@@ -13,12 +13,12 @@
 
 ## 相关材料
 
-工作文档见 [`docs/1.preparation/`](../../docs/1.preparation/)。
+工作文档见 [`docs/`](docs/)。
 
 | 文件 | 说明 |
 | --- | --- |
-| `docs/1.preparation/Standard recording 67 - Transcription.txt` | 与导师讨论的会议转写（方向、实验经验、投稿常识） |
-| `docs/1.preparation/wechat-message.txt` | 基座论文标题 |
+| `docs/Standard recording 67 - Transcription.txt` | 与导师讨论的会议转写（方向、实验经验、投稿常识） |
+| `docs/wechat-message.txt` | 基座论文标题 |
 
 ## 待办
 
