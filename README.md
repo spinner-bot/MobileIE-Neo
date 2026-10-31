@@ -1,20 +1,19 @@
 # MobileIE-Neo
 
-<!-- 一句话介绍项目 -->
+面向手机端的轻量图像增强模型研究：在 MobileIE（极轻量实时图像增强 ConvNet）基础上，解决其应用于视频时产生的帧间闪烁问题。
 
 ## 目录结构
 
 | 目录 | 用途 |
 | --- | --- |
-| `specs/` | 需求规格与设计说明（项目文档的权威来源） |
-| `docs/` | 工程文档：`architecture/` 架构、`api/` 接口、`guides/` 使用指南 |
-| `src/` | 源代码 |
-| `tests/` | 测试用例 |
-| `scripts/` | 开发 / 训练 / 构建脚本 |
-| `configs/` | 配置文件 |
-| `data/` | 数据：`raw/` 原始数据、`processed/` 处理结果（内容不入库） |
-| `notebooks/` | 实验与分析 Notebook |
+| `docs/` | 工作文档，按阶段编号：`1.preparation/` 前期准备（会议记录、论文参考） |
+| `specs/` | 项目规范与需求文档，如 `项目规范/版本管理规范.md` |
+| `research/` | 研究材料：论文精读、代码与实验 |
 | `assets/` | 图片等静态资源 |
+
+## 项目规范
+
+版本管理遵循 [`specs/项目规范/版本管理规范.md`](specs/项目规范/版本管理规范.md)：频繁提交、SSH 提交、AI 提交作者标注 `claude code (local)` / `Codex (local)`、禁用 fast-forward 合并。
 
 ## 快速开始
 
@@ -23,4 +22,4 @@ git clone git@github.com:spinner-bot/MobileIE-Neo.git
 cd MobileIE-Neo
 ```
 
-<!-- 安装、运行说明待补充 -->
+<!-- 环境安装、代码运行说明待补充 -->
