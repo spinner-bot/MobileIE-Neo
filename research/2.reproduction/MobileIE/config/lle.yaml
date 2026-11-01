@@ -16,10 +16,10 @@ train:
   save_slim: true 
 
 test:
-  test_inp: ./datasets/lle/input   # local change: was ./lowlight/LOLdataset/eval15/low
-  test_gt: ./datasets/lle/gt       # local change: was ./lowlight/LOLdataset/eval15/high
+  test_inp: ./data/LOLdataset/eval15/low   # local change: was ./lowlight/LOLdataset/eval15/low
+  test_gt: ./data/LOLdataset/eval15/high   # local change: was ./lowlight/LOLdataset/eval15/high
   num_workers: 0
-  save: true                       # local change: was false
+  save: false                       # local change: was false
 
 demo:
   demo_inp: ./data/samples/lowlight   # local change: was ./lowlight/LOLdataset/eval15/low
