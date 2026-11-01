@@ -91,6 +91,6 @@ overall  : PSNR 25.70
 
 - [ ] 获取真实数据集：LOLv1 / LOLv2、UIEB、ZRR（配置中的 `./lowlight/...` 为作者机器路径），以便跑 `test` 复现 PSNR 数值
 - [ ] `test` 模式只输出 PSNR，需自行补 SSIM / LPIPS
-- [ ] `model/utils_IWO.py` 未被引用（见报告 [2.3 节](../../docs/进展报告/0001-T-261101-mobileie-intro.html)），训练复现需自行接入
+- [ ] `model/utils_IWO.py` 未被引用（见报告 [2.3 节](../1.preparation/report/mobileie-intro.html)），训练复现需自行接入
 - [ ] `complexity.py` 引用了不存在的 `lle.MobileIES`，需修正
 - [ ] 视频场景基线与闪烁度量（进入课题本体）
