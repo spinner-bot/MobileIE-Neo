@@ -4,6 +4,7 @@
 
 - 上游仓库：`github.com/AVC2-UESTC/MobileIE`，vendored 于 [`MobileIE/`](MobileIE)，对应提交 `7030d12`（2025-08-05，`Add files via upload`）
 - 状态：**已跑通**（预训练权重加载 → demo 推理 → 输出图像 / 速度测量）
+- 复现报告（HTML，资源内嵌）：[`report/reproduction-report.html`](report/reproduction-report.html)
 
 ## 1. 环境
 
