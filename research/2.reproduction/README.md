@@ -70,15 +70,16 @@ mkdir -p experiments                     # 上游 assume 该目录已存在
 | 延迟 | 1.447 ms | 0.895 ms（4090）/ 6.72 ms（SoC） |
 | FPS | 691 | 1100（SoC，600×400） |
 
-**PSNR**：仓库自带 LOL 样例对（`datasets/lle/`，2 张 600×400）：
+**精度**（LOLv1 eval15，15 张；UIEB 测试集，90 张）：
 
-```
-image 1  : PSNR 26.96
-image 22 : PSNR 24.44
-overall  : PSNR 25.70
-```
+| 任务 | 指标 | 本机复现 | 论文 |
+| --- | --- | --- | --- |
+| LLE（LOLv1 eval15） | PSNR / SSIM | **23.633 / 0.8152** | 23.62 / ~0.82 |
+| UIE（UIEB test） | PSNR / SSIM | **23.280 / 0.8991** | 22.81 / 0.906 |
 
-（论文整份 LOLv1 eval15 为 23.62；此处仅 2 张样例，仅作链路正确性验证，不代表整体指标。）
+- 逐图日志：`results/eval_lolv1_eval15.log`、`results/eval_uieb.log`；图表 `results/per_image_metrics.png`；
+- UIEB 数据来自 hf-mirror `Hikari0608/UIEB` 的 val split（90 对），导出至 `data/uieb/{input,gt}`（不入库）；
+- SSIM 为本项目 RGB 高斯窗实现，与论文口径可能存在差异。
 
 **Demo**（LOLv1 权重）：合成低光图 → 增强输出，见 [`results/`](results)。
 
