@@ -89,6 +89,21 @@ mkdir -p experiments                     # 上游 assume 该目录已存在
 
 数值与原论文不完全可比（GPU 型号、输入来源不同），但参数量、MACs 与论文一致，说明权重与结构对齐。
 
+## 4.1 训练侧短程验证（2026-11-03）
+
+数据：LOL our485（485 对）已下载；GPU 训练因**系统提交内存不足**失败（即使 256×256 / batch 2，CUDA 大块分配也会 OOM，参见过往记录），改用 **CPU + 40 张 256×256 子集**验证代码路径：
+
+| 项目 | 结果 |
+| --- | --- |
+| Warm-up（1 epoch） | train_loss 1.027 |
+| 主训练（1 epoch） | train_loss 1.045，验证 PSNR 12.32（远未收敛，仅验证流程） |
+| 保存产物 | `model_best.pkl`（训练网络 49,978 参数）、`model_best_slim.pkl`（4,075） |
+| 重参数化一致性 | 多分支网络 vs slim 网络输出最大差 **2.9e-6** |
+
+结论：warm-up → 训练 → 验证 → slim 保存 → 重参数化等价，整条训练链路可用；正式训练需解决内存问题（加大页面文件/关闭后台程序/换机器）。
+
+训练配置注意：训练必须 `type: original`（多分支网络有 `forward_warm`），示例见 `config/lle_train_example.yaml`。
+
 ## 5. 已知问题 / 下一步
 
 - [ ] 获取真实数据集：LOLv1 / LOLv2、UIEB、ZRR（配置中的 `./lowlight/...` 为作者机器路径），以便跑 `test` 复现 PSNR 数值
