@@ -29,7 +29,8 @@ def frame_pair(img_bgr, t):
     """第 t 帧：GT 图 + 模拟低光输入图。"""
     x = MOVE * 2 * t
     x = min(x, img_bgr.shape[1] - W)
-    gt = img_bgr[:, x:x + W]
+    y0 = (img_bgr.shape[0] - H) // 2
+    gt = img_bgr[y0:y0 + H, x:x + W]
     low = np.clip(((gt.astype(np.float32) / 255.0) ** 2.2) * 0.35, 0, 1)
     return gt, (low * 255).astype(np.uint8)
 

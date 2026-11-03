@@ -3,8 +3,9 @@
 目标：量化「MobileIE 逐帧处理视频」产生的帧间不一致（闪烁），为后续时序一致性方法提供可复现的基线与度量。
 
 - 状态：**基线已建立**（2026-11-01）
-- 脚本：[`scripts/flicker_baseline.py`](scripts/flicker_baseline.py)、[`scripts/make_videos.py`](scripts/make_videos.py)
-- 产物：`results/flicker_metrics.json`、`results/flicker_curve.png`、三段 mp4 与三联对比视频
+- 脚本：[`scripts/flicker_baseline.py`](scripts/flicker_baseline.py)、[`scripts/flicker_realistic.py`](scripts/flicker_realistic.py)、[`scripts/make_videos.py`](scripts/make_videos.py)、[`scripts/make_videos_realistic.py`](scripts/make_videos_realistic.py)、[`scripts/make_figures.py`](scripts/make_figures.py)
+- 产物：`results/`（确定性基线）、`results_realistic/`（真实退化 + 消融）
+- 汇报材料：[`report/meeting-brief.html`](report/meeting-brief.html)（资源内嵌，可离线打开）
 
 ## 1. 实验设计
 
@@ -47,6 +48,22 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 # 合成视频（独立进程，避免与 torch 争内存）
 "$PY" research/3.video-flicker/scripts/make_videos.py
 ```
+
+## 3.1 真实退化条件与机制消融（2026-11-03）
+
+在合成视频上叠加手机夜景视频的典型退化（暗部泊松噪声 40 光子 + 读出噪声 + 逐帧 JPEG 70），并冻结 HDPA 全局注意力做消融：
+
+| 条件 | 输入帧间残差 | 输出帧间残差 | 放大 | 输出亮度漂移（std） |
+| --- | --- | --- | --- | --- |
+| clean（仅低光） | 0.041 | **0.700** | **16.98×** | 1.67 |
+| realistic（噪声 + 压缩） | 3.265 | **18.070** | 5.53× | 1.29 |
+| realistic + 冻结全局注意力 | 3.263 | **18.189** | 5.57× | **0.56** |
+
+结论：
+
+1. 真实噪声下输出的帧间残差达到 **18.1/255（约 7.1%）**，肉眼可见颗粒抖动；
+2. 网络对输入噪声**放大 5.5 倍**（clean 下输入几乎无扰动，放大达 17 倍）；
+3. 冻结全局注意力**没有改善闪烁**（18.19 vs 18.07），仅把亮度漂移从 1.29 降到 0.56——**全局池化不是主因，局部高频噪声的逐帧随机性才是**。
 
 ## 4. 局限
 
