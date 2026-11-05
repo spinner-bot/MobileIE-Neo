@@ -124,3 +124,5 @@ python research/3.video-flicker/scripts/process_video.py -v path/to/video.mp4 -o
    - 输入侧历史帧拼接（简单时序上下文）；
 3. **指标扩展**：warping error（光流对齐）、闪烁频率分析；
 4. 与导师讨论方向：训练阶段引入时序一致性约束 + 极轻量帧间模块（保持手机可跑）。
+
+> 方法化与评价体系工作已转入 [4 号工作](../4.temporal-consistency/README.md)：文献核查、评价协议、消融方案与可见性/频谱分析。
