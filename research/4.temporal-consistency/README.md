@@ -4,7 +4,7 @@
 
 - 状态：**启动**（2026-11-05），P0 推进中
 - 上游：共享代码与权重在项目根目录 [`MobileIE/`](../../MobileIE)
-- 前置工作：[2 号复现](../2.reproduction/README.md)、[3 号闪烁基线](../3.video-flicker/README.md)
+- 前置工作：[2 号复现](../2.reproduction/README.md)、[3 号闪烁基线](../3.video-flicker/README.md)、[5 号前期调研](../5.prior-art-survey/README.md)
 - 进展报告：[0007-T-261105-4 号工作启动与文献核查](../../docs/进展报告/0007-T-261105-4号工作启动与文献核查.md)
 
 ## 1. 本工作的判断

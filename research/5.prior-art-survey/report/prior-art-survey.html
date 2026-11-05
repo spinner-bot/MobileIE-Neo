@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MobileIE 前期调研与重复性风险 · 2026-11-05</title>
+<style>
+  :root{--fg:#1f2328;--muted:#656d76;--line:#d0d7de;--bg:#fff;--accent:#0b5cad;--warn:#bc4c00;--ok:#1a7f37;}
+  *{box-sizing:border-box}
+  body{margin:0;background:#f6f8fa;color:var(--fg);font:15px/1.7 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif}
+  main{max-width:1060px;margin:0 auto;padding:40px 28px 64px;background:var(--bg)}
+  h1{font-size:30px;margin:0 0 6px}
+  .sub{color:var(--muted);margin-bottom:28px}
+  h2{font-size:21px;border-bottom:1px solid var(--line);padding-bottom:6px;margin-top:38px}
+  h3{font-size:17px;margin-top:24px}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+  th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+  th{background:#f6f8fa}
+  .tag{display:inline-block;padding:1px 8px;border-radius:10px;font-size:12px;border:1px solid var(--line)}
+  .hi{color:#fff;background:var(--warn);border-color:var(--warn)}
+  .mid{color:#fff;background:#9a6700;border-color:#9a6700}
+  .lo{color:var(--muted)}
+  .box{border-left:4px solid var(--accent);background:#f0f6ff;padding:12px 16px;margin:16px 0}
+  .warn{border-left-color:var(--warn);background:#fff8f0}
+  .ok{border-left-color:var(--ok);background:#f2fbf4}
+  code{background:#f2f4f7;padding:1px 5px;border-radius:4px;font-size:13px}
+  ul{margin:8px 0 8px 20px}
+  footer{margin-top:44px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:12px}
+</style>
+</head>
+<body>
+<main>
+  <h1>MobileIE 前期调研与重复性风险</h1>
+  <div class="sub">MobileIE-Neo · 5 号工作 · 检索日期 2026-11-05 · claude code (local) · 资源内嵌，可离线打开</div>
+
+  <div class="box ok">
+    <strong>一句话结论：</strong>公开文献中<strong>没有</strong>“MobileIE + 视频时序一致性/闪烁”的直接工作；
+    同组有 5 篇接续工作但全是单图任务；导师提到的 TeleAI 接续研究<strong>未能核实</strong>。
+    选题空白仍在，但“后处理够用”是最大威胁。
+  </div>
+
+  <h2>1. 检索规模</h2>
+  <table>
+    <thead><tr><th>来源</th><th>MobileIE 引用数</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td>Semantic Scholar</td><td><strong>33</strong></td><td>含 arXiv 预印本，摘要最全（29/33 有摘要）</td></tr>
+      <tr><td>OpenAlex</td><td><strong>18</strong></td><td>以正式发表为主，含作者机构</td></tr>
+      <tr><td>Crossref</td><td><strong>15</strong></td><td>以 IEEE 正式版为准</td></tr>
+    </tbody>
+  </table>
+  <p style="color:var(--muted);font-size:13px">计数差异属正常索引差异；数字为 2026-11-05 快照。</p>
+
+  <h2>2. 引用构成</h2>
+  <table>
+    <thead><tr><th>类别</th><th>数量</th><th>与本题关系</th></tr></thead>
+    <tbody>
+      <tr><td>检测/医学/分割等无关引用</td><td>约 18</td><td>工程借用或命名相似，无时序内容</td></tr>
+      <tr><td>同组接续（单图）</td><td><strong>5</strong></td><td>YUV、LiteIE、IGDNet、FGDPA、DRNet</td></tr>
+      <tr><td>视频/时序</td><td><strong>1</strong></td><td>AnyMod-LLVE（ICML 2026，多模态重模型）</td></tr>
+      <tr><td>竞赛/基线</td><td>3</td><td>Mobile AI 2026 ISP/去噪、NTIRE 2026 E-LLIE</td></tr>
+      <tr><td>轻量部署</td><td>3</td><td>量化感知、FastSHADE、边缘 NPU 测量</td></tr>
+      <tr><td>低光增强</td><td>3</td><td>零样本、扩散、可控曝光</td></tr>
+      <tr><td>应用/其他</td><td>其余</td><td>移动 AR 视频管线、JND 编码等</td></tr>
+    </tbody>
+  </table>
+
+  <h2>3. 同组接续工作（重复性风险源）</h2>
+  <table>
+    <thead><tr><th>工作</th><th>年份/出处</th><th>任务</th><th>关键点</th><th>风险</th></tr></thead>
+    <tbody>
+      <tr><td>Revisiting Lightweight LLIE: YUV Perspective</td><td>2026, arXiv 2601.17349</td><td>单图 L3IE</td><td>YUV 分解 + 双流注意力；同第一作者</td><td><span class="tag hi">中高</span></td></tr>
+      <tr><td>LiteIE: Towards Lightest LLIE</td><td>2025, ESWA</td><td>单图无监督</td><td>58 参数；4K 30 FPS（骁龙 8 Gen 3）</td><td><span class="tag hi">高（效率）</span></td></tr>
+      <tr><td>IGDNet</td><td>2025, IEEE TAI</td><td>单图零样本</td><td>光照分解 + 去噪</td><td><span class="tag mid">中</span></td></tr>
+      <tr><td>FGDPA</td><td>2026, arXiv 2606.30314</td><td>实时水下增强</td><td>4.23K 参数、600+ FPS、重参数化零推理开销</td><td><span class="tag hi">中高（方法）</span></td></tr>
+      <tr><td>DRNet</td><td>2026, IEEE TMM</td><td>All-in-one 复原</td><td>动态重参数化</td><td><span class="tag mid">中</span></td></tr>
+    </tbody>
+  </table>
+  <div class="box">
+    <strong>关键判断：</strong>五篇全部是<strong>单图</strong>任务。它们占据的是“轻量结构 / 重参数化 / 单图画质”的生态位，
+    没有占据“视频帧间一致性”的生态位。
+  </div>
+
+  <h2>4. 视频时序方向</h2>
+  <table>
+    <thead><tr><th>路线</th><th>代表</th><th>机制</th><th>对我们的意义</th></tr></thead>
+    <tbody>
+      <tr><td>对齐 + 时序损失</td><td>Zero-DCE 视频版、JFFRA、StableLLVE</td><td>训练期光流 warp + 一致性损失，推理零开销</td><td>方案 A 的直接依据</td></tr>
+      <tr><td>循环/状态</td><td>FastLLVE、EvLight++、NanoVSR</td><td>隐状态跨帧传播；NanoVSR 可重参数化</td><td>方案 B 的备选</td></tr>
+      <tr><td>时序注意力/复用</td><td>UbiEnlight、ViD-EnlightenGAN</td><td>无光流的跨帧注意力/频谱复用</td><td>轻量模块可借鉴</td></tr>
+      <tr><td>后处理去闪烁</td><td>EMA/光流 EMA、BlazeBVD、DeFlicker</td><td>输出端平滑/直方图先验</td><td><strong>必须对照的强基线</strong></td></tr>
+      <tr><td>多模态/RAW</td><td>AnyMod-LLVE、EeveeDark、CVPR 2026 Raw-to-Raw、BinRVR</td><td>事件/红外/RAW/ISP</td><td>赛道活跃，但非直接竞品</td></tr>
+      <tr><td>量化+时序</td><td>TAQ、QBasicVSR、PMQ-VE</td><td>时序感知 PTQ/比特分配，抑制量化闪烁</td><td><strong>潜在第二贡献</strong></td></tr>
+    </tbody>
+  </table>
+
+  <h2>5. TeleAI 线索核查</h2>
+  <table>
+    <thead><tr><th>核查项</th><th>结果</th></tr></thead>
+    <tbody>
+      <tr><td>S2 / OpenAlex / Crossref 引用中的 TeleAI 署名</td><td>未发现</td></tr>
+      <tr><td>TeleAI 2026 中文综述《极端环境图像退化、处理与应用研究综述》</td><td>85 条公开参考文献中<strong>无 MobileIE</strong></td></tr>
+      <tr><td>TeleAI ReDDiT（CVPR 2025）、Lumina-OmniLV、水下生成式复原</td><td>论文 HTML 中<strong>无 MobileIE</strong></td></tr>
+      <tr><td>Web 检索 <code>"MobileIE" "TeleAI"/"China Telecom"</code></td><td>无关联结果</td></tr>
+    </tbody>
+  </table>
+  <div class="box warn">
+    <strong>结论：</strong>导师提到的“电信接续研究”目前<strong>没有可核实的公开出处</strong>。
+    可能存在未被索引的中文期刊/内部工作；建议向导师索取确切标题/作者，或用 Google Scholar / IEEE Cited By / 知网复核。
+    在此之前，论文中只写“公开文献中未发现”，不写“TeleAI 没做”。
+  </div>
+
+  <h2>6. 建议的差异化定位</h2>
+  <table>
+    <thead><tr><th>贡献</th><th>内容</th><th>为什么不是重复</th><th>优先级</th></tr></thead>
+    <tbody>
+      <tr><td><strong>C1 训练期时序一致性</strong></td><td>MobileIE 训练加对齐时序损失，推理图不变</td><td>没有 4K 参数 CNN 的先例；Zero-DCE 是曲线模型</td><td>主</td></tr>
+      <tr><td><strong>C2 可见性加权</strong></td><td>JND/平坦区/时间高频加权</td><td>JND 用于编码，未用于增强闪烁</td><td>差异化</td></tr>
+      <tr><td><strong>C3 量化时序稳定性</strong></td><td>INT8/TFLite 前后的闪烁测量与修复</td><td>TAQ/QBasicVSR 针对视频超分，未覆盖 4K RGB LLIE</td><td>加分</td></tr>
+      <tr><td><strong>C4 逐模块消融</strong></td><td>注意力/FST/MBR/warm-up 对闪烁的贡献</td><td>3 号只做了冻结注意力；导师明确要求</td><td>支撑</td></tr>
+    </tbody>
+  </table>
+
+  <h2>7. 最大风险与对策</h2>
+  <table>
+    <thead><tr><th>风险</th><th>对策</th></tr></thead>
+    <tbody>
+      <tr><td>后处理 EMA/光流 EMA 已降 73%</td><td>快速运动、遮挡、无拖影、同延迟对比；把“后处理失效边界”作为主实验</td></tr>
+      <tr><td>“时序损失是现成的”</td><td>C2 可见性加权 + C4 机理分析 + 零推理开销 + 手机实测</td></tr>
+      <tr><td>同组单图工作被误认为重复</td><td>引用并明确“它们针对单帧”；视频实验是区分点</td></tr>
+      <tr><td>真实视频不足</td><td>自拍 + SDSD/REDS；合成/真实分别报告</td></tr>
+    </tbody>
+  </table>
+
+  <footer>
+    MobileIE-Neo · 5 号工作（前期调研与重复性风险）· 2026-11-05 · 由 claude code (local) 整理<br>
+    数据与脚本：<code>research/5.prior-art-survey/</code> · 资源已内嵌，可离线打开
+  </footer>
+</main>
+</body>
+</html>
