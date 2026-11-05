@@ -24,6 +24,10 @@ tmp/
 secrets/
 
 # ---- 数据与模型 ----
+# MobileIE 上游代码的运行产物与本机数据集（共享代码与预训练权重本身入库）
+MobileIE/experiments/
+MobileIE/data/LOLdataset/
+MobileIE/data/LOLsmall/
 data/raw/*
 !data/raw/.gitkeep
 data/processed/*
