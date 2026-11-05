@@ -21,6 +21,9 @@
 | 文献与新颖性核查 | [`docs/literature-and-novelty.md`](docs/literature-and-novelty.md) | MobileIE 引用追踪 + 相邻工作 + 选题定位 |
 | 评价协议（草案） | [`docs/evaluation-protocol.md`](docs/evaluation-protocol.md) | 数据集、指标、成功判据（待导师确认） |
 | 模块消融方案 | [`docs/ablation-plan.md`](docs/ablation-plan.md) | 逐模块控制变量实验矩阵 |
+| 消融变体工厂 | [`scripts/model_variants.py`](scripts/model_variants.py) | 6 个变体，已通过 slim 等价性冒烟测试 |
+| 方法候选与方案 A | [`docs/method-candidates.md`](docs/method-candidates.md) | 三条路线、损失设计、待定问题 |
+| 时序损失原型 | [`scripts/temporal_loss.py`](scripts/temporal_loss.py) | flow warp + mask + detach，冒烟测试通过 |
 | 闪烁可见性/频谱分析 | [`scripts/flicker_visibility.py`](scripts/flicker_visibility.py)、[`results/visibility/`](results/visibility) | 像素级残差、平坦/纹理区、时间标准差、时间频谱 |
 | 复跑的真实退化实验 | [`results/rerun/`](results/rerun) | 用于分析的缓存帧与指标（60 帧，CPU） |
 
@@ -63,7 +66,8 @@
 - [ ] 执行逐模块消融（见 `docs/ablation-plan.md`）。
 
 ### P2（12 月，方法原型）
-- [ ] 方案 A：训练期时序一致性损失（推理零开销）；
+- [x] 方案 A 损失原型（推理零开销，冒烟测试通过）；
+- [ ] 方案 A 正式训练与 λ 调参；
 - [ ] 方案 B：轻量帧间模块（feature EMA / 1–2 帧输入）；
 - [ ] 方案 C：输入多帧拼接（对照）；
 - [ ] 统一比较闪烁、画质、参数量、MACs、延迟、快速运动鲁棒性。

@@ -27,7 +27,7 @@ out = tail(x4)               # Conv3x3 -> 3 通道
 | V2 | w/o 局部注意力 | `x3 = 1`（移除 `att1` 分支） | 局部响应是否放大高频噪声 |
 | V3 | w/o 双注意力 | `x4 = x1` | 注意力整体对闪烁的贡献 |
 | V4 | w/o FST 融合 | `FST.forward` 退化为 `block1(x)`，去掉 `w1*x ⊙ w2*x + bias` | 二次融合是否放大噪声 |
-| V5 | w/o MBR 多分支 | 训练态直接用单分支 `Conv2d`（5×5/3×3/1×1） | “多分支训练 + 重参数化”是否影响噪声敏感性 |
+| V5 | w/o MBR 多分支 | 训练态直接用单分支网络（`MobileIELLENetS` 结构） | “多分支训练 + 重参数化”是否影响噪声敏感性（**注意容量混淆，见 §6**） |
 | V6 | w/o warm-up | 跳过 warm-up 阶段，直接主训练 | IWO/warm-up 是否让网络更依赖噪声细节 |
 | V7 | 冻结全局注意力（推理） | 3 号已有；作为参考，不需重训 | 与 V1 对照，区分“冻结”与“移除” |
 
@@ -82,13 +82,26 @@ out = tail(x4)               # Conv3x3 -> 3 通道
 
 ## 6. 实现要点
 
-1. **不改上游默认行为**：在 `research/4.temporal-consistency/scripts/model_variants.py` 中定义子类/工厂，通过 `variant` 参数选择；`MobileIE/` 保持上游 + 已标注的 local change。
+1. **不改上游默认行为**：变体工厂已在 [`scripts/model_variants.py`](../scripts/model_variants.py) 实现，通过 `variant` 参数选择；`MobileIE/` 保持上游 + 已标注的 local change。
 2. 变体需要同时支持训练态（多分支）与推理态（slim）：
    - V1–V4 只改 `forward` / FST 融合，重参数化逻辑不变；
-   - V5 需要单独的“单分支训练态”定义，`slim()` 直接返回自身卷积权重；
+   - V5 单独定义“单分支训练态”，`slim()` 直接返回自身；
 3. 训练入口复用 `MobileIE/data/lledata.py`、`MobileIE/loss.py`、`MobileIE/option.py` 的数据加载与损失，写一个精简的 `train_ablation.py`，避免复制整个 `main.py`；
 4. 训练日志与权重放 `research/4.temporal-consistency/results/ablation/<variant>/`，不入库大文件；
 5. 每个变体训练前跑一次 `slim()` 等价性检查，防止重参数化实现错误污染结论。
+
+**已完成的冒烟测试**（随机张量，64×64）：
+
+| 变体 | 训练态参数 | slim 参数 | 重参数化最大误差 |
+| --- | --- | --- | --- |
+| full | 49,978 | 4,075 | 1.5e-7 |
+| no_global_att | 49,978 | 4,075 | 3.0e-7 |
+| no_local_att | 49,978 | 4,075 | 1.3e-7 |
+| no_att | 49,978 | 4,075 | 7.2e-7 |
+| no_fst | 49,950 | 4,047 | 1.1e-7 |
+| no_mbr | 4,075 | 4,075 | 0 |
+
+**V5 的混淆**：去掉多分支后训练态参数从 49,978 降到 4,075，容量差异很大；因此 V5 只能解释为“训练复杂度/重参数化”的整体影响，不能单独归因于某个模块。若 V5 结果关键，补一个“同宽度单分支（加宽通道以匹配参数量）”的对照。
 
 ## 7. 依赖与排期
 
