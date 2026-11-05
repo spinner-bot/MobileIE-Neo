@@ -1,0 +1,76 @@
+# 5. 前期调研与重复性风险（Prior-Art Survey）
+
+目标：在动模型之前，把 MobileIE 的引用图、同组接续工作、TeleAI/工业界线索、以及视频时序一致性方向梳理完整，回答三个问题：
+
+1. 是否已经有人解决 MobileIE 的视频闪烁？（避免重复）
+2. 导师提到的“电信接续研究”具体是什么？能否证实？
+3. 我们的选题还剩下什么可发表的空间？哪些表述会被审稿人指为重复？
+
+- 状态：**首轮完成**（2026-11-05）；后续按月增量更新
+- 关联：[4 号工作](../4.temporal-consistency/README.md)、[3 号基线](../3.video-flicker/README.md)、[2 号复现](../2.reproduction/README.md)
+- 进展报告：[0008-T-261105-前期调研与重复性风险](../../docs/进展报告/0008-T-261105-前期调研与重复性风险.md)
+
+## 1. 核心结论（先看这里）
+
+1. **未发现“MobileIE + 视频时序一致性/闪烁”的直接工作。** S2 抓到 33 篇引用、OpenAlex 18 篇、Crossref 15 次被引；逐条扫描标题与摘要，唯一明确的视频 LLVE 引用是 *AnyMod-LLVE*（ICML 2026，多模态重模型），不涉及极轻量单图网络扩展。
+2. **同组接续工作有 5 篇，但全部是图像任务**：YUV 轻量低光（同第一作者）、LiteIE、IGDNet、频域双路径水下增强、DRNet 动态重参数化。它们是最近的“重复性风险源”，但没有一篇做视频/时序。
+3. **TeleAI/中国电信线索未能证实。** 公开引用索引中没有 TeleAI 署名的 MobileIE 引用；TeleAI 2026 中文综述《极端环境图像退化、处理与应用研究综述》的 85 条公开参考文献中也没有 MobileIE。可能存在未被 Crossref/OpenAlex/S2 收录的中文期刊或内部工作，需要导师给出确切出处后复核。
+4. **“后处理够用”仍是最大威胁**，不是重复性问题。EMA/光流 EMA 已把闪烁降 73%；若要立住训练侧方法，必须证明快速运动/无拖影/低延迟优势。
+5. 建议的差异化：**JND/可见性加权的训练期时序一致性 + 重参数化兼容 + 4K 参数/手机实时**，并用逐模块消融解释“闪烁来自哪里”，避免被评价为“把已有 temporal loss 套到 MobileIE 上”。
+
+## 2. 产出
+
+| 产出 | 位置 | 内容 |
+| --- | --- | --- |
+| 检索方法与可复现性 | [`docs/01-search-method.md`](docs/01-search-method.md) | API、查询词、日期、计数口径、局限 |
+| MobileIE 引用全表 | [`docs/02-mobileie-citations.md`](docs/02-mobileie-citations.md) | 33 条引用、分类、相关性 |
+| 同组接续工作 | [`docs/03-direct-followups.md`](docs/03-direct-followups.md) | 5 篇同组工作 + 3 个竞赛报告的细节 |
+| TeleAI/工业界核查 | [`docs/04-teleai-and-industry.md`](docs/04-teleai-and-industry.md) | 线索、证据、候选、验证方案 |
+| 视频时序方法综述 | [`docs/05-video-temporal-survey.md`](docs/05-video-temporal-survey.md) | 对齐/循环/注意力/后处理/多模态/RAW 六类 |
+| 轻量部署综述 | [`docs/06-lightweight-deployment.md`](docs/06-lightweight-deployment.md) | 重参数化、量化、蒸馏、延迟/能耗指标 |
+| 新颖性与重复风险 | [`docs/07-novelty-and-overlap-risk.md`](docs/07-novelty-and-overlap-risk.md) | 空白、候选贡献、审稿人质疑与实验对策 |
+| 汇报材料 | [`report/prior-art-survey.html`](report/prior-art-survey.html) | 单文件 HTML，资源内嵌，可离线打开 |
+| 原始数据 | [`data/`](data) | S2/OpenAlex 原始 JSON、Crossref 元数据、规范化 CSV |
+| 抓取脚本 | [`scripts/fetch_citations.py`](scripts/fetch_citations.py) | 可重跑的引用抓取（带退避） |
+| 规范化脚本 | [`scripts/normalize_citations.py`](scripts/normalize_citations.py) | 分类与 CSV 生成 |
+
+## 3. 复现
+
+```bash
+PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
+
+# 抓取（S2/OpenAlex 有速率限制，脚本会退避重试）
+"$PY" research/5.prior-art-survey/scripts/fetch_citations.py
+
+# 规范化
+"$PY" research/5.prior-art-survey/scripts/normalize_citations.py
+```
+
+## 4. 计数口径
+
+| 来源 | 计数 | 说明 |
+| --- | --- | --- |
+| Semantic Scholar | 33 | 含 arXiv 预印本，作者/摘要最全 |
+| OpenAlex | 18 | 以正式发表为主，含机构信息 |
+| Crossref | 15 | 以 IEEE 正式版为准 |
+
+三者不一致是正常的索引差异；正式论文中引用“截至 2026-11-05，MobileIE 在 S2/OpenAlex 分别有 33/18 篇引用”。
+
+## 5. 局限
+
+- Google Scholar 未做逐条人工核查（无法直接抓取），可能有遗漏；
+- 中文期刊（知网/万方）覆盖不足，TeleAI 线索可能藏在这里；
+- 引用列表是快照，2026 年新论文仍在增加；
+- 摘要扫描只能发现显式提到 video/temporal 的工作，隐性使用无法仅靠摘要判断。
+
+## 6. 下一步
+
+- [ ] 让导师提供“电信接续研究”的确切论文/作者，或授权联系作者；
+- [ ] 用 Google Scholar 人工复核 33 条引用之外的遗漏；
+- [ ] 精读 YUV、LiteIE、DRNet、AnyMod-LLVE 四篇，确认是否含时序成分；
+- [ ] 每月更新一次 `fetch_citations.py` 的输出，作为“查重台账”；
+- [ ] 把 [`docs/07-novelty-and-overlap-risk.md`](docs/07-novelty-and-overlap-risk.md) 的差异化表述写进开题/论文 Introduction。
+
+## 7. 修订记录
+
+- 2026-11-05 · claude code (local)：创建 5 号工作，完成首轮引用抓取、分类与重复性风险分析。
