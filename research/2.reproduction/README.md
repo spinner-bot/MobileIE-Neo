@@ -2,7 +2,7 @@
 
 目标：在本机跑通 MobileIE 官方代码，验证预训练权重、推理流程与速度指标，为后续「视频闪烁」课题提供可信基线。
 
-- 上游仓库：`github.com/AVC2-UESTC/MobileIE`，vendored 于 [`MobileIE/`](MobileIE)，对应提交 `7030d12`（2025-08-05，`Add files via upload`）
+- 上游仓库：`github.com/AVC2-UESTC/MobileIE`，vendored 于项目根目录 [`MobileIE/`](../../MobileIE)，对应提交 `7030d12`（2025-08-05，`Add files via upload`）
 - 状态：**已跑通**（预训练权重加载 → demo 推理 → 输出图像 / 速度测量）
 - 复现报告（HTML，资源内嵌）：[`report/reproduction-report.html`](report/reproduction-report.html)
 
@@ -32,14 +32,14 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 ## 2. 运行
 
 ```bash
-cd MobileIE
+cd MobileIE                              # 项目根目录下的共享上游代码
 mkdir -p experiments                     # 上游 assume 该目录已存在
 "$PY" main.py -task demo  -model_task lle -device cuda
 "$PY" main.py -task test  -model_task lle -device cuda   # 需测试集与 GT
 "$PY" main.py -task train -model_task lle -device cuda   # 需 LOL 数据集
 ```
 
-配置见 `MobileIE/config/lle.yaml`（已改为本地可跑：`type: re-parameterized`、`need_slim: true`、`pretrained: ./pretrain/lolv1_best_slim.pkl`、`demo_inp: ./data/samples/lowlight`）。
+配置见根目录 `MobileIE/config/lle.yaml`（已改为本地可跑：`type: re-parameterized`、`need_slim: true`、`pretrained: ./pretrain/lolv1_best_slim.pkl`、`demo_inp: ./data/samples/lowlight`）。
 
 ## 3. 本地对上游代码的修改（均已标注 `local change`）
 
@@ -111,3 +111,7 @@ mkdir -p experiments                     # 上游 assume 该目录已存在
 - [ ] `model/utils_IWO.py` 未被引用（见报告 [2.3 节](../1.preparation/report/mobileie-intro.html)），训练复现需自行接入
 - [ ] `complexity.py` 引用了不存在的 `lle.MobileIES`，需修正
 - [ ] 视频场景基线与闪烁度量（进入课题本体）
+
+## 6. 修订记录
+
+- 2026-11-05 · claude code (local)：共享的上游代码与预训练权重由 `research/2.reproduction/MobileIE/` 迁移至项目根目录 `MobileIE/`，更新本文及相关脚本引用；本工作保留数据集、脚本、结果与报告等中间资料。
