@@ -68,7 +68,7 @@ def main():
     ap.add_argument('-v', '--video', required=True)
     ap.add_argument('-o', '--out', required=True)
     ap.add_argument('--weights', default='pretrain/lolv1_best_slim.pkl')
-    ap.add_argument('--repo', default=os.path.join(os.path.dirname(__file__), '..', '..', '2.reproduction/MobileIE'))
+    ap.add_argument('--repo', default=os.path.join(os.path.dirname(__file__), '..', '..', '..', 'MobileIE'))
     ap.add_argument('--device', default='cuda')
     ap.add_argument('--max-frames', type=int, default=0, help='0 表示全部')
     args = ap.parse_args()

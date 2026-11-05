@@ -1,8 +1,9 @@
 """MobileIE 评测脚本：PSNR + SSIM（不依赖 skimage），可选保存输出图。
 
-用法（在 research/2.reproduction/MobileIE 目录下运行）：
-    python ../scripts/evaluate.py -task lle -input data/LOLdataset/eval15/low \
-        -gt data/LOLdataset/eval15/high -pretrain pretrain/lolv1_best_slim.pkl [--save out_dir]
+用法（在项目根目录的 MobileIE/ 下运行）：
+    python ../research/2.reproduction/scripts/evaluate.py -task lle \
+        -input data/LOLdataset/eval15/low -gt data/LOLdataset/eval15/high \
+        -pretrain pretrain/lolv1_best_slim.pkl [--save out_dir]
 """
 import argparse
 import os

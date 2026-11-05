@@ -77,7 +77,7 @@ def save_frame(kind, idx, frame):
 def main():
     root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..'))
     ap = argparse.ArgumentParser()
-    ap.add_argument('--repo', default=os.path.join(root, 'research/2.reproduction/MobileIE'))
+    ap.add_argument('--repo', default=os.path.join(root, 'MobileIE'))
     ap.add_argument('--image', default=os.path.join(root, 'research/3.video-flicker/assets/source_scene.jpg'))
     ap.add_argument('--weights', default='pretrain/lolv1_best_slim.pkl')
     ap.add_argument('--out', default=os.path.join(root, 'research/3.video-flicker/results'))

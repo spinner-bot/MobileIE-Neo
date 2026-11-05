@@ -87,7 +87,7 @@ def flow_warp(prev, prev_gray, cur_gray):
 def main():
     root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..'))
     ap = argparse.ArgumentParser()
-    ap.add_argument('--repo', default=os.path.join(root, 'research/2.reproduction/MobileIE'))
+    ap.add_argument('--repo', default=os.path.join(root, 'MobileIE'))
     ap.add_argument('--weights', default='pretrain/lolv1_best_slim.pkl')
     ap.add_argument('--device', default='cuda')
     args = ap.parse_args()
