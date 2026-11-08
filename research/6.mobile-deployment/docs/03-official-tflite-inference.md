@@ -53,6 +53,23 @@ F:/dev-tools/python-envs/MobileIE-Demo/Scripts/python.exe -c "import tensorflow 
 
 > 若 `tensorflow-cpu` 在 Python 3.13 无可用轮子，优先换 Python 3.12 建环境；不建议为了演示去动研究环境。
 
+### 3.1 本机实测结论（2026-11-08）
+
+| 方案 | 结果 |
+| --- | --- |
+| `tensorflow-cpu==2.21.0` | 失败：`_pywrap_tensorflow_common.dll INITIALIZATION FAILED (0x45A)` |
+| `tensorflow-cpu==2.20.0` | 失败：`_pywrap_tensorflow_internal` 动态链接库初始化失败 |
+| `ai-edge-litert==2.3.0` | 可用，但默认 XNNPACK delegate 在 `allocate_tensors()` 时段错误 |
+
+最终采用：**ai-edge-litert + `OpResolverType.BUILTIN_WITHOUT_DEFAULT_DELEGATES`**。`run_official_tflite.py` 会自动完成兼容层注入，无需改官方脚本：
+
+```python
+from ai_edge_litert.interpreter import Interpreter, OpResolverType
+Interpreter(model_path=..., experimental_op_resolver_type=OpResolverType.BUILTIN_WITHOUT_DEFAULT_DELEGATES)
+```
+
+PC 出图不追求速度，关闭默认 delegate 不影响结果正确性。
+
 ## 4. 推荐运行方式
 
 ### 方式 A：不改官方脚本，准备约定路径
@@ -82,6 +99,8 @@ F:/dev-tools/python-envs/MobileIE-Demo/Scripts/python.exe \
 ```
 
 > 包装脚本属于“传参胶水”，核心推理仍是官方实现；如不需要可直接用方式 A。
+
+**已验证结果（2026-11-08）**：eval15 共 15 张，输出 PSNR 均值 **23.619 dB**，与论文报告的 23.62 dB 一致。
 
 ## 5. 手机实拍照片
 
@@ -130,3 +149,4 @@ research/6.mobile-deployment/results/
 ## 9. 修订记录
 
 - 2026-11-08 · claude code (local)：创建，整理环境、路径、运行方式与备选方案。
+- 2026-11-08 · claude code (local)：补充本机 TensorFlow 初始化失败与 ai-edge-litert 兼容层实测结论；记录 eval15 PSNR 23.619 dB。

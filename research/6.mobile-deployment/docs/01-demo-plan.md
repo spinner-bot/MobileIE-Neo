@@ -84,6 +84,8 @@
 
 总工作量预计 **1 个工作日**（不含手机下载 App 的等待）。
 
+> 2026-11-08 进展：T1–T5 完成；LOL eval15 PSNR 23.619 dB，样例对比图已生成。受本机 TensorFlow 原生库限制，电脑侧改用 `ai-edge-litert` 兼容层（详见 [03 文档](03-official-tflite-inference.md)）。T6–T8 待手机到位。
+
 ## 4. 现场演示脚本（草案）
 
 1. **一句话背景**：MobileIE 是 4K 参数、手机端实时的图像增强网络，这是 ICCV 2025 的工作；我们用官方 TFLite 模型做端侧验证。

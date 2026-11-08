@@ -20,6 +20,48 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 DEFAULT_OFFICIAL = REPO_ROOT / "MobileIE" / "test_TFLite_RGB.py"
 
 
+def ensure_tflite_runtime():
+    """官方脚本只用到 `from tensorflow import lite`。
+
+    若本机 TensorFlow 原生库加载失败，用官方 LiteRT 运行时
+    (ai-edge-litert) 提供同名的 tf.lite.Interpreter 兼容层，
+    官方脚本的预处理/推理/保存逻辑保持不变。
+    """
+    try:
+        import tensorflow  # noqa: F401
+        return
+    except Exception as exc:
+        print(f"提示：TensorFlow 不可用（{type(exc).__name__}），尝试使用 ai-edge-litert。")
+
+    try:
+        from ai_edge_litert.interpreter import Interpreter as _Interpreter
+        from ai_edge_litert.interpreter import OpResolverType
+    except ModuleNotFoundError:
+        sys.exit(
+            "TensorFlow 与 ai-edge-litert 都不可用。\n"
+            "请按 docs/03-official-tflite-inference.md 安装其一。"
+        )
+
+    def Interpreter(*args, **kwargs):
+        # 本机 Windows + LiteRT 2.3 下，默认 XNNPACK delegate 会在
+        # allocate_tensors 时崩溃；PC 出图不需要加速，改用纯内置算子。
+        kwargs.setdefault(
+            "experimental_op_resolver_type",
+            OpResolverType.BUILTIN_WITHOUT_DEFAULT_DELEGATES,
+        )
+        return _Interpreter(*args, **kwargs)
+
+    import types
+
+    tf_module = types.ModuleType("tensorflow")
+    lite_module = types.ModuleType("tensorflow.lite")
+    lite_module.Interpreter = Interpreter
+    tf_module.lite = lite_module
+    sys.modules["tensorflow"] = tf_module
+    sys.modules["tensorflow.lite"] = lite_module
+    print("已启用 ai-edge-litert 兼容层（tf.lite.Interpreter）。")
+
+
 def load_official(path: Path):
     if not path.exists():
         sys.exit(f"找不到官方脚本：{path}")
@@ -30,8 +72,8 @@ def load_official(path: Path):
     except ModuleNotFoundError as exc:
         if exc.name and exc.name.startswith("tensorflow"):
             sys.exit(
-                "当前环境没有 TensorFlow，无法运行官方脚本。\n"
-                "请按 docs/03-official-tflite-inference.md 新建演示环境并安装 tensorflow-cpu。"
+                "当前环境没有可用的 TFLite 运行时，无法运行官方脚本。\n"
+                "请按 docs/03-official-tflite-inference.md 安装 tensorflow-cpu 或 ai-edge-litert。"
             )
         raise
     return module
@@ -69,6 +111,7 @@ def main():
         sys.exit(f"找不到输入目录：{input_dir}")
 
     check_input_size(input_dir)
+    ensure_tflite_runtime()
     official = load_official(Path(args.official))
 
     interpreter = official.load_model(str(model))

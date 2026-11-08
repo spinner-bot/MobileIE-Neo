@@ -91,8 +91,12 @@ def cmd_compare(args):
         draw = ImageDraw.Draw(canvas)
         draw.text((8, 6), args.label_input, font=font, fill=(255, 255, 255))
         draw.text((args.width + gap + 8, 6), args.label_enhanced, font=font, fill=(255, 255, 255))
-        out = dst / (path.stem + "_compare.png")
-        canvas.save(out)
+        if args.format == "jpeg":
+            out = dst / (path.stem + "_compare.jpg")
+            canvas.save(out, quality=args.quality, optimize=True)
+        else:
+            out = dst / (path.stem + "_compare.png")
+            canvas.save(out)
         print(f"compare: {path.name} -> {out.name}")
         count += 1
     print(f"done: {count} comparison(s) -> {dst}")
@@ -119,6 +123,8 @@ def main():
     compare.add_argument("--label-enhanced", default="Enhanced")
     compare.add_argument("--font", default=None, help="可选 TTF 路径（显示中文时使用）")
     compare.add_argument("--font-size", type=int, default=20)
+    compare.add_argument("--format", choices=["png", "jpeg"], default="png", help="输出格式，jpeg 更省空间")
+    compare.add_argument("--quality", type=int, default=90, help="JPEG 质量（1-100）")
     compare.set_defaults(func=cmd_compare)
 
     args = parser.parse_args()
