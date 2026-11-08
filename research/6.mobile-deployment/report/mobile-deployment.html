@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MobileIE 手机端部署与现场演示方案</title>
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --card: #ffffff;
+    --ink: #1d2430;
+    --muted: #5b6675;
+    --line: #e3e7ec;
+    --accent: #2d6cdf;
+    --accent-soft: #eaf1fd;
+    --warn: #b45309;
+    --warn-soft: #fff7e6;
+    --ok: #18794e;
+    --ok-soft: #e9f7ef;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 15px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 40px 24px 72px; }
+  header { margin-bottom: 28px; }
+  .kicker { color: var(--accent); font-weight: 600; letter-spacing: .08em; font-size: 12px; text-transform: uppercase; }
+  h1 { font-size: 30px; line-height: 1.3; margin: 8px 0 10px; }
+  .sub { color: var(--muted); font-size: 15px; }
+  .meta { margin-top: 14px; color: var(--muted); font-size: 13px; }
+  .meta span { margin-right: 16px; }
+  h2 { font-size: 20px; margin: 36px 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+  h3 { font-size: 16px; margin: 22px 0 8px; }
+  p { margin: 8px 0; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px; margin: 14px 0; }
+  .callout { border-left: 4px solid var(--accent); background: var(--accent-soft); border-radius: 8px; padding: 14px 18px; margin: 16px 0; }
+  .warn { border-left: 4px solid var(--warn); background: var(--warn-soft); border-radius: 8px; padding: 14px 18px; margin: 16px 0; }
+  .ok { border-left: 4px solid var(--ok); background: var(--ok-soft); border-radius: 8px; padding: 14px 18px; margin: 16px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { background: #f0f3f7; font-weight: 600; }
+  tr:last-child td { border-bottom: none; }
+  .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 12px; margin: 18px 0; }
+  .node { flex: 1 1 180px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+  .node b { display: block; font-size: 14px; margin-bottom: 4px; }
+  .node small { color: var(--muted); }
+  .arrow { align-self: center; color: var(--muted); font-size: 20px; }
+  ul, ol { margin: 8px 0; padding-left: 22px; }
+  li { margin: 5px 0; }
+  code { background: #eef1f5; border-radius: 4px; padding: 1px 5px; font-family: "Cascadia Code", Consolas, monospace; font-size: 13px; }
+  .tag { display: inline-block; font-size: 12px; padding: 1px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+  .tag.warn { background: var(--warn-soft); color: var(--warn); }
+  .tag.ok { background: var(--ok-soft); color: var(--ok); }
+  footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+  @media print {
+    body { background: #fff; }
+    .wrap { max-width: none; padding: 0; }
+    .card, .node { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">MobileIE-Neo · Work 6</div>
+    <h1>手机端部署与现场演示方案</h1>
+    <div class="sub">为项目申报现场考察，复现 MobileIE 官方手机测试流程，并补充可展示的增强效果。</div>
+    <div class="meta">
+      <span>创建：2026-11-08</span>
+      <span>状态：启动</span>
+      <span>作者：claude code (local)</span>
+    </div>
+  </header>
+
+  <div class="callout">
+    <b>结论先行：</b>论文的手机部分<strong>只测推理速度</strong>（Snapdragon 8 Gen 3，0.895 ms），仓库没有手机 App 或可视化 demo。因此采用 <b>B 方案</b>：手机用 AI Benchmark 实测延迟，电脑复用官方 <code>test_TFLite_RGB.py</code> 生成前后对比图，现场组合展示——不新写安卓 App。
+  </div>
+
+  <h2>1. 任务与边界</h2>
+  <p>导师在 2026-11-08 的会议中要求：尽快在安卓手机上把论文里的 AI Benchmark 跑起来并演示，用于项目申报的现场考察，“不用做研究，原文怎么弄就怎么弄”。</p>
+  <table>
+    <tr><th>问题</th><th>核对结果</th></tr>
+    <tr><td>论文手机部分做了什么？</td><td>只在 Snapdragon 8 Gen 3 上测延迟（0.895 ms / 1100 FPS），用于复杂度对比。</td></tr>
+    <tr><td>官方 README 的手机流程？</td><td><code>lolv1.tflite</code> → 导入 AI Benchmark → 获取推理速度。</td></tr>
+    <tr><td>仓库有手机 App 吗？</td><td>没有。只有 Python 训练、测试与 TFLite 转换脚本。</td></tr>
+    <tr><td>论文效果图来自手机吗？</td><td>不是。效果图来自数据集 + GPU 推理。</td></tr>
+  </table>
+  <div class="warn">
+    <b>目标冲突：</b>“直接复现论文手机做法”只能得到延迟；“现场看到增强效果”论文并未提供手机端方案。两者需要用同一份模型、两条路径拼起来。
+  </div>
+
+  <h2>2. B 方案：同一模型，两条路径</h2>
+  <div class="flow">
+    <div class="node"><b>lolv1.tflite</b><small>23 KB · FP32<br>输入 1×400×600×3</small></div>
+    <div class="arrow">→</div>
+    <div class="node"><b>手机 · AI Benchmark</b><small>PRO Mode → Custom Model<br>实测延迟 / FPS</small></div>
+    <div class="arrow">+</div>
+    <div class="node"><b>电脑 · 官方脚本</b><small>test_TFLite_RGB.py<br>低光增强前后对比图</small></div>
+    <div class="arrow">→</div>
+    <div class="node"><b>现场展示</b><small>手机测速 + 对比图/视频</small></div>
+  </div>
+
+  <h3>为什么不用现成 App 看效果</h3>
+  <ul>
+    <li><b>AI Benchmark</b>：Custom Model 只输出延迟与错误日志，没有图像预览。</li>
+    <li><b>Google AI Edge Gallery</b>：支持侧载模型，但内置任务只有分类/检测/LLM，不支持任意图生图。</li>
+    <li><b>ML Bench</b>：偏分类/检测，需要标签与元数据。</li>
+    <li><b>TensorFlow 官方 Android 示例</b>：都是写死模型的参考实现，换模型需改代码并重新编译。</li>
+  </ul>
+
+  <h2>3. 模型事实（已解析）</h2>
+  <table>
+    <tr><th>项</th><th>值</th></tr>
+    <tr><td>文件</td><td><code>MobileIE/pretrain/lolv1.tflite</code></td></tr>
+    <tr><td>大小</td><td>23 KB</td></tr>
+    <tr><td>输入</td><td><code>serving_default_input_1:0</code>，固定 1×400×600×3，FLOAT32</td></tr>
+    <tr><td>输出</td><td><code>StatefulPartitionedCall:0</code>，1×400×600×3，FLOAT32</td></tr>
+    <tr><td>算子</td><td>23 个标准算子：CONV_2D ×6、MUL ×9、ADD ×2、LOGISTIC ×2、PAD / MEAN / PRELU / REDUCE_MAX 各 1</td></tr>
+    <tr><td>自定义算子</td><td>无</td></tr>
+  </table>
+  <div class="ok">
+    单输入、单输出、固定 4D 形状、无自定义 op，满足 AI Benchmark Custom Model 的加载条件。输入固定为 400×600，手机照片必须先缩放/裁剪。
+  </div>
+
+  <h2>4. 手机端操作要点</h2>
+  <ol>
+    <li>官网下载 AI Benchmark（v7.0.0，Android 5.0+，APK 约 1.4 GB），授予存储权限。</li>
+    <li>把 <code>lolv1.tflite</code> 复制到手机 <code>Download</code>，命名为 <code>model.tflite</code>。</li>
+    <li>先完整跑一次标准测试，再进入 <b>PRO Mode → Custom Model</b>。</li>
+    <li>选择模型（自动读取 Download，或文件管理器手动选，需开启“显示内部存储”）。</li>
+    <li>精度选 <b>FP32</b>；后端依次尝试 CPU/XNNPACK、NNAPI、GPU（以及机型对应的 QNN/Neuron/ENN）。</li>
+    <li>记录延迟并截屏/录屏；提前准备离线备份，现场不依赖网络。</li>
+  </ol>
+  <p><span class="tag">注意</span> AI Benchmark 是跑分工具，不是模拟器；自定义模型模式不显示增强后的图像。</p>
+
+  <h2>5. 执行清单</h2>
+  <table>
+    <tr><th>阶段</th><th>事项</th><th>状态</th></tr>
+    <tr><td>P0</td><td>建立工作目录、方案与文档</td><td><span class="tag ok">完成</span></td></tr>
+    <tr><td>P0</td><td>解析 TFLite 模型 I/O 与算子</td><td><span class="tag ok">完成</span></td></tr>
+    <tr><td>P0</td><td>新建演示环境，安装 TensorFlow</td><td><span class="tag warn">待办</span></td></tr>
+    <tr><td>P0</td><td>官方脚本跑通，生成 LOL 对比图</td><td><span class="tag warn">待办</span></td></tr>
+    <tr><td>P0</td><td>手机暗光照片预处理与增强</td><td><span class="tag warn">待办</span></td></tr>
+    <tr><td>P1</td><td>手机安装 AI Benchmark 并测速</td><td><span class="tag warn">待办</span></td></tr>
+    <tr><td>P2</td><td>整理串场稿与离线演示素材</td><td><span class="tag warn">待办</span></td></tr>
+  </table>
+
+  <h2>6. 现场演示串场（草案）</h2>
+  <ol>
+    <li><b>背景：</b>MobileIE 是 ICCV 2025 的 4K 参数极轻量图像增强网络，面向手机端实时推理。</li>
+    <li><b>测速：</b>在手机上用 AI Benchmark 加载官方 TFLite 模型，展示后端加速下的延迟/吞吐。</li>
+    <li><b>效果：</b>展示同一模型对暗光照片的增强前后对比（左原图、右增强，输入 400×600）。</li>
+    <li><b>收尾：</b>强调“4K 参数 + 手机端实时 + 无需联网”，对应项目申报的端侧智能主题。</li>
+    <li><b>Q&amp;A 预案：</b>为什么不做实时 App？——论文原始流程只做端侧测速；延迟差异？——机型/后端/温度不同；效果是否手机算的？——效果由官方 TFLite 脚本输出，模型完全一致。</li>
+  </ol>
+
+  <h2>7. 风险与备选</h2>
+  <table>
+    <tr><th>风险</th><th>应对</th></tr>
+    <tr><td>现场要求手机摄像头实时增强</td><td>B 方案不满足；备选 Termux 跑官方脚本（0.5–1 天）或最小安卓 App（约 1 天）</td></tr>
+    <tr><td>模型输入固定 400×600</td><td>手机照片先用 <code>prepare_demo_images.py</code> 缩放/裁剪</td></tr>
+    <tr><td>虚拟环境缺少 TensorFlow</td><td>新建独立演示环境，避免影响研究环境</td></tr>
+    <tr><td>AI Benchmark 下载/版本差异</td><td>官网直连 APK；提前安装并完成标准测试；必要时用 Nightly</td></tr>
+    <tr><td>模型只擅长低光</td><td>现场素材选暗光照片；水下增强需另行转换</td></tr>
+  </table>
+
+  <h2>8. 交付物</h2>
+  <ul>
+    <li><code>README.md</code>：工作目标、边界、产出与复现</li>
+    <li><code>docs/01-demo-plan.md</code>：方案对比、任务拆解、串场稿、时间表</li>
+    <li><code>docs/02-ai-benchmark-guide.md</code>：手机安装与导入手册</li>
+    <li><code>docs/03-official-tflite-inference.md</code>：官方脚本运行与图片预处理</li>
+    <li><code>scripts/inspect_tflite.py</code>：无需 TensorFlow 的模型解析</li>
+    <li><code>scripts/prepare_demo_images.py</code>：缩放与左右对比图</li>
+    <li><code>scripts/run_official_tflite.py</code>：官方推理脚本的薄包装</li>
+    <li><code>results/</code>：增强结果、对比图、手机录屏（待产出）</li>
+  </ul>
+
+  <footer>
+    MobileIE-Neo · research/6.mobile-deployment · 2026-11-08 · 单文件 HTML，可离线打开。
+  </footer>
+</div>
+</body>
+</html>
