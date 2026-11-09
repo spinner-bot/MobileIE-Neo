@@ -1,0 +1,33 @@
+exp_name: lle
+
+train:
+  warmup: True
+  warmup_epoch: 10
+  lr_warmup: 1e-6
+  train_inp: ./data/LOLdataset/our485/low   # local change: was ./lowlight/LOLdataset/our485/low
+  train_gt: ./data/LOLdataset/our485/high   # local change: was ./lowlight/LOLdataset/our485/high
+  valid_inp: ./data/LOLdataset/eval15/low   # local change: was ./lowlight/LOLdataset/eval15/low
+  valid_gt: ./data/LOLdataset/eval15/high   # local change: was ./lowlight/LOLdataset/eval15/high
+  batch_size: 4
+  epoch: 2000
+  lr: 1e-3
+  num_workers: 0
+  save_every: 20
+  save_slim: true
+
+test:
+  test_inp: ./data/LOLdataset/eval15/low   # local change: was ./lowlight/LOLdataset/eval15/low
+  test_gt: ./data/LOLdataset/eval15/high   # local change: was ./lowlight/LOLdataset/eval15/high
+  num_workers: 0
+  save: false
+
+demo:
+  demo_inp: ./data/samples/lowlight   # local change: was ./lowlight/LOLdataset/eval15/low
+  num_workers: 0
+
+model:
+  type: re-parameterized # local change: was original [original, re-parameterized]
+  pretrained: ./pretrain/lolv1_best_slim.pkl  # local change: was false
+  need_slim: true # local change: was false
+  rep_scale: 4
+  channels: 12
