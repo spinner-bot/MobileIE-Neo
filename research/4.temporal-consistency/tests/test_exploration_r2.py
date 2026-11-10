@@ -31,8 +31,8 @@ class ExplorationR2Checks(unittest.TestCase):
             model.head.gamma.fill_(-2)
             model.body.gamma.fill_(2)
         project_mixtures(model)
-        self.assertEqual(float(model.head.gamma), 0)
-        self.assertEqual(float(model.body.gamma), 1)
+        self.assertEqual(float(model.head.gamma.detach()), 0)
+        self.assertEqual(float(model.body.gamma.detach()), 1)
         self.assertTrue(bool(torch.isfinite(model(torch.rand(1, 3, 24, 24))).all()))
 
     def test_layered_occlusion_correspondence_matches_ground_truth(self):
