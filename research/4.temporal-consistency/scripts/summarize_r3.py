@@ -90,6 +90,21 @@ def main():
         row['window'] = 'before' if t < 12 else 'event' if t == 12 else 'recovery' if t < 16 else 'late'
     windows = grouped(trace, ['case', 'method', 'window'], METRICS)
     save_json(out/'reset_windows.json', windows)
+    light = defaultdict(dict)
+    for row in trace:
+        if row['case'] == 'light_step':
+            light[(row['scene'], row['input_seed'], row['method'])][row['frame']] = row
+    response = []
+    for (scene, seed, method), frames in light.items():
+        target_jump = frames[12]['target_mean']-frames[11]['target_mean']
+        output_jump = frames[12]['output_mean']-frames[11]['output_mean']
+        response.append({'scene': scene, 'input_seed': seed, 'method': method,
+            'event_gain': output_jump/target_jump,
+            'event_jump_abs_error': abs(output_jump-target_jump),
+            'early_brightness_mae': float(np.mean([abs(frames[t]['output_mean']-frames[t]['target_mean']) for t in range(12, 16)]))})
+    save_json(out/'light_response_per_sequence.json', response)
+    save_json(out/'light_response_summary.json', grouped(response, ['method'],
+              ['event_gain', 'event_jump_abs_error', 'early_brightness_mae']))
     text = ['# 第三轮探索统计', '', '同一48输入条件的探索性评价；非真实低光、非独立盲测。', '',
             '## 冻结网络干预', '', '| method | PSNR | SSIM | temporal error | edge MAE |', '|---|---:|---:|---:|---:|']
     pglobal = grouped(product, ['method'], METRICS)
