@@ -1,6 +1,7 @@
 """Independent checks of feature moments and history-reset semantics."""
 import sys
 import copy
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -12,9 +13,50 @@ from probe_feature_products_r3 import moments
 from explore_resets_r3 import reset_methods
 from explore_products_r3 import PairFST, sampling
 from explore_temporal_controls import MobileIELLENetS
+from paired_fst_r3 import TrainablePairFST
+from xiph_motion_r3 import read_y4m
 
 
 class ExplorationR3Checks(unittest.TestCase):
+    def test_pair_training_matches_initial_function_and_learns_mixture(self):
+        torch.manual_seed(4)
+        original = MobileIELLENetS(12).body
+        value = torch.rand(4, 12, 32, 32)
+        for mode in ['cross', 'mean_square']:
+            module = TrainablePairFST(copy.deepcopy(original), mode)
+            module.offsets = [(2, -1), (-3, 2)]
+            pred = module(value)
+            torch.testing.assert_close(pred, original(value), rtol=0, atol=0)
+            pred.square().mean().backward()
+            self.assertTrue(bool(torch.isfinite(module.gamma.grad)))
+            self.assertGreater(abs(float(module.gamma.grad)), 0.)
+
+    def test_integer_alignment_preserves_equal_features(self):
+        original = MobileIELLENetS(12).body
+        original.block1 = torch.nn.Identity()
+        module = TrainablePairFST(original, 'cross')
+        module.gamma.data.fill_(1.)
+        module.offsets = [(2, 0)]
+        prev = torch.rand(1, 12, 32, 32)
+        cur = prev.clone()
+        cur[..., :-2] = prev[..., 2:]
+        value = torch.cat([prev, cur])
+        torch.testing.assert_close(module(value), original(value), rtol=0, atol=0)
+
+    def test_y4m_limited_range_and_truncation(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder)/'sample.y4m'
+            header = b'YUV4MPEG2 W4 H4 F30:1 Ip A1:1\nFRAME\n'
+            path.write_bytes(header+bytes([16]*16+[128]*8))
+            frames, _ = read_y4m(path, 1)
+            np.testing.assert_array_equal(frames[0], 0.)
+            path.write_bytes(header+bytes([235]*16+[128]*8))
+            frames, _ = read_y4m(path, 1)
+            np.testing.assert_array_equal(frames[0], 255.)
+            path.write_bytes(header+bytes([16]*3))
+            with self.assertRaises(ValueError):
+                read_y4m(path, 1)
+
     def test_product_interventions_preserve_first_frame_and_invalid_regions(self):
         torch.manual_seed(3)
         original = MobileIELLENetS(12).eval().body
