@@ -2,8 +2,9 @@
 
 目标：以论文为最终产出，深入核查 MobileIE 的架构与训练机制，在移动端计算预算内设计视频增强模型，用传统方法、后处理和已有视频模型对照验证画质、时间稳定性与效率收益。
 
-- 状态：**架构与评价核查中**（2026-11-10）；正式训练与真实视频泛化尚未验证
+- 状态：**前期探索，首轮调研与预实验已完成**（2026-11-10）；没有确定最终方法，正式训练与真实视频泛化尚未验证
 - 当前研究入口：[MobileIE 架构、训练核查与视频研究设计](docs/architecture-and-video-research-plan.md)
+- 最新结果：[进展报告0010](../../docs/进展报告/0010-T-26111018-首轮调研与预实验.md)、[预实验表格与图](report/exploration-r1/tables.md)、[完整过程](process/exploration-r1/journal.md)
 - 上游：共享代码与权重在项目根目录 [`MobileIE/`](../../MobileIE)
 - 前置工作：[2 号复现](../2.reproduction/README.md)、[3 号闪烁基线](../3.video-flicker/README.md)、[5 号前期调研](../5.prior-art-survey/README.md)
 - 进展报告：[0007-T-261105-4 号工作启动与文献核查](../../docs/进展报告/0007-T-261105-4号工作启动与文献核查.md)
@@ -18,10 +19,13 @@
 2. **原模型哪些结构与训练假设限制视频处理？** —— 用原论文/代码核查、受控实验与等预算消融定位。
 3. **训练或结构重设计能否改善画质—稳定性—效率权衡？** —— 与普通去噪、时序损失、后处理和视频增强模型比较，以可重复收益支撑论文贡献。
 
+2026-11-10首轮探索已保存891条方法—序列评估（54种不同输入条件，3个已有场景）。固定光照下“低维门控状态+运动补偿”有局部互补收益，但目标光照变化时固定组合劣于单用运动补偿；输入固定双边滤波也出现明显画质损失。下一轮继续调研和预实验，探索状态适应、噪声/特征变换及可靠时间冗余，不锁定唯一方法或组合。所有结果仍是受控合成预实验。
+
 ## 2. 当前产出
 
 | 产出 | 位置 | 说明 |
 | --- | --- | --- |
+| 首轮调研与预实验 | [协议](docs/exploration-r1-protocol.md)、[图表](report/exploration-r1/)、[过程记录](process/exploration-r1/) | 有效对齐/反向warp校验、单项及组合矩阵、正负结果与特征探针 |
 | 架构与视频研究设计 | [`docs/architecture-and-video-research-plan.md`](docs/architecture-and-video-research-plan.md) | FST/HDPA/重参数化、warm-up/IWO、结构候选与强基线矩阵 |
 | 文献与新颖性核查 | [`docs/literature-and-novelty.md`](docs/literature-and-novelty.md) | MobileIE 引用追踪 + 相邻工作 + 选题定位 |
 | 评价协议（草案） | [`docs/evaluation-protocol.md`](docs/evaluation-protocol.md) | 数据集、指标、成功判据（待导师确认） |
@@ -57,6 +61,8 @@
 图表：`results/visibility/{series,hist,temporal_std_maps,spectrum}.png`。
 
 ## 4. 工作计划
+
+以下保留2026-11-05的阶段计划；当前属于前期探索，实际优先级及下一轮假设以进展报告0010为准，暂不把方法候选当成已确定的正式实验路线。
 
 ### P0（本周，服务器到位前）
 - [x] MobileIE 引用追踪与相邻工作检索；
@@ -100,3 +106,4 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 
 - 2026-11-05 · claude code (local)：创建 4 号工作，完成文献核查、评价协议、消融方案与可见性分析。
 - 2026-11-10 18:03 +08:00 · Codex  (sqs_A100)：以论文目标更新主线入口，标注历史指标待重核，并将结构设计、训练机制和完整基线纳入研究问题。
+- 2026-11-10 18:29 +08:00 · Codex  (sqs_A100)：记录首轮自主探索已完成，连接逐序列结果、失败资料和进展报告，保持多路线及组合开放。
