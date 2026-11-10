@@ -36,9 +36,17 @@ def main():
     files = list((BASE/'scripts').glob('*.py'))+list((BASE/'tests').glob('*.py'))
     for path in files:
         ast.parse(path.read_text(), filename=str(path))
-    counts = {'reset_rows': 720, 'frozen_product_rows': 720, 'trained_validation_rows': 1344,
-              'actual_motion_synthetic_rows': 352, 'real_paired_rows': 84,
-              'real_flow_diagnostic_rows': 14, 'real_enhanced_motion_rows': 84}
+    def count_lines(folder):
+        return len((BASE/'results'/folder/'per_sequence.jsonl').read_text().splitlines())
+    training = json.loads((BASE/'report/exploration-r3-training/training_audit.json').read_text())
+    counts = {'reset_rows': count_lines('exploration-r3-resets'),
+              'frozen_product_rows': count_lines('exploration-r3-products'),
+              'trained_validation_rows': training['validation_rows'],
+              'actual_motion_synthetic_rows': sum(count_lines('exploration-r3-motion-'+s) for s in ['baseline', 'trained', 'input']),
+              'real_paired_rows': count_lines('exploration-r3-real-pairs'),
+              'real_flow_diagnostic_rows': len(json.loads((BASE/'results/exploration-r3-real-flow/per_sequence.json').read_text())),
+              'real_enhanced_motion_rows': count_lines('exploration-r3-real-enhanced-flow')}
+    assert list(counts.values()) == [720, 720, 1344, 352, 84, 14, 84]
     save_json(process/'final-accounting.json', {'row_counts': counts, 'total_method_sequence_rows': sum(counts.values()),
         'repeated_method_input_model_identities': 288+48+192+4+22,
         'new_method_input_model_identities': sum(counts.values())-(288+48+192+4+22),
