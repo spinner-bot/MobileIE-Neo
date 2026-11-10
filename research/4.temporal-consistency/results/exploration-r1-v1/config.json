@@ -1,0 +1,29 @@
+{
+  "out": "research/4.temporal-consistency/results/exploration-r1-v1",
+  "device": "cuda",
+  "frames": 32,
+  "width": 320,
+  "height": 240,
+  "batch_size": 4,
+  "experiment_id": "exploration-r1-v1",
+  "pans": [
+    0,
+    4,
+    12
+  ],
+  "noise_seeds": [
+    0,
+    1
+  ],
+  "torch": "2.9.1+cu126",
+  "opencv": "4.11.0",
+  "git_revision": "cf591c56c9b329a806617bb6e01cb6fbdc72e705",
+  "weights_sha256": "d40a930fbc0435f47ce08dda17b1c630b86a501be9423b8f48dab14722fb5548",
+  "scene_sha256": {
+    "source": "e8514f9d35b7b1df33386cc408c27874212f5b1d8dbaf7f81c2d0e92bd0d61ff",
+    "lol1": "e47ae1d4a84c19cabdc1092a4bab1f8c99f7909e9783ba2930580d7f2cf7a856",
+    "lol22": "7342c992ede8d4e082c58769373bdbc78d71410bc848e597e56f1ef85270a5e0"
+  },
+  "visible_devices": "0",
+  "notes": "exploratory synthetic videos; no training; no claim of independent generalization"
+}
