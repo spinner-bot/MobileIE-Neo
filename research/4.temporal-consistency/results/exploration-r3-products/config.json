@@ -1,0 +1,22 @@
+{
+  "weights": "official slim frozen",
+  "mask_erosion_radius": 8,
+  "pair_weights": [
+    0.5,
+    0.5
+  ],
+  "output_ema_alpha": 0.7,
+  "body_modes": [
+    "cross",
+    "mean_square",
+    "square_mean"
+  ],
+  "head_modes": [
+    "cross"
+  ],
+  "alignments": [
+    "fb",
+    "oracle"
+  ],
+  "note": "no training; causal previous block1 feature, not recursive feature EMA"
+}
