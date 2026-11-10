@@ -75,10 +75,12 @@ def main():
     parser.add_argument("--out", required=True)
     parser.add_argument("--variants", default=",".join(VARIANTS))
     parser.add_argument("--steps", type=int, default=400)
+    parser.add_argument("--temporal-weight", type=float, default=.1)
+    parser.add_argument("--checkpoint-root", default=".cache/checkpoints/exploration-r2")
     parser.add_argument("--resume", action="store_true")
     args = parser.parse_args()
     variants = args.variants.split(",")
-    if args.steps < 1 or any(v not in VARIANTS for v in variants):
+    if args.steps < 1 or args.temporal_weight < 0 or any(v not in VARIANTS for v in variants):
         parser.error("positive steps and known variants required")
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=args.resume)
@@ -98,7 +100,7 @@ def main():
         for seed in [0, 1]:
             folder = out/f"{variant}-seed{seed}"
             folder.mkdir(exist_ok=args.resume)
-            cache = ROOT/".cache/checkpoints/exploration-r2"/f"{variant}-seed{seed}"
+            cache = ROOT/args.checkpoint_root/f"{variant}-seed{seed}"
             cache.mkdir(parents=True, exist_ok=True)
             torch.manual_seed(seed)
             net = new_model(device)
@@ -113,7 +115,7 @@ def main():
             checkpoint = cache/"last.pth"
             config = {"variant": variant, "seed": seed, "steps": args.steps, "batch_pairs": 4, "patch": 128,
                       "network_lr": 1e-5, "gamma_lr": 1e-3 if bounded else None,
-                      "temporal_lambda": .1 if "temporal" in variant else 0,
+                      "temporal_lambda": args.temporal_weight if "temporal" in variant else 0,
                       "grad_clip": 1., "limits": limits, "manifest_sha256": sha256(MANIFEST),
                       "pretrained_sha256": sha256(ROOT/"MobileIE/pretrain/lolv1_best_slim.pkl"),
                       "git_revision": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()}
