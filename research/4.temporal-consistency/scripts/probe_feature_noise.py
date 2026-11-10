@@ -79,8 +79,10 @@ def main():
                             linear, quadratic = 2*a*u*du, a*du*du
                             observed = captured[name] - reference[name]
                             error = float((observed-linear-quadratic).abs().max())
-                            previous = fst.setdefault(name, {"max_identity_error": 0., "linear_energy": 0., "quadratic_energy": 0., "cross_energy": 0., "observed_energy": 0.})
+                            scale = max(float(observed.abs().max()), float(linear.abs().max()), float(quadratic.abs().max()), 1e-8)
+                            previous = fst.setdefault(name, {"max_identity_error": 0., "max_scaled_identity_error": 0., "linear_energy": 0., "quadratic_energy": 0., "cross_energy": 0., "observed_energy": 0.})
                             previous["max_identity_error"] = max(previous["max_identity_error"], error)
+                            previous["max_scaled_identity_error"] = max(previous["max_scaled_identity_error"], error / scale)
                             size = du.shape[0]
                             previous["linear_energy"] += float((core(linear)**2).mean()) * size
                             previous["quadratic_energy"] += float((core(quadratic)**2).mean()) * size
@@ -98,7 +100,7 @@ def main():
                                      "random_std_rms": float((second-bias**2).clamp_min(0).mean().sqrt())})
                     for name, values in fst.items():
                         for key in list(values):
-                            if key != "max_identity_error":
+                            if not key.startswith("max_"):
                                 values[key] /= args.draws
                         fst_rows.append({"scene": scene, "photons": photons, "jpeg": jpeg, "layer": name, **values})
                     print(json.dumps({"scene": scene, "photons": photons, "jpeg": jpeg}), flush=True)
@@ -110,7 +112,7 @@ def main():
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
         writer.writeheader()
         writer.writerows(rows)
-    save_json(out / "config.json", {"experiment_id": "exploration-r1-feature-noise-v1", "draws": args.draws,
+    save_json(out / "config.json", {"experiment_id": "exploration-r1-feature-noise-scaled-check", "draws": args.draws,
               "seed_rule": "20261110+scene_index*100+photons", "photons": [20, 40, 80],
               "jpeg": [False, True], "weights_sha256": sha256(weights),
               "wall_seconds": time.perf_counter()-start, "note": "conditional feature response, not causal contribution attribution"})
