@@ -20,19 +20,35 @@ def main():
     for index in range(1, 13):
         name = f"kodim{index:02d}.png"
         url = "https://r0k.us/graphics/kodak/kodak/" + name
+        mirror = "https://raw.githubusercontent.com/cszn/FFDNet/master/testsets/Kodak24/" + name
         target = cache / name
+        provenance = target.with_suffix(".source.json")
+        source = url
         if not target.exists():
-            request = urllib.request.Request(url, headers={"User-Agent": "MobileIE-Neo-research/1.0"})
-            with urllib.request.urlopen(request, timeout=60) as response:
-                payload = response.read()
+            errors = []
+            for candidate in [url, mirror]:
+                try:
+                    request = urllib.request.Request(candidate, headers={"User-Agent": "MobileIE-Neo-research/1.0"})
+                    with urllib.request.urlopen(request, timeout=60) as response:
+                        payload = response.read()
+                    source = candidate
+                    break
+                except Exception as error:
+                    errors.append(f"{candidate}: {error}")
+                    print(errors[-1], flush=True)
+            else:
+                raise RuntimeError("; ".join(errors))
             temporary = target.with_suffix(".download")
             temporary.write_bytes(payload)
             with Image.open(temporary) as image:
                 image.verify()
             temporary.replace(target)
+            provenance.write_text(json.dumps({"download_url": source, "errors": errors}))
+        if provenance.exists():
+            source = json.loads(provenance.read_text())["download_url"]
         with Image.open(target) as image:
             size = list(image.size)
-        rows.append({"name": name[:-4], "path": str(target), "url": url, "size": size,
+        rows.append({"name": name[:-4], "path": str(target), "url": url, "download_url": source, "size": size,
                      "sha256": hashlib.sha256(target.read_bytes()).hexdigest(),
                      "split": "train" if index <= 6 else "exploratory_validation"})
         print(name, size, flush=True)
