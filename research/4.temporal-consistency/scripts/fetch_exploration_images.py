@@ -50,6 +50,7 @@ def main():
             size = list(image.size)
         rows.append({"name": name[:-4], "path": str(target), "url": url, "download_url": source, "size": size,
                      "sha256": hashlib.sha256(target.read_bytes()).hexdigest(),
+                     "source_version": "native dimensions" if size in [[768, 512], [512, 768]] else "mirror 500x500 version",
                      "split": "train" if index <= 6 else "exploratory_validation"})
         print(name, size, flush=True)
     destination = Path(args.manifest)
@@ -59,7 +60,8 @@ def main():
     destination.write_text(json.dumps({"retrieved": datetime.datetime.now().astimezone().isoformat(),
         "source": "https://r0k.us/graphics/kodak/", "credits": "https://r0k.us/graphics/kodak/PhotoCD_credits.txt",
         "purpose": "exploration only; original pretraining overlap not audited; source images kept in ignored cache",
-        "images": rows}, indent=2) + "\n")
+        "images": rows,
+        "transform": "aspect-preserving cover and center crop to 768x512; not a standard Kodak benchmark"}, indent=2) + "\n")
 
 
 if __name__ == "__main__":
