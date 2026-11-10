@@ -24,8 +24,14 @@ def grouped(rows, keys, metrics):
     groups = defaultdict(list)
     for row in rows:
         groups[tuple(row[k] for k in keys)].append(row)
-    return [{**dict(zip(keys, key)), 'n': len(values), **{m: float(np.mean([v[m] for v in values if v[m] is not None]))
-            for m in metrics}} for key, values in groups.items()]
+    result = []
+    for key, values in groups.items():
+        row = {**dict(zip(keys, key)), 'n': len(values)}
+        for metric in metrics:
+            valid = [v[metric] for v in values if v[metric] is not None]
+            row[metric] = float(np.mean(valid)) if valid else None
+        result.append(row)
+    return result
 
 
 def compare(old, new, mapping):
