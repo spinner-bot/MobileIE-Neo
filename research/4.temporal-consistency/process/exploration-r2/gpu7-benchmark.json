@@ -1,0 +1,31 @@
+{
+  "samples": [
+    {
+      "gpu": 7,
+      "uuid": "GPU-7d263daa-6d13-02a6-b0ea-29c2c09a2c8b",
+      "memory_mib": 4,
+      "utilization_percent": 0,
+      "compute_processes": [],
+      "time": "2026-11-10T20:50:27.832376+08:00"
+    },
+    {
+      "gpu": 7,
+      "uuid": "GPU-7d263daa-6d13-02a6-b0ea-29c2c09a2c8b",
+      "memory_mib": 4,
+      "utilization_percent": 0,
+      "compute_processes": [],
+      "time": "2026-11-10T20:50:29.041900+08:00"
+    }
+  ],
+  "allowed": true,
+  "command": [
+    ".venv/bin/python",
+    "research/4.temporal-consistency/scripts/benchmark_bounded_r2.py",
+    "--out",
+    "research/4.temporal-consistency/results/exploration-r2-bounded-cost.json"
+  ],
+  "scope": "two preflight samples and project-local lock; not a reservation system shared with other users",
+  "returncode": 0,
+  "process_wall_seconds": 8.79698593399371,
+  "ended": "2026-11-10T20:50:37.841257+08:00"
+}

@@ -1,0 +1,33 @@
+{
+  "samples": [
+    {
+      "gpu": 4,
+      "uuid": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+      "memory_mib": 40439,
+      "utilization_percent": 0,
+      "compute_processes": [
+        "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e, 1741824, 40430"
+      ],
+      "time": "2026-11-10T20:57:12.599607+08:00"
+    },
+    {
+      "gpu": 4,
+      "uuid": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+      "memory_mib": 40439,
+      "utilization_percent": 5,
+      "compute_processes": [
+        "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e, 1741824, 40430"
+      ],
+      "time": "2026-11-10T20:57:13.823790+08:00"
+    }
+  ],
+  "allowed": false,
+  "command": [
+    ".venv/bin/python",
+    "-u",
+    "research/4.temporal-consistency/scripts/evaluate_trained_fusion_r2.py",
+    "--out",
+    "research/4.temporal-consistency/results/exploration-r2-trained-fusion"
+  ],
+  "scope": "two preflight samples and project-local lock; not a reservation system shared with other users"
+}

@@ -1,0 +1,38 @@
+Working directory: /root/Users/zrh/repo/MobileIE-Neo
+All GPU commands inherit PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2.
+The project .venv reads existing torch packages; it does not modify the shared environment.
+
+mountpoint -q /data
+nvidia-smi --query-gpu=index,name,memory.used,memory.total,utilization.gpu --format=csv,noheader
+nvidia-smi --query-compute-apps=gpu_uuid,pid,process_name,used_gpu_memory --format=csv
+
+# Fetch (first attempt failed on primary HTTP401; second code revision supports verified mirror)
+.venv/bin/python -u research/4.temporal-consistency/scripts/fetch_exploration_images.py --manifest research/4.temporal-consistency/data/exploration-r2/kodak_manifest.json
+
+# CPU scientific checks
+CUDA_VISIBLE_DEVICES='' .venv/bin/python -m unittest discover -s research/4.temporal-consistency/tests -v
+
+# Two independent model-training jobs. Each performs 2 variants x 2 seeds x 400 updates.
+python3 research/4.temporal-consistency/scripts/gpu_guard.py --gpu 4 --record research/4.temporal-consistency/process/exploration-r2/gpu4-training.json -- .venv/bin/python -u research/4.temporal-consistency/scripts/train_exploration_r2.py --out research/4.temporal-consistency/results/exploration-r2-training-plain --variants task,task_temporal
+python3 research/4.temporal-consistency/scripts/gpu_guard.py --gpu 5 --record research/4.temporal-consistency/process/exploration-r2/gpu5-training.json -- .venv/bin/python -u research/4.temporal-consistency/scripts/train_exploration_r2.py --out research/4.temporal-consistency/results/exploration-r2-training-bounded --variants bounded,bounded_temporal
+
+# State breadth; first launch's partial files/log were moved to the failed-v1 names.
+python3 research/4.temporal-consistency/scripts/gpu_guard.py --gpu 6 --record research/4.temporal-consistency/process/exploration-r2/gpu6-state-retry.json -- .venv/bin/python -u research/4.temporal-consistency/scripts/explore_state_r2.py --out research/4.temporal-consistency/results/exploration-r2-state
+
+# Stronger temporal-loss controls: same steps/data and separate checkpoint roots.
+python3 research/4.temporal-consistency/scripts/gpu_guard.py --gpu 4 --record research/4.temporal-consistency/process/exploration-r2/gpu4-lambda05.json -- .venv/bin/python -u research/4.temporal-consistency/scripts/train_exploration_r2.py --out research/4.temporal-consistency/results/exploration-r2-lambda05 --variants task_temporal --temporal-weight 0.5 --checkpoint-root .cache/checkpoints/exploration-r2-lambda05
+python3 research/4.temporal-consistency/scripts/gpu_guard.py --gpu 5 --record research/4.temporal-consistency/process/exploration-r2/gpu5-lambda10.json -- .venv/bin/python -u research/4.temporal-consistency/scripts/train_exploration_r2.py --out research/4.temporal-consistency/results/exploration-r2-lambda10 --variants task_temporal --temporal-weight 1.0 --checkpoint-root .cache/checkpoints/exploration-r2-lambda10
+
+# Architecture cost, 50 warm-ups + 200 measured iterations per block, 3 alternating blocks.
+python3 research/4.temporal-consistency/scripts/gpu_guard.py --gpu 7 --record research/4.temporal-consistency/process/exploration-r2/gpu7-benchmark.json -- .venv/bin/python research/4.temporal-consistency/scripts/benchmark_bounded_r2.py --out research/4.temporal-consistency/results/exploration-r2-bounded-cost.json
+
+# Trained model + fusion: attempted GPU4 was denied; identical command relaunched on idle GPU6.
+python3 research/4.temporal-consistency/scripts/gpu_guard.py --gpu 6 --record research/4.temporal-consistency/process/exploration-r2/gpu6-trained-fusion.json -- .venv/bin/python -u research/4.temporal-consistency/scripts/evaluate_trained_fusion_r2.py --out research/4.temporal-consistency/results/exploration-r2-trained-fusion
+
+# CPU audits / plots; use fresh output directory names when reproducing.
+CUDA_VISIBLE_DEVICES='' MPLCONFIGDIR="$PWD/.cache/matplotlib" .venv/bin/python research/4.temporal-consistency/scripts/summarize_r2.py --out research/4.temporal-consistency/report/exploration-r2
+CUDA_VISIBLE_DEVICES='' MPLCONFIGDIR="$PWD/.cache/matplotlib" .venv/bin/python research/4.temporal-consistency/scripts/summarize_trained_fusion_r2.py --out research/4.temporal-consistency/report/exploration-r2-fusion
+CUDA_VISIBLE_DEVICES='' .venv/bin/python research/4.temporal-consistency/scripts/probe_scalar_moments.py --out research/4.temporal-consistency/results/exploration-r2-scalar-moments.json
+
+# Source history/provenance matters: startup-revision and source-hash instrumentation
+# was added after the completed original runs. See source-revisions.json and journal.md.

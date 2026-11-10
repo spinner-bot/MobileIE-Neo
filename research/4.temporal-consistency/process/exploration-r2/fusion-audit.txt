@@ -1,0 +1,81 @@
+{
+  "rows": 864,
+  "raw_recomputed": 288,
+  "new_fusion_evaluations": 576,
+  "raw_max_abs_difference": 0.0,
+  "checkpoint_hashes_match": true
+}
+[
+  {
+    "model": "task",
+    "fusion": "raw",
+    "psnr_rgb": 19.71880791043264,
+    "ssim_rgb": 0.49160208450242254,
+    "edge_mae": 6.1975001146396,
+    "temporal_error": 16.464541745770905
+  },
+  {
+    "model": "task",
+    "fusion": "flow",
+    "psnr_rgb": 20.761904143317178,
+    "ssim_rgb": 0.6901807920464004,
+    "edge_mae": 3.5383796792270403,
+    "temporal_error": 6.1471957674787445
+  },
+  {
+    "model": "task",
+    "fusion": "fb",
+    "psnr_rgb": 20.80594572795877,
+    "ssim_rgb": 0.6887213823760652,
+    "edge_mae": 3.553872403378288,
+    "temporal_error": 6.193901932875629
+  },
+  {
+    "model": "task_T1",
+    "fusion": "raw",
+    "psnr_rgb": 19.55680063037538,
+    "ssim_rgb": 0.5061802896800348,
+    "edge_mae": 5.822218629738523,
+    "temporal_error": 15.306701408760508
+  },
+  {
+    "model": "task_T1",
+    "fusion": "flow",
+    "psnr_rgb": 20.314422420377483,
+    "ssim_rgb": 0.6968567992896877,
+    "edge_mae": 3.4507468482479453,
+    "temporal_error": 5.7413724135847986
+  },
+  {
+    "model": "task_T1",
+    "fusion": "fb",
+    "psnr_rgb": 20.35919616630033,
+    "ssim_rgb": 0.6956513707280262,
+    "edge_mae": 3.462107817745871,
+    "temporal_error": 5.784556097310522
+  },
+  {
+    "model": "bounded_T0.1",
+    "fusion": "raw",
+    "psnr_rgb": 19.53859975480084,
+    "ssim_rgb": 0.5079873968950576,
+    "edge_mae": 5.785859145224094,
+    "temporal_error": 15.15609012206474
+  },
+  {
+    "model": "bounded_T0.1",
+    "fusion": "flow",
+    "psnr_rgb": 20.315930771217534,
+    "ssim_rgb": 0.7007039750201836,
+    "edge_mae": 3.4396710140216684,
+    "temporal_error": 5.692959564432442
+  },
+  {
+    "model": "bounded_T0.1",
+    "fusion": "fb",
+    "psnr_rgb": 20.35961515296788,
+    "ssim_rgb": 0.6995149947146677,
+    "edge_mae": 3.450489971269336,
+    "temporal_error": 5.735722443994444
+  }
+]
