@@ -1,0 +1,118 @@
+{
+  "jobs": [
+    {
+      "record": "gpu0-features.json",
+      "gpu": 0,
+      "allowed": false,
+      "process_wall_seconds": 0.0,
+      "returncode": null
+    },
+    {
+      "record": "gpu1-benchmark.json",
+      "gpu": 1,
+      "allowed": true,
+      "process_wall_seconds": 8.513466888980474,
+      "returncode": 0
+    },
+    {
+      "record": "gpu1-motion-baseline.json",
+      "gpu": 1,
+      "allowed": true,
+      "process_wall_seconds": 109.7398690120317,
+      "returncode": 0
+    },
+    {
+      "record": "gpu1-real-flow.json",
+      "gpu": 1,
+      "allowed": true,
+      "process_wall_seconds": 25.608139937976375,
+      "returncode": 0
+    },
+    {
+      "record": "gpu1-resets.json",
+      "gpu": 1,
+      "allowed": true,
+      "process_wall_seconds": 227.0954857840552,
+      "returncode": 0
+    },
+    {
+      "record": "gpu1-training-input.json",
+      "gpu": 1,
+      "allowed": true,
+      "process_wall_seconds": 222.3384663190227,
+      "returncode": 0
+    },
+    {
+      "record": "gpu1-training-task.json",
+      "gpu": 1,
+      "allowed": true,
+      "process_wall_seconds": 171.38211435097037,
+      "returncode": 0
+    },
+    {
+      "record": "gpu3-features.json",
+      "gpu": 3,
+      "allowed": true,
+      "process_wall_seconds": 43.939888735010754,
+      "returncode": 0
+    },
+    {
+      "record": "gpu3-input-benchmark.json",
+      "gpu": 3,
+      "allowed": true,
+      "process_wall_seconds": 8.778967512014788,
+      "returncode": 0
+    },
+    {
+      "record": "gpu3-motion-input.json",
+      "gpu": 3,
+      "allowed": true,
+      "process_wall_seconds": 81.11505859100726,
+      "returncode": 0
+    },
+    {
+      "record": "gpu3-motion-trained.json",
+      "gpu": 3,
+      "allowed": true,
+      "process_wall_seconds": 96.0419106889749,
+      "returncode": 0
+    },
+    {
+      "record": "gpu3-products.json",
+      "gpu": 3,
+      "allowed": true,
+      "process_wall_seconds": 254.40798087400617,
+      "returncode": 0
+    },
+    {
+      "record": "gpu3-real-enhanced-flow.json",
+      "gpu": 3,
+      "allowed": true,
+      "process_wall_seconds": 60.49652821297059,
+      "returncode": 0
+    },
+    {
+      "record": "gpu3-real-pairs.json",
+      "gpu": 3,
+      "allowed": true,
+      "process_wall_seconds": 56.16574503300944,
+      "returncode": 0
+    },
+    {
+      "record": "gpu3-training-products.json",
+      "gpu": 3,
+      "allowed": true,
+      "process_wall_seconds": 462.68402271397645,
+      "returncode": 0
+    }
+  ],
+  "allowed_jobs": 14,
+  "denied_jobs": 1,
+  "peak_concurrent_project_jobs": 2,
+  "per_gpu_process_seconds": {
+    "1": 764.6775422930368,
+    "3": 1063.6301023609703
+  },
+  "total_gpu_process_seconds": 1828.3076446540072,
+  "scope": "child process elapsed, including CPU work/startup; not active CUDA kernel time. Overlap inferred from end timestamp and monotonic duration."
+}
