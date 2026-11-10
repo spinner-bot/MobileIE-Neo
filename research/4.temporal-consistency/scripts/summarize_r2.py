@@ -94,15 +94,19 @@ def main():
     (out/"tables.md").write_text("\n".join(lines)+"\n")
     plt.rcParams.update({"font.size":9,"axes.grid":True,"grid.alpha":.2})
     fig,axes=plt.subplots(2,2,figsize=(11,8))
+    markers=['x','o','s','^','D','v','P']
+    styles={name:(plt.get_cmap('tab10')(i),markers[i]) for i,name in enumerate(all_models)}
     for ax,case in zip(axes.flat,["pan","light_step","occlusion","cut"]):
         for name,rows in all_models.items():
             chosen=[r for r in rows if r['case']==case]
             x,y=mean(chosen,'temporal_error'),mean(chosen,'psnr_rgb')
-            ax.scatter(x,y)
-            ax.annotate(name,(x,y),xytext=(3,3),textcoords='offset points',fontsize=7)
+            color,marker=styles[name]
+            ax.scatter(x,y,color=color,marker=marker,label=name,s=45)
         ax.set(title=case,xlabel='GT-relative temporal error (0-255)',ylabel='RGB PSNR (dB)')
         ax.margins(x=.3,y=.2)
-    fig.tight_layout()
+    handles,labels=axes.flat[0].get_legend_handles_labels()
+    fig.legend(handles,labels,loc='lower center',ncol=4,fontsize=9)
+    fig.tight_layout(rect=(0,.08,1,1))
     fig.savefig(out/'depth_tradeoff.png',dpi=150)
     fig.savefig(out/'depth_tradeoff.svg')
     plt.close(fig)
