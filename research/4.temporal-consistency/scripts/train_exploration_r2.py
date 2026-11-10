@@ -148,10 +148,10 @@ def main():
                 norm = float(torch.nn.utils.clip_grad_norm_(net.parameters(), 1.))
                 optimizer.step()
                 project_mixtures(net)
-                row = {"step": step+1, "task": float(task), "temporal": float(temporal),
-                       "loss": float(loss), "gradient_norm": norm,
-                       "gamma_head": float(net.head.gamma) if bounded else None,
-                       "gamma_body": float(net.body.gamma) if bounded else None}
+                row = {"step": step+1, "task": float(task.detach()), "temporal": float(temporal.detach()),
+                       "loss": float(loss.detach()), "gradient_norm": norm,
+                       "gamma_head": float(net.head.gamma.detach()) if bounded else None,
+                       "gamma_body": float(net.body.gamma.detach()) if bounded else None}
                 with (folder/"training.jsonl").open("a") as stream:
                     stream.write(json.dumps(row, allow_nan=False)+"\n")
                 if (step+1)%50 == 0 or step+1 == args.steps or stop[0]:
