@@ -31,7 +31,7 @@ def main():
     baseline = read(results/directories[0]/"pretrained_validation.json")
     all_models["pretrained"] = baseline
     keys = ["psnr_rgb", "ssim_rgb", "edge_mae", "flicker", "temporal_error"]
-    first_task = []
+    first_task = {}
     for directory in directories:
         repeated = read(results/directory/"pretrained_validation.json")
         assert len(repeated) == 48
@@ -43,7 +43,7 @@ def main():
             history = [json.loads(line) for line in (run/"training.jsonl").read_text().splitlines()]
             assert [r["step"] for r in history] == list(range(1, 401))
             assert all(np.isfinite(r["loss"]) for r in history)
-            first_task.append(history[0]["task"])
+            first_task.setdefault(config["seed"], []).append(history[0]["task"])
             runtime = read(run/"runtime.json")
             checkpoint = root/runtime["checkpoint"]
             assert hashlib.sha256(checkpoint.read_bytes()).hexdigest() == runtime["checkpoint_sha256"]
@@ -56,7 +56,8 @@ def main():
             seed_summaries.append({"method": label, "seed": config["seed"], **{k:mean(values,k) for k in keys},
                 "gamma_head": history[-1]["gamma_head"], "gamma_body": history[-1]["gamma_body"]})
             histories[f"{label}-seed{config['seed']}"] = history
-    assert max(first_task)-min(first_task) < 1e-6
+    first_difference = max(max(values)-min(values) for values in first_task.values())
+    assert first_difference < 1e-6
     assert len(seed_summaries) == 12
     state = [json.loads(line) for line in (results/"exploration-r2-state/per_sequence.jsonl").read_text().splitlines()]
     traces = [json.loads(line) for line in (results/"exploration-r2-state/per_frame.jsonl").read_text().splitlines()]
@@ -70,7 +71,7 @@ def main():
     audit = {"trained_runs": len(seed_summaries), "updates_per_run": 400,
              "trained_validation_evaluations": sum(len(r) for k,r in all_models.items() if k != "pretrained"),
              "state_evaluations": len(state), "state_frame_records": len(traces),
-             "initial_task_loss_max_difference": max(first_task)-min(first_task),
+             "initial_task_loss_max_difference_within_seed": first_difference,
              "train_validation_image_hashes_disjoint": True, "all_checkpoint_hashes_match": True}
     (out/"audit.json").write_text(json.dumps(audit,indent=2)+"\n")
     summary = {name:{k:mean(rows,k) for k in keys} for name,rows in all_models.items()}
