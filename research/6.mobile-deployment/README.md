@@ -61,6 +61,7 @@
 | 演示图片预处理脚本 | [`scripts/prepare_demo_images.py`](scripts/prepare_demo_images.py) | 完成 |
 | 官方推理脚本包装 | [`scripts/run_official_tflite.py`](scripts/run_official_tflite.py) | 完成 |
 | 模型 I/O 解析结果 | [`data/model_io.txt`](data/model_io.txt) | 完成 |
+| 测试设备参数 | [`data/test-devices.md`](data/test-devices.md) | 完成（一加 13 / 一加 9R） |
 | 前后对比图 | [`results/compare_lol_eval15/`](results/compare_lol_eval15)、[`results/compare_sample/`](results/compare_sample) | 完成 |
 | 增强结果 | [`results/lol_eval15/`](results/lol_eval15)、[`results/demo_output_sample/`](results/demo_output_sample) | 完成 |
 | 手机实测截图/录屏 | `results/phone/` | 待采集 |
