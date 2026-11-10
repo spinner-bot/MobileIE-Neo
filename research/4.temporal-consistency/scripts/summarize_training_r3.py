@@ -40,8 +40,9 @@ def main():
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     rows, runs = [], []
-    for variant in ['task', 'cross', 'mean_square']:
-        folder = BASE/'results'/('exploration-r3-training-task' if variant == 'task' else 'exploration-r3-training-products')
+    for variant in ['task', 'cross', 'mean_square', 'input_mean']:
+        name = 'exploration-r3-training-task' if variant == 'task' else 'exploration-r3-training-input' if variant == 'input_mean' else 'exploration-r3-training-products'
+        folder = BASE/'results'/name
         for seed in [0, 1]:
             run = folder/f'{variant}-seed{seed}'
             history = lines(run/'training.jsonl')
@@ -61,8 +62,8 @@ def main():
     initial = {str(seed): max(r['initial_task'] for r in runs if r['seed'] == seed)
                -min(r['initial_task'] for r in runs if r['seed'] == seed) for seed in [0, 1]}
     assert max(initial.values()) == 0.
-    assert len(rows) == 960
-    save_json(out/'training_audit.json', {'runs': runs, 'total_updates': 2400,
+    assert len(rows) == 1344
+    save_json(out/'training_audit.json', {'runs': runs, 'total_updates': 3200,
         'validation_rows': len(rows), 'unique_input_conditions': 48,
         'initial_task_within_seed_max_abs_difference': initial, 'checkpoint_hashes_match': True})
     summary = grouped(rows, ['method'], METRICS)
@@ -74,6 +75,8 @@ def main():
         ('cross__history__fb', 'task__ordinary__fb'),
         ('mean_square__history__fb', 'task__ordinary__fb'),
         ('cross__history__fb', 'mean_square__history__fb'),
+        ('cross__history__fb', 'input_mean__history__fb'),
+        ('input_mean__history__fb', 'task__ordinary__fb'),
         ('cross__history__fb', 'cross__history_off__fb')]
         for metric in ['psnr_rgb', 'temporal_error']]
     save_json(out/'paired_scene_deltas.json', deltas)
@@ -94,8 +97,9 @@ def main():
     plt.close(fig)
     if args.motion:
         motion = (lines(BASE/'results/exploration-r3-motion-baseline/per_sequence.jsonl')
-                  +lines(BASE/'results/exploration-r3-motion-trained/per_sequence.jsonl'))
-        assert len(motion) == 8*34
+                  +lines(BASE/'results/exploration-r3-motion-trained/per_sequence.jsonl')
+                  +lines(BASE/'results/exploration-r3-motion-input/per_sequence.jsonl'))
+        assert len(motion) == 8*44
         assert len({(r['scene'], r['read_rho'], r['input_seed'], r['method']) for r in motion}) == len(motion)
         hashes = defaultdict(set)
         for row in motion:
@@ -111,7 +115,7 @@ def main():
             'source_clips': 2, 'frames_per_clip': 24, 'reference_flow_is_estimated': True,
             'staged_input_hashes_match': True,
             'note': 'actual motion with synthetic low-light noise; not paired real low-light evaluation'})
-    print(json.dumps({'runs': len(runs), 'updates': 2400, 'validation_rows': len(rows), 'initial_difference': initial}, indent=2))
+    print(json.dumps({'runs': len(runs), 'updates': 3200, 'validation_rows': len(rows), 'initial_difference': initial}, indent=2))
 
 
 if __name__ == '__main__':
