@@ -1,0 +1,56 @@
+# Reconstructed argument lists from GPU launch audits; not a verbatim shell transcript.
+# cwd=/data/Users/zrh/repo/MobileIE-Neo
+# Recorded child arguments only: do not invoke CUDA children directly; wrap with gpu_guard.py and a new audit filename.
+# env PYTHONDONTWRITEBYTECODE=1; outputs/checkpoints must be fresh for reruns, preserving original evidence.
+.venv/bin/python research/4.temporal-consistency/scripts/xiph_motion_r3.py --manifest research/4.temporal-consistency/data/exploration-r3/xiph_manifest.json
+.venv/bin/python research/4.temporal-consistency/scripts/fetch_olives_r3.py --manifest research/4.temporal-consistency/data/exploration-r3/olives_manifest.json
+
+# gpu0-features.json allowed=False source=f3a04f9097b7b97de5d9f231afe2b3869c57c67d
+.venv/bin/python research/4.temporal-consistency/scripts/probe_feature_products_r3.py --out research/4.temporal-consistency/results/exploration-r3-features
+
+# gpu1-benchmark.json allowed=True source=396e37beacd19836a76f86f60289c17cb2114ade
+.venv/bin/python research/4.temporal-consistency/scripts/benchmark_products_r3.py --out research/4.temporal-consistency/results/exploration-r3-product-cost.json
+
+# gpu1-motion-baseline.json allowed=True source=56962ae948ddfb51dd49fd18e3c1f05a02642329
+.venv/bin/python research/4.temporal-consistency/scripts/explore_motion_r3.py --manifest research/4.temporal-consistency/data/exploration-r3/xiph_manifest.json --out research/4.temporal-consistency/results/exploration-r3-motion-baseline
+
+# gpu1-real-flow.json allowed=True source=169ef748d740ce09bb7f804f52f09e797811da94
+.venv/bin/python research/4.temporal-consistency/scripts/diagnose_real_flow_r3.py --manifest research/4.temporal-consistency/data/exploration-r3/olives_manifest.json --out research/4.temporal-consistency/results/exploration-r3-real-flow
+
+# gpu1-resets.json allowed=True source=f3a04f9097b7b97de5d9f231afe2b3869c57c67d
+.venv/bin/python research/4.temporal-consistency/scripts/explore_resets_r3.py --out research/4.temporal-consistency/results/exploration-r3-resets
+
+# gpu1-training-input.json allowed=True source=b5ea18433ce6bf4f0e03ba62547417190be29bf5
+.venv/bin/python research/4.temporal-consistency/scripts/train_products_r3.py --variants input_mean --out research/4.temporal-consistency/results/exploration-r3-training-input
+
+# gpu1-training-task.json allowed=True source=ccbcee1ccb761aced94fef9c775e4c4ab45afc29
+.venv/bin/python research/4.temporal-consistency/scripts/train_products_r3.py --variants task --out research/4.temporal-consistency/results/exploration-r3-training-task
+
+# gpu3-features.json allowed=True source=f3a04f9097b7b97de5d9f231afe2b3869c57c67d
+.venv/bin/python research/4.temporal-consistency/scripts/probe_feature_products_r3.py --out research/4.temporal-consistency/results/exploration-r3-features
+
+# gpu3-input-benchmark.json allowed=True source=0e7a7d42a352698769651f660b36ec9dc6449426
+.venv/bin/python research/4.temporal-consistency/scripts/benchmark_products_r3.py --variants ordinary,input_mean --out research/4.temporal-consistency/results/exploration-r3-input-cost.json
+
+# gpu3-motion-input.json allowed=True source=0e7a7d42a352698769651f660b36ec9dc6449426
+.venv/bin/python research/4.temporal-consistency/scripts/explore_motion_r3.py --include-r3 --r3-only --r3-variants input_mean --frozen-fusion --manifest research/4.temporal-consistency/data/exploration-r3/xiph_manifest.json --out research/4.temporal-consistency/results/exploration-r3-motion-input
+
+# gpu3-motion-trained.json allowed=True source=db4a078dfa0825092cf06c9abce13c52f9bd4536
+.venv/bin/python research/4.temporal-consistency/scripts/explore_motion_r3.py --include-r3 --r3-only --manifest research/4.temporal-consistency/data/exploration-r3/xiph_manifest.json --out research/4.temporal-consistency/results/exploration-r3-motion-trained
+
+# gpu3-products.json allowed=True source=a4a35a7ecb319fa7b09b0095b589d1c3f10e5a7f
+.venv/bin/python research/4.temporal-consistency/scripts/explore_products_r3.py --out research/4.temporal-consistency/results/exploration-r3-products
+
+# gpu3-real-enhanced-flow.json allowed=True source=5e151d26e641499f534eca4828493acbb195c5d4
+.venv/bin/python research/4.temporal-consistency/scripts/explore_real_pairs_r3.py --motion-input enhanced --manifest research/4.temporal-consistency/data/exploration-r3/olives_manifest.json --out research/4.temporal-consistency/results/exploration-r3-real-enhanced-flow
+
+# gpu3-real-pairs.json allowed=True source=4c09de37b013d4582f6ea19ba1cafd99c74e81b2
+.venv/bin/python research/4.temporal-consistency/scripts/explore_real_pairs_r3.py --manifest research/4.temporal-consistency/data/exploration-r3/olives_manifest.json --out research/4.temporal-consistency/results/exploration-r3-real-pairs
+
+# gpu3-training-products.json allowed=True source=ccbcee1ccb761aced94fef9c775e4c4ab45afc29
+.venv/bin/python research/4.temporal-consistency/scripts/train_products_r3.py --variants cross,mean_square --out research/4.temporal-consistency/results/exploration-r3-training-products
+
+.venv/bin/python -m unittest discover -s research/4.temporal-consistency/tests -v
+.venv/bin/python research/4.temporal-consistency/scripts/summarize_r3.py --out research/4.temporal-consistency/report/exploration-r3
+.venv/bin/python research/4.temporal-consistency/scripts/summarize_training_r3.py --motion --real --enhanced --out research/4.temporal-consistency/report/exploration-r3-training
+.venv/bin/python research/4.temporal-consistency/scripts/audit_exploration_r3.py
