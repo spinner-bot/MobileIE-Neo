@@ -42,7 +42,7 @@ def save_json(path, data):
     Path(path).write_text(json.dumps(data, indent=2, ensure_ascii=False, allow_nan=False), encoding="utf-8")
 
 
-def generate_sequence(image, pan, seed, noisy, frames, width, height):
+def generate_sequence(image, pan, seed, noisy, frames, width, height, target_step=False):
     rng = np.random.default_rng(seed)
     targets, inputs = [], []
     y0 = (image.shape[0] - height) // 2
@@ -50,6 +50,8 @@ def generate_sequence(image, pan, seed, noisy, frames, width, height):
         gt = image[y0:y0 + height, pan*t:pan*t + width].copy()
         if gt.shape[:2] != (height, width):
             raise ValueError("trajectory leaves source image")
+        if target_step and t < frames // 2:
+            gt *= .6  # A real target lighting change, also present in the input.
         low = (gt / 255.0) ** 2.2 * .35
         if noisy:
             low = rng.poisson(low * 40) / 40 + rng.normal(0, .008, low.shape)
@@ -75,6 +77,21 @@ class FrozenAttention(torch.nn.Module):
         if self.cache is None:
             self.cache = self.inner(value[:1]).detach()
         return self.cache.expand(value.shape[0], -1, -1, -1)
+
+
+class TemporalAttention(torch.nn.Module):
+    """Baseline state in the existing C-dimensional channel gate (not novelty)."""
+    def __init__(self, inner, alpha=.9):
+        super().__init__()
+        self.inner, self.alpha, self.cache = inner, alpha, None
+
+    def forward(self, value):
+        gates = self.inner(value)
+        outputs = []
+        for gate in gates.split(1, dim=0):
+            self.cache = gate if self.cache is None else self.alpha*self.cache + (1-self.alpha)*gate
+            outputs.append(self.cache)
+        return torch.cat(outputs, dim=0)
 
 
 def inference(net, images, device, batch_size):
@@ -143,6 +160,8 @@ def main():
     parser.add_argument("--width", type=int, default=320)
     parser.add_argument("--height", type=int, default=240)
     parser.add_argument("--batch-size", type=int, default=4)
+    parser.add_argument("--family", choices=["controls", "attention_state"], default="controls")
+    parser.add_argument("--target-step", action="store_true")
     args = parser.parse_args()
     out_dir = Path(args.out)
     out_dir.mkdir(parents=True, exist_ok=False)
@@ -152,7 +171,7 @@ def main():
     if device.type == "cuda" and not torch.cuda.is_available():
         raise RuntimeError("CUDA requested but unavailable")
     weights = ROOT / "MobileIE/pretrain/lolv1_best_slim.pkl"
-    config = {**vars(args), "experiment_id": "exploration-r1-v1", "pans": [0, 4, 12],
+    config = {**vars(args), "experiment_id": "exploration-r1-v1" if args.family == "controls" else "exploration-r1b-attention-state", "pans": [0, 4, 12],
               "noise_seeds": [0, 1], "torch": torch.__version__, "opencv": cv2.__version__,
               "git_revision": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
               "weights_sha256": sha256(weights),
@@ -169,7 +188,7 @@ def main():
             for noisy in [False, True]:
                 for seed in ([0, 1] if noisy else [0]):
                     sequence_start = time.perf_counter()
-                    targets, inputs = generate_sequence(image, pan, seed, noisy, args.frames, args.width, args.height)
+                    targets, inputs = generate_sequence(image, pan, seed, noisy, args.frames, args.width, args.height, args.target_step)
                     raw, ms = inference(net, inputs, device, args.batch_size)
                     gpu_ms += ms
                     original_attention = net.att
@@ -195,8 +214,24 @@ def main():
                         methods[f"oracle_ema_{suffix}"] = smooth(raw, alpha, pan=pan)
                     methods["bilateral_flow_ema_07"] = smooth(denoised, .7, flows=filtered_flows)
                     methods["bilateral_oracle_ema_07"] = smooth(denoised, .7, pan=pan)
+                    if args.family == "attention_state":
+                        try:
+                            net.att = TemporalAttention(original_attention, .9)
+                            gate_state, ms = inference(net, inputs, device, args.batch_size)
+                            gpu_ms += ms
+                        finally:
+                            net.att = original_attention
+                        methods = {"input": inputs, "mobileie": raw, "frozen_global": frozen,
+                                   "attention_ema_09": gate_state,
+                                   "flow_ema_07": smooth(raw, .7, flows=flows),
+                                   "oracle_ema_07": smooth(raw, .7, pan=pan),
+                                   "frozen_flow_ema_07": smooth(frozen, .7, flows=flows),
+                                   "frozen_oracle_ema_07": smooth(frozen, .7, pan=pan),
+                                   "attention_flow_ema_07": smooth(gate_state, .7, flows=flows),
+                                   "attention_oracle_ema_07": smooth(gate_state, .7, pan=pan)}
                     for name, values in methods.items():
                         row = {"scene": scene_name, "pan": pan, "condition": "noise_jpeg" if noisy else "clean",
+                               "target_step": args.target_step,
                                "seed": seed, "method": name, "flow_epe_px": flow_epe,
                                **evaluate(values, targets, inputs, pan)}
                         rows.append(row)
@@ -204,6 +239,8 @@ def main():
                             stream.write(json.dumps(row, allow_nan=False) + "\n")
                     if pan == 4 and seed == 0 and noisy:
                         names = ["input", "mobileie", "input_bilateral", "flow_ema_09", "bilateral_flow_ema_07", "oracle_ema_09"]
+                        if args.family == "attention_state":
+                            names = ["input", "mobileie", "attention_ema_09", "flow_ema_07", "attention_flow_ema_07", "attention_oracle_ema_07"]
                         preview = np.concatenate([methods[name][-1] for name in names] + [targets[-1]], axis=1)
                         Image.fromarray(np.clip(preview, 0, 255).astype(np.uint8)).save(out_dir / f"preview_{scene_name}.png")
                         save_json(out_dir / "preview_columns.json", names + ["ground_truth"])
@@ -219,7 +256,7 @@ def main():
             for method in sorted({row["method"] for row in rows}):
                 selected = [r for r in rows if r["condition"] == condition and r["method"] == method and (pan == "all" or r["pan"] == pan)]
                 item = {"condition": condition, "pan": pan, "method": method, "sequences": len(selected)}
-                for key in ["psnr_rgb", "ssim_rgb_valid", "edge_mae", "flicker", "flicker_core", "legacy_wrapped_flicker", "flow_epe_px"]:
+                for key in ["psnr_rgb", "ssim_rgb_valid", "edge_mae", "flicker", "flicker_core", "reference_temporal_error", "legacy_wrapped_flicker", "flow_epe_px"]:
                     values = [row[key] for row in selected]
                     item[key] = float(np.mean(values))
                     item[key + "_std"] = float(np.std(values))
