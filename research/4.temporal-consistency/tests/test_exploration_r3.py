@@ -13,11 +13,23 @@ from probe_feature_products_r3 import moments
 from explore_resets_r3 import reset_methods
 from explore_products_r3 import PairFST, sampling
 from explore_temporal_controls import MobileIELLENetS
-from paired_fst_r3 import TrainablePairFST
+from paired_fst_r3 import InputPairNetwork, TrainablePairFST
 from xiph_motion_r3 import read_y4m
 
 
 class ExplorationR3Checks(unittest.TestCase):
+    def test_input_control_matches_original_and_updates_mixture(self):
+        torch.manual_seed(5)
+        original = MobileIELLENetS(12).eval()
+        model = InputPairNetwork(copy.deepcopy(original))
+        model.body.offsets = [(2, 0), (-1, 1)]
+        value = torch.rand(4, 3, 32, 32)
+        pred = model(value)
+        torch.testing.assert_close(pred, original(value), rtol=0, atol=0)
+        pred.square().mean().backward()
+        self.assertGreater(abs(float(model.body.gamma.grad)), 0.)
+        self.assertEqual(sum(p.numel() for p in model.parameters())-sum(p.numel() for p in original.parameters()), 1)
+
     def test_pair_training_matches_initial_function_and_learns_mixture(self):
         torch.manual_seed(4)
         original = MobileIELLENetS(12).body
