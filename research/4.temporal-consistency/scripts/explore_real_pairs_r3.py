@@ -43,6 +43,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--manifest', required=True)
     parser.add_argument('--out', required=True)
+    parser.add_argument('--motion-input', choices=['low', 'enhanced'], default='low')
     args = parser.parse_args()
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=False)
@@ -76,6 +77,8 @@ def main():
     manifest = json.loads(Path(args.manifest).read_text())
     save_json(out/'config.json', {'manifest_sha256': sha256(args.manifest), 'repo_revision': manifest['revision'],
         'models': provenance, 'size': [480, 270], 'resize': 'INTER_AREA', 'extra_degradation': False,
+        'motion_input': args.motion_input,
+        'motion_cost_note': 'enhanced uses additional official MobileIE inference shared across candidates; not free',
         'fusion_alpha': .7, 'feature_mask_erosion_radius': 8,
         'temporal_metric': 'estimated reference flow+FB, subtract reference frame residual; not GT flow',
         'scope': 'two author samples, 16 frames each; not full native-resolution benchmark'})
@@ -84,9 +87,10 @@ def main():
     with (out/'per_sequence.jsonl').open('w') as stream, (out/'per_frame.jsonl').open('w') as trace:
         for scene in ['example_1', 'example_2']:
             gt, low = load_pairs(manifest, scene)
+            motion_inputs = low if args.motion_input == 'low' else inference(models['pretrained'], low, device, 1)[0]
             ref = [forward_backward(gt[t-1], gt[t]) for t in range(1, len(gt))]
             reference_flow, reference_mask = [r[0] for r in ref], [r[1] for r in ref]
-            pairs = [forward_backward(low[t-1], low[t]) for t in range(1, len(low))]
+            pairs = [forward_backward(motion_inputs[t-1], motion_inputs[t]) for t in range(1, len(low))]
             flows, full_mask = [p[0] for p in pairs], [p[1] for p in pairs]
             masks = [cv2.erode(m.astype(np.uint8), np.ones((17, 17), np.uint8),
                      borderType=cv2.BORDER_CONSTANT, borderValue=0).astype(bool) for m in full_mask]
