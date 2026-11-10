@@ -1,5 +1,6 @@
 """Scientific invariants for layered motion and matched structural training."""
 import copy
+import json
 import sys
 import unittest
 from pathlib import Path
@@ -21,6 +22,7 @@ class ExplorationR2Checks(unittest.TestCase):
         dark = np.full((48, 64, 3), 10, np.float32)
         events, _ = detect_changes([dark, dark, dark*3, dark*3])
         self.assertEqual(events, [False, False, True, False])
+        json.dumps({"events": events, "count": sum(events)})
         pattern = np.zeros_like(dark)
         pattern[:, :32] = 255
         events, _ = detect_changes([pattern, 255-pattern])
