@@ -145,6 +145,9 @@ def main():
                 values = [index[m]['psnr_rgb']-baseline for m in selections]
                 ax.bar(labels, values, color=['tab:blue']*4+['tab:orange']*2)
                 ax.axhline(0, color='black', linewidth=1)
+                ax.axhline(index['pretrained__raw']['psnr_rgb']-baseline, color='grey', linestyle='--',
+                           linewidth=1, label='Pretrained without fusion')
+                ax.legend(fontsize=8)
                 ax.tick_params(axis='x', labelrotation=35, labelsize=9)
                 ax.set(title=title, ylabel='PSNR delta vs pretrained + same FB fusion (dB)')
                 ax.grid(axis='y', alpha=.2)
