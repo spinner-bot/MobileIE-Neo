@@ -36,6 +36,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--out', required=True)
     parser.add_argument('--motion', action='store_true')
+    parser.add_argument('--real', action='store_true')
     args = parser.parse_args()
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
@@ -115,6 +116,41 @@ def main():
             'source_clips': 2, 'frames_per_clip': 24, 'reference_flow_is_estimated': True,
             'staged_input_hashes_match': True,
             'note': 'actual motion with synthetic low-light noise; not paired real low-light evaluation'})
+    if args.real:
+        real = lines(BASE/'results/exploration-r3-real-pairs/per_sequence.jsonl')
+        assert len(real) == 84
+        assert len({(r['scene'], r['method']) for r in real}) == 84
+        for row in real:
+            row['model_method'] = row['method']
+            row['method'] = row['method'].replace('-seed0', '').replace('-seed1', '')
+        real_summary = grouped(real, ['method'], METRICS)
+        save_json(out/'real_summary.json', real_summary)
+        save_json(out/'real_by_scene.json', grouped(real, ['scene', 'method'], METRICS))
+        save_json(out/'real_audit.json', {'rows': 84, 'unique_input_sequences': 2, 'frames_per_sequence': 16,
+            'resized_size': [480, 270], 'extra_degradation': False, 'note': 'author samples, not full native-resolution benchmark'})
+        text = ['# 真实低光样例探索', '', '两段作者样例各16帧，480×270；不代表完整标准基准。', '',
+                '| method | PSNR | SSIM | temporal error | edge MAE |', '|---|---:|---:|---:|---:|']
+        for row in real_summary:
+            text.append(f"| {row['method']} | {row['psnr_rgb']:.4f} | {row['ssim_rgb']:.4f} | {row['temporal_error']:.4f} | {row['edge_mae']:.4f} |")
+        (out/'real_tables.md').write_text('\n'.join(text)+'\n')
+        if args.motion:
+            transfer = json.loads((out/'motion_summary.json').read_text())
+            selections = ['task__fb', 'cross__history__fb', 'mean_square__history__fb', 'input_mean__history__fb',
+                          'frozen_body_cross__fb', 'frozen_body_mean_square__fb']
+            fig, axes = plt.subplots(1, 2, figsize=(12, 5.5))
+            for ax, source, title in zip(axes, [transfer, real_summary], ['Actual motion + synthetic low light', 'Real low-light pairs (two samples)']):
+                index = {r['method'].replace('pretrained_body_', 'frozen_body_'): r for r in source}
+                baseline = index['pretrained__fb']['psnr_rgb']
+                labels = ['Task', 'Cross', 'Mean square', 'Input mean', 'Frozen cross', 'Frozen mean']
+                values = [index[m]['psnr_rgb']-baseline for m in selections]
+                ax.bar(labels, values, color=['tab:blue']*4+['tab:orange']*2)
+                ax.axhline(0, color='black', linewidth=1)
+                ax.tick_params(axis='x', labelrotation=35, labelsize=9)
+                ax.set(title=title, ylabel='PSNR delta vs pretrained + same FB fusion (dB)')
+                ax.grid(axis='y', alpha=.2)
+            fig.tight_layout()
+            fig.savefig(out/'transfer_against_pretrained.png', dpi=160)
+            plt.close(fig)
     print(json.dumps({'runs': len(runs), 'updates': 3200, 'validation_rows': len(rows), 'initial_difference': initial}, indent=2))
 
 
