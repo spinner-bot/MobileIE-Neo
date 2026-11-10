@@ -1,5 +1,6 @@
 """Independent checks of feature moments and history-reset semantics."""
 import sys
+import copy
 import unittest
 from pathlib import Path
 
@@ -9,9 +10,33 @@ import torch
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'scripts'))
 from probe_feature_products_r3 import moments
 from explore_resets_r3 import reset_methods
+from explore_products_r3 import PairFST, sampling
+from explore_temporal_controls import MobileIELLENetS
 
 
 class ExplorationR3Checks(unittest.TestCase):
+    def test_product_interventions_preserve_first_frame_and_invalid_regions(self):
+        torch.manual_seed(3)
+        original = MobileIELLENetS(12).eval().body
+        current = torch.rand(1, 12, 16, 16)
+        following = torch.rand_like(current)
+        with torch.inference_mode():
+            for mode in ['cross', 'mean_square', 'square_mean']:
+                module = PairFST(copy.deepcopy(original), mode)
+                torch.testing.assert_close(module(current), original(current), rtol=0, atol=0)
+                module.grid, module.mask = sampling(np.zeros((16, 16, 2), np.float32),
+                                                     np.zeros((16, 16), bool), 'cpu')
+                torch.testing.assert_close(module(following), original(following), rtol=0, atol=0)
+
+    def test_torch_sampling_matches_known_backward_translation(self):
+        from torch.nn import functional as F
+        source = torch.arange(48., dtype=torch.float32).reshape(1, 1, 6, 8)
+        flow = np.zeros((6, 8, 2), np.float32)
+        flow[..., 0] = 2
+        grid, _ = sampling(flow, np.ones((6, 8), bool), 'cpu')
+        result = F.grid_sample(source, grid, align_corners=True)
+        torch.testing.assert_close(result[..., :-2], source[..., 2:], rtol=0, atol=1e-5)
+
     def test_constant_feature_bias_is_not_hidden_in_covariance(self):
         clean = torch.full((1, 2, 2), 2.)
         samples = torch.full((8, 1, 2, 2), 3.)

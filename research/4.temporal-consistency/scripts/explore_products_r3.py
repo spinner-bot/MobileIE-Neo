@@ -11,7 +11,7 @@ import torch
 from torch import nn
 from torch.nn import functional as F
 
-from exploration_r2_data import detect_changes, evaluate, load_images, make_sequence
+from exploration_r2_data import evaluate, load_images, make_sequence
 from explore_state_r2 import forward_backward, fuse
 from explore_temporal_controls import inference, save_json
 from train_exploration_r2 import new_model
@@ -106,7 +106,6 @@ def main():
                     stream.write(json.dumps({**identity, 'method': 'raw', 'coverage': 0., **raw_metrics}, allow_nan=False)+'\n')
                     count += 1
                     pairs = [forward_backward(low[t-1], low[t]) for t in range(1, len(low))]
-                    events, _ = detect_changes(low)
                     for alignment, flows, masks in [('fb', [p[0] for p in pairs], [p[1] for p in pairs]),
                                                     ('oracle', true_flow, true_masks)]:
                         # Constant border explicitly invalid: erosion must not extend edge validity.
