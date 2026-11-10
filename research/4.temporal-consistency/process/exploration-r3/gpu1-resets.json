@@ -1,0 +1,55 @@
+{
+  "samples": [
+    {
+      "gpu": 1,
+      "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+      "memory_mib": 0,
+      "utilization_percent": 0,
+      "compute_processes": [],
+      "time": "2026-11-11T01:27:55.309620+08:00"
+    },
+    {
+      "gpu": 1,
+      "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+      "memory_mib": 0,
+      "utilization_percent": 0,
+      "compute_processes": [],
+      "time": "2026-11-11T01:27:59.146357+08:00"
+    }
+  ],
+  "allowed": true,
+  "command": [
+    ".venv/bin/python",
+    "research/4.temporal-consistency/scripts/explore_resets_r3.py",
+    "--out",
+    "research/4.temporal-consistency/results/exploration-r3-resets"
+  ],
+  "repository_revision_at_launch": "f3a04f9097b7b97de5d9f231afe2b3869c57c67d",
+  "script_sha256_at_launch": {
+    "research/4.temporal-consistency/scripts/model_variants.py": "4e130434efd49a86e0d4d45378a38de826f0a716386af3919a36c64fe0c7e540",
+    "research/4.temporal-consistency/scripts/benchmark_bounded_r2.py": "a25bf0a570b9e63f8f5184f8558d4d2b80e60ea4475a1a71b94196dc6a926f20",
+    "research/4.temporal-consistency/scripts/summarize_r2.py": "f2850207c25e9bdf47e520ea710a7995d086e909118463af652fba513127aa35",
+    "research/4.temporal-consistency/scripts/train_ablation.py": "d8fb8b04fd30071bd9ea68954c4ca5e5a2462a6442bc97ff19be2fcc8c8e9bbd",
+    "research/4.temporal-consistency/scripts/bounded_fst.py": "ab3a542807c1de0553f556afee0645720d6749637e8a513a31286f4fb24dadb6",
+    "research/4.temporal-consistency/scripts/train_exploration_r2.py": "30ba78b2439ffb6fdf10aafe384975326082129b03ebe562aa118f29ba5d8c7b",
+    "research/4.temporal-consistency/scripts/video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0",
+    "research/4.temporal-consistency/scripts/explore_state_r2.py": "e90c9e31f8e1858c20ba4204d35db36930b1e94e0c7407496cf06df554b44540",
+    "research/4.temporal-consistency/scripts/exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+    "research/4.temporal-consistency/scripts/explore_resets_r3.py": "afbf2d59270ba3d52c3bd7506cee89781072109cf65859008213c3f3339b213f",
+    "research/4.temporal-consistency/scripts/explore_temporal_controls.py": "04a72a82943f1e43aa03cf2e8997a26c76e467b306ceb8fc42094dfdc5398d54",
+    "research/4.temporal-consistency/scripts/probe_feature_products_r3.py": "defb31c4d1e0795d91954bf0f443f49fe5b8782172831f53beca8d27dee0b73d",
+    "research/4.temporal-consistency/scripts/evaluate_trained_fusion_r2.py": "f6600c89cc327d7d56b473a12c69f7886bd46ce8d5a40abcc00afd0adbdf6317",
+    "research/4.temporal-consistency/scripts/summarize_trained_fusion_r2.py": "a72aa2e27bfc69f1487e6e682acb9eb37f2a70eb883f1ea12206fd31985790a9",
+    "research/4.temporal-consistency/scripts/temporal_loss.py": "6b3711099ddc9c50b91832e00fb6615b30a40825e73ca7356c4a230ace949eea",
+    "research/4.temporal-consistency/scripts/gpu_guard.py": "e0a5050f47d64dbf75fab4146a276f50e3464d07e6a799ad8ccd2c69e8e3a535",
+    "research/4.temporal-consistency/scripts/flicker_visibility.py": "00d093580d29e029fe48dcf52ff2c41feaee77aaa075c49582c8b426ae45c784",
+    "research/4.temporal-consistency/scripts/fetch_exploration_images.py": "2f9a6ef8ad0f94416065e667c4cbda3decbe1e5d801f5d4d894d8e8fdc5758d8",
+    "research/4.temporal-consistency/scripts/summarize_exploration.py": "0ad15b74797b9e7597889566e5783ecccd9794b952e945bb71deeabbbe8d3d74",
+    "research/4.temporal-consistency/scripts/probe_feature_noise.py": "7dcf36c41a3f2c433e5817c80e2aa3487aa9d4d9bfe52dde8913c69a58c67883",
+    "research/4.temporal-consistency/scripts/probe_scalar_moments.py": "ac75895e4e477ddd638e36e66688091aebebb3353313ed5d66b7b51b3aa0af6b"
+  },
+  "scope": "two preflight samples and project-local lock; not a reservation system shared with other users",
+  "returncode": 0,
+  "process_wall_seconds": 227.0954857840552,
+  "ended": "2026-11-11T01:31:46.248143+08:00"
+}
