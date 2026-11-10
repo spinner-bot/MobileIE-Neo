@@ -6,13 +6,14 @@ import numpy as np
 import torch
 
 from explore_temporal_controls import save_json
-from paired_fst_r3 import TrainablePairFST, set_alignment
+from paired_fst_r3 import InputPairNetwork, TrainablePairFST, set_alignment
 from train_exploration_r2 import new_model
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--out', required=True)
+    parser.add_argument('--variants', default='ordinary,cross,mean_square')
     args = parser.parse_args()
     from pathlib import Path
     if Path(args.out).exists():
@@ -20,13 +21,19 @@ def main():
     torch.set_num_threads(2)
     torch.manual_seed(0)
     device = torch.device('cuda')
-    models = {name: new_model(device) for name in ['ordinary', 'cross', 'mean_square']}
+    names = args.variants.split(',')
+    if any(name not in ['ordinary', 'cross', 'mean_square', 'input_mean'] for name in names):
+        parser.error('unknown variant')
+    models = {name: new_model(device) for name in names}
     flow = np.zeros((400, 600, 2), np.float32)
     flow[..., 0] = 2
     mask = np.ones((400, 600), bool)
     mask[:, -2:] = False
-    for name in ['cross', 'mean_square']:
-        models[name].body = TrainablePairFST(models[name].body, name)
+    for name in [n for n in names if n != 'ordinary']:
+        if name == 'input_mean':
+            models[name] = InputPairNetwork(models[name])
+        else:
+            models[name].body = TrainablePairFST(models[name].body, name)
         with torch.no_grad():
             models[name].body.gamma.fill_(.3)
         set_alignment(models[name].body, flow, mask, device)
