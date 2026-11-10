@@ -12,7 +12,7 @@ import torch
 from exploration_r2_data import MANIFEST, ROOT, evaluate, load_images, make_sequence
 from explore_state_r2 import forward_backward, fuse
 from explore_temporal_controls import inference, save_json, sha256
-from paired_fst_r3 import TrainablePairFST, set_alignment
+from paired_fst_r3 import InputPairNetwork, TrainablePairFST, set_alignment
 from train_exploration_r2 import new_model, training_batch
 
 
@@ -68,7 +68,7 @@ def main():
     parser.add_argument('--steps', type=int, default=400)
     args = parser.parse_args()
     variants = args.variants.split(',')
-    if args.steps < 1 or any(v not in ['task', 'cross', 'mean_square'] for v in variants):
+    if args.steps < 1 or any(v not in ['task', 'cross', 'mean_square', 'input_mean'] for v in variants):
         parser.error('positive step budget and known variants required')
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=False)
@@ -88,7 +88,9 @@ def main():
             cache.mkdir(parents=True, exist_ok=False)
             torch.manual_seed(seed)
             net = new_model(device)
-            if variant != 'task':
+            if variant == 'input_mean':
+                net = InputPairNetwork(net)
+            elif variant != 'task':
                 net.body = TrainablePairFST(net.body, variant)
             groups = [{'params': [p for n, p in net.named_parameters() if not n.endswith('.gamma')], 'lr': 1e-5}]
             if variant != 'task':

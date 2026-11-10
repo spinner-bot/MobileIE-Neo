@@ -20,6 +20,8 @@ class TrainablePairFST(nn.Module):
         self.offsets = None
 
     def product(self, current, past):
+        if self.mode == 'input_mean':
+            return current+self.gamma*((current+past)/2-current)
         m = self.original
         ordinary = (m.weight1*current)*(m.weight2*current)+m.bias
         if self.mode == 'cross':
@@ -55,3 +57,21 @@ class TrainablePairFST(nn.Module):
 
 def set_alignment(module, flow, mask, device):
     module.grid, module.mask = sampling(flow, mask, device)
+
+
+class InputIdentity(nn.Module):
+    def __init__(self, device):
+        super().__init__()
+        self.block1 = nn.Identity()
+        self.register_buffer('weight1', torch.ones((), device=device))
+
+
+class InputPairNetwork(nn.Module):
+    """Expose the same state controller interface, apply averaging before RGB net."""
+    def __init__(self, original):
+        super().__init__()
+        self.original = original
+        self.body = TrainablePairFST(InputIdentity(next(original.parameters()).device), 'input_mean')
+
+    def forward(self, value):
+        return self.original(self.body(value))
