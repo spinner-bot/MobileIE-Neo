@@ -147,12 +147,12 @@ def main():
     plt.close(fig)
     fig, ax = plt.subplots(figsize=(10, 5))
     for index, row in enumerate(pglobal):
-        ax.scatter(row['temporal_error'], row['psnr_rgb'], marker='o' if row['method'].startswith('fb') else '^')
-        ax.annotate(str(index+1), (row['temporal_error'], row['psnr_rgb']), xytext=(3, 3), textcoords='offset points', fontsize=8)
+        ax.scatter(row['temporal_error'], row['psnr_rgb'], marker='o' if row['method'].startswith('fb') else '^',
+                   label=row['method'], color=plt.get_cmap('tab20')(index), s=45)
     ax.set(xlabel='GT-relative temporal error (lower better)', ylabel='PSNR (dB)', title='Frozen FST intervention: local moments vs final RGB')
     ax.grid(alpha=.2)
-    fig.subplots_adjust(right=.59)
-    fig.text(.61, .85, '\n'.join(f"{i+1}. {r['method']}" for i, r in enumerate(pglobal)), fontsize=8, va='top')
+    fig.subplots_adjust(right=.61)
+    ax.legend(bbox_to_anchor=(1.02, 1), loc='upper left', fontsize=8)
     fig.savefig(out/'product_rgb_tradeoff.png', dpi=160)
     plt.close(fig)
     print(json.dumps(audit, indent=2))
