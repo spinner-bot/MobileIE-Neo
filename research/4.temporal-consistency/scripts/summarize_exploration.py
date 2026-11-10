@@ -65,7 +65,7 @@ def main():
         raise AssertionError("baseline drift between repeated no-step matrices")
     checks["repeated_baseline_max_abs_difference"] = max_baseline_difference
     checks["total_method_sequence_evaluations"] = sum(len(rows) for rows in runs.values())
-    checks["distinct_input_conditions"] = 54  # 27 no-step reused in controls/state + 27 step
+    checks["distinct_input_conditions"] = len({(r["scene"], r["pan"], r["condition"], r["seed"], r.get("target_step", False)) for rows in runs.values() for r in rows})
     features = json.loads((root / "exploration-r1-feature-noise-v2/layer_response.json").read_text())
     identities = json.loads((root / "exploration-r1-feature-noise-v2/fst_identity.json").read_text())
     checks["feature_probe_conditions"] = len(features) // 7
@@ -92,13 +92,19 @@ def main():
     controls = runs["controls"]
     plot_methods = ["mobileie", "frozen_global", "input_bilateral", "output_gaussian", "ema_09", "flow_ema_09", "oracle_ema_09"]
     colors = dict(zip(plot_methods, plt.get_cmap("tab10").colors))
+    labels = {"mobileie": "MobileIE", "frozen_global": "frozen gate",
+              "input_bilateral": "input bilateral", "output_gaussian": "output Gaussian",
+              "ema_09": "EMA(.9)", "flow_ema_09": "flow EMA(.9)", "oracle_ema_09": "oracle EMA(.9)",
+              "attention_ema_09": "gate EMA", "flow_ema_07": "flow EMA",
+              "attention_flow_ema_07": "gate + flow", "attention_oracle_ema_07": "gate + oracle"}
     fig, axes = plt.subplots(1, 3, figsize=(14, 4.6))
     for ax, pan in zip(axes, [0, 4, 12]):
         for method in plot_methods:
             rows = select(controls, pan=pan, method=method)
             x, y = average(rows, "flicker_core"), average(rows, "psnr_rgb")
             ax.scatter(x, y, color=colors[method], marker="x" if "oracle" in method else "o")
-            ax.annotate(method, (x, y), xytext=(3, 3), textcoords="offset points", fontsize=7)
+            ax.annotate(labels[method], (x, y), xytext=(3, 3), textcoords="offset points", fontsize=7)
+        ax.margins(x=.2, y=.15)
         ax.set(title=f"Noise + JPEG; pan={pan}px/frame", xlabel="Core aligned residual (0-255)", ylabel="RGB PSNR (dB)")
     fig.suptitle("Fixed-control pilot: oracle motion is an analysis reference")
     fig.tight_layout()
@@ -134,7 +140,8 @@ def main():
             rows = select(runs[name], method=method)
             x, y = average(rows, "reference_temporal_error"), average(rows, "psnr_rgb")
             ax.scatter(x, y, marker="x" if "oracle" in method else "o")
-            ax.annotate(method, (x, y), xytext=(3, 3), textcoords="offset points", fontsize=7)
+            ax.annotate(labels[method], (x, y), xytext=(3, 3), textcoords="offset points", fontsize=7)
+        ax.margins(x=.2, y=.15)
         ax.set(title="Noisy inputs: " + ("fixed lighting" if name == "state" else "real lighting transition"),
                xlabel="GT-relative temporal error (0-255)", ylabel="RGB PSNR (dB)")
     fig.tight_layout()
