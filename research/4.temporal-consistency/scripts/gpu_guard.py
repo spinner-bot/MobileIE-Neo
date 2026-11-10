@@ -2,6 +2,7 @@
 import argparse
 import datetime
 import fcntl
+import hashlib
 import json
 import os
 import subprocess
@@ -41,7 +42,12 @@ def main():
         time.sleep(1)
         samples.append(sample(args.gpu))
         allowed = all(not s["compute_processes"] and s["memory_mib"] <= 64 and s["utilization_percent"] <= 5 for s in samples)
+        root = Path(__file__).resolve().parents[3]
+        revision = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root, text=True).strip()
+        hashes = {str(p.relative_to(root)): hashlib.sha256(p.read_bytes()).hexdigest()
+                  for p in Path(__file__).resolve().parent.glob("*.py")}
         audit = {"samples": samples, "allowed": allowed, "command": command,
+                 "repository_revision_at_launch": revision, "script_sha256_at_launch": hashes,
                  "scope": "two preflight samples and project-local lock; not a reservation system shared with other users"}
         record.write_text(json.dumps(audit, indent=2) + "\n")
         if not allowed:
