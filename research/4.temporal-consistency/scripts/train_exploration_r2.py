@@ -89,6 +89,9 @@ def main():
     torch.backends.cudnn.benchmark = False
     torch.backends.cudnn.deterministic = True
     device = torch.device("cuda")
+    startup_revision = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
+    source_hashes = {name: sha256(Path(__file__).parent/name) for name in
+                     ["train_exploration_r2.py", "bounded_fst.py", "exploration_r2_data.py"]}
     train, validation = load_images("train"), load_images("exploratory_validation")
     limits = calibrate_limits(new_model(device), train, device)
     save_json(out/"limits.json", limits)
@@ -118,7 +121,7 @@ def main():
                       "temporal_lambda": args.temporal_weight if "temporal" in variant else 0,
                       "grad_clip": 1., "limits": limits, "manifest_sha256": sha256(MANIFEST),
                       "pretrained_sha256": sha256(ROOT/"MobileIE/pretrain/lolv1_best_slim.pkl"),
-                      "git_revision": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()}
+                      "git_revision": startup_revision, "source_sha256_at_startup": source_hashes}
             start_step = 0
             if args.resume and checkpoint.exists():
                 saved = torch.load(checkpoint, map_location=device, weights_only=False)
@@ -126,6 +129,8 @@ def main():
                     # Code revision can advance while the numerical experiment remains unchanged.
                     a, b = dict(saved["config"]), dict(config)
                     a.pop("git_revision"); b.pop("git_revision")
+                    # Source hashes intentionally remain in the comparison: resume
+                    # after numerical-code changes requires a fresh experiment.
                     if a != b:
                         raise ValueError("resume configuration mismatch")
                 net.load_state_dict(saved["model"])
