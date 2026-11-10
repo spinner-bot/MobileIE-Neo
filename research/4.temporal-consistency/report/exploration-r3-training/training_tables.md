@@ -14,3 +14,7 @@
 | mean_square__history__fb | 21.1017 | 0.6970 | 5.8875 | 3.5235 |
 | mean_square__history_off__raw | 19.7184 | 0.4910 | 16.5096 | 6.2126 |
 | mean_square__history_off__fb | 20.8181 | 0.6883 | 6.2098 | 3.5580 |
+| input_mean__history__raw | 19.8336 | 0.5272 | 13.9744 | 5.5974 |
+| input_mean__history__fb | 20.5818 | 0.6957 | 5.7768 | 3.4842 |
+| input_mean__history_off__raw | 19.7299 | 0.4914 | 16.4927 | 6.2059 |
+| input_mean__history_off__fb | 20.8188 | 0.6889 | 6.2038 | 3.5555 |

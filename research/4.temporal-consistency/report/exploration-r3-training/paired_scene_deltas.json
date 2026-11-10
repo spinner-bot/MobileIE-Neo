@@ -127,6 +127,90 @@
   },
   {
     "first": "cross__history__fb",
+    "second": "input_mean__history__fb",
+    "metric": "psnr_rgb",
+    "mean_delta": 0.5756189782937428,
+    "scene_means": {
+      "kodim07": 0.05299177475680139,
+      "kodim08": 0.3234296620729009,
+      "kodim09": 0.7915681159824856,
+      "kodim10": 0.8931398027279096,
+      "kodim11": 0.13425160806715897,
+      "kodim12": 1.2583329061552002
+    },
+    "positive_scenes": 6,
+    "scene_count": 6,
+    "scene_bootstrap_95": [
+      0.24682700518592735,
+      0.9357116831130368
+    ],
+    "interpretation": "exploratory scene-cluster bootstrap, only six scenes and two training seeds; not a confirmatory significance claim"
+  },
+  {
+    "first": "cross__history__fb",
+    "second": "input_mean__history__fb",
+    "metric": "temporal_error",
+    "mean_delta": 0.19936358069262328,
+    "scene_means": {
+      "kodim07": 0.06996658865524391,
+      "kodim08": 0.08238449636773165,
+      "kodim09": 0.3861921862533439,
+      "kodim10": 0.23441444051713334,
+      "kodim11": 0.1146131846391166,
+      "kodim12": 0.30861058772317024
+    },
+    "positive_scenes": 6,
+    "scene_count": 6,
+    "scene_bootstrap_95": [
+      0.1109925164361344,
+      0.2973310138946778
+    ],
+    "interpretation": "exploratory scene-cluster bootstrap, only six scenes and two training seeds; not a confirmatory significance claim"
+  },
+  {
+    "first": "input_mean__history__fb",
+    "second": "task__ordinary__fb",
+    "metric": "psnr_rgb",
+    "mean_delta": -0.22564422340001156,
+    "scene_means": {
+      "kodim07": -0.30640457078012906,
+      "kodim08": 0.16284676491345418,
+      "kodim09": -0.31573098104204,
+      "kodim10": -0.21388231898397403,
+      "kodim11": -0.26572629939792125,
+      "kodim12": -0.41496793510945906
+    },
+    "positive_scenes": 1,
+    "scene_count": 6,
+    "scene_bootstrap_95": [
+      -0.34570116231054265,
+      -0.05903204638950743
+    ],
+    "interpretation": "exploratory scene-cluster bootstrap, only six scenes and two training seeds; not a confirmatory significance claim"
+  },
+  {
+    "first": "input_mean__history__fb",
+    "second": "task__ordinary__fb",
+    "metric": "temporal_error",
+    "mean_delta": -0.417306068072363,
+    "scene_means": {
+      "kodim07": -0.3326108644425634,
+      "kodim08": -0.43105414745364723,
+      "kodim09": -0.5897259378268311,
+      "kodim10": -0.4280355575939882,
+      "kodim11": -0.29008380279475054,
+      "kodim12": -0.43232609832239705
+    },
+    "positive_scenes": 0,
+    "scene_count": 6,
+    "scene_bootstrap_95": [
+      -0.4936917223065737,
+      -0.3443737531004765
+    ],
+    "interpretation": "exploratory scene-cluster bootstrap, only six scenes and two training seeds; not a confirmatory significance claim"
+  },
+  {
+    "first": "cross__history__fb",
     "second": "cross__history_off__fb",
     "metric": "psnr_rgb",
     "mean_delta": 0.3479537085068157,
