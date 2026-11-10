@@ -24,7 +24,10 @@ def main():
     parser.add_argument('--manifest', required=True)
     parser.add_argument('--out', required=True)
     parser.add_argument('--include-r3', action='store_true')
+    parser.add_argument('--r3-only', action='store_true')
     args = parser.parse_args()
+    if args.r3_only and not args.include_r3:
+        parser.error('--r3-only requires --include-r3')
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=False)
     torch.set_num_threads(2)
@@ -74,10 +77,11 @@ def main():
             for rho in [0., .9]:
                 for seed in [0, 1]:
                     low = corrupt(gt, seed, rho)
+                    input_hash = hashlib.sha256(np.stack(low).tobytes()).hexdigest()
                     pairs = [forward_backward(low[t-1], low[t]) for t in range(1, len(low))]
                     flow, masks = [p[0] for p in pairs], [p[1] for p in pairs]
                     methods = {}
-                    for name, model in models.items():
+                    for name, model in ([] if args.r3_only else models.items()):
                         raw, _ = inference(model, low, device, 1)
                         methods[name+'__raw'] = raw
                         methods[name+'__fb'] = fuse(raw, flow, masks)
@@ -93,7 +97,7 @@ def main():
                             methods[name+'__'+state+'__fb'] = fuse(raw, flow, masks)
                         with torch.no_grad():
                             model.body.gamma.fill_(gamma)
-                    for label, flows, valid in [('low_fb', flow, masks), ('reference_fb', reference_flow, reference_mask)]:
+                    for label, flows, valid in ([] if args.r3_only else [('low_fb', flow, masks), ('reference_fb', reference_flow, reference_mask)]):
                         valid = [cv2.erode(m.astype(np.uint8), np.ones((17, 17), np.uint8),
                                  borderType=cv2.BORDER_CONSTANT, borderValue=0).astype(bool) for m in valid]
                         for mode in ['cross', 'mean_square']:
@@ -102,7 +106,8 @@ def main():
                         methods[label+'__output_pair'] = pair_blend(methods['pretrained__raw'], flows, valid)
                     for method, output in methods.items():
                         metrics, frames = evaluate(output, gt, reference_flow, reference_mask)
-                        identity = {'scene': clip['scene'], 'read_rho': rho, 'input_seed': seed, 'method': method}
+                        identity = {'scene': clip['scene'], 'read_rho': rho, 'input_seed': seed, 'method': method,
+                                    'input_sha256': input_hash}
                         stream.write(json.dumps({**identity, **metrics,
                             'low_flow_coverage': float(np.mean([m.mean() for m in masks])),
                             'reference_flow_coverage': float(np.mean([m.mean() for m in reference_mask]))}, allow_nan=False)+'\n')
