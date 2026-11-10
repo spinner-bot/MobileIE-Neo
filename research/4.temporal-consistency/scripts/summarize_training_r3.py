@@ -37,7 +37,10 @@ def main():
     parser.add_argument('--out', required=True)
     parser.add_argument('--motion', action='store_true')
     parser.add_argument('--real', action='store_true')
+    parser.add_argument('--enhanced', action='store_true')
     args = parser.parse_args()
+    if args.enhanced and not args.real:
+        parser.error('--enhanced requires --real')
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     rows, runs = [], []
@@ -154,6 +157,31 @@ def main():
             fig.tight_layout()
             fig.savefig(out/'transfer_against_pretrained.png', dpi=160)
             plt.close(fig)
+    if args.enhanced:
+        enhanced = lines(BASE/'results/exploration-r3-real-enhanced-flow/per_sequence.jsonl')
+        assert len(enhanced) == 84
+        original = {(r['scene'], r['model_method']): r for r in real}
+        differences = []
+        for row in enhanced:
+            if row['method'].endswith('__raw') and (row['method'].startswith(('pretrained', 'task-', 'T1-')) or '__history_off__' in row['method']):
+                ref = original[(row['scene'], row['method'])]
+                differences.extend(abs(row[k]-ref[k]) for k in METRICS)
+            row['model_method'] = row['method']
+            row['method'] = row['method'].replace('-seed0', '').replace('-seed1', '')
+        assert len(differences) == 22*len(METRICS)
+        save_json(out/'enhanced_motion_audit.json', {'rows': 84, 'unchanged_raw_repeat_rows': 22,
+            'max_abs_repeat_difference': max(differences), 'motion_input': 'same official MobileIE output for every candidate',
+            'cost_note': 'extra official-model forward needed by other candidates; not included in model-only cost'})
+        save_json(out/'enhanced_motion_summary.json', grouped(enhanced, ['method'], METRICS))
+        save_json(out/'enhanced_motion_by_scene.json', grouped(enhanced, ['scene', 'method'], METRICS))
+        flow = json.loads((BASE/'results/exploration-r3-real-flow/per_sequence.json').read_text())
+        save_json(out/'flow_input_summary.json', grouped(flow, ['method'], METRICS))
+        diag = json.loads((BASE/'results/exploration-r3-real-flow/flow_diagnostics.json').read_text())
+        save_json(out/'flow_input_diagnostics.json', diag)
+        old_raw = {(r['scene'], r['model_method']): r for r in real}
+        repeat = [abs(row[k]-old_raw[(row['scene'], 'pretrained__raw' if row['method'] == 'raw' else 'pretrained__fb')][k])
+                  for row in flow if row['method'] in ['raw', 'low_fb'] for k in METRICS]
+        save_json(out/'flow_input_audit.json', {'rows': 14, 'repeat_rows': 4, 'max_abs_repeat_difference': max(repeat)})
     print(json.dumps({'runs': len(runs), 'updates': 3200, 'validation_rows': len(rows), 'initial_difference': initial}, indent=2))
 
 
