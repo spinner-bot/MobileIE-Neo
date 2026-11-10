@@ -9,13 +9,31 @@ import torch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]/"scripts"))
 from bounded_fst import apply_bounded, project_mixtures
-from exploration_r2_data import make_sequence
+from exploration_r2_data import detect_changes, make_sequence
+from explore_state_r2 import forward_backward, fuse
 from explore_temporal_controls import MobileIELLENetS
 from train_exploration_r2 import temporal_penalty, training_batch
 from video_metrics import warp_previous
 
 
 class ExplorationR2Checks(unittest.TestCase):
+    def test_change_detector_keeps_constant_input_and_finds_transitions(self):
+        dark = np.full((48, 64, 3), 10, np.float32)
+        events, _ = detect_changes([dark, dark, dark*3, dark*3])
+        self.assertEqual(events, [False, False, True, False])
+        pattern = np.zeros_like(dark)
+        pattern[:, :32] = 255
+        events, _ = detect_changes([pattern, 255-pattern])
+        self.assertTrue(events[1])
+
+    def test_confident_static_flow_and_reset_fallback(self):
+        image = np.full((48, 64, 3), 20, np.float32)
+        flow, confidence = forward_backward(image, image)
+        np.testing.assert_allclose(flow, 0, atol=1e-6)
+        self.assertTrue(confidence.all())
+        outputs = fuse([image*5, image], [flow], [confidence], [False, True])
+        np.testing.assert_array_equal(outputs[1], image)
+
     def test_bounded_starts_with_identical_function(self):
         torch.manual_seed(8)
         original = MobileIELLENetS(12).eval()
