@@ -1,0 +1,79 @@
+MobileIE 手机演示包 · 操作说明
+================================
+
+包内文件
+--------
+model.tflite            模型本体（23 KB，FP32，输入固定 600x400）
+效果对比/               低光增强前后对比图（左：输入，右：MobileIE）
+手机操作说明.txt        本文件
+
+一、演示目标
+------------
+按 MobileIE 论文的官方流程，在安卓手机上用 AI Benchmark 跑出真实推理延迟；
+效果画面用同一份 TFLite 模型在电脑上生成的对比图展示。
+
+二、手机端操作（约 10 分钟，建议提前做完）
+------------------------------------------
+1. 安装 AI Benchmark
+   - 手机浏览器打开 https://ai-benchmark.com/download
+   - 下载 "Direct APK Download"（约 1.4 GB，需预留 3 GB 空间）
+   - 允许“安装未知应用”，完成安装；首次打开授予存储权限
+
+2. 放入模型
+   - 把本包的 model.tflite 复制到手机内部存储的 Download 目录
+   - 路径应为：内部存储/Download/model.tflite
+   - 传输方式：USB、微信文件传输助手、adb push 均可
+   - adb 示例：adb push model.tflite /sdcard/Download/model.tflite
+
+3. 先跑一次标准测试
+   - 打开 AI Benchmark，完整跑一次默认测试
+   - 部分版本需要跑完才显示 PRO Mode 入口
+
+4. 加载自定义模型
+   - 进入 PRO Mode → Custom Model
+   - 选择 Download/model.tflite；若看不到文件，在文件管理器里开启“显示内部存储”
+   - 精度选 FP32（本模型未量化）
+
+5. 逐个后端测速并记录
+   - 先跑 TFLite CPU / XNNPACK（最稳）
+   - 再跑 Android NNAPI、GPU delegate
+   - 有 Qualcomm QNN / Hexagon 的机型可再测一项
+   - 记录每个后端的延迟（ms）和 FPS，截屏或录屏
+
+三、现场演示流程（约 3 分钟）
+------------------------------
+1. 打开 AI Benchmark，展示已加载的 model.tflite
+2. 运行 CPU 后端，指着实时延迟/吞吐讲解
+3. 切到 NNAPI 或 GPU，对比数字
+4. 打开“效果对比”文件夹，展示低光增强前后画面
+5. 收尾口径：
+   “同一份 23 KB 的 TFLite 模型，手机端实测 X ms；
+    画质对比由官方推理脚本在同一模型上生成。”
+
+四、记录表
+----------
+日期：
+手机型号：
+Android 版本：
+AI Benchmark 版本：
+后端            精度    延迟(ms)    FPS     备注
+CPU/XNNPACK     FP32
+NNAPI           FP32
+GPU             FP32
+
+论文参考值：Snapdragon 8 Gen 3，0.895 ms（约 1117 FPS）。
+不同机型/后端/温度会有明显差异，汇报时注明机型即可。
+
+五、常见问题
+------------
+- 找不到 PRO Mode：先完整跑一次标准测试，确认 App 为 v4 以上（建议 v7）
+- 看不到 model.tflite：检查存储权限；文件管理器开启“显示内部存储”
+- 加载报算子不支持：换 Nightly 版；确认模型未被改动
+- 运行卡死/闪退：换 CPU 后端，关闭后台应用，重启 App
+- 手机空间紧张：装完并跑完标准测试后，可清理 App 缓存；模型和对比图很小
+
+六、注意
+--------
+- AI Benchmark 只输出延迟，不显示增强后的图像，这是 App 本身的限制
+- 现场不要依赖网络，APK、模型、录屏、对比图都提前离线准备好
+- 手机电量充足，关闭省电模式，避免降频影响数值

@@ -2,7 +2,8 @@
 
 目标：为项目申报的现场考察，按 MobileIE 官方流程把模型跑在安卓手机上，并提供“手机实测速度 + 处理前后效果对比”的演示材料。**这是演示任务，不是研究任务**，不改变 3/4/5 号工作的技术路线。
 
-- 状态：**P0 完成**（2026-11-08），手机测速待做
+- 分支：**`demo.org`**（移动端演示支线；核心研究在 `main` 上由 Codex 推进，两者互不合并）
+- 状态：**P0 完成**（2026-11-08），演示包已打包，手机测速待做
 - 上游代码与权重：项目根目录 [`MobileIE/`](../../MobileIE)
 - 关联：[2 号复现](../2.reproduction/README.md)、[5 号前期调研](../5.prior-art-survey/README.md)、[6B06-01 会议记录](../../docs/会议记录/6B06-01/audio%20-%20Transcription.txt)
 - 进展报告：[0009-T-261108-6 号工作启动与手机演示方案](../../docs/进展报告/0009-T-261108-6号工作启动与手机演示方案.md)
@@ -63,6 +64,7 @@
 | 前后对比图 | [`results/compare_lol_eval15/`](results/compare_lol_eval15)、[`results/compare_sample/`](results/compare_sample) | 完成 |
 | 增强结果 | [`results/lol_eval15/`](results/lol_eval15)、[`results/demo_output_sample/`](results/demo_output_sample) | 完成 |
 | 手机实测截图/录屏 | `results/phone/` | 待采集 |
+| 手机演示包 | [`demo-package/MobileIE-Demo/`](demo-package/MobileIE-Demo/)（本地压缩件 `demo-package/MobileIE-手机演示包.zip`） | 完成（模型 + 3 张对比图 + 中文操作说明） |
 | 汇报 HTML | [`report/mobile-deployment.html`](report/mobile-deployment.html) | 完成（含 P0 结果，单文件内嵌图片） |
 
 ## 5. 执行清单
@@ -126,3 +128,4 @@ PYD=F:/dev-tools/python-envs/MobileIE-Demo/Scripts/python.exe
 
 - 2026-11-08 · claude code (local)：创建 6 号工作，确定 B 方案，完成模型解析与文档首版。
 - 2026-11-08 · claude code (local)：P0 跑通，LOL eval15 PSNR 23.619 dB；补充 ai-edge-litert 兼容层与结果对比图。
+- 2026-11-10 · claude code (local)：建立 `demo.org` 演示分支；打包手机演示包（模型 + 对比图 + 中文操作说明）。
