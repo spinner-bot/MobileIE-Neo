@@ -93,13 +93,23 @@ def main():
     fig.savefig(out/'trained_product_tradeoff.png', dpi=160)
     plt.close(fig)
     if args.motion:
-        motion = lines(BASE/'results/exploration-r3-motion/per_sequence.jsonl')
+        motion = (lines(BASE/'results/exploration-r3-motion-baseline/per_sequence.jsonl')
+                  +lines(BASE/'results/exploration-r3-motion-trained/per_sequence.jsonl'))
         assert len(motion) == 8*34
+        assert len({(r['scene'], r['read_rho'], r['input_seed'], r['method']) for r in motion}) == len(motion)
+        hashes = defaultdict(set)
+        for row in motion:
+            hashes[(row['scene'], row['read_rho'], row['input_seed'])].add(row['input_sha256'])
+            row['model_method'] = row['method']
+            row['method'] = row['method'].replace('-seed0', '').replace('-seed1', '')
+        assert len(hashes) == 8 and all(len(h) == 1 for h in hashes.values())
+        save_json(out/'motion_by_model.json', grouped(motion, ['model_method'], METRICS))
         save_json(out/'motion_summary.json', grouped(motion, ['method'], METRICS))
         save_json(out/'motion_by_scene.json', grouped(motion, ['scene', 'method'], METRICS))
         save_json(out/'motion_by_noise.json', grouped(motion, ['read_rho', 'method'], METRICS))
         save_json(out/'motion_audit.json', {'rows': len(motion), 'unique_input_conditions': 8,
             'source_clips': 2, 'frames_per_clip': 24, 'reference_flow_is_estimated': True,
+            'staged_input_hashes_match': True,
             'note': 'actual motion with synthetic low-light noise; not paired real low-light evaluation'})
     print(json.dumps({'runs': len(runs), 'updates': 2400, 'validation_rows': len(rows), 'initial_difference': initial}, indent=2))
 
