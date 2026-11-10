@@ -14,6 +14,8 @@ from explore_products_r3 import intervention, pair_blend
 from explore_state_r2 import forward_backward, fuse
 from explore_temporal_controls import inference, save_json, sha256
 from train_exploration_r2 import new_model
+from paired_fst_r3 import TrainablePairFST
+from train_products_r3 import streaming
 from xiph_motion_r3 import corrupt, read_y4m
 
 
@@ -21,6 +23,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--manifest', required=True)
     parser.add_argument('--out', required=True)
+    parser.add_argument('--include-r3', action='store_true')
     args = parser.parse_args()
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=False)
@@ -39,6 +42,20 @@ def main():
             key = f'{label}-seed{seed}'
             models[key] = model
             provenance[key] = {'path': str(path.relative_to(ROOT)), 'sha256': sha256(path), 'steps': saved['step']}
+    recurrent = {}
+    if args.include_r3:
+        for variant in ['cross', 'mean_square']:
+            for seed in [0, 1]:
+                path = ROOT/'.cache/checkpoints/exploration-r3'/f'{variant}-seed{seed}'/'last.pth'
+                saved = torch.load(path, map_location=device, weights_only=False)
+                if saved['step'] != 400:
+                    raise ValueError('only final preregistered checkpoint is eligible')
+                model = new_model(device)
+                model.body = TrainablePairFST(model.body, variant)
+                model.load_state_dict(saved['model'])
+                key = f'{variant}-seed{seed}'
+                recurrent[key] = model
+                provenance[key] = {'path': str(path.relative_to(ROOT)), 'sha256': sha256(path), 'steps': saved['step']}
     save_json(out/'config.json', {'models': provenance, 'manifest_sha256': sha256(args.manifest),
         'frames': 24, 'read_rho': [0., .9], 'input_seeds': [0, 1], 'jpeg_quality': 70,
         'temporal_metric': 'reference-Farneback+FB and GT-relative frame difference; motion is estimated, not true',
@@ -64,6 +81,18 @@ def main():
                         raw, _ = inference(model, low, device, 1)
                         methods[name+'__raw'] = raw
                         methods[name+'__fb'] = fuse(raw, flow, masks)
+                    feature_masks = [cv2.erode(m.astype(np.uint8), np.ones((17, 17), np.uint8),
+                                     borderType=cv2.BORDER_CONSTANT, borderValue=0).astype(bool) for m in masks]
+                    for name, model in recurrent.items():
+                        gamma = float(model.body.gamma.detach())
+                        for state in ['history', 'history_off']:
+                            with torch.no_grad():
+                                model.body.gamma.fill_(gamma if state == 'history' else 0.)
+                            raw = streaming(model, low, flow, feature_masks, device)
+                            methods[name+'__'+state+'__raw'] = raw
+                            methods[name+'__'+state+'__fb'] = fuse(raw, flow, masks)
+                        with torch.no_grad():
+                            model.body.gamma.fill_(gamma)
                     for label, flows, valid in [('low_fb', flow, masks), ('reference_fb', reference_flow, reference_mask)]:
                         valid = [cv2.erode(m.astype(np.uint8), np.ones((17, 17), np.uint8),
                                  borderType=cv2.BORDER_CONSTANT, borderValue=0).astype(bool) for m in valid]
