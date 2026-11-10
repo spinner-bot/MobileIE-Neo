@@ -79,7 +79,7 @@ def detect_changes(inputs):
         a = cv2.resize(prev, (32, 24)) / (prev.mean()+4)
         b = cv2.resize(cur, (32, 24)) / (cur.mean()+4)
         difference = float(np.abs(a-b).mean())
-        events.append(ratio > np.log(1.35) or difference > .5)
+        events.append(bool(ratio > np.log(1.35) or difference > .5))
         details.append({"brightness_log_ratio": ratio, "normalized_thumbnail_difference": difference})
     return events, details
 
