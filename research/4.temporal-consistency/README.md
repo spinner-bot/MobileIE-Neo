@@ -2,9 +2,10 @@
 
 目标：以论文为最终产出，深入核查 MobileIE 的架构与训练机制，在移动端计算预算内设计视频增强模型，用传统方法、后处理和已有视频模型对照验证画质、时间稳定性与效率收益。
 
-- 状态：**前期探索，两轮受控预实验已完成**（2026-11-10）；没有确定最终方法，完整训练复现与真实视频泛化尚未验证
+- 状态：**前期探索，三轮受控预实验已完成**（2026-11-11）；没有确定最终方法，真实配对样例已发现迁移与运动估计反例，完整训练及广泛泛化尚待验证
 - 当前研究入口：[MobileIE 架构、训练核查与视频研究设计](docs/architecture-and-video-research-plan.md)
-- 最新结果：[进展报告0012](../../docs/进展报告/0012-T-26111021-训练对照与独立场景探索.md)、[训练/状态表](report/exploration-r2/tables.md)、[训练+融合强基线](report/exploration-r2-fusion/tables.md)、[完整过程](process/exploration-r2/journal.md)
+- 最新结果：[进展报告0013](../../docs/进展报告/0013-T-26111102-骨干时间交互与真实视频反例.md)、[受控训练表](report/exploration-r3-training/training_tables.md)、[真实低光样例](report/exploration-r3-training/real_tables.md)、[完整过程](process/exploration-r3/journal.md)
+- 第二轮：[进展报告0012](../../docs/进展报告/0012-T-26111021-训练对照与独立场景探索.md)、[训练/状态表](report/exploration-r2/tables.md)、[训练+融合强基线](report/exploration-r2-fusion/tables.md)
 - 首轮结果：[进展报告0010](../../docs/进展报告/0010-T-26111018-首轮调研与预实验.md)、[表格与图](report/exploration-r1/tables.md)
 - 上游：共享代码与权重在项目根目录 [`MobileIE/`](../../MobileIE)
 - 前置工作：[2 号复现](../2.reproduction/README.md)、[3 号闪烁基线](../3.video-flicker/README.md)、[5 号前期调研](../5.prior-art-survey/README.md)
@@ -24,10 +25,13 @@
 
 第二轮增加6张训练/6张验证素材、12次400步受控微调及光照/遮挡/切换条件。更强时序训练可接近当前有界FST收益，后者增加约35%的A100 eager前向时间，因而降低该具体实现优先级。新增普通训练+时间融合强基线，并保留特征噪声相关性/跨帧交互为待验证结构假设；数学微验证不是模型效果。共享GPU启动器会拒绝占用卡，本轮发生过一次真实资源拒绝并换空闲卡执行。
 
+第三轮完成8次同预算微调、FST真实特征统计、门控/输出状态解耦及真实视频样例探索。body交互在原合成集配合相同融合约有0.3dB增量，但真实样例没有迁移；直接低光FB光流也出现高置信错配。当前优先深化真实训练数据、运动可靠性与曝光响应，再扩大骨干候选。增强域光流改善了时间指标但仍有细节/计算代价，不把固定融合当作已解决方案。
+
 ## 2. 当前产出
 
 | 产出 | 位置 | 说明 |
 | --- | --- | --- |
+| 第三轮机制与真实视频反例 | [协议](docs/exploration-r3-protocol.md)、[特征/状态图](report/exploration-r3/)、[训练与真实样例](report/exploration-r3-training/)、[过程](process/exploration-r3/) | 相同初始化/信息量控制、history_off、真实低光样例、运动可靠性及状态成本 |
 | 第二轮训练与广度验证 | [协议](docs/exploration-r2-protocol.md)、[训练表](report/exploration-r2/)、[融合表](report/exploration-r2-fusion/)、[过程](process/exploration-r2/) | 同初始化、同数据流训练；强正则/后处理控制；成本、反例与GPU准入审计 |
 | 首轮调研与预实验 | [协议](docs/exploration-r1-protocol.md)、[图表](report/exploration-r1/)、[过程记录](process/exploration-r1/) | 有效对齐/反向warp校验、单项及组合矩阵、正负结果与特征探针 |
 | 架构与视频研究设计 | [`docs/architecture-and-video-research-plan.md`](docs/architecture-and-video-research-plan.md) | FST/HDPA/重参数化、warm-up/IWO、结构候选与强基线矩阵 |
@@ -66,7 +70,7 @@
 
 ## 4. 工作计划
 
-以下保留2026-11-05的阶段计划；当前属于前期探索，实际优先级及下一轮假设以最新进展报告0012为准，暂不把方法候选当成已确定的正式实验路线。
+以下保留2026-11-05的阶段计划；当前属于前期探索，实际优先级及下一轮假设以最新进展报告0013为准，暂不把方法候选当成已确定的正式实验路线。
 
 ### P0（本周，服务器到位前）
 - [x] MobileIE 引用追踪与相邻工作检索；
