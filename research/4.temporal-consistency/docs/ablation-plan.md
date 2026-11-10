@@ -86,7 +86,7 @@ out = tail(x4)               # Conv3x3 -> 3 通道
 2. 变体需要同时支持训练态（多分支）与推理态（slim）：
    - V1–V4 只改 `forward` / FST 融合，重参数化逻辑不变；
    - V5 单独定义“单分支训练态”，`slim()` 直接返回自身；
-3. 训练入口复用 `MobileIE/data/lledata.py`、`MobileIE/loss.py`、`MobileIE/option.py` 的数据加载与损失，写一个精简的 `train_ablation.py`，避免复制整个 `main.py`；
+3. 消融训练使用 [`scripts/train_ablation.py`](../scripts/train_ablation.py)：复用 `MobileIE/loss.py` 和模型变体，按文件名排序样本，并用同一 seed 固定各 epoch 的 shuffle 与随机裁剪；不依赖上游 `main.py` 的 OpenCV / torchvision 导入；
 4. 训练日志与权重放 `research/4.temporal-consistency/results/ablation/<variant>/`，不入库大文件；
 5. 每个变体训练前跑一次 `slim()` 等价性检查，防止重参数化实现错误污染结论。
 
@@ -113,3 +113,4 @@ out = tail(x4)               # Conv3x3 -> 3 通道
 ## 8. 修订记录
 
 - 2026-11-05 · claude code (local)：创建消融方案初稿。
+- 2026-11-10 · Codex  (sqs_A100)：补充独立训练入口，记录数据顺序与随机裁剪的可复现约定。
