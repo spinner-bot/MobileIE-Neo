@@ -1,0 +1,66 @@
+{
+  "runs": [
+    {
+      "variant": "task",
+      "seed": 0,
+      "steps": 400,
+      "initial_task": 0.13133329153060913,
+      "initial_gradient_norm": 6.324952602386475,
+      "final_gamma": null,
+      "checkpoint_sha256": "b2a2ed82baea1462b93fb1d7d53024c0bbc7695b973c9c3af7b68d056865d7d1"
+    },
+    {
+      "variant": "task",
+      "seed": 1,
+      "steps": 400,
+      "initial_task": 0.10659535229206085,
+      "initial_gradient_norm": 11.398811340332031,
+      "final_gamma": null,
+      "checkpoint_sha256": "ca07dd18f8fd607ef2321278be056b33b70f128c2a23ca7526ee39218223f770"
+    },
+    {
+      "variant": "cross",
+      "seed": 0,
+      "steps": 400,
+      "initial_task": 0.13133329153060913,
+      "initial_gradient_norm": 6.324979782104492,
+      "final_gamma": 0.3076660931110382,
+      "checkpoint_sha256": "c7532b0b75741e5348c41adacc3b25f2be1933195cd4cf2a3bb2b1d3a0389d86"
+    },
+    {
+      "variant": "cross",
+      "seed": 1,
+      "steps": 400,
+      "initial_task": 0.10659535229206085,
+      "initial_gradient_norm": 11.398811340332031,
+      "final_gamma": 0.28021833300590515,
+      "checkpoint_sha256": "379482347bf3c18c589f8b413dd7f671e5b5d6f1fddddeace2f81682f987b1f1"
+    },
+    {
+      "variant": "mean_square",
+      "seed": 0,
+      "steps": 400,
+      "initial_task": 0.13133329153060913,
+      "initial_gradient_norm": 6.324960231781006,
+      "final_gamma": 0.36656948924064636,
+      "checkpoint_sha256": "066551cc5522566da80e7243e39d8a787c41b2f6616460f2b64d6f9a0e483112"
+    },
+    {
+      "variant": "mean_square",
+      "seed": 1,
+      "steps": 400,
+      "initial_task": 0.10659535229206085,
+      "initial_gradient_norm": 11.398811340332031,
+      "final_gamma": 0.3357842266559601,
+      "checkpoint_sha256": "53183f22669504875880bcbb0fa1785d49046426bc39c019a813e01851f2bba5"
+    }
+  ],
+  "total_updates": 2400,
+  "validation_rows": 960,
+  "unique_input_conditions": 48,
+  "initial_task_within_seed_max_abs_difference": {
+    "0": 0.0,
+    "1": 0.0
+  },
+  "checkpoint_hashes_match": true
+}
