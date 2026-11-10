@@ -135,7 +135,6 @@ def main():
     parser.add_argument("--learning-rate", type=float, default=1e-3)
     parser.add_argument("--warmup-learning-rate", type=float, default=1e-6)
     parser.add_argument("--channels", type=int, default=12)
-    parser.add_argument("--rep-scale", type=int, default=4)
     parser.add_argument("--num-workers", type=int, default=0)
     parser.add_argument("--save-every", type=int, default=20)
     parser.add_argument("--device", default="cuda")
