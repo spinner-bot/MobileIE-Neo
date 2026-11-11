@@ -1,0 +1,60 @@
+{
+  "seed": 1,
+  "models": [
+    "learned_alignment",
+    "zero_alignment"
+  ],
+  "steps_per_model": 4000,
+  "batch": 4,
+  "frames": 4,
+  "patch": 128,
+  "anchor": {
+    "path": ".cache/checkpoints/exploration-r34/seed1/original-step4000.pt",
+    "sha256": "fd6a357b6d3bf087d8f78a35c323ef02becce34df52bfe342c31c8882aaf8ccd",
+    "step": 4000,
+    "model": "original",
+    "seed": 1
+  },
+  "anchor_frozen": true,
+  "loss": "MSE over all four frames",
+  "optimizer": "Adam",
+  "lr": 0.001,
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "eps": 1e-08,
+  "weight_decay": 0,
+  "clip_gradient_norm": 1,
+  "state_dtype": "float16",
+  "compute_dtype": "float32",
+  "selection": "final4000 only",
+  "source_manifest_sha256": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+  "source_sha256": {
+    "train_preserved_r37.py": "4f2b9babc876f2ed6031ee117d3c052d61a02f2e810e4f7cefa2ce9e674d2ada",
+    "training_preserved_r37.py": "b64cf1c82c08f1eef9ccf62a4bfbdda74963525f370b01ff5d1d9d64ab03b6ae",
+    "preserved_state_r37.py": "0ee15f79ed9f7d15672d8a1830edaaa062606278b1123e86c06d6c7bb52e0177",
+    "budget_causal_r33.py": "7cfe138a286fdb488973ffe7c5bc93b69ad505af981e22cba824402c491b2e3b",
+    "dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498",
+    "exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa"
+  },
+  "protocol_sha256": "019e7c7a5313aa007cc12d1e9e7b514ef21ad54d06f941539ac154b5b0be2c3e",
+  "gates": {
+    "research/4.temporal-consistency/process/exploration-r37/cpu-gate.json": "43e9fab37e8251faa345e50fec69b68a420e744dd2be122f5786b254f56b02ef",
+    "research/4.temporal-consistency/process/exploration-r37/cuda-gate.json": "69024fa1b41a7a58d251f06dda66bfcc2e2762aaf27ff71004eac7ce2c11d92a"
+  },
+  "parameters": {
+    "learned_alignment": {
+      "total": 4587,
+      "trainable": 512
+    },
+    "zero_alignment": {
+      "total": 4587,
+      "trainable": 512
+    }
+  },
+  "torch_version": "2.9.1+cu126",
+  "cudnn_tf32_allowed": true,
+  "matmul_tf32_allowed": false,
+  "revision": "04ee7f54c8063c5642c7d2cceeb26e7c215bdc15"
+}
