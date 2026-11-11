@@ -78,7 +78,7 @@ def main():
                 optimizer.step();recent.append(float(loss.detach()))
                 row={'step':step+1,'task':float(loss.detach()),'gradient_norm_all':norm,'sample_identity':samples,
                     'real_context':real_context,'synthetic_context':synthetic_context,'alignment':details,
-                    'alignment_wall_seconds':align_seconds,'decoder_context_l2':float(net.backbone.body.block1.weight[:,12:].detach().norm())}
+                    'alignment_wall_seconds':align_seconds,'decoder_context_l2':float(net.backbone.body.block1.context.weight.detach().norm())}
                 with (folder/'training.jsonl').open('a') as stream:stream.write(json.dumps(row,allow_nan=False)+'\n')
                 if (step+1)%100==0:print(json.dumps({'label':label,'step':step+1,'task':row['task'],
                     'gradient_norm_all':norm,'decoder_context_l2':row['decoder_context_l2']}),flush=True)
