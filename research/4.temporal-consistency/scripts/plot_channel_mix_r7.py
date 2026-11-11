@@ -48,7 +48,7 @@ def main():
     ax.set(xticks=range(2),xticklabels=['Light step','Scene cut'],ylabel='Mean PSNR at event frame12',title='Fixed input reset isolates event lag')
     ax.legend(fontsize=8)
     for ax in axes.flat:ax.grid(alpha=.15)
-    fig.suptitle('Frozen official weights: selecting noise channels helps static data, motion and strong RGB controls remain decisive',fontsize=12)
+    fig.suptitle('Frozen weights: static channel gains require motion and strong RGB controls\nAligned curves: circles gamma=.1, squares gamma=.5; supplied motion cost excluded',fontsize=12)
     fig.savefig(report/'channel_motion_controls.png',dpi=180)
     fig.savefig(report/'channel_motion_controls.pdf')
     plt.close(fig)
