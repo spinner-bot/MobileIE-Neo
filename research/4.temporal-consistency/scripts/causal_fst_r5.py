@@ -40,6 +40,7 @@ class CausalFST(nn.Module):
         self.backbone, self.mode = backbone, mode
         self.history_mode = 'causal'
         self.state = None
+        self.state_input_shape = None
         if mode in ('spatial_bilinear', 'temporal_bilinear', 'temporal_post'):
             self.branch = nn.Conv2d(12, 12, 3, padding=1, groups=12, bias=False)
             nn.init.zeros_(self.branch.weight)
@@ -50,6 +51,7 @@ class CausalFST(nn.Module):
         if history_mode not in ('causal', 'current', 'off'):
             raise ValueError(history_mode)
         self.state, self.history_mode = None, history_mode
+        self.state_input_shape = None
 
     def _features(self, x):
         return self.backbone.body.block1(self.backbone.head(x))
@@ -106,11 +108,12 @@ class CausalFST(nn.Module):
             return self._finish(self._ordinary(u))
         current = self._state(u)
         previous = self.state
-        if previous is None or previous.shape != current.shape:
+        if previous is None or previous.shape != current.shape or self.state_input_shape != x.shape:
             previous = current
         result = self._finish(self._body(u, current, previous))
         # clone is essential: a 3-channel view would retain all 12 channels.
-        self.state = current.detach().clone()
+        self.state = None if self.mode == 'spatial_bilinear' else current.detach().clone()
+        self.state_input_shape = x.shape
         return result
 
     def branch_parameters(self):
