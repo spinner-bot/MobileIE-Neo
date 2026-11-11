@@ -23,14 +23,15 @@ class ComponentTests(unittest.TestCase):
             with torch.no_grad():
                 x = torch.rand(9, 3, 21, 29, dtype=torch.double)*.2
                 output, features = forward_probe(model, x)
-                baseline, components = body_components(model, features['body'], features['gate'], output)
-                self.assertLess(float(components['rounding_residual'].abs().max()), 1e-10)
-                torch.testing.assert_close(baseline+sum(components.values()), output, rtol=1e-12, atol=1e-12)
-                for clipped in [False, True]:
-                    row = covariance_summary(components, output, clipped)
-                    self.assertLess(row['variance_closure_abs'], 1e-12)
-                    self.assertLess(row['centered_reconstruction_max_abs'], 1e-12)
-                    self.assertAlmostEqual(sum(row['covariance_with_total_over_total_variance']), 1., places=10)
+                for split in [False, True]:
+                    baseline, components = body_components(model, features['body'], features['gate'], output, split_interaction=split)
+                    self.assertLess(float(components['rounding_residual'].abs().max()), 1e-10)
+                    torch.testing.assert_close(baseline+sum(components.values()), output, rtol=1e-12, atol=1e-12)
+                    for clipped in [False, True]:
+                        row = covariance_summary(components, output, clipped)
+                        self.assertLess(row['variance_closure_abs'], 1e-12)
+                        self.assertLess(row['centered_reconstruction_max_abs'], 1e-12)
+                        self.assertAlmostEqual(sum(row['covariance_with_total_over_total_variance']), 1., places=10)
 
     def test_constant_gates_zero_gate_variation_components(self):
         model = new_model(torch.device('cpu')).double()
