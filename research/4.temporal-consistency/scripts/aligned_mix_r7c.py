@@ -59,5 +59,5 @@ def rgb_stream(frames, fields, gamma, recursive=False, resets=None):
             grid, mask = fields[t-1]
             output = blend(current, sample_previous(previous, grid), gamma, mask)
         result.append(output[0])
-        previous = output if recursive else current
+        previous = (output if recursive else current).detach().clone()
     return torch.stack(result)
