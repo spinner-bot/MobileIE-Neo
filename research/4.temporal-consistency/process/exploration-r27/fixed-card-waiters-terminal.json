@@ -1,0 +1,22 @@
+{
+  "observed_at": "2026-11-12T01:18:08.203129+08:00",
+  "stopped": [
+    {
+      "pid": 2864836,
+      "prefix": "gpu-fixtures-wait",
+      "command": ".venv/bin/python research/4.temporal-consistency/scripts/wait_idle_gpu.py --gpu 2 --record-prefix research/4.temporal-consistency/process/exploration-r27/gpu-fixtures-wait --poll-seconds 30 -- .venv/bin/python research/4.temporal-consistency/scripts/test_transport_fst_r27.py --device cuda --out research/4.temporal-consistency/process/exploration-r27/fixtures-cuda ",
+      "child_processes_at_stop": [],
+      "guard_attempts": 0,
+      "stopped_before_CUDA": true
+    },
+    {
+      "pid": 2869331,
+      "prefix": "gpu-fields-wait",
+      "command": ".venv/bin/python research/4.temporal-consistency/scripts/wait_idle_gpu.py --gpu 0 --record-prefix research/4.temporal-consistency/process/exploration-r27/gpu-fields-wait --poll-seconds 30 -- .venv/bin/python research/4.temporal-consistency/scripts/test_training_fields_r27.py --device cuda --out research/4.temporal-consistency/process/exploration-r27/training-fields-cuda ",
+      "child_processes_at_stop": [],
+      "guard_attempts": 0,
+      "stopped_before_CUDA": true
+    }
+  ],
+  "reason": "replace fixed-card queues with bounded same-group first-idle monitoring; no experiment cancelled or wall-clock cutoff"
+}
