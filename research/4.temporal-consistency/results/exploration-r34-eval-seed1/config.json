@@ -1,0 +1,36 @@
+{
+  "seed": 1,
+  "device": "cpu",
+  "torch_threads": 2,
+  "opencv_threads": 1,
+  "torch_version": "2.9.1+cu126",
+  "checkpoints": {
+    "original": {
+      "path": ".cache/checkpoints/exploration-r34/seed1/original-step4000.pt",
+      "sha256": "fd6a357b6d3bf087d8f78a35c323ef02becce34df52bfe342c31c8882aaf8ccd",
+      "step": 4000,
+      "model": "original",
+      "seed": 1
+    },
+    "spatial": {
+      "path": ".cache/checkpoints/exploration-r34/seed1/spatial-step4000.pt",
+      "sha256": "732eb427f52206c0c5e6ab6080d626bf1b376d7398e8f691a5169a66ddf4d5ea",
+      "step": 4000,
+      "model": "spatial",
+      "seed": 1
+    },
+    "causal": {
+      "path": ".cache/checkpoints/exploration-r34/seed1/causal-step4000.pt",
+      "sha256": "da63a1db2820d37da0f1c557c290fffde1b4192dffb3b4c43466c5157e87aa36",
+      "step": 4000,
+      "model": "causal",
+      "seed": 1
+    }
+  },
+  "cache_index_sha256": "424fa278b2fe66d29de476e2b47328619438f97cf71926448433d1191bb722c1",
+  "training_config_sha256": "d9629d2b535ee74ed43802d6c8ed7bbd405849e6a17aee9c01848ee9ce9879fe",
+  "input_reset": false,
+  "protocol_sha256": "03fef53846ffc7f68571c5ada18cf2a02c7bfa3469eb7712560e871bb249db59",
+  "revision": "ba20e9a239e6274468231c7df2f8ca6b059c833a",
+  "scope": "Custom external DEV, fixed final4000, same CPU and cached quality-evaluation motion; not original DAVIS LLVE benchmark or phone speed. Post deployment may estimate motion from its own enhanced output."
+}
