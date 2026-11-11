@@ -27,6 +27,8 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--device', choices=['cpu', 'cuda'], default='cpu')
     p.add_argument('--out', required=True)
+    p.add_argument('--first-case-only', action='store_true')
+    p.add_argument('--clone-gradients-before-clip', action='store_true')
     args = p.parse_args()
     out = Path(args.out).resolve()
     out.mkdir(parents=True, exist_ok=False)
@@ -39,7 +41,9 @@ def main():
     save_json(out/'config.json', {'device': str(device), 'revision': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
               'source_sha256': {str(p.relative_to(ROOT)): sha256(p) for p in Path(__file__).parent.glob('*.py')},
               'protocol_sha256': sha256(BASE/'docs/exploration-r27-protocol.md'),
-              'steps': [0, 1, 3999], 'seeds': [0, 1], 'scope': 'Implementation checks on training data, not quality experiments.'})
+              'steps': [0] if args.first_case_only else [0, 1, 3999], 'seeds': [0] if args.first_case_only else [0, 1],
+              'gradient_clone_before_optimizer': args.clone_gradients_before_clip,
+              'scope': 'Implementation checks on training data, not quality experiments.'})
     data, integrity = load_training()
     images = load_images('train')
     save_json(out/'source_integrity.json', integrity)
@@ -47,11 +51,11 @@ def main():
     for param in teacher.parameters():
         param.requires_grad_(False)
     checks = []
-    for seed in [0, 1]:
+    for seed in ([0] if args.first_case_only else [0, 1]):
         path = BASE/'results'/f'exploration-r26-seed{seed}'/'shared_context.jsonl'
         with path.open() as stream:
             references = {i: json.loads(line) for i, line in enumerate(stream) if i in [0, 1, 3999]}
-        for step in [0, 1, 3999]:
+        for step in ([0] if args.first_case_only else [0, 1, 3999]):
             rx, ry, rp, identity, real_context = real_pair(data, seed, step, 'native_crop')
             sx, sy, meta, sp, synthetic_context = synthetic_pair_with_context(images, seed, step)
             reference = references[step]
@@ -81,12 +85,15 @@ def main():
             for loss, model, optimizer in zip(losses, [baseline, candidate], optimizers):
                 optimizer.zero_grad(set_to_none=True)
                 loss.backward()
-                gradient_states.append({name: value.grad.detach().clone() for name, value in model.named_parameters()})
+                if args.clone_gradients_before_clip:
+                    gradient_states.append({name: value.grad.detach().clone() for name, value in model.named_parameters()})
                 norm = torch.nn.utils.clip_grad_norm_(model.parameters(), 1.)
                 assert bool(torch.isfinite(norm))
                 optimizer.step()
             model_audit = compare_state(candidate.state_dict(), baseline.state_dict())
             adam_audit = compare_state(optimizers[1].state_dict(), optimizers[0].state_dict())
+            if not args.clone_gradients_before_clip:
+                gradient_states = [{name: value.grad.detach().clone() for name, value in model.named_parameters()} for model in [baseline, candidate]]
             gradient_audit = compare_state(gradient_states[1], gradient_states[0])
             save_json(out/f'copy-step{step}-seed{seed}-diagnostic.json', {'model': model_audit, 'Adam': adam_audit, 'gradient': gradient_audit,
                 'per_parameter_gradient_max_abs': {name: float((gradient_states[0][name]-gradient_states[1][name]).abs().max()) for name in gradient_states[0]}})
@@ -97,7 +104,7 @@ def main():
                    'historical_R26_GPU_history_hash_matches_diagnostic_only': [a['history_array_sha256'] == b['history_array_sha256'] for a, b in zip(details, reference['alignment'])]}
             checks.append(row)
             print(json.dumps(row), flush=True)
-    save_json(out/'audit.json', {'passed': True, 'checks': checks, 'implementation_updates_copy': 6,
+    save_json(out/'audit.json', {'passed': True, 'checks': checks, 'implementation_updates_copy': len(checks),
                                'scope': 'Same-backend parity only. CPU teacher versus historical CUDA teacher hashes are diagnostic, not a replay requirement. No retained quality checkpoint.'})
 
 
