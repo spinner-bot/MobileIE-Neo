@@ -1,0 +1,52 @@
+{
+  "methods": [
+    "raw",
+    "finite_self05",
+    "recursive_self05",
+    "adaptive_recursive"
+  ],
+  "seeds": [
+    0,
+    1
+  ],
+  "frames": 64,
+  "device": "cpu",
+  "torch_threads": 2,
+  "opencv_threads": 1,
+  "torch_version": "2.9.1+cu126",
+  "checkpoints": [
+    {
+      "path": ".cache/checkpoints/exploration-r34/seed0/original-step4000.pt",
+      "sha256": "d1da425a8df87fdce81f9e049c57115cbe23a66f7773f5c149b1f83ab9f32344",
+      "step": 4000,
+      "model": "original",
+      "seed": 0
+    },
+    {
+      "path": ".cache/checkpoints/exploration-r34/seed1/original-step4000.pt",
+      "sha256": "fd6a357b6d3bf087d8f78a35c323ef02becce34df52bfe342c31c8882aaf8ccd",
+      "step": 4000,
+      "model": "original",
+      "seed": 1
+    }
+  ],
+  "parameters": 4075,
+  "future_frames": 0,
+  "cache_index_sha256": "424fa278b2fe66d29de476e2b47328619438f97cf71926448433d1191bb722c1",
+  "reference_sources": {
+    "research/4.temporal-consistency/results/exploration-r34-eval-seed0/per_sequence.jsonl": "a3c3aae7a6bdbccaae3c7405149fb125424e5c89caa57031e255bb9ce9a24474",
+    "research/4.temporal-consistency/results/exploration-r34-eval-seed1/per_sequence.jsonl": "54e428bbc6b6883e13fdd2b354cec59bb4b4bb675b0ebaffac2d96379ff56358"
+  },
+  "protocol_sha256": "508f662fe17513afc683eeb479df340a45d81d99efc0b97d3cd5388d0e143ebe",
+  "source_sha256": {
+    "evaluate_classical_r36.py": "aa0c229ea0acd28559f756f3167536a13eb0bd27a42e7e922d83ec89a1d94db2",
+    "classical_recursion_r36.py": "ef4d0fae9f599c96c289ab680752c39be2503d9af1cfe5ebb7437a0ba5e61fb4",
+    "half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+    "aligned_raw_history_r11.py": "e367727401f82ccf0bccaf8d88f904e4aebf8b78186f0539eedeed222b2d2227",
+    "aggregation_controls_r20.py": "7b4541be8512ca1edb755b5a73f889351e376f9a8fc1fdec7ed633a4438c116c",
+    "exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+    "video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0"
+  },
+  "revision": "f48ef2aae28f46615538787264e13d682c2398f4",
+  "scope": "Three DEV sources; shared motion for fair quality only. Variance is approximate. Timings are shared stages, not standalone/phone speed."
+}
