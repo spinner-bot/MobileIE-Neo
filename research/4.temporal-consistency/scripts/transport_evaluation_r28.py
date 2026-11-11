@@ -13,12 +13,13 @@ EXTERNAL = 'r26_pre_mse_spatial'
 
 
 def load_models(mode, device):
-    if mode not in MODES:
-        raise ValueError('registered temporal mode required')
+    if mode not in ['copy', 'post_transport']:
+        raise ValueError('convergence scope permits only copy and post_transport evaluation')
     models, markers = [], []
     for objective in ['charb', 'mse']:
         for seed in [0, 1]:
-            folder = BASE/'results'/f'exploration-r28-seed{seed}'/(mode+'-'+objective)
+            folder = (BASE/'results'/f'exploration-r26-seed{seed}'/('plain-'+objective) if mode == 'copy'
+                      else BASE/'results'/f'exploration-r28-seed{seed}'/(mode+'-'+objective))
             runtime = json.loads((folder/'runtime.json').read_text())
             assert runtime['final_step'] == 4000 and runtime['new_updates'] == 4000
             marker = json.loads((folder/'checkpoint-step4000.json').read_text())
@@ -29,6 +30,7 @@ def load_models(mode, device):
             net.load_state_dict(saved['model'], strict=True)
             models.append((mode, objective, seed, net.eval()))
             markers.append({'mode': mode, 'objective': objective, 'train_seed': seed, **marker,
+                            'reused_R26_training': mode == 'copy',
                             'training_config_sha256': sha256(folder/'config.json')})
     if mode == 'copy':
         for seed in [0, 1]:
