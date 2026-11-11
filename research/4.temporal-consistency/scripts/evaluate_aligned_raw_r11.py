@@ -76,9 +76,11 @@ def main():
     metas=json.loads(CACHE_INDEX.read_text())['scenes']+json.loads(DEV_INDEX.read_text())['scenes']
     metas += [{**r,'domain':'dev_native'} for r in json.loads(NATIVE_INDEX.read_text())['scenes'] if r['domain']=='native_crop']
     assert len(metas)==46
-    start=time.perf_counter();count=0;repeats=[];first=[]
+    start=time.perf_counter();count=0;repeats=[];first=[];event_audit=[]
     for meta in metas:
         data=load_one(meta);events,_=detect_changes(data['low'])
+        event_audit.append({'domain':meta['domain'],'scene':meta['scene'],'reset_frames':np.flatnonzero(events).tolist(),
+                            'scope':'synthetic frame12 events known; real events are unannotated'})
         inputs=torch.from_numpy((data['low']/255.).transpose(0,3,1,2).copy()).to(device)
         for variant,seed,net,histories in models:
             first_output=None
@@ -106,6 +108,7 @@ def main():
         print(json.dumps({'domain':meta['domain'],'scene':meta['scene'],'rows':count}),flush=True)
     expected=sum(736 if v.startswith('concat') else 368 for v in variants);assert count==expected
     save_json(out/'plain_replay.json',repeats);save_json(out/'first_frame_audit.json',first)
+    save_json(out/'input_events.json',event_audit)
     save_json(out/'runtime.json',{'rows':count,'wall_seconds':time.perf_counter()-start})
 
 
