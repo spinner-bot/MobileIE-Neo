@@ -1,0 +1,102 @@
+{
+  "runs": [
+    {
+      "variant": "concat_context",
+      "seed": 0,
+      "steps": 1000,
+      "parameters": 4975,
+      "initial_plain_audit": {
+        "initial_task_delta": 0.0,
+        "initial_unclipped_backbone_gradient_norm_delta": 0.0
+      },
+      "last100_task": 0.0415729564614594,
+      "steps_clipped": 936
+    },
+    {
+      "variant": "concat_context",
+      "seed": 1,
+      "steps": 1000,
+      "parameters": 4975,
+      "initial_plain_audit": {
+        "initial_task_delta": 0.0,
+        "initial_unclipped_backbone_gradient_norm_delta": 0.0
+      },
+      "last100_task": 0.04098481668159366,
+      "steps_clipped": 942
+    },
+    {
+      "variant": "copy_context_replay",
+      "seed": 0,
+      "steps": 1000,
+      "parameters": 4975,
+      "initial_plain_audit": {
+        "initial_task_delta": 0.0,
+        "initial_unclipped_backbone_gradient_norm_delta": 0.0
+      },
+      "last100_task": 0.04167742345482111,
+      "steps_clipped": 943
+    },
+    {
+      "variant": "concat_aligned_context",
+      "seed": 0,
+      "steps": 1000,
+      "parameters": 4975,
+      "initial_plain_audit": {
+        "initial_task_delta": 0.0,
+        "initial_unclipped_backbone_gradient_norm_delta": 0.0
+      },
+      "last100_task": 0.040490059945732355,
+      "steps_clipped": 930
+    },
+    {
+      "variant": "concat_aligned_context",
+      "seed": 1,
+      "steps": 1000,
+      "parameters": 4975,
+      "initial_plain_audit": {
+        "initial_task_delta": 0.0,
+        "initial_unclipped_backbone_gradient_norm_delta": 0.0
+      },
+      "last100_task": 0.04029543079435825,
+      "steps_clipped": 938
+    }
+  ],
+  "updates": 5000,
+  "temporal_updates": 4000,
+  "checkpoints_verified": 50,
+  "current_GT_identity_matches_R5_R11": true,
+  "self_history_tasks": {
+    "concat_context-seed0": {
+      "self_history_tasks": 64,
+      "all_supervised_tasks": 4000,
+      "fraction": 0.016
+    },
+    "concat_context-seed1": {
+      "self_history_tasks": 69,
+      "all_supervised_tasks": 4000,
+      "fraction": 0.01725
+    },
+    "copy_context_replay-seed0": {
+      "self_history_tasks": 64,
+      "all_supervised_tasks": 4000,
+      "fraction": 0.016
+    },
+    "concat_aligned_context-seed0": {
+      "self_history_tasks": 64,
+      "all_supervised_tasks": 4000,
+      "fraction": 0.016
+    },
+    "concat_aligned_context-seed1": {
+      "self_history_tasks": 69,
+      "all_supervised_tasks": 4000,
+      "fraction": 0.01725
+    }
+  },
+  "spatial_replay": {
+    "reference_checkpoint_sha256": "cd48471e54ae31c292f67a13ccc50452ff49d3dbc42acbfc5c4fe2ea806bd9e9",
+    "max_abs_trace_delta": 0.0,
+    "max_abs_model_state_delta": 0.0,
+    "preset_tolerance": 1e-07
+  },
+  "aligned_pairs": 8000
+}
