@@ -2,7 +2,7 @@
 
 目标：为项目申报的现场考察，按 MobileIE 官方流程把模型跑在安卓手机上，并提供“手机实测速度 + 处理前后效果对比”的演示材料。**这是演示任务，不是研究任务**，不改变 3/4/5 号工作的技术路线。
 
-- 分支：**`demo.org`**；本目录 `demo/org/` 是这项演示工作的主文件夹
+- 分支：**`demo.org`**；本目录 `demo/org/` 是这项演示工作的主文件夹。`main` 单向同步到本分支，演示改动不合并回 `main`
 - 状态：**P0 完成**（2026-11-08），演示包已打包，手机测速待做
 - 上游代码与权重：项目根目录 [`MobileIE/`](../../MobileIE)
 - 关联：[2 号复现](../../research/2.reproduction/README.md)、[5 号前期调研](../../research/5.prior-art-survey/README.md)、[6B06-01 会议记录](../../docs/会议记录/6B06-01/audio%20-%20Transcription.txt)
@@ -136,3 +136,4 @@ PYD=F:/dev-tools/python-envs/MobileIE-Demo/Scripts/python.exe
 - 2026-11-08 · claude code (local)：创建 6 号工作，确定 B 方案，完成模型解析与文档首版。
 - 2026-11-08 · claude code (local)：P0 跑通，LOL eval15 PSNR 23.619 dB；补充 ai-edge-litert 兼容层与结果对比图。
 - 2026-11-10 · claude code (local)：建立 `demo.org` 演示分支；打包手机演示包（模型 + 对比图 + 中文操作说明）。
+- 2026-11-12 · claude code (local)：工作目录迁入 `demo/org/`；与 `main` 做首次 `--no-ff` 同步（2382 个提交）。
