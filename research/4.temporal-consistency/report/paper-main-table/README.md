@@ -23,7 +23,7 @@
 |R28 post_transport/mse/current/postwarp05|same-weight reference, CUDA; classical post|26.805066|0.919185|2.760614|1.423614|
 |R28 post_transport/mse/causal/raw|trained candidate, CUDA; registered screening failed|26.780321|0.919689|2.775676|1.418377|
 
-| 方法 | 预测参数 | 运动teacher参数 | 预测Conv GMAC@1080p | 额外历史状态 | Flow | 未来帧 | 手机ms |
+| 方法 | 预测参数 | 共享质量评价teacher参数 | 预测Conv GMAC@1080p | 额外历史状态 | Flow | 未来帧 | 手机ms |
 |---|---:|---:|---:|---|---|---:|---|
 |MobileIE plain/charb/raw|4075|0|7.938|0|False|0|未测|
 |MobileIE plain/charb/postwarp05|4075|4075|7.938|RGB history 23.73 MiB@1080p + motion state|True|0|未测|
@@ -44,7 +44,7 @@
 |R28 post_transport/mse/current/postwarp05|4075|4075|7.938|RGB history 23.73 MiB@1080p + motion state|True|0|未测|
 |R28 post_transport/mse/causal/raw|4075|4075|7.938|12ch feature history 94.92 MiB@1080p + motion state|True|0|未测|
 
-运动列对应当前共享流场评价的固定官方MobileIE + 半分辨率Farneback/FB。预计算flow不等于部署免费；需要独立teacher时要计入其权重/前向、CPUflow和warp。MAC列只计预测Conv2d，不含FST/attention/激活/warp/运动teacher；历史状态是对应方法的最低历史张量，不含完整峰值内存。
+运动列对应当前共享流场质量评价的固定官方MobileIE + 半分辨率Farneback/FB，并非经典post所有部署都需要第二个CNN。自驱运动post可复用自身增强输出，见下面外部同底座表。预计算flow不等于部署免费；需要独立teacher时要计入其权重/前向、CPUflow和warp。MAC列只计预测Conv2d，不含FST/attention/激活/warp/运动teacher；历史状态是对应方法的最低历史张量，不含完整峰值内存。
 
 R27 post_transport真实推理依赖过去特征与flow；其约27.06/2.71是CPU冻结探针，不是无flow的单帧结果，也不能由空间重参数化消除独立过去输入。单帧current是另一个部署映射，R28须单独评价。
 
@@ -55,3 +55,17 @@ R28的4416行共同CUDA评价已完成，current/raw与causal/raw均未通过注
 外部有效性缺口：完整标准公开视频验证、真实手机域方法评价、同域训练/适配的已发表对照、手机端完整延迟及独立保留测试仍待。FastDVDnet/StableLLVE已有迁移评价，尚不能替代这些缺口。
 
 完整机器表：[evidence.csv](evidence.csv)；数据来源：[sources.json](sources.json)。
+
+## 外部同底座CPU证据（独立表）
+
+以下均为R26 plain MSE双seed、同一R30六条件。与上方native/CUDA表分开；仅自驱post已测CPU驻留输入流水线，不能当手机延迟。
+
+|方法|PSNR|SSIM|时序误差↓|边缘误差↓|CPU流水线ms/帧@480×854|
+|---|---:|---:|---:|---:|---:|
+|raw|23.661207|0.678138|10.069569|4.437215|未测|
+|self_motion_post05|23.817468|0.712322|7.448614|4.123568|200.612|
+|shared_motion_post05|23.735146|0.707393|7.673995|4.158096|未测|
+
+自驱post没有独立teacher前向，状态为一张raw增强RGB；该CPU循环总时间含输出留存指针开销，分帧计时不含后续指标/文件保存。未测完整峰值内存或相机到屏幕延迟。[外部机器表](external_evidence.csv)。
+
+预训练来源限制：官方FastDVDnet文档训练清单覆盖R30三开发片及DAVIS TRAIN60/VAL30，因此新的R35迁移结果不能声称未见视频泛化；旧R12的ND原生表不因该DAVIS重叠自动变成训练片。已仅按元数据保留另30段test-dev来源/1788帧，与该90训练ID及项目训练/开发ID不重叠，JPEG成员尚未读取。这仍不是官方LLVE标准基准，其他公开权重来源需分别核验。
