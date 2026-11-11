@@ -4,8 +4,9 @@
 
 - 状态：**前期探索，十六轮受控预实验/机制诊断及必要跟进已完成**（2026-11-11）；没有确定最终方法，已建立实拍ND衰减数据与两域强控制，完整训练及自然夜景泛化尚待验证
 - 当前研究入口：[MobileIE 架构、训练核查与视频研究设计](docs/architecture-and-video-research-plan.md)
-- 最新结果：[进展报告0026](../../docs/进展报告/0026-T-26111121-多尺度骨干与独立历史反证.md)、[完整表](report/exploration-r16/tables.md)、[历史反证图](report/exploration-r16/multiscale_history_controls.png)、[过程](process/exploration-r16/journal.md)，24000更新/3680新逻辑行完成
-- 进行中：[R18监督配对诊断](docs/exploration-r18-protocol.md)，固定104项、GT平移仅诊断、不改旧指标；[R17跨数据源协议](docs/exploration-r17-protocol.md)已登记，SDSD下载配额限制，尚无新像素结果
+- 最新结果：[进展报告0027](../../docs/进展报告/0027-T-26111121-监督配对几何反证与数据准备.md)、[固定配对诊断](report/exploration-r18/audit.json)、[图](report/exploration-r18/pair_geometry.png)、[过程](process/exploration-r18/journal.md)，104项CPU诊断未支持大整体整数平移主因
+- 第十六轮：[进展报告0026](../../docs/进展报告/0026-T-26111121-多尺度骨干与独立历史反证.md)、[完整表](report/exploration-r16/tables.md)、[历史反证图](report/exploration-r16/multiscale_history_controls.png)、[过程](process/exploration-r16/journal.md)，24000更新/3680新逻辑行完成
+- 数据准备：[R17协议](docs/exploration-r17-protocol.md)已登记，SDSD下载配额限制；BVI-RLV公开元数据可读、像素需IEEE登录，均尚无新像素结果。下一步检验时间冗余与噪声相关性
 - 第十五轮：[进展报告0025](../../docs/进展报告/0025-T-26111120-公开增强权重迁移与数据域核查.md)、[公开clean增强迁移表](report/exploration-r15/tables.md)、[过程](process/exploration-r15/journal.md)
 - 第十四轮：[进展报告0024](../../docs/进展报告/0024-T-26111120-原生训练与深度交互对照.md)、[深度/尺度全表](report/exploration-r14/tables.md)、[图](report/exploration-r14/native_depth_controls.png)、[过程](process/exploration-r14/journal.md)，42000新更新及全部Adam/checkpoint审核完成
 - 第十三轮：[进展报告0023](../../docs/进展报告/0023-T-26111119-前置历史与训练状态分布反证.md)、[表](report/exploration-r13/tables.md)、[过程](process/exploration-r13/journal.md)
@@ -160,3 +161,5 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 修改：2026-11-11T20:48:02.482890+08:00；作者：Codex  (sqs_A100)；原因：索引R16结构训练与R17数据获取限制。
 
 修改：2026-11-11T21:13:08.692013+08:00；作者：Codex  (sqs_A100)；原因：索引0026与固定配对诊断，记录阶段推送已恢复。
+
+修改：2026-11-11T21:21:00.783613+08:00；作者：Codex  (sqs_A100)；原因：索引0027几何负结果与后续时间冗余问题。
