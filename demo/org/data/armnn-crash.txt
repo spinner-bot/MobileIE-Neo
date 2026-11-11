@@ -1,0 +1,28 @@
+AI Benchmark v7.0.0 · Custom Model · Arm NN 后端崩溃记录
+设备：一加 9R（LE2100），Android 14 / ColorOS 14.0，SDK 34，arm64-v8a
+模型：model.tflite（FP32，输入 [1,400,600,3]），FP16 精度档，10 次迭代
+时间：2026-11-12 03:09:33
+现象：点击 Run 后进程崩溃重启，App 回到标准测试第 1 页；设置全部重置（模型路径清空、精度/后端恢复默认）。
+
+adb logcat -b crash 摘要（已裁剪，保留关键帧）：
+
+  F DEBUG   : backtrace:
+  F DEBUG   :       #00 pc 000000000009ce10  /apex/com.android.runtime/lib64/bionic/libc.so (abort+168)
+  F DEBUG   :       #01 pc 00000000017246a0  .../lib/arm64/libarmnn_delegate_jni.so (abort_message+260)
+  F DEBUG   :       #02 pc 00000000017241ac  .../lib/arm64/libarmnn_delegate_jni.so (demangling_terminate_handler()+268)
+  F DEBUG   :       #04 pc 000000000173cbd4  .../lib/arm64/libarmnn_delegate_jni.so (__cxxabiv1::failed_throw(...)+32)
+  F DEBUG   :       #05 pc 000000000173cb48  .../lib/arm64/libarmnn_delegate_jni.so (__cxa_throw+128)
+  F DEBUG   :       #06 pc 0000000000fb4e2c  .../lib/arm64/libarmnn_delegate_jni.so (armnn::ClImportTensorHandle::ClImport(long const*, void*, bool)+556)
+  F DEBUG   :       #07 pc 0000000000fb4160  .../lib/arm64/libarmnn_delegate_jni.so (armnn::ClImportTensorHandle::Import(void*, armnn::MemorySource)+320)
+  F DEBUG   :       #08 pc 00000000011de30c  .../lib/arm64/libarmnn_delegate_jni.so (armnn::LoadedNetwork::EnqueueInput(...)+680)
+  F DEBUG   :       #09 pc 00000000011dd258  .../lib/arm64/libarmnn_delegate_jni.so (armnn::LoadedNetwork::EnqueueWorkload(...)+1548)
+  F DEBUG   :       #10 pc 00000000011cf718  .../lib/arm64/libarmnn_delegate_jni.so (armnn::RuntimeImpl::EnqueueWorkload(...)+1248)
+  F DEBUG   :       #11 pc 00000000011cf14c  .../lib/arm64/libarmnn_delegate_jni.so (armnn::IRuntime::EnqueueWorkload(...)+480)
+  F DEBUG   :       #12 pc 00000000011cc624  .../lib/arm64/libarmnn_delegate_jni.so (armnnDelegate::ArmnnSubgraph::Invoke(TfLiteContext*, TfLiteNode*)+668)
+  F DEBUG   :       #13 .../libtensorflowlite_jni.so
+  F DEBUG   :       #16 .../libtensorflowlite_jni.so (Java_org_tensorflow_lite_NativeInterpreterWrapper_run+88)
+  F DEBUG   :       #29 .../base.vdex (org.benchmark.demo.RunCustomModel.e+1216)
+
+结论：Arm NN 走 OpenCL 后端（ClImportTensorHandle），在导入输入张量时抛出 C++ 异常并未捕获，进程 abort。
+可解释为：该 App 打包的 Arm NN delegate 与本机 Adreno OpenCL 驱动/该模型输入不兼容。
+本机不做 Arm NN 结果统计；重跑需要换驱动或跳过该后端。
