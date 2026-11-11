@@ -1,0 +1,58 @@
+[
+  {
+    "record": "research/4.temporal-consistency/process/exploration-r11/gpu-eval-aligned.json",
+    "gpu": 3,
+    "revision": "5795f3febe48afbb69200e971d1c45c67e013981",
+    "command": [
+      ".venv/bin/python",
+      "-u",
+      "research/4.temporal-consistency/scripts/evaluate_aligned_raw_r11.py",
+      "--variants",
+      "concat_aligned_high",
+      "--out",
+      "research/4.temporal-consistency/results/exploration-r11-eval-aligned"
+    ]
+  },
+  {
+    "record": "research/4.temporal-consistency/process/exploration-r11/gpu-eval-raw.json",
+    "gpu": 2,
+    "revision": "5795f3febe48afbb69200e971d1c45c67e013981",
+    "command": [
+      ".venv/bin/python",
+      "-u",
+      "research/4.temporal-consistency/scripts/evaluate_aligned_raw_r11.py",
+      "--variants",
+      "plain_high,copy_high,concat_high",
+      "--out",
+      "research/4.temporal-consistency/results/exploration-r11-eval-raw"
+    ]
+  },
+  {
+    "record": "research/4.temporal-consistency/process/exploration-r11/gpu-train-aligned.json",
+    "gpu": 3,
+    "revision": "2c3c4e182fe00c169b3c3ecedae45a3ab2e6adfa",
+    "command": [
+      ".venv/bin/python",
+      "-u",
+      "research/4.temporal-consistency/scripts/train_aligned_raw_r11.py",
+      "--variants",
+      "concat_aligned_high",
+      "--out",
+      "research/4.temporal-consistency/results/exploration-r11-aligned"
+    ]
+  },
+  {
+    "record": "research/4.temporal-consistency/process/exploration-r11/gpu-train-raw.json",
+    "gpu": 2,
+    "revision": "2c3c4e182fe00c169b3c3ecedae45a3ab2e6adfa",
+    "command": [
+      ".venv/bin/python",
+      "-u",
+      "research/4.temporal-consistency/scripts/train_aligned_raw_r11.py",
+      "--variants",
+      "copy_high,concat_high",
+      "--out",
+      "research/4.temporal-consistency/results/exploration-r11-raw"
+    ]
+  }
+]
