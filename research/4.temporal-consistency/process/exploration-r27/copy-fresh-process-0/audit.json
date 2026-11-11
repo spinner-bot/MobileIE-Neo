@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "seed": 0,
+      "step_index": 0,
+      "same_backend_RGB_history_exact": true,
+      "history_hashes": 4,
+      "raw_transport_max_abs_gray": 7.599592208862305e-06,
+      "same_CPU_or_CUDA_current_context_exact": true,
+      "copy_model_after_Adam": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "copy_Adam_state": {
+        "tensors": 57,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "historical_R26_GPU_history_hash_matches_diagnostic_only": [
+        false,
+        true,
+        false,
+        false
+      ]
+    }
+  ],
+  "implementation_updates_copy": 1,
+  "scope": "Same-backend parity only. CPU teacher versus historical CUDA teacher hashes are diagnostic, not a replay requirement. No retained quality checkpoint."
+}
