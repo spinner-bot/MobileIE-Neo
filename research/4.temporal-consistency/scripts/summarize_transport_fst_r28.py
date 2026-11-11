@@ -95,7 +95,8 @@ def main():
     ]:
         path = BASE/'results'/directory/'per_sequence.jsonl'
         old = {key({**r, 'mode': mode, 'history': 'causal'}): r for r in read_rows(path)
-               if r['architecture'] == architecture and r['step'] == 4000 and r['history'] == history}
+               if r['architecture'] == architecture and r['step'] == 4000 and r['history'] == history
+               and (mode != EXTERNAL or r['objective'] == 'mse')}
         actual = [r for r in rows if r['mode'] == mode]
         assert len(actual) == len(old)
         maximum = max(abs(r[m]-old[key(r)][m]) for r in actual for m in METRICS)
