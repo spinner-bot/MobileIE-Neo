@@ -1,0 +1,36 @@
+{
+  "static_conditions": 24,
+  "source_images": 6,
+  "draw_images": 3072,
+  "feature_channel_rows": 5184,
+  "rgb_rows": 1008,
+  "covariance_rows": 144,
+  "oracle_reference_rows": 216,
+  "raw_repeat_max_abs": {
+    "exploration-r6b-centered": 0.0,
+    "exploration-r6c-rgb-components": 0.0
+  },
+  "feature_identity_max_relative_error": 2.2209481385739062e-15,
+  "rgb_mse_closure_max_abs": 1.7763568394002505e-15,
+  "covariance_closure_max_abs": 6.938893903907228e-18,
+  "covariance_reconstruction_max_abs": 4.440892098500626e-16,
+  "rounding_variance_max_ratio": 1.5842224675296318e-06,
+  "inputs": {
+    "research/4.temporal-consistency/results/exploration-r6-moments/runtime.json": "a80a70f3aa5b330365cb3264da2a284abf630f7b60d487deea1020fa41d5aecd",
+    "research/4.temporal-consistency/results/exploration-r6-moments/config.json": "57a450a05d5ac84a638caa7a5e5ff9b83680492cf8e48938e45a2f9b7037a923",
+    "research/4.temporal-consistency/results/exploration-r6-moments/rgb_per_condition.jsonl": "33eb75a3f57fa62f774d124bc871017eb1797b844c01abbdaa2cf78731713dc0",
+    "research/4.temporal-consistency/results/exploration-r6-moments/feature_per_channel.jsonl": "dc1d86397a67f7189c4784ff54a04404594f00c0645ab8f0f35198d039b2ac4f",
+    "research/4.temporal-consistency/results/exploration-r6-moments/cache_index.json": "93b8263eeaf507c3f68882b9a5d1b783184c834d6467b34db5c3650cd7305fdf",
+    "research/4.temporal-consistency/results/exploration-r6-moments/oracle_references.jsonl": "cb67c210b663f13bba324cc5850503f6dbde4db902d28167d731e9bbb11c08d0",
+    "research/4.temporal-consistency/results/exploration-r6b-centered/runtime.json": "4b35d3ef87f98ac750b752218ba1cdda3a9b926c722ec0444a0471d3d302e103",
+    "research/4.temporal-consistency/results/exploration-r6b-centered/config.json": "1f5de15e6b8213c372c270ada30aa2a3f492551f6eaaa6a135b7d210236598d7",
+    "research/4.temporal-consistency/results/exploration-r6b-centered/raw_repeat_audit.json": "6a3c98fed66e6a652008fc269d1caa3c0b189a226a5ee0eb3ed334790b8f9617",
+    "research/4.temporal-consistency/results/exploration-r6b-centered/rgb_per_condition.jsonl": "cb304e7b1ac16905b4dd6ca7160d3bc972f8699144a8f02b7a5c96431398f9b4",
+    "research/4.temporal-consistency/results/exploration-r6b-centered/layer_per_condition.jsonl": "687ec033822e23e3197ae71b86a65e226e51ede4a24152d51e5061abbe62854f",
+    "research/4.temporal-consistency/results/exploration-r6c-rgb-components/per_condition.json": "4a60cb9c6245dddc24b912e07f27559dcdc2f7c4cd658b285d18639e43264d20",
+    "research/4.temporal-consistency/results/exploration-r6c-rgb-components/runtime.json": "5120755db1a7b8e8d31b9892148787feed276aac3df6961b03e21ba988a410c9",
+    "research/4.temporal-consistency/results/exploration-r6c-rgb-components/config.json": "337399211ab923ce3ddb22afdaf9c83d5b78ed9910bbf780878514095f5f42e6",
+    "research/4.temporal-consistency/results/exploration-r6c-rgb-components/raw_repeat_audit.json": "6a3c98fed66e6a652008fc269d1caa3c0b189a226a5ee0eb3ed334790b8f9617"
+  },
+  "scope": "static repeated synthetic diagnosis, not real-video performance or independent test"
+}
