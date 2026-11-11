@@ -22,8 +22,10 @@ def now():
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--download-pid', type=int, required=True)
+    parser.add_argument('--stage-id', type=int, required=True)
     args = parser.parse_args()
-    out = BASE/'process/exploration-r34/stage001'
+    assert args.stage_id >= 1
+    out = BASE/f'process/exploration-r34/stage{args.stage_id:03d}'
     out.mkdir(parents=True, exist_ok=False)
     env = os.environ.copy()
     env['CUBLAS_WORKSPACE_CONFIG'] = ':4096:8'
