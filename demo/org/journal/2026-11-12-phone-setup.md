@@ -46,3 +46,20 @@
 启动后 App **自动开始完整标准跑分**，首屏为 `Section: 1/30. Recognition`、`MobileNet-V4 Large`、`448×448`。截屏见 `../results/phone/01_launch.jpg`（2 MB PNG 原件留在 `F:/pip-tmp/aibench/`，仓库只存 JPEG）。
 
 按手册，需要等这套 30 段标准测试跑完，PRO Mode / Custom Model 入口才会出现。测试期间保持前台、不锁屏。
+
+## 11-12 02:56 标准测试完成
+
+- SoC AI Score **460.5**，Device AI Score **651.3**（Medium Performance）；
+- INT8：AI Speed 194、Accuracy 79.0%；FP16：AI Speed 290、Accuracy 88.2%；
+- 截图：`../results/phone/02_standard_result.jpg`。
+
+## 11-12 03:02 自定义模型首次运行（CPU）
+
+- 入口：PRO MODE → Custom Model → 选择 `Download/model.tflite`；
+- 模型被正确识别：Input `[1, 400, 600, 3]`，Output `[1, 400, 600, 3]`；
+- 加速器：CPU（4 线程）；迭代 10 次；
+- **Avg Latency 90.7 ms**，STD 3.17 ms，Initialization 42.3 ms；
+- 逐次延迟：129.0 / 101.0 / 105.0 / 88.4 / 98.5 / 90.4 / 91.4 / 88.7 / 96.8 / 88.4 ms；
+- 截图：`../results/phone/03_custom_cpu_fp16.jpg`。
+
+**待核对**：运行页表头显示 `FP16`，但界面上已选中 `FP32`；需要用 FP32 重跑并确认表头，避免把精度档位记错。另外输入范围仍是默认 `0,255`，对延迟测量无影响，但后续可改成 `0,1` 与训练预处理一致。
