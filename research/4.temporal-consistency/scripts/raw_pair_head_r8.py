@@ -4,7 +4,7 @@ import torch
 from torch import nn
 from torch.nn import functional as F
 
-MODES = ('spatial_detail','temporal_concat','temporal_delta','temporal_delta_aug')
+MODES = ('spatial_copy','spatial_detail','temporal_concat','temporal_delta','temporal_delta_aug')
 
 
 class RawPairHead(nn.Module):
@@ -24,6 +24,8 @@ class RawPairHead(nn.Module):
         self.state, self.history_mode = None, history_mode
 
     def signal(self, current, previous):
+        if self.mode=='spatial_copy':
+            return current
         if self.mode=='spatial_detail':
             return current-F.avg_pool2d(current,3,stride=1,padding=1,count_include_pad=False)
         if self.mode=='temporal_concat':
@@ -54,7 +56,7 @@ class RawPairHead(nn.Module):
         if previous is None or previous.shape!=current.shape or self.history_mode=='current':
             previous = current
         output = self.transform(current,previous)
-        self.state = None if self.mode=='spatial_detail' else current.detach().clone()
+        self.state = None if self.mode.startswith('spatial_') else current.detach().clone()
         return output
 
     def state_storage_bytes(self):
