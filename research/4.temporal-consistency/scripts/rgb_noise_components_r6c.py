@@ -5,7 +5,7 @@ from torch.nn import functional as F
 from causal_fst_r5 import coarse_pool, coarse_up
 
 
-def body_components(model, u, gate, output):
+def body_components(model, u, gate, output, split_interaction=False):
     net = getattr(model, 'backbone', model)
     u, gate, output = u.double(), gate.double(), output.double()
     mu = u.mean(0, keepdim=True)
@@ -25,8 +25,12 @@ def body_components(model, u, gate, output):
     baseline = conv(avg_gate*mean)+net.tail.bias.double().reshape(1, -1, 1, 1)
     components = {'feature_linear_mean_gate': conv(avg_gate*linear),
                   'feature_quadratic_mean_gate': conv(avg_gate*quadratic),
-                  'gate_mean_feature': conv(dg*mean),
-                  'gate_feature_interaction': conv(dg*(linear+quadratic))}
+                  'gate_mean_feature': conv(dg*mean)}
+    if split_interaction:
+        components['gate_linear_interaction'] = conv(dg*linear)
+        components['gate_quadratic_interaction'] = conv(dg*quadratic)
+    else:
+        components['gate_feature_interaction'] = conv(dg*(linear+quadratic))
     reconstructed = baseline+sum(components.values())
     components['rounding_residual'] = output-reconstructed
     return baseline, components
