@@ -14,9 +14,20 @@ from calibrate_mapping_r4 import fit_mappings, transform
 from train_mixture_r4b import mixture_loss, synthetic_pair
 from train_exploration_r2 import temporal_penalty
 from calibrate_noise_gate_r4 import haar_noise_scale
+from half_motion_r4 import half_forward_backward
 
 
 class ExplorationR4Checks(unittest.TestCase):
+    def test_half_scale_flow_restores_native_translation_units(self):
+        import cv2
+        image = np.random.default_rng(11).integers(0, 256, (128, 160, 3)).astype(np.float32)
+        image = cv2.GaussianBlur(image, (0, 0), .8)
+        current = np.roll(image, -4, axis=1)
+        flow, mask = half_forward_backward(image, current)
+        self.assertTrue(bool(mask[30:-30, 30:-30].any()))
+        self.assertAlmostEqual(float(flow[30:-30, 30:-30, 0].mean()), 4., delta=.4)
+        self.assertAlmostEqual(float(flow[30:-30, 30:-30, 1].mean()), 0., delta=.3)
+
     def test_synthetic_stop_keeps_loss_value_and_only_real_gradient(self):
         prediction = torch.full((2, 2, 3, 12, 16), .3, requires_grad=True)
         target = torch.zeros_like(prediction)
