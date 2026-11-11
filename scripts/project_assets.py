@@ -42,7 +42,8 @@ def project_python_processes():
                 continue
             program = argv[0].decode(errors='replace')
             cwd = (entry/'cwd').resolve()
-            if cwd == REPO and (program.startswith('.venv/bin/python') or program.startswith(str(REPO/'.venv/bin/python'))):
+            if cwd == REPO and (program.startswith('.venv/bin/python') or program.startswith(str(REPO/'.venv/bin/python'))
+                                or program.startswith(str(ENVIRONMENT/'bin/python'))):
                 rows.append({'pid': int(entry.name), 'argv': [a.decode(errors='replace') for a in argv if a]})
         except (FileNotFoundError, PermissionError, ProcessLookupError):
             continue
@@ -53,6 +54,21 @@ def owned_environment():
     env = os.environ.copy()
     for key in ['PYTHONPATH', 'PYTHONHOME', 'PIP_EXTRA_INDEX_URL', 'PIP_TRUSTED_HOST']:
         env.pop(key, None)
+    for key in ['LD_LIBRARY_PATH', 'LD_PRELOAD']:
+        if key in env:
+            paths = env[key].replace(' ', os.pathsep).split(os.pathsep)
+            kept = []
+            for value in paths:
+                if not value:
+                    continue
+                path = Path(value).resolve()
+                if str(path).startswith(('/data/Users/', '/root/')) and not path.is_relative_to(OWNER):
+                    continue
+                kept.append(value)
+            if kept:
+                env[key] = os.pathsep.join(kept)
+            else:
+                env.pop(key, None)
     env.update({'VIRTUAL_ENV': str(ENVIRONMENT), 'PYTHONNOUSERSITE': '1',
                 'PIP_CONFIG_FILE': '/dev/null', 'PIP_INDEX_URL': 'https://pypi.org/simple',
                 'PIP_DISABLE_PIP_VERSION_CHECK': '1', 'PIP_CACHE_DIR': str(ASSETS/'pip-cache'),
