@@ -94,8 +94,25 @@ def main():
         assert MANIFEST.is_file(), 'Download ended without final manifest; no training launched'
         unchanged()
         event('download', status='terminal_manifest_present')
-        command('decode', 'verify_dynamic_training_r34.py')
-        command('data-interface', 'check_dynamic_training_r34.py', '--registered-data')
+        decode = BASE/'results/exploration-r32-decode/audit.json'
+        if decode.exists():
+            audit = json.loads(decode.read_text())
+            assert audit['passed'] and audit['manifest_sha256'] == digest(MANIFEST)
+            assert audit['frames'] == 3428 and audit['videos'] == 57
+            event('decode', status='reuse_completed_manifest_matched_audit', audit_sha256=digest(decode))
+        else:
+            command('decode', 'verify_dynamic_training_r34.py')
+        interface = BASE/'report/exploration-r33-prototype/training-interface-registered-data.json'
+        if interface.exists():
+            audit = json.loads(interface.read_text())
+            assert audit['initial_spatial_causal_output_equal'] and audit['optimizer_updates'] == 0
+            assert audit['batch_shape'] == [4, 4, 3, 128, 128]
+            required = {'budget_causal_r33.py', 'dynamic_training_r34.py', 'train_dynamic_r34.py', 'check_dynamic_training_r34.py'}
+            assert set(audit['source_sha256']) == required
+            assert all(digest(SCRIPTS/name) == value for name, value in audit['source_sha256'].items())
+            event('data-interface', status='reuse_completed_source_matched_audit', audit_sha256=digest(interface))
+        else:
+            command('data-interface', 'check_dynamic_training_r34.py', '--registered-data')
         guarded('cuda-backward', 'check_budget_causal_cuda_r33.py')
         for seed in [0, 1]:
             guarded(f'train-seed{seed}', 'train_dynamic_r34.py', '--seed', str(seed))
