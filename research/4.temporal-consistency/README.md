@@ -2,10 +2,12 @@
 
 目标：以论文为最终产出，深入核查 MobileIE 的架构与训练机制，在移动端计算预算内设计视频增强模型，用传统方法、后处理和已有视频模型对照验证画质、时间稳定性与效率收益。
 
-- 状态：**前期探索，多轮受控预实验/机制诊断及必要跟进已完成**（2026-11-11）；没有确定最终方法，已建立实拍ND衰减数据与两域强控制，完整训练及自然夜景泛化尚待验证
+- 状态：**前期探索，聚焦post_transport训练适配及强基线验证**（2026-11-12）；没有确定最终方法，实拍白天ND衰减开发集不代表自然夜景，标准外部基准/真实手机域/手机延迟仍缺
 - 当前研究入口：[MobileIE 架构、训练核查与视频研究设计](docs/architecture-and-video-research-plan.md)
-- 最新结果：[进展报告0029](../../docs/进展报告/0029-T-26111122-动态聚合与增强对齐顺序强控制.md)、[同流场全表](report/exploration-r20/tables.md)、[图](report/exploration-r20/dynamic_order_tradeoffs.png)、[过程](process/exploration-r20/journal.md)，1472行/368原基线回放差0，固定前置未成独立动态优势
-- 进行中：[R21聚合感知训练协议](docs/exploration-r21-protocol.md)，同R14 native任务，四类×双seed×4000=32000更新；独立模型/Adam只共享固定history准备，不称新方法
+- 最新状态：[进展报告0041](../../docs/进展报告/0041-T-26111202-内部时间算子训练收口与自有资产迁移.md)、[论文证据表草稿](report/paper-main-table/README.md)；R28 seed0十模型各4000步已正常完成，尚未得出训练后质量结论
+- 进行中：[R28生效收口协议](docs/exploration-r28-protocol.md)；待自有环境迁移核验后，只补post_transport双目标seed1共8000更新，复用R26 plain参考，主评价4416逻辑行；actual需要历史/flow/warp，current单帧映射单独评价
+- 运行资产：[迁移过程](process/asset-migration/)、[路径规范](../../specs/项目规范/路径与环境规范.md)；独立环境与运行数据迁往 `/data/Users/zrh/data/MobileIE-Neo`，完成前不使用旧借用环境启动任务
+- 既有完整结果：[R26监督目标控制](../../docs/进展报告/0038-T-26111200-监督目标全评价与历史贡献分离.md)、[同权重强后处理](../../docs/进展报告/0039-T-26111200-同权重单帧后处理排除聚合伪收益.md)、[R27冻结探针](../../docs/进展报告/0040-T-26111201-FST内部时间算子冻结探针与实现门槛.md)；R29潜矩资料归档附录，不继续扩大逐bit诊断
 - 已知信息诊断：[进展报告0028](../../docs/进展报告/0028-T-26111121-可用时间信息与非线性聚合顺序.md)、[信息图](report/exploration-r19/known_temporal_information.png)、[顺序图](report/exploration-r19-aggregation/aggregation_order.png)、[过程](process/exploration-r19/journal.md)
 - 配对反证：[进展报告0027](../../docs/进展报告/0027-T-26111121-监督配对几何反证与数据准备.md)、[图](report/exploration-r18/pair_geometry.png)、[过程](process/exploration-r18/journal.md)，104项未支持大整体整数平移主因
 - 第十六轮：[进展报告0026](../../docs/进展报告/0026-T-26111121-多尺度骨干与独立历史反证.md)、[完整表](report/exploration-r16/tables.md)、[历史反证图](report/exploration-r16/multiscale_history_controls.png)、[过程](process/exploration-r16/journal.md)，24000更新/3680新逻辑行完成
