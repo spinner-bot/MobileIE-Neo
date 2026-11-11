@@ -13,6 +13,7 @@ from aggregation_controls_r20 import blend
 from aligned_raw_history_r11 import align_history
 from dynamic_training_r34 import BASE, ROOT, digest, models
 from exploration_r2_data import evaluate
+from half_motion_r4 import half_forward_backward
 from prepare_cache_r5 import load_one
 
 
@@ -88,7 +89,7 @@ def main():
                     delta = float(np.abs(raw[0]-own_current).max())
                     assert delta <= 1e-4
                     first.append({'scene': meta['scene'], 'first_frame_max_abs_0to255': delta})
-                fusions = ['raw', 'postwarp05'] if route == 'current' else ['raw']
+                fusions = ['raw', 'postwarp05', 'self_motion_post05'] if route == 'current' else ['raw']
                 for fusion in fusions:
                     begin = time.perf_counter()
                     output = raw
@@ -96,6 +97,12 @@ def main():
                         warped = np.stack([raw[0], *[align_history(raw[t-1], raw[t], data['half_flow'][t-1],
                                                                  data['half_mask'][t-1])[0] for t in range(1, len(raw))]])
                         output = blend(raw, warped, .5)
+                    elif fusion == 'self_motion_post05':
+                        past = [raw[0]]
+                        for t in range(1, len(raw)):
+                            flow, mask = half_forward_backward(raw[t-1], raw[t])
+                            past.append(align_history(raw[t-1], raw[t], flow, mask)[0])
+                        output = blend(raw, np.stack(past), .5)
                     post_seconds = time.perf_counter()-begin if fusion != 'raw' else 0.
                     metrics, frames = evaluate(output, data['gt'], data['reference_flow'], data['reference_mask'])
                     identity = {'domain': meta['domain'], 'scene': meta['scene'], 'source_video': meta['source_video'],
@@ -106,11 +113,12 @@ def main():
                         for frame in frames:
                             stream.write(json.dumps({**identity, **frame}, allow_nan=False)+'\n')
                     with (out/'stage_cost.jsonl').open('a') as stream:
-                        stream.write(json.dumps({**identity, 'forward_seconds': forward_seconds, 'post_seconds_excluding_motion': post_seconds,
-                                                 'state_storage_bytes': storage, 'scope': 'CPU stage only; cached flow, no phone or complete deployed-pipeline timing.'})+'\n')
+                        stream.write(json.dumps({**identity, 'forward_seconds': forward_seconds, 'post_seconds': post_seconds,
+                                                 'shared_motion_precomputed': fusion == 'postwarp05',
+                                                 'state_storage_bytes': storage, 'scope': 'CPU stages only; self motion computed, shared motion cached, not phone or complete deployed-pipeline timing.'})+'\n')
                     count += 1
                 print(json.dumps({'scene': meta['scene'], 'model': name, 'history': route, 'rows': count}), flush=True)
-        assert count == 42 and inferences == 24 and not torch.cuda.is_initialized()
+        assert count == 60 and inferences == 24 and not torch.cuda.is_initialized()
         write(out/'first_frame.json', first)
         complete = True
     except Exception:
