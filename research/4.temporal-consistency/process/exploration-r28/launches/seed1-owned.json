@@ -1,0 +1,90 @@
+{
+  "observed_at": "2026-11-12T03:09:56.289769+08:00",
+  "pid": 2959605,
+  "argv": [
+    "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python",
+    "research/4.temporal-consistency/scripts/wait_idle_gpu_group.py",
+    "--gpus",
+    "0,1,2,3",
+    "--record-prefix",
+    "research/4.temporal-consistency/process/exploration-r28/gpu-seed1-owned",
+    "--",
+    ".venv/bin/python",
+    "research/4.temporal-consistency/scripts/train_transport_fst_r28.py",
+    "--seed",
+    "1",
+    "--modes",
+    "post_transport",
+    "--out",
+    "research/4.temporal-consistency/results/exploration-r28-seed1"
+  ],
+  "python_executable": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python",
+  "child_pids": [],
+  "waiter_has_CUDA_context": false,
+  "queue_observation_count": 4,
+  "observation_prefix_sha256": "51e72b80a5143c044498a6d6fd3caec49998466295ca004248818346f0513f6a",
+  "latest_observation": {
+    "samples": [
+      {
+        "gpu": 0,
+        "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+        "memory_mib": 849,
+        "utilization_percent": 29,
+        "compute_processes": [
+          "GPU-81550800-367d-1855-0f35-c61c274edfdf, 2956239, 840"
+        ],
+        "time": "2026-11-12T03:09:48.387773+08:00"
+      },
+      {
+        "gpu": 1,
+        "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+        "memory_mib": 849,
+        "utilization_percent": 29,
+        "compute_processes": [
+          "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150, 2946795, 840"
+        ],
+        "time": "2026-11-12T03:09:48.618384+08:00"
+      },
+      {
+        "gpu": 2,
+        "uuid": "GPU-e7f8224e-43d7-f7d6-10ff-8412dc30aa9e",
+        "memory_mib": 849,
+        "utilization_percent": 27,
+        "compute_processes": [
+          "GPU-e7f8224e-43d7-f7d6-10ff-8412dc30aa9e, 2945180, 840"
+        ],
+        "time": "2026-11-12T03:09:48.830404+08:00"
+      },
+      {
+        "gpu": 3,
+        "uuid": "GPU-3a66f673-05de-ba45-3f5c-308b333fea68",
+        "memory_mib": 849,
+        "utilization_percent": 27,
+        "compute_processes": [
+          "GPU-3a66f673-05de-ba45-3f5c-308b333fea68, 2947530, 840"
+        ],
+        "time": "2026-11-12T03:09:49.045438+08:00"
+      }
+    ],
+    "idle_candidates": []
+  },
+  "environment_migration_completed": {
+    "completed": true,
+    "observed_at": "2026-11-12T03:06:17.866876+08:00",
+    "attempt": "research/4.temporal-consistency/process/asset-migration/attempt-20261112T030521"
+  },
+  "new_training_out_exists": false,
+  "registered_budget": {
+    "modes": [
+      "post_transport"
+    ],
+    "objectives": [
+      "charb",
+      "mse"
+    ],
+    "seed": 1,
+    "steps_per_model": 4000,
+    "new_updates": 8000
+  },
+  "scope": "Immutable queue snapshot, not a training completion or GPU reservation; fresh two-sample guard admission required."
+}
