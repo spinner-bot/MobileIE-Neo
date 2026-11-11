@@ -36,7 +36,10 @@ class RemoteZip(io.RawIOBase):
         start, end = self.position, self.position+count-1
         def part(bounds):
             a, b = bounds
-            request = Request(self.url, headers={'Range': f'bytes={a}-{b}', 'If-Match': self.etag})
+            headers = {'Range': f'bytes={a}-{b}'}
+            if self.etag:
+                headers['If-Match'] = self.etag
+            request = Request(self.url, headers=headers)
             with urlopen(request, timeout=30) as response:
                 assert response.status == 206
                 assert response.headers['Content-Range'] == f'bytes {a}-{b}/{self.size}'
