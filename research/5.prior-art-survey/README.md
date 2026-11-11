@@ -53,6 +53,8 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 
 - [18 数据域与公开增强模型准备度](docs/18-data-domain-and-published-enhancement-readiness.md)：SDSD正文ND/ISO边界、StableLLVE真实推理、FastLLVE多尺度/时间/LUT先例。
 
+- [19 配对证据与真实调光数据](docs/19-registration-evidence-and-real-lighting-data.md)：BVI版本/登录获取边界，R18实际OLiVES反证，避免用文献批评替代本项目测量。
+
 ## 4. 计数口径
 
 | 来源 | 计数 | 说明 |
@@ -89,3 +91,5 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 修改：2026-11-11T19:15:36.577012+08:00；作者：Codex  (sqs_A100)；原因：索引已运行FastDVDnet及BSVD入口核查。
 
 修改：2026-11-11T20:24:45.731053+08:00；作者：Codex  (sqs_A100)；原因：索引R14/R15完整结果及新的结构/数据问题。
+
+修改：2026-11-11T21:21:00.783613+08:00；作者：Codex  (sqs_A100)；原因：索引0027几何负结果与后续时间冗余问题。
