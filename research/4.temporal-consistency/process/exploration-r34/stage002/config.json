@@ -1,0 +1,29 @@
+{
+  "started": "2026-11-12T05:37:25.421644+08:00",
+  "download_pid": 3010011,
+  "script_sha256": {
+    "budget_causal_r33.py": "7cfe138a286fdb488973ffe7c5bc93b69ad505af981e22cba824402c491b2e3b",
+    "dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498",
+    "train_dynamic_r34.py": "0e8a0a7b6cd2372f837a67e1e5450ccdcd56d7b77bc305fc9f13a3390be723e1",
+    "verify_dynamic_training_r34.py": "dac58eaad404659c3a26ed816c7ba851420541d2abf6df3ef24529c3dc819e19",
+    "check_dynamic_training_r34.py": "1598b9bde22686bc75797713b12a18b3e8138681d6fe20279802633f709bf868",
+    "check_budget_causal_cuda_r33.py": "4ae11f588c61df703c5d6ec79b32e764bed4784189f6772ca6af0d0ff2d23c7a",
+    "evaluate_dynamic_r34.py": "e63e4c3df514b000976500d1fca5f99b2ed2158eb444aa643fdfc4c083e86ef9"
+  },
+  "protocol_sha256": "7a60dda8c514bb75fd3d4ba95326acc1d72b6977c23101971d98fcd48383be90",
+  "gpu_group": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "gpu_preference": [
+    3,
+    2,
+    1,
+    0
+  ],
+  "concurrent_training_jobs": 1,
+  "retry_scope": "wait for idle only; failed actual commands are never silently restarted",
+  "revision": "13f3b226f4e1c3990ee184c6045d60b7d45d1d2a"
+}
