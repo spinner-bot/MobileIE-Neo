@@ -85,7 +85,7 @@
 - [ ] 用手机实拍暗光照片替换样例，生成最终演示素材（待用户提供照片）。
 
 ### P1 —— 手机侧速度
-- [ ] 手机安装 AI Benchmark（官网直连 APK，约 1.4 GB）；
+- [ ] 手机安装 AI Benchmark（官网直连 APK，约 1.98 GB）；
 - [ ] `model.tflite` 放入 Download，PRO Mode → Custom Model 加载；
 - [ ] 记录 CPU / NNAPI / GPU 等后端的延迟，截屏或录屏。
 
