@@ -10,6 +10,7 @@ import numpy as np
 import torch
 
 from exploration_r2_data import ROOT, detect_changes, evaluate
+from evaluation_aliases_r14 import event_flags
 from explore_state_r2 import fuse
 from explore_temporal_controls import save_json, sha256
 from prepare_cache_r5 import CACHE_INDEX, load_one
@@ -40,7 +41,7 @@ def main():
     assert len(metas)==46
     start=time.perf_counter();count=0;computations=0;aliases=0;cost=[];events_audit=[]
     for meta in metas:
-        data=load_one(meta);events,_=detect_changes(data['low']);has_events=bool(events.any())
+        data=load_one(meta);events,_=detect_changes(data['low']);events=event_flags(events);has_events=bool(events.any())
         events_audit.append({'domain':meta['domain'],'scene':meta['scene'],'reset_frames':np.flatnonzero(events).tolist()})
         inputs=input_tensor(data['low'],device);torch.cuda.synchronize();begin=time.perf_counter()
         prediction=infer(net,inputs);torch.cuda.synchronize();seconds=time.perf_counter()-begin
