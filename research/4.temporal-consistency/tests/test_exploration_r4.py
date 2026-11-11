@@ -11,12 +11,22 @@ from real_data_r4 import batch, residual_temporal
 from reliability_r4 import census, discrepancy, masks_at_threshold, quality_feasible
 from explore_state_r2 import fuse
 from calibrate_mapping_r4 import fit_mappings, transform
-from train_mixture_r4b import synthetic_pair
+from train_mixture_r4b import mixture_loss, synthetic_pair
 from train_exploration_r2 import temporal_penalty
 from calibrate_noise_gate_r4 import haar_noise_scale
 
 
 class ExplorationR4Checks(unittest.TestCase):
+    def test_synthetic_stop_keeps_loss_value_and_only_real_gradient(self):
+        prediction = torch.full((2, 2, 3, 12, 16), .3, requires_grad=True)
+        target = torch.zeros_like(prediction)
+        full = mixture_loss(prediction, target)
+        stopped = mixture_loss(prediction, target, True)
+        torch.testing.assert_close(full, stopped, rtol=0, atol=0)
+        stopped.backward()
+        self.assertGreater(float(prediction.grad[0].abs().sum()), 0.)
+        self.assertEqual(float(prediction.grad[1].abs().sum()), 0.)
+
     def test_haar_scale_constant_and_known_independent_gaussian(self):
         self.assertEqual(haar_noise_scale(np.full((32, 40, 3), 80, np.float32)), 0.)
         noisy = 100+np.random.default_rng(10).normal(0, 4, (256, 256, 3)).astype(np.float32)
