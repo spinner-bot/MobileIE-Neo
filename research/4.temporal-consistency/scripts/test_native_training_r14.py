@@ -53,5 +53,14 @@ class NativeTrainingTests(unittest.TestCase):
             self.assertEqual(audit['parameters'],4075 if variant=='plain' else 4975)
             self.assertGreater(audit['optimizer_tensors_verified'],0)
 
+    def test_native_crop_uses_recorded_spatial_coordinates(self):
+        data=self.fixture();y,x=np.mgrid[:1080,:1920]
+        spatial=np.stack([x%251,y%251,(x+y)%251],-1).astype(np.uint8)
+        data[0]['native_input']=np.broadcast_to(spatial,(16,1080,1920,3))
+        low,_,_,_,metadata=real_pair(data,1,177,'native_crop');cx,cy,_,_=metadata['crop_xywh']
+        self.assertAlmostEqual(float(low[0,0,0,0]),(cx%251)/255,places=7)
+        self.assertAlmostEqual(float(low[0,1,0,0]),(cy%251)/255,places=7)
+        self.assertAlmostEqual(float(low[1,2,-1,-1]),((cx+319+cy+179)%251)/255,places=7)
+
 
 if __name__=='__main__':unittest.main()
