@@ -13,6 +13,8 @@ def quadratic(module, u, correction=None, statistics=None):
         return result-a*statistics['variance']
     if correction == 'linearize':
         return result-a*(u-statistics['mean'])**2
+    if correction == 'centered':
+        return result-a*((u-statistics['mean'])**2-statistics['variance'])
     raise ValueError(correction)
 
 
