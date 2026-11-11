@@ -27,7 +27,7 @@ def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--seed',type=int,choices=[0,1],required=True);p.add_argument('--out',required=True)
     args=p.parse_args();out=Path(args.out);out.mkdir(parents=True,exist_ok=False)
     cv2.setNumThreads(1);torch.set_num_threads(2);torch.backends.cudnn.deterministic=True;torch.backends.cudnn.benchmark=False
-    device=torch.device('cuda');revision=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
+    device=torch.device('cuda:0');revision=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
     scripts={str(p.relative_to(ROOT)):sha256(p) for p in Path(__file__).parent.glob('*.py')};base=ROOT/'research/4.temporal-consistency'
     data,integrity=load_training();images=load_images('train');teacher=new_model(device).eval()
     for parameter in teacher.parameters():parameter.requires_grad_(False)
