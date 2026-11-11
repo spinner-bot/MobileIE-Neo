@@ -2,11 +2,11 @@
 
 目标：以论文为最终产出，深入核查 MobileIE 的架构与训练机制，在移动端计算预算内设计视频增强模型，用传统方法、后处理和已有视频模型对照验证画质、时间稳定性与效率收益。
 
-- 状态：**前期探索，聚焦post_transport训练适配及强基线验证**（2026-11-12）；没有确定最终方法，实拍白天ND衰减开发集不代表自然夜景，标准外部基准/真实手机域/手机延迟仍缺
+- 状态：**前期探索，post_transport收口验证失败，已冻结主方法投入**（2026-11-12）；没有确定最终方法，转向公共动态训练资料与骨干计算分配，实拍白天ND开发集不代表自然夜景，完整独立基准/手机方法评价/时延仍缺
 - 当前研究入口：[MobileIE 架构、训练核查与视频研究设计](docs/architecture-and-video-research-plan.md)
-- 最新状态：[进展报告0042](../../docs/进展报告/0042-T-26111203-外部动态视频与真实手机验证资料就绪.md)、[论文证据表草稿](report/paper-main-table/README.md)；R28 seed0十模型各4000步已正常完成，尚未得出训练后质量结论
-- 进行中：[R28生效收口协议](docs/exploration-r28-protocol.md)；seed1已正常完成双目标8000更新，整个收口训练48000更新完成；共同CUDA强参考2208行及历史结果核对通过，post_transport评价正在运行，主评价共4416逻辑行。actual需要历史/flow/warp，current单帧映射单独评价，尚无候选成功结论
-- 外部开发资料已准备：[R30 DAVIS协议](docs/exploration-r30-protocol.md)/[6条件缓存](results/exploration-r30-cache/index.json)，3独立视频各64帧、合成低光，VAL图像未读；[R31手机协议](docs/exploration-r31-protocol.md)/[3设备输入](results/exploration-r31-data/index.json)/[原亮度预览](report/exploration-r31-data/phone_inputs.png)，无同步GT。共同CPU方法评价进行中，不是标准基准成绩或手机时延实测
+- 最新结论：[进展报告0043](../../docs/进展报告/0043-T-26111204-内部时间算子双种子闭环与路线止损.md)、[路线决策](docs/exploration-r28-decision.md)、[论文证据表](report/paper-main-table/README.md)；R28重点双seed/双目标4000步及4416行主评价完成，主门槛未通过
+- 完成闭环：[原注册协议](docs/exploration-r28-protocol.md)、[全表](report/exploration-r28/tables.md)、[质量—时序图](report/exploration-r28/native_quality_stability.png)、[312行共同CPU外部表](report/exploration-r30/tables.md)。actual需要历史/flow/warp，current单帧映射单独评价；不继续沿该算子追加训练/相似网格
+- 外部开发资料：[R30 DAVIS协议](docs/exploration-r30-protocol.md)/[6条件缓存](results/exploration-r30-cache/index.json)，3独立视频各64帧、合成低光，VAL图像未读；[R31手机协议](docs/exploration-r31-protocol.md)/[3设备输入](results/exploration-r31-data/index.json)/[原亮度预览](report/exploration-r31-data/phone_inputs.png)，无同步GT。R30候选双seed评价已完成，手机输入尚无方法质量结论，均非完整独立基准或手机时延实测
 - 运行资产：[迁移过程](process/asset-migration/journal.md)、[路径规范](../../specs/项目规范/路径与环境规范.md)；独立环境与运行数据已于2026-11-12 03:06迁入 `/data/Users/zrh/data/MobileIE-Neo`，2106文件摘要一致、16帧CPU参考指标差0，仓库链接已入Git；后续统一用 `./scripts/project-python`
 - 既有完整结果：[R26监督目标控制](../../docs/进展报告/0038-T-26111200-监督目标全评价与历史贡献分离.md)、[同权重强后处理](../../docs/进展报告/0039-T-26111200-同权重单帧后处理排除聚合伪收益.md)、[R27冻结探针](../../docs/进展报告/0040-T-26111201-FST内部时间算子冻结探针与实现门槛.md)；R29潜矩资料归档附录，不继续扩大逐bit诊断
 - 已知信息诊断：[进展报告0028](../../docs/进展报告/0028-T-26111121-可用时间信息与非线性聚合顺序.md)、[信息图](report/exploration-r19/known_temporal_information.png)、[顺序图](report/exploration-r19-aggregation/aggregation_order.png)、[过程](process/exploration-r19/journal.md)
