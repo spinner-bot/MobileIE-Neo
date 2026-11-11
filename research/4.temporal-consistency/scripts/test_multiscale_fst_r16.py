@@ -19,7 +19,7 @@ class MultiscaleControls(unittest.TestCase):
         self.assertEqual(a.shape,self.current.shape);self.assertTrue(bool(torch.isfinite(a).all()))
         self.assertLessEqual(float((a-b).abs().max()),2e-5)
         self.assertTrue(torch.equal(net.backbone.body.block1.weight[:,:12],self.base.body.block1.weight))
-        self.assertEqual(float(net.backbone.body.block1.weight[:,12:].abs().max()),0.)
+        self.assertEqual(float(net.backbone.body.block1.weight[:,12:].detach().abs().max()),0.)
 
     def test_identical_seed_and_parameter_capacity(self):
         models=[]
