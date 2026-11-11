@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "included_phases": [
+    "references",
+    "post-seed0",
+    "post-seed1"
+  ],
+  "rows": 312,
+  "runtimes": [
+    {
+      "phase": "references",
+      "completed_normally": true,
+      "rows": 168,
+      "neural_sequences": 42,
+      "metric_aliases": 56,
+      "device": "cpu",
+      "cuda_initialized": false,
+      "wall_seconds": 1011.2487795680063
+    },
+    {
+      "phase": "post-seed0",
+      "completed_normally": true,
+      "rows": 72,
+      "neural_sequences": 32,
+      "metric_aliases": 20,
+      "device": "cpu",
+      "cuda_initialized": false,
+      "wall_seconds": 615.0634404399898
+    },
+    {
+      "phase": "post-seed1",
+      "completed_normally": true,
+      "rows": 72,
+      "neural_sequences": 32,
+      "metric_aliases": 20,
+      "device": "cpu",
+      "cuda_initialized": false,
+      "wall_seconds": 599.3658618759946
+    }
+  ],
+  "source_sha256": {
+    "research/4.temporal-consistency/results/exploration-r30-eval-references/per_sequence.jsonl": "b71323e6cce812804dc986198e535d44f37acdb8b28cfd9903e70bbe71008d3f",
+    "research/4.temporal-consistency/results/exploration-r30-eval-references/runtime.json": "6b00abebcd531af9668131e75c049cae873e5429b4bc08bd4b737f15b5b9efbe",
+    "research/4.temporal-consistency/results/exploration-r30-eval-references/checkpoints.json": "6058744b4ec8985ec8d353eae274c964cb41254bd7d47e771f7e71ad9cbffc34",
+    "research/4.temporal-consistency/results/exploration-r30-eval-references/config.json": "20bb3636de4799a61296a8f5103346bfca1fca176d52e5dffbed39574138aca0",
+    "research/4.temporal-consistency/results/exploration-r30-eval-post-seed0/per_sequence.jsonl": "d7136756d08424139ff7badef99ce78ce52b4605fd9df7325475b0761a16bcaf",
+    "research/4.temporal-consistency/results/exploration-r30-eval-post-seed0/runtime.json": "c806f6498efb853682dbde55ac0228ef95a0ca320801ed45ca58565c9b191675",
+    "research/4.temporal-consistency/results/exploration-r30-eval-post-seed0/checkpoints.json": "34498d71fd56881391e6bd5b8e9bce622a853142a9abb32dd799cb5820e3ef34",
+    "research/4.temporal-consistency/results/exploration-r30-eval-post-seed0/config.json": "72dc3473308913c5ccb5ea8b739c7e36145e900ee763ff21dbc2f5a405a958f8",
+    "research/4.temporal-consistency/results/exploration-r30-eval-post-seed1/per_sequence.jsonl": "5b778fa5baf87cc27516d8fe3e717921df69d30e4a04c9d692a9812662ea8447",
+    "research/4.temporal-consistency/results/exploration-r30-eval-post-seed1/runtime.json": "6a371710e19b1754201b6c45785b7d55e8fb77c6cfed4df838a5327ef29255eb",
+    "research/4.temporal-consistency/results/exploration-r30-eval-post-seed1/checkpoints.json": "da8297a695ea910e1617072b1ea07d5e448298aa35d3dd60e5410d8ae5487cfe",
+    "research/4.temporal-consistency/results/exploration-r30-eval-post-seed1/config.json": "6e55aa71ea5d611340120ef5f3b9d39cf21d2cfd8f12b5aedecd737cda4053dd"
+  },
+  "complete_registered_model_set": true,
+  "scope": "Three external TRAIN video sources, six custom degraded conditions; repeated frames/conditions are not independent samples. No standard-test or phone-latency claim."
+}
