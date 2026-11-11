@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import time
 import urllib.request
+import urllib.error
 
 import numpy as np
 
@@ -23,7 +24,7 @@ def read(url):
                 return stream.read()
         except (OSError, TimeoutError) as error:
             print(json.dumps({'url': url, 'attempt': attempt+1, 'error': str(error)}), flush=True)
-            if attempt == 2:
+            if attempt == 2 or (isinstance(error, urllib.error.HTTPError) and 400 <= error.code < 500):
                 raise
             time.sleep(attempt+1)
 
@@ -34,12 +35,21 @@ def main():
     args = parser.parse_args()
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
+    available = {}
+    for side in ['gt', 'input']:
+        url = f'https://huggingface.co/api/datasets/{REPO}/tree/{REVISION}/Frames/{side}?limit=1000'
+        directory = json.loads(read(url))
+        available[side] = {Path(r['path']).name for r in directory if r['type'] == 'directory'}
+    eligible = available['gt'] & available['input']
+    save_json(out/'available_directories.json', {side: sorted(names) for side, names in available.items()})
     selection, source_text = [], {}
     for name, count in [('train', 4), ('test', 6)]:
         url = f'https://huggingface.co/datasets/{REPO}/resolve/{REVISION}/{name}_list.txt'
         payload = read(url)
         source_text[name] = {'url': url, 'sha256': hashlib.sha256(payload).hexdigest(), 'text': payload.decode()}
-        names = payload.decode().split()
+        names = [name for name in payload.decode().split() if name in eligible]
+        if len(names) < count:
+            raise ValueError('not enough accessible paired scenes: '+name)
         indices = np.linspace(0, len(names)-1, count, dtype=int).tolist()
         selection.extend({'scene': names[i], 'split': name, 'list_index': i} for i in indices)
     save_json(out/'selection.json', {'repo': REPO, 'revision': REVISION, 'author_lists': source_text,
