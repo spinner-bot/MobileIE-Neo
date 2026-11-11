@@ -1,0 +1,32 @@
+{
+  "process_directories": [
+    "research/4.temporal-consistency/process/exploration-r27"
+  ],
+  "completed": [
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r27/gpu-fields-group-attempt001.json",
+      "gpu": 0,
+      "revision": "93dccf5455ab6f0240a4a69ca3b4a71789577bd4",
+      "allowed": true,
+      "process_wall_seconds": 32.25521774200024,
+      "returncode": 0
+    }
+  ],
+  "failed": [],
+  "resource_refusals": [
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r27/gpu-fixtures-cuda-attempt1.json",
+      "gpu": 2,
+      "revision": "cf2d514178410cf3ce9d700806999d0746457a68",
+      "allowed": false
+    }
+  ],
+  "used_physical_gpus": [
+    0
+  ],
+  "peak_own_concurrent_jobs": 1,
+  "source_hashes_verified": 415,
+  "source_mismatches": [],
+  "process_gpu_seconds": 32.25521774200024,
+  "scope": "includes CPU/data/metrics; not GPU kernel time; preflight and local locks are not a global reservation"
+}
