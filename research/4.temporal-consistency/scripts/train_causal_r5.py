@@ -14,16 +14,21 @@ from explore_temporal_controls import save_json, sha256
 from real_data_r4 import batch, load_sequences, prepare_training
 from train_exploration_r2 import new_model
 from train_mixture_r4b import EXPANDED, mixture_loss, synthetic_pair
+from synthetic_temporal_r5b import synthetic_residual_temporal
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--variants', required=True)
     parser.add_argument('--out', required=True)
+    parser.add_argument('--synthetic-temporal-weight', type=float, default=0.)
+    parser.add_argument('--checkpoint-root', default='.cache/checkpoints/exploration-r5')
     args = parser.parse_args()
     variants = args.variants.split(',')
     if any(v not in MODES for v in variants) or len(set(variants)) != len(variants):
         parser.error('unique known modes required')
+    if args.synthetic_temporal_weight < 0:
+        parser.error('nonnegative temporal coefficient required')
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=False)
     cv2.setNumThreads(1)
@@ -39,7 +44,7 @@ def main():
         for seed in [0, 1]:
             folder = out/f'{variant}-seed{seed}'
             folder.mkdir()
-            check_dir = ROOT/'.cache/checkpoints/exploration-r5'/f'{variant}-seed{seed}'
+            check_dir = ROOT/args.checkpoint_root/f'{variant}-seed{seed}'
             check_dir.mkdir(parents=True, exist_ok=False)
             torch.manual_seed(seed)
             net = CausalFST(new_model(device), variant).to(device).train()
@@ -57,6 +62,8 @@ def main():
                 'expanded_manifest_sha256': sha256(EXPANDED),
                 'pretrained_sha256': sha256(ROOT/'MobileIE/pretrain/lolv1_best_slim.pkl'),
                 'protocol_sha256': sha256(ROOT/'research/4.temporal-consistency/docs/exploration-r5-protocol.md'),
+                'synthetic_temporal_weight': args.synthetic_temporal_weight,
+                'temporal_protocol_sha256': sha256(ROOT/'research/4.temporal-consistency/docs/exploration-r5b-protocol.md') if args.synthetic_temporal_weight else None,
                 'git_revision_at_startup': revision, 'source_sha256_at_startup': sources,
                 'parameters': sum(p.numel() for p in net.parameters()),
                 'cudnn_deterministic': True, 'cudnn_benchmark': False,
@@ -70,7 +77,9 @@ def main():
                 sx, sy, meta = synthetic_pair(synthetic, seed, step)
                 low[1], target[1] = sx.to(device), sy.to(device)
                 pred = net.forward_pair(low)
-                loss = mixture_loss(pred, target)
+                task = mixture_loss(pred, target)
+                temporal = synthetic_residual_temporal(pred[1], target[1], meta['offset']) if args.synthetic_temporal_weight else None
+                loss = task+args.synthetic_temporal_weight*temporal if temporal is not None else task
                 if not bool(torch.isfinite(loss)):
                     raise FloatingPointError('nonfinite training loss')
                 optimizer.zero_grad(set_to_none=True)
@@ -82,7 +91,9 @@ def main():
                 optimizer.step()
                 net.project()
                 samples = [{'source': 'real', 'scene': identity[0][0], 'frame_pair': identity[0][1]}, meta]
-                row = {'step': step+1, 'task': float(loss.detach()), 'gradient_norm_backbone': norm,
+                row = {'step': step+1, 'task': float(task.detach()), 'total': float(loss.detach()),
+                       'synthetic_temporal': float(temporal.detach()) if temporal is not None else None,
+                       'gradient_norm_backbone': norm,
                        'gradient_norm_extra': extra_norm, 'sample_identity': samples}
                 if hasattr(net, 'gamma'):
                     row['gamma'] = float(net.gamma.detach())
@@ -97,7 +108,7 @@ def main():
                     save_json(folder/f'checkpoint-step{step+1:04d}.json',
                               {'path': str(path.relative_to(ROOT)), 'sha256': sha256(path)})
                     print(json.dumps({'variant': variant, 'seed': seed, **row}), flush=True)
-                    if variant == 'plain' and step+1 == 400:
+                    if variant == 'plain' and step+1 == 400 and not args.synthetic_temporal_weight:
                         previous = ROOT/'.cache/checkpoints/exploration-r4b'/f'real12_mix-seed{seed}'/'last.pth'
                         old = torch.load(previous, map_location=device, weights_only=False)['model']
                         deltas = {k: float((v-old[k]).abs().max()) for k, v in net.backbone.state_dict().items()}
