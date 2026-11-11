@@ -1,0 +1,34 @@
+[
+  {
+    "method": "recursive_self05",
+    "seed": 0,
+    "reference": "finite_self05",
+    "delta_psnr": 0.1401710391526052,
+    "temporal_ratio": 0.8931220304894592,
+    "passed": true
+  },
+  {
+    "method": "recursive_self05",
+    "seed": 1,
+    "reference": "finite_self05",
+    "delta_psnr": 0.14902219726469923,
+    "temporal_ratio": 0.8925586991098529,
+    "passed": true
+  },
+  {
+    "method": "adaptive_recursive",
+    "seed": 0,
+    "reference": "finite_self05",
+    "delta_psnr": -0.07527293375780886,
+    "temporal_ratio": 1.3174606681176468,
+    "passed": false
+  },
+  {
+    "method": "adaptive_recursive",
+    "seed": 1,
+    "reference": "finite_self05",
+    "delta_psnr": -0.08547130639644962,
+    "temporal_ratio": 1.3196082728681067,
+    "passed": false
+  }
+]
