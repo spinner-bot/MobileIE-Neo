@@ -13,8 +13,26 @@ from explore_state_r2 import forward_backward
 from explore_temporal_controls import inference, save_json, sha256
 from real_data_r4 import MANIFEST, load_sequences
 from train_exploration_r2 import new_model
+from xiph_motion_r3 import corrupt, read_y4m
 
 CACHE_INDEX = ROOT/'research/4.temporal-consistency/results/exploration-r4-cache/index.json'
+
+
+def sequence_groups():
+    for split in ['train', 'test']:
+        yield split, load_sequences(split)
+    manifest = json.loads((ROOT/'research/4.temporal-consistency/data/exploration-r3/xiph_manifest.json').read_text())
+    sequences = {}
+    for clip in manifest['clips']:
+        path = ROOT/clip['path']
+        if sha256(path) != clip['sha256']:
+            raise ValueError('legacy source hash mismatch')
+        gt, _ = read_y4m(path)
+        for rho in [0., .9]:
+            for seed in [0, 1]:
+                name = f"xiph_{clip['scene']}_rho{rho}_seed{seed}"
+                sequences[name] = {'gt': gt, 'input': corrupt(gt, seed, rho)}
+    yield 'legacy_synthetic', sequences
 
 
 def load_cache(split, index=CACHE_INDEX):
@@ -47,8 +65,7 @@ def main():
     net = new_model(device)
     rows = []
     start = time.perf_counter()
-    for split in ['train', 'test']:
-        sequences = load_sequences(split)
+    for split, sequences in sequence_groups():
         for scene, arrays in sequences.items():
             raw, _ = inference(net, arrays['input'], device, 1)
             values = {'low': np.stack(arrays['input']), 'gt': np.stack(arrays['gt']), 'pretrained': np.stack(raw)}
@@ -64,7 +81,8 @@ def main():
             rows.append(row)
             print(json.dumps(row), flush=True)
     save_json(out/'index.json', {'scenes': rows, 'source_manifest_sha256': sha256(MANIFEST),
-        'pretrained_sha256': sha256(ROOT/'MobileIE/pretrain/lolv1_best_slim.pkl'), 'size': [480, 270],
+        'pretrained_sha256': sha256(ROOT/'MobileIE/pretrain/lolv1_best_slim.pkl'), 'real_size': [480, 270],
+        'legacy_synthetic_size': [352, 288],
         'cudnn_deterministic': True, 'cudnn_tf32_allowed': torch.backends.cudnn.allow_tf32,
         'motion_scope': 'reference flow only for evaluation/training supervision; candidates use shared official enhanced-domain motion'})
     save_json(out/'runtime.json', {'wall_seconds': time.perf_counter()-start})
