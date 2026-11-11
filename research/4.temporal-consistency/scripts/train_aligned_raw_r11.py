@@ -39,10 +39,11 @@ def main():
     out=Path(args.out);out.mkdir(parents=True,exist_ok=False)
     cv2.setNumThreads(1);torch.set_num_threads(2)
     torch.backends.cudnn.deterministic=True;torch.backends.cudnn.benchmark=False
-    device=torch.device('cuda');data=prepare_training(load_sequences('train',(320,180),EXPANDED),device)
-    images=load_images('train');teacher=new_model(device)
+    device=torch.device('cuda')
     revision=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
     sources={str(f.relative_to(ROOT)):sha256(f) for f in Path(__file__).parent.glob('*.py')}
+    data=prepare_training(load_sequences('train',(320,180),EXPANDED),device)
+    images=load_images('train');teacher=new_model(device)
     for variant in variants:
         real_cache={}
         for seed in [0,1]:
