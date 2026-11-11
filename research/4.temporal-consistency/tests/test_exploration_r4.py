@@ -4,12 +4,35 @@ import unittest
 from pathlib import Path
 
 import torch
+import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'scripts'))
 from real_data_r4 import batch, residual_temporal
+from reliability_r4 import census, discrepancy, masks_at_threshold, quality_feasible
+from explore_state_r2 import fuse
 
 
 class ExplorationR4Checks(unittest.TestCase):
+    def test_census_is_invariant_to_positive_affine_brightness(self):
+        image = np.random.default_rng(7).uniform(10, 80, (20, 24, 3)).astype(np.float32)
+        np.testing.assert_array_equal(census(image), census(image*2+5))
+
+    def test_zero_threshold_keeps_raw_and_rejects_all_history(self):
+        raw = [np.full((20, 24, 3), v, np.float32) for v in [10, 20, 30]]
+        flows = [np.zeros((20, 24, 2), np.float32) for _ in range(2)]
+        valid = [np.ones((20, 24), bool) for _ in range(2)]
+        scores = discrepancy(raw, flows, 'photo')
+        masks = masks_at_threshold(scores, valid, 0.)
+        self.assertFalse(any(m.any() for m in masks))
+        for actual, expected in zip(fuse(raw, flows, masks), raw):
+            np.testing.assert_array_equal(actual, expected)
+
+    def test_quality_guard_requires_all_three_quality_constraints(self):
+        reference = {'psnr_rgb': 20., 'ssim_rgb': .8, 'edge_mae': 2.}
+        self.assertTrue(quality_feasible(reference, reference))
+        for key, value in [('psnr_rgb', 19.9), ('ssim_rgb', .79), ('edge_mae', 2.1)]:
+            self.assertFalse(quality_feasible({**reference, key: value}, reference))
+
     def setUp(self):
         yy, xx = torch.meshgrid(torch.linspace(-1, 1, 12), torch.linspace(-1, 1, 16), indexing='ij')
         self.grid = torch.stack([xx, yy], -1)[None]
