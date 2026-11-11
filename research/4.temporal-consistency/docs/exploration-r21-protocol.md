@@ -13,3 +13,7 @@
 评价原46探索条件，四类双seed、1000/4000、真实history/current替代、reset及raw/共同half01，新增5888逻辑行（4类×2seed×2checkpoint×2history×2reset×2fusion×46）。全部模型走同inputteacher对齐，复用既有R11推理和R14强参考；post骨干每输出两次前向、pre一次，额外teacher/flow/状态不作零成本。current替代后若保留整体收益，不能把它归为推理历史利用。最终未读test/Kodak13–24保留。
 
 先做CPU检查再启动每seed独立GPU job（2/3空闲预检后）。一job四模型并列推进各4000，shared teacher不接受梯度；每个checkpoint/过程/报告逐文件小步提交，完成阶段以zrh目录spinner-bot身份SSH推送，保持no-ff。后续如需防参考帧塌缩损失，先核验KPN等已有方法，不把该问题或常见技巧当新颖性。
+
+修改：2026-11-11T22:32:28.995709+08:00；作者：Codex  (sqs_A100)；原因：共享GPU持续被占而CPU有96线程/充足内存，在任何评价行产生前固定CPU后备方案。
+
+完整5888逻辑行改用CPU FP32、每job2 Torch线程、OpenCV1线程，候选/数据/步数/全部消融不变。另完整CPU重算R14 native plain 1000/4000的736参考行及R20双seed八方法1472强参考行，避免微小跨后端误差被误认为方法收益；原GPU结果保留，逐帧/逐片跨后端差单列。所有主比较使用共同CPU参考。训练仍为已审计GPU结果；CPU耗时不与旧GPU推理成本比较。只停止尚未启动任何guard子进程的两个本项目等待器，不中断任何实际实验或其他用户任务；等待/拒绝记录全部保留。
