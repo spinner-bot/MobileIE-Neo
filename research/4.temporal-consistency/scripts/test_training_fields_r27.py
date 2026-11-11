@@ -77,14 +77,19 @@ def main():
             assert torch.equal(a, b)
             losses = [mixture_loss(a, target), mixture_loss(b, target)]
             assert torch.equal(losses[0], losses[1])
+            gradient_states = []
             for loss, model, optimizer in zip(losses, [baseline, candidate], optimizers):
                 optimizer.zero_grad(set_to_none=True)
                 loss.backward()
+                gradient_states.append({name: value.grad.detach().clone() for name, value in model.named_parameters()})
                 norm = torch.nn.utils.clip_grad_norm_(model.parameters(), 1.)
                 assert bool(torch.isfinite(norm))
                 optimizer.step()
             model_audit = compare_state(candidate.state_dict(), baseline.state_dict())
             adam_audit = compare_state(optimizers[1].state_dict(), optimizers[0].state_dict())
+            gradient_audit = compare_state(gradient_states[1], gradient_states[0])
+            save_json(out/f'copy-step{step}-seed{seed}-diagnostic.json', {'model': model_audit, 'Adam': adam_audit, 'gradient': gradient_audit,
+                'per_parameter_gradient_max_abs': {name: float((gradient_states[0][name]-gradient_states[1][name]).abs().max()) for name in gradient_states[0]}})
             assert model_audit['exact'] and adam_audit['exact']
             row = {'seed': seed, 'step_index': step, 'same_backend_RGB_history_exact': True, 'history_hashes': 4,
                    'raw_transport_max_abs_gray': warp_error, 'same_CPU_or_CUDA_current_context_exact': True,
