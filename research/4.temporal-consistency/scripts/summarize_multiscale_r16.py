@@ -24,7 +24,8 @@ def method(variant,step,history,fusion):return '__'.join([variant,str(step),hist
 def main():
     out=BASE/'report/exploration-r16';out.mkdir(parents=True,exist_ok=False)
     rows=[];first=[];runtime=[];sources={};training=[];streams={};checkpoints=0
-    for scope,expected in [('spatial-raw',2208),('aligned',1472)]:
+    for scope,expected,train_scope,train_variant in [('spatial',736,'spatial-raw','spatial'),
+            ('raw',1472,'spatial-raw','raw_history'),('aligned',1472,'aligned','aligned_history')]:
         folder=BASE/'results'/('exploration-r16-eval-'+scope);values=jsonl(folder/'per_sequence.jsonl')
         run=json.loads((folder/'runtime.json').read_text());assert len(values)==run['rows']==expected
         events=json.loads((folder/'input_events.json').read_text());assert len(events)==46
@@ -44,10 +45,11 @@ def main():
         for item in json.loads((folder/'checkpoints.json').read_text()):assert sha256(ROOT/item['path'])==item['sha256']
         rows+=values;runtime.append(run);first+=json.loads((folder/'first_frame_audit.json').read_text())
         sources.update({str(p.relative_to(ROOT)):sha256(p) for p in folder.iterdir() if p.is_file()})
-        trainroot=BASE/'results'/('exploration-r16-'+scope)
+        trainroot=BASE/'results'/('exploration-r16-'+train_scope)
         integrity=json.loads((trainroot/'source_integrity.json').read_text());assert integrity['verified_files']==384
         for folder in sorted(p for p in trainroot.iterdir() if p.is_dir()):
             cfg=json.loads((folder/'config.json').read_text());trace=jsonl(folder/'training.jsonl');run=json.loads((folder/'runtime.json').read_text())
+            if cfg['variant']!=train_variant:continue
             assert len(trace)==4000 and [r['step'] for r in trace]==list(range(1,4001)) and run['new_updates']==4000
             assert cfg['parameters']==24955
             oldpath=BASE/'results/exploration-r14-spatial'/f"native_crop-plain-seed{cfg['seed']}"/'training.jsonl'
