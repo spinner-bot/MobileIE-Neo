@@ -1,0 +1,61 @@
+{
+  "observed_at": "2026-11-11T22:36:13.244625+08:00",
+  "author": "Codex  (sqs_A100)",
+  "device": "cpu",
+  "jobs": [
+    {
+      "tag": "eval-pre-zero-cpu",
+      "session": 90068,
+      "log": "research/4.temporal-consistency/process/exploration-r21/eval-pre-zero-cpu.log",
+      "Torch_threads": 2,
+      "OpenCV_threads": 1,
+      "OMP_NUM_THREADS": 2,
+      "MKL_NUM_THREADS": 2,
+      "OPENBLAS_NUM_THREADS": 1
+    },
+    {
+      "tag": "eval-half-post-cpu",
+      "session": 21069,
+      "log": "research/4.temporal-consistency/process/exploration-r21/eval-half-post-cpu.log",
+      "Torch_threads": 2,
+      "OpenCV_threads": 1,
+      "OMP_NUM_THREADS": 2,
+      "MKL_NUM_THREADS": 2,
+      "OPENBLAS_NUM_THREADS": 1
+    },
+    {
+      "tag": "reference-plain-cpu",
+      "session": 8277,
+      "log": "research/4.temporal-consistency/process/exploration-r21/reference-plain-cpu.log",
+      "Torch_threads": 2,
+      "OpenCV_threads": 1,
+      "OMP_NUM_THREADS": 2,
+      "MKL_NUM_THREADS": 2,
+      "OPENBLAS_NUM_THREADS": 1
+    },
+    {
+      "tag": "reference-post-seed0-cpu",
+      "session": 49073,
+      "log": "research/4.temporal-consistency/process/exploration-r21/reference-post-seed0-cpu.log",
+      "Torch_threads": 2,
+      "OpenCV_threads": 1,
+      "OMP_NUM_THREADS": 2,
+      "MKL_NUM_THREADS": 2,
+      "OPENBLAS_NUM_THREADS": 1
+    },
+    {
+      "tag": "reference-post-seed1-cpu",
+      "session": 82223,
+      "log": "research/4.temporal-consistency/process/exploration-r21/reference-post-seed1-cpu.log",
+      "Torch_threads": 2,
+      "OpenCV_threads": 1,
+      "OMP_NUM_THREADS": 2,
+      "MKL_NUM_THREADS": 2,
+      "OPENBLAS_NUM_THREADS": 1
+    }
+  ],
+  "new_candidate_logical_rows": 5888,
+  "new_reference_logical_rows": 2208,
+  "initial_source_revision": "da916a0909931c5f3546b9735f26fc7074d7b65c",
+  "scope": "No CUDA context, two threads per process; no deadline, no quality selection; startup configs contain full immutable source SHA maps"
+}
