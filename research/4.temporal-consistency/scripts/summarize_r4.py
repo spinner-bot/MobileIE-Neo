@@ -91,13 +91,16 @@ def main():
     noise = json.loads((BASE/'results/exploration-r4-noise-gate/validation.json').read_text())
     assert len(noise) == 14
     combined.extend(noise)
+    half = json.loads((BASE/'results/exploration-r4-half/validation.json').read_text())
+    assert len(half) == 28
+    combined.extend(half)
     summary = grouped(combined, ['domain', 'method'], METRICS)
     save_json(out/'domain_summary.json', summary)
     save_json(out/'by_scene.json', grouped(combined, ['domain', 'scene', 'method'], METRICS))
     save_json(out/'new_real_clips_only.json', grouped([r for r in combined if r['domain'] == 'test' and r['scene'] != 'video_21'], ['method'], METRICS))
     base_index = {(r['domain'], r['scene']): r for r in baseline if r['method'] == 'pretrained_raw'}
     violations = []
-    for row in reliable+alpha+noise:
+    for row in reliable+alpha+noise+half:
         reference = base_index[(row['domain'], row['scene'])]
         violations.append({'domain': row['domain'], 'scene': row['scene'], 'method': row['method'],
             'quality_constraints_hold': quality_feasible(row, reference),
@@ -129,7 +132,7 @@ def main():
         ax.legend(); ax.grid(axis='y', alpha=.2)
     fig.tight_layout(); fig.savefig(out/'fit_and_resolution.png', dpi=160); plt.close(fig)
     selected = ['pretrained_raw', 'pretrained_enhanced_fb', 'synthetic_task__raw', 'real_task__raw',
-                'real_anchor__raw', 'real_temporal__raw', 'gate_enhanced__photo', 'global_alpha_enhanced']
+                'real_anchor__raw', 'real_temporal__raw', 'gate_enhanced__photo', 'global_alpha_enhanced', 'global_alpha_enhanced_half']
     if args.expanded:
         selected += ['real12_only__raw', 'real12_mix__raw', 'real4_mix__raw', 'real12_mix_stop__raw', 'noise_normalized_photo']
     fig, axes = plt.subplots(1, 2, figsize=(13, 5.4))
@@ -147,7 +150,7 @@ def main():
     fig.legend(handles, selected, loc='center right', fontsize=8)
     fig.savefig(out/'two_domain_tradeoff.png', dpi=160); plt.close(fig)
     save_json(out/'audit.json', {'training_runs': runs, 'updates': len(runs)*400,
-        'evaluation_rows': len(combined), 'calibration_rows': 216, 'resolution_diagnostic_rows': 180,
+        'evaluation_rows': len(combined), 'calibration_rows': 248, 'resolution_diagnostic_rows': 180,
         'matched_initial_task_difference': initial, 'same_real_streams_verified': True,
         'checkpoint_hashes_verified': True, 'expanded_mix_streams_verified': args.expanded,
         'real_test_clips': 6, 'new_real_test_clips': 5, 'legacy_conditions': 8, 'legacy_sources': 2,
