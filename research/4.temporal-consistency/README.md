@@ -2,10 +2,12 @@
 
 目标：以论文为最终产出，深入核查 MobileIE 的架构与训练机制，在移动端计算预算内设计视频增强模型，用传统方法、后处理和已有视频模型对照验证画质、时间稳定性与效率收益。
 
-- 状态：**前期探索，十轮受控预实验/机制诊断及必要跟进已完成**（2026-11-11）；没有确定最终方法，已建立实拍ND衰减数据与两域强控制，完整训练及自然夜景泛化尚待验证
+- 状态：**前期探索，十二轮受控预实验/机制诊断及必要跟进已完成**（2026-11-11）；没有确定最终方法，已建立实拍ND衰减数据与两域强控制，完整训练及自然夜景泛化尚待验证
 - 当前研究入口：[MobileIE 架构、训练核查与视频研究设计](docs/architecture-and-video-research-plan.md)
-- 最新结果：[进展报告0020](../../docs/进展报告/0020-T-26111118-原生尺度与匹配区域诊断.md)、[表](report/exploration-r10/tables.md)、[平滑权衡图](report/exploration-r10/matched_smoothing.png)、[过程](process/exploration-r10/journal.md)
-- 进行中：[R11强优化历史与对应协议](docs/exploration-r11-protocol.md)，6次1000步已完成，46条件评价中
+- 最新结果：[进展报告0022](../../docs/进展报告/0022-T-26111119-已发表去噪对照与原生窗口.md)、[完整表](report/exploration-r12/tables.md)、[图](report/exploration-r12/published_denoiser_transfer.png)、[过程](process/exploration-r12/journal.md)
+- 第十一轮：[进展报告0021](../../docs/进展报告/0021-T-26111119-强优化与历史对应反证.md)、[同权重历史图](report/exploration-r11/strong_history_controls.png)、[表](report/exploration-r11/tables.md)
+- 第十轮：[进展报告0020](../../docs/进展报告/0020-T-26111118-原生尺度与匹配区域诊断.md)、[平滑权衡](report/exploration-r10/matched_smoothing.png)
+- 进行中：[R13前置训练历史](docs/exploration-r13-protocol.md)，空间1000步精确重放通过、时域4000步完成，46条件评价中
 - 第九轮：[进展报告0019](../../docs/进展报告/0019-T-26111118-优化基线与新增开发集.md)、[完整表](report/exploration-r9/tables.md)、[优化图](report/exploration-r9/optimizer_controls.png)、[过程](process/exploration-r9/journal.md)
 - 第八轮：[进展报告0018](../../docs/进展报告/0018-T-26111118-输入时域化与优化强对照.md)、[完整表](report/exploration-r8/tables.md)、[优化/历史图](report/exploration-r8/optimization_history.png)、[过程](process/exploration-r8/journal.md)
 - 第七轮：[进展报告0017](../../docs/进展报告/0017-T-26111118-通道状态与运动强对照.md)、[同状态与motion表](report/exploration-r7-aligned/tables.md)、[过程](process/exploration-r7/journal.md)
@@ -144,3 +146,5 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 修改：2026-11-11T18:37:56.584049+08:00；作者：Codex  (sqs_A100)；原因：索引0019强优化基线，限定低LR结构结论范围。
 
 修改：2026-11-11T18:51:23.382324+08:00；作者：Codex  (sqs_A100)；原因：索引0020原生诊断，记录R11强优化历史评价进行中。
+
+修改：2026-11-11T19:15:58.253077+08:00；作者：Codex  (sqs_A100)；原因：索引0021/0022，记录R13前置历史评价中。
