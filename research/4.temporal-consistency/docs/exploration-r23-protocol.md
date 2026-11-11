@@ -11,3 +11,7 @@
 固定比较每R21 current/causal对R14单帧、每causal对同模型current、每causal对R20 postwarp.5。保存signed ΔMSE=Δcommon-channel bias²+Δopponent-channel bias²+Δcentered error；比值允许负数或>1，不截为“百分比贡献”。GT均值移除后的中心化误差只作分析参考，不生成增强算法/新性能或因果归因；不改GT/原指标。
 
 CPU/std数学分析，不占GPU。先确认质量差是全局映射还是空间项，再决定是否需要同接受域的GT估计motion分析；GT估计flow仍非真值、不作可部署结果。R22局部交换误差并不由本轮建立因果关系。最终保留素材未读，普通偏差分解不当论文创新。
+
+修改：2026-11-11T23:02:50.051748+08:00；作者：Codex  (sqs_A100)；原因：首轮正式PSNR重放失败暴露口径误判，0统计行完成后先修订方案再重跑。
+
+上述margin8分解与正式PSNR口径不匹配：实际exploration_r2_data.evaluate的PSNR在全帧计算，只有时序有效区裁边8。主分解改为全帧，以精确对应正式每帧MSE/PSNR；仍保持1e-12恒等式及1e-8dB重放门槛。失败资料完整保留，不改任何既有指标/GT/主评价、不放宽数值容差。
