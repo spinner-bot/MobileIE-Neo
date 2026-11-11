@@ -12,4 +12,8 @@
 8. 恢复方式：系统 Python 运行 `scripts/prepare_owned_wheelhouse.py`，读取首安装日志中已解析的 wheel 文件名，从官方 PyPI JSON 获取 URL、大小及 SHA256，最多四个256KiB分块请求下载官方文件。完整摘要匹配后才形成可安装 wheel，存放在自有资产目录 `wheelhouse`。记录明确区分 partial 和 complete。
 9. 后续恢复流程已启动：仅在 wheelhouse 完整且每个摘要复核通过后，使用自有 Python 执行 `pip install --no-index --find-links /data/Users/zrh/data/MobileIE-Neo/wheelhouse -r requirements-research.txt`。然后重新运行迁移脚本，使用新的 attempt 目录和 `execution-retry.log`；须通过包路径、缓存清单、链接、既有CPU参考回放后才产生 completed 标记。
 
-当前第9步尚未完成，不据本记录宣告迁移成功。完成记录、最终清单、实际链接、安装锁定清单和核验结果须逐文件提交并阶段推送，随后使用 `./scripts/project-python` 重新经共享GPU空闲预检启动 seed1。
+10. 03:05：26个wheel共151529343字节全部匹配官方SHA256，离线安装成功。新尝试 `attempt-20261112T030521` 再次通过无活动实验屏障和包归属检查，安装锁定清单单独提交。
+11. 03:06:17：迁移完成。缓存2106个常规文件，共9269917305字节，迁移前后大小/内容SHA256全部相同；仓库 `.cache -> ../../data/MobileIE-Neo/cache`、`.venv -> ../../data/MobileIE-Neo/.venv`。原155MB环境移入自有非活动归档，移除shared-torch.pth并禁用system-site-packages，没有修改其他用户文件。
+12. 最终验证：所有研究包真实路径位于自有环境，缓存变量位于自有资产目录；既有video_15共16帧CPU回放的四项指标差0，未初始化CUDA。通过新的 `./scripts/project-python` 再次核对环境前缀、包文件、两个Git链接mode120000和仓库剩余忽略资产，无遗漏运行数据目录。各清单、验证结果、日志和两个链接逐文件提交。
+
+迁移现已实际完成；首失败尝试保留，最终证据见 `completed.json`、新attempt的 `07-final-verification.json` 和 `09-entrypoint-and-layout.json`。阶段推送完成后，使用 `./scripts/project-python` 重新经共享GPU空闲双采样启动seed1，预算仍为post_transport两目标各4000步。
