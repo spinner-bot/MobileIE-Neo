@@ -26,7 +26,7 @@ BASE = ROOT/'research/4.temporal-consistency'
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--mode', choices=MODES, required=True)
+    parser.add_argument('--mode', choices=['copy', 'post_transport'], required=True)
     parser.add_argument('--out', required=True)
     args = parser.parse_args()
     out = Path(args.out).resolve()
