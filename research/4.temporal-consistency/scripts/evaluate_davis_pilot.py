@@ -50,7 +50,6 @@ def main():
     parser.add_argument('--phase', choices=['references', 'post-seed0', 'post-seed1'], required=True)
     args = parser.parse_args()
     out = BASE/'results'/('exploration-r30-eval-'+args.phase)
-    out.mkdir(parents=True, exist_ok=False)
     index = BASE/'results/exploration-r30-cache/index.json'
     metas = json.loads(index.read_text())['scenes']
     assert len(metas) == 6
@@ -61,6 +60,7 @@ def main():
     device = torch.device('cpu')
     nets, markers = models(args.phase, device)
     marker_lookup = {(r['mode'], r.get('objective'), r.get('train_seed')): r for r in markers}
+    out.mkdir(parents=True, exist_ok=False)
     save_json(out/'checkpoints.json', markers)
     save_json(out/'config.json', {'phase': args.phase, 'device': 'cpu', 'torch_threads': 2,
               'opencv_threads': 1, 'index_sha256': sha256(index), 'torch_version': torch.__version__,
