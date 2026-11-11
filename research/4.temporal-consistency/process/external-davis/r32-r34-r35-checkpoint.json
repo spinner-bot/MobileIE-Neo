@@ -1,0 +1,69 @@
+{
+  "observed_at": "2026-11-12T05:16:58+08:00",
+  "scope": "Immutable running snapshot; no completed download, CUDA pass, trained R34 quality or complete R35 claim.",
+  "download_verified_member_log_lines": 1722,
+  "registered_frames": 3428,
+  "R35_completed_sequence_rows": [
+    {
+      "domain": "davis_train_pilot",
+      "scene": "bear_photons20",
+      "source_video": "bear",
+      "base_objective": "mse",
+      "train_seed": 0,
+      "mode": "raw",
+      "sigma": null,
+      "psnr_rgb": 24.21867228125062,
+      "ssim_rgb": 0.6314492486417294,
+      "edge_mae": 5.604556500911713,
+      "flicker": 11.837181575714595,
+      "temporal_error": 12.222146185617598
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "bear_photons20",
+      "source_video": "bear",
+      "base_objective": "mse",
+      "train_seed": 0,
+      "mode": "window",
+      "sigma": 15,
+      "psnr_rgb": 24.744938990901716,
+      "ssim_rgb": 0.6663357084617019,
+      "edge_mae": 5.200567424297333,
+      "flicker": 8.845845267886208,
+      "temporal_error": 9.514063275049603
+    }
+  ],
+  "R34_events_at_snapshot": [
+    {
+      "time": "2026-11-12T05:15:58.428426+08:00",
+      "stage": "download",
+      "status": "waiting_for_existing_registered_process"
+    }
+  ],
+  "live_processes": [
+    {
+      "pid": 3010011,
+      "argv": [
+        "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python",
+        "research/4.temporal-consistency/scripts/fetch_davis_training.py",
+        "--download"
+      ]
+    },
+    {
+      "pid": 3048459,
+      "argv": [
+        "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python",
+        "research/4.temporal-consistency/scripts/evaluate_published_davis_r35.py"
+      ]
+    },
+    {
+      "pid": 3060249,
+      "argv": [
+        "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python",
+        "research/4.temporal-consistency/scripts/launch_dynamic_stage_r34.py",
+        "--download-pid",
+        "3010011"
+      ]
+    }
+  ]
+}
