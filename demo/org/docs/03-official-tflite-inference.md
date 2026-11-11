@@ -92,10 +92,10 @@ F:/dev-tools/python-envs/MobileIE-Demo/Scripts/python.exe test_TFLite_RGB.py
 
 ```bash
 F:/dev-tools/python-envs/MobileIE-Demo/Scripts/python.exe \
-  research/6.mobile-deployment/scripts/run_official_tflite.py \
+  demo/org/scripts/run_official_tflite.py \
   --model MobileIE/pretrain/lolv1.tflite \
   --input MobileIE/data/LOLdataset/eval15/low \
-  --output research/6.mobile-deployment/results/lol_eval15
+  --output demo/org/results/lol_eval15
 ```
 
 > 包装脚本属于“传参胶水”，核心推理仍是官方实现；如不需要可直接用方式 A。
@@ -109,9 +109,9 @@ F:/dev-tools/python-envs/MobileIE-Demo/Scripts/python.exe \
 ```bash
 # 生成 400×600（宽 600、高 400）的输入图
 F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe \
-  research/6.mobile-deployment/scripts/prepare_demo_images.py \
+  demo/org/scripts/prepare_demo_images.py \
   --input F:/path/to/phone/photos \
-  --output research/6.mobile-deployment/data/demo_input
+  --output demo/org/data/demo_input
 ```
 
 然后用方式 B 对 `data/demo_input` 推理，输出到 `results/demo_output`。
@@ -137,7 +137,7 @@ F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe \
 建议目录：
 
 ```
-research/6.mobile-deployment/results/
+demo/org/results/
 ├── lol_eval15/          # 官方 LOL 验证集结果
 ├── demo_input/          # 手机照片缩放后的 400×600 输入
 ├── demo_output/         # 手机照片增强结果

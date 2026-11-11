@@ -8,7 +8,7 @@
     python run_official_tflite.py \
         --model MobileIE/pretrain/lolv1.tflite \
         --input MobileIE/data/LOLdataset/eval15/low \
-        --output research/6.mobile-deployment/results/lol_eval15
+        --output demo/org/results/lol_eval15
 """
 
 import argparse

@@ -2,11 +2,17 @@
 
 目标：为项目申报的现场考察，按 MobileIE 官方流程把模型跑在安卓手机上，并提供“手机实测速度 + 处理前后效果对比”的演示材料。**这是演示任务，不是研究任务**，不改变 3/4/5 号工作的技术路线。
 
-- 分支：**`demo.org`**（移动端演示支线；核心研究在 `main` 上由 Codex 推进，两者互不合并）
+- 分支：**`demo.org`**；本目录 `demo/org/` 是这项演示工作的主文件夹
 - 状态：**P0 完成**（2026-11-08），演示包已打包，手机测速待做
 - 上游代码与权重：项目根目录 [`MobileIE/`](../../MobileIE)
-- 关联：[2 号复现](../2.reproduction/README.md)、[5 号前期调研](../5.prior-art-survey/README.md)、[6B06-01 会议记录](../../docs/会议记录/6B06-01/audio%20-%20Transcription.txt)
+- 关联：[2 号复现](../../research/2.reproduction/README.md)、[5 号前期调研](../../research/5.prior-art-survey/README.md)、[6B06-01 会议记录](../../docs/会议记录/6B06-01/audio%20-%20Transcription.txt)
 - 进展报告：[0009-T-261108-6 号工作启动与手机演示方案](../../docs/进展报告/0009-T-261108-6号工作启动与手机演示方案.md)
+
+**协作约定**
+
+- 本仓库是唯一数据站：日志、结论、截图、脚本等全部入库，不依赖本地或服务器临时文件；
+- 小步、密集提交，阶段性 `git push origin demo.org`；
+- 同步 `main` 只用 `git fetch origin` + `git merge --no-ff origin/main`，**禁止 `git pull`**，以保留完整合并历史；`main` 由 Codex 在服务器上快速迭代，合并前先看 `git log --oneline HEAD..origin/main`。
 
 ## 1. 任务边界（先看这里）
 
@@ -97,23 +103,23 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 PYD=F:/dev-tools/python-envs/MobileIE-Demo/Scripts/python.exe
 
 # 解析 TFLite 模型（仅标准库）
-"$PY" research/6.mobile-deployment/scripts/inspect_tflite.py
+"$PY" demo/org/scripts/inspect_tflite.py
 
 # 缩放手机照片到 600×400
-"$PY" research/6.mobile-deployment/scripts/prepare_demo_images.py resize \
-  --input photos/ --output research/6.mobile-deployment/data/demo_input
+"$PY" demo/org/scripts/prepare_demo_images.py resize \
+  --input photos/ --output demo/org/data/demo_input
 
 # 官方 TFLite 推理（包装脚本自动选择 TensorFlow 或 ai-edge-litert）
-"$PYD" research/6.mobile-deployment/scripts/run_official_tflite.py \
+"$PYD" demo/org/scripts/run_official_tflite.py \
   --model MobileIE/pretrain/lolv1.tflite \
-  --input research/6.mobile-deployment/data/demo_input \
-  --output research/6.mobile-deployment/results/demo_output
+  --input demo/org/data/demo_input \
+  --output demo/org/results/demo_output
 
 # 生成左右对比图
-"$PY" research/6.mobile-deployment/scripts/prepare_demo_images.py compare \
-  --input research/6.mobile-deployment/data/demo_input \
-  --enhanced research/6.mobile-deployment/results/demo_output \
-  --output research/6.mobile-deployment/results/compare_demo \
+"$PY" demo/org/scripts/prepare_demo_images.py compare \
+  --input demo/org/data/demo_input \
+  --enhanced demo/org/results/demo_output \
+  --output demo/org/results/compare_demo \
   --format jpeg
 ```
 

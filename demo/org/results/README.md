@@ -29,7 +29,7 @@ F:/dev-tools/python-envs/MobileIE-Demo/Scripts/python.exe - <<'EOF'
 import numpy as np
 from pathlib import Path
 from PIL import Image
-out=Path('research/6.mobile-deployment/results/lol_eval15')
+out=Path('demo/org/results/lol_eval15')
 gt=Path('MobileIE/data/LOLdataset/eval15/high')
 ps=[]
 for p in sorted(out.glob('*.png')):
@@ -47,16 +47,16 @@ PYD=F:/dev-tools/python-envs/MobileIE-Demo/Scripts/python.exe
 PYN=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 
 # 增强
-"$PYD" research/6.mobile-deployment/scripts/run_official_tflite.py \
+"$PYD" demo/org/scripts/run_official_tflite.py \
   --model MobileIE/pretrain/lolv1.tflite \
   --input MobileIE/data/LOLdataset/eval15/low \
-  --output research/6.mobile-deployment/results/lol_eval15
+  --output demo/org/results/lol_eval15
 
 # 对比图
-"$PYN" research/6.mobile-deployment/scripts/prepare_demo_images.py compare \
+"$PYN" demo/org/scripts/prepare_demo_images.py compare \
   --input MobileIE/data/LOLdataset/eval15/low \
-  --enhanced research/6.mobile-deployment/results/lol_eval15 \
-  --output research/6.mobile-deployment/results/compare_lol_eval15 \
+  --enhanced demo/org/results/lol_eval15 \
+  --output demo/org/results/compare_lol_eval15 \
   --label-enhanced MobileIE --format jpeg
 ```
 
