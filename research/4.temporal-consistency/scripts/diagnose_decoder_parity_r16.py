@@ -21,7 +21,7 @@ def main():
     device=torch.device('cuda');data,_=load_training();images=load_images('train')
     rx,*_=real_pair(data,0,0,'native_crop');sx,*_=synthetic_pair_with_context(images,0,0)
     low=torch.stack([rx,sx]).to(device).flatten(0,1);torch.manual_seed(0)
-    net=MultiscaleFST(new_model(device),'spatial');ref=new_model(device);rows=[]
+    net=MultiscaleFST(new_model(device),'spatial').to(device);ref=new_model(device);rows=[]
     with torch.no_grad():
         for tf32 in [True,False]:
             torch.backends.cudnn.allow_tf32=tf32
