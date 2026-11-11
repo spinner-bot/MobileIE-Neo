@@ -25,7 +25,7 @@ BASE=ROOT/'research/4.temporal-consistency'
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--out',required=True)
-    out=Path(parser.parse_args().out);out.mkdir(parents=True,exist_ok=False)
+    out=Path(parser.parse_args().out).resolve();out.mkdir(parents=True,exist_ok=False)
     assert json.loads((BASE/'report/exploration-r21/audit.json').read_text())['new_rows']==5888
     cache=ROOT/'.cache/qualitative-r21';cache.mkdir(parents=True,exist_ok=False)
     cv2.setNumThreads(1);torch.set_num_threads(2);device=torch.device('cpu');models={};weights=[]
