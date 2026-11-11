@@ -43,6 +43,17 @@ class NoiseMomentTests(unittest.TestCase):
         r = rgb_statistics(x, y)
         self.assertLess(r['closure_abs'], 1e-12)
 
+    def test_centered_control_preserves_empirical_feature_mean(self):
+        net = new_model(torch.device('cpu')).double()
+        u = torch.randn(64, 12, 3, 4, dtype=torch.double)+2
+        stats = {'mean': u.mean(0), 'variance': u.var(0, unbiased=False)}
+        raw = quadratic(net.body, u)
+        centered = quadratic(net.body, u, 'centered', stats)
+        torch.testing.assert_close(centered.mean(0), raw.mean(0), rtol=1e-12, atol=1e-12)
+        a = net.body.weight1*net.body.weight2
+        expected = a*(2*stats['mean']*u-stats['mean'].square()+stats['variance'])+net.body.bias
+        torch.testing.assert_close(centered, expected, rtol=1e-11, atol=1e-12)
+
     def test_static_forward_matches_existing_models(self):
         for mode in ['plain', 'spatial_post']:
             net = CausalFST(new_model(torch.device('cpu')), mode)
