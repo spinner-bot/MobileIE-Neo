@@ -24,12 +24,12 @@ from train_aggregation_r21 import create_model
 
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--variants',required=True);p.add_argument('--out',required=True)
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--variants',required=True);p.add_argument('--out',required=True);p.add_argument('--device',choices=['cpu','cuda'],default='cuda')
     args=p.parse_args();variants=args.variants.split(',')
     if len(set(variants))!=len(variants) or any(v not in MODES for v in variants):p.error('registered unique variants required')
     out=Path(args.out);out.mkdir(parents=True,exist_ok=False)
     cv2.setNumThreads(1);torch.set_num_threads(2);torch.backends.cudnn.deterministic=True;torch.backends.cudnn.benchmark=False
-    device=torch.device('cuda');revision=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
+    device=torch.device(args.device);revision=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
     sources={str(f.relative_to(ROOT)):sha256(f) for f in Path(__file__).parent.glob('*.py')};models=[];checkpoints=[]
     for variant in variants:
         for seed in [0,1]:
@@ -42,7 +42,7 @@ def main():
                 checkpoints.append({'variant':variant,'train_seed':seed,'step':step,'path':item['path'],'sha256':item['sha256'],
                     'training_config_sha256':sha256(folder/'config.json'),'alpha':net.coefficient()})
     save_json(out/'checkpoints.json',checkpoints)
-    save_json(out/'config.json',{'variants':variants,'steps':[1000,4000],'training_preparation':'native_crop','future_wait_frames':0,
+    save_json(out/'config.json',{'device':str(device),'Torch_threads':2,'OpenCV_threads':1,'variants':variants,'steps':[1000,4000],'training_preparation':'native_crop','future_wait_frames':0,
         'protocol_sha256':sha256(ROOT/'research/4.temporal-consistency/docs/exploration-r21-protocol.md'),
         'cache_indices':{str(f.relative_to(ROOT)):sha256(f) for f in [CACHE_INDEX,DEV_INDEX,NATIVE_INDEX]},
         'git_revision_at_startup':revision,'source_sha256_at_startup':sources,
@@ -90,7 +90,7 @@ def main():
     assert count==1472*len(variants) and computations+aliases==count
     save_json(out/'first_frame_audit.json',first);save_json(out/'input_events.json',events_audit)
     save_json(out/'runtime.json',{'wall_seconds':time.perf_counter()-start,'rows':count,'actual_inference_sequences':inferences,
-        'metric_computations':computations,'metric_aliases':aliases,'scope':'logical configuration rows, not independent videos or full pipeline benchmark'})
+        'metric_computations':computations,'metric_aliases':aliases,'device':str(device),'cuda_initialized':torch.cuda.is_initialized(),'scope':'logical configuration rows, not independent videos or full pipeline benchmark'})
 
 
 if __name__=='__main__':main()
