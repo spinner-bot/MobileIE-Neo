@@ -6,7 +6,7 @@ import cv2
 import numpy as np
 import torch
 
-from dynamic_training_r34 import BASE, TrainingPool, models
+from dynamic_training_r34 import BASE, TrainingPool, digest, models
 from exploration_r2_data import degrade
 from train_dynamic_r34 import prediction
 
@@ -51,6 +51,8 @@ def main():
     assert torch.equal(initial['spatial'], initial['causal'])
     value = {'mode': mode, 'batch_shape': list(low.shape), 'initialization': initialization, 'models': rows,
              'initial_spatial_causal_output_equal': True, 'identities': identities, 'cuda_initialized': torch.cuda.is_initialized(),
+             'source_sha256': {name: digest(BASE/'scripts'/name) for name in
+                              ['budget_causal_r33.py', 'dynamic_training_r34.py', 'train_dynamic_r34.py', 'check_dynamic_training_r34.py']},
              'optimizer_updates': 0, 'scope': 'CPU integration on one window only; not trained quality or final benchmark.'}
     out.write_text(json.dumps(value, indent=2)+'\n')
     print(json.dumps(value), flush=True)
