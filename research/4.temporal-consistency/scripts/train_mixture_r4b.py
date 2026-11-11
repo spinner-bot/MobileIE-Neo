@@ -19,6 +19,12 @@ from train_real_r4 import validation
 EXPANDED = ROOT/'research/4.temporal-consistency/data/exploration-r4b/manifest.json'
 
 
+def mixture_loss(prediction, target, stop_synthetic=False):
+    if stop_synthetic:
+        prediction = torch.cat([prediction[:1], prediction[1:].detach()], 0)
+    return torch.sqrt((prediction-target)**2+1e-6).mean()
+
+
 def synthetic_pair(images, seed, step):
     rng = np.random.default_rng(910000000+seed*1000000+step)
     names = list(images)
@@ -43,7 +49,7 @@ def main():
     parser.add_argument('--variants', required=True)
     args = parser.parse_args()
     variants = args.variants.split(',')
-    if any(v not in ['real12_only', 'real12_mix', 'real4_mix'] for v in variants):
+    if any(v not in ['real12_only', 'real12_mix', 'real4_mix', 'real12_mix_stop'] for v in variants):
         parser.error('known variants required')
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=False)
@@ -63,6 +69,7 @@ def main():
     synthetic = load_images('train')
     cache = {domain: load_cache(domain) for domain in ['test', 'legacy_synthetic']}
     for variant in variants:
+        use_mix = '_mix' in variant
         training = base_training if variant.startswith('real4_') else all_training
         for seed in [0, 1]:
             folder = out/f'{variant}-seed{seed}'
@@ -74,7 +81,7 @@ def main():
             optimizer = torch.optim.Adam(net.parameters(), lr=1e-5, weight_decay=0)
             config = {'variant': variant, 'seed': seed, 'steps': 400, 'batch_pairs': 2, 'size': [320, 180],
                 'lr': 1e-5, 'clip': 1., 'real_scenes': [r['scene'] for r in training],
-                'synthetic_pair_per_step': int(variant.endswith('_mix')),
+                'synthetic_pair_per_step': int(use_mix), 'stop_synthetic_gradient': variant.endswith('_stop'),
                 'expanded_manifest_sha256': sha256(EXPANDED), 'base_manifest_sha256': sha256(MANIFEST),
                 'evaluation_cache_index_sha256': sha256(CACHE_INDEX),
                 'pretrained_sha256': sha256(ROOT/'MobileIE/pretrain/lolv1_best_slim.pkl'),
@@ -85,11 +92,11 @@ def main():
             for step in range(400):
                 low, target, _, _, identity = batch(training, seed, step)
                 samples = [{'source': 'real', 'scene': n, 'frame_pair': t} for n, t in identity]
-                if variant.endswith('_mix'):
+                if use_mix:
                     sx, sy, samples[1] = synthetic_pair(synthetic, seed, step)
                     low[1], target[1] = sx.to(device), sy.to(device)
                 pred = net(low.flatten(0, 1)).reshape_as(target)
-                loss = torch.sqrt((pred-target)**2+1e-6).mean()
+                loss = mixture_loss(pred, target, variant.endswith('_stop'))
                 if not bool(torch.isfinite(loss)):
                     raise FloatingPointError('nonfinite mixture loss')
                 optimizer.zero_grad(set_to_none=True)
