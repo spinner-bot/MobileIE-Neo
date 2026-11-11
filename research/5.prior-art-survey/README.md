@@ -6,17 +6,17 @@
 2. 导师提到的“电信接续研究”具体是什么？能否证实？
 3. 我们的选题还剩下什么可发表的空间？哪些表述会被审稿人指为重复？
 
-- 状态：**首轮完成**（2026-11-05）；后续按月增量更新
+- 状态：**首轮完成，持续随实验增量核查**（最近2026-11-11）；计数快照仍标原日期，方法边界随新证据更新
 - 关联：[4 号工作](../4.temporal-consistency/README.md)、[3 号基线](../3.video-flicker/README.md)、[2 号复现](../2.reproduction/README.md)
 - 进展报告：[0008-T-261105-前期调研与重复性风险](../../docs/进展报告/0008-T-261105-前期调研与重复性风险.md)
 
-## 1. 核心结论（先看这里）
+## 1. 首轮核心结论（2026-11-05历史快照）
 
 1. **未发现“MobileIE + 视频时序一致性/闪烁”的直接工作。** S2 抓到 33 篇引用、OpenAlex 18 篇、Crossref 15 次被引；逐条扫描标题与摘要，唯一明确的视频 LLVE 引用是 *AnyMod-LLVE*（ICML 2026，多模态重模型），不涉及极轻量单图网络扩展。
 2. **同组接续工作有 5 篇，但全部是图像任务**：YUV 轻量低光（同第一作者）、LiteIE、IGDNet、频域双路径水下增强、DRNet 动态重参数化。它们是最近的“重复性风险源”，但没有一篇做视频/时序。
 3. **TeleAI/中国电信线索未能证实。** 公开引用索引中没有 TeleAI 署名的 MobileIE 引用；TeleAI 2026 中文综述《极端环境图像退化、处理与应用研究综述》的 85 条公开参考文献中也没有 MobileIE。可能存在未被 Crossref/OpenAlex/S2 收录的中文期刊或内部工作，需要导师给出确切出处后复核。
-4. **“后处理够用”仍是最大威胁**，不是重复性问题。EMA/光流 EMA 已把闪烁降 73%；若要立住训练侧方法，必须证明快速运动/无拖影/低延迟优势。
-5. 建议的差异化：**JND/可见性加权的训练期时序一致性 + 重参数化兼容 + 4K 参数/手机实时**，并用逐模块消融解释“闪烁来自哪里”，避免被评价为“把已有 temporal loss 套到 MobileIE 上”。
+4. **后处理是必须比较的强基线。** 首轮“降73%”来自旧实现；后续修复边界、warp方向与缓存问题后，当前结论应以4号工作报告0015及其前置报告为准。
+5. 当时建议的差异化（尚未确认方法）：**JND/可见性加权的训练期时序一致性 + 重参数化兼容 + 4K 参数/手机实时**，并用逐模块消融解释“闪烁来自哪里”，避免被评价为“把已有 temporal loss 套到 MobileIE 上”。
 
 ## 2. 产出
 
@@ -29,6 +29,9 @@
 | 视频时序方法综述 | [`docs/05-video-temporal-survey.md`](docs/05-video-temporal-survey.md) | 对齐/循环/注意力/后处理/多模态/RAW 六类 |
 | 轻量部署综述 | [`docs/06-lightweight-deployment.md`](docs/06-lightweight-deployment.md) | 重参数化、量化、蒸馏、延迟/能耗指标 |
 | 新颖性与重复风险 | [`docs/07-novelty-and-overlap-risk.md`](docs/07-novelty-and-overlap-risk.md) | 空白、候选贡献、审稿人质疑与实验对策 |
+| 后续受控探索相关工作 | [08](docs/08-exploration-literature-map.md)、[09](docs/09-feature-products-and-temporal-correlation.md)、[10](docs/10-streaming-denoising-and-equal-information-controls.md) | 训练、双线性/移位、流式去噪及等信息对照 |
+| 数据与可靠性 | [11](docs/11-real-video-data-readiness.md)、[12](docs/12-motion-validity-and-quality-constrained-history.md) | ND实拍数据边界、运动有效性、质量约束 |
+| 因果训练与多项式噪声 | [13](docs/13-training-objectives-and-causal-state.md)、[14](docs/14-polynomial-noise-and-bias-variance.md) | 近期训练先例、二次映射假设、偏差方差分析及未完成精读 |
 | 汇报材料 | [`report/prior-art-survey.html`](report/prior-art-survey.html) | 单文件 HTML，资源内嵌，可离线打开 |
 | 原始数据 | [`data/`](data) | S2/OpenAlex 原始 JSON、Crossref 元数据、规范化 CSV |
 | 抓取脚本 | [`scripts/fetch_citations.py`](scripts/fetch_citations.py) | 可重跑的引用抓取（带退避） |
@@ -74,3 +77,5 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 ## 7. 修订记录
 
 - 2026-11-05 · claude code (local)：创建 5 号工作，完成首轮引用抓取、分类与重复性风险分析。
+
+- 2026-11-11T16:51:31.316795+08:00 · Codex  (sqs_A100)：补齐08–14增量入口，明确首轮计数/建议为历史快照，并移除旧光流改善数字的当前证据地位。
