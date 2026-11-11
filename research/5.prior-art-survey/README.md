@@ -51,6 +51,8 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 "$PY" research/5.prior-art-survey/scripts/normalize_citations.py
 ```
 
+- [18 数据域与公开增强模型准备度](docs/18-data-domain-and-published-enhancement-readiness.md)：SDSD正文ND/ISO边界、StableLLVE真实推理、FastLLVE多尺度/时间/LUT先例。
+
 ## 4. 计数口径
 
 | 来源 | 计数 | 说明 |
@@ -85,3 +87,5 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 修改：2026-11-11T18:39:15.432022+08:00；作者：Codex  (sqs_A100)；原因：索引15/16，避免将训练优化或简化参考误作新颖性。
 
 修改：2026-11-11T19:15:36.577012+08:00；作者：Codex  (sqs_A100)；原因：索引已运行FastDVDnet及BSVD入口核查。
+
+修改：2026-11-11T20:24:45.731053+08:00；作者：Codex  (sqs_A100)；原因：索引R14/R15完整结果及新的结构/数据问题。
