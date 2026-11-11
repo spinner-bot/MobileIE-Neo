@@ -11,8 +11,13 @@
     "research/4.temporal-consistency/results/exploration-r16-cost-counterbalanced/cost.json": "230f1df71c69e898d15d61b70074f926f61f12d32b294f3e3de44046de22a299",
     "research/4.temporal-consistency/results/exploration-r30-cache/index.json": "424fa278b2fe66d29de476e2b47328619438f97cf71926448433d1191bb722c1",
     "research/4.temporal-consistency/results/exploration-r31-data/index.json": "7159d5a54d60438555caf130bf9d47185b39024ea4f67a123900b46e7cc08069",
+    "research/4.temporal-consistency/data/external-davis/fastdvdnet-training-overlap.json": "6177a00bdfeaa1fbde8a56d479bdb09a2cb527851f9f5ac06f92b088fb26d209",
+    "research/4.temporal-consistency/data/external-davis/test-dev-metadata-reserve.json": "803f0ac722e910f95e5d33722ec7bda08d0aecee82614a6747fd31a623737ce0",
     "research/4.temporal-consistency/results/exploration-r15-eval/config.json": "03b416af961176e17a852028a0f5b6de20242eac18c410ec49e1d396867c52ac",
-    "research/4.temporal-consistency/report/exploration-r12/audit.json": "abdf2d4428accfb70b449d4047ff2d9f3af7f2342796e28dac95c22153ae71bb"
+    "research/4.temporal-consistency/report/exploration-r12/audit.json": "abdf2d4428accfb70b449d4047ff2d9f3af7f2342796e28dac95c22153ae71bb",
+    "research/4.temporal-consistency/report/external-baselines-self-motion/domain_summary.json": "644a915079757f410b58e2080d07d38e813909192e1db0572fef100ce337c821",
+    "research/4.temporal-consistency/report/external-baselines-self-motion/audit.json": "207be45c327d5fbfc28213710cf962754a088fbe3105d8a1a1317930eb324873",
+    "research/4.temporal-consistency/results/exploration-r30-self-motion/pipeline_cost.jsonl": "f439dcc019324f1453e5f189fd8ba02b826f759b327ca64d6c04162f9519c99e"
   },
   "rows": 18,
   "external_data_prepared": {
@@ -25,5 +30,16 @@
   },
   "R28_screening_status": "failed; route frozen as primary method, not universal impossibility",
   "R30_external_pilot_status": "complete312 rows, common CPU; separate from native CUDA table; candidate screening failed",
+  "external_same_base_rows": 3,
+  "FastDVDnet_documented_R30_DEV_overlap": [
+    "bear",
+    "lucia",
+    "walking"
+  ],
+  "heldout_metadata_only": {
+    "video_count": 30,
+    "future_frames": 1788,
+    "JPEG_members_read": 0
+  },
   "scope": "Evidence draft only. Missing values are explicit; no new inference, training or phone timing."
 }
