@@ -38,6 +38,9 @@ class FeatureMix(nn.Module):
         b = self.backbone.body
         return (b.weight1*u)*(b.weight2*u)+b.bias
 
+    def mix(self, current, previous):
+        return previous if self.gamma == 1 else current if self.gamma == 0 else current+self.gamma*(previous-current)
+
     def forward(self, x):
         net = self.backbone
         u = net.body.block1(net.head(x))
@@ -46,7 +49,7 @@ class FeatureMix(nn.Module):
         previous = self.state
         if previous is None or self.state_input_shape != x.shape:
             previous = current
-        mixed = previous if self.gamma == 1 else current if self.gamma == 0 else current+self.gamma*(previous-current)
+        mixed = self.mix(current, previous)
         body = self.replace(original, mixed)
         if self.placement == 'pre':
             body = self.ordinary(body)
