@@ -118,6 +118,52 @@ def main():
             writer = csv.DictWriter(stream, fieldnames=list(external_rows[0]))
             writer.writeheader()
             writer.writerows(external_rows)
+    dynamic_rows, dynamic_audit, dynamic_cost_audit = [], None, None
+    if (BASE/'report/exploration-r34/audit.json').exists():
+        dynamic_audit = read(Path('report/exploration-r34/audit.json'))
+        assert dynamic_audit['passed'] and dynamic_audit['rows'] == 120
+        summaries = read(Path('report/exploration-r34/domain_summary.json'))
+        comparisons = read(Path('report/exploration-r34/paired_domain_seed.json'))
+        assert len(summaries) == 10
+        training = read(Path('results/exploration-r34-seed0/config.json'))
+        candidate_cost = read(Path('report/exploration-r33-prototype/checks.json'))
+        cost_lookup = {}
+        if (BASE/'report/exploration-r34-runtime/audit.json').exists():
+            dynamic_cost_audit = read(Path('report/exploration-r34-runtime/audit.json'))
+            assert dynamic_cost_audit['passed'] and dynamic_cost_audit['runs'] == 42
+            measured = read(Path('report/exploration-r34-runtime/cost.json'))
+            cost_lookup = {(r['model'], r['history'], r['fusion']): r for r in measured}
+            assert len(cost_lookup) == 7
+        def gate_against(model):
+            values = [r for r in comparisons if r['reference_model'] == model and r['reference_fusion'] == 'self_motion_post05']
+            assert len(values) == 2 and {r['seed'] for r in values} == {0, 1}
+            return all(r['descriptive_quality_temporal_gate'] for r in values)
+        for r in summaries:
+            measured = cost_lookup.get((r['model'], r['history'], r['fusion']))
+            actual = r['history'] == 'causal'
+            shared = r['fusion'] == 'postwarp05'
+            post = r['fusion'] != 'raw'
+            sampling = 'none' if r['model'] == 'original' else 'learned causal low-resolution transport' if actual else 'learned single-frame sampling'
+            if post:
+                sampling += ' + '+('shared teacher' if shared else 'own enhancement')+' half-FB/warp'
+            dynamic_rows.append({'model': r['model'], 'history': r['history'], 'fusion': r['fusion'],
+                'protocol': 'R34 final4000; 57 training videos, 3 disjoint DEV videos x 2 noise conditions x 2 seeds; CPU',
+                **{m: r[m] for m in ['psnr_rgb', 'ssim_rgb', 'temporal_error', 'edge_mae']},
+                'predictor_params': training['parameters'][r['model']],
+                'predictor_conv_MACs_1080p': macs if r['model'] == 'original' else candidate_cost['conv_MACs_1080p'],
+                'fixed_quality_motion_teacher_params': 4075 if shared else 0, 'sampling_path': sampling,
+                'future_frames': 0, 'online_history_bytes_480x854': None if measured is None else measured['online_history_storage_bytes'],
+                'cpu_median_pipeline_ms_per_frame_480x854': None if measured is None else measured['median_pipeline_ms_per_frame'],
+                'cpu_pipeline_min_run_average_ms': None if measured is None else measured['min_pipeline_ms_per_frame'],
+                'cpu_pipeline_max_run_average_ms': None if measured is None else measured['max_pipeline_ms_per_frame'],
+                'phone_latency_ms': None,
+                'registered_spatial_self_post_gate_both_seeds': dynamic_audit['registered_spatial_post_gate_passed_both_seeds'] if actual else None,
+                'original_self_post_gate_both_seeds': gate_against('original') if actual else None,
+                'same_weight_self_post_gate_both_seeds': gate_against('causal') if actual else None})
+        with (out/'dynamic_evidence.csv').open('w', newline='') as stream:
+            writer = csv.DictWriter(stream, fieldnames=list(dynamic_rows[0]))
+            writer.writeheader()
+            writer.writerows(dynamic_rows)
     lines = ['# 论文主表工作稿：已有证据与缺口', '',
              '这是旧探索DEV证据清单，尚非标准基准投稿主表。不能跨证据组把异域权重迁移或CPU微小差当作公平SOTA排名。所有手机延迟均未测。', '',
              '| 方法 | 证据组 | PSNR | SSIM | 时序误差↓ | 边缘误差↓ |', '|---|---|---:|---:|---:|---:|']
@@ -145,6 +191,19 @@ def main():
             lines.append('|'+r['method']+'|'+'|'.join(f'{r[m]:.6f}' for m in ['psnr_rgb', 'ssim_rgb', 'temporal_error', 'edge_mae'])+'|'+('未测' if cpu is None else f'{cpu:.3f}')+'|')
         lines += ['', '自驱post没有独立teacher前向，状态为一张raw增强RGB；该CPU循环总时间含输出留存指针开销，分帧计时不含后续指标/文件保存。未测完整峰值内存或相机到屏幕延迟。[外部机器表](external_evidence.csv)。']
     lines += ['', '预训练来源限制：官方FastDVDnet文档训练清单覆盖R30三开发片及DAVIS TRAIN60/VAL30，因此新的R35迁移结果不能声称未见视频泛化；旧R12的ND原生表不因该DAVIS重叠自动变成训练片。已仅按元数据保留另30段test-dev来源/1788帧，与该90训练ID及项目训练/开发ID不重叠，JPEG成员尚未读取。这仍不是官方LLVE标准基准，其他公开权重来源需分别核验。']
+    if dynamic_rows:
+        lines += ['', '## R34公共动态训练后的固定双seed对照', '',
+                  '以下三控制均同资料/同更新预算，采用最终4000权重。质量是R30六条件/三源视频的共同CPU均值；与上面R26旧训练资料/原生CUDA表分开。成本若已测，仅来自固定单片前16帧、两seed各三轮的CPU驻留输入流水线，不能当手机速度。', '',
+                  '|模型|历史|输出|PSNR|SSIM|时序↓|边缘↓|CPU中位ms/帧|',
+                  '|---|---|---|---:|---:|---:|---:|---:|']
+        for r in dynamic_rows:
+            cpu = r['cpu_median_pipeline_ms_per_frame_480x854']
+            lines.append('|'+ '|'.join(r[f] for f in ['model', 'history', 'fusion'])+'|'+'|'.join(f'{r[m]:.6f}' for m in ['psnr_rgb', 'ssim_rgb', 'temporal_error', 'edge_mae'])+'|'+('未测' if cpu is None else f'{cpu:.3f}')+'|')
+        actual = next(r for r in dynamic_rows if r['history'] == 'causal')
+        lines += ['', f"actual相对独立空间+self-post的注册联合门槛（双seed均过）：{actual['registered_spatial_self_post_gate_both_seeds']}；相对原始模型+self-post：{actual['original_self_post_gate_both_seeds']}；相对自身current+self-post：{actual['same_weight_self_post_gate_both_seeds']}。门槛仅为DEV筛查，不能替代全部质量/成本、新颖性、手机和独立测试证据。", '',
+                  '同权重current保留训练后的空间路径；actual内部仍有学习偏移/采样，不能称完全无对齐成本。shared-motion post仅用原共享teacher质量控制，未实测其完整部署成本。[动态机器表](dynamic_evidence.csv)、[配对与分seed全表](../exploration-r34/tables.md)。']
+    else:
+        lines += ['', 'R34固定动态训练与120行双seed评价尚未产生完整汇总，当前不填入候选质量或成本，不由部分训练loss推断效果。']
     (out/'README.md').write_text('\n'.join(lines)+'\n')
     (out/'sources.json').write_text(json.dumps({'sources': sources, 'rows': len(rows),
         'external_data_prepared': {'DAVIS_source_videos': 3, 'DAVIS_synthetic_conditions': 6,
@@ -153,6 +212,9 @@ def main():
         'R28_screening_status': 'failed; route frozen as primary method, not universal impossibility',
         'R30_external_pilot_status': 'complete312 rows, common CPU; separate from native CUDA table; candidate screening failed',
         'external_same_base_rows': len(external_rows),
+        'R34_dynamic_rows': len(dynamic_rows),
+        'R34_quality_complete': dynamic_audit is not None,
+        'R34_complete_CPU_cost': dynamic_cost_audit is not None,
         'FastDVDnet_documented_R30_DEV_overlap': prior_overlap['overlap_R30_DEV'],
         'heldout_metadata_only': {'video_count': heldout_metadata['video_count'], 'future_frames': heldout_metadata['future_total_frames'],
                                   'JPEG_members_read': heldout_metadata['JPEG_members_read']},
