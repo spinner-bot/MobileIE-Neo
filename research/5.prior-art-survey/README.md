@@ -115,3 +115,7 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 - [25 骨干计算与流式状态](docs/25-compute-allocation-and-streaming-state.md)：R28路线冻结后的NAFNet/BSVD固定源码补读、TLC已知空间控制及未训练预算；乘法/移位/零初始化不作为新颖性，状态逻辑元素不替代真实storage/峰值。
 
 修改：2026-11-12T01:32:47.707565+08:00；作者：Codex  (sqs_A100)；原因：索引对应与统计依赖的深度核查。
+
+- [26 跨帧训练与推理边界](docs/26-cross-frame-training-and-inference-boundaries.md)：补读VLLVE++正文中的CFIM/训练期对应精化，区分参考帧依赖与单帧路径；近期方法的读取深度和未复现项分别保留。
+
+修改：2026-11-12T05:16:58+08:00；作者：Codex  (sqs_A100)；原因：索引训练/推理依赖和同信息比较边界。
