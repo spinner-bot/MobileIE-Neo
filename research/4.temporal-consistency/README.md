@@ -2,10 +2,11 @@
 
 目标：以论文为最终产出，深入核查 MobileIE 的架构与训练机制，在移动端计算预算内设计视频增强模型，用传统方法、后处理和已有视频模型对照验证画质、时间稳定性与效率收益。
 
-- 状态：**前期探索，十三轮受控预实验/机制诊断及必要跟进已完成**（2026-11-11）；没有确定最终方法，已建立实拍ND衰减数据与两域强控制，完整训练及自然夜景泛化尚待验证
+- 状态：**前期探索，十五轮受控预实验/机制诊断及必要跟进已完成**（2026-11-11）；没有确定最终方法，已建立实拍ND衰减数据与两域强控制，完整训练及自然夜景泛化尚待验证
 - 当前研究入口：[MobileIE 架构、训练核查与视频研究设计](docs/architecture-and-video-research-plan.md)
-- 最新结果：[进展报告0023](../../docs/进展报告/0023-T-26111119-前置历史与训练状态分布反证.md)、[表](report/exploration-r13/tables.md)、[上下文反证图](report/exploration-r13/training_context_controls.png)、[过程](process/exploration-r13/journal.md)
-- 深度训练中：[R14协议](docs/exploration-r14-protocol.md)、[过程](process/exploration-r14/journal.md)，native与resize成对累计1000/4000，42000新更新；保留Adam矩及所有空间/时间控制
+- 最新结果：[进展报告0025](../../docs/进展报告/0025-T-26111120-公开增强权重迁移与数据域核查.md)、[StableLLVE完整迁移表](report/exploration-r15/tables.md)、[过程](process/exploration-r15/journal.md)
+- 第十四轮：[进展报告0024](../../docs/进展报告/0024-T-26111120-原生训练与深度交互对照.md)、[深度/尺度全表](report/exploration-r14/tables.md)、[图](report/exploration-r14/native_depth_controls.png)、[过程](process/exploration-r14/journal.md)，42000新更新及全部Adam/checkpoint审核完成
+- 第十三轮：[进展报告0023](../../docs/进展报告/0023-T-26111119-前置历史与训练状态分布反证.md)、[表](report/exploration-r13/tables.md)、[过程](process/exploration-r13/journal.md)
 - 第十二轮：[进展报告0022](../../docs/进展报告/0022-T-26111119-已发表去噪对照与原生窗口.md)、[完整表](report/exploration-r12/tables.md)、[图](report/exploration-r12/published_denoiser_transfer.png)、[过程](process/exploration-r12/journal.md)
 - 第十一轮：[进展报告0021](../../docs/进展报告/0021-T-26111119-强优化与历史对应反证.md)、[同权重历史图](report/exploration-r11/strong_history_controls.png)、[表](report/exploration-r11/tables.md)
 - 第十轮：[进展报告0020](../../docs/进展报告/0020-T-26111118-原生尺度与匹配区域诊断.md)、[平滑权衡](report/exploration-r10/matched_smoothing.png)
@@ -151,3 +152,5 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 修改：2026-11-11T19:15:58.253077+08:00；作者：Codex  (sqs_A100)；原因：索引0021/0022，记录R13前置历史评价中。
 
 修改：2026-11-11T19:42:53.736037+08:00；作者：Codex  (sqs_A100)；原因：索引0023及R14深度训练启动，保留完整研究目标。
+
+修改：2026-11-11T20:24:45.731053+08:00；作者：Codex  (sqs_A100)；原因：索引R14/R15完整结果及新的结构/数据问题。
