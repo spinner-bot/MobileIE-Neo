@@ -46,12 +46,23 @@ def main():
     evidence = json.loads((BASE/'report/exploration-r4/audit.json').read_text())
     assert len(evidence['training_runs']) == 14 and evidence['updates'] == 5600
     assert evidence['evaluation_rows'] == 770 and evidence['calibration_rows'] == 248
+    counts = {'reliability': 120, 'alpha': 64, 'noise-gate': 32, 'half': 32}
+    for name, expected in counts.items():
+        assert len(json.loads((BASE/f'results/exploration-r4-{name}/calibration_trials.json').read_text())) == expected
+    timed = 0
+    for name in ['pipeline-cost', 'half-cost']:
+        values = json.loads((BASE/f'results/exploration-r4-{name}.json').read_text())
+        for records in values['per_frame'].values():
+            assert len(records) == 45
+            assert all(r['total_ms'] >= r['model_transfer_sync_ms'] >= 0 for r in records)
+            timed += len(records)
     save_json(process/'final-accounting.json', {'neural_training_runs': 14, 'updates': 5600,
         'evaluation_rows': 770, 'calibration_rows': 248, 'scale_fit_diagnostic_rows': 180,
         'total_method_sequence_rows': 1198, 'evaluation_input_conditions': 14,
         'real_test_clips': 6, 'new_real_test_clips': 5, 'legacy_synthetic_conditions': 8, 'legacy_source_clips': 2,
         'real_training_clips_max': 12, 'paired_source_files': len(b['files']), 'source_bytes': b['integrity']['bytes'],
         'test_files_unchanged': True, 'train_test_file_hash_overlap': 0, 'parsed_python_files': len(files),
+        'calibration_counts_verified': counts, 'timed_pipeline_frame_samples': timed,
         'note': 'repeated controls/conditions included; pixels, seeds, related clips and rows are not independent videos'})
     print(json.dumps({'jobs': len(jobs), 'allowed': summary['allowed_jobs'], 'peak_jobs': peak,
         'gpu_process_seconds': summary['total_gpu_process_seconds'], 'python_files': len(files), 'method_sequence_rows': 1198}, indent=2))
