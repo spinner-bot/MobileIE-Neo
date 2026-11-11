@@ -1,0 +1,91 @@
+{
+  "runs": [
+    {
+      "variant": "concat_high",
+      "seed": 0,
+      "parameters": 4975,
+      "steps": 1000,
+      "initial_plain_audit": {
+        "initial_task_delta": 0.0,
+        "initial_unclipped_backbone_gradient_norm_delta": 0.0
+      },
+      "last100_task": 0.041153986491262916,
+      "steps_clipped": 943,
+      "alignment_wall_seconds": 0.0008846948621794581,
+      "auxiliary_l2": 1.6447970867156982
+    },
+    {
+      "variant": "concat_high",
+      "seed": 1,
+      "parameters": 4975,
+      "steps": 1000,
+      "initial_plain_audit": {
+        "initial_task_delta": 0.0,
+        "initial_unclipped_backbone_gradient_norm_delta": 0.0
+      },
+      "last100_task": 0.039882604088634255,
+      "steps_clipped": 947,
+      "alignment_wall_seconds": 0.0008137620170600712,
+      "auxiliary_l2": 1.5009135007858276
+    },
+    {
+      "variant": "copy_high",
+      "seed": 0,
+      "parameters": 4975,
+      "steps": 1000,
+      "initial_plain_audit": {
+        "initial_task_delta": 0.0,
+        "initial_unclipped_backbone_gradient_norm_delta": 0.0
+      },
+      "last100_task": 0.04167742345482111,
+      "steps_clipped": 943,
+      "alignment_wall_seconds": 0.00110230763675645,
+      "auxiliary_l2": 1.6343213319778442
+    },
+    {
+      "variant": "copy_high",
+      "seed": 1,
+      "parameters": 4975,
+      "steps": 1000,
+      "initial_plain_audit": {
+        "initial_task_delta": 0.0,
+        "initial_unclipped_backbone_gradient_norm_delta": 0.0
+      },
+      "last100_task": 0.0409303755313158,
+      "steps_clipped": 936,
+      "alignment_wall_seconds": 0.0010700863786041737,
+      "auxiliary_l2": 1.587977647781372
+    },
+    {
+      "variant": "concat_aligned_high",
+      "seed": 0,
+      "parameters": 4975,
+      "steps": 1000,
+      "initial_plain_audit": {
+        "initial_task_delta": 0.0,
+        "initial_unclipped_backbone_gradient_norm_delta": 0.0
+      },
+      "last100_task": 0.04094680931419134,
+      "steps_clipped": 955,
+      "alignment_wall_seconds": 27.30075510998722,
+      "auxiliary_l2": 1.6858186721801758
+    },
+    {
+      "variant": "concat_aligned_high",
+      "seed": 1,
+      "parameters": 4975,
+      "steps": 1000,
+      "initial_plain_audit": {
+        "initial_task_delta": 0.0,
+        "initial_unclipped_backbone_gradient_norm_delta": 0.0
+      },
+      "last100_task": 0.04002388283610344,
+      "steps_clipped": 933,
+      "alignment_wall_seconds": 22.778930502943695,
+      "auxiliary_l2": 1.520667314529419
+    }
+  ],
+  "updates": 6000,
+  "checkpoints_verified": 60,
+  "current_GT_stream_matches_plain": true
+}
