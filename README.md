@@ -4,9 +4,9 @@
 
 ## 当前研究状态
 
-目前处于前期探索，收缩到内部时间算子 post_transport 的双目标训练适配与强基线验证，尚未确定最终模型。主线在 `main` 推进，移动演示由独立支线处理。
+目前处于前期探索。内部时间算子post_transport的收口验证未通过预设门槛，已冻结该主方法路线，转向公共动态训练资料与骨干计算分配的研究；尚未确定最终模型。主线在 `main` 推进，移动演示由独立支线处理。
 
-最新状态见[进展报告0042](docs/进展报告/0042-T-26111203-外部动态视频与真实手机验证资料就绪.md)、[论文证据表草稿](research/4.temporal-consistency/report/paper-main-table/README.md)及[4号工作入口](research/4.temporal-consistency/README.md)。R28收口后的双seed训练均已正常完成，主阶段共48000新更新；共同CUDA强参考2208行完成并核对既有结果，post_transport正式质量评价正在运行，尚无候选定论。新增3段DAVIS来源/6合成条件与3设备原始手机输入已准备；共同CPU外部参考显示旧域较强映射的排序未保持，候选外部评价继续进行。
+最新结论见[进展报告0043](docs/进展报告/0043-T-26111204-内部时间算子双种子闭环与路线止损.md)、[论文证据表](research/4.temporal-consistency/report/paper-main-table/README.md)及[4号入口](research/4.temporal-consistency/README.md)。R28收口训练48000新更新、4416行共同CUDA主评价及R30双seed312行外部CPU评价均已完成。真实历史和单帧current均未通过质量—时序筛查，不再扩大相似算子网格；主表已保留实测负结果及同权重强post。真实手机输入已准备，方法质量、手机延迟与完整独立基准仍缺。
 
 2026-11-12 03:06自有环境和数据迁移已核验完成，两个仓库相对链接已入Git，后续统一用 `./scripts/project-python`。代码、过程、结果、报告分别密集提交，阶段SSH推送，保持no-ff；迁移详情见[0041](docs/进展报告/0041-T-26111202-内部时间算子训练收口与自有资产迁移.md)。
 
