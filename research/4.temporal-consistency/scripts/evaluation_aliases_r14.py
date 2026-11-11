@@ -1,4 +1,11 @@
 """Exact reset invariants, separate from model and output-fusion resets."""
+import numpy as np
+
+
+def event_flags(events):
+    result=np.asarray(events,dtype=bool)
+    if result.ndim!=1:raise ValueError('one event flag per frame required')
+    return result
 
 
 def cache_keys(variant,history,reset,has_events,fusion):
