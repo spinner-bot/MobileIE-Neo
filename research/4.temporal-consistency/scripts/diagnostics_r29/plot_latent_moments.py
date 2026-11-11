@@ -28,7 +28,7 @@ def main():
                     assert len(selected) == 2
                     values.append(np.mean([(r[key] if key.endswith('_term') else r['latent_bias'][key])['rms_over_reference_q_rms'] for r in selected]))
                 assert min(values) > 0
-                ax.bar(np.arange(4)+(k-1.5)*.2, values, width=.2, label=label)
+                ax.scatter(np.arange(4)+(k-1.5)*.16, values, s=35, marker=['o', 's', '^', 'D'][k], label=label)
             ax.set_yscale('log')
             ax.set_xticks(range(4), ['rho0 / no JPEG', 'rho.9 / no JPEG', 'rho0 / JPEG', 'rho.9 / JPEG'], rotation=20, ha='right')
             ax.set_title(objective+' / '+stage+' FST', fontsize=11)
