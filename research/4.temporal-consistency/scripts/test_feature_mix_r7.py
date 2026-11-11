@@ -53,6 +53,15 @@ class FeatureMixTests(unittest.TestCase):
         post = (1-gamma)*(a*u.square()+bias)+gamma*(a*p.square()+bias)
         torch.testing.assert_close(post-pre, a*gamma*(1-gamma)*(u-p).square(), rtol=1e-10, atol=1e-14)
 
+    def test_full_replacement_pre_post_equivalence_at_fixed_weights(self):
+        net = new_model(torch.device('cpu'))
+        a = FeatureMix(copy.deepcopy(net), [6, 7, 8], 'pre', 1.)
+        b = FeatureMix(copy.deepcopy(net), [6, 7, 8], 'post', 1.)
+        with torch.no_grad():
+            for _ in range(4):
+                x = torch.rand(1, 3, 21, 29)*.1
+                torch.testing.assert_close(a(x), b(x), rtol=0, atol=0)
+
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
