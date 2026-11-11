@@ -6,7 +6,7 @@
 - 当前研究入口：[MobileIE 架构、训练核查与视频研究设计](docs/architecture-and-video-research-plan.md)
 - 最新状态：[进展报告0041](../../docs/进展报告/0041-T-26111202-内部时间算子训练收口与自有资产迁移.md)、[论文证据表草稿](report/paper-main-table/README.md)；R28 seed0十模型各4000步已正常完成，尚未得出训练后质量结论
 - 进行中：[R28生效收口协议](docs/exploration-r28-protocol.md)；待自有环境迁移核验后，只补post_transport双目标seed1共8000更新，复用R26 plain参考，主评价4416逻辑行；actual需要历史/flow/warp，current单帧映射单独评价
-- 运行资产：[迁移过程](process/asset-migration/)、[路径规范](../../specs/项目规范/路径与环境规范.md)；独立环境与运行数据迁往 `/data/Users/zrh/data/MobileIE-Neo`，完成前不使用旧借用环境启动任务
+- 运行资产：[迁移过程](process/asset-migration/journal.md)、[路径规范](../../specs/项目规范/路径与环境规范.md)；独立环境与运行数据已于2026-11-12 03:06迁入 `/data/Users/zrh/data/MobileIE-Neo`，2106文件摘要一致、16帧CPU参考指标差0，仓库链接已入Git；后续统一用 `./scripts/project-python`
 - 既有完整结果：[R26监督目标控制](../../docs/进展报告/0038-T-26111200-监督目标全评价与历史贡献分离.md)、[同权重强后处理](../../docs/进展报告/0039-T-26111200-同权重单帧后处理排除聚合伪收益.md)、[R27冻结探针](../../docs/进展报告/0040-T-26111201-FST内部时间算子冻结探针与实现门槛.md)；R29潜矩资料归档附录，不继续扩大逐bit诊断
 - 已知信息诊断：[进展报告0028](../../docs/进展报告/0028-T-26111121-可用时间信息与非线性聚合顺序.md)、[信息图](report/exploration-r19/known_temporal_information.png)、[顺序图](report/exploration-r19-aggregation/aggregation_order.png)、[过程](process/exploration-r19/journal.md)
 - 配对反证：[进展报告0027](../../docs/进展报告/0027-T-26111121-监督配对几何反证与数据准备.md)、[图](report/exploration-r18/pair_geometry.png)、[过程](process/exploration-r18/journal.md)，104项未支持大整体整数平移主因
