@@ -246,6 +246,56 @@ def main():
                          +f"|{r['online_history_storage_bytes']/2**20:.3f}|"+('未测' if cpu is None else f'{cpu:.3f}')+'|')
         lines += ['', f"固定递归EMA相对有限post双seed联合筛查：{classical_audit['gate_passed_both_seeds']['recursive_self05']}；启发式adaptive：{classical_audit['gate_passed_both_seeds']['adaptive_recursive']}。递归是既有传统机制，不算创新。后续模型必须同时对照这个更强参考；不能只打败有限两帧post。", '',
                   '这些为三开发源上的固定控制。自适应方差未经校准，不等价复现BNLK/EMVD；共享质量阶段计时不作独立流水线速度。若CPU栏已填，来自R36独立raw/finite/recursive同轮18次流水线，固定单片前16帧，六个run均值取中位；不能和上方R34旧轮次混排，min–max见机器表。手机仍未测。[传统机器表](classical_evidence.csv)、[逐seed与限制](../exploration-r36-classical/tables.md)。']
+    preserved_rows = []
+    if (BASE/'report/exploration-r37/audit.json').exists():
+        audit = read(Path('report/exploration-r37/audit.json'))
+        assert audit['passed'] and audit['rows'] == 72 and audit['new_neural_sequences'] == 24
+        values = read(Path('report/exploration-r37/domain_summary.json'))
+        assert len(values) == 6
+        for r in values:
+            temporal = r['method'].endswith('alignment')
+            preserved_rows.append({**r, 'protocol': 'R37 final4000, same frozen R34 anchor; R30 3 DEV videos x 2 noise conditions x 2 seeds; common CPU',
+                 'fixed_motion_teacher_params': 0, 'future_frames': 0,
+                 'external_FB_at_inference': not temporal and r['method'] != 'raw',
+                 'learned_sampling_at_inference': temporal,
+                 'primary_gate_both_seeds_both_references': audit['primary_passed_both_seeds_both_references'].get(r['method']),
+                 'phone_latency_ms': None,
+                 'scope': 'Fixed negative candidate; finite and recursive strong references preserved, no new candidate speed claim.'})
+        with (out/'preserved_evidence.csv').open('w', newline='') as stream:
+            writer = csv.DictWriter(stream, fieldnames=list(preserved_rows[0]))
+            writer.writeheader()
+            writer.writerows(preserved_rows)
+        lines += ['', '## R37保留强空间映射的全分辨率状态：完整负结果', '',
+                  '冻结同一R34原始骨干、仅训练512时间参数；final4000两个seed完整72行，含48行同anchor强传统参考复用。current显式返回不可变原骨干。', '',
+                  '|方法|PSNR|SSIM|时序↓|边缘↓|在线历史MiB@480×854|',
+                  '|---|---:|---:|---:|---:|---:|---:|']
+        for r in preserved_rows:
+            lines.append('|'+r['method']+'|'+'|'.join(f'{r[m]:.6f}' for m in ['psnr_rgb', 'ssim_rgb', 'temporal_error', 'edge_mae'])
+                         +f"|{r['online_history_storage_bytes']/2**20:.3f}|")
+        lines += ['', '两个时间控制对finite/recursive的双seed主要门槛全部False，已停止该设计的局部网格。缓存减少是真实取舍，不能充当质量联合胜出；未为失败候选追加手机/CPU成本调优。[机器表](preserved_evidence.csv)、[全条件配对](../exploration-r37/tables.md)、[止损决策](../../docs/exploration-r37-decision.md)。']
+    transfer_rows = []
+    if (BASE/'report/exploration-r39-anchor-transfer/audit.json').exists():
+        audit = read(Path('report/exploration-r39-anchor-transfer/audit.json'))
+        assert audit['passed'] and audit['rows'] == 60 and audit['neural_sequences'] == 20
+        transfer_rows = read(Path('report/exploration-r39-anchor-transfer/domain_summary.json'))
+        assert len(transfer_rows) == 9
+        with (out/'paired_real_anchor_transfer.csv').open('w', newline='') as stream:
+            writer = csv.DictWriter(stream, fieldnames=list(transfer_rows[0]))
+            writer.writeheader()
+            writer.writerows(transfer_rows)
+        lines += ['', '## R39固定空间底座的既有配对实拍DEV转移', '',
+                  '四个既有白天ND实拍native crop，各16帧；全部同CPU2，官方一份权重、R26/R34各两个final4000 seed。训练方案不同，不能归于单个数据/优化因素；与R30合成域分开，不是自然夜景或独立最终确认。', '',
+                  '|底座|输出|PSNR|SSIM|时序↓|边缘↓|', '|---|---|---:|---:|---:|---:|']
+        for r in transfer_rows:
+            lines.append('|'+r['anchor_family']+'|'+r['method']+'|'+'|'.join(f'{r[m]:.6f}' for m in ['psnr_rgb', 'ssim_rgb', 'temporal_error', 'edge_mae'])+'|')
+        lines += ['', '[完整共同CPU转移表](../exploration-r39-anchor-transfer/tables.md)、[机器表](paired_real_anchor_transfer.csv)。R34合成DEV较强，配对实拍却明显弱于R26；后续必须处理跨域映射及数据假设，不能只优化合成均值。']
+    phone_reference_complete = False
+    if (BASE/'report/exploration-r38-phone/audit.json').exists():
+        phone_audit = read(Path('report/exploration-r38-phone/audit.json'))
+        assert phone_audit['passed'] and phone_audit['reference_rows'] == 27
+        phone_reference_complete = True
+        lines += ['', '## R38真实手机输入上的参考检查', '',
+                  '三设备各64帧、官方及R34双seed底座的raw/finite/recursive共27输出序列已完成。固定0/32/63接触表与全部64帧预览均保留，出现明显截断/色偏；没有同步GT，不提供伪PSNR/SSIM或真实闪烁排名。它们是参考行为诊断，不是R37候选结果或手机时延。[固定预览与限制](../exploration-r38-phone/README.md)。']
     (out/'README.md').write_text('\n'.join(lines)+'\n')
     (out/'sources.json').write_text(json.dumps({'sources': sources, 'rows': len(rows),
         'external_data_prepared': {'DAVIS_source_videos': 3, 'DAVIS_synthetic_conditions': 6,
@@ -258,6 +308,9 @@ def main():
         'R34_quality_complete': dynamic_audit is not None,
         'R34_complete_CPU_cost': dynamic_cost_audit is not None,
         'R36_classical_rows': len(classical_rows),
+        'R37_preserved_rows': len(preserved_rows),
+        'R38_real_phone_reference_complete': phone_reference_complete,
+        'R39_paired_real_anchor_rows': len(transfer_rows),
         'FastDVDnet_documented_R30_DEV_overlap': prior_overlap['overlap_R30_DEV'],
         'heldout_metadata_only': {'video_count': heldout_metadata['video_count'], 'future_frames': heldout_metadata['future_total_frames'],
                                   'JPEG_members_read': heldout_metadata['JPEG_members_read']},
