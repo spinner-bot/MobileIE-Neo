@@ -1,0 +1,33 @@
+{
+  "process_directories": [
+    "research/4.temporal-consistency/process/exploration-r19"
+  ],
+  "completed": [
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r19/gpu-aggregation.json",
+      "gpu": 2,
+      "revision": "6f5e0092248d994bb412a45360011738960b20e2",
+      "allowed": true,
+      "process_wall_seconds": 33.252457898983266,
+      "returncode": 0
+    },
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r19/gpu-probe.json",
+      "gpu": 2,
+      "revision": "2cbb249404b5314371e0b354b82b24511eda4630",
+      "allowed": true,
+      "process_wall_seconds": 57.200194046017714,
+      "returncode": 0
+    }
+  ],
+  "failed": [],
+  "resource_refusals": [],
+  "used_physical_gpus": [
+    2
+  ],
+  "peak_own_concurrent_jobs": 1,
+  "source_hashes_verified": 311,
+  "source_mismatches": [],
+  "process_gpu_seconds": 90.45265194500098,
+  "scope": "includes CPU/data/metrics; not GPU kernel time; preflight and local locks are not a global reservation"
+}
