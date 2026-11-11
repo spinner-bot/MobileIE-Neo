@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "included_stages": [
+    "self-motion",
+    "published"
+  ],
+  "methods": [
+    "fastdvd_sigma15_five_current",
+    "fastdvd_sigma15_window",
+    "raw",
+    "self_motion_post05",
+    "shared_motion_post05"
+  ],
+  "rows": 60,
+  "source_sha256": {
+    "research/4.temporal-consistency/results/exploration-r30-eval-references/per_sequence.jsonl": "b71323e6cce812804dc986198e535d44f37acdb8b28cfd9903e70bbe71008d3f",
+    "research/4.temporal-consistency/data/external-davis/fastdvdnet-training-overlap.json": "6177a00bdfeaa1fbde8a56d479bdb09a2cb527851f9f5ac06f92b088fb26d209",
+    "research/4.temporal-consistency/results/exploration-r30-self-motion/runtime.json": "fc8b5e105aef7a8a5b4c62bf49db339749e4c9c6c6eb7bf8bd7b1c18e620a144",
+    "research/4.temporal-consistency/results/exploration-r30-self-motion/per_sequence.jsonl": "7d6beadf248e1a53df7292db31b9e1c6f8654b1e61d708e59176eea3c92f4cf9",
+    "research/4.temporal-consistency/results/exploration-r30-self-motion/config.json": "0a9d95f2fab25149930f74f1943a9eced5d10d8da43ce357af1c489fc1ebb1f5",
+    "research/4.temporal-consistency/results/exploration-r35-published/runtime.json": "d08c032c549906413c5dc48fc59151bb07b8b8c74508717931fd57388050e138",
+    "research/4.temporal-consistency/results/exploration-r35-published/per_sequence.jsonl": "a02b76af8f794be1a6f18c80b843815e2caaba8efa991b1c2be14e615154fd70",
+    "research/4.temporal-consistency/results/exploration-r35-published/config.json": "a793104c68fc512db38198245c23b3d7fda94fb1092413b11364931e4dc38507"
+  },
+  "published_documented_training_overlap_DEV": [
+    "bear",
+    "lucia",
+    "walking"
+  ],
+  "scope": "Same R26 plain MSE base weights and common CPU R30 input; three DEV source videos, not six independent benchmarks or a phone test."
+}
