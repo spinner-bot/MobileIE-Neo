@@ -1,0 +1,9 @@
+{
+  "time": "2026-11-11T23:02:50.051748+08:00",
+  "reason": "Decomposition assumed margin8 PSNR; actual exploration_r2_data.evaluate uses full-frame PSNR, margin8 only masks temporal metrics.",
+  "formal_evaluation_affected": false,
+  "new_completed_statistic_rows": 0,
+  "example_video15_frame0_R14_full_PSNR": 30.721847008291874,
+  "incorrect_margin8_PSNR": 30.867811967831607,
+  "recovery": "Use full-frame decomposition to match original metric, retain <=1e-8 dB replay threshold; do not change old outputs or metric definition"
+}
