@@ -58,10 +58,15 @@ def main():
     if args.expanded:
         extra_rows, extra_runs, extra_streams = [], [], {}
         for name, variants in [('exploration-r4b-diversity', ['real12_only']),
-                               ('exploration-r4b-mixture', ['real12_mix', 'real4_mix'])]:
+                               ('exploration-r4b-mixture', ['real12_mix', 'real4_mix']),
+                               ('exploration-r4b-stop', ['real12_mix_stop'])]:
             a, b, c = training_rows(BASE/'results'/name, variants)
             extra_rows.extend(a); extra_runs.extend(b); extra_streams.update(c)
         for seed in [0, 1]:
+            assert extra_streams[('real12_mix', seed)] == extra_streams[('real12_mix_stop', seed)]
+            full = next(r['initial_task'] for r in extra_runs if r['variant'] == 'real12_mix' and r['seed'] == seed)
+            stopped = next(r['initial_task'] for r in extra_runs if r['variant'] == 'real12_mix_stop' and r['seed'] == seed)
+            assert full == stopped
             for step in range(400):
                 real = streams[('real_task', seed)][step][0]
                 mixed = extra_streams[('real4_mix', seed)][step][0]
@@ -83,13 +88,16 @@ def main():
     alpha = json.loads((BASE/'results/exploration-r4-alpha/validation.json').read_text())
     assert len(alpha) == 28
     combined.extend(alpha)
+    noise = json.loads((BASE/'results/exploration-r4-noise-gate/validation.json').read_text())
+    assert len(noise) == 14
+    combined.extend(noise)
     summary = grouped(combined, ['domain', 'method'], METRICS)
     save_json(out/'domain_summary.json', summary)
     save_json(out/'by_scene.json', grouped(combined, ['domain', 'scene', 'method'], METRICS))
     save_json(out/'new_real_clips_only.json', grouped([r for r in combined if r['domain'] == 'test' and r['scene'] != 'video_21'], ['method'], METRICS))
     base_index = {(r['domain'], r['scene']): r for r in baseline if r['method'] == 'pretrained_raw'}
     violations = []
-    for row in reliable+alpha:
+    for row in reliable+alpha+noise:
         reference = base_index[(row['domain'], row['scene'])]
         violations.append({'domain': row['domain'], 'scene': row['scene'], 'method': row['method'],
             'quality_constraints_hold': quality_feasible(row, reference),
@@ -123,7 +131,7 @@ def main():
     selected = ['pretrained_raw', 'pretrained_enhanced_fb', 'synthetic_task__raw', 'real_task__raw',
                 'real_anchor__raw', 'real_temporal__raw', 'gate_enhanced__photo', 'global_alpha_enhanced']
     if args.expanded:
-        selected += ['real12_only__raw', 'real12_mix__raw', 'real4_mix__raw']
+        selected += ['real12_only__raw', 'real12_mix__raw', 'real4_mix__raw', 'real12_mix_stop__raw', 'noise_normalized_photo']
     fig, axes = plt.subplots(1, 2, figsize=(13, 5.4))
     handles = []
     for ax, domain in zip(axes, ['test', 'legacy_synthetic']):
@@ -139,7 +147,7 @@ def main():
     fig.legend(handles, selected, loc='center right', fontsize=8)
     fig.savefig(out/'two_domain_tradeoff.png', dpi=160); plt.close(fig)
     save_json(out/'audit.json', {'training_runs': runs, 'updates': len(runs)*400,
-        'evaluation_rows': len(combined), 'calibration_rows': 184, 'resolution_diagnostic_rows': 180,
+        'evaluation_rows': len(combined), 'calibration_rows': 216, 'resolution_diagnostic_rows': 180,
         'matched_initial_task_difference': initial, 'same_real_streams_verified': True,
         'checkpoint_hashes_verified': True, 'expanded_mix_streams_verified': args.expanded,
         'real_test_clips': 6, 'new_real_test_clips': 5, 'legacy_conditions': 8, 'legacy_sources': 2,
