@@ -135,7 +135,7 @@ def main():
         'inputs': {str(path.relative_to(ROOT)): sha256(path) for folder in [original, centered, components] for path in folder.iterdir() if path.is_file()},
         'scope': 'static repeated synthetic diagnosis, not real-video performance or independent test'})
     lines = ['# R6/R6b/R6c fixed-draw mechanism diagnosis', '', 'Clipped RGB; means over 24 conditions, not 24 independent scenes. Oracle controls are not deployable.', '',
-             '| Model | Intervention | Mean PSNR | Noise SD /255 |', '|---|---|---:|---:|']
+             '| Model | Intervention | Mean PSNR | Noise SD (0–255 levels) |', '|---|---|---:|---:|']
     for r in rgb_summary:
         if r['clipped']:
             lines.append(f"| {r['model']} | {r['intervention']} | {r['mean_draw_psnr']:.5f} | {r['noise_sd_255']:.5f} |")
