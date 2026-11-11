@@ -2,9 +2,10 @@
 
 目标：以论文为最终产出，深入核查 MobileIE 的架构与训练机制，在移动端计算预算内设计视频增强模型，用传统方法、后处理和已有视频模型对照验证画质、时间稳定性与效率收益。
 
-- 状态：**前期探索，五轮受控预实验及必要跟进已完成**（2026-11-11）；没有确定最终方法，已建立实拍ND衰减数据与两域强控制，完整训练及自然夜景泛化尚待验证
+- 状态：**前期探索，六轮受控预实验/机制诊断及必要跟进已完成**（2026-11-11）；没有确定最终方法，已建立实拍ND衰减数据与两域强控制，完整训练及自然夜景泛化尚待验证
 - 当前研究入口：[MobileIE 架构、训练核查与视频研究设计](docs/architecture-and-video-research-plan.md)
-- 最新结果：[进展报告0015](../../docs/进展报告/0015-T-26111116-因果骨干与同容量反证.md)、[完整控制表](report/exploration-r5-combined/tables.md)、[历史替代图](report/exploration-r5-combined/history_mechanism.png)、[过程](process/exploration-r5/journal.md)
+- 最新结果：[进展报告0016](../../docs/进展报告/0016-T-26111117-局部噪声与RGB通路辨识.md)、[条件矩与RGB表](report/exploration-r6/tables.md)、[机制图](report/exploration-r6/noise_mechanism.png)、[过程](process/exploration-r6/journal.md)
+- 第五轮：[进展报告0015](../../docs/进展报告/0015-T-26111116-因果骨干与同容量反证.md)、[完整控制表](report/exploration-r5-combined/tables.md)、[历史替代图](report/exploration-r5-combined/history_mechanism.png)、[过程](process/exploration-r5/journal.md)
 - 持续目标：[远期论文目标记录](docs/long-term-goal.md)
 - 第四轮：[进展报告0014](../../docs/进展报告/0014-T-26111115-真实数据覆盖与时序强基线.md)、[两域结果](report/exploration-r4/tables.md)、[逐片增量](report/exploration-r4/paired_clip_deltas.json)、[完整过程](process/exploration-r4/journal.md)
 - 第三轮：[进展报告0013](../../docs/进展报告/0013-T-26111102-骨干时间交互与真实视频反例.md)、[受控训练表](report/exploration-r3-training/training_tables.md)、[实拍样例](report/exploration-r3-training/real_tables.md)
@@ -34,10 +35,13 @@
 
 第五轮及两项必要跟进完成20次1000步训练、38条件上的3040模型评价。空间post相对plain实拍+.677dB，历史post相对同位空间post仅+.00023dB；历史替代和合成运动时序监督均未建立该分支的独立历史收益。固定TSM在切换首帧明显退化，时序训练也有跨域质量代价。降低这些具体历史实现优先级，下一步分解FST条件噪声矩、均值偏移与波动，保留强空间/廉价后处理基线。全部仍属探索。
 
+第六轮以24静态条件、独立64校准/64评价draw，验证局部矩与RGB协方差精确分解。body二阶局部能量约68%，经门控/tail后的主要RGB代数分量却是body线性随机响应；保持均值修正减少局部方差仍未统一降低RGB波动。下一步在训练素材核验有效噪声通路及通道选择，避免按大特征能量盲目改平方算子；该诊断尚不能推广到运动或自然夜景。
+
 ## 2. 当前产出
 
 | 产出 | 位置 | 说明 |
 | --- | --- | --- |
+| 第六轮条件矩与RGB通路辨识 | [R6](docs/exploration-r6-protocol.md)、[R6b](docs/exploration-r6b-protocol.md)、[R6c](docs/exploration-r6c-protocol.md)、[结果](report/exploration-r6/)、[过程](process/exploration-r6/) | 独立oracle、局部/输出噪声分离、完整门控/截断协方差及实际资源拒绝 |
 | 第五轮因果骨干与同容量反证 | [R5协议](docs/exploration-r5-protocol.md)、[R5b](docs/exploration-r5b-protocol.md)、[R5c](docs/exploration-r5c-protocol.md)、[完整结果](report/exploration-r5-combined/)、[过程](process/exploration-r5/) | 20000更新、历史替代/关闭、同位空间控制、事件响应、源码/GPU审计 |
 | 第四轮数据与廉价时序强控制 | [协议](docs/exploration-r4-protocol.md)、[结果/图](report/exploration-r4/)、[过程](process/exploration-r4/) | 5600更新、相同混合输入梯度控制、固定test、传统可靠性与完整处理成本 |
 | 第三轮机制与真实视频反例 | [协议](docs/exploration-r3-protocol.md)、[特征/状态图](report/exploration-r3/)、[训练与真实样例](report/exploration-r3-training/)、[过程](process/exploration-r3/) | 相同初始化/信息量控制、history_off、真实低光样例、运动可靠性及状态成本 |
@@ -79,7 +83,7 @@
 
 ## 4. 工作计划
 
-以下保留2026-11-05的阶段计划；当前属于前期探索，实际优先级及下一轮假设以最新进展报告0015为准，暂不把方法候选当成已确定的正式实验路线。
+以下保留2026-11-05的阶段计划；当前属于前期探索，实际优先级及下一轮假设以最新进展报告0016为准，暂不把方法候选当成已确定的正式实验路线。
 
 ### P0（本周，服务器到位前）
 - [x] MobileIE 引用追踪与相邻工作检索；
@@ -127,3 +131,5 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 - 2026-11-10 21:13 +08:00 · Codex  (sqs_A100)：连接第二轮受控训练、独立素材验证、强基线与资源审计；据成本和对照结果调整候选优先级。
 
 修改：2026-11-11T16:40:43.250064+08:00；作者：Codex  (sqs_A100)；原因：更新0015结果与持续研究入口，历史阶段计划保留供追溯。
+
+修改：2026-11-11T17:09:03.253353+08:00；作者：Codex  (sqs_A100)；原因：索引0016及已完成噪声诊断。
