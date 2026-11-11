@@ -97,6 +97,19 @@ def main():
     summary = grouped(combined, ['domain', 'method'], METRICS)
     save_json(out/'domain_summary.json', summary)
     save_json(out/'by_scene.json', grouped(combined, ['domain', 'scene', 'method'], METRICS))
+    if args.expanded:
+        clips = grouped([r for r in combined if r['domain'] == 'test'], ['scene', 'method'], METRICS)
+        index = {(r['scene'], r['method']): r for r in clips}
+        deltas = []
+        for first, second in [('real12_only__raw', 'real_task__raw'), ('real12_mix__raw', 'real12_only__raw'),
+                              ('real12_mix__raw', 'real12_mix_stop__raw'), ('real12_mix__raw', 'synthetic_task__raw')]:
+            for metric in METRICS:
+                values = {scene: index[(scene, first)][metric]-index[(scene, second)][metric]
+                          for scene in sorted({r['scene'] for r in clips})}
+                deltas.append({'first': first, 'second': second, 'metric': metric, 'clip_deltas': values,
+                    'mean_delta': float(np.mean(list(values.values()))), 'median_delta': float(np.median(list(values.values()))),
+                    'beneficial_clips': sum(v > 0 if metric in ['psnr_rgb', 'ssim_rgb'] else v < 0 for v in values.values())})
+        save_json(out/'paired_clip_deltas.json', deltas)
     save_json(out/'new_real_clips_only.json', grouped([r for r in combined if r['domain'] == 'test' and r['scene'] != 'video_21'], ['method'], METRICS))
     base_index = {(r['domain'], r['scene']): r for r in baseline if r['method'] == 'pretrained_raw'}
     violations = []
@@ -149,6 +162,20 @@ def main():
     fig.subplots_adjust(right=.74, bottom=.17)
     fig.legend(handles, selected, loc='center right', fontsize=8)
     fig.savefig(out/'two_domain_tradeoff.png', dpi=160); plt.close(fig)
+    cost = json.loads((BASE/'results/exploration-r4-half-cost.json').read_text())['summary']
+    fig, axes = plt.subplots(1, 2, figsize=(10, 4.2))
+    labels = ['Raw', 'Full motion', 'Half motion']
+    values = [cost[n]['total_ms_median'] for n in ['raw', 'global_alpha', 'global_alpha_half']]
+    bars = axes[0].bar(labels, values)
+    axes[0].bar_label(bars, fmt='%.2f')
+    axes[0].set(title='Measured serial per-frame wall time', ylabel='Milliseconds')
+    bars = axes[1].bar(labels[1:], [cost[n]['motion_ms_median'] for n in ['global_alpha', 'global_alpha_half']])
+    axes[1].bar_label(bars, fmt='%.2f')
+    axes[1].set(title='Fresh CPU bidirectional motion stage', ylabel='Milliseconds')
+    for ax in axes:
+        ax.margins(y=.15); ax.grid(axis='y', alpha=.2)
+    fig.suptitle('480x270, one CPU flow thread + A100; not phone latency', fontsize=10)
+    fig.tight_layout(); fig.savefig(out/'complete_processing_cost.png', dpi=160); plt.close(fig)
     save_json(out/'audit.json', {'training_runs': runs, 'updates': len(runs)*400,
         'evaluation_rows': len(combined), 'calibration_rows': 248, 'resolution_diagnostic_rows': 180,
         'matched_initial_task_difference': initial, 'same_real_streams_verified': True,
