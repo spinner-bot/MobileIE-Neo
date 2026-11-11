@@ -1,0 +1,26 @@
+[
+  {
+    "record": "research/4.temporal-consistency/process/exploration-r10/gpu-cache.json",
+    "gpu": 3,
+    "revision": "ae97392393866824bb119715d995fdb9696c35be",
+    "command": [
+      ".venv/bin/python",
+      "-u",
+      "research/4.temporal-consistency/scripts/prepare_native_r10.py",
+      "--out",
+      "research/4.temporal-consistency/results/exploration-r10-cache"
+    ]
+  },
+  {
+    "record": "research/4.temporal-consistency/process/exploration-r10/gpu-eval.json",
+    "gpu": 3,
+    "revision": "692514bfefb47a24a96cb6b83f4a9d7e1f15588a",
+    "command": [
+      ".venv/bin/python",
+      "-u",
+      "research/4.temporal-consistency/scripts/evaluate_native_r10.py",
+      "--out",
+      "research/4.temporal-consistency/results/exploration-r10-eval"
+    ]
+  }
+]
