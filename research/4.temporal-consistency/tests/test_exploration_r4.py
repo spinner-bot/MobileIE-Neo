@@ -13,9 +13,15 @@ from explore_state_r2 import fuse
 from calibrate_mapping_r4 import fit_mappings, transform
 from train_mixture_r4b import synthetic_pair
 from train_exploration_r2 import temporal_penalty
+from calibrate_noise_gate_r4 import haar_noise_scale
 
 
 class ExplorationR4Checks(unittest.TestCase):
+    def test_haar_scale_constant_and_known_independent_gaussian(self):
+        self.assertEqual(haar_noise_scale(np.full((32, 40, 3), 80, np.float32)), 0.)
+        noisy = 100+np.random.default_rng(10).normal(0, 4, (256, 256, 3)).astype(np.float32)
+        self.assertAlmostEqual(haar_noise_scale(noisy), 4., delta=.12)
+
     def test_identity_centered_ridge_preserves_identity(self):
         image = np.random.default_rng(8).uniform(0, 255, (20, 24, 3)).astype(np.float32)
         coefficients = fit_mappings([(image, image)])
