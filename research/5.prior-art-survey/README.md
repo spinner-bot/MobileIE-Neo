@@ -109,3 +109,7 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 - [23 时间双线性先例](docs/23-temporal-bilinear-prior-and-operator-controls.md)：ABM原文/初始化先例及FST算子控制边界。
 
 修改：2026-11-12T00:53:28.926200+08:00；作者：Codex  (sqs_A100)；原因：索引已核查先例，约束后续新颖性主张。
+
+- [24 对应校准与独立性](docs/24-alignment-calibration-and-independence.md)：STBN原文/固定代码与精确选择反例，区分有监督和blind-spot假设。
+
+修改：2026-11-12T01:32:47.707565+08:00；作者：Codex  (sqs_A100)；原因：索引对应与统计依赖的深度核查。

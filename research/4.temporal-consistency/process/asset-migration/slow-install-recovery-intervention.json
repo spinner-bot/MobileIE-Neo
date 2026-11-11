@@ -1,0 +1,20 @@
+{
+  "observed_at": "2026-11-12T02:55:13.813558+08:00",
+  "terminated_pid": 2939633,
+  "command": [
+    "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python",
+    "-m",
+    "pip",
+    "install",
+    "--only-binary=:all:",
+    "--index-url",
+    "https://pypi.org/simple",
+    "-r",
+    "/data/Users/zrh/repo/MobileIE-Neo/requirements-research.txt"
+  ],
+  "signal": "SIGTERM",
+  "reason": "repeated download timeout followed by approximately 10-30KB/s; replace transport with bounded official-PyPI range downloads verified against official SHA256",
+  "scope": "Only inactive-experiment environment installer stopped; no GPU experiment or data move was interrupted. Preserve first attempt failure; install verified owned wheels, then rerun migration.",
+  "cache_and_environment_links_switched": false,
+  "experiment_budget_changed": false
+}

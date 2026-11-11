@@ -1,0 +1,14 @@
+#!/usr/bin/python3.10
+"""Run Python using only the migrated project environment and owned runtime caches."""
+import json
+import os
+import sys
+from project_assets import ASSETS, ENVIRONMENT, RECORDS, REPO, owned_environment
+
+marker = RECORDS/'completed.json'
+if not marker.exists() or not json.loads(marker.read_text()).get('completed'):
+    raise SystemExit('Project asset migration has not completed; do not fall back to a borrowed environment.')
+if not (REPO/'.venv').is_symlink() or (REPO/'.venv').resolve() != ENVIRONMENT.resolve():
+    raise SystemExit('Project environment link does not match the owned asset directory.')
+python = str(ENVIRONMENT/'bin/python')
+os.execve(python, [python, *sys.argv[1:]], owned_environment())

@@ -4,9 +4,9 @@
 
 ## 当前研究状态
 
-目前处于前期探索，调研、受控训练与多种方法/组合预实验并行，尚未确定最终模型。主线在 `main` 推进，移动演示由独立支线处理。
+目前处于前期探索，收缩到内部时间算子 post_transport 的双目标训练适配与强基线验证，尚未确定最终模型。主线在 `main` 推进，移动演示由独立支线处理。
 
-最新结果见[进展报告0029](docs/进展报告/0029-T-26111122-动态聚合与增强对齐顺序强控制.md)及[4号工作入口](research/4.temporal-consistency/README.md)。同权重/同流场的动态对照未建立固定前置平均优势；原生域由增强后平均支配。下一步固定数据深化聚合感知训练、可学历史系数与初始化，保留强后处理/current替代，尚无新方法定论。按密集提交、阶段SSH推送和no-ff持续推进。
+最新状态见[进展报告0041](docs/进展报告/0041-T-26111202-内部时间算子训练收口与自有资产迁移.md)、[论文证据表草稿](research/4.temporal-consistency/report/paper-main-table/README.md)及[4号工作入口](research/4.temporal-consistency/README.md)。R28 seed0已正常完成40000更新，正式质量评价待后续收缩后的seed1完成；不能将带状态/flow的实际推理收益算作单帧零开销。2026-11-12 03:06自有环境和数据迁移已核验完成：2106文件摘要一致，16帧CPU参考指标差0，两个仓库相对链接已入Git；后续用新入口启动seed1。代码、过程、结果、报告分别密集提交，阶段SSH推送，保持no-ff。
 
 新GPU任务必须先检查共享卡的显存、利用率和计算进程，使用同组最多4张空闲卡；本项目提供可审计的启动检查脚本。
 
@@ -31,7 +31,7 @@ git clone git@github.com:spinner-bot/MobileIE-Neo.git
 cd MobileIE-Neo
 ```
 
-<!-- 环境安装、代码运行说明待补充 -->
+服务器运行资产固定在 `/data/Users/zrh/data/MobileIE-Neo`；仓库 `.venv`、`.cache` 已分别指向该目录的独立环境和缓存，并将相对链接入Git。运行统一用 `./scripts/project-python`，例如 `./scripts/project-python -c 'import torch; print(torch.__version__)'`。迁移过程及恢复记录见[迁移日志](research/4.temporal-consistency/process/asset-migration/journal.md)；禁止借用其他用户环境或在/root安装项目依赖，详见[路径与环境规范](specs/项目规范/路径与环境规范.md)。
 
 修改：2026-11-11T18:25:49.244614+08:00；作者：Codex  (sqs_A100)；原因：索引0017/0018及优化强对照研究。
 

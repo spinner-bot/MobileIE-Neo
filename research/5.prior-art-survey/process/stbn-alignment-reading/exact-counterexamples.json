@@ -1,0 +1,153 @@
+{
+  "observed_at": "2026-11-12T01:32:47.707565+08:00",
+  "fixed_W_checks": [
+    {
+      "case": "injective_permutation",
+      "W": [
+        [
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "unit_input_covariance": "I2",
+      "output_covariance_WWT": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ]
+    },
+    {
+      "case": "nearest_repeated_selection",
+      "W": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "unit_input_covariance": "I2",
+      "output_covariance_WWT": [
+        [
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "1"
+        ]
+      ]
+    },
+    {
+      "case": "bilinear_repeated_average",
+      "W": [
+        [
+          "1/2",
+          "1/2"
+        ],
+        [
+          "1/2",
+          "1/2"
+        ]
+      ],
+      "unit_input_covariance": "I2",
+      "output_covariance_WWT": [
+        [
+          "1/2",
+          "1/2"
+        ],
+        [
+          "1/2",
+          "1/2"
+        ]
+      ]
+    }
+  ],
+  "data_dependent_selection": {
+    "independent_inputs": "three independent uniform Rademacher noises; clean signal zero",
+    "rule": "choose past noise closest to current target, ties first",
+    "enumeration": [
+      {
+        "target_noise": -1,
+        "past0_noise": -1,
+        "past1_noise": -1,
+        "selected_index": 0,
+        "selected_history": -1,
+        "probability": "1/8"
+      },
+      {
+        "target_noise": -1,
+        "past0_noise": -1,
+        "past1_noise": 1,
+        "selected_index": 0,
+        "selected_history": -1,
+        "probability": "1/8"
+      },
+      {
+        "target_noise": -1,
+        "past0_noise": 1,
+        "past1_noise": -1,
+        "selected_index": 1,
+        "selected_history": -1,
+        "probability": "1/8"
+      },
+      {
+        "target_noise": -1,
+        "past0_noise": 1,
+        "past1_noise": 1,
+        "selected_index": 0,
+        "selected_history": 1,
+        "probability": "1/8"
+      },
+      {
+        "target_noise": 1,
+        "past0_noise": -1,
+        "past1_noise": -1,
+        "selected_index": 0,
+        "selected_history": -1,
+        "probability": "1/8"
+      },
+      {
+        "target_noise": 1,
+        "past0_noise": -1,
+        "past1_noise": 1,
+        "selected_index": 1,
+        "selected_history": 1,
+        "probability": "1/8"
+      },
+      {
+        "target_noise": 1,
+        "past0_noise": 1,
+        "past1_noise": -1,
+        "selected_index": 0,
+        "selected_history": 1,
+        "probability": "1/8"
+      },
+      {
+        "target_noise": 1,
+        "past0_noise": 1,
+        "past1_noise": 1,
+        "selected_index": 0,
+        "selected_history": 1,
+        "probability": "1/8"
+      }
+    ],
+    "E_target_noise_times_selected_history": "1/2",
+    "E_target_noise_given_selected_history": {
+      "-1": "-1/2",
+      "1": "1/2"
+    }
+  },
+  "scope": "Own exact finite/algebraic counterexamples to blanket implications, not measured defects in STBN or a new method."
+}

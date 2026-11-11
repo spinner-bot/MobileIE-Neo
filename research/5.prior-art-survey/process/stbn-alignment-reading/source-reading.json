@@ -1,0 +1,31 @@
+{
+  "observed_at": "2026-11-12T01:32:47.707565+08:00",
+  "author": "Codex  (sqs_A100)",
+  "paper": "Spatiotemporal Blind-Spot Network with Calibrated Flow Alignment for Self-Supervised Video Denoising",
+  "primary_html": "https://arxiv.org/html/2412.11820v1",
+  "read_sections": [
+    "Calibration of Frame Alignment",
+    "Spatiotemporal Blind-Spot Feature Aggregation",
+    "Flow Refinement in Noise",
+    "Implementation Details",
+    "Feature Alignment Strategy",
+    "Appendix A proof",
+    "Appendix B hyperparameters"
+  ],
+  "official_repository": "https://github.com/ZKCCZ/STBN",
+  "commit": "e3a228f19a50682ac582f3e899a8ed97dc22d049",
+  "files_read": [
+    "models/bdc_flow.py",
+    "models/bdc_2_unify.py",
+    "models/components.py",
+    "utils/warp.py",
+    "main.sh",
+    "mainraw.sh"
+  ],
+  "observations": {
+    "warp": "grid_sample mode nearest, align_corners True, default zero padding, returns mask None",
+    "causality": "bidirectional full-sequence feature propagation",
+    "paper_launch_differences": "paper lr1e-4 crop96 T10/7; main.sh lr3e-4 T8; mainraw.sh crop80. No reproduction equivalence assumed."
+  },
+  "scope": "Read-only official plugin file fetches at pinned commit; no code import, weight download, execution or reproduction"
+}

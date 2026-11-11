@@ -1,0 +1,29 @@
+{
+  "observed_at": "2026-11-12T02:13:49.958644+08:00",
+  "repository": "/data/Users/zrh/repo/MobileIE-Neo",
+  "asset_root": "/data/Users/zrh/data/MobileIE-Neo",
+  "target_environment": "/data/Users/zrh/data/MobileIE-Neo/.venv",
+  "target_cache": "/data/Users/zrh/data/MobileIE-Neo/cache",
+  "current_environment": {
+    "prefix": "/data/Users/zrh/repo/MobileIE-Neo/.venv",
+    "include_system_site_packages": true,
+    "foreign_package_reference": "/data/Users/sqs/TabPFN/.venv-r/lib/python3.10/site-packages",
+    "disposition": "replace after active experiment exits; never modify foreign environment"
+  },
+  "active_experiment": {
+    "pid": 2895910,
+    "seed": 0,
+    "fixed_steps": 4000,
+    "gpu": 3
+  },
+  "deferred_experiment": {
+    "seed": 1,
+    "modes": [
+      "post_transport"
+    ],
+    "reason": "must relaunch using owned environment after migration"
+  },
+  "migration_status": "planned, not executed",
+  "version_control": "separate file/module commits for plan scripts inventory verification report; stage push after completion",
+  "asset_scope": "runtime datasets, downloaded weights, produced checkpoints, caches, temp files and independent environment; tracked source/report/experiment records stay in owned repository"
+}

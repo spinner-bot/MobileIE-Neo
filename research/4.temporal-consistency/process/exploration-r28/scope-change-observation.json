@@ -1,0 +1,15 @@
+{
+  "observed_at": "2026-11-12T01:55:23.232271+08:00",
+  "reason": "user convergence feedback",
+  "initial_observation": "queue pending; one resource refusal, zero admitted jobs at 01:47 observation",
+  "subsequent_admission": "GPU3 at about01:49; remaining CUDA gate passed; seed0 ten-model training started",
+  "attempt_to_stop_waiter": "refused because active child was present; waiter resumed, child untouched",
+  "active_seed0_budget_updates": 40000,
+  "future_seed1_modes": [
+    "post_transport"
+  ],
+  "future_seed1_new_updates": 8000,
+  "stage_new_updates": 48000,
+  "new_quality_results_used_for_selection": false,
+  "plain_reference": "reuse R26 matched4000 endpoints; no seed1 copy retraining"
+}
