@@ -2,9 +2,11 @@
 
 目标：以论文为最终产出，深入核查 MobileIE 的架构与训练机制，在移动端计算预算内设计视频增强模型，用传统方法、后处理和已有视频模型对照验证画质、时间稳定性与效率收益。
 
-- 状态：**前期探索，十六轮受控预实验/机制诊断及必要跟进已完成**（2026-11-11）；没有确定最终方法，已建立实拍ND衰减数据与两域强控制，完整训练及自然夜景泛化尚待验证
+- 状态：**前期探索，多轮受控预实验/机制诊断及必要跟进已完成**（2026-11-11）；没有确定最终方法，已建立实拍ND衰减数据与两域强控制，完整训练及自然夜景泛化尚待验证
 - 当前研究入口：[MobileIE 架构、训练核查与视频研究设计](docs/architecture-and-video-research-plan.md)
-- 最新结果：[进展报告0027](../../docs/进展报告/0027-T-26111121-监督配对几何反证与数据准备.md)、[固定配对诊断](report/exploration-r18/audit.json)、[图](report/exploration-r18/pair_geometry.png)、[过程](process/exploration-r18/journal.md)，104项CPU诊断未支持大整体整数平移主因
+- 最新结果：[进展报告0028](../../docs/进展报告/0028-T-26111121-可用时间信息与非线性聚合顺序.md)、[信息图](report/exploration-r19/known_temporal_information.png)、[顺序图](report/exploration-r19-aggregation/aggregation_order.png)、[过程](process/exploration-r19/journal.md)，640含复用静态统计行、同current/输出重放通过
+- 进行中：[R20动态聚合顺序协议](docs/exploration-r20-protocol.md)，同流场、同R14权重、固定alpha.1/.5、零新训练，先核验动态Pareto空间
+- 配对反证：[进展报告0027](../../docs/进展报告/0027-T-26111121-监督配对几何反证与数据准备.md)、[图](report/exploration-r18/pair_geometry.png)、[过程](process/exploration-r18/journal.md)，104项未支持大整体整数平移主因
 - 第十六轮：[进展报告0026](../../docs/进展报告/0026-T-26111121-多尺度骨干与独立历史反证.md)、[完整表](report/exploration-r16/tables.md)、[历史反证图](report/exploration-r16/multiscale_history_controls.png)、[过程](process/exploration-r16/journal.md)，24000更新/3680新逻辑行完成
 - 数据准备：[R17协议](docs/exploration-r17-protocol.md)已登记，SDSD下载配额限制；BVI-RLV公开元数据可读、像素需IEEE登录，均尚无新像素结果。下一步检验时间冗余与噪声相关性
 - 第十五轮：[进展报告0025](../../docs/进展报告/0025-T-26111120-公开增强权重迁移与数据域核查.md)、[公开clean增强迁移表](report/exploration-r15/tables.md)、[过程](process/exploration-r15/journal.md)
@@ -163,3 +165,5 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 修改：2026-11-11T21:13:08.692013+08:00；作者：Codex  (sqs_A100)；原因：索引0026与固定配对诊断，记录阶段推送已恢复。
 
 修改：2026-11-11T21:21:00.783613+08:00；作者：Codex  (sqs_A100)；原因：索引0027几何负结果与后续时间冗余问题。
+
+修改：2026-11-11T21:48:32.613420+08:00；作者：Codex  (sqs_A100)；原因：索引0028及动态聚合强对照，保持论文目标进行中。
