@@ -92,3 +92,18 @@ R28的4416行共同CUDA评价已完成，current/raw与causal/raw均未通过注
 actual相对独立空间+self-post的注册联合门槛（双seed均过）：False；相对原始模型+self-post：False；相对自身current+self-post：False。门槛仅为DEV筛查，不能替代全部质量/成本、新颖性、手机和独立测试证据。
 
 同权重current保留训练后的空间路径；actual内部仍有学习偏移/采样，不能称完全无对齐成本。shared-motion post仅用原共享teacher质量控制，未实测其完整部署成本。[动态机器表](dynamic_evidence.csv)、[配对与分seed全表](../exploration-r34/tables.md)。
+
+## R36强原始底座上的传统递归对照
+
+同R34原始final4000权重与同R30输入，两seed完整48行。有限post只使用上一raw，递归EMA另保存上一融合输出；三post共享同一own-raw半尺度FB运动，部署不需要第二CNN。
+
+|方法|PSNR|SSIM|时序↓|边缘↓|在线历史MiB@480×854|
+|---|---:|---:|---:|---:|---:|
+|raw|26.234161|0.698872|10.505352|4.446445|0.000|
+|finite_self05|26.465757|0.743040|7.542986|4.014079|4.691|
+|recursive_self05|26.610354|0.758387|6.734680|3.882416|9.382|
+|adaptive_recursive|26.385385|0.708503|9.945699|4.346142|10.946|
+
+固定递归EMA相对有限post双seed联合筛查：True；启发式adaptive：False。递归是既有传统机制，不算创新。后续模型必须同时对照这个更强参考；不能只打败有限两帧post。
+
+这些为三开发源上的固定控制。自适应方差未经校准，不等价复现BNLK/EMVD；共享阶段计时不作独立流水线速度，手机仍未测。[传统机器表](classical_evidence.csv)、[逐seed与限制](../exploration-r36-classical/tables.md)。
