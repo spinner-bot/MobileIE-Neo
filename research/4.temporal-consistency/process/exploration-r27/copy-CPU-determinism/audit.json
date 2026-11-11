@@ -1,0 +1,608 @@
+{
+  "comparisons": [
+    {
+      "threads": 2,
+      "mkldnn": true,
+      "control": "identical_code",
+      "repeat": 0,
+      "outputs_exact": true,
+      "model": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "Adam": {
+        "tensors": 57,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "clipped_gradients": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      }
+    },
+    {
+      "threads": 2,
+      "mkldnn": true,
+      "control": "identical_code",
+      "repeat": 1,
+      "outputs_exact": true,
+      "model": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "Adam": {
+        "tensors": 57,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "clipped_gradients": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      }
+    },
+    {
+      "threads": 2,
+      "mkldnn": true,
+      "control": "identical_code",
+      "repeat": 2,
+      "outputs_exact": true,
+      "model": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "Adam": {
+        "tensors": 57,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "clipped_gradients": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      }
+    },
+    {
+      "threads": 2,
+      "mkldnn": true,
+      "control": "transport_copy",
+      "repeat": 0,
+      "outputs_exact": true,
+      "model": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "Adam": {
+        "tensors": 57,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "clipped_gradients": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      }
+    },
+    {
+      "threads": 2,
+      "mkldnn": true,
+      "control": "transport_copy",
+      "repeat": 1,
+      "outputs_exact": true,
+      "model": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "Adam": {
+        "tensors": 57,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "clipped_gradients": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      }
+    },
+    {
+      "threads": 2,
+      "mkldnn": true,
+      "control": "transport_copy",
+      "repeat": 2,
+      "outputs_exact": true,
+      "model": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "Adam": {
+        "tensors": 57,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "clipped_gradients": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      }
+    },
+    {
+      "threads": 2,
+      "mkldnn": false,
+      "control": "identical_code",
+      "repeat": 0,
+      "outputs_exact": true,
+      "model": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "Adam": {
+        "tensors": 57,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "clipped_gradients": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      }
+    },
+    {
+      "threads": 2,
+      "mkldnn": false,
+      "control": "identical_code",
+      "repeat": 1,
+      "outputs_exact": true,
+      "model": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "Adam": {
+        "tensors": 57,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "clipped_gradients": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      }
+    },
+    {
+      "threads": 2,
+      "mkldnn": false,
+      "control": "identical_code",
+      "repeat": 2,
+      "outputs_exact": true,
+      "model": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "Adam": {
+        "tensors": 57,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "clipped_gradients": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      }
+    },
+    {
+      "threads": 2,
+      "mkldnn": false,
+      "control": "transport_copy",
+      "repeat": 0,
+      "outputs_exact": true,
+      "model": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "Adam": {
+        "tensors": 57,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "clipped_gradients": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      }
+    },
+    {
+      "threads": 2,
+      "mkldnn": false,
+      "control": "transport_copy",
+      "repeat": 1,
+      "outputs_exact": true,
+      "model": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "Adam": {
+        "tensors": 57,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "clipped_gradients": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      }
+    },
+    {
+      "threads": 2,
+      "mkldnn": false,
+      "control": "transport_copy",
+      "repeat": 2,
+      "outputs_exact": true,
+      "model": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "Adam": {
+        "tensors": 57,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "clipped_gradients": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      }
+    },
+    {
+      "threads": 1,
+      "mkldnn": true,
+      "control": "identical_code",
+      "repeat": 0,
+      "outputs_exact": true,
+      "model": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "Adam": {
+        "tensors": 57,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "clipped_gradients": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      }
+    },
+    {
+      "threads": 1,
+      "mkldnn": true,
+      "control": "identical_code",
+      "repeat": 1,
+      "outputs_exact": true,
+      "model": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "Adam": {
+        "tensors": 57,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "clipped_gradients": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      }
+    },
+    {
+      "threads": 1,
+      "mkldnn": true,
+      "control": "identical_code",
+      "repeat": 2,
+      "outputs_exact": true,
+      "model": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "Adam": {
+        "tensors": 57,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "clipped_gradients": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      }
+    },
+    {
+      "threads": 1,
+      "mkldnn": true,
+      "control": "transport_copy",
+      "repeat": 0,
+      "outputs_exact": true,
+      "model": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "Adam": {
+        "tensors": 57,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "clipped_gradients": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      }
+    },
+    {
+      "threads": 1,
+      "mkldnn": true,
+      "control": "transport_copy",
+      "repeat": 1,
+      "outputs_exact": true,
+      "model": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "Adam": {
+        "tensors": 57,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "clipped_gradients": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      }
+    },
+    {
+      "threads": 1,
+      "mkldnn": true,
+      "control": "transport_copy",
+      "repeat": 2,
+      "outputs_exact": true,
+      "model": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "Adam": {
+        "tensors": 57,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "clipped_gradients": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      }
+    },
+    {
+      "threads": 1,
+      "mkldnn": false,
+      "control": "identical_code",
+      "repeat": 0,
+      "outputs_exact": true,
+      "model": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "Adam": {
+        "tensors": 57,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "clipped_gradients": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      }
+    },
+    {
+      "threads": 1,
+      "mkldnn": false,
+      "control": "identical_code",
+      "repeat": 1,
+      "outputs_exact": true,
+      "model": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "Adam": {
+        "tensors": 57,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "clipped_gradients": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      }
+    },
+    {
+      "threads": 1,
+      "mkldnn": false,
+      "control": "identical_code",
+      "repeat": 2,
+      "outputs_exact": true,
+      "model": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "Adam": {
+        "tensors": 57,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "clipped_gradients": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      }
+    },
+    {
+      "threads": 1,
+      "mkldnn": false,
+      "control": "transport_copy",
+      "repeat": 0,
+      "outputs_exact": true,
+      "model": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "Adam": {
+        "tensors": 57,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "clipped_gradients": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      }
+    },
+    {
+      "threads": 1,
+      "mkldnn": false,
+      "control": "transport_copy",
+      "repeat": 1,
+      "outputs_exact": true,
+      "model": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "Adam": {
+        "tensors": 57,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "clipped_gradients": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      }
+    },
+    {
+      "threads": 1,
+      "mkldnn": false,
+      "control": "transport_copy",
+      "repeat": 2,
+      "outputs_exact": true,
+      "model": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "Adam": {
+        "tensors": 57,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      },
+      "clipped_gradients": {
+        "tensors": 19,
+        "exact": true,
+        "max_abs": 0.0,
+        "structure_and_nontensor_fields_equal": true
+      }
+    }
+  ],
+  "pairs": 24,
+  "implementation_updates": 48,
+  "nonexact_pairs": 0,
+  "scope": "Control on the fixed first training task. Does not erase earlier failure or establish CUDA/full training reproducibility."
+}
