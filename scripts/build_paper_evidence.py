@@ -23,6 +23,9 @@ def main():
     stable = read(Path('report/exploration-r15/domain_summary.json'))
     frozen = read(Path('report/exploration-r27-frozen/domain_summary.json'))
     cost = read(Path('results/exploration-r16-cost-counterbalanced/cost.json'))
+    external = read(Path('results/exploration-r30-cache/index.json'))
+    phones = read(Path('results/exploration-r31-data/index.json'))
+    assert external['source_video_count'] == 3 and external['input_conditions'] == 6 and len(phones['scenes']) == 3
     conv = {r['conv_MACs_per_frame'] for r in cost['rows'] if r['variant'] == 'official' and r['HW'] == [1080, 1920]}
     assert len(conv) == 1
     macs = next(iter(conv))
@@ -80,10 +83,14 @@ def main():
         lines.append(f"|{r['method']}|{r['predictor_params']}|{r['fixed_motion_teacher_params']}|{value}|{r['history_state']}|{r['flow_at_inference']}|{r['future_frames']}|未测|")
     lines += ['', '运动列对应当前共享流场评价的固定官方MobileIE + 半分辨率Farneback/FB。预计算flow不等于部署免费；需要独立teacher时要计入其权重/前向、CPUflow和warp。MAC列只计预测Conv2d，不含FST/attention/激活/warp/运动teacher；历史状态是对应方法的最低历史张量，不含完整峰值内存。', '',
               'R27 post_transport真实推理依赖过去特征与flow；其约27.06/2.71是CPU冻结探针，不是无flow的单帧结果，也不能由空间重参数化消除独立过去输入。单帧current是另一个部署映射，R28须单独评价。', '',
-              '外部有效性缺口：标准公开视频协议、真实手机视频、同域训练/适配的已发表对照、手机端完整延迟及独立保留测试仍待。FastDVDnet/StableLLVE已有迁移评价，尚不能替代这些缺口。', '',
+              '外部输入已准备：[R30 DAVIS](../../docs/exploration-r30-protocol.md)为3段官方TRAIN来源、6个合成低光条件、每段64帧；[R31真实手机](../../docs/exploration-r31-protocol.md)为3设备各64帧，无同步GT，[原亮度预览](../exploration-r31-data/phone_inputs.png)。两者均为开发资料，方法外部评价尚未完成，不将已取得输入写作基准结果。', '',
+              '外部有效性缺口：完整标准公开视频验证、真实手机域方法评价、同域训练/适配的已发表对照、手机端完整延迟及独立保留测试仍待。FastDVDnet/StableLLVE已有迁移评价，尚不能替代这些缺口。', '',
               '完整机器表：[evidence.csv](evidence.csv)；数据来源：[sources.json](sources.json)。']
     (out/'README.md').write_text('\n'.join(lines)+'\n')
     (out/'sources.json').write_text(json.dumps({'sources': sources, 'rows': len(rows),
+        'external_data_prepared': {'DAVIS_source_videos': 3, 'DAVIS_synthetic_conditions': 6,
+                                   'real_phone_videos': 3, 'phone_reference_GT_available': False,
+                                   'frames_per_clip': 64, 'method_results_in_this_table': False},
         'scope': 'Evidence draft only. Missing values are explicit; no new inference, training or phone timing.'}, indent=2)+'\n')
 
 
