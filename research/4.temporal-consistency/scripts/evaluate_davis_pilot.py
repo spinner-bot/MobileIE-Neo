@@ -60,6 +60,7 @@ def main():
     torch.use_deterministic_algorithms(True)
     device = torch.device('cpu')
     nets, markers = models(args.phase, device)
+    marker_lookup = {(r['mode'], r.get('objective'), r.get('train_seed')): r for r in markers}
     save_json(out/'checkpoints.json', markers)
     save_json(out/'config.json', {'phase': args.phase, 'device': 'cpu', 'torch_threads': 2,
               'opencv_threads': 1, 'index_sha256': sha256(index), 'torch_version': torch.__version__,
@@ -92,6 +93,16 @@ def main():
                             values = infer(net, inputs, data, mode, history, events if model_key[1] else None)
                         assert bool(torch.isfinite(values).all())
                         predictions[model_key] = np.ascontiguousarray(values.clamp(0, 1).permute(0, 2, 3, 1).numpy()*255.)
+                        if mode == 'copy':
+                            # Preserve strong-base RGB once for later published denoiser transfer.
+                            target = ROOT/'.cache/experiments/exploration-r30-predictions'/f'plain-{objective}-seed{seed}'/(meta['scene']+'.npy')
+                            assert target.resolve().is_relative_to('/data/Users/zrh/data/MobileIE-Neo') and not target.exists()
+                            target.parent.mkdir(parents=True, exist_ok=True)
+                            np.save(target, predictions[model_key], allow_pickle=False)
+                            with (out/'prediction_manifest.jsonl').open('a') as stream:
+                                stream.write(json.dumps({'scene': meta['scene'], 'objective': objective, 'train_seed': seed,
+                                             'input_cache_sha256': meta['sha256'], 'checkpoint_sha256': marker_lookup[(mode, objective, seed)]['sha256'],
+                                             'path': str(target.relative_to(ROOT)), 'sha256': sha256(target)})+'\n')
                         inferences += 1
                     raw = predictions[model_key]
                     if reference is None:
