@@ -66,12 +66,22 @@ def paired(rows, first, second, domain):
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--out', required=True)
+    p.add_argument('--include-followups', action='store_true')
     args = p.parse_args()
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=False)
     rows, inputs, frame_paths = [], {}, []
-    for part, expected in [('spatial', 456), ('temporal', 912), ('shift', 608)]:
-        folder = BASE/'results'/f'exploration-r5-eval-{part}'
+    specs = [('exploration-r5-eval-'+part, expected, '') for part, expected in [('spatial', 456), ('temporal', 912), ('shift', 608)]]
+    if args.include_followups:
+        specs += [('exploration-r5b-eval-'+part, expected, '_st') for part, expected in [('plain', 152), ('temporal', 456), ('shift', 304)]]
+        specs += [('exploration-r5c-eval-spatial-post', 152, '')]
+    def alias(r, suffix):
+        if not suffix:
+            return r
+        variant = r['variant']+suffix
+        return {**r, 'variant': variant, 'method': method(variant, r['history'], r['post'])}
+    for part, expected, suffix in specs:
+        folder = BASE/'results'/part
         seq_path = folder/'per_sequence.jsonl'
         values = jsonl(seq_path)
         if len(values) != expected or json.loads((folder/'runtime.json').read_text())['rows'] != expected:
@@ -81,9 +91,9 @@ def main():
         for checkpoint in json.loads((folder/'checkpoints.json').read_text()):
             if sha256(ROOT/checkpoint['path']) != checkpoint['sha256']:
                 raise ValueError('checkpoint hash mismatch')
-        rows.extend(values)
+        rows.extend(alias(r, suffix) for r in values)
         inputs[str(seq_path.relative_to(ROOT))] = sha256(seq_path)
-        frame_paths.append(folder/'per_frame.jsonl')
+        frame_paths.append((folder/'per_frame.jsonl', suffix))
     baseline = BASE/'results/exploration-r5-cache/baseline_per_sequence.json'
     for r in json.loads(baseline.read_text()):
         rows.append({**r, 'variant': 'pretrained', 'train_seed': None, 'history': 'causal',
@@ -107,13 +117,23 @@ def main():
                  ('tsm_fixed', 'causal', 'tsm_fixed', 'current'),
                  ('plain', 'causal', 'r2_task', 'causal')]
     contrasts += [(v, 'causal', 'plain', 'causal') for v in ['spatial_bilinear', 'temporal_bilinear', 'temporal_post', 'tsm_learned', 'tsm_fixed']]
+    if args.include_followups:
+        contrasts += [('temporal_post', 'causal', 'spatial_post', 'causal'),
+                      ('spatial_post', 'causal', 'plain', 'causal')]
+        contrasts += [(v+'_st', 'causal', v, 'causal') for v in ['plain', 'temporal_bilinear', 'tsm_learned']]
+        contrasts += [(v+'_st', 'causal', 'plain_st', 'causal') for v in ['temporal_bilinear', 'tsm_learned']]
+        contrasts += [(v+'_st', 'causal', v+'_st', 'current') for v in ['temporal_bilinear', 'tsm_learned']]
     deltas = [paired(rows, method(a, ah, post), method(b, bh, post), domain)
               for a, ah, b, bh in contrasts for post in ['raw', 'half01']
               for domain in ['test', 'legacy_synthetic', 'event_light_step', 'event_cut']]
     save_json(out/'paired_deltas.json', deltas)
     training, repeat, traces = [], [], {}
-    for part in ['spatial', 'temporal', 'shift']:
-        for folder in sorted((BASE/'results'/f'exploration-r5-{part}').iterdir()):
+    training_specs = ['exploration-r5-'+part for part in ['spatial', 'temporal', 'shift']]
+    if args.include_followups:
+        training_specs += ['exploration-r5b-'+part for part in ['plain', 'temporal', 'shift']]
+        training_specs += ['exploration-r5c-spatial-post']
+    for part in training_specs:
+        for folder in sorted((BASE/'results'/part).iterdir()):
             trace = jsonl(folder/'training.jsonl')
             if [r['step'] for r in trace] != list(range(1, 1001)):
                 raise ValueError('incomplete training trace')
@@ -127,18 +147,20 @@ def main():
                 item = json.loads(path.read_text())
                 if sha256(ROOT/item['path']) != item['sha256']:
                     raise ValueError('saved checkpoint changed')
-            training.append({'run': folder.name, 'steps': len(trace), 'initial_task': trace[0]['task'],
+            training.append({'scope': part, 'run': folder.name, 'steps': len(trace), 'initial_task': trace[0]['task'],
                 'last100_task': float(np.mean([r['task'] for r in trace[-100:]])),
                 'final_gamma': trace[-1].get('gamma'), 'final_branch_l2': trace[-1].get('branch_l2')})
             if (folder/'r4b-repeat-audit.json').exists():
                 repeat.append({'run': folder.name, **json.loads((folder/'r4b-repeat-audit.json').read_text())})
-    if len(training) != 12 or len(repeat) != 2 or not all(r['exact_match'] for r in repeat):
+    expected_runs = 20 if args.include_followups else 12
+    if len(training) != expected_runs or len(repeat) != 2 or not all(r['exact_match'] for r in repeat):
         raise ValueError('training/repeat budget mismatch')
-    save_json(out/'training_audit.json', {'runs': training, 'total_updates': 12000, 'same_streams_all_modes': True, 'r4b_repeat': repeat})
+    save_json(out/'training_audit.json', {'runs': training, 'total_updates': expected_runs*1000, 'same_streams_all_modes': True, 'r4b_repeat': repeat})
     event_rows = []
-    for path in frame_paths:
+    for path, suffix in frame_paths:
         groups = collections.defaultdict(list)
-        for r in jsonl(path):
+        for original in jsonl(path):
+            r = alias(original, suffix)
             if r['domain'].startswith('event_'):
                 groups[(r['domain'], r['scene'], r['method'], r['train_seed'])].append(r)
         for (domain, scene, name, seed), frames in groups.items():
@@ -158,10 +180,10 @@ def main():
                 row['brightness_response_gain'] = (frames[12]['output_mean']-frames[11]['output_mean'])/jump
             event_rows.append(row)
     save_json(out/'event_diagnostics.json', event_rows)
-    save_json(out/'audit.json', {'model_sequence_evaluations': 1976, 'teacher_sequence_evaluations': 76,
-        'input_conditions': 38, 'training_runs': 12, 'training_updates': 12000,
+    save_json(out/'audit.json', {'model_sequence_evaluations': 3040 if args.include_followups else 1976, 'teacher_sequence_evaluations': 76,
+        'input_conditions': 38, 'training_runs': expected_runs, 'training_updates': expected_runs*1000,
         'cache_index_sha256': sha256(CACHE_INDEX), 'inputs': inputs,
-        'frame_files': {str(path.relative_to(ROOT)): sha256(path) for path in frame_paths},
+        'frame_files': {str(path.relative_to(ROOT)): sha256(path) for path, _ in frame_paths},
         'scope': 'reused exploratory data, 6 real ND clips incl one R3 overlap, 2 legacy source clips; no locked test claims'})
     lines = ['# R5 complete domain means', '', 'All train seeds/input repeats averaged; lower temporal/edge is better. Exploratory, no test selection.', '']
     for domain in ['test', 'legacy_synthetic', 'event_light_step', 'event_cut']:
