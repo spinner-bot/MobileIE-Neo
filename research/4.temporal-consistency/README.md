@@ -7,6 +7,8 @@
 - 最新结论：[进展报告0043](../../docs/进展报告/0043-T-26111204-内部时间算子双种子闭环与路线止损.md)、[路线决策](docs/exploration-r28-decision.md)、[论文证据表](report/paper-main-table/README.md)；R28重点双seed/双目标4000步及4416行主评价完成，主门槛未通过
 - 完成闭环：[原注册协议](docs/exploration-r28-protocol.md)、[全表](report/exploration-r28/tables.md)、[质量—时序图](report/exploration-r28/native_quality_stability.png)、[312行共同CPU外部表](report/exploration-r30/tables.md)。actual需要历史/flow/warp，current单帧映射单独评价；不继续沿该算子追加训练/相似网格
 - 接续准备：[R32公共训练池协议](docs/exploration-r32-data-protocol.md)/[57视频3428帧登记](data/exploration-r32-training/selection.json)已排除三开发片，下载进行中、没有新训练；[未训练空间预算](report/architecture-budget/tables.md)与[门控/流式源码阅读](../5.prior-art-survey/docs/25-compute-allocation-and-streaming-state.md)只约束下一方案，不是质量或手机速度结果
+- 新原型：[0044可行性报告](../../docs/进展报告/0044-T-26111205-低分辨率因果原型可行性与共享资源等待.md)、[R33协议](docs/exploration-r33-prototype-protocol.md)/[CPU检查](report/exploration-r33-prototype/checks.json)。3586参数低维因果状态通过CPU功能检查，CUDA因共享GPU占用尚未启动；不是画质/速度或创新结论。
+- 固定后续：[R34三控制训练协议](docs/exploration-r34-training-protocol.md)与共同近似初始化/窗口代码已提交，等完整R32与CUDA门槛，不训练部分资料；[R35同底座FastDVDnet协议](docs/exploration-r35-published-transfer-protocol.md)已启动双线程CPU评价，36行尚未完成，不作质量结论。
 - 外部开发资料：[R30 DAVIS协议](docs/exploration-r30-protocol.md)/[6条件缓存](results/exploration-r30-cache/index.json)，3独立视频各64帧、合成低光，VAL图像未读；[R31手机协议](docs/exploration-r31-protocol.md)/[3设备输入](results/exploration-r31-data/index.json)/[原亮度预览](report/exploration-r31-data/phone_inputs.png)，无同步GT。R30候选双seed评价已完成，手机输入尚无方法质量结论，均非完整独立基准或手机时延实测
 - 运行资产：[迁移过程](process/asset-migration/journal.md)、[路径规范](../../specs/项目规范/路径与环境规范.md)；独立环境与运行数据已于2026-11-12 03:06迁入 `/data/Users/zrh/data/MobileIE-Neo`，2106文件摘要一致、16帧CPU参考指标差0，仓库链接已入Git；后续统一用 `./scripts/project-python`
 - 既有完整结果：[R26监督目标控制](../../docs/进展报告/0038-T-26111200-监督目标全评价与历史贡献分离.md)、[同权重强后处理](../../docs/进展报告/0039-T-26111200-同权重单帧后处理排除聚合伪收益.md)、[R27冻结探针](../../docs/进展报告/0040-T-26111201-FST内部时间算子冻结探针与实现门槛.md)；R29潜矩资料归档附录，不继续扩大逐bit诊断
@@ -218,3 +220,5 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 [0040 FST内部算子](../../docs/进展报告/0040-T-26111201-FST内部时间算子冻结探针与实现门槛.md)：240冻结行/200前向、current与8段128帧CPU参考精确重放；五4075参数算子已实现，CUDA门槛等待共享卡空闲，尚未训练。首copy Adam失败未定位并完整保留。
 
 修改：2026-11-12T01:10:55.655899+08:00；作者：Codex  (sqs_A100)；原因：索引原算子深度探索及当前边界。
+
+修改：2026-11-12T05:10:57+08:00；作者：Codex  (sqs_A100)；原因：索引受预算原型、已登记训练门槛及正在执行的同底座公开方法评价。
