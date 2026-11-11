@@ -24,6 +24,12 @@ def main():
     assert len(rows) == 24
     old_raw = {(r['scene'], r['train_seed']): r for r in rows if r['method'] == 'raw'}
     sources = {str(reference.relative_to(ROOT)): digest(reference)}
+    overlap = None
+    if 'published' in stages:
+        path = BASE/'data/external-davis/fastdvdnet-training-overlap.json'
+        overlap = json.loads(path.read_text())
+        assert set(overlap['overlap_R30_DEV']) == {'bear', 'lucia', 'walking'}
+        sources[str(path.relative_to(ROOT))] = digest(path)
     for stage in stages:
         folder = BASE/'results'/('exploration-r30-self-motion' if stage == 'self-motion' else 'exploration-r35-published')
         runtime = json.loads((folder/'runtime.json').read_text())
@@ -73,6 +79,7 @@ def main():
     for filename, value in [('domain_seed_summary.json', seeds), ('domain_summary.json', domains),
                             ('paired_by_condition.json', paired), ('audit.json', {'passed': True, 'included_stages': stages,
                              'methods': methods, 'rows': len(rows), 'source_sha256': sources,
+                             'published_documented_training_overlap_DEV': overlap['overlap_R30_DEV'] if overlap else None,
                              'scope': 'Same R26 plain MSE base weights and common CPU R30 input; three DEV source videos, not six independent benchmarks or a phone test.'})]:
         (out/filename).write_text(json.dumps(value, indent=2)+'\n')
     lines = ['# Same-base external development baselines', '',
@@ -80,6 +87,8 @@ def main():
              '|Method|PSNR|SSIM|Temporal↓|Edge↓|', '|---|---:|---:|---:|---:|']
     for row in domains:
         lines.append('|'+row['method']+'|'+'|'.join(f'{row[m]:.6f}' for m in METRICS)+'|')
+    if overlap:
+        lines += ['', '**Prior-training overlap:** the official FastDVDnet training list includes all three R30 DEV videos, all 60 DAVIS TRAIN IDs and all 30 VAL IDs. These rows are development/transfer evidence, never held-out-video generalization. The list is not a per-weight frame-sampling trace. See the versioned training-overlap metadata.']
     lines += ['', 'Self-motion post reuses its own enhancement and needs no extra teacher CNN. Shared-motion post uses the original fixed teacher flow for quality control. FastDVDnet window waits two future frames; five_current removes real temporal input with identical denoiser capacity. CPU stage timings exclude phone/camera behavior and cannot be reported as mobile latency.', '',
               '|Method|Seed|PSNR|SSIM|Temporal↓|Edge↓|', '|---|---:|---:|---:|---:|---:|']
     for row in seeds:
