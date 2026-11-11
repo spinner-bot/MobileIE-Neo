@@ -26,9 +26,10 @@ def main():
     cache=ROOT/'.cache/experiments/exploration-r9-dev';cache.mkdir(parents=True,exist_ok=False)
     cv2.setNumThreads(1);torch.set_num_threads(2)
     torch.backends.cudnn.deterministic=True;torch.backends.cudnn.benchmark=False
-    net=new_model('cuda');start=time.perf_counter();rows=[];baseline=[]
+    device=torch.device('cuda')
+    net=new_model(device);start=time.perf_counter();rows=[];baseline=[]
     for scene,arrays in load_sequences('dev',(480,270),DEV_MANIFEST).items():
-        raw,_=inference(net,arrays['input'],'cuda',1)
+        raw,_=inference(net,arrays['input'],device,1)
         data={'low':np.stack(arrays['input']),'gt':np.stack(arrays['gt']),'teacher':np.stack(raw)}
         for label,frames,func in [('reference',arrays['gt'],forward_backward),('half',raw,half_forward_backward)]:
             pairs=[func(frames[t-1],frames[t]) for t in range(1,len(frames))]
