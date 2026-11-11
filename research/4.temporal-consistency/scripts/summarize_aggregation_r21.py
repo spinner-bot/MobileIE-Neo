@@ -22,7 +22,7 @@ def main():
     values=[];first=[];runtimes=[];sources={}
     for part in ['pre-zero','half-post']:
         folder=BASE/'results'/('exploration-r21-eval-'+part);rows=jsonl(folder/'per_sequence.jsonl')
-        runtime=json.loads((folder/'runtime.json').read_text());assert len(rows)==runtime['rows']==2944
+        runtime=json.loads((folder/'runtime.json').read_text());assert runtime['device']=='cpu' and not runtime['cuda_initialized'];assert len(rows)==runtime['rows']==2944
         events=json.loads((folder/'input_events.json').read_text());assert len(events)==46
         event_map={(r['domain'],r['scene']):bool(r['reset_frames']) for r in events};seen={}
         for r in rows:
@@ -48,12 +48,12 @@ def main():
     assert training['new_updates']==32000 and len(training['checkpoints'])==32
     sources[str(training_path.relative_to(ROOT))]=sha256(training_path)
     refs=[]
-    path=BASE/'results/exploration-r14-eval-spatial/per_sequence.jsonl'
+    path=BASE/'results/exploration-r21-reference-plain-cpu/per_sequence.jsonl'
     for r in jsonl(path):
         if r['train_preparation']=='native_crop' and r['variant']=='plain':refs.append({**r,'variant':'R14_plain'})
     assert len(refs)==736;sources[str(path.relative_to(ROOT))]=sha256(path)
     for seed in [0,1]:
-        path=BASE/'results'/f'exploration-r20-seed{seed}'/'per_sequence.jsonl';sources[str(path.relative_to(ROOT))]=sha256(path)
+        path=BASE/'results'/f'exploration-r21-reference-post-seed{seed}-cpu'/'per_sequence.jsonl';sources[str(path.relative_to(ROOT))]=sha256(path)
         for r in jsonl(path):refs.append({**r,'variant':'R20_'+r['method'],'step':4000,'history':'causal','fusion':'raw'})
     assert len(refs)==2208
     combined=values+refs;groups=collections.defaultdict(list);clips=collections.defaultdict(list)
@@ -86,10 +86,10 @@ def main():
                 for domain in DOMAINS:deltas.append({**paired(rows,method(v,4000,'causal','raw'),method('R20_'+post,4000,'causal','raw'),domain),
                     'contrast':'strong_post_control','input_reset':reset})
     save_json(out/'paired_deltas.json',deltas)
-    save_json(out/'audit.json',{'new_rows':5888,'reused_reference_rows':len(refs),'actual_inference_sequences':1856,
+    save_json(out/'audit.json',{'new_rows':5888,'new_CPU_reference_rows':len(refs),'actual_inference_sequences':1856,
         'metric_computations':4096,'metric_aliases':1792,'sequence_and_frame_alias_exact':True,
         'first_frame_max_abs_pixel':max(r['max_abs_pixel'] for r in first),'source_sha256':sources,
-        'scope':'Repeated exploratory conditions, two seeds; no novelty/independent test/mobile latency claim. R20 post clamps branches before aggregation; R21 post averages raw branches.'})
+        'evaluation_device':'cpu','scope':'Repeated exploratory conditions, two seeds; no novelty/independent test/mobile latency claim. R20 post clamps branches before aggregation; R21 post averages raw branches.'})
     lines=['# Aggregation-aware training controls','','All fixed checkpoints and controls retained; current replacement separates mapping adaptation from actual history.','',
         '| Domain | Variant | Step | History | Reset | Fusion | PSNR | SSIM | Temporal | Edge |',
         '|---|---|---:|---|---|---|---:|---:|---:|---:|']
