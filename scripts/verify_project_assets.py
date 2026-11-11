@@ -3,6 +3,7 @@ import argparse
 import hashlib
 import importlib
 import importlib.metadata
+import os
 from pathlib import Path
 import site
 import sys
@@ -19,6 +20,12 @@ def main():
     assert prefix == ENVIRONMENT.resolve() and prefix.is_relative_to(OWNER)
     assert 'include-system-site-packages = false' in (prefix/'pyvenv.cfg').read_text()
     assert site.ENABLE_USER_SITE is False
+    customization = prefix/'lib/python3.10/site-packages/sitecustomize.py'
+    assert customization.read_bytes() == (REPO/'scripts/project_sitecustomize.py').read_bytes()
+    cache_locations = {key: os.environ[key] for key in ['PIP_CACHE_DIR', 'TMPDIR', 'XDG_CACHE_HOME', 'TORCH_HOME',
+                       'MPLCONFIGDIR', 'HF_HOME', 'CUDA_CACHE_PATH', 'TRITON_CACHE_DIR', 'TORCH_EXTENSIONS_DIR',
+                       'TORCHINDUCTOR_CACHE_DIR', 'NUMBA_CACHE_DIR', 'UV_CACHE_DIR']}
+    assert all(Path(path).resolve().is_relative_to(ASSETS) for path in cache_locations.values())
     modules = {}
     for name in ['torch', 'numpy', 'cv2', 'PIL', 'matplotlib', 'scipy', 'einops', 'yaml', 'pandas', 'tqdm', 'pypdf']:
         module = importlib.import_module(name)
@@ -39,7 +46,8 @@ def main():
     assert not torch.cuda.is_initialized()
     report = {'observed_at': stamp(), 'prefix': str(prefix), 'system_site_packages': False,
               'user_site_enabled': site.ENABLE_USER_SITE, 'modules': modules,
-              'sys_path': sys.path, 'cuda_initialized': False, 'packages_only': args.packages_only}
+              'sys_path': sys.path, 'cuda_initialized': False, 'packages_only': args.packages_only,
+              'cache_locations': cache_locations, 'source_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest()}
     if not args.packages_only:
         assert (REPO/'.venv').is_symlink() and (REPO/'.venv').resolve() == ENVIRONMENT.resolve()
         assert (REPO/'.cache').is_symlink() and (REPO/'.cache').resolve() == CACHE.resolve()
