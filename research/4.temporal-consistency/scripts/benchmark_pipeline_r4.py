@@ -15,11 +15,13 @@ from explore_temporal_controls import inference, save_json
 from prepare_cache_r4 import load_cache
 from train_exploration_r2 import new_model
 from video_metrics import warp_previous
+from half_motion_r4 import half_forward_backward
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--out', required=True)
+    parser.add_argument('--half-comparison', action='store_true')
     args = parser.parse_args()
     if Path(args.out).exists():
         raise FileExistsError(args.out)
@@ -34,8 +36,11 @@ def main():
     photo = next(r['threshold'] for r in json.loads((base/'exploration-r4-reliability/selected.json').read_text())['configurations'] if r['motion'] == 'enhanced' and r['family'] == 'photo')
     noise = json.loads((base/'exploration-r4-noise-gate/selected.json').read_text())['threshold']
     photo, noise = [float('inf') if x is None else x for x in [photo, noise]]
+    half_alpha = None
+    if args.half_comparison:
+        half_alpha = json.loads((base/'exploration-r4-half/selected.json').read_text())['configurations'][0]['alpha']
     frames = load_cache('test')['video_21']['low']
-    names = ['raw', 'global_alpha', 'photo_gate', 'noise_gate']
+    names = ['raw', 'global_alpha', 'global_alpha_half'] if args.half_comparison else ['raw', 'global_alpha', 'photo_gate', 'noise_gate']
     records = {name: [] for name in names}
     for block in range(3):
         for name in names[block:]+names[:block]:
@@ -49,7 +54,8 @@ def main():
                     after_model = time.perf_counter()
                     motion_seconds = 0.
                     if name != 'raw':
-                        flow, confidence = forward_backward(previous, current)
+                        motion = half_forward_backward if name == 'global_alpha_half' else forward_backward
+                        flow, confidence = motion(previous, current)
                         after_motion = time.perf_counter()
                         motion_seconds = after_motion-after_model
                         accepted = confidence
@@ -63,7 +69,8 @@ def main():
                                 previous_sigma = sigma
                             accepted = confidence & valid & (difference < threshold)
                         past, valid = warp_previous(history, flow)
-                        weight = (alpha if name == 'global_alpha' else .7)*(accepted & valid)[..., None]
+                        coefficient = half_alpha if name == 'global_alpha_half' else alpha if name == 'global_alpha' else .7
+                        weight = coefficient*(accepted & valid)[..., None]
                         history = (weight*past+(1-weight)*current).astype(np.float32)
                     previous = current
                     end = time.perf_counter()
@@ -78,7 +85,7 @@ def main():
     save_json(args.out, {'size': [480, 270], 'scene': 'video_21', 'blocks': 3, 'timed_frames_per_method': 45,
         'warmup': 'one full 16-frame sequence per block', 'opencv_threads': 1,
         'gpu': torch.cuda.get_device_name(), 'cudnn_tf32_allowed': torch.backends.cudnn.allow_tf32,
-        'parameters': {'global_alpha': alpha, 'photo_threshold': photo, 'noise_normalized_threshold': noise},
+        'parameters': {'global_alpha': alpha, 'photo_threshold': photo, 'noise_normalized_threshold': noise, 'half_alpha': half_alpha},
         'scope': 'serial wall processing including current model transfers/sync and fresh motion; excludes decode, initialization and loading; not phone latency',
         'summary': summary, 'per_frame': records})
 
