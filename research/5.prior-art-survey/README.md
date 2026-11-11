@@ -97,3 +97,7 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 - [20 历史利用与聚合训练先例](docs/20-reference-collapse-and-aggregation-training.md)：KPN参考帧局部极小值、辅助退火及短训练日程边界；R21无新增辅助损失。
 
 修改：2026-11-11T22:23:36.759961+08:00；作者：Codex  (sqs_A100)；原因：索引已读原文/固定源码与重复风险核查。
+
+- [21 噪声变换与warp假设](docs/21-noise-transforms-and-resampling-assumptions.md)：Noise2VST固定源码/正文阅读，空间插值矩与时间噪声方差的边界。
+
+修改：2026-11-11T22:40:33.143257+08:00；作者：Codex  (sqs_A100)；原因：索引原模型统计适配的相关工作与自监督限制。
