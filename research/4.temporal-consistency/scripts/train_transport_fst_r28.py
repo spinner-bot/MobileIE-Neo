@@ -28,7 +28,12 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--seed', type=int, choices=[0, 1], required=True)
     parser.add_argument('--out', required=True)
+    parser.add_argument('--modes', default='post_transport',
+                        help='Registered convergence scope; legacy seed0 already started all modes.')
     args = parser.parse_args()
+    modes = args.modes.split(',')
+    if modes != ['post_transport']:
+        parser.error('Convergence amendment permits new training only for post_transport')
     # These complete gates are prerequisites, not advisory status checks.
     gates = [BASE/'process/exploration-r27'/name/'audit.json' for name in ['fixtures-cuda', 'training-fields-cuda']]
     for path in gates:
@@ -64,7 +69,7 @@ def main():
     assert len(references) == 4000
     runs, pointers = [], set()
     shared_path = out/'shared_context.jsonl'
-    for mode in MODES:
+    for mode in modes:
         for objective in ['charb', 'mse']:
             torch.manual_seed(args.seed)
             net = TransportFST(new_model(device), mode).train()
@@ -80,6 +85,7 @@ def main():
             checkpoints = ROOT/'.cache/checkpoints/exploration-r28'/f'{label}-seed{args.seed}'
             checkpoints.mkdir(parents=True, exist_ok=False)
             cfg = {'mode': mode, 'objective': objective, 'seed': args.seed, 'steps': 4000, 'parameters': 4075,
+                   'registered_execution_modes': modes, 'scope_amendment': 'user convergence feedback; legacy seed0 unchanged',
                    'optimizer': 'Adam', 'lr': 1e-3, 'weight_decay': 0, 'betas': [.9, .999], 'eps': 1e-8,
                    'global_clip': 1., 'loss_scale': 1., 'loss': 'sqrt(e²+1e-6).mean' if objective == 'charb' else 'e².mean',
                    'revision': revision, 'source_sha256': sources, 'protocol_sha256': sha256(BASE/'docs/exploration-r28-protocol.md'),
@@ -195,7 +201,7 @@ def main():
                   'checkpoint': str((run['checkpoints']/'step4000.pth').relative_to(ROOT)),
                   'checkpoint_sha256': sha256(run['checkpoints']/'step4000.pth'), 'shared_seed_wall_seconds': time.perf_counter()-start,
                   'scope': 'Concurrent logical models, sequential updates with shared fields; not standalone pipeline time.'})
-    save_json(out/'runtime.json', {'seed': args.seed, 'final_step': 4000, 'independent_models': 10, 'new_updates': 40000,
+    save_json(out/'runtime.json', {'seed': args.seed, 'final_step': 4000, 'independent_models': len(runs), 'new_updates': 4000*len(runs),
               'old_history_hashes_exact': total_hashes, 'wall_seconds': time.perf_counter()-start, 'completed_normally': True})
 
 
