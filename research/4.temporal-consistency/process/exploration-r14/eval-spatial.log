@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/evaluate_native_r14.py", line 110, in <module>
+    if __name__=='__main__':main()
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/evaluate_native_r14.py", line 64, in main
+    data=load_one(meta);events,_=detect_changes(data['low']);has_events=bool(events.any())
+AttributeError: 'list' object has no attribute 'any'
