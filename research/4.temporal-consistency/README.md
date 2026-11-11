@@ -2,9 +2,10 @@
 
 目标：以论文为最终产出，深入核查 MobileIE 的架构与训练机制，在移动端计算预算内设计视频增强模型，用传统方法、后处理和已有视频模型对照验证画质、时间稳定性与效率收益。
 
-- 状态：**前期探索，八轮受控预实验/机制诊断及必要跟进已完成**（2026-11-11）；没有确定最终方法，已建立实拍ND衰减数据与两域强控制，完整训练及自然夜景泛化尚待验证
+- 状态：**前期探索，九轮受控预实验/机制诊断及必要跟进已完成**（2026-11-11）；没有确定最终方法，已建立实拍ND衰减数据与两域强控制，完整训练及自然夜景泛化尚待验证
 - 当前研究入口：[MobileIE 架构、训练核查与视频研究设计](docs/architecture-and-video-research-plan.md)
-- 最新结果：[进展报告0018](../../docs/进展报告/0018-T-26111118-输入时域化与优化强对照.md)、[完整表](report/exploration-r8/tables.md)、[优化/历史图](report/exploration-r8/optimization_history.png)、[过程](process/exploration-r8/journal.md)
+- 最新结果：[进展报告0019](../../docs/进展报告/0019-T-26111118-优化基线与新增开发集.md)、[完整表](report/exploration-r9/tables.md)、[优化图](report/exploration-r9/optimizer_controls.png)、[过程](process/exploration-r9/journal.md)
+- 第八轮：[进展报告0018](../../docs/进展报告/0018-T-26111118-输入时域化与优化强对照.md)、[完整表](report/exploration-r8/tables.md)、[优化/历史图](report/exploration-r8/optimization_history.png)、[过程](process/exploration-r8/journal.md)
 - 第七轮：[进展报告0017](../../docs/进展报告/0017-T-26111118-通道状态与运动强对照.md)、[同状态与motion表](report/exploration-r7-aligned/tables.md)、[过程](process/exploration-r7/journal.md)
 - 第六轮：[进展报告0016](../../docs/进展报告/0016-T-26111117-局部噪声与RGB通路辨识.md)、[条件矩与RGB表](report/exploration-r6/tables.md)、[机制图](report/exploration-r6/noise_mechanism.png)、[过程](process/exploration-r6/journal.md)
 - 第五轮：[进展报告0015](../../docs/进展报告/0015-T-26111116-因果骨干与同容量反证.md)、[完整控制表](report/exploration-r5-combined/tables.md)、[历史替代图](report/exploration-r5-combined/history_mechanism.png)、[过程](process/exploration-r5/journal.md)
@@ -137,3 +138,5 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 修改：2026-11-11T17:09:03.253353+08:00；作者：Codex  (sqs_A100)；原因：索引0016及已完成噪声诊断。
 
 修改：2026-11-11T18:25:49.244614+08:00；作者：Codex  (sqs_A100)；原因：索引0017/0018及优化强对照研究。
+
+修改：2026-11-11T18:37:56.584049+08:00；作者：Codex  (sqs_A100)；原因：索引0019强优化基线，限定低LR结构结论范围。
