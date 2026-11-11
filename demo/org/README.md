@@ -3,7 +3,7 @@
 目标：为项目申报的现场考察，按 MobileIE 官方流程把模型跑在安卓手机上，并提供“手机实测速度 + 处理前后效果对比”的演示材料。**这是演示任务，不是研究任务**，不改变 3/4/5 号工作的技术路线。
 
 - 分支：**`demo.org`**；本目录 `demo/org/` 是这项演示工作的主文件夹。`main` 单向同步到本分支，演示改动不合并回 `main`
-- 状态：**P0 完成**（2026-11-08），演示包已打包，手机测速待做
+- 状态：**P1 完成**（2026-11-12，备用机一加 9R 跑通自定义模型：GPU FP16 **5.8 ms**、CPU **86–91 ms**），现场演示准备待做
 - 上游代码与权重：项目根目录 [`MobileIE/`](../../MobileIE)
 - 关联：[2 号复现](../../research/2.reproduction/README.md)、[5 号前期调研](../../research/5.prior-art-survey/README.md)、[6B06-01 会议记录](../../docs/会议记录/6B06-01/audio%20-%20Transcription.txt)
 - 进展报告：[0009-T-261108-6 号工作启动与手机演示方案](../../docs/进展报告/0009-T-261108-6号工作启动与手机演示方案.md)
@@ -70,7 +70,7 @@
 | 测试设备参数 | [`data/test-devices.md`](data/test-devices.md) | 完成（一加 13 / 一加 9R） |
 | 前后对比图 | [`results/compare_lol_eval15/`](results/compare_lol_eval15)、[`results/compare_sample/`](results/compare_sample) | 完成 |
 | 增强结果 | [`results/lol_eval15/`](results/lol_eval15)、[`results/demo_output_sample/`](results/demo_output_sample) | 完成 |
-| 手机实测截图/录屏 | `results/phone/` | 待采集 |
+| 手机实测截图/录屏 | [`results/phone/`](results/phone) | 完成（启动、标准跑分、自定义模型 8 张后端截图） |
 | 手机演示包 | [`demo-package/MobileIE-Demo/`](demo-package/MobileIE-Demo/)（本地压缩件 `demo-package/MobileIE-手机演示包.zip`） | 完成（模型 + 3 张对比图 + 中文操作说明） |
 | 汇报 HTML | [`report/mobile-deployment.html`](report/mobile-deployment.html) | 完成（含 P0 结果，单文件内嵌图片） |
 
@@ -84,10 +84,21 @@
 - [x] 用 `prepare_demo_images.py` 处理仓库暗光样例，生成 400×600 输入与增强结果；
 - [ ] 用手机实拍暗光照片替换样例，生成最终演示素材（待用户提供照片）。
 
-### P1 —— 手机侧速度
-- [ ] 手机安装 AI Benchmark（官网直连 APK，约 1.98 GB）；
-- [ ] `model.tflite` 放入 Download，PRO Mode → Custom Model 加载；
-- [ ] 记录 CPU / NNAPI / GPU 等后端的延迟，截屏或录屏。
+### P1 —— 手机侧速度（已完成，一加 9R）
+- [x] 手机安装 AI Benchmark（官网直连 APK，1.98 GB）；
+- [x] `model.tflite` 放入 Download，PRO Mode → Custom Model 加载；
+- [x] 记录 CPU / NNAPI / GPU / QNN 等后端的延迟，截屏（`results/phone/`）。
+
+**实测结论**（详见 [`data/test-devices.md`](data/test-devices.md) §4 与 [今日日志](journal/2026-11-12-phone-setup.md)）：
+
+| 后端 | 精度 | 单帧延迟 | 说明 |
+| --- | --- | --- | --- |
+| TFLite GPU Delegate | FP16 | **5.76 / 5.95 ms**（≈170 FPS） | 演示主推；初始化约 450 ms |
+| TFLite GPU Delegate | FP32 | 23.6 ms | |
+| Qualcomm QNN GPU | FP16 | 15.8 ms | |
+| CPU（4 线程） | FP16/FP32 | 86–91 ms | 表头在 CPU 下不区分精度 |
+| Android NNAPI | FP16 | 154 ms | 未真正下沉，仅记录 |
+| Arm NN | FP16 | 崩溃 | OpenCL 导入输入张量异常，见 `data/armnn-crash.txt` |
 
 ### P2 —— 现场演示
 - [ ] 按 [`docs/01-demo-plan.md`](docs/01-demo-plan.md) 的演示脚本串场；
@@ -130,6 +141,7 @@ PYD=F:/dev-tools/python-envs/MobileIE-Demo/Scripts/python.exe
 3. **依赖环境**：本机 `tensorflow-cpu` 2.20/2.21 原生库初始化失败，已改用 `ai-edge-litert` + 关闭默认 XNNPACK delegate；换机器时需重新验证；
 4. **AI Benchmark**：v4 起支持自定义模型，v7.0.0（2026-10）仍保留；需跑完标准测试后进入 PRO Mode，APK 较大；国内网络下优先用官网直连 APK；
 5. **模型任务**：`lolv1.tflite` 是低光增强模型，现场素材应选暗光照片；水下增强只有 `.pkl`，需另行转换 TFLite。
+6. **AI Benchmark 操作坑**：CPU 下选 FP16/FP32 运行页表头都写 `FP16`（不区分）；INT8 档位要求量化模型，FP32 模型直接报 `IllegalArgumentException`；Arm NN 后端会崩溃并清空全部设置；切换精度会把后端重置回 CPU。现场固定“**FP16 + TFLite GPU Delegate**”，选完先看一眼表头再点 Run。
 
 ## 8. 修订记录
 
@@ -137,3 +149,4 @@ PYD=F:/dev-tools/python-envs/MobileIE-Demo/Scripts/python.exe
 - 2026-11-08 · claude code (local)：P0 跑通，LOL eval15 PSNR 23.619 dB；补充 ai-edge-litert 兼容层与结果对比图。
 - 2026-11-10 · claude code (local)：建立 `demo.org` 演示分支；打包手机演示包（模型 + 对比图 + 中文操作说明）。
 - 2026-11-12 · claude code (local)：工作目录迁入 `demo/org/`；与 `main` 做首次 `--no-ff` 同步（2382 个提交）。
+- 2026-11-12 · claude code (local)：备用机完成 P1 多后端测速（GPU FP16 5.8 ms / CPU 90 ms），记录 INT8 不兼容与 Arm NN 崩溃；与 `main` 二次同步（281 个提交）。
