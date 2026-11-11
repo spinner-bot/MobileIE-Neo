@@ -81,7 +81,7 @@ def main():
              '|Model|History|Output|PSNR|SSIM|Temporal↓|Edge↓|', '|---|---|---|---:|---:|---:|---:|']
     for row in domains:
         lines.append('|'+ '|'.join(row[f] for f in FIELDS)+'|'+'|'.join(f'{row[m]:.6f}' for m in METRICS)+'|')
-    lines += ['', 'Causal/current includes the trained low-resolution spatial path; it is not the bare modified backbone. Actual history benefits must survive this same-weight control and the independently trained equal-capacity spatial control. Post .5 uses the common cached motion for quality; a deployed post can estimate flow from its own enhancement.', '',
+    lines += ['', 'Causal/current includes the trained low-resolution spatial path; it is not the bare modified backbone. Actual history benefits must survive this same-weight control and the independently trained equal-capacity spatial control. Shared-motion post uses cached teacher motion; self-motion post computes motion from its own enhancement.', '',
               '|Reference|Seed|ΔPSNR|Temporal ratio|Registered spatial-post gate|', '|---|---:|---:|---:|---|']
     for row in paired_seeds:
         lines.append(f"|{row['reference_model']}/{row['reference_fusion']}|{row['seed']}|{row['delta_psnr_rgb']:.6f}|{row['temporal_ratio_of_condition_means']:.6f}|{row['registered_primary_gate']}|")
