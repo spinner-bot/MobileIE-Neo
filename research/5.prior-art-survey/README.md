@@ -101,3 +101,7 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 - [21 噪声变换与warp假设](docs/21-noise-transforms-and-resampling-assumptions.md)：Noise2VST固定源码/正文阅读，空间插值矩与时间噪声方差的边界。
 
 修改：2026-11-11T22:40:33.143257+08:00；作者：Codex  (sqs_A100)；原因：索引原模型统计适配的相关工作与自监督限制。
+
+- [22 监督目标与条件假设](docs/22-training-objectives-and-conditional-assumptions.md)：Noise2Noise原理论/相关噪声段落阅读，R26梯度尺度与global clip耦合边界。
+
+修改：2026-11-11T23:56:37.412147+08:00；作者：Codex  (sqs_A100)；原因：索引训练目标的前提与优化控制。
