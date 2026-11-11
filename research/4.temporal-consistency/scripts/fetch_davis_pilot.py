@@ -15,9 +15,9 @@ from inspect_davis_external import ROOT, RemoteZip
 BASE = ROOT/'research/4.temporal-consistency'
 
 
-def fetch(item):
+def fetch(item, destination='DAVIS2017-pilot'):
     record, url, total, etag, offset, end, compressed, method = item
-    target = ROOT/'.cache/datasets/DAVIS2017-pilot'/record['name'].removeprefix('DAVIS/')
+    target = ROOT/'.cache/datasets'/destination/record['name'].removeprefix('DAVIS/')
     assert target.resolve().is_relative_to('/data/Users/zrh/data/MobileIE-Neo')
     target.parent.mkdir(parents=True, exist_ok=True)
     if target.exists():
