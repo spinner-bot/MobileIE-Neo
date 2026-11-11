@@ -1,0 +1,81 @@
+{
+  "observed_at": "2026-11-12T01:08:11.966405+08:00",
+  "weights": [
+    {
+      "weight": "official",
+      "path": "MobileIE/pretrain/lolv1_best_slim.pkl",
+      "sha256": "d40a930fbc0435f47ce08dda17b1c630b86a501be9423b8f48dab14722fb5548",
+      "head": {
+        "weight1": -0.018955163657665253,
+        "weight2": 0.018955163657665253,
+        "coefficient_a": -0.00035929822928887356
+      },
+      "body": {
+        "weight1": -0.04344054311513901,
+        "weight2": 0.043444957584142685,
+        "coefficient_a": -0.0018872725530693357
+      }
+    },
+    {
+      "weight": "charb-seed0",
+      "path": ".cache/checkpoints/exploration-r26/plain-charb-seed0/step4000.pth",
+      "sha256": "435bcf6fe1ccf25029e6c34ed1a57b1f6f8b473941df98822e1b85840e3b2d16",
+      "head": {
+        "weight1": -0.019110077992081642,
+        "weight2": 0.019110077992081642,
+        "coefficient_a": -0.00036519508086344313
+      },
+      "body": {
+        "weight1": -0.03769325092434883,
+        "weight2": 0.037694890052080154,
+        "coefficient_a": -0.0014208429492987978
+      }
+    },
+    {
+      "weight": "charb-seed1",
+      "path": ".cache/checkpoints/exploration-r26/plain-charb-seed1/step4000.pth",
+      "sha256": "e4a377922b630415f68d73e169c5f6a3200ad0820ad31bf9cc67215d221c6d03",
+      "head": {
+        "weight1": -0.018534889444708824,
+        "weight2": 0.018534889444708824,
+        "coefficient_a": -0.0003435421267275786
+      },
+      "body": {
+        "weight1": -0.03510408475995064,
+        "weight2": 0.035105638206005096,
+        "coefficient_a": -0.0012323512991357644
+      }
+    },
+    {
+      "weight": "mse-seed0",
+      "path": ".cache/checkpoints/exploration-r26/plain-mse-seed0/step4000.pth",
+      "sha256": "2f9885d66e48fc22779c5e73a41b2c1f378bde3b4a5497a910274be216f85c7a",
+      "head": {
+        "weight1": -0.018329201266169548,
+        "weight2": 0.018329201266169548,
+        "coefficient_a": -0.00033595961905575136
+      },
+      "body": {
+        "weight1": -0.0379997119307518,
+        "weight2": 0.03800167143344879,
+        "coefficient_a": -0.001444052567358134
+      }
+    },
+    {
+      "weight": "mse-seed1",
+      "path": ".cache/checkpoints/exploration-r26/plain-mse-seed1/step4000.pth",
+      "sha256": "d421b5a3b383deddd571cd0dd1abb35e45526cc76b6566a8052f7ab8abcc2111",
+      "head": {
+        "weight1": -0.018324660137295723,
+        "weight2": 0.018324660137295723,
+        "coefficient_a": -0.0003357931691473949
+      },
+      "body": {
+        "weight1": -0.035763226449489594,
+        "weight2": 0.03576511889696121,
+        "coefficient_a": -0.0012790760461049433
+      }
+    }
+  ],
+  "scope": "Existing frozen operator coefficients, not quality or causal RGB attribution."
+}
