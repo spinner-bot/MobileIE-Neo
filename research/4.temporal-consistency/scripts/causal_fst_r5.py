@@ -39,6 +39,8 @@ class CausalFST(nn.Module):
             raise ValueError(mode)
         self.backbone, self.mode = backbone, mode
         self.history_mode = 'causal'
+        # Optional inference-only implementation audit; legacy training stays unchanged.
+        self.direct_fixed_shift = False
         self.state = None
         self.state_input_shape = None
         if mode in ('spatial_bilinear', 'temporal_bilinear', 'temporal_post', 'spatial_post'):
@@ -74,7 +76,7 @@ class CausalFST(nn.Module):
             previous = current
         if self.mode.startswith('tsm_'):
             gamma = self.gamma if self.mode == 'tsm_learned' else 1.
-            shifted = u[:, :3]+gamma*(previous-u[:, :3])
+            shifted = previous if self.mode == 'tsm_fixed' and self.direct_fixed_shift else u[:, :3]+gamma*(previous-u[:, :3])
             return self._ordinary(torch.cat([shifted, u[:, 3:]], 1))
         delta = coarse_up(self.branch(previous), u.shape[-2:])
         if self.mode.endswith('_post'):
