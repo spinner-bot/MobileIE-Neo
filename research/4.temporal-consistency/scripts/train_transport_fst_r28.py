@@ -33,6 +33,15 @@ def main():
     gates = [BASE/'process/exploration-r27'/name/'audit.json' for name in ['fixtures-cuda', 'training-fields-cuda']]
     for path in gates:
         assert json.loads(path.read_text())['passed']
+        gate_config = json.loads(path.with_name('config.json').read_text())
+        assert gate_config['device'] == 'cuda'
+        critical = ['transport_fst_r27.py', 'training_fields_r27.py', 'test_transport_fst_r27.py', 'test_training_fields_r27.py']
+        verified = 0
+        for name, expected in gate_config['source_sha256'].items():
+            if Path(name).name in critical:
+                assert sha256(ROOT/name) == expected
+                verified += 1
+        assert verified >= (2 if path.parent.name == 'fixtures-cuda' else 4)
     assert os.environ.get('CUBLAS_WORKSPACE_CONFIG') == ':4096:8'
     out = Path(args.out).resolve()
     out.mkdir(parents=True, exist_ok=False)
