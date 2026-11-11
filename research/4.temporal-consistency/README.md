@@ -7,7 +7,7 @@
 - 最新结论：[进展报告0043](../../docs/进展报告/0043-T-26111204-内部时间算子双种子闭环与路线止损.md)、[路线决策](docs/exploration-r28-decision.md)、[论文证据表](report/paper-main-table/README.md)；R28重点双seed/双目标4000步及4416行主评价完成，主门槛未通过
 - 完成闭环：[原注册协议](docs/exploration-r28-protocol.md)、[全表](report/exploration-r28/tables.md)、[质量—时序图](report/exploration-r28/native_quality_stability.png)、[312行共同CPU外部表](report/exploration-r30/tables.md)。actual需要历史/flow/warp，current单帧映射单独评价；不继续沿该算子追加训练/相似网格
 - 接续准备：[R32公共训练池协议](docs/exploration-r32-data-protocol.md)/[57视频3428帧登记](data/exploration-r32-training/selection.json)已排除三开发片，[完整清单](data/exploration-r32-training/manifest.json)与[解码核验](results/exploration-r32-decode/audit.json)均完成；[未训练空间预算](report/architecture-budget/tables.md)与[门控/流式源码阅读](../5.prior-art-survey/docs/25-compute-allocation-and-streaming-state.md)只约束下一方案，不是质量或手机速度结果
-- 当前执行：[0046](../../docs/进展报告/0046-T-26111206-公共动态训练池完成与因果骨干训练启动.md)：R32全部57视频3428帧完成来源/解码核验；R34三控制统一逐时刻B=4的初始检查及CUDA反向通过，stage003在GPU1实际训练seed0（需查活进程/最终runtime），尚无新质量结论；[DID准备度](docs/external-did-readiness.md)仅官方划分/匿名目录已验证，未取得像素。
+- 当前执行：[0047](../../docs/进展报告/0047-T-26111206-动态骨干首种子训练完成与完整成本对照准备.md)：R34 seed0三个控制各4000正常完成，seed1在GPU3实际运行；stage003完成后finalize001才汇总120行质量并运行[最终权重CPU成本对照](docs/exploration-r34-runtime-protocol.md)。无新质量结论或手机速度结果；[0046](../../docs/进展报告/0046-T-26111206-公共动态训练池完成与因果骨干训练启动.md)保留完整R32/门槛记录，[DID准备度](docs/external-did-readiness.md)仍只有元数据。
 - 最新强基线与来源边界：[0045](../../docs/进展报告/0045-T-26111205-自驱运动强后处理与公开预训练重叠.md)、[同底座自驱post全表](report/external-baselines-self-motion/tables.md)。双seed自驱运动post无需独立teacher，均值23.817dB/时序7.449；CPU驻留流水线200.612ms@480×854，不是手机延迟。R35三开发片与官方FastDVDnet文档训练ID重叠，不能当未见视频泛化；另30 test-dev来源只读元数据、未读JPEG。R34首次训练前已修订为120评价行，训练预算不变，stage002失败已留档；stage003接续实际训练。
 - 新原型：[0044可行性报告](../../docs/进展报告/0044-T-26111205-低分辨率因果原型可行性与共享资源等待.md)、[R33协议](docs/exploration-r33-prototype-protocol.md)/[CPU检查](report/exploration-r33-prototype/checks.json)。3586参数低维因果状态通过CPU功能检查与[真实CUDA反向](process/exploration-r33/cuda-backward.json)，进入固定训练；这些不是画质/速度或创新结论。
 - 固定后续：[R34三控制训练协议](docs/exploration-r34-training-protocol.md)与共同近似初始化/窗口代码已提交，完整资料与CUDA门槛已通过，stage003执行中，不训练部分资料或选择中间权重；[R35同底座FastDVDnet协议](docs/exploration-r35-published-transfer-protocol.md)已启动双线程CPU评价，36行尚未完成，不作质量结论。
@@ -230,3 +230,5 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 修改：2026-11-12T06:08:00+08:00；作者：Codex  (sqs_A100)；原因：索引真实数据/执行门槛和训练前batch口径修正。
 
 修改：2026-11-12T06:09:14+08:00；作者：Codex  (sqs_A100)；原因：替换入口顶部已过时的下载/CUDA等待状态。
+
+修改：2026-11-12T06:35:24+08:00；作者：Codex  (sqs_A100)；原因：索引首seed闭环及固定成本测量准备，不把活动输出当最终。
