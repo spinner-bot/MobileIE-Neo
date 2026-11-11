@@ -32,3 +32,17 @@
 2. `adb install` 安装 APK；
 3. `adb push demo/org/demo-package/MobileIE-Demo/model.tflite /sdcard/Download/`；
 4. 启动 App、截图，检查 Custom Model 入口。
+
+## 11-12 02:20–02:30 安装与启动
+
+| 步骤 | 结果 |
+| --- | --- |
+| `adb devices` | `b62e7c1 device`，LE2100 / OnePlus / Android 14 / SDK 34 / arm64-v8a |
+| 剩余空间 | 66 GB（`/storage/emulated`） |
+| `adb install -r` | **Success**，版本 `7.0.0`（versionCode 58，targetSdk 36） |
+| 推模型 | `/sdcard/Download/model.tflite`，23,228 字节 |
+| 启动 | `org.benchmark.demo` 正常启动，约 8 秒后进入 `IntermediateActivity` |
+
+启动后 App **自动开始完整标准跑分**，首屏为 `Section: 1/30. Recognition`、`MobileNet-V4 Large`、`448×448`。截屏见 `../results/phone/01_launch.jpg`（2 MB PNG 原件留在 `F:/pip-tmp/aibench/`，仓库只存 JPEG）。
+
+按手册，需要等这套 30 段标准测试跑完，PRO Mode / Custom Model 入口才会出现。测试期间保持前台、不锁屏。
