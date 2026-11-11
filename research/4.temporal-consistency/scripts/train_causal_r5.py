@@ -23,6 +23,7 @@ def main():
     parser.add_argument('--out', required=True)
     parser.add_argument('--synthetic-temporal-weight', type=float, default=0.)
     parser.add_argument('--checkpoint-root', default='.cache/checkpoints/exploration-r5')
+    parser.add_argument('--protocol', default='research/4.temporal-consistency/docs/exploration-r5-protocol.md')
     args = parser.parse_args()
     variants = args.variants.split(',')
     if any(v not in MODES for v in variants) or len(set(variants)) != len(variants):
@@ -61,7 +62,7 @@ def main():
                 'real_scenes': [r['scene'] for r in data], 'synthetic_pair_per_step': 1,
                 'expanded_manifest_sha256': sha256(EXPANDED),
                 'pretrained_sha256': sha256(ROOT/'MobileIE/pretrain/lolv1_best_slim.pkl'),
-                'protocol_sha256': sha256(ROOT/'research/4.temporal-consistency/docs/exploration-r5-protocol.md'),
+                'protocol': args.protocol, 'protocol_sha256': sha256(ROOT/args.protocol),
                 'synthetic_temporal_weight': args.synthetic_temporal_weight,
                 'temporal_protocol_sha256': sha256(ROOT/'research/4.temporal-consistency/docs/exploration-r5b-protocol.md') if args.synthetic_temporal_weight else None,
                 'git_revision_at_startup': revision, 'source_sha256_at_startup': sources,
