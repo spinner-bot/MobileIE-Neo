@@ -27,10 +27,48 @@ def write(path, value):
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False)+'\n')
 
 
+def audit_controls(sources):
+    replays = []
+    folder = BASE/'results/exploration-r28-eval-copy'
+    for filename in ['per_sequence.jsonl', 'per_frame.jsonl']:
+        fields = IDENTITY+(['frame'] if filename == 'per_frame.jsonl' else [])
+        values = read_rows(folder/filename)
+        for mode, directory, architecture, history in [
+            ('copy', 'exploration-r26-eval-plain', 'plain', 'causal'),
+            (EXTERNAL, 'exploration-r26b-eval-pre_fixedhalf', 'pre_fixedhalf', 'current'),
+        ]:
+            path = BASE/'results'/directory/filename
+            old = {key({**r, 'mode': mode, 'history': 'causal'}, fields): r for r in read_rows(path)
+                   if r['architecture'] == architecture and r['step'] == 4000 and r['history'] == history
+                   and (mode != EXTERNAL or r['objective'] == 'mse')}
+            actual = [r for r in values if r['mode'] == mode]
+            assert len(actual) == len(old)
+            assert len(actual) == len({key(r, fields) for r in actual})
+            maximum = max(abs(r[m]-old[key(r, fields)][m]) for r in actual for m in METRICS
+                          if r[m] is not None and old[key(r, fields)][m] is not None)
+            assert all((r[m] is None) == (old[key(r, fields)][m] is None) for r in actual for m in METRICS)
+            assert maximum <= 1e-10, (mode, filename, maximum)
+            replays.append({'mode': mode, 'file': filename, 'rows': len(actual), 'max_abs_metric': maximum})
+            sources[str(path.relative_to(ROOT))] = hashlib.sha256(path.read_bytes()).hexdigest()
+        sources[str((folder/filename).relative_to(ROOT))] = hashlib.sha256((folder/filename).read_bytes()).hexdigest()
+    return replays
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--out', default=str(BASE/'report/exploration-r28'))
+    parser.add_argument('--audit-copy-only', action='store_true', help='verify completed sequence/frame references while candidate evaluation is pending')
     args = parser.parse_args()
+    if args.audit_copy_only:
+        sources = {}
+        runtime = json.loads((BASE/'results/exploration-r28-eval-copy/runtime.json').read_text())
+        assert runtime['rows'] == 2208 and runtime['device'] == 'cuda:0'
+        replays = audit_controls(sources)
+        path = BASE/'process/exploration-r28/reused-reference-audit.json'
+        write(path, {'passed': True, 'historical_replays': replays, 'source_sha256': sources,
+                     'scope': 'Registered reused weights and cache on common CUDA; no new quality claim or repeated training.'})
+        print(json.dumps({'passed': True, 'replays': replays}))
+        return
     rows, sources, runtimes = [], {}, []
     for mode, counts in [('copy', (2208, 276, 1536, 672)), ('post_transport', (2208, 464, 1584, 624))]:
         folder = BASE/'results'/('exploration-r28-eval-'+mode)
@@ -88,21 +126,7 @@ def main():
             and record['temporal_ratio_of_condition_means'] <= .9) if record['fusion'] == 'raw' else None
         paired.append(record)
     # Required historical controls: same final weights, CUDA and condition/reset.
-    replays = []
-    for mode, directory, architecture, history in [
-        ('copy', 'exploration-r26-eval-plain', 'plain', 'causal'),
-        (EXTERNAL, 'exploration-r26b-eval-pre_fixedhalf', 'pre_fixedhalf', 'current'),
-    ]:
-        path = BASE/'results'/directory/'per_sequence.jsonl'
-        old = {key({**r, 'mode': mode, 'history': 'causal'}): r for r in read_rows(path)
-               if r['architecture'] == architecture and r['step'] == 4000 and r['history'] == history
-               and (mode != EXTERNAL or r['objective'] == 'mse')}
-        actual = [r for r in rows if r['mode'] == mode]
-        assert len(actual) == len(old)
-        maximum = max(abs(r[m]-old[key(r)][m]) for r in actual for m in METRICS)
-        assert maximum <= 1e-10, (mode, maximum)
-        replays.append({'mode': mode, 'sequence_rows': len(actual), 'max_abs_metric': maximum})
-        sources[str(path.relative_to(ROOT))] = hashlib.sha256(path.read_bytes()).hexdigest()
+    replays = audit_controls(sources)
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=False)
     write(out/'domain_seed_summary.json', summary)
