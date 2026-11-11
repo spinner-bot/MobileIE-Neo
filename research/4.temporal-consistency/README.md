@@ -7,7 +7,8 @@
 - 最新结论：[进展报告0043](../../docs/进展报告/0043-T-26111204-内部时间算子双种子闭环与路线止损.md)、[路线决策](docs/exploration-r28-decision.md)、[论文证据表](report/paper-main-table/README.md)；R28重点双seed/双目标4000步及4416行主评价完成，主门槛未通过
 - 完成闭环：[原注册协议](docs/exploration-r28-protocol.md)、[全表](report/exploration-r28/tables.md)、[质量—时序图](report/exploration-r28/native_quality_stability.png)、[312行共同CPU外部表](report/exploration-r30/tables.md)。actual需要历史/flow/warp，current单帧映射单独评价；不继续沿该算子追加训练/相似网格
 - 接续准备：[R32公共训练池协议](docs/exploration-r32-data-protocol.md)/[57视频3428帧登记](data/exploration-r32-training/selection.json)已排除三开发片，下载进行中、没有新训练；[未训练空间预算](report/architecture-budget/tables.md)与[门控/流式源码阅读](../5.prior-art-survey/docs/25-compute-allocation-and-streaming-state.md)只约束下一方案，不是质量或手机速度结果
-- 最新强基线与来源边界：[0045](../../docs/进展报告/0045-T-26111205-自驱运动强后处理与公开预训练重叠.md)、[同底座自驱post全表](report/external-baselines-self-motion/tables.md)。双seed自驱运动post无需独立teacher，均值23.817dB/时序7.449；CPU驻留流水线200.612ms@480×854，不是手机延迟。R35三开发片与官方FastDVDnet文档训练ID重叠，不能当未见视频泛化；另30 test-dev来源只读元数据、未读JPEG。R34首次训练前已修订为120评价行，训练预算不变，stage002待完整资料/空闲GPU。
+- 当前执行：[0046](../../docs/进展报告/0046-T-26111206-公共动态训练池完成与因果骨干训练启动.md)：R32全部57视频3428帧完成来源/解码核验；R34三控制统一逐时刻B=4的初始检查及CUDA反向通过，stage003在GPU1实际训练seed0（需查活进程/最终runtime），尚无新质量结论；[DID准备度](docs/external-did-readiness.md)仅官方划分/匿名目录已验证，未取得像素。
+- 最新强基线与来源边界：[0045](../../docs/进展报告/0045-T-26111205-自驱运动强后处理与公开预训练重叠.md)、[同底座自驱post全表](report/external-baselines-self-motion/tables.md)。双seed自驱运动post无需独立teacher，均值23.817dB/时序7.449；CPU驻留流水线200.612ms@480×854，不是手机延迟。R35三开发片与官方FastDVDnet文档训练ID重叠，不能当未见视频泛化；另30 test-dev来源只读元数据、未读JPEG。R34首次训练前已修订为120评价行，训练预算不变，stage002失败已留档；stage003接续实际训练。
 - 新原型：[0044可行性报告](../../docs/进展报告/0044-T-26111205-低分辨率因果原型可行性与共享资源等待.md)、[R33协议](docs/exploration-r33-prototype-protocol.md)/[CPU检查](report/exploration-r33-prototype/checks.json)。3586参数低维因果状态通过CPU功能检查，CUDA因共享GPU占用尚未启动；不是画质/速度或创新结论。
 - 固定后续：[R34三控制训练协议](docs/exploration-r34-training-protocol.md)与共同近似初始化/窗口代码已提交，等完整R32与CUDA门槛，不训练部分资料；[R35同底座FastDVDnet协议](docs/exploration-r35-published-transfer-protocol.md)已启动双线程CPU评价，36行尚未完成，不作质量结论。
 - 外部开发资料：[R30 DAVIS协议](docs/exploration-r30-protocol.md)/[6条件缓存](results/exploration-r30-cache/index.json)，3独立视频各64帧、合成低光，VAL图像未读；[R31手机协议](docs/exploration-r31-protocol.md)/[3设备输入](results/exploration-r31-data/index.json)/[原亮度预览](report/exploration-r31-data/phone_inputs.png)，无同步GT。R30候选双seed评价已完成，手机输入尚无方法质量结论，均非完整独立基准或手机时延实测
@@ -225,3 +226,5 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 修改：2026-11-12T05:10:57+08:00；作者：Codex  (sqs_A100)；原因：索引受预算原型、已登记训练门槛及正在执行的同底座公开方法评价。
 
 修改：2026-11-12T05:39:58+08:00；作者：Codex  (sqs_A100)；原因：索引强post实测、公开训练重叠和训练前修订。
+
+修改：2026-11-12T06:08:00+08:00；作者：Codex  (sqs_A100)；原因：索引真实数据/执行门槛和训练前batch口径修正。
