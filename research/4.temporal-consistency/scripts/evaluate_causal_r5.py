@@ -32,6 +32,7 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--variants', required=True)
     p.add_argument('--out', required=True)
+    p.add_argument('--checkpoint-root', default='.cache/checkpoints/exploration-r5')
     args = p.parse_args()
     variants = args.variants.split(',')
     if any(v not in (*MODES, 'r2_task') for v in variants):
@@ -45,7 +46,7 @@ def main():
     device = torch.device('cuda')
     metadata = json.loads(CACHE_INDEX.read_text())
     cache = [(row, load_one(row)) for row in metadata['scenes']]
-    save_json(out/'config.json', {'variants': variants, 'checkpoint_step': 1000,
+    save_json(out/'config.json', {'variants': variants, 'checkpoint_step': 1000, 'checkpoint_root': args.checkpoint_root,
         'cache_index_sha256': sha256(CACHE_INDEX), 'alpha': .1,
         'git_revision': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
         'source_sha256': {str(p.relative_to(ROOT)): sha256(p) for p in Path(__file__).parent.glob('*.py')},
@@ -60,7 +61,7 @@ def main():
                 net = CausalFST(new_model(device), 'plain').to(device)
                 net.backbone.load_state_dict(torch.load(path, map_location=device, weights_only=False)['model'])
             else:
-                path = ROOT/'.cache/checkpoints/exploration-r5'/f'{variant}-seed{seed}'/'step1000.pth'
+                path = ROOT/args.checkpoint_root/f'{variant}-seed{seed}'/'step1000.pth'
                 net = CausalFST(new_model(device), variant).to(device)
                 net.load_state_dict(torch.load(path, map_location=device, weights_only=False)['model'])
             net.eval()
