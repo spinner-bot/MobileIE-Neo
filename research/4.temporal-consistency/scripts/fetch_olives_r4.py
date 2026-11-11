@@ -24,7 +24,7 @@ def read(url):
                 return stream.read()
         except (OSError, TimeoutError) as error:
             print(json.dumps({'url': url, 'attempt': attempt+1, 'error': str(error)}), flush=True)
-            if attempt == 2 or (isinstance(error, urllib.error.HTTPError) and 400 <= error.code < 500):
+            if attempt == 2 or (isinstance(error, urllib.error.HTTPError) and 400 <= error.code < 500 and error.code not in [408, 429]):
                 raise
             time.sleep(attempt+1)
 
@@ -32,7 +32,12 @@ def read(url):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--out', required=True)
+    parser.add_argument('--base-manifest')
+    parser.add_argument('--extra-train', type=int, default=0)
     args = parser.parse_args()
+    base = json.loads(Path(args.base_manifest).read_text()) if args.base_manifest else None
+    if args.extra_train < 0 or (args.extra_train and base is None):
+        parser.error('extra training scenes require a base manifest')
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     available = {}
@@ -50,7 +55,17 @@ def main():
         names = [name for name in payload.decode().split() if name in eligible]
         if len(names) < count:
             raise ValueError('not enough accessible paired scenes: '+name)
-        indices = np.linspace(0, len(names)-1, count, dtype=int).tolist()
+        if base:
+            original = [r['scene'] for r in base['selection'] if r['split'] == name]
+            additional = []
+            if name == 'train' and args.extra_train:
+                remaining = [n for n in names if n not in original]
+                if len(remaining) < args.extra_train:
+                    raise ValueError('not enough additional training scenes')
+                additional = [remaining[i] for i in np.linspace(0, len(remaining)-1, args.extra_train, dtype=int)]
+            indices = [names.index(n) for n in original+additional]
+        else:
+            indices = np.linspace(0, len(names)-1, count, dtype=int).tolist()
         selection.extend({'scene': names[i], 'split': name, 'list_index': i} for i in indices)
     save_json(out/'selection.json', {'repo': REPO, 'revision': REVISION, 'author_lists': source_text,
                                     'selection': selection, 'frames': 16})
@@ -95,7 +110,7 @@ def main():
 
     with ThreadPoolExecutor(max_workers=4) as executor:
         files = list(executor.map(fetch, selected))
-    assert len(files) == 320
+    assert len(files) == len(selection)*32
     train = {r['sha256'] for r in files if r['split'] == 'train'}
     test = {r['sha256'] for r in files if r['split'] == 'test'}
     if train & test:
