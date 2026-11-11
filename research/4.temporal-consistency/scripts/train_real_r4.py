@@ -16,12 +16,12 @@ from real_data_r4 import MANIFEST, batch, load_sequences, prepare_training, resi
 from train_exploration_r2 import new_model
 
 
-def validation(net, cache):
+def validation(net, cache, device):
     rows = []
     net.eval()
     for domain, scenes in cache.items():
         for scene, data in scenes.items():
-            raw, _ = inference(net, data['low'], 'cuda', 1)
+            raw, _ = inference(net, data['low'], device, 1)
             for fusion, output in [('raw', raw), ('enhanced_fb', fuse(raw, data['enhanced_flow'], data['enhanced_mask']))]:
                 metrics, _ = evaluate(output, data['gt'], data['reference_flow'], data['reference_mask'])
                 rows.append({'domain': domain, 'scene': scene, 'fusion': fusion, **metrics})
@@ -94,7 +94,7 @@ def main():
                     torch.save({'model': net.state_dict(), 'optimizer': optimizer.state_dict(),
                                 'step': step+1, 'config': config}, checkpoint)
                     print(json.dumps({'variant': variant, 'seed': seed, **row}), flush=True)
-            save_json(folder/'validation.json', validation(net, cache))
+            save_json(folder/'validation.json', validation(net, cache, device))
             save_json(folder/'runtime.json', {'wall_seconds': time.perf_counter()-start,
                 'checkpoint': str(checkpoint.relative_to(ROOT)), 'checkpoint_sha256': sha256(checkpoint),
                 'parameters': sum(p.numel() for p in net.parameters())})
