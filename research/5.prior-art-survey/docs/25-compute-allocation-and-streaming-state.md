@@ -4,7 +4,7 @@
 
 ## NAFNet与原FST的区别
 
-[NAFNet v4正文](https://arxiv.org/html/2204.04676v4)§3–5及[固定代码](https://github.com/megvii-research/NAFNet/blob/2b4af71ebe098a92a75910c233a3965a3e93ede4/basicsr/models/archs/NAFNet_arch.py)已核查。SimpleGate乘通道两半；NAFBlock已有pointwise/depthwise卷积、LayerNorm、简化通道注意力及零初始化beta/gamma残差缩放。MobileIE的FST是同一特征自乘且共享标量曲率，两者函数类不同；更一般乘积、深度卷积、零扰动初始化都不能单独主张新颖性。
+[NAFNet v4正文](https://arxiv.org/html/2204.04676v4)的SimpleGate说明、§5.1训练设置及[固定代码](https://github.com/megvii-research/NAFNet/blob/2b4af71ebe098a92a75910c233a3965a3e93ede4/basicsr/models/archs/NAFNet_arch.py)已核查，不将本次记作全文复现。SimpleGate乘通道两半；NAFBlock已有pointwise/depthwise卷积、LayerNorm、简化通道注意力及零初始化beta/gamma残差缩放。MobileIE的FST是同一特征自乘且共享标量曲率，两者函数类不同；更一般乘积、深度卷积、零扰动初始化都不能单独主张新颖性。
 
 NAFNet实验段明确讨论裁块训练/整图测试的全局统计不一致，并使用TLC。[TLC一手论文入口](https://arxiv.org/abs/2112.04491)提出测试期局部化全局操作。本次对TLC仅核查摘要及NAFNet相关正文，尚未按原代码复现MobileIE转换。MobileIE有GAP、既有训练用小裁块，需考虑该已知空间强控制；但R28失败不能据此归因GAP，旧R24冻结门控干预也不能替代这个控制。
 
