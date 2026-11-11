@@ -18,8 +18,8 @@ class MultiscaleControls(unittest.TestCase):
         with torch.no_grad():a=net.transform(self.current,self.past);b=self.base(self.current)
         self.assertEqual(a.shape,self.current.shape);self.assertTrue(bool(torch.isfinite(a).all()))
         self.assertLessEqual(float((a-b).abs().max()),2e-5)
-        self.assertTrue(torch.equal(net.backbone.body.block1.weight[:,:12],self.base.body.block1.weight))
-        self.assertEqual(float(net.backbone.body.block1.weight[:,12:].detach().abs().max()),0.)
+        self.assertTrue(torch.equal(net.backbone.body.block1.current.weight,self.base.body.block1.weight))
+        self.assertEqual(float(net.backbone.body.block1.context.weight.detach().abs().max()),0.)
 
     def test_identical_seed_and_parameter_capacity(self):
         models=[]
@@ -32,7 +32,7 @@ class MultiscaleControls(unittest.TestCase):
     def test_operational_history_and_spatial_independence(self):
         net=MultiscaleFST(copy.deepcopy(self.base),'raw_history')
         # Nonzero decoder context fixture tests actual routing rather than relying on initially zero columns.
-        with torch.no_grad():net.backbone.body.block1.weight[:,12:].fill_(.002)
+        with torch.no_grad():net.backbone.body.block1.context.weight.fill_(.002)
         a=net.transform(self.current,self.past);b=net.transform(self.current,self.current)
         self.assertGreater(float((a-b).detach().abs().max()),1e-9)
         a.mean().backward();self.assertGreater(float(net.encoder[0].weight.grad.abs().sum()),0.)
