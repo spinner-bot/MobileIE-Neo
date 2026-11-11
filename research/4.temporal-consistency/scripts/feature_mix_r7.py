@@ -46,7 +46,7 @@ class FeatureMix(nn.Module):
         previous = self.state
         if previous is None or self.state_input_shape != x.shape:
             previous = current
-        mixed = current+self.gamma*(previous-current)
+        mixed = previous if self.gamma == 1 else current if self.gamma == 0 else current+self.gamma*(previous-current)
         body = self.replace(original, mixed)
         if self.placement == 'pre':
             body = self.ordinary(body)
