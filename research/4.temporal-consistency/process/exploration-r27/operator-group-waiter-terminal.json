@@ -1,0 +1,8 @@
+{
+  "observed_at": "2026-11-12T01:27:53.525222+08:00",
+  "pid": 2880854,
+  "command": ".venv/bin/python research/4.temporal-consistency/scripts/wait_idle_gpu_group.py --gpus 0,1,2,3 --record-prefix research/4.temporal-consistency/process/exploration-r27/gpu-fixtures-group --poll-seconds 10 -- .venv/bin/python research/4.temporal-consistency/scripts/test_transport_fst_r27.py --device cuda --out research/4.temporal-consistency/process/exploration-r27/fixtures-cuda ",
+  "admitted_children": 0,
+  "local_lock_races": 1,
+  "reason": "replace pending standalone gate with continuous gate-then-seed0 stage after fields passed; no active experiment stopped"
+}
