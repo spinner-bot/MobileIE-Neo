@@ -35,3 +35,13 @@ CPU门槛过后才安排GPU同样验证，仍每次两次空闲采样/同组最�
 ## 2026-11-12T00:58:05.818944+08:00 原训练流字段门槛
 
 在CPU两seed固定step索引0/1/3999，核对R26原current/GT/ROI/合成metadata；新字段准备与原align_tasks在同CPU后端的4项history SHA和RGB数组必须完全一致。共6组/24历史，不把CPU teacher与旧CUDA teacher数值混为精确重放。公开fields重采样RGB与原aligned RGB归一化差*255<=1e-3。copy的forward/损失/梯度/一次Adam相对新建同CPU CausalFST plain逐tensor完全一致；6次copy更新仅实现验证，不留作质量候选。只读训练来源，不读最终保留素材。CUDA同样验证待空闲卡及算子门槛通过后再执行。
+
+## 2026-11-12T01:02:26.746229+08:00 冻结原生序列算子探针（CPU可独立执行）
+
+CPU前向/stream/current门槛已过，copy一次Adam首测失败未定位，新增诊断六组全部精确但不能抹去首败；CUDA仍等待空闲。本节仅冻结前向，不启动正式质量训练，也不依赖未通过的优化器门槛。
+
+固定5套4075参数权重：官方、R26 plain Charb双seed4000（与R14一致）、R26 plain MSE双seed4000；原四native DEV/16帧、关闭reset，五body算子各current/causal，共200逻辑配置。所有current以及copy causal应与同权重原plain前向/指标精确一致并作显式alias；每权重/片段六套实际输出（五算子causal、plain finite post .1/.5，其中copy同原plain，合计七套，140指标计算/60精确current额外别名口径需按下文明确）。
+
+确切计数：5权重×4片×(5算子×2history+2经典post)=240逻辑行；其中20个copy current和80个其它current均alias到copy causal，共100alias；实际神经推理100序列（五causal算子），另40经典post仅warp/blend，指标140套。所有字段来源固定输入teacher flow/mask，评价用原reference flow/mask，不读最终保留素材。模型冻结，绝不从GT计算部署flow；当前极限/首帧归一化差<=2e-5，逐帧及逐片alias精确，既存CPU plain参考可匹配时另核验，不混CUDA数字。
+
+每配置保存完整时序/质量指标和输入/权重SHA，报告双目标、双seed、每片，不把冻结替换初始冲击当训练后失败，也不按结果删模式。目的在真实长宽、实际fields下核验与比较算子行为，非新方法/SOTA证据。训练预算仍待实现/优化器门槛充分处理后单独预注册。
