@@ -49,7 +49,7 @@ def main():
             if name!=scene or panel in ['Input','GT']:continue
             predicted=np.load(path,mmap_mode='r');local=[]
             for t in range(16):
-                error=(predicted[t,8:-8,8:-8].astype(np.float64)-gt[t,8:-8,8:-8].astype(np.float64))/255.
+                error=(predicted[t].astype(np.float64)-gt[t].astype(np.float64))/255.
                 mu=error.mean((0,1));mse=float(np.mean(error**2));global_bias=float(np.mean(mu**2))
                 common=float(mu.mean()**2);opponent=float(np.mean((mu-mu.mean())**2));centered=float(np.mean((error-mu)**2))
                 closure=max(abs(mse-global_bias-centered),abs(global_bias-common-opponent));assert closure<=1e-12;closure_max=max(closure_max,closure)
@@ -85,7 +85,7 @@ def main():
     for name,rows in [('per_frame.jsonl',frame_rows),('per_sequence.jsonl',sequence_rows),('paired_deltas.jsonl',deltas)]:
         with (out/name).open('w') as stream:
             for row in rows:stream.write(json.dumps(row,allow_nan=False)+'\n')
-    save_json(out/'config.json',{'manifest_sha256':sha256(manifest_path),'source_arrays':source_arrays,
+    save_json(out/'config.json',{'spatial_scope':'full-frame, matching formal PSNR; temporal metric border is independent','manifest_sha256':sha256(manifest_path),'source_arrays':source_arrays,
         'protocol_sha256':sha256(BASE/'docs/exploration-r23-protocol.md'),
         'revision':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
         'source_sha256':{str(p.relative_to(ROOT)):sha256(p) for p in Path(__file__).parent.glob('*.py')},
