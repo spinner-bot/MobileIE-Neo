@@ -1,0 +1,40 @@
+{
+  "checks": [
+    {
+      "reference": "R14 native plain raw/recursive, both steps",
+      "file": "per_sequence.jsonl",
+      "rows": 736,
+      "max_abs_metric": 0.0
+    },
+    {
+      "reference": "R20 finite postwarp .1/.5 step4000",
+      "file": "per_sequence.jsonl",
+      "rows": 368,
+      "max_abs_metric": 0.0
+    },
+    {
+      "reference": "R14 native plain raw/recursive, both steps",
+      "file": "per_frame.jsonl",
+      "rows": 15872,
+      "max_abs_metric": 0.0
+    },
+    {
+      "reference": "R20 finite postwarp .1/.5 step4000",
+      "file": "per_frame.jsonl",
+      "rows": 7936,
+      "max_abs_metric": 0.0
+    }
+  ],
+  "max_abs_metric": 0.0,
+  "source_sha256": {
+    "research/4.temporal-consistency/results/exploration-r26-eval-plain/per_sequence.jsonl": "1410b9e22ec2c8f84fc29791082b438bca3051833440da704ae023aa1c2f1a77",
+    "research/4.temporal-consistency/results/exploration-r14-eval-spatial/per_sequence.jsonl": "8f48f18c9c135c12ce699e6b61a59e19f381684f35576df4a83b591f04d2c38d",
+    "research/4.temporal-consistency/results/exploration-r20-seed0/per_sequence.jsonl": "5bd9b09fc96a6b1864b28ce67bfa8ded8faddad2dd1fa20f854714d63a3ec4ea",
+    "research/4.temporal-consistency/results/exploration-r20-seed1/per_sequence.jsonl": "0e1e36dd40589e645da7eac29eabf117329c88ad8b2bfb5906ac7156cb29a628",
+    "research/4.temporal-consistency/results/exploration-r26-eval-plain/per_frame.jsonl": "5104dd82e789566048b4cd8c12e1bf32bed4ce01462fcb3d1204c7a4df60a12a",
+    "research/4.temporal-consistency/results/exploration-r14-eval-spatial/per_frame.jsonl": "5db71a0a809f56c1f8eab55ce1bcb5cb1eafd17e5b7e6db2c911726adff6b90e",
+    "research/4.temporal-consistency/results/exploration-r20-seed0/per_frame.jsonl": "bc844a2d1395da788d1a8ced289f343262505b3c0620525c93abad50a68963cb",
+    "research/4.temporal-consistency/results/exploration-r20-seed1/per_frame.jsonl": "a24e0ac58826fd57be4221c300b5fe674410e70fd5b38a1b1766a77a4498c6de"
+  },
+  "scope": "Secondary same-GPU-backend historical replay; primary loss comparisons all freshly evaluated on the common backend."
+}
