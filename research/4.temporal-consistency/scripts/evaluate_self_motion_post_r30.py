@@ -49,7 +49,7 @@ def main():
           'source_sha256': {name: digest(Path(__file__).parent/name) for name in
                            ['evaluate_self_motion_post_r30.py', 'half_motion_r4.py', 'aligned_raw_history_r11.py', 'aggregation_controls_r20.py']},
           'revision': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
-          'scope': 'CPU software pipeline with resident input and three warmups; excludes camera/display, IO, metrics and offline output retention; not phone latency or full peak-memory evidence.'})
+          'scope': 'CPU software pipeline with resident input and three warmups; loop includes retaining output references, excludes camera/display, IO, metrics and file saving; not phone latency or full peak-memory evidence.'})
     count, complete, started = 0, False, time.perf_counter()
     shared = []
     try:
