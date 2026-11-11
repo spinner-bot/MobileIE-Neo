@@ -56,11 +56,26 @@ def main():
             other = lookup[key(reference)]
             pairs.append({**{k: row[k] for k in FIELDS}, 'reference': label,
                           **{'delta_'+m: row[m]-other[m] for m in METRICS},
+                          'candidate_temporal': row['temporal_error'], 'reference_temporal': other['temporal_error'],
                           'temporal_ratio': row['temporal_error']/other['temporal_error']})
+    paired_groups = defaultdict(list)
+    fields_pair = ['objective', 'train_seed', 'history', 'input_reset', 'reference']
+    for row in pairs:
+        paired_groups[tuple(row[k] for k in fields_pair)].append(row)
+    paired_summary = []
+    for group, values in sorted(paired_groups.items()):
+        assert len(values) == 6
+        ratio = mean(r['candidate_temporal'] for r in values)/mean(r['reference_temporal'] for r in values)
+        deltas = {'delta_'+m: mean(r['delta_'+m] for r in values) for m in METRICS}
+        paired_summary.append({**dict(zip(fields_pair, group)), **deltas,
+                               'temporal_ratio_of_condition_means': ratio,
+                               'registered_quality_temporal_gate': deltas['delta_psnr_rgb'] >= -.05 and ratio <= .9,
+                               'source_videos': 3, 'input_conditions': 6})
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=False)
     save_json(out/'domain_seed_summary.json', summaries)
     save_json(out/'paired_by_condition.json', pairs)
+    save_json(out/'paired_domain_seed.json', paired_summary)
     save_json(out/'audit.json', {'passed': True, 'included_phases': phases, 'rows': len(rows), 'runtimes': runs,
               'source_sha256': sources, 'complete_registered_model_set': set(phases) == {'references', 'post-seed0', 'post-seed1'},
               'scope': 'Three external TRAIN video sources, six custom degraded conditions; repeated frames/conditions are not independent samples. No standard-test or phone-latency claim.'})
