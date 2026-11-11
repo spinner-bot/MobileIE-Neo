@@ -10,9 +10,35 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'scripts'))
 from real_data_r4 import batch, residual_temporal
 from reliability_r4 import census, discrepancy, masks_at_threshold, quality_feasible
 from explore_state_r2 import fuse
+from calibrate_mapping_r4 import fit_mappings, transform
+from train_mixture_r4b import synthetic_pair
+from train_exploration_r2 import temporal_penalty
 
 
 class ExplorationR4Checks(unittest.TestCase):
+    def test_identity_centered_ridge_preserves_identity(self):
+        image = np.random.default_rng(8).uniform(0, 255, (20, 24, 3)).astype(np.float32)
+        coefficients = fit_mappings([(image, image)])
+        self.assertAlmostEqual(coefficients['scalar_gain'], 1., places=12)
+        np.testing.assert_allclose(coefficients['channel_gain'], 1., atol=1e-12)
+        np.testing.assert_allclose(coefficients['rgb_affine'], np.vstack([np.eye(3), np.zeros((1, 3))]), atol=1e-10)
+        np.testing.assert_allclose(transform(image, 'rgb_affine', coefficients), image, atol=1e-5)
+
+    def test_mapping_output_clips_in_float_domain(self):
+        x = np.asarray([[[-10., 300., 128.]]], np.float32)
+        result = transform(x, 'scalar_gain', {'scalar_gain': 1.})
+        np.testing.assert_array_equal(result, [[[0., 255., 128.]]])
+        self.assertEqual(result.dtype, np.float32)
+
+    def test_synthetic_mixture_pairs_repeat_and_preserve_geometry(self):
+        images = {'fixed': np.random.default_rng(9).integers(0, 256, (512, 768, 3)).astype(np.float32)}
+        low, target, identity = synthetic_pair(images, 0, 3)
+        repeated, _, metadata = synthetic_pair(images, 0, 3)
+        torch.testing.assert_close(low, repeated, rtol=0, atol=0)
+        self.assertEqual(identity, metadata)
+        self.assertEqual(tuple(low.shape), (2, 3, 180, 320))
+        self.assertAlmostEqual(float(temporal_penalty(target[None], [tuple(identity['offset'])])), .001, places=6)
+
     def test_census_is_invariant_to_positive_affine_brightness(self):
         image = np.random.default_rng(7).uniform(10, 80, (20, 24, 3)).astype(np.float32)
         np.testing.assert_array_equal(census(image), census(image*2+5))
