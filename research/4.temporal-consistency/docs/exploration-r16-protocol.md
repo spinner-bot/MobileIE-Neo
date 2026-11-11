@@ -21,3 +21,7 @@
 修改：2026-11-11T20:40:41.111004+08:00；作者：Codex  (sqs_A100)；原因：评价质量前固定新增结构成本测量，避免只汇报质量。
 
 成本检查采用已完成spatial seed0固定4000 checkpoint（不看其dev表现），复用其同结构权重切换spatial/raw路由，仅测计算而非质量。另测原MobileIE。FP32，batch1，270×480、288×512、1080×1920，独立随机输入，torch线程2/cv2线程1、与训练相同cuDNN deterministic/TF32。每项10热身、50次同步GPU阶段wall，报告p10/中位/p90，不含CPU/传输/flow/加载；aligned额外teacher/flow不在其中，禁止当完整pipeline/手机。Conv2d hook计MAC（每乘加1），另列未计FST/门控/插值/GAP；参数独立计、GPU分配基线与增量峰值、额外前帧存储字节均记录。spatial当前实现也重复encoder，不隐藏实现冗余，不称折叠或缓存加速。经独立空闲GPU1检查，同组总并发最多3。
+
+修改：2026-11-11T20:45:29.494514+08:00；作者：Codex  (sqs_A100)；原因：初次成本测量270×480同结构spatial/raw中位2.217/1.353ms，需排查测量顺序状态，不能据此做架构速度解释。
+
+保留原9行测量。新增一次独立GPU任务复核：先原模型1080p固定200次热身，各尺寸以raw/spatial/official、spatial/official/raw、official/raw/spatial轮换三轮；每项原10热身50采样不变，保留全部样本与位置、GPU SM时钟/功率快照，不按更快结果替换旧记录。checkpoint payload改在CPU加载，增量峰值/基线分别记录；新旧基线分配不可直接相减。只在复核后解释顺序/clock影响，不能由差异提前认定原因。
