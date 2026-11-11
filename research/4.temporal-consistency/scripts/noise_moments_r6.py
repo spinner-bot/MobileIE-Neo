@@ -39,7 +39,8 @@ def forward_probe(model, x, intervention='raw', statistics=None):
     att = net.att(body)
     maximum = torch.max(att*body, dim=1, keepdim=True)[0]
     att1 = net.att1(maximum)
-    return net.tail(torch.mul(att1, att)*body), {'head': u_head, 'body': u_body}
+    gate = torch.mul(att1, att)
+    return net.tail(gate*body), {'head': u_head, 'body': u_body, 'body_output': body, 'gate': gate}
 
 
 def central_statistics(samples):
