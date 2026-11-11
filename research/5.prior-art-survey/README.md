@@ -105,3 +105,7 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 - [22 监督目标与条件假设](docs/22-training-objectives-and-conditional-assumptions.md)：Noise2Noise原理论/相关噪声段落阅读，R26梯度尺度与global clip耦合边界。
 
 修改：2026-11-11T23:56:37.412147+08:00；作者：Codex  (sqs_A100)；原因：索引训练目标的前提与优化控制。
+
+- [23 时间双线性先例](docs/23-temporal-bilinear-prior-and-operator-controls.md)：ABM原文/初始化先例及FST算子控制边界。
+
+修改：2026-11-12T00:53:28.926200+08:00；作者：Codex  (sqs_A100)；原因：索引已核查先例，约束后续新颖性主张。
