@@ -139,7 +139,7 @@ def main():
             norm = float(torch.nn.utils.clip_grad_norm_(run['params'], 1.))
             assert np.isfinite(norm)
             optimizer.step()
-            assert all(bool(torch.isfinite(param).all()) for param in run['params'])
+            assert bool(torch.isfinite(torch.cat([param.detach().flatten() for param in run['params']])).all())
             error = (prediction-target).detach().double()
             mu = error.mean((-2, -1), keepdim=True)
             full_mse = float(error.square().mean())
