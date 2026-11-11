@@ -6,6 +6,16 @@ from torch.nn import functional as F
 MODES=('spatial','raw_history','aligned_history')
 
 
+class SplitDecoder(nn.Module):
+    """A 36→12 convolution stored in channel blocks, preserving original FP32 path."""
+    def __init__(self,current):
+        super().__init__();self.current=current;self.context=nn.Conv2d(24,12,3,padding=1,bias=False)
+        nn.init.zeros_(self.context.weight)
+
+    def forward(self,features):
+        return self.current(features[:,:12].contiguous())+self.context(features[:,12:].contiguous())
+
+
 class MultiscaleFST(nn.Module):
     def __init__(self,backbone,mode):
         super().__init__()
@@ -14,11 +24,7 @@ class MultiscaleFST(nn.Module):
         self.encoder=nn.Sequential(nn.Conv2d(12,24,3,stride=2,padding=1),nn.PReLU(24),
             nn.Conv2d(24,24,3,padding=1),nn.PReLU(24))
         self.mixer=nn.Sequential(nn.Conv2d(48,24,3,padding=1),nn.PReLU(24))
-        original=backbone.body.block1
-        decoder=nn.Conv2d(36,12,3,padding=1)
-        with torch.no_grad():
-            decoder.weight.zero_();decoder.weight[:,:12].copy_(original.weight);decoder.bias.copy_(original.bias)
-        backbone.body.block1=decoder
+        backbone.body.block1=SplitDecoder(backbone.body.block1)
 
     def transform(self,current,previous):
         if current.ndim!=4 or previous.shape!=current.shape:raise ValueError('matching NCHW current/history required')
