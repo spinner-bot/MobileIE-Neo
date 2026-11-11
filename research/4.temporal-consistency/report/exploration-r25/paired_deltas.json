@@ -1,0 +1,1542 @@
+[
+  {
+    "first_minus_second": [
+      "pre_fixedhalf__teacher_common",
+      "pre_fixedhalf__teacher_default"
+    ],
+    "domain": "dev_native",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": 0.08153742124854446,
+        "ssim_rgb": 0.0033394955098628998,
+        "edge_mae": -0.023140911012887955,
+        "temporal_error": -0.06114922364552733
+      },
+      "video_47": {
+        "psnr_rgb": 0.02428085115412415,
+        "ssim_rgb": -0.0010544303804636002,
+        "edge_mae": 0.00981861725449562,
+        "temporal_error": 0.005150945981343913
+      },
+      "video_91": {
+        "psnr_rgb": 0.0010103425556167167,
+        "ssim_rgb": -1.568906009197235e-05,
+        "edge_mae": 0.00029757246375083923,
+        "temporal_error": -3.7034352615705757e-06
+      },
+      "video_121": {
+        "psnr_rgb": -0.00238430715723581,
+        "ssim_rgb": -7.412396371364594e-05,
+        "edge_mae": 0.0016392059624195099,
+        "temporal_error": -3.627936045358382e-06
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": 0.02611107695026238,
+        "median": 0.012645596854870433,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.0006869823008095466,
+          0.061405651575312525
+        ]
+      },
+      "ssim_rgb": {
+        "mean": 0.0005488130263984203,
+        "median": -4.490651190280914e-05,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.0007947450503706932,
+          0.0024860906414687634
+        ]
+      },
+      "edge_mae": {
+        "mean": -0.002846378833055496,
+        "median": 0.0009683892130851746,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.01694588176906109,
+          0.007438356056809425
+        ]
+      },
+      "temporal_error": {
+        "mean": -0.014001402258872586,
+        "median": -3.665685653464479e-06,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.045862824718156836,
+          0.003862283627192542
+        ]
+      }
+    },
+    "scope": "train seeds and input-noise repeats averaged within scene; legacy has only 2 source clips; exploratory intervals are not confirmatory inference",
+    "contrast": "mask_restriction"
+  },
+  {
+    "first_minus_second": [
+      "pre_fixedhalf__reference_common",
+      "pre_fixedhalf__teacher_common"
+    ],
+    "domain": "dev_native",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": 0.11077510863697171,
+        "ssim_rgb": 0.005483325570821762,
+        "edge_mae": -0.05573900416493416,
+        "temporal_error": -0.22926901181538906
+      },
+      "video_47": {
+        "psnr_rgb": -0.04236439961136895,
+        "ssim_rgb": -0.0016246233135461807,
+        "edge_mae": 0.012509055435657501,
+        "temporal_error": 0.008867867787678563
+      },
+      "video_91": {
+        "psnr_rgb": 0.007120914966048275,
+        "ssim_rgb": 0.0002521965652704239,
+        "edge_mae": -0.005358539521694183,
+        "temporal_error": -0.09378983974456823
+      },
+      "video_121": {
+        "psnr_rgb": -0.00425521536500284,
+        "ssim_rgb": 8.409656584262848e-05,
+        "edge_mae": 0.0001758970320224762,
+        "temporal_error": -0.0400975823402403
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": 0.017819102156662048,
+        "median": 0.0014328498005227175,
+        "positive_clusters": 2,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.029993070967014646,
+          0.08201752763647807
+        ]
+      },
+      "ssim_rgb": {
+        "mean": 0.0010487488470971584,
+        "median": 0.00016814656555652618,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.0011554183438420296,
+          0.004133518319576979
+        ]
+      },
+      "edge_mae": {
+        "mean": -0.012103147804737091,
+        "median": -0.0025913212448358536,
+        "positive_clusters": 2,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.041760278865695,
+          0.00804215669631958
+        ]
+      },
+      "temporal_error": {
+        "mean": -0.08857214152812976,
+        "median": -0.06694371104240426,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.18197615444660187,
+          -0.015614857276280869
+        ]
+      }
+    },
+    "scope": "train seeds and input-noise repeats averaged within scene; legacy has only 2 source clips; exploratory intervals are not confirmatory inference",
+    "contrast": "flow_choice"
+  },
+  {
+    "first_minus_second": [
+      "pre_fixedhalf__reference_common",
+      "pre_fixedhalf__teacher_default"
+    ],
+    "domain": "dev_native",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": 0.19231252988551617,
+        "ssim_rgb": 0.008822821080684662,
+        "edge_mae": -0.07887991517782211,
+        "temporal_error": -0.2904182354609164
+      },
+      "video_47": {
+        "psnr_rgb": -0.018083548457244802,
+        "ssim_rgb": -0.002679053694009781,
+        "edge_mae": 0.022327672690153122,
+        "temporal_error": 0.014018813769022476
+      },
+      "video_91": {
+        "psnr_rgb": 0.008131257521664992,
+        "ssim_rgb": 0.00023650750517845154,
+        "edge_mae": -0.005060967057943344,
+        "temporal_error": -0.0937935431798298
+      },
+      "video_121": {
+        "psnr_rgb": -0.00663952252223865,
+        "ssim_rgb": 9.972602128982544e-06,
+        "edge_mae": 0.001815102994441986,
+        "temporal_error": -0.04010121027628566
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": 0.04393017910692443,
+        "median": 0.0007458674997131709,
+        "positive_clusters": 2,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.012361535489741726,
+          0.14257451678357747
+        ]
+      },
+      "ssim_rgb": {
+        "mean": 0.0015975618734955788,
+        "median": 0.00012324005365371704,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.0019501633942127228,
+          0.006619608961045742
+        ]
+      },
+      "edge_mae": {
+        "mean": -0.014949526637792587,
+        "median": -0.001622932031750679,
+        "positive_clusters": 2,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.05870616063475609,
+          0.015480512753129005
+        ]
+      },
+      "temporal_error": {
+        "mean": -0.10257354378700234,
+        "median": -0.06694737672805773,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.2278389791647587,
+          -0.012934275468190592
+        ]
+      }
+    },
+    "scope": "train seeds and input-noise repeats averaged within scene; legacy has only 2 source clips; exploratory intervals are not confirmatory inference",
+    "contrast": "combined_GT_assisted_change"
+  },
+  {
+    "first_minus_second": [
+      "pre_fixedhalf__reference_common",
+      "pre_fixedhalf__current"
+    ],
+    "domain": "dev_native",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": 0.11265713543524924,
+        "ssim_rgb": -0.006997423246502876,
+        "edge_mae": 0.03424501419067383,
+        "temporal_error": 0.11995310783386248
+      },
+      "video_47": {
+        "psnr_rgb": -0.537718141155306,
+        "ssim_rgb": 0.01951923593878746,
+        "edge_mae": -0.1922556534409523,
+        "temporal_error": -1.0258378267288206
+      },
+      "video_91": {
+        "psnr_rgb": -0.38795547340977166,
+        "ssim_rgb": 0.018165234476327896,
+        "edge_mae": -0.1963142491877079,
+        "temporal_error": -1.560129181543986
+      },
+      "video_121": {
+        "psnr_rgb": 0.190814703044623,
+        "ssim_rgb": 0.012408601120114326,
+        "edge_mae": -0.19430068507790565,
+        "temporal_error": -1.0294640541076658
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": -0.15555044402130136,
+        "median": -0.1376491689872612,
+        "positive_clusters": 2,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.46283680728253884,
+          0.15173591923993612
+        ]
+      },
+      "ssim_rgb": {
+        "mean": 0.010773912072181702,
+        "median": 0.015286917798221111,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.0007067588157951832,
+          0.018842235207557678
+        ]
+      },
+      "edge_mae": {
+        "mean": -0.137156393378973,
+        "median": -0.19327816925942898,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.19530746713280678,
+          -0.022891410626471043
+        ]
+      },
+      "temporal_error": {
+        "mean": -0.8738694886366525,
+        "median": -1.0276509404182432,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -1.4265563428401946,
+          -0.1674011826515196
+        ]
+      }
+    },
+    "scope": "train seeds and input-noise repeats averaged within scene; legacy has only 2 source clips; exploratory intervals are not confirmatory inference",
+    "contrast": "actual_history"
+  },
+  {
+    "first_minus_second": [
+      "pre_learnzero__teacher_common",
+      "pre_learnzero__teacher_default"
+    ],
+    "domain": "dev_native",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": 0.029193176340477578,
+        "ssim_rgb": 0.001905849203467369,
+        "edge_mae": -0.014066491276025772,
+        "temporal_error": -0.04266102313995379
+      },
+      "video_47": {
+        "psnr_rgb": 0.020672839480713634,
+        "ssim_rgb": -0.0009194780141115189,
+        "edge_mae": 0.008870292454957962,
+        "temporal_error": 0.006156500180562574
+      },
+      "video_91": {
+        "psnr_rgb": 0.00035489125213672423,
+        "ssim_rgb": -1.531466841697693e-05,
+        "edge_mae": 0.00027439743280410767,
+        "temporal_error": 7.080237070677953e-05
+      },
+      "video_121": {
+        "psnr_rgb": -0.0035637584702854497,
+        "ssim_rgb": -4.2673200368881226e-05,
+        "edge_mae": 0.0009139496833086014,
+        "temporal_error": 0.0006225983301797466
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": 0.011664287150760622,
+        "median": 0.010513865366425179,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.0016044336090743627,
+          0.024933007910595606
+        ]
+      },
+      "ssim_rgb": {
+        "mean": 0.00023209583014249802,
+        "median": -2.8993934392929077e-05,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.0006934371776878834,
+          0.0014187186025083065
+        ]
+      },
+      "edge_mae": {
+        "mean": -0.0010019629262387753,
+        "median": 0.0005941735580563545,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.010321381036192179,
+          0.0067213186994194984
+        ]
+      },
+      "temporal_error": {
+        "mean": -0.008952780564626173,
+        "median": 0.0003467003504432631,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.031840117772420407,
+          0.0046350757280986254
+        ]
+      }
+    },
+    "scope": "train seeds and input-noise repeats averaged within scene; legacy has only 2 source clips; exploratory intervals are not confirmatory inference",
+    "contrast": "mask_restriction"
+  },
+  {
+    "first_minus_second": [
+      "pre_learnzero__reference_common",
+      "pre_learnzero__teacher_common"
+    ],
+    "domain": "dev_native",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": 0.04933610678204303,
+        "ssim_rgb": 0.0035825110971927643,
+        "edge_mae": -0.03891399875283241,
+        "temporal_error": -0.1800998846689863
+      },
+      "video_47": {
+        "psnr_rgb": -0.035014463102868376,
+        "ssim_rgb": -0.0010154154151678085,
+        "edge_mae": 0.007699171081185341,
+        "temporal_error": -0.0066814422607421875
+      },
+      "video_91": {
+        "psnr_rgb": 0.00390717159033116,
+        "ssim_rgb": 0.00022762268781661987,
+        "edge_mae": -0.0038337334990501404,
+        "temporal_error": -0.07372299830118756
+      },
+      "video_121": {
+        "psnr_rgb": 0.0026559959180438852,
+        "ssim_rgb": 0.00018534064292907715,
+        "edge_mae": -0.0020430926233530045,
+        "temporal_error": -0.027067844072977687
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": 0.005221202796887425,
+        "median": 0.0032815837541875226,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.025284054429568492,
+          0.037666079066043245
+        ]
+      },
+      "ssim_rgb": {
+        "mean": 0.0007450147531926632,
+        "median": 0.0002064816653728485,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.0007046558894217014,
+          0.0027332184836268425
+        ]
+      },
+      "edge_mae": {
+        "mean": -0.009272913448512554,
+        "median": -0.0029384130612015724,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.02969627222046256,
+          0.0048159449361264706
+        ]
+      },
+      "temporal_error": {
+        "mean": -0.07189304232597343,
+        "median": -0.05039542118708262,
+        "positive_clusters": 0,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.14184187451998415,
+          -0.016874643166859937
+        ]
+      }
+    },
+    "scope": "train seeds and input-noise repeats averaged within scene; legacy has only 2 source clips; exploratory intervals are not confirmatory inference",
+    "contrast": "flow_choice"
+  },
+  {
+    "first_minus_second": [
+      "pre_learnzero__reference_common",
+      "pre_learnzero__teacher_default"
+    ],
+    "domain": "dev_native",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": 0.07852928312252061,
+        "ssim_rgb": 0.005488360300660133,
+        "edge_mae": -0.052980490028858185,
+        "temporal_error": -0.2227609078089401
+      },
+      "video_47": {
+        "psnr_rgb": -0.014341623622154742,
+        "ssim_rgb": -0.0019348934292793274,
+        "edge_mae": 0.016569463536143303,
+        "temporal_error": -0.0005249420801796134
+      },
+      "video_91": {
+        "psnr_rgb": 0.004262062842467884,
+        "ssim_rgb": 0.00021230801939964294,
+        "edge_mae": -0.0035593360662460327,
+        "temporal_error": -0.07365219593048078
+      },
+      "video_121": {
+        "psnr_rgb": -0.0009077625522415644,
+        "ssim_rgb": 0.00014266744256019592,
+        "edge_mae": -0.001129142940044403,
+        "temporal_error": -0.02644524574279794
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": 0.016885489947648047,
+        "median": 0.0016771501451131599,
+        "positive_clusters": 2,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.009690702005999086,
+          0.058670021703830066
+        ]
+      },
+      "ssim_rgb": {
+        "mean": 0.0009771105833351612,
+        "median": 0.00017748773097991943,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.0013980930671095848,
+          0.004151937086135149
+        ]
+      },
+      "edge_mae": {
+        "mean": -0.01027487637475133,
+        "median": -0.002344239503145218,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.04001765325665474,
+          0.011537263635545969
+        ]
+      },
+      "temporal_error": {
+        "mean": -0.0808458228905996,
+        "median": -0.05004872083663936,
+        "positive_clusters": 0,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.17368199229240455,
+          -0.013485093911488777
+        ]
+      }
+    },
+    "scope": "train seeds and input-noise repeats averaged within scene; legacy has only 2 source clips; exploratory intervals are not confirmatory inference",
+    "contrast": "combined_GT_assisted_change"
+  },
+  {
+    "first_minus_second": [
+      "pre_learnzero__reference_common",
+      "pre_learnzero__current"
+    ],
+    "domain": "dev_native",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": 0.3758094919570567,
+        "ssim_rgb": -0.002069244161248207,
+        "edge_mae": -0.005271166563034058,
+        "temporal_error": -0.12139609654744499
+      },
+      "video_47": {
+        "psnr_rgb": -0.4531491983752076,
+        "ssim_rgb": 0.01703263446688652,
+        "edge_mae": -0.17459742352366447,
+        "temporal_error": -0.8715637922286987
+      },
+      "video_91": {
+        "psnr_rgb": -0.11408568393583707,
+        "ssim_rgb": 0.016293806955218315,
+        "edge_mae": -0.16922806948423386,
+        "temporal_error": -1.3731524546941118
+      },
+      "video_121": {
+        "psnr_rgb": 0.47344547011650207,
+        "ssim_rgb": 0.0074709635227918625,
+        "edge_mae": -0.11704404279589653,
+        "temporal_error": -0.8463613351186119
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": 0.07050501994062852,
+        "median": 0.13086190401060982,
+        "positive_clusters": 2,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.28361744115552234,
+          0.4246274810367794
+        ]
+      },
+      "ssim_rgb": {
+        "mean": 0.009682040195912123,
+        "median": 0.011882385239005089,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          0.0025215186178684235,
+          0.016663220711052418
+        ]
+      },
+      "edge_mae": {
+        "mean": -0.11653517559170723,
+        "median": -0.1431360561400652,
+        "positive_clusters": 0,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.17191274650394917,
+          -0.04626039229333401
+        ]
+      },
+      "temporal_error": {
+        "mean": -0.8031184196472169,
+        "median": -0.8589625636736553,
+        "positive_clusters": 0,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -1.2414546748002369,
+          -0.3089380204677584
+        ]
+      }
+    },
+    "scope": "train seeds and input-noise repeats averaged within scene; legacy has only 2 source clips; exploratory intervals are not confirmatory inference",
+    "contrast": "actual_history"
+  },
+  {
+    "first_minus_second": [
+      "pre_learnhalf__teacher_common",
+      "pre_learnhalf__teacher_default"
+    ],
+    "domain": "dev_native",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": 0.037826752556057386,
+        "ssim_rgb": 0.0021636858582496643,
+        "edge_mae": -0.01624250039458275,
+        "temporal_error": -0.04053396383921326
+      },
+      "video_47": {
+        "psnr_rgb": 0.022365281626669287,
+        "ssim_rgb": -0.000767948105931282,
+        "edge_mae": 0.007936015725135803,
+        "temporal_error": 0.004892587661743164
+      },
+      "video_91": {
+        "psnr_rgb": 0.0012502760463810603,
+        "ssim_rgb": -1.237913966178894e-05,
+        "edge_mae": 0.00024982914328575134,
+        "temporal_error": 4.39564387004765e-05
+      },
+      "video_121": {
+        "psnr_rgb": -0.006082448766022708,
+        "ssim_rgb": -4.4655054807662964e-05,
+        "edge_mae": 0.0009696725755929947,
+        "temporal_error": 0.00047773122787475586
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": 0.013839965365771256,
+        "median": 0.011807778836525173,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.0024160863598208238,
+          0.030096017091363336
+        ]
+      },
+      "ssim_rgb": {
+        "mean": 0.0003346758894622326,
+        "median": -2.8517097234725952e-05,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.0005790558643639088,
+          0.0016116006299853325
+        ]
+      },
+      "edge_mae": {
+        "mean": -0.0017717457376420498,
+        "median": 0.000609750859439373,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.011939457152038813,
+          0.00601446907967329
+        ]
+      },
+      "temporal_error": {
+        "mean": -0.008779922127723716,
+        "median": 0.0002608438332876162,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.030281040072441257,
+          0.003680429855982492
+        ]
+      }
+    },
+    "scope": "train seeds and input-noise repeats averaged within scene; legacy has only 2 source clips; exploratory intervals are not confirmatory inference",
+    "contrast": "mask_restriction"
+  },
+  {
+    "first_minus_second": [
+      "pre_learnhalf__reference_common",
+      "pre_learnhalf__teacher_common"
+    ],
+    "domain": "dev_native",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": 0.06362973082456591,
+        "ssim_rgb": 0.0037664975970983505,
+        "edge_mae": -0.03914586827158928,
+        "temporal_error": -0.1546804984410599
+      },
+      "video_47": {
+        "psnr_rgb": -0.037043840000094974,
+        "ssim_rgb": -0.000882413238286972,
+        "edge_mae": 0.00619988888502121,
+        "temporal_error": -0.0013746738433839667
+      },
+      "video_91": {
+        "psnr_rgb": 0.004906865311635755,
+        "ssim_rgb": 0.00021936558187007904,
+        "edge_mae": -0.0032657161355018616,
+        "temporal_error": -0.06657163302103708
+      },
+      "video_121": {
+        "psnr_rgb": -0.009373274313688285,
+        "ssim_rgb": 0.00020251236855983734,
+        "edge_mae": -0.001993810757994652,
+        "temporal_error": -0.027972658475239998
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": 0.005529870455604602,
+        "median": -0.0022332045010262647,
+        "positive_clusters": 2,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.026556163672162292,
+          0.04537897954000236
+        ]
+      },
+      "ssim_rgb": {
+        "mean": 0.0008264905773103237,
+        "median": 0.0002109389752149582,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.0006069685332477093,
+          0.0028755012899637222
+        ]
+      },
+      "edge_mae": {
+        "mean": -0.009551376570016146,
+        "median": -0.0026297634467482567,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.029857853893190622,
+          0.003833487629890442
+        ]
+      },
+      "temporal_error": {
+        "mean": -0.06264986594518024,
+        "median": -0.04727214574813854,
+        "positive_clusters": 0,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.12300353844960493,
+          -0.014673666159311982
+        ]
+      }
+    },
+    "scope": "train seeds and input-noise repeats averaged within scene; legacy has only 2 source clips; exploratory intervals are not confirmatory inference",
+    "contrast": "flow_choice"
+  },
+  {
+    "first_minus_second": [
+      "pre_learnhalf__reference_common",
+      "pre_learnhalf__teacher_default"
+    ],
+    "domain": "dev_native",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": 0.1014564833806233,
+        "ssim_rgb": 0.005930183455348015,
+        "edge_mae": -0.05538836866617203,
+        "temporal_error": -0.19521446228027317
+      },
+      "video_47": {
+        "psnr_rgb": -0.014678558373425687,
+        "ssim_rgb": -0.001650361344218254,
+        "edge_mae": 0.014135904610157013,
+        "temporal_error": 0.0035179138183591974
+      },
+      "video_91": {
+        "psnr_rgb": 0.0061571413580168155,
+        "ssim_rgb": 0.0002069864422082901,
+        "edge_mae": -0.0030158869922161102,
+        "temporal_error": -0.0665276765823366
+      },
+      "video_121": {
+        "psnr_rgb": -0.015455723079710992,
+        "ssim_rgb": 0.00015785731375217438,
+        "edge_mae": -0.001024138182401657,
+        "temporal_error": -0.027494927247365242
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": 0.019369835821375858,
+        "median": -0.004260708507704436,
+        "positive_clusters": 2,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.01506714072656834,
+          0.07242272294211105
+        ]
+      },
+      "ssim_rgb": {
+        "mean": 0.0011611664667725563,
+        "median": 0.00018242187798023224,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.001186024397611618,
+          0.004487101919949055
+        ]
+      },
+      "edge_mae": {
+        "mean": -0.011323122307658195,
+        "median": -0.0020200125873088837,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.041797311045229435,
+          0.009847956709563732
+        ]
+      },
+      "temporal_error": {
+        "mean": -0.07142978807290395,
+        "median": -0.04701130191485092,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.1532845785220462,
+          -0.011988506714503022
+        ]
+      }
+    },
+    "scope": "train seeds and input-noise repeats averaged within scene; legacy has only 2 source clips; exploratory intervals are not confirmatory inference",
+    "contrast": "combined_GT_assisted_change"
+  },
+  {
+    "first_minus_second": [
+      "pre_learnhalf__reference_common",
+      "pre_learnhalf__current"
+    ],
+    "domain": "dev_native",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": 0.24192574054463734,
+        "ssim_rgb": -0.004276515915989876,
+        "edge_mae": 0.020791973918676376,
+        "temporal_error": 0.02818296750386562
+      },
+      "video_47": {
+        "psnr_rgb": -0.4958252603776252,
+        "ssim_rgb": 0.014134110882878304,
+        "edge_mae": -0.15791954472661018,
+        "temporal_error": -0.7824346423149109
+      },
+      "video_91": {
+        "psnr_rgb": -0.5242696780861849,
+        "ssim_rgb": 0.01368383876979351,
+        "edge_mae": -0.14392323046922684,
+        "temporal_error": -1.2171978553136196
+      },
+      "video_121": {
+        "psnr_rgb": 0.5881456337867128,
+        "ssim_rgb": 0.007026674225926399,
+        "edge_mae": -0.11650533229112625,
+        "temporal_error": -0.733422489960988
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": -0.04750589103311498,
+        "median": -0.12694975991649393,
+        "positive_clusters": 2,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.510047469231905,
+          0.41503568716567507
+        ]
+      },
+      "ssim_rgb": {
+        "mean": 0.007642026990652084,
+        "median": 0.010355256497859955,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          0.00021357275545597076,
+          0.013908974826335907
+        ]
+      },
+      "edge_mae": {
+        "mean": -0.09938903339207172,
+        "median": -0.13021428138017654,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.1509213875979185,
+          -0.020386827178299427
+        ]
+      },
+      "temporal_error": {
+        "mean": -0.6762180050214133,
+        "median": -0.7579285661379495,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -1.0962540139754617,
+          -0.1744714349508285
+        ]
+      }
+    },
+    "scope": "train seeds and input-noise repeats averaged within scene; legacy has only 2 source clips; exploratory intervals are not confirmatory inference",
+    "contrast": "actual_history"
+  },
+  {
+    "first_minus_second": [
+      "post_fixedhalf__teacher_common",
+      "post_fixedhalf__teacher_default"
+    ],
+    "domain": "dev_native",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": 0.09502646899615996,
+        "ssim_rgb": 0.003411034122109413,
+        "edge_mae": -0.023005474358797073,
+        "temporal_error": -0.06087731520334927
+      },
+      "video_47": {
+        "psnr_rgb": 0.012483555228243404,
+        "ssim_rgb": -0.0011406242847442627,
+        "edge_mae": 0.010015608742833138,
+        "temporal_error": 0.007581512133280288
+      },
+      "video_91": {
+        "psnr_rgb": -1.5461031981800488e-05,
+        "ssim_rgb": -1.771189272403717e-05,
+        "edge_mae": 0.00034537166357040405,
+        "temporal_error": -8.176962534633958e-05
+      },
+      "video_121": {
+        "psnr_rgb": -0.003977789626762984,
+        "ssim_rgb": -5.691312253475189e-05,
+        "edge_mae": 0.0012660734355449677,
+        "temporal_error": 9.372631708792767e-05
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": 0.025879193391414645,
+        "median": 0.006234047098130802,
+        "positive_clusters": 2,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.0019966253293723923,
+          0.07126598648912452
+        ]
+      },
+      "ssim_rgb": {
+        "mean": 0.0005489462055265903,
+        "median": -3.731250762939453e-05,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.0008598961867392063,
+          0.002544047310948372
+        ]
+      },
+      "edge_mae": {
+        "mean": -0.002844605129212141,
+        "median": 0.0008057225495576859,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.016937587410211563,
+          0.007598049473017454
+        ]
+      },
+      "temporal_error": {
+        "mean": -0.013320961594581848,
+        "median": 5.978345870794044e-06,
+        "positive_clusters": 2,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.04563455482323997,
+          0.005665691693623631
+        ]
+      }
+    },
+    "scope": "train seeds and input-noise repeats averaged within scene; legacy has only 2 source clips; exploratory intervals are not confirmatory inference",
+    "contrast": "mask_restriction"
+  },
+  {
+    "first_minus_second": [
+      "post_fixedhalf__reference_common",
+      "post_fixedhalf__teacher_common"
+    ],
+    "domain": "dev_native",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": 0.12958570051558382,
+        "ssim_rgb": 0.005478989332914352,
+        "edge_mae": -0.05558827891945839,
+        "temporal_error": -0.23802515665690116
+      },
+      "video_47": {
+        "psnr_rgb": -0.018307552877722344,
+        "ssim_rgb": -0.0014006104320287704,
+        "edge_mae": 0.01119469664990902,
+        "temporal_error": -0.0063130696614579485
+      },
+      "video_91": {
+        "psnr_rgb": -0.002813792164594986,
+        "ssim_rgb": 0.00024840421974658966,
+        "edge_mae": -0.005254071205854416,
+        "temporal_error": -0.09172228972117091
+      },
+      "video_121": {
+        "psnr_rgb": -0.02188760871605666,
+        "ssim_rgb": 0.00015306472778320312,
+        "edge_mae": -0.0012151561677455902,
+        "temporal_error": -0.0387698054313661
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": 0.021644186689302458,
+        "median": -0.010560672521158665,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.020097580796889503,
+          0.09261238716725728
+        ]
+      },
+      "ssim_rgb": {
+        "mean": 0.0011199619621038437,
+        "median": 0.0002007344737648964,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.0009883567690849304,
+          0.004147508181631565
+        ]
+      },
+      "edge_mae": {
+        "mean": -0.012715702410787344,
+        "median": -0.003234613686800003,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.04199499823153019,
+          0.007082504685968161
+        ]
+      },
+      "temporal_error": {
+        "mean": -0.09370758036772403,
+        "median": -0.0652460475762685,
+        "positive_clusters": 0,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.1882113188505174,
+          -0.022541437546412024
+        ]
+      }
+    },
+    "scope": "train seeds and input-noise repeats averaged within scene; legacy has only 2 source clips; exploratory intervals are not confirmatory inference",
+    "contrast": "flow_choice"
+  },
+  {
+    "first_minus_second": [
+      "post_fixedhalf__reference_common",
+      "post_fixedhalf__teacher_default"
+    ],
+    "domain": "dev_native",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": 0.2246121695117438,
+        "ssim_rgb": 0.008890023455023766,
+        "edge_mae": -0.07859375327825546,
+        "temporal_error": -0.29890247186025043
+      },
+      "video_47": {
+        "psnr_rgb": -0.00582399764947894,
+        "ssim_rgb": -0.002541234716773033,
+        "edge_mae": 0.021210305392742157,
+        "temporal_error": 0.0012684424718223397
+      },
+      "video_91": {
+        "psnr_rgb": -0.0028292531965767864,
+        "ssim_rgb": 0.0002306923270225525,
+        "edge_mae": -0.004908699542284012,
+        "temporal_error": -0.09180405934651725
+      },
+      "video_121": {
+        "psnr_rgb": -0.025865398342819645,
+        "ssim_rgb": 9.615160524845123e-05,
+        "edge_mae": 5.091726779937744e-05,
+        "temporal_error": -0.03867607911427817
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": 0.047523380080717104,
+        "median": -0.004326625423027863,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.02010636205625893,
+          0.1670031277214381
+        ]
+      },
+      "ssim_rgb": {
+        "mean": 0.001668908167630434,
+        "median": 0.00016342196613550186,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.0018482529558241367,
+          0.006691555492579937
+        ]
+      },
+      "edge_mae": {
+        "mean": -0.015560307539999485,
+        "median": -0.002428891137242317,
+        "positive_clusters": 2,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.05893258564174175,
+          0.014680554158985615
+        ]
+      },
+      "temporal_error": {
+        "mean": -0.10702854196230588,
+        "median": -0.06524006923039771,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.23384587367375737,
+          -0.018703818321227916
+        ]
+      }
+    },
+    "scope": "train seeds and input-noise repeats averaged within scene; legacy has only 2 source clips; exploratory intervals are not confirmatory inference",
+    "contrast": "combined_GT_assisted_change"
+  },
+  {
+    "first_minus_second": [
+      "post_fixedhalf__reference_common",
+      "post_fixedhalf__current"
+    ],
+    "domain": "dev_native",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": -0.0359509777735596,
+        "ssim_rgb": -0.006312498822808266,
+        "edge_mae": 0.018607094883918762,
+        "temporal_error": 0.03642888069152761
+      },
+      "video_47": {
+        "psnr_rgb": -0.243811258284218,
+        "ssim_rgb": 0.021494479849934578,
+        "edge_mae": -0.20186101458966732,
+        "temporal_error": -1.1036539475123082
+      },
+      "video_91": {
+        "psnr_rgb": -0.44376554446176897,
+        "ssim_rgb": 0.019648339599370956,
+        "edge_mae": -0.20956923812627792,
+        "temporal_error": -1.6439764738082885
+      },
+      "video_121": {
+        "psnr_rgb": 0.33163450783709436,
+        "ssim_rgb": 0.010498227551579475,
+        "edge_mae": -0.15986960753798485,
+        "temporal_error": -1.1390373229980468
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": -0.09797331817061306,
+        "median": -0.1398811180288888,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.3437884013729935,
+          0.18777306630676627
+        ]
+      },
+      "ssim_rgb": {
+        "mean": 0.011332137044519186,
+        "median": 0.015073283575475216,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          0.00017771078273653984,
+          0.020571409724652767
+        ]
+      },
+      "edge_mae": {
+        "mean": -0.13817319134250283,
+        "median": -0.18086531106382608,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.20571512635797262,
+          -0.03650993248447776
+        ]
+      },
+      "temporal_error": {
+        "mean": -0.9625597159067789,
+        "median": -1.1213456352551776,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -1.5088958422342933,
+          -0.257437670230866
+        ]
+      }
+    },
+    "scope": "train seeds and input-noise repeats averaged within scene; legacy has only 2 source clips; exploratory intervals are not confirmatory inference",
+    "contrast": "actual_history"
+  },
+  {
+    "first_minus_second": [
+      "R14_postwarp05__teacher_common",
+      "R14_postwarp05__teacher_default"
+    ],
+    "domain": "dev_native",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": 0.11330803051101768,
+        "ssim_rgb": 0.002790777012705803,
+        "edge_mae": -0.019100654870271683,
+        "temporal_error": -0.04528264204660992
+      },
+      "video_47": {
+        "psnr_rgb": -0.005478211321449322,
+        "ssim_rgb": -0.001136086881160736,
+        "edge_mae": 0.008569762110710144,
+        "temporal_error": 0.004278008143107304
+      },
+      "video_91": {
+        "psnr_rgb": -0.0008360007574061967,
+        "ssim_rgb": 3.5017728805541992e-06,
+        "edge_mae": 9.967014193534851e-05,
+        "temporal_error": -0.0006129662195841767
+      },
+      "video_121": {
+        "psnr_rgb": -0.001326194550077986,
+        "ssim_rgb": -2.0034611225128174e-05,
+        "edge_mae": 0.0009191073477268219,
+        "temporal_error": -0.0010320464769999482
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": 0.026416905970521043,
+        "median": -0.0010810976537420913,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.004317658680438541,
+          0.08464947424574376
+        ]
+      },
+      "ssim_rgb": {
+        "mean": 0.0004095393233001232,
+        "median": -8.266419172286987e-06,
+        "positive_clusters": 2,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.0008511897176504135,
+          0.00208807410672307
+        ]
+      },
+      "edge_mae": {
+        "mean": -0.002378028817474842,
+        "median": 0.0005093887448310852,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.014095714315772057,
+          0.006452239118516445
+        ]
+      },
+      "temporal_error": {
+        "mean": -0.010662411650021686,
+        "median": -0.0008225063482920625,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.034115223089853486,
+          0.0029504944880804906
+        ]
+      }
+    },
+    "scope": "train seeds and input-noise repeats averaged within scene; legacy has only 2 source clips; exploratory intervals are not confirmatory inference",
+    "contrast": "mask_restriction"
+  },
+  {
+    "first_minus_second": [
+      "R14_postwarp05__reference_common",
+      "R14_postwarp05__teacher_common"
+    ],
+    "domain": "dev_native",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": 0.1261014428015379,
+        "ssim_rgb": 0.005551282316446304,
+        "edge_mae": -0.05452553555369377,
+        "temporal_error": -0.2184170246124273
+      },
+      "video_47": {
+        "psnr_rgb": -0.08030560044455015,
+        "ssim_rgb": -0.001576293259859085,
+        "edge_mae": 0.011282609775662422,
+        "temporal_error": 0.008554200331369888
+      },
+      "video_91": {
+        "psnr_rgb": 0.011754963316892741,
+        "ssim_rgb": 0.00012229196727275848,
+        "edge_mae": -0.002849176526069641,
+        "temporal_error": -0.08676592508951808
+      },
+      "video_121": {
+        "psnr_rgb": 0.009178719428312831,
+        "ssim_rgb": 0.00023173168301582336,
+        "edge_mae": -0.002618633210659027,
+        "temporal_error": -0.03228445847829198
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": 0.01668238127554833,
+        "median": 0.010466841372602786,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.05729045950418943,
+          0.09687076195823163
+        ]
+      },
+      "ssim_rgb": {
+        "mean": 0.0010822531767189503,
+        "median": 0.00017701182514429092,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.001124287024140358,
+          0.004194034729152918
+        ]
+      },
+      "edge_mae": {
+        "mean": -0.012177683878690004,
+        "median": -0.002733904868364334,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.041548809967935085,
+          0.007749663200229406
+        ]
+      },
+      "temporal_error": {
+        "mean": -0.08222830196221687,
+        "median": -0.05952519178390503,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.17188388307889346,
+          -0.011865129073461045
+        ]
+      }
+    },
+    "scope": "train seeds and input-noise repeats averaged within scene; legacy has only 2 source clips; exploratory intervals are not confirmatory inference",
+    "contrast": "flow_choice"
+  },
+  {
+    "first_minus_second": [
+      "R14_postwarp05__reference_common",
+      "R14_postwarp05__teacher_default"
+    ],
+    "domain": "dev_native",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": 0.23940947331255558,
+        "ssim_rgb": 0.008342059329152107,
+        "edge_mae": -0.07362619042396545,
+        "temporal_error": -0.2636996666590372
+      },
+      "video_47": {
+        "psnr_rgb": -0.08578381176599947,
+        "ssim_rgb": -0.002712380141019821,
+        "edge_mae": 0.019852371886372566,
+        "temporal_error": 0.012832208474477191
+      },
+      "video_91": {
+        "psnr_rgb": 0.010918962559486545,
+        "ssim_rgb": 0.00012579374015331268,
+        "edge_mae": -0.0027495063841342926,
+        "temporal_error": -0.08737889130910226
+      },
+      "video_121": {
+        "psnr_rgb": 0.007852524878234846,
+        "ssim_rgb": 0.0002116970717906952,
+        "edge_mae": -0.0016995258629322052,
+        "temporal_error": -0.033316504955291926
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": 0.04309928724606937,
+        "median": 0.009385743718860695,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.06160811818462797,
+          0.1815202362039754
+        ]
+      },
+      "ssim_rgb": {
+        "mean": 0.0014917925000190735,
+        "median": 0.00016874540597200394,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.001981360837817192,
+          0.006287992931902409
+        ]
+      },
+      "edge_mae": {
+        "mean": -0.014555712696164846,
+        "median": -0.002224516123533249,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.05564452428370714,
+          0.014201902318745852
+        ]
+      },
+      "temporal_error": {
+        "mean": -0.09289071361223855,
+        "median": -0.06034769813219709,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.2061038762331009,
+          -0.010242148240407367
+        ]
+      }
+    },
+    "scope": "train seeds and input-noise repeats averaged within scene; legacy has only 2 source clips; exploratory intervals are not confirmatory inference",
+    "contrast": "combined_GT_assisted_change"
+  },
+  {
+    "first_minus_second": [
+      "R14_postwarp05__reference_common",
+      "R14_postwarp05__current"
+    ],
+    "domain": "dev_native",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": -0.5464199421051461,
+        "ssim_rgb": -0.01045810803771019,
+        "edge_mae": 0.06384364515542984,
+        "temporal_error": 0.1611071666081747
+      },
+      "video_47": {
+        "psnr_rgb": -0.13168114053075541,
+        "ssim_rgb": 0.016413038596510887,
+        "edge_mae": -0.15975637920200825,
+        "temporal_error": -0.9989023486773174
+      },
+      "video_91": {
+        "psnr_rgb": 0.26072140966546087,
+        "ssim_rgb": 0.0154168251901865,
+        "edge_mae": -0.15730075165629387,
+        "temporal_error": -1.5494161605834962
+      },
+      "video_121": {
+        "psnr_rgb": 0.13849910354754513,
+        "ssim_rgb": 0.005884822458028793,
+        "edge_mae": -0.09064457565546036,
+        "temporal_error": -0.9829768260320031
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": -0.06972014235572388,
+        "median": 0.0034089815083948594,
+        "positive_clusters": 2,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.3751901806919733,
+          0.199610256606503
+        ]
+      },
+      "ssim_rgb": {
+        "mean": 0.006814144551753998,
+        "median": 0.010650823824107647,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.003989374730736017,
+          0.015914931893348694
+        ]
+      },
+      "edge_mae": {
+        "mean": -0.08596451533958316,
+        "median": -0.12397266365587711,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.15852856542915106,
+          0.008557545952498913
+        ]
+      },
+      "temporal_error": {
+        "mean": -0.8425470421711605,
+        "median": -0.9909395873546603,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -1.407806326945623,
+          -0.12889521221319833
+        ]
+      }
+    },
+    "scope": "train seeds and input-noise repeats averaged within scene; legacy has only 2 source clips; exploratory intervals are not confirmatory inference",
+    "contrast": "actual_history"
+  }
+]
