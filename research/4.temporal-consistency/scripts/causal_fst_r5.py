@@ -3,7 +3,7 @@ import torch
 from torch import nn
 
 MODES = ('plain', 'spatial_bilinear', 'temporal_bilinear', 'temporal_post',
-         'tsm_learned', 'tsm_fixed')
+         'tsm_learned', 'tsm_fixed', 'spatial_post')
 
 
 def coarse_pool(x):
@@ -41,7 +41,7 @@ class CausalFST(nn.Module):
         self.history_mode = 'causal'
         self.state = None
         self.state_input_shape = None
-        if mode in ('spatial_bilinear', 'temporal_bilinear', 'temporal_post'):
+        if mode in ('spatial_bilinear', 'temporal_bilinear', 'temporal_post', 'spatial_post'):
             self.branch = nn.Conv2d(12, 12, 3, padding=1, groups=12, bias=False)
             nn.init.zeros_(self.branch.weight)
         if mode == 'tsm_learned':
@@ -63,21 +63,21 @@ class CausalFST(nn.Module):
     def _state(self, u):
         if self.mode.startswith('tsm_'):
             return u[:, :3]
-        return coarse_pool(self._ordinary(u) if self.mode == 'temporal_post' else u)
+        return coarse_pool(self._ordinary(u) if self.mode.endswith('_post') else u)
 
     def _body(self, u, current, previous):
         if self.mode == 'plain':
             return self._ordinary(u)
         if self.history_mode == 'off':
             return self._ordinary(u)
-        if self.history_mode == 'current' or self.mode == 'spatial_bilinear':
+        if self.history_mode == 'current' or self.mode.startswith('spatial_'):
             previous = current
         if self.mode.startswith('tsm_'):
             gamma = self.gamma if self.mode == 'tsm_learned' else 1.
             shifted = u[:, :3]+gamma*(previous-u[:, :3])
             return self._ordinary(torch.cat([shifted, u[:, 3:]], 1))
         delta = coarse_up(self.branch(previous), u.shape[-2:])
-        if self.mode == 'temporal_post':
+        if self.mode.endswith('_post'):
             return self._ordinary(u)+delta
         b = self.backbone.body
         return (b.weight1*u)*(b.weight2*(u+delta))+b.bias
@@ -112,7 +112,7 @@ class CausalFST(nn.Module):
             previous = current
         result = self._finish(self._body(u, current, previous))
         # clone is essential: a 3-channel view would retain all 12 channels.
-        self.state = None if self.mode == 'spatial_bilinear' else current.detach().clone()
+        self.state = None if self.mode.startswith('spatial_') else current.detach().clone()
         self.state_input_shape = x.shape
         return result
 
