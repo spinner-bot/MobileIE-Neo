@@ -18,13 +18,15 @@ def write(path, value):
 
 
 def prediction(net, name, low):
-    if name == 'original':
-        return net(low.flatten(0, 1)).reshape_as(low)
-    if name == 'spatial':
-        return net(low.flatten(0, 1))[0].reshape_as(low)
     state, outputs = None, []
     for frame in low.unbind(1):
-        output, state = net(frame, state)
+        if name == 'original':
+            output = net(frame)
+        elif name == 'spatial':
+            output = net(frame, history='current')[0]
+        else:
+            assert name == 'causal'
+            output, state = net(frame, state)
         outputs.append(output)
     return torch.stack(outputs, dim=1)
 
@@ -51,6 +53,7 @@ def main():
     checkpoints.mkdir(parents=True, exist_ok=False)
     files = ['budget_causal_r33.py', 'dynamic_training_r34.py', 'train_dynamic_r34.py', 'exploration_r2_data.py']
     config = {'seed': args.seed, 'models': list(nets), 'steps_per_model': 4000, 'batch': 4, 'frames': 4, 'patch': 128,
+              'batch_scheduling': 'Four sequential frame batches of B=4 for every control; no B*T flatten fast path',
               'objective': 'MSE over all four supervised frames', 'optimizer': 'Adam', 'lr': 1e-4,
               'betas': [.9, .999], 'eps': 1e-8, 'weight_decay': 0, 'global_norm_clip': 1,
               'dtype': 'float32', 'device': str(device), 'deterministic_algorithms': True,
