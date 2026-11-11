@@ -212,12 +212,24 @@ def main():
         classical = read(Path('report/exploration-r36-classical/domain_summary.json'))
         classical_gates = read(Path('report/exploration-r36-classical/gates.json'))
         assert len(classical) == 4 and len(classical_gates) == 4
+        classical_cost = {}
+        if (BASE/'report/exploration-r36-runtime/audit.json').exists():
+            classical_cost_audit = read(Path('report/exploration-r36-runtime/audit.json'))
+            assert classical_cost_audit['passed'] and classical_cost_audit['runs'] == 18
+            measured = read(Path('report/exploration-r36-runtime/cost.json'))
+            classical_cost = {r['method']: r for r in measured}
+            assert set(classical_cost) == {'raw', 'finite_self05', 'recursive_self05'}
         for r in classical:
+            measured = classical_cost.get(r['method'])
+            if measured:
+                assert measured['online_history_storage_bytes'] == r['online_history_storage_bytes']
             classical_rows.append({**r, 'predictor_params': 4075,
                 'protocol': 'R36 same R34 original/final4000 weights; 3 DEV videos x 2 noise conditions x 2 seeds; CPU',
                 'flow_at_inference': r['method'] != 'raw', 'future_frames': 0,
                 'extra_motion_teacher_params': 0, 'phone_latency_ms': None,
-                'standalone_cpu_pipeline_ms': None,
+                'standalone_cpu_median_pipeline_ms_480x854': None if measured is None else measured['median_pipeline_ms_per_frame'],
+                'standalone_cpu_min_run_average_ms': None if measured is None else measured['min_pipeline_ms_per_frame'],
+                'standalone_cpu_max_run_average_ms': None if measured is None else measured['max_pipeline_ms_per_frame'],
                 'gate_vs_finite_both_seeds': classical_audit['gate_passed_both_seeds'].get(r['method']),
                 'scope': 'Fixed traditional control, not a novel method or calibrated covariance; no shared-stage speed rank.'})
         with (out/'classical_evidence.csv').open('w', newline='') as stream:
@@ -226,13 +238,14 @@ def main():
             writer.writerows(classical_rows)
         lines += ['', '## R36强原始底座上的传统递归对照', '',
                   '同R34原始final4000权重与同R30输入，两seed完整48行。有限post只使用上一raw，递归EMA另保存上一融合输出；三post共享同一own-raw半尺度FB运动，部署不需要第二CNN。', '',
-                  '|方法|PSNR|SSIM|时序↓|边缘↓|在线历史MiB@480×854|',
-                  '|---|---:|---:|---:|---:|---:|']
+                  '|方法|PSNR|SSIM|时序↓|边缘↓|在线历史MiB@480×854|同轮CPU中位ms/帧|',
+                  '|---|---:|---:|---:|---:|---:|---:|']
         for r in classical_rows:
+            cpu = r['standalone_cpu_median_pipeline_ms_480x854']
             lines.append('|'+r['method']+'|'+'|'.join(f'{r[m]:.6f}' for m in ['psnr_rgb', 'ssim_rgb', 'temporal_error', 'edge_mae'])
-                         +f"|{r['online_history_storage_bytes']/2**20:.3f}|")
+                         +f"|{r['online_history_storage_bytes']/2**20:.3f}|"+('未测' if cpu is None else f'{cpu:.3f}')+'|')
         lines += ['', f"固定递归EMA相对有限post双seed联合筛查：{classical_audit['gate_passed_both_seeds']['recursive_self05']}；启发式adaptive：{classical_audit['gate_passed_both_seeds']['adaptive_recursive']}。递归是既有传统机制，不算创新。后续模型必须同时对照这个更强参考；不能只打败有限两帧post。", '',
-                  '这些为三开发源上的固定控制。自适应方差未经校准，不等价复现BNLK/EMVD；共享阶段计时不作独立流水线速度，手机仍未测。[传统机器表](classical_evidence.csv)、[逐seed与限制](../exploration-r36-classical/tables.md)。']
+                  '这些为三开发源上的固定控制。自适应方差未经校准，不等价复现BNLK/EMVD；共享质量阶段计时不作独立流水线速度。若CPU栏已填，来自R36独立raw/finite/recursive同轮18次流水线，固定单片前16帧，六个run均值取中位；不能和上方R34旧轮次混排，min–max见机器表。手机仍未测。[传统机器表](classical_evidence.csv)、[逐seed与限制](../exploration-r36-classical/tables.md)。']
     (out/'README.md').write_text('\n'.join(lines)+'\n')
     (out/'sources.json').write_text(json.dumps({'sources': sources, 'rows': len(rows),
         'external_data_prepared': {'DAVIS_source_videos': 3, 'DAVIS_synthetic_conditions': 6,
