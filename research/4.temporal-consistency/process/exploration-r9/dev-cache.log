@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/prepare_development_r9.py", line 53, in <module>
+    if __name__=='__main__':main()
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/prepare_development_r9.py", line 31, in main
+    raw,_=inference(net,arrays['input'],'cuda',1)
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/explore_temporal_controls.py", line 103, in inference
+    if device.type == "cuda":
+AttributeError: 'str' object has no attribute 'type'
