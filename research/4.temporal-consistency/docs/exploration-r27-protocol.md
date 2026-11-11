@@ -40,7 +40,7 @@ CPU门槛过后才安排GPU同样验证，仍每次两次空闲采样/同组最�
 
 CPU前向/stream/current门槛已过，copy一次Adam首测失败未定位，新增诊断六组全部精确但不能抹去首败；CUDA仍等待空闲。本节仅冻结前向，不启动正式质量训练，也不依赖未通过的优化器门槛。
 
-固定5套4075参数权重：官方、R26 plain Charb双seed4000（与R14一致）、R26 plain MSE双seed4000；原四native DEV/16帧、关闭reset，五body算子各current/causal，共200逻辑配置。所有current以及copy causal应与同权重原plain前向/指标精确一致并作显式alias；每权重/片段六套实际输出（五算子causal、plain finite post .1/.5，其中copy同原plain，合计七套，140指标计算/60精确current额外别名口径需按下文明确）。
+固定5套4075参数权重：官方、R26 plain Charb双seed4000（与R14一致）、R26 plain MSE双seed4000；原四native DEV/16帧、关闭reset，五body算子各current/causal，共200模型逻辑配置，再加40经典post配置。所有current应与同权重原plain前向/指标精确一致并作显式alias；每权重/片段七套实际输出（五算子causal、plain finite post .1/.5，其中copy即原plain），共140指标计算。
 
 确切计数：5权重×4片×(5算子×2history+2经典post)=240逻辑行；其中20个copy current和80个其它current均alias到copy causal，共100alias；实际神经推理100序列（五causal算子），另40经典post仅warp/blend，指标140套。所有字段来源固定输入teacher flow/mask，评价用原reference flow/mask，不读最终保留素材。模型冻结，绝不从GT计算部署flow；当前极限/首帧归一化差<=2e-5，逐帧及逐片alias精确，既存CPU plain参考可匹配时另核验，不混CUDA数字。
 
