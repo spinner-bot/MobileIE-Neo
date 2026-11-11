@@ -2,6 +2,7 @@
 import hashlib
 import io
 import json
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 import time
 from urllib.request import Request, urlopen
@@ -33,11 +34,21 @@ class RemoteZip(io.RawIOBase):
         if count == 0:
             return b''
         start, end = self.position, self.position+count-1
-        request = Request(self.url, headers={'Range': f'bytes={start}-{end}', 'If-Match': self.etag})
-        with urlopen(request, timeout=30) as response:
-            assert response.status == 206
-            assert response.headers['Content-Range'] == f'bytes {start}-{end}/{self.size}'
-            value = response.read()
+        def part(bounds):
+            a, b = bounds
+            request = Request(self.url, headers={'Range': f'bytes={a}-{b}', 'If-Match': self.etag})
+            with urlopen(request, timeout=30) as response:
+                assert response.status == 206
+                assert response.headers['Content-Range'] == f'bytes {a}-{b}/{self.size}'
+                value = response.read()
+            assert len(value) == b-a+1
+            return value
+        bounds = [(a, min(a+256*1024, end+1)-1) for a in range(start, end+1, 256*1024)]
+        if len(bounds) == 1:
+            value = part(bounds[0])
+        else:
+            with ThreadPoolExecutor(max_workers=4) as pool:
+                value = b''.join(pool.map(part, bounds))
         assert len(value) == count
         self.position += count
         self.transferred += count
