@@ -40,18 +40,18 @@ class RawPairHeadTests(unittest.TestCase):
                 net.reset()
                 streamed = torch.stack([net(low[:,i]) for i in range(2)],1)
                 torch.testing.assert_close(paired,streamed,rtol=2e-5,atol=2e-6)
-                self.assertEqual(net.state_storage_bytes(),0 if mode=='spatial_detail' else 2*3*21*29*4)
+                self.assertEqual(net.state_storage_bytes(),0 if mode.startswith('spatial_') else 2*3*21*29*4)
                 net.reset()
                 self.assertEqual(net.state_storage_bytes(),0)
 
     def test_current_history_folds_concat_and_disables_delta(self):
         x = torch.rand(2,3,21,29,dtype=torch.double)*.1
-        for mode in ['temporal_concat','temporal_delta']:
+        for mode in ['spatial_copy','temporal_concat','temporal_delta']:
             net = RawPairHead(new_model(torch.device('cpu')),mode).double()
             torch.nn.init.normal_(net.auxiliary.weight,std=.001)
             folded = copy.deepcopy(net.backbone)
             with torch.no_grad():
-                if mode=='temporal_concat':
+                if mode in ('spatial_copy','temporal_concat'):
                     folded.head.block1[0].weight.add_(net.auxiliary.weight)
                 net.reset('current')
                 torch.testing.assert_close(net(x),folded(x),rtol=1e-10,atol=1e-11)
