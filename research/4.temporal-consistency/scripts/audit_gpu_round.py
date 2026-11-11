@@ -13,13 +13,16 @@ from explore_temporal_controls import save_json
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--process-dir',required=True)
+    p.add_argument('--additional-process-dir',action='append',default=[])
     p.add_argument('--completed',type=int,required=True)
     p.add_argument('--denied',type=int,default=0)
     p.add_argument('--failed',type=int,default=0)
     p.add_argument('--out',required=True)
     args = p.parse_args()
     jobs,failed,denied,hashes,events = [],[],[],{},[]
-    for path in sorted((ROOT/args.process_dir).glob('gpu-*.json')):
+    directories=[args.process_dir,*args.additional_process_dir]
+    paths=sorted({path for directory in directories for path in (ROOT/directory).glob('gpu-*.json')})
+    for path in paths:
         r = json.loads(path.read_text())
         if len(r['samples'])!=2:
             raise ValueError('two preflight samples required')
@@ -61,7 +64,7 @@ def main():
             active.remove(gpu)
     if peak>4:
         raise ValueError('concurrency limit exceeded')
-    save_json(args.out,{'completed':jobs,'failed':failed,'resource_refusals':denied,'used_physical_gpus':used,
+    save_json(args.out,{'process_directories':directories,'completed':jobs,'failed':failed,'resource_refusals':denied,'used_physical_gpus':used,
         'peak_own_concurrent_jobs':peak,'source_hashes_verified':len(hashes),'source_mismatches':[],
         'process_gpu_seconds':sum(r['process_wall_seconds'] for r in jobs+failed),
         'scope':'includes CPU/data/metrics; not GPU kernel time; preflight and local locks are not a global reservation'})
