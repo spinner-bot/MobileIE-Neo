@@ -40,6 +40,8 @@ def main():
         python = ENVIRONMENT/'bin/python'
         if not (ENVIRONMENT/'pyvenv.cfg').exists():
             subprocess.run(['/usr/bin/python3.10', '-m', 'venv', '--copies', str(ENVIRONMENT)], check=True, env=env)
+        customization = ENVIRONMENT/'lib/python3.10/site-packages/sitecustomize.py'
+        customization.write_bytes((REPO/'scripts/project_sitecustomize.py').read_bytes())
         assert 'include-system-site-packages = false' in (ENVIRONMENT/'pyvenv.cfg').read_text()
         commands = [
             [str(python), '-m', 'pip', 'install', '--only-binary=:all:', '--index-url', 'https://pypi.org/simple', 'pip==25.3'],
