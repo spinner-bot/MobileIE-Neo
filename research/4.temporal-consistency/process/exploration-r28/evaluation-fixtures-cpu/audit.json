@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "causal_checks": [
+    {
+      "mode": "copy",
+      "current_exact": true,
+      "future_prefix_exact": true,
+      "first_exact": true,
+      "reset_current_exact": true,
+      "reset_fresh_subsequence_exact": true
+    },
+    {
+      "mode": "post_transport",
+      "current_exact": true,
+      "future_prefix_exact": true,
+      "first_exact": true,
+      "reset_current_exact": true,
+      "reset_fresh_subsequence_exact": true
+    },
+    {
+      "mode": "post_after_warp",
+      "current_exact": true,
+      "future_prefix_exact": true,
+      "first_exact": true,
+      "reset_current_exact": true,
+      "reset_fresh_subsequence_exact": true
+    },
+    {
+      "mode": "pre_square",
+      "current_exact": true,
+      "future_prefix_exact": true,
+      "first_exact": true,
+      "reset_current_exact": true,
+      "reset_fresh_subsequence_exact": true
+    },
+    {
+      "mode": "cross",
+      "current_exact": true,
+      "future_prefix_exact": true,
+      "first_exact": true,
+      "reset_current_exact": true,
+      "reset_fresh_subsequence_exact": true
+    },
+    {
+      "mode": "r26_pre_mse_spatial",
+      "current_exact": true,
+      "future_prefix_exact": true,
+      "first_exact": true,
+      "reset_current_exact": true,
+      "reset_fresh_subsequence_exact": true
+    }
+  ],
+  "grid_counts": [
+    {
+      "group": "copy",
+      "logical_rows": 2208,
+      "metrics": 1536,
+      "aliases": 672,
+      "neural_sequences": 276
+    },
+    {
+      "group": "post_transport",
+      "logical_rows": 2208,
+      "metrics": 1584,
+      "aliases": 624,
+      "neural_sequences": 464
+    },
+    {
+      "group": "post_after_warp",
+      "logical_rows": 2208,
+      "metrics": 1584,
+      "aliases": 624,
+      "neural_sequences": 464
+    },
+    {
+      "group": "pre_square",
+      "logical_rows": 2208,
+      "metrics": 1584,
+      "aliases": 624,
+      "neural_sequences": 464
+    },
+    {
+      "group": "cross",
+      "logical_rows": 2208,
+      "metrics": 1584,
+      "aliases": 624,
+      "neural_sequences": 464
+    }
+  ],
+  "input_events_sha256": "736cea3dcb1813a34b19733da63eb823bb3484f5c3f6d02608b8a45f07d135d7",
+  "revision": "53d64aa1532112f7a7a81a153b3e6be1e6b34edc",
+  "source_sha256": {
+    "research/4.temporal-consistency/scripts/test_transport_evaluation_r28.py": "9c061fbe61ec11ddf6720d3171e7a0aa8c337c1afd766c1862a691d4e43a3d22",
+    "research/4.temporal-consistency/scripts/transport_evaluation_r28.py": "78125681875cc7b4965482f46b1744d4d0ae5b1edd1de4b01a996b62e105ee60"
+  },
+  "scope": "Implementation/interface/budget gates on official weights; no R28 trained quality results."
+}
