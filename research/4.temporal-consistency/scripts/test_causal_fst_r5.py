@@ -32,7 +32,7 @@ class CausalTests(unittest.TestCase):
             torch.testing.assert_close(ga, ge, rtol=1e-12, atol=1e-12)
 
     def test_parameter_count(self):
-        expected = [4075, 4183, 4183, 4183, 4076, 4075]
+        expected = [4075, 4183, 4183, 4183, 4076, 4075, 4183]
         for mode, count in zip(MODES, expected):
             self.assertEqual(sum(p.numel() for p in self.model(mode).parameters()), count)
 
@@ -42,7 +42,7 @@ class CausalTests(unittest.TestCase):
         reference = self.model('plain')
         y = reference.forward_pair(x)
         y.square().mean().backward()
-        for mode in MODES[:-1]:
+        for mode in [m for m in MODES if m != 'tsm_fixed']:
             net = self.model(mode)
             pred = net.forward_pair(x)
             torch.testing.assert_close(pred, y, rtol=0, atol=0)
@@ -76,7 +76,7 @@ class CausalTests(unittest.TestCase):
             net = self.model(mode)
             with torch.no_grad():
                 net(torch.rand(1, 3, 21, 29))
-                if mode in ('plain', 'spatial_bilinear'):
+                if mode == 'plain' or mode.startswith('spatial_'):
                     self.assertEqual(net.state_storage_bytes(), 0)
                 else:
                     elements = 3*21*29 if mode.startswith('tsm_') else 12*6*8
