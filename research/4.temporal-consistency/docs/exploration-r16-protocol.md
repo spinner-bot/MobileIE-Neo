@@ -25,3 +25,7 @@
 修改：2026-11-11T20:45:29.494514+08:00；作者：Codex  (sqs_A100)；原因：初次成本测量270×480同结构spatial/raw中位2.217/1.353ms，需排查测量顺序状态，不能据此做架构速度解释。
 
 保留原9行测量。新增一次独立GPU任务复核：先原模型1080p固定200次热身，各尺寸以raw/spatial/official、spatial/official/raw、official/raw/spatial轮换三轮；每项原10热身50采样不变，保留全部样本与位置、GPU SM时钟/功率快照，不按更快结果替换旧记录。checkpoint payload改在CPU加载，增量峰值/基线分别记录；新旧基线分配不可直接相减。只在复核后解释顺序/clock影响，不能由差异提前认定原因。
+
+修改：2026-11-11T20:48:56.032082+08:00；作者：Codex  (sqs_A100)；原因：在完整时间组开发集评价前固定定性检查。
+
+固定4原生dev、frame8、seed0 step4000，九格显示input/GT/official、R14 native plain/R16 spatial/R16 raw causal、R16 raw current/R16 aligned causal/R16 aligned current。所有四片均保留，不挑最好的片；模型/源cache SHA与显示FP32数组另记，图仅显示clamp后RGB，不作为量化指标来源。使用既有GT估计flow做评价参考，部署对齐仍共同teacher/inputflow。所有所需seed0检查点均已完成，双seed完整训练继续；另经空闲GPU0预检，最多与1/2/3总并发4同组。
