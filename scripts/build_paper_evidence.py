@@ -204,6 +204,35 @@ def main():
                   '同权重current保留训练后的空间路径；actual内部仍有学习偏移/采样，不能称完全无对齐成本。shared-motion post仅用原共享teacher质量控制，未实测其完整部署成本。[动态机器表](dynamic_evidence.csv)、[配对与分seed全表](../exploration-r34/tables.md)。']
     else:
         lines += ['', 'R34固定动态训练与120行双seed评价尚未产生完整汇总，当前不填入候选质量或成本，不由部分训练loss推断效果。']
+    classical_rows = []
+    if (BASE/'report/exploration-r36-classical/audit.json').exists():
+        classical_audit = read(Path('report/exploration-r36-classical/audit.json'))
+        assert classical_audit['passed'] and classical_audit['rows'] == 48
+        assert classical_audit['reference_checks'] == 24
+        classical = read(Path('report/exploration-r36-classical/domain_summary.json'))
+        classical_gates = read(Path('report/exploration-r36-classical/gates.json'))
+        assert len(classical) == 4 and len(classical_gates) == 4
+        for r in classical:
+            classical_rows.append({**r, 'predictor_params': 4075,
+                'protocol': 'R36 same R34 original/final4000 weights; 3 DEV videos x 2 noise conditions x 2 seeds; CPU',
+                'flow_at_inference': r['method'] != 'raw', 'future_frames': 0,
+                'extra_motion_teacher_params': 0, 'phone_latency_ms': None,
+                'standalone_cpu_pipeline_ms': None,
+                'gate_vs_finite_both_seeds': classical_audit['gate_passed_both_seeds'].get(r['method']),
+                'scope': 'Fixed traditional control, not a novel method or calibrated covariance; no shared-stage speed rank.'})
+        with (out/'classical_evidence.csv').open('w', newline='') as stream:
+            writer = csv.DictWriter(stream, fieldnames=list(classical_rows[0]))
+            writer.writeheader()
+            writer.writerows(classical_rows)
+        lines += ['', '## R36强原始底座上的传统递归对照', '',
+                  '同R34原始final4000权重与同R30输入，两seed完整48行。有限post只使用上一raw，递归EMA另保存上一融合输出；三post共享同一own-raw半尺度FB运动，部署不需要第二CNN。', '',
+                  '|方法|PSNR|SSIM|时序↓|边缘↓|在线历史MiB@480×854|',
+                  '|---|---:|---:|---:|---:|---:|']
+        for r in classical_rows:
+            lines.append('|'+r['method']+'|'+'|'.join(f'{r[m]:.6f}' for m in ['psnr_rgb', 'ssim_rgb', 'temporal_error', 'edge_mae'])
+                         +f"|{r['online_history_storage_bytes']/2**20:.3f}|")
+        lines += ['', f"固定递归EMA相对有限post双seed联合筛查：{classical_audit['gate_passed_both_seeds']['recursive_self05']}；启发式adaptive：{classical_audit['gate_passed_both_seeds']['adaptive_recursive']}。递归是既有传统机制，不算创新。后续模型必须同时对照这个更强参考；不能只打败有限两帧post。", '',
+                  '这些为三开发源上的固定控制。自适应方差未经校准，不等价复现BNLK/EMVD；共享阶段计时不作独立流水线速度，手机仍未测。[传统机器表](classical_evidence.csv)、[逐seed与限制](../exploration-r36-classical/tables.md)。']
     (out/'README.md').write_text('\n'.join(lines)+'\n')
     (out/'sources.json').write_text(json.dumps({'sources': sources, 'rows': len(rows),
         'external_data_prepared': {'DAVIS_source_videos': 3, 'DAVIS_synthetic_conditions': 6,
@@ -215,6 +244,7 @@ def main():
         'R34_dynamic_rows': len(dynamic_rows),
         'R34_quality_complete': dynamic_audit is not None,
         'R34_complete_CPU_cost': dynamic_cost_audit is not None,
+        'R36_classical_rows': len(classical_rows),
         'FastDVDnet_documented_R30_DEV_overlap': prior_overlap['overlap_R30_DEV'],
         'heldout_metadata_only': {'video_count': heldout_metadata['video_count'], 'future_frames': heldout_metadata['future_total_frames'],
                                   'JPEG_members_read': heldout_metadata['JPEG_members_read']},
