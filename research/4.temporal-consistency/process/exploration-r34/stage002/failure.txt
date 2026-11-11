@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/launch_dynamic_stage_r34.py", line 98, in main
+    command('data-interface', 'check_dynamic_training_r34.py', '--registered-data')
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/launch_dynamic_stage_r34.py", line 57, in command
+    subprocess.run([PYTHON, str(SCRIPTS/filename), *arguments], cwd=ROOT, env=env,
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/data/Users/zrh/repo/MobileIE-Neo/scripts/project-python', '/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/check_dynamic_training_r34.py', '--registered-data']' returned non-zero exit status 1.
