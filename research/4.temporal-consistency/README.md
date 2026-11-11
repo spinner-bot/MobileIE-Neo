@@ -7,6 +7,7 @@
 - 最新结论：[进展报告0043](../../docs/进展报告/0043-T-26111204-内部时间算子双种子闭环与路线止损.md)、[路线决策](docs/exploration-r28-decision.md)、[论文证据表](report/paper-main-table/README.md)；R28重点双seed/双目标4000步及4416行主评价完成，主门槛未通过
 - 完成闭环：[原注册协议](docs/exploration-r28-protocol.md)、[全表](report/exploration-r28/tables.md)、[质量—时序图](report/exploration-r28/native_quality_stability.png)、[312行共同CPU外部表](report/exploration-r30/tables.md)。actual需要历史/flow/warp，current单帧映射单独评价；不继续沿该算子追加训练/相似网格
 - 接续准备：[R32公共训练池协议](docs/exploration-r32-data-protocol.md)/[57视频3428帧登记](data/exploration-r32-training/selection.json)已排除三开发片，[完整清单](data/exploration-r32-training/manifest.json)与[解码核验](results/exploration-r32-decode/audit.json)均完成；[未训练空间预算](report/architecture-budget/tables.md)与[门控/流式源码阅读](../5.prior-art-survey/docs/25-compute-allocation-and-streaming-state.md)只约束下一方案，不是质量或手机速度结果
+- 当前接续：[0049](../../docs/进展报告/0049-T-26111207-传统递归强基线与保留空间映射的因果状态.md)、[R36完整传统对照](report/exploration-r36-classical/tables.md)/[全条件图](report/exploration-r36-classical/quality_condition.png)。固定递归成为强参考，启发式adaptive失败；[R37保留空间函数协议](docs/exploration-r37-preserved-state-protocol.md)已过CPU/CUDA门槛，两seed分别在GPU0/1实际训练，每控制最终4000，尚无质量结论。
 - 当前终态：[0048](../../docs/进展报告/0048-T-26111207-动态骨干双种子闭环与公开方法迁移收口.md)：R34全部24000更新、120行质量与42次CPU成本正常结束，[止损决策](docs/exploration-r34-decision.md)冻结低分辨率状态+可分离body局部扩展；[完整质量](report/exploration-r34/tables.md)/[CPU成本](report/exploration-r34-runtime/tables.md)均为开发/服务器结果，无手机测量。
 - 最新强基线与来源边界：[0045](../../docs/进展报告/0045-T-26111205-自驱运动强后处理与公开预训练重叠.md)、[同底座自驱post全表](report/external-baselines-self-motion/tables.md)。双seed自驱运动post无需独立teacher，均值23.817dB/时序7.449；CPU驻留流水线200.612ms@480×854，不是手机延迟。R35三开发片与官方FastDVDnet文档训练ID重叠，不能当未见视频泛化；另30 test-dev来源只读元数据、未读JPEG。R34首次训练前已修订为120评价行，训练预算不变，stage002失败已留档；stage003接续实际训练。
 - 已止损原型：[R33协议](docs/exploration-r33-prototype-protocol.md)/[功能检查](report/exploration-r33-prototype/checks.json)曾通过CPU/CUDA功能门槛；后续完整R34未过质量门槛，功能通过不等于有效方法。
@@ -234,3 +235,5 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 修改：2026-11-12T06:35:24+08:00；作者：Codex  (sqs_A100)；原因：索引首seed闭环及固定成本测量准备，不把活动输出当最终。
 
 修改：2026-11-12T07:17:16+08:00；作者：Codex  (sqs_A100)；原因：以完整结果更新接续入口，保留历史报告。
+
+修改：2026-11-12T07:34:27+08:00；作者：Codex  (sqs_A100)；原因：索引传统参考提升与已实际启动的新机制检验。
