@@ -1,0 +1,36 @@
+{
+  "all_parameters_exactly_once": true,
+  "results": [
+    {
+      "variant": "full_lr1e4",
+      "groups": [
+        {
+          "lr": 0.0001,
+          "parameters": 4075
+        }
+      ]
+    },
+    {
+      "variant": "full_lr1e3",
+      "groups": [
+        {
+          "lr": 0.001,
+          "parameters": 4075
+        }
+      ]
+    },
+    {
+      "variant": "head_lr1e3",
+      "groups": [
+        {
+          "lr": 1e-05,
+          "parameters": 3163
+        },
+        {
+          "lr": 0.001,
+          "parameters": 912
+        }
+      ]
+    }
+  ]
+}
