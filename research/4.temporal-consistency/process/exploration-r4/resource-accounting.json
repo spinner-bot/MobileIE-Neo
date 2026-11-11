@@ -1,0 +1,76 @@
+{
+  "jobs": [
+    {
+      "record": "gpu6-cache.json",
+      "gpu": 6,
+      "allowed": true,
+      "seconds": 261.34592735400656,
+      "returncode": 0
+    },
+    {
+      "record": "gpu6-diversity.json",
+      "gpu": 6,
+      "allowed": true,
+      "seconds": 89.99425156204961,
+      "returncode": 0
+    },
+    {
+      "record": "gpu6-stop.json",
+      "gpu": 6,
+      "allowed": true,
+      "seconds": 111.46247800101992,
+      "returncode": 0
+    },
+    {
+      "record": "gpu6-training.json",
+      "gpu": 6,
+      "allowed": true,
+      "seconds": 153.64736942597665,
+      "returncode": 0
+    },
+    {
+      "record": "gpu6-transfer.json",
+      "gpu": 6,
+      "allowed": true,
+      "seconds": 133.20519640203565,
+      "returncode": 0
+    },
+    {
+      "record": "gpu7-baselines.json",
+      "gpu": 7,
+      "allowed": true,
+      "seconds": 201.7728064369876,
+      "returncode": 0
+    },
+    {
+      "record": "gpu7-half-cost.json",
+      "gpu": 7,
+      "allowed": true,
+      "seconds": 21.57126243598759,
+      "returncode": 0
+    },
+    {
+      "record": "gpu7-mixture.json",
+      "gpu": 7,
+      "allowed": true,
+      "seconds": 162.47432049398776,
+      "returncode": 0
+    },
+    {
+      "record": "gpu7-pipeline-cost.json",
+      "gpu": 7,
+      "allowed": true,
+      "seconds": 34.34438310097903,
+      "returncode": 0
+    }
+  ],
+  "allowed_jobs": 9,
+  "denied_jobs": 0,
+  "peak_project_gpu_jobs": 2,
+  "total_gpu_process_seconds": 1169.8179952130304,
+  "per_gpu_process_seconds": {
+    "6": 749.6552227450884,
+    "7": 420.162772467942
+  },
+  "scope": "includes CPU preparation/validation and startup; not active CUDA time. Overlap inferred from end timestamp and monotonic duration."
+}
