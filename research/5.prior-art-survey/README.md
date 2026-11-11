@@ -112,4 +112,6 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 
 - [24 对应校准与独立性](docs/24-alignment-calibration-and-independence.md)：STBN原文/固定代码与精确选择反例，区分有监督和blind-spot假设。
 
+- [25 骨干计算与流式状态](docs/25-compute-allocation-and-streaming-state.md)：R28路线冻结后的NAFNet/BSVD固定源码补读、TLC已知空间控制及未训练预算；乘法/移位/零初始化不作为新颖性，状态逻辑元素不替代真实storage/峰值。
+
 修改：2026-11-12T01:32:47.707565+08:00；作者：Codex  (sqs_A100)；原因：索引对应与统计依赖的深度核查。
