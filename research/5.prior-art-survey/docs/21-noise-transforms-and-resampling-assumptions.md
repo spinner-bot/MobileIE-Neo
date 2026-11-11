@@ -27,3 +27,7 @@ E[V] = Σ_i w_i (s_i - Σ_k w_k s_k)² + Σ_i w_i v_i - Σ_i w_i² v_i
 它混合真实结构与噪声贡献；没有额外信息时不能由V唯一恢复噪声方差。因而不将R22矩直接作为噪声标签，也不把HH-MAD或输入时间残差当真实σ。二次FST中aV的精确交换关系仍然成立，但“校正它提高最终视频质量”是另外一个必须实验检验的问题。
 
 这也限制后续自监督设计：blind-spot/Noise2Noise的独立性不能在warp后自动继承；由同一有噪输入产生teacher/flow时尤其要区分条件选择偏差。这里没有将Noise2VST的图像结果迁移为本项目视频性能结论，未确定最终方法。
+
+修改：2026-11-11T23:56:37.412147+08:00；作者：Codex  (sqs_A100)；原因：进一步区分blind-spot空间独立和Noise2Noise条件无偏。
+
+上述假设限制不意味着所有空间相关噪声下Noise2Noise均无效；完整限定见[22](22-training-objectives-and-conditional-assumptions.md)，固定W与由目标噪声参与估计的W也应区分。
