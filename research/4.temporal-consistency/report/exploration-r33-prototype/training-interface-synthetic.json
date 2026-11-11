@@ -1,0 +1,38 @@
+{
+  "mode": "synthetic",
+  "batch_shape": [
+    4,
+    4,
+    3,
+    128,
+    128
+  ],
+  "initialization": {
+    "body_kernel_relative_frobenius_error": 0.3632499058727486,
+    "body_initialization": "per-input-channel best rank1 SVD; approximate, not function preserving",
+    "spatial_causal_initial_weights_equal": true,
+    "official_weights_sha256": "d40a930fbc0435f47ce08dda17b1c630b86a501be9423b8f48dab14722fb5548"
+  },
+  "models": [
+    {
+      "model": "original",
+      "initial_mse": 0.21387143433094025,
+      "gradient_norm_before_clip": 25.2597599029541
+    },
+    {
+      "model": "spatial",
+      "initial_mse": 0.15204590559005737,
+      "gradient_norm_before_clip": 2.234156370162964
+    },
+    {
+      "model": "causal",
+      "initial_mse": 0.15204590559005737,
+      "gradient_norm_before_clip": 2.234173536300659
+    }
+  ],
+  "initial_spatial_causal_output_equal": true,
+  "identities": null,
+  "cuda_initialized": false,
+  "optimizer_updates": 0,
+  "scope": "CPU integration on one window only; not trained quality or final benchmark."
+}
