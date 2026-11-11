@@ -15,9 +15,10 @@ def main():
     p.add_argument('--process-dir',required=True)
     p.add_argument('--completed',type=int,required=True)
     p.add_argument('--denied',type=int,default=0)
+    p.add_argument('--failed',type=int,default=0)
     p.add_argument('--out',required=True)
     args = p.parse_args()
-    jobs,denied,hashes,events = [],[],{},[]
+    jobs,failed,denied,hashes,events = [],[],[],{},[]
     for path in sorted((ROOT/args.process_dir).glob('gpu-*.json')):
         r = json.loads(path.read_text())
         if len(r['samples'])!=2:
@@ -36,17 +37,18 @@ def main():
                 raise ValueError('rejected child executed')
             denied.append(row)
             continue
-        if r.get('returncode')!=0 or 'ended' not in r:
-            raise ValueError('incomplete or failed expected-success job')
+        if not isinstance(r.get('returncode'),int) or 'ended' not in r:
+            raise ValueError('incomplete job')
         if any(s['compute_processes'] or s['memory_mib']>64 or s['utilization_percent']>5 for s in r['samples']):
             raise ValueError('occupied GPU admitted')
         row['process_wall_seconds'] = r['process_wall_seconds']
-        jobs.append(row)
+        row['returncode'] = r['returncode']
+        (jobs if r['returncode']==0 else failed).append(row)
         events.extend([(datetime.fromisoformat(r['samples'][-1]['time']).timestamp(),1,gpu),
                        (datetime.fromisoformat(r['ended']).timestamp(),-1,gpu)])
-    if len(jobs)!=args.completed or len(denied)!=args.denied:
+    if len(jobs)!=args.completed or len(denied)!=args.denied or len(failed)!=args.failed:
         raise ValueError('job budget mismatch')
-    used = sorted({r['gpu'] for r in jobs})
+    used = sorted({r['gpu'] for r in jobs+failed})
     if len({g//4 for g in used})>1:
         raise ValueError('multiple GPU groups used')
     active,peak = set(),0
@@ -59,9 +61,9 @@ def main():
             active.remove(gpu)
     if peak>4:
         raise ValueError('concurrency limit exceeded')
-    save_json(args.out,{'completed':jobs,'resource_refusals':denied,'used_physical_gpus':used,
+    save_json(args.out,{'completed':jobs,'failed':failed,'resource_refusals':denied,'used_physical_gpus':used,
         'peak_own_concurrent_jobs':peak,'source_hashes_verified':len(hashes),'source_mismatches':[],
-        'process_gpu_seconds':sum(r['process_wall_seconds'] for r in jobs),
+        'process_gpu_seconds':sum(r['process_wall_seconds'] for r in jobs+failed),
         'scope':'includes CPU/data/metrics; not GPU kernel time; preflight and local locks are not a global reservation'})
 
 
