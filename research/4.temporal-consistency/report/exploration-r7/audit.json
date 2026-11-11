@@ -1,0 +1,78 @@
+{
+  "train_source_static_conditions": 48,
+  "video_conditions": 38,
+  "static_rows": 432,
+  "video_rows": 1368,
+  "selection": {
+    "selected": {
+      "channels_zero_based": [
+        6,
+        7,
+        8
+      ],
+      "mean_gamma05_gain": 0.3599454322922921,
+      "worst_gamma05_gain": 0.12185074985230533,
+      "positive_conditions": 48,
+      "mean_gamma1_gain": 0.05647280538383314,
+      "rank": 1
+    },
+    "references": {
+      "first3": {
+        "channels_zero_based": [
+          0,
+          1,
+          2
+        ],
+        "mean_gamma05_gain": 0.0010207807650075226,
+        "worst_gamma05_gain": -0.006748910608421404,
+        "positive_conditions": 27,
+        "mean_gamma1_gain": 0.0017766584169266048,
+        "rank": 218
+      },
+      "uniform": {
+        "channels_zero_based": [
+          0,
+          4,
+          8
+        ],
+        "mean_gamma05_gain": 0.3030306141537521,
+        "worst_gamma05_gain": 0.005147186451870785,
+        "positive_conditions": 48,
+        "mean_gamma1_gain": 0.0719564860034564,
+        "rank": 45
+      },
+      "random109": {
+        "channels_zero_based": [
+          3,
+          5,
+          10
+        ],
+        "mean_gamma05_gain": 0.0246128548337456,
+        "worst_gamma05_gain": -0.005502833484354542,
+        "positive_conditions": 45,
+        "mean_gamma1_gain": 0.009043656331580448,
+        "rank": 179
+      }
+    },
+    "scope": "train-source independent-noise/fixed-response proxy; validate actual causal video behavior separately"
+  },
+  "first_frame_max_abs_normalized_difference": 0.0,
+  "g1_pre_post_metric_max_abs": 0.0,
+  "static_batch1_batch8_psnr_max_abs_delta": 0.020743176922211504,
+  "max_static_state_storage_bytes_128": 196608,
+  "video_source_files": {
+    "research/4.temporal-consistency/results/exploration-r7b-video-pre/runtime.json": "548f6fb9fb1324bfa113a39bbaae034accc755e085cb91d8c2546318abc626e5",
+    "research/4.temporal-consistency/results/exploration-r7b-video-pre/first_frame_checks.json": "061bfa825b613232c1ec654f3de3c8a2ddd85728eaff3238b0f27b3034de9b78",
+    "research/4.temporal-consistency/results/exploration-r7b-video-pre/config.json": "65f35b06b7b8070ff6cc0d69b928a1d9140c037a4be7282c0ec61da2858c2409",
+    "research/4.temporal-consistency/results/exploration-r7b-video-pre/per_frame.jsonl": "63b9ea1c1fc300b87d9978b2eabc3b963d58ecd99cdab5cf309d53dec553187e",
+    "research/4.temporal-consistency/results/exploration-r7b-video-pre/input_events.json": "8f54e19aef403a19d06dff7195a613f81683f87779b3862561a4ec280bfe5d43",
+    "research/4.temporal-consistency/results/exploration-r7b-video-pre/per_sequence.jsonl": "dad03eaa682fb45bd071de98b0adf71b97290996b50540378ae35bc36c14f063",
+    "research/4.temporal-consistency/results/exploration-r7b-video-post/runtime.json": "3786d8d187d0018faf859558d5aeff1cf699e40f9de99aada25a454b2ace38d2",
+    "research/4.temporal-consistency/results/exploration-r7b-video-post/first_frame_checks.json": "724536d9f51b8bf3f28b34cc7ff3bef38774cef85dc4fdabe675add3ae89fda2",
+    "research/4.temporal-consistency/results/exploration-r7b-video-post/config.json": "74106ef6c71732a753d4e06d7b391b7c8bac6473db85714bce6efcf594176de0",
+    "research/4.temporal-consistency/results/exploration-r7b-video-post/per_frame.jsonl": "aff455d5576bd67443ccc3107b1891edf5c9c3f089e0b62cb459de546f868605",
+    "research/4.temporal-consistency/results/exploration-r7b-video-post/input_events.json": "8f54e19aef403a19d06dff7195a613f81683f87779b3862561a4ec280bfe5d43",
+    "research/4.temporal-consistency/results/exploration-r7b-video-post/per_sequence.jsonl": "25f528502b0a8608ffd52c834407167bb8be33f5dc675504d3f26b7e14f6fc23"
+  },
+  "scope": "train-source calibration and reused exploratory video; covariance proxy is not a moving-video guarantee"
+}

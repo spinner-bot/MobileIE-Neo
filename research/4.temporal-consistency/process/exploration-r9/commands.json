@@ -1,0 +1,88 @@
+[
+  {
+    "record": "research/4.temporal-consistency/process/exploration-r9/gpu-dev-cache-retry.json",
+    "gpu": 3,
+    "revision": "8e6c5e7ca5f5c85047b614913e4555d833aa95b4",
+    "command": [
+      ".venv/bin/python",
+      "-u",
+      "research/4.temporal-consistency/scripts/prepare_development_r9.py",
+      "--out",
+      "research/4.temporal-consistency/results/exploration-r9-dev-cache"
+    ],
+    "returncode": 0
+  },
+  {
+    "record": "research/4.temporal-consistency/process/exploration-r9/gpu-dev-cache.json",
+    "gpu": 3,
+    "revision": "d933134ef34ff98e1d5834e725a96b7469da4527",
+    "command": [
+      ".venv/bin/python",
+      "-u",
+      "research/4.temporal-consistency/scripts/prepare_development_r9.py",
+      "--out",
+      "research/4.temporal-consistency/results/exploration-r9-dev-cache"
+    ],
+    "returncode": 1
+  },
+  {
+    "record": "research/4.temporal-consistency/process/exploration-r9/gpu-eval-high.json",
+    "gpu": 3,
+    "revision": "7817bf5dd7fdde4a9a0adde86322b286ff7cb4f4",
+    "command": [
+      ".venv/bin/python",
+      "-u",
+      "research/4.temporal-consistency/scripts/evaluate_optimizer_r9.py",
+      "--variants",
+      "full_lr1e3",
+      "--out",
+      "research/4.temporal-consistency/results/exploration-r9-eval-high"
+    ],
+    "returncode": 0
+  },
+  {
+    "record": "research/4.temporal-consistency/process/exploration-r9/gpu-eval-moderate.json",
+    "gpu": 2,
+    "revision": "7817bf5dd7fdde4a9a0adde86322b286ff7cb4f4",
+    "command": [
+      ".venv/bin/python",
+      "-u",
+      "research/4.temporal-consistency/scripts/evaluate_optimizer_r9.py",
+      "--variants",
+      "full_lr1e4,head_lr1e3,plain,spatial_copy",
+      "--out",
+      "research/4.temporal-consistency/results/exploration-r9-eval-moderate"
+    ],
+    "returncode": 0
+  },
+  {
+    "record": "research/4.temporal-consistency/process/exploration-r9/gpu-train-high.json",
+    "gpu": 3,
+    "revision": "1f10ce02e2f88495674368b042d286f7a3aef157",
+    "command": [
+      ".venv/bin/python",
+      "-u",
+      "research/4.temporal-consistency/scripts/train_optimizer_r9.py",
+      "--variants",
+      "full_lr1e3",
+      "--out",
+      "research/4.temporal-consistency/results/exploration-r9-high"
+    ],
+    "returncode": 0
+  },
+  {
+    "record": "research/4.temporal-consistency/process/exploration-r9/gpu-train-moderate.json",
+    "gpu": 2,
+    "revision": "1f10ce02e2f88495674368b042d286f7a3aef157",
+    "command": [
+      ".venv/bin/python",
+      "-u",
+      "research/4.temporal-consistency/scripts/train_optimizer_r9.py",
+      "--variants",
+      "full_lr1e4,head_lr1e3",
+      "--out",
+      "research/4.temporal-consistency/results/exploration-r9-moderate"
+    ],
+    "returncode": 0
+  }
+]

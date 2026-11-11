@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/preview_aggregation_r21.py", line 97, in <module>
+    if __name__=='__main__':main()
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/preview_aggregation_r21.py", line 90, in main
+    movies.append({'scene':meta['scene'],'path':str(path.relative_to(ROOT)),'sha256':sha256(path),'decoded_frames':decoded,'display_fps':8})
+  File "/usr/lib/python3.10/pathlib.py", line 818, in relative_to
+    raise ValueError("{!r} is not in the subpath of {!r}"
+ValueError: 'research/4.temporal-consistency/report/exploration-r21/qualitative/video_15.mp4' is not in the subpath of '/data/Users/zrh/repo/MobileIE-Neo' OR one path is relative and the other is absolute.

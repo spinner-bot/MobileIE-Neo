@@ -1,0 +1,40 @@
+{
+  "completed": [
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r6/gpu-centered.json",
+      "allowed": true,
+      "gpu": 2,
+      "revision": "f720664c2f44bba0d8706f229eff740b88e1f089",
+      "process_wall_seconds": 7.583787391020451
+    },
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r6/gpu-moments-gpu2.json",
+      "allowed": true,
+      "gpu": 2,
+      "revision": "dbbc69c08f60b2e8b3c4292fb7b1115f2beda5cb",
+      "process_wall_seconds": 61.587598753976636
+    },
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r6/gpu-rgb-components.json",
+      "allowed": true,
+      "gpu": 2,
+      "revision": "a8ae669d65988c592dda19f3462462bca1e2cc2e",
+      "process_wall_seconds": 6.720809786987957
+    }
+  ],
+  "resource_refusals": [
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r6/gpu-moments.json",
+      "allowed": false,
+      "gpu": 0,
+      "revision": "61fd1030df50f2269d66301e3302d2f9eeb7ad00",
+      "process_wall_seconds": null
+    }
+  ],
+  "source_hashes_verified": 261,
+  "source_mismatches": [],
+  "used_gpu": 2,
+  "peak_own_concurrent_gpu_jobs": 1,
+  "process_gpu_seconds": 75.89219593198504,
+  "scope": "process duration includes CPU/data work; no kernel-time or global-reservation claim"
+}

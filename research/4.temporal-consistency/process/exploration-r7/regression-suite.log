@@ -1,0 +1,43 @@
+test_bounded_starts_with_identical_function (test_exploration_r2.ExplorationR2Checks) ... ok
+test_change_detector_keeps_constant_input_and_finds_transitions (test_exploration_r2.ExplorationR2Checks) ... ok
+test_confident_static_flow_and_reset_fallback (test_exploration_r2.ExplorationR2Checks) ... ok
+test_cut_has_no_correspondence (test_exploration_r2.ExplorationR2Checks) ... ok
+test_layered_occlusion_correspondence_matches_ground_truth (test_exploration_r2.ExplorationR2Checks) ... ok
+test_mixture_projection_and_finite_forward (test_exploration_r2.ExplorationR2Checks) ... ok
+test_training_stream_is_repeatable_and_preserves_pair_geometry (test_exploration_r2.ExplorationR2Checks) ... ok
+test_constant_feature_bias_is_not_hidden_in_covariance (test_exploration_r3.ExplorationR3Checks) ... ok
+test_independent_symmetric_pairs_remove_square_bias (test_exploration_r3.ExplorationR3Checks) ... ok
+test_input_control_matches_original_and_updates_mixture (test_exploration_r3.ExplorationR3Checks) ... ok
+test_integer_alignment_preserves_equal_features (test_exploration_r3.ExplorationR3Checks) ... ok
+test_output_reset_does_not_change_gate_selection (test_exploration_r3.ExplorationR3Checks) ... ok
+test_pair_training_matches_initial_function_and_learns_mixture (test_exploration_r3.ExplorationR3Checks) ... ok
+test_product_interventions_preserve_first_frame_and_invalid_regions (test_exploration_r3.ExplorationR3Checks) ... ok
+test_torch_sampling_matches_known_backward_translation (test_exploration_r3.ExplorationR3Checks) ... ok
+test_y4m_limited_range_and_truncation (test_exploration_r3.ExplorationR3Checks) ... ok
+test_census_is_invariant_to_positive_affine_brightness (test_exploration_r4.ExplorationR4Checks) ... ok
+test_haar_scale_constant_and_known_independent_gaussian (test_exploration_r4.ExplorationR4Checks) ... ok
+test_half_scale_flow_restores_native_translation_units (test_exploration_r4.ExplorationR4Checks) ... ok
+test_identity_centered_ridge_preserves_identity (test_exploration_r4.ExplorationR4Checks) ... ok
+test_mapping_output_clips_in_float_domain (test_exploration_r4.ExplorationR4Checks) ... ok
+test_no_valid_correspondence_does_not_create_a_supervision_signal (test_exploration_r4.ExplorationR4Checks) ... ok
+test_only_current_temporal_branch_receives_gradient (test_exploration_r4.ExplorationR4Checks) ... ok
+test_pair_stream_repeats_without_cross_scene_pairs (test_exploration_r4.ExplorationR4Checks) ... ok
+test_quality_guard_requires_all_three_quality_constraints (test_exploration_r4.ExplorationR4Checks) ... ok
+test_synthetic_mixture_pairs_repeat_and_preserve_geometry (test_exploration_r4.ExplorationR4Checks) ... ok
+test_synthetic_stop_keeps_loss_value_and_only_real_gradient (test_exploration_r4.ExplorationR4Checks) ... ok
+test_true_brightness_change_is_not_penalized (test_exploration_r4.ExplorationR4Checks) ... ok
+test_zero_threshold_keeps_raw_and_rejects_all_history (test_exploration_r4.ExplorationR4Checks) ... ok
+test_attention_state_does_not_depend_on_inference_batch_partition (test_temporal_controls.TemporalControlChecks) ... ok
+test_real_lighting_change_is_not_rewarded_for_being_suppressed (test_temporal_controls.TemporalControlChecks) ... ok
+test_backward_flow_recovers_direction (test_video_metrics.VideoMetricsChecks) ... ok
+test_known_translation_is_exact_and_legacy_wrap_is_not (test_video_metrics.VideoMetricsChecks) ... ok
+test_negative_and_vertical_translation (test_video_metrics.VideoMetricsChecks) ... ok
+test_no_overlap_is_rejected (test_video_metrics.VideoMetricsChecks) ... ok
+test_quality_and_reference_temporal_change (test_video_metrics.VideoMetricsChecks) ... ok
+test_warp_mask_and_translation (test_video_metrics.VideoMetricsChecks) ... ok
+test_zero_motion_and_unsigned_subtraction (test_video_metrics.VideoMetricsChecks) ... ok
+
+----------------------------------------------------------------------
+Ran 38 tests in 0.698s
+
+OK

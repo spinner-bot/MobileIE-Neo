@@ -1,0 +1,47 @@
+# Reconstructed recorded arguments, not a verbatim terminal transcript.
+# cwd=/data/Users/zrh/repo/MobileIE-Neo
+# Recorded CUDA children must be invoked through gpu_guard.py with a fresh audit file.
+# Use isolated new output/checkpoint/cache roots; preserve existing evidence.
+# env PYTHONDONTWRITEBYTECODE=1
+.venv/bin/python research/4.temporal-consistency/scripts/fetch_olives_r4.py --out research/4.temporal-consistency/data/exploration-r4
+.venv/bin/python research/4.temporal-consistency/scripts/fetch_olives_r4.py --base-manifest research/4.temporal-consistency/data/exploration-r4/manifest.json --extra-train 8 --out research/4.temporal-consistency/data/exploration-r4b
+
+# gpu=6 launched_revision=b409b6698773b4bad2da49f1cf33d05dcd18c5d1
+.venv/bin/python research/4.temporal-consistency/scripts/prepare_cache_r4.py --out research/4.temporal-consistency/results/exploration-r4-cache
+
+# gpu=7 launched_revision=e5412a827949f7170c45a683608aacf3f56a78db
+.venv/bin/python research/4.temporal-consistency/scripts/evaluate_baselines_r4.py --out research/4.temporal-consistency/results/exploration-r4-baselines
+
+# gpu=6 launched_revision=e5412a827949f7170c45a683608aacf3f56a78db
+.venv/bin/python research/4.temporal-consistency/scripts/train_real_r4.py --out research/4.temporal-consistency/results/exploration-r4-training
+
+# gpu=6 launched_revision=1d64379d8fe179ffddd9c29f3ed9e09de66840bf
+.venv/bin/python research/4.temporal-consistency/scripts/diagnose_transfer_r4.py --out research/4.temporal-consistency/results/exploration-r4-transfer
+
+# gpu=7 launched_revision=1f3cc04eb99805f865480027cd03696251761b4b
+.venv/bin/python research/4.temporal-consistency/scripts/train_mixture_r4b.py --variants real12_mix,real4_mix --out research/4.temporal-consistency/results/exploration-r4b-mixture
+
+# gpu=6 launched_revision=1f3cc04eb99805f865480027cd03696251761b4b
+.venv/bin/python research/4.temporal-consistency/scripts/train_mixture_r4b.py --variants real12_only --out research/4.temporal-consistency/results/exploration-r4b-diversity
+
+# gpu=6 launched_revision=96a576bda49926546a07325418f381f5988a973b
+.venv/bin/python research/4.temporal-consistency/scripts/train_mixture_r4b.py --variants real12_mix_stop --out research/4.temporal-consistency/results/exploration-r4b-stop
+
+# gpu=7 launched_revision=03362bef7c367ae27a3e5de5e5b8d36da89ce02b
+.venv/bin/python research/4.temporal-consistency/scripts/benchmark_pipeline_r4.py --out research/4.temporal-consistency/results/exploration-r4-pipeline-cost.json
+
+# gpu=7 launched_revision=8b3c8424ed0f1246e1eea1651e05ed408e8d32ea
+.venv/bin/python research/4.temporal-consistency/scripts/benchmark_pipeline_r4.py --half-comparison --out research/4.temporal-consistency/results/exploration-r4-half-cost.json
+
+.venv/bin/python research/4.temporal-consistency/scripts/reliability_r4.py --out research/4.temporal-consistency/results/exploration-r4-reliability
+
+.venv/bin/python research/4.temporal-consistency/scripts/calibrate_mapping_r4.py --out research/4.temporal-consistency/results/exploration-r4-mapping
+
+.venv/bin/python research/4.temporal-consistency/scripts/calibrate_alpha_r4.py --out research/4.temporal-consistency/results/exploration-r4-alpha
+
+.venv/bin/python research/4.temporal-consistency/scripts/calibrate_noise_gate_r4.py --out research/4.temporal-consistency/results/exploration-r4-noise-gate
+
+.venv/bin/python research/4.temporal-consistency/scripts/calibrate_alpha_r4.py --half --out research/4.temporal-consistency/results/exploration-r4-half
+.venv/bin/python research/4.temporal-consistency/scripts/summarize_r4.py --expanded --out research/4.temporal-consistency/report/exploration-r4
+.venv/bin/python research/4.temporal-consistency/scripts/audit_resources_r4.py
+.venv/bin/python -m unittest discover -s research/4.temporal-consistency/tests -v

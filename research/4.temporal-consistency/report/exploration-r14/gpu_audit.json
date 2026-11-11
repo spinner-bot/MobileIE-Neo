@@ -1,0 +1,56 @@
+{
+  "completed": [
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r14/gpu-eval-aligned.json",
+      "gpu": 3,
+      "revision": "7f3fcbbbed87794e72577e08256955cfdb6a5194",
+      "allowed": true,
+      "process_wall_seconds": 526.0958228649688,
+      "returncode": 0
+    },
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r14/gpu-eval-spatial-retry.json",
+      "gpu": 2,
+      "revision": "7f3fcbbbed87794e72577e08256955cfdb6a5194",
+      "allowed": true,
+      "process_wall_seconds": 477.4025378799997,
+      "returncode": 0
+    },
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r14/gpu-train-aligned.json",
+      "gpu": 3,
+      "revision": "a5655b7c48d7a3d0ea6a69e8c5bceefbadbfc271",
+      "allowed": true,
+      "process_wall_seconds": 1641.1908386240248,
+      "returncode": 0
+    },
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r14/gpu-train-spatial.json",
+      "gpu": 2,
+      "revision": "a5655b7c48d7a3d0ea6a69e8c5bceefbadbfc271",
+      "allowed": true,
+      "process_wall_seconds": 1368.1659361810307,
+      "returncode": 0
+    }
+  ],
+  "failed": [
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r14/gpu-eval-spatial.json",
+      "gpu": 2,
+      "revision": "b33805d96d61a77182d67d4ba353bb481ea54176",
+      "allowed": true,
+      "process_wall_seconds": 3.460954167996533,
+      "returncode": 1
+    }
+  ],
+  "resource_refusals": [],
+  "used_physical_gpus": [
+    2,
+    3
+  ],
+  "peak_own_concurrent_jobs": 2,
+  "source_hashes_verified": 393,
+  "source_mismatches": [],
+  "process_gpu_seconds": 4016.3160897180205,
+  "scope": "includes CPU/data/metrics; not GPU kernel time; preflight and local locks are not a global reservation"
+}

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/diagnose_decoder_parity_r16.py", line 39, in <module>
+    if __name__=='__main__':main()
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/diagnose_decoder_parity_r16.py", line 29, in main
+    original=ref.body.block1(h);wide=F.conv2d(torch.cat([h,zeros],1),net.backbone.body.block1.weight,net.backbone.body.block1.bias,padding=1)
+RuntimeError: Input type (torch.cuda.FloatTensor) and weight type (torch.FloatTensor) should be the same

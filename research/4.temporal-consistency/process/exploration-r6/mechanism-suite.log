@@ -1,0 +1,25 @@
+test_bad_inputs (test_causal_fst_r5.CausalTests) ... ok
+test_initial_output_and_backbone_gradient (test_causal_fst_r5.CausalTests) ... ok
+test_pairs_equal_streams_and_future_cannot_affect_first (test_causal_fst_r5.CausalTests) ... ok
+test_parameter_count (test_causal_fst_r5.CausalTests) ... ok
+test_pool_and_interpolation_forward_backward (test_causal_fst_r5.CausalTests) ... ok
+test_state_storage_reset_and_shape_change (test_causal_fst_r5.CausalTests) ... ok
+test_centered_control_preserves_empirical_feature_mean (test_noise_moments_r6.NoiseMomentTests) ... ok
+test_constant_debias_preserves_local_variance (test_noise_moments_r6.NoiseMomentTests) ... ok
+test_empirical_identity_without_gaussian_assumption (test_noise_moments_r6.NoiseMomentTests) ... ok
+test_linearization_removes_sample_squared_noise (test_noise_moments_r6.NoiseMomentTests) ... ok
+test_mse_bias_variance_closure (test_noise_moments_r6.NoiseMomentTests) ... ok
+test_static_forward_matches_existing_models (test_noise_moments_r6.NoiseMomentTests) ... ok
+test_constant_gates_zero_gate_variation_components (test_rgb_noise_components_r6c.ComponentTests) ... /data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/test_rgb_noise_components_r6c.py:42: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  self.assertLess(float(components['gate_mean_feature'].abs().max()), 1e-12)
+ok
+test_reconstruction_and_covariance_including_clipping (test_rgb_noise_components_r6c.ComponentTests) ... ok
+test_insufficient_overlap_rejected (test_synthetic_temporal_r5b.SyntheticTemporalTests) ... ok
+test_only_current_error_receives_direct_gradient (test_synthetic_temporal_r5b.SyntheticTemporalTests) ... ok
+test_true_translations_reach_floor_with_nonzero_gt_change (test_synthetic_temporal_r5b.SyntheticTemporalTests) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.982s
+
+OK

@@ -1,0 +1,55 @@
+{
+  "rows": 5888,
+  "actual_inference_sequences": 736,
+  "metric_computations": 4096,
+  "metric_aliases": 1792,
+  "first_frame_max_abs_pixel": 0.0,
+  "historical_current_replays": [
+    {
+      "architecture": "pre_fixedhalf",
+      "file": "per_sequence.jsonl",
+      "rows": 1472,
+      "max_abs_metric": 0.0
+    },
+    {
+      "architecture": "pre_fixedhalf",
+      "file": "per_frame.jsonl",
+      "rows": 31744,
+      "max_abs_metric": 0.0
+    },
+    {
+      "architecture": "post_fixedhalf",
+      "file": "per_sequence.jsonl",
+      "rows": 1472,
+      "max_abs_metric": 0.0
+    },
+    {
+      "architecture": "post_fixedhalf",
+      "file": "per_frame.jsonl",
+      "rows": 31744,
+      "max_abs_metric": 0.0
+    }
+  ],
+  "common_device": "cuda:0",
+  "source_sha256": {
+    "research/4.temporal-consistency/results/exploration-r26b-eval-pre_fixedhalf/per_sequence.jsonl": "b8fc37e57a38a4bc1e641b2841536c230a57761a0b181c95ebeea4cc93d4e71a",
+    "research/4.temporal-consistency/results/exploration-r26-eval-pre_fixedhalf/per_sequence.jsonl": "00a0c683de133d0798a42c55e96ed47992a38b219f1f74a3a7ee9f6d75481694",
+    "research/4.temporal-consistency/results/exploration-r26b-eval-pre_fixedhalf/per_frame.jsonl": "33840d4a6ed9757847c9bf4ce89627d7196aeecb3fd06e62ccdb49ac43c1cc86",
+    "research/4.temporal-consistency/results/exploration-r26-eval-pre_fixedhalf/per_frame.jsonl": "128517c64971a07d60d34b91ccf93be4c9e04dd32fc1f2f6b312acc2689758d7",
+    "research/4.temporal-consistency/results/exploration-r26b-eval-pre_fixedhalf/runtime.json": "e0614aea47eba217396a87e2e00a1c57b2b8b35e2154e686a91d0d9852b9fcbd",
+    "research/4.temporal-consistency/results/exploration-r26b-eval-pre_fixedhalf/config.json": "81b7162486bf3397750933bd03b9d667dacd2692db31faa443884c4d54b76f67",
+    "research/4.temporal-consistency/results/exploration-r26b-eval-pre_fixedhalf/checkpoints.json": "f2fb64e7eecf334af1bc08f7d20621a91c3f4a29f087dff65111c17a6bb71d37",
+    "research/4.temporal-consistency/results/exploration-r26b-eval-pre_fixedhalf/input_events.json": "736cea3dcb1813a34b19733da63eb823bb3484f5c3f6d02608b8a45f07d135d7",
+    "research/4.temporal-consistency/results/exploration-r26b-eval-pre_fixedhalf/first_frame_audit.json": "a7592623f818d1099e9aea5f8ca79309efe9fca1af1d3fba4ee11192c08a5195",
+    "research/4.temporal-consistency/results/exploration-r26b-eval-post_fixedhalf/per_sequence.jsonl": "1f9d8f3389998fb9a26dc37b8a54d167b8e1cc1afb8fe0d0df5bee6fde78e594",
+    "research/4.temporal-consistency/results/exploration-r26-eval-post_fixedhalf/per_sequence.jsonl": "383b22b20f26d8837a8d2c84a4fc127d01ac55775c3e885f6eb0b793a92df9bf",
+    "research/4.temporal-consistency/results/exploration-r26b-eval-post_fixedhalf/per_frame.jsonl": "93c96cbb5c3e09a131e412e11d7bce7ff2484a730bfc1682b2428e0c2e08cb19",
+    "research/4.temporal-consistency/results/exploration-r26-eval-post_fixedhalf/per_frame.jsonl": "117371bb64f0907067ee2e683904b892c996ae2f7fbe42f5a907aaaa665d7a70",
+    "research/4.temporal-consistency/results/exploration-r26b-eval-post_fixedhalf/runtime.json": "a34dfa3d837d56b5aa9ee1026e9022f2335af72e5e9e195367d00215f5778730",
+    "research/4.temporal-consistency/results/exploration-r26b-eval-post_fixedhalf/config.json": "d475d2031303951e7fe07e6889d1fe27ace898cb5c750d275063f46403b3a9e3",
+    "research/4.temporal-consistency/results/exploration-r26b-eval-post_fixedhalf/checkpoints.json": "d977d49fd0a736560f343b01099038498c73c29b1357325558e3855eea67d883",
+    "research/4.temporal-consistency/results/exploration-r26b-eval-post_fixedhalf/input_events.json": "736cea3dcb1813a34b19733da63eb823bb3484f5c3f6d02608b8a45f07d135d7",
+    "research/4.temporal-consistency/results/exploration-r26b-eval-post_fixedhalf/first_frame_audit.json": "078ca8140d6f77cdf357a8ad0357d8e1d00fefe3f76af8736b9cd09ed4fae5e1"
+  },
+  "scope": "Same trained weights, stronger single-frame/classical-post controls. Exploratory repeated conditions, no new structure or mobile latency claim."
+}

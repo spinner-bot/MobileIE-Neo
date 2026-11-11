@@ -1,0 +1,118 @@
+{
+  "training_runs": [
+    {
+      "variant": "real_task",
+      "seed": 0,
+      "updates": 400,
+      "initial_task": 0.05264326184988022,
+      "checkpoint_sha256": "9be0f091c6f2dc24e7a48828cbb122af06d53d838b418b446efc46354d1cd0a1"
+    },
+    {
+      "variant": "real_task",
+      "seed": 1,
+      "updates": 400,
+      "initial_task": 0.05330057814717293,
+      "checkpoint_sha256": "a1033a0071ddf2402850fa64c0bf9488fa2c7951c6da7fd5db4073c582196e09"
+    },
+    {
+      "variant": "real_anchor",
+      "seed": 0,
+      "updates": 400,
+      "initial_task": 0.05264326184988022,
+      "checkpoint_sha256": "6435d6e720b820db4381f5fd7ed2a4e22282f7cd36e69b204891e24cd84206da"
+    },
+    {
+      "variant": "real_anchor",
+      "seed": 1,
+      "updates": 400,
+      "initial_task": 0.05330057814717293,
+      "checkpoint_sha256": "c5ddc62be3157b72c0255c5be068f1e75da9a264f673c8b523a9ca5c0aae9bfa"
+    },
+    {
+      "variant": "real_temporal",
+      "seed": 0,
+      "updates": 400,
+      "initial_task": 0.05264326184988022,
+      "checkpoint_sha256": "5f5467eb2b31cd8e0696d251431b66513432b6cddd213ff31f96c8ae833baa02"
+    },
+    {
+      "variant": "real_temporal",
+      "seed": 1,
+      "updates": 400,
+      "initial_task": 0.05330057814717293,
+      "checkpoint_sha256": "e806ff75940bd05eaebd9e147a068bcb2f531c08f5f40a42b5b970a5872ae8c9"
+    },
+    {
+      "variant": "real12_only",
+      "seed": 0,
+      "updates": 400,
+      "initial_task": 0.11190542578697205,
+      "checkpoint_sha256": "8a858e13544672ef98d77cc6d66e694d56019b25277515e2596478760eeea6a1"
+    },
+    {
+      "variant": "real12_only",
+      "seed": 1,
+      "updates": 400,
+      "initial_task": 0.12117942422628403,
+      "checkpoint_sha256": "d1057bc2e764d247736d3735c213bc67b5a90abbe25c6bb021671759873da711"
+    },
+    {
+      "variant": "real12_mix",
+      "seed": 0,
+      "updates": 400,
+      "initial_task": 0.1261654943227768,
+      "checkpoint_sha256": "0189ee27266b7f33a13aa460bcbf1c2f5e005af4d7f9a70034b0741639dfd6b4"
+    },
+    {
+      "variant": "real12_mix",
+      "seed": 1,
+      "updates": 400,
+      "initial_task": 0.10840814560651779,
+      "checkpoint_sha256": "2e62fb79b9db9c88494a28746c84ee5a489c7fffaccea6696fb21e4248f4971f"
+    },
+    {
+      "variant": "real4_mix",
+      "seed": 0,
+      "updates": 400,
+      "initial_task": 0.06995638459920883,
+      "checkpoint_sha256": "3a3822aab0a820fa5c285418f304df58fb562e4adab61f197362b5a5852e6e6b"
+    },
+    {
+      "variant": "real4_mix",
+      "seed": 1,
+      "updates": 400,
+      "initial_task": 0.0780840814113617,
+      "checkpoint_sha256": "cf91d3f0de6d3c3ffa16aae65ea32feb5ae31b021d1765ddeed335ae630e4262"
+    },
+    {
+      "variant": "real12_mix_stop",
+      "seed": 0,
+      "updates": 400,
+      "initial_task": 0.1261654943227768,
+      "checkpoint_sha256": "5bb27cb1ddd85e25a6392d16780ca991b8d51923ff14fa0feb1a55c9e882de6d"
+    },
+    {
+      "variant": "real12_mix_stop",
+      "seed": 1,
+      "updates": 400,
+      "initial_task": 0.10840814560651779,
+      "checkpoint_sha256": "b6de700153f5c039bcf5b92bd385bbcfeff382b6dad45d521297e4a9a45e101b"
+    }
+  ],
+  "updates": 5600,
+  "evaluation_rows": 770,
+  "calibration_rows": 248,
+  "resolution_diagnostic_rows": 180,
+  "matched_initial_task_difference": {
+    "0": 0.0,
+    "1": 0.0
+  },
+  "same_real_streams_verified": true,
+  "checkpoint_hashes_verified": true,
+  "expanded_mix_streams_verified": true,
+  "real_test_clips": 6,
+  "new_real_test_clips": 5,
+  "legacy_conditions": 8,
+  "legacy_sources": 2,
+  "note": "clip identities may share physical scenes; no independent-sample or formal benchmark claim"
+}

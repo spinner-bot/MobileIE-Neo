@@ -1,0 +1,420 @@
+{
+  "cross_backend": [
+    {
+      "scope": "R14 native plain CPU minus GPU",
+      "file": "per_sequence.jsonl",
+      "rows": 736,
+      "max_abs": {
+        "psnr_rgb": 0.029149517060297114,
+        "ssim_rgb": 0.00015174845854437624,
+        "edge_mae": 0.0009430845578508595,
+        "temporal_error": 0.005318683126699142,
+        "flicker": 0.00532593934432235
+      },
+      "worst_identity": {
+        "psnr_rgb": [
+          "dev_native",
+          "video_121",
+          1,
+          4000,
+          false,
+          "half01"
+        ],
+        "ssim_rgb": [
+          "event_light_step",
+          "kodim07_light_step_seed0",
+          0,
+          4000,
+          false,
+          "raw"
+        ],
+        "edge_mae": [
+          "event_light_step",
+          "kodim10_light_step_seed1",
+          1,
+          1000,
+          false,
+          "raw"
+        ],
+        "temporal_error": [
+          "event_light_step",
+          "kodim07_light_step_seed1",
+          0,
+          4000,
+          false,
+          "raw"
+        ],
+        "flicker": [
+          "event_light_step",
+          "kodim07_light_step_seed1",
+          0,
+          4000,
+          false,
+          "raw"
+        ]
+      }
+    },
+    {
+      "scope": "R20 full controls seed0 CPU minus GPU",
+      "file": "per_sequence.jsonl",
+      "rows": 736,
+      "max_abs": {
+        "psnr_rgb": 0.007860645297970592,
+        "ssim_rgb": 0.0003281558553377417,
+        "edge_mae": 0.001936932404836167,
+        "temporal_error": 0.006813173708708931,
+        "flicker": 0.007022816201914139
+      },
+      "worst_identity": {
+        "psnr_rgb": [
+          "event_light_step",
+          "kodim07_light_step_seed0",
+          0,
+          "pre05",
+          false
+        ],
+        "ssim_rgb": [
+          "event_light_step",
+          "kodim07_light_step_seed0",
+          0,
+          "pre05",
+          false
+        ],
+        "edge_mae": [
+          "event_light_step",
+          "kodim07_light_step_seed0",
+          0,
+          "pre05",
+          true
+        ],
+        "temporal_error": [
+          "event_light_step",
+          "kodim07_light_step_seed1",
+          0,
+          "pre05",
+          true
+        ],
+        "flicker": [
+          "event_light_step",
+          "kodim07_light_step_seed1",
+          0,
+          "pre05",
+          false
+        ]
+      }
+    },
+    {
+      "scope": "R20 full controls seed1 CPU minus GPU",
+      "file": "per_sequence.jsonl",
+      "rows": 736,
+      "max_abs": {
+        "psnr_rgb": 0.02970256843767416,
+        "ssim_rgb": 0.00010601431131362915,
+        "edge_mae": 0.0008183121681213379,
+        "temporal_error": 0.0030065826747724955,
+        "flicker": 0.003400201382844692
+      },
+      "worst_identity": {
+        "psnr_rgb": [
+          "dev_native",
+          "video_121",
+          1,
+          "postwarp05",
+          false
+        ],
+        "ssim_rgb": [
+          "event_light_step",
+          "kodim07_light_step_seed0",
+          1,
+          "pre05",
+          false
+        ],
+        "edge_mae": [
+          "dev",
+          "video_15",
+          1,
+          "recursive_half01",
+          false
+        ],
+        "temporal_error": [
+          "event_light_step",
+          "kodim07_light_step_seed0",
+          1,
+          "pre05",
+          true
+        ],
+        "flicker": [
+          "event_light_step",
+          "kodim07_light_step_seed0",
+          1,
+          "pre05",
+          true
+        ]
+      }
+    },
+    {
+      "scope": "R14 native plain CPU minus GPU",
+      "file": "per_frame.jsonl",
+      "rows": 15872,
+      "max_abs": {
+        "psnr_rgb": 0.03715148736608853,
+        "ssim_rgb": 0.0002950429916381836,
+        "edge_mae": 0.0014491081237792969,
+        "output_mean": 0.05309295654296875,
+        "target_mean": 0.0,
+        "temporal_error": 0.030853271484375,
+        "flicker": 0.03855133056640625
+      },
+      "worst_identity": {
+        "psnr_rgb": [
+          "dev_native",
+          "video_121",
+          1,
+          4000,
+          false,
+          "half01",
+          14
+        ],
+        "ssim_rgb": [
+          "event_light_step",
+          "kodim07_light_step_seed0",
+          0,
+          4000,
+          false,
+          "raw",
+          11
+        ],
+        "edge_mae": [
+          "event_light_step",
+          "kodim07_light_step_seed1",
+          0,
+          4000,
+          false,
+          "raw",
+          7
+        ],
+        "output_mean": [
+          "test",
+          "video_60",
+          1,
+          4000,
+          false,
+          "raw",
+          0
+        ],
+        "target_mean": [
+          "test",
+          "video_21",
+          0,
+          1000,
+          false,
+          "raw",
+          0
+        ],
+        "temporal_error": [
+          "event_light_step",
+          "kodim09_light_step_seed1",
+          0,
+          1000,
+          false,
+          "half01",
+          12
+        ],
+        "flicker": [
+          "event_light_step",
+          "kodim09_light_step_seed1",
+          0,
+          1000,
+          true,
+          "half01",
+          12
+        ]
+      }
+    },
+    {
+      "scope": "R20 full controls seed0 CPU minus GPU",
+      "file": "per_frame.jsonl",
+      "rows": 15872,
+      "max_abs": {
+        "psnr_rgb": 0.014937709925121112,
+        "ssim_rgb": 0.000751197338104248,
+        "edge_mae": 0.0037994384765625,
+        "output_mean": 0.04571533203125,
+        "target_mean": 0.0,
+        "temporal_error": 0.02106475830078125,
+        "flicker": 0.0231475830078125
+      },
+      "worst_identity": {
+        "psnr_rgb": [
+          "event_light_step",
+          "kodim07_light_step_seed0",
+          0,
+          "pre05",
+          false,
+          9
+        ],
+        "ssim_rgb": [
+          "event_light_step",
+          "kodim07_light_step_seed0",
+          0,
+          "pre05",
+          false,
+          2
+        ],
+        "edge_mae": [
+          "event_light_step",
+          "kodim07_light_step_seed0",
+          0,
+          "pre05",
+          false,
+          9
+        ],
+        "output_mean": [
+          "event_light_step",
+          "kodim11_light_step_seed1",
+          0,
+          "pre05",
+          false,
+          5
+        ],
+        "target_mean": [
+          "test",
+          "video_21",
+          0,
+          "raw",
+          false,
+          0
+        ],
+        "temporal_error": [
+          "event_light_step",
+          "kodim09_light_step_seed1",
+          0,
+          "pre05",
+          true,
+          13
+        ],
+        "flicker": [
+          "event_light_step",
+          "kodim07_light_step_seed0",
+          0,
+          "pre05",
+          false,
+          12
+        ]
+      }
+    },
+    {
+      "scope": "R20 full controls seed1 CPU minus GPU",
+      "file": "per_frame.jsonl",
+      "rows": 15872,
+      "max_abs": {
+        "psnr_rgb": 0.03791064920370957,
+        "ssim_rgb": 0.00024127960205078125,
+        "edge_mae": 0.0013508796691894531,
+        "output_mean": 0.0555572509765625,
+        "target_mean": 0.0,
+        "temporal_error": 0.037517547607421875,
+        "flicker": 0.037517547607421875
+      },
+      "worst_identity": {
+        "psnr_rgb": [
+          "dev_native",
+          "video_121",
+          1,
+          "postaligned05",
+          false,
+          15
+        ],
+        "ssim_rgb": [
+          "event_light_step",
+          "kodim07_light_step_seed0",
+          1,
+          "pre05",
+          false,
+          9
+        ],
+        "edge_mae": [
+          "event_light_step",
+          "kodim10_light_step_seed0",
+          1,
+          "pre05",
+          false,
+          4
+        ],
+        "output_mean": [
+          "test",
+          "video_60",
+          1,
+          "pre05",
+          false,
+          1
+        ],
+        "target_mean": [
+          "test",
+          "video_21",
+          1,
+          "raw",
+          false,
+          0
+        ],
+        "temporal_error": [
+          "event_light_step",
+          "kodim09_light_step_seed1",
+          1,
+          "pre05",
+          false,
+          13
+        ],
+        "flicker": [
+          "event_light_step",
+          "kodim09_light_step_seed1",
+          1,
+          "pre05",
+          false,
+          13
+        ]
+      }
+    }
+  ],
+  "common_CPU_exact_replays": [
+    {
+      "seed": 0,
+      "file": "per_sequence.jsonl",
+      "rows": 184,
+      "max_abs": 0.0
+    },
+    {
+      "seed": 1,
+      "file": "per_sequence.jsonl",
+      "rows": 184,
+      "max_abs": 0.0
+    },
+    {
+      "seed": 0,
+      "file": "per_frame.jsonl",
+      "rows": 3968,
+      "max_abs": 0.0
+    },
+    {
+      "seed": 1,
+      "file": "per_frame.jsonl",
+      "rows": 3968,
+      "max_abs": 0.0
+    }
+  ],
+  "source_sha256": {
+    "research/4.temporal-consistency/results/exploration-r14-eval-spatial/per_sequence.jsonl": "8f48f18c9c135c12ce699e6b61a59e19f381684f35576df4a83b591f04d2c38d",
+    "research/4.temporal-consistency/results/exploration-r21-reference-plain-cpu/per_sequence.jsonl": "36c7f105a98b27923863c7eef8602653be766b9cf7266a4899b4874e4cea97ae",
+    "research/4.temporal-consistency/results/exploration-r20-seed0/per_sequence.jsonl": "5bd9b09fc96a6b1864b28ce67bfa8ded8faddad2dd1fa20f854714d63a3ec4ea",
+    "research/4.temporal-consistency/results/exploration-r21-reference-post-seed0-cpu/per_sequence.jsonl": "a38be698b0823aa273398ae2002fd65faca809752124bfdf222ffbc973e5b459",
+    "research/4.temporal-consistency/results/exploration-r20-seed1/per_sequence.jsonl": "0e1e36dd40589e645da7eac29eabf117329c88ad8b2bfb5906ac7156cb29a628",
+    "research/4.temporal-consistency/results/exploration-r21-reference-post-seed1-cpu/per_sequence.jsonl": "969555a5c16120137be04e4a21be15b9821c5e0320eb85bd47763da7fa15d70c",
+    "research/4.temporal-consistency/results/exploration-r14-eval-spatial/per_frame.jsonl": "5db71a0a809f56c1f8eab55ce1bcb5cb1eafd17e5b7e6db2c911726adff6b90e",
+    "research/4.temporal-consistency/results/exploration-r21-reference-plain-cpu/per_frame.jsonl": "0c3f7c40d397e44864927b5c11ca3717e4b6abf3637f7d42dc3c91c34ce3ec84",
+    "research/4.temporal-consistency/results/exploration-r20-seed0/per_frame.jsonl": "bc844a2d1395da788d1a8ced289f343262505b3c0620525c93abad50a68963cb",
+    "research/4.temporal-consistency/results/exploration-r21-reference-post-seed0-cpu/per_frame.jsonl": "fa9b9a61664f84d001cd027226b3ab43e47aa1491d862793134bd5af716a58c5",
+    "research/4.temporal-consistency/results/exploration-r20-seed1/per_frame.jsonl": "a24e0ac58826fd57be4221c300b5fe674410e70fd5b38a1b1766a77a4498c6de",
+    "research/4.temporal-consistency/results/exploration-r21-reference-post-seed1-cpu/per_frame.jsonl": "72e6e42db627f49d51cdf09f6489c69d7abd822994b22f60e35083d6aefb69f2"
+  },
+  "scope": "CPU primary comparisons; cross-backend drift retained, no relaxed equality claim."
+}

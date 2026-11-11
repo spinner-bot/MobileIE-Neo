@@ -1,0 +1,49 @@
+{"url": "https://huggingface.co/api/datasets/OLiVES-Lowlight/OLiVES/tree/291ae19d061dedcff8e62f9b6d9d33d7ceeedbaf/Frames/gt/video_38?limit=1000", "attempt": 1, "error": "HTTP Error 404: Not Found"}
+{"url": "https://huggingface.co/api/datasets/OLiVES-Lowlight/OLiVES/tree/291ae19d061dedcff8e62f9b6d9d33d7ceeedbaf/Frames/gt/video_1?limit=1000", "attempt": 1, "error": "HTTP Error 404: Not Found"}
+{"url": "https://huggingface.co/api/datasets/OLiVES-Lowlight/OLiVES/tree/291ae19d061dedcff8e62f9b6d9d33d7ceeedbaf/Frames/gt/video_93?limit=1000", "attempt": 1, "error": "HTTP Error 404: Not Found"}
+{"url": "https://huggingface.co/api/datasets/OLiVES-Lowlight/OLiVES/tree/291ae19d061dedcff8e62f9b6d9d33d7ceeedbaf/Frames/gt/video_38?limit=1000", "attempt": 2, "error": "HTTP Error 404: Not Found"}
+{"url": "https://huggingface.co/api/datasets/OLiVES-Lowlight/OLiVES/tree/291ae19d061dedcff8e62f9b6d9d33d7ceeedbaf/Frames/gt/video_1?limit=1000", "attempt": 2, "error": "HTTP Error 404: Not Found"}
+{"url": "https://huggingface.co/api/datasets/OLiVES-Lowlight/OLiVES/tree/291ae19d061dedcff8e62f9b6d9d33d7ceeedbaf/Frames/gt/video_137?limit=1000", "attempt": 1, "error": "HTTP Error 404: Not Found"}
+{"url": "https://huggingface.co/api/datasets/OLiVES-Lowlight/OLiVES/tree/291ae19d061dedcff8e62f9b6d9d33d7ceeedbaf/Frames/gt/video_93?limit=1000", "attempt": 2, "error": "HTTP Error 404: Not Found"}
+{"url": "https://huggingface.co/api/datasets/OLiVES-Lowlight/OLiVES/tree/291ae19d061dedcff8e62f9b6d9d33d7ceeedbaf/Frames/gt/video_137?limit=1000", "attempt": 2, "error": "HTTP Error 404: Not Found"}
+{"url": "https://huggingface.co/api/datasets/OLiVES-Lowlight/OLiVES/tree/291ae19d061dedcff8e62f9b6d9d33d7ceeedbaf/Frames/gt/video_38?limit=1000", "attempt": 3, "error": "HTTP Error 404: Not Found"}
+{"url": "https://huggingface.co/api/datasets/OLiVES-Lowlight/OLiVES/tree/291ae19d061dedcff8e62f9b6d9d33d7ceeedbaf/Frames/gt/video_1?limit=1000", "attempt": 3, "error": "HTTP Error 404: Not Found"}
+{"url": "https://huggingface.co/api/datasets/OLiVES-Lowlight/OLiVES/tree/291ae19d061dedcff8e62f9b6d9d33d7ceeedbaf/Frames/gt/video_7?limit=1000", "attempt": 1, "error": "HTTP Error 404: Not Found"}
+{"url": "https://huggingface.co/api/datasets/OLiVES-Lowlight/OLiVES/tree/291ae19d061dedcff8e62f9b6d9d33d7ceeedbaf/Frames/gt/video_93?limit=1000", "attempt": 3, "error": "HTTP Error 404: Not Found"}
+{"url": "https://huggingface.co/api/datasets/OLiVES-Lowlight/OLiVES/tree/291ae19d061dedcff8e62f9b6d9d33d7ceeedbaf/Frames/gt/video_137?limit=1000", "attempt": 3, "error": "HTTP Error 404: Not Found"}
+{"url": "https://huggingface.co/api/datasets/OLiVES-Lowlight/OLiVES/tree/291ae19d061dedcff8e62f9b6d9d33d7ceeedbaf/Frames/gt/video_7?limit=1000", "attempt": 2, "error": "HTTP Error 404: Not Found"}
+{"url": "https://huggingface.co/api/datasets/OLiVES-Lowlight/OLiVES/tree/291ae19d061dedcff8e62f9b6d9d33d7ceeedbaf/Frames/gt/video_7?limit=1000", "attempt": 3, "error": "HTTP Error 404: Not Found"}
+Traceback (most recent call last):
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/fetch_olives_r4.py", line 102, in <module>
+    main()
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/fetch_olives_r4.py", line 56, in main
+    listings = {(side, scene): rows for side, scene, rows in executor.map(listing, jobs)}
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/fetch_olives_r4.py", line 56, in <dictcomp>
+    listings = {(side, scene): rows for side, scene, rows in executor.map(listing, jobs)}
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 621, in result_iterator
+    yield _result_or_cancel(fs.pop())
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 319, in _result_or_cancel
+    return fut.result(timeout)
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 458, in result
+    return self.__get_result()
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/fetch_olives_r4.py", line 51, in listing
+    rows = json.loads(read(url))
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/fetch_olives_r4.py", line 22, in read
+    with urllib.request.urlopen(url, timeout=180) as stream:
+  File "/usr/lib/python3.10/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.10/urllib/request.py", line 525, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.10/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+  File "/usr/lib/python3.10/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.10/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.10/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found

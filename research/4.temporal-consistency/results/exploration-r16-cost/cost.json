@@ -1,0 +1,221 @@
+{
+  "rows": [
+    {
+      "HW": [
+        270,
+        480
+      ],
+      "variant": "official",
+      "parameters": 4075,
+      "conv_MACs_per_frame": 496108944,
+      "conv_calls": 6,
+      "warmups": 10,
+      "timed_forwards": 50,
+      "p10_median_p90_ms": [
+        1.0393535834737122,
+        1.0414239950478077,
+        1.045499072642997
+      ],
+      "allocation_baseline_bytes": 5042688,
+      "peak_allocated_bytes": 42508800,
+      "incremental_peak_bytes": 37466112,
+      "additional_raw_previous_bytes": 0,
+      "spatial_duplicates_encoder": false,
+      "weights": "official"
+    },
+    {
+      "HW": [
+        270,
+        480
+      ],
+      "variant": "spatial",
+      "parameters": 24955,
+      "conv_MACs_per_frame": 1956441744,
+      "conv_calls": 14,
+      "warmups": 10,
+      "timed_forwards": 50,
+      "p10_median_p90_ms": [
+        2.213167113950476,
+        2.2166650160215795,
+        2.219810872338712
+      ],
+      "allocation_baseline_bytes": 5883392,
+      "peak_allocated_bytes": 81098240,
+      "incremental_peak_bytes": 75214848,
+      "additional_raw_previous_bytes": 0,
+      "spatial_duplicates_encoder": true,
+      "weights": "spatial seed0 step4000 for topology cost only"
+    },
+    {
+      "HW": [
+        270,
+        480
+      ],
+      "variant": "raw_history",
+      "parameters": 24955,
+      "conv_MACs_per_frame": 1956441744,
+      "conv_calls": 14,
+      "warmups": 10,
+      "timed_forwards": 50,
+      "p10_median_p90_ms": [
+        1.3515725906472653,
+        1.353394502075389,
+        1.3565271976403892
+      ],
+      "allocation_baseline_bytes": 5883392,
+      "peak_allocated_bytes": 81098240,
+      "incremental_peak_bytes": 75214848,
+      "additional_raw_previous_bytes": 1555200,
+      "spatial_duplicates_encoder": false,
+      "weights": "spatial seed0 step4000 for topology cost only"
+    },
+    {
+      "HW": [
+        288,
+        512
+      ],
+      "variant": "official",
+      "parameters": 4075,
+      "conv_MACs_per_frame": 564461712,
+      "conv_calls": 6,
+      "warmups": 10,
+      "timed_forwards": 50,
+      "p10_median_p90_ms": [
+        0.6824439798947424,
+        0.6844885065220296,
+        0.6873940001241863
+      ],
+      "allocation_baseline_bytes": 5881344,
+      "peak_allocated_bytes": 48348672,
+      "incremental_peak_bytes": 42467328,
+      "additional_raw_previous_bytes": 0,
+      "spatial_duplicates_encoder": false,
+      "weights": "official"
+    },
+    {
+      "HW": [
+        288,
+        512
+      ],
+      "variant": "spatial",
+      "parameters": 24955,
+      "conv_MACs_per_frame": 2225995920,
+      "conv_calls": 14,
+      "warmups": 10,
+      "timed_forwards": 50,
+      "p10_median_p90_ms": [
+        1.36842051288113,
+        1.3737734989263117,
+        1.4584609190933406
+      ],
+      "allocation_baseline_bytes": 5968384,
+      "peak_allocated_bytes": 90913792,
+      "incremental_peak_bytes": 84945408,
+      "additional_raw_previous_bytes": 0,
+      "spatial_duplicates_encoder": true,
+      "weights": "spatial seed0 step4000 for topology cost only"
+    },
+    {
+      "HW": [
+        288,
+        512
+      ],
+      "variant": "raw_history",
+      "parameters": 24955,
+      "conv_MACs_per_frame": 2225995920,
+      "conv_calls": 14,
+      "warmups": 10,
+      "timed_forwards": 50,
+      "p10_median_p90_ms": [
+        1.3710506784263998,
+        1.374622486764565,
+        1.7719325318466872
+      ],
+      "allocation_baseline_bytes": 5968384,
+      "peak_allocated_bytes": 90913792,
+      "incremental_peak_bytes": 84945408,
+      "additional_raw_previous_bytes": 1769472,
+      "spatial_duplicates_encoder": false,
+      "weights": "spatial seed0 step4000 for topology cost only"
+    },
+    {
+      "HW": [
+        1080,
+        1920
+      ],
+      "variant": "official",
+      "parameters": 4075,
+      "conv_MACs_per_frame": 7937740944,
+      "conv_calls": 6,
+      "warmups": 10,
+      "timed_forwards": 50,
+      "p10_median_p90_ms": [
+        8.521200402174145,
+        8.573267492465675,
+        8.61454273108393
+      ],
+      "allocation_baseline_bytes": 75591168,
+      "peak_allocated_bytes": 672787968,
+      "incremental_peak_bytes": 597196800,
+      "additional_raw_previous_bytes": 0,
+      "spatial_duplicates_encoder": false,
+      "weights": "official"
+    },
+    {
+      "HW": [
+        1080,
+        1920
+      ],
+      "variant": "spatial",
+      "parameters": 24955,
+      "conv_MACs_per_frame": 31303065744,
+      "conv_calls": 14,
+      "warmups": 10,
+      "timed_forwards": 50,
+      "p10_median_p90_ms": [
+        18.43112353235483,
+        18.497620476409793,
+        18.699202692369
+      ],
+      "allocation_baseline_bytes": 75678208,
+      "peak_allocated_bytes": 1270410240,
+      "incremental_peak_bytes": 1194732032,
+      "additional_raw_previous_bytes": 0,
+      "spatial_duplicates_encoder": true,
+      "weights": "spatial seed0 step4000 for topology cost only"
+    },
+    {
+      "HW": [
+        1080,
+        1920
+      ],
+      "variant": "raw_history",
+      "parameters": 24955,
+      "conv_MACs_per_frame": 31303065744,
+      "conv_calls": 14,
+      "warmups": 10,
+      "timed_forwards": 50,
+      "p10_median_p90_ms": [
+        18.467082973802462,
+        18.511161499191076,
+        18.62274567829445
+      ],
+      "allocation_baseline_bytes": 75678208,
+      "peak_allocated_bytes": 1270410240,
+      "incremental_peak_bytes": 1194732032,
+      "additional_raw_previous_bytes": 24883200,
+      "spatial_duplicates_encoder": false,
+      "weights": "spatial seed0 step4000 for topology cost only"
+    }
+  ],
+  "checkpoint": ".cache/checkpoints/exploration-r16/spatial-seed0/step4000.pth",
+  "checkpoint_sha256": "acc9a2c222af9836cdc7ebc046046c178a80f38361d07fd82a1e11f5be2a8a90",
+  "protocol_sha256": "48887d573ca304341d4de095c1348a43c8ac280aaaaba4e445ee16f4f32982c7",
+  "cudnn_tf32_allowed": true,
+  "cudnn_deterministic": true,
+  "dtype": "float32",
+  "batch": 1,
+  "scope": "synchronized eager GPU-stage wall including Python/allocation; excludes CPU/loading/transfers/teacher/flow/metrics; shared A100, not phone",
+  "MAC_scope": "Conv2d only, multiply-add counts as1; FST, gates, interpolation, activations and GAP excluded",
+  "memory_scope": "PyTorch allocated memory, not reserved or total device; baseline includes allocated inputs/models; raw state listed separately"
+}

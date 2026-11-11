@@ -1,0 +1,156 @@
+{
+  "runs": [
+    {
+      "run": "plain-seed0",
+      "steps": 1000,
+      "initial_task": 0.1261654943227768,
+      "last100_task": 0.0724790322035551,
+      "final_gamma": null,
+      "final_branch_l2": null
+    },
+    {
+      "run": "plain-seed1",
+      "steps": 1000,
+      "initial_task": 0.10840814560651779,
+      "last100_task": 0.06940769888460636,
+      "final_gamma": null,
+      "final_branch_l2": null
+    },
+    {
+      "run": "spatial_bilinear-seed0",
+      "steps": 1000,
+      "initial_task": 0.1261654943227768,
+      "last100_task": 0.07178175859153271,
+      "final_gamma": null,
+      "final_branch_l2": 0.029948117211461067
+    },
+    {
+      "run": "spatial_bilinear-seed1",
+      "steps": 1000,
+      "initial_task": 0.10840814560651779,
+      "last100_task": 0.0687451633065939,
+      "final_gamma": null,
+      "final_branch_l2": 0.029847681522369385
+    },
+    {
+      "run": "temporal_bilinear-seed0",
+      "steps": 1000,
+      "initial_task": 0.1261654943227768,
+      "last100_task": 0.07178870793431998,
+      "final_gamma": null,
+      "final_branch_l2": 0.02989191934466362
+    },
+    {
+      "run": "temporal_bilinear-seed1",
+      "steps": 1000,
+      "initial_task": 0.10840814560651779,
+      "last100_task": 0.06874989278614521,
+      "final_gamma": null,
+      "final_branch_l2": 0.02978111058473587
+    },
+    {
+      "run": "temporal_post-seed0",
+      "steps": 1000,
+      "initial_task": 0.1261654943227768,
+      "last100_task": 0.06993373341858387,
+      "final_gamma": null,
+      "final_branch_l2": 0.03331362456083298
+    },
+    {
+      "run": "temporal_post-seed1",
+      "steps": 1000,
+      "initial_task": 0.10840814560651779,
+      "last100_task": 0.06742445319890976,
+      "final_gamma": null,
+      "final_branch_l2": 0.032902225852012634
+    },
+    {
+      "run": "tsm_fixed-seed0",
+      "steps": 1000,
+      "initial_task": 0.12959417700767517,
+      "last100_task": 0.07236555576324463,
+      "final_gamma": null,
+      "final_branch_l2": null
+    },
+    {
+      "run": "tsm_fixed-seed1",
+      "steps": 1000,
+      "initial_task": 0.10944516956806183,
+      "last100_task": 0.06925686214119196,
+      "final_gamma": null,
+      "final_branch_l2": null
+    },
+    {
+      "run": "tsm_learned-seed0",
+      "steps": 1000,
+      "initial_task": 0.1261654943227768,
+      "last100_task": 0.07244396314024926,
+      "final_gamma": 0.05690912902355194,
+      "final_branch_l2": null
+    },
+    {
+      "run": "tsm_learned-seed1",
+      "steps": 1000,
+      "initial_task": 0.10840814560651779,
+      "last100_task": 0.0693017728626728,
+      "final_gamma": 0.05820157751441002,
+      "final_branch_l2": null
+    }
+  ],
+  "total_updates": 12000,
+  "same_streams_all_modes": true,
+  "r4b_repeat": [
+    {
+      "run": "plain-seed0",
+      "previous_sha256": "0189ee27266b7f33a13aa460bcbf1c2f5e005af4d7f9a70034b0741639dfd6b4",
+      "max_abs_by_tensor": {
+        "head.weight1": 0.0,
+        "head.weight2": 0.0,
+        "head.bias": 0.0,
+        "head.block1.0.weight": 0.0,
+        "head.block1.0.bias": 0.0,
+        "head.block1.1.weight": 0.0,
+        "head.block1.2.weight": 0.0,
+        "head.block1.2.bias": 0.0,
+        "body.weight1": 0.0,
+        "body.weight2": 0.0,
+        "body.bias": 0.0,
+        "body.block1.weight": 0.0,
+        "body.block1.bias": 0.0,
+        "att.1.weight": 0.0,
+        "att.1.bias": 0.0,
+        "att1.0.weight": 0.0,
+        "att1.0.bias": 0.0,
+        "tail.weight": 0.0,
+        "tail.bias": 0.0
+      },
+      "exact_match": true
+    },
+    {
+      "run": "plain-seed1",
+      "previous_sha256": "2e62fb79b9db9c88494a28746c84ee5a489c7fffaccea6696fb21e4248f4971f",
+      "max_abs_by_tensor": {
+        "head.weight1": 0.0,
+        "head.weight2": 0.0,
+        "head.bias": 0.0,
+        "head.block1.0.weight": 0.0,
+        "head.block1.0.bias": 0.0,
+        "head.block1.1.weight": 0.0,
+        "head.block1.2.weight": 0.0,
+        "head.block1.2.bias": 0.0,
+        "body.weight1": 0.0,
+        "body.weight2": 0.0,
+        "body.bias": 0.0,
+        "body.block1.weight": 0.0,
+        "body.block1.bias": 0.0,
+        "att.1.weight": 0.0,
+        "att.1.bias": 0.0,
+        "att1.0.weight": 0.0,
+        "att1.0.bias": 0.0,
+        "tail.weight": 0.0,
+        "tail.bias": 0.0
+      },
+      "exact_match": true
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "samples": [
+    {
+      "gpu": 4,
+      "uuid": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+      "memory_mib": 4,
+      "utilization_percent": 0,
+      "compute_processes": [],
+      "time": "2026-11-10T20:49:19.295125+08:00"
+    },
+    {
+      "gpu": 4,
+      "uuid": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+      "memory_mib": 4,
+      "utilization_percent": 0,
+      "compute_processes": [],
+      "time": "2026-11-10T20:49:20.548312+08:00"
+    }
+  ],
+  "allowed": true,
+  "command": [
+    ".venv/bin/python",
+    "-u",
+    "research/4.temporal-consistency/scripts/train_exploration_r2.py",
+    "--out",
+    "research/4.temporal-consistency/results/exploration-r2-lambda05",
+    "--variants",
+    "task_temporal",
+    "--temporal-weight",
+    "0.5",
+    "--checkpoint-root",
+    ".cache/checkpoints/exploration-r2-lambda05"
+  ],
+  "scope": "two preflight samples and project-local lock; not a reservation system shared with other users",
+  "returncode": 0,
+  "process_wall_seconds": 115.06472427700646,
+  "ended": "2026-11-10T20:51:15.615863+08:00"
+}

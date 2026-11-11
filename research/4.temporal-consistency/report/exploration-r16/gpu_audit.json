@@ -1,0 +1,117 @@
+{
+  "process_directories": [
+    "research/4.temporal-consistency/process/exploration-r16"
+  ],
+  "completed": [
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r16/gpu-cost-counterbalanced.json",
+      "gpu": 1,
+      "revision": "8f7f2f49775046b91bf954af1f848a6f7f363f9c",
+      "allowed": true,
+      "process_wall_seconds": 22.522823665000033,
+      "returncode": 0
+    },
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r16/gpu-cost.json",
+      "gpu": 1,
+      "revision": "52b42034df411990d2af093e139831fbcecf38da",
+      "allowed": true,
+      "process_wall_seconds": 6.420507259957958,
+      "returncode": 0
+    },
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r16/gpu-decoder-diagnostic-retry.json",
+      "gpu": 1,
+      "revision": "d74dcd64a75b5ac812e3d979ea391499280242a1",
+      "allowed": true,
+      "process_wall_seconds": 28.63779789704131,
+      "returncode": 0
+    },
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r16/gpu-eval-aligned.json",
+      "gpu": 3,
+      "revision": "e1f3c31f4b27345628801ef662ba175a3d3f64bb",
+      "allowed": true,
+      "process_wall_seconds": 359.3999743180466,
+      "returncode": 0
+    },
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r16/gpu-eval-raw.json",
+      "gpu": 2,
+      "revision": "1cfd8111f5a95e8aecbaa748b0a0ffd48bfbf05b",
+      "allowed": true,
+      "process_wall_seconds": 350.888405729027,
+      "returncode": 0
+    },
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r16/gpu-eval-spatial.json",
+      "gpu": 1,
+      "revision": "7c6485dd75d876f276c1f517ba7f5315a5ee5dbc",
+      "allowed": true,
+      "process_wall_seconds": 184.41366732801544,
+      "returncode": 0
+    },
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r16/gpu-preview.json",
+      "gpu": 0,
+      "revision": "f8ed605600f9cc31424cdff3e2e9f4de347cefdd",
+      "allowed": true,
+      "process_wall_seconds": 14.686955784040038,
+      "returncode": 0
+    },
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r16/gpu-train-aligned-retry.json",
+      "gpu": 3,
+      "revision": "c5be03d7ea6a6f4ddb5fde645a085530cdb7a29e",
+      "allowed": true,
+      "process_wall_seconds": 1158.6764788559522,
+      "returncode": 0
+    },
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r16/gpu-train-spatial-raw-retry.json",
+      "gpu": 2,
+      "revision": "c5be03d7ea6a6f4ddb5fde645a085530cdb7a29e",
+      "allowed": true,
+      "process_wall_seconds": 907.5076747229905,
+      "returncode": 0
+    }
+  ],
+  "failed": [
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r16/gpu-decoder-diagnostic.json",
+      "gpu": 1,
+      "revision": "256633a16e4266e8dd5d25f89579c5904cdebfa3",
+      "allowed": true,
+      "process_wall_seconds": 28.577683454030193,
+      "returncode": 1
+    },
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r16/gpu-train-aligned.json",
+      "gpu": 3,
+      "revision": "c3efbe092e1ef636c277545f7ee2b16247307c68",
+      "allowed": true,
+      "process_wall_seconds": 39.52415503998054,
+      "returncode": 1
+    },
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r16/gpu-train-spatial-raw.json",
+      "gpu": 2,
+      "revision": "c3efbe092e1ef636c277545f7ee2b16247307c68",
+      "allowed": true,
+      "process_wall_seconds": 38.2767063259962,
+      "returncode": 1
+    }
+  ],
+  "resource_refusals": [],
+  "used_physical_gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "peak_own_concurrent_jobs": 4,
+  "source_hashes_verified": 1450,
+  "source_mismatches": [],
+  "process_gpu_seconds": 3139.532830380078,
+  "scope": "includes CPU/data/metrics; not GPU kernel time; preflight and local locks are not a global reservation"
+}

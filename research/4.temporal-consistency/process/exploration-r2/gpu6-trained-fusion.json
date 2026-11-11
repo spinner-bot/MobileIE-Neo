@@ -1,0 +1,32 @@
+{
+  "samples": [
+    {
+      "gpu": 6,
+      "uuid": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+      "memory_mib": 4,
+      "utilization_percent": 0,
+      "compute_processes": [],
+      "time": "2026-11-10T20:59:04.203905+08:00"
+    },
+    {
+      "gpu": 6,
+      "uuid": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+      "memory_mib": 4,
+      "utilization_percent": 0,
+      "compute_processes": [],
+      "time": "2026-11-10T20:59:05.422760+08:00"
+    }
+  ],
+  "allowed": true,
+  "command": [
+    ".venv/bin/python",
+    "-u",
+    "research/4.temporal-consistency/scripts/evaluate_trained_fusion_r2.py",
+    "--out",
+    "research/4.temporal-consistency/results/exploration-r2-trained-fusion"
+  ],
+  "scope": "two preflight samples and project-local lock; not a reservation system shared with other users",
+  "returncode": 0,
+  "process_wall_seconds": 264.58903261998785,
+  "ended": "2026-11-10T21:03:30.013909+08:00"
+}

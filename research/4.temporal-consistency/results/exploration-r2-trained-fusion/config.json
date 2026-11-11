@@ -1,0 +1,37 @@
+{
+  "experiment_id": "exploration-r2-trained-fusion",
+  "models": {
+    "task-seed0": {
+      "path": ".cache/checkpoints/exploration-r2/task-seed0/last.pth",
+      "sha256": "3dbd857119687a27ce0c3b10b772e574482caf03cf1d9ab649fb75d5cc10aa12",
+      "step": 400
+    },
+    "task-seed1": {
+      "path": ".cache/checkpoints/exploration-r2/task-seed1/last.pth",
+      "sha256": "a007cb8cfdca1d4a1d89b431b60881a1dc5616ae9cc628cf2dec324d59bd9b89",
+      "step": 400
+    },
+    "task_T1-seed0": {
+      "path": ".cache/checkpoints/exploration-r2-lambda10/task_temporal-seed0/last.pth",
+      "sha256": "e052bc510fd8b532da47db728a92a31dd831911b6ccdf1fe22d0a6d2b388934d",
+      "step": 400
+    },
+    "task_T1-seed1": {
+      "path": ".cache/checkpoints/exploration-r2-lambda10/task_temporal-seed1/last.pth",
+      "sha256": "a697ca79b043951ab66a47c0bfa57f681f95b2652034a1fc4bdb62ba50f0aefc",
+      "step": 400
+    },
+    "bounded_T0.1-seed0": {
+      "path": ".cache/checkpoints/exploration-r2/bounded_temporal-seed0/last.pth",
+      "sha256": "ba9e48ebae8bd827f22723422e785933ed06e460256dc36b8ca588df163c4fa7",
+      "step": 400
+    },
+    "bounded_T0.1-seed1": {
+      "path": ".cache/checkpoints/exploration-r2/bounded_temporal-seed1/last.pth",
+      "sha256": "b34eb61a5f9159ee7d48bb5c2b4f70736fd9f1185eea19d57da4c1f984de9ced",
+      "step": 400
+    }
+  },
+  "fusion_alpha": 0.7,
+  "note": "selected exploratory configurations, not formal test-set model selection"
+}

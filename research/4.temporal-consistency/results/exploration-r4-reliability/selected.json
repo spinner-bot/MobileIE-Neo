@@ -1,0 +1,35 @@
+{
+  "configurations": [
+    {
+      "motion": "low",
+      "family": "photo",
+      "threshold": 2.0,
+      "train_temporal_error": 3.229068058729172
+    },
+    {
+      "motion": "low",
+      "family": "census",
+      "threshold": 0.0,
+      "train_temporal_error": 3.3137233753999076
+    },
+    {
+      "motion": "enhanced",
+      "family": "photo",
+      "threshold": 2.0,
+      "train_temporal_error": 3.212075694402059
+    },
+    {
+      "motion": "enhanced",
+      "family": "census",
+      "threshold": 0.0,
+      "train_temporal_error": 3.3137233753999076
+    }
+  ],
+  "cache_index_sha256": "96a2faeb5968ef6cc1ee42f98459e9d60a9441882b9736c551607a2f8857dfb0",
+  "quality_constraints": {
+    "psnr_max_drop": 0.05,
+    "ssim_max_drop": 0.005,
+    "edge_max_increase": 0.05
+  },
+  "scope": "train-only selection, all four training clips constrained; no validation threshold tuning"
+}

@@ -1,0 +1,36 @@
+Working directory: /root/Users/zrh/repo/MobileIE-Neo
+Author: Codex  (sqs_A100)
+Date: 2026-11-10 Asia/Shanghai
+This file records the setup and experiment commands; git history records code/document edits.
+
+# Local environment (existing torch packages are read, not installed into or changed)
+mountpoint -q /data
+python3 -m venv --system-site-packages .venv
+mkdir -p .cache/pip .cache/tmp
+# Write one line into .venv/lib/python3.10/site-packages/shared-torch.pth:
+# /data/Users/sqs/TabPFN/.venv-r/lib/python3.10/site-packages
+PIP_CACHE_DIR="$PWD/.cache/pip" TMPDIR="$PWD/.cache/tmp" .venv/bin/python -m pip install --no-deps opencv-python-headless==4.11.0.86
+
+# Analytic metric and streaming checks (CPU)
+CUDA_VISIBLE_DEVICES='' PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest discover -s research/4.temporal-consistency/tests -v
+
+# Always re-check physical GPU availability immediately before launch
+nvidia-smi --query-gpu=index,name,memory.used,memory.total,utilization.gpu --format=csv,noheader
+
+# Fixed controls, GPU0
+CUDA_VISIBLE_DEVICES=0 PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 .venv/bin/python -u research/4.temporal-consistency/scripts/explore_temporal_controls.py --out research/4.temporal-consistency/results/exploration-r1-v1 --device cuda
+
+# Layer probes, GPU0, sequential. v2 adds scale-relative identity diagnostics.
+CUDA_VISIBLE_DEVICES=0 PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 .venv/bin/python -u research/4.temporal-consistency/scripts/probe_feature_noise.py --out research/4.temporal-consistency/results/exploration-r1-feature-noise-v1 --device cuda
+CUDA_VISIBLE_DEVICES=0 PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 .venv/bin/python -u research/4.temporal-consistency/scripts/probe_feature_noise.py --out research/4.temporal-consistency/results/exploration-r1-feature-noise-v2 --device cuda
+
+# Independent combination matrices, GPUs0/1, run concurrently
+CUDA_VISIBLE_DEVICES=0 PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 .venv/bin/python -u research/4.temporal-consistency/scripts/explore_temporal_controls.py --out research/4.temporal-consistency/results/exploration-r1b-state --device cuda --family attention_state
+CUDA_VISIBLE_DEVICES=1 PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 .venv/bin/python -u research/4.temporal-consistency/scripts/explore_temporal_controls.py --out research/4.temporal-consistency/results/exploration-r1b-light-step --device cuda --family attention_state --target-step
+
+# Reproduction uses new output-directory names to preserve historical runs.
+# stdout for every original run was redirected to the sibling run-*.txt / probe-*.txt file.
+# config.json records the revision used for every matrix; the original first probe predates scaled-error fields.
+
+# Audit and figures (CPU)
+CUDA_VISIBLE_DEVICES='' PYTHONDONTWRITEBYTECODE=1 MPLCONFIGDIR="$PWD/.cache/matplotlib" .venv/bin/python research/4.temporal-consistency/scripts/summarize_exploration.py --results-root research/4.temporal-consistency/results --out research/4.temporal-consistency/report/exploration-r1

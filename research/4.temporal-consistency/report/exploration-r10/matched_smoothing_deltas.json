@@ -1,0 +1,938 @@
+[
+  {
+    "first_minus_second": [
+      "smooth_crop",
+      "native_crop"
+    ],
+    "domain": "dev",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": -4.619296004558063,
+        "ssim_rgb": -0.13937739469110966,
+        "edge_mae": 1.0786644704639912,
+        "temporal_error": -0.26482711633046385
+      },
+      "video_47": {
+        "psnr_rgb": -0.6621303357606969,
+        "ssim_rgb": 0.04515511728823185,
+        "edge_mae": -0.45271580666303635,
+        "temporal_error": -1.251972277959188
+      },
+      "video_91": {
+        "psnr_rgb": -3.192120349784066,
+        "ssim_rgb": -0.13249140977859497,
+        "edge_mae": 0.724877193570137,
+        "temporal_error": -1.0666863361994423
+      },
+      "video_121": {
+        "psnr_rgb": -3.7052254360383436,
+        "ssim_rgb": -0.07011534087359905,
+        "edge_mae": 0.7521519996225834,
+        "temporal_error": -0.7250494917233783
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": -3.0446930315352922,
+        "median": -3.4486728929112047,
+        "positive_clusters": 0,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -4.262502090864563,
+          -1.4229041108301086
+        ]
+      },
+      "ssim_rgb": {
+        "mean": -0.07420725701376796,
+        "median": -0.10130337532609701,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.13593440223485231,
+          0.0007434855215251446
+        ]
+      },
+      "edge_mae": {
+        "mean": 0.5257444642484188,
+        "median": 0.7385145965963602,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.1514988550916314,
+          0.9902176512405276
+        ]
+      },
+      "temporal_error": {
+        "mean": -0.8271338055531181,
+        "median": -0.8958679139614103,
+        "positive_clusters": 0,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -1.1593293070793151,
+          -0.46529192129770847
+        ]
+      }
+    },
+    "scope": "same GT/FOV/grid; input smoothing alters texture and noise, not pure noise intervention",
+    "variant": "full_lr1e3",
+    "fusion": "raw"
+  },
+  {
+    "first_minus_second": [
+      "smooth_crop",
+      "native_crop"
+    ],
+    "domain": "dev",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": -4.741064088011676,
+        "ssim_rgb": -0.1447147522121668,
+        "edge_mae": 1.1533723771572113,
+        "temporal_error": -0.08617527484893728
+      },
+      "video_47": {
+        "psnr_rgb": -0.7257475649696623,
+        "ssim_rgb": 0.03464761935174465,
+        "edge_mae": -0.37406185641884804,
+        "temporal_error": -1.0440090258916221
+      },
+      "video_91": {
+        "psnr_rgb": -3.2077502053060982,
+        "ssim_rgb": -0.13983827084302902,
+        "edge_mae": 0.8159033879637718,
+        "temporal_error": -0.8761881669362386
+      },
+      "video_121": {
+        "psnr_rgb": -3.7215159332469625,
+        "ssim_rgb": -0.07290422543883324,
+        "edge_mae": 0.7890780083835125,
+        "temporal_error": -0.6101494987805687
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": -3.0990194478835997,
+        "median": -3.4646330692765304,
+        "positive_clusters": 0,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -4.3577356173352815,
+          -1.4746896570389874
+        ]
+      },
+      "ssim_rgb": {
+        "mean": -0.0807024072855711,
+        "median": -0.10637124814093113,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.1422765115275979,
+          -0.008973853196948767
+        ]
+      },
+      "edge_mae": {
+        "mean": 0.5960729792714119,
+        "median": 0.8024906981736422,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.07657054532319307,
+          1.0622987849637866
+        ]
+      },
+      "temporal_error": {
+        "mean": -0.6541304916143417,
+        "median": -0.7431688328584036,
+        "positive_clusters": 0,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.9600985964139304,
+          -0.2836784978707626
+        ]
+      }
+    },
+    "scope": "same GT/FOV/grid; input smoothing alters texture and noise, not pure noise intervention",
+    "variant": "full_lr1e3",
+    "fusion": "half01"
+  },
+  {
+    "first_minus_second": [
+      "smooth_crop",
+      "native_crop"
+    ],
+    "domain": "dev",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": -3.7073245705384537,
+        "ssim_rgb": -0.13715405203402042,
+        "edge_mae": 1.0029418505728245,
+        "temporal_error": -0.4261001745859776
+      },
+      "video_47": {
+        "psnr_rgb": -0.6143319616050533,
+        "ssim_rgb": 0.05951410159468651,
+        "edge_mae": -0.5601132120937109,
+        "temporal_error": -1.5031526486078897
+      },
+      "video_91": {
+        "psnr_rgb": -2.5853040660570556,
+        "ssim_rgb": -0.12891997769474983,
+        "edge_mae": 0.7536655887961388,
+        "temporal_error": -1.0332660992940261
+      },
+      "video_121": {
+        "psnr_rgb": 1.0744745427054418,
+        "ssim_rgb": -0.010010551661252975,
+        "edge_mae": 0.3455459587275982,
+        "temporal_error": -1.0914643605550132
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": -1.4581215138737802,
+        "median": -1.5998180138310545,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -3.1463143182977547,
+          0.23007129055019426
+        ]
+      },
+      "ssim_rgb": {
+        "mean": -0.05414261994883418,
+        "median": -0.0694652646780014,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.13303701486438513,
+          0.024751774966716766
+        ]
+      },
+      "edge_mae": {
+        "mean": 0.38551004650071263,
+        "median": 0.5496057737618685,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.23166851187124848,
+          0.8783037196844816
+        ]
+      },
+      "temporal_error": {
+        "mean": -1.0134958207607268,
+        "median": -1.0623652299245196,
+        "positive_clusters": 0,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -1.3856810112794236,
+          -0.5924412210782365
+        ]
+      }
+    },
+    "scope": "same GT/FOV/grid; input smoothing alters texture and noise, not pure noise intervention",
+    "variant": "full_lr1e4",
+    "fusion": "raw"
+  },
+  {
+    "first_minus_second": [
+      "smooth_crop",
+      "native_crop"
+    ],
+    "domain": "dev",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": -3.790663820278194,
+        "ssim_rgb": -0.1428324431180954,
+        "edge_mae": 1.0794606395065784,
+        "temporal_error": -0.2190501213073741
+      },
+      "video_47": {
+        "psnr_rgb": -0.6325657373981883,
+        "ssim_rgb": 0.04684809409081936,
+        "edge_mae": -0.47370897606015205,
+        "temporal_error": -1.26742578347524
+      },
+      "video_91": {
+        "psnr_rgb": -2.600527845645825,
+        "ssim_rgb": -0.13599688559770584,
+        "edge_mae": 0.839862085878849,
+        "temporal_error": -0.8444632212320964
+      },
+      "video_121": {
+        "psnr_rgb": 1.0719234589497226,
+        "ssim_rgb": -0.017002277076244354,
+        "edge_mae": 0.410032469779253,
+        "temporal_error": -0.9161914229393004
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": -1.4879584860931212,
+        "median": -1.6165467915220066,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -3.1955958329620096,
+          0.21967886077576715
+        ]
+      },
+      "ssim_rgb": {
+        "mean": -0.06224587792530656,
+        "median": -0.0764995813369751,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.13941466435790062,
+          0.014922908507287502
+        ]
+      },
+      "edge_mae": {
+        "mean": 0.4639115547761321,
+        "median": 0.624947277829051,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.14531621057540178,
+          0.9596613626927137
+        ]
+      },
+      "temporal_error": {
+        "mean": -0.8117826372385027,
+        "median": -0.8803273220856984,
+        "positive_clusters": 0,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -1.1616851429144541,
+          -0.3933354467153557
+        ]
+      }
+    },
+    "scope": "same GT/FOV/grid; input smoothing alters texture and noise, not pure noise intervention",
+    "variant": "full_lr1e4",
+    "fusion": "half01"
+  },
+  {
+    "first_minus_second": [
+      "smooth_crop",
+      "native_crop"
+    ],
+    "domain": "dev",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": -3.39484594201722,
+        "ssim_rgb": -0.1472659632563591,
+        "edge_mae": 1.0322650894522667,
+        "temporal_error": -0.49092283248901314
+      },
+      "video_47": {
+        "psnr_rgb": -0.7968573285911376,
+        "ssim_rgb": 0.06782296299934387,
+        "edge_mae": -0.6321513000875711,
+        "temporal_error": -1.6370577414830523
+      },
+      "video_91": {
+        "psnr_rgb": -2.9208621506737025,
+        "ssim_rgb": -0.1436491645872593,
+        "edge_mae": 0.8287876546382904,
+        "temporal_error": -1.1561865965525318
+      },
+      "video_121": {
+        "psnr_rgb": 1.3654849355720344,
+        "ssim_rgb": 0.014660203829407692,
+        "edge_mae": 0.2308698408305645,
+        "temporal_error": -1.3365453084309893
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": -1.4367701214275064,
+        "median": -1.85885973963242,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -3.157854046345461,
+          0.2938981640106002
+        ]
+      },
+      "ssim_rgb": {
+        "mean": -0.05210799025371671,
+        "median": -0.0644944803789258,
+        "positive_clusters": 2,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.1454575639218092,
+          0.04124158341437578
+        ]
+      },
+      "edge_mae": {
+        "mean": 0.3649428212083876,
+        "median": 0.5298287477344275,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.26691656140610576,
+          0.9305263720452785
+        ]
+      },
+      "temporal_error": {
+        "mean": -1.1551781197388966,
+        "median": -1.2463659524917605,
+        "positive_clusters": 0,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -1.5168399552504221,
+          -0.7023284514745072
+        ]
+      }
+    },
+    "scope": "same GT/FOV/grid; input smoothing alters texture and noise, not pure noise intervention",
+    "variant": "head_lr1e3",
+    "fusion": "raw"
+  },
+  {
+    "first_minus_second": [
+      "smooth_crop",
+      "native_crop"
+    ],
+    "domain": "dev",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": -3.4294738506522897,
+        "ssim_rgb": -0.15292434766888618,
+        "edge_mae": 1.1027957126498222,
+        "temporal_error": -0.2824886957804358
+      },
+      "video_47": {
+        "psnr_rgb": -0.8105386229552636,
+        "ssim_rgb": 0.05382084287703037,
+        "edge_mae": -0.5396812278777361,
+        "temporal_error": -1.3812397400538128
+      },
+      "video_91": {
+        "psnr_rgb": -2.9295343364450055,
+        "ssim_rgb": -0.15113674476742744,
+        "edge_mae": 0.9116942211985588,
+        "temporal_error": -0.9473573923110963
+      },
+      "video_121": {
+        "psnr_rgb": 1.361851683480225,
+        "ssim_rgb": 0.005313718691468239,
+        "edge_mae": 0.30756963789463043,
+        "temporal_error": -1.115981034437815
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": -1.4519237816430834,
+        "median": -1.8700364797001345,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -3.1795040935486476,
+          0.2890051784989174
+        ]
+      },
+      "ssim_rgb": {
+        "mean": -0.061231632716953754,
+        "median": -0.0729115130379796,
+        "positive_clusters": 2,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.15203054621815681,
+          0.029567280784249306
+        ]
+      },
+      "edge_mae": {
+        "mean": 0.44559458596631885,
+        "median": 0.6096319295465946,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.17683736560866237,
+          1.0072449669241905
+        ]
+      },
+      "temporal_error": {
+        "mean": -0.93176671564579,
+        "median": -1.0316692133744556,
+        "positive_clusters": 0,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -1.2727691531181335,
+          -0.49086178044478057
+        ]
+      }
+    },
+    "scope": "same GT/FOV/grid; input smoothing alters texture and noise, not pure noise intervention",
+    "variant": "head_lr1e3",
+    "fusion": "half01"
+  },
+  {
+    "first_minus_second": [
+      "smooth_crop",
+      "native_crop"
+    ],
+    "domain": "dev",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": -3.4185866414087123,
+        "ssim_rgb": -0.13491696119308472,
+        "edge_mae": 0.9387937448918819,
+        "temporal_error": -0.5717543760935468
+      },
+      "video_47": {
+        "psnr_rgb": -0.6756931303031628,
+        "ssim_rgb": 0.0672465581446886,
+        "edge_mae": -0.629101000726223,
+        "temporal_error": -1.6479701042175292
+      },
+      "video_91": {
+        "psnr_rgb": -3.4891697927552485,
+        "ssim_rgb": -0.13172496855258942,
+        "edge_mae": 0.7309622913599014,
+        "temporal_error": -1.1798638423283894
+      },
+      "video_121": {
+        "psnr_rgb": 0.6653135612954841,
+        "ssim_rgb": 0.01542184129357338,
+        "edge_mae": 0.18040959164500237,
+        "temporal_error": -1.2624334971110027
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": -1.7295340007929099,
+        "median": -2.0471398858559375,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -3.4538782170819804,
+          -0.005189784503839334
+        ]
+      },
+      "ssim_rgb": {
+        "mean": -0.04599338257685304,
+        "median": -0.05815156362950802,
+        "positive_clusters": 2,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.13332096487283707,
+          0.04133419971913099
+        ]
+      },
+      "edge_mae": {
+        "mean": 0.3052661567926407,
+        "median": 0.4556859415024519,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.2890851777046919,
+          0.8348780181258917
+        ]
+      },
+      "temporal_error": {
+        "mean": -1.165505454937617,
+        "median": -1.221148669719696,
+        "positive_clusters": 0,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -1.5309435387452441,
+          -0.7444241563479108
+        ]
+      }
+    },
+    "scope": "same GT/FOV/grid; input smoothing alters texture and noise, not pure noise intervention",
+    "variant": "plain",
+    "fusion": "raw"
+  },
+  {
+    "first_minus_second": [
+      "smooth_crop",
+      "native_crop"
+    ],
+    "domain": "dev",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": -3.457377270560862,
+        "ssim_rgb": -0.14098579809069633,
+        "edge_mae": 1.0210146680474281,
+        "temporal_error": -0.3454338868459068
+      },
+      "video_47": {
+        "psnr_rgb": -0.684135349293193,
+        "ssim_rgb": 0.05339132621884346,
+        "edge_mae": -0.535810487344861,
+        "temporal_error": -1.3924678881963093
+      },
+      "video_91": {
+        "psnr_rgb": -3.505305403076548,
+        "ssim_rgb": -0.13957732915878296,
+        "edge_mae": 0.8213267624378204,
+        "temporal_error": -0.970475125312805
+      },
+      "video_121": {
+        "psnr_rgb": 0.6637287401069152,
+        "ssim_rgb": 0.006380727514624596,
+        "edge_mae": 0.25391562655568123,
+        "temporal_error": -1.0566157539685568
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": -1.745772320705922,
+        "median": -2.0707563099270274,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -3.481341336818705,
+          -0.010203304593138895
+        ]
+      },
+      "ssim_rgb": {
+        "mean": -0.05519776837900281,
+        "median": -0.06659830082207918,
+        "positive_clusters": 2,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.14028156362473965,
+          0.029886026866734028
+        ]
+      },
+      "edge_mae": {
+        "mean": 0.3901116424240172,
+        "median": 0.5376211944967508,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.19652617489919066,
+          0.9211707152426243
+        ]
+      },
+      "temporal_error": {
+        "mean": -0.9412481635808945,
+        "median": -1.013545439640681,
+        "positive_clusters": 0,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -1.2869696974754332,
+          -0.5232293536265693
+        ]
+      }
+    },
+    "scope": "same GT/FOV/grid; input smoothing alters texture and noise, not pure noise intervention",
+    "variant": "plain",
+    "fusion": "half01"
+  },
+  {
+    "first_minus_second": [
+      "smooth_crop",
+      "native_crop"
+    ],
+    "domain": "dev",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": -2.762498321135663,
+        "ssim_rgb": -0.1378820762038231,
+        "edge_mae": 1.0540227517485619,
+        "temporal_error": -0.5687052885691326
+      },
+      "video_47": {
+        "psnr_rgb": -0.4759060775919046,
+        "ssim_rgb": 0.061003491282463074,
+        "edge_mae": -0.5568512566387653,
+        "temporal_error": -1.517220401763916
+      },
+      "video_91": {
+        "psnr_rgb": -2.9499872342347366,
+        "ssim_rgb": -0.12960658594965935,
+        "edge_mae": 0.7751266211271286,
+        "temporal_error": -1.211701313654582
+      },
+      "video_121": {
+        "psnr_rgb": 0.5240468775220091,
+        "ssim_rgb": 0.0009679906070232391,
+        "edge_mae": 0.2783106714487076,
+        "temporal_error": -1.0763583978017173
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": -1.4160861888600738,
+        "median": -1.6192021993637837,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -2.8562427776851997,
+          0.024070399965052225
+        ]
+      },
+      "ssim_rgb": {
+        "mean": -0.05137929506599903,
+        "median": -0.06431929767131805,
+        "positive_clusters": 2,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.13374433107674122,
+          0.030985740944743156
+        ]
+      },
+      "edge_mae": {
+        "mean": 0.3876521969214082,
+        "median": 0.5267186462879181,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.22385678719729185,
+          0.9145746864378452
+        ]
+      },
+      "temporal_error": {
+        "mean": -1.093496350447337,
+        "median": -1.1440298557281496,
+        "positive_clusters": 0,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -1.4070049007733663,
+          -0.729454294840495
+        ]
+      }
+    },
+    "scope": "same GT/FOV/grid; input smoothing alters texture and noise, not pure noise intervention",
+    "variant": "pretrained",
+    "fusion": "raw"
+  },
+  {
+    "first_minus_second": [
+      "smooth_crop",
+      "native_crop"
+    ],
+    "domain": "dev",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": -2.7934874490512556,
+        "ssim_rgb": -0.14358410611748695,
+        "edge_mae": 1.1271540373563766,
+        "temporal_error": -0.3500827948252354
+      },
+      "video_47": {
+        "psnr_rgb": -0.4837287708703215,
+        "ssim_rgb": 0.04826394096016884,
+        "edge_mae": -0.47098200395703316,
+        "temporal_error": -1.2800477186838788
+      },
+      "video_91": {
+        "psnr_rgb": -2.965693415057551,
+        "ssim_rgb": -0.13755055889487267,
+        "edge_mae": 0.8626513928174973,
+        "temporal_error": -0.999737326304118
+      },
+      "video_121": {
+        "psnr_rgb": 0.5233076561284733,
+        "ssim_rgb": -0.006699487566947937,
+        "edge_mae": 0.34134572744369507,
+        "temporal_error": -0.8942413568496703
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": -1.4299004947126637,
+        "median": -1.6386081099607885,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -2.8795904320544032,
+          0.019789442629075893
+        ]
+      },
+      "ssim_rgb": {
+        "mean": -0.05989255290478468,
+        "median": -0.0721250232309103,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.1405673325061798,
+          0.02078222669661045
+        ]
+      },
+      "edge_mae": {
+        "mean": 0.46504228841513395,
+        "median": 0.6019985601305962,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.13757365476340055,
+          0.994902715086937
+        ]
+      },
+      "temporal_error": {
+        "mean": -0.8810272991657256,
+        "median": -0.9469893415768942,
+        "positive_clusters": 0,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -1.1835961282253267,
+          -0.5124964276949561
+        ]
+      }
+    },
+    "scope": "same GT/FOV/grid; input smoothing alters texture and noise, not pure noise intervention",
+    "variant": "pretrained",
+    "fusion": "half01"
+  },
+  {
+    "first_minus_second": [
+      "smooth_crop",
+      "native_crop"
+    ],
+    "domain": "dev",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": -3.588788360373279,
+        "ssim_rgb": -0.14521614648401737,
+        "edge_mae": 1.0192217640578747,
+        "temporal_error": -0.5180915037790941
+      },
+      "video_47": {
+        "psnr_rgb": -0.7935374732338261,
+        "ssim_rgb": 0.06994728557765484,
+        "edge_mae": -0.6440710350871086,
+        "temporal_error": -1.6554623603820797
+      },
+      "video_91": {
+        "psnr_rgb": -3.1730907944260522,
+        "ssim_rgb": -0.1421373188495636,
+        "edge_mae": 0.8084191083908081,
+        "temporal_error": -1.1812062581380207
+      },
+      "video_121": {
+        "psnr_rgb": 1.4004724766338548,
+        "ssim_rgb": 0.017619766294956207,
+        "edge_mae": 0.20991715416312218,
+        "temporal_error": -1.3878804206848145
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": -1.5387360378498256,
+        "median": -1.9833141338299392,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -3.3809395773996656,
+          0.30346750170001435
+        ]
+      },
+      "ssim_rgb": {
+        "mean": -0.04994660336524248,
+        "median": -0.062258776277303696,
+        "positive_clusters": 2,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.14367673266679049,
+          0.04378352593630552
+        ]
+      },
+      "edge_mae": {
+        "mean": 0.3483717478811741,
+        "median": 0.5091681312769651,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.28094849921762943,
+          0.9138204362243414
+        ]
+      },
+      "temporal_error": {
+        "mean": -1.1856601357460024,
+        "median": -1.2845433394114176,
+        "positive_clusters": 0,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -1.536898334821065,
+          -0.7355387330055242
+        ]
+      }
+    },
+    "scope": "same GT/FOV/grid; input smoothing alters texture and noise, not pure noise intervention",
+    "variant": "spatial_copy",
+    "fusion": "raw"
+  },
+  {
+    "first_minus_second": [
+      "smooth_crop",
+      "native_crop"
+    ],
+    "domain": "dev",
+    "by_input_condition": {
+      "video_15": {
+        "psnr_rgb": -3.627544046521809,
+        "ssim_rgb": -0.15101643465459347,
+        "edge_mae": 1.0925537832081318,
+        "temporal_error": -0.30597302118937186
+      },
+      "video_47": {
+        "psnr_rgb": -0.809042130089253,
+        "ssim_rgb": 0.05571361631155014,
+        "edge_mae": -0.5503309983760118,
+        "temporal_error": -1.3967373768488565
+      },
+      "video_91": {
+        "psnr_rgb": -3.1831241264344836,
+        "ssim_rgb": -0.14985162392258644,
+        "edge_mae": 0.8942191526293755,
+        "temporal_error": -0.9692042509714764
+      },
+      "video_121": {
+        "psnr_rgb": 1.3971994642381844,
+        "ssim_rgb": 0.007939107716083527,
+        "edge_mae": 0.2885378412902355,
+        "temporal_error": -1.1622001687685652
+      }
+    },
+    "summary": {
+      "psnr_rgb": {
+        "mean": -1.5556277097018403,
+        "median": -1.9960831282618683,
+        "positive_clusters": 1,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -3.4053340864781463,
+          0.2940786670744657
+        ]
+      },
+      "ssim_rgb": {
+        "mean": -0.05930383363738656,
+        "median": -0.07095625810325146,
+        "positive_clusters": 2,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.15043402928858995,
+          0.031826362013816833
+        ]
+      },
+      "edge_mae": {
+        "mean": 0.43124494468793273,
+        "median": 0.5913784969598055,
+        "positive_clusters": 3,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -0.18919346062466502,
+          0.9933864679187536
+        ]
+      },
+      "temporal_error": {
+        "mean": -0.9585287044445675,
+        "median": -1.0657022098700208,
+        "positive_clusters": 0,
+        "clusters": 4,
+        "exploratory_cluster_bootstrap_95": [
+          -1.2898540953795115,
+          -0.5200298080841702
+        ]
+      }
+    },
+    "scope": "same GT/FOV/grid; input smoothing alters texture and noise, not pure noise intervention",
+    "variant": "spatial_copy",
+    "fusion": "half01"
+  }
+]

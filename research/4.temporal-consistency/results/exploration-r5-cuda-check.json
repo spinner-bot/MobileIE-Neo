@@ -1,0 +1,56 @@
+{
+  "rows": [
+    {
+      "mode": "plain",
+      "initial_output_max_abs_difference": 0.0,
+      "initial_backbone_gradient_max_abs_difference": 0.0,
+      "extra_gradient_l1": 0,
+      "one_update_finite": true,
+      "state_storage_bytes_batch2_180x320": 0
+    },
+    {
+      "mode": "spatial_bilinear",
+      "initial_output_max_abs_difference": 0.0,
+      "initial_backbone_gradient_max_abs_difference": 0.0,
+      "extra_gradient_l1": 0.5403573513031006,
+      "one_update_finite": true,
+      "state_storage_bytes_batch2_180x320": 0
+    },
+    {
+      "mode": "temporal_bilinear",
+      "initial_output_max_abs_difference": 0.0,
+      "initial_backbone_gradient_max_abs_difference": 0.0,
+      "extra_gradient_l1": 0.5382061004638672,
+      "one_update_finite": true,
+      "state_storage_bytes_batch2_180x320": 345600
+    },
+    {
+      "mode": "temporal_post",
+      "initial_output_max_abs_difference": 0.0,
+      "initial_backbone_gradient_max_abs_difference": 0.0,
+      "extra_gradient_l1": 1.207924723625183,
+      "one_update_finite": true,
+      "state_storage_bytes_batch2_180x320": 345600
+    },
+    {
+      "mode": "tsm_learned",
+      "initial_output_max_abs_difference": 0.0,
+      "initial_backbone_gradient_max_abs_difference": 0.0,
+      "extra_gradient_l1": 0.027129463851451874,
+      "one_update_finite": true,
+      "state_storage_bytes_batch2_180x320": 1382400
+    },
+    {
+      "mode": "tsm_fixed",
+      "initial_output_max_abs_difference": 0.015231877565383911,
+      "initial_backbone_gradient_max_abs_difference": 0.022015690803527832,
+      "extra_gradient_l1": 0,
+      "one_update_finite": true,
+      "state_storage_bytes_batch2_180x320": 1382400
+    }
+  ],
+  "gpu": "NVIDIA A100-PCIE-40GB",
+  "torch": "2.9.1+cu126",
+  "cudnn_deterministic": true,
+  "cudnn_tf32_allowed": true
+}

@@ -1,0 +1,27 @@
+{
+  "time": "2026-11-11T22:31:56.650597+08:00",
+  "records": [
+    {
+      "pid": 2688109,
+      "tag": "pre-zero",
+      "guard_attempts": 0,
+      "training_or_evaluation_updates_interrupted": 0,
+      "reason": "CPU has ample capacity; move entire fixed evaluation and strong references to CPU instead of holding an idle-GPU queue"
+    },
+    {
+      "pid": 2688111,
+      "tag": "half-post",
+      "guard_attempts": 0,
+      "training_or_evaluation_updates_interrupted": 0,
+      "reason": "CPU has ample capacity; move entire fixed evaluation and strong references to CPU instead of holding an idle-GPU queue"
+    }
+  ],
+  "CPU_logical_cores": 96,
+  "load_average_observed": [
+    14.94,
+    12.29,
+    9.56
+  ],
+  "available_RAM_GiB": 713,
+  "scope": "Only own waiting observers stopped before any guard or experiment launch; other user tasks untouched"
+}

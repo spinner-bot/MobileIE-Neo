@@ -1,0 +1,132 @@
+{
+  "runs": [
+    {
+      "variant": "spatial_copy",
+      "seed": 0,
+      "steps": 1000,
+      "parameters": 4975,
+      "initial_plain_audit": {
+        "initial_task_delta_from_plain": 0.0,
+        "initial_gradient_norm_delta_from_plain": 0.0
+      },
+      "last100_task": 0.06562725361436605,
+      "final_auxiliary_l2": 5.272779941558838
+    },
+    {
+      "variant": "spatial_copy",
+      "seed": 1,
+      "steps": 1000,
+      "parameters": 4975,
+      "initial_plain_audit": {
+        "initial_task_delta_from_plain": 0.0,
+        "initial_gradient_norm_delta_from_plain": 0.0
+      },
+      "last100_task": 0.06245331648737192,
+      "final_auxiliary_l2": 5.573321342468262
+    },
+    {
+      "variant": "spatial_detail",
+      "seed": 0,
+      "steps": 1000,
+      "parameters": 4975,
+      "initial_plain_audit": {
+        "initial_task_delta_from_plain": 0.0,
+        "initial_gradient_norm_delta_from_plain": 0.0
+      },
+      "last100_task": 0.070995386056602,
+      "final_auxiliary_l2": 6.703484535217285
+    },
+    {
+      "variant": "spatial_detail",
+      "seed": 1,
+      "steps": 1000,
+      "parameters": 4975,
+      "initial_plain_audit": {
+        "initial_task_delta_from_plain": 0.0,
+        "initial_gradient_norm_delta_from_plain": 0.0
+      },
+      "last100_task": 0.06754497576504946,
+      "final_auxiliary_l2": 7.216602802276611
+    },
+    {
+      "variant": "temporal_concat",
+      "seed": 0,
+      "steps": 1000,
+      "parameters": 4975,
+      "initial_plain_audit": {
+        "initial_task_delta_from_plain": 0.0,
+        "initial_gradient_norm_delta_from_plain": 0.0
+      },
+      "last100_task": 0.0656694521009922,
+      "final_auxiliary_l2": 5.166991710662842
+    },
+    {
+      "variant": "temporal_concat",
+      "seed": 1,
+      "steps": 1000,
+      "parameters": 4975,
+      "initial_plain_audit": {
+        "initial_task_delta_from_plain": 0.0,
+        "initial_gradient_norm_delta_from_plain": 0.0
+      },
+      "last100_task": 0.06249875333160162,
+      "final_auxiliary_l2": 5.520138740539551
+    },
+    {
+      "variant": "temporal_delta",
+      "seed": 0,
+      "steps": 1000,
+      "parameters": 4975,
+      "initial_plain_audit": {
+        "initial_task_delta_from_plain": 0.0,
+        "initial_gradient_norm_delta_from_plain": 0.0
+      },
+      "last100_task": 0.07131252303719521,
+      "final_auxiliary_l2": 4.637665748596191
+    },
+    {
+      "variant": "temporal_delta",
+      "seed": 1,
+      "steps": 1000,
+      "parameters": 4975,
+      "initial_plain_audit": {
+        "initial_task_delta_from_plain": 0.0,
+        "initial_gradient_norm_delta_from_plain": 0.0
+      },
+      "last100_task": 0.06804916247725487,
+      "final_auxiliary_l2": 4.75570821762085
+    },
+    {
+      "variant": "temporal_delta_aug",
+      "seed": 0,
+      "steps": 1000,
+      "parameters": 4975,
+      "initial_plain_audit": {
+        "initial_task_delta_from_plain": 0.0,
+        "initial_gradient_norm_delta_from_plain": 0.0
+      },
+      "last100_task": 0.07164081532508135,
+      "final_auxiliary_l2": 3.3632023334503174
+    },
+    {
+      "variant": "temporal_delta_aug",
+      "seed": 1,
+      "steps": 1000,
+      "parameters": 4975,
+      "initial_plain_audit": {
+        "initial_task_delta_from_plain": 0.0,
+        "initial_gradient_norm_delta_from_plain": 0.0
+      },
+      "last100_task": 0.0682438040152192,
+      "final_auxiliary_l2": 3.6840665340423584
+    }
+  ],
+  "total_new_updates": 10000,
+  "all_current_streams_match_R5_plain": true,
+  "augmentation_actions": {
+    "actual_previous": 3204,
+    "other_pair_previous": 428,
+    "current": 368
+  },
+  "reused_baseline": "R5 plain seed0/1 step1000; same batch/loss/backbone optimizer budget"
+}

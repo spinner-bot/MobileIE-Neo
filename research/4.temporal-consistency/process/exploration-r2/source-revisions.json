@@ -1,0 +1,20 @@
+{
+  "scope": "Reconstructed revisions when commands were issued, from recorded command/commit order; not retroactively inserted runtime source hashes",
+  "command_issued_at_revision": {
+    "gpu4-training.json": "e5ca1c2",
+    "gpu5-training.json": "e5ca1c2",
+    "gpu6-state.json": "8071907",
+    "gpu6-state-retry.json": "df39d82",
+    "gpu4-lambda05.json": "052b68a",
+    "gpu5-lambda10.json": "052b68a",
+    "gpu7-benchmark.json": "cdc8c97",
+    "gpu4-trained-fusion.json": "3b705a7",
+    "gpu6-trained-fusion.json": "0badcbf"
+  },
+  "notes": [
+    "gpu4-trained-fusion was denied before launching a child command",
+    "Original training config git_revision was captured per run while the process remained loaded; it is not a strict process-start source identity",
+    "Later revisions ab1dc27 and be793b2 add process-start provenance and generic launch-time script hashes for future experiments",
+    "Use the recorded CLI, fixed image hashes and relevant launch revision to reproduce original runs; do not silently treat the latest runner as identical historical code"
+  ]
+}

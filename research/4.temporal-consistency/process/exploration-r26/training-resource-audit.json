@@ -1,0 +1,41 @@
+{
+  "process_directories": [
+    "research/4.temporal-consistency/process/exploration-r26/training-complete"
+  ],
+  "completed": [
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r26/training-complete/gpu-train-seed0-retry.json",
+      "gpu": 0,
+      "revision": "0dc9e8f0f8ed0e15d78812aa4bb17f1e8a7e543d",
+      "allowed": true,
+      "process_wall_seconds": 836.4018857689807,
+      "returncode": 0
+    },
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r26/training-complete/gpu-train-seed1.json",
+      "gpu": 3,
+      "revision": "1fa1934811be100771d0abd172dd6c857c48329e",
+      "allowed": true,
+      "process_wall_seconds": 837.4433352989727,
+      "returncode": 0
+    }
+  ],
+  "failed": [],
+  "resource_refusals": [
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r26/training-complete/gpu-train-seed0.json",
+      "gpu": 1,
+      "revision": "1fa1934811be100771d0abd172dd6c857c48329e",
+      "allowed": false
+    }
+  ],
+  "used_physical_gpus": [
+    0,
+    3
+  ],
+  "peak_own_concurrent_jobs": 2,
+  "source_hashes_verified": 386,
+  "source_mismatches": [],
+  "process_gpu_seconds": 1673.8452210679534,
+  "scope": "includes CPU/data/metrics; not GPU kernel time; preflight and local locks are not a global reservation"
+}

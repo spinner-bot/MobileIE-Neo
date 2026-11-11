@@ -1,0 +1,121 @@
+{
+  "warp_reference_checks": [
+    {
+      "channels": 3,
+      "kind": "integer",
+      "max_abs_gray": 0.0
+    },
+    {
+      "channels": 3,
+      "kind": "fractional",
+      "max_abs_gray": 0.0
+    },
+    {
+      "channels": 3,
+      "kind": "random",
+      "max_abs_gray": 0.0
+    },
+    {
+      "channels": 3,
+      "kind": "rejected",
+      "max_abs_gray": 0.0
+    },
+    {
+      "channels": 12,
+      "kind": "integer",
+      "max_abs_gray": 0.0
+    },
+    {
+      "channels": 12,
+      "kind": "fractional",
+      "max_abs_gray": 0.0
+    },
+    {
+      "channels": 12,
+      "kind": "random",
+      "max_abs_gray": 0.0
+    },
+    {
+      "channels": 12,
+      "kind": "rejected",
+      "max_abs_gray": 0.0
+    }
+  ],
+  "feature_gradcheck": true,
+  "FP64_identities": [
+    {
+      "left": "post_after_warp",
+      "right": "pre_square",
+      "scaled_max_abs": 1.561922339442398e-16
+    },
+    {
+      "left": "pre_square",
+      "right": "cross",
+      "scaled_max_abs": 1.9463829291320643e-16
+    },
+    {
+      "left": "post_transport",
+      "right": "post_after_warp",
+      "scaled_max_abs": 1.895863988210485e-16
+    }
+  ],
+  "controls": [
+    {
+      "mode": "copy",
+      "parameters": 4075,
+      "first_frame_error": 0.0,
+      "current_limit_error": 0.0,
+      "all_rejected_error": 0.0,
+      "stream_direct_error": 0.0,
+      "state_bytes": 0,
+      "past_gradient_l1": null,
+      "past_perturbation_max_output": 0.0
+    },
+    {
+      "mode": "post_transport",
+      "parameters": 4075,
+      "first_frame_error": 0.0,
+      "current_limit_error": 0.0,
+      "all_rejected_error": 0.0,
+      "stream_direct_error": 0.0,
+      "state_bytes": 10608,
+      "past_gradient_l1": 360.423095703125,
+      "past_perturbation_max_output": 16.11407470703125
+    },
+    {
+      "mode": "post_after_warp",
+      "parameters": 4075,
+      "first_frame_error": 0.0,
+      "current_limit_error": 0.0,
+      "all_rejected_error": 0.0,
+      "stream_direct_error": 0.0,
+      "state_bytes": 10608,
+      "past_gradient_l1": 6.510364532470703,
+      "past_perturbation_max_output": 11.082741737365723
+    },
+    {
+      "mode": "pre_square",
+      "parameters": 4075,
+      "first_frame_error": 0.0,
+      "current_limit_error": 0.0,
+      "all_rejected_error": 0.0,
+      "stream_direct_error": 0.0,
+      "state_bytes": 10608,
+      "past_gradient_l1": 4.857280731201172,
+      "past_perturbation_max_output": 9.435542106628418
+    },
+    {
+      "mode": "cross",
+      "parameters": 4075,
+      "first_frame_error": 0.0,
+      "current_limit_error": 0.0,
+      "all_rejected_error": 0.0,
+      "stream_direct_error": 0.0,
+      "state_bytes": 10608,
+      "past_gradient_l1": 152.1170196533203,
+      "past_perturbation_max_output": 14.564214706420898
+    }
+  ],
+  "passed": true,
+  "scope": "Implementation gates only; no training, quality evaluation or novelty evidence."
+}

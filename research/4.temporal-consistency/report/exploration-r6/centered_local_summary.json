@@ -1,0 +1,98 @@
+[
+  {
+    "model": "official",
+    "layer": "head",
+    "local_variance_ratio": {
+      "mean": 0.5111035191310583,
+      "median": 0.5106933724030673,
+      "min": 0.1018127709566551,
+      "max": 0.853311409404942
+    },
+    "calibration_mean_shift_over_original_variance": {
+      "mean": 0.015578042766992685,
+      "median": 0.013244245840162813,
+      "min": 0.004361776960523304,
+      "max": 0.028980163394879
+    }
+  },
+  {
+    "model": "official",
+    "layer": "body",
+    "local_variance_ratio": {
+      "mean": 0.1466867364158643,
+      "median": 0.09694482957878658,
+      "min": 0.009266235460415493,
+      "max": 0.5839829599784946
+    },
+    "calibration_mean_shift_over_original_variance": {
+      "mean": 0.023521691164913167,
+      "median": 0.024254225319152903,
+      "min": 0.01231751140840897,
+      "max": 0.034556645549952685
+    }
+  },
+  {
+    "model": "r5_plain",
+    "layer": "head",
+    "local_variance_ratio": {
+      "mean": 0.5093134255534922,
+      "median": 0.5091431020216414,
+      "min": 0.09325613159553722,
+      "max": 0.8589930597707779
+    },
+    "calibration_mean_shift_over_original_variance": {
+      "mean": 0.015905070670373837,
+      "median": 0.013620894768385716,
+      "min": 0.004243374181970999,
+      "max": 0.029270550193751656
+    }
+  },
+  {
+    "model": "r5_plain",
+    "layer": "body",
+    "local_variance_ratio": {
+      "mean": 0.15123107296833035,
+      "median": 0.10060772621455304,
+      "min": 0.00856672190637449,
+      "max": 0.5879998296632631
+    },
+    "calibration_mean_shift_over_original_variance": {
+      "mean": 0.023476154660591348,
+      "median": 0.024223524006403235,
+      "min": 0.011818644319263601,
+      "max": 0.03415027013895365
+    }
+  },
+  {
+    "model": "r5_spatial_post",
+    "layer": "head",
+    "local_variance_ratio": {
+      "mean": 0.5093454786711846,
+      "median": 0.5092480110872922,
+      "min": 0.0932885733283267,
+      "max": 0.8590347561527788
+    },
+    "calibration_mean_shift_over_original_variance": {
+      "mean": 0.015905650296706174,
+      "median": 0.013619757126654804,
+      "min": 0.004243477490750178,
+      "max": 0.029277598101040362
+    }
+  },
+  {
+    "model": "r5_spatial_post",
+    "layer": "body",
+    "local_variance_ratio": {
+      "mean": 0.15114166035712473,
+      "median": 0.1004878894725347,
+      "min": 0.008590284833214853,
+      "max": 0.5881159764771027
+    },
+    "calibration_mean_shift_over_original_variance": {
+      "mean": 0.02348110277702613,
+      "median": 0.024225370315420748,
+      "min": 0.011825533070356381,
+      "max": 0.0341796123952364
+    }
+  }
+]

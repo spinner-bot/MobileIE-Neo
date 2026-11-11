@@ -1,0 +1,64 @@
+{
+  "completed_jobs": [
+    {
+      "result_directory": "exploration-r21-eval-pre-zero",
+      "rows": 2944,
+      "device": "cpu",
+      "cuda_initialized": false,
+      "revision": "0e8eebfcc0d8fc197704c8671ef6e0592acf1192",
+      "source_files_verified": 175,
+      "evaluation_loop_wall_seconds": 1023.8647544659907
+    },
+    {
+      "result_directory": "exploration-r21-eval-half-post",
+      "rows": 2944,
+      "device": "cpu",
+      "cuda_initialized": false,
+      "revision": "eac1cc58ab602c7e0bb5a94b42ca83ec0fd6e048",
+      "source_files_verified": 175,
+      "evaluation_loop_wall_seconds": 1167.2994392800028
+    },
+    {
+      "result_directory": "exploration-r21-reference-plain-cpu",
+      "rows": 736,
+      "device": "cpu",
+      "cuda_initialized": false,
+      "revision": "755033a88216d3c507ffe7722b3aabde0163a9c4",
+      "source_files_verified": 175,
+      "evaluation_loop_wall_seconds": 260.28121149900835
+    },
+    {
+      "result_directory": "exploration-r21-reference-post-seed0-cpu",
+      "rows": 736,
+      "device": "cpu",
+      "cuda_initialized": false,
+      "revision": "162eeedcbc0fdb16897a98a94422d9517818ac5c",
+      "source_files_verified": 175,
+      "evaluation_loop_wall_seconds": 263.99172841600375
+    },
+    {
+      "result_directory": "exploration-r21-reference-post-seed1-cpu",
+      "rows": 736,
+      "device": "cpu",
+      "cuda_initialized": false,
+      "revision": "162eeedcbc0fdb16897a98a94422d9517818ac5c",
+      "source_files_verified": 175,
+      "evaluation_loop_wall_seconds": 262.84830791701097
+    },
+    {
+      "result_directory": "exploration-r21b",
+      "rows": 384,
+      "device": "cpu",
+      "cuda_initialized": false,
+      "revision": "fff6a9001f33b68a215ddc49a48cc9082d091660",
+      "source_files_verified": 180,
+      "evaluation_loop_wall_seconds": 134.20938633201877
+    }
+  ],
+  "source_hashes_verified": 880,
+  "source_mismatches": [],
+  "main_candidate_rows": 5888,
+  "matched_reference_rows": 2208,
+  "static_followup_rows": 384,
+  "scope": "Runtime fields exclude some startup/import costs and are not CPU core-seconds or GPU/mobile timings."
+}

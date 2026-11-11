@@ -1,0 +1,2696 @@
+[
+  {
+    "domain": "test",
+    "scene": "video_21",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 16,
+        "GPU_stage_wall_seconds": 0.27165082399733365,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.015080202021636069,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.015085263992659748,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.015137011010665447,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 61,
+    "mean_motion_valid_fraction": 0.9407150205761317,
+    "warp_enhancement_commutator_MAE255": [
+      0.70856773853302,
+      0.8413749933242798,
+      0.6310901045799255,
+      0.3256528973579407,
+      0.41817477345466614,
+      0.36987704038619995,
+      0.39631062746047974,
+      0.5104977488517761,
+      0.3818405866622925,
+      0.6143739819526672,
+      0.8885939717292786,
+      0.31401705741882324,
+      0.31541040539741516,
+      0.5021377801895142,
+      0.5804148316383362
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "test",
+    "scene": "video_23",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 16,
+        "GPU_stage_wall_seconds": 0.01625072496244684,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.015075050992891192,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.01511075597954914,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.015088334039319307,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 61,
+    "mean_motion_valid_fraction": 0.9944279835390947,
+    "warp_enhancement_commutator_MAE255": [
+      0.8722086548805237,
+      1.0727558135986328,
+      0.7551589012145996,
+      0.6895336508750916,
+      0.6409422159194946,
+      1.0435701608657837,
+      1.2397979497909546,
+      1.2076948881149292,
+      0.7264307737350464,
+      0.5831515192985535,
+      0.5254132151603699,
+      1.1198070049285889,
+      1.2106587886810303,
+      0.607025682926178,
+      0.6968672871589661
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "test",
+    "scene": "video_50",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 16,
+        "GPU_stage_wall_seconds": 0.016102291992865503,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.0151021089986898,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.01509443495888263,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.015070491004735231,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 61,
+    "mean_motion_valid_fraction": 0.98975,
+    "warp_enhancement_commutator_MAE255": [
+      1.3919659852981567,
+      1.6014915704727173,
+      1.5323987007141113,
+      1.6765854358673096,
+      1.6694799661636353,
+      1.7216880321502686,
+      1.7693095207214355,
+      1.6986618041992188,
+      1.7928569316864014,
+      1.3471872806549072,
+      1.6103631258010864,
+      1.7704534530639648,
+      1.7179065942764282,
+      1.2755004167556763,
+      1.671879768371582
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "test",
+    "scene": "video_60",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 16,
+        "GPU_stage_wall_seconds": 0.016279674018733203,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.01508830499369651,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.01505829399684444,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.015076343959663063,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 61,
+    "mean_motion_valid_fraction": 0.9683688271604938,
+    "warp_enhancement_commutator_MAE255": [
+      1.8298039436340332,
+      1.9442191123962402,
+      1.8544310331344604,
+      1.5120134353637695,
+      1.454817533493042,
+      1.4110063314437866,
+      1.267045021057129,
+      0.9156238436698914,
+      0.7705222368240356,
+      0.6369495987892151,
+      0.598946213722229,
+      0.8600932359695435,
+      0.8790955543518066,
+      0.96555095911026,
+      0.9472458958625793
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "test",
+    "scene": "video_79",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 16,
+        "GPU_stage_wall_seconds": 0.016093353973701596,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.01508139300858602,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.01505938998889178,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.01508620596723631,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 61,
+    "mean_motion_valid_fraction": 0.9928924897119341,
+    "warp_enhancement_commutator_MAE255": [
+      1.6706613302230835,
+      1.1899700164794922,
+      3.0193989276885986,
+      3.6291136741638184,
+      3.330075740814209,
+      1.9358478784561157,
+      1.3986541032791138,
+      2.3388538360595703,
+      2.716083526611328,
+      2.594606637954712,
+      2.6568074226379395,
+      2.6898233890533447,
+      2.816563367843628,
+      2.3361361026763916,
+      2.0241057872772217
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "test",
+    "scene": "video_118",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 16,
+        "GPU_stage_wall_seconds": 0.01622107595903799,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.015085809980519116,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.015032713999971747,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.01509909296873957,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 61,
+    "mean_motion_valid_fraction": 0.9809161522633745,
+    "warp_enhancement_commutator_MAE255": [
+      1.8740273714065552,
+      1.9080439805984497,
+      2.981231212615967,
+      1.8551125526428223,
+      2.2550106048583984,
+      1.9813649654388428,
+      2.2303683757781982,
+      1.4994080066680908,
+      1.3007533550262451,
+      1.595623254776001,
+      1.5040851831436157,
+      6.843385696411133,
+      5.2397074699401855,
+      2.188405990600586,
+      7.537142753601074
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "legacy_synthetic",
+    "scene": "xiph_foreman_rho0.0_seed0",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.024558750970754772,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.019526185002177954,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.019530899997334927,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.019586847978644073,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9785636596947739,
+    "warp_enhancement_commutator_MAE255": [
+      3.148695945739746,
+      3.1628193855285645,
+      3.004605531692505,
+      2.42897629737854,
+      3.0883660316467285,
+      3.4456894397735596,
+      3.669234275817871,
+      3.5365383625030518,
+      3.5836338996887207,
+      3.9187209606170654,
+      2.7632083892822266,
+      3.388493537902832,
+      3.435816526412964,
+      3.320354461669922,
+      3.546438455581665,
+      3.262519598007202,
+      3.43521785736084,
+      3.4038643836975098,
+      2.7439534664154053,
+      3.0631542205810547,
+      3.323306083679199,
+      2.735941171646118,
+      3.506314992904663
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "legacy_synthetic",
+    "scene": "xiph_foreman_rho0.0_seed1",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.020436574995983392,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.019548840005882084,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.019453795976005495,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.019546644994989038,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9781030412823891,
+    "warp_enhancement_commutator_MAE255": [
+      3.184199810028076,
+      3.7371292114257812,
+      3.176534652709961,
+      3.195014715194702,
+      3.024071455001831,
+      3.2888410091400146,
+      3.205547332763672,
+      3.7394766807556152,
+      4.3653483390808105,
+      3.0787956714630127,
+      3.2540690898895264,
+      2.72261643409729,
+      2.9339442253112793,
+      3.1517934799194336,
+      3.1137256622314453,
+      3.097234010696411,
+      2.6881179809570312,
+      3.3755879402160645,
+      3.1550662517547607,
+      3.2983953952789307,
+      2.9359002113342285,
+      2.9245307445526123,
+      3.200425148010254
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "legacy_synthetic",
+    "scene": "xiph_foreman_rho0.9_seed0",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.02045285201165825,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.01956084294943139,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.019449357001576573,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.019573873025365174,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9791396471508564,
+    "warp_enhancement_commutator_MAE255": [
+      3.4702515602111816,
+      3.6268675327301025,
+      3.42826509475708,
+      2.832150936126709,
+      3.1034955978393555,
+      3.451540946960449,
+      3.5027365684509277,
+      3.9391684532165527,
+      3.414217710494995,
+      3.6741323471069336,
+      3.072207450866699,
+      3.500044345855713,
+      3.336237668991089,
+      3.301151990890503,
+      3.358818769454956,
+      3.21880841255188,
+      3.280888557434082,
+      3.4003713130950928,
+      2.8143298625946045,
+      3.0666825771331787,
+      3.0093722343444824,
+      2.7651212215423584,
+      3.1408567428588867
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "legacy_synthetic",
+    "scene": "xiph_foreman_rho0.9_seed1",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.02059347997419536,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.019579453044570982,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.019586963986512274,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.01987922500120476,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9778650122145367,
+    "warp_enhancement_commutator_MAE255": [
+      3.4635729789733887,
+      3.491703987121582,
+      3.0790343284606934,
+      3.2396483421325684,
+      3.1170856952667236,
+      2.9643282890319824,
+      3.3213186264038086,
+      3.651482343673706,
+      4.455852508544922,
+      3.050266742706299,
+      3.059107542037964,
+      2.786442995071411,
+      3.3713812828063965,
+      3.329434633255005,
+      3.155015468597412,
+      3.3310508728027344,
+      2.7126400470733643,
+      3.2180447578430176,
+      3.0287821292877197,
+      3.350940227508545,
+      2.7411062717437744,
+      3.12107253074646,
+      3.1421406269073486
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "legacy_synthetic",
+    "scene": "xiph_coastguard_rho0.0_seed0",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.02046351198805496,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.019556431041564792,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.019574962032493204,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.019444849982392043,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9878236337560387,
+    "warp_enhancement_commutator_MAE255": [
+      3.016273260116577,
+      2.5817949771881104,
+      2.914591073989868,
+      3.4265239238739014,
+      2.578338384628296,
+      3.8066420555114746,
+      2.8669192790985107,
+      3.421004056930542,
+      2.069607734680176,
+      2.6512949466705322,
+      2.468398094177246,
+      2.9942219257354736,
+      2.765479564666748,
+      2.422400712966919,
+      1.8175288438796997,
+      2.019347667694092,
+      2.8700783252716064,
+      2.324321746826172,
+      3.6833577156066895,
+      2.1858394145965576,
+      1.5902516841888428,
+      2.484590530395508,
+      2.5865535736083984
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "legacy_synthetic",
+    "scene": "xiph_coastguard_rho0.0_seed1",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.020393830025568604,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.01954185700742528,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.019455778994597495,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.019554310012608767,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9881916138285024,
+    "warp_enhancement_commutator_MAE255": [
+      3.6262240409851074,
+      3.7365927696228027,
+      2.600818634033203,
+      3.244926691055298,
+      2.983203411102295,
+      3.6335320472717285,
+      3.7869067192077637,
+      1.6690784692764282,
+      3.1098406314849854,
+      3.488309860229492,
+      3.372249126434326,
+      2.022035837173462,
+      2.400148868560791,
+      2.534592390060425,
+      3.1191391944885254,
+      2.317981481552124,
+      3.5714199542999268,
+      3.2116756439208984,
+      2.893364429473877,
+      1.836992859840393,
+      1.776808500289917,
+      2.0081324577331543,
+      2.2259249687194824
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "legacy_synthetic",
+    "scene": "xiph_coastguard_rho0.9_seed0",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.020466594025492668,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.01954437600215897,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.0195385729894042,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.019574371981434524,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9876070487483531,
+    "warp_enhancement_commutator_MAE255": [
+      3.708744525909424,
+      2.45426607131958,
+      2.6528544425964355,
+      3.3009448051452637,
+      2.439830780029297,
+      3.0301337242126465,
+      3.811253070831299,
+      3.3864526748657227,
+      2.7139394283294678,
+      2.6194682121276855,
+      2.6783158779144287,
+      2.4654064178466797,
+      3.4620089530944824,
+      2.6528666019439697,
+      2.2807979583740234,
+      2.029146432876587,
+      3.752265691757202,
+      1.9246852397918701,
+      3.2895865440368652,
+      1.8425596952438354,
+      1.2080553770065308,
+      2.7457175254821777,
+      3.044772148132324
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "legacy_synthetic",
+    "scene": "xiph_coastguard_rho0.9_seed1",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.02044251497136429,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.01952670799801126,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.019559337000828236,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.019535580999217927,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9883031229413702,
+    "warp_enhancement_commutator_MAE255": [
+      3.5925045013427734,
+      3.6758525371551514,
+      2.2695815563201904,
+      3.1335368156433105,
+      2.8441927433013916,
+      3.765019655227661,
+      2.8129284381866455,
+      2.2525219917297363,
+      3.1091039180755615,
+      3.70705246925354,
+      3.560939073562622,
+      1.5989606380462646,
+      2.0656044483184814,
+      2.5409886837005615,
+      2.9161062240600586,
+      2.235011339187622,
+      3.0753183364868164,
+      2.8370018005371094,
+      3.1460304260253906,
+      1.6904209852218628,
+      2.762021780014038,
+      1.3068029880523682,
+      2.044905662536621
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "event_light_step",
+    "scene": "kodim07_light_step_seed0",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.01936261699302122,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013229999982286245,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013200787012465298,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013193677004892379,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9707048941349637,
+    "warp_enhancement_commutator_MAE255": [
+      2.9741406440734863,
+      2.803983211517334,
+      2.088646173477173,
+      2.3256311416625977,
+      2.243788719177246,
+      2.6748762130737305,
+      2.257615327835083,
+      2.1064980030059814,
+      2.7268292903900146,
+      1.7498992681503296,
+      2.3864529132843018,
+      4.254253387451172,
+      1.7436753511428833,
+      1.4179198741912842,
+      2.236039876937866,
+      1.6903883218765259,
+      1.876639485359192,
+      2.090195655822754,
+      1.397539734840393,
+      1.9016432762145996,
+      1.5614562034606934,
+      1.5711244344711304,
+      1.41398286819458
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "event_light_step",
+    "scene": "kodim07_light_step_seed1",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.014076912018936127,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013221187982708216,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013139627000782639,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013187722011934966,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9677451313405797,
+    "warp_enhancement_commutator_MAE255": [
+      2.4020836353302,
+      2.406926393508911,
+      2.910452127456665,
+      2.625265121459961,
+      2.417717218399048,
+      1.949320912361145,
+      2.250972032546997,
+      2.496018648147583,
+      2.1540651321411133,
+      2.2267580032348633,
+      2.361135482788086,
+      3.674898862838745,
+      2.110348701477051,
+      1.9442449808120728,
+      1.546904444694519,
+      2.162578821182251,
+      1.5953478813171387,
+      1.6988365650177002,
+      1.7571377754211426,
+      1.833679437637329,
+      1.6221612691879272,
+      1.42256760597229,
+      1.2936680316925049
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "event_cut",
+    "scene": "kodim07_cut_seed0",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.0140034289797768,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013367848994676024,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013370256987400353,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.01336762896971777,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.964827827785326,
+    "warp_enhancement_commutator_MAE255": [
+      2.494727373123169,
+      2.691227912902832,
+      2.269862174987793,
+      2.2112109661102295,
+      2.464559316635132,
+      2.0468685626983643,
+      2.3813064098358154,
+      1.8430609703063965,
+      1.7411290407180786,
+      1.7699334621429443,
+      2.740544080734253,
+      6.468807697296143,
+      1.226778268814087,
+      1.316554069519043,
+      1.1930080652236938,
+      1.3498048782348633,
+      1.2864675521850586,
+      1.1969226598739624,
+      1.2450679540634155,
+      1.2438005208969116,
+      1.3216863870620728,
+      1.4320454597473145,
+      1.3896281719207764
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "event_cut",
+    "scene": "kodim07_cut_seed1",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.013909838977269828,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013296142977196723,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013291640032548457,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013379955955315381,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9657371631567029,
+    "warp_enhancement_commutator_MAE255": [
+      2.626326560974121,
+      2.687082052230835,
+      1.892359972000122,
+      2.3904504776000977,
+      2.130718946456909,
+      2.4823927879333496,
+      1.8887118101119995,
+      2.0031282901763916,
+      2.0199599266052246,
+      2.3865160942077637,
+      2.505840539932251,
+      6.763970851898193,
+      1.1523618698120117,
+      1.3008713722229004,
+      1.4173961877822876,
+      1.2863285541534424,
+      1.2918373346328735,
+      1.4213535785675049,
+      1.3669668436050415,
+      1.3028444051742554,
+      1.3432848453521729,
+      1.3360950946807861,
+      1.2180308103561401
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "event_light_step",
+    "scene": "kodim08_light_step_seed0",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.013948076986707747,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013364312006160617,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013365671969950199,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013342696998734027,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9842520451200181,
+    "warp_enhancement_commutator_MAE255": [
+      3.0428950786590576,
+      2.8047702312469482,
+      2.972316026687622,
+      3.8995001316070557,
+      3.138087749481201,
+      3.5405943393707275,
+      3.3102288246154785,
+      3.9648334980010986,
+      2.7708699703216553,
+      3.164682626724243,
+      4.091844081878662,
+      3.5910892486572266,
+      1.2671337127685547,
+      1.3118475675582886,
+      1.2754430770874023,
+      1.2787405252456665,
+      1.4779192209243774,
+      1.3893834352493286,
+      1.5449347496032715,
+      1.2749536037445068,
+      1.6494946479797363,
+      1.5489988327026367,
+      1.274407982826233
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "event_light_step",
+    "scene": "kodim08_light_step_seed1",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.013911349989939481,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013378224044572562,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013324452971573919,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.01323618897004053,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9841848179913949,
+    "warp_enhancement_commutator_MAE255": [
+      4.433354377746582,
+      3.7832159996032715,
+      3.6097278594970703,
+      5.173929214477539,
+      4.022373199462891,
+      3.516416549682617,
+      2.6541733741760254,
+      3.9087820053100586,
+      3.215592622756958,
+      3.260058879852295,
+      2.5990102291107178,
+      5.884133338928223,
+      1.2260584831237793,
+      1.388064980506897,
+      1.2331498861312866,
+      1.2567168474197388,
+      1.3244154453277588,
+      1.3466182947158813,
+      1.2534122467041016,
+      1.2153809070587158,
+      1.1654374599456787,
+      1.470518708229065,
+      1.465597152709961
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "event_cut",
+    "scene": "kodim08_cut_seed0",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.013838768005371094,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013253381999675184,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013279423990752548,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013353955000638962,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9578061311141305,
+    "warp_enhancement_commutator_MAE255": [
+      1.2278103828430176,
+      1.355447769165039,
+      1.3047696352005005,
+      1.1825947761535645,
+      1.2043894529342651,
+      1.2926522493362427,
+      1.2510110139846802,
+      1.3633075952529907,
+      1.3765360116958618,
+      1.3678282499313354,
+      1.2554506063461304,
+      7.225346088409424,
+      9.631889343261719,
+      6.662883758544922,
+      7.297050476074219,
+      4.865231513977051,
+      6.905579090118408,
+      6.825963020324707,
+      8.490763664245605,
+      7.151226043701172,
+      6.749697208404541,
+      5.219408988952637,
+      5.214902877807617
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "event_cut",
+    "scene": "kodim08_cut_seed1",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.01415328000439331,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013229909003712237,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013354922004509717,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013366430008318275,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9539281872735508,
+    "warp_enhancement_commutator_MAE255": [
+      1.1672338247299194,
+      1.3560035228729248,
+      1.3615846633911133,
+      1.3522872924804688,
+      1.3152174949645996,
+      1.4578814506530762,
+      1.2446730136871338,
+      1.2996728420257568,
+      1.4194660186767578,
+      1.2764458656311035,
+      1.2475908994674683,
+      7.127691268920898,
+      7.057274341583252,
+      8.256821632385254,
+      5.965729236602783,
+      6.823195457458496,
+      6.0403642654418945,
+      2.9733784198760986,
+      6.675016403198242,
+      4.8777923583984375,
+      6.975050926208496,
+      5.861636638641357,
+      5.875901699066162
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "event_light_step",
+    "scene": "kodim09_light_step_seed0",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.01394612796138972,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013387247046921402,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013242263987194747,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013336515985429287,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9469852171082428,
+    "warp_enhancement_commutator_MAE255": [
+      7.5730671882629395,
+      5.982535362243652,
+      6.283688068389893,
+      4.896462917327881,
+      5.6067938804626465,
+      4.985751152038574,
+      4.638455867767334,
+      5.000271320343018,
+      3.594511032104492,
+      4.325400352478027,
+      3.018937349319458,
+      2.5150647163391113,
+      8.297625541687012,
+      9.599953651428223,
+      6.602782726287842,
+      8.993264198303223,
+      6.458188533782959,
+      5.803908824920654,
+      6.881993293762207,
+      9.556355476379395,
+      8.23760986328125,
+      5.09871768951416,
+      5.64990758895874
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "event_light_step",
+    "scene": "kodim09_light_step_seed1",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.014094884973019361,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.01321696600643918,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013385446975007653,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013322209008038044,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9427446006000906,
+    "warp_enhancement_commutator_MAE255": [
+      7.458922863006592,
+      5.772647857666016,
+      5.904151439666748,
+      7.369699001312256,
+      6.997472286224365,
+      6.150732517242432,
+      3.858330488204956,
+      4.568072319030762,
+      3.6465530395507812,
+      3.1743569374084473,
+      3.072706699371338,
+      2.988067626953125,
+      7.5640082359313965,
+      6.843454837799072,
+      8.879271507263184,
+      4.771018028259277,
+      6.705358505249023,
+      6.411283493041992,
+      5.033438205718994,
+      5.1824870109558105,
+      6.7830681800842285,
+      4.778013706207275,
+      4.576330661773682
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "event_cut",
+    "scene": "kodim09_cut_seed0",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.013798973988741636,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013267486006952822,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013311792979948223,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013336133968550712,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9517379981884058,
+    "warp_enhancement_commutator_MAE255": [
+      8.530790328979492,
+      3.493377923965454,
+      7.478128910064697,
+      6.077099800109863,
+      6.395362377166748,
+      5.1106977462768555,
+      3.82611346244812,
+      7.808035373687744,
+      6.4490227699279785,
+      3.9674031734466553,
+      8.377598762512207,
+      2.3512845039367676,
+      14.048419952392578,
+      14.53433609008789,
+      13.821348190307617,
+      14.409690856933594,
+      12.700455665588379,
+      12.833368301391602,
+      14.156038284301758,
+      13.493924140930176,
+      12.910918235778809,
+      15.09268856048584,
+      13.605500221252441
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "event_cut",
+    "scene": "kodim09_cut_seed1",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.013861820043530315,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013369045977015048,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.01334938599029556,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.01361403102055192,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9405995244565217,
+    "warp_enhancement_commutator_MAE255": [
+      6.719383716583252,
+      10.308996200561523,
+      7.4428205490112305,
+      6.915210723876953,
+      4.880973815917969,
+      7.57320499420166,
+      4.970974922180176,
+      6.833858013153076,
+      4.45369815826416,
+      6.955854415893555,
+      5.74819803237915,
+      2.368638753890991,
+      14.587591171264648,
+      12.474244117736816,
+      15.131494522094727,
+      11.913102149963379,
+      13.4941987991333,
+      13.977360725402832,
+      13.311554908752441,
+      10.615335464477539,
+      11.743354797363281,
+      13.968644142150879,
+      15.504232406616211
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "event_light_step",
+    "scene": "kodim10_light_step_seed0",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.013843063032254577,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013302972016390413,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013322465994860977,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013347190979402512,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9327339504076086,
+    "warp_enhancement_commutator_MAE255": [
+      5.191473484039307,
+      3.4913389682769775,
+      3.2820229530334473,
+      3.624013900756836,
+      3.938526153564453,
+      3.68591570854187,
+      2.990084648132324,
+      4.502296447753906,
+      4.215358734130859,
+      2.917145013809204,
+      3.1018309593200684,
+      2.4791226387023926,
+      14.55693244934082,
+      13.67464542388916,
+      14.744549751281738,
+      11.718369483947754,
+      14.372458457946777,
+      12.214522361755371,
+      13.794572830200195,
+      11.56787395477295,
+      14.700511932373047,
+      12.142922401428223,
+      14.753046035766602
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "event_light_step",
+    "scene": "kodim10_light_step_seed1",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.014013076026458293,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013335404975805432,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013329742010682821,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013359549979213625,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9357591711956522,
+    "warp_enhancement_commutator_MAE255": [
+      4.575073719024658,
+      3.6401567459106445,
+      4.614198207855225,
+      4.019650459289551,
+      4.130346298217773,
+      4.2523417472839355,
+      4.321637153625488,
+      3.996978759765625,
+      4.3698601722717285,
+      4.1355485916137695,
+      4.029576778411865,
+      3.344440221786499,
+      11.742005348205566,
+      15.000262260437012,
+      14.393637657165527,
+      14.447369575500488,
+      13.270601272583008,
+      14.962203025817871,
+      15.132758140563965,
+      11.767328262329102,
+      12.547961235046387,
+      14.417281150817871,
+      14.180388450622559
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "event_cut",
+    "scene": "kodim10_cut_seed0",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.013827541959472,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013324703963007778,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.01338268502149731,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.01334782299818471,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9489852241847826,
+    "warp_enhancement_commutator_MAE255": [
+      14.635316848754883,
+      12.642827033996582,
+      11.179037094116211,
+      13.767115592956543,
+      14.878988265991211,
+      14.5013427734375,
+      13.518454551696777,
+      15.661415100097656,
+      14.410983085632324,
+      15.33898639678955,
+      10.43789291381836,
+      6.64354944229126,
+      2.2327029705047607,
+      2.031412124633789,
+      2.086193799972534,
+      1.9485950469970703,
+      2.2401342391967773,
+      1.9139050245285034,
+      2.1876416206359863,
+      1.7154991626739502,
+      1.9160897731781006,
+      1.650425910949707,
+      1.872157096862793
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "event_cut",
+    "scene": "kodim10_cut_seed1",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.013957154005765915,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013367340026888996,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013313002011273056,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013317078002728522,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9455194887907609,
+    "warp_enhancement_commutator_MAE255": [
+      15.802494049072266,
+      12.441630363464355,
+      10.53242301940918,
+      12.825750350952148,
+      15.145988464355469,
+      12.816863059997559,
+      13.8939208984375,
+      14.262472152709961,
+      14.688244819641113,
+      13.133973121643066,
+      15.14252758026123,
+      5.71101713180542,
+      1.9803438186645508,
+      1.975394606590271,
+      1.7933121919631958,
+      1.857837200164795,
+      1.9463200569152832,
+      2.2349932193756104,
+      1.8146871328353882,
+      1.589920997619629,
+      1.9415825605392456,
+      1.9006577730178833,
+      1.5580891370773315
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "event_light_step",
+    "scene": "kodim11_light_step_seed0",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.014061781985219568,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013321262958925217,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013339456054382026,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013348250009585172,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9637495400249094,
+    "warp_enhancement_commutator_MAE255": [
+      2.1998069286346436,
+      1.543352484703064,
+      1.573483943939209,
+      2.185600519180298,
+      2.6436758041381836,
+      1.9527982473373413,
+      1.9008073806762695,
+      2.3812594413757324,
+      1.8601183891296387,
+      1.635066270828247,
+      1.5161292552947998,
+      1.2121591567993164,
+      2.0812079906463623,
+      1.9972193241119385,
+      1.7502801418304443,
+      2.106945753097534,
+      2.128657341003418,
+      1.741490364074707,
+      2.211200714111328,
+      1.8386207818984985,
+      1.672977328300476,
+      2.0924971103668213,
+      1.796159029006958
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "event_light_step",
+    "scene": "kodim11_light_step_seed1",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.013894881005398929,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013312514987774193,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013356301991734654,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013352523965295404,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9676690585371377,
+    "warp_enhancement_commutator_MAE255": [
+      2.0424976348876953,
+      1.7582093477249146,
+      2.0114526748657227,
+      2.176239490509033,
+      2.343221664428711,
+      1.8613629341125488,
+      2.213055372238159,
+      2.0855178833007812,
+      1.7098580598831177,
+      1.154584527015686,
+      1.9706284999847412,
+      1.1193381547927856,
+      2.2996702194213867,
+      2.1128902435302734,
+      1.8695063591003418,
+      2.0875704288482666,
+      2.15791392326355,
+      1.7373236417770386,
+      1.8002490997314453,
+      1.8357802629470825,
+      1.830399990081787,
+      1.571553111076355,
+      1.9951492547988892
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "event_cut",
+    "scene": "kodim11_cut_seed0",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.013976688962429762,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013309875037521124,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013307024026289582,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013357466028537601,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9621086673460145,
+    "warp_enhancement_commutator_MAE255": [
+      2.1611664295196533,
+      2.0339787006378174,
+      1.7204841375350952,
+      2.404547929763794,
+      2.5013742446899414,
+      2.403327226638794,
+      2.1164796352386475,
+      2.082427978515625,
+      2.467946767807007,
+      2.1621322631835938,
+      1.729225516319275,
+      6.38715124130249,
+      1.3090153932571411,
+      1.1006544828414917,
+      1.267276406288147,
+      1.2056573629379272,
+      1.0314531326293945,
+      1.081683874130249,
+      1.1266669034957886,
+      1.196109652519226,
+      1.2274928092956543,
+      1.2635873556137085,
+      1.1018445491790771
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "event_cut",
+    "scene": "kodim11_cut_seed1",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.014101216045673937,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.01332031498895958,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013319126970600337,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013348129054065794,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9602130392323369,
+    "warp_enhancement_commutator_MAE255": [
+      2.001067876815796,
+      1.9244661331176758,
+      2.019524574279785,
+      1.6712310314178467,
+      2.9124178886413574,
+      2.2172584533691406,
+      1.8466616868972778,
+      2.052569627761841,
+      2.2515430450439453,
+      2.018490791320801,
+      1.9293204545974731,
+      6.149977207183838,
+      1.1299623250961304,
+      1.1432790756225586,
+      1.2136850357055664,
+      1.3733083009719849,
+      1.2943406105041504,
+      1.2092769145965576,
+      0.9912192821502686,
+      1.1612722873687744,
+      1.2148030996322632,
+      1.1442431211471558,
+      1.1044209003448486
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "event_light_step",
+    "scene": "kodim12_light_step_seed0",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.013885012012906373,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013289252005051821,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.01333364297170192,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013334714982192963,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9724174167798914,
+    "warp_enhancement_commutator_MAE255": [
+      2.936422348022461,
+      3.742696523666382,
+      2.4061007499694824,
+      2.3636670112609863,
+      2.481595277786255,
+      2.6625728607177734,
+      2.7363975048065186,
+      2.1234591007232666,
+      2.663620710372925,
+      2.4874532222747803,
+      2.391737461090088,
+      1.6501200199127197,
+      1.1192620992660522,
+      1.0790820121765137,
+      1.079410433769226,
+      1.1479835510253906,
+      1.109355092048645,
+      1.1392959356307983,
+      1.3130309581756592,
+      1.0842268466949463,
+      1.2477381229400635,
+      1.4768933057785034,
+      0.9862871170043945
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "event_light_step",
+    "scene": "kodim12_light_step_seed1",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.01400467602070421,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.01333232200704515,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013350989029277116,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.01334283995674923,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.972029976222826,
+    "warp_enhancement_commutator_MAE255": [
+      2.5412306785583496,
+      3.725996732711792,
+      2.38085675239563,
+      1.97938871383667,
+      2.8267180919647217,
+      2.3965609073638916,
+      2.3946468830108643,
+      2.866509199142456,
+      3.1538798809051514,
+      1.8634214401245117,
+      2.048367738723755,
+      2.839884042739868,
+      1.2307060956954956,
+      1.1653856039047241,
+      1.1534008979797363,
+      1.1950657367706299,
+      1.0809929370880127,
+      1.1377185583114624,
+      1.2412681579589844,
+      1.259198784828186,
+      1.1560813188552856,
+      1.1565755605697632,
+      1.2668044567108154
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "event_cut",
+    "scene": "kodim12_cut_seed0",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.013904301973525435,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013356979005038738,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.01335507002659142,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013387868006248027,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9600325874660326,
+    "warp_enhancement_commutator_MAE255": [
+      1.856164813041687,
+      1.7585526704788208,
+      1.2078676223754883,
+      1.3105055093765259,
+      1.2431639432907104,
+      1.5703736543655396,
+      1.0516085624694824,
+      1.4199103116989136,
+      1.6390007734298706,
+      1.1825307607650757,
+      1.1169768571853638,
+      3.8652453422546387,
+      1.8356801271438599,
+      1.6513769626617432,
+      1.6742775440216064,
+      2.0497403144836426,
+      1.4881762266159058,
+      1.9716647863388062,
+      1.4951260089874268,
+      1.5961562395095825,
+      1.2932854890823364,
+      1.6745938062667847,
+      2.0641374588012695
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "event_cut",
+    "scene": "kodim12_cut_seed1",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 24,
+        "GPU_stage_wall_seconds": 0.013939271972049028,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.01335151499370113,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013319669989868999,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 23,
+        "GPU_stage_wall_seconds": 0.013384169025812298,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 93,
+    "mean_motion_valid_fraction": 0.9588189608808877,
+    "warp_enhancement_commutator_MAE255": [
+      1.7812111377716064,
+      1.6097012758255005,
+      1.615630865097046,
+      3.616830348968506,
+      1.3168466091156006,
+      1.485518455505371,
+      1.2426174879074097,
+      1.3807318210601807,
+      1.1820708513259888,
+      1.1564207077026367,
+      1.2271265983581543,
+      3.8308680057525635,
+      1.8718106746673584,
+      1.5780755281448364,
+      1.985388159751892,
+      1.7120109796524048,
+      1.8271863460540771,
+      1.9295578002929688,
+      1.6411923170089722,
+      1.7601691484451294,
+      1.9258227348327637,
+      1.8220829963684082,
+      1.5466406345367432
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "dev",
+    "scene": "video_15",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 16,
+        "GPU_stage_wall_seconds": 0.016048970981501043,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.015092668996658176,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.015091797977220267,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.015084075974300504,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 61,
+    "mean_motion_valid_fraction": 0.973687242798354,
+    "warp_enhancement_commutator_MAE255": [
+      5.954869270324707,
+      8.05648136138916,
+      7.253774642944336,
+      3.48543119430542,
+      7.576345443725586,
+      6.287264347076416,
+      5.290067672729492,
+      4.317835330963135,
+      4.252342224121094,
+      2.466996431350708,
+      2.903968572616577,
+      5.182046413421631,
+      5.079499244689941,
+      3.2953903675079346,
+      2.79097580909729
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "dev",
+    "scene": "video_47",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 16,
+        "GPU_stage_wall_seconds": 0.01607588498154655,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.015091858978848904,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.015069574990775436,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.015085311024449766,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 61,
+    "mean_motion_valid_fraction": 0.9803148148148149,
+    "warp_enhancement_commutator_MAE255": [
+      0.3971652388572693,
+      0.8059657216072083,
+      0.24847477674484253,
+      0.6907109618186951,
+      1.054404854774475,
+      0.69752037525177,
+      0.6831783056259155,
+      1.009497046470642,
+      0.9672161936759949,
+      0.39274540543556213,
+      0.8008471131324768,
+      0.9663451313972473,
+      0.6695103049278259,
+      0.8035293221473694,
+      0.811983585357666
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "dev",
+    "scene": "video_91",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 16,
+        "GPU_stage_wall_seconds": 0.016739344981033355,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.01522474002558738,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.015181716997176409,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.015177252993453294,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 61,
+    "mean_motion_valid_fraction": 0.9933374485596708,
+    "warp_enhancement_commutator_MAE255": [
+      4.6474456787109375,
+      5.590795993804932,
+      4.341204643249512,
+      5.342055797576904,
+      3.646207332611084,
+      2.6208348274230957,
+      3.054755449295044,
+      3.4620540142059326,
+      3.704162359237671,
+      3.801778554916382,
+      4.524835586547852,
+      3.867528200149536,
+      3.835841417312622,
+      3.0567588806152344,
+      4.889464855194092
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "dev",
+    "scene": "video_121",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 16,
+        "GPU_stage_wall_seconds": 0.01670702896080911,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.01521604898152873,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.01519500301219523,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.015187436016276479,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 61,
+    "mean_motion_valid_fraction": 0.9906640946502058,
+    "warp_enhancement_commutator_MAE255": [
+      3.239206075668335,
+      3.0522124767303467,
+      3.031320333480835,
+      2.0688889026641846,
+      1.11532723903656,
+      2.76352596282959,
+      1.7290117740631104,
+      2.1423256397247314,
+      2.9172987937927246,
+      2.2226290702819824,
+      2.243366241455078,
+      2.524163007736206,
+      2.2459120750427246,
+      1.0022059679031372,
+      0.5566039085388184
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "dev_native",
+    "scene": "video_15",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 16,
+        "GPU_stage_wall_seconds": 0.021874842001125216,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.016449828981421888,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.01624612300656736,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.01628842600621283,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 61,
+    "mean_motion_valid_fraction": 0.8671771014178241,
+    "warp_enhancement_commutator_MAE255": [
+      1.8655078411102295,
+      2.5569562911987305,
+      2.5334632396698,
+      2.0408811569213867,
+      2.2872185707092285,
+      2.1040749549865723,
+      1.8472349643707275,
+      1.6269686222076416,
+      1.3981599807739258,
+      1.7134146690368652,
+      1.3066500425338745,
+      1.4629830121994019,
+      1.4722758531570435,
+      2.0895586013793945,
+      1.7854403257369995
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "dev_native",
+    "scene": "video_47",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 16,
+        "GPU_stage_wall_seconds": 0.017537666019052267,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.01628525002161041,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.01626863202545792,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.016253503039479256,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 61,
+    "mean_motion_valid_fraction": 0.9653966833043981,
+    "warp_enhancement_commutator_MAE255": [
+      1.43344247341156,
+      0.8656014204025269,
+      0.9343809485435486,
+      0.8219287395477295,
+      0.8661430478096008,
+      0.8051415681838989,
+      0.7847450971603394,
+      0.6381220817565918,
+      0.7182890176773071,
+      0.858021080493927,
+      0.9998323917388916,
+      1.1980866193771362,
+      0.9230011701583862,
+      1.0994967222213745,
+      1.030829906463623
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "dev_native",
+    "scene": "video_91",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 16,
+        "GPU_stage_wall_seconds": 0.0172822589520365,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.01617188798263669,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.01616904401453212,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.01617505104513839,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 61,
+    "mean_motion_valid_fraction": 0.9859433774594908,
+    "warp_enhancement_commutator_MAE255": [
+      2.6673197746276855,
+      2.9499571323394775,
+      1.9201395511627197,
+      2.965768814086914,
+      1.9839566946029663,
+      3.3568663597106934,
+      2.596060037612915,
+      2.5897107124328613,
+      3.1089305877685547,
+      2.517893075942993,
+      2.7246148586273193,
+      2.2402288913726807,
+      2.285618782043457,
+      2.638957977294922,
+      1.7681026458740234
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  },
+  {
+    "domain": "dev_native",
+    "scene": "video_121",
+    "stages": [
+      {
+        "stage": "raw",
+        "model_forward_frames": 16,
+        "GPU_stage_wall_seconds": 0.017293224984314293,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "aligned_prior",
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.016178995021618903,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 0,
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.016177201992832124,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      },
+      {
+        "stage": "preblend",
+        "alpha_order": 1,
+        "model_forward_frames": 15,
+        "GPU_stage_wall_seconds": 0.01617699401685968,
+        "scope": "batch1 synchronized forward/stack/clamp incl Python; excludes transfers, data, teacher/flow, metrics; shared comparisons not standalone cost"
+      }
+    ],
+    "model_sequence_passes": 4,
+    "model_forward_frames": 61,
+    "mean_motion_valid_fraction": 0.9663904260706019,
+    "warp_enhancement_commutator_MAE255": [
+      0.46394625306129456,
+      0.870586097240448,
+      0.7369819283485413,
+      0.3564199209213257,
+      0.7501702904701233,
+      0.487753689289093,
+      0.6484928131103516,
+      0.536612331867218,
+      0.8137850761413574,
+      1.1645859479904175,
+      0.6649958491325378,
+      1.206288456916809,
+      1.096457600593567,
+      0.5362879037857056,
+      0.5289828181266785
+    ],
+    "scope": "shared compute across comparisons, not standalone pipeline cost"
+  }
+]

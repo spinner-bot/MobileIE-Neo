@@ -1,0 +1,64 @@
+{
+  "process_directories": [
+    "research/4.temporal-consistency/process/exploration-r21"
+  ],
+  "completed": [
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r21/gpu-train-seed0-retry.json",
+      "gpu": 2,
+      "revision": "c9a5ebef916ea3c3c53bd17b64d66451d7fb3999",
+      "allowed": true,
+      "process_wall_seconds": 731.7219009480323,
+      "returncode": 0
+    },
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r21/gpu-train-seed1-retry.json",
+      "gpu": 3,
+      "revision": "c9a5ebef916ea3c3c53bd17b64d66451d7fb3999",
+      "allowed": true,
+      "process_wall_seconds": 731.293510900985,
+      "returncode": 0
+    }
+  ],
+  "failed": [
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r21/gpu-train-seed0.json",
+      "gpu": 2,
+      "revision": "8f62ec8fe6cbebabd27b285392b937aac8d5459f",
+      "allowed": true,
+      "process_wall_seconds": 31.182225431024563,
+      "returncode": 1
+    },
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r21/gpu-train-seed1.json",
+      "gpu": 3,
+      "revision": "8f62ec8fe6cbebabd27b285392b937aac8d5459f",
+      "allowed": true,
+      "process_wall_seconds": 31.036173836968374,
+      "returncode": 1
+    }
+  ],
+  "resource_refusals": [
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r21/gpu-eval-half-post.json",
+      "gpu": 3,
+      "revision": "ed249cfc83f9e80943b9317f40557b33f20488f6",
+      "allowed": false
+    },
+    {
+      "record": "research/4.temporal-consistency/process/exploration-r21/gpu-eval-pre-zero.json",
+      "gpu": 2,
+      "revision": "5310c2c3b09a31c8b6281cc0a460bd8965cb9cb2",
+      "allowed": false
+    }
+  ],
+  "used_physical_gpus": [
+    2,
+    3
+  ],
+  "peak_own_concurrent_jobs": 2,
+  "source_hashes_verified": 672,
+  "source_mismatches": [],
+  "process_gpu_seconds": 1525.2338111170102,
+  "scope": "includes CPU/data/metrics; not GPU kernel time; preflight and local locks are not a global reservation"
+}
