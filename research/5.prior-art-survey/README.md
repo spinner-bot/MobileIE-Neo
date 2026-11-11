@@ -93,3 +93,7 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 修改：2026-11-11T20:24:45.731053+08:00；作者：Codex  (sqs_A100)；原因：索引R14/R15完整结果及新的结构/数据问题。
 
 修改：2026-11-11T21:21:00.783613+08:00；作者：Codex  (sqs_A100)；原因：索引0027几何负结果与后续时间冗余问题。
+
+- [20 历史利用与聚合训练先例](docs/20-reference-collapse-and-aggregation-training.md)：KPN参考帧局部极小值、辅助退火及短训练日程边界；R21无新增辅助损失。
+
+修改：2026-11-11T22:23:36.759961+08:00；作者：Codex  (sqs_A100)；原因：索引已读原文/固定源码与重复风险核查。
