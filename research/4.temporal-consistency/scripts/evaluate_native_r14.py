@@ -11,7 +11,7 @@ import torch
 
 from continuation_r14 import MODES, create_model
 from evaluate_aligned_raw_r11 import infer
-from evaluation_aliases_r14 import cache_keys
+from evaluation_aliases_r14 import cache_keys, event_flags
 from exploration_r2_data import ROOT, detect_changes, evaluate
 from explore_state_r2 import fuse
 from explore_temporal_controls import save_json, sha256
@@ -61,7 +61,7 @@ def main():
     assert len(metas)==46
     start=time.perf_counter();count=0;inferences=0;computations=0;aliases=0;first=[];events_audit=[]
     for meta in metas:
-        data=load_one(meta);events,_=detect_changes(data['low']);has_events=bool(events.any())
+        data=load_one(meta);events,_=detect_changes(data['low']);events=event_flags(events);has_events=bool(events.any())
         events_audit.append({'domain':meta['domain'],'scene':meta['scene'],'reset_frames':np.flatnonzero(events).tolist()})
         inputs=torch.from_numpy((data['low']/255.).transpose(0,3,1,2).copy()).to(device)
         for variant,preparation,seed,step,net in models:
