@@ -1,0 +1,7 @@
+{
+  "error": "AttributeError str object has no attribute type",
+  "cause": "inference helper requires torch.device; caller passed string",
+  "completed_cache_scenes": 0,
+  "preserved_empty_folders": "suffix -failed-device",
+  "fix": "torch.device cuda passed to model and inference; new guard record on retry"
+}
