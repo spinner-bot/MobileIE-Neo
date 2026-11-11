@@ -1,0 +1,916 @@
+[
+  {
+    "domain": "test",
+    "input_reset": false,
+    "method": "postaligned01",
+    "dominated_by": [
+      "postwarp01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "test",
+    "input_reset": false,
+    "method": "postaligned05",
+    "dominated_by": [
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "test",
+    "input_reset": false,
+    "method": "postwarp01",
+    "dominated_by": [],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "test",
+    "input_reset": false,
+    "method": "postwarp05",
+    "dominated_by": [],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "test",
+    "input_reset": false,
+    "method": "pre01",
+    "dominated_by": [
+      "postaligned01",
+      "postwarp01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "test",
+    "input_reset": false,
+    "method": "pre05",
+    "dominated_by": [
+      "postaligned05",
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "test",
+    "input_reset": false,
+    "method": "raw",
+    "dominated_by": [],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "test",
+    "input_reset": false,
+    "method": "recursive_half01",
+    "dominated_by": [
+      "postwarp01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev",
+    "input_reset": false,
+    "method": "postaligned01",
+    "dominated_by": [],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev",
+    "input_reset": false,
+    "method": "postaligned05",
+    "dominated_by": [
+      "postaligned01",
+      "postwarp01",
+      "pre01",
+      "raw",
+      "recursive_half01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev",
+    "input_reset": false,
+    "method": "postwarp01",
+    "dominated_by": [],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev",
+    "input_reset": false,
+    "method": "postwarp05",
+    "dominated_by": [
+      "postwarp01",
+      "recursive_half01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev",
+    "input_reset": false,
+    "method": "pre01",
+    "dominated_by": [],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev",
+    "input_reset": false,
+    "method": "pre05",
+    "dominated_by": [
+      "postaligned01",
+      "postaligned05",
+      "postwarp01",
+      "pre01",
+      "raw",
+      "recursive_half01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev",
+    "input_reset": false,
+    "method": "raw",
+    "dominated_by": [],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev",
+    "input_reset": false,
+    "method": "recursive_half01",
+    "dominated_by": [
+      "postwarp01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev_native",
+    "input_reset": false,
+    "method": "postaligned01",
+    "dominated_by": [
+      "postwarp01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev_native",
+    "input_reset": false,
+    "method": "postaligned05",
+    "dominated_by": [
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev_native",
+    "input_reset": false,
+    "method": "postwarp01",
+    "dominated_by": [],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev_native",
+    "input_reset": false,
+    "method": "postwarp05",
+    "dominated_by": [],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev_native",
+    "input_reset": false,
+    "method": "pre01",
+    "dominated_by": [
+      "postaligned01",
+      "postwarp01",
+      "recursive_half01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev_native",
+    "input_reset": false,
+    "method": "pre05",
+    "dominated_by": [
+      "postaligned05",
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev_native",
+    "input_reset": false,
+    "method": "raw",
+    "dominated_by": [
+      "postaligned01",
+      "postwarp01",
+      "recursive_half01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev_native",
+    "input_reset": false,
+    "method": "recursive_half01",
+    "dominated_by": [],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "legacy_synthetic",
+    "input_reset": false,
+    "method": "postaligned01",
+    "dominated_by": [
+      "postaligned05",
+      "postwarp01",
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "legacy_synthetic",
+    "input_reset": false,
+    "method": "postaligned05",
+    "dominated_by": [
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "legacy_synthetic",
+    "input_reset": false,
+    "method": "postwarp01",
+    "dominated_by": [
+      "postaligned05",
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "legacy_synthetic",
+    "input_reset": false,
+    "method": "postwarp05",
+    "dominated_by": [],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "legacy_synthetic",
+    "input_reset": false,
+    "method": "pre01",
+    "dominated_by": [
+      "postaligned05",
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "legacy_synthetic",
+    "input_reset": false,
+    "method": "pre05",
+    "dominated_by": [
+      "postaligned05",
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "legacy_synthetic",
+    "input_reset": false,
+    "method": "raw",
+    "dominated_by": [
+      "postaligned01",
+      "postaligned05",
+      "postwarp01",
+      "postwarp05",
+      "recursive_half01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "legacy_synthetic",
+    "input_reset": false,
+    "method": "recursive_half01",
+    "dominated_by": [
+      "postaligned05",
+      "postwarp01",
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_cut",
+    "input_reset": false,
+    "method": "postaligned01",
+    "dominated_by": [
+      "postwarp01",
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_cut",
+    "input_reset": false,
+    "method": "postaligned05",
+    "dominated_by": [
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_cut",
+    "input_reset": false,
+    "method": "postwarp01",
+    "dominated_by": [
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_cut",
+    "input_reset": false,
+    "method": "postwarp05",
+    "dominated_by": [],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_cut",
+    "input_reset": false,
+    "method": "pre01",
+    "dominated_by": [
+      "postaligned01",
+      "postaligned05",
+      "postwarp01",
+      "postwarp05",
+      "recursive_half01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_cut",
+    "input_reset": false,
+    "method": "pre05",
+    "dominated_by": [
+      "postaligned05",
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_cut",
+    "input_reset": false,
+    "method": "raw",
+    "dominated_by": [
+      "postaligned01",
+      "postaligned05",
+      "postwarp01",
+      "postwarp05",
+      "recursive_half01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_cut",
+    "input_reset": false,
+    "method": "recursive_half01",
+    "dominated_by": [
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_light_step",
+    "input_reset": false,
+    "method": "postaligned01",
+    "dominated_by": [
+      "postwarp01",
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_light_step",
+    "input_reset": false,
+    "method": "postaligned05",
+    "dominated_by": [
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_light_step",
+    "input_reset": false,
+    "method": "postwarp01",
+    "dominated_by": [
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_light_step",
+    "input_reset": false,
+    "method": "postwarp05",
+    "dominated_by": [],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_light_step",
+    "input_reset": false,
+    "method": "pre01",
+    "dominated_by": [
+      "postaligned01",
+      "postaligned05",
+      "postwarp01",
+      "postwarp05",
+      "recursive_half01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_light_step",
+    "input_reset": false,
+    "method": "pre05",
+    "dominated_by": [
+      "postaligned05",
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_light_step",
+    "input_reset": false,
+    "method": "raw",
+    "dominated_by": [
+      "postaligned01",
+      "postaligned05",
+      "postwarp01",
+      "postwarp05",
+      "recursive_half01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_light_step",
+    "input_reset": false,
+    "method": "recursive_half01",
+    "dominated_by": [
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "test",
+    "input_reset": true,
+    "method": "postaligned01",
+    "dominated_by": [
+      "postwarp01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "test",
+    "input_reset": true,
+    "method": "postaligned05",
+    "dominated_by": [
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "test",
+    "input_reset": true,
+    "method": "postwarp01",
+    "dominated_by": [],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "test",
+    "input_reset": true,
+    "method": "postwarp05",
+    "dominated_by": [],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "test",
+    "input_reset": true,
+    "method": "pre01",
+    "dominated_by": [
+      "postaligned01",
+      "postwarp01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "test",
+    "input_reset": true,
+    "method": "pre05",
+    "dominated_by": [
+      "postaligned05",
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "test",
+    "input_reset": true,
+    "method": "raw",
+    "dominated_by": [],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "test",
+    "input_reset": true,
+    "method": "recursive_half01",
+    "dominated_by": [
+      "postwarp01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev",
+    "input_reset": true,
+    "method": "postaligned01",
+    "dominated_by": [],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev",
+    "input_reset": true,
+    "method": "postaligned05",
+    "dominated_by": [
+      "postaligned01",
+      "postwarp01",
+      "pre01",
+      "raw",
+      "recursive_half01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev",
+    "input_reset": true,
+    "method": "postwarp01",
+    "dominated_by": [],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev",
+    "input_reset": true,
+    "method": "postwarp05",
+    "dominated_by": [
+      "postwarp01",
+      "recursive_half01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev",
+    "input_reset": true,
+    "method": "pre01",
+    "dominated_by": [],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev",
+    "input_reset": true,
+    "method": "pre05",
+    "dominated_by": [
+      "postaligned01",
+      "postaligned05",
+      "postwarp01",
+      "pre01",
+      "raw",
+      "recursive_half01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev",
+    "input_reset": true,
+    "method": "raw",
+    "dominated_by": [],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev",
+    "input_reset": true,
+    "method": "recursive_half01",
+    "dominated_by": [
+      "postwarp01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev_native",
+    "input_reset": true,
+    "method": "postaligned01",
+    "dominated_by": [
+      "postwarp01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev_native",
+    "input_reset": true,
+    "method": "postaligned05",
+    "dominated_by": [
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev_native",
+    "input_reset": true,
+    "method": "postwarp01",
+    "dominated_by": [],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev_native",
+    "input_reset": true,
+    "method": "postwarp05",
+    "dominated_by": [],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev_native",
+    "input_reset": true,
+    "method": "pre01",
+    "dominated_by": [
+      "postaligned01",
+      "postwarp01",
+      "recursive_half01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev_native",
+    "input_reset": true,
+    "method": "pre05",
+    "dominated_by": [
+      "postaligned05",
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev_native",
+    "input_reset": true,
+    "method": "raw",
+    "dominated_by": [
+      "postaligned01",
+      "postwarp01",
+      "recursive_half01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "dev_native",
+    "input_reset": true,
+    "method": "recursive_half01",
+    "dominated_by": [],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "legacy_synthetic",
+    "input_reset": true,
+    "method": "postaligned01",
+    "dominated_by": [
+      "postaligned05",
+      "postwarp01",
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "legacy_synthetic",
+    "input_reset": true,
+    "method": "postaligned05",
+    "dominated_by": [
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "legacy_synthetic",
+    "input_reset": true,
+    "method": "postwarp01",
+    "dominated_by": [
+      "postaligned05",
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "legacy_synthetic",
+    "input_reset": true,
+    "method": "postwarp05",
+    "dominated_by": [],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "legacy_synthetic",
+    "input_reset": true,
+    "method": "pre01",
+    "dominated_by": [
+      "postaligned05",
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "legacy_synthetic",
+    "input_reset": true,
+    "method": "pre05",
+    "dominated_by": [
+      "postaligned05",
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "legacy_synthetic",
+    "input_reset": true,
+    "method": "raw",
+    "dominated_by": [
+      "postaligned01",
+      "postaligned05",
+      "postwarp01",
+      "postwarp05",
+      "recursive_half01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "legacy_synthetic",
+    "input_reset": true,
+    "method": "recursive_half01",
+    "dominated_by": [
+      "postaligned05",
+      "postwarp01",
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_cut",
+    "input_reset": true,
+    "method": "postaligned01",
+    "dominated_by": [
+      "postaligned05",
+      "postwarp01",
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_cut",
+    "input_reset": true,
+    "method": "postaligned05",
+    "dominated_by": [
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_cut",
+    "input_reset": true,
+    "method": "postwarp01",
+    "dominated_by": [
+      "postaligned05",
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_cut",
+    "input_reset": true,
+    "method": "postwarp05",
+    "dominated_by": [],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_cut",
+    "input_reset": true,
+    "method": "pre01",
+    "dominated_by": [
+      "postaligned01",
+      "postaligned05",
+      "postwarp01",
+      "postwarp05",
+      "recursive_half01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_cut",
+    "input_reset": true,
+    "method": "pre05",
+    "dominated_by": [
+      "postaligned05",
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_cut",
+    "input_reset": true,
+    "method": "raw",
+    "dominated_by": [
+      "postaligned01",
+      "postaligned05",
+      "postwarp01",
+      "postwarp05",
+      "recursive_half01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_cut",
+    "input_reset": true,
+    "method": "recursive_half01",
+    "dominated_by": [
+      "postaligned05",
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_light_step",
+    "input_reset": true,
+    "method": "postaligned01",
+    "dominated_by": [
+      "postaligned05",
+      "postwarp01",
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_light_step",
+    "input_reset": true,
+    "method": "postaligned05",
+    "dominated_by": [
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_light_step",
+    "input_reset": true,
+    "method": "postwarp01",
+    "dominated_by": [
+      "postaligned05",
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_light_step",
+    "input_reset": true,
+    "method": "postwarp05",
+    "dominated_by": [],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_light_step",
+    "input_reset": true,
+    "method": "pre01",
+    "dominated_by": [
+      "postaligned01",
+      "postaligned05",
+      "postwarp01",
+      "postwarp05",
+      "recursive_half01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_light_step",
+    "input_reset": true,
+    "method": "pre05",
+    "dominated_by": [
+      "postaligned05",
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_light_step",
+    "input_reset": true,
+    "method": "raw",
+    "dominated_by": [
+      "postaligned01",
+      "postaligned05",
+      "postwarp01",
+      "postwarp05",
+      "recursive_half01"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  },
+  {
+    "domain": "event_light_step",
+    "input_reset": true,
+    "method": "recursive_half01",
+    "dominated_by": [
+      "postaligned05",
+      "postwarp05"
+    ],
+    "scope": "four metric means only, no compute/latency ranking; repeated exploration data"
+  }
+]
