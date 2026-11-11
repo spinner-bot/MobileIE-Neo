@@ -1,0 +1,36 @@
+{
+  "rows": 240,
+  "metric_computations": 140,
+  "metric_aliases": 100,
+  "actual_inference_sequences": 200,
+  "common_CPU_replay": [
+    {
+      "file": "per_sequence.jsonl",
+      "rows": 8,
+      "max_abs_metric": 0.0,
+      "reference": "research/4.temporal-consistency/results/exploration-r21-reference-plain-cpu/per_sequence.jsonl"
+    },
+    {
+      "file": "per_frame.jsonl",
+      "rows": 128,
+      "max_abs_metric": 0.0,
+      "reference": "research/4.temporal-consistency/results/exploration-r21-reference-plain-cpu/per_frame.jsonl"
+    }
+  ],
+  "sequence_and_frame_alias_exact": true,
+  "current_limits_all_frames_exact": true,
+  "first_frame_max_abs_normalized": 0.0,
+  "source_sha256": {
+    "research/4.temporal-consistency/results/exploration-r21-reference-plain-cpu/per_sequence.jsonl": "36c7f105a98b27923863c7eef8602653be766b9cf7266a4899b4874e4cea97ae",
+    "research/4.temporal-consistency/results/exploration-r21-reference-plain-cpu/per_frame.jsonl": "0c3f7c40d397e44864927b5c11ca3717e4b6abf3637f7d42dc3c91c34ce3ec84",
+    "research/4.temporal-consistency/results/exploration-r27-frozen-cpu/runtime.json": "beee5898c4f45d179e6a55a802be487756b25e3991b3d42caeee2eb9f83f62c5",
+    "research/4.temporal-consistency/results/exploration-r27-frozen-cpu/config.json": "89ee444f153e2faeb35703f4e53886b9316d3d846e22c8810e00b45667582a68",
+    "research/4.temporal-consistency/results/exploration-r27-frozen-cpu/checkpoints.json": "4769e240cab5dd2e93adc8e18e6800bcf72d226e7b8b3542efcbc0fc1e8a2b99",
+    "research/4.temporal-consistency/results/exploration-r27-frozen-cpu/current_limit_audit.json": "4022f798e0a5d839a8f8c4d83a1ec770b5cbaa41b29ab8b19a742e89e187dd9b",
+    "research/4.temporal-consistency/results/exploration-r27-frozen-cpu/per_frame.jsonl": "f25a725a265615ac27fddd6366521cd2e4418f5e0494d77f8ac23a73a69f5d7d",
+    "research/4.temporal-consistency/results/exploration-r27-frozen-cpu/first_frame_audit.json": "9c38aedcb40943d679352e16d1e06b8048e1869eb702f72afb8efc6fee4bfeb9",
+    "research/4.temporal-consistency/results/exploration-r27-frozen-cpu/per_sequence.jsonl": "7ac3fd73e2d93973d0b75034382bdbb035de1d0787a294fc76ea6675ca148efb"
+  },
+  "training_updates": 0,
+  "scope": "Frozen forward intervention on four exploratory native DEV clips. Not trained-method quality, convergence, unseen-test or novelty evidence."
+}
