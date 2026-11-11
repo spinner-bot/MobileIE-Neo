@@ -10,13 +10,13 @@ import torch
 from exploration_r2_data import ROOT
 from explore_temporal_controls import save_json, sha256
 from train_exploration_r2 import new_model
-from transport_evaluation_r28 import EXTERNAL, infer, output_keys
+from transport_evaluation_r28 import EXTERNAL, infer, output_keys, load_models
 from transport_fst_r27 import MODES, TransportFST
 
 
 def main():
     base = ROOT/'research/4.temporal-consistency'
-    out = base/'process/exploration-r28/evaluation-fixtures-cpu'
+    out = base/'process/exploration-r28/evaluation-fixtures-focused-cpu'
     out.mkdir(parents=True, exist_ok=False)
     torch.set_num_threads(2)
     torch.use_deterministic_algorithms(True)
@@ -52,7 +52,7 @@ def main():
     events = json.loads(events_path.read_text())
     assert len(events) == 46 and sum(bool(r['reset_frames']) for r in events) == 24
     counts = []
-    for group in MODES:
+    for group in ['copy', 'post_transport']:
         logical = metrics = aliases = neural = 0
         nodes = [(group, 4)]+([(EXTERNAL, 2)] if group == 'copy' else [])
         for mode, weights in nodes:
@@ -76,13 +76,17 @@ def main():
         expected = (2208, 1536, 672, 276) if group == 'copy' else (2208, 1584, 624, 464)
         assert (logical, metrics, aliases, neural) == expected
         counts.append({'group': group, 'logical_rows': logical, 'metrics': metrics, 'aliases': aliases, 'neural_sequences': neural})
-    assert [sum(r[k] for r in counts) for k in ['logical_rows', 'metrics', 'aliases', 'neural_sequences']] == [11040, 7872, 3168, 2132]
+    assert [sum(r[k] for r in counts) for k in ['logical_rows', 'metrics', 'aliases', 'neural_sequences']] == [4416, 3120, 1296, 740]
+    reused_models, reused_markers = load_models('copy', torch.device('cpu'))
+    assert len(reused_models) == len(reused_markers) == 6
+    assert sum(bool(r.get('reused_R26_training')) for r in reused_markers) == 4
     save_json(out/'audit.json', {'passed': True, 'causal_checks': checks, 'grid_counts': counts,
               'input_events_sha256': sha256(events_path),
               'revision': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
               'source_sha256': {str(p.relative_to(ROOT)): sha256(p) for p in [Path(__file__), Path(__file__).with_name('transport_evaluation_r28.py')]},
-              'scope': 'Implementation/interface/budget gates on official weights; no R28 trained quality results.'})
-    print(json.dumps({'passed': True, 'causal_nodes': len(checks), 'logical_rows': 11040}), flush=True)
+              'reused_spatial_model_markers': reused_markers,
+              'scope': 'Focused-grid interface/budget and reused-weight loading checks; no R28 trained quality results.'})
+    print(json.dumps({'passed': True, 'causal_nodes': len(checks), 'logical_rows': 4416}), flush=True)
 
 
 if __name__ == '__main__':
