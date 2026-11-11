@@ -17,7 +17,12 @@ from train_exploration_r2 import new_model
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--out', required=True)
+    p.add_argument('--variants', default=','.join(MODES))
+    p.add_argument('--direct-fixed-shift', action='store_true')
     args = p.parse_args()
+    modes = args.variants.split(',')
+    if any(m not in MODES for m in modes):
+        p.error('known modes required')
     torch.set_num_threads(2)
     torch.backends.cudnn.deterministic = True
     torch.backends.cudnn.benchmark = False
@@ -28,10 +33,12 @@ def main():
     start = time.perf_counter()
     with torch.inference_mode():
         for block in range(3):
-            order = np.random.default_rng(32+block).permutation(MODES).tolist()
+            order = np.random.default_rng(32+block).permutation(modes).tolist()
             for mode in order:
                 net = CausalFST(new_model(device), mode).to(device).eval()
-                check = ROOT/'.cache/checkpoints/exploration-r5'/f'{mode}-seed0'/'step1000.pth'
+                net.direct_fixed_shift = args.direct_fixed_shift
+                scope = 'exploration-r5c' if mode == 'spatial_post' else 'exploration-r5'
+                check = ROOT/'.cache/checkpoints'/scope/f'{mode}-seed0'/'step1000.pth'
                 provenance = None
                 if check.exists():
                     net.load_state_dict(torch.load(check, map_location=device, weights_only=False)['model'])
@@ -54,6 +61,7 @@ def main():
                 wall_ms = (time.perf_counter()-wall)*1000/200
                 times = [a.elapsed_time(b) for a, b in pairs]
                 row = {'block': block, 'mode': mode, 'parameters': sum(p.numel() for p in net.parameters()),
+                    'direct_fixed_shift': args.direct_fixed_shift if mode == 'tsm_fixed' else False,
                     'checkpoint': provenance, 'cuda_event_ms': times, 'median_ms': float(np.median(times)),
                     'mean_ms': float(np.mean(times)), 'p95_ms': float(np.percentile(times, 95)),
                     'synchronized_wall_ms_per_call': wall_ms, 'state_storage_bytes': net.state_storage_bytes(),
