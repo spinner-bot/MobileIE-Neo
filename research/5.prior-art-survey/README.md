@@ -33,6 +33,7 @@
 | 数据与可靠性 | [11](docs/11-real-video-data-readiness.md)、[12](docs/12-motion-validity-and-quality-constrained-history.md) | ND实拍数据边界、运动有效性、质量约束 |
 | 因果训练与多项式噪声 | [13](docs/13-training-objectives-and-causal-state.md)、[14](docs/14-polynomial-noise-and-bias-variance.md) | 近期训练先例、二次映射假设、偏差方差分析及未完成精读 |
 | 状态及优化控制 | [15](docs/15-temporal-shift-baseline-scope.md)、[16](docs/16-optimization-and-reparameterization-controls.md) | 原TSM范围、可折叠分支与训练等价边界 |
+| 已发表去噪复现入口 | [17](docs/17-published-denoiser-reproduction-readiness.md) | 官方权重/推理接入、未来等待与未完成LLVE对照 |
 | 汇报材料 | [`report/prior-art-survey.html`](report/prior-art-survey.html) | 单文件 HTML，资源内嵌，可离线打开 |
 | 原始数据 | [`data/`](data) | S2/OpenAlex 原始 JSON、Crossref 元数据、规范化 CSV |
 | 抓取脚本 | [`scripts/fetch_citations.py`](scripts/fetch_citations.py) | 可重跑的引用抓取（带退避） |
@@ -82,3 +83,5 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 - 2026-11-11T16:51:31.316795+08:00 · Codex  (sqs_A100)：补齐08–14增量入口，明确首轮计数/建议为历史快照，并移除旧光流改善数字的当前证据地位。
 
 修改：2026-11-11T18:39:15.432022+08:00；作者：Codex  (sqs_A100)；原因：索引15/16，避免将训练优化或简化参考误作新颖性。
+
+修改：2026-11-11T19:15:36.577012+08:00；作者：Codex  (sqs_A100)；原因：索引已运行FastDVDnet及BSVD入口核查。
