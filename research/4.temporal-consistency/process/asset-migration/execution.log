@@ -1,0 +1,9 @@
+{"stage": "installing_owned_environment", "time": "2026-11-12T02:20:38.679108+08:00", "prefix": "/data/Users/zrh/data/MobileIE-Neo/.venv"}
+Traceback (most recent call last):
+  File "/data/Users/zrh/repo/MobileIE-Neo/scripts/migrate_project_assets.py", line 120, in <module>
+    
+  File "/data/Users/zrh/repo/MobileIE-Neo/scripts/migrate_project_assets.py", line 55, in main
+    stream.write(json.dumps({'command': command})+'\n')
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python', '-m', 'pip', 'install', '--only-binary=:all:', '--index-url', 'https://pypi.org/simple', '-r', '/data/Users/zrh/repo/MobileIE-Neo/requirements-research.txt']' died with <Signals.SIGTERM: 15>.
