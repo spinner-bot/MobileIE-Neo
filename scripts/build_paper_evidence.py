@@ -22,6 +22,11 @@ def main():
     dvd = read(Path('report/exploration-r12/domain_summary.json'))
     stable = read(Path('report/exploration-r15/domain_summary.json'))
     frozen = read(Path('report/exploration-r27-frozen/domain_summary.json'))
+    transport = read(Path('report/exploration-r28/domain_seed_summary.json'))
+    transport_audit = read(Path('report/exploration-r28/audit.json'))
+    assert transport_audit['passed'] and transport_audit['rows'] == 4416
+    external_audit = read(Path('report/exploration-r30/audit.json'))
+    assert external_audit['complete_registered_model_set'] and external_audit['rows'] == 312
     cost = read(Path('results/exploration-r16-cost-counterbalanced/cost.json'))
     external = read(Path('results/exploration-r30-cache/index.json'))
     phones = read(Path('results/exploration-r31-data/index.json'))
@@ -63,9 +68,17 @@ def main():
         add('R27 frozen/'+mode+'/'+fusion, 'frozen mechanism, CPU; compare only this CPU pair', metrics, flow=True,
             state=('RGB history 23.73 MiB' if mode == 'copy' else '12ch feature history 94.92 MiB')+'@1080p + motion state', source='R27')
     for objective in ['charb', 'mse']:
-        add('R28 post_transport/'+objective+'/current', 'candidate pending; single-frame deployment', None, source='R28 focused protocol')
-        add('R28 post_transport/'+objective+'/causal', 'candidate pending; temporal deployment', None, flow=True,
-            state='12ch feature history 94.92 MiB@1080p + motion state', source='R28 focused protocol')
+        for history, fusion in [('current', 'raw'), ('current', 'postwarp05'), ('causal', 'raw')]:
+            selected = [r for r in transport if r['domain'] == 'dev_native' and r['mode'] == 'post_transport'
+                        and r['objective'] == objective and r['history'] == history and r['fusion'] == fusion and not r['input_reset']]
+            assert len(selected) == 2
+            metrics = {k: statistics.mean(r[k] for r in selected) for k in ['psnr_rgb', 'ssim_rgb', 'temporal_error', 'edge_mae']}
+            temporal = history == 'causal'
+            post = fusion != 'raw'
+            evidence = 'same-weight reference, CUDA; classical post' if post else 'trained candidate, CUDA; registered screening failed'
+            add('R28 post_transport/'+objective+'/'+history+'/'+fusion, evidence, metrics, flow=temporal or post,
+                state=('12ch feature history 94.92 MiB@1080p + motion state' if temporal else 'RGB history 23.73 MiB@1080p + motion state' if post else '0'),
+                source='R28 fixed4000, dual seed; current/raw is single-frame')
     with (out/'evidence.csv').open('w', newline='') as stream:
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
         writer.writeheader()
@@ -83,7 +96,8 @@ def main():
         lines.append(f"|{r['method']}|{r['predictor_params']}|{r['fixed_motion_teacher_params']}|{value}|{r['history_state']}|{r['flow_at_inference']}|{r['future_frames']}|未测|")
     lines += ['', '运动列对应当前共享流场评价的固定官方MobileIE + 半分辨率Farneback/FB。预计算flow不等于部署免费；需要独立teacher时要计入其权重/前向、CPUflow和warp。MAC列只计预测Conv2d，不含FST/attention/激活/warp/运动teacher；历史状态是对应方法的最低历史张量，不含完整峰值内存。', '',
               'R27 post_transport真实推理依赖过去特征与flow；其约27.06/2.71是CPU冻结探针，不是无flow的单帧结果，也不能由空间重参数化消除独立过去输入。单帧current是另一个部署映射，R28须单独评价。', '',
-              '外部输入已准备：[R30 DAVIS](../../docs/exploration-r30-protocol.md)为3段官方TRAIN来源、6个合成低光条件、每段64帧；[R31真实手机](../../docs/exploration-r31-protocol.md)为3设备各64帧，无同步GT，[原亮度预览](../exploration-r31-data/phone_inputs.png)。两者均为开发资料，方法外部评价尚未完成，不将已取得输入写作基准结果。', '',
+              'R28的4416行共同CUDA评价已完成，current/raw与causal/raw均未通过注册质量—时序筛查。causal需要flow和12ch历史状态，主路线冻结；同权重current+post保留完整，不能把训练后空间映射变化归为真实历史收益。', '',
+              '外部开发评价：[R30 DAVIS](../../docs/exploration-r30-protocol.md)为3段官方TRAIN来源、6个合成低光条件、每段64帧；双seed312行[共同CPU结果](../exploration-r30/tables.md)已完成，仍未建立候选联合优势，与上表CUDA原生域分开。[R31真实手机](../../docs/exploration-r31-protocol.md)为3设备各64帧，无同步GT，[原亮度预览](../exploration-r31-data/phone_inputs.png)，尚无方法质量结论。', '',
               '外部有效性缺口：完整标准公开视频验证、真实手机域方法评价、同域训练/适配的已发表对照、手机端完整延迟及独立保留测试仍待。FastDVDnet/StableLLVE已有迁移评价，尚不能替代这些缺口。', '',
               '完整机器表：[evidence.csv](evidence.csv)；数据来源：[sources.json](sources.json)。']
     (out/'README.md').write_text('\n'.join(lines)+'\n')
@@ -91,6 +105,8 @@ def main():
         'external_data_prepared': {'DAVIS_source_videos': 3, 'DAVIS_synthetic_conditions': 6,
                                    'real_phone_videos': 3, 'phone_reference_GT_available': False,
                                    'frames_per_clip': 64, 'method_results_in_this_table': False},
+        'R28_screening_status': 'failed; route frozen as primary method, not universal impossibility',
+        'R30_external_pilot_status': 'complete312 rows, common CPU; separate from native CUDA table; candidate screening failed',
         'scope': 'Evidence draft only. Missing values are explicit; no new inference, training or phone timing.'}, indent=2)+'\n')
 
 
