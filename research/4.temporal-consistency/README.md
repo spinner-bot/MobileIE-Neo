@@ -2,9 +2,10 @@
 
 目标：以论文为最终产出，深入核查 MobileIE 的架构与训练机制，在移动端计算预算内设计视频增强模型，用传统方法、后处理和已有视频模型对照验证画质、时间稳定性与效率收益。
 
-- 状态：**前期探索，三轮受控预实验已完成**（2026-11-11）；没有确定最终方法，真实配对样例已发现迁移与运动估计反例，完整训练及广泛泛化尚待验证
+- 状态：**前期探索，四轮受控预实验已完成**（2026-11-11）；没有确定最终方法，已建立实拍ND衰减数据与两域强控制，完整训练及自然夜景泛化尚待验证
 - 当前研究入口：[MobileIE 架构、训练核查与视频研究设计](docs/architecture-and-video-research-plan.md)
-- 最新结果：[进展报告0013](../../docs/进展报告/0013-T-26111102-骨干时间交互与真实视频反例.md)、[受控训练表](report/exploration-r3-training/training_tables.md)、[真实低光样例](report/exploration-r3-training/real_tables.md)、[完整过程](process/exploration-r3/journal.md)
+- 最新结果：[进展报告0014](../../docs/进展报告/0014-T-26111115-真实数据覆盖与时序强基线.md)、[两域结果](report/exploration-r4/tables.md)、[逐片增量](report/exploration-r4/paired_clip_deltas.json)、[完整过程](process/exploration-r4/journal.md)
+- 第三轮：[进展报告0013](../../docs/进展报告/0013-T-26111102-骨干时间交互与真实视频反例.md)、[受控训练表](report/exploration-r3-training/training_tables.md)、[实拍样例](report/exploration-r3-training/real_tables.md)
 - 第二轮：[进展报告0012](../../docs/进展报告/0012-T-26111021-训练对照与独立场景探索.md)、[训练/状态表](report/exploration-r2/tables.md)、[训练+融合强基线](report/exploration-r2-fusion/tables.md)
 - 首轮结果：[进展报告0010](../../docs/进展报告/0010-T-26111018-首轮调研与预实验.md)、[表格与图](report/exploration-r1/tables.md)
 - 上游：共享代码与权重在项目根目录 [`MobileIE/`](../../MobileIE)
@@ -27,10 +28,13 @@
 
 第三轮完成8次同预算微调、FST真实特征统计、门控/输出状态解耦及真实视频样例探索。body交互在原合成集配合相同融合约有0.3dB增量，但真实样例没有迁移；直接低光FB光流也出现高置信错配。当前优先深化真实训练数据、运动可靠性与曝光响应，再扩大骨干候选。增强域光流改善了时间指标但仍有细节/计算代价，不把固定融合当作已解决方案。
 
+第四轮扩大到12训练/6测试片段，完成14次400步训练及数据覆盖、混合梯度、尺度/映射诊断。少量实拍微调的过拟合可由更多覆盖部分缓解，但均值提升不均匀，旧合成微调仍是强参考。训练选alpha0.1及固定半尺度motion将本机串行成本约82.6→34.4ms，必须纳入骨干候选对照；固定photo/census/启发式noise-scale门控未统一解决两域问题。OLiVES为白天ND衰减实拍，不等同自然夜景。
+
 ## 2. 当前产出
 
 | 产出 | 位置 | 说明 |
 | --- | --- | --- |
+| 第四轮数据与廉价时序强控制 | [协议](docs/exploration-r4-protocol.md)、[结果/图](report/exploration-r4/)、[过程](process/exploration-r4/) | 5600更新、相同混合输入梯度控制、固定test、传统可靠性与完整处理成本 |
 | 第三轮机制与真实视频反例 | [协议](docs/exploration-r3-protocol.md)、[特征/状态图](report/exploration-r3/)、[训练与真实样例](report/exploration-r3-training/)、[过程](process/exploration-r3/) | 相同初始化/信息量控制、history_off、真实低光样例、运动可靠性及状态成本 |
 | 第二轮训练与广度验证 | [协议](docs/exploration-r2-protocol.md)、[训练表](report/exploration-r2/)、[融合表](report/exploration-r2-fusion/)、[过程](process/exploration-r2/) | 同初始化、同数据流训练；强正则/后处理控制；成本、反例与GPU准入审计 |
 | 首轮调研与预实验 | [协议](docs/exploration-r1-protocol.md)、[图表](report/exploration-r1/)、[过程记录](process/exploration-r1/) | 有效对齐/反向warp校验、单项及组合矩阵、正负结果与特征探针 |
@@ -70,7 +74,7 @@
 
 ## 4. 工作计划
 
-以下保留2026-11-05的阶段计划；当前属于前期探索，实际优先级及下一轮假设以最新进展报告0013为准，暂不把方法候选当成已确定的正式实验路线。
+以下保留2026-11-05的阶段计划；当前属于前期探索，实际优先级及下一轮假设以最新进展报告0014为准，暂不把方法候选当成已确定的正式实验路线。
 
 ### P0（本周，服务器到位前）
 - [x] MobileIE 引用追踪与相邻工作检索；
