@@ -1,0 +1,161 @@
+{
+  "passed": true,
+  "constant_checks": {
+    "spatial_only": {
+      "passed": true,
+      "constant_RGB_max_abs_error_8bit": 0.0223388671875,
+      "run": {
+        "mode": "spatial_only",
+        "sigma_8bit": 10.0,
+        "shape": [
+          5,
+          64,
+          64,
+          3
+        ],
+        "Nf": 0,
+        "command": [
+          "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/vbm3d-array",
+          "/data/Users/zrh/repo/MobileIE-Neo/.cache/experiments/exploration-r70/cpu-gate001/constant-spatial_only/input-tchw.f32",
+          "/data/Users/zrh/repo/MobileIE-Neo/.cache/experiments/exploration-r70/cpu-gate001/constant-spatial_only/native-output-tchw.f32",
+          "64",
+          "64",
+          "5",
+          "10",
+          "0"
+        ],
+        "bypassed_zero_sigma": false,
+        "native_filter_seconds": 0.18714144598925486,
+        "full_filter_stage_seconds": 0.1898070700117387,
+        "binary_sha256": "601c7e28eb8bfe7b837641c947d4c64b8c07580b3afe3ff825eb4bbb8545b190",
+        "raw_output_min": 40.008033752441406,
+        "raw_output_max": 179.97772216796875,
+        "scheduler": "same core, spatial search only with fixed first-frame calibration",
+        "scope": "CPU2 plus array I/O. Not exact dependency bound, phone timing or calibrated AWGN/ISP reproduction."
+      }
+    },
+    "video_default": {
+      "passed": true,
+      "constant_RGB_max_abs_error_8bit": 0.0048370361328125,
+      "run": {
+        "mode": "video_default",
+        "sigma_8bit": 10.0,
+        "shape": [
+          5,
+          64,
+          64,
+          3
+        ],
+        "Nf": 4,
+        "command": [
+          "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/vbm3d-array",
+          "/data/Users/zrh/repo/MobileIE-Neo/.cache/experiments/exploration-r70/cpu-gate001/constant-video_default/input-tchw.f32",
+          "/data/Users/zrh/repo/MobileIE-Neo/.cache/experiments/exploration-r70/cpu-gate001/constant-video_default/native-output-tchw.f32",
+          "64",
+          "64",
+          "5",
+          "10",
+          "4"
+        ],
+        "bypassed_zero_sigma": false,
+        "native_filter_seconds": 0.3350807960378006,
+        "full_filter_stage_seconds": 0.33674336900003254,
+        "binary_sha256": "601c7e28eb8bfe7b837641c947d4c64b8c07580b3afe3ff825eb4bbb8545b190",
+        "raw_output_min": 40.003326416015625,
+        "raw_output_max": 179.99534606933594,
+        "scheduler": "offline full provided clip",
+        "scope": "CPU2 plus array I/O. Not exact dependency bound, phone timing or calibrated AWGN/ISP reproduction."
+      }
+    }
+  },
+  "noise_checks": {
+    "spatial_only": {
+      "passed": true,
+      "noisy_MSE": 404.0591931885814,
+      "filtered_MSE": 18.104938213789374,
+      "run": {
+        "mode": "spatial_only",
+        "sigma_8bit": 20.0,
+        "shape": [
+          5,
+          64,
+          64,
+          3
+        ],
+        "Nf": 0,
+        "command": [
+          "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/vbm3d-array",
+          "/data/Users/zrh/repo/MobileIE-Neo/.cache/experiments/exploration-r70/cpu-gate001/noisy-spatial_only/input-tchw.f32",
+          "/data/Users/zrh/repo/MobileIE-Neo/.cache/experiments/exploration-r70/cpu-gate001/noisy-spatial_only/native-output-tchw.f32",
+          "64",
+          "64",
+          "5",
+          "20",
+          "0"
+        ],
+        "bypassed_zero_sigma": false,
+        "native_filter_seconds": 0.18388115102425218,
+        "full_filter_stage_seconds": 0.18482054804917425,
+        "binary_sha256": "601c7e28eb8bfe7b837641c947d4c64b8c07580b3afe3ff825eb4bbb8545b190",
+        "raw_output_min": 36.783836364746094,
+        "raw_output_max": 166.7403106689453,
+        "scheduler": "same core, spatial search only with fixed first-frame calibration",
+        "scope": "CPU2 plus array I/O. Not exact dependency bound, phone timing or calibrated AWGN/ISP reproduction."
+      }
+    },
+    "video_default": {
+      "passed": true,
+      "noisy_MSE": 404.0591931885814,
+      "filtered_MSE": 5.716095973886078,
+      "run": {
+        "mode": "video_default",
+        "sigma_8bit": 20.0,
+        "shape": [
+          5,
+          64,
+          64,
+          3
+        ],
+        "Nf": 4,
+        "command": [
+          "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/vbm3d-array",
+          "/data/Users/zrh/repo/MobileIE-Neo/.cache/experiments/exploration-r70/cpu-gate001/noisy-video_default/input-tchw.f32",
+          "/data/Users/zrh/repo/MobileIE-Neo/.cache/experiments/exploration-r70/cpu-gate001/noisy-video_default/native-output-tchw.f32",
+          "64",
+          "64",
+          "5",
+          "20",
+          "4"
+        ],
+        "bypassed_zero_sigma": false,
+        "native_filter_seconds": 0.3464110709610395,
+        "full_filter_stage_seconds": 0.3475514749879949,
+        "binary_sha256": "601c7e28eb8bfe7b837641c947d4c64b8c07580b3afe3ff825eb4bbb8545b190",
+        "raw_output_min": 48.78956985473633,
+        "raw_output_max": 153.2243194580078,
+        "scheduler": "offline full provided clip",
+        "scope": "CPU2 plus array I/O. Not exact dependency bound, phone timing or calibrated AWGN/ISP reproduction."
+      }
+    }
+  },
+  "spatial_only_other_frame_central_max_abs": 0.0,
+  "first_frame_sigma_unchanged": true,
+  "estimated_sigma_in_artificial_case": 19.652100422151726,
+  "sigma_info": {
+    "source": "first input frame only",
+    "per_channel_sigma": [
+      19.652100422151726,
+      19.48534556561666,
+      21.049423490450813
+    ],
+    "estimator": "nonoverlapping Haar HH centered MAD / .6744897501960817; median RGB",
+    "calibrated_sensor_noise": false,
+    "target_or_known_degradation_used": false
+  },
+  "artificial_filter_calls": 5,
+  "new_real_images": 0,
+  "new_CNN": 0,
+  "new_SGD": 0,
+  "new_GPU": 0,
+  "scope": "One fixed artificial fixture, no sigma/precision/search grid or real-quality conclusion."
+}
