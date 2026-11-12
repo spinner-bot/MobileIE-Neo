@@ -1,0 +1,128 @@
+{
+  "at": "2026-11-13T06:28:37.443664+08:00",
+  "coordinator_pid": 4030342,
+  "coordinator_actual_identity": {
+    "start_ticks": "46167726",
+    "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/finalize_reds_r72.py "
+  },
+  "frozen_sources_unchanged": true,
+  "data_complete": {
+    "completed_normally": true,
+    "conditions": 8,
+    "decoded_source_frames": 256,
+    "degraded_observations": 512,
+    "input_rows": 8,
+    "CNN": 0,
+    "SGD": 0,
+    "GPU": 0,
+    "seconds": 470.27333014801843,
+    "ended": "2026-11-13T06:19:28.895917+08:00"
+  },
+  "seed0_neural_complete": {
+    "completed_normally": true,
+    "seed": 0,
+    "CNN_sequences": 40,
+    "CNN_centers": 2560,
+    "new_SGD": 0,
+    "peak_cuda_allocated_bytes": 1163146240,
+    "seconds": 286.619854370947,
+    "ended": "2026-11-13T06:24:42.160285+08:00"
+  },
+  "seed0_CPU": {
+    "at": "2026-11-13T06:24:43.078761+08:00",
+    "pid": 4037261,
+    "identity": {
+      "start_ticks": "46247060",
+      "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/evaluate_reds_r72.py --seed 0 "
+    },
+    "command": [
+      "./scripts/project-python",
+      "research/4.temporal-consistency/scripts/evaluate_reds_r72.py",
+      "--seed",
+      "0"
+    ]
+  },
+  "seed1_GPU": {
+    "at": "2026-11-13T06:24:47.731926+08:00",
+    "guard_pid": 4037360,
+    "identity": {
+      "start_ticks": "46247525",
+      "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 6 --record research/4.temporal-consistency/process/exploration-r72/finalize001/seed1-guard001.json -- ./scripts/project-python research/4.temporal-consistency/scripts/infer_reds_r72.py --seed 1 --admission-attempt 1 "
+    },
+    "gpu": 6,
+    "command": [
+      "./scripts/project-python",
+      "research/4.temporal-consistency/scripts/gpu_guard.py",
+      "--gpu",
+      "6",
+      "--record",
+      "research/4.temporal-consistency/process/exploration-r72/finalize001/seed1-guard001.json",
+      "--",
+      "./scripts/project-python",
+      "research/4.temporal-consistency/scripts/infer_reds_r72.py",
+      "--seed",
+      "1",
+      "--admission-attempt",
+      "1"
+    ],
+    "preguard_samples": [
+      {
+        "gpu": 6,
+        "uuid": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+        "memory_mib": 0,
+        "utilization_percent": 0,
+        "compute_processes": [],
+        "time": "2026-11-13T06:24:46.271069+08:00"
+      },
+      {
+        "gpu": 6,
+        "uuid": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+        "memory_mib": 0,
+        "utilization_percent": 0,
+        "compute_processes": [],
+        "time": "2026-11-13T06:24:47.530702+08:00"
+      }
+    ]
+  },
+  "seed1_internal_admission": {
+    "at": "2026-11-13T06:25:12.706226+08:00",
+    "samples": [
+      {
+        "gpu": 6,
+        "uuid": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+        "memory_mib": 0,
+        "utilization_percent": 0,
+        "compute_processes": [],
+        "time": "2026-11-13T06:25:11.405332+08:00"
+      },
+      {
+        "gpu": 6,
+        "uuid": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+        "memory_mib": 0,
+        "utilization_percent": 0,
+        "compute_processes": [],
+        "time": "2026-11-13T06:25:12.705852+08:00"
+      }
+    ],
+    "allowed": true,
+    "CPU_models_loaded": [
+      "MobileIE_MSE",
+      "MobileIE_L1",
+      "Nano",
+      "StableLLVE_L1",
+      "FastDVDnet"
+    ],
+    "CPU_data_index_checked": true,
+    "first_native_input_prepared": true,
+    "CUDA_initialized": false
+  },
+  "scope": "Actual data/first-seed neural milestones; final CPU quality/perception still pending, no quality ranking from prefixes.",
+  "seed0_CPU_actual_identity": {
+    "start_ticks": "46247060",
+    "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/evaluate_reds_r72.py --seed 0 "
+  },
+  "seed1_guard_actual_identity": {
+    "start_ticks": "46247525",
+    "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 6 --record research/4.temporal-consistency/process/exploration-r72/finalize001/seed1-guard001.json -- ./scripts/project-python research/4.temporal-consistency/scripts/infer_reds_r72.py --seed 1 --admission-attempt 1 "
+  }
+}
