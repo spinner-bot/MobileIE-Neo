@@ -1,0 +1,81 @@
+{
+  "at": "2026-11-13T01:35:32.768530+08:00",
+  "scope": "Directed closest-state/initialization/device reading while original R64 training stays frozen. No implementation, model weights, new video pixels, GPU or data acquisition.",
+  "sources": [
+    {
+      "name": "EVRNet",
+      "primary": "https://arxiv.org/html/2012.02228v1",
+      "version": "arXiv technical report v1, 2020-12-03",
+      "actually_read": [
+        "3.1 architecture and recurrence input/state",
+        "4.1 training/data/metrics",
+        "5 runtime on iPhone and table5",
+        "6 ablation scope"
+      ],
+      "limits": "Not a complete reproduction or verified official code/weight availability; no current GPU/phone rerun."
+    },
+    {
+      "name": "ReBotNet",
+      "publication_metadata": "https://openaccess.thecvf.com/content/WACV2025/html/Valanarasu_ReBotNet_Fast_Real-Time_Video_Enhancement_WACV_2025_paper.html",
+      "primary_actually_read": "https://arxiv.org/html/2303.13504v1",
+      "version": "arXiv v1 2023-03-23; formal WACV2025 metadata separately confirmed",
+      "actually_read": [
+        "3.1-3.4 dual branches and recurrent training/GT initialization",
+        "4.1 data degradation scope",
+        "4.2 training",
+        "4.3 high-quality first frame and A100 timing",
+        "5 limitations"
+      ],
+      "limits": "Full formal WACV PDF access403, so details attributed only to arXiv v1, not automatically the final version."
+    },
+    {
+      "name": "ReMoNet",
+      "primary": "https://cdn.aaai.org/ojs/20182/20182-13-24195-1-2-20220628.pdf",
+      "version": "AAAI2022 main PDF,9 pages",
+      "actually_read": [
+        "method RTF/MOA and recurrence equation",
+        "table2 size/computation",
+        "mobile runtime paragraph",
+        "ablation and perturbation-analysis scope"
+      ],
+      "limits": "No independent reproduction, no assumption that multi-output frame-average time equals initial latency; no official code/weight availability audit."
+    },
+    {
+      "name": "Adapting MIMO video restoration networks to low latency constraints",
+      "primary_actually_read": "https://arxiv.org/html/2408.12439v1",
+      "version": "arXiv v1, rendered HTML explicitly contains Supplementary material",
+      "actually_read": [
+        "supplement1 smooth-motion artifacts",
+        "supplement2.2 ReMoNet implementation and warmup",
+        "supplement2.3 M2Mnet recurrence/training"
+      ],
+      "limits": "Main PDF fetch exceeded web tool12MB limit. Supplement is not the full main text. Its 2024 statement that original ReMoNet code unavailable is historical, not a claim about current2026 availability."
+    }
+  ],
+  "access_limits_retained": [
+    {
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/20182",
+      "result": "Access denied via BotStopper; read the publicly served official CDN PDF instead, no login/bypass."
+    },
+    {
+      "url": "https://openaccess.thecvf.com/content/WACV2025/papers/Valanarasu_ReBotNet_Fast_Real-Time_Video_Enhancement_WACV_2025_paper.pdf",
+      "result": "403 in web tool; used author arXiv v1."
+    },
+    {
+      "url": "https://arxiv.org/html/2303.13504v2",
+      "result": "404; then checked actual abs version history/link and read v1."
+    },
+    {
+      "url": "https://arxiv.org/html/2012.02228v2",
+      "result": "404; then checked actual abs version history/link and read v1."
+    }
+  ],
+  "not_used_as_fulltext_evidence": [
+    "WDVR2019 PDF fetch403; search abstract only",
+    "Efficient recurrent real video restoration2025 publisher403; retrieved author dataset README only, not a new natural-night benchmark"
+  ],
+  "new_candidate_or_training_launched": false,
+  "R64_budget_changed": false,
+  "published_quality_rows_imported": 0,
+  "new_pixels": 0
+}
