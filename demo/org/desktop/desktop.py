@@ -132,8 +132,17 @@ class Desktop:
         tk.Label(header,text="◒  微光实验室",font=(self.font,24,"bold"),fg="#243d35",bg="#f6f5ef").pack(side="left")
         tk.Label(header,text="PYTHON DESKTOP  /  本机 · 离线",font=(self.font,11),fg="#68766c",bg="#f6f5ef").pack(side="right")
         body=tk.Frame(root,bg="#f6f5ef");body.pack(fill="both",expand=True,padx=28)
-        rail=tk.Frame(body,bg="#e8ecdf",width=250);self.rail=rail;rail.pack(side="left",fill="y",padx=(0,20));rail.pack_propagate(False)
-        self.info_button=self.button(rail,"查看计算记录",self.info,False);self.info_button.pack(side="bottom",fill="x",padx=20,pady=12)
+        rail_shell=tk.Frame(body,bg="#e8ecdf",width=250);rail_shell.pack(side="left",fill="y",padx=(0,20));rail_shell.pack_propagate(False)
+        self.info_button=self.button(rail_shell,"查看计算记录",self.info,False);self.info_button.pack(side="bottom",fill="x",padx=20,pady=12)
+        rail_bar=tk.Scrollbar(rail_shell,orient="vertical");rail_bar.pack(side="right",fill="y")
+        self.rail_scroll=tk.Canvas(rail_shell,bg="#e8ecdf",highlightthickness=0,yscrollcommand=rail_bar.set);self.rail_scroll.pack(side="left",fill="both",expand=True);rail_bar.configure(command=self.rail_scroll.yview)
+        rail=tk.Frame(self.rail_scroll,bg="#e8ecdf");self.rail=rail
+        rail_window=self.rail_scroll.create_window((0,0),window=rail,anchor="nw")
+        rail.bind("<Configure>",lambda event:self.rail_scroll.configure(scrollregion=self.rail_scroll.bbox("all")))
+        self.rail_scroll.bind("<Configure>",lambda event:self.rail_scroll.itemconfigure(rail_window,width=event.width))
+        def scroll_rail(event):
+            if self.rail_scroll.winfo_rootx()<=event.x_root<=self.rail_scroll.winfo_rootx()+self.rail_scroll.winfo_width():self.rail_scroll.yview_scroll(-1 if event.delta>0 else 1,"units")
+        root.bind("<MouseWheel>",scroll_rail)
         tk.Label(rail,text="同一张照片，\n看见不同处理。",justify="left",font=(self.font,20,"bold"),fg="#243d35",bg="#e8ecdf").pack(anchor="w",padx=20,pady=(20,8))
         self.actions=[]
         for label,command,primary in (("选择图片",self.choose,True),("内置暗光样例",self.choose_sample,False),("开始对比",self.process,True),("保存结果",self.save,False)):

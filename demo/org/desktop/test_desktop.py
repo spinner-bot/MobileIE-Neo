@@ -102,6 +102,10 @@ class GuiTests(unittest.TestCase):
             self.assertGreater(app.canvas.winfo_height(),100)
             for widget in (app.actions[3],app.chips["Gamma 0.5"]):self.assertLessEqual(widget.winfo_rooty()+widget.winfo_height(),root.winfo_rooty()+root.winfo_height())
             for widget in app.rail.winfo_children():self.assertGreaterEqual(widget.winfo_height(),widget.winfo_reqheight())
+            self.assertGreater(app.info_button.winfo_height(),20)
+            app.rail_scroll.yview_moveto(1);root.update();last=app.rail.winfo_children()[-1]
+            self.assertLessEqual(last.winfo_rooty()+last.winfo_height(),app.rail_scroll.winfo_rooty()+app.rail_scroll.winfo_height())
+            shot("desktop-06-small-window-scrolled.png")
         finally:app.close();app.worker_thread.join(timeout=5)
         self.assertFalse(app.worker_thread.is_alive())
         (OUT/"desktop-gui.json").write_text(json.dumps({"pass":True,"platform":"Linux/Xvfb Tk 8.6 simulation","native_windows_tested":False,"checks":["initial controls","async processing","slider","overview","cancel","PNG/JSON save","invalid input retention","new input clears old timing","model failure baseline","disabled unavailable method","900x650 layout","clean worker exit"]},indent=2)+"\n")
