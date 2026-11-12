@@ -1,4 +1,5 @@
 """One ordinary public Range recovery, preserving the original premature EOF."""
+import argparse
 import hashlib
 import json
 import re
@@ -7,34 +8,47 @@ import time
 import urllib.parse
 import urllib.request
 from datetime import datetime
+from pathlib import Path
 
 from dynamic_training_r34 import BASE, ROOT, digest
 from fetch_wenzhou_samples_r52 import DownloadForm, EXPECTED, FILE_ID, PUBLIC_URL, write
 
 
+def file_digest(path):
+    checksum = hashlib.sha256()
+    with Path(path).open('rb') as stream:
+        for block in iter(lambda: stream.read(1024*1024), b''):
+            checksum.update(block)
+    return checksum.hexdigest()
+
+
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--attempt', default='003')
+    args = parser.parse_args()
+    assert re.fullmatch(r'\d{3}', args.attempt) and int(args.attempt) >= 3
     process = BASE/'process/external-night-wenzhou'
     old = json.loads((process/'acquisition001/runtime.json').read_text())
     assert old['completed_normally'] is False
     assert old['downloaded_bytes'] == 1148839705
     original = ROOT/'.cache/datasets/Night-Wenzhou/author-samples/attempt001/Wenzhou-Night.rar.part'
-    cache = original.parent.parent/'attempt002'
-    out = process/'acquisition002'
+    cache = original.parent.parent/('attempt'+args.attempt)
+    out = process/('acquisition'+args.attempt)
     assert original.resolve().is_relative_to('/data/Users/zrh/data/MobileIE-Neo')
     assert original.stat().st_size == old['downloaded_bytes']
     out.mkdir(exist_ok=False); cache.mkdir(exist_ok=False)
     partial, final = cache/'Wenzhou-Night.rar.part', cache/'Wenzhou-Night.rar'
     offset, overlap = original.stat().st_size, 1024*1024
     start, complete, count = time.perf_counter(), False, offset
-    original_sha = digest(original)
+    original_sha = file_digest(original)
     try:
         write(out/'config.json', dict(at=datetime.now().astimezone().isoformat(),
               original=str(original.relative_to(ROOT)), original_bytes=offset, original_sha256=original_sha,
               range_start=offset-overlap, range_end=EXPECTED-1, overlap_bytes=overlap,
               technical_retries=0, protocol_sha256=digest(BASE/'docs/exploration-r52-wenzhou-range-recovery-protocol.md'),
-              script_sha256=digest(__file__), old_runtime_sha256=digest(process/'acquisition001/runtime.json')))
+              script_sha256=digest(Path(__file__)), old_runtime_sha256=digest(process/'acquisition001/runtime.json')))
         shutil.copyfile(original, partial)
-        assert digest(partial) == original_sha
+        assert file_digest(partial) == original_sha
         with urllib.request.urlopen(PUBLIC_URL, timeout=30) as response:
             value = response.read(65536)
             assert len(value) < 65536 and response.headers.get_content_type() == 'text/html'
@@ -72,8 +86,8 @@ def main():
         assert count == EXPECTED and partial.stat().st_size == EXPECTED
         with partial.open('rb') as stream:
             assert stream.read(8).startswith((b'Rar!\x1a\x07\x00', b'Rar!\x1a\x07\x01\x00'))
-        assert original.stat().st_size == offset and digest(original) == original_sha
-        full_sha = digest(partial); partial.rename(final)
+        assert original.stat().st_size == offset and file_digest(original) == original_sha
+        full_sha = file_digest(partial); partial.rename(final)
         write(out/'manifest.json', dict(at=datetime.now().astimezone().isoformat(),
               path=str(final.relative_to(ROOT)), bytes=count, sha256=full_sha,
               checksum_is_author_provided=False, download_complete=True, original_partial_preserved=True,
