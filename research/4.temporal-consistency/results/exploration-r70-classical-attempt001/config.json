@@ -1,0 +1,65 @@
+{
+  "at": "2026-11-13T05:21:16.204588+08:00",
+  "CPU_Torch": 2,
+  "OpenCV": 1,
+  "native_OpenMP": 2,
+  "modes": {
+    "spatial_only": 0,
+    "video_default": 4
+  },
+  "expected_filter_sequences": 20,
+  "expected_filter_frames": 896,
+  "expected_quality_rows": 80,
+  "expected_frame_rows": 3584,
+  "expected_CNN_sequences": 40,
+  "expected_CNN_centers": 1792,
+  "source_sha256": {
+    "evaluate_classical_block_r70.py": "d37054cb58d860154ba1aa03ae5fe3e4177d14b79d1a6e4ae6fc25ccb6297935",
+    "classical_block_r70.py": "f7681474ab2b73e26b18cfc37ab34fbeea19081b07cabf16f721355bd39b6246",
+    "prepare_vbm3d_r70.py": "ed265d979b622325f4f2b1e83ca0fe28e5e89d1b304fa3dd3947061d2c211e15",
+    "vbm3d_array_r70.cpp": "1e0c4a0db31bfadd901f5c3ad0ffd57511a52b9d18e5e10119f275f5f376e587",
+    "prepare_cache_r5.py": "675860fc6ef1d97d28750815e99f5c923ecfd94e94254f1f7a7685f08d84f2c8",
+    "exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+    "video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0",
+    "response_cue_r45.py": "804870366389b2cf293384cb795ac445a99db2086501a2a46d98a9dfd9e33c0e",
+    "drv_references_r59.py": "8c805ca335edb8294e13f0403ee1dde6e69a1e67eecb98102c25b000185ba9d8",
+    "half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+    "aligned_raw_history_r11.py": "e367727401f82ccf0bccaf8d88f904e4aebf8b78186f0539eedeed222b2d2227"
+  },
+  "protocol_sha256": "a0d1beb125f3093800a201cac92806281d6c4419bd94a7c94b24d05e49dab9bd",
+  "gate_sha256": "68d23436e9edb731ebb5b7305ec11a736ae0cc93c938b17c2818f9b9f56c6d86",
+  "binary_sha256": "601c7e28eb8bfe7b837641c947d4c64b8c07580b3afe3ff825eb4bbb8545b190",
+  "cache_indices": {
+    "research/4.temporal-consistency/results/exploration-r30-cache/index.json": "424fa278b2fe66d29de476e2b47328619438f97cf71926448433d1191bb722c1",
+    "research/4.temporal-consistency/results/exploration-r10-cache/index.json": "ec00801b04b873ead0025af91af441b783da3f08c87cf24e9c136a4268ffb43c"
+  },
+  "checkpoints": {
+    "0": {
+      "model": "square_mse",
+      "seed": 0,
+      "new_step": 4000,
+      "inherited_updates": 4000,
+      "path": ".cache/checkpoints/exploration-r44/stage001/seed0/square_mse-deploy-step4000.pt",
+      "sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+      "training_path": ".cache/checkpoints/exploration-r44/stage001/seed0/square_mse-training-step4000.pt",
+      "training_sha256": "91800b897a2b568d837cf92925b727bb71934f781437733c75323d3562f6998e",
+      "deployment_parameters": 4075,
+      "final_eval_export_max_abs_delta": 2.5033950805664062e-06,
+      "final_export_gate_passed": true
+    },
+    "1": {
+      "model": "square_mse",
+      "seed": 1,
+      "new_step": 4000,
+      "inherited_updates": 4000,
+      "path": ".cache/checkpoints/exploration-r44/stage001/seed1/square_mse-deploy-step4000.pt",
+      "sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+      "training_path": ".cache/checkpoints/exploration-r44/stage001/seed1/square_mse-training-step4000.pt",
+      "training_sha256": "450d55e60333655019c820321ad9ae4afe78d012aefe3615b9490ef61a3943ba",
+      "deployment_parameters": 4075,
+      "final_eval_export_max_abs_delta": 1.4901161193847656e-06,
+      "final_export_gate_passed": true
+    }
+  },
+  "scope": "Fixed original-core classical pipeline adaptation; offline video, blind approximate sigma, reused DEV. No training/phone/new method or full AWGN-paper reproduction."
+}
