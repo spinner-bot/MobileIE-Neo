@@ -61,7 +61,8 @@ compile入口会拒绝缺失/未正常/来源已变的视频扩展；手机ms仍
   ./scripts/project-python scripts/build_manuscript_snapshot.py
   ./scripts/project-python scripts/build_paper_video_evidence.py
   ./scripts/project-python scripts/build_paper_objective_evidence.py
+  ./scripts/project-python scripts/build_paper_classical_evidence.py
   ./scripts/project-python scripts/build_manuscript.py --attempt N
   ./scripts/project-python scripts/review_manuscript.py --build N
 
-R69扩展在任何写表前要求正式8000/最终fold、两CPU完整终态、40感知、完整联合表和20图actual review；另存objective-evidence-snapshot.json。编译核全主快照及各扩展来源。R70未完成输出不在本快照；不得从实时前缀填论文表。已有固定工具无需重新准备或安装。
+R69扩展在任何写表前要求正式8000/最终fold、两CPU完整终态、40感知、完整联合表和20图actual review；另存objective-evidence-snapshot.json。R70扩展要求原协调/20过滤896帧/40CNN1792中心/80质量3584逐帧、80感知3584比较帧、联合完整表、20图actual review及成本来源核验全部正常，另存classical-evidence-snapshot.json，生成12行质量/感知表与4行描述性成本表。当前完整顺序为基础→视频→目标→传统四个生成器；编译核全主快照及各扩展来源。不得从R72等实时前缀填论文表。已有固定工具无需重新准备或安装。
