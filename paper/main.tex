@@ -3,7 +3,7 @@
 \usepackage{amsmath,amssymb,booktabs,graphicx,xcolor}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 \newcommand{\pending}[1]{\textcolor{red!65!black}{#1}}
-\graphicspath{{../research/4.temporal-consistency/report/exploration-r41-training-form/}{../research/4.temporal-consistency/report/exploration-r42-tlc/}}
+\graphicspath{{../research/4.temporal-consistency/report/exploration-r41-training-form/}{../research/4.temporal-consistency/report/exploration-r42-tlc/}{../research/4.temporal-consistency/report/exploration-r44-bounded-video/}}
 \title{Temporally Stable Ultra-Compact Video Enhancement\\
 \large Working manuscript: problem, protocol, and verified preliminary evidence}
 \author{Internal research draft; authorship to be determined by the project team}
@@ -18,11 +18,12 @@ history, establish strong same-weight classical references, and document
 controlled evidence for adapting MobileIE. The completed experiments show that
 restoring the original expanded training parameterization improves a matched
 mixed-data baseline, while a fixed test-time local pooling conversion harms
-both evaluated domains. These findings constrain the next experiment; they do
-not establish a new video enhancement method. A factorial study of the root
-nonlinearity and a training-only temporal objective is currently running.
-This internal draft contains no final result for that candidate, independent
-final-test claim, or measured phone latency.
+both evaluated domains. A completed factorial study of the root nonlinearity
+and a training-only temporal objective improves paired-real spatial quality
+but fails all three registered temporal/deployment screens. Its spatial and
+temporal effects must be separated. These findings do not establish a new
+video enhancement method. This internal draft contains no independent
+final-test claim or measured phone latency.
 \end{abstract}
 
 \paragraph{Draft status.}
