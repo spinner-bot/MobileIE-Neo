@@ -28,7 +28,9 @@ rho=0是平方均值，rho=1等于混合平方响应；基本恒等式及一般�
 
 所有正式final4000/fold正常后才既有6 SYN64+4 ND16共同质量（10开发条件，不开新数据/最终测试）。每seed三个模型causal与同权重current各raw及自身rec，spatial只有current，合100新质量行/4480逐帧，50新CNN序列/2240中心；两seed200/8960与100/4480。首帧causal/current匹配；rec部署只自身输出half-FB，无GT部署流。另合原R44/R64 plain强参考，完整逐源/两域/双seed保留。
 
-仅完整质量后新准入固定ColorVideoVDP0.5.7/standard_fhd/旧资料名义30fps/replicate，200行/8960比较帧、0新增强CNN；固定10条件×两seed=20联系表、帧0/中/末、Input/GT/旧强MSErec/三新输出及moment current，不选片或曝光修正，全部实际review另记。来源24fps的R72结果不混入本30fps表；REDS仍是DEV，不用它挑rho/权重。
+仅完整质量后新准入固定ColorVideoVDP0.5.7/standard_fhd/旧资料名义30fps/replicate，新模型200行/8960比较帧；另匹配R64 plain raw/rec既有质量40行但尚无该权重感知，所以需额外40感知/1792帧，合240行/10752比较帧，0新增强CNN。R64 rec在GPU前仅CPU从原raw按原算法重建缓存；R44原8000的40行感知直接复用既有完整结果。合新旧280质量条件/56域-seed均值。此项明确于CPU资格正常后、任何GPU资格/正式训练或DEV前补记，未改模型/资格数值/数据/预算，原CPU资格所读协议SHA保留。
+
+固定10条件×两seed=20联系表、帧0/中/末、Input/GT/旧强MSErec/三新输出及moment current，不选片或曝光修正，全部实际review另记。来源24fps的R72结果不混入本30fps表；REDS仍是DEV，不用它挑rho/权重。
 
 只有所有两域/双seed满足下列联合筛查才继续外部/成本：moment raw对spatial raw与mean raw各PSNR差≥−.05dB、JOD差≥−.02、Etemp比≤.95；对moment同权重current raw也需Etemp比≤.95和PSNR/JOD保护；对旧R44及匹配R64 plain各自强rec需PSNR差≥−.05dB/JOD差≥−.02/Etemp比≤.90，逐源PSNR最坏≥−.30dB。不用moment再加flow后的输出替代主候选过门槛。此为有限pilot投入门槛，不是统计显著性或会议录用保证。
 
