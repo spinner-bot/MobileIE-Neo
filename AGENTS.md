@@ -1,6 +1,6 @@
 # MobileIE-Neo 服务器工作约定
 
-更新：2026-11-12T22:01:08.532219+08:00；作者：Codex  (sqs_A100)。
+更新：2026-11-12T22:38:54.402910+08:00；作者：Codex  (sqs_A100)。
 
 - 本项目属于zrh。源码仓库为 `/data/Users/zrh/repo/MobileIE-Neo`；项目运行资产统一在 `/data/Users/zrh/data/MobileIE-Neo`。
 - 禁止借用其他用户的虚拟环境、site-packages、数据或缓存；禁止在 `/root`、其他用户目录或全局Python中建立/安装本项目环境。
@@ -115,3 +115,8 @@
 - 当前论文manuscript.pdf已build007正常13页/六表，新增R53/R56与原Nano公开权重的全部16行，实际查看完整联系表和新增第10页；0未解析引用。此前12页/五表描述为旧快照，不是当前PDF。仍无独立方法/手机/最终结论。
 - R57严格当前RGB共享正增益+clip类的GT空间上限已完整64帧/6.855秒正常，0CNN/0SGD/0CUDA，无活跃R57任务。均值24.507864dB，比现有raw/recursive两个seed低2.416–2.784dB，四均值门槛全False、逐源12/16失败，video91正例保留。按R57 current-ray-decision不训练该类、不扩gamma/滤波/alpha/seed网格；不把oracle当可部署/时间/手机或普遍Retinex否定。先读0072、R57全表/决定/journal及note45。下一结构须有明确颜色/历史信息恢复机制与强对照，不因此盲目追加模块。
 修改：2026-11-12T22:01:08.532219+08:00；作者：Codex  (sqs_A100)；原因：索引论文完整参考入稿与R57实际有界上限止损，继续保留原Night下载链和资产归属规范。
+
+- R58已完整正常：原预选train0001/0072/0138/0202各8短+1长，共36RAW，738787328原始字节/567870045压缩payload，22:29:12获取return0、无技术重试；全部EXIF/RAW资格和4×8×428×640渲染22:29:43正常，协调器22:29:44 return0。当前无活跃R58，禁止重启3681843/3689825/3698918。0CNN/SGD/GPU，不是完整/独立最终/动态benchmark。
+- R58 native与内部ev_matched两视图均保留：后者仅名义EXIF补偿，EV/GT RGB均值比1.4452/1.3415/4.6960/1.0636，不能称实测亮度匹配或纯去噪基准。四源全部8行联系表已实际查看，原标签版先入Git，再从原缓存更正nominal标签，未改RGB处理或GT拟合。0202于16:44拍摄，非全部自然夜间；无子秒，快门1/30不代表30FPS。见0073/R58 README/visual-review/journal，下一为固定native冻结参考另登记，不追渲染参数或用这些资料选checkpoint。
+- 本轮只新增自有venv rawpy0.25.1/ExifRead3.5.1两个hash固定wheel，numpy/torch/Python未改；原件/压缩流/数组均在zrh data。note46实际读ELD/Starlight与NUC原摘要，相关噪声/分状态已有先例，不由32帧宣称完成标定或建立新颖性。
+修改：2026-11-12T22:38:54.402910+08:00；作者：Codex  (sqs_A100)；原因：接续R58真实相机资料完整终态和实际名义EV失配，保持Night原链及论文目标未完成。
