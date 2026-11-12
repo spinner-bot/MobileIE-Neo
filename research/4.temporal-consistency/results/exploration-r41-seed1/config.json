@@ -1,0 +1,124 @@
+{
+  "seed": 1,
+  "models": [
+    "slim_fp32",
+    "expanded_fp32"
+  ],
+  "steps_per_model": 4000,
+  "batch": 4,
+  "frames": 4,
+  "patch": 128,
+  "data": {
+    "manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "verified_files": 384,
+    "scenes": [
+      "video_11",
+      "video_35",
+      "video_92",
+      "video_131",
+      "video_12",
+      "video_20",
+      "video_29",
+      "video_52",
+      "video_59",
+      "video_95",
+      "video_104",
+      "video_122"
+    ],
+    "native_bytes": 2388787200,
+    "real_training_ids": [
+      "video_104",
+      "video_11",
+      "video_12",
+      "video_122",
+      "video_131",
+      "video_20",
+      "video_29",
+      "video_35",
+      "video_52",
+      "video_59",
+      "video_92",
+      "video_95"
+    ],
+    "excluded_native_DEV": [
+      "video_121",
+      "video_15",
+      "video_47",
+      "video_91"
+    ],
+    "all_real_assets_owned": true,
+    "source_manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "synthetic_manifest_sha256": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+    "synthetic_training_videos": 57,
+    "real_tensor_dtype": "uint8 native inputs/GT; float32 /255 after crops",
+    "timing_scope": "Consecutive registered frame indices, not independently verified sensor timing."
+  },
+  "initialization": {
+    "pretrained_sha256": "d40a930fbc0435f47ce08dda17b1c630b86a501be9423b8f48dab14722fb5548",
+    "rep_scale": 4,
+    "branch_seed": 4101,
+    "expanded_layers": [
+      "head.block1.0",
+      "head.block1.2",
+      "body.block1",
+      "att.1",
+      "att1.0",
+      "tail"
+    ],
+    "training_parameters_total": 49978,
+    "training_parameters_active": 47239,
+    "inactive_warm_parameters": 2739,
+    "deployment_parameters": 4075,
+    "initialization": "Copy each slim kernel/bias into first outputs of the largest raw branch; identity compression, zero other readout columns; copy FST/PReLU.",
+    "warmup": false,
+    "scope": "Original MBR parameterization control, not a reproduction of the complete official training protocol."
+  },
+  "parameters": {
+    "slim_fp32": {
+      "total": 4075,
+      "active": 4075
+    },
+    "expanded_fp32": {
+      "total": 49978,
+      "active": 47239
+    }
+  },
+  "deployment_parameters": 4075,
+  "objective": "MSE all four frames",
+  "optimizer": "Adam",
+  "lr": 0.0001,
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "eps": 1e-08,
+  "weight_decay": 0,
+  "clip": 1,
+  "dtype": "float32",
+  "cudnn_tf32_allowed": false,
+  "matmul_tf32_allowed": false,
+  "BN_train_calls_per_update": 4,
+  "warmup_used": false,
+  "selection": "final4000 folded only",
+  "gates": {
+    "research/4.temporal-consistency/process/exploration-r41/cpu-gate.json": "ff391ed81cae10a02858c23636228d8477e07cdf9a47c597559e5bf3890b6e6e",
+    "research/4.temporal-consistency/process/exploration-r41/cuda-fp32-gate.json": "b1dd297bb986e4f548de2eb593459a8d0e3474689439f6e52730fe183d0a0519"
+  },
+  "protocol_sha256": "575dcf98ed356a80083a024399e6b092755260cfa4d70f6fedd29571253bc663",
+  "source_sha256": {
+    "train_training_form_r41.py": "1f2f32ee000d0ab2caa11a1672e8245e3cc4893e4b7b42b9e9e840fea9735e78",
+    "training_form_r41.py": "a029b2351072cff86b2c219ffc3194f41da9ed0184e44153e05dbbff5875b47e",
+    "mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5",
+    "native_training_r14.py": "588b505ede11ac9f0d747ad1c16b1c118a7bbbbba7405ce918a6163d133d69a1",
+    "dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498",
+    "exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+    "gpu_guard.py": "e0a5050f47d64dbf75fab4146a276f50e3464d07e6a799ad8ccd2c69e8e3a535"
+  },
+  "upstream_source_sha256": {
+    "model/lle.py": "c569c48f4fb4d25d227db85d078ce763e68dd89d304a623d8125dcd6808e8bff",
+    "model/utils.py": "76b5c97b99add030af5d42b8a424aeaa672b159925d92139d0d12d804cf8d992"
+  },
+  "R40_old_precision_config_sha256": "a95ce7051c7d04ca041c2c7964afdb503bc4a65712049e9ced55067537ad6720",
+  "torch_version": "2.9.1+cu126",
+  "revision": "609abd04553c9f1e717d8ffcafe72a0e4f372e5d"
+}
