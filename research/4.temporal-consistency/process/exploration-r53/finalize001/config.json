@@ -1,0 +1,43 @@
+{
+  "started": "2026-11-12T19:56:09.983757+08:00",
+  "dependencies": [
+    {
+      "seed": 0,
+      "pid": 3527538,
+      "identity": {
+        "start_ticks": "42465274",
+        "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 5 --record research/4.temporal-consistency/process/exploration-r53/seed0-guard.json -- ./scripts/project-python research/4.temporal-consistency/scripts/train_source_context_r53.py --seed 0 "
+      }
+    },
+    {
+      "seed": 1,
+      "pid": 3527539,
+      "identity": {
+        "start_ticks": "42465274",
+        "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 6 --record research/4.temporal-consistency/process/exploration-r53/seed1-guard.json -- ./scripts/project-python research/4.temporal-consistency/scripts/train_source_context_r53.py --seed 1 "
+      }
+    }
+  ],
+  "source_sha256": {
+    "source_context_r53.py": "d3484e17f69b9141f9ba771bfd22d7ab0b55fe564824fcb7ddf70d3df0ce3e62",
+    "check_source_context_r53.py": "c99bea071bff3551903a3e4ef0f26a615fe5286b421f92d88c6d1a9322ac9208",
+    "train_source_context_r53.py": "b2f2029c90c058c2c92b5af3689986ea65879b057700cc62dc60bf2ebfadde83",
+    "evaluate_source_context_r53.py": "535a9b7573e269fe9061fb35c8e5301847e62effe8a7637055985abe370043c0",
+    "summarize_source_context_r53.py": "9a7979c43b2d09e6ab61572bbe56a34895943049b2ca1416c12bff7d9f169662",
+    "finalize_source_context_r53.py": "4f6c86a53e4b06889fce50d2984ca2d3e97d3ff9332211436fcec022bbc71d46",
+    "task_fastdvd_r47.py": "9e312377b462e81313229665450580280a74444c6c3a6b5b9cba1beca4863c8b",
+    "mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5",
+    "dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498",
+    "native_training_r14.py": "588b505ede11ac9f0d747ad1c16b1c118a7bbbbba7405ce918a6163d133d69a1",
+    "fastdvdnet_adapter_r12.py": "f61d8d3024f517c288218c6eb3c88001e139549bfa3a9fe7a4a34f894b47b668",
+    "training_form_r41.py": "4392fdceb16750ca0a763f4485beec873dc7316d758c95e9eaef042ffceb4ded",
+    "gpu_guard.py": "e0a5050f47d64dbf75fab4146a276f50e3464d07e6a799ad8ccd2c69e8e3a535",
+    "exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+    "video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0",
+    "prepare_cache_r5.py": "675860fc6ef1d97d28750815e99f5c923ecfd94e94254f1f7a7685f08d84f2c8"
+  },
+  "protocol_sha256": "884f509b1c1b7ed7325294b1efa990ec14e540b057515cadb5739f85d703d6ec",
+  "no_wall_cutoff": true,
+  "no_automatic_retry": true,
+  "selection": "final8000 both seeds, both information modes"
+}
