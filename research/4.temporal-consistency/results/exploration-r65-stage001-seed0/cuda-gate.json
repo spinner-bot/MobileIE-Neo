@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "arms": {
+    "spatial_l1": {
+      "passed": true,
+      "arm": "spatial_l1",
+      "parameters": 4316259,
+      "total": 0.07932978868484497,
+      "spatial_L1": 0.07932978868484497,
+      "consistency_L1": 0.0,
+      "consistency_path_gradient_L2": {},
+      "endpoint_gradient_L2": {
+        "inc.double_conv.0.weight": 0.18175370280763367,
+        "outc.conv.weight": 0.09623625088271155
+      },
+      "endpoint_max_parameter_change": {
+        "inc.double_conv.0.weight": 1.952052116394043e-06,
+        "outc.conv.weight": 3.2261013984680176e-06
+      },
+      "gradient_norm_before_clip": 0.9486165046691895,
+      "original_warp_zero_flow_ramp_max_error": 0.0038750767707824707,
+      "discarded_SGD_updates": 1,
+      "inherited_into_formal_training": false
+    },
+    "commute20": {
+      "passed": true,
+      "arm": "commute20",
+      "parameters": 4316259,
+      "total": 0.17595350742340088,
+      "spatial_L1": 0.07932978868484497,
+      "consistency_L1": 0.0048311855643987656,
+      "consistency_path_gradient_L2": {
+        "F_W_input": 0.0013020789278682195,
+        "W_F_input": 0.0013020789278682195
+      },
+      "endpoint_gradient_L2": {
+        "inc.double_conv.0.weight": 0.6327808303496276,
+        "outc.conv.weight": 0.07860123776382966
+      },
+      "endpoint_max_parameter_change": {
+        "inc.double_conv.0.weight": 4.61190938949585e-06,
+        "outc.conv.weight": 1.3709068298339844e-06
+      },
+      "gradient_norm_before_clip": 2.232792854309082,
+      "original_warp_zero_flow_ramp_max_error": 0.0038750767707824707,
+      "discarded_SGD_updates": 1,
+      "inherited_into_formal_training": false
+    }
+  },
+  "discarded_SGD_updates": 2
+}
