@@ -1,0 +1,43 @@
+{
+  "seed": 0,
+  "device": "cpu",
+  "torch_threads": 2,
+  "opencv_threads": 1,
+  "checkpoints": {
+    "tlc192": {
+      "path": ".cache/checkpoints/exploration-r41/stage002/seed0/expanded_fp32-deploy-step4000.pt",
+      "sha256": "5dd7160408a8402646f61f1e2ed477a787b0e3075dba96e055f1e6c81e3e7232",
+      "training_path": ".cache/checkpoints/exploration-r41/stage002/seed0/expanded_fp32-training-step4000.pt",
+      "training_sha256": "6a22f1cf952074a2f4a29f52a38ff16cd9c13d4949013690eebba1b369124da0",
+      "model": "expanded_fp32",
+      "seed": 0,
+      "step": 4000,
+      "deployment_parameters": 4075,
+      "final_eval_fold_max_abs_delta": 1.6689300537109375e-06,
+      "final_fold_gate_passed": true
+    }
+  },
+  "deployment_parameters_each": 4075,
+  "torch_version": "2.9.1+cu126",
+  "training_config_sha256": "21897855c84addd11a2fde8496bcf15e3d3a55a31b9791ed6c8bedb5dd941ea9",
+  "fixed_TLC_window": 192,
+  "correctness_gate_sha256": "7911e1e89cc86fde833809b14f43a12d394eb400605423a7c904042fc3ab98b6",
+  "reference_rows_path": "research/4.temporal-consistency/results/exploration-r41-stage002-eval-seed0/per_sequence.jsonl",
+  "reference_rows_sha256": "898f9e61a12a2366f10481db26ad759a57b6738fcc1d51f2401bb3de612b2e9d",
+  "cache_indices": {
+    "research/4.temporal-consistency/results/exploration-r30-cache/index.json": "424fa278b2fe66d29de476e2b47328619438f97cf71926448433d1191bb722c1",
+    "research/4.temporal-consistency/results/exploration-r10-cache/index.json": "ec00801b04b873ead0025af91af441b783da3f08c87cf24e9c136a4268ffb43c"
+  },
+  "protocol_sha256": "ba607aff96744177a65904c73f30412dbf8ed6cbb6b33ee13913d7567205d863",
+  "source_sha256": {
+    "evaluate_tlc_r42.py": "3ef932d06f06e7c0e785e409a894a7862d3c68deff88657fef360191f0b7a2a6",
+    "tlc_pool_r42.py": "ec21edf096aa7fbfb32d3aa4eb619828caf2d636c22c0a272c08f6d9cb375d87",
+    "half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+    "aligned_raw_history_r11.py": "e367727401f82ccf0bccaf8d88f904e4aebf8b78186f0539eedeed222b2d2227",
+    "aggregation_controls_r20.py": "7b4541be8512ca1edb755b5a73f889351e376f9a8fc1fdec7ed633a4438c116c",
+    "exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+    "video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0"
+  },
+  "revision": "c102a1c372ec5427317e84fff94d2ead06893c3d",
+  "scope": "Fixed known TLC spatial conversion of R41 expanded final4000; unchanged weights/4075 parameters, added local operations and memory; no raw history, new training, novelty or phone-cost claim."
+}
