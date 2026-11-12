@@ -1,0 +1,20 @@
+{
+  "at": "2026-11-12T19:54:25.022417+08:00",
+  "guard_pid": 3527539,
+  "gpu": 6,
+  "seed": 1,
+  "command": [
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/gpu_guard.py",
+    "--gpu",
+    "6",
+    "--record",
+    "research/4.temporal-consistency/process/exploration-r53/seed1-guard.json",
+    "--",
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/train_source_context_r53.py",
+    "--seed",
+    "1"
+  ],
+  "scope": "Actual launch; admission and discarded CUDA gate must pass before fresh official initialization and 8000 updates."
+}
