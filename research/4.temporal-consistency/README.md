@@ -7,7 +7,7 @@
 - 最新结论：[进展报告0043](../../docs/进展报告/0043-T-26111204-内部时间算子双种子闭环与路线止损.md)、[路线决策](docs/exploration-r28-decision.md)、[论文证据表](report/paper-main-table/README.md)；R28重点双seed/双目标4000步及4416行主评价完成，主门槛未通过
 - 完成闭环：[原注册协议](docs/exploration-r28-protocol.md)、[全表](report/exploration-r28/tables.md)、[质量—时序图](report/exploration-r28/native_quality_stability.png)、[312行共同CPU外部表](report/exploration-r30/tables.md)。actual需要历史/flow/warp，current单帧映射单独评价；不继续沿该算子追加训练/相似网格
 - 接续准备：[R32公共训练池协议](docs/exploration-r32-data-protocol.md)/[57视频3428帧登记](data/exploration-r32-training/selection.json)已排除三开发片，[完整清单](data/exploration-r32-training/manifest.json)与[解码核验](results/exploration-r32-decode/audit.json)均完成；[未训练空间预算](report/architecture-budget/tables.md)与[门控/流式源码阅读](../5.prior-art-survey/docs/25-compute-allocation-and-streaming-state.md)只约束下一方案，不是质量或手机速度结果
-- 当前接续：[0050](../../docs/进展报告/0050-T-26111207-保留骨干状态止损与真实域增强映射差距.md)。R37全部16000更新/72评价行正常完成，[决策](docs/exploration-r37-decision.md)冻结此全分辨率低秩状态局部扩展；[R38手机参考与限制](report/exploration-r38-phone/README.md)/[人工观察](report/exploration-r38-phone/inspection.md)完成；[R39配对实拍共同CPU表](report/exploration-r39-anchor-transfer/tables.md)证明R34合成优势未直接迁移。暂不追加同类结构训练，先检验共同训练资料与光度映射。
+- 当前接续：[0051](../../docs/进展报告/0051-T-26111208-固定混合资料闭环与训练参数化边界.md)、[R40完整双域表](report/exploration-r40-mixed-anchor/tables.md)/[图](report/exploration-r40-mixed-anchor/cross_domain.png)/[决策](docs/exploration-r40-decision.md)。8000训练更新/60新质量行+96参考正常完成，固定混合呈现跨域取舍但门槛失败；停止比例/loss/LR网格。下一有限工作核查原模型训练参数化强对照，先登记函数保持/BN/fold与预算；不是新方法。
 - 当前终态：[0048](../../docs/进展报告/0048-T-26111207-动态骨干双种子闭环与公开方法迁移收口.md)：R34全部24000更新、120行质量与42次CPU成本正常结束，[止损决策](docs/exploration-r34-decision.md)冻结低分辨率状态+可分离body局部扩展；[完整质量](report/exploration-r34/tables.md)/[CPU成本](report/exploration-r34-runtime/tables.md)均为开发/服务器结果，无手机测量。
 - 最新强基线与来源边界：[0045](../../docs/进展报告/0045-T-26111205-自驱运动强后处理与公开预训练重叠.md)、[同底座自驱post全表](report/external-baselines-self-motion/tables.md)。双seed自驱运动post无需独立teacher，均值23.817dB/时序7.449；CPU驻留流水线200.612ms@480×854，不是手机延迟。R35三开发片与官方FastDVDnet文档训练ID重叠，不能当未见视频泛化；另30 test-dev来源只读元数据、未读JPEG。R34首次训练前已修订为120评价行，训练预算不变，stage002失败已留档；stage003接续实际训练。
 - 已止损原型：[R33协议](docs/exploration-r33-prototype-protocol.md)/[功能检查](report/exploration-r33-prototype/checks.json)曾通过CPU/CUDA功能门槛；后续完整R34未过质量门槛，功能通过不等于有效方法。
@@ -239,3 +239,5 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 修改：2026-11-12T07:34:27+08:00；作者：Codex  (sqs_A100)；原因：索引传统参考提升与已实际启动的新机制检验。
 
 修改：2026-11-12T07:57:36+08:00；作者：Codex  (sqs_A100)；原因：使用完成终态接续，新增真实输入与有GT域转移约束。
+
+修改：2026-11-12T08:23:58+08:00；作者：Codex  (sqs_A100)；原因：索引已结束的固定资料检验与原训练范式边界。
