@@ -1,0 +1,29 @@
+{
+  "samples": [
+    {
+      "gpu": 1,
+      "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+      "memory_mib": 0,
+      "utilization_percent": 0,
+      "compute_processes": [],
+      "time": "2026-11-12T08:02:51.391339+08:00"
+    },
+    {
+      "gpu": 1,
+      "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+      "memory_mib": 0,
+      "utilization_percent": 0,
+      "compute_processes": [],
+      "time": "2026-11-12T08:02:52.628750+08:00"
+    }
+  ],
+  "allowed": true,
+  "command": [
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/train_mixed_anchor_r40.py",
+    "--seed",
+    "1"
+  ],
+  "repository_revision_at_launch": "eef51c81d233aa92689e2fa8bdc1748184966247",
+  "scope": "two preflight samples and project-local lock; not a reservation system shared with other users"
+}
