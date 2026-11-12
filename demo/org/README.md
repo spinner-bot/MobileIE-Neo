@@ -4,6 +4,7 @@
 
 - 分支：**`demo.org`**；本目录 `demo/org/` 是这项演示工作的主文件夹。`main` 单向同步到本分支，演示改动不合并回 `main`
 - 状态：**P1 完成**（2026-11-12，备用机一加 9R 跑通自定义模型：GPU FP16 **5.8 ms**、CPU **86–91 ms**），现场演示准备待做
+- 验收安排（2026-11-13 用户确认）：**2026-11-16（下周一）上午最终验收**；导师提前检查演示，用户主要协助演示。预检查时间、验收具体时刻与地点待确认，见[预检查与验收清单](docs/04-acceptance-checklist.md)。
 - 上游代码与权重：项目根目录 [`MobileIE/`](../../MobileIE)
 - 关联：[2 号复现](../../research/2.reproduction/README.md)、[5 号前期调研](../../research/5.prior-art-survey/README.md)、[6B06-01 会议记录](../../docs/会议记录/6B06-01/audio%20-%20Transcription.txt)
 - 进展报告：[0009-T-261108-6 号工作启动与手机演示方案](../../docs/进展报告/0009-T-261108-6号工作启动与手机演示方案.md)
@@ -13,6 +14,7 @@
 - 本仓库是唯一数据站：日志、结论、截图、脚本等全部入库，不依赖本地或服务器临时文件；
 - 小步、密集提交，阶段性 `git push origin demo.org`；
 - 同步 `main` 只用 `git fetch origin` + `git merge --no-ff origin/main`，**禁止 `git pull`**，以保留完整合并历史；`main` 由 Codex 在服务器上快速迭代，合并前先看 `git log --oneline HEAD..origin/main`。
+- 用户于 2026-11-13 重申：**严禁 fast-forward，所有合并必须 `--no-ff`**。推送因远端分歧失败时，先 fetch，以 `--no-ff` 合并并解决冲突后重试；不 rebase、squash 或强推。
 
 ## 1. 任务边界（先看这里）
 
@@ -63,6 +65,7 @@
 | 演示方案与任务拆解 | [`docs/01-demo-plan.md`](docs/01-demo-plan.md) | 完成 |
 | AI Benchmark 手机操作手册 | [`docs/02-ai-benchmark-guide.md`](docs/02-ai-benchmark-guide.md) | 完成 |
 | 官方 TFLite 脚本使用说明 | [`docs/03-official-tflite-inference.md`](docs/03-official-tflite-inference.md) | 完成 |
+| 导师预检查与验收清单 | [`docs/04-acceptance-checklist.md`](docs/04-acceptance-checklist.md) | 已整理，真机彩排与导师反馈待完成 |
 | 模型结构解析脚本 | [`scripts/inspect_tflite.py`](scripts/inspect_tflite.py) | 完成 |
 | 演示图片预处理脚本 | [`scripts/prepare_demo_images.py`](scripts/prepare_demo_images.py) | 完成 |
 | 官方推理脚本包装 | [`scripts/run_official_tflite.py`](scripts/run_official_tflite.py) | 完成 |
@@ -101,6 +104,8 @@
 | Arm NN | FP16 | 崩溃 | OpenCL 导入输入张量异常，见 `data/armnn-crash.txt` |
 
 ### P2 —— 现场演示
+- 最终验收定于 **2026-11-16 上午**；导师将在此之前检查，用户主要协助演示。
+- [ ] 完成[预检查清单](docs/04-acceptance-checklist.md)，复跑 GPU FP16 并记录本次结果与导师反馈；
 - [ ] 按 [`docs/01-demo-plan.md`](docs/01-demo-plan.md) 的演示脚本串场；
 - [ ] 准备离线素材：手机本地模型、前后对比图、录屏，避免现场依赖网络。
 
@@ -145,6 +150,7 @@ PYD=F:/dev-tools/python-envs/MobileIE-Demo/Scripts/python.exe
 
 ## 8. 修订记录
 
+- 2026-11-13 · Codex  (sqs_A100)：接手 `demo.org`；记录周一上午最终验收、导师提前检查及用户协助演示分工，新增预检查清单，修订演示包操作顺序，重申禁止 fast-forward 与阶段推送约定。此次仅完成文档准备，未进行新一轮真机测试。
 - 2026-11-08 · claude code (local)：创建 6 号工作，确定 B 方案，完成模型解析与文档首版。
 - 2026-11-08 · claude code (local)：P0 跑通，LOL eval15 PSNR 23.619 dB；补充 ai-edge-litert 兼容层与结果对比图。
 - 2026-11-10 · claude code (local)：建立 `demo.org` 演示分支；打包手机演示包（模型 + 对比图 + 中文操作说明）。
