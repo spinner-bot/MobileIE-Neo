@@ -1,0 +1,98 @@
+{
+  "at": "2026-11-12T17:21:52.721574+08:00",
+  "seed": 1,
+  "steps": 8000,
+  "data_steps": [
+    0,
+    7999
+  ],
+  "batch": 4,
+  "frames": 4,
+  "crop": 128,
+  "initialization": {
+    "official_manifest_sha256": "6220b11333692a08b1c6a16e39a85500127adb4d4d45cf5e5f1228c85fc171cf",
+    "official_checkpoint_sha256": "8118974ac7defaa5037f73caf87e0cb53efcfa49ae77d55c05ab187f59e55949",
+    "official_commit": "c8fdf6182a0340e89dd18f5df25b47337cbede6f",
+    "parameters": 2479096,
+    "conditioning_sigma_interface": 15.0,
+    "future_wait_max": 2,
+    "task": "direct lowlight RGB to paired GT; no MobileIE prefix",
+    "pretraining_overlap": "Official DAVIS training includes three DEV video IDs; not unseen generalization."
+  },
+  "data": {
+    "manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "verified_files": 384,
+    "scenes": [
+      "video_11",
+      "video_35",
+      "video_92",
+      "video_131",
+      "video_12",
+      "video_20",
+      "video_29",
+      "video_52",
+      "video_59",
+      "video_95",
+      "video_104",
+      "video_122"
+    ],
+    "native_bytes": 2388787200,
+    "real_training_ids": [
+      "video_104",
+      "video_11",
+      "video_12",
+      "video_122",
+      "video_131",
+      "video_20",
+      "video_29",
+      "video_35",
+      "video_52",
+      "video_59",
+      "video_92",
+      "video_95"
+    ],
+    "excluded_native_DEV": [
+      "video_121",
+      "video_15",
+      "video_47",
+      "video_91"
+    ],
+    "all_real_assets_owned": true,
+    "source_manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "synthetic_manifest_sha256": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+    "synthetic_training_videos": 57,
+    "real_tensor_dtype": "uint8 native inputs/GT; float32 /255 after crops",
+    "timing_scope": "Consecutive registered frame indices, not independently verified sensor timing."
+  },
+  "objective": "MSE all four centers",
+  "BN": "Flatten B*T=16 centers, shared temp1 called three times per update",
+  "optimizer": "fresh Adam initially and after update4000",
+  "lr": 0.0001,
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "eps": 1e-08,
+  "weight_decay": 0,
+  "clip": 1,
+  "FP32": true,
+  "TF32": false,
+  "selection": "final8000 only",
+  "protocol_sha256": "921e4868f035647dfc84d64637157e2d08a58aa85e11aebe96305bab95813d59",
+  "gates": {
+    "research/4.temporal-consistency/process/exploration-r47/cpu-gate001/gate.json": "3673f2f513e2904c7b203c3b155aff6cd3b4e3279688ac0c3d9a86fb1210edf1",
+    "research/4.temporal-consistency/process/exploration-r47/cuda-gate001/gate.json": "e10ae124c0cbf67452461b7bd022432c1860364a488abb0a990960675f675d80"
+  },
+  "source_sha256": {
+    "task_fastdvd_r47.py": "9e312377b462e81313229665450580280a74444c6c3a6b5b9cba1beca4863c8b",
+    "train_task_fastdvd_r47.py": "72fa22462e9c434346655f220a896ba75f3e53f7d8ac56182a8ce814db1ba88d",
+    "mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5",
+    "dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498",
+    "native_training_r14.py": "588b505ede11ac9f0d747ad1c16b1c118a7bbbbba7405ce918a6163d133d69a1",
+    "fastdvdnet_adapter_r12.py": "f61d8d3024f517c288218c6eb3c88001e139549bfa3a9fe7a4a34f894b47b668",
+    "training_form_r41.py": "4392fdceb16750ca0a763f4485beec873dc7316d758c95e9eaef042ffceb4ded",
+    "gpu_guard.py": "e0a5050f47d64dbf75fab4146a276f50e3464d07e6a799ad8ccd2c69e8e3a535"
+  },
+  "revision": "9e1c9c37d0b636ee1c239c4ba4c7b47cca8129d5",
+  "scope": "Published task-adapted reference; no novelty, equal FLOPs, full-convergence or phone claim."
+}
