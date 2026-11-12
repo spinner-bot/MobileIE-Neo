@@ -1,0 +1,32 @@
+{
+  "at": "2026-11-13T03:25:03.953804+08:00",
+  "source_sha256": {
+    "research/4.temporal-consistency/scripts/finalize_cvvdp_r66.py": "011b59f15e69f448aea477e9d5ef5a8be8f8a0cfe0e04d69c9af89fe4b140173",
+    "research/4.temporal-consistency/scripts/evaluate_cvvdp_stablellve_r66.py": "e4de7aea08b3d357a57336685e25aa3634bb4f484ff1c0e9d578cab9579cbbdc",
+    "research/4.temporal-consistency/scripts/evaluate_cvvdp_references_r66.py": "b463399fc54c51cc91b0f8b5c0bb63a3d6f77e30fe0223261db8d790b36bc3d9",
+    "research/4.temporal-consistency/scripts/cvvdp_adapter_r66.py": "b1d30768ccace5a0ceb388d6097b67e98bb4818d5885529c14bfa9605d3d344f",
+    "research/4.temporal-consistency/scripts/summarize_cvvdp_r66.py": "5d710b5748c09eae293c3593374d32e41ba959087201026f7ca8b9180377cf14",
+    "research/4.temporal-consistency/scripts/render_stablellve_task_r65.py": "b67a8e9601a53c5d17260052893de40b3bdbb2511b5c98791252b3818316013b",
+    "research/4.temporal-consistency/scripts/render_dense_history_r64.py": "d3457f941fa890be0212ce836084f542c2f41bbfd4ade21dc801a47150786aa5",
+    "research/4.temporal-consistency/scripts/prepare_cache_r5.py": "675860fc6ef1d97d28750815e99f5c923ecfd94e94254f1f7a7685f08d84f2c8",
+    "research/4.temporal-consistency/scripts/half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+    "research/4.temporal-consistency/scripts/aligned_raw_history_r11.py": "e367727401f82ccf0bccaf8d88f904e4aebf8b78186f0539eedeed222b2d2227",
+    "research/4.temporal-consistency/scripts/aggregation_controls_r20.py": "7b4541be8512ca1edb755b5a73f889351e376f9a8fc1fdec7ed633a4438c116c",
+    "research/4.temporal-consistency/docs/exploration-r66-perceptual-metric-protocol.md": "a862cddcf1e0ecb8c67aa0bd2f630d4ba58a009f7efd8d1bdc02458abc8e6c0d",
+    "research/4.temporal-consistency/docs/exploration-r65-final-visual-protocol.md": "fcd87547be040faf050016a054842479ba0b94f7f38334d533c91918e11e778c"
+  },
+  "reference_guard_pid": 3901351,
+  "reference_guard_identity": {
+    "start_ticks": "45130509",
+    "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 4 --record research/4.temporal-consistency/process/exploration-r66/reference-guard002.json -- ./scripts/project-python research/4.temporal-consistency/scripts/evaluate_cvvdp_references_r66.py --attempt 2 "
+  },
+  "original_R65_coordinator_pid": 3887076,
+  "original_R65_identity": {
+    "start_ticks": "44994714",
+    "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/finalize_stablellve_task_r65.py "
+  },
+  "no_wall_cutoff": true,
+  "no_scientific_retry": true,
+  "no_GPU_lock_while_waiting": true,
+  "scope": "Only registered reference/complete summaries, registered final R65 cached contacts and80 perceptual rows."
+}
