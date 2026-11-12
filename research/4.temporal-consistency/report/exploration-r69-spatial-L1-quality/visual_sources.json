@@ -1,0 +1,3782 @@
+{
+  "contacts": [
+    {
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "seed": 0,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "R44 MIE MSE raw",
+        "R44 MIE MSE rec .5",
+        "R69 MIE L1 raw",
+        "R69 MIE L1 rec .5",
+        "R65 U-Net L1 raw",
+        "R65 U-Net L1 rec .5"
+      ],
+      "center_xy": [
+        363,
+        176
+      ],
+      "center_shape": [
+        128,
+        128
+      ],
+      "full_FOV_display_box": [
+        266,
+        150
+      ],
+      "input_shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "input_cache": {
+        "domain": "davis_train_pilot",
+        "scene": "bear_photons20",
+        "source_video": "bear",
+        "frames": 64,
+        "shape": [
+          64,
+          480,
+          854,
+          3
+        ],
+        "photons": 20,
+        "input_rng_seed": 3339271205033111615,
+        "path": ".cache/experiments/exploration-r30/bear_photons20.npz",
+        "sha256": "e3412adaa3d6b5802874069c45a00500840ca9a4a24442aa493e3ca4324c063f"
+      },
+      "predictions": [
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons20",
+          "source_video": "bear",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "square_mse",
+          "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/bear_photons20--raw.npy",
+          "sha256": "c761eee1393e88e2deddd0fd07088057f1e3d4156943187ee039dac80b3f8e6c",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "displayed_methods": [
+            "raw",
+            "recomputed own-raw recursive .5"
+          ]
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons20",
+          "source_video": "bear",
+          "family": "MobileIE_L1",
+          "seed": 0,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r69/stage001/seed0/bear_photons20--raw.npy",
+          "sha256": "a61f6814d6517b523f7242972b883bf3af7f690d874fe948d46f611ff4dc7106",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/bear_photons20.npz",
+          "input_cache_sha256": "e3412adaa3d6b5802874069c45a00500840ca9a4a24442aa493e3ca4324c063f",
+          "checkpoint_sha256": "750835b5abafe800fbc4f912e818a63ec57757fd5a1fac8bdb3cc523dbb5c1d6",
+          "online_RGB_history_bytes": 0,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons20",
+          "source_video": "bear",
+          "family": "MobileIE_L1",
+          "seed": 0,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r69/stage001/seed0/bear_photons20--recursive_self05.npy",
+          "sha256": "8b6190542e4420408811f18fbef3157f63c4649a55505ac54e60f90db1518ef5",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/bear_photons20.npz",
+          "input_cache_sha256": "e3412adaa3d6b5802874069c45a00500840ca9a4a24442aa493e3ca4324c063f",
+          "checkpoint_sha256": "750835b5abafe800fbc4f912e818a63ec57757fd5a1fac8bdb3cc523dbb5c1d6",
+          "online_RGB_history_bytes": 9838080,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons20",
+          "source_video": "bear",
+          "arm": "spatial_l1",
+          "train_seed": 0,
+          "reference": "R65_spatial_l1_seed0",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r65/stage001/seed0/spatial_l1--bear_photons20--raw.npy",
+          "sha256": "1e885d08b720e82c538345ad487e050a55e85f0f1b3ddce4cf8f00841392d6bb",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/bear_photons20.npz",
+          "input_cache_sha256": "e3412adaa3d6b5802874069c45a00500840ca9a4a24442aa493e3ca4324c063f",
+          "checkpoint_sha256": "e077baa4a83282d25a47e2c2bcdff4471f7ed87b9a337df194ae17d6a2732452",
+          "online_RGB_history_bytes": 0,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons20",
+          "source_video": "bear",
+          "arm": "spatial_l1",
+          "train_seed": 0,
+          "reference": "R65_spatial_l1_seed0",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r65/stage001/seed0/spatial_l1--bear_photons20--recursive_self05.npy",
+          "sha256": "c5c373592d741bb40a322a9682afdc692b40b27eddc9f6e937807e5a63321bce",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/bear_photons20.npz",
+          "input_cache_sha256": "e3412adaa3d6b5802874069c45a00500840ca9a4a24442aa493e3ca4324c063f",
+          "checkpoint_sha256": "e077baa4a83282d25a47e2c2bcdff4471f7ed87b9a337df194ae17d6a2732452",
+          "online_RGB_history_bytes": 9838080,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        }
+      ],
+      "actual_reviewed": false,
+      "contact": "research/4.temporal-consistency/report/exploration-r69-spatial-L1-quality/fixed-bear_photons20-seed0.png",
+      "sha256": "363bcc77c657ad98284f00602bd635a938244f76f109c97dcc143f2bc7326a03",
+      "bytes": 2557172,
+      "manifests": {
+        "research/4.temporal-consistency/results/exploration-r69-stage001-eval-seed0/prediction_manifest.jsonl": "444f00efcb3d77c0f7e16c3a1d48bd78b0fd058a752ccdb66b556bf768fb9f47",
+        "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+        "research/4.temporal-consistency/results/exploration-r65-stage001-eval-seed0/prediction_manifest.jsonl": "f1edac1c60245a5c1015a8b229409fb529b1e611c5c64e1a6bfc70c67ffefe98"
+      }
+    },
+    {
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "seed": 0,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "R44 MIE MSE raw",
+        "R44 MIE MSE rec .5",
+        "R69 MIE L1 raw",
+        "R69 MIE L1 rec .5",
+        "R65 U-Net L1 raw",
+        "R65 U-Net L1 rec .5"
+      ],
+      "center_xy": [
+        363,
+        176
+      ],
+      "center_shape": [
+        128,
+        128
+      ],
+      "full_FOV_display_box": [
+        266,
+        150
+      ],
+      "input_shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "input_cache": {
+        "domain": "davis_train_pilot",
+        "scene": "bear_photons80",
+        "source_video": "bear",
+        "frames": 64,
+        "shape": [
+          64,
+          480,
+          854,
+          3
+        ],
+        "photons": 80,
+        "input_rng_seed": 14391588235251423621,
+        "path": ".cache/experiments/exploration-r30/bear_photons80.npz",
+        "sha256": "c4ef811e339a219202adcd6fdcc99890d221b103497949458a7015847d20aad8"
+      },
+      "predictions": [
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons80",
+          "source_video": "bear",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "square_mse",
+          "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/bear_photons80--raw.npy",
+          "sha256": "24ccddd5fa89d6d3127ac1da840571cacf6fec940a61532eee481e14ccf32ef0",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "displayed_methods": [
+            "raw",
+            "recomputed own-raw recursive .5"
+          ]
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons80",
+          "source_video": "bear",
+          "family": "MobileIE_L1",
+          "seed": 0,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r69/stage001/seed0/bear_photons80--raw.npy",
+          "sha256": "fb80ef5420573bc5a5aa8cea8d76ab33552c38e6bc87489a80e717cec24902d8",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/bear_photons80.npz",
+          "input_cache_sha256": "c4ef811e339a219202adcd6fdcc99890d221b103497949458a7015847d20aad8",
+          "checkpoint_sha256": "750835b5abafe800fbc4f912e818a63ec57757fd5a1fac8bdb3cc523dbb5c1d6",
+          "online_RGB_history_bytes": 0,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons80",
+          "source_video": "bear",
+          "family": "MobileIE_L1",
+          "seed": 0,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r69/stage001/seed0/bear_photons80--recursive_self05.npy",
+          "sha256": "fb9822bb07eaee85432058dac0ca52d7a8dd8eb5bcb574df3a8eaa799a999b8e",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/bear_photons80.npz",
+          "input_cache_sha256": "c4ef811e339a219202adcd6fdcc99890d221b103497949458a7015847d20aad8",
+          "checkpoint_sha256": "750835b5abafe800fbc4f912e818a63ec57757fd5a1fac8bdb3cc523dbb5c1d6",
+          "online_RGB_history_bytes": 9838080,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons80",
+          "source_video": "bear",
+          "arm": "spatial_l1",
+          "train_seed": 0,
+          "reference": "R65_spatial_l1_seed0",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r65/stage001/seed0/spatial_l1--bear_photons80--raw.npy",
+          "sha256": "8a51f1a4fd25b2f6278324596d493078b15d1071c32f60f6eed89d00f5c750eb",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/bear_photons80.npz",
+          "input_cache_sha256": "c4ef811e339a219202adcd6fdcc99890d221b103497949458a7015847d20aad8",
+          "checkpoint_sha256": "e077baa4a83282d25a47e2c2bcdff4471f7ed87b9a337df194ae17d6a2732452",
+          "online_RGB_history_bytes": 0,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons80",
+          "source_video": "bear",
+          "arm": "spatial_l1",
+          "train_seed": 0,
+          "reference": "R65_spatial_l1_seed0",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r65/stage001/seed0/spatial_l1--bear_photons80--recursive_self05.npy",
+          "sha256": "9116cb4e322a47620c0eed30a9336f9a4be67d1c80190bc4efcf095256a6603d",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/bear_photons80.npz",
+          "input_cache_sha256": "c4ef811e339a219202adcd6fdcc99890d221b103497949458a7015847d20aad8",
+          "checkpoint_sha256": "e077baa4a83282d25a47e2c2bcdff4471f7ed87b9a337df194ae17d6a2732452",
+          "online_RGB_history_bytes": 9838080,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        }
+      ],
+      "actual_reviewed": false,
+      "contact": "research/4.temporal-consistency/report/exploration-r69-spatial-L1-quality/fixed-bear_photons80-seed0.png",
+      "sha256": "963d1233fed328bfb768e5e67a016a241c2bbb9b82d1d3300dfe926a33013b76",
+      "bytes": 2470578,
+      "manifests": {
+        "research/4.temporal-consistency/results/exploration-r69-stage001-eval-seed0/prediction_manifest.jsonl": "444f00efcb3d77c0f7e16c3a1d48bd78b0fd058a752ccdb66b556bf768fb9f47",
+        "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+        "research/4.temporal-consistency/results/exploration-r65-stage001-eval-seed0/prediction_manifest.jsonl": "f1edac1c60245a5c1015a8b229409fb529b1e611c5c64e1a6bfc70c67ffefe98"
+      }
+    },
+    {
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "seed": 0,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "R44 MIE MSE raw",
+        "R44 MIE MSE rec .5",
+        "R69 MIE L1 raw",
+        "R69 MIE L1 rec .5",
+        "R65 U-Net L1 raw",
+        "R65 U-Net L1 rec .5"
+      ],
+      "center_xy": [
+        363,
+        176
+      ],
+      "center_shape": [
+        128,
+        128
+      ],
+      "full_FOV_display_box": [
+        266,
+        150
+      ],
+      "input_shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "input_cache": {
+        "domain": "davis_train_pilot",
+        "scene": "lucia_photons20",
+        "source_video": "lucia",
+        "frames": 64,
+        "shape": [
+          64,
+          480,
+          854,
+          3
+        ],
+        "photons": 20,
+        "input_rng_seed": 2188991276962062359,
+        "path": ".cache/experiments/exploration-r30/lucia_photons20.npz",
+        "sha256": "98a5e1c1097fd21e6ced8cf64d6f21faab777977b7e405d02c2a4686152f0fa5"
+      },
+      "predictions": [
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons20",
+          "source_video": "lucia",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "square_mse",
+          "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/lucia_photons20--raw.npy",
+          "sha256": "c9b6121de62756049c4b8f6caeeffb67829702cfbb77310f6f14cf361b5d1440",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "displayed_methods": [
+            "raw",
+            "recomputed own-raw recursive .5"
+          ]
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons20",
+          "source_video": "lucia",
+          "family": "MobileIE_L1",
+          "seed": 0,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r69/stage001/seed0/lucia_photons20--raw.npy",
+          "sha256": "486e612869d59f40df301f88de894b3212e3def3e4c42f274f54a495f7c7f5aa",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/lucia_photons20.npz",
+          "input_cache_sha256": "98a5e1c1097fd21e6ced8cf64d6f21faab777977b7e405d02c2a4686152f0fa5",
+          "checkpoint_sha256": "750835b5abafe800fbc4f912e818a63ec57757fd5a1fac8bdb3cc523dbb5c1d6",
+          "online_RGB_history_bytes": 0,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons20",
+          "source_video": "lucia",
+          "family": "MobileIE_L1",
+          "seed": 0,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r69/stage001/seed0/lucia_photons20--recursive_self05.npy",
+          "sha256": "f8b3f1b213c742185c751d8212e1c42fa1b4f7de67d81f4e48eb781ce9beda78",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/lucia_photons20.npz",
+          "input_cache_sha256": "98a5e1c1097fd21e6ced8cf64d6f21faab777977b7e405d02c2a4686152f0fa5",
+          "checkpoint_sha256": "750835b5abafe800fbc4f912e818a63ec57757fd5a1fac8bdb3cc523dbb5c1d6",
+          "online_RGB_history_bytes": 9838080,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons20",
+          "source_video": "lucia",
+          "arm": "spatial_l1",
+          "train_seed": 0,
+          "reference": "R65_spatial_l1_seed0",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r65/stage001/seed0/spatial_l1--lucia_photons20--raw.npy",
+          "sha256": "efca275c1ddcce8eac06870ffb0404782e991a4ddd5b62ef815693f9a9338786",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/lucia_photons20.npz",
+          "input_cache_sha256": "98a5e1c1097fd21e6ced8cf64d6f21faab777977b7e405d02c2a4686152f0fa5",
+          "checkpoint_sha256": "e077baa4a83282d25a47e2c2bcdff4471f7ed87b9a337df194ae17d6a2732452",
+          "online_RGB_history_bytes": 0,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons20",
+          "source_video": "lucia",
+          "arm": "spatial_l1",
+          "train_seed": 0,
+          "reference": "R65_spatial_l1_seed0",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r65/stage001/seed0/spatial_l1--lucia_photons20--recursive_self05.npy",
+          "sha256": "6a7a3dec6c23fe644975fb7730e9fcb8d484a2a837871ded91f91104a68f88fe",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/lucia_photons20.npz",
+          "input_cache_sha256": "98a5e1c1097fd21e6ced8cf64d6f21faab777977b7e405d02c2a4686152f0fa5",
+          "checkpoint_sha256": "e077baa4a83282d25a47e2c2bcdff4471f7ed87b9a337df194ae17d6a2732452",
+          "online_RGB_history_bytes": 9838080,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        }
+      ],
+      "actual_reviewed": false,
+      "contact": "research/4.temporal-consistency/report/exploration-r69-spatial-L1-quality/fixed-lucia_photons20-seed0.png",
+      "sha256": "0eb70363852d0be6b56f0e0cf66e09f0c9b192640d0d6435f3eb2c55a14bb973",
+      "bytes": 2533714,
+      "manifests": {
+        "research/4.temporal-consistency/results/exploration-r69-stage001-eval-seed0/prediction_manifest.jsonl": "444f00efcb3d77c0f7e16c3a1d48bd78b0fd058a752ccdb66b556bf768fb9f47",
+        "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+        "research/4.temporal-consistency/results/exploration-r65-stage001-eval-seed0/prediction_manifest.jsonl": "f1edac1c60245a5c1015a8b229409fb529b1e611c5c64e1a6bfc70c67ffefe98"
+      }
+    },
+    {
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "seed": 0,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "R44 MIE MSE raw",
+        "R44 MIE MSE rec .5",
+        "R69 MIE L1 raw",
+        "R69 MIE L1 rec .5",
+        "R65 U-Net L1 raw",
+        "R65 U-Net L1 rec .5"
+      ],
+      "center_xy": [
+        363,
+        176
+      ],
+      "center_shape": [
+        128,
+        128
+      ],
+      "full_FOV_display_box": [
+        266,
+        150
+      ],
+      "input_shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "input_cache": {
+        "domain": "davis_train_pilot",
+        "scene": "lucia_photons80",
+        "source_video": "lucia",
+        "frames": 64,
+        "shape": [
+          64,
+          480,
+          854,
+          3
+        ],
+        "photons": 80,
+        "input_rng_seed": 13125256489390080369,
+        "path": ".cache/experiments/exploration-r30/lucia_photons80.npz",
+        "sha256": "a8704f3d26d16124e8114df44dabce3374b6a555ee21db2fd7e1e6fe9f5eba0d"
+      },
+      "predictions": [
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons80",
+          "source_video": "lucia",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "square_mse",
+          "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/lucia_photons80--raw.npy",
+          "sha256": "ea5d38de226c10585cffeb58c45d562d23382db11c558d6e8421b59fa36b14de",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "displayed_methods": [
+            "raw",
+            "recomputed own-raw recursive .5"
+          ]
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons80",
+          "source_video": "lucia",
+          "family": "MobileIE_L1",
+          "seed": 0,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r69/stage001/seed0/lucia_photons80--raw.npy",
+          "sha256": "2cb85940fbcfc78fbad9342ebc5a59a50fc38f6f5a91ee6a5a5d271b2b1baff9",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/lucia_photons80.npz",
+          "input_cache_sha256": "a8704f3d26d16124e8114df44dabce3374b6a555ee21db2fd7e1e6fe9f5eba0d",
+          "checkpoint_sha256": "750835b5abafe800fbc4f912e818a63ec57757fd5a1fac8bdb3cc523dbb5c1d6",
+          "online_RGB_history_bytes": 0,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons80",
+          "source_video": "lucia",
+          "family": "MobileIE_L1",
+          "seed": 0,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r69/stage001/seed0/lucia_photons80--recursive_self05.npy",
+          "sha256": "07e5efaa1503f9dfc4c9a8a1724221aceb1312bf18543a0cf8202dcbe7dda866",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/lucia_photons80.npz",
+          "input_cache_sha256": "a8704f3d26d16124e8114df44dabce3374b6a555ee21db2fd7e1e6fe9f5eba0d",
+          "checkpoint_sha256": "750835b5abafe800fbc4f912e818a63ec57757fd5a1fac8bdb3cc523dbb5c1d6",
+          "online_RGB_history_bytes": 9838080,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons80",
+          "source_video": "lucia",
+          "arm": "spatial_l1",
+          "train_seed": 0,
+          "reference": "R65_spatial_l1_seed0",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r65/stage001/seed0/spatial_l1--lucia_photons80--raw.npy",
+          "sha256": "54201bb1d8fc2b7beca2e62aae9335dbf76103b40a9db5885e81ae59b2927c71",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/lucia_photons80.npz",
+          "input_cache_sha256": "a8704f3d26d16124e8114df44dabce3374b6a555ee21db2fd7e1e6fe9f5eba0d",
+          "checkpoint_sha256": "e077baa4a83282d25a47e2c2bcdff4471f7ed87b9a337df194ae17d6a2732452",
+          "online_RGB_history_bytes": 0,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons80",
+          "source_video": "lucia",
+          "arm": "spatial_l1",
+          "train_seed": 0,
+          "reference": "R65_spatial_l1_seed0",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r65/stage001/seed0/spatial_l1--lucia_photons80--recursive_self05.npy",
+          "sha256": "0a67b24fdd88263c91d3cfa04a796ea9c0a1a476c6ab90c4210a4f9f88327f7a",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/lucia_photons80.npz",
+          "input_cache_sha256": "a8704f3d26d16124e8114df44dabce3374b6a555ee21db2fd7e1e6fe9f5eba0d",
+          "checkpoint_sha256": "e077baa4a83282d25a47e2c2bcdff4471f7ed87b9a337df194ae17d6a2732452",
+          "online_RGB_history_bytes": 9838080,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        }
+      ],
+      "actual_reviewed": false,
+      "contact": "research/4.temporal-consistency/report/exploration-r69-spatial-L1-quality/fixed-lucia_photons80-seed0.png",
+      "sha256": "7aa967144f7d1b3fa76ed576f53ea305c9966a0746a7ecee67c17b0c7977c476",
+      "bytes": 2458679,
+      "manifests": {
+        "research/4.temporal-consistency/results/exploration-r69-stage001-eval-seed0/prediction_manifest.jsonl": "444f00efcb3d77c0f7e16c3a1d48bd78b0fd058a752ccdb66b556bf768fb9f47",
+        "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+        "research/4.temporal-consistency/results/exploration-r65-stage001-eval-seed0/prediction_manifest.jsonl": "f1edac1c60245a5c1015a8b229409fb529b1e611c5c64e1a6bfc70c67ffefe98"
+      }
+    },
+    {
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "seed": 0,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "R44 MIE MSE raw",
+        "R44 MIE MSE rec .5",
+        "R69 MIE L1 raw",
+        "R69 MIE L1 rec .5",
+        "R65 U-Net L1 raw",
+        "R65 U-Net L1 rec .5"
+      ],
+      "center_xy": [
+        363,
+        176
+      ],
+      "center_shape": [
+        128,
+        128
+      ],
+      "full_FOV_display_box": [
+        266,
+        150
+      ],
+      "input_shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "input_cache": {
+        "domain": "davis_train_pilot",
+        "scene": "walking_photons20",
+        "source_video": "walking",
+        "frames": 64,
+        "shape": [
+          64,
+          480,
+          854,
+          3
+        ],
+        "photons": 20,
+        "input_rng_seed": 18428040562701664290,
+        "path": ".cache/experiments/exploration-r30/walking_photons20.npz",
+        "sha256": "86a4f1ea35631249aeb6afdb838939af697796e0a6f24f20155a2e59cab2b1f6"
+      },
+      "predictions": [
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons20",
+          "source_video": "walking",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "square_mse",
+          "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/walking_photons20--raw.npy",
+          "sha256": "e958ad5c5b367105e94ae2888212c411af591e48c8fa9895176d5983a2039ad3",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "displayed_methods": [
+            "raw",
+            "recomputed own-raw recursive .5"
+          ]
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons20",
+          "source_video": "walking",
+          "family": "MobileIE_L1",
+          "seed": 0,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r69/stage001/seed0/walking_photons20--raw.npy",
+          "sha256": "be0b6f06d0884e6eb3aad7e3dd9aaed4302b35534b300f71a1029d8bff4c59e5",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/walking_photons20.npz",
+          "input_cache_sha256": "86a4f1ea35631249aeb6afdb838939af697796e0a6f24f20155a2e59cab2b1f6",
+          "checkpoint_sha256": "750835b5abafe800fbc4f912e818a63ec57757fd5a1fac8bdb3cc523dbb5c1d6",
+          "online_RGB_history_bytes": 0,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons20",
+          "source_video": "walking",
+          "family": "MobileIE_L1",
+          "seed": 0,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r69/stage001/seed0/walking_photons20--recursive_self05.npy",
+          "sha256": "d67a647c3a0a2edd1795acf49e098b1b3641aa25e715ac4eda1d77e44cc4f3cd",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/walking_photons20.npz",
+          "input_cache_sha256": "86a4f1ea35631249aeb6afdb838939af697796e0a6f24f20155a2e59cab2b1f6",
+          "checkpoint_sha256": "750835b5abafe800fbc4f912e818a63ec57757fd5a1fac8bdb3cc523dbb5c1d6",
+          "online_RGB_history_bytes": 9838080,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons20",
+          "source_video": "walking",
+          "arm": "spatial_l1",
+          "train_seed": 0,
+          "reference": "R65_spatial_l1_seed0",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r65/stage001/seed0/spatial_l1--walking_photons20--raw.npy",
+          "sha256": "56cd0ed6cc7989d0d1be23853fb764c0b10d1e5c947aef877bc229f83b091037",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/walking_photons20.npz",
+          "input_cache_sha256": "86a4f1ea35631249aeb6afdb838939af697796e0a6f24f20155a2e59cab2b1f6",
+          "checkpoint_sha256": "e077baa4a83282d25a47e2c2bcdff4471f7ed87b9a337df194ae17d6a2732452",
+          "online_RGB_history_bytes": 0,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons20",
+          "source_video": "walking",
+          "arm": "spatial_l1",
+          "train_seed": 0,
+          "reference": "R65_spatial_l1_seed0",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r65/stage001/seed0/spatial_l1--walking_photons20--recursive_self05.npy",
+          "sha256": "6a34128f60eb1c2941a99724570652eaa2b88e6e439c84966daad4d494a61205",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/walking_photons20.npz",
+          "input_cache_sha256": "86a4f1ea35631249aeb6afdb838939af697796e0a6f24f20155a2e59cab2b1f6",
+          "checkpoint_sha256": "e077baa4a83282d25a47e2c2bcdff4471f7ed87b9a337df194ae17d6a2732452",
+          "online_RGB_history_bytes": 9838080,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        }
+      ],
+      "actual_reviewed": false,
+      "contact": "research/4.temporal-consistency/report/exploration-r69-spatial-L1-quality/fixed-walking_photons20-seed0.png",
+      "sha256": "de8b772ecad250519d2dc3b363bf4b4e13449adde5d606bfd951ef9af0780148",
+      "bytes": 2272097,
+      "manifests": {
+        "research/4.temporal-consistency/results/exploration-r69-stage001-eval-seed0/prediction_manifest.jsonl": "444f00efcb3d77c0f7e16c3a1d48bd78b0fd058a752ccdb66b556bf768fb9f47",
+        "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+        "research/4.temporal-consistency/results/exploration-r65-stage001-eval-seed0/prediction_manifest.jsonl": "f1edac1c60245a5c1015a8b229409fb529b1e611c5c64e1a6bfc70c67ffefe98"
+      }
+    },
+    {
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "seed": 0,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "R44 MIE MSE raw",
+        "R44 MIE MSE rec .5",
+        "R69 MIE L1 raw",
+        "R69 MIE L1 rec .5",
+        "R65 U-Net L1 raw",
+        "R65 U-Net L1 rec .5"
+      ],
+      "center_xy": [
+        363,
+        176
+      ],
+      "center_shape": [
+        128,
+        128
+      ],
+      "full_FOV_display_box": [
+        266,
+        150
+      ],
+      "input_shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "input_cache": {
+        "domain": "davis_train_pilot",
+        "scene": "walking_photons80",
+        "source_video": "walking",
+        "frames": 64,
+        "shape": [
+          64,
+          480,
+          854,
+          3
+        ],
+        "photons": 80,
+        "input_rng_seed": 12836456888684371681,
+        "path": ".cache/experiments/exploration-r30/walking_photons80.npz",
+        "sha256": "0f311aa6df9f19a46dd1a843c774089d49be63b4c8c6116935e67fe56e401970"
+      },
+      "predictions": [
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons80",
+          "source_video": "walking",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "square_mse",
+          "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/walking_photons80--raw.npy",
+          "sha256": "2da2b065133477777323692a4a54723c7febaa7fb6cfe6237ca965b0a009d6f3",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "displayed_methods": [
+            "raw",
+            "recomputed own-raw recursive .5"
+          ]
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons80",
+          "source_video": "walking",
+          "family": "MobileIE_L1",
+          "seed": 0,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r69/stage001/seed0/walking_photons80--raw.npy",
+          "sha256": "beb03700da83ff3de8a874f0543e4ba0f48667a958eff03854864a9dfa36eeb7",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/walking_photons80.npz",
+          "input_cache_sha256": "0f311aa6df9f19a46dd1a843c774089d49be63b4c8c6116935e67fe56e401970",
+          "checkpoint_sha256": "750835b5abafe800fbc4f912e818a63ec57757fd5a1fac8bdb3cc523dbb5c1d6",
+          "online_RGB_history_bytes": 0,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons80",
+          "source_video": "walking",
+          "family": "MobileIE_L1",
+          "seed": 0,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r69/stage001/seed0/walking_photons80--recursive_self05.npy",
+          "sha256": "1a9ff149dd9a858a9ba729f1d98ad89a3cb0b9864d03b3e39fa6a656a53ca337",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/walking_photons80.npz",
+          "input_cache_sha256": "0f311aa6df9f19a46dd1a843c774089d49be63b4c8c6116935e67fe56e401970",
+          "checkpoint_sha256": "750835b5abafe800fbc4f912e818a63ec57757fd5a1fac8bdb3cc523dbb5c1d6",
+          "online_RGB_history_bytes": 9838080,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons80",
+          "source_video": "walking",
+          "arm": "spatial_l1",
+          "train_seed": 0,
+          "reference": "R65_spatial_l1_seed0",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r65/stage001/seed0/spatial_l1--walking_photons80--raw.npy",
+          "sha256": "51411a0dacd2999c03613e4c81966d84186098ef5f038cabbc6668a85288520e",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/walking_photons80.npz",
+          "input_cache_sha256": "0f311aa6df9f19a46dd1a843c774089d49be63b4c8c6116935e67fe56e401970",
+          "checkpoint_sha256": "e077baa4a83282d25a47e2c2bcdff4471f7ed87b9a337df194ae17d6a2732452",
+          "online_RGB_history_bytes": 0,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons80",
+          "source_video": "walking",
+          "arm": "spatial_l1",
+          "train_seed": 0,
+          "reference": "R65_spatial_l1_seed0",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r65/stage001/seed0/spatial_l1--walking_photons80--recursive_self05.npy",
+          "sha256": "dec75f9f6d0195bd37d1d8a47679a6a0bd8fb7afd1a169a131db7321bb285bec",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/walking_photons80.npz",
+          "input_cache_sha256": "0f311aa6df9f19a46dd1a843c774089d49be63b4c8c6116935e67fe56e401970",
+          "checkpoint_sha256": "e077baa4a83282d25a47e2c2bcdff4471f7ed87b9a337df194ae17d6a2732452",
+          "online_RGB_history_bytes": 9838080,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        }
+      ],
+      "actual_reviewed": false,
+      "contact": "research/4.temporal-consistency/report/exploration-r69-spatial-L1-quality/fixed-walking_photons80-seed0.png",
+      "sha256": "21b358180aee06769161bf278ffcf432b7549a0d2fec7404e324358d8c78e5b5",
+      "bytes": 2108547,
+      "manifests": {
+        "research/4.temporal-consistency/results/exploration-r69-stage001-eval-seed0/prediction_manifest.jsonl": "444f00efcb3d77c0f7e16c3a1d48bd78b0fd058a752ccdb66b556bf768fb9f47",
+        "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+        "research/4.temporal-consistency/results/exploration-r65-stage001-eval-seed0/prediction_manifest.jsonl": "f1edac1c60245a5c1015a8b229409fb529b1e611c5c64e1a6bfc70c67ffefe98"
+      }
+    },
+    {
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "seed": 0,
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "R44 MIE MSE raw",
+        "R44 MIE MSE rec .5",
+        "R69 MIE L1 raw",
+        "R69 MIE L1 rec .5",
+        "R65 U-Net L1 raw",
+        "R65 U-Net L1 rec .5"
+      ],
+      "center_xy": [
+        192,
+        80
+      ],
+      "center_shape": [
+        128,
+        128
+      ],
+      "full_FOV_display_box": [
+        266,
+        150
+      ],
+      "input_shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "input_cache": {
+        "domain": "paired_real_ND_DEV",
+        "scene": "video_15",
+        "frames": 16,
+        "path": ".cache/experiments/exploration-r10/video_15_native_crop.npz",
+        "sha256": "08708be23625b82ff4da2c1679e2def9e4092e7018aa03dcd8072593dce2cc93",
+        "shape": [
+          16,
+          288,
+          512,
+          3
+        ]
+      },
+      "predictions": [
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_15",
+          "source_video": "video_15",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "square_mse",
+          "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/video_15--raw.npy",
+          "sha256": "aff2da64f86c9755fb4b86148383700af8bf15ccad031bcd0a50a7cd447904ec",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "displayed_methods": [
+            "raw",
+            "recomputed own-raw recursive .5"
+          ]
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_15",
+          "source_video": "video_15",
+          "family": "MobileIE_L1",
+          "seed": 0,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r69/stage001/seed0/video_15--raw.npy",
+          "sha256": "b4748104d63085dc7d6c2aaee25587fd0e1cf5431c97f24786d5dc5ab97e6eaf",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_15_native_crop.npz",
+          "input_cache_sha256": "08708be23625b82ff4da2c1679e2def9e4092e7018aa03dcd8072593dce2cc93",
+          "checkpoint_sha256": "750835b5abafe800fbc4f912e818a63ec57757fd5a1fac8bdb3cc523dbb5c1d6",
+          "online_RGB_history_bytes": 0,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_15",
+          "source_video": "video_15",
+          "family": "MobileIE_L1",
+          "seed": 0,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r69/stage001/seed0/video_15--recursive_self05.npy",
+          "sha256": "3ff5915a6c4cafe2155af6584b3a1f09f0513f01c67fc9430887dbff7c5a03ed",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_15_native_crop.npz",
+          "input_cache_sha256": "08708be23625b82ff4da2c1679e2def9e4092e7018aa03dcd8072593dce2cc93",
+          "checkpoint_sha256": "750835b5abafe800fbc4f912e818a63ec57757fd5a1fac8bdb3cc523dbb5c1d6",
+          "online_RGB_history_bytes": 3538944,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_15",
+          "source_video": "video_15",
+          "arm": "spatial_l1",
+          "train_seed": 0,
+          "reference": "R65_spatial_l1_seed0",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r65/stage001/seed0/spatial_l1--video_15--raw.npy",
+          "sha256": "ec0a3955e2032cff3dd0dff19e10df2e63e9b280357c243cd68c57a2bf045d5c",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_15_native_crop.npz",
+          "input_cache_sha256": "08708be23625b82ff4da2c1679e2def9e4092e7018aa03dcd8072593dce2cc93",
+          "checkpoint_sha256": "e077baa4a83282d25a47e2c2bcdff4471f7ed87b9a337df194ae17d6a2732452",
+          "online_RGB_history_bytes": 0,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_15",
+          "source_video": "video_15",
+          "arm": "spatial_l1",
+          "train_seed": 0,
+          "reference": "R65_spatial_l1_seed0",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r65/stage001/seed0/spatial_l1--video_15--recursive_self05.npy",
+          "sha256": "458b2eca9a08f67fcdefcec3d5b14333bdad8596e6bfb3b3387d4042c96772ea",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_15_native_crop.npz",
+          "input_cache_sha256": "08708be23625b82ff4da2c1679e2def9e4092e7018aa03dcd8072593dce2cc93",
+          "checkpoint_sha256": "e077baa4a83282d25a47e2c2bcdff4471f7ed87b9a337df194ae17d6a2732452",
+          "online_RGB_history_bytes": 3538944,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        }
+      ],
+      "actual_reviewed": false,
+      "contact": "research/4.temporal-consistency/report/exploration-r69-spatial-L1-quality/fixed-video_15-seed0.png",
+      "sha256": "95acb76762b1fab273e94df824ccd9c5a8d467d3b5af1097b7b3f570b3b3c63f",
+      "bytes": 1964425,
+      "manifests": {
+        "research/4.temporal-consistency/results/exploration-r69-stage001-eval-seed0/prediction_manifest.jsonl": "444f00efcb3d77c0f7e16c3a1d48bd78b0fd058a752ccdb66b556bf768fb9f47",
+        "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+        "research/4.temporal-consistency/results/exploration-r65-stage001-eval-seed0/prediction_manifest.jsonl": "f1edac1c60245a5c1015a8b229409fb529b1e611c5c64e1a6bfc70c67ffefe98"
+      }
+    },
+    {
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "seed": 0,
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "R44 MIE MSE raw",
+        "R44 MIE MSE rec .5",
+        "R69 MIE L1 raw",
+        "R69 MIE L1 rec .5",
+        "R65 U-Net L1 raw",
+        "R65 U-Net L1 rec .5"
+      ],
+      "center_xy": [
+        192,
+        80
+      ],
+      "center_shape": [
+        128,
+        128
+      ],
+      "full_FOV_display_box": [
+        266,
+        150
+      ],
+      "input_shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "input_cache": {
+        "domain": "paired_real_ND_DEV",
+        "scene": "video_47",
+        "frames": 16,
+        "path": ".cache/experiments/exploration-r10/video_47_native_crop.npz",
+        "sha256": "00b20972a571b776403fc7c65f28c2ae32dd6140f6569adf2190b38434c012f6",
+        "shape": [
+          16,
+          288,
+          512,
+          3
+        ]
+      },
+      "predictions": [
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_47",
+          "source_video": "video_47",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "square_mse",
+          "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/video_47--raw.npy",
+          "sha256": "0e668305f44e896fd8eaa6aa9169b0a142a645dc55cea0a8c21cd6c0c2c41330",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "displayed_methods": [
+            "raw",
+            "recomputed own-raw recursive .5"
+          ]
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_47",
+          "source_video": "video_47",
+          "family": "MobileIE_L1",
+          "seed": 0,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r69/stage001/seed0/video_47--raw.npy",
+          "sha256": "b23a77fac7617216628ff448258d100a5b175b8bae58b9e8069b5c67dcbf87f3",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_47_native_crop.npz",
+          "input_cache_sha256": "00b20972a571b776403fc7c65f28c2ae32dd6140f6569adf2190b38434c012f6",
+          "checkpoint_sha256": "750835b5abafe800fbc4f912e818a63ec57757fd5a1fac8bdb3cc523dbb5c1d6",
+          "online_RGB_history_bytes": 0,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_47",
+          "source_video": "video_47",
+          "family": "MobileIE_L1",
+          "seed": 0,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r69/stage001/seed0/video_47--recursive_self05.npy",
+          "sha256": "a2eb7bbabc866a2f17193d7f3a350653bcaa8b0b15b39ff384db0ae76e9e020b",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_47_native_crop.npz",
+          "input_cache_sha256": "00b20972a571b776403fc7c65f28c2ae32dd6140f6569adf2190b38434c012f6",
+          "checkpoint_sha256": "750835b5abafe800fbc4f912e818a63ec57757fd5a1fac8bdb3cc523dbb5c1d6",
+          "online_RGB_history_bytes": 3538944,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_47",
+          "source_video": "video_47",
+          "arm": "spatial_l1",
+          "train_seed": 0,
+          "reference": "R65_spatial_l1_seed0",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r65/stage001/seed0/spatial_l1--video_47--raw.npy",
+          "sha256": "29eb1db27ed5502c7cb09983155f2fd970c59e2eac3bd3ee919571e6e724a9a3",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_47_native_crop.npz",
+          "input_cache_sha256": "00b20972a571b776403fc7c65f28c2ae32dd6140f6569adf2190b38434c012f6",
+          "checkpoint_sha256": "e077baa4a83282d25a47e2c2bcdff4471f7ed87b9a337df194ae17d6a2732452",
+          "online_RGB_history_bytes": 0,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_47",
+          "source_video": "video_47",
+          "arm": "spatial_l1",
+          "train_seed": 0,
+          "reference": "R65_spatial_l1_seed0",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r65/stage001/seed0/spatial_l1--video_47--recursive_self05.npy",
+          "sha256": "56e46eb357490154a3bede2d265f47d4796d796797c5bb88f39c2a26cb4842db",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_47_native_crop.npz",
+          "input_cache_sha256": "00b20972a571b776403fc7c65f28c2ae32dd6140f6569adf2190b38434c012f6",
+          "checkpoint_sha256": "e077baa4a83282d25a47e2c2bcdff4471f7ed87b9a337df194ae17d6a2732452",
+          "online_RGB_history_bytes": 3538944,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        }
+      ],
+      "actual_reviewed": false,
+      "contact": "research/4.temporal-consistency/report/exploration-r69-spatial-L1-quality/fixed-video_47-seed0.png",
+      "sha256": "1788ce41cb7211a30e444df4c40e214b5b165b48c541217fb625eb8178b83f1f",
+      "bytes": 1336593,
+      "manifests": {
+        "research/4.temporal-consistency/results/exploration-r69-stage001-eval-seed0/prediction_manifest.jsonl": "444f00efcb3d77c0f7e16c3a1d48bd78b0fd058a752ccdb66b556bf768fb9f47",
+        "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+        "research/4.temporal-consistency/results/exploration-r65-stage001-eval-seed0/prediction_manifest.jsonl": "f1edac1c60245a5c1015a8b229409fb529b1e611c5c64e1a6bfc70c67ffefe98"
+      }
+    },
+    {
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "seed": 0,
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "R44 MIE MSE raw",
+        "R44 MIE MSE rec .5",
+        "R69 MIE L1 raw",
+        "R69 MIE L1 rec .5",
+        "R65 U-Net L1 raw",
+        "R65 U-Net L1 rec .5"
+      ],
+      "center_xy": [
+        192,
+        80
+      ],
+      "center_shape": [
+        128,
+        128
+      ],
+      "full_FOV_display_box": [
+        266,
+        150
+      ],
+      "input_shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "input_cache": {
+        "domain": "paired_real_ND_DEV",
+        "scene": "video_91",
+        "frames": 16,
+        "path": ".cache/experiments/exploration-r10/video_91_native_crop.npz",
+        "sha256": "6e198a4a28ee814b67ae9237aa30f05ea1e086c785480da5c9c97d73adabb22a",
+        "shape": [
+          16,
+          288,
+          512,
+          3
+        ]
+      },
+      "predictions": [
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_91",
+          "source_video": "video_91",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "square_mse",
+          "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/video_91--raw.npy",
+          "sha256": "e0b61255e22f7ecf2b2861ea430de2ebf53cd3c91c5b800e770fd1533a59e2f0",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "displayed_methods": [
+            "raw",
+            "recomputed own-raw recursive .5"
+          ]
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_91",
+          "source_video": "video_91",
+          "family": "MobileIE_L1",
+          "seed": 0,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r69/stage001/seed0/video_91--raw.npy",
+          "sha256": "a2c30d35c49d479a54c76488fd1fac8dddd59d5900ff31559b5731835716dba9",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_91_native_crop.npz",
+          "input_cache_sha256": "6e198a4a28ee814b67ae9237aa30f05ea1e086c785480da5c9c97d73adabb22a",
+          "checkpoint_sha256": "750835b5abafe800fbc4f912e818a63ec57757fd5a1fac8bdb3cc523dbb5c1d6",
+          "online_RGB_history_bytes": 0,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_91",
+          "source_video": "video_91",
+          "family": "MobileIE_L1",
+          "seed": 0,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r69/stage001/seed0/video_91--recursive_self05.npy",
+          "sha256": "6d5b9b50bd7ab368d0ebf8231e54d9a74a6f04c428875ff624a29e16c67df5f5",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_91_native_crop.npz",
+          "input_cache_sha256": "6e198a4a28ee814b67ae9237aa30f05ea1e086c785480da5c9c97d73adabb22a",
+          "checkpoint_sha256": "750835b5abafe800fbc4f912e818a63ec57757fd5a1fac8bdb3cc523dbb5c1d6",
+          "online_RGB_history_bytes": 3538944,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_91",
+          "source_video": "video_91",
+          "arm": "spatial_l1",
+          "train_seed": 0,
+          "reference": "R65_spatial_l1_seed0",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r65/stage001/seed0/spatial_l1--video_91--raw.npy",
+          "sha256": "576a232d22007d03b46094d6d4aa413613efc6c1d36c61bcbf71fa776677315f",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_91_native_crop.npz",
+          "input_cache_sha256": "6e198a4a28ee814b67ae9237aa30f05ea1e086c785480da5c9c97d73adabb22a",
+          "checkpoint_sha256": "e077baa4a83282d25a47e2c2bcdff4471f7ed87b9a337df194ae17d6a2732452",
+          "online_RGB_history_bytes": 0,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_91",
+          "source_video": "video_91",
+          "arm": "spatial_l1",
+          "train_seed": 0,
+          "reference": "R65_spatial_l1_seed0",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r65/stage001/seed0/spatial_l1--video_91--recursive_self05.npy",
+          "sha256": "9ec8a77eb392b2d217555f848370c3aac125ba8050dcf85ce56e9727420b6b63",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_91_native_crop.npz",
+          "input_cache_sha256": "6e198a4a28ee814b67ae9237aa30f05ea1e086c785480da5c9c97d73adabb22a",
+          "checkpoint_sha256": "e077baa4a83282d25a47e2c2bcdff4471f7ed87b9a337df194ae17d6a2732452",
+          "online_RGB_history_bytes": 3538944,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        }
+      ],
+      "actual_reviewed": false,
+      "contact": "research/4.temporal-consistency/report/exploration-r69-spatial-L1-quality/fixed-video_91-seed0.png",
+      "sha256": "c703dd511052d00a508fe49ba6495d25d49c435ef7e321ca278a8d0b6ee82fef",
+      "bytes": 1805013,
+      "manifests": {
+        "research/4.temporal-consistency/results/exploration-r69-stage001-eval-seed0/prediction_manifest.jsonl": "444f00efcb3d77c0f7e16c3a1d48bd78b0fd058a752ccdb66b556bf768fb9f47",
+        "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+        "research/4.temporal-consistency/results/exploration-r65-stage001-eval-seed0/prediction_manifest.jsonl": "f1edac1c60245a5c1015a8b229409fb529b1e611c5c64e1a6bfc70c67ffefe98"
+      }
+    },
+    {
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "seed": 0,
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "R44 MIE MSE raw",
+        "R44 MIE MSE rec .5",
+        "R69 MIE L1 raw",
+        "R69 MIE L1 rec .5",
+        "R65 U-Net L1 raw",
+        "R65 U-Net L1 rec .5"
+      ],
+      "center_xy": [
+        192,
+        80
+      ],
+      "center_shape": [
+        128,
+        128
+      ],
+      "full_FOV_display_box": [
+        266,
+        150
+      ],
+      "input_shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "input_cache": {
+        "domain": "paired_real_ND_DEV",
+        "scene": "video_121",
+        "frames": 16,
+        "path": ".cache/experiments/exploration-r10/video_121_native_crop.npz",
+        "sha256": "a5e00a35c79271f57e269ea723c1bcecb4834abedce2db6098e73c33efd7b4e9",
+        "shape": [
+          16,
+          288,
+          512,
+          3
+        ]
+      },
+      "predictions": [
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_121",
+          "source_video": "video_121",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "square_mse",
+          "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/video_121--raw.npy",
+          "sha256": "f2c80b9e1c5c88406d57f6adf38a96c3dcd39e334bf9c0469fe9b52145e7edad",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "displayed_methods": [
+            "raw",
+            "recomputed own-raw recursive .5"
+          ]
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_121",
+          "source_video": "video_121",
+          "family": "MobileIE_L1",
+          "seed": 0,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r69/stage001/seed0/video_121--raw.npy",
+          "sha256": "55c59088cecd8c064ff2c2dc58d56e30167d0e96c9968dd00c10e63f981652bb",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_121_native_crop.npz",
+          "input_cache_sha256": "a5e00a35c79271f57e269ea723c1bcecb4834abedce2db6098e73c33efd7b4e9",
+          "checkpoint_sha256": "750835b5abafe800fbc4f912e818a63ec57757fd5a1fac8bdb3cc523dbb5c1d6",
+          "online_RGB_history_bytes": 0,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_121",
+          "source_video": "video_121",
+          "family": "MobileIE_L1",
+          "seed": 0,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r69/stage001/seed0/video_121--recursive_self05.npy",
+          "sha256": "3f19a0caaa658563bbe17b1b9bb31b96f1881028de13ddea0c132524f425d8e8",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_121_native_crop.npz",
+          "input_cache_sha256": "a5e00a35c79271f57e269ea723c1bcecb4834abedce2db6098e73c33efd7b4e9",
+          "checkpoint_sha256": "750835b5abafe800fbc4f912e818a63ec57757fd5a1fac8bdb3cc523dbb5c1d6",
+          "online_RGB_history_bytes": 3538944,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_121",
+          "source_video": "video_121",
+          "arm": "spatial_l1",
+          "train_seed": 0,
+          "reference": "R65_spatial_l1_seed0",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r65/stage001/seed0/spatial_l1--video_121--raw.npy",
+          "sha256": "9719f5c4f93dd70905309d0acc36bea08cab260b47b5c518285b2f27e1c580a2",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_121_native_crop.npz",
+          "input_cache_sha256": "a5e00a35c79271f57e269ea723c1bcecb4834abedce2db6098e73c33efd7b4e9",
+          "checkpoint_sha256": "e077baa4a83282d25a47e2c2bcdff4471f7ed87b9a337df194ae17d6a2732452",
+          "online_RGB_history_bytes": 0,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_121",
+          "source_video": "video_121",
+          "arm": "spatial_l1",
+          "train_seed": 0,
+          "reference": "R65_spatial_l1_seed0",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r65/stage001/seed0/spatial_l1--video_121--recursive_self05.npy",
+          "sha256": "752d1e018b1e4021e2122d3506305efe4cb1f2f80454e482feb05432606f10bc",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_121_native_crop.npz",
+          "input_cache_sha256": "a5e00a35c79271f57e269ea723c1bcecb4834abedce2db6098e73c33efd7b4e9",
+          "checkpoint_sha256": "e077baa4a83282d25a47e2c2bcdff4471f7ed87b9a337df194ae17d6a2732452",
+          "online_RGB_history_bytes": 3538944,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        }
+      ],
+      "actual_reviewed": false,
+      "contact": "research/4.temporal-consistency/report/exploration-r69-spatial-L1-quality/fixed-video_121-seed0.png",
+      "sha256": "9bf4bc56736c3668f40a85e41e3e95d5dae05dfdcd36cbf0ea9d5964093885cc",
+      "bytes": 1547162,
+      "manifests": {
+        "research/4.temporal-consistency/results/exploration-r69-stage001-eval-seed0/prediction_manifest.jsonl": "444f00efcb3d77c0f7e16c3a1d48bd78b0fd058a752ccdb66b556bf768fb9f47",
+        "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+        "research/4.temporal-consistency/results/exploration-r65-stage001-eval-seed0/prediction_manifest.jsonl": "f1edac1c60245a5c1015a8b229409fb529b1e611c5c64e1a6bfc70c67ffefe98"
+      }
+    },
+    {
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "seed": 1,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "R44 MIE MSE raw",
+        "R44 MIE MSE rec .5",
+        "R69 MIE L1 raw",
+        "R69 MIE L1 rec .5",
+        "R65 U-Net L1 raw",
+        "R65 U-Net L1 rec .5"
+      ],
+      "center_xy": [
+        363,
+        176
+      ],
+      "center_shape": [
+        128,
+        128
+      ],
+      "full_FOV_display_box": [
+        266,
+        150
+      ],
+      "input_shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "input_cache": {
+        "domain": "davis_train_pilot",
+        "scene": "bear_photons20",
+        "source_video": "bear",
+        "frames": 64,
+        "shape": [
+          64,
+          480,
+          854,
+          3
+        ],
+        "photons": 20,
+        "input_rng_seed": 3339271205033111615,
+        "path": ".cache/experiments/exploration-r30/bear_photons20.npz",
+        "sha256": "e3412adaa3d6b5802874069c45a00500840ca9a4a24442aa493e3ca4324c063f"
+      },
+      "predictions": [
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons20",
+          "source_video": "bear",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "square_mse",
+          "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/bear_photons20--raw.npy",
+          "sha256": "2e3822b9ed49bd500c76020364ab0a17d2c5757e53f35eaa7c929ebda298aa6c",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "displayed_methods": [
+            "raw",
+            "recomputed own-raw recursive .5"
+          ]
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons20",
+          "source_video": "bear",
+          "family": "MobileIE_L1",
+          "seed": 1,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r69/stage001/seed1/bear_photons20--raw.npy",
+          "sha256": "6bcfd448c089a945d12f822041bbd61f7268237e5a26af6e9d6b10cb2fd26ac6",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/bear_photons20.npz",
+          "input_cache_sha256": "e3412adaa3d6b5802874069c45a00500840ca9a4a24442aa493e3ca4324c063f",
+          "checkpoint_sha256": "10e328822320c4ea11bea792189fce6247a49616e99c2992fae4ab42b7b29e5b",
+          "online_RGB_history_bytes": 0,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons20",
+          "source_video": "bear",
+          "family": "MobileIE_L1",
+          "seed": 1,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r69/stage001/seed1/bear_photons20--recursive_self05.npy",
+          "sha256": "6c21ee759eb2684f14bb75831fc0ee935e1e66b92307a7dcb752073f7917156a",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/bear_photons20.npz",
+          "input_cache_sha256": "e3412adaa3d6b5802874069c45a00500840ca9a4a24442aa493e3ca4324c063f",
+          "checkpoint_sha256": "10e328822320c4ea11bea792189fce6247a49616e99c2992fae4ab42b7b29e5b",
+          "online_RGB_history_bytes": 9838080,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons20",
+          "source_video": "bear",
+          "arm": "spatial_l1",
+          "train_seed": 1,
+          "reference": "R65_spatial_l1_seed1",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r65/stage001/seed1/spatial_l1--bear_photons20--raw.npy",
+          "sha256": "48ba12cad2e556f7d4cab123a9d09e699f4df85547c4b648c131e66d09313deb",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/bear_photons20.npz",
+          "input_cache_sha256": "e3412adaa3d6b5802874069c45a00500840ca9a4a24442aa493e3ca4324c063f",
+          "checkpoint_sha256": "e2fa913c5a27564a9a7ff640f7c1dce6694389f9059ed95c15f52619e5bc0e84",
+          "online_RGB_history_bytes": 0,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons20",
+          "source_video": "bear",
+          "arm": "spatial_l1",
+          "train_seed": 1,
+          "reference": "R65_spatial_l1_seed1",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r65/stage001/seed1/spatial_l1--bear_photons20--recursive_self05.npy",
+          "sha256": "622e1588baee5a6a3e14125b8cdba385eabffd68869107cf08e78a90474e4dba",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/bear_photons20.npz",
+          "input_cache_sha256": "e3412adaa3d6b5802874069c45a00500840ca9a4a24442aa493e3ca4324c063f",
+          "checkpoint_sha256": "e2fa913c5a27564a9a7ff640f7c1dce6694389f9059ed95c15f52619e5bc0e84",
+          "online_RGB_history_bytes": 9838080,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        }
+      ],
+      "actual_reviewed": false,
+      "contact": "research/4.temporal-consistency/report/exploration-r69-spatial-L1-quality/fixed-bear_photons20-seed1.png",
+      "sha256": "aae36e528d5f367d8bd8800832ddb05828b23d90b3dba2efc87af6d9e5341e66",
+      "bytes": 2537348,
+      "manifests": {
+        "research/4.temporal-consistency/results/exploration-r69-stage001-eval-seed1/prediction_manifest.jsonl": "55d997028b3cc3c18c09715d119acf06cb8f241d8c146f3a3beb7c5635075881",
+        "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+        "research/4.temporal-consistency/results/exploration-r65-stage001-eval-seed1/prediction_manifest.jsonl": "19e94795100879047560aa9b9ec0bc285c09af90cffa1fd6c3118550691bb0b5"
+      }
+    },
+    {
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "seed": 1,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "R44 MIE MSE raw",
+        "R44 MIE MSE rec .5",
+        "R69 MIE L1 raw",
+        "R69 MIE L1 rec .5",
+        "R65 U-Net L1 raw",
+        "R65 U-Net L1 rec .5"
+      ],
+      "center_xy": [
+        363,
+        176
+      ],
+      "center_shape": [
+        128,
+        128
+      ],
+      "full_FOV_display_box": [
+        266,
+        150
+      ],
+      "input_shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "input_cache": {
+        "domain": "davis_train_pilot",
+        "scene": "bear_photons80",
+        "source_video": "bear",
+        "frames": 64,
+        "shape": [
+          64,
+          480,
+          854,
+          3
+        ],
+        "photons": 80,
+        "input_rng_seed": 14391588235251423621,
+        "path": ".cache/experiments/exploration-r30/bear_photons80.npz",
+        "sha256": "c4ef811e339a219202adcd6fdcc99890d221b103497949458a7015847d20aad8"
+      },
+      "predictions": [
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons80",
+          "source_video": "bear",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "square_mse",
+          "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/bear_photons80--raw.npy",
+          "sha256": "0019f4cbbb7c2a367dd3282cb9b6922833041d5e2fba9123bba410d75f430e75",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "displayed_methods": [
+            "raw",
+            "recomputed own-raw recursive .5"
+          ]
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons80",
+          "source_video": "bear",
+          "family": "MobileIE_L1",
+          "seed": 1,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r69/stage001/seed1/bear_photons80--raw.npy",
+          "sha256": "1eb19f6dcd4bbc3bd3428837e81c96bc223f30510d124b483ce605f70f818486",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/bear_photons80.npz",
+          "input_cache_sha256": "c4ef811e339a219202adcd6fdcc99890d221b103497949458a7015847d20aad8",
+          "checkpoint_sha256": "10e328822320c4ea11bea792189fce6247a49616e99c2992fae4ab42b7b29e5b",
+          "online_RGB_history_bytes": 0,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons80",
+          "source_video": "bear",
+          "family": "MobileIE_L1",
+          "seed": 1,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r69/stage001/seed1/bear_photons80--recursive_self05.npy",
+          "sha256": "ac85b9ff3ffb164f87aef3a5759596e4da1c74986ec94ecb38382d211c16ee6f",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/bear_photons80.npz",
+          "input_cache_sha256": "c4ef811e339a219202adcd6fdcc99890d221b103497949458a7015847d20aad8",
+          "checkpoint_sha256": "10e328822320c4ea11bea792189fce6247a49616e99c2992fae4ab42b7b29e5b",
+          "online_RGB_history_bytes": 9838080,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons80",
+          "source_video": "bear",
+          "arm": "spatial_l1",
+          "train_seed": 1,
+          "reference": "R65_spatial_l1_seed1",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r65/stage001/seed1/spatial_l1--bear_photons80--raw.npy",
+          "sha256": "820f6f3fca79eb809278c865b852afce192e1bc172cdf8f4b8777121314a6fdf",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/bear_photons80.npz",
+          "input_cache_sha256": "c4ef811e339a219202adcd6fdcc99890d221b103497949458a7015847d20aad8",
+          "checkpoint_sha256": "e2fa913c5a27564a9a7ff640f7c1dce6694389f9059ed95c15f52619e5bc0e84",
+          "online_RGB_history_bytes": 0,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons80",
+          "source_video": "bear",
+          "arm": "spatial_l1",
+          "train_seed": 1,
+          "reference": "R65_spatial_l1_seed1",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r65/stage001/seed1/spatial_l1--bear_photons80--recursive_self05.npy",
+          "sha256": "4effde064a5258753f7aac77d88fa6889affb135538fa5a22c61f94831ab7f9a",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/bear_photons80.npz",
+          "input_cache_sha256": "c4ef811e339a219202adcd6fdcc99890d221b103497949458a7015847d20aad8",
+          "checkpoint_sha256": "e2fa913c5a27564a9a7ff640f7c1dce6694389f9059ed95c15f52619e5bc0e84",
+          "online_RGB_history_bytes": 9838080,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        }
+      ],
+      "actual_reviewed": false,
+      "contact": "research/4.temporal-consistency/report/exploration-r69-spatial-L1-quality/fixed-bear_photons80-seed1.png",
+      "sha256": "ebb2a46ab93ad9ed3d1215f52bbe0bbf17076bf6ce57bcf8850076d1278db18e",
+      "bytes": 2453322,
+      "manifests": {
+        "research/4.temporal-consistency/results/exploration-r69-stage001-eval-seed1/prediction_manifest.jsonl": "55d997028b3cc3c18c09715d119acf06cb8f241d8c146f3a3beb7c5635075881",
+        "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+        "research/4.temporal-consistency/results/exploration-r65-stage001-eval-seed1/prediction_manifest.jsonl": "19e94795100879047560aa9b9ec0bc285c09af90cffa1fd6c3118550691bb0b5"
+      }
+    },
+    {
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "seed": 1,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "R44 MIE MSE raw",
+        "R44 MIE MSE rec .5",
+        "R69 MIE L1 raw",
+        "R69 MIE L1 rec .5",
+        "R65 U-Net L1 raw",
+        "R65 U-Net L1 rec .5"
+      ],
+      "center_xy": [
+        363,
+        176
+      ],
+      "center_shape": [
+        128,
+        128
+      ],
+      "full_FOV_display_box": [
+        266,
+        150
+      ],
+      "input_shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "input_cache": {
+        "domain": "davis_train_pilot",
+        "scene": "lucia_photons20",
+        "source_video": "lucia",
+        "frames": 64,
+        "shape": [
+          64,
+          480,
+          854,
+          3
+        ],
+        "photons": 20,
+        "input_rng_seed": 2188991276962062359,
+        "path": ".cache/experiments/exploration-r30/lucia_photons20.npz",
+        "sha256": "98a5e1c1097fd21e6ced8cf64d6f21faab777977b7e405d02c2a4686152f0fa5"
+      },
+      "predictions": [
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons20",
+          "source_video": "lucia",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "square_mse",
+          "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/lucia_photons20--raw.npy",
+          "sha256": "a650f953f993bafd69528165c13b9f8bdebb64029fc6fc064a97497bd5d7b6bc",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "displayed_methods": [
+            "raw",
+            "recomputed own-raw recursive .5"
+          ]
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons20",
+          "source_video": "lucia",
+          "family": "MobileIE_L1",
+          "seed": 1,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r69/stage001/seed1/lucia_photons20--raw.npy",
+          "sha256": "bdfa40e020ee200395d2a823d64b63f23e8eec41963cd076ebf098ff0469a379",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/lucia_photons20.npz",
+          "input_cache_sha256": "98a5e1c1097fd21e6ced8cf64d6f21faab777977b7e405d02c2a4686152f0fa5",
+          "checkpoint_sha256": "10e328822320c4ea11bea792189fce6247a49616e99c2992fae4ab42b7b29e5b",
+          "online_RGB_history_bytes": 0,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons20",
+          "source_video": "lucia",
+          "family": "MobileIE_L1",
+          "seed": 1,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r69/stage001/seed1/lucia_photons20--recursive_self05.npy",
+          "sha256": "0ceafa873289df6c23ebd0128ef90bc33fd89495a2c2f4de3f14969b5ddc3108",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/lucia_photons20.npz",
+          "input_cache_sha256": "98a5e1c1097fd21e6ced8cf64d6f21faab777977b7e405d02c2a4686152f0fa5",
+          "checkpoint_sha256": "10e328822320c4ea11bea792189fce6247a49616e99c2992fae4ab42b7b29e5b",
+          "online_RGB_history_bytes": 9838080,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons20",
+          "source_video": "lucia",
+          "arm": "spatial_l1",
+          "train_seed": 1,
+          "reference": "R65_spatial_l1_seed1",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r65/stage001/seed1/spatial_l1--lucia_photons20--raw.npy",
+          "sha256": "73e65806485b9b93ea3fe42d41c339ccce9ae644d1f50335c49e8df1a58c7c16",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/lucia_photons20.npz",
+          "input_cache_sha256": "98a5e1c1097fd21e6ced8cf64d6f21faab777977b7e405d02c2a4686152f0fa5",
+          "checkpoint_sha256": "e2fa913c5a27564a9a7ff640f7c1dce6694389f9059ed95c15f52619e5bc0e84",
+          "online_RGB_history_bytes": 0,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons20",
+          "source_video": "lucia",
+          "arm": "spatial_l1",
+          "train_seed": 1,
+          "reference": "R65_spatial_l1_seed1",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r65/stage001/seed1/spatial_l1--lucia_photons20--recursive_self05.npy",
+          "sha256": "7daaf29d10f55dca8a96fb8dd339874212b613df4118390c0b81c9dc5cf190fe",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/lucia_photons20.npz",
+          "input_cache_sha256": "98a5e1c1097fd21e6ced8cf64d6f21faab777977b7e405d02c2a4686152f0fa5",
+          "checkpoint_sha256": "e2fa913c5a27564a9a7ff640f7c1dce6694389f9059ed95c15f52619e5bc0e84",
+          "online_RGB_history_bytes": 9838080,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        }
+      ],
+      "actual_reviewed": false,
+      "contact": "research/4.temporal-consistency/report/exploration-r69-spatial-L1-quality/fixed-lucia_photons20-seed1.png",
+      "sha256": "8bfad6d6dcaf16c5ebc19951c3b3eb23c4d8130674ea6cc67df30d5035048076",
+      "bytes": 2515070,
+      "manifests": {
+        "research/4.temporal-consistency/results/exploration-r69-stage001-eval-seed1/prediction_manifest.jsonl": "55d997028b3cc3c18c09715d119acf06cb8f241d8c146f3a3beb7c5635075881",
+        "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+        "research/4.temporal-consistency/results/exploration-r65-stage001-eval-seed1/prediction_manifest.jsonl": "19e94795100879047560aa9b9ec0bc285c09af90cffa1fd6c3118550691bb0b5"
+      }
+    },
+    {
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "seed": 1,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "R44 MIE MSE raw",
+        "R44 MIE MSE rec .5",
+        "R69 MIE L1 raw",
+        "R69 MIE L1 rec .5",
+        "R65 U-Net L1 raw",
+        "R65 U-Net L1 rec .5"
+      ],
+      "center_xy": [
+        363,
+        176
+      ],
+      "center_shape": [
+        128,
+        128
+      ],
+      "full_FOV_display_box": [
+        266,
+        150
+      ],
+      "input_shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "input_cache": {
+        "domain": "davis_train_pilot",
+        "scene": "lucia_photons80",
+        "source_video": "lucia",
+        "frames": 64,
+        "shape": [
+          64,
+          480,
+          854,
+          3
+        ],
+        "photons": 80,
+        "input_rng_seed": 13125256489390080369,
+        "path": ".cache/experiments/exploration-r30/lucia_photons80.npz",
+        "sha256": "a8704f3d26d16124e8114df44dabce3374b6a555ee21db2fd7e1e6fe9f5eba0d"
+      },
+      "predictions": [
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons80",
+          "source_video": "lucia",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "square_mse",
+          "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/lucia_photons80--raw.npy",
+          "sha256": "0084e9aec0b93faaa4560a31430bf77e16d4ac238a3f61f31479c09bb0177585",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "displayed_methods": [
+            "raw",
+            "recomputed own-raw recursive .5"
+          ]
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons80",
+          "source_video": "lucia",
+          "family": "MobileIE_L1",
+          "seed": 1,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r69/stage001/seed1/lucia_photons80--raw.npy",
+          "sha256": "63915b7aad34561e963aac3766f33f0cc78d12fc25d647122c19a35d6f236825",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/lucia_photons80.npz",
+          "input_cache_sha256": "a8704f3d26d16124e8114df44dabce3374b6a555ee21db2fd7e1e6fe9f5eba0d",
+          "checkpoint_sha256": "10e328822320c4ea11bea792189fce6247a49616e99c2992fae4ab42b7b29e5b",
+          "online_RGB_history_bytes": 0,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons80",
+          "source_video": "lucia",
+          "family": "MobileIE_L1",
+          "seed": 1,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r69/stage001/seed1/lucia_photons80--recursive_self05.npy",
+          "sha256": "35ba80183ae15e73fbdf42aa43f97a77b83f6f06f8647f66bb4cbbcdd3cfd9d9",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/lucia_photons80.npz",
+          "input_cache_sha256": "a8704f3d26d16124e8114df44dabce3374b6a555ee21db2fd7e1e6fe9f5eba0d",
+          "checkpoint_sha256": "10e328822320c4ea11bea792189fce6247a49616e99c2992fae4ab42b7b29e5b",
+          "online_RGB_history_bytes": 9838080,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons80",
+          "source_video": "lucia",
+          "arm": "spatial_l1",
+          "train_seed": 1,
+          "reference": "R65_spatial_l1_seed1",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r65/stage001/seed1/spatial_l1--lucia_photons80--raw.npy",
+          "sha256": "b9270e8a818aee84e0158956f4d08e162b1fba49556246f100e4b68fe3724497",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/lucia_photons80.npz",
+          "input_cache_sha256": "a8704f3d26d16124e8114df44dabce3374b6a555ee21db2fd7e1e6fe9f5eba0d",
+          "checkpoint_sha256": "e2fa913c5a27564a9a7ff640f7c1dce6694389f9059ed95c15f52619e5bc0e84",
+          "online_RGB_history_bytes": 0,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons80",
+          "source_video": "lucia",
+          "arm": "spatial_l1",
+          "train_seed": 1,
+          "reference": "R65_spatial_l1_seed1",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r65/stage001/seed1/spatial_l1--lucia_photons80--recursive_self05.npy",
+          "sha256": "328d02b55dac99fca41dcab19fe863841539d59405173c81874b2718a0049b8d",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/lucia_photons80.npz",
+          "input_cache_sha256": "a8704f3d26d16124e8114df44dabce3374b6a555ee21db2fd7e1e6fe9f5eba0d",
+          "checkpoint_sha256": "e2fa913c5a27564a9a7ff640f7c1dce6694389f9059ed95c15f52619e5bc0e84",
+          "online_RGB_history_bytes": 9838080,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        }
+      ],
+      "actual_reviewed": false,
+      "contact": "research/4.temporal-consistency/report/exploration-r69-spatial-L1-quality/fixed-lucia_photons80-seed1.png",
+      "sha256": "379fe81bcc01666700d77f444964c9c8916a52a8c71b470a51e080c8455fd6ac",
+      "bytes": 2442479,
+      "manifests": {
+        "research/4.temporal-consistency/results/exploration-r69-stage001-eval-seed1/prediction_manifest.jsonl": "55d997028b3cc3c18c09715d119acf06cb8f241d8c146f3a3beb7c5635075881",
+        "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+        "research/4.temporal-consistency/results/exploration-r65-stage001-eval-seed1/prediction_manifest.jsonl": "19e94795100879047560aa9b9ec0bc285c09af90cffa1fd6c3118550691bb0b5"
+      }
+    },
+    {
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "seed": 1,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "R44 MIE MSE raw",
+        "R44 MIE MSE rec .5",
+        "R69 MIE L1 raw",
+        "R69 MIE L1 rec .5",
+        "R65 U-Net L1 raw",
+        "R65 U-Net L1 rec .5"
+      ],
+      "center_xy": [
+        363,
+        176
+      ],
+      "center_shape": [
+        128,
+        128
+      ],
+      "full_FOV_display_box": [
+        266,
+        150
+      ],
+      "input_shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "input_cache": {
+        "domain": "davis_train_pilot",
+        "scene": "walking_photons20",
+        "source_video": "walking",
+        "frames": 64,
+        "shape": [
+          64,
+          480,
+          854,
+          3
+        ],
+        "photons": 20,
+        "input_rng_seed": 18428040562701664290,
+        "path": ".cache/experiments/exploration-r30/walking_photons20.npz",
+        "sha256": "86a4f1ea35631249aeb6afdb838939af697796e0a6f24f20155a2e59cab2b1f6"
+      },
+      "predictions": [
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons20",
+          "source_video": "walking",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "square_mse",
+          "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/walking_photons20--raw.npy",
+          "sha256": "aabd6e7b85e1eef6c7252ee208e58e40b3cf42c286e7c08017d9d84188c5f40b",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "displayed_methods": [
+            "raw",
+            "recomputed own-raw recursive .5"
+          ]
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons20",
+          "source_video": "walking",
+          "family": "MobileIE_L1",
+          "seed": 1,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r69/stage001/seed1/walking_photons20--raw.npy",
+          "sha256": "d6300c78d441e5e11699f5bbabbe7325fef8023dc4a4526cc99d0ab378136410",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/walking_photons20.npz",
+          "input_cache_sha256": "86a4f1ea35631249aeb6afdb838939af697796e0a6f24f20155a2e59cab2b1f6",
+          "checkpoint_sha256": "10e328822320c4ea11bea792189fce6247a49616e99c2992fae4ab42b7b29e5b",
+          "online_RGB_history_bytes": 0,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons20",
+          "source_video": "walking",
+          "family": "MobileIE_L1",
+          "seed": 1,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r69/stage001/seed1/walking_photons20--recursive_self05.npy",
+          "sha256": "b595106b5205ff36a46357d279c6717bf83bebd4fc9b35c47bac0364db7451e5",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/walking_photons20.npz",
+          "input_cache_sha256": "86a4f1ea35631249aeb6afdb838939af697796e0a6f24f20155a2e59cab2b1f6",
+          "checkpoint_sha256": "10e328822320c4ea11bea792189fce6247a49616e99c2992fae4ab42b7b29e5b",
+          "online_RGB_history_bytes": 9838080,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons20",
+          "source_video": "walking",
+          "arm": "spatial_l1",
+          "train_seed": 1,
+          "reference": "R65_spatial_l1_seed1",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r65/stage001/seed1/spatial_l1--walking_photons20--raw.npy",
+          "sha256": "0eb7493c8c2ab545881aa34394228c02cdcc5e229e8128d796fea925c8362d49",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/walking_photons20.npz",
+          "input_cache_sha256": "86a4f1ea35631249aeb6afdb838939af697796e0a6f24f20155a2e59cab2b1f6",
+          "checkpoint_sha256": "e2fa913c5a27564a9a7ff640f7c1dce6694389f9059ed95c15f52619e5bc0e84",
+          "online_RGB_history_bytes": 0,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons20",
+          "source_video": "walking",
+          "arm": "spatial_l1",
+          "train_seed": 1,
+          "reference": "R65_spatial_l1_seed1",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r65/stage001/seed1/spatial_l1--walking_photons20--recursive_self05.npy",
+          "sha256": "43deae63ca8c969e081d5f1ffaaf07bae58ebaaea991c757b839531ee62f5f33",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/walking_photons20.npz",
+          "input_cache_sha256": "86a4f1ea35631249aeb6afdb838939af697796e0a6f24f20155a2e59cab2b1f6",
+          "checkpoint_sha256": "e2fa913c5a27564a9a7ff640f7c1dce6694389f9059ed95c15f52619e5bc0e84",
+          "online_RGB_history_bytes": 9838080,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        }
+      ],
+      "actual_reviewed": false,
+      "contact": "research/4.temporal-consistency/report/exploration-r69-spatial-L1-quality/fixed-walking_photons20-seed1.png",
+      "sha256": "f3ee488d8a4817fae410c853567444d16ce1afd8338b87e6da121eab99703ed4",
+      "bytes": 2255801,
+      "manifests": {
+        "research/4.temporal-consistency/results/exploration-r69-stage001-eval-seed1/prediction_manifest.jsonl": "55d997028b3cc3c18c09715d119acf06cb8f241d8c146f3a3beb7c5635075881",
+        "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+        "research/4.temporal-consistency/results/exploration-r65-stage001-eval-seed1/prediction_manifest.jsonl": "19e94795100879047560aa9b9ec0bc285c09af90cffa1fd6c3118550691bb0b5"
+      }
+    },
+    {
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "seed": 1,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "R44 MIE MSE raw",
+        "R44 MIE MSE rec .5",
+        "R69 MIE L1 raw",
+        "R69 MIE L1 rec .5",
+        "R65 U-Net L1 raw",
+        "R65 U-Net L1 rec .5"
+      ],
+      "center_xy": [
+        363,
+        176
+      ],
+      "center_shape": [
+        128,
+        128
+      ],
+      "full_FOV_display_box": [
+        266,
+        150
+      ],
+      "input_shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "input_cache": {
+        "domain": "davis_train_pilot",
+        "scene": "walking_photons80",
+        "source_video": "walking",
+        "frames": 64,
+        "shape": [
+          64,
+          480,
+          854,
+          3
+        ],
+        "photons": 80,
+        "input_rng_seed": 12836456888684371681,
+        "path": ".cache/experiments/exploration-r30/walking_photons80.npz",
+        "sha256": "0f311aa6df9f19a46dd1a843c774089d49be63b4c8c6116935e67fe56e401970"
+      },
+      "predictions": [
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons80",
+          "source_video": "walking",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "square_mse",
+          "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/walking_photons80--raw.npy",
+          "sha256": "264c47d2eaf25c913033f002b1283bd9d59c6b73907dd8aaf19a014f4ea374bc",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "displayed_methods": [
+            "raw",
+            "recomputed own-raw recursive .5"
+          ]
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons80",
+          "source_video": "walking",
+          "family": "MobileIE_L1",
+          "seed": 1,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r69/stage001/seed1/walking_photons80--raw.npy",
+          "sha256": "576480e5e2d06588991d1deeeb5c755eb2b2beeddd09151427d26f468c5eb085",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/walking_photons80.npz",
+          "input_cache_sha256": "0f311aa6df9f19a46dd1a843c774089d49be63b4c8c6116935e67fe56e401970",
+          "checkpoint_sha256": "10e328822320c4ea11bea792189fce6247a49616e99c2992fae4ab42b7b29e5b",
+          "online_RGB_history_bytes": 0,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons80",
+          "source_video": "walking",
+          "family": "MobileIE_L1",
+          "seed": 1,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r69/stage001/seed1/walking_photons80--recursive_self05.npy",
+          "sha256": "392e46898007e9aedac598c68f794974c7d6bfc0f41a62ce12104d8bb76358f0",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/walking_photons80.npz",
+          "input_cache_sha256": "0f311aa6df9f19a46dd1a843c774089d49be63b4c8c6116935e67fe56e401970",
+          "checkpoint_sha256": "10e328822320c4ea11bea792189fce6247a49616e99c2992fae4ab42b7b29e5b",
+          "online_RGB_history_bytes": 9838080,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons80",
+          "source_video": "walking",
+          "arm": "spatial_l1",
+          "train_seed": 1,
+          "reference": "R65_spatial_l1_seed1",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r65/stage001/seed1/spatial_l1--walking_photons80--raw.npy",
+          "sha256": "0e91025ccd6d69d9764c7c7e978728077e2db17ee4efeca7ba68684e70bb3dad",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/walking_photons80.npz",
+          "input_cache_sha256": "0f311aa6df9f19a46dd1a843c774089d49be63b4c8c6116935e67fe56e401970",
+          "checkpoint_sha256": "e2fa913c5a27564a9a7ff640f7c1dce6694389f9059ed95c15f52619e5bc0e84",
+          "online_RGB_history_bytes": 0,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons80",
+          "source_video": "walking",
+          "arm": "spatial_l1",
+          "train_seed": 1,
+          "reference": "R65_spatial_l1_seed1",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r65/stage001/seed1/spatial_l1--walking_photons80--recursive_self05.npy",
+          "sha256": "9a1cc147e58faf22ff066489fcb9dfdfa98ae8e5d52f57dfb2fe5faa0603fe0b",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r30/walking_photons80.npz",
+          "input_cache_sha256": "0f311aa6df9f19a46dd1a843c774089d49be63b4c8c6116935e67fe56e401970",
+          "checkpoint_sha256": "e2fa913c5a27564a9a7ff640f7c1dce6694389f9059ed95c15f52619e5bc0e84",
+          "online_RGB_history_bytes": 9838080,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        }
+      ],
+      "actual_reviewed": false,
+      "contact": "research/4.temporal-consistency/report/exploration-r69-spatial-L1-quality/fixed-walking_photons80-seed1.png",
+      "sha256": "b801163937989f3bae280e8e9950e37642b1166cbaa9c765ba839b0786e88740",
+      "bytes": 2089506,
+      "manifests": {
+        "research/4.temporal-consistency/results/exploration-r69-stage001-eval-seed1/prediction_manifest.jsonl": "55d997028b3cc3c18c09715d119acf06cb8f241d8c146f3a3beb7c5635075881",
+        "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+        "research/4.temporal-consistency/results/exploration-r65-stage001-eval-seed1/prediction_manifest.jsonl": "19e94795100879047560aa9b9ec0bc285c09af90cffa1fd6c3118550691bb0b5"
+      }
+    },
+    {
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "seed": 1,
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "R44 MIE MSE raw",
+        "R44 MIE MSE rec .5",
+        "R69 MIE L1 raw",
+        "R69 MIE L1 rec .5",
+        "R65 U-Net L1 raw",
+        "R65 U-Net L1 rec .5"
+      ],
+      "center_xy": [
+        192,
+        80
+      ],
+      "center_shape": [
+        128,
+        128
+      ],
+      "full_FOV_display_box": [
+        266,
+        150
+      ],
+      "input_shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "input_cache": {
+        "domain": "paired_real_ND_DEV",
+        "scene": "video_15",
+        "frames": 16,
+        "path": ".cache/experiments/exploration-r10/video_15_native_crop.npz",
+        "sha256": "08708be23625b82ff4da2c1679e2def9e4092e7018aa03dcd8072593dce2cc93",
+        "shape": [
+          16,
+          288,
+          512,
+          3
+        ]
+      },
+      "predictions": [
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_15",
+          "source_video": "video_15",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "square_mse",
+          "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/video_15--raw.npy",
+          "sha256": "e3b359a455ec1cabf6ce8a78ca43a04384b068efbfb4c47c2ed8d4dbf31b49be",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "displayed_methods": [
+            "raw",
+            "recomputed own-raw recursive .5"
+          ]
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_15",
+          "source_video": "video_15",
+          "family": "MobileIE_L1",
+          "seed": 1,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r69/stage001/seed1/video_15--raw.npy",
+          "sha256": "2991654f76228ee9f23d575456e30232fec413467174ed930000125bf92a7559",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_15_native_crop.npz",
+          "input_cache_sha256": "08708be23625b82ff4da2c1679e2def9e4092e7018aa03dcd8072593dce2cc93",
+          "checkpoint_sha256": "10e328822320c4ea11bea792189fce6247a49616e99c2992fae4ab42b7b29e5b",
+          "online_RGB_history_bytes": 0,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_15",
+          "source_video": "video_15",
+          "family": "MobileIE_L1",
+          "seed": 1,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r69/stage001/seed1/video_15--recursive_self05.npy",
+          "sha256": "f30f06141844d7ab3ef19728d909a1ae6aad25d302530add1f986b03bd6378e9",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_15_native_crop.npz",
+          "input_cache_sha256": "08708be23625b82ff4da2c1679e2def9e4092e7018aa03dcd8072593dce2cc93",
+          "checkpoint_sha256": "10e328822320c4ea11bea792189fce6247a49616e99c2992fae4ab42b7b29e5b",
+          "online_RGB_history_bytes": 3538944,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_15",
+          "source_video": "video_15",
+          "arm": "spatial_l1",
+          "train_seed": 1,
+          "reference": "R65_spatial_l1_seed1",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r65/stage001/seed1/spatial_l1--video_15--raw.npy",
+          "sha256": "b452c2098f6440cf91bcc4d0486a123e9f1520cd8e84b8165987c67c4101cdfd",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_15_native_crop.npz",
+          "input_cache_sha256": "08708be23625b82ff4da2c1679e2def9e4092e7018aa03dcd8072593dce2cc93",
+          "checkpoint_sha256": "e2fa913c5a27564a9a7ff640f7c1dce6694389f9059ed95c15f52619e5bc0e84",
+          "online_RGB_history_bytes": 0,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_15",
+          "source_video": "video_15",
+          "arm": "spatial_l1",
+          "train_seed": 1,
+          "reference": "R65_spatial_l1_seed1",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r65/stage001/seed1/spatial_l1--video_15--recursive_self05.npy",
+          "sha256": "9224065c457b5ebbf78c3f0712e142c46f6f7c1fb3e933f083b154329832be95",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_15_native_crop.npz",
+          "input_cache_sha256": "08708be23625b82ff4da2c1679e2def9e4092e7018aa03dcd8072593dce2cc93",
+          "checkpoint_sha256": "e2fa913c5a27564a9a7ff640f7c1dce6694389f9059ed95c15f52619e5bc0e84",
+          "online_RGB_history_bytes": 3538944,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        }
+      ],
+      "actual_reviewed": false,
+      "contact": "research/4.temporal-consistency/report/exploration-r69-spatial-L1-quality/fixed-video_15-seed1.png",
+      "sha256": "f264b391f5b2ed03cead605e5930b497d7c28fe1cfc25996404983db04823712",
+      "bytes": 1968665,
+      "manifests": {
+        "research/4.temporal-consistency/results/exploration-r69-stage001-eval-seed1/prediction_manifest.jsonl": "55d997028b3cc3c18c09715d119acf06cb8f241d8c146f3a3beb7c5635075881",
+        "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+        "research/4.temporal-consistency/results/exploration-r65-stage001-eval-seed1/prediction_manifest.jsonl": "19e94795100879047560aa9b9ec0bc285c09af90cffa1fd6c3118550691bb0b5"
+      }
+    },
+    {
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "seed": 1,
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "R44 MIE MSE raw",
+        "R44 MIE MSE rec .5",
+        "R69 MIE L1 raw",
+        "R69 MIE L1 rec .5",
+        "R65 U-Net L1 raw",
+        "R65 U-Net L1 rec .5"
+      ],
+      "center_xy": [
+        192,
+        80
+      ],
+      "center_shape": [
+        128,
+        128
+      ],
+      "full_FOV_display_box": [
+        266,
+        150
+      ],
+      "input_shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "input_cache": {
+        "domain": "paired_real_ND_DEV",
+        "scene": "video_47",
+        "frames": 16,
+        "path": ".cache/experiments/exploration-r10/video_47_native_crop.npz",
+        "sha256": "00b20972a571b776403fc7c65f28c2ae32dd6140f6569adf2190b38434c012f6",
+        "shape": [
+          16,
+          288,
+          512,
+          3
+        ]
+      },
+      "predictions": [
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_47",
+          "source_video": "video_47",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "square_mse",
+          "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/video_47--raw.npy",
+          "sha256": "ef297cb355b0fda9e8830a0a4136ebc9f5cda3ba8f90073dc4a0d8ffd76b2cb5",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "displayed_methods": [
+            "raw",
+            "recomputed own-raw recursive .5"
+          ]
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_47",
+          "source_video": "video_47",
+          "family": "MobileIE_L1",
+          "seed": 1,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r69/stage001/seed1/video_47--raw.npy",
+          "sha256": "484ead171fbe18fbe6783cfe56a8cee0ad7e18400d43d8c092b89706dc8826e9",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_47_native_crop.npz",
+          "input_cache_sha256": "00b20972a571b776403fc7c65f28c2ae32dd6140f6569adf2190b38434c012f6",
+          "checkpoint_sha256": "10e328822320c4ea11bea792189fce6247a49616e99c2992fae4ab42b7b29e5b",
+          "online_RGB_history_bytes": 0,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_47",
+          "source_video": "video_47",
+          "family": "MobileIE_L1",
+          "seed": 1,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r69/stage001/seed1/video_47--recursive_self05.npy",
+          "sha256": "79d5b714f2e86a1e47f6076a796bc2136e263d477fff5fd8040826839a8db9d3",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_47_native_crop.npz",
+          "input_cache_sha256": "00b20972a571b776403fc7c65f28c2ae32dd6140f6569adf2190b38434c012f6",
+          "checkpoint_sha256": "10e328822320c4ea11bea792189fce6247a49616e99c2992fae4ab42b7b29e5b",
+          "online_RGB_history_bytes": 3538944,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_47",
+          "source_video": "video_47",
+          "arm": "spatial_l1",
+          "train_seed": 1,
+          "reference": "R65_spatial_l1_seed1",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r65/stage001/seed1/spatial_l1--video_47--raw.npy",
+          "sha256": "8a887a1aeec5055404f36db1bead0a4f9dd27d979831e4885d74fd7efe4982b9",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_47_native_crop.npz",
+          "input_cache_sha256": "00b20972a571b776403fc7c65f28c2ae32dd6140f6569adf2190b38434c012f6",
+          "checkpoint_sha256": "e2fa913c5a27564a9a7ff640f7c1dce6694389f9059ed95c15f52619e5bc0e84",
+          "online_RGB_history_bytes": 0,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_47",
+          "source_video": "video_47",
+          "arm": "spatial_l1",
+          "train_seed": 1,
+          "reference": "R65_spatial_l1_seed1",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r65/stage001/seed1/spatial_l1--video_47--recursive_self05.npy",
+          "sha256": "2ed484f6264cb6c7e2b8ac7cfa1c04010000fa2469c6d8820cb6b721fad34606",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_47_native_crop.npz",
+          "input_cache_sha256": "00b20972a571b776403fc7c65f28c2ae32dd6140f6569adf2190b38434c012f6",
+          "checkpoint_sha256": "e2fa913c5a27564a9a7ff640f7c1dce6694389f9059ed95c15f52619e5bc0e84",
+          "online_RGB_history_bytes": 3538944,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        }
+      ],
+      "actual_reviewed": false,
+      "contact": "research/4.temporal-consistency/report/exploration-r69-spatial-L1-quality/fixed-video_47-seed1.png",
+      "sha256": "009529dbce556d92de6fe3d3ab423a1b7e0b8134ff1e4da415673d1c28f979d9",
+      "bytes": 1331558,
+      "manifests": {
+        "research/4.temporal-consistency/results/exploration-r69-stage001-eval-seed1/prediction_manifest.jsonl": "55d997028b3cc3c18c09715d119acf06cb8f241d8c146f3a3beb7c5635075881",
+        "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+        "research/4.temporal-consistency/results/exploration-r65-stage001-eval-seed1/prediction_manifest.jsonl": "19e94795100879047560aa9b9ec0bc285c09af90cffa1fd6c3118550691bb0b5"
+      }
+    },
+    {
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "seed": 1,
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "R44 MIE MSE raw",
+        "R44 MIE MSE rec .5",
+        "R69 MIE L1 raw",
+        "R69 MIE L1 rec .5",
+        "R65 U-Net L1 raw",
+        "R65 U-Net L1 rec .5"
+      ],
+      "center_xy": [
+        192,
+        80
+      ],
+      "center_shape": [
+        128,
+        128
+      ],
+      "full_FOV_display_box": [
+        266,
+        150
+      ],
+      "input_shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "input_cache": {
+        "domain": "paired_real_ND_DEV",
+        "scene": "video_91",
+        "frames": 16,
+        "path": ".cache/experiments/exploration-r10/video_91_native_crop.npz",
+        "sha256": "6e198a4a28ee814b67ae9237aa30f05ea1e086c785480da5c9c97d73adabb22a",
+        "shape": [
+          16,
+          288,
+          512,
+          3
+        ]
+      },
+      "predictions": [
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_91",
+          "source_video": "video_91",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "square_mse",
+          "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/video_91--raw.npy",
+          "sha256": "182c7a9701eb9493b335e08fe1a2df11812d7813f1530763321da49158f0742a",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "displayed_methods": [
+            "raw",
+            "recomputed own-raw recursive .5"
+          ]
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_91",
+          "source_video": "video_91",
+          "family": "MobileIE_L1",
+          "seed": 1,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r69/stage001/seed1/video_91--raw.npy",
+          "sha256": "41e3a504f474ca21093cf1c8512ffaa740684715493e1ad0c36a5851e3c01258",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_91_native_crop.npz",
+          "input_cache_sha256": "6e198a4a28ee814b67ae9237aa30f05ea1e086c785480da5c9c97d73adabb22a",
+          "checkpoint_sha256": "10e328822320c4ea11bea792189fce6247a49616e99c2992fae4ab42b7b29e5b",
+          "online_RGB_history_bytes": 0,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_91",
+          "source_video": "video_91",
+          "family": "MobileIE_L1",
+          "seed": 1,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r69/stage001/seed1/video_91--recursive_self05.npy",
+          "sha256": "851a191d8fe1b6416d046bb98ec4ea4c99411511ff6868ed177928ae731d39b1",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_91_native_crop.npz",
+          "input_cache_sha256": "6e198a4a28ee814b67ae9237aa30f05ea1e086c785480da5c9c97d73adabb22a",
+          "checkpoint_sha256": "10e328822320c4ea11bea792189fce6247a49616e99c2992fae4ab42b7b29e5b",
+          "online_RGB_history_bytes": 3538944,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_91",
+          "source_video": "video_91",
+          "arm": "spatial_l1",
+          "train_seed": 1,
+          "reference": "R65_spatial_l1_seed1",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r65/stage001/seed1/spatial_l1--video_91--raw.npy",
+          "sha256": "2fc73ad5e521d96b86bdb859fcebeb2e1d6dbaad65473d2e4efa9c89a74037bd",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_91_native_crop.npz",
+          "input_cache_sha256": "6e198a4a28ee814b67ae9237aa30f05ea1e086c785480da5c9c97d73adabb22a",
+          "checkpoint_sha256": "e2fa913c5a27564a9a7ff640f7c1dce6694389f9059ed95c15f52619e5bc0e84",
+          "online_RGB_history_bytes": 0,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_91",
+          "source_video": "video_91",
+          "arm": "spatial_l1",
+          "train_seed": 1,
+          "reference": "R65_spatial_l1_seed1",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r65/stage001/seed1/spatial_l1--video_91--recursive_self05.npy",
+          "sha256": "973e4268611d4851c5ec5835084e3338d1bf8f02390ee4da36ecd277dd1c1c2b",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_91_native_crop.npz",
+          "input_cache_sha256": "6e198a4a28ee814b67ae9237aa30f05ea1e086c785480da5c9c97d73adabb22a",
+          "checkpoint_sha256": "e2fa913c5a27564a9a7ff640f7c1dce6694389f9059ed95c15f52619e5bc0e84",
+          "online_RGB_history_bytes": 3538944,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        }
+      ],
+      "actual_reviewed": false,
+      "contact": "research/4.temporal-consistency/report/exploration-r69-spatial-L1-quality/fixed-video_91-seed1.png",
+      "sha256": "60edf3d2154b6bc884ab57f3cfbe4d7dd319824841fc4b9049cae99896d16e44",
+      "bytes": 1808892,
+      "manifests": {
+        "research/4.temporal-consistency/results/exploration-r69-stage001-eval-seed1/prediction_manifest.jsonl": "55d997028b3cc3c18c09715d119acf06cb8f241d8c146f3a3beb7c5635075881",
+        "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+        "research/4.temporal-consistency/results/exploration-r65-stage001-eval-seed1/prediction_manifest.jsonl": "19e94795100879047560aa9b9ec0bc285c09af90cffa1fd6c3118550691bb0b5"
+      }
+    },
+    {
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "seed": 1,
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "R44 MIE MSE raw",
+        "R44 MIE MSE rec .5",
+        "R69 MIE L1 raw",
+        "R69 MIE L1 rec .5",
+        "R65 U-Net L1 raw",
+        "R65 U-Net L1 rec .5"
+      ],
+      "center_xy": [
+        192,
+        80
+      ],
+      "center_shape": [
+        128,
+        128
+      ],
+      "full_FOV_display_box": [
+        266,
+        150
+      ],
+      "input_shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "input_cache": {
+        "domain": "paired_real_ND_DEV",
+        "scene": "video_121",
+        "frames": 16,
+        "path": ".cache/experiments/exploration-r10/video_121_native_crop.npz",
+        "sha256": "a5e00a35c79271f57e269ea723c1bcecb4834abedce2db6098e73c33efd7b4e9",
+        "shape": [
+          16,
+          288,
+          512,
+          3
+        ]
+      },
+      "predictions": [
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_121",
+          "source_video": "video_121",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "square_mse",
+          "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/video_121--raw.npy",
+          "sha256": "36cd47bcfa36d859befa06ce0eab1ee5a04c048ce695f0976302085cb763c967",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "displayed_methods": [
+            "raw",
+            "recomputed own-raw recursive .5"
+          ]
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_121",
+          "source_video": "video_121",
+          "family": "MobileIE_L1",
+          "seed": 1,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r69/stage001/seed1/video_121--raw.npy",
+          "sha256": "1d48b914fd71f6da6d6902d55943d1abe6f12a73ac6ffb74c2159098a1105071",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_121_native_crop.npz",
+          "input_cache_sha256": "a5e00a35c79271f57e269ea723c1bcecb4834abedce2db6098e73c33efd7b4e9",
+          "checkpoint_sha256": "10e328822320c4ea11bea792189fce6247a49616e99c2992fae4ab42b7b29e5b",
+          "online_RGB_history_bytes": 0,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_121",
+          "source_video": "video_121",
+          "family": "MobileIE_L1",
+          "seed": 1,
+          "parameters": 4075,
+          "project_updates": 8000,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r69/stage001/seed1/video_121--recursive_self05.npy",
+          "sha256": "77fbd8a2a29f693150ab0c004c5530f09692a9eace1625a75e29ceb748e5f8e4",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_121_native_crop.npz",
+          "input_cache_sha256": "a5e00a35c79271f57e269ea723c1bcecb4834abedce2db6098e73c33efd7b4e9",
+          "checkpoint_sha256": "10e328822320c4ea11bea792189fce6247a49616e99c2992fae4ab42b7b29e5b",
+          "online_RGB_history_bytes": 3538944,
+          "note": "Recursive output additionally uses flow/warp/workspace; raw graph unchanged."
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_121",
+          "source_video": "video_121",
+          "arm": "spatial_l1",
+          "train_seed": 1,
+          "reference": "R65_spatial_l1_seed1",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "raw",
+          "path": ".cache/experiments/exploration-r65/stage001/seed1/spatial_l1--video_121--raw.npy",
+          "sha256": "3f74aa497451c34790daa499d381ef5209b4958f14bfa3e620e434f0f53ab91f",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_121_native_crop.npz",
+          "input_cache_sha256": "a5e00a35c79271f57e269ea723c1bcecb4834abedce2db6098e73c33efd7b4e9",
+          "checkpoint_sha256": "e2fa913c5a27564a9a7ff640f7c1dce6694389f9059ed95c15f52619e5bc0e84",
+          "online_RGB_history_bytes": 0,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_121",
+          "source_video": "video_121",
+          "arm": "spatial_l1",
+          "train_seed": 1,
+          "reference": "R65_spatial_l1_seed1",
+          "project_updates": 8000,
+          "parameters": 4316259,
+          "future_wait_max": 0,
+          "method": "recursive_self05",
+          "path": ".cache/experiments/exploration-r65/stage001/seed1/spatial_l1--video_121--recursive_self05.npy",
+          "sha256": "be8db92cb75c7a6331b154432f0e224864511d4070cfaf5ad72ed894c06bf0ca",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "input_cache": ".cache/experiments/exploration-r10/video_121_native_crop.npz",
+          "input_cache_sha256": "a5e00a35c79271f57e269ea723c1bcecb4834abedce2db6098e73c33efd7b4e9",
+          "checkpoint_sha256": "e2fa913c5a27564a9a7ff640f7c1dce6694389f9059ed95c15f52619e5bc0e84",
+          "online_RGB_history_bytes": 3538944,
+          "note": "Classic post additionally uses flow/workspace; inference training conditions differ from other architectures."
+        }
+      ],
+      "actual_reviewed": false,
+      "contact": "research/4.temporal-consistency/report/exploration-r69-spatial-L1-quality/fixed-video_121-seed1.png",
+      "sha256": "797404d4758cfb2303075d3786f7b8f8b68da3cbdd03589107f91f91c65c7433",
+      "bytes": 1563847,
+      "manifests": {
+        "research/4.temporal-consistency/results/exploration-r69-stage001-eval-seed1/prediction_manifest.jsonl": "55d997028b3cc3c18c09715d119acf06cb8f241d8c146f3a3beb7c5635075881",
+        "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+        "research/4.temporal-consistency/results/exploration-r65-stage001-eval-seed1/prediction_manifest.jsonl": "19e94795100879047560aa9b9ec0bc285c09af90cffa1fd6c3118550691bb0b5"
+      }
+    }
+  ],
+  "actual_reviewed": false,
+  "scope": "Generated static contacts only; resized full FOV plus native center, no full-video viewing/MOS."
+}
