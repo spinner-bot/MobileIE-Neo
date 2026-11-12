@@ -1,6 +1,6 @@
 # MobileIE-Neo 服务器工作约定
 
-更新：2026-11-12T23:19:39.023074+08:00；作者：Codex  (sqs_A100)。
+更新：2026-11-12T23:46:50.754716+08:00；作者：Codex  (sqs_A100)。
 
 - 本项目属于zrh。源码仓库为 `/data/Users/zrh/repo/MobileIE-Neo`；项目运行资产统一在 `/data/Users/zrh/data/MobileIE-Neo`。
 - 禁止借用其他用户的虚拟环境、site-packages、数据或缓存；禁止在 `/root`、其他用户目录或全局Python中建立/安装本项目环境。
@@ -130,3 +130,10 @@
 
 - Night恢复收尾finalize002 PID3757631于23:21:50已实际启动，冻结resume_wenzhou_samples_r52.py/list_wenzhou_samples_r52.py/finalize_wenzhou_recovery_r52.py源码；活跃时禁止修改。原恢复正常runtime/manifest后只列catalog002，失败不重试，0Night像素/新CNN。先查acquisition003/runtime.json、finalize002/runtime.json、catalog002/catalog.json实际状态；不要由本历史启动行重启任何进程。
 修改：2026-11-12T23:23:04.310054+08:00；作者：Codex  (sqs_A100)；原因：保留实际目录收尾任务身份和不可改活跃依赖约定。
+
+
+- Night作者备份现已完整正常：acquisition003于23:26:07正常1170848021字节，新增22008316/重叠1MiB通过，原partial未变；catalog002/原finalize002于23:26:17正常24成员/6MP4/13JPG/2TXT/3目录。3752140/3757631均已退出，所有此前“仍活跃”均历史快照，禁止重启旧链。原001提前EOF/本地002 HTTP前Path错误/全部失败保留，别以成功覆盖失败。见process/external-night-wenzhou/journal.md。
+- R60资料已全部正常：两TXT共890字节先读身份，再登记全部6MP4/中部128，六原件1155331513字节正常；prepare001于23:33:54正常768返回RGB/720主目标、连续位置/递增时间、360×640原亮度uint8。DJI实际29.97003FPS/2720×1530、GoPro30/1920×1080，说明DJI0020与实际0021差异保留。0准备CNN/GPU，全部6×3固定输入图已实际查看。不是全原视频/完整标准/GT/六独立地点/手机/最终测试；详见0075与输入review/来源README。
+- R60冻结参考实际运行：evaluate001 PID3772075于23:39:24启动，CPU2/OpenCV1，八R59既有实例各raw/recursive .5，共预定96输出/48CNN/6144中心，主目标5760模型中心/720唯一目标；无训练/新seed/模型/调参。finalize001 PID3773674于23:42:27绑定等待，只在完整正常后生成全部16行表、每源17信号固定图/128帧预览回读，失败不自动重试。progress001在23:44:29核两进程真实存活、仅12输出/768中心前缀，不是最终6144；先读真实runtime/log，禁止从本历史行重启旧进程。
+- 活跃R60源码/依赖摘要见最终config，包括evaluate_wenzhou_r60.py、wenzhou_references_r60.py、summarize_wenzhou_r60.py、render_wenzhou_r60.py、finalize_wenzhou_references_r60.py及R59/原加载/流模块，执行期间禁止修改。所有输出共用原输入评价流/接受域，不是GT，不能以暗/模糊低变化代理称质量成功；后处理自身raw流成本/FD未来2与训练历史保持披露。当前尚无Night模型最终/视觉结论，旧局部止损继续，目标active；paper仍13页build007，尚无确立新方法。资产仅zrh自有data，阶段推送和no-ff继续。
+修改：2026-11-12T23:46:50.754716+08:00；作者：Codex  (sqs_A100)；原因：闭环完整Night获取与身份/固定准备，接续真实活跃评价而非历史下载，记录所有限制和源码冻结。
