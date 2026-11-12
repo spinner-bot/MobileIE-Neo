@@ -41,7 +41,7 @@ export GRADLE_USER_HOME="$ANDROID_DEV_ROOT/gradle-cache"
 export ANDROID_NDK_HOME="$ANDROID_HOME/ndk/27.3.13750724"
 export TMPDIR="$ANDROID_DEV_ROOT/tmp"
 export ADB_SERVER_SOCKET=tcp:localhost:5038
-export PATH="$JAVA_HOME/bin:$ANDROID_DEV_ROOT/gradle-8.13/bin:$ANDROID_HOME/cmdline-tools/19.0/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools/35.0.0:$ANDROID_HOME/cmake/3.22.1/bin:$ANDROID_HOME/emulator:$PATH"
+export PATH="$ANDROID_DEV_ROOT/bin:$JAVA_HOME/bin:$ANDROID_DEV_ROOT/gradle-8.13/bin:$ANDROID_HOME/cmdline-tools/19.0/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools/35.0.0:$ANDROID_HOME/cmake/3.22.1/bin:$ANDROID_HOME/emulator:$PATH"
 ACTIVATE
 source "$ANDROID_DEV_ROOT/activate.sh"
 # Accept the SDK component licenses for this user-authorized installation.
