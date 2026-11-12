@@ -1,0 +1,29 @@
+{
+  "at": "2026-11-13T04:50:06.776010+08:00",
+  "allowed": true,
+  "samples": [
+    {
+      "gpu": 6,
+      "uuid": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+      "memory_mib": 0,
+      "utilization_percent": 0,
+      "compute_processes": [],
+      "time": "2026-11-13T04:48:00.146429+08:00"
+    },
+    {
+      "gpu": 6,
+      "uuid": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+      "memory_mib": 0,
+      "utilization_percent": 0,
+      "compute_processes": [],
+      "time": "2026-11-13T04:48:01.431213+08:00"
+    }
+  ],
+  "command": [
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/train_spatial_l1_r69.py",
+    "--seed",
+    "1"
+  ],
+  "scope": "Immutable snapshot of original external admission; live guard terminal is not committed until complete."
+}
