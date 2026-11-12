@@ -1,0 +1,41 @@
+{
+  "started_at": "2026-11-12T16:07:04.881170+08:00",
+  "dependencies": [
+    {
+      "seed": 0,
+      "pid": 3395790,
+      "identity": {
+        "start_ticks": "41047611",
+        "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 4 --record research/4.temporal-consistency/process/exploration-r45/stage001/seed0-guard.json -- ./scripts/project-python research/4.temporal-consistency/scripts/train_response_recursion_r45.py --seed 0 "
+      }
+    },
+    {
+      "seed": 1,
+      "pid": 3395791,
+      "identity": {
+        "start_ticks": "41047611",
+        "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 5 --record research/4.temporal-consistency/process/exploration-r45/stage001/seed1-guard.json -- ./scripts/project-python research/4.temporal-consistency/scripts/train_response_recursion_r45.py --seed 1 "
+      }
+    }
+  ],
+  "source_sha256": {
+    "finalize_response_recursion_r45.py": "115f7758f7f83b2898544b9e71b88a5c991971588fa2ee3dffea1337a65407e2",
+    "train_response_recursion_r45.py": "628932cc74f46570d21c6d7dad4e4c295f6c4e945e352227c1cb760f70c41cfc",
+    "evaluate_response_recursion_r45.py": "19bbd026f77e685c00da488f9c4cead223cf4e0fa4124025f1ebf63fd0c559ae",
+    "summarize_response_recursion_r45.py": "313b1b1e968429d830cc02ab8b2ed2649278054337794720a81a23dd57928ccd",
+    "response_cue_r45.py": "804870366389b2cf293384cb795ac445a99db2086501a2a46d98a9dfd9e33c0e",
+    "response_sequence_r45.py": "5af95a98b6de1110d733d2f77b1b7ed05da44e2b6cb2d6095a6eb1b14022ef99",
+    "budget_causal_r33.py": "7cfe138a286fdb488973ffe7c5bc93b69ad505af981e22cba824402c491b2e3b",
+    "half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+    "aligned_raw_history_r11.py": "e367727401f82ccf0bccaf8d88f904e4aebf8b78186f0539eedeed222b2d2227",
+    "aggregation_controls_r20.py": "7b4541be8512ca1edb755b5a73f889351e376f9a8fc1fdec7ed633a4438c116c",
+    "exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+    "video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0",
+    "prepare_cache_r5.py": "675860fc6ef1d97d28750815e99f5c923ecfd94e94254f1f7a7685f08d84f2c8",
+    "dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498",
+    "finalize_preserved_r37.py": "bc5bc7e848d703f34e3e5853a006b73a34d9204b5db4f4a8f12beb18e5d96f71",
+    "finalize_bounded_video_r44.py": "2fed7e7fbb602da866c9c0aa6e98c0845d8e9592d3585ab88814592b331ba13a"
+  },
+  "revision": "0f2595d98952241a4749b1e1fdbb2c21f9117b69",
+  "scope": "Both identified trainings complete 12000 new controller updates each, frozen base unchanged, before 180 final CPU rows. No auto retry/checkpoint selection or wall cutoff."
+}
