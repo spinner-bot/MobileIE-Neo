@@ -38,11 +38,12 @@ def main():
         ax.set(title=title, xlabel='Reference-flow temporal error (lower is better)',
                ylabel='RGB PSNR (dB, higher is better)')
         ax.grid(alpha=.2)
-        ax.legend(fontsize=7, loc='best')
     fig.suptitle('R41 matched FP32 forms: same data / updates, 4075-parameter deployment\n'
                  'Pale points: individual seeds; solid points: mean. Post variants retain history and flow.',
                  fontsize=11)
-    fig.tight_layout()
+    handles, labels = axes[0].get_legend_handles_labels()
+    fig.legend(handles, labels, loc='lower center', ncol=3, fontsize=8)
+    fig.tight_layout(rect=(0, .13, 1, 1))
     for extension in ['png', 'pdf']:
         fig.savefig(folder/('matched_forms.'+extension), dpi=160, bbox_inches='tight')
     plt.close(fig)
