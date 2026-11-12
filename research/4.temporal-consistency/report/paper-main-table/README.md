@@ -256,3 +256,32 @@ raw无历史或flow，finite/recursive有传统历史与motion开销；手机延
 注册结构门槛：False；无状态部署门槛：False；传统递归组合质量门槛：False。组合成本未测，不挪作无状态成功。
 
 有理分母推理保留；raw单帧，finite/recursive需要自身raw估计motion及RGB历史。两域/两个seed/全部条件保留，均值不是显著性证明；不建立新颖性、手机成本或独立测试结论。[完整配对和门槛](../exploration-r44-bounded-video/tables.md)、[机器表](bounded_video_evidence.csv)。
+
+## R45完整共享表征递归控制与固定alpha前沿
+
+同一R44最终square_mse冻结空间底座（已累计8000），两seed三个学习控制各新增4000更新，总24000。原raw回放、fixed α=.1/.25/.5/.75/.9、全局α/RGB/内部提示全部保留；仅全部180行/20CNN和协调器正常结束后进入本表。
+
+|域|输出|参数|PSNR|SSIM|时序↓|边缘↓|
+|---|---|---:|---:|---:|---:|---:|
+|davis_train_pilot|fixed_01|4075|26.732729|0.732230|8.921811|4.115431|
+|davis_train_pilot|fixed_025|4075|26.932460|0.751111|7.768194|3.940652|
+|davis_train_pilot|fixed_05|4075|26.706510|0.767504|6.469695|3.821135|
+|davis_train_pilot|fixed_075|4075|25.555811|0.751340|5.859992|4.011525|
+|davis_train_pilot|fixed_09|4075|23.832652|0.693034|5.935660|4.519718|
+|davis_train_pilot|raw|4075|26.465786|0.716221|9.900441|4.277081|
+|davis_train_pilot|response|4116|27.115699|0.760573|7.121737|3.860483|
+|davis_train_pilot|rgb|4116|27.112124|0.760378|7.140606|3.862030|
+|davis_train_pilot|scalar|4076|26.921635|0.749133|7.892656|3.957834|
+|paired_real_ND_DEV|fixed_01|4075|27.187630|0.916116|3.315930|1.465329|
+|paired_real_ND_DEV|fixed_025|4075|27.217140|0.920867|2.940176|1.412129|
+|paired_real_ND_DEV|fixed_05|4075|27.107765|0.922044|2.569853|1.385233|
+|paired_real_ND_DEV|fixed_075|4075|26.720750|0.910647|2.475401|1.468985|
+|paired_real_ND_DEV|fixed_09|4075|26.147374|0.886949|2.575231|1.662956|
+|paired_real_ND_DEV|raw|4075|27.128274|0.911261|3.652687|1.517297|
+|paired_real_ND_DEV|response|4116|27.231626|0.923067|2.741460|1.386956|
+|paired_real_ND_DEV|rgb|4116|27.233645|0.923107|2.733771|1.386211|
+|paired_real_ND_DEV|scalar|4076|27.217755|0.920442|2.979227|1.417152|
+
+独立提示门槛：False；固定alpha前沿不被支配：True；注册完整质量门槛：False。成本另测，不能由质量共享计算推断速度。
+
+提示只是特征RMS的确定性重标度，不能称新的导数/方差理论；普通学习融合或更优常数α不自动证明内部提示有独立作用。除raw外推理均有motion和两个RGB历史；同容量RGB生产路径不计算内部提示。未建立手机/夜间/最终测试结论。[完整对照](../exploration-r45-response-recursion/tables.md)、[机器表](response_recursion_evidence.csv)。
