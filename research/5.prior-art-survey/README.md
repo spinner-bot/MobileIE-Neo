@@ -126,3 +126,6 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 - 增量来源核查（2026-11-12T13:10:09.132243+08:00）：[LENVIZ图像/视频边界](docs/30-lenviz-image-and-video-scope.md)，作者交叉链接确认，未取得像素；[DarkVision版本说明](docs/29-raw-srgb-benchmark-boundaries.md)补正式2026出版信息，不以DOI年份代替文献年份。
 
 - [TLC空间强对照与实际成本](docs/31-tlc-strong-spatial-control.md)：补读固定算法源码，区别于R24门控替换；尚未进行新质量评价。
+
+- [时间归一化边界](docs/32-temporal-normalization-boundaries.md)：DNR正文与FLAIR未核验范围；不把BN打包当创新。
+- [有理激活先例与根部候选](docs/33-rational-activation-boundaries.md)：PAU明确已有，候选仅待原型，不称新视频方法或零开销。
