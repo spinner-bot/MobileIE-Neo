@@ -1,0 +1,37 @@
+{
+  "at": "2026-11-12T18:18:42.005980+08:00",
+  "pushed_head": "5d404174785c6ed3ede0c3d8b4a9dc09f216d8c5",
+  "remote_head": "5d404174785c6ed3ede0c3d8b4a9dc09f216d8c5",
+  "ahead": 67,
+  "behind": 0,
+  "stage": "R49 full phone inputs and CNN budget complete; R48 training complete/final CPU active; R47 seed1 complete/seed0 active",
+  "observed_processes": {
+    "3458800": {
+      "live": true,
+      "command": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python /data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/train_task_fastdvd_r47.py --seed 0 "
+    },
+    "3458699": {
+      "live": true,
+      "command": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python /data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/evaluate_task_fastdvd_r47.py --seed 1 "
+    },
+    "3440492": {
+      "live": true,
+      "command": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/finalize_task_fastdvd_r47.py "
+    },
+    "3468657": {
+      "live": true,
+      "command": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python /data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/evaluate_joint_recursion_r48.py --seed 0 "
+    },
+    "3468658": {
+      "live": true,
+      "command": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python /data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/evaluate_joint_recursion_r48.py --seed 1 "
+    },
+    "3446792": {
+      "live": true,
+      "command": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/finalize_joint_recursion_r48.py "
+    }
+  },
+  "author": "Codex  (sqs_A100)",
+  "merge_policy": "explicit no-ff when needed; no rebase/squash/force",
+  "quality_not_inferred": true
+}
