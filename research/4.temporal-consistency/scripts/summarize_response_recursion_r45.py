@@ -110,7 +110,7 @@ def main():
           'independent_cue_screen_passed': independent, 'fixed_frontier_nondominated': nondominated,
           'registered_quality_passed': quality_passed, 'cost_confirmed': False,
           'freeze_local_family': not quality_passed, 'gates': gates, 'source_sha256': sources,
-          'scope': 'Complete DEV only. Cue is an invertible rescaling of feature energy, not new variance theory. No handset or final test.'})
+          'scope': 'Complete DEV only. Cue is a deterministic rescaling of feature energy, not new variance theory. No handset or final test.'})
     lines = ['# R45 complete fixed controller comparison', '',
              'Both seeds, three controls each4000 new updates, same frozen square-MSE base inherited8000. All alpha points retained; 180 quality rows, 20 new CNN sequences obtaining cues and replaying existing raw. DEV only.', '',
              '|Domain|Method|Parameters|PSNR|SSIM|Temporal↓|Edge↓|', '|---|---|---:|---:|---:|---:|---:|']
