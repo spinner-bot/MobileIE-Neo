@@ -127,3 +127,6 @@
 - Night先前所有“原下载仍运行”是历史快照：3514885/3531976于23:03:19提前EOF/上游失败，1148839705/1170848021字节，原partial/两终态/失败保留，未形成catalog。attempt002本地Path错误在HTTP前失败，亦保留；新attempt003 PID3752140于23:17:12只发一次公开Range，206/总长/文件名/1MiB重叠已通过，未完成状态须查acquisition003/runtime.json，不因低速重启。新原件在zrh自有data；完整manifest前不解码/列partial，完整后先只列catalog002并另定像素协议。
 - 迁移03:06已完成，followup-26111223.json再次核验两个Git链接、真实关键包与缓存均在zrh项目data、CUDA未初始化；没有重复全量摘要实验。所有新资产/数据传输继续按规范记录来源/失败/清单，源码、结果、过程/报告分别小步提交，阶段推送。当前论文仍13页build007证据稿，目标active。
 修改：2026-11-12T23:19:39.023074+08:00；作者：Codex  (sqs_A100)；原因：接续完整R59与原Night实际失败/独立有限技术恢复，保持迁移和版本管理约定。
+
+- Night恢复收尾finalize002 PID3757631于23:21:50已实际启动，冻结resume_wenzhou_samples_r52.py/list_wenzhou_samples_r52.py/finalize_wenzhou_recovery_r52.py源码；活跃时禁止修改。原恢复正常runtime/manifest后只列catalog002，失败不重试，0Night像素/新CNN。先查acquisition003/runtime.json、finalize002/runtime.json、catalog002/catalog.json实际状态；不要由本历史启动行重启任何进程。
+修改：2026-11-12T23:23:04.310054+08:00；作者：Codex  (sqs_A100)；原因：保留实际目录收尾任务身份和不可改活跃依赖约定。
