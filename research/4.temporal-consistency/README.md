@@ -2,9 +2,16 @@
 
 目标：以论文为最终产出，深入核查 MobileIE 的架构与训练机制，在移动端计算预算内设计视频增强模型，用传统方法、后处理和已有视频模型对照验证画质、时间稳定性与效率收益。
 
-R44已通过CPU/CUDA目标与结构门槛，stage001于14:17在同组空闲GPU4/5实际启动，两个seed四模型各4000新更新（总32000），共同R41完整起点/新Adam；正式首窗口四输出差均0。先读0056与R44过程。guard3364191/3364219及finalize001进程3367906仍在运行；不要重启。自动评价仅在全部预算与导出通过后执行240新行，尚无最终质量/成本结论。R41强基线保留，R42失败局部网格冻结；有理激活/时间loss不预设创新。
+当前接续（2026-11-13 07:56 CST）：R73原生双矩核心通过CPU与CUDA资格后，正式seed0仍按原链运行；三控制已有1000步备份，最终仍各4000，seed1依原协调顺序接续。先读[0100报告](../../docs/进展报告/0100-T-26111307-双矩先例边界与原链千步备份.md)、[固定协议](docs/exploration-r73-native-moment-core-protocol.md)、[过程](process/exploration-r73/journal.md)和[已核进度](process/exploration-r73/progress002.json)。核实真实PID/start/runtime再操作，不根据旧状态文件或以下历史提示重启任务；八模块、协议及完整依赖已冻结。
 
-- 状态：**前期探索，post_transport收口验证失败，已冻结主方法投入**（2026-11-12）；没有确定最终方法，转向公共动态训练资料与骨干计算分配，实拍白天ND开发集不代表自然夜景，完整独立基准/手机方法评价/时延仍缺
+- 当前性质：前期机制预实验，尚无已建立的新方法、联合收益或最终测试。双矩/递归融合已有先例，[note54](../5.prior-art-survey/docs/54-moment-history-equivalence-and-noise-boundaries.md)明确混合离散度不等于噪声方差；不从loss或中间备份宣称成功。
+- 最近完整外部来源参考：[0098报告](../../docs/进展报告/0098-T-26111307-原生跨来源联合评价完整收口.md)、[R72完整联合表](report/exploration-r72-reds-joint/tables.md)/[决定](docs/exploration-r72-decision.md)。四REDS源原720p/24fps、152质量与156感知行、16固定图actual review及原协调均正常结束。强自身rec仍须保留；这是合成低光DEV，不是自然夜间/独立最终，不再扩大参考家族或损失网格。
+- 完整传统与已发表参考：[0096](../../docs/进展报告/0096-T-26111306-传统对照写入论文与迁移版本记录复核.md)、[R70传统参考决定](docs/exploration-r70-decision.md)，以及既有R53/R56/R65共同适配。原方法/预算/收敛限制仍适用，不把适配或负结果当新贡献。
+- 论文当前为build013、18页/12表的内部证据稿；创新、外部自然动态配对、完整手机成本和独立最终仍待完成。[构建说明](../../paper/BUILDING.txt)给出四生成器顺序与来源门槛，不录入R73部分结果。
+
+以下索引和后半部为历史阶段记录，所述“最新/正在运行/下一步”仅对应原记录日期，均服从上述接续入口和真实runtime。R44及其他旧任务已结束，旧止损决定不回写。
+
+- R28历史状态：**前期探索，post_transport收口验证失败，已冻结主方法投入**（2026-11-12）；没有确定最终方法，转向公共动态训练资料与骨干计算分配，实拍白天ND开发集不代表自然夜景，完整独立基准/手机方法评价/时延仍缺
 - 当前研究入口：[MobileIE 架构、训练核查与视频研究设计](docs/architecture-and-video-research-plan.md)
 - 最新结论：[进展报告0043](../../docs/进展报告/0043-T-26111204-内部时间算子双种子闭环与路线止损.md)、[路线决策](docs/exploration-r28-decision.md)、[论文证据表](report/paper-main-table/README.md)；R28重点双seed/双目标4000步及4416行主评价完成，主门槛未通过
 - 完成闭环：[原注册协议](docs/exploration-r28-protocol.md)、[全表](report/exploration-r28/tables.md)、[质量—时序图](report/exploration-r28/native_quality_stability.png)、[312行共同CPU外部表](report/exploration-r30/tables.md)。actual需要历史/flow/warp，current单帧映射单独评价；不继续沿该算子追加训练/相似网格
