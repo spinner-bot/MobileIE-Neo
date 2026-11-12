@@ -1,4 +1,5 @@
 """One CPU qualification, no images, optimizer updates, or CUDA initialization."""
+import copy
 from datetime import datetime
 import json
 from pathlib import Path
@@ -44,10 +45,12 @@ def main():
               'scope': 'Structural qualification only. Perturbed readout is discarded, not learned or selected.'}
     try:
         for seed in [0, 1]:
-            nets, info = make_models(seed)
+            initialized, info = make_models(seed)
             item = {'seed': seed, 'initialization': info, 'cases': []}
             record['seeds'].append(item)
             for case, shape in enumerate([(1, 4, 3, 17, 19), (2, 4, 3, 16, 20)]):
+                # Keep every shape's BN buffers at the common inherited state.
+                nets = {name: copy.deepcopy(net) for name, net in initialized.items()}
                 torch.manual_seed(63600+10*seed+case)
                 clip, gt = torch.rand(shape), torch.rand(shape)
                 row = {'shape': list(shape), 'initial_deltas': [], 'initial_gradients': {},
@@ -121,11 +124,6 @@ def main():
                             assert reset_error == 0
                             row['export'][name].update(state_storage_bytes=observed,
                                 expected_state_storage_bytes=expected, resized_reset_delta=reset_error)
-                # The next shape rechecks the original zero-readout initialization.
-                for name in ['spatial', 'causal']:
-                    with torch.no_grad():
-                        nets[name].readout.weight.zero_()
-                        nets[name].readout.bias.zero_()
         record['persistent_FP32_state_bytes_batch1'] = {
             f'{height}x{width}': 8*((height+3)//4)*((width+3)//4)*4
             for height, width in [(720, 1280), (1080, 1920)]}
