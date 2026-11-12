@@ -1,8 +1,8 @@
 \section{Verified preliminary evidence}
 \label{sec:evidence}
 The following results come from completed development experiments. They
-constrain method design; they are not evidence that the pending candidate
-has succeeded. The source manifest and generated tables accompany this draft.
+constrain method design and retain failed candidate screens. The source
+manifest and generated tables accompany this draft.
 
 \subsection{A stronger training baseline}
 \input{generated/anchor-table}
@@ -78,9 +78,52 @@ are ineffective. It also does not justify a speed claim: localizing the
 channel map adds approximately 0.299 convolution GMAC at $1080\mathrm p$,
 with prefix sums and memory traffic additional to that count.
 
-\subsection{Pending candidate results}
-\pending{The R44 factorial is still running at this manuscript snapshot.
-Its raw, finite, recursive, per-condition, and per-seed final results must
-be inserted only after both training budgets finish normally and all export
-checks pass. No current loss curve or intermediate checkpoint supplies
-this missing evidence.}
+\subsection{Complete root-operator and temporal-objective factorial}
+\label{sec:r44}
+\input{generated/r44-table}
+Both seeds and all four arms complete their prescribed additional 4,000
+updates. All final export checks pass, with maximum discrepancy
+$2.51\!\times\!10^{-6}$. Common CPU evaluation completes 240 sequence rows
+and 80 neural predictions of sequences. No intermediate checkpoint is used.
+Table~\ref{tab:r44} retains all raw and recursive arm means; finite outputs,
+individual seeds, and all condition comparisons remain in the full record.
+
+The spatial effect is different from the temporal effect. Under MSE,
+the rational operator improves paired-real PSNR over its square control by
+0.441 and 0.475\,dB, with synthetic changes of $-0.027$ and $-0.009$\,dB.
+Under the same temporal objective, paired-real gains are 0.461 and
+0.465\,dB, but temporal ratios range from 0.9925 to 1.0070 across the
+four domain--seed comparisons. Thus the primary structural screen preserves
+quality but fails the required temporal ratio of at most 0.90.
+
+Temporal supervision reduces square-model raw temporal error by about
+5.8\% on synthetic data and 4.7\% on paired-real data. The paired-real
+seed-1 PSNR change is $-0.079$\,dB, outside the $-0.05$\,dB preservation
+bound. The rational model shows a similar objective trade-off. These are
+finite regularization effects, not a demonstrated independent temporal
+advantage of the rational operator.
+
+History remains useful. The rational temporal raw output has temporal
+error ratios of 1.435--1.444 on synthetic data and 1.352--1.359 on paired-real
+data against square-MSE recursion. It does not replace that strong history
+reference. With recursion applied to all models, the registered combination
+screen also fails: the synthetic mean loses about 0.212\,dB against
+square-MSE recursion for only about 3.4\% less temporal error. There is no
+new full-pipeline or phone-cost measurement for this candidate.
+
+All three registered screens therefore fail. The local rational/temporal
+family, loss-weight, scale, learning-rate, training-length, and additional-seed
+search is stopped. The spatial quality signal is retained as a stronger
+reference, without a novelty claim. Continuing square-MSE training itself
+raises paired-real PSNR from about 25.85\,dB at the earlier R41 checkpoint
+to 27.13\,dB; that gain cannot be attributed to the new activation.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{factorial.pdf}
+\caption{Complete R44 factorial. Both seeds and their means remain visible.
+Raw and recursive deployment paths are shown separately. The rational
+operator's paired-real quality gain does not imply an independent temporal
+gain; the temporal objective has a quality--stability trade-off.}
+\label{fig:r44}
+\end{figure}
