@@ -18,3 +18,13 @@
 finalize001协调器PID3440492于17:26:21实际运行，已实查/proc命令与配置；跟踪guard3438398的PID/start_ticks/命令，非仅相信静态锁文件。启动前核对已有process_identity只返回start_ticks/commandline，修正为显式传PID后再执行，没有启动失败协调器或增加科学更新。冻结训练/资料/推理/评价代码摘要；等待seed1完整8000正常终态后先CPU eval1，GPU7空闲双采样后以全新attempt002 guard启动未训练seed0，再CPU eval0并在两评价正常后全表汇总。不改活跃核心，任何数值/评价/新guard失败保留、不自动科学重试。
 
 seed1已实际完成1000更新，308.224秒（含CPU准备），所有记录梯度有限；1000完整权重/优化器存自有cache，稳定元数据单独提交。该检查点不是最终质量，没有运行开发评价或选择最好loss。活跃完整trace/windows/guard仅在正常结束后归档。最终CPU质量预计40行/1792逐帧行，尚未开始。
+
+## seed1训练终态、seed0安全接续与CNN预算
+
+更新：2026-11-12T18:16:34.809690+08:00；作者：Codex  (sqs_A100)。
+
+seed1 guard3438398返回0，完整8000新更新正常结束，耗时2264.675秒。1000–8000元数据、8000行trace/windows、runtime、终态guard/stdout均按完成阶段逐文件提交，原训练3438450不可重启。协调器自动启动CPU eval1 PID3458699（最终20质量/CNN行，仍在运行）。
+
+GPU7两次资源探测允许后，seed0以新attempt002 guard3458784、训练3458800实际启动，外部及CPU完整源后内部准入均通过，首窗口与R41一致。目前已保存1000/2000/3000稳定检查点，无旧训练更新继承。早先GPU5拒绝记录保持原状；state.json为阶段入口记录，实际启动/进程/config优先，不能误以为seed0仍未运行。协调器3440492与CPU eval1及seed0均已实查存活。
+
+单独登记共同CNN预算，用Torch meta对四既有分辨率计形状，0像素/0神经质量/0GPU。原MobileIE1080p复现7.937741G卷积MAC，固定FastDVDnet canonical unbuffered forward为1319.207731G，参数4075/2479096。其temp1每输出三次、temp2一次；64帧窗口192次temp1三帧tuple中仅66种，缓存有算术复用潜力但未实现/计时。单张量体积不是峰值，MobileIE flow/warp及两方非卷积都不在表内，不推导手机速度。源/脚本/完整层调用/表分别提交，见report/exploration-r47-cnn-budget。
