@@ -177,3 +177,7 @@
 - R64 history/A/B全False：causal raw对同权重current时序仅降.37–.96%，对strong recursive时序比1.313–1.500，不能以ND部分PSNR或再次加flow称成功。按R64 decision冻结此固定dense joint路径width/scale/offset/loss/LR/长度/追加seed，不做候选成本优化/新手机夜景/最终测试；不否定所有因果模型或将共同空间seed差异归于时间分支。先读0083、R64 decision/full table/visual-review/journal及prior note48。
 - R64固定20图render正常449.829523秒、pack正常13.680244秒，0新CNN/SGD/GPU；全部20紧凑图和comparison PNG已实际查看，没有人工全视频/逐原图/MOS。全分辨率20图212939870B在zrh自有.cache/experiments/exploration-r64/full-contact-archive001，仓库紧凑20图31871584B及双重摘要/原full manifest入库，不改原浮点指标。所有R64作业已结束，当前无新候选或训练登记；paper仍009/13页证据稿，独立新方法/联合收益/手机/最终验证未完成，目标active。源码、结果、过程、报告密集分别提交，阶段推送，自有data/no-ff/指定作者保持。
 修改：2026-11-13T02:28:05.884246+08:00；作者：Codex  (sqs_A100)；原因：接续完整R64止损与实际全图检查，消除旧活跃任务提示并保留尚未完成研究目标。
+
+- R65两臂StableLLVE任务适配已实际启动：seed0 GPU5 guard3885535/训练3885619，seed1 GPU6 guard3885536/训练3885554，协调3887076。CPU32.938610秒/2丢弃及每seed2次CUDA gate均过；新外部及完整CPU资料后内部双采样通过。L1/原权重20 commutator同MixedPool/原clean初始化，各seed每臂8000共32000；原CMP/512裁块/随机初始化改动已披露，非原论文充分复现/新方法，CUDA warp非确定性保留。progress001 02:56:18实际核活、两臂前缀400/412，不是最终质量；按原进程及runtime接续，不重复启动/改活跃依赖。
+- R65完整训练后原finalize001才执行固定CPU80质量/3584逐帧、40CNN/1792中心及全220条件/44均值；预定数不能当完成。没有新手机/Night/DRV/最终测试，paper仍009/13页，目标active。先读0084、R65协议/journal/finalize001及prior note49；不由gamma缺少前向编码认定实拍根因，也不把已知ISP合成或同网络适配当创新。所有旧网格止损、zrh自有data/project-python/no-ff/指定作者/密集提交及阶段推送继续。
+修改：2026-11-13T02:59:35.060545+08:00；作者：Codex  (sqs_A100)；原因：接续实际已启动的已发表损失对照，保持终态/因果与原始方法复现边界。
