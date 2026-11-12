@@ -70,15 +70,22 @@ def main():
             assert all(p.grad is not None and bool(torch.isfinite(p.grad).all()) for p in active)
             assert all(p.grad is None for p in net.tail_warm.parameters())
             readouts = {}
+            unlocked = {}
             for name in LAYERS:
                 module = net.get_submodule(name)
                 gradient = float(module.conv_out.weight.grad[:, module.out_channels:].norm())
                 assert gradient > 0, name
                 readouts[name] = gradient
+                if step == 1:
+                    extra = float(module.conv.weight.grad[module.out_channels:].norm())
+                    other = float(module.conv1.weight.grad.norm()) if hasattr(module, 'conv1') else float(module.conv_bn[0].weight.grad.norm())
+                    assert extra > 0 and other > 0, (name, extra, other)
+                    unlocked[name] = {'extra_raw_channels': extra, 'additional_conv_or_BN': other}
             norm = torch.nn.utils.clip_grad_norm_(active, 1., error_if_nonfinite=True)
             optimizer.step()
             rounds.append({'discarded_step': step+1, 'mse': float(loss.detach()),
-                           'gradient_norm_before_clip': float(norm), 'other_readout_gradient_norms': readouts})
+                           'gradient_norm_before_clip': float(norm), 'other_readout_gradient_norms': readouts,
+                           'unlocked_branch_gradient_norms': unlocked})
         result['discarded_backward'] = rounds
         net.eval()
         folded = net.slim().to(args.device).eval()
