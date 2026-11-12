@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "rows": 180,
+  "new_neural_sequences": 20,
+  "independent_cue_screen_passed": false,
+  "fixed_frontier_nondominated": true,
+  "registered_quality_passed": false,
+  "cost_confirmed": false,
+  "freeze_local_family": true,
+  "gates": {
+    "response_vs_scalar": {
+      "all_domain_seed_quality": true,
+      "all_domain_seed_time": false,
+      "worst_condition_delta_psnr": -0.03744100043216392,
+      "passed": false
+    },
+    "response_vs_rgb": {
+      "all_domain_seed_quality": true,
+      "all_domain_seed_time": false,
+      "worst_condition_delta_psnr": -0.005907424375045878,
+      "passed": false
+    },
+    "response_vs_fixed05": {
+      "all_domain_seed_quality": true,
+      "all_domain_seed_time": false,
+      "worst_condition_delta_psnr": -0.27921848960344775,
+      "passed": false
+    },
+    "rgb_vs_scalar": {
+      "all_domain_seed_quality": true,
+      "all_domain_seed_time": false,
+      "worst_condition_delta_psnr": -0.03543564262760768,
+      "passed": false
+    },
+    "scalar_vs_fixed05": {
+      "all_domain_seed_quality": true,
+      "all_domain_seed_time": false,
+      "worst_condition_delta_psnr": -0.5348342439572029,
+      "passed": false
+    },
+    "rgb_vs_fixed05": {
+      "all_domain_seed_quality": true,
+      "all_domain_seed_time": false,
+      "worst_condition_delta_psnr": -0.27934905456022463,
+      "passed": false
+    }
+  },
+  "source_sha256": {
+    "research/4.temporal-consistency/results/exploration-r45-stage001-eval-seed0/config.json": "4246a1f748a46cdf9e9cb9627ad122f24af024f14aad521c61059c8684c63879",
+    "research/4.temporal-consistency/results/exploration-r45-stage001-eval-seed0/runtime.json": "bc060931c85500937f40f274615f5af6e1cae6ce49351d5e91a1207d3fcb7b12",
+    "research/4.temporal-consistency/results/exploration-r45-stage001-eval-seed0/per_sequence.jsonl": "6e80e5431a3aa2ff5bdf70e1e088be3fad8d31142f7f3d2f6055cfd685c44715",
+    "research/4.temporal-consistency/results/exploration-r45-stage001-eval-seed0/fusion_stats.jsonl": "5a76f51ea95391c2ad65a7d3f7914a44b3c08a94ab2c77700797c55f55038137",
+    "research/4.temporal-consistency/results/exploration-r45-stage001-eval-seed1/config.json": "888573381d3e8a9323738bd427c1b0ce19953174efbc4da0200d15809004f44c",
+    "research/4.temporal-consistency/results/exploration-r45-stage001-eval-seed1/runtime.json": "a0f400902a5e9447eeca3f7095fce6766173b80b10fb2e3260848c7a573f1f62",
+    "research/4.temporal-consistency/results/exploration-r45-stage001-eval-seed1/per_sequence.jsonl": "8fb82a845222f4ac53479a4117ab2c3b923e342a8ce31117cdb49f4087933480",
+    "research/4.temporal-consistency/results/exploration-r45-stage001-eval-seed1/fusion_stats.jsonl": "d7c150b8242aa8ad65220cbb9d74b4bfd7e21663bb794e10414e6f2875cd1781"
+  },
+  "scope": "Complete DEV only. Cue is a deterministic rescaling of feature energy, not new variance theory. No handset or final test."
+}
