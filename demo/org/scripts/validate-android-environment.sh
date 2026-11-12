@@ -82,6 +82,17 @@ adb version
 cmake --version
 ninja --version
 "$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/clang" --version
+mkdir -p "$ANDROID_DEV_ROOT/validation/java-probe"
+cat > "$ANDROID_DEV_ROOT/validation/java-probe/JavaProbe.java" <<'EOF'
+public class JavaProbe {
+    public static void main(String[] args) {
+        if (Runtime.version().feature() != 17) throw new AssertionError("Expected JDK17");
+        System.out.println("Java compile and execution passed: " + Runtime.version());
+    }
+}
+EOF
+javac -d "$ANDROID_DEV_ROOT/validation/java-probe" "$ANDROID_DEV_ROOT/validation/java-probe/JavaProbe.java"
+java -cp "$ANDROID_DEV_ROOT/validation/java-probe" JavaProbe > "$ANDROID_DEV_ROOT/records/java-probe.txt"
 gradle -p "$probe" --no-daemon --console=plain assembleDebug assembleRelease
 key="$probe/probe-signing.keystore"
 if [[ ! -f "$key" ]]; then
