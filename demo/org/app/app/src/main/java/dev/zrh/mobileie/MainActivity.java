@@ -20,7 +20,7 @@ public final class MainActivity extends Activity {
     private LightLabApplication app;
     private final Runnable observer = this::render;
     private ComparisonView comparison;
-    private TextView status, source, metrics, process, save, camera, pick, sample, modeMie, modeGamma, modeOverview;
+    private TextView status, source, metrics, process, save, camera, pick, sample, modeMie, modeGamma, modeOverview, hint;
     private ProgressBar progress;
     private LinearLayout modes;
     private int mode;
@@ -80,7 +80,7 @@ public final class MainActivity extends Activity {
         comparison=new ComparisonView(this); comparison.setId(R.id.comparison); add(panel,comparison,12);
         modes=row(); modeMie=modeButton("MobileIE",R.id.mode_mobileie,0); modeGamma=modeButton("Gamma 0.5",R.id.mode_gamma,1); modeOverview=modeButton("三图总览",R.id.mode_overview,2);
         weighted(modes,modeMie,0); weighted(modes,modeGamma,6); weighted(modes,modeOverview,6); add(panel,modes,12);
-        TextView hint=text("左右拖动分界线，比较同一位置的细节",11,MUTED,false); hint.setGravity(Gravity.CENTER); add(panel,hint,8);
+        hint=text("选择照片并处理后，可拖动对比同一位置",11,MUTED,false); hint.setGravity(Gravity.CENTER); add(panel,hint,8);
         process=button("开始对比",R.id.process,true); process.setOnClickListener(v->{mode=0;app.process();}); add(panel,process,14); add(body,panel,20);
 
         LinearLayout detail=new LinearLayout(this); detail.setOrientation(LinearLayout.VERTICAL); detail.setPadding(dp(16),dp(16),dp(16),dp(16)); detail.setBackground(round(0xffe8ecdf,16));
@@ -107,6 +107,7 @@ public final class MainActivity extends Activity {
         camera.setEnabled(!app.busy); pick.setEnabled(!app.busy); sample.setEnabled(!app.busy);
         process.setEnabled(loaded&&!app.busy); process.setText(app.busy?"处理中…":done?"重新处理":"开始对比");
         save.setEnabled(done&&!app.busy); modes.setVisibility(done?View.VISIBLE:View.GONE);
+        hint.setText(!done?"选择照片并处理后，可拖动对比同一位置":mode==2?"同一处理范围：原图 / MobileIE / Gamma":"左右拖动分界线，比较同一位置的细节");
         select(modeMie,mode==0); select(modeGamma,mode==1); select(modeOverview,mode==2);
         if(done) metrics.setText(String.format(Locale.CHINA,"MobileIE %s   ·   Gamma %.1f ms\n点击查看分项计时与模型信息",s.mobileie==null?"未生成":String.format(Locale.CHINA,"%.1f ms",s.metadata.optDouble("inference_ms")),s.metadata.optDouble("gamma_ms")));
         else metrics.setText("处理后显示本次耗时，点击可查看计算记录");
@@ -137,7 +138,7 @@ public final class MainActivity extends Activity {
             File captured=pendingCapture; pendingCapture=null;
             if(result==RESULT_OK && captured!=null && captured.length()>0) {
                 Uri uri=FileProvider.getUriForFile(this,getPackageName()+".files",captured); app.load(uri,"现场拍摄");
-            } else { if(captured!=null) captured.delete(); app.message("已取消拍照，保留此前结果"); }
+            } else { if(captured!=null) captured.delete(); app.message(result==RESULT_OK?"相机未返回完整照片，请重新拍摄；此前结果已保留":"已取消拍照，保留此前结果"); }
         } else if(request==PICK) {
             if(result==RESULT_OK && data!=null && data.getData()!=null) {
                 Uri uri=data.getData();
@@ -151,7 +152,7 @@ public final class MainActivity extends Activity {
             Intent intent=getPackageManager().getLaunchIntentForPackage("org.benchmark.demo");
             if(intent==null) { app.message("未安装 AI Benchmark；图片对比仍可独立使用"); return; }
             startActivity(intent);
-        } catch(ActivityNotFoundException e) { app.message("无法打开 AI Benchmark，请手动打开"); }
+        } catch(ActivityNotFoundException | SecurityException e) { app.message("无法打开 AI Benchmark，请手动打开"); }
     }
     private void showRecord() {
         if(app.session==null) return;

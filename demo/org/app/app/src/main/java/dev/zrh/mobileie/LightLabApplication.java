@@ -26,6 +26,8 @@ public final class LightLabApplication extends Application {
     private final Handler main = new Handler(Looper.getMainLooper());
     private final ExecutorService worker = Executors.newSingleThreadExecutor();
     private Runnable listener;
+    private boolean restoring = true;
+    private Runnable queuedAcquisition;
     private MobileEngine engine;
     interface EngineFactory { MobileEngine create(android.content.Context context) throws IOException; }
     volatile EngineFactory engineFactory = MobileEngine::new;
@@ -54,7 +56,11 @@ public final class LightLabApplication extends Application {
                 }
             } catch (Exception e) { restored = null; }
             Session result = restored;
-            main.post(() -> { session = result; busy = false; status = result == null ? "选一张暗光照片，开始本机对比" : "已恢复上次照片，可继续查看或重新处理"; emit(); });
+            main.post(() -> {
+                session = result; busy = false; restoring = false;
+                if (queuedAcquisition != null) { Runnable next = queuedAcquisition; queuedAcquisition = null; next.run(); }
+                else { status = result == null ? "选一张暗光照片，开始本机对比" : "已恢复上次照片，可继续查看或重新处理"; emit(); }
+            });
         });
     }
 
@@ -68,7 +74,10 @@ public final class LightLabApplication extends Application {
     public void loadSample(int index) { beginLoad(() -> getAssets().open(String.format(java.util.Locale.ROOT, "samples/%02d.png", index)), "内置暗光样例 " + index); }
     interface StreamSource { InputStream open() throws IOException; }
     private void beginLoad(StreamSource source, String label) {
-        if (busy) return;
+        if (busy) {
+            if (restoring) queuedAcquisition = () -> beginLoad(source, label);
+            return;
+        }
         busy = true; status = "正在准备图片…"; emit();
         worker.execute(() -> {
             File dir = new File(sessions, UUID.randomUUID().toString());
@@ -170,6 +179,10 @@ public final class LightLabApplication extends Application {
         try { out = atomic.startWrite(); out.write(value.toString().getBytes(java.nio.charset.StandardCharsets.UTF_8)); atomic.finishWrite(out); }
         catch (IOException e) { if (out != null) atomic.failWrite(out); throw e; }
     }
-    static String readable(Throwable e) { return e.getMessage() == null ? "请重试或更换图片" : e.getMessage(); }
+    static String readable(Throwable e) {
+        if (e instanceof SecurityException) return "图片授权已失效，请重新选择";
+        String message = e.getMessage();
+        return message != null && message.matches("(?s).*[\\u4e00-\\u9fff].*") ? message : "请重试或更换图片";
+    }
     static void deleteTree(File dir) { File[] children = dir.listFiles(); if (children != null) for (File f : children) deleteTree(f); dir.delete(); }
 }
