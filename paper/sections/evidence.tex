@@ -128,7 +128,7 @@ gain; the temporal objective has a quality--stability trade-off.}
 \label{fig:r44}
 \end{figure}
 
-\subsection{Fixed-budget published architecture references}
+\subsection{Published checkpoints and fixed-budget adaptations}
 \label{sec:published-adapted}
 \input{generated/published-adapted-table}
 Table~\ref{tab:published-adapted} adds a 696-parameter published Nano
@@ -141,6 +141,17 @@ targets, not pretraining, training parameterization, computation, or full
 convergence. The Nano architecture and its original batch normalization
 are retained; four sequential batch-four forwards preserve that training
 semantics.
+
+We additionally evaluate the original public StableLLVE synthetic-clean
+checkpoint~\cite{stablellve}, with 4,316,259 parameters and zero project
+updates, on the same inputs and CPU metrics. Its official BGR input
+convention and internal size handling are retained. Inference is
+frame-by-frame with no future input; the temporal training objective does
+not create an inference-time state. Classical recursion reduces temporal
+error, while slightly reducing paired-real PSNR. The released clean
+checkpoint does not reproduce the paper's noisy setting, and its transfer
+gap against task-adapted models is not a matched-training architectural
+ranking.
 
 The Nano raw adaptation gains 1.922--2.192\,dB on SYN and
 2.508--2.949\,dB on paired ND over its original LOL-v1 checkpoint. Its
@@ -164,7 +175,7 @@ seeds retain purple stage colours but visibly over-brighten the scene;
 dark-region colour artifacts remain on the outdoor clip. The existing
 MobileIE reference also has severe exposure and colour failures there.
 These unpaired reused clips do not establish colour accuracy, temporal
-perception, or a phone quality ranking. Neither comparison supplies a new
-method, a reproduced standard LLVE benchmark, or handset latency. The
+perception, or a phone quality ranking. These comparisons supply neither a
+new method, a reproduced standard LLVE benchmark, nor handset latency. The
 fixed reference budgets are closed rather than extended by local
 hyperparameter search.
