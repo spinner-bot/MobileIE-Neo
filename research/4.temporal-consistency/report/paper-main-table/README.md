@@ -173,3 +173,28 @@ actual相对独立空间+self-post的注册联合门槛（双seed均过）：Fal
 注册raw诊断门槛（两seed均须真实域相对R34补回2dB、合成域不低于−.2dB）：False。同时保留更强R26真实域参考，不把部分补回称追平。即使通过也仅形成更强数据基线，不自动成为方法、新颖性或独立最终验证。
 
 没有新权重手机延迟或整条CPU速度结论；纯单帧预测/finite/recursive路径分开，后两者部署有motion与历史。实拍域是四段既有白天ND crop。[完整两域与配对](../exploration-r40-mixed-anchor/tables.md)、[机器表](mixed_anchor_evidence.csv)。
+
+## R41同精度训练参数化强对照
+
+修正stage002两训练形式×两seed各4000更新，最终eval/fold门槛通过后共同CPU评价120新行/40CNN序列。两形式都为严格FP32；展开形式训练含MBR/BN，部署折叠回同4075参数。相同窗口、优化器和更新数不代表训练FLOPs相同。
+
+原宽卷积按预训练输出块分开执行以保持初始函数数值门槛，执行实现与上游不同；无warm-up/完整原训练复现。先前失败与1568部分更新另存，不计本阶段模型预算，不用部分权重挑结果。旧R40训练精度不同，仅作单列历史参考。
+
+|域|训练形式|输出|PSNR|SSIM|时序↓|边缘↓|
+|---|---|---|---:|---:|---:|---:|
+|davis_train_pilot|R41_expanded_fp32|finite_self05|26.394347|0.751125|7.285598|3.948008|
+|davis_train_pilot|R41_expanded_fp32|raw|26.185509|0.711587|10.007045|4.312240|
+|davis_train_pilot|R41_expanded_fp32|recursive_self05|26.502948|0.764433|6.520411|3.839379|
+|davis_train_pilot|R41_slim_fp32|finite_self05|25.627506|0.727188|7.959190|4.102653|
+|davis_train_pilot|R41_slim_fp32|raw|25.130525|0.671213|11.362138|4.685800|
+|davis_train_pilot|R41_slim_fp32|recursive_self05|25.799645|0.745059|7.105422|3.937824|
+|paired_real_ND_DEV|R41_expanded_fp32|finite_self05|25.734394|0.916057|2.803777|1.449319|
+|paired_real_ND_DEV|R41_expanded_fp32|raw|25.846515|0.908162|3.629984|1.549785|
+|paired_real_ND_DEV|R41_expanded_fp32|recursive_self05|25.758288|0.919261|2.553407|1.412203|
+|paired_real_ND_DEV|R41_slim_fp32|finite_self05|24.776960|0.912889|2.783841|1.447414|
+|paired_real_ND_DEV|R41_slim_fp32|raw|24.861383|0.902098|3.627413|1.575703|
+|paired_real_ND_DEV|R41_slim_fp32|recursive_self05|24.785150|0.916680|2.540057|1.402136|
+
+展开相对本阶段同精度slim的注册强基线门槛：True。要求同一域两seed均≥+.2dB、另一域均≥−.05dB；这是基线筛查，不是时间机制、新颖性或独立泛化证据。
+
+raw无历史或flow，finite/recursive有传统历史与motion开销；手机延迟未测。两域分开，不合并成功分数。[完整全表及逐seed配对](../exploration-r41-training-form/tables.md)、[机器表](training_form_evidence.csv)。
