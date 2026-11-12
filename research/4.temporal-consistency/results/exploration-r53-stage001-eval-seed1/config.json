@@ -1,0 +1,85 @@
+{
+  "at": "2026-11-12T20:39:29.003972+08:00",
+  "seed": 1,
+  "checkpoint": {
+    "path": ".cache/checkpoints/exploration-r53/stage001/seed1/fastdvd-step8000.pt",
+    "sha256": "13d8c0797ba2febf43baf05ab7a72d1e5c307d1eef6d493b56e11bb8fa346ecc",
+    "step": 8000,
+    "seed": 1,
+    "parameters": 2479096,
+    "BN_counts": {
+      "temp1.inc.convblock.1": 1344000,
+      "temp1.inc.convblock.4": 1344000,
+      "temp1.downc0.convblock.1": 1344000,
+      "temp1.downc0.convblock.3.convblock.1": 1344000,
+      "temp1.downc0.convblock.3.convblock.4": 1344000,
+      "temp1.downc1.convblock.1": 1344000,
+      "temp1.downc1.convblock.3.convblock.1": 1344000,
+      "temp1.downc1.convblock.3.convblock.4": 1344000,
+      "temp1.upc2.convblock.0.convblock.1": 1344000,
+      "temp1.upc2.convblock.0.convblock.4": 1344000,
+      "temp1.upc1.convblock.0.convblock.1": 1344000,
+      "temp1.upc1.convblock.0.convblock.4": 1344000,
+      "temp1.outc.convblock.1": 1344000,
+      "temp2.inc.convblock.1": 448000,
+      "temp2.inc.convblock.4": 448000,
+      "temp2.downc0.convblock.1": 448000,
+      "temp2.downc0.convblock.3.convblock.1": 448000,
+      "temp2.downc0.convblock.3.convblock.4": 448000,
+      "temp2.downc1.convblock.1": 448000,
+      "temp2.downc1.convblock.3.convblock.1": 448000,
+      "temp2.downc1.convblock.3.convblock.4": 448000,
+      "temp2.upc2.convblock.0.convblock.1": 448000,
+      "temp2.upc2.convblock.0.convblock.4": 448000,
+      "temp2.upc1.convblock.0.convblock.1": 448000,
+      "temp2.upc1.convblock.0.convblock.4": 448000,
+      "temp2.outc.convblock.1": 448000
+    },
+    "Adam_phase": 2,
+    "loss_last_window": {
+      "step": 8000,
+      "data_step": 7999,
+      "MSE": 0.002331124385818839,
+      "synthetic_MSE": 0.0024604271166026592,
+      "real_MSE": 0.0022018221206963062,
+      "gradient_norm_before_clip": 0.045673221349716187,
+      "Adam_reset": false,
+      "BN_first": 1344000,
+      "BN_last": 448000,
+      "windows_with_duplicate_source_index": 0
+    },
+    "final_quality_eligible": true
+  },
+  "methods": [
+    "window",
+    "five_current"
+  ],
+  "device": "cpu",
+  "torch_threads": 2,
+  "opencv_threads": 1,
+  "sigma_interface": 15.0,
+  "extra_noise": false,
+  "direct_low_to_GT": true,
+  "base_MobileIE_calls": 0,
+  "new_neural_sequences_expected": 20,
+  "future_wait": {
+    "window": 2,
+    "five_current": 0
+  },
+  "save_arrays": "window only, in owned cache",
+  "protocol_sha256": "884f509b1c1b7ed7325294b1efa990ec14e540b057515cadb5739f85d703d6ec",
+  "cache_indices": {
+    "research/4.temporal-consistency/results/exploration-r30-cache/index.json": "424fa278b2fe66d29de476e2b47328619438f97cf71926448433d1191bb722c1",
+    "research/4.temporal-consistency/results/exploration-r10-cache/index.json": "ec00801b04b873ead0025af91af441b783da3f08c87cf24e9c136a4268ffb43c"
+  },
+  "source_sha256": {
+    "evaluate_source_context_r53.py": "535a9b7573e269fe9061fb35c8e5301847e62effe8a7637055985abe370043c0",
+    "source_context_r53.py": "d3484e17f69b9141f9ba771bfd22d7ab0b55fe564824fcb7ddf70d3df0ce3e62",
+    "task_fastdvd_r47.py": "9e312377b462e81313229665450580280a74444c6c3a6b5b9cba1beca4863c8b",
+    "fastdvdnet_adapter_r12.py": "f61d8d3024f517c288218c6eb3c88001e139549bfa3a9fe7a4a34f894b47b668",
+    "exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+    "video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0",
+    "prepare_cache_r5.py": "675860fc6ef1d97d28750815e99f5c923ecfd94e94254f1f7a7685f08d84f2c8"
+  },
+  "scope": "Source-context corrected reference; extra observations vs R47, reused DEV and public-pretraining overlap; not full convergence, novelty, phone or unseen final."
+}
