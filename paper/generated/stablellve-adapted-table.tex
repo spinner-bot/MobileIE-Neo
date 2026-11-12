@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering\scriptsize\setlength{\tabcolsep}{4pt}
+\caption{Complete StableLLVE network/loss task adaptation. Every arm starts from the same public clean checkpoint and receives 8,000 updates per seed. The official L1 and weight-20 commutator form are retained, but training flow source, crop, initialization and schedule differ from the paper. Raw has no history/future input; rec. adds classical motion/history. JOD uses the fixed nominal display conditions in Table~\ref{tab:perceptual}. This is neither a new method nor a full-paper reproduction.}
+\label{tab:stablellve-adapted}
+\begin{tabular}{llrrrrrr}
+\toprule
+Loss/output & Seed & SYN PSNR & SYN $E_{\rm temp}$ & SYN JOD & ND PSNR & ND $E_{\rm temp}$ & ND JOD\\
+\midrule
+L1 raw & 0 & 28.087 & 7.619 & 7.657 & 28.732 & 3.235 & 8.432\\
+L1 raw & 1 & 28.033 & 7.622 & 7.639 & 28.420 & 3.697 & 8.208\\
+L1 + rec. & 0 & 27.590 & 5.493 & 7.632 & 28.582 & 2.437 & 8.430\\
+L1 + rec. & 1 & 27.547 & 5.497 & 7.613 & 28.578 & 2.741 & 8.247\\
+L1 + commute20 raw & 0 & 25.368 & 7.743 & 6.992 & 25.853 & 2.905 & 7.765\\
+L1 + commute20 raw & 1 & 25.246 & 7.875 & 6.972 & 25.828 & 2.905 & 7.676\\
+L1 + commute20 + rec. & 0 & 25.204 & 5.789 & 6.912 & 25.632 & 2.353 & 7.651\\
+L1 + commute20 + rec. & 1 & 25.147 & 5.859 & 6.895 & 25.579 & 2.344 & 7.562\\
+\bottomrule
+\end{tabular}
+\end{table}
