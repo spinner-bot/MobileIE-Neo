@@ -35,6 +35,32 @@ cannot be inferred from this comparison. All 20 preassigned static
 contacts were inspected, including native center crops. These contacts
 are not full-video playback or human flicker judgments.
 
+\paragraph{Matching the spatial objective does not close the gap.}
+\input{generated/matched-objective-table}
+We separately train original MobileIE with spatial L1 under the same
+source-window schedule and two-stage 8,000-update budget as its existing
+MSE reference (Table~\ref{tab:matched-objective}). The original expanded
+training graph and initialization are retained; both deploy the same
+4,075-parameter graph. The comparison concerns the full objective setting:
+different gradient scales interact with the shared gradient-clipping rule.
+Only the preassigned final weights are evaluated.
+
+L1 does not give a consistent joint improvement. Raw temporal error falls
+by 1.18--3.59\%, while paired-real raw PSNR falls by 0.37--1.03\,dB and
+predicted JOD by 0.12--0.48. Recursive temporal error falls by only
+0.22--1.80\%, again with quality costs. SYN seed 1 raw gains just
+0.036\,dB while predicted JOD decreases slightly. This fixed reference
+is retained without an objective-mixture, learning-rate or seed search.
+All 20 prescribed contacts were inspected, without full-video playback
+or a human temporal study.
+
+With both spatial references trained using L1, the U-Net still has
+1.54--1.79\,dB higher SYN raw PSNR and 1.79--2.51\,dB higher paired-real
+raw PSNR. Thus the objective difference alone does not account for the
+observed gap, but architecture, capacity, pretraining and optimization
+remain coupled. This comparison does not identify capacity as the cause
+or establish a new temporal method.
+
 \paragraph{Perceptual predictions qualify the temporal proxy.}
 \input{generated/perceptual-reference-table}
 We evaluate ColorVideoVDP~\cite{colorvideovdp} on the complete cached
