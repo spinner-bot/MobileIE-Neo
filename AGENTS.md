@@ -1,6 +1,6 @@
 # MobileIE-Neo 服务器工作约定
 
-更新：2026-11-12T23:46:50.754716+08:00；作者：Codex  (sqs_A100)。
+更新：2026-11-13T00:14:00.083934+08:00；作者：Codex  (sqs_A100)。
 
 - 本项目属于zrh。源码仓库为 `/data/Users/zrh/repo/MobileIE-Neo`；项目运行资产统一在 `/data/Users/zrh/data/MobileIE-Neo`。
 - 禁止借用其他用户的虚拟环境、site-packages、数据或缓存；禁止在 `/root`、其他用户目录或全局Python中建立/安装本项目环境。
@@ -137,3 +137,10 @@
 - R60冻结参考实际运行：evaluate001 PID3772075于23:39:24启动，CPU2/OpenCV1，八R59既有实例各raw/recursive .5，共预定96输出/48CNN/6144中心，主目标5760模型中心/720唯一目标；无训练/新seed/模型/调参。finalize001 PID3773674于23:42:27绑定等待，只在完整正常后生成全部16行表、每源17信号固定图/128帧预览回读，失败不自动重试。progress001在23:44:29核两进程真实存活、仅12输出/768中心前缀，不是最终6144；先读真实runtime/log，禁止从本历史行重启旧进程。
 - 活跃R60源码/依赖摘要见最终config，包括evaluate_wenzhou_r60.py、wenzhou_references_r60.py、summarize_wenzhou_r60.py、render_wenzhou_r60.py、finalize_wenzhou_references_r60.py及R59/原加载/流模块，执行期间禁止修改。所有输出共用原输入评价流/接受域，不是GT，不能以暗/模糊低变化代理称质量成功；后处理自身raw流成本/FD未来2与训练历史保持披露。当前尚无Night模型最终/视觉结论，旧局部止损继续，目标active；paper仍13页build007，尚无确立新方法。资产仅zrh自有data，阶段推送和no-ff继续。
 修改：2026-11-12T23:46:50.754716+08:00；作者：Codex  (sqs_A100)；原因：闭环完整Night获取与身份/固定准备，接续真实活跃评价而非历史下载，记录所有限制和源码冻结。
+
+
+- R61仅精确边界核查已正常0.331800秒/12恒等残差0，0图像/MonteCarlo/CNN/SGD/GPU。常系数两观察二次、对角一致/无历史一阶响应族不能靠g缩小Gaussian线性方差项；g=a/2局部去偏方差仍同raw。不是整网/非Gaussian下界或新理论，部分g仍可能改四阶项。结合R6实际负结果与已存在R5/R7 TSM训练，按R61 decision不扩近邻系数/shift比例/去偏loss/训练长度网格。先读0076、note47与R61 journal；NBC直接噪声均值补偿、FC-AIDE独立条件、TAP冻结多尺度先例均已读，不能改名为创新，也不由R37否定所有冻结方法。
+- R60仍按原完整CPU链3772075/3773674运行，progress002在00:13:20实际核活：已进入Gopro1，54输出/27CNN/3456中心是部分前缀，不是最终96/6144；前三DJI已完整不代表全部自然夜景质量。所有活跃源/后续汇总/渲染依赖冻结；按真实runtime/log接续，不重复启动/由慢速或部分数值判终态。
+- R62原公开StableLLVE共同CPU参考已实际启动：3785520于00:09:52、协调器3788570于00:11:44。不是新权重/模型训练，原R15已完成旧评价；这里只补现行R30六SYN/R10四ND的同CPU/指标与自身raw recursive .5。固定4316259参数clean权重、更新0/seed空、10CNN/448中心、20输出/896逐帧，不能和8k适配作相同训练/SOTA排名。progress002核两个进程活跃、2CNN/128中心/4输出前缀；完整终态前不改paper/generated或PDF。
+- R62 evaluate_stablellve_common_r62.py、summarize_stablellve_common_r62.py、finalize_stablellve_common_r62.py及共享适配/指标/流依赖活跃时冻结；协调器只等完整20/448再汇总，不自动重试/墙钟截断。准确状态见R62 runtime/finalize与journal；无新增Night/DRV/手机/最终数据。当前仍build007的13页证据稿，无确立新方法/手机/独立最终结论，目标active；资产与no-ff/小步提交/阶段推送保持。
+修改：2026-11-13T00:14:00.083934+08:00；作者：Codex  (sqs_A100)；原因：接续R61有界排除和两条真实活跃CPU参考链，避免重复旧候选或把部分结果填进论文。
