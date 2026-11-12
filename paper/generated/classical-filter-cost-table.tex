@@ -1,0 +1,15 @@
+\begin{table}[t]
+\centering\small
+\caption{Descriptive CPU2 complete input-filter stages, including array I/O, in seconds per frame. Medians are over the registered sequence conditions; SYN has three source videos under two noise conditions. The same filtered input is reused across two enhancement seeds, so filtering is counted once. Shared-server timings have no isolated repeated latency trial and are not handset speed or an end-to-end future-wait bound.}
+\label{tab:classical-cost}
+\begin{tabular}{llrrr}
+\toprule
+Domain/size & Mode & Conditions & Median s/frame & Range\\
+\midrule
+SYN $480\times854$ & S-only & 6 & 1.824 & 1.816--1.907\\
+SYN $480\times854$ & V-default & 6 & 5.249 & 5.220--5.280\\
+ND $288\times512$ & S-only & 4 & 0.677 & 0.658--0.695\\
+ND $288\times512$ & V-default & 4 & 1.774 & 1.739--1.776\\
+\bottomrule
+\end{tabular}
+\end{table}
