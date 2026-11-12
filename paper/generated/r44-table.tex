@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering\small
+\caption{Complete R44 factorial, both-seed means. All models inherit the same R41 training form and add 4,000 updates. Raw inference is single-frame; recursive outputs retain motion and history. Rational denominators remain at inference.}
+\label{tab:r44}
+\begin{tabular}{llrrrr}
+\toprule
+Model & Output & SYN PSNR & SYN $E_{\rm temp}$ & ND PSNR & ND $E_{\rm temp}$\\
+\midrule
+Square/MSE & Raw & 26.466 & 9.900 & 27.128 & 3.653\\
+Square/temporal & Raw & 26.463 & 9.328 & 27.084 & 3.482\\
+Rational/MSE & Raw & 26.448 & 9.892 & 27.586 & 3.660\\
+Rational/temporal & Raw & 26.428 & 9.315 & 27.547 & 3.484\\
+\midrule
+Square/MSE & Recursive & 26.707 & 6.470 & 27.108 & 2.570\\
+Square/temporal & Recursive & 26.526 & 6.257 & 27.018 & 2.508\\
+Rational/MSE & Recursive & 26.694 & 6.461 & 27.544 & 2.566\\
+Rational/temporal & Recursive & 26.495 & 6.250 & 27.459 & 2.504\\
+\bottomrule
+\end{tabular}
+\end{table}
