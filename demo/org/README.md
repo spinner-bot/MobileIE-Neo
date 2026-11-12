@@ -5,6 +5,7 @@
 - 分支：**`demo.org`**；本目录 `demo/org/` 是这项演示工作的主文件夹。`main` 单向同步到本分支，演示改动不合并回 `main`
 - 状态：**P1 完成**（2026-11-12，备用机一加 9R 跑通自定义模型：GPU FP16 **5.8 ms**、CPU **86–91 ms**），现场演示准备待做
 - 验收安排（2026-11-13 用户确认）：**2026-11-16（下周一）上午最终验收**；导师提前检查演示，用户主要协助演示。预检查时间、验收具体时刻与地点待确认，见[预检查与验收清单](docs/04-acceptance-checklist.md)。
+- 新增需求（2026-11-13）：微 App 支持现场拍照、相册选图及传统方法对照；当前**仅完成[设计草案](docs/05-micro-app-design.md)，待用户审阅，尚未开始制作**。建议采用固定 Gamma 指数 0.5，CPU 链路优先。
 - 上游代码与权重：项目根目录 [`MobileIE/`](../../MobileIE)
 - 关联：[2 号复现](../../research/2.reproduction/README.md)、[5 号前期调研](../../research/5.prior-art-survey/README.md)、[6B06-01 会议记录](../../docs/会议记录/6B06-01/audio%20-%20Transcription.txt)
 - 进展报告：[0009-T-261108-6 号工作启动与手机演示方案](../../docs/进展报告/0009-T-261108-6号工作启动与手机演示方案.md)
@@ -32,6 +33,8 @@
 - **效果端（复用官方脚本）**：在电脑上运行仓库自带的 `MobileIE/test_TFLite_RGB.py`，用同一份 TFLite 模型生成低光增强前后对比图，放到手机/投影上展示。
 
 现场表述：同一份 TFLite 模型，手机实测 X ms；效果对比由官方推理脚本输出。
+
+**2026-11-13 需求更新**：用户提出拍照处理与传统 baseline 的微 App，要求先写设计。上述 B 方案保留为既有可用方案；新增 App 尚在设计审阅阶段，见[05 设计文档](docs/05-micro-app-design.md)。
 
 ## 2. 模型事实（已解析 `lolv1.tflite`）
 
@@ -66,6 +69,7 @@
 | AI Benchmark 手机操作手册 | [`docs/02-ai-benchmark-guide.md`](docs/02-ai-benchmark-guide.md) | 完成 |
 | 官方 TFLite 脚本使用说明 | [`docs/03-official-tflite-inference.md`](docs/03-official-tflite-inference.md) | 完成 |
 | 导师预检查与验收清单 | [`docs/04-acceptance-checklist.md`](docs/04-acceptance-checklist.md) | 已整理，真机彩排与导师反馈待完成 |
+| 拍照增强与传统对照微 App 设计 | [`docs/05-micro-app-design.md`](docs/05-micro-app-design.md) | 设计待审阅，工程 / APK / 真机验证均未开始 |
 | 模型结构解析脚本 | [`scripts/inspect_tflite.py`](scripts/inspect_tflite.py) | 完成 |
 | 演示图片预处理脚本 | [`scripts/prepare_demo_images.py`](scripts/prepare_demo_images.py) | 完成 |
 | 官方推理脚本包装 | [`scripts/run_official_tflite.py`](scripts/run_official_tflite.py) | 完成 |
@@ -109,8 +113,9 @@
 - [ ] 按 [`docs/01-demo-plan.md`](docs/01-demo-plan.md) 的演示脚本串场；
 - [ ] 准备离线素材：手机本地模型、前后对比图、录屏，避免现场依赖网络。
 
-### P3 —— 备选（仅在要求“手机实时处理画面”时启用）
-- Termux 跑官方脚本（不写新 App）或最小安卓 App；需重新评估工作量。
+### P3 —— 微 App（2026-11-13 起仅设计，待审阅）
+- 需求为系统拍照后单张处理、相册选图、MobileIE / 传统方法 / 原图对比，详见[设计草案](docs/05-micro-app-design.md)。
+- [ ] 用户审阅并确认设计，再开展工程实现与真机验证。
 
 ## 6. 复现
 
@@ -150,6 +155,7 @@ PYD=F:/dev-tools/python-envs/MobileIE-Demo/Scripts/python.exe
 
 ## 8. 修订记录
 
+- 2026-11-13 · Codex  (sqs_A100)：补充拍照、相册选图和 Gamma 传统对照的微 App 设计，记录只写文档、暂不制作的用户要求；保留旧演示方案为备份。
 - 2026-11-13 · Codex  (sqs_A100)：接手 `demo.org`；记录周一上午最终验收、导师提前检查及用户协助演示分工，新增预检查清单，修订演示包操作顺序，重申禁止 fast-forward 与阶段推送约定。此次仅完成文档准备，未进行新一轮真机测试。
 - 2026-11-08 · claude code (local)：创建 6 号工作，确定 B 方案，完成模型解析与文档首版。
 - 2026-11-08 · claude code (local)：P0 跑通，LOL eval15 PSNR 23.619 dB；补充 ai-edge-litert 兼容层与结果对比图。
