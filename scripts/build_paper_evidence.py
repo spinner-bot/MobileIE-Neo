@@ -352,6 +352,35 @@ def main():
                          +'|'.join(f'{r[m]:.6f}' for m in ['psnr_rgb', 'ssim_rgb', 'temporal_error', 'edge_mae'])+'|')
         lines += ['', f"展开相对本阶段同精度slim的注册强基线门槛：{form_audit['matched_baseline_screening_passed']}。要求同一域两seed均≥+.2dB、另一域均≥−.05dB；这是基线筛查，不是时间机制、新颖性或独立泛化证据。", '',
                   'raw无历史或flow，finite/recursive有传统历史与motion开销；手机延迟未测。两域分开，不合并成功分数。[完整全表及逐seed配对](../exploration-r41-training-form/tables.md)、[机器表](training_form_evidence.csv)。']
+    tlc_rows = []
+    if (BASE/'report/exploration-r42-tlc/audit.json').exists():
+        tlc_audit = read(Path('report/exploration-r42-tlc/audit.json'))
+        assert tlc_audit['passed'] and tlc_audit['new_rows'] == tlc_audit['reused_reference_rows'] == 60
+        assert tlc_audit['new_neural_sequences'] == 20 and tlc_audit['new_training_updates'] == 0
+        values = read(Path('report/exploration-r42-tlc/domain_summary.json'))
+        assert len(values) == 12
+        for r in values:
+            local = r['anchor_family'] == 'R42_TLC192'
+            tlc_rows.append({**r, 'predictor_params': 4075, 'future_frames': 0,
+                 'flow_at_inference': r['method'] != 'raw',
+                 'predictor_conv_MACs_1080p': macs+144*(1920*1080-1) if local else macs,
+                 'registered_fixed_TLC_screen_passed': tlc_audit['registered_screening_passed'],
+                 'phone_latency_ms': None, 'CPU_pipeline_latency_ms': None,
+                 'scope': 'Known fixed192 spatial TLC on R41 expanded final4000. '
+                          '60 new quality rows plus60 reused global references; no new training. '
+                          'Convolution MACs omit prefix sums, memory traffic and other non-convolution operations.'})
+        with (out/'tlc_evidence.csv').open('w', newline='') as stream:
+            writer = csv.DictWriter(stream, fieldnames=list(tlc_rows[0]))
+            writer.writeheader()
+            writer.writerows(tlc_rows)
+        lines += ['', '## R42固定已知TLC空间统计对照', '',
+                  '同R41展开最终4000两个seed，只将GAP替为窗口192的精确TLC局部均值；权重不变、零新训练。60新行/20CNN序列与同权重global60行复用，raw/finite/recursive完整保留。不是新视频方法，raw仍无时间状态。', '',
+                  '|域|空间统计|输出|PSNR|SSIM|时序↓|边缘↓|', '|---|---|---|---:|---:|---:|---:|']
+        for r in tlc_rows:
+            lines.append('|'+r['domain']+'|'+r['anchor_family']+'|'+r['method']+'|'
+                         +'|'.join(f'{r[m]:.6f}' for m in ['psnr_rgb', 'ssim_rgb', 'temporal_error', 'edge_mae'])+'|')
+        lines += ['', f"固定TLC注册门槛：{tlc_audit['registered_screening_passed']}；要求同域双seed≥+.1dB、另域均≥−.05dB且所有域/seed raw时间比≤1.02。最差逐条件raw ΔPSNR为{tlc_audit['worst_raw_condition_delta_psnr']:.6f}dB。", '',
+                  '参数4075不变，但att卷积从全局一点扩至全分辨率，1080p约新增.299卷积GMAC，前缀和与内存另计；不是零推理开销，当前不据共享质量计时排行手机或独立CPU速度。[完整表](../exploration-r42-tlc/tables.md)、[机器表](tlc_evidence.csv)。']
     (out/'README.md').write_text('\n'.join(lines)+'\n')
     (out/'sources.json').write_text(json.dumps({'sources': sources, 'rows': len(rows),
         'external_data_prepared': {'DAVIS_source_videos': 3, 'DAVIS_synthetic_conditions': 6,
@@ -369,6 +398,7 @@ def main():
         'R39_paired_real_anchor_rows': len(transfer_rows),
         'R40_mixed_anchor_rows': len(mixed_rows),
         'R41_matched_training_form_rows': len(training_form_rows),
+        'R42_fixed_TLC_domain_method_rows': len(tlc_rows),
         'FastDVDnet_documented_R30_DEV_overlap': prior_overlap['overlap_R30_DEV'],
         'heldout_metadata_only': {'video_count': heldout_metadata['video_count'], 'future_frames': heldout_metadata['future_total_frames'],
                                   'JPEG_members_read': heldout_metadata['JPEG_members_read']},
