@@ -1,0 +1,56 @@
+{
+  "at": "2026-11-13T07:05:22.137748+08:00",
+  "CPU_normal": {
+    "0": {
+      "completed_normally": true,
+      "seed": 0,
+      "quality_rows": 72,
+      "frame_rows": 4608,
+      "new_CNN": 0,
+      "new_SGD": 0,
+      "CUDA_initialized": false,
+      "seconds": 1792.0201440220117,
+      "ended": "2026-11-13T06:54:55.960659+08:00"
+    },
+    "1": {
+      "completed_normally": true,
+      "seed": 1,
+      "quality_rows": 72,
+      "frame_rows": 4608,
+      "new_CNN": 0,
+      "new_SGD": 0,
+      "CUDA_initialized": false,
+      "seconds": 1737.7703117670026,
+      "ended": "2026-11-13T06:59:24.706527+08:00"
+    }
+  },
+  "coordinator": {
+    "pid": 4030342,
+    "identity": {
+      "start_ticks": "46167726",
+      "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/finalize_reds_r72.py "
+    }
+  },
+  "perception_guard": {
+    "pid": 4049015,
+    "identity": {
+      "start_ticks": "46455609",
+      "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 4 --record research/4.temporal-consistency/process/exploration-r72/finalize001/perceptual-guard001.json -- ./scripts/project-python research/4.temporal-consistency/scripts/evaluate_cvvdp_reds_r72.py --admission-attempt 1 "
+    }
+  },
+  "perception_child": {
+    "pid": 4049050,
+    "identity": {
+      "start_ticks": "46455774",
+      "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/evaluate_cvvdp_reds_r72.py --admission-attempt 1 "
+    }
+  },
+  "source_sha256_unchanged": true,
+  "perceptual_prefix_rows": 59,
+  "perceptual_terminal_exists": false,
+  "complete_quality_rows": 152,
+  "complete_frame_rows": 9728,
+  "complete_mean_rows": 38,
+  "all16contacts_actual_reviewed": true,
+  "scope": "Full CPU quality and actual static contacts normal. Original separately admitted24fps perception alive; prefix is progress only, no final JOD ranking/restart/new model."
+}
