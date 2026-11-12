@@ -62,6 +62,14 @@ def main():
         assert all(sha(REPO/name) == value for name, value in objective['source_sha256'].items())
         assert all((paper/'generated'/name).exists() for name in objective['generated_tables'])
         sources.append(extension)
+    if r'\input{sections/classical-reference}' in (paper/'main.tex').read_text():
+        extension = paper/'classical-evidence-snapshot.json'
+        classical = json.loads(extension.read_text())
+        assert classical['R70_complete'] and classical['quality_table_rows'] == 12
+        assert classical['cost_table_rows'] == 4 and snapshot['R70_complete_classical_included']
+        assert all(sha(REPO/name) == value for name, value in classical['source_sha256'].items())
+        assert all((paper/'generated'/name).exists() for name in classical['generated_tables'])
+        sources.append(extension)
     command = [str(binary), '--untrusted', '--keep-logs', '--keep-intermediates', '--outdir', str(work), 'main.tex']
     record = {'started_at': datetime.now().astimezone().isoformat(), 'command': command,
               'source_sha256': {str(p.relative_to(REPO)): sha(p) for p in sources},
