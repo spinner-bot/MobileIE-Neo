@@ -132,14 +132,14 @@ class Desktop:
         tk.Label(header,text="◒  微光实验室",font=(self.font,24,"bold"),fg="#243d35",bg="#f6f5ef").pack(side="left")
         tk.Label(header,text="PYTHON DESKTOP  /  本机 · 离线",font=(self.font,11),fg="#68766c",bg="#f6f5ef").pack(side="right")
         body=tk.Frame(root,bg="#f6f5ef");body.pack(fill="both",expand=True,padx=28)
-        rail=tk.Frame(body,bg="#e8ecdf",width=250);rail.pack(side="left",fill="y",padx=(0,20));rail.pack_propagate(False)
-        tk.Label(rail,text="同一张照片，\n看见不同处理。",justify="left",font=(self.font,20,"bold"),fg="#243d35",bg="#e8ecdf").pack(anchor="w",padx=20,pady=(24,12))
+        rail=tk.Frame(body,bg="#e8ecdf",width=250);self.rail=rail;rail.pack(side="left",fill="y",padx=(0,20));rail.pack_propagate(False)
+        self.info_button=self.button(rail,"查看计算记录",self.info,False);self.info_button.pack(side="bottom",fill="x",padx=20,pady=12)
+        tk.Label(rail,text="同一张照片，\n看见不同处理。",justify="left",font=(self.font,20,"bold"),fg="#243d35",bg="#e8ecdf").pack(anchor="w",padx=20,pady=(20,8))
         self.actions=[]
         for label,command,primary in (("选择图片",self.choose,True),("内置暗光样例",self.choose_sample,False),("开始对比",self.process,True),("保存结果",self.save,False)):
-            button=self.button(rail,label,command,primary);button.pack(fill="x",padx=20,pady=6);self.actions.append(button)
-        tk.Label(rail,text="01  选图并确认处理范围\n02  处理后拖动分界线\n03  切换传统 Gamma 对照",justify="left",font=(self.font,11),fg="#68766c",bg="#e8ecdf").pack(anchor="w",padx=20,pady=18)
+            button=self.button(rail,label,command,primary);button.pack(fill="x",padx=20,pady=4);self.actions.append(button)
+        tk.Label(rail,text="01  选图并确认处理范围\n02  处理后拖动分界线\n03  切换传统 Gamma 对照",justify="left",font=(self.font,11),fg="#68766c",bg="#e8ecdf").pack(anchor="w",padx=20,pady=12)
         tk.Label(rail,text="统一输入 600 × 400\nGamma 指数固定为 0.5\nGamma 不包含降噪",justify="left",font=(self.font,10),fg="#68766c",bg="#e8ecdf").pack(anchor="w",padx=20)
-        self.button(rail,"查看计算记录",self.info,False).pack(side="bottom",fill="x",padx=20,pady=20)
         content=tk.Frame(body,bg="white");content.pack(side="left",fill="both",expand=True)
         self.status=tk.StringVar(value="选一张暗光照片，开始本机对比")
         status_label=tk.Label(content,textvariable=self.status,anchor="w",wraplength=760,font=(self.font,12),bg="white",fg="#243d35");status_label.pack(fill="x",padx=20,pady=(18,6))
@@ -221,13 +221,21 @@ class Desktop:
         if self.input is None:
             c.create_oval(w*.55,h*.08,w*.85,h*.50,fill="#e9c28e",outline="");c.create_oval(w*.61,h*.02,w*.91,h*.44,fill="#243d35",outline="")
             c.create_text(32,h*.68,text="让暗处的细节，重新被看见。",anchor="w",fill="#f6f5ef",font=(self.font,18,"bold"));return
-        if self.mode=="三图总览":image=comparison(self.images)
+        if self.mode=="三图总览":
+            image=Image.new("RGB",(1800,400),"#e8ecdf")
+            for i,name in enumerate(("Input","MobileIE","Gamma 0.5")):
+                if self.images[name] is not None:image.paste(self.images[name],(i*600,0))
         else:
             image=self.input.copy();processed=self.images.get(self.mode)
             if processed is not None:
                 x=int(600*self.split);image.paste(processed.crop((x,0,600,400)),(x,0))
-        ratio=min(w/image.width,h/image.height);size=(max(1,int(image.width*ratio)),max(1,int(image.height*ratio)))
+        ratio=min(w/image.width,(h-36 if self.mode=="三图总览" else h)/image.height);size=(max(1,int(image.width*ratio)),max(1,int(image.height*ratio)))
         self.rect=((w-size[0])//2,(h-size[1])//2,size[0],size[1]);self._photo=self.ImageTk.PhotoImage(image.resize(size,Image.Resampling.BILINEAR));c.create_image(w//2,h//2,image=self._photo)
+        if self.mode=="三图总览":
+            x0,y0,iw,ih=self.rect
+            for i,(name,label) in enumerate((("Input","原图"),("MobileIE","MobileIE"),("Gamma 0.5","Gamma 0.5"))):
+                cx=x0+(i+.5)*iw/3;c.create_text(cx,y0+ih+18,text=label,fill="white",font=(self.font,11))
+                if self.images[name] is None:c.create_text(cx,y0+ih/2,text="未生成",fill="#68766c",font=(self.font,11))
         if self.mode!="三图总览" and self.images.get(self.mode) is not None:
             x0,y0,iw,ih=self.rect;x=x0+int(iw*self.split);c.create_line(x,y0,x,y0+ih,fill="white",width=2);c.create_oval(x-16,h/2-16,x+16,h/2+16,fill="white",outline="");c.create_text(x,h/2,text="↔",fill="#243d35",font=(self.font,12))
 

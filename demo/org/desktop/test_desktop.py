@@ -62,7 +62,7 @@ class CoreTests(unittest.TestCase):
             destination=lab.save_results(Path(directory),images,record)
             for key,name in (("Input","input.png"),("MobileIE","mobileie.png"),("Gamma 0.5","gamma-0.5.png")):
                 self.assertEqual(images[key].tobytes(),Image.open(destination/name).tobytes())
-            self.assertEqual((1800,478),Image.open(destination/"comparison.png").size)
+            with Image.open(destination/"comparison.png") as saved:self.assertEqual((1800,478),saved.size)
             self.assertEqual(record,json.loads((destination/"record.json").read_text()))
             before=set(Path(directory).iterdir())
             with self.assertRaises(TypeError):lab.save_results(Path(directory),images,{"bad":object()})
@@ -101,9 +101,10 @@ class GuiTests(unittest.TestCase):
             root.geometry("900x650");root.update();shot("desktop-05-small-window.png")
             self.assertGreater(app.canvas.winfo_height(),100)
             for widget in (app.actions[3],app.chips["Gamma 0.5"]):self.assertLessEqual(widget.winfo_rooty()+widget.winfo_height(),root.winfo_rooty()+root.winfo_height())
-            (OUT/"desktop-gui.json").write_text(json.dumps({"pass":True,"platform":"Linux/Xvfb Tk 8.6 simulation","native_windows_tested":False,"checks":["initial controls","async processing","slider","overview","cancel","PNG/JSON save","invalid input retention","new input clears old timing","model failure baseline","disabled unavailable method"]},indent=2)+"\n")
+            for widget in app.rail.winfo_children():self.assertGreaterEqual(widget.winfo_height(),widget.winfo_reqheight())
         finally:app.close();app.worker_thread.join(timeout=5)
         self.assertFalse(app.worker_thread.is_alive())
+        (OUT/"desktop-gui.json").write_text(json.dumps({"pass":True,"platform":"Linux/Xvfb Tk 8.6 simulation","native_windows_tested":False,"checks":["initial controls","async processing","slider","overview","cancel","PNG/JSON save","invalid input retention","new input clears old timing","model failure baseline","disabled unavailable method","900x650 layout","clean worker exit"]},indent=2)+"\n")
 
 
 if __name__=="__main__":unittest.main(verbosity=2)
