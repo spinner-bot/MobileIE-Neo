@@ -1,0 +1,113 @@
+{
+  "at": "2026-11-13T04:48:45.274800+08:00",
+  "seed": 1,
+  "steps": 8000,
+  "batch": 4,
+  "frames": 4,
+  "crop": 128,
+  "data_steps": [
+    0,
+    7999
+  ],
+  "data": {
+    "manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "verified_files": 384,
+    "scenes": [
+      "video_11",
+      "video_35",
+      "video_92",
+      "video_131",
+      "video_12",
+      "video_20",
+      "video_29",
+      "video_52",
+      "video_59",
+      "video_95",
+      "video_104",
+      "video_122"
+    ],
+    "native_bytes": 2388787200,
+    "real_training_ids": [
+      "video_104",
+      "video_11",
+      "video_12",
+      "video_122",
+      "video_131",
+      "video_20",
+      "video_29",
+      "video_35",
+      "video_52",
+      "video_59",
+      "video_92",
+      "video_95"
+    ],
+    "excluded_native_DEV": [
+      "video_121",
+      "video_15",
+      "video_47",
+      "video_91"
+    ],
+    "all_real_assets_owned": true,
+    "source_manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "synthetic_manifest_sha256": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+    "synthetic_training_videos": 57,
+    "real_tensor_dtype": "uint8 native inputs/GT; float32 /255 after crops",
+    "timing_scope": "Consecutive registered frame indices, not independently verified sensor timing."
+  },
+  "initialization": {
+    "pretrained_sha256": "d40a930fbc0435f47ce08dda17b1c630b86a501be9423b8f48dab14722fb5548",
+    "rep_scale": 4,
+    "branch_seed": 4101,
+    "expanded_layers": [
+      "head.block1.0",
+      "head.block1.2",
+      "body.block1",
+      "att.1",
+      "att1.0",
+      "tail"
+    ],
+    "training_parameters_total": 49978,
+    "training_parameters_active": 47239,
+    "inactive_warm_parameters": 2739,
+    "deployment_parameters": 4075,
+    "raw_convolution_execution": "Preserved outputs and extra outputs convolved separately then concatenated; same MBR weights, BN and readout",
+    "initialization": "Copy each slim kernel/bias into first outputs of the largest raw branch; identity compression, zero other readout columns; copy FST/PReLU.",
+    "warmup": false,
+    "scope": "Original MBR parameterization control, not a reproduction of the complete official training protocol."
+  },
+  "training_parameters": 49978,
+  "active_parameters": 47239,
+  "deployment_parameters": 4075,
+  "objective": "unclipped four-frame mean L1; no temporal/auxiliary term",
+  "optimizer": "fresh Adam initially and after4000",
+  "lr": 0.0001,
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "eps": 1e-08,
+  "weight_decay": 0,
+  "clip": 1,
+  "BN_calls_per_update": 4,
+  "FP32": true,
+  "TF32": false,
+  "discarded_CUDA_SGD": 1,
+  "CPU_gate_sha256": "54d8f2275b4a04e37a3fd912d6d03d31fe7606f6d4231aa39c6170e86656a336",
+  "source_sha256": {
+    "train_spatial_l1_r69.py": "1c28df4771cd8ad885371d36947f673e9bd37715577eb384f8c912105b1524af",
+    "spatial_l1_r69.py": "b779706692d2ff8d202f0b671ae9a4f8b11146d1bb694bb1b7706f8a9ef11152",
+    "check_spatial_l1_r69.py": "86173bdd19ef2ef3a87af29bd93d6e507667136d7ea78a329fa2c357a08aac09",
+    "training_form_r41.py": "4392fdceb16750ca0a763f4485beec873dc7316d758c95e9eaef042ffceb4ded",
+    "mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5",
+    "dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498",
+    "native_training_r14.py": "588b505ede11ac9f0d747ad1c16b1c118a7bbbbba7405ce918a6163d133d69a1",
+    "exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+    "train_exploration_r2.py": "30ba78b2439ffb6fdf10aafe384975326082129b03ebe562aa118f29ba5d8c7b",
+    "gpu_guard.py": "e0a5050f47d64dbf75fab4146a276f50e3464d07e6a799ad8ccd2c69e8e3a535"
+  },
+  "windows_reference_sha256": "c049b98a8cea7d06abab51540de30df6a8f95fbf1abfbcf6d10832f517b5e87f",
+  "selection": "final8000 only",
+  "protocol_sha256": "c0832ac5639460638582f9dd25595bb9afc9b3bc6445574c076a519e9299e83e",
+  "revision": "aec5c0dcda3b1f50c90738391a1143f6fc93f34e",
+  "scope": "Necessary objective-matched spatial reference, not a novel video method or phone/final-test claim."
+}
