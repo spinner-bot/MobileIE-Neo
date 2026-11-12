@@ -1,0 +1,1694 @@
+{
+  "created_at": "2026-11-12T13:58:13.287786+08:00",
+  "completed_normally": true,
+  "new_optimizer_updates": 0,
+  "window_steps": [
+    4000,
+    4001,
+    4002,
+    4003,
+    4004,
+    4005,
+    4006,
+    4007
+  ],
+  "seeds": [
+    {
+      "seed": 0,
+      "training_checkpoint_sha256": "6a22f1cf952074a2f4a29f52a38ff16cd9c13d4949013690eebba1b369124da0",
+      "statistics": {
+        "head": {
+          "sum_squares": 36533556123.20339,
+          "count": 25165824,
+          "max_abs": 847.28759765625,
+          "RMS": 38.101352864041765
+        },
+        "body": {
+          "sum_squares": 30159710242.438324,
+          "count": 25165824,
+          "max_abs": 4243.294921875,
+          "RMS": 34.6184807632113
+        }
+      },
+      "contexts": [
+        {
+          "step": 4000,
+          "windows": [
+            {
+              "video": "dog-agility",
+              "members": [
+                "DAVIS/JPEGImages/480p/dog-agility/00010.jpg",
+                "DAVIS/JPEGImages/480p/dog-agility/00011.jpg",
+                "DAVIS/JPEGImages/480p/dog-agility/00012.jpg",
+                "DAVIS/JPEGImages/480p/dog-agility/00013.jpg"
+              ],
+              "xy": [
+                242,
+                322
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": false,
+              "photons": 20,
+              "source": "davis_synthetic"
+            },
+            {
+              "video": "dog-gooses",
+              "members": [
+                "DAVIS/JPEGImages/480p/dog-gooses/00053.jpg",
+                "DAVIS/JPEGImages/480p/dog-gooses/00054.jpg",
+                "DAVIS/JPEGImages/480p/dog-gooses/00055.jpg",
+                "DAVIS/JPEGImages/480p/dog-gooses/00056.jpg"
+              ],
+              "xy": [
+                345,
+                64
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": false,
+              "photons": 80,
+              "source": "davis_synthetic"
+            },
+            {
+              "source": "olives_real",
+              "video": "video_29",
+              "indices": [
+                5,
+                6,
+                7,
+                8
+              ],
+              "xy": [
+                738,
+                568
+              ],
+              "flip_horizontal": false,
+              "flip_vertical": true,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_29/00005.png",
+                ".cache/data/olives-r4/Frames/input/video_29/00006.png",
+                ".cache/data/olives-r4/Frames/input/video_29/00007.png",
+                ".cache/data/olives-r4/Frames/input/video_29/00008.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_29/00005.png",
+                ".cache/data/olives-r4/Frames/gt/video_29/00006.png",
+                ".cache/data/olives-r4/Frames/gt/video_29/00007.png",
+                ".cache/data/olives-r4/Frames/gt/video_29/00008.png"
+              ]
+            },
+            {
+              "source": "olives_real",
+              "video": "video_104",
+              "indices": [
+                5,
+                6,
+                7,
+                8
+              ],
+              "xy": [
+                468,
+                842
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": true,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_104/00005.png",
+                ".cache/data/olives-r4/Frames/input/video_104/00006.png",
+                ".cache/data/olives-r4/Frames/input/video_104/00007.png",
+                ".cache/data/olives-r4/Frames/input/video_104/00008.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_104/00005.png",
+                ".cache/data/olives-r4/Frames/gt/video_104/00006.png",
+                ".cache/data/olives-r4/Frames/gt/video_104/00007.png",
+                ".cache/data/olives-r4/Frames/gt/video_104/00008.png"
+              ]
+            }
+          ]
+        },
+        {
+          "step": 4001,
+          "windows": [
+            {
+              "video": "mallard-fly",
+              "members": [
+                "DAVIS/JPEGImages/480p/mallard-fly/00039.jpg",
+                "DAVIS/JPEGImages/480p/mallard-fly/00040.jpg",
+                "DAVIS/JPEGImages/480p/mallard-fly/00041.jpg",
+                "DAVIS/JPEGImages/480p/mallard-fly/00042.jpg"
+              ],
+              "xy": [
+                110,
+                32
+              ],
+              "flip_horizontal": false,
+              "flip_vertical": false,
+              "photons": 80,
+              "source": "davis_synthetic"
+            },
+            {
+              "video": "rollerblade",
+              "members": [
+                "DAVIS/JPEGImages/480p/rollerblade/00031.jpg",
+                "DAVIS/JPEGImages/480p/rollerblade/00032.jpg",
+                "DAVIS/JPEGImages/480p/rollerblade/00033.jpg",
+                "DAVIS/JPEGImages/480p/rollerblade/00034.jpg"
+              ],
+              "xy": [
+                108,
+                14
+              ],
+              "flip_horizontal": false,
+              "flip_vertical": true,
+              "photons": 80,
+              "source": "davis_synthetic"
+            },
+            {
+              "source": "olives_real",
+              "video": "video_104",
+              "indices": [
+                6,
+                7,
+                8,
+                9
+              ],
+              "xy": [
+                878,
+                796
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": false,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_104/00006.png",
+                ".cache/data/olives-r4/Frames/input/video_104/00007.png",
+                ".cache/data/olives-r4/Frames/input/video_104/00008.png",
+                ".cache/data/olives-r4/Frames/input/video_104/00009.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_104/00006.png",
+                ".cache/data/olives-r4/Frames/gt/video_104/00007.png",
+                ".cache/data/olives-r4/Frames/gt/video_104/00008.png",
+                ".cache/data/olives-r4/Frames/gt/video_104/00009.png"
+              ]
+            },
+            {
+              "source": "olives_real",
+              "video": "video_11",
+              "indices": [
+                12,
+                13,
+                14,
+                15
+              ],
+              "xy": [
+                916,
+                143
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": true,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_11/00012.png",
+                ".cache/data/olives-r4/Frames/input/video_11/00013.png",
+                ".cache/data/olives-r4/Frames/input/video_11/00014.png",
+                ".cache/data/olives-r4/Frames/input/video_11/00015.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_11/00012.png",
+                ".cache/data/olives-r4/Frames/gt/video_11/00013.png",
+                ".cache/data/olives-r4/Frames/gt/video_11/00014.png",
+                ".cache/data/olives-r4/Frames/gt/video_11/00015.png"
+              ]
+            }
+          ]
+        },
+        {
+          "step": 4002,
+          "windows": [
+            {
+              "video": "disc-jockey",
+              "members": [
+                "DAVIS/JPEGImages/480p/disc-jockey/00026.jpg",
+                "DAVIS/JPEGImages/480p/disc-jockey/00027.jpg",
+                "DAVIS/JPEGImages/480p/disc-jockey/00028.jpg",
+                "DAVIS/JPEGImages/480p/disc-jockey/00029.jpg"
+              ],
+              "xy": [
+                604,
+                305
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": false,
+              "photons": 80,
+              "source": "davis_synthetic"
+            },
+            {
+              "video": "drift-turn",
+              "members": [
+                "DAVIS/JPEGImages/480p/drift-turn/00029.jpg",
+                "DAVIS/JPEGImages/480p/drift-turn/00030.jpg",
+                "DAVIS/JPEGImages/480p/drift-turn/00031.jpg",
+                "DAVIS/JPEGImages/480p/drift-turn/00032.jpg"
+              ],
+              "xy": [
+                37,
+                143
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": false,
+              "photons": 80,
+              "source": "davis_synthetic"
+            },
+            {
+              "source": "olives_real",
+              "video": "video_104",
+              "indices": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "xy": [
+                1693,
+                750
+              ],
+              "flip_horizontal": false,
+              "flip_vertical": false,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_104/00009.png",
+                ".cache/data/olives-r4/Frames/input/video_104/00010.png",
+                ".cache/data/olives-r4/Frames/input/video_104/00011.png",
+                ".cache/data/olives-r4/Frames/input/video_104/00012.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_104/00009.png",
+                ".cache/data/olives-r4/Frames/gt/video_104/00010.png",
+                ".cache/data/olives-r4/Frames/gt/video_104/00011.png",
+                ".cache/data/olives-r4/Frames/gt/video_104/00012.png"
+              ]
+            },
+            {
+              "source": "olives_real",
+              "video": "video_95",
+              "indices": [
+                8,
+                9,
+                10,
+                11
+              ],
+              "xy": [
+                1392,
+                929
+              ],
+              "flip_horizontal": false,
+              "flip_vertical": false,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_95/00008.png",
+                ".cache/data/olives-r4/Frames/input/video_95/00009.png",
+                ".cache/data/olives-r4/Frames/input/video_95/00010.png",
+                ".cache/data/olives-r4/Frames/input/video_95/00011.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_95/00008.png",
+                ".cache/data/olives-r4/Frames/gt/video_95/00009.png",
+                ".cache/data/olives-r4/Frames/gt/video_95/00010.png",
+                ".cache/data/olives-r4/Frames/gt/video_95/00011.png"
+              ]
+            }
+          ]
+        },
+        {
+          "step": 4003,
+          "windows": [
+            {
+              "video": "elephant",
+              "members": [
+                "DAVIS/JPEGImages/480p/elephant/00058.jpg",
+                "DAVIS/JPEGImages/480p/elephant/00059.jpg",
+                "DAVIS/JPEGImages/480p/elephant/00060.jpg",
+                "DAVIS/JPEGImages/480p/elephant/00061.jpg"
+              ],
+              "xy": [
+                692,
+                149
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": true,
+              "photons": 80,
+              "source": "davis_synthetic"
+            },
+            {
+              "video": "train",
+              "members": [
+                "DAVIS/JPEGImages/480p/train/00003.jpg",
+                "DAVIS/JPEGImages/480p/train/00004.jpg",
+                "DAVIS/JPEGImages/480p/train/00005.jpg",
+                "DAVIS/JPEGImages/480p/train/00006.jpg"
+              ],
+              "xy": [
+                264,
+                270
+              ],
+              "flip_horizontal": false,
+              "flip_vertical": false,
+              "photons": 20,
+              "source": "davis_synthetic"
+            },
+            {
+              "source": "olives_real",
+              "video": "video_52",
+              "indices": [
+                5,
+                6,
+                7,
+                8
+              ],
+              "xy": [
+                848,
+                102
+              ],
+              "flip_horizontal": false,
+              "flip_vertical": true,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_52/00005.png",
+                ".cache/data/olives-r4/Frames/input/video_52/00006.png",
+                ".cache/data/olives-r4/Frames/input/video_52/00007.png",
+                ".cache/data/olives-r4/Frames/input/video_52/00008.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_52/00005.png",
+                ".cache/data/olives-r4/Frames/gt/video_52/00006.png",
+                ".cache/data/olives-r4/Frames/gt/video_52/00007.png",
+                ".cache/data/olives-r4/Frames/gt/video_52/00008.png"
+              ]
+            },
+            {
+              "source": "olives_real",
+              "video": "video_20",
+              "indices": [
+                3,
+                4,
+                5,
+                6
+              ],
+              "xy": [
+                473,
+                678
+              ],
+              "flip_horizontal": false,
+              "flip_vertical": false,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_20/00003.png",
+                ".cache/data/olives-r4/Frames/input/video_20/00004.png",
+                ".cache/data/olives-r4/Frames/input/video_20/00005.png",
+                ".cache/data/olives-r4/Frames/input/video_20/00006.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_20/00003.png",
+                ".cache/data/olives-r4/Frames/gt/video_20/00004.png",
+                ".cache/data/olives-r4/Frames/gt/video_20/00005.png",
+                ".cache/data/olives-r4/Frames/gt/video_20/00006.png"
+              ]
+            }
+          ]
+        },
+        {
+          "step": 4004,
+          "windows": [
+            {
+              "video": "rollerblade",
+              "members": [
+                "DAVIS/JPEGImages/480p/rollerblade/00003.jpg",
+                "DAVIS/JPEGImages/480p/rollerblade/00004.jpg",
+                "DAVIS/JPEGImages/480p/rollerblade/00005.jpg",
+                "DAVIS/JPEGImages/480p/rollerblade/00006.jpg"
+              ],
+              "xy": [
+                345,
+                75
+              ],
+              "flip_horizontal": false,
+              "flip_vertical": false,
+              "photons": 20,
+              "source": "davis_synthetic"
+            },
+            {
+              "video": "tuk-tuk",
+              "members": [
+                "DAVIS/JPEGImages/480p/tuk-tuk/00052.jpg",
+                "DAVIS/JPEGImages/480p/tuk-tuk/00053.jpg",
+                "DAVIS/JPEGImages/480p/tuk-tuk/00054.jpg",
+                "DAVIS/JPEGImages/480p/tuk-tuk/00055.jpg"
+              ],
+              "xy": [
+                78,
+                229
+              ],
+              "flip_horizontal": false,
+              "flip_vertical": true,
+              "photons": 20,
+              "source": "davis_synthetic"
+            },
+            {
+              "source": "olives_real",
+              "video": "video_95",
+              "indices": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "xy": [
+                1325,
+                330
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": false,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_95/00000.png",
+                ".cache/data/olives-r4/Frames/input/video_95/00001.png",
+                ".cache/data/olives-r4/Frames/input/video_95/00002.png",
+                ".cache/data/olives-r4/Frames/input/video_95/00003.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_95/00000.png",
+                ".cache/data/olives-r4/Frames/gt/video_95/00001.png",
+                ".cache/data/olives-r4/Frames/gt/video_95/00002.png",
+                ".cache/data/olives-r4/Frames/gt/video_95/00003.png"
+              ]
+            },
+            {
+              "source": "olives_real",
+              "video": "video_131",
+              "indices": [
+                2,
+                3,
+                4,
+                5
+              ],
+              "xy": [
+                1509,
+                371
+              ],
+              "flip_horizontal": false,
+              "flip_vertical": true,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_131/00002.png",
+                ".cache/data/olives-r4/Frames/input/video_131/00003.png",
+                ".cache/data/olives-r4/Frames/input/video_131/00004.png",
+                ".cache/data/olives-r4/Frames/input/video_131/00005.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_131/00002.png",
+                ".cache/data/olives-r4/Frames/gt/video_131/00003.png",
+                ".cache/data/olives-r4/Frames/gt/video_131/00004.png",
+                ".cache/data/olives-r4/Frames/gt/video_131/00005.png"
+              ]
+            }
+          ]
+        },
+        {
+          "step": 4005,
+          "windows": [
+            {
+              "video": "motocross-bumps",
+              "members": [
+                "DAVIS/JPEGImages/480p/motocross-bumps/00027.jpg",
+                "DAVIS/JPEGImages/480p/motocross-bumps/00028.jpg",
+                "DAVIS/JPEGImages/480p/motocross-bumps/00029.jpg",
+                "DAVIS/JPEGImages/480p/motocross-bumps/00030.jpg"
+              ],
+              "xy": [
+                361,
+                176
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": false,
+              "photons": 20,
+              "source": "davis_synthetic"
+            },
+            {
+              "video": "horsejump-low",
+              "members": [
+                "DAVIS/JPEGImages/480p/horsejump-low/00054.jpg",
+                "DAVIS/JPEGImages/480p/horsejump-low/00055.jpg",
+                "DAVIS/JPEGImages/480p/horsejump-low/00056.jpg",
+                "DAVIS/JPEGImages/480p/horsejump-low/00057.jpg"
+              ],
+              "xy": [
+                425,
+                314
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": true,
+              "photons": 80,
+              "source": "davis_synthetic"
+            },
+            {
+              "source": "olives_real",
+              "video": "video_20",
+              "indices": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "xy": [
+                1577,
+                676
+              ],
+              "flip_horizontal": false,
+              "flip_vertical": true,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_20/00009.png",
+                ".cache/data/olives-r4/Frames/input/video_20/00010.png",
+                ".cache/data/olives-r4/Frames/input/video_20/00011.png",
+                ".cache/data/olives-r4/Frames/input/video_20/00012.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_20/00009.png",
+                ".cache/data/olives-r4/Frames/gt/video_20/00010.png",
+                ".cache/data/olives-r4/Frames/gt/video_20/00011.png",
+                ".cache/data/olives-r4/Frames/gt/video_20/00012.png"
+              ]
+            },
+            {
+              "source": "olives_real",
+              "video": "video_35",
+              "indices": [
+                10,
+                11,
+                12,
+                13
+              ],
+              "xy": [
+                83,
+                79
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": true,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_35/00010.png",
+                ".cache/data/olives-r4/Frames/input/video_35/00011.png",
+                ".cache/data/olives-r4/Frames/input/video_35/00012.png",
+                ".cache/data/olives-r4/Frames/input/video_35/00013.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_35/00010.png",
+                ".cache/data/olives-r4/Frames/gt/video_35/00011.png",
+                ".cache/data/olives-r4/Frames/gt/video_35/00012.png",
+                ".cache/data/olives-r4/Frames/gt/video_35/00013.png"
+              ]
+            }
+          ]
+        },
+        {
+          "step": 4006,
+          "windows": [
+            {
+              "video": "hike",
+              "members": [
+                "DAVIS/JPEGImages/480p/hike/00001.jpg",
+                "DAVIS/JPEGImages/480p/hike/00002.jpg",
+                "DAVIS/JPEGImages/480p/hike/00003.jpg",
+                "DAVIS/JPEGImages/480p/hike/00004.jpg"
+              ],
+              "xy": [
+                416,
+                117
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": false,
+              "photons": 80,
+              "source": "davis_synthetic"
+            },
+            {
+              "video": "planes-water",
+              "members": [
+                "DAVIS/JPEGImages/480p/planes-water/00016.jpg",
+                "DAVIS/JPEGImages/480p/planes-water/00017.jpg",
+                "DAVIS/JPEGImages/480p/planes-water/00018.jpg",
+                "DAVIS/JPEGImages/480p/planes-water/00019.jpg"
+              ],
+              "xy": [
+                628,
+                235
+              ],
+              "flip_horizontal": false,
+              "flip_vertical": true,
+              "photons": 80,
+              "source": "davis_synthetic"
+            },
+            {
+              "source": "olives_real",
+              "video": "video_59",
+              "indices": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "xy": [
+                480,
+                398
+              ],
+              "flip_horizontal": false,
+              "flip_vertical": true,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_59/00009.png",
+                ".cache/data/olives-r4/Frames/input/video_59/00010.png",
+                ".cache/data/olives-r4/Frames/input/video_59/00011.png",
+                ".cache/data/olives-r4/Frames/input/video_59/00012.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_59/00009.png",
+                ".cache/data/olives-r4/Frames/gt/video_59/00010.png",
+                ".cache/data/olives-r4/Frames/gt/video_59/00011.png",
+                ".cache/data/olives-r4/Frames/gt/video_59/00012.png"
+              ]
+            },
+            {
+              "source": "olives_real",
+              "video": "video_122",
+              "indices": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "xy": [
+                1309,
+                644
+              ],
+              "flip_horizontal": false,
+              "flip_vertical": false,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_122/00001.png",
+                ".cache/data/olives-r4/Frames/input/video_122/00002.png",
+                ".cache/data/olives-r4/Frames/input/video_122/00003.png",
+                ".cache/data/olives-r4/Frames/input/video_122/00004.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_122/00001.png",
+                ".cache/data/olives-r4/Frames/gt/video_122/00002.png",
+                ".cache/data/olives-r4/Frames/gt/video_122/00003.png",
+                ".cache/data/olives-r4/Frames/gt/video_122/00004.png"
+              ]
+            }
+          ]
+        },
+        {
+          "step": 4007,
+          "windows": [
+            {
+              "video": "soccerball",
+              "members": [
+                "DAVIS/JPEGImages/480p/soccerball/00039.jpg",
+                "DAVIS/JPEGImages/480p/soccerball/00040.jpg",
+                "DAVIS/JPEGImages/480p/soccerball/00041.jpg",
+                "DAVIS/JPEGImages/480p/soccerball/00042.jpg"
+              ],
+              "xy": [
+                168,
+                303
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": true,
+              "photons": 80,
+              "source": "davis_synthetic"
+            },
+            {
+              "video": "swing",
+              "members": [
+                "DAVIS/JPEGImages/480p/swing/00021.jpg",
+                "DAVIS/JPEGImages/480p/swing/00022.jpg",
+                "DAVIS/JPEGImages/480p/swing/00023.jpg",
+                "DAVIS/JPEGImages/480p/swing/00024.jpg"
+              ],
+              "xy": [
+                591,
+                26
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": true,
+              "photons": 20,
+              "source": "davis_synthetic"
+            },
+            {
+              "source": "olives_real",
+              "video": "video_12",
+              "indices": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "xy": [
+                1613,
+                532
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": true,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_12/00000.png",
+                ".cache/data/olives-r4/Frames/input/video_12/00001.png",
+                ".cache/data/olives-r4/Frames/input/video_12/00002.png",
+                ".cache/data/olives-r4/Frames/input/video_12/00003.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_12/00000.png",
+                ".cache/data/olives-r4/Frames/gt/video_12/00001.png",
+                ".cache/data/olives-r4/Frames/gt/video_12/00002.png",
+                ".cache/data/olives-r4/Frames/gt/video_12/00003.png"
+              ]
+            },
+            {
+              "source": "olives_real",
+              "video": "video_122",
+              "indices": [
+                10,
+                11,
+                12,
+                13
+              ],
+              "xy": [
+                503,
+                940
+              ],
+              "flip_horizontal": false,
+              "flip_vertical": true,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_122/00010.png",
+                ".cache/data/olives-r4/Frames/input/video_122/00011.png",
+                ".cache/data/olives-r4/Frames/input/video_122/00012.png",
+                ".cache/data/olives-r4/Frames/input/video_122/00013.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_122/00010.png",
+                ".cache/data/olives-r4/Frames/gt/video_122/00011.png",
+                ".cache/data/olives-r4/Frames/gt/video_122/00012.png",
+                ".cache/data/olives-r4/Frames/gt/video_122/00013.png"
+              ]
+            }
+          ]
+        }
+      ],
+      "same_window_gradient_checks": [
+        {
+          "scale_rule": "unit",
+          "scales": [
+            1.0,
+            1.0
+          ],
+          "MSE": 0.004069630056619644,
+          "kappa_gradients": {
+            "head": -19.366409301757812,
+            "body": -35.33245849609375
+          },
+          "all_gradient_norm": 40.29593276977539,
+          "kappa_gradient_norm_fraction": 0.9999009149532038,
+          "optimizer_updates": 0
+        },
+        {
+          "scale_rule": "fixed_training_RMS",
+          "scales": [
+            38.101352864041765,
+            34.6184807632113
+          ],
+          "MSE": 0.004069630056619644,
+          "kappa_gradients": {
+            "head": -0.01334038469940424,
+            "body": -0.029482059180736542
+          },
+          "all_gradient_norm": 0.568232536315918,
+          "kappa_gradient_norm_fraction": 0.0569481923581924,
+          "optimizer_updates": 0
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "training_checkpoint_sha256": "327a9217f8b0d29f8bb24ea2aa73d83f3e7b8ca704b4be5fd1b5a8a54661b2e4",
+      "statistics": {
+        "head": {
+          "sum_squares": 37839306640.36036,
+          "count": 25165824,
+          "max_abs": 696.2042236328125,
+          "RMS": 38.7762679212063
+        },
+        "body": {
+          "sum_squares": 28077810229.761803,
+          "count": 25165824,
+          "max_abs": 4415.9443359375,
+          "RMS": 33.40227442171946
+        }
+      },
+      "contexts": [
+        {
+          "step": 4000,
+          "windows": [
+            {
+              "video": "flamingo",
+              "members": [
+                "DAVIS/JPEGImages/480p/flamingo/00034.jpg",
+                "DAVIS/JPEGImages/480p/flamingo/00035.jpg",
+                "DAVIS/JPEGImages/480p/flamingo/00036.jpg",
+                "DAVIS/JPEGImages/480p/flamingo/00037.jpg"
+              ],
+              "xy": [
+                508,
+                69
+              ],
+              "flip_horizontal": false,
+              "flip_vertical": false,
+              "photons": 80,
+              "source": "davis_synthetic"
+            },
+            {
+              "video": "scooter-gray",
+              "members": [
+                "DAVIS/JPEGImages/480p/scooter-gray/00047.jpg",
+                "DAVIS/JPEGImages/480p/scooter-gray/00048.jpg",
+                "DAVIS/JPEGImages/480p/scooter-gray/00049.jpg",
+                "DAVIS/JPEGImages/480p/scooter-gray/00050.jpg"
+              ],
+              "xy": [
+                514,
+                195
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": true,
+              "photons": 80,
+              "source": "davis_synthetic"
+            },
+            {
+              "source": "olives_real",
+              "video": "video_20",
+              "indices": [
+                6,
+                7,
+                8,
+                9
+              ],
+              "xy": [
+                866,
+                531
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": true,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_20/00006.png",
+                ".cache/data/olives-r4/Frames/input/video_20/00007.png",
+                ".cache/data/olives-r4/Frames/input/video_20/00008.png",
+                ".cache/data/olives-r4/Frames/input/video_20/00009.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_20/00006.png",
+                ".cache/data/olives-r4/Frames/gt/video_20/00007.png",
+                ".cache/data/olives-r4/Frames/gt/video_20/00008.png",
+                ".cache/data/olives-r4/Frames/gt/video_20/00009.png"
+              ]
+            },
+            {
+              "source": "olives_real",
+              "video": "video_104",
+              "indices": [
+                8,
+                9,
+                10,
+                11
+              ],
+              "xy": [
+                476,
+                40
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": false,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_104/00008.png",
+                ".cache/data/olives-r4/Frames/input/video_104/00009.png",
+                ".cache/data/olives-r4/Frames/input/video_104/00010.png",
+                ".cache/data/olives-r4/Frames/input/video_104/00011.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_104/00008.png",
+                ".cache/data/olives-r4/Frames/gt/video_104/00009.png",
+                ".cache/data/olives-r4/Frames/gt/video_104/00010.png",
+                ".cache/data/olives-r4/Frames/gt/video_104/00011.png"
+              ]
+            }
+          ]
+        },
+        {
+          "step": 4001,
+          "windows": [
+            {
+              "video": "boat",
+              "members": [
+                "DAVIS/JPEGImages/480p/boat/00032.jpg",
+                "DAVIS/JPEGImages/480p/boat/00033.jpg",
+                "DAVIS/JPEGImages/480p/boat/00034.jpg",
+                "DAVIS/JPEGImages/480p/boat/00035.jpg"
+              ],
+              "xy": [
+                687,
+                37
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": false,
+              "photons": 20,
+              "source": "davis_synthetic"
+            },
+            {
+              "video": "paragliding",
+              "members": [
+                "DAVIS/JPEGImages/480p/paragliding/00023.jpg",
+                "DAVIS/JPEGImages/480p/paragliding/00024.jpg",
+                "DAVIS/JPEGImages/480p/paragliding/00025.jpg",
+                "DAVIS/JPEGImages/480p/paragliding/00026.jpg"
+              ],
+              "xy": [
+                682,
+                19
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": true,
+              "photons": 80,
+              "source": "davis_synthetic"
+            },
+            {
+              "source": "olives_real",
+              "video": "video_59",
+              "indices": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "xy": [
+                712,
+                214
+              ],
+              "flip_horizontal": false,
+              "flip_vertical": true,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_59/00001.png",
+                ".cache/data/olives-r4/Frames/input/video_59/00002.png",
+                ".cache/data/olives-r4/Frames/input/video_59/00003.png",
+                ".cache/data/olives-r4/Frames/input/video_59/00004.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_59/00001.png",
+                ".cache/data/olives-r4/Frames/gt/video_59/00002.png",
+                ".cache/data/olives-r4/Frames/gt/video_59/00003.png",
+                ".cache/data/olives-r4/Frames/gt/video_59/00004.png"
+              ]
+            },
+            {
+              "source": "olives_real",
+              "video": "video_95",
+              "indices": [
+                3,
+                4,
+                5,
+                6
+              ],
+              "xy": [
+                105,
+                28
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": false,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_95/00003.png",
+                ".cache/data/olives-r4/Frames/input/video_95/00004.png",
+                ".cache/data/olives-r4/Frames/input/video_95/00005.png",
+                ".cache/data/olives-r4/Frames/input/video_95/00006.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_95/00003.png",
+                ".cache/data/olives-r4/Frames/gt/video_95/00004.png",
+                ".cache/data/olives-r4/Frames/gt/video_95/00005.png",
+                ".cache/data/olives-r4/Frames/gt/video_95/00006.png"
+              ]
+            }
+          ]
+        },
+        {
+          "step": 4002,
+          "windows": [
+            {
+              "video": "varanus-cage",
+              "members": [
+                "DAVIS/JPEGImages/480p/varanus-cage/00041.jpg",
+                "DAVIS/JPEGImages/480p/varanus-cage/00042.jpg",
+                "DAVIS/JPEGImages/480p/varanus-cage/00043.jpg",
+                "DAVIS/JPEGImages/480p/varanus-cage/00044.jpg"
+              ],
+              "xy": [
+                384,
+                11
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": false,
+              "photons": 80,
+              "source": "davis_synthetic"
+            },
+            {
+              "video": "paragliding",
+              "members": [
+                "DAVIS/JPEGImages/480p/paragliding/00048.jpg",
+                "DAVIS/JPEGImages/480p/paragliding/00049.jpg",
+                "DAVIS/JPEGImages/480p/paragliding/00050.jpg",
+                "DAVIS/JPEGImages/480p/paragliding/00051.jpg"
+              ],
+              "xy": [
+                541,
+                286
+              ],
+              "flip_horizontal": false,
+              "flip_vertical": true,
+              "photons": 20,
+              "source": "davis_synthetic"
+            },
+            {
+              "source": "olives_real",
+              "video": "video_104",
+              "indices": [
+                6,
+                7,
+                8,
+                9
+              ],
+              "xy": [
+                1131,
+                266
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": true,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_104/00006.png",
+                ".cache/data/olives-r4/Frames/input/video_104/00007.png",
+                ".cache/data/olives-r4/Frames/input/video_104/00008.png",
+                ".cache/data/olives-r4/Frames/input/video_104/00009.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_104/00006.png",
+                ".cache/data/olives-r4/Frames/gt/video_104/00007.png",
+                ".cache/data/olives-r4/Frames/gt/video_104/00008.png",
+                ".cache/data/olives-r4/Frames/gt/video_104/00009.png"
+              ]
+            },
+            {
+              "source": "olives_real",
+              "video": "video_59",
+              "indices": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "xy": [
+                895,
+                557
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": false,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_59/00000.png",
+                ".cache/data/olives-r4/Frames/input/video_59/00001.png",
+                ".cache/data/olives-r4/Frames/input/video_59/00002.png",
+                ".cache/data/olives-r4/Frames/input/video_59/00003.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_59/00000.png",
+                ".cache/data/olives-r4/Frames/gt/video_59/00001.png",
+                ".cache/data/olives-r4/Frames/gt/video_59/00002.png",
+                ".cache/data/olives-r4/Frames/gt/video_59/00003.png"
+              ]
+            }
+          ]
+        },
+        {
+          "step": 4003,
+          "windows": [
+            {
+              "video": "hockey",
+              "members": [
+                "DAVIS/JPEGImages/480p/hockey/00033.jpg",
+                "DAVIS/JPEGImages/480p/hockey/00034.jpg",
+                "DAVIS/JPEGImages/480p/hockey/00035.jpg",
+                "DAVIS/JPEGImages/480p/hockey/00036.jpg"
+              ],
+              "xy": [
+                33,
+                111
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": true,
+              "photons": 80,
+              "source": "davis_synthetic"
+            },
+            {
+              "video": "bus",
+              "members": [
+                "DAVIS/JPEGImages/480p/bus/00042.jpg",
+                "DAVIS/JPEGImages/480p/bus/00043.jpg",
+                "DAVIS/JPEGImages/480p/bus/00044.jpg",
+                "DAVIS/JPEGImages/480p/bus/00045.jpg"
+              ],
+              "xy": [
+                28,
+                304
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": true,
+              "photons": 80,
+              "source": "davis_synthetic"
+            },
+            {
+              "source": "olives_real",
+              "video": "video_12",
+              "indices": [
+                10,
+                11,
+                12,
+                13
+              ],
+              "xy": [
+                1484,
+                507
+              ],
+              "flip_horizontal": false,
+              "flip_vertical": true,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_12/00010.png",
+                ".cache/data/olives-r4/Frames/input/video_12/00011.png",
+                ".cache/data/olives-r4/Frames/input/video_12/00012.png",
+                ".cache/data/olives-r4/Frames/input/video_12/00013.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_12/00010.png",
+                ".cache/data/olives-r4/Frames/gt/video_12/00011.png",
+                ".cache/data/olives-r4/Frames/gt/video_12/00012.png",
+                ".cache/data/olives-r4/Frames/gt/video_12/00013.png"
+              ]
+            },
+            {
+              "source": "olives_real",
+              "video": "video_95",
+              "indices": [
+                2,
+                3,
+                4,
+                5
+              ],
+              "xy": [
+                223,
+                219
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": true,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_95/00002.png",
+                ".cache/data/olives-r4/Frames/input/video_95/00003.png",
+                ".cache/data/olives-r4/Frames/input/video_95/00004.png",
+                ".cache/data/olives-r4/Frames/input/video_95/00005.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_95/00002.png",
+                ".cache/data/olives-r4/Frames/gt/video_95/00003.png",
+                ".cache/data/olives-r4/Frames/gt/video_95/00004.png",
+                ".cache/data/olives-r4/Frames/gt/video_95/00005.png"
+              ]
+            }
+          ]
+        },
+        {
+          "step": 4004,
+          "windows": [
+            {
+              "video": "bus",
+              "members": [
+                "DAVIS/JPEGImages/480p/bus/00035.jpg",
+                "DAVIS/JPEGImages/480p/bus/00036.jpg",
+                "DAVIS/JPEGImages/480p/bus/00037.jpg",
+                "DAVIS/JPEGImages/480p/bus/00038.jpg"
+              ],
+              "xy": [
+                38,
+                191
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": true,
+              "photons": 20,
+              "source": "davis_synthetic"
+            },
+            {
+              "video": "cat-girl",
+              "members": [
+                "DAVIS/JPEGImages/480p/cat-girl/00012.jpg",
+                "DAVIS/JPEGImages/480p/cat-girl/00013.jpg",
+                "DAVIS/JPEGImages/480p/cat-girl/00014.jpg",
+                "DAVIS/JPEGImages/480p/cat-girl/00015.jpg"
+              ],
+              "xy": [
+                169,
+                189
+              ],
+              "flip_horizontal": false,
+              "flip_vertical": false,
+              "photons": 80,
+              "source": "davis_synthetic"
+            },
+            {
+              "source": "olives_real",
+              "video": "video_131",
+              "indices": [
+                2,
+                3,
+                4,
+                5
+              ],
+              "xy": [
+                757,
+                157
+              ],
+              "flip_horizontal": false,
+              "flip_vertical": false,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_131/00002.png",
+                ".cache/data/olives-r4/Frames/input/video_131/00003.png",
+                ".cache/data/olives-r4/Frames/input/video_131/00004.png",
+                ".cache/data/olives-r4/Frames/input/video_131/00005.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_131/00002.png",
+                ".cache/data/olives-r4/Frames/gt/video_131/00003.png",
+                ".cache/data/olives-r4/Frames/gt/video_131/00004.png",
+                ".cache/data/olives-r4/Frames/gt/video_131/00005.png"
+              ]
+            },
+            {
+              "source": "olives_real",
+              "video": "video_12",
+              "indices": [
+                7,
+                8,
+                9,
+                10
+              ],
+              "xy": [
+                574,
+                464
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": false,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_12/00007.png",
+                ".cache/data/olives-r4/Frames/input/video_12/00008.png",
+                ".cache/data/olives-r4/Frames/input/video_12/00009.png",
+                ".cache/data/olives-r4/Frames/input/video_12/00010.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_12/00007.png",
+                ".cache/data/olives-r4/Frames/gt/video_12/00008.png",
+                ".cache/data/olives-r4/Frames/gt/video_12/00009.png",
+                ".cache/data/olives-r4/Frames/gt/video_12/00010.png"
+              ]
+            }
+          ]
+        },
+        {
+          "step": 4005,
+          "windows": [
+            {
+              "video": "dance-jump",
+              "members": [
+                "DAVIS/JPEGImages/480p/dance-jump/00007.jpg",
+                "DAVIS/JPEGImages/480p/dance-jump/00008.jpg",
+                "DAVIS/JPEGImages/480p/dance-jump/00009.jpg",
+                "DAVIS/JPEGImages/480p/dance-jump/00010.jpg"
+              ],
+              "xy": [
+                117,
+                55
+              ],
+              "flip_horizontal": false,
+              "flip_vertical": false,
+              "photons": 20,
+              "source": "davis_synthetic"
+            },
+            {
+              "video": "kid-football",
+              "members": [
+                "DAVIS/JPEGImages/480p/kid-football/00004.jpg",
+                "DAVIS/JPEGImages/480p/kid-football/00005.jpg",
+                "DAVIS/JPEGImages/480p/kid-football/00006.jpg",
+                "DAVIS/JPEGImages/480p/kid-football/00007.jpg"
+              ],
+              "xy": [
+                226,
+                0
+              ],
+              "flip_horizontal": false,
+              "flip_vertical": true,
+              "photons": 80,
+              "source": "davis_synthetic"
+            },
+            {
+              "source": "olives_real",
+              "video": "video_92",
+              "indices": [
+                2,
+                3,
+                4,
+                5
+              ],
+              "xy": [
+                1529,
+                203
+              ],
+              "flip_horizontal": false,
+              "flip_vertical": false,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_92/00002.png",
+                ".cache/data/olives-r4/Frames/input/video_92/00003.png",
+                ".cache/data/olives-r4/Frames/input/video_92/00004.png",
+                ".cache/data/olives-r4/Frames/input/video_92/00005.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_92/00002.png",
+                ".cache/data/olives-r4/Frames/gt/video_92/00003.png",
+                ".cache/data/olives-r4/Frames/gt/video_92/00004.png",
+                ".cache/data/olives-r4/Frames/gt/video_92/00005.png"
+              ]
+            },
+            {
+              "source": "olives_real",
+              "video": "video_29",
+              "indices": [
+                12,
+                13,
+                14,
+                15
+              ],
+              "xy": [
+                1750,
+                778
+              ],
+              "flip_horizontal": false,
+              "flip_vertical": true,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_29/00012.png",
+                ".cache/data/olives-r4/Frames/input/video_29/00013.png",
+                ".cache/data/olives-r4/Frames/input/video_29/00014.png",
+                ".cache/data/olives-r4/Frames/input/video_29/00015.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_29/00012.png",
+                ".cache/data/olives-r4/Frames/gt/video_29/00013.png",
+                ".cache/data/olives-r4/Frames/gt/video_29/00014.png",
+                ".cache/data/olives-r4/Frames/gt/video_29/00015.png"
+              ]
+            }
+          ]
+        },
+        {
+          "step": 4006,
+          "windows": [
+            {
+              "video": "breakdance-flare",
+              "members": [
+                "DAVIS/JPEGImages/480p/breakdance-flare/00038.jpg",
+                "DAVIS/JPEGImages/480p/breakdance-flare/00039.jpg",
+                "DAVIS/JPEGImages/480p/breakdance-flare/00040.jpg",
+                "DAVIS/JPEGImages/480p/breakdance-flare/00041.jpg"
+              ],
+              "xy": [
+                202,
+                152
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": false,
+              "photons": 80,
+              "source": "davis_synthetic"
+            },
+            {
+              "video": "scooter-gray",
+              "members": [
+                "DAVIS/JPEGImages/480p/scooter-gray/00053.jpg",
+                "DAVIS/JPEGImages/480p/scooter-gray/00054.jpg",
+                "DAVIS/JPEGImages/480p/scooter-gray/00055.jpg",
+                "DAVIS/JPEGImages/480p/scooter-gray/00056.jpg"
+              ],
+              "xy": [
+                410,
+                246
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": true,
+              "photons": 80,
+              "source": "davis_synthetic"
+            },
+            {
+              "source": "olives_real",
+              "video": "video_35",
+              "indices": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "xy": [
+                142,
+                261
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": false,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_35/00009.png",
+                ".cache/data/olives-r4/Frames/input/video_35/00010.png",
+                ".cache/data/olives-r4/Frames/input/video_35/00011.png",
+                ".cache/data/olives-r4/Frames/input/video_35/00012.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_35/00009.png",
+                ".cache/data/olives-r4/Frames/gt/video_35/00010.png",
+                ".cache/data/olives-r4/Frames/gt/video_35/00011.png",
+                ".cache/data/olives-r4/Frames/gt/video_35/00012.png"
+              ]
+            },
+            {
+              "source": "olives_real",
+              "video": "video_29",
+              "indices": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "xy": [
+                263,
+                207
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": false,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_29/00009.png",
+                ".cache/data/olives-r4/Frames/input/video_29/00010.png",
+                ".cache/data/olives-r4/Frames/input/video_29/00011.png",
+                ".cache/data/olives-r4/Frames/input/video_29/00012.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_29/00009.png",
+                ".cache/data/olives-r4/Frames/gt/video_29/00010.png",
+                ".cache/data/olives-r4/Frames/gt/video_29/00011.png",
+                ".cache/data/olives-r4/Frames/gt/video_29/00012.png"
+              ]
+            }
+          ]
+        },
+        {
+          "step": 4007,
+          "windows": [
+            {
+              "video": "dogs-scale",
+              "members": [
+                "DAVIS/JPEGImages/480p/dogs-scale/00032.jpg",
+                "DAVIS/JPEGImages/480p/dogs-scale/00033.jpg",
+                "DAVIS/JPEGImages/480p/dogs-scale/00034.jpg",
+                "DAVIS/JPEGImages/480p/dogs-scale/00035.jpg"
+              ],
+              "xy": [
+                147,
+                210
+              ],
+              "flip_horizontal": false,
+              "flip_vertical": false,
+              "photons": 80,
+              "source": "davis_synthetic"
+            },
+            {
+              "video": "tractor-sand",
+              "members": [
+                "DAVIS/JPEGImages/480p/tractor-sand/00008.jpg",
+                "DAVIS/JPEGImages/480p/tractor-sand/00009.jpg",
+                "DAVIS/JPEGImages/480p/tractor-sand/00010.jpg",
+                "DAVIS/JPEGImages/480p/tractor-sand/00011.jpg"
+              ],
+              "xy": [
+                190,
+                317
+              ],
+              "flip_horizontal": false,
+              "flip_vertical": true,
+              "photons": 80,
+              "source": "davis_synthetic"
+            },
+            {
+              "source": "olives_real",
+              "video": "video_12",
+              "indices": [
+                3,
+                4,
+                5,
+                6
+              ],
+              "xy": [
+                752,
+                696
+              ],
+              "flip_horizontal": true,
+              "flip_vertical": true,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_12/00003.png",
+                ".cache/data/olives-r4/Frames/input/video_12/00004.png",
+                ".cache/data/olives-r4/Frames/input/video_12/00005.png",
+                ".cache/data/olives-r4/Frames/input/video_12/00006.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_12/00003.png",
+                ".cache/data/olives-r4/Frames/gt/video_12/00004.png",
+                ".cache/data/olives-r4/Frames/gt/video_12/00005.png",
+                ".cache/data/olives-r4/Frames/gt/video_12/00006.png"
+              ]
+            },
+            {
+              "source": "olives_real",
+              "video": "video_122",
+              "indices": [
+                2,
+                3,
+                4,
+                5
+              ],
+              "xy": [
+                1688,
+                164
+              ],
+              "flip_horizontal": false,
+              "flip_vertical": true,
+              "input_sources": [
+                ".cache/data/olives-r4/Frames/input/video_122/00002.png",
+                ".cache/data/olives-r4/Frames/input/video_122/00003.png",
+                ".cache/data/olives-r4/Frames/input/video_122/00004.png",
+                ".cache/data/olives-r4/Frames/input/video_122/00005.png"
+              ],
+              "target_sources": [
+                ".cache/data/olives-r4/Frames/gt/video_122/00002.png",
+                ".cache/data/olives-r4/Frames/gt/video_122/00003.png",
+                ".cache/data/olives-r4/Frames/gt/video_122/00004.png",
+                ".cache/data/olives-r4/Frames/gt/video_122/00005.png"
+              ]
+            }
+          ]
+        }
+      ],
+      "same_window_gradient_checks": [
+        {
+          "scale_rule": "unit",
+          "scales": [
+            1.0,
+            1.0
+          ],
+          "MSE": 0.0016920751659199595,
+          "kappa_gradients": {
+            "head": -17.804447174072266,
+            "body": -6.553746223449707
+          },
+          "all_gradient_norm": 18.974868774414062,
+          "kappa_gradient_norm_fraction": 0.9998670687534834,
+          "optimizer_updates": 0
+        },
+        {
+          "scale_rule": "fixed_training_RMS",
+          "scales": [
+            38.7762679212063,
+            33.40227442171946
+          ],
+          "MSE": 0.0016920751659199595,
+          "kappa_gradients": {
+            "head": -0.01184122171252966,
+            "body": -0.0058740475215017796
+          },
+          "all_gradient_norm": 0.3095702528953552,
+          "kappa_gradient_norm_fraction": 0.04269832154197723,
+          "optimizer_updates": 0
+        }
+      ]
+    }
+  ],
+  "source_sha256": {
+    "calibrate_bounded_fst_r43.py": "14ff08efaeb2171f9f38acfe59677ff9f796c2532ebd85faec8a5c5f4779b6d1",
+    "bounded_fst_r43.py": "0aa8eeb9dab97aad65a25fa28d439cef5933025916058e29d78bd7f4bb57c41c",
+    "mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5"
+  },
+  "scope": "Fixed training-input RMS units, all BN/gradient states discarded; no DEV, quality or optimizer replay.",
+  "data": {
+    "manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "verified_files": 384,
+    "scenes": [
+      "video_11",
+      "video_35",
+      "video_92",
+      "video_131",
+      "video_12",
+      "video_20",
+      "video_29",
+      "video_52",
+      "video_59",
+      "video_95",
+      "video_104",
+      "video_122"
+    ],
+    "native_bytes": 2388787200,
+    "real_training_ids": [
+      "video_104",
+      "video_11",
+      "video_12",
+      "video_122",
+      "video_131",
+      "video_20",
+      "video_29",
+      "video_35",
+      "video_52",
+      "video_59",
+      "video_92",
+      "video_95"
+    ],
+    "excluded_native_DEV": [
+      "video_121",
+      "video_15",
+      "video_47",
+      "video_91"
+    ],
+    "all_real_assets_owned": true,
+    "source_manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "synthetic_manifest_sha256": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+    "synthetic_training_videos": 57,
+    "real_tensor_dtype": "uint8 native inputs/GT; float32 /255 after crops",
+    "timing_scope": "Consecutive registered frame indices, not independently verified sensor timing."
+  },
+  "wall_seconds": 76.85283016599715,
+  "cuda_initialized": false
+}
