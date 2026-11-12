@@ -11,6 +11,7 @@ probe="$ANDROID_DEV_ROOT/validation/benchmark-launch-stub"
 mkdir -p "$probe/app/src/main/java/org/benchmark/demo"
 cat > "$probe/settings.gradle" <<'EOF'
 pluginManagement { repositories { google(); mavenCentral() } }
+dependencyResolutionManagement { repositories { google(); mavenCentral() } }
 rootProject.name='BenchmarkLaunchStubOnly'
 include ':app'
 EOF
