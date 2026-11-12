@@ -21,6 +21,7 @@ org.gradle.jvmargs=-Xmx1536m -Djava.io.tmpdir=$TMPDIR -Duser.home=$ANDROID_DEV_R
 org.gradle.workers.max=2
 org.gradle.java.installations.auto-detect=false
 org.gradle.java.installations.auto-download=false
+kotlin.compiler.execution.strategy=in-process
 android.useAndroidX=true
 EOF
 cat > "$probe/app/build.gradle" <<'EOF'
