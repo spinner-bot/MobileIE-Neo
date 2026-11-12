@@ -1,0 +1,34 @@
+内部论文工作稿（2026-11-12）
+
+manuscript.pdf 是可阅读的阶段性研究稿，不是投稿终稿。当前版本包括问题、
+候选定义、训练和评价协议、已结束 R36/R41/R42 证据及明确的验证缺口。
+R44 最终质量仍待完整实验结束，不能从训练中间状态填表。
+
+从仓库根目录执行，始终使用项目独立环境：
+
+  ./scripts/project-python scripts/build_manuscript_snapshot.py
+  ./scripts/project-python scripts/prepare_paper_toolchain.py
+  ./scripts/project-python scripts/build_manuscript.py --attempt N
+
+首项从完整结果生成 generated/*.tex 和 evidence-snapshot.json。
+第二项只用于首次准备固定的官方 Tectonic；已有 process/toolchain.json 时无需重跑。
+N 必须是尚未使用的编号。已保留 001（成功但一处文字越界）、002（修正后成功）。
+编译时不要修改本次的 tex/bib/证据快照；完成后才修改并用新编号重编。
+源码引用仓库已有 R41 图，其来源仍保留在对应实验报告目录。
+
+可选的 PDF 版面检查：
+
+  ./scripts/project-python -m pip install --no-deps --require-hashes -r paper/requirements-render.txt
+  ./scripts/project-python scripts/review_manuscript.py --build N
+
+只向自有 .venv 添加固定 PDF 渲染工具，不升级研究依赖。review 生成每页 PNG、
+文字和联系表，实际查看后另写 visual-review-NNN.json；渲染成功不等于审阅通过。
+
+所有工具、TeX 支持文件、中间排版文件与页图位于
+/data/Users/zrh/data/MobileIE-Neo 的 cache 或 runtime-cache 下。
+仓库保留源码、生成表、来源清单、过程记录和最终小型 PDF；不安装全局 TeX，
+不引用其他用户环境。编译调用禁用不可信 shell 操作。
+
+R44 完整结果产生后，先按其注册门槛收口，新增独立表格/结果说明和来源记录，
+再更新稿件及快照，重新编译审阅。不得将已知机制、局部收益、CPU 时延、
+ND 白天实拍或已反复使用的开发集改称创新、手机测量、自然夜间或最终测试。
