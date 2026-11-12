@@ -212,7 +212,9 @@ def main():
               'R44_complete_quality_included': r44_complete,
               'R45_complete_quality_included': r45_complete,
               'R53_R56_complete_references_included': True,
+              'R62_complete_clean_transfer_reference_included': True,
               'excluded_active_study': excluded,
+              'additional_studies_not_in_this_snapshot': ['R59 static RAW pilot', 'R60 unpaired Night DEV', 'R61 scalar boundary'],
               'scope': 'Completed DEV evidence only; no novelty, SOTA, phone latency or independent final-test claim.'}
     (ROOT/'paper/evidence-snapshot.json').write_text(json.dumps(record, indent=2)+'\n')
     print(json.dumps({'tables': len(generated), 'completed_sources': len(sources),
