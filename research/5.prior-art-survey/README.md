@@ -122,3 +122,5 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 修改：2026-11-12T05:16:58+08:00；作者：Codex  (sqs_A100)；原因：索引训练/推理依赖和同信息比较边界。
 
 修改：2026-11-12T08:16:59+08:00；作者：Codex  (sqs_A100)；原因：索引递归强基线、函数保持及数据接口的有界增量核查。
+
+- 增量来源核查（2026-11-12T13:10:09.132243+08:00）：[LENVIZ图像/视频边界](docs/30-lenviz-image-and-video-scope.md)，作者交叉链接确认，未取得像素；[DarkVision版本说明](docs/29-raw-srgb-benchmark-boundaries.md)补正式2026出版信息，不以DOI年份代替文献年份。
