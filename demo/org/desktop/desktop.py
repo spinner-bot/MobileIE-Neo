@@ -12,7 +12,7 @@ import time
 import uuid
 
 import numpy as np
-from PIL import Image, ImageDraw, ImageOps, ImageCms
+from PIL import Image, ImageDraw, ImageOps, ImageCms, ImageFont
 
 VERSION = "0.1.0"
 MODEL_SHA = "2ea09b840634469eceab5263bf7b549c33fcd5df2a25701ce5fefc585402ad44"
@@ -81,15 +81,16 @@ class Engine:
 
 
 def comparison(images: dict[str, Image.Image | None]):
-    sheet = Image.new("RGB", (1800, 458), "#f6f5ef")
+    sheet = Image.new("RGB", (1800, 478), "#f6f5ef")
     draw = ImageDraw.Draw(sheet)
+    label_font, footer_font = ImageFont.load_default(size=24), ImageFont.load_default(size=18)
     for i, name in enumerate(("Input", "MobileIE", "Gamma 0.5")):
-        draw.text((i*600+16, 12), name, fill="#243d35")
+        draw.text((i*600+16, 10), name, fill="#243d35", font=label_font)
         if images[name] is not None:
-            sheet.paste(images[name], (i*600, 40))
+            sheet.paste(images[name], (i*600, 44))
         else:
-            draw.text((i*600+220, 220), "Not generated", fill="#68766c")
-    draw.text((16, 445), "Same 600 x 400 input | local CPU | fixed Gamma exponent 0.5, no denoising", fill="#68766c")
+            draw.text((i*600+180, 220), "Not generated", fill="#68766c", font=label_font)
+    draw.text((16, 450), "Same 600 x 400 input | local CPU | fixed Gamma exponent 0.5, no denoising", fill="#68766c", font=footer_font)
     return sheet
 
 
@@ -153,7 +154,7 @@ class Desktop:
         self.metrics=tk.StringVar(value="处理后显示本次 CPU 耗时；安卓测速请使用 AI Benchmark")
         tk.Label(content,textvariable=self.metrics,font=(self.font,10),fg="#68766c",bg="white",wraplength=740).pack(padx=20,pady=(0,18))
         tk.Label(root,text="MobileIE 官方模型  ·  原图 / 学习增强 / 固定 Gamma  ·  单张本地处理",font=(self.font,10),fg="#68766c",bg="#f6f5ef").pack(pady=14)
-        threading.Thread(target=self.worker,daemon=True).start();root.after(40,self.poll);root.protocol("WM_DELETE_WINDOW",self.close)
+        self.worker_thread=threading.Thread(target=self.worker,daemon=True);self.worker_thread.start();root.after(40,self.poll);root.protocol("WM_DELETE_WINDOW",self.close)
         self.update_controls()
 
     def button(self,parent,label,command,primary):
@@ -172,7 +173,7 @@ class Desktop:
 
     def process(self):
         if self.busy or self.input is None:return
-        self.busy=True;self.status.set("正在本机处理，请稍候…");self.images={"Input":self.input,"MobileIE":None,"Gamma 0.5":None};self.update_controls();self.tasks.put(("process",self.input.copy()))
+        self.busy=True;self.status.set("正在本机处理，请稍候…");self.metrics.set("正在计算本次结果…");self.images={"Input":self.input,"MobileIE":None,"Gamma 0.5":None};self.update_controls();self.tasks.put(("process",self.input.copy()))
 
     def worker(self):
         while True:
@@ -244,12 +245,12 @@ class Desktop:
         self.messagebox.showinfo("计算记录",json.dumps(self.record,ensure_ascii=False,indent=2) if self.record else "选择图片并处理后可查看本次记录。")
 
     def close(self):
-        self.closed=True;self.tasks.put(("stop",None));self.root.destroy()
+        self.closed=True;self.tasks.put(("stop",None));self._photo=None;self.root.destroy()
 
 
 def main():
     import tkinter as tk
-    root=tk.Tk();Desktop(root);root.mainloop()
+    root=tk.Tk();desktop=Desktop(root);root.mainloop();desktop.worker_thread.join(timeout=5)
 
 
 if __name__=="__main__":main()
