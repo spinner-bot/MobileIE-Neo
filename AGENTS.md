@@ -60,3 +60,7 @@
 
 
 修改：2026-11-12T16:53:42.205712+08:00；作者：Codex  (sqs_A100)；原因：R45完整终态及止损/论文接续，消除已结束作业的活跃提示。
+
+- R46 oracle001完整150输出/127检查已正常结束，预登记理想运动clean/noisy MSE比.482196/.507411，仅是机制信号；motion-gate001四十项检查通过。stage002实际DEV CPU评价PID3432402/seed0、3432403/seed1正在运行，各30行/1344逐帧行，零新CNN/零GPU，固定K8/α=.5。不要改coordinate_motion/evaluate核心或重复启动；等两runtime正常终态后运行summarize_coordinate_motion_r46.py。必须同时比较ordinary与same_mask，位移原生状态+75%，不声称零开销；门槛未过就停止K/alpha/插值/有效阈值网格。读两R46协议及journal。
+
+修改：2026-11-12T17:05:58.826233+08:00；作者：Codex  (sqs_A100)；原因：记录理想控制完成和真实流检验实际活跃进程。
