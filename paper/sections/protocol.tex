@@ -1,0 +1,98 @@
+\section{Experimental protocol and comparison scope}
+\label{sec:protocol}
+\subsection{Development data}
+The current synthetic training pool contains 57 DAVIS training videos,
+excluding the three development sources \emph{bear}, \emph{lucia}, and
+\emph{walking}. The synthetic development pilot uses 64 frames per source,
+at 480-pixel height, with two independently sampled noise conditions.
+There are three source videos and six conditions, not six independent videos.
+For a target RGB value $y$ in $[0,1]$, the degradation proxy is
+\[
+ v=0.35y^{2.2},\qquad
+ x=Q_8\!\left(\operatorname{clip}
+ \left[\operatorname{Poisson}(Pv)/P+\eta,0,1\right]\right),
+ \quad \eta\sim\mathcal N(0,0.008^2),
+\]
+with $P\in\{20,80\}$. Here $Q_8$ denotes conversion to the eight-bit
+observation. The present pilot adds no extra JPEG encoding, although the
+source frames are JPEG images. This is a controlled synthetic proxy, not
+a calibrated model of arbitrary RAW sensors or phone ISP video.
+
+The fixed mixed-data study replaces half of each training batch with
+native crops from 12 verified paired ND-filter video sources in the
+project's OLiVES snapshot. Its four already-used paired-real development
+sources are videos 15, 47, 91, and 121, each evaluated on 16 frames with a
+$288\!\times\!512$ crop. Training and development source IDs are separated.
+Consecutive registered frame indices are available; independent sensor
+timestamps have not been verified. These daytime ND pairs must not be
+presented as natural nighttime validation.
+
+Three original phone clips have additionally been inspected without
+synthetic degradation. They have no synchronized reference, so they support
+behavioural examples rather than reference PSNR or a perceptual flicker
+ranking. Independent final-test evaluation remains outstanding.
+
+\subsection{Quality and temporal measurements}
+Predictions are evaluated as floating-point RGB values after clipping to
+$[0,255]$, before display rounding or video encoding. Sequence PSNR is the
+mean of full-frame RGB frame PSNR values,
+\[
+ \operatorname{PSNR}_{\rm seq}
+ =\frac1T\sum_t 10\log_{10}
+ \frac{255^2}{\operatorname{MSE}_{\rm RGB}(z_t,y_t)}.
+\]
+RGB SSIM uses an $11\!\times\!11$ Gaussian window with standard deviation
+1.5 and the valid region obtained by excluding five boundary pixels.
+Edge MAE is the full-frame mean absolute error of horizontal and vertical
+luminance Sobel gradients, with the fixed gradient normalization used by
+the evaluation implementation.
+
+For a fixed estimated reference flow and validity mask, temporal error is
+\[
+ E_{\rm temp}=\operatorname{mean}_{t,p,c;\,m_t^{\rm ref}(p)=1}
+ \left|[z_t-W_t^{\rm ref}z_{t-1}]_c(p)
+       -[y_t-W_t^{\rm ref}y_{t-1}]_c(p)\right|.
+\]
+The implemented sequence summary first averages each valid frame pair,
+then averages the available pairs. The reference mask excludes an
+eight-pixel boundary. Reference flow is estimated from targets and held
+fixed across compared methods; it is not ground-truth motion.
+This metric is not a sufficient perceptual definition of flicker.
+Evaluation uses fixed reference fields and absolute RGB error. Training
+uses half-scale estimated fields, differentiable continuous bilinear
+gathering, and squared error. The two are not numerically identical.
+
+Domains and training seeds are reported separately before aggregation.
+The present two-seed pilot does not establish statistical significance.
+We retain per-condition failures alongside mean improvements.
+
+\subsection{Strong same-weight references}
+For each spatial anchor, let $r_t$ denote the raw prediction. The finite
+reference uses the previous raw output, while recursive fusion uses the
+previous fused output:
+\[
+ z_t^{\rm fin}=\tfrac12 r_t+\tfrac12 W_t r_{t-1},
+ \qquad
+ z_t^{\rm rec}=\tfrac12 r_t+\tfrac12 W_t z_{t-1}^{\rm rec}.
+\]
+The formulas apply only on accepted correspondences; invalid points and the
+first frame use the current raw output. Both estimate motion from their own
+adjacent raw predictions with the fixed half-resolution forward--backward
+estimator. Recursive fusion therefore also keeps the previous raw output.
+Neither reference requires a second enhancement CNN or a GT reset.
+
+Published FastDVDnet weights~\cite{fastdvdnet} have been evaluated as
+fixed denoiser transfer, not as a retrained low-light video method.
+Its five-frame window uses two future frames. The documented pretraining
+source includes the three current DAVIS development IDs, so that transfer
+cannot establish unseen generalization. Same-domain retraining and broader
+published LLVE comparisons remain necessary.
+
+\subsection{Efficiency}
+Convolution MACs, pointwise work, history storage, and full pipeline time
+are distinct measurements. The original predictor has approximately
+7.938 convolution GMAC at $1080\mathrm p$. This count omits non-convolution
+work. Online history counts use actual tensor storage rather than only
+logical channel slices. CPU timing is measured with two Torch threads and
+one OpenCV thread, and its workload and reference weights are stated
+explicitly. No handset latency is inferred from these measurements.
