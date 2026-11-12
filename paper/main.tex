@@ -1,0 +1,43 @@
+\documentclass[11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,graphicx,xcolor}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\pending}[1]{\textcolor{red!65!black}{#1}}
+\graphicspath{{../research/4.temporal-consistency/report/exploration-r41-training-form/}{../research/4.temporal-consistency/report/exploration-r42-tlc/}}
+\title{Temporally Stable Ultra-Compact Video Enhancement\\
+\large Working manuscript: problem, protocol, and verified preliminary evidence}
+\author{Internal research draft; authorship to be determined by the project team}
+\date{Evidence snapshot: 12 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Applying a compact image enhancer independently to video frames creates a
+quality--stability problem under a tight computation budget. We formulate the
+distinction between training-time temporal supervision and inference-time
+history, establish strong same-weight classical references, and document
+controlled evidence for adapting MobileIE. The completed experiments show that
+restoring the original expanded training parameterization improves a matched
+mixed-data baseline, while a fixed test-time local pooling conversion harms
+both evaluated domains. These findings constrain the next experiment; they do
+not establish a new video enhancement method. A factorial study of the root
+nonlinearity and a training-only temporal objective is currently running.
+This internal draft contains no final result for that candidate, independent
+final-test claim, or measured phone latency.
+\end{abstract}
+
+\paragraph{Draft status.}
+\pending{This is a research manuscript under development, not a submission-ready
+paper. The final method, verified novelty, independent low-light video
+evaluation, and handset measurements remain incomplete.}
+The numerical tables are generated from completed repository evidence.
+Training progress, partial checkpoints, and loss curves are excluded.
+
+\input{sections/problem}
+\input{sections/candidate}
+\input{sections/protocol}
+\input{sections/evidence}
+\input{sections/limitations}
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
