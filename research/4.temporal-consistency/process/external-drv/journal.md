@@ -11,3 +11,5 @@ archive-metadata-attempt001解析失败：对帧文件名与场景目录混淆�
 复查发现attempt002剩余语义问题：动态Mxxxx目录下0001_*.ARW仍被fallback误标静态0001。原始成员名/CRC/offset/大小有效，但当时matched_static_scene标签已被替代。用classify_drv_catalog_r52.py对现有索引本地重分类，无新增网络、无像素读取；严格按目录分类。classification001/catalog.json为最终权威清单：long改44标签、short5改114，short1–4不变；202静态scene在raw+long均齐，实际动态目录22个，不与源码枚举23个混同。
 
 完整索引位于.cache/datasets/DRV/archive-index/classification001，原始attempt002索引保留。四个候选短RAW数量111/109/110/64，只是目录数量；没有获取这些数据成员。独立test49、动态像素均未打开，0CNN/0GPU/0图像或视频解码。后续读取/渲染像素必须另定曝光、黑电平、色彩、量化与时间协议，本阶段不自动续到像素实验。
+
+2026-11-12T22:04:00+08:00补核：本日志此前提及的note42未实际存在于当前Git；重新读取已保存作者PDF文本§3–4/4.1，补建research/5.prior-art-survey/docs/42-drv-raw-isp-and-temporal-preprocessing.md。保留真实补记时间，不把旧引用当当时已经落盘的证据。原始RAW与VBM4D时域预处理再逐帧网络的区别仍成立；本次0新成员获取/解码/CNN/GPU，不改变元数据状态或旧失败记录。作者：Codex  (sqs_A100)。
