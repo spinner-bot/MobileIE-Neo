@@ -1,0 +1,3266 @@
+{
+  "at": "2026-11-12T18:10:09.767438+08:00",
+  "device": "meta; shape only",
+  "rows": [
+    {
+      "model": "MobileIE",
+      "height": 480,
+      "width": 854,
+      "padded_shape": [
+        480,
+        854
+      ],
+      "parameters": 4075,
+      "conv_MACs": 1569173904,
+      "conv_invocations": 6,
+      "largest_single_conv_output_FP32_bytes": 19676160,
+      "temp1_one_call_MACs": null,
+      "temp2_one_call_MACs": null,
+      "layers": [
+        {
+          "layer": "head.block1.0",
+          "output_shape": [
+            1,
+            12,
+            480,
+            854
+          ],
+          "conv_MACs": 368928000,
+          "single_output_tensor_FP32_bytes": 19676160
+        },
+        {
+          "layer": "head.block1.2",
+          "output_shape": [
+            1,
+            12,
+            480,
+            854
+          ],
+          "conv_MACs": 531256320,
+          "single_output_tensor_FP32_bytes": 19676160
+        },
+        {
+          "layer": "body.block1",
+          "output_shape": [
+            1,
+            12,
+            480,
+            854
+          ],
+          "conv_MACs": 531256320,
+          "single_output_tensor_FP32_bytes": 19676160
+        },
+        {
+          "layer": "att.1",
+          "output_shape": [
+            1,
+            12,
+            1,
+            1
+          ],
+          "conv_MACs": 144,
+          "single_output_tensor_FP32_bytes": 48
+        },
+        {
+          "layer": "att1.0",
+          "output_shape": [
+            1,
+            12,
+            480,
+            854
+          ],
+          "conv_MACs": 4919040,
+          "single_output_tensor_FP32_bytes": 19676160
+        },
+        {
+          "layer": "tail",
+          "output_shape": [
+            1,
+            3,
+            480,
+            854
+          ],
+          "conv_MACs": 132814080,
+          "single_output_tensor_FP32_bytes": 4919040
+        }
+      ]
+    },
+    {
+      "model": "FastDVDnet",
+      "height": 480,
+      "width": 854,
+      "padded_shape": [
+        480,
+        856
+      ],
+      "parameters": 2479096,
+      "conv_MACs": 261398568960,
+      "conv_invocations": 64,
+      "largest_single_conv_output_FP32_bytes": 147916800,
+      "temp1_one_call_MACs": 65349642240,
+      "temp2_one_call_MACs": 65349642240,
+      "layers": [
+        {
+          "layer": "temp1.inc.convblock.0",
+          "output_shape": [
+            1,
+            90,
+            480,
+            856
+          ],
+          "conv_MACs": 1331251200,
+          "single_output_tensor_FP32_bytes": 147916800
+        },
+        {
+          "layer": "temp1.inc.convblock.3",
+          "output_shape": [
+            1,
+            32,
+            480,
+            856
+          ],
+          "conv_MACs": 10650009600,
+          "single_output_tensor_FP32_bytes": 52592640
+        },
+        {
+          "layer": "temp1.downc0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            240,
+            428
+          ],
+          "conv_MACs": 1893335040,
+          "single_output_tensor_FP32_bytes": 26296320
+        },
+        {
+          "layer": "temp1.downc0.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            240,
+            428
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 26296320
+        },
+        {
+          "layer": "temp1.downc0.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            240,
+            428
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 26296320
+        },
+        {
+          "layer": "temp1.downc1.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            120,
+            214
+          ],
+          "conv_MACs": 1893335040,
+          "single_output_tensor_FP32_bytes": 13148160
+        },
+        {
+          "layer": "temp1.downc1.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            120,
+            214
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 13148160
+        },
+        {
+          "layer": "temp1.downc1.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            120,
+            214
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 13148160
+        },
+        {
+          "layer": "temp1.upc2.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            120,
+            214
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 13148160
+        },
+        {
+          "layer": "temp1.upc2.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            120,
+            214
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 13148160
+        },
+        {
+          "layer": "temp1.upc2.convblock.1",
+          "output_shape": [
+            1,
+            256,
+            120,
+            214
+          ],
+          "conv_MACs": 7573340160,
+          "single_output_tensor_FP32_bytes": 26296320
+        },
+        {
+          "layer": "temp1.upc1.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            240,
+            428
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 26296320
+        },
+        {
+          "layer": "temp1.upc1.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            240,
+            428
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 26296320
+        },
+        {
+          "layer": "temp1.upc1.convblock.1",
+          "output_shape": [
+            1,
+            128,
+            240,
+            428
+          ],
+          "conv_MACs": 7573340160,
+          "single_output_tensor_FP32_bytes": 52592640
+        },
+        {
+          "layer": "temp1.outc.convblock.0",
+          "output_shape": [
+            1,
+            32,
+            480,
+            856
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 52592640
+        },
+        {
+          "layer": "temp1.outc.convblock.3",
+          "output_shape": [
+            1,
+            3,
+            480,
+            856
+          ],
+          "conv_MACs": 355000320,
+          "single_output_tensor_FP32_bytes": 4930560
+        },
+        {
+          "layer": "temp1.inc.convblock.0",
+          "output_shape": [
+            1,
+            90,
+            480,
+            856
+          ],
+          "conv_MACs": 1331251200,
+          "single_output_tensor_FP32_bytes": 147916800
+        },
+        {
+          "layer": "temp1.inc.convblock.3",
+          "output_shape": [
+            1,
+            32,
+            480,
+            856
+          ],
+          "conv_MACs": 10650009600,
+          "single_output_tensor_FP32_bytes": 52592640
+        },
+        {
+          "layer": "temp1.downc0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            240,
+            428
+          ],
+          "conv_MACs": 1893335040,
+          "single_output_tensor_FP32_bytes": 26296320
+        },
+        {
+          "layer": "temp1.downc0.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            240,
+            428
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 26296320
+        },
+        {
+          "layer": "temp1.downc0.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            240,
+            428
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 26296320
+        },
+        {
+          "layer": "temp1.downc1.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            120,
+            214
+          ],
+          "conv_MACs": 1893335040,
+          "single_output_tensor_FP32_bytes": 13148160
+        },
+        {
+          "layer": "temp1.downc1.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            120,
+            214
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 13148160
+        },
+        {
+          "layer": "temp1.downc1.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            120,
+            214
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 13148160
+        },
+        {
+          "layer": "temp1.upc2.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            120,
+            214
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 13148160
+        },
+        {
+          "layer": "temp1.upc2.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            120,
+            214
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 13148160
+        },
+        {
+          "layer": "temp1.upc2.convblock.1",
+          "output_shape": [
+            1,
+            256,
+            120,
+            214
+          ],
+          "conv_MACs": 7573340160,
+          "single_output_tensor_FP32_bytes": 26296320
+        },
+        {
+          "layer": "temp1.upc1.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            240,
+            428
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 26296320
+        },
+        {
+          "layer": "temp1.upc1.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            240,
+            428
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 26296320
+        },
+        {
+          "layer": "temp1.upc1.convblock.1",
+          "output_shape": [
+            1,
+            128,
+            240,
+            428
+          ],
+          "conv_MACs": 7573340160,
+          "single_output_tensor_FP32_bytes": 52592640
+        },
+        {
+          "layer": "temp1.outc.convblock.0",
+          "output_shape": [
+            1,
+            32,
+            480,
+            856
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 52592640
+        },
+        {
+          "layer": "temp1.outc.convblock.3",
+          "output_shape": [
+            1,
+            3,
+            480,
+            856
+          ],
+          "conv_MACs": 355000320,
+          "single_output_tensor_FP32_bytes": 4930560
+        },
+        {
+          "layer": "temp1.inc.convblock.0",
+          "output_shape": [
+            1,
+            90,
+            480,
+            856
+          ],
+          "conv_MACs": 1331251200,
+          "single_output_tensor_FP32_bytes": 147916800
+        },
+        {
+          "layer": "temp1.inc.convblock.3",
+          "output_shape": [
+            1,
+            32,
+            480,
+            856
+          ],
+          "conv_MACs": 10650009600,
+          "single_output_tensor_FP32_bytes": 52592640
+        },
+        {
+          "layer": "temp1.downc0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            240,
+            428
+          ],
+          "conv_MACs": 1893335040,
+          "single_output_tensor_FP32_bytes": 26296320
+        },
+        {
+          "layer": "temp1.downc0.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            240,
+            428
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 26296320
+        },
+        {
+          "layer": "temp1.downc0.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            240,
+            428
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 26296320
+        },
+        {
+          "layer": "temp1.downc1.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            120,
+            214
+          ],
+          "conv_MACs": 1893335040,
+          "single_output_tensor_FP32_bytes": 13148160
+        },
+        {
+          "layer": "temp1.downc1.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            120,
+            214
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 13148160
+        },
+        {
+          "layer": "temp1.downc1.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            120,
+            214
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 13148160
+        },
+        {
+          "layer": "temp1.upc2.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            120,
+            214
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 13148160
+        },
+        {
+          "layer": "temp1.upc2.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            120,
+            214
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 13148160
+        },
+        {
+          "layer": "temp1.upc2.convblock.1",
+          "output_shape": [
+            1,
+            256,
+            120,
+            214
+          ],
+          "conv_MACs": 7573340160,
+          "single_output_tensor_FP32_bytes": 26296320
+        },
+        {
+          "layer": "temp1.upc1.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            240,
+            428
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 26296320
+        },
+        {
+          "layer": "temp1.upc1.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            240,
+            428
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 26296320
+        },
+        {
+          "layer": "temp1.upc1.convblock.1",
+          "output_shape": [
+            1,
+            128,
+            240,
+            428
+          ],
+          "conv_MACs": 7573340160,
+          "single_output_tensor_FP32_bytes": 52592640
+        },
+        {
+          "layer": "temp1.outc.convblock.0",
+          "output_shape": [
+            1,
+            32,
+            480,
+            856
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 52592640
+        },
+        {
+          "layer": "temp1.outc.convblock.3",
+          "output_shape": [
+            1,
+            3,
+            480,
+            856
+          ],
+          "conv_MACs": 355000320,
+          "single_output_tensor_FP32_bytes": 4930560
+        },
+        {
+          "layer": "temp2.inc.convblock.0",
+          "output_shape": [
+            1,
+            90,
+            480,
+            856
+          ],
+          "conv_MACs": 1331251200,
+          "single_output_tensor_FP32_bytes": 147916800
+        },
+        {
+          "layer": "temp2.inc.convblock.3",
+          "output_shape": [
+            1,
+            32,
+            480,
+            856
+          ],
+          "conv_MACs": 10650009600,
+          "single_output_tensor_FP32_bytes": 52592640
+        },
+        {
+          "layer": "temp2.downc0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            240,
+            428
+          ],
+          "conv_MACs": 1893335040,
+          "single_output_tensor_FP32_bytes": 26296320
+        },
+        {
+          "layer": "temp2.downc0.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            240,
+            428
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 26296320
+        },
+        {
+          "layer": "temp2.downc0.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            240,
+            428
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 26296320
+        },
+        {
+          "layer": "temp2.downc1.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            120,
+            214
+          ],
+          "conv_MACs": 1893335040,
+          "single_output_tensor_FP32_bytes": 13148160
+        },
+        {
+          "layer": "temp2.downc1.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            120,
+            214
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 13148160
+        },
+        {
+          "layer": "temp2.downc1.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            120,
+            214
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 13148160
+        },
+        {
+          "layer": "temp2.upc2.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            120,
+            214
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 13148160
+        },
+        {
+          "layer": "temp2.upc2.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            120,
+            214
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 13148160
+        },
+        {
+          "layer": "temp2.upc2.convblock.1",
+          "output_shape": [
+            1,
+            256,
+            120,
+            214
+          ],
+          "conv_MACs": 7573340160,
+          "single_output_tensor_FP32_bytes": 26296320
+        },
+        {
+          "layer": "temp2.upc1.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            240,
+            428
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 26296320
+        },
+        {
+          "layer": "temp2.upc1.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            240,
+            428
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 26296320
+        },
+        {
+          "layer": "temp2.upc1.convblock.1",
+          "output_shape": [
+            1,
+            128,
+            240,
+            428
+          ],
+          "conv_MACs": 7573340160,
+          "single_output_tensor_FP32_bytes": 52592640
+        },
+        {
+          "layer": "temp2.outc.convblock.0",
+          "output_shape": [
+            1,
+            32,
+            480,
+            856
+          ],
+          "conv_MACs": 3786670080,
+          "single_output_tensor_FP32_bytes": 52592640
+        },
+        {
+          "layer": "temp2.outc.convblock.3",
+          "output_shape": [
+            1,
+            3,
+            480,
+            856
+          ],
+          "conv_MACs": 355000320,
+          "single_output_tensor_FP32_bytes": 4930560
+        }
+      ]
+    },
+    {
+      "model": "MobileIE",
+      "height": 288,
+      "width": 512,
+      "padded_shape": [
+        288,
+        512
+      ],
+      "parameters": 4075,
+      "conv_MACs": 564461712,
+      "conv_invocations": 6,
+      "largest_single_conv_output_FP32_bytes": 7077888,
+      "temp1_one_call_MACs": null,
+      "temp2_one_call_MACs": null,
+      "layers": [
+        {
+          "layer": "head.block1.0",
+          "output_shape": [
+            1,
+            12,
+            288,
+            512
+          ],
+          "conv_MACs": 132710400,
+          "single_output_tensor_FP32_bytes": 7077888
+        },
+        {
+          "layer": "head.block1.2",
+          "output_shape": [
+            1,
+            12,
+            288,
+            512
+          ],
+          "conv_MACs": 191102976,
+          "single_output_tensor_FP32_bytes": 7077888
+        },
+        {
+          "layer": "body.block1",
+          "output_shape": [
+            1,
+            12,
+            288,
+            512
+          ],
+          "conv_MACs": 191102976,
+          "single_output_tensor_FP32_bytes": 7077888
+        },
+        {
+          "layer": "att.1",
+          "output_shape": [
+            1,
+            12,
+            1,
+            1
+          ],
+          "conv_MACs": 144,
+          "single_output_tensor_FP32_bytes": 48
+        },
+        {
+          "layer": "att1.0",
+          "output_shape": [
+            1,
+            12,
+            288,
+            512
+          ],
+          "conv_MACs": 1769472,
+          "single_output_tensor_FP32_bytes": 7077888
+        },
+        {
+          "layer": "tail",
+          "output_shape": [
+            1,
+            3,
+            288,
+            512
+          ],
+          "conv_MACs": 47775744,
+          "single_output_tensor_FP32_bytes": 1769472
+        }
+      ]
+    },
+    {
+      "model": "FastDVDnet",
+      "height": 288,
+      "width": 512,
+      "padded_shape": [
+        288,
+        512
+      ],
+      "parameters": 2479096,
+      "conv_MACs": 93810327552,
+      "conv_invocations": 64,
+      "largest_single_conv_output_FP32_bytes": 53084160,
+      "temp1_one_call_MACs": 23452581888,
+      "temp2_one_call_MACs": 23452581888,
+      "layers": [
+        {
+          "layer": "temp1.inc.convblock.0",
+          "output_shape": [
+            1,
+            90,
+            288,
+            512
+          ],
+          "conv_MACs": 477757440,
+          "single_output_tensor_FP32_bytes": 53084160
+        },
+        {
+          "layer": "temp1.inc.convblock.3",
+          "output_shape": [
+            1,
+            32,
+            288,
+            512
+          ],
+          "conv_MACs": 3822059520,
+          "single_output_tensor_FP32_bytes": 18874368
+        },
+        {
+          "layer": "temp1.downc0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            144,
+            256
+          ],
+          "conv_MACs": 679477248,
+          "single_output_tensor_FP32_bytes": 9437184
+        },
+        {
+          "layer": "temp1.downc0.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            144,
+            256
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 9437184
+        },
+        {
+          "layer": "temp1.downc0.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            144,
+            256
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 9437184
+        },
+        {
+          "layer": "temp1.downc1.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            72,
+            128
+          ],
+          "conv_MACs": 679477248,
+          "single_output_tensor_FP32_bytes": 4718592
+        },
+        {
+          "layer": "temp1.downc1.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            72,
+            128
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 4718592
+        },
+        {
+          "layer": "temp1.downc1.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            72,
+            128
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 4718592
+        },
+        {
+          "layer": "temp1.upc2.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            72,
+            128
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 4718592
+        },
+        {
+          "layer": "temp1.upc2.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            72,
+            128
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 4718592
+        },
+        {
+          "layer": "temp1.upc2.convblock.1",
+          "output_shape": [
+            1,
+            256,
+            72,
+            128
+          ],
+          "conv_MACs": 2717908992,
+          "single_output_tensor_FP32_bytes": 9437184
+        },
+        {
+          "layer": "temp1.upc1.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            144,
+            256
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 9437184
+        },
+        {
+          "layer": "temp1.upc1.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            144,
+            256
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 9437184
+        },
+        {
+          "layer": "temp1.upc1.convblock.1",
+          "output_shape": [
+            1,
+            128,
+            144,
+            256
+          ],
+          "conv_MACs": 2717908992,
+          "single_output_tensor_FP32_bytes": 18874368
+        },
+        {
+          "layer": "temp1.outc.convblock.0",
+          "output_shape": [
+            1,
+            32,
+            288,
+            512
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 18874368
+        },
+        {
+          "layer": "temp1.outc.convblock.3",
+          "output_shape": [
+            1,
+            3,
+            288,
+            512
+          ],
+          "conv_MACs": 127401984,
+          "single_output_tensor_FP32_bytes": 1769472
+        },
+        {
+          "layer": "temp1.inc.convblock.0",
+          "output_shape": [
+            1,
+            90,
+            288,
+            512
+          ],
+          "conv_MACs": 477757440,
+          "single_output_tensor_FP32_bytes": 53084160
+        },
+        {
+          "layer": "temp1.inc.convblock.3",
+          "output_shape": [
+            1,
+            32,
+            288,
+            512
+          ],
+          "conv_MACs": 3822059520,
+          "single_output_tensor_FP32_bytes": 18874368
+        },
+        {
+          "layer": "temp1.downc0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            144,
+            256
+          ],
+          "conv_MACs": 679477248,
+          "single_output_tensor_FP32_bytes": 9437184
+        },
+        {
+          "layer": "temp1.downc0.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            144,
+            256
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 9437184
+        },
+        {
+          "layer": "temp1.downc0.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            144,
+            256
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 9437184
+        },
+        {
+          "layer": "temp1.downc1.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            72,
+            128
+          ],
+          "conv_MACs": 679477248,
+          "single_output_tensor_FP32_bytes": 4718592
+        },
+        {
+          "layer": "temp1.downc1.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            72,
+            128
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 4718592
+        },
+        {
+          "layer": "temp1.downc1.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            72,
+            128
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 4718592
+        },
+        {
+          "layer": "temp1.upc2.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            72,
+            128
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 4718592
+        },
+        {
+          "layer": "temp1.upc2.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            72,
+            128
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 4718592
+        },
+        {
+          "layer": "temp1.upc2.convblock.1",
+          "output_shape": [
+            1,
+            256,
+            72,
+            128
+          ],
+          "conv_MACs": 2717908992,
+          "single_output_tensor_FP32_bytes": 9437184
+        },
+        {
+          "layer": "temp1.upc1.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            144,
+            256
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 9437184
+        },
+        {
+          "layer": "temp1.upc1.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            144,
+            256
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 9437184
+        },
+        {
+          "layer": "temp1.upc1.convblock.1",
+          "output_shape": [
+            1,
+            128,
+            144,
+            256
+          ],
+          "conv_MACs": 2717908992,
+          "single_output_tensor_FP32_bytes": 18874368
+        },
+        {
+          "layer": "temp1.outc.convblock.0",
+          "output_shape": [
+            1,
+            32,
+            288,
+            512
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 18874368
+        },
+        {
+          "layer": "temp1.outc.convblock.3",
+          "output_shape": [
+            1,
+            3,
+            288,
+            512
+          ],
+          "conv_MACs": 127401984,
+          "single_output_tensor_FP32_bytes": 1769472
+        },
+        {
+          "layer": "temp1.inc.convblock.0",
+          "output_shape": [
+            1,
+            90,
+            288,
+            512
+          ],
+          "conv_MACs": 477757440,
+          "single_output_tensor_FP32_bytes": 53084160
+        },
+        {
+          "layer": "temp1.inc.convblock.3",
+          "output_shape": [
+            1,
+            32,
+            288,
+            512
+          ],
+          "conv_MACs": 3822059520,
+          "single_output_tensor_FP32_bytes": 18874368
+        },
+        {
+          "layer": "temp1.downc0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            144,
+            256
+          ],
+          "conv_MACs": 679477248,
+          "single_output_tensor_FP32_bytes": 9437184
+        },
+        {
+          "layer": "temp1.downc0.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            144,
+            256
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 9437184
+        },
+        {
+          "layer": "temp1.downc0.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            144,
+            256
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 9437184
+        },
+        {
+          "layer": "temp1.downc1.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            72,
+            128
+          ],
+          "conv_MACs": 679477248,
+          "single_output_tensor_FP32_bytes": 4718592
+        },
+        {
+          "layer": "temp1.downc1.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            72,
+            128
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 4718592
+        },
+        {
+          "layer": "temp1.downc1.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            72,
+            128
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 4718592
+        },
+        {
+          "layer": "temp1.upc2.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            72,
+            128
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 4718592
+        },
+        {
+          "layer": "temp1.upc2.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            72,
+            128
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 4718592
+        },
+        {
+          "layer": "temp1.upc2.convblock.1",
+          "output_shape": [
+            1,
+            256,
+            72,
+            128
+          ],
+          "conv_MACs": 2717908992,
+          "single_output_tensor_FP32_bytes": 9437184
+        },
+        {
+          "layer": "temp1.upc1.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            144,
+            256
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 9437184
+        },
+        {
+          "layer": "temp1.upc1.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            144,
+            256
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 9437184
+        },
+        {
+          "layer": "temp1.upc1.convblock.1",
+          "output_shape": [
+            1,
+            128,
+            144,
+            256
+          ],
+          "conv_MACs": 2717908992,
+          "single_output_tensor_FP32_bytes": 18874368
+        },
+        {
+          "layer": "temp1.outc.convblock.0",
+          "output_shape": [
+            1,
+            32,
+            288,
+            512
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 18874368
+        },
+        {
+          "layer": "temp1.outc.convblock.3",
+          "output_shape": [
+            1,
+            3,
+            288,
+            512
+          ],
+          "conv_MACs": 127401984,
+          "single_output_tensor_FP32_bytes": 1769472
+        },
+        {
+          "layer": "temp2.inc.convblock.0",
+          "output_shape": [
+            1,
+            90,
+            288,
+            512
+          ],
+          "conv_MACs": 477757440,
+          "single_output_tensor_FP32_bytes": 53084160
+        },
+        {
+          "layer": "temp2.inc.convblock.3",
+          "output_shape": [
+            1,
+            32,
+            288,
+            512
+          ],
+          "conv_MACs": 3822059520,
+          "single_output_tensor_FP32_bytes": 18874368
+        },
+        {
+          "layer": "temp2.downc0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            144,
+            256
+          ],
+          "conv_MACs": 679477248,
+          "single_output_tensor_FP32_bytes": 9437184
+        },
+        {
+          "layer": "temp2.downc0.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            144,
+            256
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 9437184
+        },
+        {
+          "layer": "temp2.downc0.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            144,
+            256
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 9437184
+        },
+        {
+          "layer": "temp2.downc1.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            72,
+            128
+          ],
+          "conv_MACs": 679477248,
+          "single_output_tensor_FP32_bytes": 4718592
+        },
+        {
+          "layer": "temp2.downc1.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            72,
+            128
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 4718592
+        },
+        {
+          "layer": "temp2.downc1.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            72,
+            128
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 4718592
+        },
+        {
+          "layer": "temp2.upc2.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            72,
+            128
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 4718592
+        },
+        {
+          "layer": "temp2.upc2.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            72,
+            128
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 4718592
+        },
+        {
+          "layer": "temp2.upc2.convblock.1",
+          "output_shape": [
+            1,
+            256,
+            72,
+            128
+          ],
+          "conv_MACs": 2717908992,
+          "single_output_tensor_FP32_bytes": 9437184
+        },
+        {
+          "layer": "temp2.upc1.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            144,
+            256
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 9437184
+        },
+        {
+          "layer": "temp2.upc1.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            144,
+            256
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 9437184
+        },
+        {
+          "layer": "temp2.upc1.convblock.1",
+          "output_shape": [
+            1,
+            128,
+            144,
+            256
+          ],
+          "conv_MACs": 2717908992,
+          "single_output_tensor_FP32_bytes": 18874368
+        },
+        {
+          "layer": "temp2.outc.convblock.0",
+          "output_shape": [
+            1,
+            32,
+            288,
+            512
+          ],
+          "conv_MACs": 1358954496,
+          "single_output_tensor_FP32_bytes": 18874368
+        },
+        {
+          "layer": "temp2.outc.convblock.3",
+          "output_shape": [
+            1,
+            3,
+            288,
+            512
+          ],
+          "conv_MACs": 127401984,
+          "single_output_tensor_FP32_bytes": 1769472
+        }
+      ]
+    },
+    {
+      "model": "MobileIE",
+      "height": 360,
+      "width": 640,
+      "padded_shape": [
+        360,
+        640
+      ],
+      "parameters": 4075,
+      "conv_MACs": 881971344,
+      "conv_invocations": 6,
+      "largest_single_conv_output_FP32_bytes": 11059200,
+      "temp1_one_call_MACs": null,
+      "temp2_one_call_MACs": null,
+      "layers": [
+        {
+          "layer": "head.block1.0",
+          "output_shape": [
+            1,
+            12,
+            360,
+            640
+          ],
+          "conv_MACs": 207360000,
+          "single_output_tensor_FP32_bytes": 11059200
+        },
+        {
+          "layer": "head.block1.2",
+          "output_shape": [
+            1,
+            12,
+            360,
+            640
+          ],
+          "conv_MACs": 298598400,
+          "single_output_tensor_FP32_bytes": 11059200
+        },
+        {
+          "layer": "body.block1",
+          "output_shape": [
+            1,
+            12,
+            360,
+            640
+          ],
+          "conv_MACs": 298598400,
+          "single_output_tensor_FP32_bytes": 11059200
+        },
+        {
+          "layer": "att.1",
+          "output_shape": [
+            1,
+            12,
+            1,
+            1
+          ],
+          "conv_MACs": 144,
+          "single_output_tensor_FP32_bytes": 48
+        },
+        {
+          "layer": "att1.0",
+          "output_shape": [
+            1,
+            12,
+            360,
+            640
+          ],
+          "conv_MACs": 2764800,
+          "single_output_tensor_FP32_bytes": 11059200
+        },
+        {
+          "layer": "tail",
+          "output_shape": [
+            1,
+            3,
+            360,
+            640
+          ],
+          "conv_MACs": 74649600,
+          "single_output_tensor_FP32_bytes": 2764800
+        }
+      ]
+    },
+    {
+      "model": "FastDVDnet",
+      "height": 360,
+      "width": 640,
+      "padded_shape": [
+        360,
+        640
+      ],
+      "parameters": 2479096,
+      "conv_MACs": 146578636800,
+      "conv_invocations": 64,
+      "largest_single_conv_output_FP32_bytes": 82944000,
+      "temp1_one_call_MACs": 36644659200,
+      "temp2_one_call_MACs": 36644659200,
+      "layers": [
+        {
+          "layer": "temp1.inc.convblock.0",
+          "output_shape": [
+            1,
+            90,
+            360,
+            640
+          ],
+          "conv_MACs": 746496000,
+          "single_output_tensor_FP32_bytes": 82944000
+        },
+        {
+          "layer": "temp1.inc.convblock.3",
+          "output_shape": [
+            1,
+            32,
+            360,
+            640
+          ],
+          "conv_MACs": 5971968000,
+          "single_output_tensor_FP32_bytes": 29491200
+        },
+        {
+          "layer": "temp1.downc0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            180,
+            320
+          ],
+          "conv_MACs": 1061683200,
+          "single_output_tensor_FP32_bytes": 14745600
+        },
+        {
+          "layer": "temp1.downc0.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            180,
+            320
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 14745600
+        },
+        {
+          "layer": "temp1.downc0.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            180,
+            320
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 14745600
+        },
+        {
+          "layer": "temp1.downc1.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            90,
+            160
+          ],
+          "conv_MACs": 1061683200,
+          "single_output_tensor_FP32_bytes": 7372800
+        },
+        {
+          "layer": "temp1.downc1.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            90,
+            160
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 7372800
+        },
+        {
+          "layer": "temp1.downc1.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            90,
+            160
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 7372800
+        },
+        {
+          "layer": "temp1.upc2.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            90,
+            160
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 7372800
+        },
+        {
+          "layer": "temp1.upc2.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            90,
+            160
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 7372800
+        },
+        {
+          "layer": "temp1.upc2.convblock.1",
+          "output_shape": [
+            1,
+            256,
+            90,
+            160
+          ],
+          "conv_MACs": 4246732800,
+          "single_output_tensor_FP32_bytes": 14745600
+        },
+        {
+          "layer": "temp1.upc1.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            180,
+            320
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 14745600
+        },
+        {
+          "layer": "temp1.upc1.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            180,
+            320
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 14745600
+        },
+        {
+          "layer": "temp1.upc1.convblock.1",
+          "output_shape": [
+            1,
+            128,
+            180,
+            320
+          ],
+          "conv_MACs": 4246732800,
+          "single_output_tensor_FP32_bytes": 29491200
+        },
+        {
+          "layer": "temp1.outc.convblock.0",
+          "output_shape": [
+            1,
+            32,
+            360,
+            640
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 29491200
+        },
+        {
+          "layer": "temp1.outc.convblock.3",
+          "output_shape": [
+            1,
+            3,
+            360,
+            640
+          ],
+          "conv_MACs": 199065600,
+          "single_output_tensor_FP32_bytes": 2764800
+        },
+        {
+          "layer": "temp1.inc.convblock.0",
+          "output_shape": [
+            1,
+            90,
+            360,
+            640
+          ],
+          "conv_MACs": 746496000,
+          "single_output_tensor_FP32_bytes": 82944000
+        },
+        {
+          "layer": "temp1.inc.convblock.3",
+          "output_shape": [
+            1,
+            32,
+            360,
+            640
+          ],
+          "conv_MACs": 5971968000,
+          "single_output_tensor_FP32_bytes": 29491200
+        },
+        {
+          "layer": "temp1.downc0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            180,
+            320
+          ],
+          "conv_MACs": 1061683200,
+          "single_output_tensor_FP32_bytes": 14745600
+        },
+        {
+          "layer": "temp1.downc0.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            180,
+            320
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 14745600
+        },
+        {
+          "layer": "temp1.downc0.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            180,
+            320
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 14745600
+        },
+        {
+          "layer": "temp1.downc1.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            90,
+            160
+          ],
+          "conv_MACs": 1061683200,
+          "single_output_tensor_FP32_bytes": 7372800
+        },
+        {
+          "layer": "temp1.downc1.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            90,
+            160
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 7372800
+        },
+        {
+          "layer": "temp1.downc1.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            90,
+            160
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 7372800
+        },
+        {
+          "layer": "temp1.upc2.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            90,
+            160
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 7372800
+        },
+        {
+          "layer": "temp1.upc2.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            90,
+            160
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 7372800
+        },
+        {
+          "layer": "temp1.upc2.convblock.1",
+          "output_shape": [
+            1,
+            256,
+            90,
+            160
+          ],
+          "conv_MACs": 4246732800,
+          "single_output_tensor_FP32_bytes": 14745600
+        },
+        {
+          "layer": "temp1.upc1.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            180,
+            320
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 14745600
+        },
+        {
+          "layer": "temp1.upc1.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            180,
+            320
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 14745600
+        },
+        {
+          "layer": "temp1.upc1.convblock.1",
+          "output_shape": [
+            1,
+            128,
+            180,
+            320
+          ],
+          "conv_MACs": 4246732800,
+          "single_output_tensor_FP32_bytes": 29491200
+        },
+        {
+          "layer": "temp1.outc.convblock.0",
+          "output_shape": [
+            1,
+            32,
+            360,
+            640
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 29491200
+        },
+        {
+          "layer": "temp1.outc.convblock.3",
+          "output_shape": [
+            1,
+            3,
+            360,
+            640
+          ],
+          "conv_MACs": 199065600,
+          "single_output_tensor_FP32_bytes": 2764800
+        },
+        {
+          "layer": "temp1.inc.convblock.0",
+          "output_shape": [
+            1,
+            90,
+            360,
+            640
+          ],
+          "conv_MACs": 746496000,
+          "single_output_tensor_FP32_bytes": 82944000
+        },
+        {
+          "layer": "temp1.inc.convblock.3",
+          "output_shape": [
+            1,
+            32,
+            360,
+            640
+          ],
+          "conv_MACs": 5971968000,
+          "single_output_tensor_FP32_bytes": 29491200
+        },
+        {
+          "layer": "temp1.downc0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            180,
+            320
+          ],
+          "conv_MACs": 1061683200,
+          "single_output_tensor_FP32_bytes": 14745600
+        },
+        {
+          "layer": "temp1.downc0.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            180,
+            320
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 14745600
+        },
+        {
+          "layer": "temp1.downc0.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            180,
+            320
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 14745600
+        },
+        {
+          "layer": "temp1.downc1.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            90,
+            160
+          ],
+          "conv_MACs": 1061683200,
+          "single_output_tensor_FP32_bytes": 7372800
+        },
+        {
+          "layer": "temp1.downc1.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            90,
+            160
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 7372800
+        },
+        {
+          "layer": "temp1.downc1.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            90,
+            160
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 7372800
+        },
+        {
+          "layer": "temp1.upc2.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            90,
+            160
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 7372800
+        },
+        {
+          "layer": "temp1.upc2.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            90,
+            160
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 7372800
+        },
+        {
+          "layer": "temp1.upc2.convblock.1",
+          "output_shape": [
+            1,
+            256,
+            90,
+            160
+          ],
+          "conv_MACs": 4246732800,
+          "single_output_tensor_FP32_bytes": 14745600
+        },
+        {
+          "layer": "temp1.upc1.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            180,
+            320
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 14745600
+        },
+        {
+          "layer": "temp1.upc1.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            180,
+            320
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 14745600
+        },
+        {
+          "layer": "temp1.upc1.convblock.1",
+          "output_shape": [
+            1,
+            128,
+            180,
+            320
+          ],
+          "conv_MACs": 4246732800,
+          "single_output_tensor_FP32_bytes": 29491200
+        },
+        {
+          "layer": "temp1.outc.convblock.0",
+          "output_shape": [
+            1,
+            32,
+            360,
+            640
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 29491200
+        },
+        {
+          "layer": "temp1.outc.convblock.3",
+          "output_shape": [
+            1,
+            3,
+            360,
+            640
+          ],
+          "conv_MACs": 199065600,
+          "single_output_tensor_FP32_bytes": 2764800
+        },
+        {
+          "layer": "temp2.inc.convblock.0",
+          "output_shape": [
+            1,
+            90,
+            360,
+            640
+          ],
+          "conv_MACs": 746496000,
+          "single_output_tensor_FP32_bytes": 82944000
+        },
+        {
+          "layer": "temp2.inc.convblock.3",
+          "output_shape": [
+            1,
+            32,
+            360,
+            640
+          ],
+          "conv_MACs": 5971968000,
+          "single_output_tensor_FP32_bytes": 29491200
+        },
+        {
+          "layer": "temp2.downc0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            180,
+            320
+          ],
+          "conv_MACs": 1061683200,
+          "single_output_tensor_FP32_bytes": 14745600
+        },
+        {
+          "layer": "temp2.downc0.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            180,
+            320
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 14745600
+        },
+        {
+          "layer": "temp2.downc0.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            180,
+            320
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 14745600
+        },
+        {
+          "layer": "temp2.downc1.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            90,
+            160
+          ],
+          "conv_MACs": 1061683200,
+          "single_output_tensor_FP32_bytes": 7372800
+        },
+        {
+          "layer": "temp2.downc1.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            90,
+            160
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 7372800
+        },
+        {
+          "layer": "temp2.downc1.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            90,
+            160
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 7372800
+        },
+        {
+          "layer": "temp2.upc2.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            90,
+            160
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 7372800
+        },
+        {
+          "layer": "temp2.upc2.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            90,
+            160
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 7372800
+        },
+        {
+          "layer": "temp2.upc2.convblock.1",
+          "output_shape": [
+            1,
+            256,
+            90,
+            160
+          ],
+          "conv_MACs": 4246732800,
+          "single_output_tensor_FP32_bytes": 14745600
+        },
+        {
+          "layer": "temp2.upc1.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            180,
+            320
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 14745600
+        },
+        {
+          "layer": "temp2.upc1.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            180,
+            320
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 14745600
+        },
+        {
+          "layer": "temp2.upc1.convblock.1",
+          "output_shape": [
+            1,
+            128,
+            180,
+            320
+          ],
+          "conv_MACs": 4246732800,
+          "single_output_tensor_FP32_bytes": 29491200
+        },
+        {
+          "layer": "temp2.outc.convblock.0",
+          "output_shape": [
+            1,
+            32,
+            360,
+            640
+          ],
+          "conv_MACs": 2123366400,
+          "single_output_tensor_FP32_bytes": 29491200
+        },
+        {
+          "layer": "temp2.outc.convblock.3",
+          "output_shape": [
+            1,
+            3,
+            360,
+            640
+          ],
+          "conv_MACs": 199065600,
+          "single_output_tensor_FP32_bytes": 2764800
+        }
+      ]
+    },
+    {
+      "model": "MobileIE",
+      "height": 1080,
+      "width": 1920,
+      "padded_shape": [
+        1080,
+        1920
+      ],
+      "parameters": 4075,
+      "conv_MACs": 7937740944,
+      "conv_invocations": 6,
+      "largest_single_conv_output_FP32_bytes": 99532800,
+      "temp1_one_call_MACs": null,
+      "temp2_one_call_MACs": null,
+      "layers": [
+        {
+          "layer": "head.block1.0",
+          "output_shape": [
+            1,
+            12,
+            1080,
+            1920
+          ],
+          "conv_MACs": 1866240000,
+          "single_output_tensor_FP32_bytes": 99532800
+        },
+        {
+          "layer": "head.block1.2",
+          "output_shape": [
+            1,
+            12,
+            1080,
+            1920
+          ],
+          "conv_MACs": 2687385600,
+          "single_output_tensor_FP32_bytes": 99532800
+        },
+        {
+          "layer": "body.block1",
+          "output_shape": [
+            1,
+            12,
+            1080,
+            1920
+          ],
+          "conv_MACs": 2687385600,
+          "single_output_tensor_FP32_bytes": 99532800
+        },
+        {
+          "layer": "att.1",
+          "output_shape": [
+            1,
+            12,
+            1,
+            1
+          ],
+          "conv_MACs": 144,
+          "single_output_tensor_FP32_bytes": 48
+        },
+        {
+          "layer": "att1.0",
+          "output_shape": [
+            1,
+            12,
+            1080,
+            1920
+          ],
+          "conv_MACs": 24883200,
+          "single_output_tensor_FP32_bytes": 99532800
+        },
+        {
+          "layer": "tail",
+          "output_shape": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "conv_MACs": 671846400,
+          "single_output_tensor_FP32_bytes": 24883200
+        }
+      ]
+    },
+    {
+      "model": "FastDVDnet",
+      "height": 1080,
+      "width": 1920,
+      "padded_shape": [
+        1080,
+        1920
+      ],
+      "parameters": 2479096,
+      "conv_MACs": 1319207731200,
+      "conv_invocations": 64,
+      "largest_single_conv_output_FP32_bytes": 746496000,
+      "temp1_one_call_MACs": 329801932800,
+      "temp2_one_call_MACs": 329801932800,
+      "layers": [
+        {
+          "layer": "temp1.inc.convblock.0",
+          "output_shape": [
+            1,
+            90,
+            1080,
+            1920
+          ],
+          "conv_MACs": 6718464000,
+          "single_output_tensor_FP32_bytes": 746496000
+        },
+        {
+          "layer": "temp1.inc.convblock.3",
+          "output_shape": [
+            1,
+            32,
+            1080,
+            1920
+          ],
+          "conv_MACs": 53747712000,
+          "single_output_tensor_FP32_bytes": 265420800
+        },
+        {
+          "layer": "temp1.downc0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            540,
+            960
+          ],
+          "conv_MACs": 9555148800,
+          "single_output_tensor_FP32_bytes": 132710400
+        },
+        {
+          "layer": "temp1.downc0.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            540,
+            960
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 132710400
+        },
+        {
+          "layer": "temp1.downc0.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            540,
+            960
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 132710400
+        },
+        {
+          "layer": "temp1.downc1.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            270,
+            480
+          ],
+          "conv_MACs": 9555148800,
+          "single_output_tensor_FP32_bytes": 66355200
+        },
+        {
+          "layer": "temp1.downc1.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            270,
+            480
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 66355200
+        },
+        {
+          "layer": "temp1.downc1.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            270,
+            480
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 66355200
+        },
+        {
+          "layer": "temp1.upc2.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            270,
+            480
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 66355200
+        },
+        {
+          "layer": "temp1.upc2.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            270,
+            480
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 66355200
+        },
+        {
+          "layer": "temp1.upc2.convblock.1",
+          "output_shape": [
+            1,
+            256,
+            270,
+            480
+          ],
+          "conv_MACs": 38220595200,
+          "single_output_tensor_FP32_bytes": 132710400
+        },
+        {
+          "layer": "temp1.upc1.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            540,
+            960
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 132710400
+        },
+        {
+          "layer": "temp1.upc1.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            540,
+            960
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 132710400
+        },
+        {
+          "layer": "temp1.upc1.convblock.1",
+          "output_shape": [
+            1,
+            128,
+            540,
+            960
+          ],
+          "conv_MACs": 38220595200,
+          "single_output_tensor_FP32_bytes": 265420800
+        },
+        {
+          "layer": "temp1.outc.convblock.0",
+          "output_shape": [
+            1,
+            32,
+            1080,
+            1920
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 265420800
+        },
+        {
+          "layer": "temp1.outc.convblock.3",
+          "output_shape": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "conv_MACs": 1791590400,
+          "single_output_tensor_FP32_bytes": 24883200
+        },
+        {
+          "layer": "temp1.inc.convblock.0",
+          "output_shape": [
+            1,
+            90,
+            1080,
+            1920
+          ],
+          "conv_MACs": 6718464000,
+          "single_output_tensor_FP32_bytes": 746496000
+        },
+        {
+          "layer": "temp1.inc.convblock.3",
+          "output_shape": [
+            1,
+            32,
+            1080,
+            1920
+          ],
+          "conv_MACs": 53747712000,
+          "single_output_tensor_FP32_bytes": 265420800
+        },
+        {
+          "layer": "temp1.downc0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            540,
+            960
+          ],
+          "conv_MACs": 9555148800,
+          "single_output_tensor_FP32_bytes": 132710400
+        },
+        {
+          "layer": "temp1.downc0.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            540,
+            960
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 132710400
+        },
+        {
+          "layer": "temp1.downc0.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            540,
+            960
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 132710400
+        },
+        {
+          "layer": "temp1.downc1.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            270,
+            480
+          ],
+          "conv_MACs": 9555148800,
+          "single_output_tensor_FP32_bytes": 66355200
+        },
+        {
+          "layer": "temp1.downc1.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            270,
+            480
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 66355200
+        },
+        {
+          "layer": "temp1.downc1.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            270,
+            480
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 66355200
+        },
+        {
+          "layer": "temp1.upc2.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            270,
+            480
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 66355200
+        },
+        {
+          "layer": "temp1.upc2.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            270,
+            480
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 66355200
+        },
+        {
+          "layer": "temp1.upc2.convblock.1",
+          "output_shape": [
+            1,
+            256,
+            270,
+            480
+          ],
+          "conv_MACs": 38220595200,
+          "single_output_tensor_FP32_bytes": 132710400
+        },
+        {
+          "layer": "temp1.upc1.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            540,
+            960
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 132710400
+        },
+        {
+          "layer": "temp1.upc1.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            540,
+            960
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 132710400
+        },
+        {
+          "layer": "temp1.upc1.convblock.1",
+          "output_shape": [
+            1,
+            128,
+            540,
+            960
+          ],
+          "conv_MACs": 38220595200,
+          "single_output_tensor_FP32_bytes": 265420800
+        },
+        {
+          "layer": "temp1.outc.convblock.0",
+          "output_shape": [
+            1,
+            32,
+            1080,
+            1920
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 265420800
+        },
+        {
+          "layer": "temp1.outc.convblock.3",
+          "output_shape": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "conv_MACs": 1791590400,
+          "single_output_tensor_FP32_bytes": 24883200
+        },
+        {
+          "layer": "temp1.inc.convblock.0",
+          "output_shape": [
+            1,
+            90,
+            1080,
+            1920
+          ],
+          "conv_MACs": 6718464000,
+          "single_output_tensor_FP32_bytes": 746496000
+        },
+        {
+          "layer": "temp1.inc.convblock.3",
+          "output_shape": [
+            1,
+            32,
+            1080,
+            1920
+          ],
+          "conv_MACs": 53747712000,
+          "single_output_tensor_FP32_bytes": 265420800
+        },
+        {
+          "layer": "temp1.downc0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            540,
+            960
+          ],
+          "conv_MACs": 9555148800,
+          "single_output_tensor_FP32_bytes": 132710400
+        },
+        {
+          "layer": "temp1.downc0.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            540,
+            960
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 132710400
+        },
+        {
+          "layer": "temp1.downc0.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            540,
+            960
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 132710400
+        },
+        {
+          "layer": "temp1.downc1.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            270,
+            480
+          ],
+          "conv_MACs": 9555148800,
+          "single_output_tensor_FP32_bytes": 66355200
+        },
+        {
+          "layer": "temp1.downc1.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            270,
+            480
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 66355200
+        },
+        {
+          "layer": "temp1.downc1.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            270,
+            480
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 66355200
+        },
+        {
+          "layer": "temp1.upc2.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            270,
+            480
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 66355200
+        },
+        {
+          "layer": "temp1.upc2.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            270,
+            480
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 66355200
+        },
+        {
+          "layer": "temp1.upc2.convblock.1",
+          "output_shape": [
+            1,
+            256,
+            270,
+            480
+          ],
+          "conv_MACs": 38220595200,
+          "single_output_tensor_FP32_bytes": 132710400
+        },
+        {
+          "layer": "temp1.upc1.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            540,
+            960
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 132710400
+        },
+        {
+          "layer": "temp1.upc1.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            540,
+            960
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 132710400
+        },
+        {
+          "layer": "temp1.upc1.convblock.1",
+          "output_shape": [
+            1,
+            128,
+            540,
+            960
+          ],
+          "conv_MACs": 38220595200,
+          "single_output_tensor_FP32_bytes": 265420800
+        },
+        {
+          "layer": "temp1.outc.convblock.0",
+          "output_shape": [
+            1,
+            32,
+            1080,
+            1920
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 265420800
+        },
+        {
+          "layer": "temp1.outc.convblock.3",
+          "output_shape": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "conv_MACs": 1791590400,
+          "single_output_tensor_FP32_bytes": 24883200
+        },
+        {
+          "layer": "temp2.inc.convblock.0",
+          "output_shape": [
+            1,
+            90,
+            1080,
+            1920
+          ],
+          "conv_MACs": 6718464000,
+          "single_output_tensor_FP32_bytes": 746496000
+        },
+        {
+          "layer": "temp2.inc.convblock.3",
+          "output_shape": [
+            1,
+            32,
+            1080,
+            1920
+          ],
+          "conv_MACs": 53747712000,
+          "single_output_tensor_FP32_bytes": 265420800
+        },
+        {
+          "layer": "temp2.downc0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            540,
+            960
+          ],
+          "conv_MACs": 9555148800,
+          "single_output_tensor_FP32_bytes": 132710400
+        },
+        {
+          "layer": "temp2.downc0.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            540,
+            960
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 132710400
+        },
+        {
+          "layer": "temp2.downc0.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            540,
+            960
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 132710400
+        },
+        {
+          "layer": "temp2.downc1.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            270,
+            480
+          ],
+          "conv_MACs": 9555148800,
+          "single_output_tensor_FP32_bytes": 66355200
+        },
+        {
+          "layer": "temp2.downc1.convblock.3.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            270,
+            480
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 66355200
+        },
+        {
+          "layer": "temp2.downc1.convblock.3.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            270,
+            480
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 66355200
+        },
+        {
+          "layer": "temp2.upc2.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            128,
+            270,
+            480
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 66355200
+        },
+        {
+          "layer": "temp2.upc2.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            128,
+            270,
+            480
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 66355200
+        },
+        {
+          "layer": "temp2.upc2.convblock.1",
+          "output_shape": [
+            1,
+            256,
+            270,
+            480
+          ],
+          "conv_MACs": 38220595200,
+          "single_output_tensor_FP32_bytes": 132710400
+        },
+        {
+          "layer": "temp2.upc1.convblock.0.convblock.0",
+          "output_shape": [
+            1,
+            64,
+            540,
+            960
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 132710400
+        },
+        {
+          "layer": "temp2.upc1.convblock.0.convblock.3",
+          "output_shape": [
+            1,
+            64,
+            540,
+            960
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 132710400
+        },
+        {
+          "layer": "temp2.upc1.convblock.1",
+          "output_shape": [
+            1,
+            128,
+            540,
+            960
+          ],
+          "conv_MACs": 38220595200,
+          "single_output_tensor_FP32_bytes": 265420800
+        },
+        {
+          "layer": "temp2.outc.convblock.0",
+          "output_shape": [
+            1,
+            32,
+            1080,
+            1920
+          ],
+          "conv_MACs": 19110297600,
+          "single_output_tensor_FP32_bytes": 265420800
+        },
+        {
+          "layer": "temp2.outc.convblock.3",
+          "output_shape": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "conv_MACs": 1791590400,
+          "single_output_tensor_FP32_bytes": 24883200
+        }
+      ]
+    }
+  ],
+  "reuse_arithmetic": [
+    {
+      "frames": 16,
+      "mode": "window",
+      "unbuffered_temp1_calls": 48,
+      "unique_temp1_tuples": 18,
+      "temp2_calls": 16,
+      "scope": "Arithmetic reuse potential only, no cache implemented or latency measured."
+    },
+    {
+      "frames": 16,
+      "mode": "five_current",
+      "unbuffered_temp1_calls": 48,
+      "unique_temp1_tuples": 16,
+      "temp2_calls": 16,
+      "scope": "Arithmetic reuse potential only, no cache implemented or latency measured."
+    },
+    {
+      "frames": 64,
+      "mode": "window",
+      "unbuffered_temp1_calls": 192,
+      "unique_temp1_tuples": 66,
+      "temp2_calls": 64,
+      "scope": "Arithmetic reuse potential only, no cache implemented or latency measured."
+    },
+    {
+      "frames": 64,
+      "mode": "five_current",
+      "unbuffered_temp1_calls": 192,
+      "unique_temp1_tuples": 64,
+      "temp2_calls": 64,
+      "scope": "Arithmetic reuse potential only, no cache implemented or latency measured."
+    }
+  ],
+  "numerical_neural_sequences": 0,
+  "GPU": false,
+  "scope": "Conv-only canonical unbuffered forward, not full pipeline FLOPs, cost timing, memory peak or phone.",
+  "source_sha256": {
+    "research/4.temporal-consistency/scripts/profile_published_cnn_r47.py": "e09af87c9dcd4ce7616fbf69f30ca698a40c76b35d27e1d9ceed6c65ac75c567",
+    "third_party/fastdvdnet/models.py": "3b38ee3892420d1bd8b0c5b9b7d09bf44931276465c66527eff7555f2fa17532",
+    "research/4.temporal-consistency/data/exploration-r12-fastdvdnet/manifest.json": "6220b11333692a08b1c6a16e39a85500127adb4d4d45cf5e5f1228c85fc171cf",
+    "research/4.temporal-consistency/docs/exploration-r47-cnn-cost-convention.md": "179dc9379bd72c821c7a080ec473825c143e28a3cbb7fa672df9a5cb7f064b6c",
+    "MobileIE/model/lle.py": "c569c48f4fb4d25d227db85d078ce763e68dd89d304a623d8125dcd6808e8bff"
+  }
+}
