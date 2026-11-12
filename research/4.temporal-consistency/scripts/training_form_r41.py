@@ -52,7 +52,7 @@ def create_model(seed):
 def cuda_headroom():
     assert not torch.cuda.is_initialized(), 'Headroom must be checked before initializing CUDA'
     physical = int(os.environ['CUDA_VISIBLE_DEVICES'])
-    assert physical in [0, 1, 2, 3]
+    assert physical in [4, 5, 6, 7], 'R41 resource amendment fixes the NUMA1 GPU group'
     samples = [sample(physical)]
     time.sleep(1)
     samples.append(sample(physical))
