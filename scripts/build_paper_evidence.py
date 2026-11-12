@@ -296,6 +296,32 @@ def main():
         phone_reference_complete = True
         lines += ['', '## R38真实手机输入上的参考检查', '',
                   '三设备各64帧、官方及R34双seed底座的raw/finite/recursive共27输出序列已完成。固定0/32/63接触表与全部64帧预览均保留，出现明显截断/色偏；没有同步GT，不提供伪PSNR/SSIM或真实闪烁排名。它们是参考行为诊断，不是R37候选结果或手机时延。[固定预览与限制](../exploration-r38-phone/README.md)。']
+    mixed_rows = []
+    if (BASE/'report/exploration-r40-mixed-anchor/audit.json').exists():
+        mixed_audit = read(Path('report/exploration-r40-mixed-anchor/audit.json'))
+        assert mixed_audit['passed'] and mixed_audit['new_rows'] == 60 and mixed_audit['total_rows'] == 156
+        assert mixed_audit['domains_separate']
+        mixed = read(Path('report/exploration-r40-mixed-anchor/domain_summary.json'))
+        assert len(mixed) == 18
+        for r in mixed:
+            mixed_rows.append({**r, 'predictor_params': 4075, 'future_frames': 0,
+                 'extra_motion_teacher_params': 0, 'flow_at_inference': r['method'] != 'raw',
+                 'phone_latency_ms': None,
+                 'registered_raw_diagnostic_both_seeds': mixed_audit['registered_diagnostic_both_seeds']
+                     if r['anchor_family'] == 'R40_mixed' and r['method'] == 'raw' else None,
+                 'scope': 'R40 fixed mixed-data baseline plus complete CPU references; domains remain separate, not a temporal innovation.'})
+        with (out/'mixed_anchor_evidence.csv').open('w', newline='') as stream:
+            writer = csv.DictWriter(stream, fieldnames=list(mixed_rows[0]))
+            writer.writeheader()
+            writer.writerows(mixed_rows)
+        lines += ['', '## R40固定50/50资料混合：两域分别评价', '',
+                  '保持原4075参数骨干和R34优化预算，只替换每步一半窗口为既有12视频真实配对；两个seed最终4000、60新质量行及96同CPU参考。既有R26训练方案还含其它差异，不能把R26差值孤立归于资料。以下域均值分开，不计算掩盖一侧损失的混合总分。', '',
+                  '|域|底座|输出|PSNR|SSIM|时序↓|边缘↓|', '|---|---|---|---:|---:|---:|---:|']
+        for r in mixed_rows:
+            lines.append('|'+r['domain']+'|'+r['anchor_family']+'|'+r['method']+'|'
+                         +'|'.join(f'{r[m]:.6f}' for m in ['psnr_rgb', 'ssim_rgb', 'temporal_error', 'edge_mae'])+'|')
+        lines += ['', f"注册raw诊断门槛（两seed均须真实域相对R34补回2dB、合成域不低于−.2dB）：{mixed_audit['registered_diagnostic_both_seeds']}。同时保留更强R26真实域参考，不把部分补回称追平。即使通过也仅形成更强数据基线，不自动成为方法、新颖性或独立最终验证。", '',
+                  '没有新权重手机延迟或整条CPU速度结论；纯单帧预测/finite/recursive路径分开，后两者部署有motion与历史。实拍域是四段既有白天ND crop。[完整两域与配对](../exploration-r40-mixed-anchor/tables.md)、[机器表](mixed_anchor_evidence.csv)。']
     (out/'README.md').write_text('\n'.join(lines)+'\n')
     (out/'sources.json').write_text(json.dumps({'sources': sources, 'rows': len(rows),
         'external_data_prepared': {'DAVIS_source_videos': 3, 'DAVIS_synthetic_conditions': 6,
@@ -311,6 +337,7 @@ def main():
         'R37_preserved_rows': len(preserved_rows),
         'R38_real_phone_reference_complete': phone_reference_complete,
         'R39_paired_real_anchor_rows': len(transfer_rows),
+        'R40_mixed_anchor_rows': len(mixed_rows),
         'FastDVDnet_documented_R30_DEV_overlap': prior_overlap['overlap_R30_DEV'],
         'heldout_metadata_only': {'video_count': heldout_metadata['video_count'], 'future_frames': heldout_metadata['future_total_frames'],
                                   'JPEG_members_read': heldout_metadata['JPEG_members_read']},
