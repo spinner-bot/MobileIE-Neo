@@ -11,7 +11,7 @@ import torch
 from dynamic_training_r34 import BASE, digest
 from mixed_anchor_r40 import MixedPool, prediction
 from train_exploration_r2 import new_model
-from training_form_r41 import LAYERS, create_model, cuda_headroom
+from training_form_r41 import LAYERS, configure_precision, create_model, cuda_headroom
 
 
 def main():
@@ -27,6 +27,7 @@ def main():
     torch.use_deterministic_algorithms(True)
     torch.backends.cudnn.deterministic = True
     torch.backends.cudnn.benchmark = False
+    configure_precision()
     result = {'passed': False, 'device': args.device, 'created_at': datetime.now().astimezone().isoformat(),
               'source_sha256': {name: digest(Path(__file__).parent/name) for name in
                                 ['training_form_r41.py', 'check_training_form_r41.py', 'mixed_anchor_r40.py']},
