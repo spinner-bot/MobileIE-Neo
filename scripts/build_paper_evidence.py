@@ -381,6 +381,35 @@ def main():
                          +'|'.join(f'{r[m]:.6f}' for m in ['psnr_rgb', 'ssim_rgb', 'temporal_error', 'edge_mae'])+'|')
         lines += ['', f"固定TLC注册门槛：{tlc_audit['registered_screening_passed']}；要求同域双seed≥+.1dB、另域均≥−.05dB且所有域/seed raw时间比≤1.02。最差逐条件raw ΔPSNR为{tlc_audit['worst_raw_condition_delta_psnr']:.6f}dB。", '',
                   '参数4075不变，但att卷积从全局一点扩至全分辨率，1080p约新增.299卷积GMAC，前缀和与内存另计；不是零推理开销，当前不据共享质量计时排行手机或独立CPU速度。[完整表](../exploration-r42-tlc/tables.md)、[机器表](tlc_evidence.csv)。']
+    factorial_rows = []
+    closure = BASE/'process/exploration-r44/stage001/finalize001/runtime.json'
+    if closure.exists() and json.loads(closure.read_text())['completed_normally']:
+        read(Path('process/exploration-r44/stage001/finalize001/runtime.json'))
+        factorial_audit = read(Path('report/exploration-r44-bounded-video/audit.json'))
+        assert factorial_audit['passed'] and factorial_audit['new_rows'] == 240
+        assert factorial_audit['new_neural_sequences'] == 80
+        values = read(Path('report/exploration-r44-bounded-video/domain_summary.json'))
+        assert len(values) == 24
+        for r in values:
+            factorial_rows.append({**r, 'predictor_params': r['deployment_parameters'],
+                 'future_frames': 0, 'flow_at_inference': r['method'] != 'raw',
+                 'extra_motion_teacher_params': 0, 'phone_latency_ms': None,
+                 'CPU_pipeline_latency_ms': None,
+                 'scope': 'Complete R44 fixed 2x2, inherited4000 plusnew4000, both seeds. '
+                          'Known activation and temporal objective; rational denominator remains in inference. '
+                          'DEV only; no cost, independent-test or novelty claim.'})
+        with (out/'bounded_video_evidence.csv').open('w', newline='') as stream:
+            writer = csv.DictWriter(stream, fieldnames=list(factorial_rows[0]))
+            writer.writeheader()
+            writer.writerows(factorial_rows)
+        lines += ['', '## R44完整根部结构与时间目标2×2', '',
+                  '两seed四模型各4000新更新，均继承同R41完整4000起点、共同重启Adam。全部32000新更新/导出门槛及共同CPU240行/80CNN正常结束后才纳入此表，不从中间权重择优。', '',
+                  '|域|模型|输出|参数|PSNR|SSIM|时序↓|边缘↓|', '|---|---|---|---:|---:|---:|---:|---:|']
+        for r in factorial_rows:
+            lines.append('|'+r['domain']+'|'+r['model']+'|'+r['method']+'|'+str(r['predictor_params'])+'|'
+                         +'|'.join(f'{r[m]:.6f}' for m in ['psnr_rgb', 'ssim_rgb', 'temporal_error', 'edge_mae'])+'|')
+        lines += ['', f"注册结构门槛：{factorial_audit['registered_structure_passed']}；无状态部署门槛：{factorial_audit['registered_stateless_passed']}；传统递归组合质量门槛：{factorial_audit['registered_combination_quality_passed']}。组合成本未测，不挪作无状态成功。", '',
+                  '有理分母推理保留；raw单帧，finite/recursive需要自身raw估计motion及RGB历史。两域/两个seed/全部条件保留，均值不是显著性证明；不建立新颖性、手机成本或独立测试结论。[完整配对和门槛](../exploration-r44-bounded-video/tables.md)、[机器表](bounded_video_evidence.csv)。']
     (out/'README.md').write_text('\n'.join(lines)+'\n')
     (out/'sources.json').write_text(json.dumps({'sources': sources, 'rows': len(rows),
         'external_data_prepared': {'DAVIS_source_videos': 3, 'DAVIS_synthetic_conditions': 6,
@@ -399,6 +428,7 @@ def main():
         'R40_mixed_anchor_rows': len(mixed_rows),
         'R41_matched_training_form_rows': len(training_form_rows),
         'R42_fixed_TLC_domain_method_rows': len(tlc_rows),
+        'R44_complete_factorial_domain_method_rows': len(factorial_rows),
         'FastDVDnet_documented_R30_DEV_overlap': prior_overlap['overlap_R30_DEV'],
         'heldout_metadata_only': {'video_count': heldout_metadata['video_count'], 'future_frames': heldout_metadata['future_total_frames'],
                                   'JPEG_members_read': heldout_metadata['JPEG_members_read']},
