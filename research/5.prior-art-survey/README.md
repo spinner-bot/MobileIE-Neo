@@ -129,3 +129,5 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 
 - [时间归一化边界](docs/32-temporal-normalization-boundaries.md)：DNR正文与FLAIR未核验范围；不把BN打包当创新。
 - [有理激活先例与根部候选](docs/33-rational-activation-boundaries.md)：PAU明确已有，候选仅待原型，不称新视频方法或零开销。
+
+- 2026-11-13：[双矩历史的先例与噪声解释边界](docs/54-moment-history-equivalence-and-noise-boundaries.md)。SVGF已有重投影时间矩，MSTMN区分噪声/对齐权重；R73混合矩的条件二次展开与插值离散度分析限制创新措辞。原固定训练继续，不改活跃源码或注册门槛。
