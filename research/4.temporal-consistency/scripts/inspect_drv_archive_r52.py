@@ -1,4 +1,5 @@
 """Inspect official DRV raw ZIP directories only; never read an image member."""
+import argparse
 import json
 import re
 import time
@@ -26,8 +27,10 @@ def write(path, value):
 
 
 def main():
-    out = BASE/'process/external-drv/archive-metadata-attempt001'; out.mkdir(parents=True, exist_ok=False)
-    cache = ROOT/'.cache/datasets/DRV/archive-index/attempt001'
+    parser = argparse.ArgumentParser(); parser.add_argument('--attempt', type=int, required=True)
+    args = parser.parse_args(); assert args.attempt >= 2
+    out = BASE/f'process/external-drv/archive-metadata-attempt{args.attempt:03d}'; out.mkdir(parents=True, exist_ok=False)
+    cache = ROOT/f'.cache/datasets/DRV/archive-index/attempt{args.attempt:03d}'
     assert cache.resolve().is_relative_to('/data/Users/zrh/data/MobileIE-Neo')
     cache.mkdir(parents=True, exist_ok=False)
     split = json.loads((BASE/'data/external-drv/official-split.json').read_text())
@@ -43,9 +46,11 @@ def main():
             with zipfile.ZipFile(remote) as archive:
                 for info in archive.infolist():
                     parts = PurePosixPath(info.filename).parts
-                    scene_ids = {part[:4] for part in parts if re.match(r'^\d{4}(?:_|\.|$)', part)} & ids
-                    assert len(scene_ids) <= 1
-                    scene = next(iter(scene_ids)) if scene_ids else None
+                    # Frame basenames such as 0001.ARW can coincide with scene IDs.
+                    # Prefer the nearest matching parent directory, not a frame number.
+                    parents = [part for part in parts[:-1] if part in ids]
+                    match = re.match(r'^(\d{4})_', parts[-1]) if parts else None
+                    scene = parents[-1] if parents else (match.group(1) if match and match.group(1) in ids else None)
                     if scene: matches[scene] += not info.is_dir()
                     rows.append({'name': info.filename, 'size': info.file_size, 'compressed_size': info.compress_size,
                         'crc32': f'{info.CRC:08x}', 'offset': info.header_offset, 'method': info.compress_type,
