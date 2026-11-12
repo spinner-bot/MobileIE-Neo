@@ -1,4 +1,5 @@
 """Install hash-verified extra wheels into an owned tool target, leaving live venv alone."""
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -40,10 +41,12 @@ class Links(HTMLParser):
 
 
 def main():
+    parser = argparse.ArgumentParser(); parser.add_argument('--attempt', type=int, default=1)
+    args = parser.parse_args(); assert args.attempt in (1, 2)
     mounted_data()
     assert TARGET.resolve().is_relative_to('/data/Users/zrh/data/MobileIE-Neo')
-    out = BASE/'process/exploration-r66/package001'; out.mkdir(parents=True, exist_ok=False)
-    wheels = ROOT/'.cache/tools/exploration-r66/wheels'; wheels.mkdir(parents=True, exist_ok=False)
+    out = BASE/f'process/exploration-r66/package{args.attempt:03d}'; out.mkdir(parents=True, exist_ok=False)
+    wheels = ROOT/'.cache/tools/exploration-r66/wheels'; wheels.mkdir(parents=True, exist_ok=args.attempt > 1)
     assert not TARGET.exists()
     start, complete, records = time.perf_counter(), False, []
     try:
@@ -77,8 +80,13 @@ def main():
         write(out/'sources-before-download.json', dict(at=datetime.now().astimezone().isoformat(),
               wheels=records, target=str(TARGET.relative_to(ROOT)), source='Official PyPI files and PyTorch cu126 only.'))
         for item in records:
-            assert item['url'].startswith(('https://files.pythonhosted.org/', 'https://download.pytorch.org/'))
+            assert item['url'].startswith(('https://files.pythonhosted.org/', 'https://download.pytorch.org/',
+                                           'https://download-r2.pytorch.org/'))
             path = wheels/item['filename']; partial = path.with_suffix('.whl.partial')
+            if path.exists():
+                assert path.stat().st_size == item['bytes'] and hashlib.sha256(path.read_bytes()).hexdigest() == item['sha256']
+                item.update(local=str(path.relative_to(ROOT)), verified=True, reused_verified_wheel=True)
+                continue
             chunk, size = 256*1024, item['bytes']
             with partial.open('xb') as stream, ThreadPoolExecutor(max_workers=4) as pool:
                 stream.truncate(size)
