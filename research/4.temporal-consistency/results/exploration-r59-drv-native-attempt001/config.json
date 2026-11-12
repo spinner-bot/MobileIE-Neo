@@ -1,0 +1,112 @@
+{
+  "at": "2026-11-12T22:54:51.855917+08:00",
+  "networks": [
+    "mobileie_published",
+    "nano_published",
+    "mobileie_seed0",
+    "mobileie_seed1",
+    "nano_seed0",
+    "nano_seed1",
+    "fastdvd_seed0",
+    "fastdvd_seed1"
+  ],
+  "data_controls": [
+    "native_input",
+    "nominal_EV_data_control"
+  ],
+  "primary_frames": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "CNN_input_view": "low_native only",
+  "nominal_EV_input_to_CNN": false,
+  "GT_fitted_scaling": false,
+  "source_index_sha256": "7563e35d379dd52932314663937b469223666ec2e9255cf62084cc95376d67ec",
+  "gate_sha256": "eb7524462606a06fa8ee470fe1483570687769233b74672cc7487188dfe85450",
+  "protocol_sha256": "ffd3239f3736cf9a574767ff73b51065961349c88ee41f2603de1d19dd09fb35",
+  "source_sha256": {
+    "evaluate_drv_native_r59.py": "9aace934027fed03158c4aac15b13362d45794057709c665e4d98a0f5e2cb925",
+    "drv_references_r59.py": "8c805ca335edb8294e13f0403ee1dde6e69a1e67eecb98102c25b000185ba9d8",
+    "response_cue_r45.py": "804870366389b2cf293384cb795ac445a99db2086501a2a46d98a9dfd9e33c0e",
+    "multinex_reference_r55.py": "7c3b12228c8e9624224a14e6ed020aad25efb120ba6baa8f04931903646299e0",
+    "tiny_adapted_reference_r56.py": "a62f60abe48875663ee98ce5a293080e89925ca8217b128818efb2f449d0fb7e",
+    "task_fastdvd_r47.py": "9e312377b462e81313229665450580280a74444c6c3a6b5b9cba1beca4863c8b",
+    "fastdvdnet_adapter_r12.py": "f61d8d3024f517c288218c6eb3c88001e139549bfa3a9fe7a4a34f894b47b668",
+    "aligned_raw_history_r11.py": "e367727401f82ccf0bccaf8d88f904e4aebf8b78186f0539eedeed222b2d2227",
+    "half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+    "video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0"
+  },
+  "future_wait_max": {
+    "fastdvd": 2,
+    "others": 0
+  },
+  "five_frame_indices": [
+    [
+      2,
+      1,
+      0,
+      1,
+      2
+    ],
+    [
+      1,
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    [
+      4,
+      5,
+      6,
+      7,
+      6
+    ],
+    [
+      5,
+      6,
+      7,
+      6,
+      5
+    ]
+  ],
+  "CPU_threads": 2,
+  "OpenCV_threads": 1,
+  "revision": "816ebbb6c839a1fba24d61dd4cade0b061a0ff46",
+  "expected_quality_rows": 88,
+  "expected_per_frame_rows": 704,
+  "expected_CNN_sequences": 32,
+  "expected_CNN_center_outputs": 256,
+  "unique_native_observations": 32,
+  "scope": "Static train pilot custom ISP, repeated longGT; no method, true-flicker, standard/final/phone claim."
+}
