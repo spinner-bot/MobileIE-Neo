@@ -1,4 +1,5 @@
 """List the acquired RAR using the OS libarchive, without extracting or decoding."""
+import argparse
 import ctypes as C
 import ctypes.util
 import json
@@ -16,12 +17,19 @@ def write(path, value):
 
 
 def main():
-    source = BASE/'process/external-night-wenzhou/acquisition001/manifest.json'
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--manifest', type=Path, default=BASE/'process/external-night-wenzhou/acquisition001/manifest.json')
+    parser.add_argument('--out', type=Path, default=BASE/'process/external-night-wenzhou/catalog001')
+    args = parser.parse_args()
+    source = args.manifest
+    assert source.resolve().is_relative_to((BASE/'process/external-night-wenzhou').resolve())
     manifest = json.loads(source.read_text()); assert manifest['download_complete']
     path = ROOT/manifest['path']
     assert path.resolve().is_relative_to('/data/Users/zrh/data/MobileIE-Neo')
     assert path.stat().st_size == manifest['bytes'] and digest(path) == manifest['sha256']
-    out = BASE/'process/external-night-wenzhou/catalog001'; out.mkdir(exist_ok=False)
+    out = args.out
+    assert out.resolve().is_relative_to((BASE/'process/external-night-wenzhou').resolve())
+    out.mkdir(exist_ok=False)
     start, complete, handle, rows = time.perf_counter(), False, None, []
     lib = C.CDLL(ctypes.util.find_library('archive'))
     lib.archive_version_string.restype = C.c_char_p
@@ -62,7 +70,7 @@ def main():
                          'hardlink': bool(lib.archive_entry_hardlink(entry))})
             assert len(rows) <= 10000
             check(lib.archive_read_data_skip(handle))
-        index = path.parent/'catalog001.json'; write(index, rows)
+        index = path.parent/(out.name+'.json'); write(index, rows)
         write(out/'catalog.json', {'at': datetime.now().astimezone().isoformat(),
               'archive_manifest': str(source.relative_to(ROOT)), 'manifest_sha256': digest(source),
               'index': str(index.relative_to(ROOT)), 'index_sha256': digest(index), 'members': len(rows),
