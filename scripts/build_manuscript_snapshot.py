@@ -101,6 +101,8 @@ def main():
         lines += [r'\bottomrule', r'\end{tabular}', r'\end{table}']
         (out/'r44-table.tex').write_text('\n'.join(lines)+'\n')
         generated.append('r44-table.tex')
+        p = BASE/'report/exploration-r44-bounded-video/factorial.pdf'
+        sources[str(p.relative_to(ROOT))] = hashlib.sha256(p.read_bytes()).hexdigest()
     record = {'created_at': datetime.now().astimezone().isoformat(), 'source_sha256': sources,
               'generated_tables': generated,
               'R44_complete_quality_included': r44_complete,
