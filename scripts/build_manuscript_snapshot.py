@@ -8,6 +8,52 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT/'research/4.temporal-consistency'
 
 
+def published_reference_table(read, out):
+    """Keep both final seeds; equal updates do not establish equal convergence."""
+    for experiment, report in [(53, 'exploration-r53-source-context-reference'),
+                               (56, 'exploration-r56-tiny-task-reference')]:
+        assert read(f'process/exploration-r{experiment}/finalize001/runtime.json')['completed_normally']
+        audit = read(f'report/{report}/audit.json')
+        assert audit['new_training_updates'] == 16000 and audit['new_quality_rows'] == 40
+        for seed in [0, 1]:
+            train = read(f'results/exploration-r{experiment}-stage001-seed{seed}/runtime.json')
+            runtime = read(f'results/exploration-r{experiment}-stage001-eval-seed{seed}/runtime.json')
+            assert train['completed_normally'] and train['steps'] == 8000
+            assert runtime['completed_normally'] and not runtime['cuda_initialized']
+            assert runtime.get('rows', runtime.get('quality_rows')) == 20
+    nano = read('report/exploration-r56-tiny-task-reference/domain_seed_summary.json')
+    video = read('report/exploration-r53-source-context-reference/domain_seed_summary.json')
+    n = {(r['domain'], r['seed'], r['method']): r for r in nano}
+    v = {(r['domain'], r['seed'], r['method']): r for r in video}
+    domains = ['davis_train_pilot', 'paired_real_ND_DEV']
+    rows = []
+    for method, label in [('raw', 'Nano published raw'), ('recursive_self05', 'Nano published + rec.')]:
+        rows.append((label, '--', 696, [n[d, 'published', 'Nano_published_'+method] for d in domains]))
+    methods = [('Nano_adapted_raw', 'Nano adapted raw', 696),
+               ('Nano_adapted_recursive_self05', 'Nano adapted + rec.', 696),
+               ('source_context_window', 'FastDVDnet window', 2479096),
+               ('source_context_five_current', 'FastDVDnet current', 2479096),
+               ('MobileIE_raw', 'MobileIE raw', 4075),
+               ('MobileIE_fixed_05', 'MobileIE + rec.', 4075),
+               ('MobileIE_rgb', 'MobileIE + RGB gate', 4116)]
+    for method, label, parameters in methods:
+        for seed in [0, 1]:
+            values = ([n[d, f'seed{seed}', method] for d in domains] if method.startswith('Nano_')
+                      else [v[d, seed, method] for d in domains])
+            rows.append((label, str(seed), parameters, values))
+    assert len(rows) == 16
+    lines = [r'\begin{table}[t]', r'\centering\scriptsize\setlength{\tabcolsep}{4pt}',
+             r'\caption{Completed fixed-budget published references on reused DEV data. Adapted models use 8,000 updates with the same four supervised targets per window; FastDVDnet sees additional surrounding inputs and two future frames. Pretraining, training parameterization and compute differ. The published Nano checkpoint has no project adaptation or claimed seed. Current means five copies of the current input, a diagnostic rather than a video configuration. Recursion and RGB gating include motion/history cost beyond the listed learned parameters.}',
+             r'\label{tab:published-adapted}', r'\begin{tabular}{llrrrrr}', r'\toprule',
+             r'Model/output & Seed & Params & SYN PSNR & SYN $E_{\rm temp}$ & ND PSNR & ND $E_{\rm temp}$\\',
+             r'\midrule']
+    for label, seed, parameters, (syn, real) in rows:
+        lines.append(f"{label} & {seed} & {parameters} & {syn['psnr_rgb']:.3f} & "
+                     f"{syn['temporal_error']:.3f} & {real['psnr_rgb']:.3f} & {real['temporal_error']:.3f}"+r'\\')
+    lines += [r'\bottomrule', r'\end{tabular}', r'\end{table}']
+    (out/'published-adapted-table.tex').write_text('\n'.join(lines)+'\n')
+
+
 def main():
     sources = {}
     def read(relative):
@@ -133,12 +179,15 @@ def main():
         for name in ['frontier.pdf', 'alpha_distribution.pdf']:
             p = BASE/'report/exploration-r45-response-recursion'/name
             sources[str(p.relative_to(ROOT))] = hashlib.sha256(p.read_bytes()).hexdigest()
+    published_reference_table(read, out)
+    generated.append('published-adapted-table.tex')
     excluded = ('R44; no partial checkpoint or loss curve included' if not r44_complete else
                 'R45; no partial quality included' if not r45_complete else None)
     record = {'created_at': datetime.now().astimezone().isoformat(), 'source_sha256': sources,
               'generated_tables': generated,
               'R44_complete_quality_included': r44_complete,
               'R45_complete_quality_included': r45_complete,
+              'R53_R56_complete_references_included': True,
               'excluded_active_study': excluded,
               'scope': 'Completed DEV evidence only; no novelty, SOTA, phone latency or independent final-test claim.'}
     (ROOT/'paper/evidence-snapshot.json').write_text(json.dumps(record, indent=2)+'\n')
