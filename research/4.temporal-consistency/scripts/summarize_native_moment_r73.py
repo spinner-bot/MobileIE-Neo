@@ -4,7 +4,9 @@ from collections import defaultdict
 from datetime import datetime
 import json
 import time
+import cv2
 import numpy as np
+import torch
 
 from native_moment_core_r73 import BASE, ROOT, PROTOCOL
 from check_native_moment_r73 import write
@@ -46,20 +48,21 @@ def prepare_old_predictions():
                   ['render_dense_history_r64.py', 'half_motion_r4.py', 'aligned_raw_history_r11.py', 'aggregation_controls_r20.py']},
               scope='Reconstruct original R64 plain own-recursion before perceptual GPU. No CNN/SGD or recomputed old quality.'))
         for seed in [0, 1]:
-            path = BASE/f'results/exploration-r64-stage001-eval-seed{seed}/prediction_manifest.jsonl'
-            selected = [r for r in lines(path) if r['model'] == 'plain']; assert len(selected) == 10
+          for stage, original, model, updates in [(44, 'square_mse', 'R44_plain', 8000), (64, 'plain', 'R64_plain', 12000)]:
+            path = BASE/f'results/exploration-r{stage}-stage001-eval-seed{seed}/prediction_manifest.jsonl'
+            selected = [r for r in lines(path) if r['model'] == original]; assert len(selected) == 10
             for entry in selected:
                 raw_path = ROOT/entry['path']; assert digest(raw_path) == entry['sha256']
                 raw = np.load(raw_path, mmap_mode='r', allow_pickle=False)
                 rec = recursive(raw)
                 for method, value in [('raw', raw), ('recursive_self05', rec)]:
-                    output = raw_path if method == 'raw' else cache/f'seed{seed}--{entry["scene"]}--recursive.npy'
+                    output = raw_path if method == 'raw' else cache/f'{model}--seed{seed}--{entry["scene"]}--recursive.npy'
                     if method != 'raw': np.save(output, value, allow_pickle=False)
-                    append(out/'prediction_manifest.jsonl', dict(entry, model='R64_plain', seed=seed,
+                    append(out/'prediction_manifest.jsonl', dict(entry, model=model, seed=seed, project_updates=updates, parameters=4075,
                            history='current', method=method, path=str(output.relative_to(ROOT)), sha256=digest(output),
                            shape=list(value.shape), source_manifest=str(path.relative_to(ROOT)), source_manifest_sha256=digest(path)))
                     count += 1
-        assert count == 40; complete = True
+        assert count == 80; complete = True
     finally:
         write(out/'runtime.json', dict(completed_normally=complete, rows=count, CNN=0, SGD=0, GPU=0,
               seconds=time.perf_counter()-start, ended=datetime.now().astimezone().isoformat()))
@@ -67,6 +70,7 @@ def prepare_old_predictions():
 
 def main():
     parser = argparse.ArgumentParser(); parser.add_argument('--perceptual', action='store_true'); args = parser.parse_args()
+    cv2.setNumThreads(1); torch.set_num_threads(2); assert not torch.cuda.is_initialized()
     rows, sources = old_quality(); new = []
     for seed in [0, 1]:
         path = BASE/f'results/exploration-r73-eval-seed{seed}'
