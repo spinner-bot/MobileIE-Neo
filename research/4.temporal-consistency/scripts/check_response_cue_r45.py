@@ -93,8 +93,10 @@ def main():
             assert torch.equal(rejected, current) and torch.equal(control(current)[0], current)
             left = control(current, torch.zeros_like(previous), zero_flow, torch.ones_like(mask), cues)[0]
             right = control(current, torch.ones_like(previous), zero_flow, torch.ones_like(mask), cues)[0]
-            assert float((left-right).abs().max()) > 0
+            assert float((left-right).abs().max().detach()) > 0
+        print(json.dumps({'phase': 'toy_gates_passed', 'discarded_updates': updates}), flush=True)
         pool = MixedPool()
+        print(json.dumps({'phase': 'training_pool_loaded', 'discarded_updates': updates}), flush=True)
         seeds = []
         for seed in [0, 1]:
             low, gt, context = pool.batch(seed, 8000)
@@ -141,6 +143,7 @@ def main():
                           'raw_parity': parity, 'initial_recursive_deltas': initial,
                           'discarded_gradient_norms': gradients, 'frozen_backbone_unchanged': True,
                           'control_parameters': {n: sum(p.numel() for p in c.parameters()) for n, c in controls.items()}})
+            print(json.dumps({'phase': 'seed_gate_passed', 'seed': seed, 'discarded_updates': updates}), flush=True)
         assert updates == 12 and not torch.cuda.is_initialized()
         write(out/'gate.json', {'passed': True, 'warp_cases': errors, 'seeds': seeds,
               'discarded_SGD_updates': updates, 'formal_updates': 0, 'new_DEV_quality_rows': 0,
