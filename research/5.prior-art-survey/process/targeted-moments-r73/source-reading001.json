@@ -1,0 +1,61 @@
+{
+  "at": "2026-11-13T07:55:18.552906+08:00",
+  "author": "Codex  (sqs_A100)",
+  "sources": [
+    {
+      "title": "Spatiotemporal Variance-Guided Filtering: Real-Time Reconstruction for Path-Traced Global Illumination",
+      "url": "https://research.nvidia.com/sites/default/files/pubs/2017-07_Spatiotemporal-Variance-Guided-Filtering%3A/svgf_preprint.pdf",
+      "doi": "10.1145/3105762.3105770",
+      "venue": "HPG 2017",
+      "actually_read": [
+        "author/version metadata",
+        "pipeline and history inputs",
+        "4.1 temporal filtering",
+        "4.2 variance estimation",
+        "4.3 variance propagation and history feedback"
+      ],
+      "access": "primary author PDF parsed text",
+      "full_paper_or_all_figures_reviewed": false
+    },
+    {
+      "title": "Gradient Estimation for Real-time Adaptive Temporal Filtering",
+      "url": "https://www.momentsingraphics.de/HPG2018.html",
+      "paper_url": "https://www.momentsingraphics.de/Media/HPG2018/Schied2018-AdaptiveTemporalFiltering.pdf",
+      "actually_read": [
+        "author publication-page metadata",
+        "author abstract"
+      ],
+      "access": "publication page read; PDF opened as metadata but two subsequent targeted text requests timed out; detailed method not claimed read",
+      "full_paper_or_all_figures_reviewed": false
+    },
+    {
+      "title": "Multi-scale Spatio-temporal Memory Network for Low-light Video Enhancement",
+      "url": "https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/TIP2024-MSTMN.pdf",
+      "doi": "10.1109/TIP.2024.3444315",
+      "actually_read": [
+        "intro and recurrent formulation excerpts",
+        "Gaussian/Laplacian pyramid and equation10 fusion",
+        "memory-key/value excerpts",
+        "III-D noise-variance and alignment-error estimation modules, equation17 supplied noise map"
+      ],
+      "access": "fresh direct URL404; previously indexed primary PDF parsed successfully via cached reference",
+      "full_paper_or_all_figures_reviewed": false
+    },
+    {
+      "title": "Temporal Bilinear Networks for Video Action Recognition",
+      "url": "https://arxiv.org/html/2007.12887v1",
+      "actually_read": [
+        "3.1-3.3 bilinear operation, adjacent/multiframe variants and initialization"
+      ],
+      "scope": "targeted method reread; old note23 retained; no venue/version conflation",
+      "full_paper_or_all_figures_reviewed": false
+    }
+  ],
+  "project_code_read": [
+    "research/4.temporal-consistency/scripts/transport_fst_r27.py",
+    "research/4.temporal-consistency/scripts/native_moment_core_r73.py"
+  ],
+  "scope": "Closest-prior and algebraic boundary analysis during original formal R73 training; no new candidate, grid, data, model/code import, CNN, SGD or GPU job. No frozen source or threshold changed. No paper metrics transferred into project tables.",
+  "new_experimental_updates": 0,
+  "original_R73_continues": true
+}
