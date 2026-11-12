@@ -1,0 +1,23 @@
+\begin{table}[t]
+\centering\scriptsize\setlength{\tabcolsep}{4pt}
+\caption{Fixed original-core block-matching prefilters followed by the same frozen MobileIE weights. S-only disables temporal search in the VBM3D implementation; it is not an optimized BM3D reproduction. V-default uses the original video search on a full offline clip. A single blind first-frame noise estimate is shared by both modes. Rec. adds the same own-output motion/history reference. These reused development results and fixed-display JOD predictions do not establish calibrated noise, human judgments or a new method.}
+\label{tab:classical-block}
+\begin{tabular}{llrrrrrr}
+\toprule
+Prefilter/output & Seed & SYN PSNR & SYN $E_{\rm temp}$ & SYN JOD & ND PSNR & ND $E_{\rm temp}$ & ND JOD\\
+\midrule
+None raw & 0 & 26.475 & 10.102 & 7.040 & 27.252 & 3.729 & 8.414\\
+None raw & 1 & 26.456 & 9.699 & 7.111 & 27.004 & 3.577 & 8.552\\
+None + rec. & 0 & 26.800 & 6.546 & 7.424 & 27.292 & 2.605 & 8.373\\
+None + rec. & 1 & 26.613 & 6.393 & 7.409 & 26.923 & 2.534 & 8.512\\
+S-only raw & 0 & 24.351 & 8.142 & 6.917 & 26.689 & 3.525 & 8.383\\
+S-only raw & 1 & 24.204 & 7.778 & 6.959 & 26.479 & 3.380 & 8.530\\
+S-only + rec. & 0 & 24.278 & 5.772 & 6.931 & 26.725 & 2.540 & 8.328\\
+S-only + rec. & 1 & 24.043 & 5.646 & 6.923 & 26.411 & 2.474 & 8.475\\
+V-default raw & 0 & 23.978 & 7.554 & 6.781 & 26.605 & 3.466 & 8.380\\
+V-default raw & 1 & 23.807 & 7.233 & 6.816 & 26.394 & 3.327 & 8.527\\
+V-default + rec. & 0 & 23.878 & 5.707 & 6.749 & 26.641 & 2.522 & 8.324\\
+V-default + rec. & 1 & 23.637 & 5.599 & 6.735 & 26.328 & 2.459 & 8.471\\
+\bottomrule
+\end{tabular}
+\end{table}
