@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-12T17:40:20.549303+08:00",
+  "guard_pid": 3444621,
+  "command": [
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/gpu_guard.py",
+    "--gpu",
+    "5",
+    "--record",
+    "research/4.temporal-consistency/process/exploration-r48/cuda-gate001-guard.json",
+    "--",
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/check_joint_recursion_r48.py",
+    "--device",
+    "cuda",
+    "--out",
+    "research/4.temporal-consistency/process/exploration-r48/cuda-gate001"
+  ]
+}
