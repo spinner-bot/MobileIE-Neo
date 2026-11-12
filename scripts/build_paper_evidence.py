@@ -410,6 +410,35 @@ def main():
                          +'|'.join(f'{r[m]:.6f}' for m in ['psnr_rgb', 'ssim_rgb', 'temporal_error', 'edge_mae'])+'|')
         lines += ['', f"注册结构门槛：{factorial_audit['registered_structure_passed']}；无状态部署门槛：{factorial_audit['registered_stateless_passed']}；传统递归组合质量门槛：{factorial_audit['registered_combination_quality_passed']}。组合成本未测，不挪作无状态成功。", '',
                   '有理分母推理保留；raw单帧，finite/recursive需要自身raw估计motion及RGB历史。两域/两个seed/全部条件保留，均值不是显著性证明；不建立新颖性、手机成本或独立测试结论。[完整配对和门槛](../exploration-r44-bounded-video/tables.md)、[机器表](bounded_video_evidence.csv)。']
+    recursion_rows = []
+    closure = BASE/'process/exploration-r45/stage001/finalize002/runtime.json'
+    if closure.exists() and json.loads(closure.read_text())['completed_normally']:
+        read(Path('process/exploration-r45/stage001/finalize002/runtime.json'))
+        recursion_audit = read(Path('report/exploration-r45-response-recursion/audit.json'))
+        assert recursion_audit['passed'] and recursion_audit['rows'] == 180
+        assert recursion_audit['new_neural_sequences'] == 20
+        values = read(Path('report/exploration-r45-response-recursion/domain_summary.json'))
+        assert len(values) == 18
+        for r in values:
+            recursion_rows.append({**r, 'predictor_params': r['parameters'],
+                 'future_frames': 0, 'flow_at_inference': r['method'] != 'raw',
+                 'extra_motion_teacher_params': 0, 'phone_latency_ms': None,
+                 'CPU_pipeline_latency_ms': None,
+                 'registered_quality_screen_passed': recursion_audit['registered_quality_passed'],
+                 'scope': 'Complete R45, both seeds, frozen8000 spatial base and new4000 per controller. '
+                          'All five fixed alpha points retained. Internal cue equals rescaled feature energy. '
+                          'Quality shares base/cue/flow work; no inference-cost or independent-method claim.'})
+        with (out/'response_recursion_evidence.csv').open('w', newline='') as stream:
+            writer = csv.DictWriter(stream, fieldnames=list(recursion_rows[0]))
+            writer.writeheader();writer.writerows(recursion_rows)
+        lines += ['', '## R45完整共享表征递归控制与固定alpha前沿', '',
+                  '同一R44最终square_mse冻结空间底座（已累计8000），两seed三个学习控制各新增4000更新，总24000。原raw回放、fixed α=.1/.25/.5/.75/.9、全局α/RGB/内部提示全部保留；仅全部180行/20CNN和协调器正常结束后进入本表。', '',
+                  '|域|输出|参数|PSNR|SSIM|时序↓|边缘↓|', '|---|---|---:|---:|---:|---:|---:|']
+        for r in recursion_rows:
+            lines.append('|'+r['domain']+'|'+r['method']+'|'+str(r['parameters'])+'|'
+                         +'|'.join(f'{r[m]:.6f}' for m in ['psnr_rgb', 'ssim_rgb', 'temporal_error', 'edge_mae'])+'|')
+        lines += ['', f"独立提示门槛：{recursion_audit['independent_cue_screen_passed']}；固定alpha前沿不被支配：{recursion_audit['fixed_frontier_nondominated']}；注册完整质量门槛：{recursion_audit['registered_quality_passed']}。成本另测，不能由质量共享计算推断速度。", '',
+                  '提示只是特征RMS的确定性重标度，不能称新的导数/方差理论；普通学习融合或更优常数α不自动证明内部提示有独立作用。除raw外推理均有motion和两个RGB历史；同容量RGB生产路径不计算内部提示。未建立手机/夜间/最终测试结论。[完整对照](../exploration-r45-response-recursion/tables.md)、[机器表](response_recursion_evidence.csv)。']
     (out/'README.md').write_text('\n'.join(lines)+'\n')
     (out/'sources.json').write_text(json.dumps({'sources': sources, 'rows': len(rows),
         'external_data_prepared': {'DAVIS_source_videos': 3, 'DAVIS_synthetic_conditions': 6,
@@ -429,6 +458,7 @@ def main():
         'R41_matched_training_form_rows': len(training_form_rows),
         'R42_fixed_TLC_domain_method_rows': len(tlc_rows),
         'R44_complete_factorial_domain_method_rows': len(factorial_rows),
+        'R45_complete_recursion_domain_method_rows': len(recursion_rows),
         'FastDVDnet_documented_R30_DEV_overlap': prior_overlap['overlap_R30_DEV'],
         'heldout_metadata_only': {'video_count': heldout_metadata['video_count'], 'future_frames': heldout_metadata['future_total_frames'],
                                   'JPEG_members_read': heldout_metadata['JPEG_members_read']},
