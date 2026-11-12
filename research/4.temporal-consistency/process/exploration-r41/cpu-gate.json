@@ -1,0 +1,220 @@
+{
+  "passed": true,
+  "device": "cpu",
+  "created_at": "2026-11-12T12:38:54.244791+08:00",
+  "source_sha256": {
+    "training_form_r41.py": "3202c4586e60605f538d31b5dc50dd84c913b1faf5a46b86af3010689614b058",
+    "check_training_form_r41.py": "c28545b25012245e43db425ef5b083d528bfecfa6e16b25225610ee5a03cc60b",
+    "mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5"
+  },
+  "protocol_sha256": "46fb95e8e0416e378b224527aef993fa317c9c6c954af0ba05b650e8ece36d19",
+  "scope": "Functional gates with two discarded SGD updates; fresh initialization required for training. No quality or optimizer replay claim.",
+  "data": {
+    "manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "verified_files": 384,
+    "scenes": [
+      "video_11",
+      "video_35",
+      "video_92",
+      "video_131",
+      "video_12",
+      "video_20",
+      "video_29",
+      "video_52",
+      "video_59",
+      "video_95",
+      "video_104",
+      "video_122"
+    ],
+    "native_bytes": 2388787200,
+    "real_training_ids": [
+      "video_104",
+      "video_11",
+      "video_12",
+      "video_122",
+      "video_131",
+      "video_20",
+      "video_29",
+      "video_35",
+      "video_52",
+      "video_59",
+      "video_92",
+      "video_95"
+    ],
+    "excluded_native_DEV": [
+      "video_121",
+      "video_15",
+      "video_47",
+      "video_91"
+    ],
+    "all_real_assets_owned": true,
+    "source_manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "synthetic_manifest_sha256": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+    "synthetic_training_videos": 57,
+    "real_tensor_dtype": "uint8 native inputs/GT; float32 /255 after crops",
+    "timing_scope": "Consecutive registered frame indices, not independently verified sensor timing."
+  },
+  "parameters": {
+    "pretrained_sha256": "d40a930fbc0435f47ce08dda17b1c630b86a501be9423b8f48dab14722fb5548",
+    "rep_scale": 4,
+    "branch_seed": 4100,
+    "expanded_layers": [
+      "head.block1.0",
+      "head.block1.2",
+      "body.block1",
+      "att.1",
+      "att1.0",
+      "tail"
+    ],
+    "training_parameters_total": 49978,
+    "training_parameters_active": 47239,
+    "inactive_warm_parameters": 2739,
+    "deployment_parameters": 4075,
+    "initialization": "Copy each slim kernel/bias into first outputs of the largest raw branch; identity compression, zero other readout columns; copy FST/PReLU.",
+    "warmup": false,
+    "scope": "Original MBR parameterization control, not a reproduction of the complete official training protocol."
+  },
+  "initial_shapes": [
+    {
+      "shape": [
+        2,
+        3,
+        32,
+        36
+      ],
+      "train_max_abs_delta": 0.0,
+      "eval_max_abs_delta": 0.0
+    },
+    {
+      "shape": [
+        2,
+        3,
+        33,
+        37
+      ],
+      "train_max_abs_delta": 0.0,
+      "eval_max_abs_delta": 0.0
+    }
+  ],
+  "discarded_backward": [
+    {
+      "discarded_step": 1,
+      "mse": 0.5962610244750977,
+      "gradient_norm_before_clip": 158.94407653808594,
+      "other_readout_gradient_norms": {
+        "head.block1.0": 1.2319705486297607,
+        "head.block1.2": 2.1295225620269775,
+        "body.block1": 2.7883002758026123,
+        "att.1": 0.028413204476237297,
+        "att1.0": 1.1833384037017822,
+        "tail": 5.804714679718018
+      }
+    },
+    {
+      "discarded_step": 2,
+      "mse": 0.5805758833885193,
+      "gradient_norm_before_clip": 154.8277587890625,
+      "other_readout_gradient_norms": {
+        "head.block1.0": 1.1963897943496704,
+        "head.block1.2": 2.0703670978546143,
+        "body.block1": 2.7116198539733887,
+        "att.1": 0.02871784381568432,
+        "att1.0": 1.1582367420196533,
+        "tail": 5.696864128112793
+      }
+    }
+  ],
+  "real_window_eval_fold_max_abs_delta": 5.793571472167969e-05,
+  "real_windows": [
+    {
+      "video": "breakdance-flare",
+      "members": [
+        "DAVIS/JPEGImages/480p/breakdance-flare/00000.jpg",
+        "DAVIS/JPEGImages/480p/breakdance-flare/00001.jpg",
+        "DAVIS/JPEGImages/480p/breakdance-flare/00002.jpg",
+        "DAVIS/JPEGImages/480p/breakdance-flare/00003.jpg"
+      ],
+      "xy": [
+        634,
+        41
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": false,
+      "photons": 20,
+      "source": "davis_synthetic"
+    },
+    {
+      "video": "rallye",
+      "members": [
+        "DAVIS/JPEGImages/480p/rallye/00032.jpg",
+        "DAVIS/JPEGImages/480p/rallye/00033.jpg",
+        "DAVIS/JPEGImages/480p/rallye/00034.jpg",
+        "DAVIS/JPEGImages/480p/rallye/00035.jpg"
+      ],
+      "xy": [
+        20,
+        7
+      ],
+      "flip_horizontal": true,
+      "flip_vertical": true,
+      "photons": 20,
+      "source": "davis_synthetic"
+    },
+    {
+      "source": "olives_real",
+      "video": "video_29",
+      "indices": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "xy": [
+        38,
+        660
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": true,
+      "input_sources": [
+        ".cache/data/olives-r4/Frames/input/video_29/00009.png",
+        ".cache/data/olives-r4/Frames/input/video_29/00010.png",
+        ".cache/data/olives-r4/Frames/input/video_29/00011.png",
+        ".cache/data/olives-r4/Frames/input/video_29/00012.png"
+      ],
+      "target_sources": [
+        ".cache/data/olives-r4/Frames/gt/video_29/00009.png",
+        ".cache/data/olives-r4/Frames/gt/video_29/00010.png",
+        ".cache/data/olives-r4/Frames/gt/video_29/00011.png",
+        ".cache/data/olives-r4/Frames/gt/video_29/00012.png"
+      ]
+    },
+    {
+      "source": "olives_real",
+      "video": "video_11",
+      "indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "xy": [
+        840,
+        658
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": true,
+      "input_sources": [
+        ".cache/data/olives-r4/Frames/input/video_11/00000.png",
+        ".cache/data/olives-r4/Frames/input/video_11/00001.png",
+        ".cache/data/olives-r4/Frames/input/video_11/00002.png",
+        ".cache/data/olives-r4/Frames/input/video_11/00003.png"
+      ],
+      "target_sources": [
+        ".cache/data/olives-r4/Frames/gt/video_11/00000.png",
+        ".cache/data/olives-r4/Frames/gt/video_11/00001.png",
+        ".cache/data/olives-r4/Frames/gt/video_11/00002.png",
+        ".cache/data/olives-r4/Frames/gt/video_11/00003.png"
+      ]
+    }
+  ]
+}
