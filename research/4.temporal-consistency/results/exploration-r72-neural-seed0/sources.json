@@ -1,0 +1,290 @@
+{
+  "MobileIE_MSE": {
+    "checkpoint": {
+      "model": "square_mse",
+      "seed": 0,
+      "new_step": 4000,
+      "inherited_updates": 4000,
+      "path": ".cache/checkpoints/exploration-r44/stage001/seed0/square_mse-deploy-step4000.pt",
+      "sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+      "training_path": ".cache/checkpoints/exploration-r44/stage001/seed0/square_mse-training-step4000.pt",
+      "training_sha256": "91800b897a2b568d837cf92925b727bb71934f781437733c75323d3562f6998e",
+      "deployment_parameters": 4075,
+      "final_eval_export_max_abs_delta": 2.5033950805664062e-06,
+      "final_export_gate_passed": true
+    },
+    "parameters": 4075,
+    "project_updates": 8000,
+    "future_wait_max": 0,
+    "pretraining_REDS_overlap": "Not fully verified; project adaptation does not use REDS."
+  },
+  "MobileIE_L1": {
+    "checkpoint": {
+      "seed": 0,
+      "step": 8000,
+      "parameters": 4075,
+      "path": ".cache/checkpoints/exploration-r69/stage001/seed0/deploy-step8000.pt",
+      "sha256": "750835b5abafe800fbc4f912e818a63ec57757fd5a1fac8bdb3cc523dbb5c1d6",
+      "training_path": ".cache/checkpoints/exploration-r69/stage001/seed0/training-step8000.pt",
+      "training_sha256": "d7eab546474205ccd70a6bd52a5675aad331e00bc36a6397f3cae1e79b0d84b8",
+      "final_quality_eligible": true,
+      "final_eval_fold_max_abs_delta": 2.5033950805664062e-06,
+      "final_fold_gate_passed": true
+    },
+    "training_config_sha256": "600572887f5bf068142c83c92442f4f83a7a262f7cee37099eac426d82221639",
+    "project_updates": 8000,
+    "parameters": 4075,
+    "future_wait_max": 0,
+    "objective": "spatial L1",
+    "pretraining_REDS_overlap": "Not fully verified; project adaptation does not use REDS."
+  },
+  "Nano": {
+    "name": "nano_seed0",
+    "family": "nano",
+    "seed": 0,
+    "parameters": 696,
+    "future_wait_max": 0,
+    "source": {
+      "repository": "albrateanu/multinex",
+      "commit": "e15790a963935569fff1ba6a8b0d33a791765749",
+      "source_manifest_sha256": "6dd18639368ba7b93f7c2285f606edd63af94e04e11fc652f1e1888d7cd5e240",
+      "files": {
+        "basicsr/models/archs/MultinexNano_arch.py": {
+          "source": "basicsr/models/archs/MultinexNano_arch.py",
+          "role": "source",
+          "url": "https://raw.githubusercontent.com/albrateanu/multinex/e15790a963935569fff1ba6a8b0d33a791765749/basicsr/models/archs/MultinexNano_arch.py",
+          "path": "third_party/multinex/basicsr/models/archs/MultinexNano_arch.py",
+          "bytes": 23010,
+          "git_blob_sha": "279dca3cff7ec9075e8800b6aacb6218c13d7574",
+          "sha256": "0a2d94f12e7de799b5e13f46905dd9e5c3f7cf005dee40412d18ec6b1adf2cdf",
+          "reused_verified_file": false
+        },
+        "Options/Multinex-Nano_LOL-v1.yaml": {
+          "source": "Options/Multinex-Nano_LOL-v1.yaml",
+          "role": "source",
+          "url": "https://raw.githubusercontent.com/albrateanu/multinex/e15790a963935569fff1ba6a8b0d33a791765749/Options/Multinex-Nano_LOL-v1.yaml",
+          "path": "third_party/multinex/Options/Multinex-Nano_LOL-v1.yaml",
+          "bytes": 4910,
+          "git_blob_sha": "ffa840641eba1e488af122231bb09455e6fd1012",
+          "sha256": "53c42fb0f782ef4acd58ba25d47f07db67f1da774eb8e588ca71773f6063484e",
+          "reused_verified_file": false
+        },
+        "pretrained_weights/Multinex-Nano_LOL-v1.pth": {
+          "source": "pretrained_weights/Multinex-Nano_LOL-v1.pth",
+          "role": "weight",
+          "url": "https://raw.githubusercontent.com/albrateanu/multinex/e15790a963935569fff1ba6a8b0d33a791765749/pretrained_weights/Multinex-Nano_LOL-v1.pth",
+          "path": ".cache/weights/multinex/LOL-v1/Multinex-Nano_LOL-v1.pth",
+          "bytes": 20317,
+          "git_blob_sha": "395c4218d7e20ae3ceece91670dfe7c338741315",
+          "sha256": "ed3e9fafef4bc15a7e84450d002eb564bb1d1e18345432a30b0bfbc7b7b535e4",
+          "reused_verified_file": false
+        }
+      },
+      "network_kwargs": {
+        "in_ch": 3,
+        "out_ch": 3,
+        "base_channels": 3,
+        "width_mult": 1.0,
+        "use_depthwise": true,
+        "act": "ReLU",
+        "per_illum_proj": false,
+        "per_chroma_proj": false,
+        "use_illum_attn": true,
+        "use_chroma_attn": true,
+        "illum_mid": 1,
+        "chroma_mid": 1,
+        "reduction_ratio": 3,
+        "luma_head_act": null,
+        "chroma_head_act": null,
+        "retinex_residual": true,
+        "eps": 1e-09,
+        "illum_flags": {
+          "mean": false,
+          "rec709": true,
+          "vmax": true,
+          "lightness": true,
+          "ycgco": false,
+          "l2norm": true
+        },
+        "chroma_flags": {
+          "yuv_uv": false,
+          "ycbcr_cbcr": true,
+          "opponent": false,
+          "chroma_rg": true,
+          "hsv_s": true,
+          "litags": false
+        },
+        "target_params": 300
+      },
+      "parameters": 696,
+      "buffer_elements": 38,
+      "state_entries": 50,
+      "strict_load": true,
+      "input": "RGB FP32 [0,1]",
+      "inference": "Official even reflection pad, unpad and clip; no GT mean, ensemble or large-image splitting.",
+      "training": "R56 fixed MixedPool8000 adaptation, original BN kept, no full-convergence or new-method claim.",
+      "adapted_checkpoint": {
+        "path": ".cache/checkpoints/exploration-r56/stage001/seed0/nano-step8000.pt",
+        "sha256": "10fa03c5d22fbe965011ad847ef8dc452cc8d334e05f19e05ff71f18030fe970",
+        "step": 8000,
+        "seed": 0,
+        "parameters": 696,
+        "BN_counts": {
+          "illum_mid_seq.0.0.bn": 80970,
+          "chroma_mid_seq.0.0.bn": 80970
+        },
+        "Adam_phase": 2,
+        "loss_last_window": {
+          "step": 8000,
+          "data_step": 7999,
+          "MSE": 0.012737937271595001,
+          "synthetic_MSE": 0.017895091325044632,
+          "real_MSE": 0.0075807832181453705,
+          "gradient_norm_before_clip": 0.5577399134635925,
+          "Adam_reset": false,
+          "BN_counts": {
+            "illum_mid_seq.0.0.bn": 80970,
+            "chroma_mid_seq.0.0.bn": 80970
+          }
+        },
+        "final_quality_eligible": true
+      },
+      "adaptation_config_sha256": "69aebf8c91058b97d0c770ff442895ae7f7ecdcfce6746742d4dc320f83f0731",
+      "train_seed": 0,
+      "adaptation_updates": 8000,
+      "project_updates": 8000
+    },
+    "project_updates": 8000,
+    "pretraining_REDS_overlap": "Not fully verified; project adaptation does not use REDS."
+  },
+  "StableLLVE_L1": {
+    "seed": 0,
+    "arm": "spatial_l1",
+    "parameters": 4316259,
+    "project_updates": 8000,
+    "original_manifest": {
+      "repository": "https://github.com/zkawfanx/StableLLVE",
+      "commit": "4cc070da328ffadc8498285985aa98175e473bc5",
+      "url": "https://raw.githubusercontent.com/zkawfanx/StableLLVE/4cc070da328ffadc8498285985aa98175e473bc5/checkpoint.pth",
+      "path": ".cache/pretrained/stablellve/4cc070da328ffadc8498285985aa98175e473bc5/checkpoint.pth",
+      "sha256": "277e4d29566709a31f8f25c401396e9bd9c70395e6da36513cd9d9a83e005ad9",
+      "git_blob_sha1": "f819f8daf6f9ad7e2548480ae2584935f4922a45",
+      "bytes": 17274710,
+      "sources": [
+        {
+          "path": "third_party/stablellve/LICENSE",
+          "sha256": "2a09d7de462e5b18f53c283eb006f9546c729a46f4ae53def95654b0cc7fe475",
+          "git_blob_sha1": "f361df58be63bc15d953dd54ddf7bb83bd10c191",
+          "bytes": 1065
+        },
+        {
+          "path": "third_party/stablellve/model.py",
+          "sha256": "86b9d7e2b836dde336eb09aaea44b9e5c09b0e05576e6a1656d01ce3a84cd1a1",
+          "git_blob_sha1": "cccf6808fbea20ddedae55bdd5f83187b6797b7f",
+          "bytes": 3821
+        }
+      ],
+      "upstream_manifest_sha256": "e6964b3947f1987c18685cf7bb787c185bc100f3fc83e266e4a80652ba8a79a2",
+      "scope": "official synthetic-clean training, unsuitable-for-noise caveat retained; BGR source convention; no new training"
+    },
+    "adapted_checkpoint": {
+      "path": ".cache/checkpoints/exploration-r65/stage001/seed0/spatial_l1-step8000.pt",
+      "sha256": "e077baa4a83282d25a47e2c2bcdff4471f7ed87b9a337df194ae17d6a2732452",
+      "seed": 0,
+      "arm": "spatial_l1",
+      "step": 8000,
+      "parameters": 4316259,
+      "Adam_phase": 2,
+      "loss_last_window": {
+        "arm": "spatial_l1",
+        "step": 8000,
+        "data_step": 7999,
+        "total": 0.02793140709400177,
+        "spatial_L1": 0.02793140709400177,
+        "consistency_L1": 0.0,
+        "synthetic_MAE": 0.02714882791042328,
+        "real_MAE": 0.02871398627758026,
+        "unclipped_MSE": 0.0014431625604629517,
+        "gradient_norm_before_clip": 0.9435452222824097,
+        "Adam_reset": false
+      },
+      "final_quality_eligible": true
+    },
+    "training_config_sha256": "d51eb36ffdef4f7ab03b5367a630a118aebe05ae35eff143e0b488b02a321515",
+    "future_wait_max": 0,
+    "scope": "Fixed-budget official network/loss adaptation; not full-paper reproduction/new method.",
+    "pretraining_REDS_overlap": "Not fully verified; project adaptation does not use REDS."
+  },
+  "FastDVDnet": {
+    "name": "fastdvd_seed0",
+    "family": "fastdvd",
+    "seed": 0,
+    "parameters": 2479096,
+    "future_wait_max": 2,
+    "source": {
+      "checkpoint": {
+        "path": ".cache/checkpoints/exploration-r53/stage001/seed0/fastdvd-step8000.pt",
+        "sha256": "012e6df2df6f0b6c618fa11a7bf6f6ac5558dfb2a874fb0d55886538d21d4b31",
+        "step": 8000,
+        "seed": 0,
+        "parameters": 2479096,
+        "BN_counts": {
+          "temp1.inc.convblock.1": 1344000,
+          "temp1.inc.convblock.4": 1344000,
+          "temp1.downc0.convblock.1": 1344000,
+          "temp1.downc0.convblock.3.convblock.1": 1344000,
+          "temp1.downc0.convblock.3.convblock.4": 1344000,
+          "temp1.downc1.convblock.1": 1344000,
+          "temp1.downc1.convblock.3.convblock.1": 1344000,
+          "temp1.downc1.convblock.3.convblock.4": 1344000,
+          "temp1.upc2.convblock.0.convblock.1": 1344000,
+          "temp1.upc2.convblock.0.convblock.4": 1344000,
+          "temp1.upc1.convblock.0.convblock.1": 1344000,
+          "temp1.upc1.convblock.0.convblock.4": 1344000,
+          "temp1.outc.convblock.1": 1344000,
+          "temp2.inc.convblock.1": 448000,
+          "temp2.inc.convblock.4": 448000,
+          "temp2.downc0.convblock.1": 448000,
+          "temp2.downc0.convblock.3.convblock.1": 448000,
+          "temp2.downc0.convblock.3.convblock.4": 448000,
+          "temp2.downc1.convblock.1": 448000,
+          "temp2.downc1.convblock.3.convblock.1": 448000,
+          "temp2.downc1.convblock.3.convblock.4": 448000,
+          "temp2.upc2.convblock.0.convblock.1": 448000,
+          "temp2.upc2.convblock.0.convblock.4": 448000,
+          "temp2.upc1.convblock.0.convblock.1": 448000,
+          "temp2.upc1.convblock.0.convblock.4": 448000,
+          "temp2.outc.convblock.1": 448000
+        },
+        "Adam_phase": 2,
+        "loss_last_window": {
+          "step": 8000,
+          "data_step": 7999,
+          "MSE": 0.004522640723735094,
+          "synthetic_MSE": 0.00415396224707365,
+          "real_MSE": 0.004891319200396538,
+          "gradient_norm_before_clip": 0.12449081242084503,
+          "Adam_reset": false,
+          "BN_first": 1344000,
+          "BN_last": 448000,
+          "windows_with_duplicate_source_index": 2
+        },
+        "final_quality_eligible": true
+      },
+      "official": {
+        "official_manifest_sha256": "6220b11333692a08b1c6a16e39a85500127adb4d4d45cf5e5f1228c85fc171cf",
+        "official_checkpoint_sha256": "8118974ac7defaa5037f73caf87e0cb53efcfa49ae77d55c05ab187f59e55949",
+        "official_commit": "c8fdf6182a0340e89dd18f5df25b47337cbede6f",
+        "parameters": 2479096,
+        "conditioning_sigma_interface": 15.0,
+        "future_wait_max": 2,
+        "task": "direct lowlight RGB to paired GT; no MobileIE prefix",
+        "pretraining_overlap": "Official DAVIS training includes three DEV video IDs; not unseen generalization."
+      },
+      "project_updates": 8000,
+      "input": "native only, true five-frame window, fixed sigma15/255"
+    },
+    "project_updates": 8000,
+    "pretraining_REDS_overlap": "Not fully verified; project adaptation does not use REDS."
+  }
+}
