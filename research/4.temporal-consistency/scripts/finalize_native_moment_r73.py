@@ -1,5 +1,6 @@
 """Immutable R73 qualification, sequential GPU seeds, and complete evidence chain."""
 from datetime import datetime
+import argparse
 import json
 import subprocess
 import time
@@ -16,10 +17,14 @@ def stamp(): return datetime.now().astimezone().isoformat()
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--attempt', type=int, default=1)
+    parser.add_argument('--qualification-start', type=int, default=1)
+    args = parser.parse_args()
     process = BASE/'process/exploration-r73'
     cpu = json.loads((process/'cpu-gate001/runtime.json').read_text())
     assert cpu['passed'] and cpu['discarded_SGD_updates'] == 12 and not cpu['CUDA_initialized']
-    out = process/'finalize001'; out.mkdir(exist_ok=False)
+    out = process/f'finalize{args.attempt:03d}'; out.mkdir(exist_ok=False)
     names = ['mixed_anchor_r40.py', 'dynamic_training_r34.py', 'native_training_r14.py', 'training_form_r41.py',
              'budget_causal_r33.py', 'gpu_guard.py', 'prepare_cache_r5.py', 'exploration_r2_data.py',
              'video_metrics.py', 'half_motion_r4.py', 'aligned_raw_history_r11.py', 'aggregation_controls_r20.py',
@@ -57,8 +62,9 @@ def main():
                 write(out/f'{tag}-resource-wait.json', dict(at=stamp(), resource_only=True, stage='Waiting for fresh idle same-group GPU samples'))
                 time.sleep(30); continue
             attempt += 1; record = out/f'{tag}-guard{attempt:03d}.json'; log = out/f'{tag}-attempt{attempt:03d}.log'
+            admission_number = args.qualification_start+attempt-1 if tag == 'qualification' else attempt
             cmd = command('gpu_guard.py', ['--gpu', str(chosen), '--record', str(record.relative_to(ROOT)),
-                          '--', *command(script, [*extra, '--admission-attempt', str(attempt)])])
+                          '--', *command(script, [*extra, '--admission-attempt', str(admission_number)])])
             with log.open('x') as stream:
                 child = subprocess.Popen(cmd, cwd=ROOT, stdout=stream, stderr=subprocess.STDOUT)
                 time.sleep(.2)
@@ -75,7 +81,7 @@ def main():
                 time.sleep(5); continue
             if code == 75:
                 if tag == 'qualification':
-                    directory = process/f'cuda-gate{attempt:03d}'
+                    directory = process/f'cuda-gate{admission_number:03d}'
                     denied = json.loads((directory/'internal-admission.json').read_text())
                     terminal = json.loads((directory/'runtime.json').read_text())
                     assert terminal['discarded_SGD_updates'] == 0 and not terminal['CUDA_initialized']
@@ -86,7 +92,7 @@ def main():
                 write(out/f'{tag}-resource-reject{attempt:03d}.json', dict(at=stamp(), resource_only=True, returncode=75, no_CUDA_or_updates=True))
                 time.sleep(5); continue
             assert code == 0, f'{tag} admitted scientific failure preserved; no automatic retry'
-            return record, attempt
+            return record, admission_number
 
     try:
         state('Full source chain frozen; separately admitted CUDA actual-window qualification next')
