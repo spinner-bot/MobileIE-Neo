@@ -1,0 +1,193 @@
+{
+  "at": "2026-11-13T03:03:14.293067+08:00",
+  "scope": "Current exact original processes and immutable1000 backup markers; no final quality or checkpoint selection.",
+  "seeds": {
+    "0": {
+      "guard_pid": 3885535,
+      "guard_identity": {
+        "command": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 5 --record research/4.temporal-consistency/process/exploration-r65/seed0-guard.json -- ./scripts/project-python research/4.temporal-consistency/scripts/train_stablellve_task_r65.py --seed 0 ",
+        "start_ticks": "44975469"
+      },
+      "training_pid": 3885619,
+      "training_identity": {
+        "command": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/train_stablellve_task_r65.py --seed 0 ",
+        "start_ticks": "44975636"
+      },
+      "last_flushed_arm_rows": {
+        "spatial_l1": {
+          "arm": "spatial_l1",
+          "step": 1400,
+          "data_step": 1399,
+          "total": 0.04103745147585869,
+          "spatial_L1": 0.04103745147585869,
+          "consistency_L1": 0.0,
+          "synthetic_MAE": 0.029693907126784325,
+          "real_MAE": 0.0523809939622879,
+          "unclipped_MSE": 0.002721107564866543,
+          "gradient_norm_before_clip": 1.6844791173934937,
+          "Adam_reset": false
+        },
+        "commute20": {
+          "arm": "commute20",
+          "step": 1400,
+          "data_step": 1399,
+          "total": 0.09210475534200668,
+          "spatial_L1": 0.049059897661209106,
+          "consistency_L1": 0.0021522429306060076,
+          "synthetic_MAE": 0.038444168865680695,
+          "real_MAE": 0.05967562645673752,
+          "unclipped_MSE": 0.0034425731282681227,
+          "gradient_norm_before_clip": 1.1178470849990845,
+          "Adam_reset": false
+        }
+      },
+      "first_backup_markers": {
+        "spatial_l1": {
+          "path": ".cache/checkpoints/exploration-r65/stage001/seed0/spatial_l1-step1000.pt",
+          "sha256": "2812d739145c9f4554c3bafcc252a48f19860d39a0a3f76bf8e352420ecd501c",
+          "seed": 0,
+          "arm": "spatial_l1",
+          "step": 1000,
+          "parameters": 4316259,
+          "Adam_phase": 1,
+          "loss_last_window": {
+            "arm": "spatial_l1",
+            "step": 1000,
+            "data_step": 999,
+            "total": 0.03619419038295746,
+            "spatial_L1": 0.03619419038295746,
+            "consistency_L1": 0.0,
+            "synthetic_MAE": 0.03209848701953888,
+            "real_MAE": 0.040289897471666336,
+            "unclipped_MSE": 0.0022802590392529964,
+            "gradient_norm_before_clip": 0.8661548495292664,
+            "Adam_reset": false
+          },
+          "final_quality_eligible": false
+        },
+        "commute20": {
+          "path": ".cache/checkpoints/exploration-r65/stage001/seed0/commute20-step1000.pt",
+          "sha256": "ba094cc48a4f955ba7c45208cf8d6d4c7be1dce3cede04c25c62cc0300c23730",
+          "seed": 0,
+          "arm": "commute20",
+          "step": 1000,
+          "parameters": 4316259,
+          "Adam_phase": 1,
+          "loss_last_window": {
+            "arm": "commute20",
+            "step": 1000,
+            "data_step": 999,
+            "total": 0.1123911440372467,
+            "spatial_L1": 0.07890303432941437,
+            "consistency_L1": 0.0016744054155424237,
+            "synthetic_MAE": 0.061594441533088684,
+            "real_MAE": 0.09621162712574005,
+            "unclipped_MSE": 0.00990235060453415,
+            "gradient_norm_before_clip": 2.03729248046875,
+            "Adam_reset": false
+          },
+          "final_quality_eligible": false
+        }
+      },
+      "terminal_runtime_exists": false
+    },
+    "1": {
+      "guard_pid": 3885536,
+      "guard_identity": {
+        "command": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 6 --record research/4.temporal-consistency/process/exploration-r65/seed1-guard.json -- ./scripts/project-python research/4.temporal-consistency/scripts/train_stablellve_task_r65.py --seed 1 ",
+        "start_ticks": "44975469"
+      },
+      "training_pid": 3885554,
+      "training_identity": {
+        "command": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/train_stablellve_task_r65.py --seed 1 ",
+        "start_ticks": "44975627"
+      },
+      "last_flushed_arm_rows": {
+        "spatial_l1": {
+          "arm": "spatial_l1",
+          "step": 1412,
+          "data_step": 1411,
+          "total": 0.047180768102407455,
+          "spatial_L1": 0.047180768102407455,
+          "consistency_L1": 0.0,
+          "synthetic_MAE": 0.027035564184188843,
+          "real_MAE": 0.06732597202062607,
+          "unclipped_MSE": 0.004046897403895855,
+          "gradient_norm_before_clip": 9.244059562683105,
+          "Adam_reset": false
+        },
+        "commute20": {
+          "arm": "commute20",
+          "step": 1412,
+          "data_step": 1411,
+          "total": 0.06873168051242828,
+          "spatial_L1": 0.04521449655294418,
+          "consistency_L1": 0.00117585901170969,
+          "synthetic_MAE": 0.030688386410474777,
+          "real_MAE": 0.05974060297012329,
+          "unclipped_MSE": 0.0032251179218292236,
+          "gradient_norm_before_clip": 0.9948229789733887,
+          "Adam_reset": false
+        }
+      },
+      "first_backup_markers": {
+        "spatial_l1": {
+          "path": ".cache/checkpoints/exploration-r65/stage001/seed1/spatial_l1-step1000.pt",
+          "sha256": "c1afcaf6f3e51c4b4ffa415af6d2690cec1f4a6b370bc46ac118a1174a40b2f4",
+          "seed": 1,
+          "arm": "spatial_l1",
+          "step": 1000,
+          "parameters": 4316259,
+          "Adam_phase": 1,
+          "loss_last_window": {
+            "arm": "spatial_l1",
+            "step": 1000,
+            "data_step": 999,
+            "total": 0.04190313071012497,
+            "spatial_L1": 0.04190313071012497,
+            "consistency_L1": 0.0,
+            "synthetic_MAE": 0.03488773852586746,
+            "real_MAE": 0.048918526619672775,
+            "unclipped_MSE": 0.002823975868523121,
+            "gradient_norm_before_clip": 0.8862807750701904,
+            "Adam_reset": false
+          },
+          "final_quality_eligible": false
+        },
+        "commute20": {
+          "path": ".cache/checkpoints/exploration-r65/stage001/seed1/commute20-step1000.pt",
+          "sha256": "b3ef72770795a0e98ccf92745913ea7675aeb3d879385650a9457d6a2327b6df",
+          "seed": 1,
+          "arm": "commute20",
+          "step": 1000,
+          "parameters": 4316259,
+          "Adam_phase": 1,
+          "loss_last_window": {
+            "arm": "commute20",
+            "step": 1000,
+            "data_step": 999,
+            "total": 0.09800873696804047,
+            "spatial_L1": 0.05808480829000473,
+            "consistency_L1": 0.0019961963407695293,
+            "synthetic_MAE": 0.0503745898604393,
+            "real_MAE": 0.06579503417015076,
+            "unclipped_MSE": 0.0052236830815672874,
+            "gradient_norm_before_clip": 0.6380759477615356,
+            "Adam_reset": false
+          },
+          "final_quality_eligible": false
+        }
+      },
+      "terminal_runtime_exists": false
+    }
+  },
+  "visual_preparation": "Protocol and cached renderer committed; not run before complete final evaluation.",
+  "coordinator": {
+    "pid": 3887076,
+    "identity": {
+      "command": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/finalize_stablellve_task_r65.py ",
+      "start_ticks": "44994714"
+    }
+  },
+  "all_original_frozen_dependencies_unchanged": true
+}
