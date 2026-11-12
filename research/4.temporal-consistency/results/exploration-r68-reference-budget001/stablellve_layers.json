@@ -1,0 +1,1344 @@
+{
+  "rows": [
+    {
+      "model": "StableLLVE",
+      "height": 288,
+      "width": 512,
+      "parameters": 4316259,
+      "conv_MACs": 22564306944,
+      "conv_invocations": 19,
+      "largest_single_conv_output_FP32_bytes": 18874368,
+      "layers": [
+        {
+          "layer": "inc.double_conv.0",
+          "input_shape": [
+            1,
+            3,
+            288,
+            512
+          ],
+          "output_shape": [
+            1,
+            32,
+            288,
+            512
+          ],
+          "conv_MACs": 127401984,
+          "output_FP32_bytes": 18874368
+        },
+        {
+          "layer": "inc.double_conv.2",
+          "input_shape": [
+            1,
+            32,
+            288,
+            512
+          ],
+          "output_shape": [
+            1,
+            32,
+            288,
+            512
+          ],
+          "conv_MACs": 1358954496,
+          "output_FP32_bytes": 18874368
+        },
+        {
+          "layer": "down1.maxpool_conv.1.double_conv.0",
+          "input_shape": [
+            1,
+            32,
+            144,
+            256
+          ],
+          "output_shape": [
+            1,
+            64,
+            144,
+            256
+          ],
+          "conv_MACs": 679477248,
+          "output_FP32_bytes": 9437184
+        },
+        {
+          "layer": "down1.maxpool_conv.1.double_conv.2",
+          "input_shape": [
+            1,
+            64,
+            144,
+            256
+          ],
+          "output_shape": [
+            1,
+            64,
+            144,
+            256
+          ],
+          "conv_MACs": 1358954496,
+          "output_FP32_bytes": 9437184
+        },
+        {
+          "layer": "down2.maxpool_conv.1.double_conv.0",
+          "input_shape": [
+            1,
+            64,
+            72,
+            128
+          ],
+          "output_shape": [
+            1,
+            128,
+            72,
+            128
+          ],
+          "conv_MACs": 679477248,
+          "output_FP32_bytes": 4718592
+        },
+        {
+          "layer": "down2.maxpool_conv.1.double_conv.2",
+          "input_shape": [
+            1,
+            128,
+            72,
+            128
+          ],
+          "output_shape": [
+            1,
+            128,
+            72,
+            128
+          ],
+          "conv_MACs": 1358954496,
+          "output_FP32_bytes": 4718592
+        },
+        {
+          "layer": "down3.maxpool_conv.1.double_conv.0",
+          "input_shape": [
+            1,
+            128,
+            36,
+            64
+          ],
+          "output_shape": [
+            1,
+            256,
+            36,
+            64
+          ],
+          "conv_MACs": 679477248,
+          "output_FP32_bytes": 2359296
+        },
+        {
+          "layer": "down3.maxpool_conv.1.double_conv.2",
+          "input_shape": [
+            1,
+            256,
+            36,
+            64
+          ],
+          "output_shape": [
+            1,
+            256,
+            36,
+            64
+          ],
+          "conv_MACs": 1358954496,
+          "output_FP32_bytes": 2359296
+        },
+        {
+          "layer": "down4.maxpool_conv.1.double_conv.0",
+          "input_shape": [
+            1,
+            256,
+            18,
+            32
+          ],
+          "output_shape": [
+            1,
+            256,
+            18,
+            32
+          ],
+          "conv_MACs": 339738624,
+          "output_FP32_bytes": 589824
+        },
+        {
+          "layer": "down4.maxpool_conv.1.double_conv.2",
+          "input_shape": [
+            1,
+            256,
+            18,
+            32
+          ],
+          "output_shape": [
+            1,
+            256,
+            18,
+            32
+          ],
+          "conv_MACs": 339738624,
+          "output_FP32_bytes": 589824
+        },
+        {
+          "layer": "up1.conv.double_conv.0",
+          "input_shape": [
+            1,
+            512,
+            36,
+            64
+          ],
+          "output_shape": [
+            1,
+            256,
+            36,
+            64
+          ],
+          "conv_MACs": 2717908992,
+          "output_FP32_bytes": 2359296
+        },
+        {
+          "layer": "up1.conv.double_conv.2",
+          "input_shape": [
+            1,
+            256,
+            36,
+            64
+          ],
+          "output_shape": [
+            1,
+            128,
+            36,
+            64
+          ],
+          "conv_MACs": 679477248,
+          "output_FP32_bytes": 1179648
+        },
+        {
+          "layer": "up2.conv.double_conv.0",
+          "input_shape": [
+            1,
+            256,
+            72,
+            128
+          ],
+          "output_shape": [
+            1,
+            128,
+            72,
+            128
+          ],
+          "conv_MACs": 2717908992,
+          "output_FP32_bytes": 4718592
+        },
+        {
+          "layer": "up2.conv.double_conv.2",
+          "input_shape": [
+            1,
+            128,
+            72,
+            128
+          ],
+          "output_shape": [
+            1,
+            64,
+            72,
+            128
+          ],
+          "conv_MACs": 679477248,
+          "output_FP32_bytes": 2359296
+        },
+        {
+          "layer": "up3.conv.double_conv.0",
+          "input_shape": [
+            1,
+            128,
+            144,
+            256
+          ],
+          "output_shape": [
+            1,
+            64,
+            144,
+            256
+          ],
+          "conv_MACs": 2717908992,
+          "output_FP32_bytes": 9437184
+        },
+        {
+          "layer": "up3.conv.double_conv.2",
+          "input_shape": [
+            1,
+            64,
+            144,
+            256
+          ],
+          "output_shape": [
+            1,
+            32,
+            144,
+            256
+          ],
+          "conv_MACs": 679477248,
+          "output_FP32_bytes": 4718592
+        },
+        {
+          "layer": "up4.conv.double_conv.0",
+          "input_shape": [
+            1,
+            64,
+            288,
+            512
+          ],
+          "output_shape": [
+            1,
+            32,
+            288,
+            512
+          ],
+          "conv_MACs": 2717908992,
+          "output_FP32_bytes": 18874368
+        },
+        {
+          "layer": "up4.conv.double_conv.2",
+          "input_shape": [
+            1,
+            32,
+            288,
+            512
+          ],
+          "output_shape": [
+            1,
+            32,
+            288,
+            512
+          ],
+          "conv_MACs": 1358954496,
+          "output_FP32_bytes": 18874368
+        },
+        {
+          "layer": "outc.conv",
+          "input_shape": [
+            1,
+            32,
+            288,
+            512
+          ],
+          "output_shape": [
+            1,
+            3,
+            288,
+            512
+          ],
+          "conv_MACs": 14155776,
+          "output_FP32_bytes": 1769472
+        }
+      ]
+    },
+    {
+      "model": "StableLLVE",
+      "height": 360,
+      "width": 640,
+      "parameters": 4316259,
+      "conv_MACs": 35233136640,
+      "conv_invocations": 19,
+      "largest_single_conv_output_FP32_bytes": 29491200,
+      "layers": [
+        {
+          "layer": "inc.double_conv.0",
+          "input_shape": [
+            1,
+            3,
+            360,
+            640
+          ],
+          "output_shape": [
+            1,
+            32,
+            360,
+            640
+          ],
+          "conv_MACs": 199065600,
+          "output_FP32_bytes": 29491200
+        },
+        {
+          "layer": "inc.double_conv.2",
+          "input_shape": [
+            1,
+            32,
+            360,
+            640
+          ],
+          "output_shape": [
+            1,
+            32,
+            360,
+            640
+          ],
+          "conv_MACs": 2123366400,
+          "output_FP32_bytes": 29491200
+        },
+        {
+          "layer": "down1.maxpool_conv.1.double_conv.0",
+          "input_shape": [
+            1,
+            32,
+            180,
+            320
+          ],
+          "output_shape": [
+            1,
+            64,
+            180,
+            320
+          ],
+          "conv_MACs": 1061683200,
+          "output_FP32_bytes": 14745600
+        },
+        {
+          "layer": "down1.maxpool_conv.1.double_conv.2",
+          "input_shape": [
+            1,
+            64,
+            180,
+            320
+          ],
+          "output_shape": [
+            1,
+            64,
+            180,
+            320
+          ],
+          "conv_MACs": 2123366400,
+          "output_FP32_bytes": 14745600
+        },
+        {
+          "layer": "down2.maxpool_conv.1.double_conv.0",
+          "input_shape": [
+            1,
+            64,
+            90,
+            160
+          ],
+          "output_shape": [
+            1,
+            128,
+            90,
+            160
+          ],
+          "conv_MACs": 1061683200,
+          "output_FP32_bytes": 7372800
+        },
+        {
+          "layer": "down2.maxpool_conv.1.double_conv.2",
+          "input_shape": [
+            1,
+            128,
+            90,
+            160
+          ],
+          "output_shape": [
+            1,
+            128,
+            90,
+            160
+          ],
+          "conv_MACs": 2123366400,
+          "output_FP32_bytes": 7372800
+        },
+        {
+          "layer": "down3.maxpool_conv.1.double_conv.0",
+          "input_shape": [
+            1,
+            128,
+            45,
+            80
+          ],
+          "output_shape": [
+            1,
+            256,
+            45,
+            80
+          ],
+          "conv_MACs": 1061683200,
+          "output_FP32_bytes": 3686400
+        },
+        {
+          "layer": "down3.maxpool_conv.1.double_conv.2",
+          "input_shape": [
+            1,
+            256,
+            45,
+            80
+          ],
+          "output_shape": [
+            1,
+            256,
+            45,
+            80
+          ],
+          "conv_MACs": 2123366400,
+          "output_FP32_bytes": 3686400
+        },
+        {
+          "layer": "down4.maxpool_conv.1.double_conv.0",
+          "input_shape": [
+            1,
+            256,
+            22,
+            40
+          ],
+          "output_shape": [
+            1,
+            256,
+            22,
+            40
+          ],
+          "conv_MACs": 519045120,
+          "output_FP32_bytes": 901120
+        },
+        {
+          "layer": "down4.maxpool_conv.1.double_conv.2",
+          "input_shape": [
+            1,
+            256,
+            22,
+            40
+          ],
+          "output_shape": [
+            1,
+            256,
+            22,
+            40
+          ],
+          "conv_MACs": 519045120,
+          "output_FP32_bytes": 901120
+        },
+        {
+          "layer": "up1.conv.double_conv.0",
+          "input_shape": [
+            1,
+            512,
+            45,
+            80
+          ],
+          "output_shape": [
+            1,
+            256,
+            45,
+            80
+          ],
+          "conv_MACs": 4246732800,
+          "output_FP32_bytes": 3686400
+        },
+        {
+          "layer": "up1.conv.double_conv.2",
+          "input_shape": [
+            1,
+            256,
+            45,
+            80
+          ],
+          "output_shape": [
+            1,
+            128,
+            45,
+            80
+          ],
+          "conv_MACs": 1061683200,
+          "output_FP32_bytes": 1843200
+        },
+        {
+          "layer": "up2.conv.double_conv.0",
+          "input_shape": [
+            1,
+            256,
+            90,
+            160
+          ],
+          "output_shape": [
+            1,
+            128,
+            90,
+            160
+          ],
+          "conv_MACs": 4246732800,
+          "output_FP32_bytes": 7372800
+        },
+        {
+          "layer": "up2.conv.double_conv.2",
+          "input_shape": [
+            1,
+            128,
+            90,
+            160
+          ],
+          "output_shape": [
+            1,
+            64,
+            90,
+            160
+          ],
+          "conv_MACs": 1061683200,
+          "output_FP32_bytes": 3686400
+        },
+        {
+          "layer": "up3.conv.double_conv.0",
+          "input_shape": [
+            1,
+            128,
+            180,
+            320
+          ],
+          "output_shape": [
+            1,
+            64,
+            180,
+            320
+          ],
+          "conv_MACs": 4246732800,
+          "output_FP32_bytes": 14745600
+        },
+        {
+          "layer": "up3.conv.double_conv.2",
+          "input_shape": [
+            1,
+            64,
+            180,
+            320
+          ],
+          "output_shape": [
+            1,
+            32,
+            180,
+            320
+          ],
+          "conv_MACs": 1061683200,
+          "output_FP32_bytes": 7372800
+        },
+        {
+          "layer": "up4.conv.double_conv.0",
+          "input_shape": [
+            1,
+            64,
+            360,
+            640
+          ],
+          "output_shape": [
+            1,
+            32,
+            360,
+            640
+          ],
+          "conv_MACs": 4246732800,
+          "output_FP32_bytes": 29491200
+        },
+        {
+          "layer": "up4.conv.double_conv.2",
+          "input_shape": [
+            1,
+            32,
+            360,
+            640
+          ],
+          "output_shape": [
+            1,
+            32,
+            360,
+            640
+          ],
+          "conv_MACs": 2123366400,
+          "output_FP32_bytes": 29491200
+        },
+        {
+          "layer": "outc.conv",
+          "input_shape": [
+            1,
+            32,
+            360,
+            640
+          ],
+          "output_shape": [
+            1,
+            3,
+            360,
+            640
+          ],
+          "conv_MACs": 22118400,
+          "output_FP32_bytes": 2764800
+        }
+      ]
+    },
+    {
+      "model": "StableLLVE",
+      "height": 480,
+      "width": 854,
+      "parameters": 4316259,
+      "conv_MACs": 62572769280,
+      "conv_invocations": 19,
+      "largest_single_conv_output_FP32_bytes": 52469760,
+      "layers": [
+        {
+          "layer": "inc.double_conv.0",
+          "input_shape": [
+            1,
+            3,
+            480,
+            854
+          ],
+          "output_shape": [
+            1,
+            32,
+            480,
+            854
+          ],
+          "conv_MACs": 354170880,
+          "output_FP32_bytes": 52469760
+        },
+        {
+          "layer": "inc.double_conv.2",
+          "input_shape": [
+            1,
+            32,
+            480,
+            854
+          ],
+          "output_shape": [
+            1,
+            32,
+            480,
+            854
+          ],
+          "conv_MACs": 3777822720,
+          "output_FP32_bytes": 52469760
+        },
+        {
+          "layer": "down1.maxpool_conv.1.double_conv.0",
+          "input_shape": [
+            1,
+            32,
+            240,
+            427
+          ],
+          "output_shape": [
+            1,
+            64,
+            240,
+            427
+          ],
+          "conv_MACs": 1888911360,
+          "output_FP32_bytes": 26234880
+        },
+        {
+          "layer": "down1.maxpool_conv.1.double_conv.2",
+          "input_shape": [
+            1,
+            64,
+            240,
+            427
+          ],
+          "output_shape": [
+            1,
+            64,
+            240,
+            427
+          ],
+          "conv_MACs": 3777822720,
+          "output_FP32_bytes": 26234880
+        },
+        {
+          "layer": "down2.maxpool_conv.1.double_conv.0",
+          "input_shape": [
+            1,
+            64,
+            120,
+            213
+          ],
+          "output_shape": [
+            1,
+            128,
+            120,
+            213
+          ],
+          "conv_MACs": 1884487680,
+          "output_FP32_bytes": 13086720
+        },
+        {
+          "layer": "down2.maxpool_conv.1.double_conv.2",
+          "input_shape": [
+            1,
+            128,
+            120,
+            213
+          ],
+          "output_shape": [
+            1,
+            128,
+            120,
+            213
+          ],
+          "conv_MACs": 3768975360,
+          "output_FP32_bytes": 13086720
+        },
+        {
+          "layer": "down3.maxpool_conv.1.double_conv.0",
+          "input_shape": [
+            1,
+            128,
+            60,
+            106
+          ],
+          "output_shape": [
+            1,
+            256,
+            60,
+            106
+          ],
+          "conv_MACs": 1875640320,
+          "output_FP32_bytes": 6512640
+        },
+        {
+          "layer": "down3.maxpool_conv.1.double_conv.2",
+          "input_shape": [
+            1,
+            256,
+            60,
+            106
+          ],
+          "output_shape": [
+            1,
+            256,
+            60,
+            106
+          ],
+          "conv_MACs": 3751280640,
+          "output_FP32_bytes": 6512640
+        },
+        {
+          "layer": "down4.maxpool_conv.1.double_conv.0",
+          "input_shape": [
+            1,
+            256,
+            30,
+            53
+          ],
+          "output_shape": [
+            1,
+            256,
+            30,
+            53
+          ],
+          "conv_MACs": 937820160,
+          "output_FP32_bytes": 1628160
+        },
+        {
+          "layer": "down4.maxpool_conv.1.double_conv.2",
+          "input_shape": [
+            1,
+            256,
+            30,
+            53
+          ],
+          "output_shape": [
+            1,
+            256,
+            30,
+            53
+          ],
+          "conv_MACs": 937820160,
+          "output_FP32_bytes": 1628160
+        },
+        {
+          "layer": "up1.conv.double_conv.0",
+          "input_shape": [
+            1,
+            512,
+            60,
+            106
+          ],
+          "output_shape": [
+            1,
+            256,
+            60,
+            106
+          ],
+          "conv_MACs": 7502561280,
+          "output_FP32_bytes": 6512640
+        },
+        {
+          "layer": "up1.conv.double_conv.2",
+          "input_shape": [
+            1,
+            256,
+            60,
+            106
+          ],
+          "output_shape": [
+            1,
+            128,
+            60,
+            106
+          ],
+          "conv_MACs": 1875640320,
+          "output_FP32_bytes": 3256320
+        },
+        {
+          "layer": "up2.conv.double_conv.0",
+          "input_shape": [
+            1,
+            256,
+            120,
+            213
+          ],
+          "output_shape": [
+            1,
+            128,
+            120,
+            213
+          ],
+          "conv_MACs": 7537950720,
+          "output_FP32_bytes": 13086720
+        },
+        {
+          "layer": "up2.conv.double_conv.2",
+          "input_shape": [
+            1,
+            128,
+            120,
+            213
+          ],
+          "output_shape": [
+            1,
+            64,
+            120,
+            213
+          ],
+          "conv_MACs": 1884487680,
+          "output_FP32_bytes": 6543360
+        },
+        {
+          "layer": "up3.conv.double_conv.0",
+          "input_shape": [
+            1,
+            128,
+            240,
+            427
+          ],
+          "output_shape": [
+            1,
+            64,
+            240,
+            427
+          ],
+          "conv_MACs": 7555645440,
+          "output_FP32_bytes": 26234880
+        },
+        {
+          "layer": "up3.conv.double_conv.2",
+          "input_shape": [
+            1,
+            64,
+            240,
+            427
+          ],
+          "output_shape": [
+            1,
+            32,
+            240,
+            427
+          ],
+          "conv_MACs": 1888911360,
+          "output_FP32_bytes": 13117440
+        },
+        {
+          "layer": "up4.conv.double_conv.0",
+          "input_shape": [
+            1,
+            64,
+            480,
+            854
+          ],
+          "output_shape": [
+            1,
+            32,
+            480,
+            854
+          ],
+          "conv_MACs": 7555645440,
+          "output_FP32_bytes": 52469760
+        },
+        {
+          "layer": "up4.conv.double_conv.2",
+          "input_shape": [
+            1,
+            32,
+            480,
+            854
+          ],
+          "output_shape": [
+            1,
+            32,
+            480,
+            854
+          ],
+          "conv_MACs": 3777822720,
+          "output_FP32_bytes": 52469760
+        },
+        {
+          "layer": "outc.conv",
+          "input_shape": [
+            1,
+            32,
+            480,
+            854
+          ],
+          "output_shape": [
+            1,
+            3,
+            480,
+            854
+          ],
+          "conv_MACs": 39352320,
+          "output_FP32_bytes": 4919040
+        }
+      ]
+    },
+    {
+      "model": "StableLLVE",
+      "height": 1080,
+      "width": 1920,
+      "parameters": 4316259,
+      "conv_MACs": 317239787520,
+      "conv_invocations": 19,
+      "largest_single_conv_output_FP32_bytes": 265420800,
+      "layers": [
+        {
+          "layer": "inc.double_conv.0",
+          "input_shape": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "output_shape": [
+            1,
+            32,
+            1080,
+            1920
+          ],
+          "conv_MACs": 1791590400,
+          "output_FP32_bytes": 265420800
+        },
+        {
+          "layer": "inc.double_conv.2",
+          "input_shape": [
+            1,
+            32,
+            1080,
+            1920
+          ],
+          "output_shape": [
+            1,
+            32,
+            1080,
+            1920
+          ],
+          "conv_MACs": 19110297600,
+          "output_FP32_bytes": 265420800
+        },
+        {
+          "layer": "down1.maxpool_conv.1.double_conv.0",
+          "input_shape": [
+            1,
+            32,
+            540,
+            960
+          ],
+          "output_shape": [
+            1,
+            64,
+            540,
+            960
+          ],
+          "conv_MACs": 9555148800,
+          "output_FP32_bytes": 132710400
+        },
+        {
+          "layer": "down1.maxpool_conv.1.double_conv.2",
+          "input_shape": [
+            1,
+            64,
+            540,
+            960
+          ],
+          "output_shape": [
+            1,
+            64,
+            540,
+            960
+          ],
+          "conv_MACs": 19110297600,
+          "output_FP32_bytes": 132710400
+        },
+        {
+          "layer": "down2.maxpool_conv.1.double_conv.0",
+          "input_shape": [
+            1,
+            64,
+            270,
+            480
+          ],
+          "output_shape": [
+            1,
+            128,
+            270,
+            480
+          ],
+          "conv_MACs": 9555148800,
+          "output_FP32_bytes": 66355200
+        },
+        {
+          "layer": "down2.maxpool_conv.1.double_conv.2",
+          "input_shape": [
+            1,
+            128,
+            270,
+            480
+          ],
+          "output_shape": [
+            1,
+            128,
+            270,
+            480
+          ],
+          "conv_MACs": 19110297600,
+          "output_FP32_bytes": 66355200
+        },
+        {
+          "layer": "down3.maxpool_conv.1.double_conv.0",
+          "input_shape": [
+            1,
+            128,
+            135,
+            240
+          ],
+          "output_shape": [
+            1,
+            256,
+            135,
+            240
+          ],
+          "conv_MACs": 9555148800,
+          "output_FP32_bytes": 33177600
+        },
+        {
+          "layer": "down3.maxpool_conv.1.double_conv.2",
+          "input_shape": [
+            1,
+            256,
+            135,
+            240
+          ],
+          "output_shape": [
+            1,
+            256,
+            135,
+            240
+          ],
+          "conv_MACs": 19110297600,
+          "output_FP32_bytes": 33177600
+        },
+        {
+          "layer": "down4.maxpool_conv.1.double_conv.0",
+          "input_shape": [
+            1,
+            256,
+            67,
+            120
+          ],
+          "output_shape": [
+            1,
+            256,
+            67,
+            120
+          ],
+          "conv_MACs": 4742184960,
+          "output_FP32_bytes": 8232960
+        },
+        {
+          "layer": "down4.maxpool_conv.1.double_conv.2",
+          "input_shape": [
+            1,
+            256,
+            67,
+            120
+          ],
+          "output_shape": [
+            1,
+            256,
+            67,
+            120
+          ],
+          "conv_MACs": 4742184960,
+          "output_FP32_bytes": 8232960
+        },
+        {
+          "layer": "up1.conv.double_conv.0",
+          "input_shape": [
+            1,
+            512,
+            135,
+            240
+          ],
+          "output_shape": [
+            1,
+            256,
+            135,
+            240
+          ],
+          "conv_MACs": 38220595200,
+          "output_FP32_bytes": 33177600
+        },
+        {
+          "layer": "up1.conv.double_conv.2",
+          "input_shape": [
+            1,
+            256,
+            135,
+            240
+          ],
+          "output_shape": [
+            1,
+            128,
+            135,
+            240
+          ],
+          "conv_MACs": 9555148800,
+          "output_FP32_bytes": 16588800
+        },
+        {
+          "layer": "up2.conv.double_conv.0",
+          "input_shape": [
+            1,
+            256,
+            270,
+            480
+          ],
+          "output_shape": [
+            1,
+            128,
+            270,
+            480
+          ],
+          "conv_MACs": 38220595200,
+          "output_FP32_bytes": 66355200
+        },
+        {
+          "layer": "up2.conv.double_conv.2",
+          "input_shape": [
+            1,
+            128,
+            270,
+            480
+          ],
+          "output_shape": [
+            1,
+            64,
+            270,
+            480
+          ],
+          "conv_MACs": 9555148800,
+          "output_FP32_bytes": 33177600
+        },
+        {
+          "layer": "up3.conv.double_conv.0",
+          "input_shape": [
+            1,
+            128,
+            540,
+            960
+          ],
+          "output_shape": [
+            1,
+            64,
+            540,
+            960
+          ],
+          "conv_MACs": 38220595200,
+          "output_FP32_bytes": 132710400
+        },
+        {
+          "layer": "up3.conv.double_conv.2",
+          "input_shape": [
+            1,
+            64,
+            540,
+            960
+          ],
+          "output_shape": [
+            1,
+            32,
+            540,
+            960
+          ],
+          "conv_MACs": 9555148800,
+          "output_FP32_bytes": 66355200
+        },
+        {
+          "layer": "up4.conv.double_conv.0",
+          "input_shape": [
+            1,
+            64,
+            1080,
+            1920
+          ],
+          "output_shape": [
+            1,
+            32,
+            1080,
+            1920
+          ],
+          "conv_MACs": 38220595200,
+          "output_FP32_bytes": 265420800
+        },
+        {
+          "layer": "up4.conv.double_conv.2",
+          "input_shape": [
+            1,
+            32,
+            1080,
+            1920
+          ],
+          "output_shape": [
+            1,
+            32,
+            1080,
+            1920
+          ],
+          "conv_MACs": 19110297600,
+          "output_FP32_bytes": 265420800
+        },
+        {
+          "layer": "outc.conv",
+          "input_shape": [
+            1,
+            32,
+            1080,
+            1920
+          ],
+          "output_shape": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "conv_MACs": 199065600,
+          "output_FP32_bytes": 24883200
+        }
+      ]
+    }
+  ],
+  "original_manifest_sha256": "c8cdcb8b165de11472e820513dfed6699a79a36de5f6f875c632e58192e0cc46",
+  "upstream_model_sha256": "86b9d7e2b836dde336eb09aaea44b9e5c09b0e05576e6a1656d01ce3a84cd1a1",
+  "real_CNN_images": 0,
+  "CUDA": false
+}
