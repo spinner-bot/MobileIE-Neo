@@ -60,8 +60,34 @@ public class FlowInstrumentedTest {
         shot("03-three-method-overview");
         find("save").click(); idle(); assertTrue(app.status,app.status.startsWith("已保存"));
         int images=0;
-        try(Cursor c=context.getContentResolver().query(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,new String[]{"_id"},"_display_name LIKE ?",new String[]{"MobileIE_"+app.session.id.substring(0,8)+"_%"},null)) { assertNotNull(c); images=c.getCount(); }
+        String prefix="MobileIE_"+app.session.id.substring(0,8)+"_%";
+        try(Cursor c=context.getContentResolver().query(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,new String[]{"_id","_display_name","is_pending"},"_display_name LIKE ?",new String[]{prefix},null)) {
+            assertNotNull(c); images=c.getCount();
+            while(c.moveToNext()) {
+                assertEquals(0,c.getInt(2));
+                Uri saved=ContentUris.withAppendedId(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,c.getLong(0));
+                try(InputStream in=context.getContentResolver().openInputStream(saved)) {
+                    Bitmap decoded=BitmapFactory.decodeStream(in); assertNotNull(decoded);
+                    String name=c.getString(1);
+                    if(name.endsWith("_comparison.png")) { assertEquals(1800,decoded.getWidth());assertEquals(478,decoded.getHeight());assertEquals(app.session.input.getPixel(300,200),decoded.getPixel(300,244)); }
+                    else {
+                        Bitmap expected=name.endsWith("_input.png")?app.session.input:name.endsWith("_mobileie.png")?app.session.mobileie:app.session.gamma;
+                        assertArrayEquals(LightLabApplication.bitmapBytes(expected),LightLabApplication.bitmapBytes(decoded));
+                    }
+                    decoded.recycle();
+                }
+            }
+        }
         assertEquals(4,images);
+        try(Cursor c=context.getContentResolver().query(MediaStore.Downloads.EXTERNAL_CONTENT_URI,new String[]{"_id","is_pending"},"_display_name LIKE ?",new String[]{prefix},null)) {
+            assertNotNull(c);assertEquals(1,c.getCount());assertTrue(c.moveToFirst());assertEquals(0,c.getInt(1));
+            try(InputStream in=context.getContentResolver().openInputStream(ContentUris.withAppendedId(MediaStore.Downloads.EXTERNAL_CONTENT_URI,c.getLong(0)));ByteArrayOutputStream bytes=new ByteArrayOutputStream()) {
+                byte[] buffer=new byte[8192];int n;while((n=in.read(buffer))!=-1)bytes.write(buffer,0,n);
+                org.json.JSONObject record=new org.json.JSONObject(bytes.toString("UTF-8"));
+                assertEquals(MobileEngine.MODEL_SHA,record.getString("model_sha256"));assertEquals(.5,record.getDouble("gamma_exponent"),0);
+                assertTrue(record.getBoolean("mobileie_complete"));assertTrue(record.getBoolean("gamma_complete"));
+            }
+        }
         String[] permissions=context.getPackageManager().getPackageInfo(PKG,android.content.pm.PackageManager.GET_PERMISSIONS).requestedPermissions;
         if(permissions!=null) for(String permission:permissions) { assertNotEquals("android.permission.INTERNET",permission); assertNotEquals("android.permission.CAMERA",permission); }
         find("benchmark").click(); assertTrue(app.status,app.status.contains("未安装 AI Benchmark")); shot("04-benchmark-unavailable");
