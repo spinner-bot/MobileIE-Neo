@@ -1,0 +1,143 @@
+{
+  "at": "2026-11-13T01:36:39.517203+08:00",
+  "scope": "Actual1000 backup milestone and live process check; not final4000 qualification or completed quality.",
+  "processes": [
+    {
+      "pid": 3831145,
+      "argv": [
+        "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python",
+        "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/train_dense_history_r64.py",
+        "--seed",
+        "0"
+      ],
+      "cwd": "/data/Users/zrh/repo/MobileIE-Neo",
+      "start_ticks": "44439634"
+    },
+    {
+      "pid": 3831080,
+      "argv": [
+        "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python",
+        "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/train_dense_history_r64.py",
+        "--seed",
+        "1"
+      ],
+      "cwd": "/data/Users/zrh/repo/MobileIE-Neo",
+      "start_ticks": "44439626"
+    },
+    {
+      "pid": 3831670,
+      "argv": [
+        "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python",
+        "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/finalize_dense_history_r64.py"
+      ],
+      "cwd": "/data/Users/zrh/repo/MobileIE-Neo",
+      "start_ticks": "44445498"
+    }
+  ],
+  "seeds": [
+    {
+      "seed": 0,
+      "actual_logged_updates_by_model": {
+        "plain": 1387,
+        "spatial": 1387,
+        "causal": 1386
+      },
+      "common_completed_prefix": 1386,
+      "completed1000_backup_markers": {
+        "plain": {
+          "model": "plain",
+          "seed": 0,
+          "new_step": 1000,
+          "inherited_updates": 8000,
+          "path": ".cache/checkpoints/exploration-r64/stage001/seed0/plain-deploy-step1000.pt",
+          "sha256": "d41fea7dae2b02b98cfc87a00a98cafa66ca5e88c2e5a8bcb2a3341bf0ad8747",
+          "training_path": ".cache/checkpoints/exploration-r64/stage001/seed0/plain-training-step1000.pt",
+          "training_sha256": "709df3f0bc350861ea60b86a05c543b7db9982e78b770b0a9a4afa4c97e3ba32",
+          "deployment_parameters": 4075,
+          "final_fold_delta": null,
+          "final_fold_passed": null
+        },
+        "spatial": {
+          "model": "spatial",
+          "seed": 0,
+          "new_step": 1000,
+          "inherited_updates": 8000,
+          "path": ".cache/checkpoints/exploration-r64/stage001/seed0/spatial-deploy-step1000.pt",
+          "sha256": "49ff70ba8b979837b1097c1f469336805765aabe50847b0438ec32a0a912b25f",
+          "training_path": ".cache/checkpoints/exploration-r64/stage001/seed0/spatial-training-step1000.pt",
+          "training_sha256": "a6fcec7e0a725ea52b1efb9fe30df5f53a20fb56a4f15889815cecc7d8b0bacc",
+          "deployment_parameters": 4618,
+          "final_fold_delta": null,
+          "final_fold_passed": null
+        },
+        "causal": {
+          "model": "causal",
+          "seed": 0,
+          "new_step": 1000,
+          "inherited_updates": 8000,
+          "path": ".cache/checkpoints/exploration-r64/stage001/seed0/causal-deploy-step1000.pt",
+          "sha256": "306434ade15ddee180a79df83f14c68031dc6acbed3c079ad64d6e580548903a",
+          "training_path": ".cache/checkpoints/exploration-r64/stage001/seed0/causal-training-step1000.pt",
+          "training_sha256": "96da2395fde2d11c252db41088b2aee7fd135a9dcae3f60522e6715180e37790",
+          "deployment_parameters": 4618,
+          "final_fold_delta": null,
+          "final_fold_passed": null
+        }
+      },
+      "terminal_runtime_exists": false
+    },
+    {
+      "seed": 1,
+      "actual_logged_updates_by_model": {
+        "plain": 1379,
+        "spatial": 1379,
+        "causal": 1378
+      },
+      "common_completed_prefix": 1378,
+      "completed1000_backup_markers": {
+        "plain": {
+          "model": "plain",
+          "seed": 1,
+          "new_step": 1000,
+          "inherited_updates": 8000,
+          "path": ".cache/checkpoints/exploration-r64/stage001/seed1/plain-deploy-step1000.pt",
+          "sha256": "8ff6cbf48f29d8c5913393dbd71d0766f7a2b04a6dae391b3d33aabca1849cbd",
+          "training_path": ".cache/checkpoints/exploration-r64/stage001/seed1/plain-training-step1000.pt",
+          "training_sha256": "6e68012efd70e5cb6e77093272c8ecf3439f8bde57f2fb228cebeac3c9b907cf",
+          "deployment_parameters": 4075,
+          "final_fold_delta": null,
+          "final_fold_passed": null
+        },
+        "spatial": {
+          "model": "spatial",
+          "seed": 1,
+          "new_step": 1000,
+          "inherited_updates": 8000,
+          "path": ".cache/checkpoints/exploration-r64/stage001/seed1/spatial-deploy-step1000.pt",
+          "sha256": "985ace77cdc24189cbdb9f5e3643ef119f7f11f2449f79b1a52470b35685b9d3",
+          "training_path": ".cache/checkpoints/exploration-r64/stage001/seed1/spatial-training-step1000.pt",
+          "training_sha256": "ac94e1a97eb62a917707d35ebf14e0f5d0f559b7827bff96731672e35d572ee4",
+          "deployment_parameters": 4618,
+          "final_fold_delta": null,
+          "final_fold_passed": null
+        },
+        "causal": {
+          "model": "causal",
+          "seed": 1,
+          "new_step": 1000,
+          "inherited_updates": 8000,
+          "path": ".cache/checkpoints/exploration-r64/stage001/seed1/causal-deploy-step1000.pt",
+          "sha256": "df934d8c8b1e5b6a3122e40370568bad3222ea7a7ef84014300cc99fc16352b5",
+          "training_path": ".cache/checkpoints/exploration-r64/stage001/seed1/causal-training-step1000.pt",
+          "training_sha256": "2fd7e2ac9a25ef4277e1b3367e7aa7043c21702d572e572aee431347945f25f3",
+          "deployment_parameters": 4618,
+          "final_fold_delta": null,
+          "final_fold_passed": null
+        }
+      },
+      "terminal_runtime_exists": false
+    }
+  ],
+  "no_new_training_or_budget_change": true,
+  "all_active_sources_unchanged": true
+}
