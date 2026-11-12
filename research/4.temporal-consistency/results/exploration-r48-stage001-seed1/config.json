@@ -1,0 +1,113 @@
+{
+  "at": "2026-11-12T17:42:43.596153+08:00",
+  "seed": 1,
+  "models": [
+    "plain",
+    "joint"
+  ],
+  "new_steps_each": 4000,
+  "inherited_steps": 8000,
+  "data_steps": [
+    8000,
+    11999
+  ],
+  "initialization": {
+    "model": "square_mse",
+    "seed": 1,
+    "new_step": 4000,
+    "inherited_updates": 4000,
+    "path": ".cache/checkpoints/exploration-r44/stage001/seed1/square_mse-deploy-step4000.pt",
+    "sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+    "training_path": ".cache/checkpoints/exploration-r44/stage001/seed1/square_mse-training-step4000.pt",
+    "training_sha256": "450d55e60333655019c820321ad9ae4afe78d012aefe3615b9490ef61a3943ba",
+    "deployment_parameters": 4075,
+    "final_eval_export_max_abs_delta": 1.4901161193847656e-06,
+    "final_export_gate_passed": true
+  },
+  "data": {
+    "manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "verified_files": 384,
+    "scenes": [
+      "video_11",
+      "video_35",
+      "video_92",
+      "video_131",
+      "video_12",
+      "video_20",
+      "video_29",
+      "video_52",
+      "video_59",
+      "video_95",
+      "video_104",
+      "video_122"
+    ],
+    "native_bytes": 2388787200,
+    "real_training_ids": [
+      "video_104",
+      "video_11",
+      "video_12",
+      "video_122",
+      "video_131",
+      "video_20",
+      "video_29",
+      "video_35",
+      "video_52",
+      "video_59",
+      "video_92",
+      "video_95"
+    ],
+    "excluded_native_DEV": [
+      "video_121",
+      "video_15",
+      "video_47",
+      "video_91"
+    ],
+    "all_real_assets_owned": true,
+    "source_manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "synthetic_manifest_sha256": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+    "synthetic_training_videos": 57,
+    "real_tensor_dtype": "uint8 native inputs/GT; float32 /255 after crops",
+    "timing_scope": "Consecutive registered frame indices, not independently verified sensor timing."
+  },
+  "batch": 4,
+  "frames": 4,
+  "crop": 128,
+  "losses": {
+    "plain": "MSE clipped raw",
+    "joint": "MSE deployed fixed-recursive .5 output"
+  },
+  "alpha": 0.5,
+  "fresh_Adam_lr": 0.0001,
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "eps": 1e-08,
+  "weight_decay": 0,
+  "clip": 1,
+  "BN": "Four sequential B4 calls; original complete MBR training form",
+  "FP32": true,
+  "TF32": false,
+  "history_detached": false,
+  "flow_gradient": false,
+  "selection": "Final new4000 only; deployment4075 and same inference operator",
+  "protocol_sha256": "548afe11e2f72a2861011938554999a55ff942b9e8efeb7e6e752e0311eb1cd9",
+  "gates": {
+    "research/4.temporal-consistency/process/exploration-r48/cpu-gate001/gate.json": "eaec447c1216e49e48f7807b1a0ac7a86dc739195c415d4a60a83e1a21f4a459",
+    "research/4.temporal-consistency/process/exploration-r48/cuda-gate001/gate.json": "64b3e2a4ed198b405990940ab9f7361b07dd8f40dc15f33f0c61637b7a2f0e17"
+  },
+  "source_sha256": {
+    "train_joint_recursion_r48.py": "42fde97624b1e9a5a74bcf8f3f951e68e2d1be6b6431e510f5b5dbbb600daf68",
+    "joint_recursion_r48.py": "3651f49d8a93efff124c788ad337eb725d5895ae21dbe1037416bfcc26ca2d69",
+    "response_cue_r45.py": "804870366389b2cf293384cb795ac445a99db2086501a2a46d98a9dfd9e33c0e",
+    "response_sequence_r45.py": "5af95a98b6de1110d733d2f77b1b7ed05da44e2b6cb2d6095a6eb1b14022ef99",
+    "budget_causal_r33.py": "7cfe138a286fdb488973ffe7c5bc93b69ad505af981e22cba824402c491b2e3b",
+    "half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+    "video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0",
+    "mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5",
+    "dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498",
+    "training_form_r41.py": "4392fdceb16750ca0a763f4485beec873dc7316d758c95e9eaef042ffceb4ded",
+    "gpu_guard.py": "e0a5050f47d64dbf75fab4146a276f50e3464d07e6a799ad8ccd2c69e8e3a535"
+  },
+  "revision": "f5fee3de0cd3df21a4a48e46e01446fa1bc02b74"
+}
