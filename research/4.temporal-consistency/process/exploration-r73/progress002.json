@@ -1,0 +1,45 @@
+{
+  "at": "2026-11-13T07:56:59.329549+08:00",
+  "original_processes": {
+    "coordinator": {
+      "pid": 4060901,
+      "start_ticks": "46715399",
+      "state": "S",
+      "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/finalize_native_moment_r73.py --attempt 2 --qualification-start 2 "
+    },
+    "guard": {
+      "pid": 4061135,
+      "start_ticks": "46719541",
+      "state": "S",
+      "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 4 --record research/4.temporal-consistency/process/exploration-r73/finalize002/seed0-guard001.json -- ./scripts/project-python research/4.temporal-consistency/scripts/train_native_moment_r73.py --seed 0 --admission-attempt 1 "
+    },
+    "trainer": {
+      "pid": 4061150,
+      "start_ticks": "46719708",
+      "state": "R",
+      "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/train_native_moment_r73.py --seed 0 --admission-attempt 1 "
+    }
+  },
+  "GPU": 4,
+  "complete_readable_prefix_counts": {
+    "spatial": 1243,
+    "mean": 1243,
+    "moment": 1242
+  },
+  "last_complete_steps": {
+    "spatial": 1243,
+    "mean": 1243,
+    "moment": 1242
+  },
+  "frozen_sources_unchanged": true,
+  "runtime_exists": false,
+  "seed0_step1000_backups": [
+    "spatial",
+    "mean",
+    "moment"
+  ],
+  "backup_content_and_own_asset_paths_verified": true,
+  "final_fold_at_step1000": null,
+  "seed1_config_exists": false,
+  "scope": "Progress and immutable backup metadata only; not final4000, no DEV selection or quality claim. Original registered training continues unchanged. No new job."
+}
