@@ -53,3 +53,15 @@ compile入口会拒绝缺失/未正常/来源已变的视频扩展；手机ms仍
 当前PDF仍是原已审阅009，准备代码/新引用不等于论文数值或版面已更新。
 
 更新：2026-11-13T04:27:53.724621+08:00；作者：Codex  (sqs_A100)。R65/R66/R68全部正常后原生成器→视频扩展生成器已实际运行，三张新表/完整来源分别提交。build010首次16页/九表，实际整份联系表及第13–16页查看发现摘要逗号/文献尾页问题；修正文稿后build011正常16页/九表/九引用，整份联系表及第1/16页已实际查看，0未解析引用。参考文献独立完整一页，不缩小正文字号。第15页留白/旧.28235pt警告/小图例仍在；非投稿终稿。全部学习/质量与感知终态、20固定图及实际review见各R65/R66记录；没有把参考适配当新方法，手机与独立最终仍未完成。
+
+更新：2026-11-13T05:41:06.081443+08:00；作者：Codex  (sqs_A100)。R69全部正常后新增同原骨干MSE/L1八行参考表与解释，build012为17页/十表/九引用，整份联系表和新增第13/14页已实际查看，0未解析引用。第16页短限制段留白、旧小图例和.28235pt警告仍在；未建立新方法或投稿终稿。
+
+当前完整重新生成顺序（后一步会扩展主快照，不能只运行第一步后编译）：
+
+  ./scripts/project-python scripts/build_manuscript_snapshot.py
+  ./scripts/project-python scripts/build_paper_video_evidence.py
+  ./scripts/project-python scripts/build_paper_objective_evidence.py
+  ./scripts/project-python scripts/build_manuscript.py --attempt N
+  ./scripts/project-python scripts/review_manuscript.py --build N
+
+R69扩展在任何写表前要求正式8000/最终fold、两CPU完整终态、40感知、完整联合表和20图actual review；另存objective-evidence-snapshot.json。编译核全主快照及各扩展来源。R70未完成输出不在本快照；不得从实时前缀填论文表。已有固定工具无需重新准备或安装。
