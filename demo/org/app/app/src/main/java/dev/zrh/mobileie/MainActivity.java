@@ -108,11 +108,14 @@ public final class MainActivity extends Activity {
         camera.setEnabled(!app.busy); pick.setEnabled(!app.busy); sample.setEnabled(!app.busy);
         process.setEnabled(loaded&&!app.busy); process.setText(app.busy?"处理中…":done?"重新处理":"开始对比");
         save.setEnabled(done&&!app.busy); modes.setVisibility(done?View.VISIBLE:View.GONE);
-        modeMie.setEnabled(loaded&&s.mobileie!=null); modeMie.setAlpha(modeMie.isEnabled()?1f:.4f);
+        modeMie.setEnabled(loaded&&s.mobileie!=null&&!app.busy); modeMie.setAlpha(modeMie.isEnabled()?1f:.4f);
+        modeGamma.setEnabled(done&&!app.busy); modeOverview.setEnabled(done&&!app.busy);
+        comparison.setEnabled(!app.busy); metrics.setEnabled(!app.busy);
         modeMie.setContentDescription(modeMie.isEnabled()?"MobileIE 对比":"MobileIE 本次未生成，暂不可选择");
         hint.setText(!done?"选择照片并处理后，可拖动对比同一位置":mode==2?"同一处理范围：原图 / MobileIE / Gamma":"左右拖动分界线，比较同一位置的细节");
         select(modeMie,mode==0); select(modeGamma,mode==1); select(modeOverview,mode==2);
-        if(done) metrics.setText(String.format(Locale.CHINA,"MobileIE %s   ·   Gamma %.1f ms\n点击查看分项计时与模型信息",s.mobileie==null?"未生成":String.format(Locale.CHINA,"%.1f ms",s.metadata.optDouble("inference_ms")),s.metadata.optDouble("gamma_ms")));
+        if(app.busy) metrics.setText("任务进行中，完成后显示本次耗时");
+        else if(done) metrics.setText(String.format(Locale.CHINA,"MobileIE %s   ·   Gamma %.1f ms\n点击查看分项计时与模型信息",s.mobileie==null?"未生成":String.format(Locale.CHINA,"%.1f ms",s.metadata.optDouble("inference_ms")),s.metadata.optDouble("gamma_ms")));
         else metrics.setText("处理后显示本次耗时，点击可查看计算记录");
         for(TextView b:new TextView[]{camera,pick,sample,process,save}) b.setAlpha(b.isEnabled()?1f:.45f);
     }

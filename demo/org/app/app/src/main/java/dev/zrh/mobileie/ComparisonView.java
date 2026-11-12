@@ -84,6 +84,7 @@ public final class ComparisonView extends View {
         paint.setColor(Color.WHITE); paint.setTextSize(11*density); c.drawText(s,x+10*density,y+19*density,paint);
     }
     @Override public boolean onTouchEvent(android.view.MotionEvent event) {
+        if(!isEnabled()) return false;
         if(mode==2 || (mode==0?mobileie:gamma)==null) return super.onTouchEvent(event);
         if(event.getAction()==MotionEvent.ACTION_DOWN) getParent().requestDisallowInterceptTouchEvent(true);
         position(event.getX()/getWidth());
@@ -106,6 +107,7 @@ public final class ComparisonView extends View {
         info.addAction(AccessibilityNodeInfo.AccessibilityAction.ACTION_SCROLL_BACKWARD);
     }
     @Override public boolean performAccessibilityAction(int action, Bundle args) {
+        if(!isEnabled()) return false;
         if(action==AccessibilityNodeInfo.ACTION_SCROLL_FORWARD || action==AccessibilityNodeInfo.ACTION_SCROLL_BACKWARD) {
             position(split+(action==AccessibilityNodeInfo.ACTION_SCROLL_FORWARD?.1f:-.1f)); return true;
         }

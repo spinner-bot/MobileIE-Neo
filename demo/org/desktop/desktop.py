@@ -14,7 +14,7 @@ import uuid
 import numpy as np
 from PIL import Image, ImageDraw, ImageOps, ImageCms, ImageFont
 
-VERSION = "0.1.0"
+VERSION = "0.1.1"
 MODEL_SHA = "2ea09b840634469eceab5263bf7b549c33fcd5df2a25701ce5fefc585402ad44"
 HERE = Path(__file__).resolve().parent
 ASSETS = HERE / "assets" if (HERE / "assets").is_dir() else HERE.parent / "app/app/src/main/assets"
