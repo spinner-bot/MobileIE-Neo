@@ -1,0 +1,25 @@
+{
+  "at": "2026-11-13T04:48:00.044523+08:00",
+  "seed": 1,
+  "gpu": 6,
+  "guard_pid": 3953739,
+  "identity": {
+    "start_ticks": "45666756",
+    "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 6 --record research/4.temporal-consistency/process/exploration-r69/seed1-guard.json -- ./scripts/project-python research/4.temporal-consistency/scripts/train_spatial_l1_r69.py --seed 1 "
+  },
+  "command": [
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/gpu_guard.py",
+    "--gpu",
+    "6",
+    "--record",
+    "research/4.temporal-consistency/process/exploration-r69/seed1-guard.json",
+    "--",
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/train_spatial_l1_r69.py",
+    "--seed",
+    "1"
+  ],
+  "log": "research/4.temporal-consistency/process/exploration-r69/seed1-guard.log",
+  "scope": "Guard actually spawned, not proof of internal admission or training progress."
+}
