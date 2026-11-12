@@ -1,5 +1,6 @@
 """One CPU qualification, no images, optimizer updates, or CUDA initialization."""
 import copy
+import argparse
 from datetime import datetime
 import json
 from pathlib import Path
@@ -28,7 +29,10 @@ def norms(net):
 
 
 def main():
-    target = BASE/'process/exploration-r63/cpu-gate001.json'
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--attempt', choices=['002'], required=True)
+    args = parser.parse_args()
+    target = BASE/f'process/exploration-r63/cpu-gate{args.attempt}.json'
     assert not target.exists(), 'Retain failed qualifications; never overwrite or auto retry'
     target.parent.mkdir(parents=True, exist_ok=True)
     torch.set_num_threads(2)
@@ -56,7 +60,8 @@ def main():
                 row = {'shape': list(shape), 'initial_deltas': [], 'initial_gradients': {},
                        'activated_gradients': {}, 'history_gradients': {}, 'export': {}}
                 item['cases'].append(row)
-                for training in [True, False]:
+                # Original pooled BN has one value/channel at batch1 in train mode.
+                for training in ([False] if shape[0] == 1 else [True, False]):
                     with torch.no_grad():
                         values = {name: prediction(net.train(training), clip) for name, net in nets.items()}
                     for name, value in values.items():
@@ -64,7 +69,7 @@ def main():
                         row['initial_deltas'].append({'training': training, 'model': name, 'max_abs': error})
                         assert error <= 1e-5
                 for name in ['spatial', 'causal']:
-                    net = nets[name].train()
+                    net = nets[name].train(shape[0] > 1)
                     net.zero_grad(set_to_none=True)
                     (prediction(net, clip)-gt).square().mean().backward()
                     grad = norms(net)
