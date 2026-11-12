@@ -1,0 +1,48 @@
+{
+  "at": "2026-11-13T02:56:00.812338+08:00",
+  "dependencies": [
+    {
+      "seed": 0,
+      "pid": 3885535,
+      "identity": {
+        "start_ticks": "44975469",
+        "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 5 --record research/4.temporal-consistency/process/exploration-r65/seed0-guard.json -- ./scripts/project-python research/4.temporal-consistency/scripts/train_stablellve_task_r65.py --seed 0 "
+      }
+    },
+    {
+      "seed": 1,
+      "pid": 3885536,
+      "identity": {
+        "start_ticks": "44975469",
+        "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 6 --record research/4.temporal-consistency/process/exploration-r65/seed1-guard.json -- ./scripts/project-python research/4.temporal-consistency/scripts/train_stablellve_task_r65.py --seed 1 "
+      }
+    }
+  ],
+  "source_sha256": {
+    "research/4.temporal-consistency/scripts/stablellve_task_r65.py": "dec0e6afdb05fd2a6c3750710ee44a2234af34c0639646c5a85cb6afdb85ce78",
+    "research/4.temporal-consistency/scripts/check_stablellve_task_r65.py": "ca5ec5034c4fa325a54a2122a6a0abda27de0d20328e55070cae62ec257e7947",
+    "research/4.temporal-consistency/scripts/train_stablellve_task_r65.py": "336b8e8cd1ca6bce32cd3d649c620bc37b3b12d0fb4d939387a70a30d68f1953",
+    "research/4.temporal-consistency/scripts/stablellve_adapted_r65.py": "47ca61dd98471461775469b9e4d0f6909f30e389cfdf24d304461c40eefc3be7",
+    "research/4.temporal-consistency/scripts/evaluate_stablellve_task_r65.py": "e8f89e7cb588ac1c725b5273ebc6c9a2e166f587a95079a5fbc6242a709b658a",
+    "research/4.temporal-consistency/scripts/summarize_stablellve_task_r65.py": "549964323916cf027b073384e303b5e7bc5e90abef63720f2acec9771903c010",
+    "research/4.temporal-consistency/scripts/finalize_stablellve_task_r65.py": "2d192197794427532d931843b9732ab158aedadcfed602739855da390e95d2ef",
+    "research/4.temporal-consistency/scripts/stablellve_adapter_r15.py": "b9d61a40a6b16f143c9c4874d04dbae99b7d017d95ce917839319b011b575cbd",
+    "research/4.temporal-consistency/scripts/mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5",
+    "research/4.temporal-consistency/scripts/dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498",
+    "research/4.temporal-consistency/scripts/native_training_r14.py": "588b505ede11ac9f0d747ad1c16b1c118a7bbbbba7405ce918a6163d133d69a1",
+    "research/4.temporal-consistency/scripts/training_form_r41.py": "4392fdceb16750ca0a763f4485beec873dc7316d758c95e9eaef042ffceb4ded",
+    "research/4.temporal-consistency/scripts/gpu_guard.py": "e0a5050f47d64dbf75fab4146a276f50e3464d07e6a799ad8ccd2c69e8e3a535",
+    "research/4.temporal-consistency/scripts/half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+    "research/4.temporal-consistency/scripts/aligned_raw_history_r11.py": "e367727401f82ccf0bccaf8d88f904e4aebf8b78186f0539eedeed222b2d2227",
+    "research/4.temporal-consistency/scripts/drv_references_r59.py": "8c805ca335edb8294e13f0403ee1dde6e69a1e67eecb98102c25b000185ba9d8",
+    "research/4.temporal-consistency/scripts/prepare_cache_r5.py": "675860fc6ef1d97d28750815e99f5c923ecfd94e94254f1f7a7685f08d84f2c8",
+    "research/4.temporal-consistency/scripts/exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+    "research/4.temporal-consistency/scripts/video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0",
+    "research/4.temporal-consistency/scripts/finalize_task_fastdvd_r47.py": "39ea4259a71a46a897d4b50f147c0597d6f31f822c6ed5017fa3a06aae64f254",
+    "third_party/stablellve/model.py": "86b9d7e2b836dde336eb09aaea44b9e5c09b0e05576e6a1656d01ce3a84cd1a1",
+    "research/4.temporal-consistency/docs/exploration-r65-stablellve-task-adaptation-protocol.md": "e6c99b7175e30982b6038d6b4000d8a71fc7a522570c4d3a1f58c007865a5966"
+  },
+  "no_wall_cutoff": true,
+  "no_automatic_retry": true,
+  "scope": "All four final8000 checkpoints only; common paired CPU evaluation and complete summary, no additional training."
+}
