@@ -1,0 +1,71 @@
+\section{Candidate and controlled questions}
+\label{sec:candidate}
+\pending{The following candidate is being tested in the registered R44 study.
+Its performance and independent contribution have not been established.}
+
+\subsection{A constrained root nonlinearity}
+We investigate the restricted rational response
+\[
+ q_\kappa(u)=\frac{a u^2}{1+\kappa(u/s)^2}+b,
+ \qquad s>0,\quad \kappa\geq 0 .
+\]
+Each of the two FSTs receives one additional scalar $\kappa$. This is a
+constrained member of the known rational-activation family~\cite{pau};
+we do not claim the rational form, safe denominator, or learnable activation
+as a new invention. At $\kappa=0$, the original response is recovered.
+For positive $\kappa$,
+\[
+ q_\kappa'(u)=\frac{2au}{[1+\kappa(u/s)^2]^2},
+ \qquad
+ \sup_u|q_\kappa'(u)|
+ =\frac{9|a|s}{8\sqrt{3\kappa}}.
+\]
+The maximum occurs at $|u|=s/\sqrt{3\kappa}$. This scalar derivative bound
+does not establish a measured whole-network robustness or flicker bound;
+it also diverges when $\kappa$ approaches zero.
+
+The fixed scale $s$ is the pre-FST feature RMS from eight predetermined
+training windows, computed separately for each layer and training seed.
+Calibration uses only training inputs and discards the temporary BN states.
+It fixes optimization units rather than selecting a scale on development
+quality. The learned denominator remains in deployment. The resulting
+predictor has 4,077 parameters, no temporal state in its raw path, and extra
+pointwise arithmetic compared with the 4,075-parameter square predictor.
+Only the spatial MBR convolutions and fixed-statistics BN are folded.
+
+\subsection{Training-only target-change compensation}
+Let $W_t$ gather the previous frame into current-frame coordinates and let
+$m_t$ be its validity mask. The candidate temporal objective is
+\[
+ \mathcal L_{\rm time} =
+ \frac{\sum_{t,p}m_t(p)
+ \left\|[z_t-W_tz_{t-1}](p)
+       -[y_t-W_ty_{t-1}](p)\right\|_2^2}
+ {3\sum_{t,p}m_t(p)} .
+\]
+It is defined as zero when no points are valid. The frame reconstruction
+term still updates in that case. Subtracting the target change allows
+legitimate target motion or brightness change rather than assuming that
+the desired video is constant. Correspondences are estimated from training
+targets with the fixed half-resolution forward--backward estimator; they
+are not motion truth. Both predicted frames receive gradients. Deployment
+does not call this training correspondence estimator.
+
+\subsection{Factorial control}
+The fixed design crosses original square versus constrained rational FST
+with frame MSE versus $\mathcal L_{\rm MSE}+0.25\mathcal L_{\rm time}$.
+All four models start from the same completed expanded-training checkpoint
+for each seed, with the same BN statistics. Adam is restarted for every
+arm. Each final model inherits 4,000 updates and receives 4,000 additional
+updates on the same prescribed windows. This controls for extra training,
+the objective, and the structural change; equal image/update budgets do
+not imply equal training FLOPs.
+
+The primary structural screen compares the rational temporal model with
+the square model under the same temporal objective. A separate stateless
+deployment screen compares its raw output with both square controls'
+recursive postprocessing. A third screen compares all models with
+recursive postprocessing. A positive third screen cannot be reported as a
+stateless or flow-free result. Each registered screen includes both domains,
+both seeds, quality preservation, a temporal-error improvement requirement,
+and a worst-condition quality bound.
