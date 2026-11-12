@@ -23,6 +23,10 @@ def main():
               ('rgb', 'RGB gate (41 params)', '#059669', 's'), ('response', 'Internal feature cue (41 params)', '#9333ea', 'D')]
     fig, axes = plt.subplots(1, 2, figsize=(12, 5.7))
     for ax, (domain, title) in zip(axes, domains):
+        for seed in [0, 1]:
+            values = [seeds[(domain, method, seed)] for method, _ in fixed]
+            ax.plot([r['temporal_error'] for r in values], [r['psnr_rgb'] for r in values],
+                    'x--', color='#9ca3af', alpha=.3, linewidth=.7, markersize=4)
         curve = [lookup[(domain, method)] for method, _ in fixed]
         ax.plot([r['temporal_error'] for r in curve], [r['psnr_rgb'] for r in curve], 'x--',
                 color='#6b7280', label='Fixed recursive alpha frontier', linewidth=1)
