@@ -1,0 +1,23 @@
+{
+  "observed_at": "2026-11-12T12:51:43.986381+08:00",
+  "seed0_terminal": {
+    "completed_normally": false,
+    "model_updates": {
+      "slim_fp32": 0,
+      "expanded_fp32": 0
+    },
+    "total_updates": 0,
+    "final_deployment_gates": {},
+    "wall_seconds": 0.49624834198039025,
+    "scope": "Two matched FP32 training forms; quality is unproven until complete folded evaluation."
+  },
+  "signals_to_owned_children": [
+    {
+      "pid": 3322169,
+      "command": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/train_training_form_r41.py --seed 1 ",
+      "signal": "SIGINT"
+    }
+  ],
+  "reason": "Formal shared B4T4/128 initial-function gate failed on seed0 before any update. Stop unmatched sibling before changing common implementation. Not a wall-clock cutoff, not DEV selection.",
+  "scope": "Only identified project child signalled; other server jobs untouched."
+}
