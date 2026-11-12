@@ -75,9 +75,13 @@ def main():
                 net = nets[name]; net.reset(); began = time.perf_counter(); values = []
                 with torch.inference_mode():
                     for frame in inputs:
-                        value = net.step(frame[None], history=route)
+                        if route == 'causal':
+                            value = net.step(frame[None], history=route)
+                            state = net._state
+                        else:
+                            value, state = net(frame[None], history='current')
                         assert torch.isfinite(value).all()
-                        assert all(v is None or torch.isfinite(v).all() for v in net._state)
+                        assert all(v is None or torch.isfinite(v).all() for v in state)
                         values.append(value[0])
                     raw = torch.stack(values).clamp(0, 1).permute(0, 2, 3, 1).contiguous().numpy()*255
                 neural += 1; centers += len(raw)
