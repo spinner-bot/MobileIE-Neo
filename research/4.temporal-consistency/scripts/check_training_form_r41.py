@@ -58,6 +58,20 @@ def main():
             result['initial_shapes'] = shapes
             assert max(train_delta, eval_delta) <= 1e-5, row
         low, target = low.to(args.device), target.to(args.device)
+        real_initial = []
+        for seed in [0, 1]:
+            candidate = net if seed == 0 else create_model(seed)[0].to(args.device)
+            candidate.train()
+            sample_low = low if seed == 0 else pool.batch(seed, 0)[0].to(args.device)
+            with torch.no_grad():
+                expected = prediction(reference, sample_low)
+                actual = prediction(candidate, sample_low)
+                delta = float((actual-expected).abs().max())
+            real_initial.append({'seed': seed, 'shape': list(sample_low.shape), 'max_abs_delta': delta})
+            result['real_initial_both_seeds'] = real_initial
+            assert delta <= 1e-5, real_initial[-1]
+            if seed == 1:
+                del candidate
         active = [p for p in net.parameters() if p.requires_grad]
         optimizer = torch.optim.SGD(active, lr=1e-4)
         rounds = []
