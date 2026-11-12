@@ -3,7 +3,7 @@
 \usepackage{amsmath,amssymb,booktabs,graphicx,xcolor}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 \newcommand{\pending}[1]{\textcolor{red!65!black}{#1}}
-\graphicspath{{../research/4.temporal-consistency/report/exploration-r41-training-form/}{../research/4.temporal-consistency/report/exploration-r42-tlc/}{../research/4.temporal-consistency/report/exploration-r44-bounded-video/}}
+\graphicspath{{../research/4.temporal-consistency/report/exploration-r41-training-form/}{../research/4.temporal-consistency/report/exploration-r42-tlc/}{../research/4.temporal-consistency/report/exploration-r44-bounded-video/}{../research/4.temporal-consistency/report/exploration-r45-response-recursion/}}
 \title{Temporally Stable Ultra-Compact Video Enhancement\\
 \large Working manuscript: problem, protocol, and verified preliminary evidence}
 \author{Internal research draft; authorship to be determined by the project team}
@@ -21,8 +21,11 @@ mixed-data baseline, while a fixed test-time local pooling conversion harms
 both evaluated domains. A completed factorial study of the root nonlinearity
 and a training-only temporal objective improves paired-real spatial quality
 but fails all three registered temporal/deployment screens. Its spatial and
-temporal effects must be separated. These findings do not establish a new
-video enhancement method. This internal draft contains no independent
+temporal effects must be separated. Matched learned-recursion controls also
+show negligible benefit of an internal feature-energy cue over an RGB gate,
+while exposing a quality--stability trade-off over fixed fusion weights.
+These findings do not establish a new video enhancement method.
+This internal draft contains no independent
 final-test claim or measured phone latency.
 \end{abstract}
 
@@ -38,6 +41,7 @@ Training progress, partial checkpoints, and loss curves are excluded.
 \input{sections/candidate}
 \input{sections/protocol}
 \input{sections/evidence}
+\input{sections/recursion}
 \input{sections/limitations}
 
 \bibliographystyle{plain}
