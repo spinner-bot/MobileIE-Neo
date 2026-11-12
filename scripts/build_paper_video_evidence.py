@@ -27,6 +27,11 @@ def main():
                               outputs_written=False))); return
     if missing or unsuccessful:
         raise SystemExit('Completed video evidence not available; no table written: '+str(missing+unsuccessful))
+    primary_path = ROOT/'paper/evidence-snapshot.json'
+    primary = json.loads(primary_path.read_text())
+    assert primary['R53_R56_complete_references_included'] and primary['R62_complete_clean_transfer_reference_included']
+    assert all(hashlib.sha256((ROOT/name).read_bytes()).hexdigest() == sha
+               for name, sha in primary['source_sha256'].items())
     sources = {}
     def read(name):
         path = BASE/name; sources[str(path.relative_to(ROOT))] = hashlib.sha256(path.read_bytes()).hexdigest()
@@ -114,7 +119,15 @@ def main():
         generated_tables=list(tables), R65_complete_quality=True, R66_complete_perceptual=True,
         R68_Conv_budget_only=True, new_method=False, handset_measured=False, independent_final=False,
         scope='Only complete reused-DEV evidence; no partial checkpoint, active score, SOTA/novelty or handset claim.')
-    (ROOT/'paper/video-evidence-snapshot.json').write_text(json.dumps(record, indent=2)+'\n')
+    video_path = ROOT/'paper/video-evidence-snapshot.json'
+    video_path.write_text(json.dumps(record, indent=2)+'\n')
+    primary['created_at'] = record['created_at']
+    primary['source_sha256'].update(sources)
+    primary['source_sha256'][str(video_path.relative_to(ROOT))] = hashlib.sha256(video_path.read_bytes()).hexdigest()
+    primary['generated_tables'] = list(dict.fromkeys(primary['generated_tables']+list(tables)))
+    primary.update(R65_complete_quality_included=True, R66_complete_perceptual_included=True,
+                   R68_Conv_budget_included=True, supplemental_video_snapshot='paper/video-evidence-snapshot.json')
+    primary_path.write_text(json.dumps(primary, indent=2)+'\n')
     print(json.dumps(dict(tables=len(tables), completed_sources=len(sources), new_adapted_table_rows=len(new_rows))))
 
 
