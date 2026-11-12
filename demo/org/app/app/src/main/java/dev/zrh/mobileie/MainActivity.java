@@ -11,6 +11,7 @@ import android.provider.MediaStore;
 import android.view.*;
 import android.widget.*;
 import androidx.core.content.FileProvider;
+import androidx.core.view.WindowInsetsCompat;
 import java.io.*;
 import java.util.*;
 
@@ -48,7 +49,7 @@ public final class MainActivity extends Activity {
         LinearLayout body=new LinearLayout(this); body.setOrientation(LinearLayout.VERTICAL); body.setPadding(dp(20),dp(18),dp(20),dp(24));
         scroll.addView(body,new ScrollView.LayoutParams(-1,-2));
         scroll.setOnApplyWindowInsetsListener((view,insets)-> {
-            android.graphics.Insets bars=insets.getInsets(WindowInsets.Type.systemBars()|WindowInsets.Type.displayCutout());
+            androidx.core.graphics.Insets bars=WindowInsetsCompat.toWindowInsetsCompat(insets,view).getInsets(WindowInsetsCompat.Type.systemBars()|WindowInsetsCompat.Type.displayCutout());
             view.setPadding(bars.left,bars.top,bars.right,bars.bottom); return insets;
         });
         setContentView(scroll); scroll.requestApplyInsets();

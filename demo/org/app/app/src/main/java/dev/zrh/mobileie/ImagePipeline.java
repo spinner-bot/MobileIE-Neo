@@ -1,7 +1,7 @@
 package dev.zrh.mobileie;
 
 import android.graphics.*;
-import android.media.ExifInterface;
+import androidx.exifinterface.media.ExifInterface;
 import java.io.*;
 
 /** One common RGB input for every method and every comparison view. */
