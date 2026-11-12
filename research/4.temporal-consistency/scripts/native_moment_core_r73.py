@@ -69,20 +69,18 @@ class NativeMomentCore(nn.Module):
         if self.mode == 'mean':
             moved, valid = transport(mean, current, offset)
             updated = current + gate*valid.to(current.dtype)*(moved-current)
-            quadratic = updated.square()
             next_state = (updated, None)
         else:
             moved, valid = transport(torch.cat([mean, second], dim=1),
                                      torch.cat([current, current.square()], dim=1), offset)
             updated, second, dispersion = mix_moments(current, moved.chunk(2, dim=1),
                                                        gate*valid.to(current.dtype))
-            quadratic = updated.square() + self.rho*dispersion
             next_state = (updated, second)
         # Preserve the original two sequential vector multiplies, with a moment
         # correction added in the same output units; spatial MBR alone folds.
         head = (net.head.weight1*updated)*(net.head.weight2*updated)+net.head.bias
         if self.rho is not None:
-            head = head + (net.head.weight1*net.head.weight2)*(quadratic-updated.square())
+            head = head + (net.head.weight1*dispersion)*(net.head.weight2*self.rho)
         body = net.body(head)
         channel = net.att(body)
         spatial = net.att1((channel*body).max(dim=1, keepdim=True).values)
