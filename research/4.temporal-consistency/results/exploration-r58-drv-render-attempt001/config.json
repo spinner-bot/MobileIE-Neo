@@ -1,0 +1,32 @@
+{
+  "at": "2026-11-12T22:29:16.411336+08:00",
+  "protocol_sha256": "ecddf0bf468ca1d2f708b3298100f409c6e803a063f6ee6a15ab93e5534f0b93",
+  "plan_sha256": "ce6174a4658807c71a06a6fc90f5a3d89751d0bbc441e211572c961eddb39daa",
+  "gate_sha256": "22ecb09343946074c6ea21e9c6681b50cab1b0b3cf260c3547548a36c3609e84",
+  "acquisition_manifest_sha256": "809c2b9c7feb059621f6009ea6d5412b6973eb232e91e6db1de6b822307b0c34",
+  "views": [
+    "native",
+    "ev_matched"
+  ],
+  "WB": "first short camera WB fixed for whole scene and long reference",
+  "image_orientation": "raw sensor orientation; user_flip0",
+  "threads": {
+    "OpenMP": 2,
+    "OpenCV": 1
+  },
+  "versions": {
+    "rawpy": "0.25.1",
+    "LibRaw": [
+      0,
+      21,
+      4
+    ],
+    "ExifRead": "3.5.1",
+    "numpy": "2.2.6"
+  },
+  "source_sha256": {
+    "render_drv_pilot_r58.py": "d590356c5d4558ab337cff3ef990de1dbdf37e4761266921397e3b44271d1db1",
+    "drv_render_r58.py": "e899bfe7aa370dc1f642ebde60c6b0c4e604f24fc56ad503217fcf9b0f0fec45"
+  },
+  "scope": "Fixed custom rendered static train pilot, no VBM4D/CNN or standard/independent test claim."
+}
