@@ -56,7 +56,7 @@ class Engine:
         model = ASSETS / "model.tflite"
         if hashlib.sha256(model.read_bytes()).hexdigest() != MODEL_SHA:
             raise ValueError("模型校验失败，请重新获取演示包")
-        self.interpreter = Interpreter(model_path=str(model), num_threads=4,
+        self.interpreter = Interpreter(model_path=str(model), num_threads=1,
                                        experimental_op_resolver_type=OpResolverType.BUILTIN_WITHOUT_DEFAULT_DELEGATES)
         self.interpreter.allocate_tensors()
         self.input = self.interpreter.get_input_details()[0]
@@ -127,7 +127,7 @@ class Desktop:
         self.tasks, self.results = queue.Queue(), queue.Queue()
         self.closed = False
         self.font = "Microsoft YaHei" if sys.platform == "win32" else "Noto Sans CJK SC"
-        root.title("微光实验室 · MobileIE Python"); root.geometry("1180x850"); root.minsize(960, 760); root.configure(bg="#f6f5ef")
+        root.title("微光实验室 · MobileIE Python"); root.geometry("1180x850"); root.minsize(900, 650); root.configure(bg="#f6f5ef")
         header=tk.Frame(root,bg="#f6f5ef");header.pack(fill="x",padx=28,pady=(24,18))
         tk.Label(header,text="◒  微光实验室",font=(self.font,24,"bold"),fg="#243d35",bg="#f6f5ef").pack(side="left")
         tk.Label(header,text="PYTHON DESKTOP  /  本机 · 离线",font=(self.font,11),fg="#68766c",bg="#f6f5ef").pack(side="right")
@@ -142,17 +142,18 @@ class Desktop:
         self.button(rail,"查看计算记录",self.info,False).pack(side="bottom",fill="x",padx=20,pady=20)
         content=tk.Frame(body,bg="white");content.pack(side="left",fill="both",expand=True)
         self.status=tk.StringVar(value="选一张暗光照片，开始本机对比")
-        tk.Label(content,textvariable=self.status,anchor="w",wraplength=760,font=(self.font,12),bg="white",fg="#243d35").pack(fill="x",padx=20,pady=(18,6))
+        status_label=tk.Label(content,textvariable=self.status,anchor="w",wraplength=760,font=(self.font,12),bg="white",fg="#243d35");status_label.pack(fill="x",padx=20,pady=(18,6))
         self.source=tk.StringVar(value="原图指校正方向、居中裁剪后的同一处理范围")
-        tk.Label(content,textvariable=self.source,anchor="w",font=(self.font,10),bg="white",fg="#68766c").pack(fill="x",padx=20)
-        self.canvas=tk.Canvas(content,bg="#243d35",highlightthickness=0,height=480)
+        source_label=tk.Label(content,textvariable=self.source,anchor="w",font=(self.font,10),bg="white",fg="#68766c");source_label.pack(fill="x",padx=20)
+        self.canvas=tk.Canvas(content,bg="#243d35",highlightthickness=0,height=300)
         self.canvas.pack(fill="both",expand=True,padx=20,pady=16)
         self.canvas.bind("<Configure>",self.redraw);self.canvas.bind("<B1-Motion>",self.drag);self.canvas.bind("<Button-1>",self.drag)
         chips=tk.Frame(content,bg="white");chips.pack(fill="x",padx=20,pady=(0,12));self.chips={}
         for label in ("MobileIE","Gamma 0.5","三图总览"):
             b=self.button(chips,label,lambda name=label:self.select(name),False);b.pack(side="left",expand=True,fill="x",padx=4);self.chips[label]=b
         self.metrics=tk.StringVar(value="处理后显示本次 CPU 耗时；安卓测速请使用 AI Benchmark")
-        tk.Label(content,textvariable=self.metrics,font=(self.font,10),fg="#68766c",bg="white",wraplength=740).pack(padx=20,pady=(0,18))
+        metrics_label=tk.Label(content,textvariable=self.metrics,font=(self.font,10),fg="#68766c",bg="white",wraplength=740);metrics_label.pack(padx=20,pady=(0,18))
+        content.bind("<Configure>",lambda event:[label.configure(wraplength=max(280,event.width-40)) for label in (status_label,source_label,metrics_label)])
         tk.Label(root,text="MobileIE 官方模型  ·  原图 / 学习增强 / 固定 Gamma  ·  单张本地处理",font=(self.font,10),fg="#68766c",bg="#f6f5ef").pack(pady=14)
         self.worker_thread=threading.Thread(target=self.worker,daemon=True);self.worker_thread.start();root.after(40,self.poll);root.protocol("WM_DELETE_WINDOW",self.close)
         self.update_controls()
@@ -187,7 +188,7 @@ class Desktop:
                         if self.engine is None:self.engine=Engine()
                         mie,_,ms=self.engine.run(value)
                     except Exception as exc:error=type(exc).__name__;ms=None;self.engine=None
-                    record={"app_version":VERSION,"model_sha256":MODEL_SHA,"width":600,"height":400,"gamma_exponent":.5,"gamma_ms":gamma_ms,"inference_ms":ms,"initialization_in_this_run":init,"runtime":"ai-edge-litert 2.3.0, CPU builtin, 4 threads","mobileie_complete":mie is not None,"gamma_complete":True,"mobileie_error":error,"input_rgb_sha256":hashlib.sha256(value.tobytes()).hexdigest()}
+                    record={"app_version":VERSION,"model_sha256":MODEL_SHA,"width":600,"height":400,"gamma_exponent":.5,"gamma_ms":gamma_ms,"inference_ms":ms,"initialization_in_this_run":init,"runtime":"ai-edge-litert 2.3.0, CPU builtin, 1 thread","mobileie_complete":mie is not None,"gamma_complete":True,"mobileie_error":error,"input_rgb_sha256":hashlib.sha256(value.tobytes()).hexdigest()}
                     self.results.put((kind,(mie,g,record)))
             except Exception as exc:self.results.put(("error",type(exc).__name__))
 
