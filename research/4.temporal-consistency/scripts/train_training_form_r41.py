@@ -49,9 +49,10 @@ def checkpoint(net, optimizer, model, seed, step, cache, out, last_input):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--seed', type=int, choices=[0, 1], required=True)
+    parser.add_argument('--stage', choices=['stage002'], required=True)
     args = parser.parse_args()
     assert os.environ.get('CUBLAS_WORKSPACE_CONFIG') == ':4096:8'
-    gates = [BASE/'process/exploration-r41'/name for name in ['cpu-gate.json', 'cuda-fp32-gate.json']]
+    gates = [BASE/'process/exploration-r41'/args.stage/name for name in ['cpu-gate.json', 'cuda-gate.json']]
     assert all(json.loads(path.read_text())['passed'] for path in gates)
     torch.set_num_threads(2)
     cv2.setNumThreads(1)
@@ -59,7 +60,7 @@ def main():
     torch.backends.cudnn.deterministic = True
     torch.backends.cudnn.benchmark = False
     configure_precision()
-    out = BASE/f'results/exploration-r41-seed{args.seed}'
+    out = BASE/f'results/exploration-r41-{args.stage}-seed{args.seed}'
     out.mkdir(parents=True, exist_ok=False)
     pool = MixedPool()
     expanded, info = create_model(args.seed)
@@ -70,12 +71,12 @@ def main():
     nets = {'slim_fp32': slim.cuda().train(), 'expanded_fp32': expanded.cuda().train()}
     optimizers = {name: torch.optim.Adam([p for p in net.parameters() if p.requires_grad],
                    lr=1e-4, betas=(.9, .999), eps=1e-8, weight_decay=0) for name, net in nets.items()}
-    cache = ROOT/f'.cache/checkpoints/exploration-r41/seed{args.seed}'
+    cache = ROOT/f'.cache/checkpoints/exploration-r41/{args.stage}/seed{args.seed}'
     assert cache.resolve().is_relative_to('/data/Users/zrh/data/MobileIE-Neo')
     cache.mkdir(parents=True, exist_ok=False)
     sources = ['train_training_form_r41.py', 'training_form_r41.py', 'mixed_anchor_r40.py',
                'native_training_r14.py', 'dynamic_training_r34.py', 'exploration_r2_data.py', 'gpu_guard.py']
-    write(out/'config.json', {'seed': args.seed, 'models': list(nets), 'steps_per_model': 4000,
+    write(out/'config.json', {'seed': args.seed, 'stage': args.stage, 'models': list(nets), 'steps_per_model': 4000,
           'batch': 4, 'frames': 4, 'patch': 128, 'data': pool.info, 'initialization': info,
           'parameters': {name: {'total': sum(p.numel() for p in net.parameters()),
                                 'active': sum(p.numel() for p in net.parameters() if p.requires_grad)}
