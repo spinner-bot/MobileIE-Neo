@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "objective": "L1",
+  "L1": 0.31292954087257385,
+  "MSE": 0.5962610244750977,
+  "gradient_norm_before_clip": 30.425033569335938,
+  "selected_gradient_L2": {
+    "head.block1.0.conv_out.weight": 1.8807658478648208,
+    "tail.conv_out.weight": 1.600644059722482,
+    "head.weight1": 19.465757369995117,
+    "body.weight1": 7.301040172576904
+  },
+  "selected_parameter_max_changes": {
+    "head.block1.0.conv_out.weight": 2.667602075234754e-06,
+    "tail.conv_out.weight": 5.928678774580476e-07,
+    "head.weight1": 6.397999823093414e-05,
+    "body.weight1": 2.399832010269165e-05
+  },
+  "actual_window_eval_fold_max_abs": 3.62396240234375e-05,
+  "discarded_SGD_updates": 1,
+  "inherited_into_formal_training": false
+}
