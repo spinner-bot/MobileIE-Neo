@@ -127,3 +127,44 @@ operator's paired-real quality gain does not imply an independent temporal
 gain; the temporal objective has a quality--stability trade-off.}
 \label{fig:r44}
 \end{figure}
+
+\subsection{Fixed-budget published architecture references}
+\label{sec:published-adapted}
+\input{generated/published-adapted-table}
+Table~\ref{tab:published-adapted} adds a 696-parameter published Nano
+enhancer~\cite{multinex} and a 2,479,096-parameter five-frame
+FastDVDnet~\cite{fastdvdnet}. Both complete two independent 8,000-update
+adaptations from their published weights using the same four supervised
+targets, crop coordinates, and augmentations as the spatial reference.
+Only final weights are evaluated. This matches development updates and
+targets, not pretraining, training parameterization, computation, or full
+convergence. The Nano architecture and its original batch normalization
+are retained; four sequential batch-four forwards preserve that training
+semantics.
+
+The Nano raw adaptation gains 1.922--2.192\,dB on SYN and
+2.508--2.949\,dB on paired ND over its original LOL-v1 checkpoint. Its
+remaining gap to MobileIE in this budget does not establish a general
+architectural ranking. Applying the same classical recursion reduces its
+temporal error, but does not recover the paired-real quality gap.
+
+FastDVDnet training supplies two additional source inputs on each side of
+the four targets. This avoids reflecting at every short sampled window,
+while adding observations; it is not an equal-information comparison
+to the earlier short-context control. There is no consistent improvement
+over that control across domains and seeds. On paired ND, true five-frame
+input loses 2.202 and 1.908\,dB against five copies of the current frame,
+with temporal error about 6.7\% and 6.5\% higher. The latter is a
+same-weight diagnostic, not the published video configuration. The true
+window remains the video reference. Published AWGN pretraining overlaps
+three synthetic DEV sources; no unseen-source claim is made.
+
+Full phone inspection exposes a separate limitation. Both adapted Nano
+seeds retain purple stage colours but visibly over-brighten the scene;
+dark-region colour artifacts remain on the outdoor clip. The existing
+MobileIE reference also has severe exposure and colour failures there.
+These unpaired reused clips do not establish colour accuracy, temporal
+perception, or a phone quality ranking. Neither comparison supplies a new
+method, a reproduced standard LLVE benchmark, or handset latency. The
+fixed reference budgets are closed rather than extended by local
+hyperparameter search.
