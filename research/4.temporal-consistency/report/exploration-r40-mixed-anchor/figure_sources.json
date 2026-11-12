@@ -1,0 +1,55 @@
+{
+  "source_sha256": {
+    "research/4.temporal-consistency/report/exploration-r40-mixed-anchor/domain_seed_summary.json": "6284819c06caa1a87033b5464cf53860ae8c12076dd7d412efa329957d4198b1",
+    "research/4.temporal-consistency/report/external-baselines/domain_seed_summary.json": "86dae6b4a834c9cc2a517a20251707b34ca12e48b818c55e79e91556f0c87749",
+    "research/4.temporal-consistency/scripts/plot_mixed_anchor_r40.py": "fd403197e1990fe1e0c6073bed91c7a195561035cbc9b8e5073f153a06bf1201"
+  },
+  "raw_coordinates": [
+    {
+      "anchor_family": "R26_plain_MSE",
+      "seed_coordinates": [
+        [
+          24.120195855698828,
+          26.193630686961708
+        ],
+        [
+          23.202218988335314,
+          28.08239865345224
+        ]
+      ],
+      "mean_synthetic_raw_psnr": 23.66120742201707,
+      "mean_real_raw_psnr": 27.138014670206974
+    },
+    {
+      "anchor_family": "R34_original",
+      "seed_coordinates": [
+        [
+          26.260978950834467,
+          23.474496669605486
+        ],
+        [
+          26.20734364717809,
+          23.431597948465377
+        ]
+      ],
+      "mean_synthetic_raw_psnr": 26.234161299006278,
+      "mean_real_raw_psnr": 23.453047309035433
+    },
+    {
+      "anchor_family": "R40_mixed",
+      "seed_coordinates": [
+        [
+          25.205809139299635,
+          24.53646815886401
+        ],
+        [
+          25.061434275647525,
+          25.185079992571026
+        ]
+      ],
+      "mean_synthetic_raw_psnr": 25.13362170747358,
+      "mean_real_raw_psnr": 24.86077407571752
+    }
+  ],
+  "scope": "Both seeds, all three post routes. Training/data/optimization differ for the earlier R26 scheme; no isolated causal attribution."
+}
