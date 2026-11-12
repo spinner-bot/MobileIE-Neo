@@ -31,3 +31,5 @@ CPU先在seed0/data_step0执行两arm各1次丢弃SGD，验证原权重输出/�
 协议、代码、资格、原始终态、表/解释、过程和进展报告分别密集提交，阶段fetch核分歧后推送；merge/pull显式--no-ff、指定作者、自有zrh data、project-python入口，不改移动演示。目标仍active，独立方法创新、可信联合收益、标准/自然场景验证与手机测量仍待完成。
 
 来源：[官方train.py](https://github.com/zkawfanx/StableLLVE/blob/4cc070da328ffadc8498285985aa98175e473bc5/train.py)、[dataloader.py](https://github.com/zkawfanx/StableLLVE/blob/4cc070da328ffadc8498285985aa98175e473bc5/dataloader.py)、[warp.py](https://github.com/zkawfanx/StableLLVE/blob/4cc070da328ffadc8498285985aa98175e473bc5/warp.py)、[项目README](https://github.com/zkawfanx/StableLLVE)。
+
+实现前补充：2026-11-13T02:51:08.075963+08:00；官方F.grid_sample的CUDA反传可能没有确定性实现。固定cudnn deterministic/benchmark=False与TF32off，同时torch.use_deterministic_algorithms(True, warn_only=True)保留原warp并记录警告；不声称CUDA逐bit可复现，不为通过确定性限制替换损失/warp。所有seed/预算及评价设置不变。此补充在CPU资格与GPU执行前登记。
