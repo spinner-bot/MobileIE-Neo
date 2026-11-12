@@ -1,0 +1,86 @@
+\section{Verified preliminary evidence}
+\label{sec:evidence}
+The following results come from completed development experiments. They
+constrain method design; they are not evidence that the pending candidate
+has succeeded. The source manifest and generated tables accompany this draft.
+
+\subsection{A stronger training baseline}
+\input{generated/anchor-table}
+Table~\ref{tab:anchors} separates historical anchors from the matched
+training-form comparison. In the matched FP32 experiment, restoring MBR/BN
+training improves synthetic raw PSNR over direct Slim fine-tuning by
+0.968 and 1.142\,dB for the two seeds. The corresponding paired-real gains
+are 0.171 and 1.799\,dB. Both deploy to the same 4,075-parameter spatial
+class. Training parameterization is therefore a material baseline choice.
+This is known spatial reparameterization, not a new video mechanism.
+
+The expanded control uses 49,978 training parameters, including an inactive
+frozen warm head; 47,239 parameters are optimized. It is a controlled
+fine-tuning study, not a complete reproduction of the official warm-up,
+loss, and long-schedule training. To preserve the pretrained numerical
+starting function, the wide raw convolution executes its preserved and
+additional output blocks separately. This retains its parameters and
+mathematical operator but differs from the upstream single wide-kernel call.
+
+The domain trade-off remains important. Expanded training approximately
+recovers the synthetic quality of the dynamic-synthetic anchor while
+improving its paired-real mapping. It still trails the earlier native
+training reference in paired-real PSNR. Those historical training schemes
+differ in several respects and do not isolate one causal factor.
+No single online model is obtained by taking the best weight separately
+for each domain.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{matched_forms.pdf}
+\caption{Completed matched FP32 training-form comparison. Pale points retain
+both individual seeds; solid points are their means. The real-domain spread
+and the quality--temporal trade-off are visible. Postprocessed outputs use
+motion and history; they are not stateless predictions.}
+\label{fig:forms}
+\end{figure}
+
+Mean improvement does not imply reliable per-clip improvement. On paired-real
+video 121, expanded seed 0 loses 2.606\,dB against its matched Slim control
+and shows sky colour bias in the fixed-frame inspection. Its four-source
+real mean is 24.710\,dB, versus 26.983\,dB for expanded seed 1. Raw
+paired-real temporal error is not consistently reduced. All source/seed
+pairs and all four metrics remain part of the record.
+
+\subsection{Classical recursion is a necessary reference}
+\input{generated/classical-table}
+On the same strong dynamic-synthetic anchor, recursive fusion improves
+the finite reference's quality and temporal error
+(Table~\ref{tab:classical}). Its persistent fused output is a meaningful
+information advantage, not a negligible implementation detail. The
+recursive reference cannot be replaced by a weaker two-frame average
+when judging a proposed temporal model.
+
+The measured CPU ranges overlap, so the small difference between the finite
+and recursive medians is not established as a significant speed difference.
+These timings concern the stated R34 weights and workload; they are not
+measurements of the later expanded anchor or the pending rational model.
+The extra stored RGB history and motion work remain part of deployment.
+
+\subsection{Fixed local statistics do not rescue this anchor}
+\input{generated/tlc-table}
+The fixed TLC~\cite{tlc} control replaces only the channel-pooling node
+with exact local averaging at a window of 192 pixels. Both development
+domains and both seeds lose raw PSNR; the paired-real temporal ratios also
+exceed the registered 1.02 upper bound (Table~\ref{tab:tlc}).
+Across the 20 raw seed--condition pairs, five PSNR deltas are positive,
+but all eight paired-real deltas are negative. The worst paired-real
+condition loses 3.716\,dB.
+
+The fixed instance and its local window search are stopped. This result
+does not prove that all local aggregation or global-statistic adaptations
+are ineffective. It also does not justify a speed claim: localizing the
+channel map adds approximately 0.299 convolution GMAC at $1080\mathrm p$,
+with prefix sums and memory traffic additional to that count.
+
+\subsection{Pending candidate results}
+\pending{The R44 factorial is still running at this manuscript snapshot.
+Its raw, finite, recursive, per-condition, and per-seed final results must
+be inserted only after both complete budgets and deployment-export gates
+finish normally. No current loss curve or intermediate checkpoint supplies
+this missing evidence.}
