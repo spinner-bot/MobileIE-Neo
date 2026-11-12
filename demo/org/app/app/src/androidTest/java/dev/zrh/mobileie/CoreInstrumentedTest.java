@@ -27,7 +27,10 @@ public class CoreInstrumentedTest {
             assertEquals((int)Math.floor(255*Math.pow((255-i)/255.0,.5)),Color.green(p));
             assertEquals((int)Math.floor(255*Math.pow(((i*31)%256)/255.0,.5)),Color.blue(p));
         }
-        assertEquals(Color.BLACK,result.getPixel(0,0)&0xff0000ff | 0xff000000); // Blue and red zero at i=0.
+        Bitmap extremes=Bitmap.createBitmap(new int[]{Color.BLACK,Color.WHITE},2,1,Bitmap.Config.ARGB_8888);
+        Bitmap gammaExtremes=ImagePipeline.gamma(extremes);
+        assertEquals(Color.BLACK,gammaExtremes.getPixel(0,0)); assertEquals(Color.WHITE,gammaExtremes.getPixel(1,0));
+        extremes.recycle(); gammaExtremes.recycle();
         source.recycle(); result.recycle();
     }
 

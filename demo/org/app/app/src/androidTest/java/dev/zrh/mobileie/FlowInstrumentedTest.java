@@ -26,7 +26,7 @@ public class FlowInstrumentedTest {
     private final UiDevice device=UiDevice.getInstance(InstrumentationRegistry.getInstrumentation());
     private ActivityScenario<MainActivity> scenario;
     private static final String PKG="dev.zrh.mobileie";
-    @Before public void launch() { scenario=ActivityScenario.launch(MainActivity.class); idle(); }
+    @Before public void launch() { new File(context.getFilesDir(),"gates").mkdirs(); scenario=ActivityScenario.launch(MainActivity.class); idle(); }
     @After public void close() { if(scenario!=null) scenario.close(); }
     private void main(Runnable r) { InstrumentationRegistry.getInstrumentation().runOnMainSync(r); }
     private void idle() { long end=SystemClock.uptimeMillis()+30000; do {SystemClock.sleep(100);}while(app.busy&&SystemClock.uptimeMillis()<end); assertFalse("worker did not finish: "+app.status,app.busy); device.waitForIdle(); }
@@ -39,6 +39,7 @@ public class FlowInstrumentedTest {
     private void prepared(int index) { main(()->app.loadSample(index)); idle(); assertNotNull(app.session); }
     private void processed(int index) { prepared(index); main(()->app.process()); idle(); assertNotNull("MobileIE: "+app.status,app.session.mobileie); assertNotNull(app.session.gamma); }
     private void shot(String name) {
+        device.waitForIdle(); SystemClock.sleep(200);
         File directory=new File(context.getFilesDir(),"gates"); directory.mkdirs();
         assertTrue(device.takeScreenshot(new File(directory,name+".png")));
     }
@@ -52,7 +53,8 @@ public class FlowInstrumentedTest {
         UiObject2 image=find("comparison"); android.graphics.Rect bounds=image.getVisibleBounds();
         device.swipe(bounds.left+bounds.width()/4,bounds.centerY(),bounds.left+bounds.width()*4/5,bounds.centerY(),12);
         scenario.onActivity(a->assertTrue(((ComparisonView)a.findViewById(R.id.comparison)).position()>.7f));
-        find("mode_mobileie").click(); shot("02-mobileie-comparison");
+        find("mode_mobileie").click(); device.waitForIdle();
+        scenario.onActivity(a->assertTrue(a.findViewById(R.id.mode_mobileie).isSelected())); shot("02-mobileie-comparison");
         find("mode_overview").click(); shot("03-three-method-overview");
         find("save").click(); idle(); assertTrue(app.status,app.status.startsWith("已保存"));
         int images=0;
@@ -106,9 +108,10 @@ public class FlowInstrumentedTest {
         Uri uri=context.getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,v); assertNotNull(uri);
         try(InputStream in=context.getAssets().open("samples/01.png");OutputStream out=context.getContentResolver().openOutputStream(uri)) { byte[] buffer=new byte[8192]; int n; while((n=in.read(buffer))!=-1) out.write(buffer,0,n); }
         find("pick").click(); assertTrue(device.wait(Until.hasObject(By.pkg("com.google.android.documentsui")),7000));
+        UiObject2 list=device.findObject(By.desc("List view")); if(list!=null) { list.click(); device.waitForIdle(); }
         device.dumpWindowHierarchy(new File(context.getFilesDir(),"gates/picker.xml"));
         UiObject2 photo=device.wait(Until.findObject(By.textContains("MobileIE_picker_gate")),7000);
-        if(photo==null) photo=device.findObject(By.descContains("MobileIE_picker_gate"));
+        if(photo==null) photo=device.findObject(By.desc(Pattern.compile("^MobileIE_picker_gate.*")));
         assertNotNull("Picker image",photo); photo.click();
         assertTrue(device.wait(Until.hasObject(By.pkg(PKG)),5000)); idle(); assertEquals("相册照片",app.session.label);
         main(()->app.process()); idle(); assertNotNull(app.session.mobileie);
@@ -123,6 +126,19 @@ public class FlowInstrumentedTest {
         main(()->{app.process(); assertTrue(app.busy); app.process();}); idle();
         assertEquals(previous+1,app.session.metadata.getInt("run_number")); assertNotNull(app.session.mobileie);
         invalid.delete();
+    }
+
+    @Test public void fEmptyCameraOutputIsAnErrorAndKeepsResult() throws Exception {
+        processed(1); String id=app.session.id;
+        File dir=new File(context.getFilesDir(),"captures"); dir.mkdirs();
+        File empty=File.createTempFile("empty-",".jpg",dir);
+        scenario.onActivity(a->{
+            try { Field f=MainActivity.class.getDeclaredField("pendingCapture"); f.setAccessible(true); f.set(a,empty); }
+            catch(Exception e) {throw new AssertionError(e);}
+            a.onActivityResult(MainActivity.CAMERA,Activity.RESULT_OK,null);
+        });
+        assertEquals(id,app.session.id); assertNotNull(app.session.mobileie);
+        assertTrue(app.status,app.status.contains("未返回完整照片")); assertFalse(empty.exists());
     }
 
     @Test public void gModelFailureKeepsOnlyHonestBaseline() throws Exception {
