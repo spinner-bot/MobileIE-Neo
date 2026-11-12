@@ -19,14 +19,14 @@ def stamp():
     return datetime.now().astimezone().isoformat()
 
 
-def wait_training(guard_path, identity):
+def wait_training(guard_path, pid, identity):
     while True:
         record=read_stable(guard_path)
         assert record['allowed'], 'New admission denied; preserve this attempt, no automatic retry.'
         if 'returncode' in record:
             assert record['returncode']==0, record['returncode']
             return
-        current=process_identity(identity['pid'])
+        current=process_identity(pid)
         if current!=identity:
             time.sleep(1)
             record=read_stable(guard_path)
@@ -59,7 +59,8 @@ def main():
            'dynamic_training_r34.py','native_training_r14.py','fastdvdnet_adapter_r12.py',
            'training_form_r41.py','gpu_guard.py','exploration_r2_data.py','video_metrics.py','prepare_cache_r5.py']
     frozen={n:digest(BASE/'scripts'/n) for n in names}
-    write(folder/'config.json',{'started':stamp(),'seed1_identity':identity,'source_sha256':frozen,
+    write(folder/'config.json',{'started':stamp(),'seed1_guard_pid':launch['guard_pid'],
+        'seed1_identity':identity,'source_sha256':frozen,
         'seed0_first_attempt':'Denied before training, zero updates; preserved.',
         'plan':'Complete seed1, CPU eval1; new idle GPU7 admission for seed0 attempt002; CPU eval0; complete summary.',
         'no_wall_cutoff':True,'no_scientific_retry':True})
@@ -78,7 +79,7 @@ def main():
         write(folder/f'evaluate-seed{seed}-launch.json',{'started':stamp(),'pid':child.pid,'command':command})
 
     try:
-        wait_training(process/'seed1-guard.json',identity)
+        wait_training(process/'seed1-guard.json',launch['guard_pid'],identity)
         evaluate(1)
         write(folder/'state.json',{'at':stamp(),'stage':'seed1 normal8000 / CPUeval1; seed0 waiting fresh GPU7 idle'})
         while True:
