@@ -1,0 +1,27 @@
+微光实验室 · Windows Python 桌面版 0.1.0
+=======================================
+
+1. 保留 desktop.py、requirements.txt、run.cmd、assets/ 的相对位置。
+2. 使用已有的演示 Python 环境运行：
+       python -m pip install -r requirements.txt
+       python desktop.py
+3. 或在命令提示符设置实际的 Python 路径后启动 run.cmd：
+       set MOBILEIE_PYTHON=F:\dev-tools\python-envs\MobileIE-Demo\Scripts\python.exe
+       run.cmd
+
+需要 Python 3.10+，带 Tcl/Tk 组件；python -m tkinter 可检查。
+不需要 Visual Studio、Android SDK 或 C++ 编译工具。
+
+操作：选图或内置样例 → 开始对比 → 拖动分界线 / Gamma / 三图总览 → 保存。
+保存时在所选位置新建带编号目录，包含 PNG 图片和 record.json。
+原图是方向校正、居中裁剪并缩放后的 600×400 输入；Gamma 固定指数 0.5，
+不包含降噪。现场拍照请使用安卓版本，桌面版处理已有照片。
+
+模型与安卓演示完全相同。桌面版沿用官方默认 CPU 单线程，关闭默认 delegate；
+安卓微 App 为 CPU 4 线程。各程序计时独立，不能与 AI Benchmark 数字混用。
+
+该 Python 程序已在 Linux/Xvfb 下完成代码与界面模拟验收；
+尚未在真实 Windows 机器执行，需本地核对 Tcl/Tk、原生文件对话框、DPI 和运行库。
+运行依赖或 DLL 出错时，请优先使用此前已成功运行官方模型的演示 Python。
+
+完整源码、测试、模拟截图与验收报告保存在 MobileIE-Neo 的 demo.org 分支。
