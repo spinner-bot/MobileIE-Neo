@@ -26,6 +26,7 @@ m.adb("shell","am","start","-W","-n",m.PKG+"/.MainActivity")
 m.wait_text("选一张暗光照片")
 (m.BASE/"01-fresh-home.png").write_bytes(m.adb("exec-out","screencap","-p"))
 log=(m.BASE/"screenrecord.txt").open("wb")
+m.adb("shell","rm","-f","/sdcard/lightlab-demo.mp4")
 recorder=subprocess.Popen(["adb","-s","emulator-5580","shell","screenrecord","--size","720x1560","--bit-rate","1800000","--time-limit","90","/sdcard/lightlab-demo.mp4"],stdout=log,stderr=log)
 try:
     time.sleep(.5)
@@ -50,8 +51,14 @@ finally:
     for pid in m.adb("shell","pidof","screenrecord",check=False).decode().split():
         if pid.isdigit():m.adb("shell","kill","-2",pid,check=False)
     recorder.wait(timeout=15);log.close()
-movie=m.adb("exec-out","cat","/sdcard/lightlab-demo.mp4")
-assert len(movie)>10000 and b"ftyp" in movie[:64] and b"moov" in movie
+# The adb shell can exit before MediaMuxer's final moov write reaches FUSE.
+# Wait for the actual container, rather than accepting only shell completion.
+movie=b""
+for _ in range(40):
+    movie=m.adb("exec-out","cat","/sdcard/lightlab-demo.mp4")
+    if len(movie)>10000 and b"ftyp" in movie[:64] and b"moov" in movie:break
+    time.sleep(.25)
+else:raise AssertionError("MP4 finalization timed out")
 (m.BASE/f"MobileIE-LightLab-{version}-emulator-demo.mp4").write_bytes(movie)
 (m.BASE/"recording.json").write_text(json.dumps({"pass":True,"version":version,"bytes":len(movie),"source":"Android 15 emulator, not real phone","workflow":["fresh launch","sample selection","local processing","Gamma slider","three-way overview","save"],"mp4_ftyp_and_moov_verified":True},indent=2)+"\n")
 print("Recorded emulator workflow",len(movie),"bytes")
