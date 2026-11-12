@@ -55,12 +55,13 @@ def artificial_gate():
 
 def main():
     parser = argparse.ArgumentParser(); parser.add_argument('--device', choices=['cpu', 'cuda'], default='cpu')
+    parser.add_argument('--admission-attempt', type=int, default=1)
     args = parser.parse_args()
     torch.set_num_threads(2); cv2.setNumThreads(1); configure_precision()
     torch.use_deterministic_algorithms(True); torch.backends.cudnn.deterministic = True
     torch.backends.cudnn.benchmark = False
     assert not torch.cuda.is_initialized()
-    out = BASE/f'process/exploration-r73/{args.device}-gate001'; out.mkdir(parents=True, exist_ok=False)
+    out = BASE/f'process/exploration-r73/{args.device}-gate{args.admission_attempt:03d}'; out.mkdir(parents=True, exist_ok=False)
     start, complete, updates, records = time.perf_counter(), False, 0, []
     try:
         write(out/'artificial.json', artificial_gate())
