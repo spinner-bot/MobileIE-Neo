@@ -1,0 +1,457 @@
+{
+  "created_at": "2026-11-13T01:08:21.401437+08:00",
+  "passed": false,
+  "formal_optimizer_updates": 0,
+  "discarded_optimizer_updates": 0,
+  "real_image_observations": 0,
+  "seeds": [
+    {
+      "seed": 0,
+      "initialization": {
+        "source_marker": "research/4.temporal-consistency/results/exploration-r44-stage001-seed0/square_mse-step4000.json",
+        "training_checkpoint_sha256": "91800b897a2b568d837cf92925b727bb71934f781437733c75323d3562f6998e",
+        "inherited_updates_each": 8000,
+        "new_branch_seed": 6300,
+        "optimizer_state_inherited": false,
+        "parameters": {
+          "plain": {
+            "total": 49978,
+            "active": 47239
+          },
+          "spatial": {
+            "total": 50521,
+            "active": 47782
+          },
+          "causal": {
+            "total": 50521,
+            "active": 47782
+          }
+        }
+      },
+      "cases": [
+        {
+          "shape": [
+            1,
+            4,
+            3,
+            17,
+            19
+          ],
+          "initial_deltas": [
+            {
+              "training": false,
+              "model": "plain",
+              "max_abs": 0.0
+            },
+            {
+              "training": false,
+              "model": "spatial",
+              "max_abs": 0.0
+            },
+            {
+              "training": false,
+              "model": "causal",
+              "max_abs": 0.0
+            }
+          ],
+          "initial_gradients": {
+            "spatial": {
+              "backbone": 107.3727368486827,
+              "project": 0.0,
+              "mix": 0.0,
+              "field": 0.0,
+              "readout": 1.5927292166863727
+            },
+            "causal": {
+              "backbone": 107.3727368486827,
+              "project": 0.0,
+              "mix": 0.0,
+              "field": 0.0,
+              "readout": 1.5925336442204823
+            }
+          },
+          "activated_gradients": {
+            "spatial": {
+              "backbone": 107.01368159103212,
+              "project": 0.013166326579168941,
+              "mix": 0.0,
+              "field": 0.01419013730988637,
+              "readout": 1.5880876530197752
+            },
+            "causal": {
+              "backbone": 107.00079958058132,
+              "project": 0.013135083422660895,
+              "mix": 0.0,
+              "field": 0.017104420763177062,
+              "readout": 1.5876649907494362
+            }
+          },
+          "history_gradients": {
+            "spatial": {
+              "past_input_abs_sum": 0.0,
+              "current_input_abs_sum": 12.309932708740234
+            },
+            "causal": {
+              "past_input_abs_sum": 0.020151440054178238,
+              "current_input_abs_sum": 12.314069747924805
+            }
+          },
+          "export": {
+            "plain": {
+              "max_abs_delta": 6.318092346191406e-06,
+              "parameters": 4075
+            },
+            "spatial": {
+              "max_abs_delta": 6.198883056640625e-06,
+              "parameters": 4618,
+              "state_storage_bytes": 800,
+              "expected_state_storage_bytes": 800,
+              "resized_reset_delta": 0.0
+            },
+            "causal": {
+              "max_abs_delta": 6.4373016357421875e-06,
+              "parameters": 4618,
+              "state_storage_bytes": 800,
+              "expected_state_storage_bytes": 800,
+              "resized_reset_delta": 0.0
+            }
+          },
+          "first_frame_current_delta": 0.0,
+          "changed_future_prefix_delta": 0.0,
+          "activated_history_difference": 0.0028001070022583008
+        },
+        {
+          "shape": [
+            2,
+            4,
+            3,
+            16,
+            20
+          ],
+          "initial_deltas": [
+            {
+              "training": true,
+              "model": "plain",
+              "max_abs": 0.0
+            },
+            {
+              "training": true,
+              "model": "spatial",
+              "max_abs": 0.0
+            },
+            {
+              "training": true,
+              "model": "causal",
+              "max_abs": 0.0
+            },
+            {
+              "training": false,
+              "model": "plain",
+              "max_abs": 0.0
+            },
+            {
+              "training": false,
+              "model": "spatial",
+              "max_abs": 0.0
+            },
+            {
+              "training": false,
+              "model": "causal",
+              "max_abs": 0.0
+            }
+          ],
+          "initial_gradients": {
+            "spatial": {
+              "backbone": 354.1692357634915,
+              "project": 0.0,
+              "mix": 0.0,
+              "field": 0.0,
+              "readout": 2.812802891226562
+            },
+            "causal": {
+              "backbone": 354.1692357634915,
+              "project": 0.0,
+              "mix": 0.0,
+              "field": 0.0,
+              "readout": 2.7411645857680322
+            }
+          },
+          "activated_gradients": {
+            "spatial": {
+              "backbone": 355.53092046266187,
+              "project": 0.02850764077714529,
+              "mix": 0.0,
+              "field": 0.0063927628094986285,
+              "readout": 2.824474434657303
+            },
+            "causal": {
+              "backbone": 355.5113373080316,
+              "project": 0.027887646935136005,
+              "mix": 0.0,
+              "field": 0.009717917176145698,
+              "readout": 2.75212130516134
+            }
+          },
+          "history_gradients": {
+            "spatial": {
+              "past_input_abs_sum": 0.0,
+              "current_input_abs_sum": 26.19122886657715
+            },
+            "causal": {
+              "past_input_abs_sum": 0.02135516330599785,
+              "current_input_abs_sum": 26.181184768676758
+            }
+          },
+          "export": {
+            "plain": {
+              "max_abs_delta": 5.53131103515625e-05,
+              "parameters": 4075
+            },
+            "spatial": {
+              "max_abs_delta": 4.863739013671875e-05,
+              "parameters": 4618,
+              "state_storage_bytes": 1280,
+              "expected_state_storage_bytes": 1280,
+              "resized_reset_delta": 0.0
+            },
+            "causal": {
+              "max_abs_delta": 4.482269287109375e-05,
+              "parameters": 4618,
+              "state_storage_bytes": 1280,
+              "expected_state_storage_bytes": 1280,
+              "resized_reset_delta": 0.0
+            }
+          },
+          "first_frame_current_delta": 0.0,
+          "changed_future_prefix_delta": 0.0,
+          "activated_history_difference": 0.005799055099487305
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "initialization": {
+        "source_marker": "research/4.temporal-consistency/results/exploration-r44-stage001-seed1/square_mse-step4000.json",
+        "training_checkpoint_sha256": "450d55e60333655019c820321ad9ae4afe78d012aefe3615b9490ef61a3943ba",
+        "inherited_updates_each": 8000,
+        "new_branch_seed": 6301,
+        "optimizer_state_inherited": false,
+        "parameters": {
+          "plain": {
+            "total": 49978,
+            "active": 47239
+          },
+          "spatial": {
+            "total": 50521,
+            "active": 47782
+          },
+          "causal": {
+            "total": 50521,
+            "active": 47782
+          }
+        }
+      },
+      "cases": [
+        {
+          "shape": [
+            1,
+            4,
+            3,
+            17,
+            19
+          ],
+          "initial_deltas": [
+            {
+              "training": false,
+              "model": "plain",
+              "max_abs": 0.0
+            },
+            {
+              "training": false,
+              "model": "spatial",
+              "max_abs": 0.0
+            },
+            {
+              "training": false,
+              "model": "causal",
+              "max_abs": 0.0
+            }
+          ],
+          "initial_gradients": {
+            "spatial": {
+              "backbone": 428.75697574378614,
+              "project": 0.0,
+              "mix": 0.0,
+              "field": 0.0,
+              "readout": 3.4938501975888427
+            },
+            "causal": {
+              "backbone": 428.75697574378614,
+              "project": 0.0,
+              "mix": 0.0,
+              "field": 0.0,
+              "readout": 3.4540370137729277
+            }
+          },
+          "activated_gradients": {
+            "spatial": {
+              "backbone": 427.6208221409778,
+              "project": 0.017155179707939082,
+              "mix": 0.0,
+              "field": 0.011710523874524719,
+              "readout": 3.5167993714371715
+            },
+            "causal": {
+              "backbone": 427.44254345728024,
+              "project": 0.016675157388453415,
+              "mix": 0.0,
+              "field": 0.01567197525404617,
+              "readout": 3.4773977894086485
+            }
+          },
+          "history_gradients": {
+            "spatial": {
+              "past_input_abs_sum": 0.0,
+              "current_input_abs_sum": 68.30467224121094
+            },
+            "causal": {
+              "past_input_abs_sum": 0.025994371622800827,
+              "current_input_abs_sum": 68.37217712402344
+            }
+          },
+          "export": {
+            "plain": {
+              "max_abs_delta": 3.0040740966796875e-05,
+              "parameters": 4075
+            },
+            "spatial": {
+              "max_abs_delta": 2.0265579223632812e-05,
+              "parameters": 4618,
+              "state_storage_bytes": 800,
+              "expected_state_storage_bytes": 800,
+              "resized_reset_delta": 0.0
+            },
+            "causal": {
+              "max_abs_delta": 6.0558319091796875e-05,
+              "parameters": 4618,
+              "state_storage_bytes": 800,
+              "expected_state_storage_bytes": 800,
+              "resized_reset_delta": 0.0
+            }
+          },
+          "first_frame_current_delta": 0.0,
+          "changed_future_prefix_delta": 0.0,
+          "activated_history_difference": 0.004585742950439453
+        },
+        {
+          "shape": [
+            2,
+            4,
+            3,
+            16,
+            20
+          ],
+          "initial_deltas": [
+            {
+              "training": true,
+              "model": "plain",
+              "max_abs": 0.0
+            },
+            {
+              "training": true,
+              "model": "spatial",
+              "max_abs": 0.0
+            },
+            {
+              "training": true,
+              "model": "causal",
+              "max_abs": 0.0
+            },
+            {
+              "training": false,
+              "model": "plain",
+              "max_abs": 0.0
+            },
+            {
+              "training": false,
+              "model": "spatial",
+              "max_abs": 0.0
+            },
+            {
+              "training": false,
+              "model": "causal",
+              "max_abs": 0.0
+            }
+          ],
+          "initial_gradients": {
+            "spatial": {
+              "backbone": 1192.5536084386604,
+              "project": 0.0,
+              "mix": 0.0,
+              "field": 0.0,
+              "readout": 4.243967724069676
+            },
+            "causal": {
+              "backbone": 1192.5536084386604,
+              "project": 0.0,
+              "mix": 0.0,
+              "field": 0.0,
+              "readout": 4.215792596049095
+            }
+          },
+          "activated_gradients": {
+            "spatial": {
+              "backbone": 1181.2889102622084,
+              "project": 0.026021635048076225,
+              "mix": 0.0,
+              "field": 0.01827776663001693,
+              "readout": 4.224857139185041
+            },
+            "causal": {
+              "backbone": 1181.6934582002514,
+              "project": 0.025636199683339016,
+              "mix": 0.0,
+              "field": 0.02056889285228478,
+              "readout": 4.197713179232762
+            }
+          },
+          "history_gradients": {
+            "spatial": {
+              "past_input_abs_sum": 0.0,
+              "current_input_abs_sum": 29.72588348388672
+            },
+            "causal": {
+              "past_input_abs_sum": 0.022348085418343544,
+              "current_input_abs_sum": 29.732837677001953
+            }
+          },
+          "export": {
+            "plain": {
+              "max_abs_delta": 9.644031524658203e-05,
+              "parameters": 4075
+            },
+            "spatial": {
+              "max_abs_delta": 0.0007049143314361572,
+              "parameters": 4618
+            }
+          },
+          "first_frame_current_delta": 0.0,
+          "changed_future_prefix_delta": 0.0,
+          "activated_history_difference": 0.005015969276428223
+        }
+      ]
+    }
+  ],
+  "source_sha256": {
+    "check_dense_joint_state_r63.py": "4824e9022cae79f89cc5ea63d1349cc2ceec0706da07ee1d94b7dd2b701f442a",
+    "dense_joint_state_r63.py": "54098da7ff4df117b63fbe809d1accf314d63308b26c0a083894a02c41f08297",
+    "budget_causal_r33.py": "7cfe138a286fdb488973ffe7c5bc93b69ad505af981e22cba824402c491b2e3b",
+    "training_form_r41.py": "4392fdceb16750ca0a763f4485beec873dc7316d758c95e9eaef042ffceb4ded"
+  },
+  "protocol_sha256": "a224348b2f96a814bd3c02b791f621d85f1b2ca5268c34aae94af961657a6e50",
+  "scope": "Structural qualification only. Perturbed readout is discarded, not learned or selected.",
+  "failure": "Traceback (most recent call last):\n  File \"/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/check_dense_joint_state_r63.py\", line 116, in main\n    assert error <= 1e-4\nAssertionError\n",
+  "wall_seconds": 4.907293255033437,
+  "cuda_initialized": false,
+  "finished_at": "2026-11-13T01:08:26.308763+08:00"
+}
