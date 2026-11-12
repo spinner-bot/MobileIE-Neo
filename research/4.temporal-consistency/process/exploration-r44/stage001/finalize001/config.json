@@ -1,0 +1,41 @@
+{
+  "created_at": "2026-11-12T14:22:04.309682+08:00",
+  "dependencies": [
+    {
+      "seed": 0,
+      "pid": 3364191,
+      "identity": {
+        "start_ticks": "40444452",
+        "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 4 --record research/4.temporal-consistency/process/exploration-r44/stage001/seed0-guard.json -- ./scripts/project-python research/4.temporal-consistency/scripts/train_bounded_video_r44.py --stage stage001 --seed 0 "
+      }
+    },
+    {
+      "seed": 1,
+      "pid": 3364219,
+      "identity": {
+        "start_ticks": "40444456",
+        "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 5 --record research/4.temporal-consistency/process/exploration-r44/stage001/seed1-guard.json -- ./scripts/project-python research/4.temporal-consistency/scripts/train_bounded_video_r44.py --stage stage001 --seed 1 "
+      }
+    }
+  ],
+  "source_sha256": {
+    "finalize_bounded_video_r44.py": "2fed7e7fbb602da866c9c0aa6e98c0845d8e9592d3585ab88814592b331ba13a",
+    "evaluate_bounded_video_r44.py": "d155c40096535d823bf943171940df3c16e9f80dd525097f9f9b412f9c693d70",
+    "summarize_bounded_video_r44.py": "f545bdf070787d1e01eb10604aa261271a38bd05cbe9217c0ad98df53d2e442c",
+    "bounded_video_r44.py": "7510feb9881c52507b27dc5ad416ffd3be7719b10b23bc87345d48b67ac20c4c",
+    "bounded_fst_r43.py": "0aa8eeb9dab97aad65a25fa28d439cef5933025916058e29d78bd7f4bb57c41c",
+    "training_form_r41.py": "4392fdceb16750ca0a763f4485beec873dc7316d758c95e9eaef042ffceb4ded",
+    "train_exploration_r2.py": "30ba78b2439ffb6fdf10aafe384975326082129b03ebe562aa118f29ba5d8c7b",
+    "half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+    "aligned_raw_history_r11.py": "e367727401f82ccf0bccaf8d88f904e4aebf8b78186f0539eedeed222b2d2227",
+    "aggregation_controls_r20.py": "7b4541be8512ca1edb755b5a73f889351e376f9a8fc1fdec7ed633a4438c116c",
+    "exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+    "video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0",
+    "prepare_cache_r5.py": "675860fc6ef1d97d28750815e99f5c923ecfd94e94254f1f7a7685f08d84f2c8",
+    "dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498",
+    "finalize_preserved_r37.py": "bc5bc7e848d703f34e3e5853a006b73a34d9204b5db4f4a8f12beb18e5d96f71"
+  },
+  "no_wall_cutoff": true,
+  "revision": "6d45856af840692d9590e1485a4462f2c0abb5eb",
+  "scope": "Both stage001 factorials (32000 new updates) and final fold gates must complete before final CPU quality; no automatic retry or checkpoint selection."
+}
