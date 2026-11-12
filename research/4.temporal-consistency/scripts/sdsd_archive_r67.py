@@ -65,7 +65,8 @@ class SplitArchive:
     def read_span(self, disk, offset, count):
         pieces = []
         while count:
-            if offset == self.volumes[disk]['bytes']: disk, offset = disk+1, 0
+            while disk < len(self.volumes) and offset >= self.volumes[disk]['bytes']:
+                offset -= self.volumes[disk]['bytes']; disk += 1
             assert disk < len(self.volumes)
             take = min(count, MAX_RANGE, self.volumes[disk]['bytes']-offset)
             pieces.append(self.read_exact(disk, offset, take)); offset += take; count -= take
