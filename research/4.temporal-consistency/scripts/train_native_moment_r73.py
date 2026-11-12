@@ -53,10 +53,12 @@ def checkpoint(net, optimizer, name, seed, step, low, cache, out):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--seed', type=int, choices=[0, 1], required=True)
+    parser.add_argument('--admission-attempt', type=int, default=1)
     args = parser.parse_args()
-    gates = [BASE/f'process/exploration-r73/{device}-gate001/runtime.json' for device in ['cpu', 'cuda']]
+    qualified = json.loads((BASE/'process/exploration-r73/cuda-qualification.json').read_text())
+    gates = [BASE/'process/exploration-r73/cpu-gate001/runtime.json', ROOT/qualified['gate_runtime']]
     assert all(json.loads(p.read_text())['passed'] for p in gates)
-    guard = BASE/'process/exploration-r73/cuda-gate001-guard.json'
+    guard = ROOT/qualified['guard']
     assert json.loads(guard.read_text())['returncode'] == 0
     torch.set_num_threads(2)
     cv2.setNumThreads(1)
@@ -65,16 +67,18 @@ def main():
     torch.backends.cudnn.benchmark = False
     configure_precision()
     assert not torch.cuda.is_initialized()
+    nets, initialization = make_models(args.seed)
+    pool = MixedPool()
+    first_low, first_gt, first_context = pool.batch(args.seed, 8000)
+    admission = cuda_headroom()
+    write(BASE/f'process/exploration-r73/seed{args.seed}-internal-admission{args.admission_attempt:03d}.json', admission)
+    if not admission['allowed']:
+        raise SystemExit(75)
     out = BASE/f'results/exploration-r73-stage001-seed{args.seed}'
     out.mkdir(exist_ok=False)
     started, complete, updates, final = time.perf_counter(), False, {n: 0 for n in MODELS}, {}
     try:
-        nets, initialization = make_models(args.seed)
-        pool = MixedPool()
-        first_low, first_gt, first_context = pool.batch(args.seed, 8000)
-        admission = cuda_headroom()
         write(out/'pre_cuda_guard.json', admission)
-        assert admission['allowed']
         nets = {name: net.cuda().train() for name, net in nets.items()}
         optimizers = {name: torch.optim.Adam([p for p in net.parameters() if p.requires_grad],
             lr=1e-4, betas=(.9, .999), eps=1e-8, weight_decay=0) for name, net in nets.items()}
