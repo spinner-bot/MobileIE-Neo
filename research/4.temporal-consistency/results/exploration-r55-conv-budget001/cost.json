@@ -1,0 +1,967 @@
+{
+  "at": "2026-11-12T20:38:38.073241+08:00",
+  "source": {
+    "repository": "albrateanu/multinex",
+    "commit": "e15790a963935569fff1ba6a8b0d33a791765749",
+    "source_manifest_sha256": "6dd18639368ba7b93f7c2285f606edd63af94e04e11fc652f1e1888d7cd5e240",
+    "files": {
+      "basicsr/models/archs/MultinexNano_arch.py": {
+        "source": "basicsr/models/archs/MultinexNano_arch.py",
+        "role": "source",
+        "url": "https://raw.githubusercontent.com/albrateanu/multinex/e15790a963935569fff1ba6a8b0d33a791765749/basicsr/models/archs/MultinexNano_arch.py",
+        "path": "third_party/multinex/basicsr/models/archs/MultinexNano_arch.py",
+        "bytes": 23010,
+        "git_blob_sha": "279dca3cff7ec9075e8800b6aacb6218c13d7574",
+        "sha256": "0a2d94f12e7de799b5e13f46905dd9e5c3f7cf005dee40412d18ec6b1adf2cdf",
+        "reused_verified_file": false
+      },
+      "Options/Multinex-Nano_LOL-v1.yaml": {
+        "source": "Options/Multinex-Nano_LOL-v1.yaml",
+        "role": "source",
+        "url": "https://raw.githubusercontent.com/albrateanu/multinex/e15790a963935569fff1ba6a8b0d33a791765749/Options/Multinex-Nano_LOL-v1.yaml",
+        "path": "third_party/multinex/Options/Multinex-Nano_LOL-v1.yaml",
+        "bytes": 4910,
+        "git_blob_sha": "ffa840641eba1e488af122231bb09455e6fd1012",
+        "sha256": "53c42fb0f782ef4acd58ba25d47f07db67f1da774eb8e588ca71773f6063484e",
+        "reused_verified_file": false
+      },
+      "pretrained_weights/Multinex-Nano_LOL-v1.pth": {
+        "source": "pretrained_weights/Multinex-Nano_LOL-v1.pth",
+        "role": "weight",
+        "url": "https://raw.githubusercontent.com/albrateanu/multinex/e15790a963935569fff1ba6a8b0d33a791765749/pretrained_weights/Multinex-Nano_LOL-v1.pth",
+        "path": ".cache/weights/multinex/LOL-v1/Multinex-Nano_LOL-v1.pth",
+        "bytes": 20317,
+        "git_blob_sha": "395c4218d7e20ae3ceece91670dfe7c338741315",
+        "sha256": "ed3e9fafef4bc15a7e84450d002eb564bb1d1e18345432a30b0bfbc7b7b535e4",
+        "reused_verified_file": false
+      }
+    },
+    "network_kwargs": {
+      "in_ch": 3,
+      "out_ch": 3,
+      "base_channels": 3,
+      "width_mult": 1.0,
+      "use_depthwise": true,
+      "act": "ReLU",
+      "per_illum_proj": false,
+      "per_chroma_proj": false,
+      "use_illum_attn": true,
+      "use_chroma_attn": true,
+      "illum_mid": 1,
+      "chroma_mid": 1,
+      "reduction_ratio": 3,
+      "luma_head_act": null,
+      "chroma_head_act": null,
+      "retinex_residual": true,
+      "eps": 1e-09,
+      "illum_flags": {
+        "mean": false,
+        "rec709": true,
+        "vmax": true,
+        "lightness": true,
+        "ycgco": false,
+        "l2norm": true
+      },
+      "chroma_flags": {
+        "yuv_uv": false,
+        "ycbcr_cbcr": true,
+        "opponent": false,
+        "chroma_rg": true,
+        "hsv_s": true,
+        "litags": false
+      },
+      "target_params": 300
+    },
+    "parameters": 696,
+    "buffer_elements": 38,
+    "state_entries": 50,
+    "strict_load": true,
+    "input": "RGB FP32 [0,1]",
+    "inference": "Official even reflection pad, unpad and clip; no GT mean, ensemble or large-image splitting.",
+    "training": "Published LOL-v1 weights; no project task adaptation or seed search; complete original training not reproduced."
+  },
+  "rows": [
+    {
+      "height": 288,
+      "width": 512,
+      "parameters": 696,
+      "executed_Conv_calls": 14,
+      "Conv_MACs": 93339648,
+      "calls": [
+        {
+          "input_shape": [
+            1,
+            4,
+            288,
+            512
+          ],
+          "output_shape": [
+            1,
+            3,
+            288,
+            512
+          ],
+          "MAC": 1769472
+        },
+        {
+          "input_shape": [
+            1,
+            5,
+            288,
+            512
+          ],
+          "output_shape": [
+            1,
+            3,
+            288,
+            512
+          ],
+          "MAC": 2211840
+        },
+        {
+          "input_shape": [
+            1,
+            4,
+            288,
+            512
+          ],
+          "output_shape": [
+            1,
+            4,
+            288,
+            512
+          ],
+          "MAC": 28901376
+        },
+        {
+          "input_shape": [
+            1,
+            4,
+            288,
+            512
+          ],
+          "output_shape": [
+            1,
+            3,
+            288,
+            512
+          ],
+          "MAC": 1769472
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            288,
+            512
+          ],
+          "output_shape": [
+            1,
+            3,
+            288,
+            512
+          ],
+          "MAC": 3981312
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            288,
+            512
+          ],
+          "output_shape": [
+            1,
+            3,
+            288,
+            512
+          ],
+          "MAC": 1327104
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            288,
+            512
+          ],
+          "output_shape": [
+            1,
+            3,
+            288,
+            512
+          ],
+          "MAC": 3981312
+        },
+        {
+          "input_shape": [
+            1,
+            5,
+            288,
+            512
+          ],
+          "output_shape": [
+            1,
+            5,
+            288,
+            512
+          ],
+          "MAC": 36126720
+        },
+        {
+          "input_shape": [
+            1,
+            5,
+            288,
+            512
+          ],
+          "output_shape": [
+            1,
+            3,
+            288,
+            512
+          ],
+          "MAC": 2211840
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            288,
+            512
+          ],
+          "output_shape": [
+            1,
+            3,
+            288,
+            512
+          ],
+          "MAC": 3981312
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            288,
+            512
+          ],
+          "output_shape": [
+            1,
+            3,
+            288,
+            512
+          ],
+          "MAC": 1327104
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            288,
+            512
+          ],
+          "output_shape": [
+            1,
+            3,
+            288,
+            512
+          ],
+          "MAC": 3981312
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            288,
+            512
+          ],
+          "output_shape": [
+            1,
+            1,
+            288,
+            512
+          ],
+          "MAC": 442368
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            288,
+            512
+          ],
+          "output_shape": [
+            1,
+            3,
+            288,
+            512
+          ],
+          "MAC": 1327104
+        }
+      ]
+    },
+    {
+      "height": 360,
+      "width": 640,
+      "parameters": 696,
+      "executed_Conv_calls": 14,
+      "Conv_MACs": 145843200,
+      "calls": [
+        {
+          "input_shape": [
+            1,
+            4,
+            360,
+            640
+          ],
+          "output_shape": [
+            1,
+            3,
+            360,
+            640
+          ],
+          "MAC": 2764800
+        },
+        {
+          "input_shape": [
+            1,
+            5,
+            360,
+            640
+          ],
+          "output_shape": [
+            1,
+            3,
+            360,
+            640
+          ],
+          "MAC": 3456000
+        },
+        {
+          "input_shape": [
+            1,
+            4,
+            360,
+            640
+          ],
+          "output_shape": [
+            1,
+            4,
+            360,
+            640
+          ],
+          "MAC": 45158400
+        },
+        {
+          "input_shape": [
+            1,
+            4,
+            360,
+            640
+          ],
+          "output_shape": [
+            1,
+            3,
+            360,
+            640
+          ],
+          "MAC": 2764800
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            360,
+            640
+          ],
+          "output_shape": [
+            1,
+            3,
+            360,
+            640
+          ],
+          "MAC": 6220800
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            360,
+            640
+          ],
+          "output_shape": [
+            1,
+            3,
+            360,
+            640
+          ],
+          "MAC": 2073600
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            360,
+            640
+          ],
+          "output_shape": [
+            1,
+            3,
+            360,
+            640
+          ],
+          "MAC": 6220800
+        },
+        {
+          "input_shape": [
+            1,
+            5,
+            360,
+            640
+          ],
+          "output_shape": [
+            1,
+            5,
+            360,
+            640
+          ],
+          "MAC": 56448000
+        },
+        {
+          "input_shape": [
+            1,
+            5,
+            360,
+            640
+          ],
+          "output_shape": [
+            1,
+            3,
+            360,
+            640
+          ],
+          "MAC": 3456000
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            360,
+            640
+          ],
+          "output_shape": [
+            1,
+            3,
+            360,
+            640
+          ],
+          "MAC": 6220800
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            360,
+            640
+          ],
+          "output_shape": [
+            1,
+            3,
+            360,
+            640
+          ],
+          "MAC": 2073600
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            360,
+            640
+          ],
+          "output_shape": [
+            1,
+            3,
+            360,
+            640
+          ],
+          "MAC": 6220800
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            360,
+            640
+          ],
+          "output_shape": [
+            1,
+            1,
+            360,
+            640
+          ],
+          "MAC": 691200
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            360,
+            640
+          ],
+          "output_shape": [
+            1,
+            3,
+            360,
+            640
+          ],
+          "MAC": 2073600
+        }
+      ]
+    },
+    {
+      "height": 480,
+      "width": 854,
+      "parameters": 696,
+      "executed_Conv_calls": 14,
+      "Conv_MACs": 259479360,
+      "calls": [
+        {
+          "input_shape": [
+            1,
+            4,
+            480,
+            854
+          ],
+          "output_shape": [
+            1,
+            3,
+            480,
+            854
+          ],
+          "MAC": 4919040
+        },
+        {
+          "input_shape": [
+            1,
+            5,
+            480,
+            854
+          ],
+          "output_shape": [
+            1,
+            3,
+            480,
+            854
+          ],
+          "MAC": 6148800
+        },
+        {
+          "input_shape": [
+            1,
+            4,
+            480,
+            854
+          ],
+          "output_shape": [
+            1,
+            4,
+            480,
+            854
+          ],
+          "MAC": 80344320
+        },
+        {
+          "input_shape": [
+            1,
+            4,
+            480,
+            854
+          ],
+          "output_shape": [
+            1,
+            3,
+            480,
+            854
+          ],
+          "MAC": 4919040
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            480,
+            854
+          ],
+          "output_shape": [
+            1,
+            3,
+            480,
+            854
+          ],
+          "MAC": 11067840
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            480,
+            854
+          ],
+          "output_shape": [
+            1,
+            3,
+            480,
+            854
+          ],
+          "MAC": 3689280
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            480,
+            854
+          ],
+          "output_shape": [
+            1,
+            3,
+            480,
+            854
+          ],
+          "MAC": 11067840
+        },
+        {
+          "input_shape": [
+            1,
+            5,
+            480,
+            854
+          ],
+          "output_shape": [
+            1,
+            5,
+            480,
+            854
+          ],
+          "MAC": 100430400
+        },
+        {
+          "input_shape": [
+            1,
+            5,
+            480,
+            854
+          ],
+          "output_shape": [
+            1,
+            3,
+            480,
+            854
+          ],
+          "MAC": 6148800
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            480,
+            854
+          ],
+          "output_shape": [
+            1,
+            3,
+            480,
+            854
+          ],
+          "MAC": 11067840
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            480,
+            854
+          ],
+          "output_shape": [
+            1,
+            3,
+            480,
+            854
+          ],
+          "MAC": 3689280
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            480,
+            854
+          ],
+          "output_shape": [
+            1,
+            3,
+            480,
+            854
+          ],
+          "MAC": 11067840
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            480,
+            854
+          ],
+          "output_shape": [
+            1,
+            1,
+            480,
+            854
+          ],
+          "MAC": 1229760
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            480,
+            854
+          ],
+          "output_shape": [
+            1,
+            3,
+            480,
+            854
+          ],
+          "MAC": 3689280
+        }
+      ]
+    },
+    {
+      "height": 1080,
+      "width": 1920,
+      "parameters": 696,
+      "executed_Conv_calls": 14,
+      "Conv_MACs": 1312588800,
+      "calls": [
+        {
+          "input_shape": [
+            1,
+            4,
+            1080,
+            1920
+          ],
+          "output_shape": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "MAC": 24883200
+        },
+        {
+          "input_shape": [
+            1,
+            5,
+            1080,
+            1920
+          ],
+          "output_shape": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "MAC": 31104000
+        },
+        {
+          "input_shape": [
+            1,
+            4,
+            1080,
+            1920
+          ],
+          "output_shape": [
+            1,
+            4,
+            1080,
+            1920
+          ],
+          "MAC": 406425600
+        },
+        {
+          "input_shape": [
+            1,
+            4,
+            1080,
+            1920
+          ],
+          "output_shape": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "MAC": 24883200
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "output_shape": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "MAC": 55987200
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "output_shape": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "MAC": 18662400
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "output_shape": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "MAC": 55987200
+        },
+        {
+          "input_shape": [
+            1,
+            5,
+            1080,
+            1920
+          ],
+          "output_shape": [
+            1,
+            5,
+            1080,
+            1920
+          ],
+          "MAC": 508032000
+        },
+        {
+          "input_shape": [
+            1,
+            5,
+            1080,
+            1920
+          ],
+          "output_shape": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "MAC": 31104000
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "output_shape": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "MAC": 55987200
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "output_shape": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "MAC": 18662400
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "output_shape": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "MAC": 55987200
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "output_shape": [
+            1,
+            1,
+            1080,
+            1920
+          ],
+          "MAC": 6220800
+        },
+        {
+          "input_shape": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "output_shape": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "MAC": 18662400
+        }
+      ]
+    }
+  ],
+  "cuda_initialized": false,
+  "real_CNN_images": 0,
+  "device": "meta",
+  "source_sha256": "1b982bdc0fea370076251fa560157aac049699b3743d75269cce9cec3d166270",
+  "excluded": "bias adds, analytic min/max/sqrt/ratios, pooling, normalization, activation, pointwise, memory, flow, warp and IO",
+  "scope": "Executed Conv MAC shape arithmetic only. Not complete FLOPs, measured latency, memory or phone performance."
+}
