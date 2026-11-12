@@ -43,6 +43,15 @@ def main():
     env['TECTONIC_UNTRUSTED_MODE'] = '1'
     sources = [paper/'main.tex', paper/'references.bib', paper/'evidence-snapshot.json',
                *sorted((paper/'sections').glob('*.tex')), *sorted((paper/'generated').glob('*.tex'))]
+    if r'\input{sections/video-evidence}' in (paper/'main.tex').read_text():
+        extension = paper/'video-evidence-snapshot.json'
+        video = json.loads(extension.read_text())
+        snapshot = json.loads((paper/'evidence-snapshot.json').read_text())
+        assert video['R65_complete_quality'] and video['R66_complete_perceptual'] and video['R68_Conv_budget_only']
+        assert snapshot['R65_complete_quality_included'] and snapshot['R66_complete_perceptual_included']
+        assert all(sha(REPO/name) == value for name, value in video['source_sha256'].items())
+        assert all((paper/'generated'/name).exists() for name in video['generated_tables'])
+        sources.append(extension)
     command = [str(binary), '--untrusted', '--keep-logs', '--keep-intermediates', '--outdir', str(work), 'main.tex']
     record = {'started_at': datetime.now().astimezone().isoformat(), 'command': command,
               'source_sha256': {str(p.relative_to(REPO)): sha(p) for p in sources},
