@@ -115,7 +115,7 @@ def main():
         R68_Conv_budget_only=True, new_method=False, handset_measured=False, independent_final=False,
         scope='Only complete reused-DEV evidence; no partial checkpoint, active score, SOTA/novelty or handset claim.')
     (ROOT/'paper/video-evidence-snapshot.json').write_text(json.dumps(record, indent=2)+'\n')
-    print(json.dumps(dict(tables=len(tables), completed_sources=len(sources), new_training_rows=len(new_rows))))
+    print(json.dumps(dict(tables=len(tables), completed_sources=len(sources), new_adapted_table_rows=len(new_rows))))
 
 
 if __name__ == '__main__': main()
