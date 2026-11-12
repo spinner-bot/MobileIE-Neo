@@ -1,0 +1,36 @@
+{
+  "at": "2026-11-13T07:45:18.786843+08:00",
+  "coordinator_pid": 4060901,
+  "coordinator_identity": {
+    "start_ticks": "46715399",
+    "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/finalize_native_moment_r73.py --attempt 2 --qualification-start 2 "
+  },
+  "train_guard_pid": 4061135,
+  "train_guard_identity": {
+    "start_ticks": "46719541",
+    "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 4 --record research/4.temporal-consistency/process/exploration-r73/finalize002/seed0-guard001.json -- ./scripts/project-python research/4.temporal-consistency/scripts/train_native_moment_r73.py --seed 0 --admission-attempt 1 "
+  },
+  "train_pid": 4061150,
+  "train_identity": {
+    "start_ticks": "46719708",
+    "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/train_native_moment_r73.py --seed 0 --admission-attempt 1 "
+  },
+  "source_sha256_unchanged": true,
+  "GPU": 4,
+  "complete_readable_prefix_counts": {
+    "spatial": 122,
+    "mean": 121,
+    "moment": 121
+  },
+  "last_complete_steps": {
+    "spatial": 122,
+    "mean": 121,
+    "moment": 121
+  },
+  "final_runtime_exists": false,
+  "qualification_CPU_normal": true,
+  "qualification_CUDA002_normal": true,
+  "qualification_discarded_updates_each_backend": 12,
+  "seed1_not_started": true,
+  "scope": "Actual original seed0 formal updates verified by complete readable rows; no final quality, no checkpoint selection, no scientific retry."
+}
