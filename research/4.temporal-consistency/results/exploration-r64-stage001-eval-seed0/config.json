@@ -1,0 +1,67 @@
+{
+  "at": "2026-11-13T02:00:32.592626+08:00",
+  "seed": 0,
+  "checkpoints": {
+    "plain": {
+      "model": "plain",
+      "seed": 0,
+      "new_step": 4000,
+      "inherited_updates": 8000,
+      "path": ".cache/checkpoints/exploration-r64/stage001/seed0/plain-deploy-step4000.pt",
+      "sha256": "588192b7b6b5f8736c15910b075ce0ba967e533a999ce8f0ed3645ab076200cb",
+      "training_path": ".cache/checkpoints/exploration-r64/stage001/seed0/plain-training-step4000.pt",
+      "training_sha256": "a9c579678d4b2c4325e0ce619ea3ccbe53a1516cba8a09edb1eee17913e0dd8d",
+      "deployment_parameters": 4075,
+      "final_fold_delta": 1.4603137969970703e-06,
+      "final_fold_passed": true
+    },
+    "spatial": {
+      "model": "spatial",
+      "seed": 0,
+      "new_step": 4000,
+      "inherited_updates": 8000,
+      "path": ".cache/checkpoints/exploration-r64/stage001/seed0/spatial-deploy-step4000.pt",
+      "sha256": "54f1464cc5e25e99ba76c8fcc797b9c3bbd2853b5ac870a02339355aa2a32cae",
+      "training_path": ".cache/checkpoints/exploration-r64/stage001/seed0/spatial-training-step4000.pt",
+      "training_sha256": "5b8238331f75dc65d95056d396662837f5ef715eea5450ff60c07f6059b5f74b",
+      "deployment_parameters": 4618,
+      "final_fold_delta": 1.430511474609375e-06,
+      "final_fold_passed": true
+    },
+    "causal": {
+      "model": "causal",
+      "seed": 0,
+      "new_step": 4000,
+      "inherited_updates": 8000,
+      "path": ".cache/checkpoints/exploration-r64/stage001/seed0/causal-deploy-step4000.pt",
+      "sha256": "99330cdf233042559b873d73062b4b976273e5b707d77c3292ed7499727ba4fd",
+      "training_path": ".cache/checkpoints/exploration-r64/stage001/seed0/causal-training-step4000.pt",
+      "training_sha256": "f46cda402ecab609f88321cf9a9511fb1b4ed5a63b398a58211e741f38e3ad89",
+      "deployment_parameters": 4618,
+      "final_fold_delta": 1.6093254089355469e-06,
+      "final_fold_passed": true
+    }
+  },
+  "device": "cpu",
+  "torch_threads": 2,
+  "opencv_threads": 1,
+  "cache_indices": {
+    "research/4.temporal-consistency/results/exploration-r30-cache/index.json": "424fa278b2fe66d29de476e2b47328619438f97cf71926448433d1191bb722c1",
+    "research/4.temporal-consistency/results/exploration-r10-cache/index.json": "ec00801b04b873ead0025af91af441b783da3f08c87cf24e9c136a4268ffb43c"
+  },
+  "protocol_sha256": "7b76dfd54e27bcb3744775d2ff5ae5cffa3a7b0084ae9d9725b5fe471ee34b25",
+  "source_sha256": {
+    "evaluate_dense_history_r64.py": "f6715c26fa382043d18fe49266a185874d6d0de58cbc1f47316b71d7a0224a67",
+    "dense_joint_state_r63.py": "54098da7ff4df117b63fbe809d1accf314d63308b26c0a083894a02c41f08297",
+    "budget_causal_r33.py": "7cfe138a286fdb488973ffe7c5bc93b69ad505af981e22cba824402c491b2e3b",
+    "half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+    "aligned_raw_history_r11.py": "e367727401f82ccf0bccaf8d88f904e4aebf8b78186f0539eedeed222b2d2227",
+    "aggregation_controls_r20.py": "7b4541be8512ca1edb755b5a73f889351e376f9a8fc1fdec7ed633a4438c116c",
+    "exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+    "video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0"
+  },
+  "expected_quality_rows": 70,
+  "expected_CNN_sequences": 40,
+  "expected_center_outputs": 1792,
+  "scope": "Final12000 only, common GT evaluation flow; post uses own raw flow. Reused DEV, no final or phone."
+}
