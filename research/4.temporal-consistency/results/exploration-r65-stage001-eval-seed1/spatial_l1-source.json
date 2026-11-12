@@ -1,0 +1,57 @@
+{
+  "seed": 1,
+  "arm": "spatial_l1",
+  "parameters": 4316259,
+  "project_updates": 8000,
+  "original_manifest": {
+    "repository": "https://github.com/zkawfanx/StableLLVE",
+    "commit": "4cc070da328ffadc8498285985aa98175e473bc5",
+    "url": "https://raw.githubusercontent.com/zkawfanx/StableLLVE/4cc070da328ffadc8498285985aa98175e473bc5/checkpoint.pth",
+    "path": ".cache/pretrained/stablellve/4cc070da328ffadc8498285985aa98175e473bc5/checkpoint.pth",
+    "sha256": "277e4d29566709a31f8f25c401396e9bd9c70395e6da36513cd9d9a83e005ad9",
+    "git_blob_sha1": "f819f8daf6f9ad7e2548480ae2584935f4922a45",
+    "bytes": 17274710,
+    "sources": [
+      {
+        "path": "third_party/stablellve/LICENSE",
+        "sha256": "2a09d7de462e5b18f53c283eb006f9546c729a46f4ae53def95654b0cc7fe475",
+        "git_blob_sha1": "f361df58be63bc15d953dd54ddf7bb83bd10c191",
+        "bytes": 1065
+      },
+      {
+        "path": "third_party/stablellve/model.py",
+        "sha256": "86b9d7e2b836dde336eb09aaea44b9e5c09b0e05576e6a1656d01ce3a84cd1a1",
+        "git_blob_sha1": "cccf6808fbea20ddedae55bdd5f83187b6797b7f",
+        "bytes": 3821
+      }
+    ],
+    "upstream_manifest_sha256": "e6964b3947f1987c18685cf7bb787c185bc100f3fc83e266e4a80652ba8a79a2",
+    "scope": "official synthetic-clean training, unsuitable-for-noise caveat retained; BGR source convention; no new training"
+  },
+  "adapted_checkpoint": {
+    "path": ".cache/checkpoints/exploration-r65/stage001/seed1/spatial_l1-step8000.pt",
+    "sha256": "e2fa913c5a27564a9a7ff640f7c1dce6694389f9059ed95c15f52619e5bc0e84",
+    "seed": 1,
+    "arm": "spatial_l1",
+    "step": 8000,
+    "parameters": 4316259,
+    "Adam_phase": 2,
+    "loss_last_window": {
+      "arm": "spatial_l1",
+      "step": 8000,
+      "data_step": 7999,
+      "total": 0.029543768614530563,
+      "spatial_L1": 0.029543768614530563,
+      "consistency_L1": 0.0,
+      "synthetic_MAE": 0.03453412652015686,
+      "real_MAE": 0.024553408846259117,
+      "unclipped_MSE": 0.001662840018980205,
+      "gradient_norm_before_clip": 0.30300724506378174,
+      "Adam_reset": false
+    },
+    "final_quality_eligible": true
+  },
+  "training_config_sha256": "1ab5251ccb1f01aeb014cf8a9afa22a03d021e652f13aee6952b031c01eb77b8",
+  "future_wait_max": 0,
+  "scope": "Fixed-budget official network/loss adaptation; not full-paper reproduction/new method."
+}
