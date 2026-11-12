@@ -5,7 +5,7 @@
 - 分支：**`demo.org`**；本目录 `demo/org/` 是这项演示工作的主文件夹。`main` 单向同步到本分支，演示改动不合并回 `main`
 - 状态：**P1 完成**（2026-11-12，备用机一加 9R 跑通自定义模型：GPU FP16 **5.8 ms**、CPU **86–91 ms**），现场演示准备待做
 - 验收安排（2026-11-13 用户确认）：**2026-11-16（下周一）上午最终验收**；导师提前检查演示，用户主要协助演示。预检查时间、验收具体时刻与地点待确认，见[预检查与验收清单](docs/04-acceptance-checklist.md)。
-- 新增需求（2026-11-13）：微 App 支持现场拍照、相册选图及传统方法对照；当前**仅完成[设计草案](docs/05-micro-app-design.md)，待用户审阅，尚未开始制作**。建议采用固定 Gamma 指数 0.5，CPU 链路优先。
+- 新增需求（2026-11-13）：微 App 支持现场拍照、相册选图及传统方法对照；用户已授权自主实现、模拟测试与迭代。[个人安卓环境报告](docs/06-android-environment.md)已完成；App 正按[交付门控](docs/07-delivery-gates.md)实施，最终状态以完整验收证据为准。
 - 上游代码与权重：项目根目录 [`MobileIE/`](../../MobileIE)
 - 关联：[2 号复现](../../research/2.reproduction/README.md)、[5 号前期调研](../../research/5.prior-art-survey/README.md)、[6B06-01 会议记录](../../docs/会议记录/6B06-01/audio%20-%20Transcription.txt)
 - 进展报告：[0009-T-261108-6 号工作启动与手机演示方案](../../docs/进展报告/0009-T-261108-6号工作启动与手机演示方案.md)
@@ -34,7 +34,7 @@
 
 现场表述：同一份 TFLite 模型，手机实测 X ms；效果对比由官方推理脚本输出。
 
-**2026-11-13 需求更新**：用户提出拍照处理与传统 baseline 的微 App，要求先写设计。上述 B 方案保留为既有可用方案；新增 App 尚在设计审阅阶段，见[05 设计文档](docs/05-micro-app-design.md)。
+**2026-11-13 需求更新**：用户先要求设计，现已授权环境完成后自主实现与可靠模拟验收。上述 B 方案保留为既有可用方案；新增 App 见[05 设计文档](docs/05-micro-app-design.md)与[07 门控](docs/07-delivery-gates.md)，开发过程不提前标为验收完成。
 
 ## 2. 模型事实（已解析 `lolv1.tflite`）
 
@@ -69,7 +69,9 @@
 | AI Benchmark 手机操作手册 | [`docs/02-ai-benchmark-guide.md`](docs/02-ai-benchmark-guide.md) | 完成 |
 | 官方 TFLite 脚本使用说明 | [`docs/03-official-tflite-inference.md`](docs/03-official-tflite-inference.md) | 完成 |
 | 导师预检查与验收清单 | [`docs/04-acceptance-checklist.md`](docs/04-acceptance-checklist.md) | 已整理，真机彩排与导师反馈待完成 |
-| 拍照增强与传统对照微 App 设计 | [`docs/05-micro-app-design.md`](docs/05-micro-app-design.md) | 设计待审阅，工程 / APK / 真机验证均未开始 |
+| 拍照增强与传统对照微 App 设计 | [`docs/05-micro-app-design.md`](docs/05-micro-app-design.md) | 已授权自主实施，模拟器测试迭代中 |
+| 个人安卓开发环境报告 | [`docs/06-android-environment.md`](docs/06-android-environment.md) | 工具、编译签名、AVD 启动及安装门控通过 |
+| 自主交付门控 | [`docs/07-delivery-gates.md`](docs/07-delivery-gates.md) | 实施与可靠验收的结束条件 |
 | 模型结构解析脚本 | [`scripts/inspect_tflite.py`](scripts/inspect_tflite.py) | 完成 |
 | 演示图片预处理脚本 | [`scripts/prepare_demo_images.py`](scripts/prepare_demo_images.py) | 完成 |
 | 官方推理脚本包装 | [`scripts/run_official_tflite.py`](scripts/run_official_tflite.py) | 完成 |
@@ -113,9 +115,10 @@
 - [ ] 按 [`docs/01-demo-plan.md`](docs/01-demo-plan.md) 的演示脚本串场；
 - [ ] 准备离线素材：手机本地模型、前后对比图、录屏，避免现场依赖网络。
 
-### P3 —— 微 App（2026-11-13 起仅设计，待审阅）
+### P3 —— 微 App（2026-11-13 已授权实施，模拟验收中）
 - 需求为系统拍照后单张处理、相册选图、MobileIE / 传统方法 / 原图对比，详见[设计草案](docs/05-micro-app-design.md)。
-- [ ] 用户审阅并确认设计，再开展工程实现与真机验证。
+- [x] 用户授权自主实现，环境报告已提交，门控已登记。
+- [ ] 完成全部 App 功能、数值、异常、生命周期、视觉与交付门控；真实一加 9R 另行核验。
 
 ## 6. 复现
 
