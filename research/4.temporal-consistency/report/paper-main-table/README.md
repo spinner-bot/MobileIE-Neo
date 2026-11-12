@@ -144,3 +144,32 @@ actual相对独立空间+self-post的注册联合门槛（双seed均过）：Fal
 ## R38真实手机输入上的参考检查
 
 三设备各64帧、官方及R34双seed底座的raw/finite/recursive共27输出序列已完成。固定0/32/63接触表与全部64帧预览均保留，出现明显截断/色偏；没有同步GT，不提供伪PSNR/SSIM或真实闪烁排名。它们是参考行为诊断，不是R37候选结果或手机时延。[固定预览与限制](../exploration-r38-phone/README.md)。
+
+## R40固定50/50资料混合：两域分别评价
+
+保持原4075参数骨干和R34优化预算，只替换每步一半窗口为既有12视频真实配对；两个seed最终4000、60新质量行及96同CPU参考。既有R26训练方案还含其它差异，不能把R26差值孤立归于资料。以下域均值分开，不计算掩盖一侧损失的混合总分。
+
+|域|底座|输出|PSNR|SSIM|时序↓|边缘↓|
+|---|---|---|---:|---:|---:|---:|
+|davis_train_pilot|R34_original|finite_self05|26.465757|0.743040|7.542986|4.014079|
+|davis_train_pilot|R34_original|raw|26.234161|0.698872|10.505352|4.446445|
+|davis_train_pilot|R34_original|recursive_self05|26.610354|0.758387|6.734680|3.882416|
+|davis_train_pilot|R40_mixed|finite_self05|25.630993|0.727212|7.959654|4.102731|
+|davis_train_pilot|R40_mixed|raw|25.133622|0.671224|11.362815|4.686064|
+|davis_train_pilot|R40_mixed|recursive_self05|25.803268|0.745086|7.105806|3.937862|
+|paired_real_ND_DEV|R26_plain_MSE|finite_self05|27.036311|0.919373|2.649882|1.423199|
+|paired_real_ND_DEV|R26_plain_MSE|raw|27.138015|0.914749|3.312686|1.482404|
+|paired_real_ND_DEV|R26_plain_MSE|recursive_self05|27.014906|0.921483|2.430531|1.399981|
+|paired_real_ND_DEV|R34_original|finite_self05|23.417486|0.890365|2.597015|1.592994|
+|paired_real_ND_DEV|R34_original|raw|23.453047|0.888458|3.165706|1.628944|
+|paired_real_ND_DEV|R34_original|recursive_self05|23.379556|0.890675|2.429468|1.582884|
+|paired_real_ND_DEV|R40_mixed|finite_self05|24.776650|0.912866|2.784050|1.447481|
+|paired_real_ND_DEV|R40_mixed|raw|24.860774|0.902075|3.627781|1.575744|
+|paired_real_ND_DEV|R40_mixed|recursive_self05|24.784900|0.916657|2.540240|1.402203|
+|paired_real_ND_DEV|official_LOL|finite_self05|18.466035|0.870795|3.163622|1.583560|
+|paired_real_ND_DEV|official_LOL|raw|18.492855|0.847843|4.379450|1.797023|
+|paired_real_ND_DEV|official_LOL|recursive_self05|18.464390|0.877091|2.873811|1.516453|
+
+注册raw诊断门槛（两seed均须真实域相对R34补回2dB、合成域不低于−.2dB）：False。同时保留更强R26真实域参考，不把部分补回称追平。即使通过也仅形成更强数据基线，不自动成为方法、新颖性或独立最终验证。
+
+没有新权重手机延迟或整条CPU速度结论；纯单帧预测/finite/recursive路径分开，后两者部署有motion与历史。实拍域是四段既有白天ND crop。[完整两域与配对](../exploration-r40-mixed-anchor/tables.md)、[机器表](mixed_anchor_evidence.csv)。
