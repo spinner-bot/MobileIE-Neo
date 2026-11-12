@@ -15,6 +15,9 @@ spec=importlib.util.spec_from_file_location("lifecycle",Path(__file__).with_name
 m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
 assert m.adb("shell","getprop","ro.kernel.qemu").decode().strip()=="1"
 assert json.loads((m.BASE/"numerical-reference/numerical-report.json").read_text())["all_pass"]
+version_match=re.search(r"versionName=(\d+\.\d+\.\d+)",m.adb("shell","dumpsys","package",m.PKG).decode())
+assert version_match, "Installed version missing"
+version=version_match.group(1)
 m.adb("shell","settings","put","system","font_scale","1.0")
 m.adb("shell","wm","user-rotation","lock","0")
 m.adb("shell","am","force-stop",m.PKG)
@@ -49,6 +52,6 @@ finally:
     recorder.wait(timeout=15);log.close()
 movie=m.adb("exec-out","cat","/sdcard/lightlab-demo.mp4")
 assert len(movie)>10000 and b"ftyp" in movie[:64] and b"moov" in movie
-(m.BASE/"MobileIE-LightLab-0.1.0-emulator-demo.mp4").write_bytes(movie)
-(m.BASE/"recording.json").write_text(json.dumps({"pass":True,"bytes":len(movie),"source":"Android 15 emulator, not real phone","workflow":["fresh launch","sample selection","local processing","Gamma slider","three-way overview","save"],"mp4_ftyp_and_moov_verified":True},indent=2)+"\n")
+(m.BASE/f"MobileIE-LightLab-{version}-emulator-demo.mp4").write_bytes(movie)
+(m.BASE/"recording.json").write_text(json.dumps({"pass":True,"version":version,"bytes":len(movie),"source":"Android 15 emulator, not real phone","workflow":["fresh launch","sample selection","local processing","Gamma slider","three-way overview","save"],"mp4_ftyp_and_moov_verified":True},indent=2)+"\n")
 print("Recorded emulator workflow",len(movie),"bytes")
