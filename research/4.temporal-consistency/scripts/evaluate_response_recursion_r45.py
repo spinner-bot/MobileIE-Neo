@@ -9,7 +9,6 @@ import cv2
 import numpy as np
 import torch
 
-from aggregation_controls_r20 import blend
 from aligned_raw_history_r11 import align_history
 from dynamic_training_r34 import BASE, ROOT, digest
 from exploration_r2_data import evaluate
@@ -38,7 +37,7 @@ def predict(method, controls, raw, cues, fields):
     for t, (flow, mask) in enumerate(fields, 1):
         if method in ALPHAS:
             moved, valid = align_history(outputs[-1], raw[t], flow, mask)
-            outputs.append(blend(raw[t], moved, ALPHAS[method]))
+            outputs.append(raw[t]+ALPHAS[method]*(moved-raw[t]))
             values = np.full(int(valid.sum()), ALPHAS[method], dtype=np.float32)
         else:
             current = torch.from_numpy(raw[t].transpose(2, 0, 1).copy()/255)[None]
