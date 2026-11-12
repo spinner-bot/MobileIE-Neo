@@ -4,6 +4,7 @@ import time
 
 import torch
 from torch import nn
+import torch.nn.functional as F
 
 from dynamic_training_r34 import ROOT, digest
 from gpu_guard import sample
@@ -12,6 +13,27 @@ from model.lle import MobileIELLENet
 from model.utils import MBRConv1, MBRConv3, MBRConv5
 
 LAYERS = ['head.block1.0', 'head.block1.2', 'body.block1', 'att.1', 'att1.0', 'tail']
+
+
+class PartitionedRawConv(nn.Conv2d):
+    """Keep the pretrained output block's convolution shape; same parameters."""
+    def __init__(self, source, preserved_outputs):
+        assert source.padding_mode == 'zeros' and source.weight.device.type == 'cpu'
+        with torch.random.fork_rng(devices=[]):
+            super().__init__(source.in_channels, source.out_channels, source.kernel_size,
+                             stride=source.stride, padding=source.padding, dilation=source.dilation,
+                             groups=source.groups, bias=source.bias is not None,
+                             device=source.weight.device, dtype=source.weight.dtype)
+        self.weight, self.bias = source.weight, source.bias
+        self.preserved_outputs = preserved_outputs
+
+    def forward(self, image):
+        cut = self.preserved_outputs
+        first = F.conv2d(image, self.weight[:cut], self.bias[:cut], self.stride,
+                         self.padding, self.dilation, self.groups)
+        extra = F.conv2d(image, self.weight[cut:], self.bias[cut:], self.stride,
+                         self.padding, self.dilation, self.groups)
+        return torch.cat([first, extra], dim=1)
 
 
 def configure_precision():
@@ -42,6 +64,7 @@ def create_model(seed):
             branch.conv_out.bias.zero_()
             index = torch.arange(outputs)
             branch.conv_out.weight[index, index, 0, 0] = 1
+            branch.conv = PartitionedRawConv(branch.conv, outputs)
     full.tail_warm.requires_grad_(False)
     info = {'pretrained_sha256': digest(ROOT/'MobileIE/pretrain/lolv1_best_slim.pkl'),
             'rep_scale': 4, 'branch_seed': 4100+seed, 'expanded_layers': LAYERS,
@@ -49,6 +72,7 @@ def create_model(seed):
             'training_parameters_active': sum(p.numel() for p in full.parameters() if p.requires_grad),
             'inactive_warm_parameters': sum(p.numel() for p in full.tail_warm.parameters()),
             'deployment_parameters': sum(p.numel() for p in slim.parameters()),
+            'raw_convolution_execution': 'Preserved outputs and extra outputs convolved separately then concatenated; same MBR weights, BN and readout',
             'initialization': 'Copy each slim kernel/bias into first outputs of the largest raw branch; identity compression, zero other readout columns; copy FST/PReLU.',
             'warmup': False, 'scope': 'Original MBR parameterization control, not a reproduction of the complete official training protocol.'}
     return full, info
