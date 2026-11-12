@@ -221,3 +221,38 @@ raw无历史或flow，finite/recursive有传统历史与motion开销；手机延
 固定TLC注册门槛：False；要求同域双seed≥+.1dB、另域均≥−.05dB且所有域/seed raw时间比≤1.02。最差逐条件raw ΔPSNR为-3.716017dB。
 
 参数4075不变，但att卷积从全局一点扩至全分辨率，1080p约新增.299卷积GMAC，前缀和与内存另计；不是零推理开销，当前不据共享质量计时排行手机或独立CPU速度。[完整表](../exploration-r42-tlc/tables.md)、[机器表](tlc_evidence.csv)。
+
+## R44完整根部结构与时间目标2×2
+
+两seed四模型各4000新更新，均继承同R41完整4000起点、共同重启Adam。全部32000新更新/导出门槛及共同CPU240行/80CNN正常结束后才纳入此表，不从中间权重择优。
+
+|域|模型|输出|参数|PSNR|SSIM|时序↓|边缘↓|
+|---|---|---|---:|---:|---:|---:|---:|
+|davis_train_pilot|bounded_mse|finite_self05|4077|26.591350|0.754729|7.223247|3.921564|
+|davis_train_pilot|bounded_mse|raw|4077|26.447809|0.716360|9.892480|4.269065|
+|davis_train_pilot|bounded_mse|recursive_self05|4077|26.693887|0.767682|6.460988|3.816490|
+|davis_train_pilot|bounded_temporal|finite_self05|4077|26.437502|0.754482|6.953240|3.943484|
+|davis_train_pilot|bounded_temporal|raw|4077|26.428317|0.722787|9.315320|4.210444|
+|davis_train_pilot|bounded_temporal|recursive_self05|4077|26.494711|0.765138|6.249731|3.860952|
+|davis_train_pilot|square_mse|finite_self05|4075|26.604146|0.754513|7.232934|3.927123|
+|davis_train_pilot|square_mse|raw|4075|26.465786|0.716221|9.900441|4.277081|
+|davis_train_pilot|square_mse|recursive_self05|4075|26.706510|0.767504|6.469695|3.821135|
+|davis_train_pilot|square_temporal|finite_self05|4075|26.467987|0.754548|6.962661|3.946030|
+|davis_train_pilot|square_temporal|raw|4075|26.462726|0.722861|9.327973|4.214644|
+|davis_train_pilot|square_temporal|recursive_self05|4075|26.526049|0.765249|6.257393|3.862918|
+|paired_real_ND_DEV|bounded_mse|finite_self05|4077|27.519685|0.920442|2.816229|1.419152|
+|paired_real_ND_DEV|bounded_mse|raw|4077|27.586391|0.912358|3.660172|1.519279|
+|paired_real_ND_DEV|bounded_mse|recursive_self05|4077|27.544106|0.923630|2.566485|1.383202|
+|paired_real_ND_DEV|bounded_temporal|finite_self05|4077|27.446487|0.920771|2.738068|1.423879|
+|paired_real_ND_DEV|bounded_temporal|raw|4077|27.546673|0.914870|3.483971|1.500279|
+|paired_real_ND_DEV|bounded_temporal|recursive_self05|4077|27.459133|0.923281|2.503695|1.395458|
+|paired_real_ND_DEV|square_mse|finite_self05|4075|27.080975|0.918989|2.815893|1.419971|
+|paired_real_ND_DEV|square_mse|raw|4075|27.128274|0.911261|3.652687|1.517297|
+|paired_real_ND_DEV|square_mse|recursive_self05|4075|27.107765|0.922044|2.569853|1.385233|
+|paired_real_ND_DEV|square_temporal|finite_self05|4075|27.002126|0.919315|2.739802|1.424316|
+|paired_real_ND_DEV|square_temporal|raw|4075|27.083676|0.913687|3.481611|1.498605|
+|paired_real_ND_DEV|square_temporal|recursive_self05|4075|27.018224|0.921723|2.508414|1.396856|
+
+注册结构门槛：False；无状态部署门槛：False；传统递归组合质量门槛：False。组合成本未测，不挪作无状态成功。
+
+有理分母推理保留；raw单帧，finite/recursive需要自身raw估计motion及RGB历史。两域/两个seed/全部条件保留，均值不是显著性证明；不建立新颖性、手机成本或独立测试结论。[完整配对和门槛](../exploration-r44-bounded-video/tables.md)、[机器表](bounded_video_evidence.csv)。
