@@ -1,8 +1,11 @@
 """Bounded actual-window qualification; discarded updates are never checkpoints."""
 import argparse
 import json
+import os
 import time
 import traceback
+
+os.environ.setdefault('CUBLAS_WORKSPACE_CONFIG', ':4096:8')
 
 import cv2
 import torch
