@@ -26,7 +26,7 @@ def contact(scene, native, matched, reference, path):
     draw.text((5, 4), f'DRV train {scene} | 8 static RAW observations, one long reference | no model', fill='black')
     for t in range(8):
         for k, (image, label) in enumerate([(native[t], 'native exposure'),
-                                          (matched[t], 'EV matched: denoising view'),
+                                          (matched[t], 'EXIF EV compensation (nominal)'),
                                           (reference, 'same single long reference')]):
             y = 24+t*step
             sheet.paste(Image.fromarray(image).resize((320, h), Image.Resampling.BILINEAR), (k*320, y+20))
