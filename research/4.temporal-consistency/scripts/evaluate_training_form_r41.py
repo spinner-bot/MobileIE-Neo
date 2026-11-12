@@ -31,12 +31,13 @@ def append(path, value):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--seed', type=int, choices=[0, 1], required=True)
+    parser.add_argument('--stage', choices=['stage002'], required=True)
     args = parser.parse_args()
     torch.set_num_threads(2)
     cv2.setNumThreads(1)
     torch.use_deterministic_algorithms(True)
     assert not torch.cuda.is_initialized()
-    folder = BASE/f'results/exploration-r41-seed{args.seed}'
+    folder = BASE/f'results/exploration-r41-{args.stage}-seed{args.seed}'
     runtime = json.loads((folder/'runtime.json').read_text())
     assert runtime['completed_normally'] and runtime['total_updates'] == 8000
     assert set(runtime['model_updates'].values()) == {4000}
@@ -61,8 +62,8 @@ def main():
     metas += [{**r, 'domain': 'paired_real_ND_DEV', 'source_video': r['scene']}
               for r in json.loads(real.read_text())['scenes'] if r['domain'] == 'native_crop']
     assert len(metas) == 10
-    out = BASE/f'results/exploration-r41-eval-seed{args.seed}'
-    cache = ROOT/f'.cache/experiments/exploration-r41/seed{args.seed}'
+    out = BASE/f'results/exploration-r41-{args.stage}-eval-seed{args.seed}'
+    cache = ROOT/f'.cache/experiments/exploration-r41/{args.stage}/seed{args.seed}'
     assert cache.resolve().is_relative_to('/data/Users/zrh/data/MobileIE-Neo')
     out.mkdir(parents=True, exist_ok=False)
     cache.mkdir(parents=True, exist_ok=False)
