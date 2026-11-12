@@ -26,13 +26,13 @@ def read_stable(path):
 
 
 def main():
-    folder = BASE/'process/exploration-r41/stage002/finalize001'
+    folder = BASE/'process/exploration-r41/stage002/finalize002'
     folder.mkdir(parents=True, exist_ok=False)
     names = ['finalize_training_form_r41.py', 'evaluate_training_form_r41.py', 'summarize_training_form_r41.py',
              'half_motion_r4.py', 'aligned_raw_history_r11.py', 'exploration_r2_data.py', 'video_metrics.py',
              'finalize_preserved_r37.py', 'finalize_mixed_anchor_r40.py',
              'training_form_r41.py', 'dynamic_training_r34.py', 'mixed_anchor_r40.py',
-             'training_adaptation_r28.py', 'native_training_r14.py']
+             'native_training_r14.py', 'aggregation_controls_r20.py', 'prepare_cache_r5.py', 'train_exploration_r2.py']
     frozen = {name: digest(Path(__file__).parent/name) for name in names}
     dependencies = []
     for seed in [0, 1]:
