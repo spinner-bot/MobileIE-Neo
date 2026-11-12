@@ -30,14 +30,14 @@ def prepare(path: Path) -> Image.Image:
         image.draft("RGB", (2048, 2048))
         corrected = ImageOps.exif_transpose(image)
         profile = image.info.get("icc_profile")
-        if profile:
-            corrected = ImageCms.profileToProfile(corrected, ImageCms.ImageCmsProfile(io.BytesIO(profile)), ImageCms.createProfile("sRGB"), outputMode="RGB")
-        elif corrected.mode in ("RGBA", "LA") or "transparency" in corrected.info:
+        if corrected.mode in ("RGBA", "LA") or "transparency" in corrected.info:
             rgba = corrected.convert("RGBA")
             background = Image.new("RGBA", rgba.size, "white")
             corrected = Image.alpha_composite(background, rgba).convert("RGB")
         else:
             corrected = corrected.convert("RGB")
+        if profile:
+            corrected = ImageCms.profileToProfile(corrected, ImageCms.ImageCmsProfile(io.BytesIO(profile)), ImageCms.createProfile("sRGB"), outputMode="RGB")
         corrected.thumbnail((2048, 2048), Image.Resampling.BILINEAR)
         w, h = corrected.size
         cw, ch = (max(1, h * 3 // 2), h) if w * 2 > h * 3 else (w, max(1, w * 2 // 3))
@@ -177,6 +177,7 @@ class Desktop:
     def worker(self):
         while True:
             kind,value=self.tasks.get()
+            if kind=="stop":self.engine=None;return
             try:
                 if kind=="load":self.results.put((kind,(prepare(value),value.name)))
                 elif kind=="process":
@@ -195,7 +196,7 @@ class Desktop:
             while True:
                 kind,value=self.results.get_nowait();self.busy=False
                 if kind=="load":
-                    self.input,name=value;self.images={"Input":self.input,"MobileIE":None,"Gamma 0.5":None};self.record={};self.source.set(name+"  ·  600 × 400 居中处理范围");self.status.set("图片已准备，请确认取景范围再开始对比")
+                    self.input,name=value;self.images={"Input":self.input,"MobileIE":None,"Gamma 0.5":None};self.record={};self.mode="MobileIE";self.split=.5;self.metrics.set("处理后显示本次 CPU 耗时；安卓测速请使用 AI Benchmark");self.source.set(name+"  ·  600 × 400 居中处理范围");self.status.set("图片已准备，请确认取景范围再开始对比")
                 elif kind=="process":
                     mie,g,self.record=value;self.images={"Input":self.input,"MobileIE":mie,"Gamma 0.5":g};self.mode="MobileIE" if mie else "Gamma 0.5";self.status.set("处理完成 · 两种方法均在本机计算" if mie else "MobileIE 未生成；Gamma 结果仍可查看，请核对依赖或模型")
                     self.metrics.set(f"MobileIE {self.record['inference_ms']:.1f} ms  ·  Gamma {self.record['gamma_ms']:.1f} ms" if mie else "MobileIE 本次未生成；Gamma 已完成")
@@ -243,7 +244,7 @@ class Desktop:
         self.messagebox.showinfo("计算记录",json.dumps(self.record,ensure_ascii=False,indent=2) if self.record else "选择图片并处理后可查看本次记录。")
 
     def close(self):
-        self.closed=True;self.root.destroy()
+        self.closed=True;self.tasks.put(("stop",None));self.root.destroy()
 
 
 def main():
