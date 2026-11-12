@@ -15,7 +15,7 @@
 
 这是真实功能依赖但达不到登记的5%同权重历史时序收益，不是“有非零梯度所以有效”。Etemp为既有GT变化残差指标，使用估计参考流/接受域，不等于感知闪烁评分。此处四个域/seed分别保留，不能以均值遮蔽失败。
 
-对独立训练的同容量spatial raw，causal raw PSNR只+.008619/+.009223dB（SYN0/1）、+.008095/+.006198dB（ND0/1），时序误差SYN略高、ND略低；没有独立一致优势。对三套strong recursive参考，causal raw时序比1.3130..1.4999，均未达A的.90或B的1.02。SYN比新plain recursive低.134645/.146047dB，比旧R44 recursive低.683980/.198113dB；最差条件也失败。ND虽然比新plain recursive高.149604/.134833dB，但时间高36.749%/39.775%；旧R44对比两seed的质量方向相反，不能称双域联合胜出。
+对独立训练的同容量spatial raw，causal raw PSNR只+.008618/+.009222dB（SYN0/1）、+.008095/+.006198dB（ND0/1），时序误差SYN略高、ND略低；没有独立一致优势。对三套strong recursive参考，causal raw时序比1.3130..1.4999，均未达A的.90或B的1.02。SYN比新plain recursive低.134645/.146047dB，比旧R44 recursive低.683980/.198113dB；最差条件也失败。ND虽然比新plain recursive高.149604/.134833dB，但时间高36.749%/39.775%；旧R44对比两seed的质量方向相反，不能称双域联合胜出。
 
 causal recursive的完整数值也保留，不能把再次加经典flow的结果替代已注册的无外部flow问题。其相对新plain recursive仍仅小变化，非本轮创新或主要门槛成功。完整[56行域/seed表与逐源](../report/exploration-r64-dense-history/tables.md)含旧R44/R48/R45，不因新模型部分源好看而删除强参考。
 
