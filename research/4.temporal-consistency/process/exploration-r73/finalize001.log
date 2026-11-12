@@ -1,0 +1,9 @@
+{"at": "2026-11-13T07:40:54.023283+08:00", "stage": "Full source chain frozen; separately admitted CUDA actual-window qualification next"}
+Traceback (most recent call last):
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/finalize_native_moment_r73.py", line 134, in <module>
+    if __name__ == '__main__': main()
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/finalize_native_moment_r73.py", line 93, in main
+    guard, attempt = guarded('check_native_moment_r73.py', 'qualification', ['--device', 'cuda'])
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/finalize_native_moment_r73.py", line 88, in guarded
+    assert code == 0, f'{tag} admitted scientific failure preserved; no automatic retry'
+AssertionError: qualification admitted scientific failure preserved; no automatic retry
