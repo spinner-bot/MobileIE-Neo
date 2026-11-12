@@ -27,6 +27,8 @@ public final class LightLabApplication extends Application {
     private final ExecutorService worker = Executors.newSingleThreadExecutor();
     private Runnable listener;
     private MobileEngine engine;
+    interface EngineFactory { MobileEngine create(android.content.Context context) throws IOException; }
+    volatile EngineFactory engineFactory = MobileEngine::new;
     private File sessions;
 
     @Override public void onCreate() {
@@ -39,10 +41,10 @@ public final class LightLabApplication extends Application {
             try {
                 File active = new File(getFilesDir(), "current.json");
                 if (active.isFile()) {
-                    String id = new JSONObject(Files.readString(active.toPath())).getString("id");
+                    String id = readJson(active).getString("id");
                     if (!id.matches("[0-9a-f-]{36}")) throw new IOException("Invalid session");
                     File dir = new File(sessions, id);
-                    JSONObject m = new JSONObject(Files.readString(new File(dir, "record.json").toPath()));
+                    JSONObject m = readJson(new File(dir, "record.json"));
                     restored = new Session(); restored.id = id; restored.directory = dir; restored.label = m.optString("source_label", "上次照片");
                     restored.metadata = m;
                     restored.input = BitmapFactory.decodeFile(new File(dir, "input.png").getPath());
@@ -107,6 +109,9 @@ public final class LightLabApplication extends Application {
         busy = true; status = "正在本机处理，请稍候…"; emit();
         worker.execute(() -> {
             try {
+                s.metadata.put("run_number", s.metadata.optInt("run_number", 0) + 1).put("gamma_complete", false).put("mobileie_complete", false);
+                for (String field : new String[]{"initialization_ms", "initialization_in_this_run", "packing_ms", "inference_ms", "rendering_ms"}) s.metadata.remove(field);
+                write(s);
                 long total = SystemClock.elapsedRealtimeNanos();
                 long t = SystemClock.elapsedRealtimeNanos();
                 Bitmap gamma = ImagePipeline.gamma(s.input);
@@ -116,7 +121,7 @@ public final class LightLabApplication extends Application {
                 String failure = null;
                 boolean first = engine == null;
                 try {
-                    if (engine == null) engine = new MobileEngine(this);
+                    if (engine == null) engine = engineFactory.create(this);
                     output = engine.run(s.input);
                     s.metadata.put("initialization_ms", engine.initializationMs).put("initialization_in_this_run", first)
                         .put("packing_ms", output.packingMs).put("inference_ms", output.inferenceMs).put("rendering_ms", output.renderingMs);
@@ -136,7 +141,7 @@ public final class LightLabApplication extends Application {
                     s.gamma = gamma; s.mobileie = done == null ? null : done.bitmap;
                     finish(message == null ? "处理完成 · 两种方法均在本机计算" : message + "；Gamma 结果可查看");
                 });
-            } catch (Exception e) { main.post(() -> finish("处理未完成：" + readable(e))); }
+            } catch (Exception e) { main.post(() -> { s.mobileie = null; s.gamma = null; finish("处理未完成：" + readable(e)); }); }
         });
     }
 
@@ -158,6 +163,7 @@ public final class LightLabApplication extends Application {
         return bytes;
     }
     static void write(Session s) throws IOException { atomicJson(new File(s.directory, "record.json"), s.metadata); }
+    static JSONObject readJson(File file) throws IOException, JSONException { return new JSONObject(new String(Files.readAllBytes(file.toPath()), java.nio.charset.StandardCharsets.UTF_8)); }
     static void atomicJson(File file, JSONObject value) throws IOException {
         AtomicFile atomic = new AtomicFile(file);
         FileOutputStream out = null;
