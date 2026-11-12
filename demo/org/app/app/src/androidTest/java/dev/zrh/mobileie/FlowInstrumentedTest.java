@@ -55,7 +55,9 @@ public class FlowInstrumentedTest {
         scenario.onActivity(a->assertTrue(((ComparisonView)a.findViewById(R.id.comparison)).position()>.7f));
         find("mode_mobileie").click(); device.waitForIdle();
         scenario.onActivity(a->assertTrue(a.findViewById(R.id.mode_mobileie).isSelected())); shot("02-mobileie-comparison");
-        find("mode_overview").click(); shot("03-three-method-overview");
+        find("mode_overview").click();
+        assertNotNull(device.wait(Until.findObject(By.res(PKG,"mode_overview").selected(true)),3000));
+        shot("03-three-method-overview");
         find("save").click(); idle(); assertTrue(app.status,app.status.startsWith("已保存"));
         int images=0;
         try(Cursor c=context.getContentResolver().query(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,new String[]{"_id"},"_display_name LIKE ?",new String[]{"MobileIE_"+app.session.id.substring(0,8)+"_%"},null)) { assertNotNull(c); images=c.getCount(); }
