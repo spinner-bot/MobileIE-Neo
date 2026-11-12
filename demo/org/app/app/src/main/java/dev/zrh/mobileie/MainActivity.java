@@ -111,7 +111,7 @@ public final class MainActivity extends Activity {
         modeMie.setEnabled(loaded&&s.mobileie!=null&&!app.busy); modeMie.setAlpha(modeMie.isEnabled()?1f:.4f);
         modeGamma.setEnabled(done&&!app.busy); modeOverview.setEnabled(done&&!app.busy);
         comparison.setEnabled(!app.busy); metrics.setEnabled(!app.busy);
-        modeMie.setContentDescription(modeMie.isEnabled()?"MobileIE 对比":"MobileIE 本次未生成，暂不可选择");
+        modeMie.setContentDescription(app.busy?"任务进行中，暂不可切换":loaded&&s.mobileie!=null?"MobileIE 对比":"MobileIE 本次未生成，暂不可选择");
         hint.setText(!done?"选择照片并处理后，可拖动对比同一位置":mode==2?"同一处理范围：原图 / MobileIE / Gamma":"左右拖动分界线，比较同一位置的细节");
         select(modeMie,mode==0); select(modeGamma,mode==1); select(modeOverview,mode==2);
         if(app.busy) metrics.setText("任务进行中，完成后显示本次耗时");

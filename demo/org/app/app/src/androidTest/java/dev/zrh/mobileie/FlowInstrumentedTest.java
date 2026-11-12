@@ -151,13 +151,12 @@ public class FlowInstrumentedTest {
         File invalid=new File(context.getCacheDir(),"not-an-image.png"); try(FileOutputStream out=new FileOutputStream(invalid)){out.write(new byte[]{1,2,3});}
         main(()->app.load(Uri.fromFile(invalid),"invalid")); idle(); assertEquals(id,app.session.id); assertTrue(app.status.contains("图片未加载"));
         int previous=app.session.metadata.optInt("run_number");
-        main(()->{app.process(); assertTrue(app.busy); app.process();});
         scenario.onActivity(a->{
-            if(app.busy) {
-                assertFalse(a.findViewById(R.id.mode_mobileie).isEnabled());assertFalse(a.findViewById(R.id.mode_gamma).isEnabled());assertFalse(a.findViewById(R.id.mode_overview).isEnabled());
-                assertFalse(a.findViewById(R.id.metrics).isEnabled());
-                assertTrue(((android.widget.TextView)a.findViewById(R.id.metrics)).getText().toString().contains("任务进行中"));
-            }
+            app.process(); assertTrue(app.busy); app.process();
+            assertFalse(a.findViewById(R.id.mode_mobileie).isEnabled());assertFalse(a.findViewById(R.id.mode_gamma).isEnabled());assertFalse(a.findViewById(R.id.mode_overview).isEnabled());
+            assertFalse(a.findViewById(R.id.comparison).isEnabled());assertFalse(a.findViewById(R.id.metrics).isEnabled());
+            assertTrue(((android.widget.TextView)a.findViewById(R.id.metrics)).getText().toString().contains("任务进行中"));
+            assertTrue(a.findViewById(R.id.mode_mobileie).getContentDescription().toString().contains("任务进行中"));
         });idle();
         assertEquals(previous+1,app.session.metadata.getInt("run_number")); assertNotNull(app.session.mobileie);
         invalid.delete();
