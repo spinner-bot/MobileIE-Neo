@@ -124,5 +124,5 @@ def metrics(output, target):
     summary.update(mean_RGB=float(value.mean()), target_mean_RGB=float(target.mean()),
                    same_coordinate_time_std_RMS=float(np.sqrt(np.mean((value-value.mean(0))**2))),
                    same_coordinate_adjacent_RGB_MAE=float(np.abs(np.diff(value,axis=0)).mean()),
-                   scope='Spatial primary frames2–5/full8; time fields are unregistered static proxies, not true flicker.')
+                   scope='Spatial primary frames2–5/full8; time fields are same-coordinate static proxies, not true flicker.')
     return summary, frames
