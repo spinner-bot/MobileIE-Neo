@@ -1,0 +1,42 @@
+{
+  "created_at": "2026-11-12T13:04:54.515559+08:00",
+  "dependencies": [
+    {
+      "seed": 0,
+      "pid": 3329449,
+      "identity": {
+        "start_ticks": "39971179",
+        "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 4 --record research/4.temporal-consistency/process/exploration-r41/stage002/seed0-guard.json -- ./scripts/project-python research/4.temporal-consistency/scripts/train_training_form_r41.py --stage stage002 --seed 0 "
+      }
+    },
+    {
+      "seed": 1,
+      "pid": 3329485,
+      "identity": {
+        "start_ticks": "39971184",
+        "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 5 --record research/4.temporal-consistency/process/exploration-r41/stage002/seed1-guard.json -- ./scripts/project-python research/4.temporal-consistency/scripts/train_training_form_r41.py --stage stage002 --seed 1 "
+      }
+    }
+  ],
+  "source_sha256": {
+    "finalize_training_form_r41.py": "6815dd3f29fffa31ed33875ff0326225f321966b99ca59af024473287ec86283",
+    "evaluate_training_form_r41.py": "cd425877853e6c0d3dcde2b8592382cf12746246738115c1fc4e531f9edfb86a",
+    "summarize_training_form_r41.py": "23f009ebf05f2b84321d5af60d9afddf175f108077538064e41a619dcf4f264c",
+    "half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+    "aligned_raw_history_r11.py": "e367727401f82ccf0bccaf8d88f904e4aebf8b78186f0539eedeed222b2d2227",
+    "exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+    "video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0",
+    "finalize_preserved_r37.py": "bc5bc7e848d703f34e3e5853a006b73a34d9204b5db4f4a8f12beb18e5d96f71",
+    "finalize_mixed_anchor_r40.py": "7054f639c39b021cb5f973272b273557f48a7ec8284b237fdc3fd02977790f9e",
+    "training_form_r41.py": "4392fdceb16750ca0a763f4485beec873dc7316d758c95e9eaef042ffceb4ded",
+    "dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498",
+    "mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5",
+    "native_training_r14.py": "588b505ede11ac9f0d747ad1c16b1c118a7bbbbba7405ce918a6163d133d69a1",
+    "aggregation_controls_r20.py": "7b4541be8512ca1edb755b5a73f889351e376f9a8fc1fdec7ed633a4438c116c",
+    "prepare_cache_r5.py": "675860fc6ef1d97d28750815e99f5c923ecfd94e94254f1f7a7685f08d84f2c8",
+    "train_exploration_r2.py": "30ba78b2439ffb6fdf10aafe384975326082129b03ebe562aa118f29ba5d8c7b"
+  },
+  "no_wall_cutoff": true,
+  "revision": "45166528dd14ec97a45cce67f09065b9247d1f45",
+  "scope": "Both stage002 matched forms and seeds (16000 updates) and final fold gates must complete before final CPU quality; no automatic retry or checkpoint selection."
+}
