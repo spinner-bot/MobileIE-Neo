@@ -49,12 +49,15 @@ the evaluation implementation.
 
 For a fixed estimated reference flow and validity mask, temporal error is
 \[
- E_{\rm temp}=\operatorname{mean}_{t,p,c;\,m_t^{\rm ref}(p)=1}
+ E_{\rm temp}=\frac{1}{|\mathcal T|}\sum_{t\in\mathcal T}
+ \frac{\sum_{p,c}m_t^{\rm ref}(p)
  \left|[z_t-W_t^{\rm ref}z_{t-1}]_c(p)
-       -[y_t-W_t^{\rm ref}y_{t-1}]_c(p)\right|.
+       -[y_t-W_t^{\rm ref}y_{t-1}]_c(p)\right|}
+ {3\sum_p m_t^{\rm ref}(p)}.
 \]
-The implemented sequence summary first averages each valid frame pair,
-then averages the available pairs. The reference mask excludes an
+Here $\mathcal T$ contains frame pairs with nonempty valid masks. The
+sequence summary first averages each valid frame pair, then averages
+the available pairs. The reference mask excludes an
 eight-pixel boundary. Reference flow is estimated from targets and held
 fixed across compared methods; it is not ground-truth motion.
 This metric is not a sufficient perceptual definition of flicker.
