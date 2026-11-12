@@ -1,0 +1,14 @@
+\begin{table}[t]
+\centering\small
+\caption{Classical references on the same R34 weights. Quality uses the full synthetic pilot. Resident CPU timing uses only the first 16 bear/P20 frames at $480\times854$, two Torch threads and one OpenCV thread. Ranges are run-average extrema, not confidence intervals or phone timings.}
+\label{tab:classical}
+\begin{tabular}{lrrrr}
+\toprule
+Output & PSNR & $E_{\rm temp}$ & History MiB & CPU ms/frame [range]\\
+\midrule
+Raw & 26.234 & 10.505 & 0.000 & 100.9 [80.9, 106.5]\\
+Finite .5 & 26.466 & 7.543 & 4.691 & 184.1 [168.1, 188.5]\\
+Recursive .5 & 26.610 & 6.735 & 9.382 & 186.5 [179.6, 192.5]\\
+\bottomrule
+\end{tabular}
+\end{table}
