@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-13T03:18:37.369849+08:00",
+  "guard_pid": 3901351,
+  "gpu": 4,
+  "command": [
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/gpu_guard.py",
+    "--gpu",
+    "4",
+    "--record",
+    "research/4.temporal-consistency/process/exploration-r66/reference-guard002.json",
+    "--",
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/evaluate_cvvdp_references_r66.py",
+    "--attempt",
+    "2"
+  ],
+  "scope": "Explicit technical launch after original zero-score gate failure; same metric/data/tolerance, fresh idle admission."
+}
