@@ -1,4 +1,4 @@
-"""Generate manuscript tables from completed evidence; exclude the active study."""
+"""Generate manuscript tables from completed evidence; never include a partial study."""
 from datetime import datetime
 import hashlib
 import json
@@ -72,12 +72,42 @@ def main():
     for name in ['exploration-r41-training-form/matched_forms.pdf', 'exploration-r42-tlc/fixed_tlc.pdf']:
         p = BASE/'report'/name
         sources[str(p.relative_to(ROOT))] = hashlib.sha256(p.read_bytes()).hexdigest()
+    generated = ['anchor-table.tex', 'classical-table.tex', 'tlc-table.tex']
+    closure = BASE/'process/exploration-r44/stage001/finalize001/runtime.json'
+    r44_complete = closure.exists() and json.loads(closure.read_text())['completed_normally']
+    if r44_complete:
+        read('process/exploration-r44/stage001/finalize001/runtime.json')
+        audit = read('report/exploration-r44-bounded-video/audit.json')
+        assert audit['passed'] and audit['new_rows'] == 240 and audit['new_neural_sequences'] == 80
+        for seed in [0, 1]:
+            runtime = read(f'results/exploration-r44-stage001-eval-seed{seed}/runtime.json')
+            assert runtime['completed_normally'] and runtime['rows'] == 120
+        values = read('report/exploration-r44-bounded-video/domain_summary.json')
+        assert len(values) == 24
+        by_key = {(r['domain'], r['model'], r['method']): r for r in values}
+        lines = [r'\begin{table}[t]', r'\centering\small',
+                 r'\caption{Complete R44 factorial, both-seed means. All models inherit the same R41 training form and add 4,000 updates. Raw inference is single-frame; recursive outputs retain motion and history. Rational denominators remain at inference.}',
+                 r'\label{tab:r44}', r'\begin{tabular}{llrrrr}', r'\toprule',
+                 r'Model & Output & SYN PSNR & SYN $E_{\rm temp}$ & ND PSNR & ND $E_{\rm temp}$\\',
+                 r'\midrule']
+        for method, short in [('raw', 'Raw'), ('recursive_self05', 'Recursive')]:
+            for model, label in [('square_mse', 'Square/MSE'), ('square_temporal', 'Square/temporal'),
+                                 ('bounded_mse', 'Rational/MSE'), ('bounded_temporal', 'Rational/temporal')]:
+                syn, real = [by_key[(domain, model, method)] for domain in ['davis_train_pilot', 'paired_real_ND_DEV']]
+                lines.append(f"{label} & {short} & {syn['psnr_rgb']:.3f} & {syn['temporal_error']:.3f} & "
+                             f"{real['psnr_rgb']:.3f} & {real['temporal_error']:.3f}"+r'\\')
+            if method == 'raw':
+                lines.append(r'\midrule')
+        lines += [r'\bottomrule', r'\end{tabular}', r'\end{table}']
+        (out/'r44-table.tex').write_text('\n'.join(lines)+'\n')
+        generated.append('r44-table.tex')
     record = {'created_at': datetime.now().astimezone().isoformat(), 'source_sha256': sources,
-              'generated_tables': ['anchor-table.tex', 'classical-table.tex', 'tlc-table.tex'],
-              'excluded_active_study': 'R44; no candidate quality, partial checkpoint or loss curve included',
+              'generated_tables': generated,
+              'R44_complete_quality_included': r44_complete,
+              'excluded_active_study': None if r44_complete else 'R44; no partial checkpoint or loss curve included',
               'scope': 'Completed DEV evidence only; no novelty, SOTA, phone latency or independent final-test claim.'}
     (ROOT/'paper/evidence-snapshot.json').write_text(json.dumps(record, indent=2)+'\n')
-    print(json.dumps({'tables': 3, 'completed_sources': len(sources), 'active_quality_included': False}))
+    print(json.dumps({'tables': len(generated), 'completed_sources': len(sources), 'R44_complete_quality_included': r44_complete}))
 
 
 if __name__ == '__main__':
