@@ -49,21 +49,21 @@ def main():
 
     def fetch(row):
         remote = RemoteZip(plan['source']['archive_url'], plan['source']['archive_bytes'])
-        # Read a single bounded span containing the local header and compressed member.
-        extra_allowance = 4096
-        wanted = 30 + len(row['name'].encode()) + extra_allowance + row['compressed_size']
-        count = min(wanted, remote.size - row['local_offset'])
-        assert 0 < count <= MAX_RANGE
-        span = remote.range_bytes(row['local_offset'], count)
-        fields = struct.unpack('<4s5H3I2H', span[:30])
+        # Exact header then exact remainder: never over-read into an unselected image member.
+        header = remote.range_bytes(row['local_offset'], 30)
+        fields = struct.unpack('<4s5H3I2H', header)
         assert fields[0] == b'PK\x03\x04' and fields[3] == row['method']
         assert fields[2] == row['flags'] and not fields[2] & 1
         name_length, extra_length = fields[-2:]
+        count = name_length + extra_length + row['compressed_size']
+        assert 0 < count <= MAX_RANGE
+        remainder = remote.range_bytes(row['local_offset'] + 30, count)
+        span = header + remainder
         encoding = 'utf-8' if fields[2] & 2048 else 'cp437'
         assert span[30:30 + name_length].decode(encoding) == row['name']
         begin = 30 + name_length + extra_length
         end = begin + row['compressed_size']
-        assert end <= len(span), 'Unexpected large local extra field; stop rather than change transfer bounds'
+        assert end == len(span)
         compressed = span[begin:end]
         if row['method'] == 8:
             decoder = zlib.decompressobj(-15)
@@ -106,6 +106,8 @@ def main():
         raise
     finally:
         runtime.update(ended=stamp(), seconds=time.perf_counter() - started)
+        runtime['validated_png_files_on_disk'] = len(list((ASSETS / 'png').glob('*/*.png')))
+        runtime['completed_members_scope'] = 'Manifest-confirmed prefix; independently count saved PNGs if a concurrent failure occurs.'
         write(OUT / 'runtime.json', runtime)
     print(json.dumps(runtime))
 
