@@ -1,0 +1,30 @@
+\section{Limitations and requirements for a complete paper}
+The present development pilot is small and repeatedly used. Synthetic
+noise, three DAVIS sources, and four paired daytime ND crops cannot
+establish general low-light video performance. The inspected phone clips
+show clipping and colour failures without synchronized ground truth.
+They do not replace a reference-based nighttime benchmark or a perceptual
+temporal study. Two training seeds expose variability but do not resolve it.
+
+Motion-compensated target-residual error helps separate desired changes
+from unwanted differences, but its estimated reference flow can fail and
+its valid mask excludes difficult regions. Spatial quality, per-condition
+failures, scene-change behaviour, and visual examples must accompany it.
+Lower temporal error alone is insufficient: an inappropriate enhancement
+mapping may also look numerically stable.
+
+The current published-weight tests are transfers with input-domain and
+pretraining-overlap limitations. A conference comparison still requires
+appropriate published temporal methods under a documented common setting.
+The fixed classical references are strong controls, not full reproductions
+of all established video denoisers.
+
+No candidate in this snapshot has a verified independent contribution or
+measured handset trade-off. A complete paper must establish the final method,
+explain its difference from rational activations and known temporal
+regularization, pass controlled structural/objective comparisons, measure
+the complete inference pipeline and state on a phone, and evaluate frozen
+decisions on genuinely independent data. If the registered candidate fails,
+its negative evidence should guide a new hypothesis rather than be rewritten
+as success. These requirements preserve the original research objective;
+the present manuscript is only the reusable foundation.
