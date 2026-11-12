@@ -1,0 +1,20 @@
+{
+  "started_at": "2026-11-12T14:15:48.431520+08:00",
+  "guard_pid": 3363437,
+  "physical_gpu": 4,
+  "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+  "command": [
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/gpu_guard.py",
+    "--gpu",
+    "4",
+    "--record",
+    "research/4.temporal-consistency/process/exploration-r44/cuda-guard.json",
+    "--",
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/check_bounded_video_r44.py",
+    "--device",
+    "cuda"
+  ],
+  "scope": "Fresh external guard and second post-CPU-data admission; correctness only, no formal training."
+}
