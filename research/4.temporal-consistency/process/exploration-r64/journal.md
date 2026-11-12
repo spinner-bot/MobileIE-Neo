@@ -29,3 +29,5 @@
 已用view_image实际查看全部20紧凑图（五批各四）及比较PNG，visual-review001/visual-review.md单独提交；没有人工全视频播放或逐张全分辨率检查。原生成时actual_reviewed=false保留，后续实际查看独立记录。全部输入/GT/三组raw/rec/current保留，细噪声受显示缩小影响，不能据图推断无闪烁。
 
 决定为停止此固定dense joint路径width/scale/offset/loss/LR/length/seed局部扩展，不做成本/新手机夜景/最终测试；未建立新方法。0083收齐数值及实际视图边界，paper仍009证据稿。所有R64作业已正常结束，无活跃R64/新候选登记，远期目标active；阶段fetch/SSH推送并另留回执，作者/no-ff/自有资产规范保持。
+
+核验补充：2026-11-13T02:28:49.439341+08:00。源码/文档/JSON等diff --check通过；原机器summary.log的print保留了一个末尾空行，因此全路径检查提示EOF空行，未为格式检查改写终态日志。该提示不改变原始结果或止损决定。
