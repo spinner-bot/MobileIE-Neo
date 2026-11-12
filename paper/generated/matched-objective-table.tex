@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering\scriptsize\setlength{\tabcolsep}{4pt}
+\caption{Matched original MobileIE objective settings, final 8,000 updates only. Both objectives use the same source-window schedule, expanded training parameterization and two-stage Adam budget; L1/MSE gradient scale interacts with clipping. Every row deploys 4,075 parameters. Rec. adds the same classical motion/history reference. SYN comprises three source videos under two noise conditions; ND comprises four reused development clips. JOD uses the fixed assumptions in Table~\ref{tab:perceptual}. No objective search, human study, handset or independent final-test claim.}
+\label{tab:matched-objective}
+\begin{tabular}{llrrrrrr}
+\toprule
+Objective/output & Seed & SYN PSNR & SYN $E_{\rm temp}$ & SYN JOD & ND PSNR & ND $E_{\rm temp}$ & ND JOD\\
+\midrule
+MSE raw & 0 & 26.475 & 10.102 & 7.040 & 27.252 & 3.729 & 8.414\\
+MSE raw & 1 & 26.456 & 9.699 & 7.111 & 27.004 & 3.577 & 8.552\\
+MSE + rec. & 0 & 26.800 & 6.546 & 7.424 & 27.292 & 2.605 & 8.373\\
+MSE + rec. & 1 & 26.613 & 6.393 & 7.409 & 26.923 & 2.534 & 8.512\\
+L1 raw & 0 & 26.301 & 9.836 & 7.083 & 26.227 & 3.685 & 7.936\\
+L1 raw & 1 & 26.492 & 9.351 & 7.104 & 26.633 & 3.474 & 8.428\\
+L1 + rec. & 0 & 26.545 & 6.443 & 7.408 & 26.189 & 2.600 & 7.892\\
+L1 + rec. & 1 & 26.531 & 6.279 & 7.354 & 26.566 & 2.512 & 8.382\\
+\bottomrule
+\end{tabular}
+\end{table}
