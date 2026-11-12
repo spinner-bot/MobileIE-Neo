@@ -1,0 +1,35 @@
+\section{Related mechanisms and the scope of differentiation}
+\label{sec:related}
+\paragraph{Temporal training with image inference.}
+StableLLVE~\cite{stablellve} trains enhancement with synthetic motion and
+temporal consistency while its released U-Net predicts one frame at a time.
+Consequently, using temporal supervision without a deployed recurrent state
+already has direct LLVE precedent. The released checkpoint is explicitly
+trained on synthetic clean data and is qualified by its authors for noisy
+inputs. Our earlier transfer experiment preserves this limitation; it does
+not replace common-data training or establish a fair ranking against a
+task-adapted compact model.
+
+\paragraph{Explicit temporal information.}
+FastDVDnet~\cite{fastdvdnet} and EMVD~\cite{emvd} illustrate two different
+deployment choices: a multiframe window and recurrent fusion. EMVD combines
+past observations recursively in a learned transform representation, then
+denoises and restores detail. Its real-RAW setting differs from the present
+RGB enhancement proxy. Neither a learned recurrent blend nor a small state
+alone distinguishes a new method. Our classical recursive reference tests
+the benefit of retained history, without claiming to reproduce EMVD.
+
+\paragraph{Correspondence and decomposition.}
+The 2026 VLLVE/VLLVE++ preprint~\cite{vllveplus} couples video-consistent
+decomposition with deep cross-frame interaction. Its described inference
+uses a nearby reference frame, and its ablations also investigate operation
+without a reference. Correspondence refinement is a training component;
+removing that estimator does not by itself remove the enhancement network's
+cross-frame dependence. These precedents require us to state precisely
+which information and operators remain in deployment. We do not infer
+an algebraic current-frame-only equivalence from a training-only component.
+
+The present draft differentiates experimental questions and information
+budgets, not an established novel method. A publishable contribution still
+requires a specific mechanism with controlled gains, stronger external
+validation, and measured deployment cost beyond these known ingredients.
