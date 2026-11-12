@@ -1,0 +1,255 @@
+{
+  "at": "2026-11-12T21:02:44.676736+08:00",
+  "passed": true,
+  "initial_eval_MSE": 0.02047916315495968,
+  "training_MSE": 0.017855241894721985,
+  "branch_gradient_L2": {
+    "luminance": 0.8413186979893587,
+    "chrominance": 0.08859100388895902
+  },
+  "branch_max_parameter_change": {
+    "luminance": 5.733966827392578e-05,
+    "chrominance": 4.51505184173584e-06
+  },
+  "missing_gradient_names": [],
+  "norm_before_clip": 0.8459701538085938,
+  "BN_before": {
+    "illum_mid_seq.0.0.bn": 48970,
+    "chroma_mid_seq.0.0.bn": 48970
+  },
+  "BN_after": {
+    "illum_mid_seq.0.0.bn": 48974,
+    "chroma_mid_seq.0.0.bn": 48974
+  },
+  "discarded_SGD_updates": 1,
+  "inherited_into_formal_training": false,
+  "initialization": {
+    "repository": "albrateanu/multinex",
+    "commit": "e15790a963935569fff1ba6a8b0d33a791765749",
+    "source_manifest_sha256": "6dd18639368ba7b93f7c2285f606edd63af94e04e11fc652f1e1888d7cd5e240",
+    "files": {
+      "basicsr/models/archs/MultinexNano_arch.py": {
+        "source": "basicsr/models/archs/MultinexNano_arch.py",
+        "role": "source",
+        "url": "https://raw.githubusercontent.com/albrateanu/multinex/e15790a963935569fff1ba6a8b0d33a791765749/basicsr/models/archs/MultinexNano_arch.py",
+        "path": "third_party/multinex/basicsr/models/archs/MultinexNano_arch.py",
+        "bytes": 23010,
+        "git_blob_sha": "279dca3cff7ec9075e8800b6aacb6218c13d7574",
+        "sha256": "0a2d94f12e7de799b5e13f46905dd9e5c3f7cf005dee40412d18ec6b1adf2cdf",
+        "reused_verified_file": false
+      },
+      "Options/Multinex-Nano_LOL-v1.yaml": {
+        "source": "Options/Multinex-Nano_LOL-v1.yaml",
+        "role": "source",
+        "url": "https://raw.githubusercontent.com/albrateanu/multinex/e15790a963935569fff1ba6a8b0d33a791765749/Options/Multinex-Nano_LOL-v1.yaml",
+        "path": "third_party/multinex/Options/Multinex-Nano_LOL-v1.yaml",
+        "bytes": 4910,
+        "git_blob_sha": "ffa840641eba1e488af122231bb09455e6fd1012",
+        "sha256": "53c42fb0f782ef4acd58ba25d47f07db67f1da774eb8e588ca71773f6063484e",
+        "reused_verified_file": false
+      },
+      "pretrained_weights/Multinex-Nano_LOL-v1.pth": {
+        "source": "pretrained_weights/Multinex-Nano_LOL-v1.pth",
+        "role": "weight",
+        "url": "https://raw.githubusercontent.com/albrateanu/multinex/e15790a963935569fff1ba6a8b0d33a791765749/pretrained_weights/Multinex-Nano_LOL-v1.pth",
+        "path": ".cache/weights/multinex/LOL-v1/Multinex-Nano_LOL-v1.pth",
+        "bytes": 20317,
+        "git_blob_sha": "395c4218d7e20ae3ceece91670dfe7c338741315",
+        "sha256": "ed3e9fafef4bc15a7e84450d002eb564bb1d1e18345432a30b0bfbc7b7b535e4",
+        "reused_verified_file": false
+      }
+    },
+    "network_kwargs": {
+      "in_ch": 3,
+      "out_ch": 3,
+      "base_channels": 3,
+      "width_mult": 1.0,
+      "use_depthwise": true,
+      "act": "ReLU",
+      "per_illum_proj": false,
+      "per_chroma_proj": false,
+      "use_illum_attn": true,
+      "use_chroma_attn": true,
+      "illum_mid": 1,
+      "chroma_mid": 1,
+      "reduction_ratio": 3,
+      "luma_head_act": null,
+      "chroma_head_act": null,
+      "retinex_residual": true,
+      "eps": 1e-09,
+      "illum_flags": {
+        "mean": false,
+        "rec709": true,
+        "vmax": true,
+        "lightness": true,
+        "ycgco": false,
+        "l2norm": true
+      },
+      "chroma_flags": {
+        "yuv_uv": false,
+        "ycbcr_cbcr": true,
+        "opponent": false,
+        "chroma_rg": true,
+        "hsv_s": true,
+        "litags": false
+      },
+      "target_params": 300
+    },
+    "parameters": 696,
+    "buffer_elements": 38,
+    "state_entries": 50,
+    "strict_load": true,
+    "input": "RGB FP32 [0,1]",
+    "inference": "Official even reflection pad, unpad and clip; no GT mean, ensemble or large-image splitting.",
+    "training": "Published LOL-v1 weights; no project task adaptation or seed search; complete original training not reproduced."
+  },
+  "data": {
+    "manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "verified_files": 384,
+    "scenes": [
+      "video_11",
+      "video_35",
+      "video_92",
+      "video_131",
+      "video_12",
+      "video_20",
+      "video_29",
+      "video_52",
+      "video_59",
+      "video_95",
+      "video_104",
+      "video_122"
+    ],
+    "native_bytes": 2388787200,
+    "real_training_ids": [
+      "video_104",
+      "video_11",
+      "video_12",
+      "video_122",
+      "video_131",
+      "video_20",
+      "video_29",
+      "video_35",
+      "video_52",
+      "video_59",
+      "video_92",
+      "video_95"
+    ],
+    "excluded_native_DEV": [
+      "video_121",
+      "video_15",
+      "video_47",
+      "video_91"
+    ],
+    "all_real_assets_owned": true,
+    "source_manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "synthetic_manifest_sha256": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+    "synthetic_training_videos": 57,
+    "real_tensor_dtype": "uint8 native inputs/GT; float32 /255 after crops",
+    "timing_scope": "Consecutive registered frame indices, not independently verified sensor timing."
+  },
+  "original_targets": [
+    {
+      "video": "breakdance-flare",
+      "members": [
+        "DAVIS/JPEGImages/480p/breakdance-flare/00000.jpg",
+        "DAVIS/JPEGImages/480p/breakdance-flare/00001.jpg",
+        "DAVIS/JPEGImages/480p/breakdance-flare/00002.jpg",
+        "DAVIS/JPEGImages/480p/breakdance-flare/00003.jpg"
+      ],
+      "xy": [
+        634,
+        41
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": false,
+      "photons": 20,
+      "source": "davis_synthetic"
+    },
+    {
+      "video": "rallye",
+      "members": [
+        "DAVIS/JPEGImages/480p/rallye/00032.jpg",
+        "DAVIS/JPEGImages/480p/rallye/00033.jpg",
+        "DAVIS/JPEGImages/480p/rallye/00034.jpg",
+        "DAVIS/JPEGImages/480p/rallye/00035.jpg"
+      ],
+      "xy": [
+        20,
+        7
+      ],
+      "flip_horizontal": true,
+      "flip_vertical": true,
+      "photons": 20,
+      "source": "davis_synthetic"
+    },
+    {
+      "source": "olives_real",
+      "video": "video_29",
+      "indices": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "xy": [
+        38,
+        660
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": true,
+      "input_sources": [
+        ".cache/data/olives-r4/Frames/input/video_29/00009.png",
+        ".cache/data/olives-r4/Frames/input/video_29/00010.png",
+        ".cache/data/olives-r4/Frames/input/video_29/00011.png",
+        ".cache/data/olives-r4/Frames/input/video_29/00012.png"
+      ],
+      "target_sources": [
+        ".cache/data/olives-r4/Frames/gt/video_29/00009.png",
+        ".cache/data/olives-r4/Frames/gt/video_29/00010.png",
+        ".cache/data/olives-r4/Frames/gt/video_29/00011.png",
+        ".cache/data/olives-r4/Frames/gt/video_29/00012.png"
+      ]
+    },
+    {
+      "source": "olives_real",
+      "video": "video_11",
+      "indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "xy": [
+        840,
+        658
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": true,
+      "input_sources": [
+        ".cache/data/olives-r4/Frames/input/video_11/00000.png",
+        ".cache/data/olives-r4/Frames/input/video_11/00001.png",
+        ".cache/data/olives-r4/Frames/input/video_11/00002.png",
+        ".cache/data/olives-r4/Frames/input/video_11/00003.png"
+      ],
+      "target_sources": [
+        ".cache/data/olives-r4/Frames/gt/video_11/00000.png",
+        ".cache/data/olives-r4/Frames/gt/video_11/00001.png",
+        ".cache/data/olives-r4/Frames/gt/video_11/00002.png",
+        ".cache/data/olives-r4/Frames/gt/video_11/00003.png"
+      ]
+    }
+  ],
+  "original_target_identities_match": true,
+  "device": "cpu",
+  "cuda_initialized": false,
+  "protocol_sha256": "0d637adb9f952c23cb28b4e4ec085c971b627f89e0433f5dc81a0ac6512e1dda",
+  "source_sha256": {
+    "tiny_task_r56.py": "63fb9c8d3d5efd138199a460553dcdbff7ee378c6058f26dee8c730f2d992d31",
+    "check_tiny_task_r56.py": "5e7b72274ca9d209514cf220955061abb35b3d877d9ba09c1dcd3e1379e7757e",
+    "multinex_reference_r55.py": "7c3b12228c8e9624224a14e6ed020aad25efb120ba6baa8f04931903646299e0",
+    "mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5",
+    "dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498"
+  },
+  "scope": "One discarded update only, no DEV or final pixels; all original BN buffers will be reloaded before formal training."
+}
