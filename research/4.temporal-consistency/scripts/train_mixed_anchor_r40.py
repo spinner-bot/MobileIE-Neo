@@ -11,6 +11,7 @@ import cv2
 import torch
 
 from dynamic_training_r34 import BASE, ROOT, digest
+from gpu_guard import sample
 from mixed_anchor_r40 import MixedPool, prediction
 from train_exploration_r2 import new_model
 
@@ -31,18 +32,28 @@ def main():
     torch.use_deterministic_algorithms(True)
     torch.backends.cudnn.deterministic = True
     torch.backends.cudnn.benchmark = False
+    out = BASE/f'results/exploration-r40-seed{args.seed}'
+    out.mkdir(parents=True, exist_ok=False)
     pool = MixedPool()
+    # Full CPU source decoding takes time; check again immediately before CUDA.
+    physical = int(os.environ['CUDA_VISIBLE_DEVICES'])
+    samples = [sample(physical)]
+    time.sleep(1)
+    samples.append(sample(physical))
+    allowed = all(not value['compute_processes'] and value['memory_mib'] <= 64
+                  and value['utilization_percent'] <= 5 for value in samples)
+    write(out/'pre_cuda_guard.json', {'samples': samples, 'allowed': allowed,
+          'scope': 'Fresh check after full owned CPU data load, immediately before CUDA; external project lock still held.'})
+    assert allowed, 'GPU headroom changed during CPU data load; CUDA not initialized'
     torch.manual_seed(args.seed)
     net = new_model(torch.device('cpu')).cuda().train()
     assert sum(p.numel() for p in net.parameters()) == 4075
     optimizer = torch.optim.Adam(net.parameters(), lr=1e-4, betas=(.9, .999), eps=1e-8, weight_decay=0)
-    out = BASE/f'results/exploration-r40-seed{args.seed}'
     checkpoints = ROOT/f'.cache/checkpoints/exploration-r40/seed{args.seed}'
     assert checkpoints.resolve().is_relative_to('/data/Users/zrh/data/MobileIE-Neo')
-    out.mkdir(parents=True, exist_ok=False)
     checkpoints.mkdir(parents=True, exist_ok=False)
     files = ['train_mixed_anchor_r40.py', 'mixed_anchor_r40.py', 'dynamic_training_r34.py',
-             'native_training_r14.py', 'exploration_r2_data.py', 'train_exploration_r2.py']
+             'native_training_r14.py', 'exploration_r2_data.py', 'train_exploration_r2.py', 'gpu_guard.py']
     control = BASE/f'results/exploration-r34-seed{args.seed}'
     write(out/'config.json', {'seed': args.seed, 'model': 'mixed_original', 'parameters': 4075,
           'steps': 4000, 'batch': 4, 'frames': 4, 'patch': 128,
