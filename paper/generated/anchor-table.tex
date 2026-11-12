@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering\small
+\caption{Completed anchor evidence: two-seed means on custom synthetic and paired ND development data. Historical rows differ in training; only the two R41 raw forms are a matched FP32 parameterization comparison.}
+\label{tab:anchors}
+\begin{tabular}{lrrrr}
+\toprule
+Anchor/output & SYN PSNR & SYN $E_{\rm temp}$ & ND PSNR & ND $E_{\rm temp}$\\
+\midrule
+Dynamic synthetic (R34) & 26.234 & 10.505 & 23.453 & 3.166\\
+Fixed mixed Slim (R40) & 25.134 & 11.363 & 24.861 & 3.628\\
+Matched Slim FP32 (R41) & 25.131 & 11.362 & 24.861 & 3.627\\
+Expanded FP32 (R41) & 26.186 & 10.007 & 25.847 & 3.630\\
+Expanded + finite & 26.394 & 7.286 & 25.734 & 2.804\\
+Expanded + recursive & 26.503 & 6.520 & 25.758 & 2.553\\
+Earlier native training (R26) & -- & -- & 27.138 & 3.313\\
+\bottomrule
+\end{tabular}
+\end{table}
