@@ -1,7 +1,7 @@
 # 06 · zrh 个人安卓开发环境
 
 - 建立日期：2026-11-13；作者：Codex  (sqs_A100)。
-- 用户授权：安卓工具链安装到个人环境站 `/root/Users/zrh/.envs`，并在 `/root` 创建链接；只安装与验证环境，微 App 仍等待设计审阅。
+- 本报告初次提交时的授权：安卓工具链安装到个人环境站 `/root/Users/zrh/.envs`，并在 `/root` 创建链接。随后用户授权环境报告先提交、再自主实现 App 与模拟迭代，当前结果见[09 最终交付报告](09-app-v011-final.md)。
 - 实际目录：`/data/Users/zrh/.envs/android`；`/root/Users/zrh` 为既有兼容软链接。
 - 便捷入口：`/root/android-dev` 指向上述实际目录。
 - 安装状态：**已完成，E0–E2 工具、构建签名与模拟安装门控全部通过。** 本报告在 App 实施前提交；配置与原始证据见[环境记录](../results/android-environment-20261113/configuration.json)。

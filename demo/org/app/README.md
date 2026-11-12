@@ -53,4 +53,4 @@ source /root/android-dev/activate.sh
 | 同位置绘制、滑动及无障碍操作 | `ComparisonView.java` |
 | 带标签导出与部分写入回滚 | `ResultExporter.java` |
 
-源码、样例来源和 MobileIE Apache-2.0 许可随仓库保存。APK 及较大的运行/测试产物存放 zrh 自有项目数据目录，最终位置、摘要、功能与未验证范围见[交付报告](../docs/08-app-delivery.md)。演示安装包采用开发调试签名，不作为应用商店正式发布包。
+源码、样例来源和 MobileIE Apache-2.0 许可随仓库保存。APK 及较大的运行/测试产物存放 zrh 自有项目数据目录，当前 0.1.1 位置、摘要、功能与未验证范围见[最终交付报告](../docs/09-app-v011-final.md)。演示安装包采用开发调试签名，不作为应用商店正式发布包。

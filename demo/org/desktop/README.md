@@ -45,4 +45,4 @@ run.cmd
 bash demo/org/scripts/run-desktop-validation.sh
 ```
 
-该入口使用服务器个人目录中的 Linux 测试依赖与独立虚拟显示，不安装 Windows 开发环境。最终交付位置、摘要、证据和仍待真机检查的项目见[交付报告](../docs/08-app-delivery.md)。
+该入口使用服务器个人目录中的 Linux 测试依赖与独立虚拟显示，不安装 Windows 开发环境。当前 0.1.1 交付位置、摘要、证据和仍待真机检查的项目见[最终交付报告](../docs/09-app-v011-final.md)。
