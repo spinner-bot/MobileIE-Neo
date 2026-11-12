@@ -1,0 +1,15 @@
+{
+  "at": "2026-11-13T07:42:46.119742+08:00",
+  "failed_coordinator": "finalize001",
+  "failed_qualification": "cuda-gate001",
+  "confirmed_terminal": true,
+  "reason": "Missing CUBLAS_WORKSPACE_CONFIG for original MBR slim matmul with deterministic CUDA.",
+  "failed_GPU_discarded_SGD": 0,
+  "failed_formal_SGD": 0,
+  "failed_DEV_conditions": 0,
+  "failed_guard_returncode": 1,
+  "corrective_change": "Set :4096:8 before importing torch in the qualification entrypoint; same setting already used by trainer. New coordinator attempt2/qualification start2, all original failure files retained.",
+  "core_or_algorithm_or_threshold_changed": false,
+  "automatically_retried_scientific_failure": false,
+  "scope": "Deliberate environment configuration correction after authoritative terminal error, not a timeout restart or parameter search."
+}
