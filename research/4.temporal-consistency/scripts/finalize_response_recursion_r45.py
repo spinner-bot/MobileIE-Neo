@@ -1,4 +1,5 @@
-"""Wait for the identified R45 fixed budgets, then run final CPU evaluation once."""
+"""Wait for the identified R45 fixed budgets, preserving each coordinator attempt."""
+import argparse
 from datetime import datetime
 import json
 import subprocess
@@ -16,7 +17,10 @@ def write(path, value):
 
 
 def main():
-    folder = BASE/'process/exploration-r45/stage001/finalize001'
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--attempt', type=int, required=True)
+    args = parser.parse_args()
+    folder = BASE/f'process/exploration-r45/stage001/finalize{args.attempt:03d}'
     folder.mkdir(parents=True, exist_ok=False)
     names = ['finalize_response_recursion_r45.py', 'train_response_recursion_r45.py',
              'evaluate_response_recursion_r45.py', 'summarize_response_recursion_r45.py',
