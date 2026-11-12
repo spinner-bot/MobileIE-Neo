@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/check_native_moment_r73.py", line 100, in main
+    before = export_check(net, low); assert before['passed'] and before['parameters'] == PARAMETERS[name]
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/check_native_moment_r73.py", line 26, in export_check
+    slim = folded(net).to(low.device)
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/native_moment_core_r73.py", line 145, in folded
+    result.backbone = net.backbone.slim().eval()
+  File "/data/Users/zrh/repo/MobileIE-Neo/MobileIE/model/lle.py", line 62, in slim
+    w, b = mod.slim()
+  File "/data/Users/zrh/repo/MobileIE-Neo/MobileIE/model/utils.py", line 131, in slim
+    weight = torch.matmul(weight_compress, weight.permute([2, 3, 0, 1])).permute([2, 3, 0, 1])
+RuntimeError: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility
