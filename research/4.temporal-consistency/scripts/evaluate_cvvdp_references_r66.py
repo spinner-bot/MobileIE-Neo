@@ -1,9 +1,13 @@
 """All140 cached reference comparisons, original ColorVideoVDP, zero new enhancement CNN."""
+import argparse
 import json
+import os
 import subprocess
 import time
 import traceback
 from datetime import datetime
+
+os.environ.setdefault('CUBLAS_WORKSPACE_CONFIG', ':4096:8')
 
 import cv2
 import numpy as np
@@ -73,12 +77,14 @@ def conditions(meta, data, manifests):
 
 
 def main():
+    parser = argparse.ArgumentParser(); parser.add_argument('--attempt', type=int, choices=[1, 2], default=1)
+    args = parser.parse_args()
     torch.set_num_threads(2); cv2.setNumThreads(1); torch.use_deterministic_algorithms(True)
     configure_precision(); assert not torch.cuda.is_initialized()
     gate_path = BASE/'process/exploration-r66/cpu-gate001/gate.json'
     gate = json.loads(gate_path.read_text()); assert gate['passed']
-    out = BASE/'results/exploration-r66-reference-attempt001'; out.mkdir(exist_ok=False)
-    cache = ROOT/'.cache/experiments/exploration-r66/reference/attempt001'
+    out = BASE/f'results/exploration-r66-reference-attempt{args.attempt:03d}'; out.mkdir(exist_ok=False)
+    cache = ROOT/f'.cache/experiments/exploration-r66/reference/attempt{args.attempt:03d}'
     assert cache.resolve().is_relative_to('/data/Users/zrh/data/MobileIE-Neo')
     cache.mkdir(parents=True, exist_ok=False)
     start, complete, rows, frames = time.perf_counter(), False, 0, 0
