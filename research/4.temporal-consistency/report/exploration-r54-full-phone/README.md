@@ -26,3 +26,14 @@ Contacts always show 0 / floor(T/2) / T-1. MJPEG contains all frames at constant
 
 ![All fixed brightness traces](brightness-traces.png)
 
+
+## Reviewed observations and native center regions
+
+[Visual review and limitations](visual-review.md). All three main contacts, brightness panels, and the following fixed final-frame center regions were inspected. This does not imply human playback of every preview frame or GT quality.
+
+![Fixed final center](Huawei_Mate_20_Pro_VID_20210209_183437--final-center.png)
+
+![Fixed final center](Pixel_3_VID_20210213_223036--final-center.png)
+
+![Fixed final center](iPhone_11_IMG_1541--final-center.png)
+
