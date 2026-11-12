@@ -14,6 +14,11 @@ from model.utils import MBRConv1, MBRConv3, MBRConv5
 LAYERS = ['head.block1.0', 'head.block1.2', 'body.block1', 'att.1', 'att1.0', 'tail']
 
 
+def configure_precision():
+    torch.backends.cudnn.allow_tf32 = False
+    torch.backends.cuda.matmul.allow_tf32 = False
+
+
 def create_model(seed):
     torch.manual_seed(seed)
     slim = new_model(torch.device('cpu'))
