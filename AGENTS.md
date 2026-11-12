@@ -95,7 +95,7 @@
 
 修改：2026-11-12T19:20:03.788606+08:00；作者：Codex  (sqs_A100)；原因：索引R51完整正常止损，区分唯一活跃R47链和已结束CPU原型。
 
-- R52外部资料：DRV六ZIP目录获取/本地目录重分类完整，权威清单process/external-drv/classification001/catalog.json；原attempt002静态标签已被替代，0RAW/PNG成员读取。公开作者Night Wenzhou部分备份PID3514885仍下载，finalize3531976只接续完整下载后列目录，不解码/CNN；原完整链接404、样例不是完整基准。不得重启下载或改活跃源码，先查runtime/manifest/catalog真实状态，再另定固定像素协议。note42记录RAW/ISP/时域预处理限制，不能把VBM4D_rawRGB当原始单帧输入。
+- R52外部资料：DRV六ZIP元数据/重分类完整，权威清单process/external-drv/classification001/catalog.json；原attempt002标签已替代，R52阶段0RAW/PNG。R58现另按独立协议完成36固定train RAW及渲染，见0073，不能继续说当前DRV只有目录。Night Wenzhou部分备份3514885/3531976沿原下载→目录链，不因低速重启；先查真实runtime/manifest/catalog，再定像素协议，0新Night解码。note42实际补记已有，RAW/时域预处理/sRGB不可混同。
 - R53源上下文参考现已全部正常结束：双seed各8000/总16000、最终CPU40行/40CNN/1792逐帧、完整160比较行，原协调器21:39:50 return0。重复源窗口6.986%/7.146%是分布记录，不是质量证据；相对R47无双域双seed一致收益，ND window比同权重five_current低2.202/1.908dB。按R53 source-context-interpretation冻结sigma/LR/长度/BN/seed网格，不重启任何旧训练/CPU/协调器。保留额外源输入/公开预训练重叠/未来2帧/容量/训练计算限制，非新方法/充分收敛。先读0071与完整全表。
 
 修改：2026-11-12T20:00:00+08:00；作者：Codex  (sqs_A100)；原因：闭环R47并披露短上下文限制，索引R52来源获取及R53实际独立对照；迁移路径与版本规范继续保持。
