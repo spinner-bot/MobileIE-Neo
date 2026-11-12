@@ -322,6 +322,36 @@ def main():
                          +'|'.join(f'{r[m]:.6f}' for m in ['psnr_rgb', 'ssim_rgb', 'temporal_error', 'edge_mae'])+'|')
         lines += ['', f"注册raw诊断门槛（两seed均须真实域相对R34补回2dB、合成域不低于−.2dB）：{mixed_audit['registered_diagnostic_both_seeds']}。同时保留更强R26真实域参考，不把部分补回称追平。即使通过也仅形成更强数据基线，不自动成为方法、新颖性或独立最终验证。", '',
                   '没有新权重手机延迟或整条CPU速度结论；纯单帧预测/finite/recursive路径分开，后两者部署有motion与历史。实拍域是四段既有白天ND crop。[完整两域与配对](../exploration-r40-mixed-anchor/tables.md)、[机器表](mixed_anchor_evidence.csv)。']
+    training_form_rows = []
+    if (BASE/'report/exploration-r41-training-form/audit.json').exists():
+        form_audit = read(Path('report/exploration-r41-training-form/audit.json'))
+        assert form_audit['passed'] and form_audit['new_rows'] == 120
+        assert form_audit['new_neural_sequences'] == 40 and form_audit['stage'] == 'stage002'
+        values = read(Path('report/exploration-r41-training-form/domain_summary.json'))
+        for r in values:
+            if r['anchor_family'] not in ['R41_slim_fp32', 'R41_expanded_fp32']:
+                continue
+            training_form_rows.append({**r, 'predictor_params': 4075, 'future_frames': 0,
+                 'flow_at_inference': r['method'] != 'raw', 'extra_motion_teacher_params': 0,
+                 'phone_latency_ms': None,
+                 'matched_training_form_screen_passed': form_audit['matched_baseline_screening_passed'],
+                 'scope': 'Matched strict FP32 final4000 forms; equal images/updates, unequal training FLOPs. '
+                          'Original MBR parameterization with partitioned raw convolution, no warm-up/full official reproduction. '
+                          'Known training-form baseline, not temporal innovation or final test.'})
+        assert len(training_form_rows) == 12
+        with (out/'training_form_evidence.csv').open('w', newline='') as stream:
+            writer = csv.DictWriter(stream, fieldnames=list(training_form_rows[0]))
+            writer.writeheader()
+            writer.writerows(training_form_rows)
+        lines += ['', '## R41同精度训练参数化强对照', '',
+                  '修正stage002两训练形式×两seed各4000更新，最终eval/fold门槛通过后共同CPU评价120新行/40CNN序列。两形式都为严格FP32；展开形式训练含MBR/BN，部署折叠回同4075参数。相同窗口、优化器和更新数不代表训练FLOPs相同。', '',
+                  '原宽卷积按预训练输出块分开执行以保持初始函数数值门槛，执行实现与上游不同；无warm-up/完整原训练复现。先前失败与1568部分更新另存，不计本阶段模型预算，不用部分权重挑结果。旧R40训练精度不同，仅作单列历史参考。', '',
+                  '|域|训练形式|输出|PSNR|SSIM|时序↓|边缘↓|', '|---|---|---|---:|---:|---:|---:|']
+        for r in training_form_rows:
+            lines.append('|'+r['domain']+'|'+r['anchor_family']+'|'+r['method']+'|'
+                         +'|'.join(f'{r[m]:.6f}' for m in ['psnr_rgb', 'ssim_rgb', 'temporal_error', 'edge_mae'])+'|')
+        lines += ['', f"展开相对本阶段同精度slim的注册强基线门槛：{form_audit['matched_baseline_screening_passed']}。要求同一域两seed均≥+.2dB、另一域均≥−.05dB；这是基线筛查，不是时间机制、新颖性或独立泛化证据。", '',
+                  'raw无历史或flow，finite/recursive有传统历史与motion开销；手机延迟未测。两域分开，不合并成功分数。[完整全表及逐seed配对](../exploration-r41-training-form/tables.md)、[机器表](training_form_evidence.csv)。']
     (out/'README.md').write_text('\n'.join(lines)+'\n')
     (out/'sources.json').write_text(json.dumps({'sources': sources, 'rows': len(rows),
         'external_data_prepared': {'DAVIS_source_videos': 3, 'DAVIS_synthetic_conditions': 6,
@@ -338,6 +368,7 @@ def main():
         'R38_real_phone_reference_complete': phone_reference_complete,
         'R39_paired_real_anchor_rows': len(transfer_rows),
         'R40_mixed_anchor_rows': len(mixed_rows),
+        'R41_matched_training_form_rows': len(training_form_rows),
         'FastDVDnet_documented_R30_DEV_overlap': prior_overlap['overlap_R30_DEV'],
         'heldout_metadata_only': {'video_count': heldout_metadata['video_count'], 'future_frames': heldout_metadata['future_total_frames'],
                                   'JPEG_members_read': heldout_metadata['JPEG_members_read']},
