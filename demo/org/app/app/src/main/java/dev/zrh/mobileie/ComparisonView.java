@@ -26,7 +26,7 @@ public final class ComparisonView extends View {
         boolean relayout = (mode == 2) != (selected == 2);
         original = input; mobileie = mie; gamma = traditional; mode = selected;
         overviewImages[0]=input; overviewImages[1]=mie; overviewImages[2]=traditional;
-        setContentDescription(selected == 2 ? "原图、MobileIE 与 Gamma 三图总览" : "原图与" + (selected == 0 ? "MobileIE" : "Gamma") + "滑动对比，可左右调整分界线");
+        setContentDescription(selected == 2 ? "原图、MobileIE 与 Gamma 三图总览"+(mie==null?"，MobileIE 本次未生成":"") : "原图与" + (selected == 0 ? "MobileIE" : "Gamma") + "滑动对比，可左右调整分界线");
         if (relayout) requestLayout(); invalidate();
     }
     public float position() { return split; }
@@ -55,6 +55,7 @@ public final class ComparisonView extends View {
                 paint.setColor(0xfff0f0e8); c.drawRect(i*cell,0,(i+1)*cell,h,paint);
                 cellBounds.set(i*cell,0,(i+1)*cell,cell*2/3f);
                 if(overviewImages[i]!=null) c.drawBitmap(overviewImages[i],null,cellBounds,paint);
+                else { paint.setColor(0xff68766c); paint.setTextSize(11*density); paint.setTextAlign(Paint.Align.CENTER); c.drawText("未生成",cell*(i+.5f),cell/3f,paint); paint.setTextAlign(Paint.Align.LEFT); }
                 paint.setColor(0xff243d35); paint.setTextSize(12*density); paint.setTextAlign(Paint.Align.CENTER);
                 c.drawText(overviewLabels[i],cell*(i+.5f),h-15*density,paint); paint.setTextAlign(Paint.Align.LEFT);
             }

@@ -153,6 +153,10 @@ public class FlowInstrumentedTest {
             main(()->app.process()); idle();
             assertNull(app.session.mobileie); assertNotNull(app.session.gamma);
             assertFalse(app.session.metadata.getBoolean("mobileie_complete")); assertFalse(app.session.metadata.has("inference_ms"));
+            scenario.onActivity(a->assertFalse(a.findViewById(R.id.mode_mobileie).isEnabled()));
+            find("mode_overview").click();
+            assertNotNull(device.wait(Until.findObject(By.res(PKG,"mode_overview").selected(true)),3000));
+            scenario.onActivity(a->assertTrue(a.findViewById(R.id.comparison).getContentDescription().toString().contains("本次未生成")));
             assertTrue(app.status.contains("Gamma")); shot("06-model-failure-honest-baseline");
         } finally { app.engineFactory=previous; }
     }

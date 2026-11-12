@@ -108,6 +108,8 @@ public final class MainActivity extends Activity {
         camera.setEnabled(!app.busy); pick.setEnabled(!app.busy); sample.setEnabled(!app.busy);
         process.setEnabled(loaded&&!app.busy); process.setText(app.busy?"处理中…":done?"重新处理":"开始对比");
         save.setEnabled(done&&!app.busy); modes.setVisibility(done?View.VISIBLE:View.GONE);
+        modeMie.setEnabled(loaded&&s.mobileie!=null); modeMie.setAlpha(modeMie.isEnabled()?1f:.4f);
+        modeMie.setContentDescription(modeMie.isEnabled()?"MobileIE 对比":"MobileIE 本次未生成，暂不可选择");
         hint.setText(!done?"选择照片并处理后，可拖动对比同一位置":mode==2?"同一处理范围：原图 / MobileIE / Gamma":"左右拖动分界线，比较同一位置的细节");
         select(modeMie,mode==0); select(modeGamma,mode==1); select(modeOverview,mode==2);
         if(done) metrics.setText(String.format(Locale.CHINA,"MobileIE %s   ·   Gamma %.1f ms\n点击查看分项计时与模型信息",s.mobileie==null?"未生成":String.format(Locale.CHINA,"%.1f ms",s.metadata.optDouble("inference_ms")),s.metadata.optDouble("gamma_ms")));
