@@ -1,4 +1,4 @@
-"""Fixed equal-time-position input contacts, original brightness and no model."""
+"""Fixed uniformly spaced frame-index input contacts, original brightness and no model."""
 import json
 from pathlib import Path
 
