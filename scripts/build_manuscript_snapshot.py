@@ -27,6 +27,23 @@ def published_reference_table(read, out):
     v = {(r['domain'], r['seed'], r['method']): r for r in video}
     domains = ['davis_train_pilot', 'paired_real_ND_DEV']
     rows = []
+    clean_run = 'results/exploration-r62-stablellve-common-attempt001'
+    clean_config = read(clean_run+'/config.json')
+    anchor_config = read('results/exploration-r44-stage001-eval-seed0/config.json')
+    assert clean_config['cache_indices'] == anchor_config['cache_indices']
+    assert clean_config['project_updates'] == 0 and clean_config['claimed_seed'] is None
+    assert clean_config['parameters'] == 4316259 and clean_config['future_wait_max'] == 0
+    clean_audit = read('report/exploration-r62-stablellve-common/audit.json')
+    assert clean_audit['completed_normally'] and clean_audit['quality_rows'] == 20
+    assert clean_audit['per_frame_rows'] == 896 and not clean_audit['training_budget_matched']
+    clean = read('report/exploration-r62-stablellve-common/domain-summary.json')
+    assert len(clean) == 4
+    c = {(r['domain'], r['method']): r for r in clean}
+    for method, label in [('raw', 'StableLLVE clean raw'), ('recursive_self05', 'StableLLVE clean + rec.')]:
+        values = [c[d, 'StableLLVE_clean_'+method] for d in domains]
+        assert [r['rows'] for r in values] == [6, 4]
+        assert all(r['project_updates'] == 0 and r['seed'] is None for r in values)
+        rows.append((label, '--', 4316259, values))
     for method, label in [('raw', 'Nano published raw'), ('recursive_self05', 'Nano published + rec.')]:
         rows.append((label, '--', 696, [n[d, 'published', 'Nano_published_'+method] for d in domains]))
     methods = [('Nano_adapted_raw', 'Nano adapted raw', 696),
@@ -41,13 +58,15 @@ def published_reference_table(read, out):
             values = ([n[d, f'seed{seed}', method] for d in domains] if method.startswith('Nano_')
                       else [v[d, seed, method] for d in domains])
             rows.append((label, str(seed), parameters, values))
-    assert len(rows) == 16
+    assert len(rows) == 18
     lines = [r'\begin{table}[t]', r'\centering\scriptsize\setlength{\tabcolsep}{4pt}',
-             r'\caption{Completed fixed-budget published references on reused DEV data. Adapted models use 8,000 updates with the same four supervised targets per window; FastDVDnet sees additional surrounding inputs and two future frames. Pretraining, training parameterization and compute differ. The published Nano checkpoint has no project adaptation or claimed seed. Current means five copies of the current input, a diagnostic rather than a video configuration. Recursion and RGB gating include motion/history cost beyond the listed learned parameters.}',
+             r'\caption{Completed published and adapted references on reused DEV data, all evaluated with the common CPU protocol. The original StableLLVE synthetic-clean and Nano LOL-v1 checkpoints have zero project updates and no claimed seed. Adapted backbones use 8,000 updates with the same four supervised targets; the RGB gate has 4,000 additional controller updates. FastDVDnet sees surrounding inputs and two future frames. Pretraining, training parameterization, noise conditions and compute differ; these are not matched-convergence architectural rankings. Current means five copies of the current input, a diagnostic. Recursion and RGB gating add motion/history cost beyond learned parameters.}',
              r'\label{tab:published-adapted}', r'\begin{tabular}{llrrrrr}', r'\toprule',
              r'Model/output & Seed & Params & SYN PSNR & SYN $E_{\rm temp}$ & ND PSNR & ND $E_{\rm temp}$\\',
              r'\midrule']
-    for label, seed, parameters, (syn, real) in rows:
+    for index, (label, seed, parameters, (syn, real)) in enumerate(rows):
+        if index == 4:
+            lines.append(r'\midrule')
         lines.append(f"{label} & {seed} & {parameters} & {syn['psnr_rgb']:.3f} & "
                      f"{syn['temporal_error']:.3f} & {real['psnr_rgb']:.3f} & {real['temporal_error']:.3f}"+r'\\')
     lines += [r'\bottomrule', r'\end{tabular}', r'\end{table}']
@@ -60,6 +79,11 @@ def main():
         path = BASE/relative
         sources[str(path.relative_to(ROOT))] = hashlib.sha256(path.read_bytes()).hexdigest()
         return json.loads(path.read_text())
+    # Fail before writing any generated table if the new reference is incomplete.
+    clean_run = read('results/exploration-r62-stablellve-common-attempt001/runtime.json')
+    assert clean_run['completed_normally'] and clean_run['sequences'] == 20
+    assert clean_run['CNN_center_outputs'] == 448 and not clean_run['cuda_initialized']
+    assert read('process/exploration-r62/finalize001/runtime.json')['completed_normally']
     assert read('report/exploration-r41-training-form/audit.json')['new_rows'] == 120
     assert read('report/exploration-r42-tlc/audit.json')['total_rows'] == 120
     assert read('report/exploration-r36-classical/audit.json')['rows'] == 48
