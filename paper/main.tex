@@ -25,8 +25,12 @@ temporal effects must be separated. Matched learned-recursion controls also
 show negligible benefit of an internal feature-energy cue over an RGB gate,
 while exposing a quality--stability trade-off over fixed fusion weights.
 Completed fixed-budget adaptations of a published 696-parameter enhancer
-and a five-frame video denoiser extend reference coverage while retaining
-training-history, convergence, and domain limitations.
+a five-frame video denoiser, and a published deformation-consistency
+objective extend reference coverage while retaining training-history,
+convergence, and domain limitations. The fixed commutator adaptation
+reduces paired-real temporal error at a substantial spatial and perceptual
+cost; a fixed display-based metric further qualifies temporal-error gains.
+Common convolution budgets are reported without inferring phone speed.
 These findings do not establish a new video enhancement method.
 This internal draft contains no independent
 final-test claim or measured phone latency.
@@ -45,6 +49,7 @@ Training progress, partial checkpoints, and loss curves are excluded.
 \input{sections/protocol}
 \input{sections/evidence}
 \input{sections/recursion}
+\input{sections/video-evidence}
 \input{sections/limitations}
 
 \bibliographystyle{plain}
