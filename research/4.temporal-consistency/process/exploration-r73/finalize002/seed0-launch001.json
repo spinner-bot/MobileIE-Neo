@@ -1,0 +1,42 @@
+{
+  "at": "2026-11-13T07:43:27.894117+08:00",
+  "guard_pid": 4061135,
+  "identity": {
+    "start_ticks": "46719541",
+    "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 4 --record research/4.temporal-consistency/process/exploration-r73/finalize002/seed0-guard001.json -- ./scripts/project-python research/4.temporal-consistency/scripts/train_native_moment_r73.py --seed 0 --admission-attempt 1 "
+  },
+  "gpu": 4,
+  "command": [
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/gpu_guard.py",
+    "--gpu",
+    "4",
+    "--record",
+    "research/4.temporal-consistency/process/exploration-r73/finalize002/seed0-guard001.json",
+    "--",
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/train_native_moment_r73.py",
+    "--seed",
+    "0",
+    "--admission-attempt",
+    "1"
+  ],
+  "preguard_samples": [
+    {
+      "gpu": 4,
+      "uuid": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+      "memory_mib": 0,
+      "utilization_percent": 0,
+      "compute_processes": [],
+      "time": "2026-11-13T07:43:26.463271+08:00"
+    },
+    {
+      "gpu": 4,
+      "uuid": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+      "memory_mib": 0,
+      "utilization_percent": 0,
+      "compute_processes": [],
+      "time": "2026-11-13T07:43:27.692915+08:00"
+    }
+  ]
+}
