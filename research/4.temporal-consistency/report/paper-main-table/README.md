@@ -198,3 +198,26 @@ actual相对独立空间+self-post的注册联合门槛（双seed均过）：Fal
 展开相对本阶段同精度slim的注册强基线门槛：True。要求同一域两seed均≥+.2dB、另一域均≥−.05dB；这是基线筛查，不是时间机制、新颖性或独立泛化证据。
 
 raw无历史或flow，finite/recursive有传统历史与motion开销；手机延迟未测。两域分开，不合并成功分数。[完整全表及逐seed配对](../exploration-r41-training-form/tables.md)、[机器表](training_form_evidence.csv)。
+
+## R42固定已知TLC空间统计对照
+
+同R41展开最终4000两个seed，只将GAP替为窗口192的精确TLC局部均值；权重不变、零新训练。60新行/20CNN序列与同权重global60行复用，raw/finite/recursive完整保留。不是新视频方法，raw仍无时间状态。
+
+|域|空间统计|输出|PSNR|SSIM|时序↓|边缘↓|
+|---|---|---|---:|---:|---:|---:|
+|davis_train_pilot|R41_expanded_fp32|finite_self05|26.394347|0.751125|7.285598|3.948008|
+|davis_train_pilot|R41_expanded_fp32|raw|26.185509|0.711587|10.007045|4.312240|
+|davis_train_pilot|R41_expanded_fp32|recursive_self05|26.502948|0.764433|6.520411|3.839379|
+|davis_train_pilot|R42_TLC192|finite_self05|26.100293|0.750149|7.335667|3.958061|
+|davis_train_pilot|R42_TLC192|raw|25.825225|0.709727|10.105171|4.333441|
+|davis_train_pilot|R42_TLC192|recursive_self05|26.218988|0.763867|6.559867|3.844880|
+|paired_real_ND_DEV|R41_expanded_fp32|finite_self05|25.734394|0.916057|2.803777|1.449319|
+|paired_real_ND_DEV|R41_expanded_fp32|raw|25.846515|0.908162|3.629984|1.549785|
+|paired_real_ND_DEV|R41_expanded_fp32|recursive_self05|25.758288|0.919261|2.553407|1.412203|
+|paired_real_ND_DEV|R42_TLC192|finite_self05|23.465614|0.911440|2.915793|1.453470|
+|paired_real_ND_DEV|R42_TLC192|raw|23.519425|0.903328|3.754367|1.556719|
+|paired_real_ND_DEV|R42_TLC192|recursive_self05|23.494847|0.914719|2.663861|1.415607|
+
+固定TLC注册门槛：False；要求同域双seed≥+.1dB、另域均≥−.05dB且所有域/seed raw时间比≤1.02。最差逐条件raw ΔPSNR为-3.716017dB。
+
+参数4075不变，但att卷积从全局一点扩至全分辨率，1080p约新增.299卷积GMAC，前缀和与内存另计；不是零推理开销，当前不据共享质量计时排行手机或独立CPU速度。[完整表](../exploration-r42-tlc/tables.md)、[机器表](tlc_evidence.csv)。
