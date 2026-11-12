@@ -9,3 +9,5 @@
 - renderer一处Python3.10 tuple-key编译错误在启动前修正；current评价改功能调用避免缓存无用历史。完整八模块再次编译/导入、0CUDA/0CNN/SGD。GPU4-7于07:39:48快照空闲，但不当准入；原协调将新外部/完整CPU模型池与首窗后内部双样本/锁，资格丢弃后重新初始化。正式两seed顺序占GPU，各正常释放即启动独立CPU，不持GPU等CPU。科学失败不自动重试，不设墙钟截断。
 
 完整新方法/联合收益、外部自然动态配对、手机及独立最终尚未完成，目标active。自有zrh data/project-python、指定作者/no-ff/密集分别提交与阶段推送保持，不改移动演示。
+
+- 2026-11-13T07:42:46.119742+08:00：原协调4059684/finalize001于07:41:27明确失败退出，CUDA gate001已初始化GPU但0资格SGD/0正式/0DEV：原MBR slim matmul因遗漏CUBLAS_WORKSPACE_CONFIG与确定性冲突。guard1并已释放；未把配置错误当模型质量/机制失败。全部原配置/失败/runtime/stdout逐文件保留，未自动重试。现只给资格入口补与trainer相同的:4096:8，在torch导入前设置；核心/预算/门槛不变，CPU数值资格不重复。协调器新增显式attempt与qualification-start，只为保留已结束001而手动新启动002，非同目录覆盖或观察超时重启。
