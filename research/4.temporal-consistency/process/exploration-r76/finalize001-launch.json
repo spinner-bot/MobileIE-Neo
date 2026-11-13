@@ -1,0 +1,30 @@
+{
+  "at": "2026-11-13T21:37:07.874221+08:00",
+  "pid": 39049,
+  "start_ticks": "51721359",
+  "command": [
+    "/data/Users/zrh/repo/MobileIE-Neo/scripts/project-python",
+    "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/finalize_self_conditioning_r76.py",
+    "--attempt",
+    "1",
+    "--primary-pid",
+    "4163819",
+    "--metric-attempt",
+    "1"
+  ],
+  "primary_pid": 4163819,
+  "primary_start_ticks": "48956211",
+  "waiting": {
+    "at": "2026-11-13T21:37:05.947476+08:00",
+    "primary_pid": 4163819,
+    "start_ticks": "48956211",
+    "primary_handle_state": "live",
+    "verified_live": true,
+    "primary_complete": false,
+    "scope": "No R76 inference or GPU yet. Unknown observations wait on the same handle."
+  },
+  "new_inference": 0,
+  "new_GPU": 0,
+  "new_training": 0,
+  "scope": "Detached supplemental coordinator waits on actual primary identity; this is not a completed experiment."
+}
