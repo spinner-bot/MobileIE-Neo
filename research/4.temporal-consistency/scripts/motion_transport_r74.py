@@ -82,6 +82,36 @@ def sequence(net, raw, zero_flow=False):
     return torch.stack(outputs, dim=1), fields
 
 
+class RGBStream:
+    """Inference state with owned compact buffers; training uses sequence/BPTT."""
+    def __init__(self, motion, zero_flow=False):
+        self.motion, self.zero_flow = motion, zero_flow
+        self.reset()
+
+    def reset(self):
+        self.previous_raw = self.previous_fused = None
+
+    def step(self, raw, fields=None):
+        if self.previous_raw is not None and (self.previous_raw.shape != raw.shape or
+                self.previous_raw.device != raw.device or self.previous_raw.dtype != raw.dtype):
+            self.reset()
+        if self.previous_raw is None:
+            output, fields = raw, None
+        else:
+            if fields is None:
+                fields = self.motion(self.previous_raw, raw)
+            output, _ = fuse(raw, self.previous_fused, fields, zero_flow=self.zero_flow)
+        # Compact copies avoid accidentally retaining the complete input clip's
+        # storage through a frame view. Copy cost belongs in stage timing.
+        self.previous_raw = raw.detach().clone(memory_format=torch.contiguous_format)
+        self.previous_fused = output.detach().clone(memory_format=torch.contiguous_format)
+        return output, fields
+
+    def state_storage_bytes(self):
+        return 0 if self.previous_raw is None else sum(
+            value.untyped_storage().nbytes() for value in [self.previous_raw, self.previous_fused])
+
+
 def make_models(seed):
     with torch.random.fork_rng(devices=[]):
         torch.manual_seed(7400+seed); first = MotionTransport()
