@@ -28,7 +28,8 @@ def prerequisites():
     # The original controller must have exited; a reused unrelated PID is harmless.
     proc = Path(f'/proc/{launch["pid"]}/stat')
     if proc.exists():
-        assert proc.read_text().split()[21] != str(launch['start_ticks'])
+        fields = proc.read_text().split()
+        assert fields[21] != str(launch['start_ticks']) or fields[2] == 'Z'
     terminal = json.loads((process/'finalize002/runtime.json').read_text())
     assert not terminal['completed_normally']
     assert 'KeyboardInterrupt' in (process/'finalize002/failure.txt').read_text()
