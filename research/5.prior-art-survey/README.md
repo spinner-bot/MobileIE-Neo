@@ -131,3 +131,5 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 - [有理激活先例与根部候选](docs/33-rational-activation-boundaries.md)：PAU明确已有，候选仅待原型，不称新视频方法或零开销。
 
 - 2026-11-13：[双矩历史的先例与噪声解释边界](docs/54-moment-history-equivalence-and-noise-boundaries.md)。SVGF已有重投影时间矩，MSTMN区分噪声/对齐权重；R73混合矩的条件二次展开与插值离散度分析限制创新措辞。原固定训练继续，不改活跃源码或注册门槛。
+
+- 2026-11-13：[DarkVision获取与视频参考边界](docs/56-darkvision-access-and-temporal-baseline-scope.md)。补读v1末尾合理申请声明、TC-DVE三帧输入及专门评价处理，当前仍无确认的官方像素入口；未联系作者/下载数据/新增模型，不把未核同名HF认作官方。R74原seed1继续，未改冻结依赖或门槛。
