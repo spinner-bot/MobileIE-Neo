@@ -1,0 +1,105 @@
+{
+  "spatial": {
+    "marker": "research/4.temporal-consistency/results/exploration-r44-stage001-seed0/square_mse-step4000.json",
+    "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+    "frozen": true,
+    "project_updates": 8000,
+    "parameters": 4075
+  },
+  "context": [
+    {
+      "video": "boxing-fisheye",
+      "members": [
+        "DAVIS/JPEGImages/480p/boxing-fisheye/00030.jpg",
+        "DAVIS/JPEGImages/480p/boxing-fisheye/00031.jpg",
+        "DAVIS/JPEGImages/480p/boxing-fisheye/00032.jpg",
+        "DAVIS/JPEGImages/480p/boxing-fisheye/00033.jpg"
+      ],
+      "xy": [
+        537,
+        270
+      ],
+      "flip_horizontal": true,
+      "flip_vertical": true,
+      "photons": 20,
+      "source": "davis_synthetic"
+    },
+    {
+      "video": "swing",
+      "members": [
+        "DAVIS/JPEGImages/480p/swing/00039.jpg",
+        "DAVIS/JPEGImages/480p/swing/00040.jpg",
+        "DAVIS/JPEGImages/480p/swing/00041.jpg",
+        "DAVIS/JPEGImages/480p/swing/00042.jpg"
+      ],
+      "xy": [
+        116,
+        264
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": false,
+      "photons": 20,
+      "source": "davis_synthetic"
+    },
+    {
+      "source": "olives_real",
+      "video": "video_95",
+      "indices": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "xy": [
+        1317,
+        932
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": true,
+      "input_sources": [
+        ".cache/data/olives-r4/Frames/input/video_95/00007.png",
+        ".cache/data/olives-r4/Frames/input/video_95/00008.png",
+        ".cache/data/olives-r4/Frames/input/video_95/00009.png",
+        ".cache/data/olives-r4/Frames/input/video_95/00010.png"
+      ],
+      "target_sources": [
+        ".cache/data/olives-r4/Frames/gt/video_95/00007.png",
+        ".cache/data/olives-r4/Frames/gt/video_95/00008.png",
+        ".cache/data/olives-r4/Frames/gt/video_95/00009.png",
+        ".cache/data/olives-r4/Frames/gt/video_95/00010.png"
+      ]
+    },
+    {
+      "source": "olives_real",
+      "video": "video_35",
+      "indices": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "xy": [
+        166,
+        633
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": false,
+      "input_sources": [
+        ".cache/data/olives-r4/Frames/input/video_35/00005.png",
+        ".cache/data/olives-r4/Frames/input/video_35/00006.png",
+        ".cache/data/olives-r4/Frames/input/video_35/00007.png",
+        ".cache/data/olives-r4/Frames/input/video_35/00008.png"
+      ],
+      "target_sources": [
+        ".cache/data/olives-r4/Frames/gt/video_35/00005.png",
+        ".cache/data/olives-r4/Frames/gt/video_35/00006.png",
+        ".cache/data/olives-r4/Frames/gt/video_35/00007.png",
+        ".cache/data/olives-r4/Frames/gt/video_35/00008.png"
+      ]
+    }
+  ],
+  "initial_motion_parameters_equal": true,
+  "independent_motion_parameters": true,
+  "spatial_eval_and_frozen": true,
+  "proxy_is_estimated_GT_motion_not_true_flow": true
+}
