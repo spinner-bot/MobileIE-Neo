@@ -2,6 +2,8 @@
 
 登记：2026-11-13；作者：Codex  (sqs_A100)。R73全正常且20门槛全部失败，旧局部STOP保持；当前没有活跃R73任务。R74改变监督信息与传输对象，不继续双矩/rho网格，不预设已有独立新颖性。[先例与边界](../../5.prior-art-survey/docs/55-motion-supervision-and-output-transport-boundaries.md)先于代码/数据评价登记。
 
+执行修订（2026-11-13，正式训练/DEV前）：依[CPU资源执行记录](exploration-r74-cpu-execution-amendment.md)，四个motion模型改为同一CPU FP32后端、Torch2/OpenCV1，顺序完整预算16000更新。复用原正常CPU实际窗资格，core/资格/共享计算不变且所有丢弃更新不继承；CPU模式不要求或声称CUDA训练资格，下面CUDA准入规则仍适用于GPU执行与感知。新attempt002重新冻结资源入口与本修订；原等待001、False工程筛选与明确结束原因保留。方法/资料/目标/优化器/最终选模/下述16质量门槛和质量后的成本规则均不变，不按墙钟或后来GPU可用性中断/迁移CPU训练。
+
 ## 固定问题与信息条件
 
 保留同seed R44 square_mse最终累计8000的4075参数部署空间网络，始终eval/frozen，仅对其clipped raw输出进行因果传输。比较相同小型motion网络的两种学习条件：task用最终递归输出对GT的全帧MSE；proxy用正常光GT上固定half-FB估计的运动/接纳代理监督。后者不是传感器运动真值，也不是无监督训练。部署只读取当前/上一raw和上一fused，不读GT、外部flow或未来帧。
