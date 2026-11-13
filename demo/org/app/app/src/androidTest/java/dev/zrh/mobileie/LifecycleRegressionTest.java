@@ -87,8 +87,13 @@ public class LifecycleRegressionTest {
             openAndCloseSecondActivity();chooseFirstSampleAndAssertVisible();
             MainActivity previous=first;main(previous::recreate);first=resumedOtherThan(previous);
         }
-        main(()->first.findViewById(R.id.process).performClick());idle();
+        main(()->{
+            try { app.session.metadata.put("app_version","0.1.1"); }
+            catch(org.json.JSONException e) { throw new AssertionError(e); }
+            first.findViewById(R.id.process).performClick();
+        });idle();
         assertNotNull(app.session.mobileie);assertNotNull(app.session.gamma);
+        assertEquals("Reprocessing an upgraded session must record the running version",BuildConfig.VERSION_NAME,app.session.metadata.optString("app_version"));
         main(()->assertTrue(((TextView)first.findViewById(R.id.status)).getText().toString().contains("处理完成")));
     }
 }
