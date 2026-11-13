@@ -13,3 +13,5 @@
 项目锁只能协调本项目进程，不能预订其他用户资源；无法凭nvidia-smi确认对方任务没有减速。显存不足或负载持续饱和时选择其他卡或等待，不靠反复OOM探测容量。运行资产仍仅使用zrh自有项目data目录。
 
 2026-11-13实际纠正：可见设备必须在启动整个子进程前传入；CPU准备也可能查询CUDA，torch.cuda.is_initialized为False不保证尚未枚举设备。初始化后应以nvidia-smi的实际PID/UUID交叉核验选择，监测实际用卡。R74原选择1/实际0的问题及同PID暂停/重新核实际卡/恢复的原记录见[纠正记录](../../research/4.temporal-consistency/docs/exploration-r74-actual-device-resource-correction.md)，不得回写原错误准入或重算已得分数来掩盖执行问题。
+
+后续可复用的[进程前绑定入口与实际验证](../../research/4.temporal-consistency/docs/prebound-shared-gpu-entry.md)已在旧任务终态后修复；父选择不代替子CPU准备后的新准入/锁与实际PID UUID检查。单元素检查不计作新的模型/指标评分，不能借修复重开已关闭科学实验。
