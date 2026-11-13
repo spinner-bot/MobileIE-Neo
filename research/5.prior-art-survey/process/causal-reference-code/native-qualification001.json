@@ -1,0 +1,89 @@
+{
+  "at": "2026-11-13T13:12:29.899347+08:00",
+  "pid": 4154286,
+  "passed": true,
+  "spatial_checks": [
+    {
+      "height": 1,
+      "width": 1,
+      "tiles": 1,
+      "output_shape": [
+        1,
+        3,
+        1,
+        1
+      ],
+      "finite": true,
+      "max_identity_error": 0.0
+    },
+    {
+      "height": 128,
+      "width": 183,
+      "tiles": 1,
+      "output_shape": [
+        1,
+        3,
+        128,
+        183
+      ],
+      "finite": true,
+      "max_identity_error": 5.960464477539063e-08
+    },
+    {
+      "height": 384,
+      "width": 384,
+      "tiles": 1,
+      "output_shape": [
+        1,
+        3,
+        384,
+        384
+      ],
+      "finite": true,
+      "max_identity_error": 5.960464477539063e-08
+    },
+    {
+      "height": 519,
+      "width": 773,
+      "tiles": 6,
+      "output_shape": [
+        1,
+        3,
+        519,
+        773
+      ],
+      "finite": true,
+      "max_identity_error": 1.7881393432617188e-07
+    },
+    {
+      "height": 1080,
+      "width": 1920,
+      "tiles": 28,
+      "output_shape": [
+        1,
+        3,
+        1080,
+        1920
+      ],
+      "finite": true,
+      "max_identity_error": 2.384185791015625e-07
+    }
+  ],
+  "self_start_history_max_error": 2.980232238769531e-07,
+  "original_384_single_tile_max_error": 1.1920928955078125e-07,
+  "original_XS_irregular_output_shape": [
+    1,
+    3,
+    519,
+    773
+  ],
+  "original_XS_irregular_finite": true,
+  "native_1080p_tiles": 28,
+  "native_1080p_conv_linear_macs": 21976141824,
+  "elapsed_seconds": 2.140551810967736,
+  "cuda_initialized": false,
+  "training_updates": 0,
+  "quality_rows": 0,
+  "new_video_pixels": 0,
+  "limits": "Artificial CPU inputs and untrained author XS; no trained temporal or seam quality, no GPU/phone latency, no original-paper performance reproduction."
+}
