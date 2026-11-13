@@ -1,0 +1,35 @@
+{
+  "version": "0.1.2",
+  "date": "2026-11-13",
+  "device": "Android 15 x86_64 emulator, not OnePlus hardware",
+  "product_apk_sha256": "5484907db7c8e87c4a270a24ab8625471f67f4d68edb1229810b738899ec30c0",
+  "instrumentation": {
+    "tests": 17,
+    "failures": 0,
+    "seconds": 112.548
+  },
+  "regression": {
+    "published_0_1_1_sha256": "3451182678596d3672d3a7e81c5b12cd6ca609cb50695665e7b44e51234447a8",
+    "red_on_published_0_1_1": true,
+    "red_assertion": "Sample loaded, but visible Activity did not refresh",
+    "green_on_0_1_2": true,
+    "repeated_back_stack_and_recreate_cycles": 6,
+    "background_completion_replayed": true,
+    "reprocessed_session_records_running_version": true
+  },
+  "numerics": {
+    "cases": 6,
+    "all_pass": true,
+    "max_raw_abs": 2.384185791015625e-07,
+    "max_uint8_abs": 1
+  },
+  "lint": {
+    "errors": 0,
+    "warnings": 6,
+    "category": "GradleDependency, deliberately pinned"
+  },
+  "same_signing_certificate_as_0_1_1": true,
+  "real_oneplus_0_1_2_tested": false,
+  "prior_oneplus_version_tested": "0.1.1",
+  "windows_companion_version_unchanged": "0.1.1"
+}
