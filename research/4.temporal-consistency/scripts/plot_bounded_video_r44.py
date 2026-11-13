@@ -23,9 +23,11 @@ def main():
               ('square_temporal', 'Square / temporal', '#059669', 's'),
               ('bounded_mse', 'Bounded / MSE', '#ea580c', '^'),
               ('bounded_temporal', 'Bounded / temporal', '#9333ea', 'D')]
-    outputs = [('raw', 'Raw: single-frame inference'),
-               ('recursive_self05', 'Recursive .5: motion + RGB history')]
-    fig, axes = plt.subplots(2, 2, figsize=(12, 9))
+    outputs = [('raw', 'Raw (single frame)'),
+               ('recursive_self05', 'Recursive .5 (stateful)')]
+    plt.rcParams.update({'font.size': 12, 'axes.titlesize': 11,
+                         'axes.labelsize': 12, 'xtick.labelsize': 11, 'ytick.labelsize': 11})
+    fig, axes = plt.subplots(2, 2, figsize=(8.2, 7.6))
     for row_index, (method, output_label) in enumerate(outputs):
         for column_index, (domain, domain_label) in enumerate(domains):
             ax = axes[row_index, column_index]
@@ -36,14 +38,13 @@ def main():
                 ax.scatter(x, y, color=color, marker=marker, alpha=.35, s=40)
                 ax.scatter(mean(x), mean(y), color=color, marker=marker, s=90, label=label)
             ax.set(title=domain_label+'\n'+output_label,
-                   xlabel='Reference-flow temporal error (lower is better)',
-                   ylabel='RGB PSNR (dB, higher is better)')
+                   xlabel='Temporal error (lower is better)', ylabel='RGB PSNR (dB)')
             ax.grid(alpha=.2)
-    fig.suptitle('R44 complete fixed 2x2: inherited 4000 + new 4000 updates per model/seed\n'
-                 'Pale: both individual seeds. Solid: mean. Rational inference retains its denominator.', fontsize=11)
+    fig.suptitle('R44: complete root-operator / objective comparison\n'
+                 'Pale: individual seeds; filled: two-seed mean', fontsize=12)
     handles, labels = axes[0, 0].get_legend_handles_labels()
-    fig.legend(handles, labels, loc='lower center', ncol=4, fontsize=9)
-    fig.tight_layout(rect=(0, .055, 1, .97))
+    fig.legend(handles, labels, loc='lower center', ncol=2, fontsize=10.5)
+    fig.tight_layout(rect=(0, .085, 1, .96))
     for extension in ['png', 'pdf']:
         fig.savefig(folder/('factorial.'+extension), dpi=160, bbox_inches='tight')
     plt.close(fig)
