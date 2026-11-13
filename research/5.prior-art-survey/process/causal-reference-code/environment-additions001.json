@@ -1,0 +1,75 @@
+{
+  "at": "2026-11-13T13:08:03.999208+08:00",
+  "assets": "/data/Users/zrh/data/MobileIE-Neo",
+  "torch_before": "2.9.1+cu126",
+  "torch_after": "2.9.1+cu126",
+  "commands": [
+    "CUDA_VISIBLE_DEVICES=empty ./scripts/project-python -m pip install --no-deps --index-url https://download.pytorch.org/whl/cu126 torchvision==0.24.1+cu126 --report <owned report>",
+    "CUDA_VISIBLE_DEVICES=empty ./scripts/project-python -m pip install timm==1.0.22 huggingface-hub==0.36.0 safetensors==0.6.2 --report <owned report>"
+  ],
+  "completed_installations": [
+    {
+      "report": "/data/Users/zrh/data/MobileIE-Neo/cache/rebotnet-vision-install001.json",
+      "pip_version": "25.3",
+      "packages": [
+        {
+          "name": "torchvision",
+          "version": "0.24.1+cu126",
+          "url": "https://download-r2.pytorch.org/whl/cu126/torchvision-0.24.1%2Bcu126-cp310-cp310-manylinux_2_28_x86_64.whl"
+        }
+      ]
+    },
+    {
+      "report": "/data/Users/zrh/data/MobileIE-Neo/cache/rebotnet-timm-install001.json",
+      "pip_version": "25.3",
+      "packages": [
+        {
+          "name": "timm",
+          "version": "1.0.22",
+          "url": "https://files.pythonhosted.org/packages/d6/14/fc04d491527b774ec7479897f5861959209de1480e4c4cd32ed098ff8bea/timm-1.0.22-py3-none-any.whl"
+        },
+        {
+          "name": "huggingface-hub",
+          "version": "0.36.0",
+          "url": "https://files.pythonhosted.org/packages/cb/bd/1a875e0d592d447cbc02805fd3fe0f497714d6a2583f59d14fa9ebad96eb/huggingface_hub-0.36.0-py3-none-any.whl"
+        },
+        {
+          "name": "safetensors",
+          "version": "0.6.2",
+          "url": "https://files.pythonhosted.org/packages/fe/5d/5a514d7b88e310c8b146e2404e0dc161282e78634d9358975fd56dfd14be/safetensors-0.6.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+        },
+        {
+          "name": "hf-xet",
+          "version": "1.8.0",
+          "url": "https://files.pythonhosted.org/packages/f8/1e/1e8ecc05ef034e9a95c18ed32d2ec07905a7cd2ca611a9d88e25ee1f4850/hf_xet-1.8.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
+        },
+        {
+          "name": "requests",
+          "version": "2.34.2",
+          "url": "https://files.pythonhosted.org/packages/a0/f4/c67b0b3f1b9245e8d266f0f112c500d50e5b4e83cb6f3b71b6528104182a/requests-2.34.2-py3-none-any.whl"
+        },
+        {
+          "name": "charset-normalizer",
+          "version": "3.5.2",
+          "url": "https://files.pythonhosted.org/packages/c4/9f/9f52d2886d52645987d603425482c63c5045a3005db1354a7097e5ed1ae9/charset_normalizer-3.5.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl"
+        },
+        {
+          "name": "idna",
+          "version": "3.20",
+          "url": "https://files.pythonhosted.org/packages/58/a2/bb081bab032533a855d44de1d56f8e8426114ff1ba5d1f07a438a0a654f8/idna-3.20-py3-none-any.whl"
+        },
+        {
+          "name": "urllib3",
+          "version": "2.8.0",
+          "url": "https://files.pythonhosted.org/packages/92/9d/c4e665119135114480843e7ab388fa94d8480650450e6f8e26b70d323a4c/urllib3-2.8.0-py3-none-any.whl"
+        },
+        {
+          "name": "certifi",
+          "version": "2026.10.23",
+          "url": "https://files.pythonhosted.org/packages/32/d1/a3652fe2c19134d0d15922177821d863cbd7e842d53a21bbe7e8e3a1b5ac/certifi-2026.10.23-py3-none-any.whl"
+        }
+      ]
+    }
+  ],
+  "limits": "Only optional ReBotNet author-code imports added. Full pip reports and wheel caches stay in owned assets; no borrowed environment/global install, model download or CUDA initialization."
+}
