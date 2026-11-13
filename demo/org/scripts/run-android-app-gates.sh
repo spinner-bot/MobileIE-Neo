@@ -10,9 +10,9 @@ bash "$repo/demo/org/app/build.sh" assembleDebug assembleDebugAndroidTest lintDe
 adb -s "$serial" install -r "$repo/demo/org/app/app/build/outputs/apk/debug/app-debug.apk"
 adb -s "$serial" install -r "$repo/demo/org/app/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk"
 adb -s "$serial" shell am instrument -w -r \
-    -e class dev.zrh.mobileie.CoreInstrumentedTest,dev.zrh.mobileie.FlowInstrumentedTest \
+    -e class dev.zrh.mobileie.CoreInstrumentedTest,dev.zrh.mobileie.FlowInstrumentedTest,dev.zrh.mobileie.LifecycleRegressionTest \
     dev.zrh.mobileie.test/androidx.test.runner.AndroidJUnitRunner > "$evidence/instrumentation.txt" 2>&1
-if ! grep -Eq '^OK \(14 tests\)' "$evidence/instrumentation.txt" || grep -Eq 'FAILURES!!!|INSTRUMENTATION_FAILED|Process crashed' "$evidence/instrumentation.txt"; then
+if ! grep -Eq '^OK \(17 tests\)' "$evidence/instrumentation.txt" || grep -Eq 'FAILURES!!!|INSTRUMENTATION_FAILED|Process crashed' "$evidence/instrumentation.txt"; then
     tail -60 "$evidence/instrumentation.txt"; exit 1
 fi
 adb -s "$serial" exec-out run-as dev.zrh.mobileie tar -C files/gates -cf - . | tar -xf - -C "$evidence/android-outputs"

@@ -40,7 +40,7 @@ source /root/android-dev/activate.sh
 "$ANDROID_DEV_ROOT/validation/reference-env/bin/python" -I demo/org/scripts/verify-android-lifecycle.py
 ```
 
-第一项 App 门控包含 14 个仪器测试、官方脚本独立数值核对、Lint、签名和对齐检查。第二项在系统相机前台时结束本 App 进程，验证返回的照片仍可被接收并处理。测试针对个人 AVD，会生成模拟照片与 MediaStore 文件；不要直接把这些故障注入测试用于装有个人照片的正式使用设备。
+第一项 App 门控包含 17 个仪器测试（含返回旧页面、后台完成后恢复及反复回退/重建）、官方脚本独立数值核对、Lint、签名和对齐检查。第二项在系统相机前台时结束本 App 进程，验证返回的照片仍可被接收并处理。测试针对个人 AVD，会生成模拟照片与 MediaStore 文件；不要直接把这些故障注入测试用于装有个人照片的正式使用设备。
 
 ## 主要源码与范围
 
