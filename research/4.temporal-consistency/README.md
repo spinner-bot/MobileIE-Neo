@@ -2,7 +2,9 @@
 
 目标：以论文为最终产出，深入核查 MobileIE 的架构与训练机制，在移动端计算预算内设计视频增强模型，用传统方法、后处理和已有视频模型对照验证画质、时间稳定性与效率收益。
 
-最新接续（2026-11-13；[0114](../../docs/进展报告/0114-T-26111313-原生因果参考共享GPU试跑完成与正式预算登记.md)）：原生ReBotNet分块CPU资格和两次丢弃共享GPU更新均正常，实际0号匹配/own最高1242MiB/最少空闲37677MiB，PID4155198已退出，0正式更新/检查点，不重跑资源小试。[R75正式协议](docs/exploration-r75-causal-reference-protocol.md)已登记，发布XS/两seed各64000/均匀native384/自启动四帧BPTT，最终40新质量+40感知及强rec/current完整八门槛/20固定图；正式采样/训练/评价代码及CPU数据资格仍未完成，正式GPU未启动。下一实现并资格，再按实际余量同组至多两卡各seed并行、初始25%合作节流。旧STOP和paper018不变，参考适配不是创新/充分原表复现，目标active。
+当前最新（[0115](../../docs/进展报告/0115-T-26111314-原生因果参考正式双种子启动与最终评价链接入.md)/[progress001](process/exploration-r75/progress001.json)）：R75已正式运行，seed0 PID4160205/实际0、seed1 PID4160204/实际1，各64000，最近归档各300步。CPU原生数据/更新恢复资格和17源冻结完成；源码/完整行前缀/固定准入等分别入库，无新DEV/JOD或方法成功。协调PID4163819按真实PID/start等待两final，再跑完整40新质量/40JOD/80共同条件/20图，手工实际图审仍待执行。17训练源/协议及评价联合27源活跃时保持，不重启原训练。SYN480×854、ND288×512原生裁块，非整幅1080p，每seed最终4864 tile调用/896帧，见[执行边界](docs/exploration-r75-evaluation-execution.md)。未来真实resource退出只用latest验证入口恢复，不选旧marker重放或自动重试科学失败；旧STOP及paper018不变，目标active。
+
+前阶段（[0114](../../docs/进展报告/0114-T-26111313-原生因果参考共享GPU试跑完成与正式预算登记.md)）：原生ReBotNet分块CPU资格和两次丢弃共享GPU更新均正常，实际0号匹配/own最高1242MiB/最少空闲37677MiB，PID4155198已退出，0正式更新/检查点，不重跑资源小试。当时仅登记[R75正式协议](docs/exploration-r75-causal-reference-protocol.md)，后续实现/CPU资格与实际正式训练以上述0115为准；普通参考适配不是创新/充分原表复现。
 
 前一代码资格阶段：[0113](../../docs/进展报告/0113-T-26111313-公开因果视频参考代码资格与成本边界.md)与[note57](../5.prior-art-survey/docs/57-causal-reference-code-feasibility.md)完成公开因果RGB代码资格。ReBotNet作者原架构/CC0/配置已固定，CPU正常、890275参数、384调用Conv/Linear .784862208GMAC，阶段内0SGD/质量/新视频像素/GPU。固定576token、原文GT启动/500K训练与未提供完整trainer的边界均保留；功能资格不等于充分复现。之后的资源实测与正式登记以上述0114为准。
 
