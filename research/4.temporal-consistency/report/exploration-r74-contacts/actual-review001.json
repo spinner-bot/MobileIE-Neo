@@ -1,0 +1,270 @@
+{
+  "at": "2026-11-13T12:25:24.352162+08:00",
+  "author": "Codex  (sqs_A100)",
+  "actual_reviewed": true,
+  "reviewed_contacts": 20,
+  "review_method": "All20 original1568x956 PNGs actually opened with view_image in five groups of four; every source/both seeds/frames0-mid-last/fullFOV/native128 compared.",
+  "findings": [
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r74-contacts/fixed-bear_photons20-seed0.png",
+      "sha256": "8fd68d69c472ebd37126d6e13dd4c9445d55271cf1b5c75656668d0e9277af94",
+      "scene": "bear_photons20",
+      "seed": 0,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "首帧增强各列一致；后两帧task保留接近raw的彩色颗粒，旧rec石墙较清楚且更平滑。proxy两路更模糊，熊体附近可见旧轮廓残留；两proxy在此显示尺度接近。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r74-contacts/fixed-bear_photons20-seed1.png",
+      "sha256": "a195a7b5d3bf912389dfc58886090acb46b83fbeac6dc2b2e94fe802f319ec85",
+      "scene": "bear_photons20",
+      "seed": 1,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "首帧增强各列一致；后两帧task保留接近raw的彩色颗粒，旧rec石墙较清楚且更平滑。proxy两路更模糊，熊体附近可见旧轮廓残留；两proxy在此显示尺度接近。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r74-contacts/fixed-bear_photons80-seed0.png",
+      "sha256": "0fcb27d3a4eaa1b4c74588305efbf8ca18c632e04ece8e4e521c1e8380fb95ae",
+      "scene": "bear_photons80",
+      "seed": 0,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "较低噪声下后段proxy熊体旧位置/轮廓残留仍明显，中心石墙更糊；task接近raw，旧rec较清楚。proxy causal与zero-flow视觉接近，不据三帧推断整段闪烁或函数等价。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r74-contacts/fixed-bear_photons80-seed1.png",
+      "sha256": "b0c65682f8ed9950446e78f4268d10fec3b18c29b0a43f64248625652c02d551",
+      "scene": "bear_photons80",
+      "seed": 1,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "较低噪声下后段proxy熊体旧位置/轮廓残留仍明显，中心石墙更糊；task接近raw，旧rec较清楚。proxy causal与zero-flow视觉接近，不据三帧推断整段闪烁或函数等价。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r74-contacts/fixed-lucia_photons20-seed0.png",
+      "sha256": "3b5b18b7206bd55bc41bd03a621f8f812ec09ae357a94a1116a96b937393dd0c",
+      "scene": "lucia_photons20",
+      "seed": 0,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "后段proxy两路在行人/树干/长椅附近有可见拖影和结构模糊，中心草地较平滑但细节减少；task仍接近raw颗粒，旧rec结构较清楚。首帧各增强列一致。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r74-contacts/fixed-lucia_photons20-seed1.png",
+      "sha256": "d1f9a6580efa89fa49eaf990f77fd3c725a8e485a40a74b60f2b05b2d33d7a1c",
+      "scene": "lucia_photons20",
+      "seed": 1,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "后段proxy两路在行人/树干/长椅附近有可见拖影和结构模糊，中心草地较平滑但细节减少；task仍接近raw颗粒，旧rec结构较清楚。首帧各增强列一致。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r74-contacts/fixed-lucia_photons80-seed0.png",
+      "sha256": "ae46bf8b348e006b13ce88ffab651b1fa9864f3d6660628b43a5b5423176cf90",
+      "scene": "lucia_photons80",
+      "seed": 0,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "较低噪声仍能看到proxy的行人重复轮廓及树干/长椅模糊，causal与zero-flow相近；task接近raw，旧rec更清楚。不能用更平滑草地替代质量保持或整段时序判断。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r74-contacts/fixed-lucia_photons80-seed1.png",
+      "sha256": "999436f761bd2f333c998f554864e181ed209c709b1fb4bbc407e2d069a42461",
+      "scene": "lucia_photons80",
+      "seed": 1,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "较低噪声仍能看到proxy的行人重复轮廓及树干/长椅模糊，causal与zero-flow相近；task接近raw，旧rec更清楚。不能用更平滑草地替代质量保持或整段时序判断。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r74-contacts/fixed-walking_photons20-seed0.png",
+      "sha256": "2c114071e91a0eefff807feea15b3f917f7927f8f995ae0f907dfe68beeb67c3",
+      "scene": "walking_photons20",
+      "seed": 0,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "后两帧proxy人物脸部/背景建筑和灯杆更模糊，有重影轮廓；task仍接近raw噪声，旧rec细节相对清楚。proxy causal与zero-flow在此尺度相近，首帧增强各列一致。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r74-contacts/fixed-walking_photons20-seed1.png",
+      "sha256": "5ff6c9d16c7a9ec39e1ff5c7b19722c7757ca95d6918661ea9ce968bd17077fb",
+      "scene": "walking_photons20",
+      "seed": 1,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "后两帧proxy人物脸部/背景建筑和灯杆更模糊，有重影轮廓；task仍接近raw噪声，旧rec细节相对清楚。proxy causal与zero-flow在此尺度相近，首帧增强各列一致。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r74-contacts/fixed-walking_photons80-seed0.png",
+      "sha256": "fb604e8feb73e8dcbd87d2d8bb7c6a170a4274d0fbba06bc101f5a47b2e5ce45",
+      "scene": "walking_photons80",
+      "seed": 0,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "低噪声后段proxy的面部、建筑边缘及中心脸颊细节仍明显变软，旧rec和task较清楚；两proxy外观接近。三帧静态查看不作全片闪烁或人类评分判断。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r74-contacts/fixed-walking_photons80-seed1.png",
+      "sha256": "946509ac80bfc1496baf40a65935fdac1b0abf67be49ebb2b7eb39d8bd0dbda4",
+      "scene": "walking_photons80",
+      "seed": 1,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "低噪声后段proxy的面部、建筑边缘及中心脸颊细节仍明显变软，旧rec和task较清楚；两proxy外观接近。三帧静态查看不作全片闪烁或人类评分判断。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r74-contacts/fixed-video_15-seed0.png",
+      "sha256": "f35a9400f24287870b34b31784d140f7ab9c30be4f6cbc1922a558308f174ebe",
+      "scene": "video_15",
+      "seed": 0,
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "observation": "首帧增强各列一致；frame8的proxy枝叶/树干边缘更软，两proxy外观相近，task接近raw。末帧GT和输入本身已有强斜向运动模糊，不能将所有模糊归因模型。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r74-contacts/fixed-video_15-seed1.png",
+      "sha256": "03b52dec8cb0019d78c387c20379debc37134bbd7d4ed371ed0bbe17c8567fbb",
+      "scene": "video_15",
+      "seed": 1,
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "observation": "首帧增强各列一致；frame8的proxy枝叶/树干边缘更软，两proxy外观相近，task接近raw。末帧GT和输入本身已有强斜向运动模糊，不能将所有模糊归因模型。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r74-contacts/fixed-video_47-seed0.png",
+      "sha256": "37f47589e970f4bce6ebf82b97b6da1603c0621a4f2fc76e8dbd1ddd654d1972",
+      "scene": "video_47",
+      "seed": 0,
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "observation": "低纹理墙面和横杆场景；后两帧proxy横杆边缘变宽、局部轮廓残留，平坦区域更平滑；task与raw接近。共同色调差异与静态三帧不能单独证明时序根因。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r74-contacts/fixed-video_47-seed1.png",
+      "sha256": "acc7d8284735440edaaa44840dd3936fe7ce47d25c6413f6f91577e3f38b0f98",
+      "scene": "video_47",
+      "seed": 1,
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "observation": "低纹理墙面和横杆场景；后两帧proxy横杆边缘变宽、局部轮廓残留，平坦区域更平滑；task与raw接近。共同色调差异与静态三帧不能单独证明时序根因。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r74-contacts/fixed-video_91-seed0.png",
+      "sha256": "9667324bdc64a62b91c0919327db93f28d1c5b93d421939519bd0bb47b7a113c",
+      "scene": "video_91",
+      "seed": 0,
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "observation": "后两帧proxy围栏竖线和横梁出现模糊/重复轮廓，草丛细节更软；task与raw接近，旧rec围栏较清楚。首帧各增强列一致，两proxy显示尺度接近。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r74-contacts/fixed-video_91-seed1.png",
+      "sha256": "77c49bcc4e95ee70e1d53f095a8b9aa713dc4033933f908a6de67dbc292dfb7e",
+      "scene": "video_91",
+      "seed": 1,
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "observation": "后两帧proxy围栏竖线和横梁出现模糊/重复轮廓，草丛细节更软；task与raw接近，旧rec围栏较清楚。首帧各增强列一致，两proxy显示尺度接近。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r74-contacts/fixed-video_121-seed0.png",
+      "sha256": "e9c61bd4aa75f8f08d79de062465ca92d98c4ad4059909255de26208a51aaddc",
+      "scene": "video_121",
+      "seed": 0,
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "observation": "后两帧proxy塔架钢梁有明显多重边缘与模糊，天空较平滑；task保持接近raw的结构和颗粒，旧rec塔架更清楚。两proxy外观相近，不据静态图判整段时序。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r74-contacts/fixed-video_121-seed1.png",
+      "sha256": "e5ec76c74a1aac08330f8559ba8094000d2ff1d019742fd79a7e4231ba364cd1",
+      "scene": "video_121",
+      "seed": 1,
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "observation": "后两帧proxy塔架钢梁有明显多重边缘与模糊，天空较平滑；task保持接近raw的结构和颗粒，旧rec塔架更清楚。两proxy外观相近，不据静态图判整段时序。"
+    }
+  ],
+  "scope": "Fixed static contacts only; not full video playback, human MOS, significance, phone cost or independent final. Generated false review flags remain original render-time records."
+}
