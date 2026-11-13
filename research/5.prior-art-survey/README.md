@@ -8,6 +8,8 @@
 
 [59 发布代码时间信息路径](docs/59-rebotnet-token-path-and-control-interpretation.md)核实六通道stem与独立token分支均读历史；token池化对为同帧相邻块，后续全局MLP可跨两槽混合。人工索引原语检查0训练/真实模型读出/视频/CUDA，只限制消融解释，不当bug、实际失败原因或新增方法。
 
+[60 SMOID公开demo接口](docs/60-smoid-public-demo-reference-and-temporal-scope.md)固定作者53e81c4、六源blob核验：demo清单input/GT同路径，packed RAW/整片段HE/32帧窗口不直接等价因果RGB配对参考。Cam1一次匿名HEAD404后停止、0body/像素，不循环同入口，不推断完整数据无GT或另两包失效。仍未增加外部配对基准；原任务同身份活跃/双seed8300及阶段过程见[0118](../../docs/进展报告/0118-T-26111321-SMOID公开样例参考身份与获取边界.md)。
+
 1. 是否已经有人解决 MobileIE 的视频闪烁？（避免重复）
 2. 导师提到的“电信接续研究”具体是什么？能否证实？
 3. 我们的选题还剩下什么可发表的空间？哪些表述会被审稿人指为重复？
