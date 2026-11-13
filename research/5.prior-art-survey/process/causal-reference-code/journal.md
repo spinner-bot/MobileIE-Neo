@@ -9,3 +9,5 @@
 5. 先提交CPU功能脚本，再以CUDA_VISIBLE_DEVICES为空运行一次：`./scripts/project-python scripts/qualify_rebotnet_cpu.py --out research/5.prior-art-survey/process/causal-reference-code/cpu-qualification001.json`。真实PID4151838正常退出，3.361秒；无SGD/质量行/视频像素/CUDA初始化。有效384及同token矩形、历史梯度、全部预定失败形状与部分MAC完整保存；原结果与原终端流分开提交，没有为得到合格结果重跑。
 6. 57号阅读追加实际结果/500K原训练边界，0113进展报告单独提交，接续入口按文件更新。论文不添加功能数字当质量结果、不重建PDF；没有正式新训练登记。下一才是有界自启动分块与共享GPU需求实测协议，不把发布架构适配当创新。
 7. 阶段推送前只fetch origin main、检查分歧/diff（排除原终端log空白）、按需显式no-ff合并。保持小步历史，不rebase/squash/强推。实际推送结果以终端及后续阶段记录为准。
+
+13:15阶段推送：origin main相对本地落后20/领先0，不需要merge；SSH推送9325e9c9成功。首次diff空白检查报告原样vendor架构/配置的上游尾空白，保留原代码，不为格式改第三方计算来源；重新排除这两个明确原样文件和原终端log后自有改动空白检查通过，工作树干净。后续GPU小试另立协议，不将此推送误作训练已启动。
