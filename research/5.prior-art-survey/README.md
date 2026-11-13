@@ -4,7 +4,9 @@
 
 2026-11-13定向增量：[57 公开因果RGB参考代码资格](docs/57-causal-reference-code-feasibility.md)，区分EVRNet第三方超分移植与ReBotNet作者发布架构，保留固定token/初始化/训练预算及CPU功能结果边界；不是新方法、画质表或完整原文复现。
 
-同日后续：[58 DID/R-DID连续性与获取边界](docs/58-did-rdid-continuity-and-acquisition-boundaries.md)，区分逐帧合成与连续配准视频；作者入口403后停止，资料未取得，不增加已完成基准数。R75正式活跃与R76解释控制以[0116报告](../../docs/进展报告/0116-T-26111321-正式训练里程碑与自条件解释对照.md)和真实runtime为准。
+同日后续：[58 DID/R-DID连续性与获取边界](docs/58-did-rdid-continuity-and-acquisition-boundaries.md)，区分逐帧合成与连续配准视频；作者入口403后停止，资料未取得，不增加已完成基准数。R75正式活跃与R76补充等待以[0117报告](../../docs/进展报告/0117-T-26111321-自条件补充评价链冻结与实际等待接续.md)和真实runtime为准。
+
+[59 发布代码时间信息路径](docs/59-rebotnet-token-path-and-control-interpretation.md)核实六通道stem与独立token分支均读历史；token池化对为同帧相邻块，后续全局MLP可跨两槽混合。人工索引原语检查0训练/真实模型读出/视频/CUDA，只限制消融解释，不当bug、实际失败原因或新增方法。
 
 1. 是否已经有人解决 MobileIE 的视频闪烁？（避免重复）
 2. 导师提到的“电信接续研究”具体是什么？能否证实？
