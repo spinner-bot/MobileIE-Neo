@@ -41,3 +41,11 @@ progress004保存两训练4160205/start48844067、4160204/start48844061及原协
 随后核原17训练源/协议、27及37评价联合源保持；两原训练4160205/4160204与原协调4163819、补充39049均同身份活跃，无runtime终态。progress005另存实际资源/waiting快照；running-prefix005仅复制已解析完整行training/window与当次progress，不把原活态文件当完整终态。1K..10K共20份正规marker，Tensor检查点仍仅自有data，不重读Tensor/重放SGD或打开中途DEV。
 
 没有新模型/预算变化/训练恢复重启/质量/JOD或方法结论。R75完整64000→原完整评价→R76补充及实际图审边界保持；R77仍条件登记/CPU资格，保留OLiVES仍只metadata、不因原门槛通过自动解封。0123报告及接续入口分开小步提交，阶段fetch仅main/实际分歧no-ff/自有diff/推送；paper018、旧STOP/全部论文缺口和远期active保持。
+
+## 11月14日11000里程碑（progress006）
+
+前序回合均为原PID/start真实存活后的verified wait。00:25:55先观察seed1实际11000及regular-step011000落盘、seed0仍10900；确认/data挂载、seed/提交步/下一步/64000预算/非final、自有data资产路径和大小后单独提交seed1元数据。00:26:21再核seed0实际11000及marker，另交seed0，不将两路写成同时完成。
+
+00:27:11的progress006核两训练4160205/start48844067、4160204/start48844061和原协调4163819/start48956211、补充39049/start51721359同身份活跃，无runtime终态；17训练源/协议及27/37评价联合源保持。running-prefix006按seed分别保存已解析完整行training/window及当次progress，原持续流仍等终态。1K..11K周期marker现22份，另有首步marker两份，实际regular文件共24；大体量Tensor仍只存自有data，未加载Tensor、重放SGD或做中途DEV。
+
+首次过程追加补丁误用了报告结尾作上下文，校验失败且无文件变更，随后按真实journal末段追加。无训练/评价源码修改、重启、恢复、额外预算或新质量/JOD。0124报告和入口逐文件另交，本阶段fetch仅main、如有分歧显式no-ff，完成检查后推送。R75→R76及两套实际图审仍待；R77严格条件、全部保留像素限制、paper018、旧STOP与论文缺口保持，远期目标active。
