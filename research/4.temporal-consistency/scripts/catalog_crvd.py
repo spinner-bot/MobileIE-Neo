@@ -1,4 +1,4 @@
-"""Seven public folder-metadata requests; no CRVD image or thumbnail requests."""
+"""Three public folder-metadata requests; select exact training-scene1 ZIP IDs."""
 import argparse
 from datetime import datetime
 import hashlib
@@ -73,13 +73,13 @@ def main():
     cache.mkdir(parents=True, exist_ok=False)
     write(out/'config.json', dict(started=datetime.now().astimezone().isoformat(),
           source_folder=SOURCE, protocol_sha256=digest(PROTOCOL),
-          script_sha256=digest(Path(__file__)), max_requests=7, max_HTML_bytes=LIMIT,
-          scope='Visible public metadata only; training scene1 ISO1600, no image requests/retries.'))
+          script_sha256=digest(Path(__file__)), max_requests=3, max_HTML_bytes=LIMIT,
+          scope='Visible public metadata only; training scene1 archive IDs, no image requests/retries.'))
     started, complete, requests, records = time.perf_counter(), False, 0, []
 
     def get(identifier, tag):
         nonlocal requests
-        assert requests < 7 and re.fullmatch(r'[A-Za-z0-9_-]+', identifier)
+        assert requests < 3 and re.fullmatch(r'[A-Za-z0-9_-]+', identifier)
         requests += 1
         url = 'https://drive.google.com/drive/folders/'+identifier
         began = time.perf_counter()
@@ -106,14 +106,19 @@ def main():
 
     try:
         root = get(SOURCE, 'root')
+        selected = []
         for name in ['indoor_raw_gt', 'indoor_raw_noisy']:
             branch = get(child(root, name), name)
-            scene = get(child(branch, 'scene1'), name+'-scene1')
-            get(child(scene, 'ISO1600'), name+'-scene1-ISO1600')
-        assert requests == len(records) == 7
+            matches = [r for r in branch if r['name'] == name+'_scene1.zip'
+                       and r['mime_type'] == 'application/zip']
+            if len(matches) != 1:
+                raise ValueError('Expected exact training-scene1 ZIP; no wider traversal')
+            selected.append(dict(matches[0], role=name))
+        assert requests == len(records) == 3 and len(selected) == 2
         write(out/'manifest.json', dict(completed=True, metadata=records,
+              selected_training_archives=selected,
               requests=requests, image_bytes=0, image_decodes=0,
-              scope='Seven observed visible folder listings; not a complete dataset acquisition.'))
+              scope='Three observed visible folder listings; not a complete dataset acquisition.'))
         complete = True
     except BaseException:
         (out/'failure.txt').write_text(traceback.format_exc())
