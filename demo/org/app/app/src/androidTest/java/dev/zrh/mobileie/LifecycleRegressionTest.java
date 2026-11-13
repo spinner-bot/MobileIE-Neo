@@ -34,32 +34,43 @@ public class LifecycleRegressionTest {
         scenario=ActivityScenario.launch(MainActivity.class);idle();
         scenario.onActivity(a->{first=a;app.session=null;app.message("选一张暗光照片，开始本机对比");});
     }
-    @After public void close() { if(scenario!=null) scenario.close(); }
-    private void openAndCloseSecondActivity() {
-        scenario.onActivity(a->a.startActivity(new Intent(a,MainActivity.class)));
+    @After public void close() {
+        main(()->{
+            for(Stage stage:Stage.values()) if(stage!=Stage.DESTROYED)
+                for(Activity activity:new java.util.ArrayList<>(ActivityLifecycleMonitorRegistry.getInstance().getActivitiesInStage(stage)))
+                    if(activity instanceof MainActivity)activity.finish();
+        });
+        if(scenario!=null) scenario.close();
+    }
+    private MainActivity resumedOtherThan(MainActivity previous) {
         MainActivity[] top={null};
         long end=SystemClock.uptimeMillis()+5000;
         do {
             main(()->{
                 for(Activity activity:ActivityLifecycleMonitorRegistry.getInstance().getActivitiesInStage(Stage.RESUMED))
-                    if(activity instanceof MainActivity&&activity!=first)top[0]=(MainActivity)activity;
+                    if(activity instanceof MainActivity&&activity!=previous)top[0]=(MainActivity)activity;
             });
             if(top[0]!=null)break;
             SystemClock.sleep(50);
         } while(SystemClock.uptimeMillis()<end);
         assertNotNull("A real second MainActivity must be resumed",top[0]);
-        main(()->top[0].finish());
+        return top[0];
+    }
+    private void openAndCloseSecondActivity() {
+        main(()->first.startActivity(new Intent(first,MainActivity.class)));
+        MainActivity top=resumedOtherThan(first);
+        main(top::finish);
         device.waitForIdle();
-        scenario.onActivity(a->assertSame(first,a));
+        main(()->assertEquals("The original page must really resume",Stage.RESUMED,ActivityLifecycleMonitorRegistry.getInstance().getLifecycleStageOf(first)));
     }
     private void chooseFirstSampleAndAssertVisible() {
-        scenario.onActivity(a->assertTrue(a.findViewById(R.id.sample).performClick()));
+        main(()->assertTrue(first.findViewById(R.id.sample).performClick()));
         assertNotNull(device.wait(Until.findObject(By.text("01 · 书柜")),3000));
         device.findObject(By.text("01 · 书柜")).click();idle();
         assertNotNull("Sample task really produced a session",app.session);
-        scenario.onActivity(a->{
-            assertTrue("Sample loaded, but visible Activity did not refresh",((TextView)a.findViewById(R.id.status)).getText().toString().contains("图片已准备"));
-            assertTrue("Process button must become usable",a.findViewById(R.id.process).isEnabled());
+        main(()->{
+            assertTrue("Sample loaded, but visible Activity did not refresh",((TextView)first.findViewById(R.id.status)).getText().toString().contains("图片已准备"));
+            assertTrue("Process button must become usable",first.findViewById(R.id.process).isEnabled());
         });
     }
     @Test public void aReturningFromSecondActivityKeepsSampleScreenLive() {
@@ -74,10 +85,10 @@ public class LifecycleRegressionTest {
     @Test public void cRepeatedBackStackAndRecreationKeepActionsLive() {
         for(int cycle=0;cycle<6;cycle++) {
             openAndCloseSecondActivity();chooseFirstSampleAndAssertVisible();
-            scenario.recreate();scenario.onActivity(a->first=a);
+            MainActivity previous=first;main(previous::recreate);first=resumedOtherThan(previous);
         }
-        scenario.onActivity(a->a.findViewById(R.id.process).performClick());idle();
+        main(()->first.findViewById(R.id.process).performClick());idle();
         assertNotNull(app.session.mobileie);assertNotNull(app.session.gamma);
-        scenario.onActivity(a->assertTrue(((TextView)a.findViewById(R.id.status)).getText().toString().contains("处理完成")));
+        main(()->assertTrue(((TextView)first.findViewById(R.id.status)).getText().toString().contains("处理完成")));
     }
 }
