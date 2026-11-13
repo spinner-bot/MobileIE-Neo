@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-13",
+  "author": "Codex  (sqs_A100)",
+  "scope": "Bounded real continuous low-light benchmark readiness while original R75 fixed training and final coordinator stay live.",
+  "primary_sources": [
+    {
+      "url": "https://www.ece.stonybrook.edu/~xwang/public/paper/Rethinking_the_Low-Light_Video_Enhancement_Benchmark_Datasets_and_Methods.pdf",
+      "version": "TIP34(2025):6799–6812, DOI10.1109/TIP.2025.3616639",
+      "actually_read": [
+        "IIA-D DID vs R-DID capture/alignment/count/size",
+        "TableII physical alignment vs DeepFlow-aligned continuous video",
+        "III LAN++ temporal support/difference input and latent illumination refinement",
+        "IV split ratio statement only"
+      ],
+      "limits": [
+        "No complete model implementation, no source data acquisition or paper performance replication",
+        "No verified concrete R-DID split IDs or capture timestamps"
+      ]
+    },
+    {
+      "url": "https://github.com/ciki000/DID",
+      "commit": "6a14908df2d789858bf79155a24d86bc73742dcc",
+      "self_description": "Official ICCV2023 DID project",
+      "actually_read": [
+        "README",
+        "complete pinned tree, untruncated, three blobs"
+      ],
+      "tree": [
+        "README.md",
+        "DID_dataset/train_list.txt",
+        "DID_dataset/test_list.txt"
+      ],
+      "not_read": [
+        "Split-list contents; not interpreted as R-DID metadata"
+      ],
+      "LAN_release": "README coming soon; pinned tree has no model"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41060857/",
+      "actually_read": "Indexed publication metadata and abstract; initial page render minimal, search index exposed the metadata.",
+      "use": "Identity/date/DOI, not independent method validation"
+    }
+  ],
+  "access": [
+    {
+      "url": "https://www.ece.stonybrook.edu/~xwang/public/paper/Rethinking_the_Low-Light_Video_Enhancement_Benchmark_Datasets_and_Methods.pdf",
+      "initial_result": "web502",
+      "followup": "Indexed reference open exposed author-hosted public PDF text; no protected publisher endpoint bypass."
+    },
+    {
+      "url": "https://pan.baidu.com/s/1d3EljvVduVM0wUOvzjWaqA?pwd=p45g",
+      "source": "Public author paper link; published share code, not user credentials",
+      "web_result": "non-retryable URL open failure",
+      "ordinary_GET_at": "2026-11-13T20:53:26.783173+08:00",
+      "ordinary_GET_result": "HTTP403 Forbidden",
+      "followup": "Stopped; no captcha/cookie/session/account bypass or further endpoint loops.",
+      "folder_list_obtained": false,
+      "body_persisted": false
+    },
+    {
+      "service": "Hugging Face connected dataset_search",
+      "result": "INVALID_ARGUMENT / tool disabled by server configuration",
+      "meaning": "Tool limitation; not evidence about public Hub coverage."
+    },
+    {
+      "service": "GitHub name searches",
+      "result": "Several empty/noisy results, then public web search discovered ciki000/DID; plugin fetched pinned primary repo.",
+      "meaning": "Empty repository searches are not a global absence proof."
+    }
+  ],
+  "previous_routes_reviewed": [
+    "notes14/46/47/54 and R64/R73 decisions: existing noise debias and moment/state evidence prevents repeating old local grids."
+  ],
+  "not_used_as_method_evidence": [
+    "Broad PURE-LET/VST search abstracts not upgraded to new experiment or full reproduction.",
+    "Unrelated lane-detection and causal-inference DID repositories excluded."
+  ],
+  "datasets_or_weights_downloaded": 0,
+  "new_decoded_pixels": 0,
+  "new_CNN_or_SGD": 0,
+  "new_GPU_launched": false,
+  "decision": "Keep R-DID prospective/unacquired. Continue existing R75 unchanged; do not count a second natural-dynamic benchmark, and do not reuse DID lists for R-DID."
+}
