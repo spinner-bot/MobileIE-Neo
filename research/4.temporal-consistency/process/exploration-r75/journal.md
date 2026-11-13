@@ -23,3 +23,13 @@
 实际代码的history槽分布差异促成R76固定self4解释控制，原模型、优化、数据和八主门槛未改变。R76仅CPU toy合同及新最终CPU读出代码已完成，没有真实模型推理或新增GPU；其JOD/汇总/固定图/补充协调仍待实现，不能把原最终协调器视作已包含它。R-DID获取403后的边界独立记在prior-art process，不扩大基准数或循环请求。0116报告与入口分别提交，paper018、旧STOP与目标active保持。
 
 本阶段仍只fetch origin main/查分歧/检查自有diff/阶段SSH推送。所有源码改动已提交，运行中parent/progress/training/window/waiting是刻意保留的活态，不把它们伪装成已结束记录；新快照以progress002为准，后续仍必须读真实进程和runtime。
+
+## 22:31后9000里程碑（progress004）
+
+前序progress003及R76过程已记录各8000marker、8100/8000原训练和补充协调39049实际等待；R77另只做有条件协议/人工CPU资格。上述旧“待实现”段为历史，R76现有37源冻结及等待身份以0117/0119和本次真实观察为准，不能重复启动原任务。
+
+本回合前三次观察均为原句柄真实存活、9000尚无；每次只等待，不把观察窗口结束当任务失败。22:31:21两seed均9000、两个regular-step009000.json实际存在且无runtime终态。随后核/data挂载、17/27/37冻结源保持、seed/提交步/预算/非final、资产在自有data且大小匹配，两个marker逐份提交。1K..9K现18份正规marker，不重读Tensor/重跑SGD或打开DEV。
+
+progress004保存两训练4160205/start48844067、4160204/start48844061及原协调4163819/start48956211、补充39049/start51721359同身份活跃、新资源快照与两waiting元数据。running-prefix004只复制完整行training/window和当次progress；原持续流/父/等待文件保留活态，终态后再交。无模型评价、新GPU、训练重启/恢复或预算变化。
+
+0121阶段报告及入口各自提交，fetch只取main/查分歧/自有diff检查/阶段推送。paper018、全部旧STOP/缺口与远期active保持；R77额外128K仍须原八门槛+self4四支持全True及两套actual review，当前没有原最终分数，禁止把CPU资格当已训练方法或新阶段已通过。
