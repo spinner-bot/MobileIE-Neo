@@ -4,6 +4,8 @@
 
 更新：2026-11-13；作者：Codex  (sqs_A100)。
 
+- 当前最新0120：原R75两seed最近8700/64000、四原PID/start仍活跃，17/27/37源不变。仅纠正research2早期README/HTML“手机1100FPS”误标与4047/4075混用；实际v1表1 GPU .895ms/SoC6.72ms分开，后者倒数149仅算术非实测；代码4075注册/FSTS28。0forward/训练权重/视频/GPU，原Windows速度及两图payload保持。note61与inspection/correction-check/过程均另交，paper018参数口径已正确/手机仍缺，不重建。R77仍按下条严格条件登记、未正式训练/GPU资格；旧STOP和自然动态/手机/最终缺口不改，目标active。不要将源论文GPU吞吐写成手机或重复检查已纠正标签。
+
 - 当前最新0119/R77 prerequisite001：原R75两seed最近8400/64000、原4160205/4160204/4163819及补充39049同身份仍活跃，17/27/37源不变。R77只登记独立空间训练控制并完成CPU人工输入6.399秒资格/一次完整累积更新丢弃，0真实视频/已训练checkpoint/正式更新/GPU。旧current/self4非独立空间训练；R77保留XS890275/数据seed-step/384/64K，改每帧F(x,x)，预算双seed128K。**仅原八门槛+R76四支持全部True且原/补充两套20图actual review后才实施新资源资格/训练；当前pending，没有后台自动启动器，完整trainer/evaluator未实现。** 有False停止额外投资，不为等待期扩训练/长度/seed网格。正式若准入还须独立空间raw及其strong递归.5/原全部100条件完整对比，不能称创新。原作业按下条0117实际身份/冻结要求继续；SMOID404/所有旧STOP/paper018/自然动态手机最终缺口保持，目标active。
 
 - 当前最新0118/SMOID followup001：原R75两seed最近均8300/64000，4160205/4160204、原协调4163819和R76补充39049均核同身份活跃，17/27/37源保持，仍无final DEV/JOD/新方法。只补SMOID作者demo来源资格：六文本blob身份正常；customized_list三行input/GT同路径，不能当独立参考；packed RAW/整片段HE/32帧窗口不等价因果RGB。Cam1固定例包一次匿名HEAD404后停止，0body/像素/GPU；不循环同404入口、不推断完整数据无GT/另两包失效，不新增已完成外部基准数。源码/结果/过程/note60/报告分别提交，paper018/旧STOP/目标active保持。原训练及补充等待/冻结要求按下条0117继续，不从旧快照重启。
