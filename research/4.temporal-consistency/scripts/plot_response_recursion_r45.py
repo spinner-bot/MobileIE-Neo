@@ -1,4 +1,5 @@
 """Plot complete fixed-alpha frontiers and learned controls, with both seeds visible."""
+import argparse
 import json
 
 import matplotlib
@@ -10,6 +11,9 @@ from dynamic_training_r34 import BASE, digest
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--frontier-only', action='store_true', help='Render only the figure used in the manuscript')
+    args = parser.parse_args()
     folder = BASE/'report/exploration-r45-response-recursion'
     audit = json.loads((folder/'audit.json').read_text())
     assert audit['passed'] and audit['rows'] == 180 and audit['new_neural_sequences'] == 20
@@ -17,11 +21,14 @@ def main():
     lookup = {(r['domain'], r['method']): r for r in json.loads(source.read_text())}
     seeds = {(r['domain'], r['method'], r['seed']): r for r in json.loads(seed_source.read_text())}
     fixed = [('fixed_01', '.1'), ('fixed_025', '.25'), ('fixed_05', '.5'), ('fixed_075', '.75'), ('fixed_09', '.9')]
-    domains = [('davis_train_pilot', 'Synthetic DEV: 3 sources / 6 conditions'),
-               ('paired_real_ND_DEV', 'Paired ND DEV: 4 sources')]
-    styles = [('raw', 'Raw spatial base', '#111827', '*'), ('scalar', 'Learned global alpha', '#2563eb', 'o'),
-              ('rgb', 'RGB gate (41 params)', '#059669', 's'), ('response', 'Internal feature cue (41 params)', '#9333ea', 'D')]
-    fig, axes = plt.subplots(1, 2, figsize=(12, 5.7))
+    domains = [('davis_train_pilot', 'Synthetic DEV\n3 sources / 6 conditions'),
+               ('paired_real_ND_DEV', 'Paired ND DEV\n4 sources')]
+    styles = [('raw', 'Raw spatial base', '#111827', '*'), ('scalar', 'Learned scalar', '#2563eb', 'o'),
+              ('rgb', 'RGB gate (41 params)', '#059669', 's'), ('response', 'Feature cue (41 params)', '#9333ea', 'D')]
+    original_style = plt.rcParams.copy()
+    plt.rcParams.update({'font.size': 12, 'axes.titlesize': 12,
+                         'axes.labelsize': 12, 'xtick.labelsize': 11, 'ytick.labelsize': 11})
+    fig, axes = plt.subplots(1, 2, figsize=(8.2, 5.9))
     for ax, (domain, title) in zip(axes, domains):
         for seed in [0, 1]:
             values = [seeds[(domain, method, seed)] for method, _ in fixed]
@@ -29,26 +36,29 @@ def main():
                     'x--', color='#9ca3af', alpha=.3, linewidth=.7, markersize=4)
         curve = [lookup[(domain, method)] for method, _ in fixed]
         ax.plot([r['temporal_error'] for r in curve], [r['psnr_rgb'] for r in curve], 'x--',
-                color='#6b7280', label='Fixed recursive alpha frontier', linewidth=1)
+                color='#6b7280', label='Fixed weights (5 samples)', linewidth=1)
         for r, (_, alpha) in zip(curve, fixed):
             ax.annotate(alpha, (r['temporal_error'], r['psnr_rgb']), xytext=(4, 4),
-                        textcoords='offset points', fontsize=8)
+                        textcoords='offset points', fontsize=11)
         for method, label, color, marker in styles:
             values = [seeds[(domain, method, seed)] for seed in [0, 1]]
             ax.scatter([r['temporal_error'] for r in values], [r['psnr_rgb'] for r in values],
                        color=color, marker=marker, alpha=.3, s=35)
             r = lookup[(domain, method)]
             ax.scatter(r['temporal_error'], r['psnr_rgb'], color=color, marker=marker, s=80, label=label)
-        ax.set(title=title, xlabel='Reference-flow temporal error (lower is better)', ylabel='RGB PSNR (dB)')
+        ax.set(title=title, xlabel='Temporal error (lower is better)', ylabel='RGB PSNR (dB)')
         ax.grid(alpha=.2)
-    fig.suptitle('R45 complete fixed comparison: identical frozen spatial base; all five alpha points retained\n'
-                 'Pale: individual seeds. Solid: mean. Stateful outputs require motion and RGB history.', fontsize=11)
+    fig.suptitle('R45: complete fixed-weight and learned controls\n'
+                 'Pale: individual seeds; filled: two-seed mean', fontsize=12)
     handles, labels = axes[0].get_legend_handles_labels()
-    fig.legend(handles, labels, loc='lower center', ncol=3, fontsize=8)
-    fig.tight_layout(rect=(0, .13, 1, 1))
+    fig.legend(handles, labels, loc='lower center', ncol=2, fontsize=10.5)
+    fig.tight_layout(rect=(0, .19, 1, .95))
     for extension in ['png', 'pdf']:
         fig.savefig(folder/('frontier.'+extension), dpi=160, bbox_inches='tight')
     plt.close(fig)
+    plt.rcParams.update(original_style)
+    if args.frontier_only:
+        return
     alpha_source = folder/'alpha_domain_seed_summary.json'
     alpha = {(r['domain'], r['seed'], r['method']): r for r in json.loads(alpha_source.read_text())}
     fig, axes = plt.subplots(2, 2, figsize=(11, 7))
