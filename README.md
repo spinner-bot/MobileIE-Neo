@@ -4,7 +4,9 @@
 
 ## 当前研究状态
 
-截至2026-11-13，项目仍处于方法探索阶段，尚未建立可投稿的新方法。接续先读[进展报告0115](docs/进展报告/0115-T-26111314-原生因果参考正式双种子启动与最终评价链接入.md)、[4号研究入口](research/4.temporal-consistency/README.md)和[服务器约定](AGENTS.md)。主线在 `main` 推进，移动演示由独立支线处理。
+截至2026-11-13，项目仍处于方法探索阶段，尚未建立可投稿的新方法。接续先读[进展报告0116](docs/进展报告/0116-T-26111321-正式训练里程碑与自条件解释对照.md)、[4号研究入口](research/4.temporal-consistency/README.md)和[服务器约定](AGENTS.md)。主线在 `main` 推进，移动演示由独立支线处理。
+
+最近[progress002](research/4.temporal-consistency/process/exploration-r75/progress002.json)已归档R75两seed各7600步和1K—7K检查点，原训练/协调继续，冻结源码保持。另提前登记[R76固定同帧self4控制](research/4.temporal-consistency/docs/exploration-r76-self-conditioning-control-protocol.md)，用于区分跨帧观测和重复细化；CPU toy资格/最终读出代码已完成，真实模型评价及剩余链未执行或全部实现，不改原主门槛。R-DID资料获取仍未完成，不能据新阅读增加已验证基准数。
 
 R75公开因果参考的正式训练已启动：发布ReBotNet-XS、自启动native384四帧、两seed各64000，实际在同组0/1号卡按余量共享。两seed最近归档均300步，完整最终质量/感知尚未执行，不能从训练loss宣称方法成功。最终评价协调器会核真实训练句柄、等两final后接续固定流程；训练/评价源码已冻结，见[进度快照](research/4.temporal-consistency/process/exploration-r75/progress001.json)及[执行边界](research/4.temporal-consistency/docs/exploration-r75-evaluation-execution.md)。共同表的ND输入为288×512原生裁块，非整幅1080p；普通参考适配不是创新或原500K充分复现，旧STOP保持。
 
