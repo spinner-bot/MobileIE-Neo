@@ -1,0 +1,270 @@
+{
+  "at": "2026-11-13T09:34:32.702878+08:00",
+  "actual_reviewed": true,
+  "reviewed_contacts": 20,
+  "review_method": "All20 native1568x940 PNGs actually opened with view_image in five groups of four; every source, both seeds, all0/mid/last frames and full-FOV/native128 crops inspected.",
+  "scope": "Static fixed-contact visual review only; not whole-video playback, MOS, statistically significant ranking, mobile latency or independent final validation.",
+  "findings": [
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r73-contacts/fixed-bear_photons20-seed0.png",
+      "sha256": "927037f296698ea7c114b70c5ebe8bcd1f5885b5fb6c2a40e979b58096f4c209",
+      "scene": "bear_photons20",
+      "seed": 0,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "熊体/石墙与植物位置合理；新空间、均值、双矩及current在此显示尺度接近，原生中心仍有明显彩色颗粒。后两固定帧旧rec石墙更平滑，未看到双矩独立改善。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r73-contacts/fixed-bear_photons20-seed1.png",
+      "sha256": "e65a284627f794ab6f26d7de2d51927368e2f0df8cc7f71a94ee49986b443ec2",
+      "scene": "bear_photons20",
+      "seed": 1,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "熊体/石墙与植物位置合理；新空间、均值、双矩及current在此显示尺度接近，原生中心仍有明显彩色颗粒。后两固定帧旧rec石墙更平滑，未看到双矩独立改善。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r73-contacts/fixed-bear_photons80-seed0.png",
+      "sha256": "7a74e09333628d0c26b01f4961105abee8eff6e68521814a20cdb9b1f70327e2",
+      "scene": "bear_photons80",
+      "seed": 0,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "较低噪声下结构更清楚，新控制之间仍接近；首帧及后两帧没有明显整图破坏，静态抽帧不能证明无闪烁或无拖影。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r73-contacts/fixed-bear_photons80-seed1.png",
+      "sha256": "2ed858a7c995f29cc33a427ba7196d363a288d809483c211e0ac1d3bd4f4e01d",
+      "scene": "bear_photons80",
+      "seed": 1,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "较低噪声下结构更清楚，新控制之间仍接近；首帧及后两帧没有明显整图破坏，静态抽帧不能证明无闪烁或无拖影。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r73-contacts/fixed-lucia_photons20-seed0.png",
+      "sha256": "bca1154d5a1dc05842f4d74ab458d37e1485f063a2fcedd06ce4436bab07e1f8",
+      "scene": "lucia_photons20",
+      "seed": 0,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "树干、草地与行人轮廓仍有颗粒，新控制间无可辨的稳定独立优势；后两帧旧rec背景较平滑，不能由三帧认定完整时间稳定性。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r73-contacts/fixed-lucia_photons20-seed1.png",
+      "sha256": "01f026c85024add5b62236b0eed400321db43d8d9f78d3b15d51ac1ba3410222",
+      "scene": "lucia_photons20",
+      "seed": 1,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "树干、草地与行人轮廓仍有颗粒，新控制间无可辨的稳定独立优势；后两帧旧rec背景较平滑，不能由三帧认定完整时间稳定性。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r73-contacts/fixed-lucia_photons80-seed0.png",
+      "sha256": "234550634999c86fc989a1c8b841f6a243197e6baa65cc188b2ad2d7875b74a7",
+      "scene": "lucia_photons80",
+      "seed": 0,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "草地/树叶及长椅结构可见，新控制很接近；seed1的新模型绿地较深，提示映射/色调变化不应归因双矩历史。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r73-contacts/fixed-lucia_photons80-seed1.png",
+      "sha256": "0ae791227ec649466b600ee740f80a26f6eda19ae26e4b136ada9fb61fa6305d",
+      "scene": "lucia_photons80",
+      "seed": 1,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "草地/树叶及长椅结构可见，新控制很接近；seed1的新模型绿地较深，提示映射/色调变化不应归因双矩历史。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r73-contacts/fixed-walking_photons20-seed0.png",
+      "sha256": "3f01f476564638fd384c3d194cb48df8d8eeca07cee3bf5f752b6bb311db80a0",
+      "scene": "walking_photons20",
+      "seed": 0,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "人脸和墙面原生裁剪仍明显有颗粒，均值/双矩/current差异很小；旧rec后帧墙面较平滑，未发现可支持双矩优势的固定帧证据。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r73-contacts/fixed-walking_photons20-seed1.png",
+      "sha256": "63ed5c3e4cfc8aed7708a29b860b70fbd1c382ecf71463eb9f2a3ae51768ae17",
+      "scene": "walking_photons20",
+      "seed": 1,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "人脸和墙面原生裁剪仍明显有颗粒，均值/双矩/current差异很小；旧rec后帧墙面较平滑，未发现可支持双矩优势的固定帧证据。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r73-contacts/fixed-walking_photons80-seed0.png",
+      "sha256": "266ec3ef4eb10de822f72f17a468402ca58e3be3b278a2bc2200e7b0ac2bf8c3",
+      "scene": "walking_photons80",
+      "seed": 0,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "人物及墙面相对低噪声条件细节较清楚，五个新路由显示接近；未见严重结构破坏，但仍有颗粒，不能替代整段运动/闪烁检查。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r73-contacts/fixed-walking_photons80-seed1.png",
+      "sha256": "f6aa682382ecf92574a37d549f46c837bd97675247ec8b82ac9732b4f7563f77",
+      "scene": "walking_photons80",
+      "seed": 1,
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "人物及墙面相对低噪声条件细节较清楚，五个新路由显示接近；未见严重结构破坏，但仍有颗粒，不能替代整段运动/闪烁检查。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r73-contacts/fixed-video_15-seed0.png",
+      "sha256": "6f5b73eb465968fa7568ae57c0523d9339ccbf28ab4fee2a8cb4fd2c0f062534",
+      "scene": "video_15",
+      "seed": 0,
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "observation": "叶枝/墙面纹理与相机视角变化保留，新控制之间接近；seed0整体偏亮/对比及色调与GT仍有差异，未据此作历史机制归因。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r73-contacts/fixed-video_15-seed1.png",
+      "sha256": "ed4f4e355107f0ad62daa1e8c7f7831092c361f72d484696ace568fa59db6e49",
+      "scene": "video_15",
+      "seed": 1,
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "observation": "叶枝/墙面纹理与相机视角变化保留，新控制之间接近；seed0整体偏亮/对比及色调与GT仍有差异，未据此作历史机制归因。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r73-contacts/fixed-video_47-seed0.png",
+      "sha256": "2485882e2bf822b94c656978c87335b59125cedae09145a03058085ea3df7f07",
+      "scene": "video_47",
+      "seed": 0,
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "observation": "水平构件和墙面完整，seed0新输出后帧较GT偏暖/偏红，seed1较接近；空间/均值/双矩共同变化，不是二阶矩收益证据。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r73-contacts/fixed-video_47-seed1.png",
+      "sha256": "b323e8735bf48496706f9f0c2f3f29539cd8774058942cc1647486345a241aee",
+      "scene": "video_47",
+      "seed": 1,
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "observation": "水平构件和墙面完整，seed0新输出后帧较GT偏暖/偏红，seed1较接近；空间/均值/双矩共同变化，不是二阶矩收益证据。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r73-contacts/fixed-video_91-seed0.png",
+      "sha256": "542fda24659046708da62f4495d36bfea58a22bc2c3118cbb4aaef16aec0b40a",
+      "scene": "video_91",
+      "seed": 0,
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "observation": "栅栏/植物形状可见，新输出与旧参考仍有雾感和色调差异；新路由接近，未见可靠的二阶矩独立细节改善。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r73-contacts/fixed-video_91-seed1.png",
+      "sha256": "e06dcaebf42126560f3b6f67be58dba1ebf1993d3ad92b1608a34b8c1e33bfe2",
+      "scene": "video_91",
+      "seed": 1,
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "observation": "栅栏/植物形状可见，新输出与旧参考仍有雾感和色调差异；新路由接近，未见可靠的二阶矩独立细节改善。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r73-contacts/fixed-video_121-seed0.png",
+      "sha256": "27d8bd24d0b0821b716e6ed5437aa2058de944111e82d57f36b1c3a6a28e0c28",
+      "scene": "video_121",
+      "seed": 0,
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "observation": "塔架边缘仍有平滑，seed0新输出天空比GT偏亮、seed1较接近；均值/双矩/current同类变化，不能把跨seed空间映射差异算作时间收益。"
+    },
+    {
+      "path": "research/4.temporal-consistency/report/exploration-r73-contacts/fixed-video_121-seed1.png",
+      "sha256": "3a4168c1b8c5eb6506fb6adce9f4fab5b4157593eae54aa325c3e836e42db265",
+      "scene": "video_121",
+      "seed": 1,
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "observation": "塔架边缘仍有平滑，seed0新输出天空比GT偏亮、seed1较接近；均值/双矩/current同类变化，不能把跨seed空间映射差异算作时间收益。"
+    }
+  ],
+  "overall": "No clear independent second-moment visual benefit over mean/current in these fixed sheets. Retained grain and shared tone differences are visible. Joint numerical gates still await complete perception; no threshold or model change."
+}
