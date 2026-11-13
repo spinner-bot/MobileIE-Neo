@@ -1,0 +1,41 @@
+{
+  "at": "2026-11-12T17:46:27.502453+08:00",
+  "dependencies": [
+    {
+      "seed": 0,
+      "pid": 3445364,
+      "identity": {
+        "start_ticks": "41671897",
+        "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 5 --record research/4.temporal-consistency/process/exploration-r48/seed0-guard.json -- ./scripts/project-python research/4.temporal-consistency/scripts/train_joint_recursion_r48.py --seed 0 "
+      }
+    },
+    {
+      "seed": 1,
+      "pid": 3445395,
+      "identity": {
+        "start_ticks": "41671902",
+        "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 6 --record research/4.temporal-consistency/process/exploration-r48/seed1-guard.json -- ./scripts/project-python research/4.temporal-consistency/scripts/train_joint_recursion_r48.py --seed 1 "
+      }
+    }
+  ],
+  "source_sha256": {
+    "finalize_joint_recursion_r48.py": "a3fa0ce0689c54562f3168d1f02c9c423af39d5b9f68d4904d07bfe005136b3c",
+    "train_joint_recursion_r48.py": "42fde97624b1e9a5a74bcf8f3f951e68e2d1be6b6431e510f5b5dbbb600daf68",
+    "joint_recursion_r48.py": "3651f49d8a93efff124c788ad337eb725d5895ae21dbe1037416bfcc26ca2d69",
+    "evaluate_joint_recursion_r48.py": "ec9d9aa63a8e39f4d6cb39e580880fa7043b67709fe83f5d5470248ea4ec11d4",
+    "summarize_joint_recursion_r48.py": "1a449e2cbde22925405ab5e039083c7adb212d9d01249362207b2c8ad55124ff",
+    "response_cue_r45.py": "804870366389b2cf293384cb795ac445a99db2086501a2a46d98a9dfd9e33c0e",
+    "response_sequence_r45.py": "5af95a98b6de1110d733d2f77b1b7ed05da44e2b6cb2d6095a6eb1b14022ef99",
+    "budget_causal_r33.py": "7cfe138a286fdb488973ffe7c5bc93b69ad505af981e22cba824402c491b2e3b",
+    "half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+    "aligned_raw_history_r11.py": "e367727401f82ccf0bccaf8d88f904e4aebf8b78186f0539eedeed222b2d2227",
+    "aggregation_controls_r20.py": "7b4541be8512ca1edb755b5a73f889351e376f9a8fc1fdec7ed633a4438c116c",
+    "exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+    "video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0",
+    "mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5",
+    "dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498",
+    "training_form_r41.py": "4392fdceb16750ca0a763f4485beec873dc7316d758c95e9eaef042ffceb4ded",
+    "gpu_guard.py": "e0a5050f47d64dbf75fab4146a276f50e3464d07e6a799ad8ccd2c69e8e3a535"
+  },
+  "scope": "Both seeds full8000 new model updates each and final fold before120 CPU rows; no retry or wall cutoff."
+}

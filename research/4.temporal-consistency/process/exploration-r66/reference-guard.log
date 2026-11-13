@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/evaluate_cvvdp_references_r66.py", line 141, in <module>
+    if __name__ == '__main__': main()
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/evaluate_cvvdp_references_r66.py", line 94, in main
+    cuda_gate = qualify('cuda', gate['scores']); write(out/'cuda-gate.json', cuda_gate)
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/cvvdp_adapter_r66.py", line 69, in qualify
+    scores = {name: predict(metric, values, reference)[0] for name, values in tests.items()}
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/cvvdp_adapter_r66.py", line 69, in <dictcomp>
+    scores = {name: predict(metric, values, reference)[0] for name, values in tests.items()}
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/cvvdp_adapter_r66.py", line 50, in predict
+    score, statistics = metric.predict(test, reference, dim_order='FHWC', frames_per_second=FPS)
+  File "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r66/cvvdp057/pycvvdp/cvvdp_metric.py", line 291, in predict
+    return self.predict_video_source(test_vs)
+  File "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r66/cvvdp057/pycvvdp/cvvdp_metric.py", line 381, in predict_video_source
+    R = self.read_block_of_frames(vid_source, no_channels, fb, block_N_frames, met_colorspace, ff, cur_block_N_frames)
+  File "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r66/cvvdp057/pycvvdp/cvvdp_metric.py", line 507, in read_block_of_frames
+    fb.sw_buf[0][:,:,ind:ind+1,:,:] = vid_source.get_test_frame(ff+fi, device=self.device, colorspace=met_colorspace)
+  File "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r66/cvvdp057/pycvvdp/video_source.py", line 315, in get_test_frame
+    return self._get_frame(self.test_video, frame, device, colorspace )
+  File "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r66/cvvdp057/pycvvdp/video_source.py", line 344, in _get_frame
+    I = self.apply_dm_and_color_transform(frame, colorspace)
+  File "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r66/cvvdp057/pycvvdp/video_source.py", line 219, in apply_dm_and_color_transform
+    I = self.dm_photometry.source_2_target_colorspace(frame, target_colorspace)
+  File "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r66/cvvdp057/pycvvdp/display_model.py", line 233, in source_2_target_colorspace
+    I_target = self.linear_2_target_colorspace(I_lin, target_colorspace)
+  File "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r66/cvvdp057/pycvvdp/display_model.py", line 256, in linear_2_target_colorspace
+    rgb2abc = torch.as_tensor( LMS2006_to_DKLd65, dtype=RGB_lin.dtype, device=RGB_lin.device) @ torch.as_tensor( XYZ_to_LMS2006, dtype=RGB_lin.dtype, device=RGB_lin.device) @ rgb2xyz
+RuntimeError: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility

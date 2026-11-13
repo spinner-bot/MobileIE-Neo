@@ -1,0 +1,20 @@
+{
+  "started_at": "2026-11-12T12:47:54.056021+08:00",
+  "guard_pid": 3322054,
+  "physical_gpu": 4,
+  "command": [
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/gpu_guard.py",
+    "--gpu",
+    "4",
+    "--record",
+    "research/4.temporal-consistency/process/exploration-r41/seed0-guard.json",
+    "--",
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/train_training_form_r41.py",
+    "--seed",
+    "0"
+  ],
+  "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+  "scope": "Fresh admission in group4\u20137, only two planned cards; actual training requires post-load pre-CUDA check and both-form first-window gate."
+}

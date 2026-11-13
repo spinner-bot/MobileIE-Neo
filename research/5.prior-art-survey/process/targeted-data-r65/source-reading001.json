@@ -1,0 +1,74 @@
+{
+  "at": "2026-11-13T02:58:33.315853+08:00",
+  "author": "Codex  (sqs_A100)",
+  "scope": "Targeted primary-source text reading only; no code/model/data reproduction or new method claim.",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2504.12204v1",
+      "sections": [
+        "III-B..III-F",
+        "equations2..9"
+      ],
+      "read": "Reverse ISP, RAW-domain exposure/noise, demosaic, white balance/color transform/tone/gamma. Novelty exclusion, not this project causal evidence."
+    },
+    {
+      "url": "https://arxiv.org/html/2504.12169v1",
+      "sections": [
+        "III-A",
+        "equations1..5",
+        "IV-C"
+      ],
+      "read": "DEN reference-noise profiling, power darkening, persistent temporal banding; LLVE adaptation uses specific target-noise reference. No copied author scores."
+    },
+    {
+      "url": "https://arxiv.org/html/2512.01495v4",
+      "sections": [
+        "3.1",
+        "3.2",
+        "4.3"
+      ],
+      "read": "CVPR2026 record verified; exposure/blur/noise profile and temporal fusion; LLVE experiment uses fixed SDSD-Net and120k updates. No reproduction."
+    },
+    {
+      "url": "https://arxiv.org/abs/1811.11127",
+      "sections": [
+        "abstract only"
+      ],
+      "read": "Unprocessing prior exists; CVF HTML and StableLLVE PDF both returned403 in this turn, not full PDF reading."
+    },
+    {
+      "url": "https://github.com/zkawfanx/StableLLVE/blob/4cc070da328ffadc8498285985aa98175e473bc5/train.py",
+      "sections": [
+        "full104line training source"
+      ],
+      "read": "L1 +20 L1 commutator, both neural paths backpropagated."
+    },
+    {
+      "url": "https://github.com/zkawfanx/StableLLVE/blob/4cc070da328ffadc8498285985aa98175e473bc5/dataloader.py",
+      "sections": [
+        "full99line loader"
+      ],
+      "read": "BGR,512 crop, flow deformation single-image training."
+    },
+    {
+      "url": "https://github.com/zkawfanx/StableLLVE/blob/4cc070da328ffadc8498285985aa98175e473bc5/warp.py",
+      "sections": [
+        "backward flow class"
+      ],
+      "read": "Read through connected GitHub fetch; endpoint linspace/reflection/unspecified align_corners in old PyTorch1.5; R65 explicitly preservesFalse."
+    }
+  ],
+  "local_sources": [
+    "exploration_r2_data.degrade",
+    "exploration-r21-training protocol",
+    "R64 decision",
+    "prior notes18/47/48"
+  ],
+  "not_done": [
+    "No claim original synthetic gamma is the cause of phone failures",
+    "No new camera calibration",
+    "No alternate synthetic DEV scores treated as algorithm gain",
+    "No new ISP pipeline as novelty",
+    "No new GPU/MC or decoding for this reading"
+  ]
+}

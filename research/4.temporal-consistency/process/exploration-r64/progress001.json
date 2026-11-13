@@ -1,0 +1,97 @@
+{
+  "at": "2026-11-13T01:26:21.898630+08:00",
+  "scope": "Verified live identities and immutable log prefix metadata, not final quality or completed24000.",
+  "processes": [
+    {
+      "pid": 3831025,
+      "argv": [
+        "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python",
+        "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/gpu_guard.py",
+        "--gpu",
+        "5",
+        "--record",
+        "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/process/exploration-r64/seed0-guard001.json",
+        "--",
+        "/data/Users/zrh/repo/MobileIE-Neo/scripts/project-python",
+        "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/train_dense_history_r64.py",
+        "--seed",
+        "0"
+      ],
+      "cwd": "/data/Users/zrh/repo/MobileIE-Neo",
+      "start_ticks": "44439465"
+    },
+    {
+      "pid": 3831026,
+      "argv": [
+        "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python",
+        "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/gpu_guard.py",
+        "--gpu",
+        "6",
+        "--record",
+        "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/process/exploration-r64/seed1-guard001.json",
+        "--",
+        "/data/Users/zrh/repo/MobileIE-Neo/scripts/project-python",
+        "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/train_dense_history_r64.py",
+        "--seed",
+        "1"
+      ],
+      "cwd": "/data/Users/zrh/repo/MobileIE-Neo",
+      "start_ticks": "44439465"
+    },
+    {
+      "pid": 3831080,
+      "argv": [
+        "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python",
+        "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/train_dense_history_r64.py",
+        "--seed",
+        "1"
+      ],
+      "cwd": "/data/Users/zrh/repo/MobileIE-Neo",
+      "start_ticks": "44439626"
+    },
+    {
+      "pid": 3831145,
+      "argv": [
+        "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python",
+        "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/train_dense_history_r64.py",
+        "--seed",
+        "0"
+      ],
+      "cwd": "/data/Users/zrh/repo/MobileIE-Neo",
+      "start_ticks": "44439634"
+    },
+    {
+      "pid": 3831670,
+      "argv": [
+        "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python",
+        "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/finalize_dense_history_r64.py"
+      ],
+      "cwd": "/data/Users/zrh/repo/MobileIE-Neo",
+      "start_ticks": "44445498"
+    }
+  ],
+  "seeds": [
+    {
+      "seed": 0,
+      "actual_logged_updates_by_model": {
+        "plain": 253,
+        "spatial": 252,
+        "causal": 252
+      },
+      "common_completed_prefix": 252,
+      "terminal_runtime_exists": false,
+      "initial_function_equal": true
+    },
+    {
+      "seed": 1,
+      "actual_logged_updates_by_model": {
+        "plain": 253,
+        "spatial": 253,
+        "causal": 253
+      },
+      "common_completed_prefix": 253,
+      "terminal_runtime_exists": false,
+      "initial_function_equal": true
+    }
+  ]
+}

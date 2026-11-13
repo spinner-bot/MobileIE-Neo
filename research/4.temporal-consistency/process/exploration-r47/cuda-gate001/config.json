@@ -1,0 +1,22 @@
+{
+  "at": "2026-11-12T17:19:12.811597+08:00",
+  "device": "cuda",
+  "discarded_updates_registered": 2,
+  "protocol_sha256": "517db06b893ee2e476930dd3d382b54c101f76d9e9ea7336383c99479484c767",
+  "source_sha256": {
+    "research/4.temporal-consistency/scripts/check_task_fastdvd_r47.py": "2fb92e3dbcecd053b8ade35b19824e7025916e5845e3181c29fd4051291827da",
+    "research/4.temporal-consistency/scripts/task_fastdvd_r47.py": "9e312377b462e81313229665450580280a74444c6c3a6b5b9cba1beca4863c8b",
+    "third_party/fastdvdnet/models.py": "3b38ee3892420d1bd8b0c5b9b7d09bf44931276465c66527eff7555f2fa17532"
+  },
+  "initialization": {
+    "official_manifest_sha256": "6220b11333692a08b1c6a16e39a85500127adb4d4d45cf5e5f1228c85fc171cf",
+    "official_checkpoint_sha256": "8118974ac7defaa5037f73caf87e0cb53efcfa49ae77d55c05ab187f59e55949",
+    "official_commit": "c8fdf6182a0340e89dd18f5df25b47337cbede6f",
+    "parameters": 2479096,
+    "conditioning_sigma_interface": 15.0,
+    "future_wait_max": 2,
+    "task": "direct lowlight RGB to paired GT; no MobileIE prefix",
+    "pretraining_overlap": "Official DAVIS training includes three DEV video IDs; not unseen generalization."
+  },
+  "scope": "Training data only; no DEV or quality claim."
+}

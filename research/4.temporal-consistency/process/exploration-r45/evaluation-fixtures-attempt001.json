@@ -1,0 +1,12 @@
+{
+  "observed_at": "2026-11-12T16:05:42.699762+08:00",
+  "fixture_returncode": 1,
+  "evaluator_sha256": "759c3d6102913629598cb60bcfaeabc6e31fcdff70f56bbf548cfd8e368b1dbf",
+  "coordinator_identity": {
+    "start_ticks": "41076345",
+    "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/finalize_response_recursion_r45.py "
+  },
+  "action": "SIGTERM sent only to waiting coordinator, before any CPU evaluation launch. Training guards not signaled.",
+  "reason": "Old blend helper restricts alpha to .1/.5, so registered .25/.75/.9 frontier cannot execute. Correct evaluator, preserve old snapshot and relaunch coordinator in a new attempt.",
+  "formal_training_budget_changed": false
+}

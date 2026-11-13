@@ -1,0 +1,49 @@
+{
+  "at": "2026-11-13T03:34:39.484068+08:00",
+  "prior_check": "2026-11-11T20:39:02.416829+08:00",
+  "seconds_since_prior": 111337.067239,
+  "maximum_body_bytes_per_endpoint": 65536,
+  "endpoint_attempts": 2,
+  "records": [
+    {
+      "name": "indoor.zip",
+      "url": "https://drive.usercontent.google.com/download?id=1HJUFO-Lr-ewX5WbUfQczkAg15GxnrAm6&export=download&confirm=t",
+      "status": 206,
+      "headers": {
+        "Content-Type": "application/octet-stream",
+        "Content-Length": "65536",
+        "Content-Range": "bytes 3072536274-3072601809/3072601810",
+        "Date": "Thu, 12 Nov 2026 19:34:41 GMT"
+      },
+      "actual_read_bytes": 65536,
+      "response_sha256": "b5f3417d950fa5f31ce9e54bafee0815ff0a699dd03aa1fc207be74795074cd2",
+      "prefix_hex": "0000002000000083037674696e646f6f",
+      "title": [],
+      "response_kind": "unclassified"
+    },
+    {
+      "name": "outdoor.zip",
+      "url": "https://drive.usercontent.google.com/download?id=1E2hUkYzit-sL2c5kG69MgaZy4a-OJrbz&export=download&confirm=t",
+      "status": 206,
+      "headers": {
+        "Content-Type": "application/octet-stream",
+        "Content-Length": "65536",
+        "Content-Range": "bytes 3399339422-3399404957/3399404958",
+        "Date": "Thu, 12 Nov 2026 19:34:43 GMT"
+      },
+      "actual_read_bytes": 65536,
+      "response_sha256": "804f5e079739718de3c553fac3342bbe82a97e98288e28280cd8281e98a3bf09",
+      "prefix_hex": "4b01021f00140000000800cb9d03532c",
+      "title": [],
+      "response_kind": "unclassified"
+    }
+  ],
+  "source_listing_sha256": {
+    "indoor_png-listing.json": "a2292f4c83b12249c7bea264100759c61f78b64d58b61d395cdc99543874b6ea",
+    "outdoor_png-listing.json": "e1483ae5df55d57d32f25a255de3faf66866bf140a967046c17c922538f53d9d"
+  },
+  "images_decoded": 0,
+  "new_enhancement_CNN": 0,
+  "source": "Same author-linked public Drive only; no retry/bypass/mirror.",
+  "scope": "Bounded response recheck only. If Range ignored, read prefix may contain archive payload; no dataset/paired-validity claim."
+}

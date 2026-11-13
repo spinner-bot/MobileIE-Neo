@@ -1,0 +1,16 @@
+{
+  "at": "2026-11-13T00:19:07.902878+08:00",
+  "checkpoint": "Original public synthetic-clean StableLLVE; no project adaptation or claimed seed",
+  "parameters": 4316259,
+  "future_wait_max": 0,
+  "training_updates": 0,
+  "CPU_threads": 2,
+  "observation_count": 448,
+  "CNN_sequences": 10,
+  "output_sequences": 20,
+  "per_frame_rows": 896,
+  "format": "Original BGR float64/255->FP32, model internal odd-size handling; output clipped RGB float32",
+  "post": "Own raw half-FB and classic recursive .5, first raw; motion/history cost additional",
+  "comparison": "Same actual DEV arrays/reference-flow/mask/CPU metrics as R44/R53/R56; unequal training/pretraining/compute.",
+  "scope": "Published clean transfer reference, no noisy-paper reproduction/SOTA or architecture/final/phone rank."
+}

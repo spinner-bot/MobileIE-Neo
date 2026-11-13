@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "parity": [
+    {
+      "shape": [
+        4,
+        4,
+        3,
+        128,
+        128
+      ],
+      "max_abs_delta": 1.564621925354004e-07,
+      "tolerance": 0.0001,
+      "passed": true
+    }
+  ],
+  "discarded_updates": 2,
+  "steps": [
+    {
+      "step": 1,
+      "MSE": 0.171449214220047,
+      "first_gradient": 0.040857717394828796,
+      "last_gradient": 0.4163878560066223,
+      "norm_before_clip": 0.5470700860023499
+    },
+    {
+      "step": 2,
+      "MSE": 0.17141929268836975,
+      "first_gradient": 0.04085247591137886,
+      "last_gradient": 0.416347861289978,
+      "norm_before_clip": 0.5470156073570251
+    }
+  ],
+  "parameter_deltas": {
+    "first": 1.1995434761047363e-06,
+    "last": 6.631016731262207e-06
+  },
+  "peak_cuda_allocated_bytes": 3837689344,
+  "inherited_into_formal_training": false,
+  "DEV_pixels": 0
+}

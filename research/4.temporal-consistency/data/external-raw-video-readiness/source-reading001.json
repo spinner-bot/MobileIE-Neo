@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-13",
+  "author": "Codex  (sqs_A100)",
+  "scope": "Bounded metadata follow-up while original R73 formal training runs. No download requests to listed data hosts, no new pixels, decoder, benchmark or candidate.",
+  "sources": [
+    {
+      "title": "CRVD author repository",
+      "url": "https://github.com/cao-cong/RViDeNet/blob/master/README.md",
+      "git_blob_sha1": "ec8515d2d9e7763307b0e2a72c11497e9e91646c",
+      "actually_read": [
+        "Dataset links and original averaged frame option",
+        "Bayer pattern and black/white levels",
+        "Dataset licence",
+        "Train/test scene IDs"
+      ],
+      "author_linked_GDrive_folder": "https://drive.google.com/drive/folders/1TZhNrsJ4tmKaU7b9b_9hkJIhwMi9Tfk3",
+      "Bayer": "GBRG",
+      "black_level": 240,
+      "white_level": 4095,
+      "decision": "RAW denoising resource with an official route; downloaded file status and standard RGB rendering not established. Does not by itself supply the missing ambient-night paired LLVE evaluation."
+    },
+    {
+      "title": "SMOID author repository",
+      "url": "https://github.com/MichaelHYJiang/Learning-to-See-Moving-Objects-in-the-Dark/blob/master/README.md",
+      "git_blob_sha1": "6e0639550b4935506034a49200944d47b7b52541",
+      "actually_read": [
+        "Demo example-data instructions and full-dataset release wording"
+      ]
+    },
+    {
+      "title": "SMOID example-data download script",
+      "url": "https://github.com/MichaelHYJiang/Learning-to-See-Moving-Objects-in-the-Dark/blob/master/download_dataset.py",
+      "git_blob_sha1": "0c3a0005e45c6eb54592800d21748aa2fa4d205e",
+      "actually_read": [
+        "Three explicitly labelled example ZIP targets and extraction commands"
+      ],
+      "executed": false,
+      "decision": "Official example route only; do not count full dataset/splits as locally available or execute downloader outside a registered acquisition/rendering plan."
+    },
+    {
+      "title": "Learning to See Moving Objects in the Dark",
+      "url": "https://openaccess.thecvf.com/content_ICCV_2019/papers/Jiang_Learning_to_See_Moving_Objects_in_the_Dark_ICCV_2019_paper.pdf",
+      "actually_read": [
+        "3.1 camera system",
+        "3.2 dataset",
+        "4.1 RAW interface"
+      ],
+      "full_paper_or_all_figures_reviewed": false,
+      "decision": "Two-camera ND-attenuated real observations, not proof of natural ambient-night coverage; RAW Bayer/bit depth/crop parity and per-clip scaling differ from current RGB pipeline."
+    }
+  ],
+  "existing_gated_or_quota_sources_not_retried": true,
+  "new_pixels": 0,
+  "new_CNN": 0,
+  "new_SGD": 0,
+  "new_GPU": 0,
+  "R73_sources_or_thresholds_changed": false
+}

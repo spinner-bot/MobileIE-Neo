@@ -1,0 +1,50 @@
+{
+  "at": "2026-11-12T20:27:32.017552+08:00",
+  "scope": "Fixed5000 flushed prefix only; no final quality or convergence inference.",
+  "seeds": {
+    "0": {
+      "updates_verified": 5000,
+      "Adam_reset_at_steps": [
+        1,
+        4001
+      ],
+      "repeated_source_window_fraction": 0.0714625,
+      "short_context_R47_fraction": 1.0,
+      "last": {
+        "step": 5000,
+        "data_step": 4999,
+        "MSE": 0.004415196366608143,
+        "synthetic_MSE": 0.004349647089838982,
+        "real_MSE": 0.004480745643377304,
+        "gradient_norm_before_clip": 0.08881749957799911,
+        "Adam_reset": false,
+        "BN_first": 1335000,
+        "BN_last": 445000,
+        "windows_with_duplicate_source_index": 1
+      },
+      "training_complete": false
+    },
+    "1": {
+      "updates_verified": 5000,
+      "Adam_reset_at_steps": [
+        1,
+        4001
+      ],
+      "repeated_source_window_fraction": 0.070675,
+      "short_context_R47_fraction": 1.0,
+      "last": {
+        "step": 5000,
+        "data_step": 4999,
+        "MSE": 0.0024039633572101593,
+        "synthetic_MSE": 0.002123447135090828,
+        "real_MSE": 0.0026844795793294907,
+        "gradient_norm_before_clip": 0.057321641594171524,
+        "Adam_reset": false,
+        "BN_first": 1335000,
+        "BN_last": 445000,
+        "windows_with_duplicate_source_index": 2
+      },
+      "training_complete": false
+    }
+  }
+}

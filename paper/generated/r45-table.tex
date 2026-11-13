@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering\small
+\caption{Complete R45 comparison on the same frozen square-MSE base. Both-seed means; all fixed alpha points retained. All outputs except raw use motion and RGB history. Parameters omit unlearned motion work; no phone or pipeline cost is inferred.}
+\label{tab:r45}
+\begin{tabular}{lrrrrr}
+\toprule
+Output & Params & SYN PSNR & SYN $E_{\rm temp}$ & ND PSNR & ND $E_{\rm temp}$\\
+\midrule
+Raw & 4075 & 26.466 & 9.900 & 27.128 & 3.653\\
+Fixed $\alpha=.1$ & 4075 & 26.733 & 8.922 & 27.188 & 3.316\\
+Fixed $\alpha=.25$ & 4075 & 26.932 & 7.768 & 27.217 & 2.940\\
+Fixed $\alpha=.5$ & 4075 & 26.707 & 6.470 & 27.108 & 2.570\\
+Fixed $\alpha=.75$ & 4075 & 25.556 & 5.860 & 26.721 & 2.475\\
+Fixed $\alpha=.9$ & 4075 & 23.833 & 5.936 & 26.147 & 2.575\\
+Learned global & 4076 & 26.922 & 7.893 & 27.218 & 2.979\\
+RGB gate & 4116 & 27.112 & 7.141 & 27.234 & 2.734\\
+Internal cue & 4116 & 27.116 & 7.122 & 27.232 & 2.741\\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,72 @@
+{
+  "at": "2026-11-12T20:26:00+08:00",
+  "repository": "albrateanu/multinex",
+  "commit": "e15790a963935569fff1ba6a8b0d33a791765749",
+  "files": [
+    {
+      "path": "basicsr/models/archs/MultinexNano_arch.py",
+      "git_blob_sha": "279dca3cff7ec9075e8800b6aacb6218c13d7574",
+      "read_via": "GitHub connected read-only fetch_file"
+    },
+    {
+      "path": "Options/Multinex-Nano_LOL-v1.yaml",
+      "git_blob_sha": "ffa840641eba1e488af122231bb09455e6fd1012",
+      "read_via": "GitHub connected read-only fetch_file"
+    },
+    {
+      "path": "Enhancement/test.py",
+      "git_blob_sha": "cc5bd0396fbef4616b3f49ca9378c31c9cbfaff5",
+      "read_via": "GitHub connected read-only fetch_file"
+    },
+    {
+      "path": "MODEL_CARD.md",
+      "git_blob_sha": "40520a4ea56b45c544012e458dfe213b10a434db",
+      "read_via": "GitHub connected read-only fetch_file"
+    },
+    {
+      "path": "pretrained_weights/README.md",
+      "git_blob_sha": "53aa71ed22829cd3310a98b2ec4aec093f74543e",
+      "read_via": "GitHub connected read-only fetch_file"
+    }
+  ],
+  "fixed_future_weight": {
+    "path": "pretrained_weights/Multinex-Nano_LOL-v1.pth",
+    "git_blob_sha": "395c4218d7e20ae3ceece91670dfe7c338741315",
+    "repository_bytes": 20317,
+    "downloaded": false
+  },
+  "paper": {
+    "url": "https://arxiv.org/html/2604.10359v3",
+    "version": "v3, 27 Jul2026",
+    "actual_targeted_sections": [
+      "3.1-3.4",
+      "C.3-C.4"
+    ],
+    "scope": "Targeted method/configuration reading; not full training reproduction."
+  },
+  "HVI": {
+    "url": "https://arxiv.org/html/2502.20272v2",
+    "actual_targeted_sections": [
+      "3.1-3.2"
+    ],
+    "scope": "Color-noise/representation prior; no model acquired or run."
+  },
+  "Nano_observations": {
+    "reported_parameters_approx": 700,
+    "actual_parameter_count_verified": false,
+    "standalone_architecture_imports": "torch,numpy,PIL,einops plus Python standard library",
+    "existing_config_target_params": 300,
+    "constructor_min_channels": 3,
+    "warning": "Auto-budget loop need not satisfy target; count actual model, strict-load fixed weights, do not silently tune configuration.",
+    "official_wrapper_padding_factor": 2,
+    "optional_GT_mean": false,
+    "optional_self_ensemble": false
+  },
+  "license_scope": "Official source/model materials PolyForm Noncommercial1.0.0 for non-commercial research; retain notices, no commercial/mobile-demo integration.",
+  "new_CNN": 0,
+  "new_training": 0,
+  "new_dataset_pixels": 0,
+  "source_installed": false,
+  "comparison_protocol_registered": false,
+  "scope": "Source readiness only. Not a reproduced700-parameter baseline, phone speed, quality result, or proof of novelty."
+}

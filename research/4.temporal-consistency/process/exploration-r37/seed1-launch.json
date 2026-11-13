@@ -1,0 +1,20 @@
+{
+  "started_at": "2026-11-12T07:31:49.907110+08:00",
+  "guard_pid": 3162216,
+  "command": [
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/gpu_guard.py",
+    "--gpu",
+    "1",
+    "--record",
+    "research/4.temporal-consistency/process/exploration-r37/seed1-guard.json",
+    "--",
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/train_preserved_r37.py",
+    "--seed",
+    "1"
+  ],
+  "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+  "revision": "4d232841d38b23db9ede853986b216ae0181524d",
+  "scope": "Separate fresh GPU1 admission; same group 0\u20133, only two project GPUs. No wall cutoff."
+}

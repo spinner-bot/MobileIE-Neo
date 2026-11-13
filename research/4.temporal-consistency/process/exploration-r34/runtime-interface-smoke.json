@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "model": "original",
+      "history": "current",
+      "fusion": "raw",
+      "state_storage_bytes": 0,
+      "passed": true
+    },
+    {
+      "model": "original",
+      "history": "current",
+      "fusion": "self_motion_post05",
+      "state_storage_bytes": 13824,
+      "passed": true
+    },
+    {
+      "model": "spatial",
+      "history": "current",
+      "fusion": "raw",
+      "state_storage_bytes": 0,
+      "passed": true
+    },
+    {
+      "model": "spatial",
+      "history": "current",
+      "fusion": "self_motion_post05",
+      "state_storage_bytes": 13824,
+      "passed": true
+    },
+    {
+      "model": "causal",
+      "history": "current",
+      "fusion": "raw",
+      "state_storage_bytes": 0,
+      "passed": true
+    },
+    {
+      "model": "causal",
+      "history": "current",
+      "fusion": "self_motion_post05",
+      "state_storage_bytes": 13824,
+      "passed": true
+    },
+    {
+      "model": "causal",
+      "history": "causal",
+      "fusion": "raw",
+      "state_storage_bytes": 2304,
+      "passed": true
+    }
+  ],
+  "benchmark_source_sha256": "b4b00e595b6b1b0dcdf8e1e1016f89d86939b148acf63fdf7947df1a16b104b3",
+  "cuda_initialized": false,
+  "scope": "Small synthetic 32x36 routing/ownership fixture only, not final-model timing or quality. All timing values discarded; optimizer updates0."
+}

@@ -1,0 +1,52 @@
+{
+  "seed": 1,
+  "models": [
+    "original",
+    "spatial",
+    "causal"
+  ],
+  "steps_per_model": 4000,
+  "batch": 4,
+  "frames": 4,
+  "patch": 128,
+  "batch_scheduling": "Four sequential frame batches of B=4 for every control; no B*T flatten fast path",
+  "objective": "MSE over all four supervised frames",
+  "optimizer": "Adam",
+  "lr": 0.0001,
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "eps": 1e-08,
+  "weight_decay": 0,
+  "global_norm_clip": 1,
+  "dtype": "float32",
+  "device": "cuda:0",
+  "deterministic_algorithms": true,
+  "cudnn_tf32_allowed": true,
+  "matmul_tf32_allowed": false,
+  "torch_version": "2.9.1+cu126",
+  "source_manifest_sha256": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+  "protocol_sha256": "03fef53846ffc7f68571c5ada18cf2a02c7bfa3469eb7712560e871bb249db59",
+  "cuda_gate_sha256": "e63159959599b17c21c47946c919765eda294cfcb8b4b63c6d11d3b75046ae24",
+  "initialization": {
+    "body_kernel_relative_frobenius_error": 0.3632499058727486,
+    "body_initialization": "per-input-channel best rank1 SVD; approximate, not function preserving",
+    "spatial_causal_initial_weights_equal": true,
+    "official_weights_sha256": "d40a930fbc0435f47ce08dda17b1c630b86a501be9423b8f48dab14722fb5548"
+  },
+  "revision": "0e9514afaa1d35cf4dffdfb3a2697366acbe486e",
+  "source_sha256": {
+    "budget_causal_r33.py": "7cfe138a286fdb488973ffe7c5bc93b69ad505af981e22cba824402c491b2e3b",
+    "dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498",
+    "train_dynamic_r34.py": "43ef42537c69582f539ff63e4ff119c417501b0987a103bf1c5aa83d0e8d1a9f",
+    "exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa"
+  },
+  "parameters": {
+    "original": 4075,
+    "spatial": 3586,
+    "causal": 3586
+  },
+  "checkpoint_selection": "final4000 only",
+  "resume_supported": false
+}

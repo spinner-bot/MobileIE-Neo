@@ -1,0 +1,27 @@
+{
+  "device": "cpu",
+  "torch_threads": 2,
+  "opencv_threads": 1,
+  "sigma": 15,
+  "modes": [
+    "raw",
+    "window",
+    "five_current"
+  ],
+  "noise_added": false,
+  "base": "R26 plain MSE final4000, both seeds; cached R30 RGB",
+  "parameters_denoiser_only": 2479096,
+  "prediction_manifest_sha256": "ef41fbfb53fb556085176af2d54b465713612adc811e28bc2a8d245623d6c8c0",
+  "cache_index_sha256": "424fa278b2fe66d29de476e2b47328619438f97cf71926448433d1191bb722c1",
+  "official_manifest_sha256": "6220b11333692a08b1c6a16e39a85500127adb4d4d45cf5e5f1228c85fc171cf",
+  "smoke_sha256": "1ad8127368dd985269364254ce35ace796ea66471780905e4577f065298f2243",
+  "protocol_sha256": "4877d5b10416d4a52891d0537b78dd1b96ed6702703911cedaa1b65c5552c8fd",
+  "source_sha256": {
+    "evaluate_published_davis_r35.py": "11780c169d726599242ee22123237a7d4a6806b8d932980905763dc4af46289d",
+    "fastdvdnet_adapter_r12.py": "f61d8d3024f517c288218c6eb3c88001e139549bfa3a9fe7a4a34f894b47b668",
+    "exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa"
+  },
+  "torch_version": "2.9.1+cu126",
+  "revision": "c44aa9152a6851bcf73105cb07fc846183624021",
+  "scope": "Published clipped-AWGN denoiser transfer on custom DEV lowlight; window has two-frame future wait, no original-paper benchmark or phone timing."
+}

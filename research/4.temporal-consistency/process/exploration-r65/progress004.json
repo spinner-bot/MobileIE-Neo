@@ -1,0 +1,56 @@
+{
+  "at": "2026-11-13T03:53:31.536859+08:00",
+  "scope": "All32000 updates complete; original final CPU jobs actually live; no final quality claim.",
+  "seeds": {
+    "0": {
+      "training_ended": "2026-11-13T03:49:21.992545+08:00",
+      "updates": {
+        "spatial_l1": 8000,
+        "commute20": 8000
+      },
+      "training_seconds": 3391.8541769830044,
+      "original_training_pid": 3885619,
+      "original_training_current_identity": null,
+      "original_guard_current_identity": null,
+      "CPU_pid": 3914838,
+      "CPU_identity": {
+        "command": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/evaluate_stablellve_task_r65.py --seed 0 ",
+        "start_ticks": "45315171"
+      },
+      "final_CPU_runtime_exists": false
+    },
+    "1": {
+      "training_ended": "2026-11-13T03:49:20.541402+08:00",
+      "updates": {
+        "spatial_l1": 8000,
+        "commute20": 8000
+      },
+      "training_seconds": 3390.4937610380002,
+      "original_training_pid": 3885554,
+      "original_training_current_identity": null,
+      "original_guard_current_identity": null,
+      "CPU_pid": 3914839,
+      "CPU_identity": {
+        "command": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/evaluate_stablellve_task_r65.py --seed 1 ",
+        "start_ticks": "45315171"
+      },
+      "final_CPU_runtime_exists": false
+    }
+  },
+  "coordinator_R65": {
+    "pid": 3887076,
+    "identity": {
+      "command": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/finalize_stablellve_task_r65.py ",
+      "start_ticks": "44994714"
+    },
+    "all_frozen_sources_unchanged": true
+  },
+  "coordinator_R66": {
+    "pid": 3905642,
+    "identity": {
+      "command": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/finalize_cvvdp_r66.py ",
+      "start_ticks": "45169000"
+    },
+    "all_frozen_sources_unchanged": true
+  }
+}

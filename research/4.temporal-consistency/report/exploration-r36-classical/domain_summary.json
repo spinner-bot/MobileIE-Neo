@@ -1,0 +1,46 @@
+[
+  {
+    "method": "raw",
+    "source_videos": 3,
+    "noise_conditions_per_video": 2,
+    "seeds": 2,
+    "online_history_storage_bytes": 0,
+    "psnr_rgb": 26.234161299006278,
+    "ssim_rgb": 0.6988724988574784,
+    "temporal_error": 10.505351911776911,
+    "edge_mae": 4.446444682156047
+  },
+  {
+    "method": "finite_self05",
+    "source_videos": 3,
+    "noise_conditions_per_video": 2,
+    "seeds": 2,
+    "online_history_storage_bytes": 4919040,
+    "psnr_rgb": 26.46575702504878,
+    "ssim_rgb": 0.743040043938284,
+    "temporal_error": 7.542986499569404,
+    "edge_mae": 4.014079278955856
+  },
+  {
+    "method": "recursive_self05",
+    "source_videos": 3,
+    "noise_conditions_per_video": 2,
+    "seeds": 2,
+    "online_history_storage_bytes": 9838080,
+    "psnr_rgb": 26.610353643257433,
+    "ssim_rgb": 0.7583874667373797,
+    "temporal_error": 6.734679864197181,
+    "edge_mae": 3.882416063298782
+  },
+  {
+    "method": "adaptive_recursive",
+    "source_videos": 3,
+    "noise_conditions_per_video": 2,
+    "seeds": 2,
+    "online_history_storage_bytes": 11477760,
+    "psnr_rgb": 26.38538490497165,
+    "ssim_rgb": 0.7085032189885776,
+    "temporal_error": 9.945698970840091,
+    "edge_mae": 4.34614190335075
+  }
+]

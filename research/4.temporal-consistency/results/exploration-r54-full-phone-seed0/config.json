@@ -1,0 +1,50 @@
+{
+  "at": "2026-11-12T20:10:36.194877+08:00",
+  "seed": 0,
+  "source_index": "research/4.temporal-consistency/results/exploration-r49-full-phone-attempt001/index.json",
+  "source_index_sha256": "a43127fa876aff1790548899f0ed7623557c5f53289160b27b516c1dafd243b9",
+  "anchor": {
+    "model": "square_mse",
+    "seed": 0,
+    "new_step": 4000,
+    "inherited_updates": 4000,
+    "path": ".cache/checkpoints/exploration-r44/stage001/seed0/square_mse-deploy-step4000.pt",
+    "sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+    "training_path": ".cache/checkpoints/exploration-r44/stage001/seed0/square_mse-training-step4000.pt",
+    "training_sha256": "91800b897a2b568d837cf92925b727bb71934f781437733c75323d3562f6998e",
+    "deployment_parameters": 4075,
+    "final_eval_export_max_abs_delta": 2.5033950805664062e-06,
+    "final_export_gate_passed": true
+  },
+  "RGB_controller": {
+    "control": "rgb",
+    "seed": 0,
+    "new_step": 4000,
+    "path": ".cache/checkpoints/exploration-r45/stage001/seed0/rgb-step4000.pt",
+    "sha256": "72eec98ce663810971023d24703e92ff03f2adce51d6874ef078fc0dd1143505",
+    "base_checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+    "controller_parameters": 41,
+    "pipeline_parameters": 4116,
+    "scope": "No BN/folding in controller. Same state used for eval; spatial predictor frozen."
+  },
+  "methods": [
+    "raw",
+    "recursive_self05",
+    "rgb"
+  ],
+  "protocol_sha256": "a61eee9927d9925bace22b32733146fd1fb838fcd6579024778fca16778dbf25",
+  "source_sha256": {
+    "evaluate_full_phone_r54.py": "10a472c117c873b607e512476e7f233280a3d5eb7829e8b48d2e5af56970ac4f",
+    "response_cue_r45.py": "804870366389b2cf293384cb795ac445a99db2086501a2a46d98a9dfd9e33c0e",
+    "evaluate_phone_references_r38.py": "ed4d06aebb8e666585faf9126dddec0e180cb32b9915e978c4e6e29f7feeac89",
+    "half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+    "aligned_raw_history_r11.py": "e367727401f82ccf0bccaf8d88f904e4aebf8b78186f0539eedeed222b2d2227",
+    "budget_causal_r33.py": "7cfe138a286fdb488973ffe7c5bc93b69ad505af981e22cba824402c491b2e3b",
+    "video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0"
+  },
+  "device": "cpu",
+  "torch_threads": 2,
+  "opencv_threads": 1,
+  "revision": "f285edd7f5690c686dc3b52fbfe2830474870069",
+  "scope": "Same three phone DEV sources, full EOF, original brightness, frozen references; no GT, selection, new method, phone cost or true-flicker rank."
+}

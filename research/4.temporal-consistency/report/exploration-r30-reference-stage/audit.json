@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "included_phases": [
+    "references"
+  ],
+  "rows": 168,
+  "runtimes": [
+    {
+      "phase": "references",
+      "completed_normally": true,
+      "rows": 168,
+      "neural_sequences": 42,
+      "metric_aliases": 56,
+      "device": "cpu",
+      "cuda_initialized": false,
+      "wall_seconds": 1011.2487795680063
+    }
+  ],
+  "source_sha256": {
+    "research/4.temporal-consistency/results/exploration-r30-eval-references/per_sequence.jsonl": "b71323e6cce812804dc986198e535d44f37acdb8b28cfd9903e70bbe71008d3f",
+    "research/4.temporal-consistency/results/exploration-r30-eval-references/runtime.json": "6b00abebcd531af9668131e75c049cae873e5429b4bc08bd4b737f15b5b9efbe",
+    "research/4.temporal-consistency/results/exploration-r30-eval-references/checkpoints.json": "6058744b4ec8985ec8d353eae274c964cb41254bd7d47e771f7e71ad9cbffc34",
+    "research/4.temporal-consistency/results/exploration-r30-eval-references/config.json": "20bb3636de4799a61296a8f5103346bfca1fca176d52e5dffbed39574138aca0"
+  },
+  "complete_registered_model_set": false,
+  "scope": "Three external TRAIN video sources, six custom degraded conditions; repeated frames/conditions are not independent samples. No standard-test or phone-latency claim."
+}

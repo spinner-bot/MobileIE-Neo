@@ -1,0 +1,60 @@
+\subsection{Internal cues versus generic learned recursion}
+\label{sec:r45}
+\input{generated/r45-table}
+The next fixed experiment asks whether the compact network's internal
+response provides useful information beyond RGB for controlling history.
+Learned fusion has established precedent~\cite{emvd}; it is a reference
+mechanism here. The same square-MSE spatial checkpoint is frozen for each
+seed. A global scalar, a 41-parameter RGB gate, and a matched 41-parameter
+internal-cue gate each receive 4,000 updates using common four-frame windows
+and MSE. Own-raw motion, acceptance masks, and recursion are shared.
+All start from the classical $\alpha=.5$ function.
+
+The internal inputs are two maps,
+\[
+ c(u)=\log\!\left(1+2|w_1w_2|\operatorname{RMS}_{C}(u)\right),
+\]
+read before the head and body FSTs in the same unchanged spatial forward
+pass. For a square FST, derivative RMS is simply a fixed rescaling of
+feature RMS. These maps are not an independent uncertainty theory or a
+calibrated output variance. The RGB gate replaces those two inputs with
+RGB chroma-deviation summaries while retaining the same capacity and six
+common RGB/motion summaries.
+
+Both complete budgets and frozen-backbone checks pass. Final CPU evaluation
+finishes 180 rows and 20 CNN sequence calls; the latter capture cues and
+replay the earlier raw predictions with maximum discrepancy zero.
+Table~\ref{tab:r45} reports all five prescribed fixed weights and all learned
+controls. Neither domain nor seed is selected after evaluation.
+
+The internal-cue result is nearly indistinguishable from the RGB control.
+Synthetic seed PSNR gains are only 0.0044 and 0.0027\,dB; paired-real
+changes are $-0.0017$ and $-0.0024$\,dB. Temporal ratios versus RGB are
+0.9969--0.9978 on synthetic data and 1.0025--1.0031 on paired-real data.
+The registered independent-cue screen fails. Against fixed $\alpha=.5$,
+quality improves but temporal error increases by about 6--11\%; that is
+not joint superiority under the registered criterion.
+
+Generic learning remains a useful control. Both pixelwise gates choose
+accepted-pixel mean history weights around 0.34--0.36, compared with
+0.228--0.236 for the learned global scalar. They are not jointly dominated
+by any of the five sampled fixed-weight points. This does not establish
+superiority over the continuous weight curve or an internal-cue contribution.
+Increasing fixed history weight to 0.9 lowers PSNR substantially and can
+also worsen temporal error. Motion error, resampling, occlusion, and bias
+remain possible causes; this experiment does not isolate one of them.
+
+The feature-RMS controller's local architecture/input/objective/optimizer
+search is stopped. All controls are retained, and no candidate-specific
+pipeline or handset cost is inferred from this shared-computation quality
+experiment.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\linewidth]{frontier.pdf}
+\caption{Complete R45 fixed-weight sample and learned controls. Pale traces
+and points retain both seeds. The RGB and internal-cue gates nearly overlap;
+their generic trade-off cannot be credited to an independent internal-cue
+mechanism. These are development results, not latency or final-test points.}
+\label{fig:r45}
+\end{figure}

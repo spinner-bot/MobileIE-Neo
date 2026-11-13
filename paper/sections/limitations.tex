@@ -1,0 +1,41 @@
+\section{Limitations and requirements for a complete paper}
+The present development pilot is small and repeatedly used. Synthetic
+noise, three DAVIS sources, and four paired daytime ND crops cannot
+establish general low-light video performance. The inspected phone clips
+show clipping and colour failures without synchronized ground truth.
+They do not replace a reference-based nighttime benchmark or a perceptual
+temporal study. Two training seeds expose variability but do not resolve it.
+The additional four native REDS sources broaden development coverage under
+two synthetic noise conditions, but retain public-pretraining uncertainty
+and do not supply natural nighttime ground truth or an independent final
+evaluation. Their source-rate 24\,fps perceptual scores are kept separate
+from the original nominal 30\,fps pilot.
+
+Motion-compensated target-residual error helps separate desired changes
+from unwanted differences, but its estimated reference flow can fail and
+its valid mask excludes difficult regions. Spatial quality, per-condition
+failures, scene-change behaviour, and visual examples must accompany it.
+Lower temporal error alone is insufficient: an inappropriate enhancement
+mapping may also look numerically stable.
+
+Published-weight transfers and fixed-budget task adaptations retain
+input-domain, convergence, training-compute and pretraining-overlap
+limitations. The completed Nano, source-context FastDVDnet and StableLLVE adaptations
+improve reference coverage but are not full standard LLVE reproductions.
+The fixed-display ColorVideoVDP predictions do not replace a human
+perceptual study, measured capture timing or handset viewing conditions.
+A conference comparison still requires appropriate published temporal
+enhancement methods under a documented common setting.
+The fixed classical references are strong controls, not full reproductions
+of all established video denoisers.
+
+No candidate in this snapshot has a verified independent contribution or
+measured handset trade-off. A complete paper must establish the final method,
+explain its difference from relevant prior art, pass controlled
+structural/objective comparisons, measure
+the complete inference pipeline and state on a phone, and evaluate frozen
+decisions on genuinely independent data. The completed candidate's failure
+must guide a distinct hypothesis, with the registered local search stopped.
+Its spatial signal cannot be rewritten as temporal success. These
+requirements preserve the original research objective;
+the present manuscript is only the reusable foundation.

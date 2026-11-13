@@ -1,0 +1,83 @@
+{
+  "started_at": "2026-11-12T16:14:58.846384+08:00",
+  "seed": 1,
+  "device": "cpu",
+  "torch_threads": 2,
+  "opencv_threads": 1,
+  "methods": [
+    "raw",
+    "fixed_01",
+    "fixed_025",
+    "fixed_05",
+    "fixed_075",
+    "fixed_09",
+    "scalar",
+    "rgb",
+    "response"
+  ],
+  "checkpoints": {
+    "scalar": {
+      "control": "scalar",
+      "seed": 1,
+      "new_step": 4000,
+      "path": ".cache/checkpoints/exploration-r45/stage001/seed1/scalar-step4000.pt",
+      "sha256": "b72fd824e3e99c2e2eacf2523a2cad0ebcba9ab664bb42480c62c492847e49a1",
+      "base_checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+      "controller_parameters": 1,
+      "pipeline_parameters": 4076,
+      "scope": "No BN/folding in controller. Same state used for eval; spatial predictor frozen."
+    },
+    "rgb": {
+      "control": "rgb",
+      "seed": 1,
+      "new_step": 4000,
+      "path": ".cache/checkpoints/exploration-r45/stage001/seed1/rgb-step4000.pt",
+      "sha256": "b50544c8f02859e81973a6eae55b3aee85decb23851aae871277403316cbfac1",
+      "base_checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+      "controller_parameters": 41,
+      "pipeline_parameters": 4116,
+      "scope": "No BN/folding in controller. Same state used for eval; spatial predictor frozen."
+    },
+    "response": {
+      "control": "response",
+      "seed": 1,
+      "new_step": 4000,
+      "path": ".cache/checkpoints/exploration-r45/stage001/seed1/response-step4000.pt",
+      "sha256": "08315a72cca860e6abf607e133743bf6d4d90145dedf8a4e9f6a0572bca8f90d",
+      "base_checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+      "controller_parameters": 41,
+      "pipeline_parameters": 4116,
+      "scope": "No BN/folding in controller. Same state used for eval; spatial predictor frozen."
+    }
+  },
+  "base_checkpoint": {
+    "model": "square_mse",
+    "seed": 1,
+    "new_step": 4000,
+    "inherited_updates": 4000,
+    "path": ".cache/checkpoints/exploration-r44/stage001/seed1/square_mse-deploy-step4000.pt",
+    "sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+    "training_path": ".cache/checkpoints/exploration-r44/stage001/seed1/square_mse-training-step4000.pt",
+    "training_sha256": "450d55e60333655019c820321ad9ae4afe78d012aefe3615b9490ef61a3943ba",
+    "deployment_parameters": 4075,
+    "final_eval_export_max_abs_delta": 1.4901161193847656e-06,
+    "final_export_gate_passed": true
+  },
+  "protocol_sha256": "b4a26f69b4e5a0ee21cc796b24c5207585380640e0091ca7bcab2740add915ee",
+  "cache_indices": {
+    "research/4.temporal-consistency/results/exploration-r30-cache/index.json": "424fa278b2fe66d29de476e2b47328619438f97cf71926448433d1191bb722c1",
+    "research/4.temporal-consistency/results/exploration-r10-cache/index.json": "ec00801b04b873ead0025af91af441b783da3f08c87cf24e9c136a4268ffb43c"
+  },
+  "source_sha256": {
+    "evaluate_response_recursion_r45.py": "19bbd026f77e685c00da488f9c4cead223cf4e0fa4124025f1ebf63fd0c559ae",
+    "response_cue_r45.py": "804870366389b2cf293384cb795ac445a99db2086501a2a46d98a9dfd9e33c0e",
+    "budget_causal_r33.py": "7cfe138a286fdb488973ffe7c5bc93b69ad505af981e22cba824402c491b2e3b",
+    "half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+    "aligned_raw_history_r11.py": "e367727401f82ccf0bccaf8d88f904e4aebf8b78186f0539eedeed222b2d2227",
+    "aggregation_controls_r20.py": "7b4541be8512ca1edb755b5a73f889351e376f9a8fc1fdec7ed633a4438c116c",
+    "exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+    "video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0"
+  },
+  "original_manifest_sha256": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+  "scope": "Final4000 controllers on inherited frozen8000 spatial base. Shared raw/cues/own-raw flow for quality only, not deployment timings. Fixed alpha frontier, no phone or final test."
+}

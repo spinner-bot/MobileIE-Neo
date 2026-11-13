@@ -1,0 +1,55 @@
+{
+  "at": "2026-11-13T09:08:42.842359+08:00",
+  "seed": 1,
+  "checkpoints": {
+    "spatial": {
+      "model": "spatial",
+      "seed": 1,
+      "new_step": 4000,
+      "inherited_updates": 8000,
+      "path": ".cache/checkpoints/exploration-r73/stage001/seed1/spatial-deploy-step4000.pt",
+      "sha256": "a296bfd5d1898352c8e2fa67d09348986c9344a7b6f0ddf2b7ebcf24072507e1",
+      "training_path": ".cache/checkpoints/exploration-r73/stage001/seed1/spatial-training-step4000.pt",
+      "training_sha256": "8915d9201e6f379412c03dabe0c3e327747428d69934f2a964adc79e1dce75ff",
+      "deployment_parameters": 4562,
+      "final_fold_delta": 1.9073486328125e-06,
+      "final_fold_passed": true
+    },
+    "mean": {
+      "model": "mean",
+      "seed": 1,
+      "new_step": 4000,
+      "inherited_updates": 8000,
+      "path": ".cache/checkpoints/exploration-r73/stage001/seed1/mean-deploy-step4000.pt",
+      "sha256": "5114d8c05ce832f82377cbde0bb9360aa7ec69b5adb73a661cb28237eeec7570",
+      "training_path": ".cache/checkpoints/exploration-r73/stage001/seed1/mean-training-step4000.pt",
+      "training_sha256": "c36e7ef293b34993d705618c059e61d474eb06452bae207779989ed678f9f93d",
+      "deployment_parameters": 4550,
+      "final_fold_delta": 1.7881393432617188e-06,
+      "final_fold_passed": true
+    },
+    "moment": {
+      "model": "moment",
+      "seed": 1,
+      "new_step": 4000,
+      "inherited_updates": 8000,
+      "path": ".cache/checkpoints/exploration-r73/stage001/seed1/moment-deploy-step4000.pt",
+      "sha256": "0cb920482244589cda7d04467790a994bd8a0f7e920ff3e0f825e90caa4c52a6",
+      "training_path": ".cache/checkpoints/exploration-r73/stage001/seed1/moment-training-step4000.pt",
+      "training_sha256": "d5b83feaeefe795672b456a7826b68a64c20296d1517248a7cab2f21d1cd726a",
+      "deployment_parameters": 4562,
+      "final_fold_delta": 1.8477439880371094e-06,
+      "final_fold_passed": true
+    }
+  },
+  "protocol_sha256": "98e224b57a646bda63571be10578af96f51718c6d2407b01242a55387ec582d1",
+  "indices": {
+    "research/4.temporal-consistency/results/exploration-r30-cache/index.json": "424fa278b2fe66d29de476e2b47328619438f97cf71926448433d1191bb722c1",
+    "research/4.temporal-consistency/results/exploration-r10-cache/index.json": "ec00801b04b873ead0025af91af441b783da3f08c87cf24e9c136a4268ffb43c"
+  },
+  "expected_rows": 100,
+  "expected_frame_rows": 4480,
+  "expected_CNN_sequences": 50,
+  "expected_CNN_centers": 2240,
+  "scope": "Final12000 paired reused DEV. Current replacements and own-output recursive references; no new final data or phone claim."
+}

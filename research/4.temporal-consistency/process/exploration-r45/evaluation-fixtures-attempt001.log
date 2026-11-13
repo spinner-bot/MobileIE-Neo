@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/check_response_evaluation_r45.py", line 48, in <module>
+    main()
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/check_response_evaluation_r45.py", line 27, in main
+    output, stats = predict(method, controls, raw, cues, fields)
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/evaluate_response_recursion_r45.py", line 41, in predict
+    outputs.append(blend(raw[t], moved, ALPHAS[method]))
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/aggregation_controls_r20.py", line 8, in blend
+    if current.shape!=history.shape or alpha not in [.1,.5]:raise ValueError('matched finite RGB histories and fixed alpha required')
+ValueError: matched finite RGB histories and fixed alpha required

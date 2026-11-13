@@ -1,0 +1,50 @@
+{
+  "seed": 1,
+  "device": "cpu",
+  "torch_threads": 2,
+  "opencv_threads": 1,
+  "checkpoints": {
+    "learned_alignment": {
+      "path": ".cache/checkpoints/exploration-r37/seed1/learned_alignment-step4000.pt",
+      "sha256": "38ed35c50ade7fb250cad5a40997c1d237e6a19d88d3d51f2000d556c6dbf418",
+      "model": "learned_alignment",
+      "seed": 1,
+      "step": 4000
+    },
+    "zero_alignment": {
+      "path": ".cache/checkpoints/exploration-r37/seed1/zero_alignment-step4000.pt",
+      "sha256": "50f2b8728e50b85acba2f9ebce050cd36c98b4b6f5517198c96c5f31d9992ca9",
+      "model": "zero_alignment",
+      "seed": 1,
+      "step": 4000
+    }
+  },
+  "anchor": {
+    "path": ".cache/checkpoints/exploration-r34/seed1/original-step4000.pt",
+    "sha256": "fd6a357b6d3bf087d8f78a35c323ef02becce34df52bfe342c31c8882aaf8ccd",
+    "step": 4000,
+    "model": "original",
+    "seed": 1
+  },
+  "weight_selection": "final4000",
+  "torch_version": "2.9.1+cu126",
+  "protocol_sha256": "019e7c7a5313aa007cc12d1e9e7b514ef21ad54d06f941539ac154b5b0be2c3e",
+  "cache_index_sha256": "424fa278b2fe66d29de476e2b47328619438f97cf71926448433d1191bb722c1",
+  "reference_source_sha256": {
+    "research/4.temporal-consistency/results/exploration-r36-classical/per_sequence.jsonl": "911bc3e8027e98e5f43fb47ed53735765318845b8be5085aa9768323f4479ce8",
+    "research/4.temporal-consistency/results/exploration-r36-classical/per_frame.jsonl": "9efa4e09ba5f19c648ee88ab8a67a8c266930825f148f7a98edafb106eecd51e",
+    "research/4.temporal-consistency/results/exploration-r36-classical/prediction_manifest.jsonl": "244330afcfac422401a73f8c50e7fdb55d06182ab01a04aa4dfdfc5dc8608a55",
+    "research/4.temporal-consistency/results/exploration-r36-classical/config.json": "fd1c836864035ad4d4873aa381e94258b07f3868a0038ceb669c00cc59a17683",
+    "research/4.temporal-consistency/results/exploration-r36-classical/runtime.json": "06de062b593f0b0761a836d4c0cd2e6a59111d0215dad0819b8a623081b6eff3"
+  },
+  "source_sha256": {
+    "evaluate_preserved_r37.py": "a44be40e1ffff906d3bfc59704c2f4bcc38fb6350355013b4a2ae940603d291a",
+    "training_preserved_r37.py": "b64cf1c82c08f1eef9ccf62a4bfbdda74963525f370b01ff5d1d9d64ab03b6ae",
+    "preserved_state_r37.py": "0ee15f79ed9f7d15672d8a1830edaaa062606278b1123e86c06d6c7bb52e0177",
+    "budget_causal_r33.py": "7cfe138a286fdb488973ffe7c5bc93b69ad505af981e22cba824402c491b2e3b",
+    "exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+    "video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0"
+  },
+  "revision": "7ce68e7d5a9862018e221b3046056063deb1c32d",
+  "scope": "Common CPU DEV; four strong references reused exactly from R36 with the same frozen anchor. Current explicitly returns the immutable anchor, not a new CNN evaluation. No phone or independent-test claim."
+}

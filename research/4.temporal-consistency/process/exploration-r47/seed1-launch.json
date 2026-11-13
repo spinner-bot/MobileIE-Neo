@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-12T17:21:21.253601+08:00",
+  "guard_pid": 3438398,
+  "gpu": 7,
+  "seed": 1,
+  "command": [
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/gpu_guard.py",
+    "--gpu",
+    "7",
+    "--record",
+    "research/4.temporal-consistency/process/exploration-r47/seed1-guard.json",
+    "--",
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/train_task_fastdvd_r47.py",
+    "--seed",
+    "1"
+  ]
+}

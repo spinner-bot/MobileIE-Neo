@@ -1,0 +1,55 @@
+{
+  "at": "2026-11-13T00:13:20.311746+08:00",
+  "scope": "Live checkpoint only; partial counts are not final performance.",
+  "R60_evaluation": {
+    "pid": 3772075,
+    "identity": {
+      "start_ticks": "43815209",
+      "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/evaluate_wenzhou_r60.py "
+    }
+  },
+  "R60_coordinator": {
+    "pid": 3773674,
+    "identity": {
+      "start_ticks": "43833474",
+      "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/finalize_wenzhou_references_r60.py "
+    }
+  },
+  "R62_evaluation": {
+    "pid": 3785520,
+    "identity": {
+      "start_ticks": "43998067",
+      "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/evaluate_stablellve_common_r62.py "
+    }
+  },
+  "R62_coordinator": {
+    "pid": 3788570,
+    "identity": {
+      "start_ticks": "44009242",
+      "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/finalize_stablellve_common_r62.py "
+    }
+  },
+  "R60_last_complete_record": {
+    "scene": "Gopro1",
+    "reference": "mobileie_seed0",
+    "seed": 0,
+    "parameters": 4075,
+    "future_wait_max": 0,
+    "sequences": 54,
+    "CNN_sequences": 27,
+    "CNN_centers": 3456
+  },
+  "R62_last_complete_record": {
+    "domain": "davis_train_pilot",
+    "scene": "bear_photons80",
+    "source_video": "bear",
+    "reference": "StableLLVE_official_clean",
+    "seed": null,
+    "project_updates": 0,
+    "parameters": 4316259,
+    "future_wait_max": 0,
+    "sequences": 4,
+    "CNN_sequences": 2,
+    "CNN_centers": 128
+  }
+}

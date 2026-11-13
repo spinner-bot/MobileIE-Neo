@@ -1,0 +1,65 @@
+{
+  "at": "2026-11-13T04:50:06.776010+08:00",
+  "frozen_sources_unchanged": true,
+  "seeds": {
+    "0": {
+      "gpu": 5,
+      "guard_pid": 3953735,
+      "guard_identity": {
+        "start_ticks": "45666736",
+        "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 5 --record research/4.temporal-consistency/process/exploration-r69/seed0-guard.json -- ./scripts/project-python research/4.temporal-consistency/scripts/train_spatial_l1_r69.py --seed 0 "
+      },
+      "training": {
+        "pid": 3953768,
+        "identity": {
+          "start_ticks": "45666895",
+          "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/train_spatial_l1_r69.py --seed 0 "
+        }
+      },
+      "last_complete_trace_row": {
+        "step": 335,
+        "data_step": 334,
+        "L1": 0.05682269483804703,
+        "MSE": 0.0054788063280284405,
+        "synthetic_MAE": 0.07675731182098389,
+        "real_MAE": 0.036888062953948975,
+        "gradient_norm_before_clip": 1.6332758665084839,
+        "Adam_reset": false
+      },
+      "has_normal_terminal": false
+    },
+    "1": {
+      "gpu": 6,
+      "guard_pid": 3953739,
+      "guard_identity": {
+        "start_ticks": "45666756",
+        "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 6 --record research/4.temporal-consistency/process/exploration-r69/seed1-guard.json -- ./scripts/project-python research/4.temporal-consistency/scripts/train_spatial_l1_r69.py --seed 1 "
+      },
+      "training": {
+        "pid": 3953902,
+        "identity": {
+          "start_ticks": "45666918",
+          "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/train_spatial_l1_r69.py --seed 1 "
+        }
+      },
+      "last_complete_trace_row": {
+        "step": 335,
+        "data_step": 334,
+        "L1": 0.053958140313625336,
+        "MSE": 0.005300050135701895,
+        "synthetic_MAE": 0.04961512237787247,
+        "real_MAE": 0.05830115079879761,
+        "gradient_norm_before_clip": 3.4609289169311523,
+        "Adam_reset": false
+      },
+      "has_normal_terminal": false
+    }
+  },
+  "coordinator": {
+    "pid": 3953966,
+    "identity": {
+      "start_ticks": "45666927",
+      "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/finalize_spatial_l1_r69.py "
+    }
+  }
+}

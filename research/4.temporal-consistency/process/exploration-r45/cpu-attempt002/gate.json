@@ -1,0 +1,371 @@
+{
+  "passed": true,
+  "warp_cases": [
+    {
+      "offset": [
+        0,
+        0
+      ],
+      "batch": 0,
+      "max_abs_delta": 0.0
+    },
+    {
+      "offset": [
+        0,
+        0
+      ],
+      "batch": 1,
+      "max_abs_delta": 0.0
+    },
+    {
+      "offset": [
+        1,
+        -1
+      ],
+      "batch": 0,
+      "max_abs_delta": 0.0
+    },
+    {
+      "offset": [
+        1,
+        -1
+      ],
+      "batch": 1,
+      "max_abs_delta": 0.0
+    },
+    {
+      "offset": [
+        0.28125,
+        -0.71875
+      ],
+      "batch": 0,
+      "max_abs_delta": 0.0
+    },
+    {
+      "offset": [
+        0.28125,
+        -0.71875
+      ],
+      "batch": 1,
+      "max_abs_delta": 0.0
+    },
+    {
+      "offset": [
+        0.015625,
+        -0.015625
+      ],
+      "batch": 0,
+      "max_abs_delta": 0.0
+    },
+    {
+      "offset": [
+        0.015625,
+        -0.015625
+      ],
+      "batch": 1,
+      "max_abs_delta": 0.0
+    }
+  ],
+  "seeds": [
+    {
+      "seed": 0,
+      "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+      "context": [
+        {
+          "video": "boxing-fisheye",
+          "members": [
+            "DAVIS/JPEGImages/480p/boxing-fisheye/00030.jpg",
+            "DAVIS/JPEGImages/480p/boxing-fisheye/00031.jpg",
+            "DAVIS/JPEGImages/480p/boxing-fisheye/00032.jpg",
+            "DAVIS/JPEGImages/480p/boxing-fisheye/00033.jpg"
+          ],
+          "xy": [
+            537,
+            270
+          ],
+          "flip_horizontal": true,
+          "flip_vertical": true,
+          "photons": 20,
+          "source": "davis_synthetic"
+        },
+        {
+          "video": "swing",
+          "members": [
+            "DAVIS/JPEGImages/480p/swing/00039.jpg",
+            "DAVIS/JPEGImages/480p/swing/00040.jpg",
+            "DAVIS/JPEGImages/480p/swing/00041.jpg",
+            "DAVIS/JPEGImages/480p/swing/00042.jpg"
+          ],
+          "xy": [
+            116,
+            264
+          ],
+          "flip_horizontal": false,
+          "flip_vertical": false,
+          "photons": 20,
+          "source": "davis_synthetic"
+        },
+        {
+          "source": "olives_real",
+          "video": "video_95",
+          "indices": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "xy": [
+            1317,
+            932
+          ],
+          "flip_horizontal": false,
+          "flip_vertical": true,
+          "input_sources": [
+            ".cache/data/olives-r4/Frames/input/video_95/00007.png",
+            ".cache/data/olives-r4/Frames/input/video_95/00008.png",
+            ".cache/data/olives-r4/Frames/input/video_95/00009.png",
+            ".cache/data/olives-r4/Frames/input/video_95/00010.png"
+          ],
+          "target_sources": [
+            ".cache/data/olives-r4/Frames/gt/video_95/00007.png",
+            ".cache/data/olives-r4/Frames/gt/video_95/00008.png",
+            ".cache/data/olives-r4/Frames/gt/video_95/00009.png",
+            ".cache/data/olives-r4/Frames/gt/video_95/00010.png"
+          ]
+        },
+        {
+          "source": "olives_real",
+          "video": "video_35",
+          "indices": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "xy": [
+            166,
+            633
+          ],
+          "flip_horizontal": false,
+          "flip_vertical": false,
+          "input_sources": [
+            ".cache/data/olives-r4/Frames/input/video_35/00005.png",
+            ".cache/data/olives-r4/Frames/input/video_35/00006.png",
+            ".cache/data/olives-r4/Frames/input/video_35/00007.png",
+            ".cache/data/olives-r4/Frames/input/video_35/00008.png"
+          ],
+          "target_sources": [
+            ".cache/data/olives-r4/Frames/gt/video_35/00005.png",
+            ".cache/data/olives-r4/Frames/gt/video_35/00006.png",
+            ".cache/data/olives-r4/Frames/gt/video_35/00007.png",
+            ".cache/data/olives-r4/Frames/gt/video_35/00008.png"
+          ]
+        }
+      ],
+      "raw_parity": 0.0,
+      "initial_recursive_deltas": {
+        "fixed": 1.7881393432617188e-07,
+        "scalar": 1.7881393432617188e-07,
+        "rgb": 1.7881393432617188e-07,
+        "response": 1.7881393432617188e-07
+      },
+      "discarded_gradient_norms": {
+        "scalar": [
+          {
+            "logit": 0.00010267317702528089
+          },
+          {
+            "logit": 0.00010267294419463724
+          }
+        ],
+        "rgb": [
+          {
+            "gate.0.weight": 0.0,
+            "gate.0.bias": 0.0,
+            "gate.2.weight": 6.435767863877118e-05,
+            "gate.2.bias": 0.0001026731260935776
+          },
+          {
+            "gate.0.weight": 8.95958238156247e-11,
+            "gate.0.bias": 6.606919872309547e-11,
+            "gate.2.weight": 6.435747491195798e-05,
+            "gate.2.bias": 0.00010267278412356973
+          }
+        ],
+        "response": [
+          {
+            "gate.0.weight": 0.0,
+            "gate.0.bias": 0.0,
+            "gate.2.weight": 6.689075962640345e-05,
+            "gate.2.bias": 0.0001026731260935776
+          },
+          {
+            "gate.0.weight": 9.329455957773902e-11,
+            "gate.0.bias": 6.867123536480335e-11,
+            "gate.2.weight": 6.689054134767503e-05,
+            "gate.2.bias": 0.00010267278412356973
+          }
+        ]
+      },
+      "frozen_backbone_unchanged": true,
+      "control_parameters": {
+        "fixed": 0,
+        "scalar": 1,
+        "rgb": 41,
+        "response": 41
+      }
+    },
+    {
+      "seed": 1,
+      "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+      "context": [
+        {
+          "video": "classic-car",
+          "members": [
+            "DAVIS/JPEGImages/480p/classic-car/00003.jpg",
+            "DAVIS/JPEGImages/480p/classic-car/00004.jpg",
+            "DAVIS/JPEGImages/480p/classic-car/00005.jpg",
+            "DAVIS/JPEGImages/480p/classic-car/00006.jpg"
+          ],
+          "xy": [
+            38,
+            290
+          ],
+          "flip_horizontal": false,
+          "flip_vertical": true,
+          "photons": 20,
+          "source": "davis_synthetic"
+        },
+        {
+          "video": "flamingo",
+          "members": [
+            "DAVIS/JPEGImages/480p/flamingo/00006.jpg",
+            "DAVIS/JPEGImages/480p/flamingo/00007.jpg",
+            "DAVIS/JPEGImages/480p/flamingo/00008.jpg",
+            "DAVIS/JPEGImages/480p/flamingo/00009.jpg"
+          ],
+          "xy": [
+            46,
+            83
+          ],
+          "flip_horizontal": true,
+          "flip_vertical": true,
+          "photons": 20,
+          "source": "davis_synthetic"
+        },
+        {
+          "source": "olives_real",
+          "video": "video_12",
+          "indices": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "xy": [
+            859,
+            187
+          ],
+          "flip_horizontal": true,
+          "flip_vertical": true,
+          "input_sources": [
+            ".cache/data/olives-r4/Frames/input/video_12/00005.png",
+            ".cache/data/olives-r4/Frames/input/video_12/00006.png",
+            ".cache/data/olives-r4/Frames/input/video_12/00007.png",
+            ".cache/data/olives-r4/Frames/input/video_12/00008.png"
+          ],
+          "target_sources": [
+            ".cache/data/olives-r4/Frames/gt/video_12/00005.png",
+            ".cache/data/olives-r4/Frames/gt/video_12/00006.png",
+            ".cache/data/olives-r4/Frames/gt/video_12/00007.png",
+            ".cache/data/olives-r4/Frames/gt/video_12/00008.png"
+          ]
+        },
+        {
+          "source": "olives_real",
+          "video": "video_52",
+          "indices": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "xy": [
+            1710,
+            56
+          ],
+          "flip_horizontal": true,
+          "flip_vertical": false,
+          "input_sources": [
+            ".cache/data/olives-r4/Frames/input/video_52/00006.png",
+            ".cache/data/olives-r4/Frames/input/video_52/00007.png",
+            ".cache/data/olives-r4/Frames/input/video_52/00008.png",
+            ".cache/data/olives-r4/Frames/input/video_52/00009.png"
+          ],
+          "target_sources": [
+            ".cache/data/olives-r4/Frames/gt/video_52/00006.png",
+            ".cache/data/olives-r4/Frames/gt/video_52/00007.png",
+            ".cache/data/olives-r4/Frames/gt/video_52/00008.png",
+            ".cache/data/olives-r4/Frames/gt/video_52/00009.png"
+          ]
+        }
+      ],
+      "raw_parity": 0.0,
+      "initial_recursive_deltas": {
+        "fixed": 1.7881393432617188e-07,
+        "scalar": 1.7881393432617188e-07,
+        "rgb": 1.7881393432617188e-07,
+        "response": 1.7881393432617188e-07
+      },
+      "discarded_gradient_norms": {
+        "scalar": [
+          {
+            "logit": 0.0001855826994869858
+          },
+          {
+            "logit": 0.00018558220472186804
+          }
+        ],
+        "rgb": [
+          {
+            "gate.0.weight": 0.0,
+            "gate.0.bias": 0.0,
+            "gate.2.weight": 5.622443131869659e-05,
+            "gate.2.bias": 0.00018558246665634215
+          },
+          {
+            "gate.0.weight": 1.2435191765192144e-10,
+            "gate.0.bias": 1.0343435136173085e-10,
+            "gate.2.weight": 5.6224271247629076e-05,
+            "gate.2.bias": 0.0001855819282354787
+          }
+        ],
+        "response": [
+          {
+            "gate.0.weight": 0.0,
+            "gate.0.bias": 0.0,
+            "gate.2.weight": 5.4640357120661065e-05,
+            "gate.2.bias": 0.00018558246665634215
+          },
+          {
+            "gate.0.weight": 1.2058873344322762e-10,
+            "gate.0.bias": 9.990621524513799e-11,
+            "gate.2.weight": 5.464020432555117e-05,
+            "gate.2.bias": 0.00018558194278739393
+          }
+        ]
+      },
+      "frozen_backbone_unchanged": true,
+      "control_parameters": {
+        "fixed": 0,
+        "scalar": 1,
+        "rgb": 41,
+        "response": 41
+      }
+    }
+  ],
+  "discarded_SGD_updates": 12,
+  "formal_updates": 0,
+  "new_DEV_quality_rows": 0,
+  "scope": "Implementation only. No effectiveness, response-cue contribution or calibrated-variance claim."
+}

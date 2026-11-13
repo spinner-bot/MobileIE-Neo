@@ -1,0 +1,23 @@
+{
+  "at": "2026-11-13T03:48:00.835451+08:00",
+  "source_commit": "07330bb0ac124d2d56f6e92908d650dde3f7f7c2",
+  "sources": [
+    {
+      "path": "data/util.py",
+      "git_blob": "b185bbc12e83c24812a3e60f7aa21fa4f002e722",
+      "read": "glob_file_list returns sorted glob"
+    },
+    {
+      "path": "data/video_samesize_dataset.py",
+      "git_blob": "86ae1fdba91b9f025ef53a971f05a8cd0a37069e",
+      "read": "Input/GT lists independently extended, GT taken at same ordinal idx"
+    },
+    {
+      "path": "data/video_samesize_dataset1.py",
+      "git_blob": "3adad43a73c57ca5b8708ec6abd074343692aa73",
+      "read": "Each sorted side truncated first30 for official testing; same ordinal GT, not filename equality"
+    }
+  ],
+  "pairing_rule": "Independently sorted per-side sequences at equal index; full per-frame map frozen in selection.json before fetching.",
+  "scope": "Source and archive metadata establish loader convention only, not pixel-level perfect temporal/spatial alignment. No dataset test image opened."
+}

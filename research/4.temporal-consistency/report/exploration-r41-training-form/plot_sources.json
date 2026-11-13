@@ -1,0 +1,163 @@
+{
+  "summary_sha256": "c53e1d64536ea3becc9bd6309bcaf3dc5b3836dd638ae2728048f95b24c66fcd",
+  "audit_sha256": "819760621861b5ced86dc02b5865d3b64abab8b1b305be9fdd6f35238c329cf6",
+  "coordinates": [
+    {
+      "domain": "davis_train_pilot",
+      "anchor_family": "R41_slim_fp32",
+      "method": "raw",
+      "temporal_seeds": [
+        11.286900401746156,
+        11.437375934035689
+      ],
+      "psnr_seeds": [
+        25.204890228958675,
+        25.056160598784714
+      ]
+    },
+    {
+      "domain": "davis_train_pilot",
+      "anchor_family": "R41_slim_fp32",
+      "method": "finite_self05",
+      "temporal_seeds": [
+        7.918023659438683,
+        8.000356022012298
+      ],
+      "psnr_seeds": [
+        25.698074603639185,
+        25.556938201638616
+      ]
+    },
+    {
+      "domain": "davis_train_pilot",
+      "anchor_family": "R41_slim_fp32",
+      "method": "recursive_self05",
+      "temporal_seeds": [
+        7.073760889194629,
+        7.137082328241338
+      ],
+      "psnr_seeds": [
+        25.864830760321983,
+        25.734459795030617
+      ]
+    },
+    {
+      "domain": "davis_train_pilot",
+      "anchor_family": "R41_expanded_fp32",
+      "method": "raw",
+      "temporal_seeds": [
+        9.817372314513676,
+        10.196717688646267
+      ],
+      "psnr_seeds": [
+        26.172581741576618,
+        26.19843633198788
+      ]
+    },
+    {
+      "domain": "davis_train_pilot",
+      "anchor_family": "R41_expanded_fp32",
+      "method": "finite_self05",
+      "temporal_seeds": [
+        7.207399446497519,
+        7.363797348012369
+      ],
+      "psnr_seeds": [
+        26.34624370336311,
+        26.442449919030057
+      ]
+    },
+    {
+      "domain": "davis_train_pilot",
+      "anchor_family": "R41_expanded_fp32",
+      "method": "recursive_self05",
+      "temporal_seeds": [
+        6.459579146097576,
+        6.5812437925389204
+      ],
+      "psnr_seeds": [
+        26.44494372314069,
+        26.560953005803853
+      ]
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "anchor_family": "R41_slim_fp32",
+      "method": "raw",
+      "temporal_seeds": [
+        3.616505082448324,
+        3.6383214235305785
+      ],
+      "psnr_seeds": [
+        24.539598949572444,
+        25.183166815656094
+      ]
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "anchor_family": "R41_slim_fp32",
+      "method": "finite_self05",
+      "temporal_seeds": [
+        2.779310222466787,
+        2.788372435172399
+      ],
+      "psnr_seeds": [
+        24.47531624263535,
+        25.078603085955372
+      ]
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "anchor_family": "R41_slim_fp32",
+      "method": "recursive_self05",
+      "temporal_seeds": [
+        2.536368896563848,
+        2.543745627005895
+      ],
+      "psnr_seeds": [
+        24.48547260162573,
+        25.084827514818535
+      ]
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "anchor_family": "R41_expanded_fp32",
+      "method": "raw",
+      "temporal_seeds": [
+        3.6437041481335957,
+        3.616262944539388
+      ],
+      "psnr_seeds": [
+        24.710444854756933,
+        26.982585245633583
+      ]
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "anchor_family": "R41_expanded_fp32",
+      "method": "finite_self05",
+      "temporal_seeds": [
+        2.8186266938845317,
+        2.7889274736245473
+      ],
+      "psnr_seeds": [
+        24.625990149553722,
+        26.84279802390492
+      ]
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "anchor_family": "R41_expanded_fp32",
+      "method": "recursive_self05",
+      "temporal_seeds": [
+        2.5740982075532277,
+        2.532716206709544
+      ],
+      "psnr_seeds": [
+        24.64196414604802,
+        26.87461137708548
+      ]
+    }
+  ],
+  "scope": "Complete DEV only; reference-flow error is not a perceptual flicker user study. Two seeds are displayed, not a confidence interval. Equal update budgets do not imply equal training FLOPs."
+}

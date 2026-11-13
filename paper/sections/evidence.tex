@@ -1,0 +1,181 @@
+\section{Verified preliminary evidence}
+\label{sec:evidence}
+The following results come from completed development experiments. They
+constrain method design and retain failed candidate screens. The source
+manifest and generated tables accompany this draft.
+
+\subsection{A stronger training baseline}
+\input{generated/anchor-table}
+Table~\ref{tab:anchors} separates historical anchors from the matched
+training-form comparison. In the matched FP32 experiment, restoring MBR/BN
+training improves synthetic raw PSNR over direct Slim fine-tuning by
+0.968 and 1.142\,dB for the two seeds. The corresponding paired-real gains
+are 0.171 and 1.799\,dB. Both deploy to the same 4,075-parameter spatial
+class. Training parameterization is therefore a material baseline choice.
+This is known spatial reparameterization, not a new video mechanism.
+
+The expanded control uses 49,978 training parameters, including an inactive
+frozen warm head; 47,239 parameters are optimized. It is a controlled
+fine-tuning study, not a complete reproduction of the official warm-up,
+loss, and long-schedule training. To preserve the pretrained numerical
+starting function, the wide raw convolution executes its preserved and
+additional output blocks separately. This retains its parameters and
+mathematical operator but differs from the upstream single wide-kernel call.
+
+The domain trade-off remains important. Expanded training approximately
+recovers the synthetic quality of the dynamic-synthetic anchor while
+improving its paired-real mapping. It still trails the earlier native
+training reference in paired-real PSNR. Those historical training schemes
+differ in several respects and do not isolate one causal factor.
+No single online model is obtained by taking the best weight separately
+for each domain.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\linewidth]{matched_forms.pdf}
+\caption{Completed matched FP32 training-form comparison. Pale points retain
+both individual seeds; solid points are their means. The real-domain spread
+and the quality--temporal trade-off are visible. Postprocessed outputs use
+motion and history; they are not stateless predictions.}
+\label{fig:forms}
+\end{figure}
+
+Mean improvement does not imply reliable per-clip improvement. On paired-real
+video 121, expanded seed 0 loses 2.606\,dB against its matched Slim control
+and shows sky colour bias in the fixed-frame inspection. Its four-source
+real mean is 24.710\,dB, versus 26.983\,dB for expanded seed 1. Raw
+paired-real temporal error is not consistently reduced. All source/seed
+pairs and all four metrics remain part of the record.
+
+\subsection{Classical recursion is a necessary reference}
+\input{generated/classical-table}
+On the same strong dynamic-synthetic anchor, recursive fusion improves
+the finite reference's quality and temporal error
+(Table~\ref{tab:classical}). Its persistent fused output is a meaningful
+information advantage, not a negligible implementation detail. The
+recursive reference cannot be replaced by a weaker two-frame average
+when judging a proposed temporal model.
+
+The measured CPU ranges overlap, so the small difference between the finite
+and recursive medians is not established as a significant speed difference.
+These timings concern the stated R34 weights and workload; they are not
+measurements of the later expanded anchor or the pending rational model.
+The extra stored RGB history and motion work remain part of deployment.
+
+\subsection{Fixed local statistics do not rescue this anchor}
+\input{generated/tlc-table}
+The fixed TLC~\cite{tlc} control replaces only the channel-pooling node
+with exact local averaging at a window of 192 pixels. Both development
+domains and both seeds lose raw PSNR; the paired-real temporal ratios also
+exceed the registered 1.02 upper bound (Table~\ref{tab:tlc}).
+Across the 20 raw seed--condition pairs, five PSNR deltas are positive,
+but all eight paired-real deltas are negative. The worst paired-real
+condition loses 3.716\,dB.
+
+The fixed instance and its local window search are stopped. This result
+does not prove that all local aggregation or global-statistic adaptations
+are ineffective. It also does not justify a speed claim: localizing the
+channel map adds approximately 0.299 convolution GMAC at $1080\mathrm p$,
+with prefix sums and memory traffic additional to that count.
+
+\subsection{Complete root-operator and temporal-objective factorial}
+\label{sec:r44}
+\input{generated/r44-table}
+Both seeds and all four arms complete their prescribed additional 4,000
+updates. All final export checks pass, with maximum discrepancy
+$2.51\!\times\!10^{-6}$. Common CPU evaluation completes 240 sequence rows
+and 80 neural predictions of sequences. No intermediate checkpoint is used.
+Table~\ref{tab:r44} retains all raw and recursive arm means; finite outputs,
+individual seeds, and all condition comparisons remain in the full record.
+
+The spatial effect is different from the temporal effect. Under MSE,
+the rational operator improves paired-real PSNR over its square control by
+0.441 and 0.475\,dB, with synthetic changes of $-0.027$ and $-0.009$\,dB.
+Under the same temporal objective, paired-real gains are 0.461 and
+0.465\,dB, but temporal ratios range from 0.9925 to 1.0070 across the
+four domain--seed comparisons. Thus the primary structural screen preserves
+quality but fails the required temporal ratio of at most 0.90.
+
+Temporal supervision reduces square-model raw temporal error by about
+5.8\% on synthetic data and 4.7\% on paired-real data. The paired-real
+seed-1 PSNR change is $-0.079$\,dB, outside the $-0.05$\,dB preservation
+bound. The rational model shows a similar objective trade-off. These are
+finite regularization effects, not a demonstrated independent temporal
+advantage of the rational operator.
+
+History remains useful. The rational temporal raw output has temporal
+error ratios of 1.435--1.444 on synthetic data and 1.352--1.359 on paired-real
+data against square-MSE recursion. It does not replace that strong history
+reference. With recursion applied to all models, the registered combination
+screen also fails: the synthetic mean loses about 0.212\,dB against
+square-MSE recursion for only about 3.4\% less temporal error. There is no
+new full-pipeline or phone-cost measurement for this candidate.
+
+All three registered screens therefore fail. The local rational/temporal
+family, loss-weight, scale, learning-rate, training-length, and additional-seed
+search is stopped. The spatial quality signal is retained as a stronger
+reference, without a novelty claim. Continuing square-MSE training itself
+raises paired-real PSNR from about 25.85\,dB at the earlier R41 checkpoint
+to 27.13\,dB; that gain cannot be attributed to the new activation.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\linewidth]{factorial.pdf}
+\caption{Complete R44 factorial. Both seeds and their means remain visible.
+Raw and recursive deployment paths are shown separately. The rational
+operator's paired-real quality gain does not imply an independent temporal
+gain; the temporal objective has a quality--stability trade-off.}
+\label{fig:r44}
+\end{figure}
+
+\subsection{Published checkpoints and fixed-budget adaptations}
+\label{sec:published-adapted}
+\input{generated/published-adapted-table}
+Table~\ref{tab:published-adapted} adds a 696-parameter published Nano
+enhancer~\cite{multinex} and a 2,479,096-parameter five-frame
+FastDVDnet~\cite{fastdvdnet}. Both complete two independent 8,000-update
+adaptations from their published weights using the same four supervised
+targets, crop coordinates, and augmentations as the spatial reference.
+Only final weights are evaluated. This matches development updates and
+targets, not pretraining, training parameterization, computation, or full
+convergence. The Nano architecture and its original batch normalization
+are retained; four sequential batch-four forwards preserve that training
+semantics.
+
+We additionally evaluate the original public StableLLVE synthetic-clean
+checkpoint~\cite{stablellve}, with 4,316,259 parameters and zero project
+updates, on the same inputs and CPU metrics. Its official BGR input
+convention and internal size handling are retained. Inference is
+frame-by-frame with no future input; the temporal training objective does
+not create an inference-time state. Classical recursion reduces temporal
+error, while slightly reducing paired-real PSNR. The released clean
+checkpoint does not reproduce the paper's noisy setting, and its transfer
+gap against task-adapted models is not a matched-training architectural
+ranking.
+
+The Nano raw adaptation gains 1.922--2.192\,dB on SYN and
+2.508--2.949\,dB on paired ND over its original LOL-v1 checkpoint. Its
+remaining gap to MobileIE in this budget does not establish a general
+architectural ranking. Applying the same classical recursion reduces its
+temporal error, but does not recover the paired-real quality gap.
+
+FastDVDnet training supplies two additional source inputs on each side of
+the four targets. This avoids reflecting at every short sampled window,
+while adding observations; it is not an equal-information comparison
+to the earlier short-context control. There is no consistent improvement
+over that control across domains and seeds. On paired ND, true five-frame
+input loses 2.202 and 1.908\,dB against five copies of the current frame,
+with temporal error about 6.7\% and 6.5\% higher. The latter is a
+same-weight diagnostic, not the published video configuration. The true
+window remains the video reference. Published AWGN pretraining overlaps
+three synthetic DEV sources; no unseen-source claim is made.
+
+Full phone inspection exposes a separate limitation. Both adapted Nano
+seeds retain purple stage colours but visibly over-brighten the scene;
+dark-region colour artifacts remain on the outdoor clip. The existing
+MobileIE reference also has severe exposure and colour failures there.
+These unpaired reused clips do not establish colour accuracy, temporal
+perception, or a phone quality ranking. These comparisons supply neither a
+new method, a reproduced standard LLVE benchmark, nor handset latency. The
+fixed reference budgets are closed rather than extended by local
+hyperparameter search.

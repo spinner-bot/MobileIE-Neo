@@ -1,0 +1,18 @@
+{
+  "observed_at": "2026-11-12T14:10:55.150611+08:00",
+  "group": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "planned_seed_gpus": {
+    "0": 4,
+    "1": 5
+  },
+  "gate_gpu": 4,
+  "gpu_status": "0, GPU-81550800-367d-1855-0f35-c61c274edfdf, 0, 0\n1, GPU-86a346f2-2b01-66d9-9efa-23eff30f4150, 0, 0\n2, GPU-e7f8224e-43d7-f7d6-10ff-8412dc30aa9e, 0, 0\n3, GPU-3a66f673-05de-ba45-3f5c-308b333fea68, 0, 0\n4, GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e, 0, 0\n5, GPU-83b3ac27-3e78-fb30-a5f6-d5daf4aac4fb, 0, 0\n6, GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249, 3355, 1\n7, GPU-7d263daa-6d13-02a6-b0ea-29c2c09a2c8b, 4011, 93\n",
+  "compute_processes": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249, 3336734, 3346\nGPU-7d263daa-6d13-02a6-b0ea-29c2c09a2c8b, 3336735, 4002\n",
+  "topology": "\t\u001b[4mGPU0\tGPU1\tGPU2\tGPU3\tGPU4\tGPU5\tGPU6\tGPU7\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tPIX\tPIX\tPIX\tSYS\tSYS\tSYS\tSYS\tPIX\t0-23,48-71\t0\t\tN/A\nGPU1\tPIX\t X \tPIX\tPIX\tSYS\tSYS\tSYS\tSYS\tPIX\t0-23,48-71\t0\t\tN/A\nGPU2\tPIX\tPIX\t X \tPIX\tSYS\tSYS\tSYS\tSYS\tPIX\t0-23,48-71\t0\t\tN/A\nGPU3\tPIX\tPIX\tPIX\t X \tSYS\tSYS\tSYS\tSYS\tPIX\t0-23,48-71\t0\t\tN/A\nGPU4\tSYS\tSYS\tSYS\tSYS\t X \tPIX\tPIX\tPIX\tSYS\t24-47,72-95\t1\t\tN/A\nGPU5\tSYS\tSYS\tSYS\tSYS\tPIX\t X \tPIX\tPIX\tSYS\t24-47,72-95\t1\t\tN/A\nGPU6\tSYS\tSYS\tSYS\tSYS\tPIX\tPIX\t X \tPIX\tSYS\t24-47,72-95\t1\t\tN/A\nGPU7\tSYS\tSYS\tSYS\tSYS\tPIX\tPIX\tPIX\t X \tSYS\t24-47,72-95\t1\t\tN/A\nNIC0\tPIX\tPIX\tPIX\tPIX\tSYS\tSYS\tSYS\tSYS\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_bond_0\n\n",
+  "scope": "Plan only, not reservation; GPU4/5 idle in this snapshot, 6/7 other jobs excluded. Fresh outer and pre-CUDA admission required for every GPU task."
+}

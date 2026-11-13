@@ -1,0 +1,30 @@
+\begin{table}[t]
+\centering\scriptsize\setlength{\tabcolsep}{4pt}
+\caption{Completed published and adapted references on reused DEV data, all evaluated with the common CPU protocol. The original StableLLVE synthetic-clean and Nano LOL-v1 checkpoints have zero project updates and no claimed seed. Adapted backbones use 8,000 updates with the same four supervised targets; the RGB gate has 4,000 additional controller updates. FastDVDnet sees surrounding inputs and two future frames. Pretraining, training parameterization, noise conditions and compute differ; these are not matched-convergence architectural rankings. Current means five copies of the current input, a diagnostic. Recursion and RGB gating add motion/history cost beyond learned parameters.}
+\label{tab:published-adapted}
+\begin{tabular}{llrrrrr}
+\toprule
+Model/output & Seed & Params & SYN PSNR & SYN $E_{\rm temp}$ & ND PSNR & ND $E_{\rm temp}$\\
+\midrule
+StableLLVE clean raw & -- & 4316259 & 21.385 & 9.802 & 20.586 & 3.126\\
+StableLLVE clean + rec. & -- & 4316259 & 21.541 & 6.668 & 20.539 & 2.476\\
+Nano published raw & -- & 696 & 20.282 & 18.464 & 21.394 & 4.547\\
+Nano published + rec. & -- & 696 & 21.933 & 10.454 & 21.387 & 2.964\\
+\midrule
+Nano adapted raw & 0 & 696 & 22.474 & 13.172 & 24.342 & 3.709\\
+Nano adapted raw & 1 & 696 & 22.204 & 13.131 & 23.902 & 3.708\\
+Nano adapted + rec. & 0 & 696 & 23.386 & 8.057 & 24.164 & 2.577\\
+Nano adapted + rec. & 1 & 696 & 23.033 & 8.039 & 23.743 & 2.581\\
+FastDVDnet window & 0 & 2479096 & 25.332 & 6.646 & 22.350 & 3.496\\
+FastDVDnet window & 1 & 2479096 & 22.582 & 7.553 & 22.964 & 3.530\\
+FastDVDnet current & 0 & 2479096 & 25.435 & 8.557 & 24.552 & 3.277\\
+FastDVDnet current & 1 & 2479096 & 23.997 & 8.526 & 24.872 & 3.316\\
+MobileIE raw & 0 & 4075 & 26.475 & 10.102 & 27.252 & 3.729\\
+MobileIE raw & 1 & 4075 & 26.456 & 9.699 & 27.004 & 3.577\\
+MobileIE + rec. & 0 & 4075 & 26.800 & 6.546 & 27.292 & 2.605\\
+MobileIE + rec. & 1 & 4075 & 26.613 & 6.393 & 26.923 & 2.534\\
+MobileIE + RGB gate & 0 & 4116 & 27.172 & 7.306 & 27.388 & 2.791\\
+MobileIE + RGB gate & 1 & 4116 & 27.052 & 6.976 & 27.080 & 2.677\\
+\bottomrule
+\end{tabular}
+\end{table}

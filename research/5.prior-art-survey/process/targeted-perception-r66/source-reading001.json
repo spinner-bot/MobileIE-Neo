@@ -1,0 +1,72 @@
+{
+  "at": "2026-11-13T03:21:04.874766+08:00",
+  "author": "Codex  (sqs_A100)",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2111.12855",
+      "version": "v2",
+      "sections": [
+        "3.1 eq15",
+        "3.2 eq16-18"
+      ],
+      "scope": "Correct REI source located by title search; remeasurement under q and SURE conditions read; no reproduction."
+    },
+    {
+      "url": "https://arxiv.org/html/2504.09789v1",
+      "sections": [
+        "3 Integral Noise",
+        "4.1"
+      ],
+      "scope": "v1 read; generated diffusion noise not captured measurement noise; no current conference acceptance inference."
+    },
+    {
+      "url": "https://proceedings.mlr.press/v306/saied26a.html",
+      "sections": [
+        "abstract/metadata only"
+      ],
+      "scope": "ICML2026 WNE normalization factorization verified at primary proceedings, no PDF proof read or reproduced."
+    },
+    {
+      "url": "https://www.cl.cam.ac.uk/research/rainbow/projects/colorvideovdp/",
+      "sections": [
+        "abstract/model scope"
+      ],
+      "scope": "SIGGRAPH2024 visual-difference model, spatiotemporal/color/display conditioning; no LLVE-domain MOS validity claim."
+    },
+    {
+      "url": "https://github.com/gfxdisp/ColorVideoVDP",
+      "sections": [
+        "README metric/reporting/display/release sections",
+        "pyproject",
+        "cvvdp_metric constructor/predict",
+        "video source",
+        "ML imports"
+      ],
+      "scope": "Read through connected GitHub fetch; package0.5.7 independent PyPI SHA fixed, unmodified package calculation."
+    },
+    {
+      "url": "https://download.pytorch.org/whl/cu126/torchvision/",
+      "sections": [
+        "0.24.1 cp310 Linux link"
+      ],
+      "scope": "Official index explicitly points to download-r2.pytorch.org wheel with SHA; confirms technical host fix, not mirror substitution."
+    }
+  ],
+  "failed_or_unrelated_access": [
+    {
+      "url": "https://arxiv.org/html/2201.12191",
+      "outcome": "Mistaken guessed ID resolves unrelated Kernelized Concept Erasure; discarded, not evidence for REI."
+    },
+    {
+      "url": "https://research.nvidia.com/labs/genair/equivdm/assets/paper/equivdm.pdf",
+      "outcome": "Tool size limit on29.7MB; read exact arxivv1 HTML instead, not PDF full reading."
+    }
+  ],
+  "existing_local_evidence": [
+    "prior note21 resampling covariance",
+    "R22 existing24 operator diagnostics",
+    "R52/R58 static-only RAW pilot; dynamic lacks paired GT",
+    "R53 manifest stores window only"
+  ],
+  "no_new_enhancement_CNN_or_training_for_reading": true
+}

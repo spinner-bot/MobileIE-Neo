@@ -1,0 +1,48 @@
+{
+  "completed_normally": true,
+  "model_updates": {
+    "scalar": 4000,
+    "rgb": 4000,
+    "response": 4000
+  },
+  "total_new_controller_updates": 12000,
+  "frozen_base_unchanged": true,
+  "final_checkpoints": {
+    "scalar": {
+      "control": "scalar",
+      "seed": 0,
+      "new_step": 4000,
+      "path": ".cache/checkpoints/exploration-r45/stage001/seed0/scalar-step4000.pt",
+      "sha256": "9774a2a804ae038068a86362a882db7527646cee89ce769d86e5b7b6694ac088",
+      "base_checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+      "controller_parameters": 1,
+      "pipeline_parameters": 4076,
+      "scope": "No BN/folding in controller. Same state used for eval; spatial predictor frozen."
+    },
+    "rgb": {
+      "control": "rgb",
+      "seed": 0,
+      "new_step": 4000,
+      "path": ".cache/checkpoints/exploration-r45/stage001/seed0/rgb-step4000.pt",
+      "sha256": "72eec98ce663810971023d24703e92ff03f2adce51d6874ef078fc0dd1143505",
+      "base_checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+      "controller_parameters": 41,
+      "pipeline_parameters": 4116,
+      "scope": "No BN/folding in controller. Same state used for eval; spatial predictor frozen."
+    },
+    "response": {
+      "control": "response",
+      "seed": 0,
+      "new_step": 4000,
+      "path": ".cache/checkpoints/exploration-r45/stage001/seed0/response-step4000.pt",
+      "sha256": "76d5ba98e4d2b4a316063a02ab92f47c7f75db25f84a749d0e896bba15218e5d",
+      "base_checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+      "controller_parameters": 41,
+      "pipeline_parameters": 4116,
+      "scope": "No BN/folding in controller. Same state used for eval; spatial predictor frozen."
+    }
+  },
+  "wall_seconds": 1003.0665885959752,
+  "ended_at": "2026-11-12T16:14:54.537599+08:00",
+  "scope": "Training closure only. No quality/cost/independent cue contribution conclusion."
+}

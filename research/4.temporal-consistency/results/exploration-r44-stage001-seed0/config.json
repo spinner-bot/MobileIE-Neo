@@ -1,0 +1,142 @@
+{
+  "seed": 0,
+  "stage": "stage001",
+  "models": [
+    "square_mse",
+    "square_temporal",
+    "bounded_mse",
+    "bounded_temporal"
+  ],
+  "new_steps_each": 4000,
+  "inherited_updates_each": 4000,
+  "data_steps": [
+    4000,
+    7999
+  ],
+  "batch": 4,
+  "frames": 4,
+  "patch": 128,
+  "data": {
+    "manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "verified_files": 384,
+    "scenes": [
+      "video_11",
+      "video_35",
+      "video_92",
+      "video_131",
+      "video_12",
+      "video_20",
+      "video_29",
+      "video_52",
+      "video_59",
+      "video_95",
+      "video_104",
+      "video_122"
+    ],
+    "native_bytes": 2388787200,
+    "real_training_ids": [
+      "video_104",
+      "video_11",
+      "video_12",
+      "video_122",
+      "video_131",
+      "video_20",
+      "video_29",
+      "video_35",
+      "video_52",
+      "video_59",
+      "video_92",
+      "video_95"
+    ],
+    "excluded_native_DEV": [
+      "video_121",
+      "video_15",
+      "video_47",
+      "video_91"
+    ],
+    "all_real_assets_owned": true,
+    "source_manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "synthetic_manifest_sha256": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+    "synthetic_training_videos": 57,
+    "real_tensor_dtype": "uint8 native inputs/GT; float32 /255 after crops",
+    "timing_scope": "Consecutive registered frame indices, not independently verified sensor timing."
+  },
+  "initialization": {
+    "source_checkpoint": {
+      "path": ".cache/checkpoints/exploration-r41/stage002/seed0/expanded_fp32-deploy-step4000.pt",
+      "sha256": "5dd7160408a8402646f61f1e2ed477a787b0e3075dba96e055f1e6c81e3e7232",
+      "training_path": ".cache/checkpoints/exploration-r41/stage002/seed0/expanded_fp32-training-step4000.pt",
+      "training_sha256": "6a22f1cf952074a2f4a29f52a38ff16cd9c13d4949013690eebba1b369124da0",
+      "model": "expanded_fp32",
+      "seed": 0,
+      "step": 4000,
+      "deployment_parameters": 4075,
+      "final_eval_fold_max_abs_delta": 1.6689300537109375e-06,
+      "final_fold_gate_passed": true
+    },
+    "scales": [
+      38.101352864041765,
+      34.6184807632113
+    ],
+    "calibration_sha256": "7b905855a391b4a09f472c200d16a69d15975ffbe7a5af3fe268bb9e0dd026ff",
+    "optimizer": "Common fresh Adam; old moments not restored",
+    "parameters": {
+      "square_mse": {
+        "total": 49978,
+        "active": 47239
+      },
+      "square_temporal": {
+        "total": 49978,
+        "active": 47239
+      },
+      "bounded_mse": {
+        "total": 49980,
+        "active": 47241
+      },
+      "bounded_temporal": {
+        "total": 49980,
+        "active": 47241
+      }
+    }
+  },
+  "optimizer": "Adam, fresh for every model",
+  "lr": 0.0001,
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "eps": 1e-08,
+  "weight_decay": 0,
+  "global_clip": 1,
+  "temporal_weights": {
+    "square_mse": 0.0,
+    "square_temporal": 0.25,
+    "bounded_mse": 0.0,
+    "bounded_temporal": 0.25
+  },
+  "BN_calls_per_update": 4,
+  "selection": "final new4000 only",
+  "dtype": "float32",
+  "cudnn_tf32_allowed": false,
+  "matmul_tf32_allowed": false,
+  "gates": {
+    "research/4.temporal-consistency/process/exploration-r44/cpu-gate.json": "bdb66ceac4e1cb0324a09d503e877997a2bb8e09bcb6f3ebead9ccb4444f012c",
+    "research/4.temporal-consistency/process/exploration-r44/cuda-gate.json": "3b2c7e9278ce7f9db9b5cf3351bd60289c17105abe5dcdc8f8dbbf695bfb5b04"
+  },
+  "protocol_sha256": "a7b9fc9974113edf8759f0adf9b8f541c05e0f31b9e8afbc5510b7283bee227a",
+  "source_sha256": {
+    "train_bounded_video_r44.py": "a85e37aee5c3bfd30b4710a21a4f4b0df1f86e49220b0f982cac1efb2e92e0d4",
+    "bounded_video_r44.py": "7510feb9881c52507b27dc5ad416ffd3be7719b10b23bc87345d48b67ac20c4c",
+    "bounded_fst_r43.py": "0aa8eeb9dab97aad65a25fa28d439cef5933025916058e29d78bd7f4bb57c41c",
+    "video_objective_r44.py": "79474e2fec26c51a09845ca9c43fb6ede9d8ca4d89e47b98f0fb997568623905",
+    "budget_causal_r33.py": "7cfe138a286fdb488973ffe7c5bc93b69ad505af981e22cba824402c491b2e3b",
+    "half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+    "video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0",
+    "mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5",
+    "training_form_r41.py": "4392fdceb16750ca0a763f4485beec873dc7316d758c95e9eaef042ffceb4ded",
+    "dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498",
+    "gpu_guard.py": "e0a5050f47d64dbf75fab4146a276f50e3464d07e6a799ad8ccd2c69e8e3a535"
+  },
+  "revision": "30c96a7276844d59abffc2eef40753a5d2af291e",
+  "scope": "Two factors, shared training-only GT motion, no inherited gate/BN/optimizer states. Rational denominator stays at inference; quality and novelty unproven."
+}

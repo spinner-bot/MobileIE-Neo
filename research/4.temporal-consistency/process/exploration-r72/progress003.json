@@ -1,0 +1,52 @@
+{
+  "at": "2026-11-13T06:36:25.238932+08:00",
+  "coordinator_pid": 4030342,
+  "coordinator_actual_identity": {
+    "start_ticks": "46167726",
+    "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/finalize_reds_r72.py "
+  },
+  "seeds": {
+    "0": {
+      "normal_neural": {
+        "completed_normally": true,
+        "seed": 0,
+        "CNN_sequences": 40,
+        "CNN_centers": 2560,
+        "new_SGD": 0,
+        "peak_cuda_allocated_bytes": 1163146240,
+        "seconds": 286.619854370947,
+        "ended": "2026-11-13T06:24:42.160285+08:00"
+      },
+      "guard_returncode": 0,
+      "CPU_pid": 4037261,
+      "CPU_actual_identity": {
+        "start_ticks": "46247060",
+        "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/evaluate_reds_r72.py --seed 0 "
+      },
+      "quality_prefix_rows": 25,
+      "quality_terminal_exists": false
+    },
+    "1": {
+      "normal_neural": {
+        "completed_normally": true,
+        "seed": 1,
+        "CNN_sequences": 40,
+        "CNN_centers": 2560,
+        "new_SGD": 0,
+        "peak_cuda_allocated_bytes": 1163146240,
+        "seconds": 291.64527431700844,
+        "ended": "2026-11-13T06:30:04.361457+08:00"
+      },
+      "guard_returncode": 0,
+      "CPU_pid": 4040502,
+      "CPU_actual_identity": {
+        "start_ticks": "46279285",
+        "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/evaluate_reds_r72.py --seed 1 "
+      },
+      "quality_prefix_rows": 13,
+      "quality_terminal_exists": false
+    }
+  },
+  "source_sha256_unchanged": true,
+  "scope": "All native raw inference completed and GPUs released; original CPU quality jobs remain live. No final quality/perception comparison."
+}

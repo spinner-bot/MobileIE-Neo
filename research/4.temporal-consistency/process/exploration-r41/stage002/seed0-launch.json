@@ -1,0 +1,22 @@
+{
+  "started_at": "2026-11-12T12:58:44.070949+08:00",
+  "guard_pid": 3329449,
+  "physical_gpu": 4,
+  "command": [
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/gpu_guard.py",
+    "--gpu",
+    "4",
+    "--record",
+    "research/4.temporal-consistency/process/exploration-r41/stage002/seed0-guard.json",
+    "--",
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/train_training_form_r41.py",
+    "--stage",
+    "stage002",
+    "--seed",
+    "0"
+  ],
+  "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+  "scope": "Corrected stage only, fresh initialization and fresh admission, no reuse of stopped-stage updates."
+}

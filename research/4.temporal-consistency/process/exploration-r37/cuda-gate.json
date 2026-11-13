@@ -1,0 +1,190 @@
+{
+  "passed": true,
+  "device": "cuda",
+  "shape_checks": [
+    {
+      "shape": [
+        2,
+        3,
+        32,
+        36
+      ],
+      "max_abs_deltas": {
+        "first": 0.0,
+        "arbitrary_history_zero_amplitude": 0.0,
+        "current": 0.0
+      },
+      "state_storage_bytes": 13824
+    },
+    {
+      "shape": [
+        2,
+        3,
+        33,
+        37
+      ],
+      "max_abs_deltas": {
+        "first": 0.0,
+        "arbitrary_history_zero_amplitude": 0.0,
+        "current": 0.0
+      },
+      "state_storage_bytes": 14652
+    }
+  ],
+  "orthogonality_max_abs_error": 1.1920928955078125e-07,
+  "real_window_backward": [
+    {
+      "model": "learned_alignment",
+      "rounds": [
+        {
+          "smoke_update": 1,
+          "mse": 0.006512045860290527,
+          "gradient_norms": {
+            "directions": 0.0,
+            "amplitude": 0.0009078992297872901,
+            "field.0.weight": 0.0,
+            "field.0.bias": 0.0,
+            "field.1.weight": 0.0,
+            "field.2.weight": 0.0,
+            "field.2.bias": 0.0
+          }
+        },
+        {
+          "smoke_update": 2,
+          "mse": 0.006512043531984091,
+          "gradient_norms": {
+            "directions": 2.2562330670439223e-08,
+            "amplitude": 0.0009078853763639927,
+            "field.0.weight": 0.0,
+            "field.0.bias": 0.0,
+            "field.1.weight": 0.0,
+            "field.2.weight": 7.591694952679973e-07,
+            "field.2.bias": 6.114453388050833e-09
+          }
+        }
+      ],
+      "current_after_smoke_max_abs_delta": 0.0
+    },
+    {
+      "model": "zero_alignment",
+      "rounds": [
+        {
+          "smoke_update": 1,
+          "mse": 0.006512045860290527,
+          "gradient_norms": {
+            "directions": 0.0,
+            "amplitude": 0.0009078992297872901,
+            "field.0.weight": 0.0,
+            "field.0.bias": 0.0,
+            "field.1.weight": 0.0,
+            "field.2.weight": 0.0,
+            "field.2.bias": 0.0
+          }
+        },
+        {
+          "smoke_update": 2,
+          "mse": 0.006512043531984091,
+          "gradient_norms": {
+            "directions": 2.2562330670439223e-08,
+            "amplitude": 0.0009078853763639927,
+            "field.0.weight": 0.0,
+            "field.0.bias": 0.0,
+            "field.1.weight": 0.0,
+            "field.2.weight": 3.650862367976515e-07,
+            "field.2.bias": 4.121341490304076e-09
+          }
+        }
+      ],
+      "current_after_smoke_max_abs_delta": 0.0
+    }
+  ],
+  "windows": [
+    {
+      "video": "breakdance-flare",
+      "members": [
+        "DAVIS/JPEGImages/480p/breakdance-flare/00000.jpg",
+        "DAVIS/JPEGImages/480p/breakdance-flare/00001.jpg",
+        "DAVIS/JPEGImages/480p/breakdance-flare/00002.jpg",
+        "DAVIS/JPEGImages/480p/breakdance-flare/00003.jpg"
+      ],
+      "xy": [
+        634,
+        41
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": false,
+      "photons": 20
+    },
+    {
+      "video": "rallye",
+      "members": [
+        "DAVIS/JPEGImages/480p/rallye/00032.jpg",
+        "DAVIS/JPEGImages/480p/rallye/00033.jpg",
+        "DAVIS/JPEGImages/480p/rallye/00034.jpg",
+        "DAVIS/JPEGImages/480p/rallye/00035.jpg"
+      ],
+      "xy": [
+        20,
+        7
+      ],
+      "flip_horizontal": true,
+      "flip_vertical": true,
+      "photons": 20
+    },
+    {
+      "video": "breakdance-flare",
+      "members": [
+        "DAVIS/JPEGImages/480p/breakdance-flare/00004.jpg",
+        "DAVIS/JPEGImages/480p/breakdance-flare/00005.jpg",
+        "DAVIS/JPEGImages/480p/breakdance-flare/00006.jpg",
+        "DAVIS/JPEGImages/480p/breakdance-flare/00007.jpg"
+      ],
+      "xy": [
+        641,
+        238
+      ],
+      "flip_horizontal": true,
+      "flip_vertical": false,
+      "photons": 20
+    },
+    {
+      "video": "dog-agility",
+      "members": [
+        "DAVIS/JPEGImages/480p/dog-agility/00013.jpg",
+        "DAVIS/JPEGImages/480p/dog-agility/00014.jpg",
+        "DAVIS/JPEGImages/480p/dog-agility/00015.jpg",
+        "DAVIS/JPEGImages/480p/dog-agility/00016.jpg"
+      ],
+      "xy": [
+        722,
+        23
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": false,
+      "photons": 20
+    }
+  ],
+  "anchor": {
+    "path": ".cache/checkpoints/exploration-r34/seed0/original-step4000.pt",
+    "sha256": "d1da425a8df87fdce81f9e049c57115cbe23a66f7773f5c149b1f83ab9f32344",
+    "step": 4000,
+    "model": "original",
+    "seed": 0
+  },
+  "parameters": {
+    "learned_alignment": {
+      "total": 4587,
+      "trainable": 512
+    },
+    "zero_alignment": {
+      "total": 4587,
+      "trainable": 512
+    }
+  },
+  "source_sha256": {
+    "preserved_state_r37.py": "0ee15f79ed9f7d15672d8a1830edaaa062606278b1123e86c06d6c7bb52e0177",
+    "training_preserved_r37.py": "b64cf1c82c08f1eef9ccf62a4bfbdda74963525f370b01ff5d1d9d64ab03b6ae",
+    "check_preserved_r37.py": "7e21699a150cc17ab73fbf29e8b149bfcfc74ff14de83a90ada3ee87b7e4ff9b"
+  },
+  "scope": "Functional/backward gates only, two discarded SGD smoke steps. Fresh models required for real training; no quality/latency or optimizer replay claim."
+}

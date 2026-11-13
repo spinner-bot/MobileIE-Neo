@@ -1,0 +1,197 @@
+{
+  "at": "2026-11-12T21:05:05.007864+08:00",
+  "seed": 1,
+  "steps": 8000,
+  "data_steps": [
+    0,
+    7999
+  ],
+  "batch": 4,
+  "target_frames": 4,
+  "crop": 128,
+  "parameters": 696,
+  "initialization": {
+    "repository": "albrateanu/multinex",
+    "commit": "e15790a963935569fff1ba6a8b0d33a791765749",
+    "source_manifest_sha256": "6dd18639368ba7b93f7c2285f606edd63af94e04e11fc652f1e1888d7cd5e240",
+    "files": {
+      "basicsr/models/archs/MultinexNano_arch.py": {
+        "source": "basicsr/models/archs/MultinexNano_arch.py",
+        "role": "source",
+        "url": "https://raw.githubusercontent.com/albrateanu/multinex/e15790a963935569fff1ba6a8b0d33a791765749/basicsr/models/archs/MultinexNano_arch.py",
+        "path": "third_party/multinex/basicsr/models/archs/MultinexNano_arch.py",
+        "bytes": 23010,
+        "git_blob_sha": "279dca3cff7ec9075e8800b6aacb6218c13d7574",
+        "sha256": "0a2d94f12e7de799b5e13f46905dd9e5c3f7cf005dee40412d18ec6b1adf2cdf",
+        "reused_verified_file": false
+      },
+      "Options/Multinex-Nano_LOL-v1.yaml": {
+        "source": "Options/Multinex-Nano_LOL-v1.yaml",
+        "role": "source",
+        "url": "https://raw.githubusercontent.com/albrateanu/multinex/e15790a963935569fff1ba6a8b0d33a791765749/Options/Multinex-Nano_LOL-v1.yaml",
+        "path": "third_party/multinex/Options/Multinex-Nano_LOL-v1.yaml",
+        "bytes": 4910,
+        "git_blob_sha": "ffa840641eba1e488af122231bb09455e6fd1012",
+        "sha256": "53c42fb0f782ef4acd58ba25d47f07db67f1da774eb8e588ca71773f6063484e",
+        "reused_verified_file": false
+      },
+      "pretrained_weights/Multinex-Nano_LOL-v1.pth": {
+        "source": "pretrained_weights/Multinex-Nano_LOL-v1.pth",
+        "role": "weight",
+        "url": "https://raw.githubusercontent.com/albrateanu/multinex/e15790a963935569fff1ba6a8b0d33a791765749/pretrained_weights/Multinex-Nano_LOL-v1.pth",
+        "path": ".cache/weights/multinex/LOL-v1/Multinex-Nano_LOL-v1.pth",
+        "bytes": 20317,
+        "git_blob_sha": "395c4218d7e20ae3ceece91670dfe7c338741315",
+        "sha256": "ed3e9fafef4bc15a7e84450d002eb564bb1d1e18345432a30b0bfbc7b7b535e4",
+        "reused_verified_file": false
+      }
+    },
+    "network_kwargs": {
+      "in_ch": 3,
+      "out_ch": 3,
+      "base_channels": 3,
+      "width_mult": 1.0,
+      "use_depthwise": true,
+      "act": "ReLU",
+      "per_illum_proj": false,
+      "per_chroma_proj": false,
+      "use_illum_attn": true,
+      "use_chroma_attn": true,
+      "illum_mid": 1,
+      "chroma_mid": 1,
+      "reduction_ratio": 3,
+      "luma_head_act": null,
+      "chroma_head_act": null,
+      "retinex_residual": true,
+      "eps": 1e-09,
+      "illum_flags": {
+        "mean": false,
+        "rec709": true,
+        "vmax": true,
+        "lightness": true,
+        "ycgco": false,
+        "l2norm": true
+      },
+      "chroma_flags": {
+        "yuv_uv": false,
+        "ycbcr_cbcr": true,
+        "opponent": false,
+        "chroma_rg": true,
+        "hsv_s": true,
+        "litags": false
+      },
+      "target_params": 300
+    },
+    "parameters": 696,
+    "buffer_elements": 38,
+    "state_entries": 50,
+    "strict_load": true,
+    "input": "RGB FP32 [0,1]",
+    "inference": "Official even reflection pad, unpad and clip; no GT mean, ensemble or large-image splitting.",
+    "training": "Published LOL-v1 weights; no project task adaptation or seed search; complete original training not reproduced."
+  },
+  "data": {
+    "manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "verified_files": 384,
+    "scenes": [
+      "video_11",
+      "video_35",
+      "video_92",
+      "video_131",
+      "video_12",
+      "video_20",
+      "video_29",
+      "video_52",
+      "video_59",
+      "video_95",
+      "video_104",
+      "video_122"
+    ],
+    "native_bytes": 2388787200,
+    "real_training_ids": [
+      "video_104",
+      "video_11",
+      "video_12",
+      "video_122",
+      "video_131",
+      "video_20",
+      "video_29",
+      "video_35",
+      "video_52",
+      "video_59",
+      "video_92",
+      "video_95"
+    ],
+    "excluded_native_DEV": [
+      "video_121",
+      "video_15",
+      "video_47",
+      "video_91"
+    ],
+    "all_real_assets_owned": true,
+    "source_manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "synthetic_manifest_sha256": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+    "synthetic_training_videos": 57,
+    "real_tensor_dtype": "uint8 native inputs/GT; float32 /255 after crops",
+    "timing_scope": "Consecutive registered frame indices, not independently verified sensor timing."
+  },
+  "objective": "unclipped MSE four original targets",
+  "BN": "Four sequential B4 calls per update; original BN kept",
+  "BN_initial_counts": {
+    "illum_mid_seq.0.0.bn": 48970,
+    "chroma_mid_seq.0.0.bn": 48970
+  },
+  "optimizer": "fresh Adam initially and after4000",
+  "lr": 0.0001,
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "eps": 1e-08,
+  "weight_decay": 0,
+  "clip": 1,
+  "FP32": true,
+  "TF32": false,
+  "selection": "final8000 only, no hyperparameter or seed search",
+  "CPU_gate_sha256": "831c7c244cd4c494e3f7200df4d0bc50b8edfc87b34ebeab72c0951612058f4d",
+  "CUDA_gate": {
+    "passed": true,
+    "initial_eval_MSE": 0.007823982276022434,
+    "training_MSE": 0.008699135854840279,
+    "branch_gradient_L2": {
+      "luminance": 0.33968041900019197,
+      "chrominance": 0.057546076879153606
+    },
+    "branch_max_parameter_change": {
+      "luminance": 2.191215753555298e-05,
+      "chrominance": 3.458932042121887e-06
+    },
+    "missing_gradient_names": [],
+    "norm_before_clip": 0.3445204496383667,
+    "BN_before": {
+      "illum_mid_seq.0.0.bn": 48970,
+      "chroma_mid_seq.0.0.bn": 48970
+    },
+    "BN_after": {
+      "illum_mid_seq.0.0.bn": 48974,
+      "chroma_mid_seq.0.0.bn": 48974
+    },
+    "discarded_SGD_updates": 1,
+    "inherited_into_formal_training": false
+  },
+  "protocol_sha256": "0d637adb9f952c23cb28b4e4ec085c971b627f89e0433f5dc81a0ac6512e1dda",
+  "source_sha256": {
+    "train_tiny_task_r56.py": "67a6286d80ec6fa4d344bcc69a880b89ce90234354c9be8004b3387add751a5b",
+    "tiny_task_r56.py": "63fb9c8d3d5efd138199a460553dcdbff7ee378c6058f26dee8c730f2d992d31",
+    "check_tiny_task_r56.py": "5e7b72274ca9d209514cf220955061abb35b3d877d9ba09c1dcd3e1379e7757e",
+    "multinex_reference_r55.py": "7c3b12228c8e9624224a14e6ed020aad25efb120ba6baa8f04931903646299e0",
+    "mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5",
+    "dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498",
+    "native_training_r14.py": "588b505ede11ac9f0d747ad1c16b1c118a7bbbbba7405ce918a6163d133d69a1",
+    "training_form_r41.py": "4392fdceb16750ca0a763f4485beec873dc7316d758c95e9eaef042ffceb4ded",
+    "gpu_guard.py": "e0a5050f47d64dbf75fab4146a276f50e3464d07e6a799ad8ccd2c69e8e3a535"
+  },
+  "upstream_source_sha256": "0a2d94f12e7de799b5e13f46905dd9e5c3f7cf005dee40412d18ec6b1adf2cdf",
+  "revision": "df5021bf23639fcf3bb87aed91de352d75b00f7d",
+  "scope": "Fixed budget published spatial reference; unequal parameterization/pretraining/compute, no new-method or full-convergence claim."
+}

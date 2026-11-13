@@ -1,0 +1,32 @@
+{
+  "at": "2026-11-13T05:20:30.944691+08:00",
+  "seed": 1,
+  "device": "cpu",
+  "torch_threads": 2,
+  "opencv_threads": 1,
+  "expected_quality_rows": 20,
+  "expected_frame_rows": 896,
+  "expected_CNN_sequences": 10,
+  "expected_CNN_centers": 448,
+  "methods": [
+    "raw",
+    "recursive_self05"
+  ],
+  "source_sha256": {
+    "evaluate_spatial_l1_r69.py": "21bc5b0c68052407bb383d77bf12a066962a01f555fd7721a8bf8523c066c423",
+    "train_exploration_r2.py": "30ba78b2439ffb6fdf10aafe384975326082129b03ebe562aa118f29ba5d8c7b",
+    "drv_references_r59.py": "8c805ca335edb8294e13f0403ee1dde6e69a1e67eecb98102c25b000185ba9d8",
+    "half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+    "aligned_raw_history_r11.py": "e367727401f82ccf0bccaf8d88f904e4aebf8b78186f0539eedeed222b2d2227",
+    "prepare_cache_r5.py": "675860fc6ef1d97d28750815e99f5c923ecfd94e94254f1f7a7685f08d84f2c8",
+    "exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+    "video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0"
+  },
+  "input_indices": {
+    "research/4.temporal-consistency/results/exploration-r30-cache/index.json": "424fa278b2fe66d29de476e2b47328619438f97cf71926448433d1191bb722c1",
+    "research/4.temporal-consistency/results/exploration-r10-cache/index.json": "ec00801b04b873ead0025af91af441b783da3f08c87cf24e9c136a4268ffb43c"
+  },
+  "protocol_sha256": "c0832ac5639460638582f9dd25595bb9afc9b3bc6445574c076a519e9299e83e",
+  "revision": "8a546dc7b97fc708bd3b3979b9b696f502129a45",
+  "scope": "Same reused DEV; no GT deployment motion, future input, phone timing or independent final test."
+}

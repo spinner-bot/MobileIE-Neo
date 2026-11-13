@@ -1,0 +1,44 @@
+{
+  "anchors": {
+    "official_LOL": {
+      "path": "MobileIE/pretrain/lolv1_best_slim.pkl",
+      "sha256": "d40a930fbc0435f47ce08dda17b1c630b86a501be9423b8f48dab14722fb5548"
+    },
+    "R34_seed0": {
+      "path": ".cache/checkpoints/exploration-r34/seed0/original-step4000.pt",
+      "sha256": "d1da425a8df87fdce81f9e049c57115cbe23a66f7773f5c149b1f83ab9f32344",
+      "step": 4000,
+      "model": "original",
+      "seed": 0
+    },
+    "R34_seed1": {
+      "path": ".cache/checkpoints/exploration-r34/seed1/original-step4000.pt",
+      "sha256": "fd6a357b6d3bf087d8f78a35c323ef02becce34df52bfe342c31c8882aaf8ccd",
+      "step": 4000,
+      "model": "original",
+      "seed": 1
+    }
+  },
+  "methods": [
+    "raw",
+    "finite_self05",
+    "recursive_self05"
+  ],
+  "device": "cpu",
+  "torch_threads": 2,
+  "opencv_threads": 1,
+  "torch_version": "2.9.1+cu126",
+  "input_index_sha256": "7159d5a54d60438555caf130bf9d47185b39024ea4f67a123900b46e7cc08069",
+  "extra_noise": false,
+  "brightness_transform": null,
+  "protocol_sha256": "7a0de5f938729cd60fbed185540bf79dde5ac184b91860b21a6d0c27e400b86d",
+  "source_sha256": {
+    "evaluate_phone_references_r38.py": "ed4d06aebb8e666585faf9126dddec0e180cb32b9915e978c4e6e29f7feeac89",
+    "half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+    "aligned_raw_history_r11.py": "e367727401f82ccf0bccaf8d88f904e4aebf8b78186f0539eedeed222b2d2227",
+    "aggregation_controls_r20.py": "7b4541be8512ca1edb755b5a73f889351e376f9a8fc1fdec7ed633a4438c116c",
+    "train_exploration_r2.py": "30ba78b2439ffb6fdf10aafe384975326082129b03ebe562aa118f29ba5d8c7b"
+  },
+  "revision": "9865ce2c52cf21531140ca25cd418c23b1c07bd6",
+  "scope": "Fixed three phone DEV inputs. No GT, PSNR/SSIM, flicker truth, best-seed selection, new method or mobile latency."
+}

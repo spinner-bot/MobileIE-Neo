@@ -1,0 +1,85 @@
+{
+  "seed": 0,
+  "device": "cpu",
+  "torch_threads": 2,
+  "opencv_threads": 1,
+  "checkpoints": {
+    "square_mse": {
+      "model": "square_mse",
+      "seed": 0,
+      "new_step": 4000,
+      "inherited_updates": 4000,
+      "path": ".cache/checkpoints/exploration-r44/stage001/seed0/square_mse-deploy-step4000.pt",
+      "sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+      "training_path": ".cache/checkpoints/exploration-r44/stage001/seed0/square_mse-training-step4000.pt",
+      "training_sha256": "91800b897a2b568d837cf92925b727bb71934f781437733c75323d3562f6998e",
+      "deployment_parameters": 4075,
+      "final_eval_export_max_abs_delta": 2.5033950805664062e-06,
+      "final_export_gate_passed": true
+    },
+    "square_temporal": {
+      "model": "square_temporal",
+      "seed": 0,
+      "new_step": 4000,
+      "inherited_updates": 4000,
+      "path": ".cache/checkpoints/exploration-r44/stage001/seed0/square_temporal-deploy-step4000.pt",
+      "sha256": "e2d3e7dc4d5c09abac5e0b898517cec9c6fc405079f4e802c6901c681d6e7666",
+      "training_path": ".cache/checkpoints/exploration-r44/stage001/seed0/square_temporal-training-step4000.pt",
+      "training_sha256": "dcbfd099cc53d514acb0c99d7f3a61ad23801c9cf648fcbf5396c2def6b1ac08",
+      "deployment_parameters": 4075,
+      "final_eval_export_max_abs_delta": 2.5033950805664062e-06,
+      "final_export_gate_passed": true
+    },
+    "bounded_mse": {
+      "model": "bounded_mse",
+      "seed": 0,
+      "new_step": 4000,
+      "inherited_updates": 4000,
+      "path": ".cache/checkpoints/exploration-r44/stage001/seed0/bounded_mse-deploy-step4000.pt",
+      "sha256": "97d4b38629810b950b21f6fb5d8a4f70c24600e5edb919f3950a829036f7b34e",
+      "training_path": ".cache/checkpoints/exploration-r44/stage001/seed0/bounded_mse-training-step4000.pt",
+      "training_sha256": "5c7e1fd4c26a5b42ee3bc5f840223f0ff94dac52464c1ccd2e5caa9614711ec7",
+      "deployment_parameters": 4077,
+      "final_eval_export_max_abs_delta": 2.384185791015625e-06,
+      "final_export_gate_passed": true
+    },
+    "bounded_temporal": {
+      "model": "bounded_temporal",
+      "seed": 0,
+      "new_step": 4000,
+      "inherited_updates": 4000,
+      "path": ".cache/checkpoints/exploration-r44/stage001/seed0/bounded_temporal-deploy-step4000.pt",
+      "sha256": "6fa9560936124dab9638062a81b13d1bfc1a4cae0ef2a9cd52218ac6e74e98a1",
+      "training_path": ".cache/checkpoints/exploration-r44/stage001/seed0/bounded_temporal-training-step4000.pt",
+      "training_sha256": "ed10ac93e27bd2025bed1997d20a027ea19dade120e26c92c5791ccf8f59a26c",
+      "deployment_parameters": 4077,
+      "final_eval_export_max_abs_delta": 1.9073486328125e-06,
+      "final_export_gate_passed": true
+    }
+  },
+  "deployment_parameters": {
+    "square_mse": 4075,
+    "square_temporal": 4075,
+    "bounded_mse": 4077,
+    "bounded_temporal": 4077
+  },
+  "torch_version": "2.9.1+cu126",
+  "training_config_sha256": "bd65f0b51faf4a7aa130a8a4460a13eb6d94db68d94728051c585857f0657414",
+  "cache_indices": {
+    "research/4.temporal-consistency/results/exploration-r30-cache/index.json": "424fa278b2fe66d29de476e2b47328619438f97cf71926448433d1191bb722c1",
+    "research/4.temporal-consistency/results/exploration-r10-cache/index.json": "ec00801b04b873ead0025af91af441b783da3f08c87cf24e9c136a4268ffb43c"
+  },
+  "protocol_sha256": "a7b9fc9974113edf8759f0adf9b8f541c05e0f31b9e8afbc5510b7283bee227a",
+  "source_sha256": {
+    "evaluate_bounded_video_r44.py": "d155c40096535d823bf943171940df3c16e9f80dd525097f9f9b412f9c693d70",
+    "bounded_video_r44.py": "7510feb9881c52507b27dc5ad416ffd3be7719b10b23bc87345d48b67ac20c4c",
+    "bounded_fst_r43.py": "0aa8eeb9dab97aad65a25fa28d439cef5933025916058e29d78bd7f4bb57c41c",
+    "half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+    "aligned_raw_history_r11.py": "e367727401f82ccf0bccaf8d88f904e4aebf8b78186f0539eedeed222b2d2227",
+    "aggregation_controls_r20.py": "7b4541be8512ca1edb755b5a73f889351e376f9a8fc1fdec7ed633a4438c116c",
+    "exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+    "video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0"
+  },
+  "revision": "ca3d50b90e2471683c484484234b72037fb33373",
+  "scope": "Final new4000 after inherited R41 4000, fixed factorial; CPU DEV, no online BN or raw history/teacher. Rational division retained, 4075/4077 parameters; no phone/novelty claim."
+}

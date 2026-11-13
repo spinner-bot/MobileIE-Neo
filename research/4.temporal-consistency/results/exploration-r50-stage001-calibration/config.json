@@ -1,0 +1,82 @@
+{
+  "at": "2026-11-12T18:46:06.066293+08:00",
+  "seed_order": [
+    0,
+    1
+  ],
+  "models": [
+    "square_mse",
+    "plain",
+    "joint"
+  ],
+  "calibration_seed": 50,
+  "data_steps": [
+    0,
+    127
+  ],
+  "windows_each": 128,
+  "batch": 4,
+  "frames": 4,
+  "crop": 128,
+  "SGD_updates": 0,
+  "GT_used_for_calibration": false,
+  "method": "official update_bn; equal B4 batches, four sequential frame calls",
+  "torch": "2.9.1+cu126",
+  "FP32": true,
+  "TF32": false,
+  "data": {
+    "manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "verified_files": 384,
+    "scenes": [
+      "video_11",
+      "video_35",
+      "video_92",
+      "video_131",
+      "video_12",
+      "video_20",
+      "video_29",
+      "video_52",
+      "video_59",
+      "video_95",
+      "video_104",
+      "video_122"
+    ],
+    "native_bytes": 2388787200,
+    "real_training_ids": [
+      "video_104",
+      "video_11",
+      "video_12",
+      "video_122",
+      "video_131",
+      "video_20",
+      "video_29",
+      "video_35",
+      "video_52",
+      "video_59",
+      "video_92",
+      "video_95"
+    ],
+    "excluded_native_DEV": [
+      "video_121",
+      "video_15",
+      "video_47",
+      "video_91"
+    ],
+    "all_real_assets_owned": true,
+    "source_manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "synthetic_manifest_sha256": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+    "synthetic_training_videos": 57,
+    "real_tensor_dtype": "uint8 native inputs/GT; float32 /255 after crops",
+    "timing_scope": "Consecutive registered frame indices, not independently verified sensor timing."
+  },
+  "update_bn_source_sha256": "4d67111e1e01591e8b3475e0e6353eb92e349907a6f02d06b827bcec3998c6ee",
+  "protocol_sha256": "f87e68197132e949dc9a800d8cdbc4cd0cc2e1edda05a5475ae91256a7db8118",
+  "source_sha256": {
+    "run_bn_calibration_r50.py": "6cd194d324f0df3b521d9485d1659a53662c39ec0d56646bcb0245eda863335a",
+    "bn_calibration_r50.py": "48c07aa641701d73a3e61e36300968d1eb5c6bbefd6b60639cb17758cf16a31c",
+    "mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5",
+    "training_form_r41.py": "4392fdceb16750ca0a763f4485beec873dc7316d758c95e9eaef042ffceb4ded",
+    "dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498"
+  },
+  "revision": "75143997e6c49bc84756eb3d6ede7ad4f2605e1c"
+}

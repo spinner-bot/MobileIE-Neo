@@ -1,0 +1,53 @@
+{
+  "completed_normally": true,
+  "model_updates": {
+    "plain": 4000,
+    "spatial": 4000,
+    "causal": 4000
+  },
+  "total_new_updates": 12000,
+  "final_markers": {
+    "plain": {
+      "model": "plain",
+      "seed": 0,
+      "new_step": 4000,
+      "inherited_updates": 8000,
+      "path": ".cache/checkpoints/exploration-r64/stage001/seed0/plain-deploy-step4000.pt",
+      "sha256": "588192b7b6b5f8736c15910b075ce0ba967e533a999ce8f0ed3645ab076200cb",
+      "training_path": ".cache/checkpoints/exploration-r64/stage001/seed0/plain-training-step4000.pt",
+      "training_sha256": "a9c579678d4b2c4325e0ce619ea3ccbe53a1516cba8a09edb1eee17913e0dd8d",
+      "deployment_parameters": 4075,
+      "final_fold_delta": 1.4603137969970703e-06,
+      "final_fold_passed": true
+    },
+    "spatial": {
+      "model": "spatial",
+      "seed": 0,
+      "new_step": 4000,
+      "inherited_updates": 8000,
+      "path": ".cache/checkpoints/exploration-r64/stage001/seed0/spatial-deploy-step4000.pt",
+      "sha256": "54f1464cc5e25e99ba76c8fcc797b9c3bbd2853b5ac870a02339355aa2a32cae",
+      "training_path": ".cache/checkpoints/exploration-r64/stage001/seed0/spatial-training-step4000.pt",
+      "training_sha256": "5b8238331f75dc65d95056d396662837f5ef715eea5450ff60c07f6059b5f74b",
+      "deployment_parameters": 4618,
+      "final_fold_delta": 1.430511474609375e-06,
+      "final_fold_passed": true
+    },
+    "causal": {
+      "model": "causal",
+      "seed": 0,
+      "new_step": 4000,
+      "inherited_updates": 8000,
+      "path": ".cache/checkpoints/exploration-r64/stage001/seed0/causal-deploy-step4000.pt",
+      "sha256": "99330cdf233042559b873d73062b4b976273e5b707d77c3292ed7499727ba4fd",
+      "training_path": ".cache/checkpoints/exploration-r64/stage001/seed0/causal-training-step4000.pt",
+      "training_sha256": "f46cda402ecab609f88321cf9a9511fb1b4ed5a63b398a58211e741f38e3ad89",
+      "deployment_parameters": 4618,
+      "final_fold_delta": 1.6093254089355469e-06,
+      "final_fold_passed": true
+    }
+  },
+  "seconds": 2216.7925405759597,
+  "ended_at": "2026-11-13T02:00:26.734940+08:00",
+  "scope": "Fixed algorithm budget, no wall cutoff, no quality selection from partial loss."
+}

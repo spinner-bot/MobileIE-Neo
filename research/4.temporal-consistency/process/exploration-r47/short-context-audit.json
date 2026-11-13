@@ -1,0 +1,60 @@
+{
+  "at": "2026-11-12T19:41:50.982009+08:00",
+  "source_sha256": "9e312377b462e81313229665450580280a74444c6c3a6b5b9cba1beca4863c8b",
+  "checks": [
+    {
+      "sequence_length": 4,
+      "centers": 4,
+      "windows_with_repeated_frame_indices": 4,
+      "fraction": 1.0,
+      "indices": [
+        [
+          2,
+          1,
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          2
+        ],
+        [
+          1,
+          2,
+          3,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "sequence_length": 16,
+      "centers": 16,
+      "windows_with_repeated_frame_indices": 4,
+      "fraction": 0.25,
+      "indices": null
+    },
+    {
+      "sequence_length": 64,
+      "centers": 64,
+      "windows_with_repeated_frame_indices": 4,
+      "fraction": 0.0625,
+      "indices": null
+    }
+  ],
+  "new_CNN": 0,
+  "new_SGD": 0,
+  "post_hoc": true,
+  "scope": "R47 trained exclusively on 4-frame reflected clips; all target windows repeat frame indices versus only source boundaries in longer evaluation. This is a training design limitation, not evidence of cause or a numerical implementation failure. Preserve all results and require separate source-context control before calling this a strong proper-context reference."
+}

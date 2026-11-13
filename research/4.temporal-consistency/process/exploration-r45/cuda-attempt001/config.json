@@ -1,0 +1,120 @@
+{
+  "started_at": "2026-11-12T15:55:01.808163+08:00",
+  "seed": 0,
+  "context": [
+    {
+      "video": "boxing-fisheye",
+      "members": [
+        "DAVIS/JPEGImages/480p/boxing-fisheye/00030.jpg",
+        "DAVIS/JPEGImages/480p/boxing-fisheye/00031.jpg",
+        "DAVIS/JPEGImages/480p/boxing-fisheye/00032.jpg",
+        "DAVIS/JPEGImages/480p/boxing-fisheye/00033.jpg"
+      ],
+      "xy": [
+        537,
+        270
+      ],
+      "flip_horizontal": true,
+      "flip_vertical": true,
+      "photons": 20,
+      "source": "davis_synthetic"
+    },
+    {
+      "video": "swing",
+      "members": [
+        "DAVIS/JPEGImages/480p/swing/00039.jpg",
+        "DAVIS/JPEGImages/480p/swing/00040.jpg",
+        "DAVIS/JPEGImages/480p/swing/00041.jpg",
+        "DAVIS/JPEGImages/480p/swing/00042.jpg"
+      ],
+      "xy": [
+        116,
+        264
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": false,
+      "photons": 20,
+      "source": "davis_synthetic"
+    },
+    {
+      "source": "olives_real",
+      "video": "video_95",
+      "indices": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "xy": [
+        1317,
+        932
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": true,
+      "input_sources": [
+        ".cache/data/olives-r4/Frames/input/video_95/00007.png",
+        ".cache/data/olives-r4/Frames/input/video_95/00008.png",
+        ".cache/data/olives-r4/Frames/input/video_95/00009.png",
+        ".cache/data/olives-r4/Frames/input/video_95/00010.png"
+      ],
+      "target_sources": [
+        ".cache/data/olives-r4/Frames/gt/video_95/00007.png",
+        ".cache/data/olives-r4/Frames/gt/video_95/00008.png",
+        ".cache/data/olives-r4/Frames/gt/video_95/00009.png",
+        ".cache/data/olives-r4/Frames/gt/video_95/00010.png"
+      ]
+    },
+    {
+      "source": "olives_real",
+      "video": "video_35",
+      "indices": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "xy": [
+        166,
+        633
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": false,
+      "input_sources": [
+        ".cache/data/olives-r4/Frames/input/video_35/00005.png",
+        ".cache/data/olives-r4/Frames/input/video_35/00006.png",
+        ".cache/data/olives-r4/Frames/input/video_35/00007.png",
+        ".cache/data/olives-r4/Frames/input/video_35/00008.png"
+      ],
+      "target_sources": [
+        ".cache/data/olives-r4/Frames/gt/video_35/00005.png",
+        ".cache/data/olives-r4/Frames/gt/video_35/00006.png",
+        ".cache/data/olives-r4/Frames/gt/video_35/00007.png",
+        ".cache/data/olives-r4/Frames/gt/video_35/00008.png"
+      ]
+    }
+  ],
+  "checkpoint": {
+    "model": "square_mse",
+    "seed": 0,
+    "new_step": 4000,
+    "inherited_updates": 4000,
+    "path": ".cache/checkpoints/exploration-r44/stage001/seed0/square_mse-deploy-step4000.pt",
+    "sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+    "training_path": ".cache/checkpoints/exploration-r44/stage001/seed0/square_mse-training-step4000.pt",
+    "training_sha256": "91800b897a2b568d837cf92925b727bb71934f781437733c75323d3562f6998e",
+    "deployment_parameters": 4075,
+    "final_eval_export_max_abs_delta": 2.5033950805664062e-06,
+    "final_export_gate_passed": true
+  },
+  "protocol_sha256": "b4a26f69b4e5a0ee21cc796b24c5207585380640e0091ca7bcab2740add915ee",
+  "source_sha256": {
+    "check_response_cuda_r45.py": "25c9d1f0a7775e905194b365fedccc8d1523d636ad143e57981df0a569b0fd9b",
+    "response_cue_r45.py": "804870366389b2cf293384cb795ac445a99db2086501a2a46d98a9dfd9e33c0e",
+    "response_sequence_r45.py": "5af95a98b6de1110d733d2f77b1b7ed05da44e2b6cb2d6095a6eb1b14022ef99",
+    "budget_causal_r33.py": "7cfe138a286fdb488973ffe7c5bc93b69ad505af981e22cba824402c491b2e3b",
+    "mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5",
+    "half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e"
+  },
+  "revision": "c6800443599c97b3e25947240cc4fa7c2e709582",
+  "scope": "Six discarded SGD updates, CUDA backend implementation only; no formal quality."
+}

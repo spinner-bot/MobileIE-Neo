@@ -1,0 +1,16 @@
+{
+  "at": "2026-11-12T18:45:33.530397+08:00",
+  "pid": 3491302,
+  "command": [
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/gpu_guard.py",
+    "--gpu",
+    "5",
+    "--record",
+    "research/4.temporal-consistency/process/exploration-r50/calibration001-guard.json",
+    "--",
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/run_bn_calibration_r50.py"
+  ],
+  "scope": "Single fixed six-model calibration, training sources only, guarded GPU5, zero SGD."
+}
