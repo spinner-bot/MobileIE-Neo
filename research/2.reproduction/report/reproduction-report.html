@@ -75,7 +75,7 @@
   <div class="chips">
     <span class="chip">PSNR 23.633（论文 23.62）</span>
     <span class="chip">SSIM 0.8152</span>
-    <span class="chip">4,047 参数 / 0.924 GMACs</span>
+    <span class="chip">4,075 注册参数 / 历史工具 0.924 GMACs</span>
     <span class="chip">1.45 ms · 691 FPS（本机 GPU）</span>
   </div>
 </header>
@@ -171,13 +171,13 @@ python ../scripts/evaluate.py -task lle \
   <table>
     <thead><tr><th>指标</th><th>本机（RTX 5060 Laptop）</th><th>论文（4090 / 骁龙 8 Gen3）</th></tr></thead>
     <tbody>
-      <tr><td>参数量</td><td>4,047</td><td>~4.1K</td></tr>
-      <tr><td>MACs</td><td>0.924 G</td><td>0.924 G</td></tr>
+      <tr><td>参数量</td><td>4,075 注册；旧工具记录 4,047</td><td>原文表列 4.047K，口径有差异</td></tr>
+      <tr><td>MACs（旧工具记录）</td><td>0.924 G</td><td>0.924 GFLOPs（原文标注，非完整同口径证明）</td></tr>
       <tr><td>单帧延迟</td><td>1.447 ms</td><td>0.895 ms（4090）/ 6.72 ms（SoC）</td></tr>
-      <tr><td>吞吐</td><td>691 FPS</td><td>1100 FPS（SoC，600×400）</td></tr>
+      <tr><td>吞吐</td><td>691 FPS（历史 Windows GPU）</td><td>原表约1120.584 FPS（600×400，与GPU延迟量级对应）；不是手机1100 FPS</td></tr>
     </tbody>
   </table>
-  <p class="muted">延迟差异主要来自 GPU 型号与笔记本功耗墙；手机端数值依赖 TFLite + SoC，本机未做端侧验证。</p>
+  <p class="muted">2026-11-13更正：<a href="https://arxiv.org/html/2507.01838v1">原文v1表1/§4.2</a>分别列GPU0.895ms及SoC6.72ms，后者倒数约149 FPS仅为算术换算；本项目未做手机实测。代码两处FSTS共28个参数，注册总数4075；4047恰为排除它们后的值，本次未重跑历史工具，不推断其具体漏计机制。历史Windows延迟未重跑，不由GPU型号猜定差异原因；复杂度未计完整视频流程，不能推导手机或1080p视频速度。</p>
 
   <h3>5.4 效果示例（lolv1 权重，输入为合成低光图）</h3>
   <div class="two">
