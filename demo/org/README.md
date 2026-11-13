@@ -5,7 +5,7 @@
 - 分支：**`demo.org`**；本目录 `demo/org/` 是这项演示工作的主文件夹。`main` 单向同步到本分支，演示改动不合并回 `main`
 - 状态：**P1 完成**（2026-11-12，备用机一加 9R 跑通自定义模型：GPU FP16 **5.8 ms**、CPU **86–91 ms**）；**微光实验室 0.1.1 已于 2026-11-13 在一加 9R 真机跑通**（拍照推理 106.7 ms，见 [10 真机检查](docs/10-real-device-0.1.1.md)），现场演示准备待做
 - 验收安排（2026-11-13 用户确认）：**2026-11-16（下周一）上午最终验收**；导师提前检查演示，用户主要协助演示。预检查时间、验收具体时刻与地点待确认，见[预检查与验收清单](docs/04-acceptance-checklist.md)。
-- 新增交付（2026-11-13）：**微光实验室 0.1.1 已完成 Android/Python 实现、模拟验收与迭代**，支持现场拍照（Android）、选图、MobileIE/Gamma 对照、滑动/总览和保存。[个人安卓环境报告](docs/06-android-environment.md)已先行提交；安装包、录像、测试与设备待检查项见[最终交付报告](docs/09-app-v011-final.md)。**真实一加 9R 检查已于 2026-11-13 完成**（见[10 真机检查](docs/10-real-device-0.1.1.md)）；真实 Windows 与导师预检查尚未完成。
+- 当前交付（2026-11-13）：**Android 0.1.2 状态刷新修复版 / Python 0.1.1**，支持现场拍照（Android）、选图、MobileIE/Gamma 对照、滑动/总览和保存。[个人安卓环境报告](docs/06-android-environment.md)已先行提交。0.1.1 的一加 9R 检查见[10 真机记录](docs/10-real-device-0.1.1.md)；其中样例失效的同症状回调缺陷已受控复现并修正，17 项模拟回归通过，安装包与说明见[11 修复报告](docs/11-android-0.1.2-state-fix.md)。**0.1.2 同机复验、真实 Windows 与导师预检查尚未完成。**
 - 上游代码与权重：项目根目录 [`MobileIE/`](../../MobileIE)
 - 关联：[2 号复现](../../research/2.reproduction/README.md)、[5 号前期调研](../../research/5.prior-art-survey/README.md)、[6B06-01 会议记录](../../docs/会议记录/6B06-01/audio%20-%20Transcription.txt)
 - 进展报告：[0009-T-261108-6 号工作启动与手机演示方案](../../docs/进展报告/0009-T-261108-6号工作启动与手机演示方案.md)
@@ -34,7 +34,7 @@
 
 现场表述：同一份 TFLite 模型，手机实测 X ms；效果对比由官方推理脚本输出。
 
-**2026-11-13 需求更新**：用户先要求设计，随后授权环境、报告、App、模拟测试与自主迭代。当前 0.1.1 已完成本轮开发与模拟交付，详见[09 最终报告](docs/09-app-v011-final.md)。真机彩排通过后采用微 App 图片效果 + AI Benchmark 独立测速；上述 B 方案保留备用。
+**2026-11-13 需求更新**：用户先要求设计，随后授权环境、报告、App、模拟测试与自主迭代。双端 0.1.1 交付见[09 报告](docs/09-app-v011-final.md)；当前 Android 修复版为[0.1.2](docs/11-android-0.1.2-state-fix.md)。真机彩排通过后采用微 App 图片效果 + AI Benchmark 独立测速；上述 B 方案保留备用。
 
 ## 2. 模型事实（已解析 `lolv1.tflite`）
 
@@ -69,10 +69,11 @@
 | AI Benchmark 手机操作手册 | [`docs/02-ai-benchmark-guide.md`](docs/02-ai-benchmark-guide.md) | 完成 |
 | 官方 TFLite 脚本使用说明 | [`docs/03-official-tflite-inference.md`](docs/03-official-tflite-inference.md) | 完成 |
 | 导师预检查与验收清单 | [`docs/04-acceptance-checklist.md`](docs/04-acceptance-checklist.md) | 已整理，真机彩排与导师反馈待完成 |
-| 拍照增强与传统对照微 App 设计 | [`docs/05-micro-app-design.md`](docs/05-micro-app-design.md) | 0.1.1 已实现，模拟验收通过 |
+| 拍照增强与传统对照微 App 设计 | [`docs/05-micro-app-design.md`](docs/05-micro-app-design.md) | Android 0.1.2 已实现，模拟验收通过 |
 | 个人安卓开发环境报告 | [`docs/06-android-environment.md`](docs/06-android-environment.md) | 工具、编译签名、AVD 启动及安装门控通过 |
 | 自主交付门控 | [`docs/07-delivery-gates.md`](docs/07-delivery-gates.md) | 实施与可靠验收的结束条件 |
-| 双端最终交付及验收报告 | [`docs/09-app-v011-final.md`](docs/09-app-v011-final.md) | 0.1.1 安装包、Python ZIP、录像与证据已交付；真实设备检查待接续 |
+| 双端首轮交付及验收报告 | [`docs/09-app-v011-final.md`](docs/09-app-v011-final.md) | 0.1.1 安装包、Python ZIP、录像与证据已交付 |
+| Android 状态刷新修复报告 | [`docs/11-android-0.1.2-state-fix.md`](docs/11-android-0.1.2-state-fix.md) | 0.1.2 APK、受控复现及 17 项通过记录；同机复验待做 |
 | 模型结构解析脚本 | [`scripts/inspect_tflite.py`](scripts/inspect_tflite.py) | 完成 |
 | 演示图片预处理脚本 | [`scripts/prepare_demo_images.py`](scripts/prepare_demo_images.py) | 完成 |
 | 官方推理脚本包装 | [`scripts/run_official_tflite.py`](scripts/run_official_tflite.py) | 完成 |
@@ -117,13 +118,14 @@
 - [ ] 按 [`docs/01-demo-plan.md`](docs/01-demo-plan.md) 的演示脚本串场；
 - [ ] 准备离线素材：手机本地模型、前后对比图、录屏，避免现场依赖网络。
 
-### P3 —— 微 App（2026-11-13，0.1.1 开发与模拟交付完成）
+### P3 —— 微 App（2026-11-13，Android 0.1.2 / Python 0.1.1）
 - 需求为系统拍照后单张处理、相册选图、MobileIE / 传统方法 / 原图对比，详见[设计草案](docs/05-micro-app-design.md)。
 - [x] 用户授权自主实现，环境报告已提交，门控已登记。
-- [x] Android 功能、6 组数值、14 项仪器回归、异常/生命周期、视觉与交付门控通过。
+- [x] Android 功能、6 组数值、17 项仪器回归、异常/生命周期、视觉与交付门控通过。
 - [x] Python 伴随版及 Linux/Xvfb 完整 5 项测试、三样例精确一致与便携 ZIP 核验通过。
 - [x] 安装包、28.837 秒模拟录像、摘要、配置/最终报告和操作说明交付。
-- [ ] 真实一加 9R、真实 Windows 和导师预检查接续；不以模拟器结果替代。
+- [x] 0.1.1 一加 9R 主要功能实测，保留样例失效问题记录及 0.1.2 受控修复。
+- [ ] 0.1.2 一加 9R 复验、真实 Windows 和导师预检查接续；不以模拟器结果替代。
 
 ## 6. 复现
 

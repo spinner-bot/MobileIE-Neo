@@ -118,7 +118,8 @@ public final class LightLabApplication extends Application {
         busy = true; status = "正在本机处理，请稍候…"; emit();
         worker.execute(() -> {
             try {
-                s.metadata.put("run_number", s.metadata.optInt("run_number", 0) + 1).put("gamma_complete", false).put("mobileie_complete", false);
+                s.metadata.put("run_number", s.metadata.optInt("run_number", 0) + 1).put("gamma_complete", false).put("mobileie_complete", false)
+                    .put("app_version", BuildConfig.VERSION_NAME);
                 for (String field : new String[]{"initialization_ms", "initialization_in_this_run", "packing_ms", "inference_ms", "rendering_ms"}) s.metadata.remove(field);
                 write(s);
                 long total = SystemClock.elapsedRealtimeNanos();

@@ -40,7 +40,7 @@ source /root/android-dev/activate.sh
 "$ANDROID_DEV_ROOT/validation/reference-env/bin/python" -I demo/org/scripts/verify-android-lifecycle.py
 ```
 
-第一项 App 门控包含 14 个仪器测试、官方脚本独立数值核对、Lint、签名和对齐检查。第二项在系统相机前台时结束本 App 进程，验证返回的照片仍可被接收并处理。测试针对个人 AVD，会生成模拟照片与 MediaStore 文件；不要直接把这些故障注入测试用于装有个人照片的正式使用设备。
+第一项 App 门控包含 17 个仪器测试（含返回旧页面、后台完成后恢复及反复回退/重建）、官方脚本独立数值核对、Lint、签名和对齐检查。第二项在系统相机前台时结束本 App 进程，验证返回的照片仍可被接收并处理。测试针对个人 AVD，会生成模拟照片与 MediaStore 文件；不要直接把这些故障注入测试用于装有个人照片的正式使用设备。
 
 ## 主要源码与范围
 
@@ -53,4 +53,4 @@ source /root/android-dev/activate.sh
 | 同位置绘制、滑动及无障碍操作 | `ComparisonView.java` |
 | 带标签导出与部分写入回滚 | `ResultExporter.java` |
 
-源码、样例来源和 MobileIE Apache-2.0 许可随仓库保存。APK 及较大的运行/测试产物存放 zrh 自有项目数据目录，当前 0.1.1 位置、摘要、功能与未验证范围见[最终交付报告](../docs/09-app-v011-final.md)。演示安装包采用开发调试签名，不作为应用商店正式发布包。
+源码、样例来源和 MobileIE Apache-2.0 许可随仓库保存。APK 及较大的运行/测试产物存放 zrh 自有项目数据目录，当前 Android 0.1.2 位置、摘要、回调修正与同机复验范围见[修复交付报告](../docs/11-android-0.1.2-state-fix.md)。演示安装包采用开发调试签名，不作为应用商店正式发布包。
