@@ -16,13 +16,15 @@ def main():
     path = folder/'domain_seed_summary.json'
     values = json.loads(path.read_text())
     lookup = {(r['domain'], r['anchor_family'], r['method'], r['seed']): r for r in values}
-    domains = [('davis_train_pilot', 'Synthetic DEV: 3 sources / 6 conditions'),
-               ('paired_real_ND_DEV', 'Paired real ND DEV: 4 sources')]
+    domains = [('davis_train_pilot', 'Synthetic DEV\n3 sources / 6 conditions'),
+               ('paired_real_ND_DEV', 'Paired ND DEV\n4 sources')]
     forms = [('R41_slim_fp32', 'Matched Slim FP32', '#2563eb'),
              ('R41_expanded_fp32', 'Expanded FP32, folded', '#059669')]
     methods = [('raw', 'raw', 'o'), ('finite_self05', 'finite .5', 's'),
                ('recursive_self05', 'recursive .5', '^')]
-    fig, axes = plt.subplots(1, 2, figsize=(12, 5.5))
+    plt.rcParams.update({'font.size': 12, 'axes.titlesize': 12,
+                         'axes.labelsize': 12, 'xtick.labelsize': 11, 'ytick.labelsize': 11})
+    fig, axes = plt.subplots(1, 2, figsize=(8.2, 5.8))
     coordinates = []
     for ax, (domain, title) in zip(axes, domains):
         for family, label, color in forms:
@@ -35,15 +37,14 @@ def main():
                            label=label+' / '+short)
                 coordinates.append({'domain': domain, 'anchor_family': family, 'method': method,
                                     'temporal_seeds': x, 'psnr_seeds': y})
-        ax.set(title=title, xlabel='Reference-flow temporal error (lower is better)',
-               ylabel='RGB PSNR (dB, higher is better)')
+        ax.set(title=title, xlabel='Temporal error (lower is better)',
+               ylabel='RGB PSNR (dB)')
         ax.grid(alpha=.2)
-    fig.suptitle('R41 matched FP32 forms: same data / updates, 4075-parameter deployment\n'
-                 'Pale points: individual seeds; solid points: mean. Post variants retain history and flow.',
-                 fontsize=11)
+    fig.suptitle('R41: matched FP32 training forms\n'
+                 'Pale: individual seeds; filled: two-seed mean', fontsize=12)
     handles, labels = axes[0].get_legend_handles_labels()
-    fig.legend(handles, labels, loc='lower center', ncol=3, fontsize=8)
-    fig.tight_layout(rect=(0, .13, 1, 1))
+    fig.legend(handles, labels, loc='lower center', ncol=2, fontsize=10.5)
+    fig.tight_layout(rect=(0, .19, 1, .95))
     for extension in ['png', 'pdf']:
         fig.savefig(folder/('matched_forms.'+extension), dpi=160, bbox_inches='tight')
     plt.close(fig)
