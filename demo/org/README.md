@@ -5,7 +5,7 @@
 - 分支：**`demo.org`**；本目录 `demo/org/` 是这项演示工作的主文件夹。`main` 单向同步到本分支，演示改动不合并回 `main`
 - 状态：**P1 完成**（2026-11-12，备用机一加 9R 跑通自定义模型：GPU FP16 **5.8 ms**、CPU **86–91 ms**）；**微光实验室 0.1.1 已于 2026-11-13 在一加 9R 真机跑通**（拍照推理 106.7 ms，见 [10 真机检查](docs/10-real-device-0.1.1.md)），现场演示准备待做
 - 验收安排（2026-11-13 用户确认）：**2026-11-16（下周一）上午最终验收**；导师提前检查演示，用户主要协助演示。预检查时间、验收具体时刻与地点待确认，见[预检查与验收清单](docs/04-acceptance-checklist.md)。
-- 当前交付（2026-11-13）：**Android 0.1.2 状态刷新修复版 / Python 0.1.1**，支持现场拍照（Android）、选图、MobileIE/Gamma 对照、滑动/总览和保存。[个人安卓环境报告](docs/06-android-environment.md)已先行提交。0.1.1 的一加 9R 检查见[10 真机记录](docs/10-real-device-0.1.1.md)；其中样例失效的同症状回调缺陷已受控复现并修正，17 项模拟回归通过，安装包与说明见[11 修复报告](docs/11-android-0.1.2-state-fix.md)。**0.1.2 同机复验、真实 Windows 与导师预检查尚未完成。**
+- 当前交付（2026-11-13）：**Android 0.1.2 状态刷新修复版 / Python 0.1.1**，支持现场拍照（Android）、选图、MobileIE/Gamma 对照、滑动/总览和保存。[个人安卓环境报告](docs/06-android-environment.md)已先行提交。0.1.1 的一加 9R 检查见[10 真机记录](docs/10-real-device-0.1.1.md)；其中样例失效的同症状回调缺陷已受控复现并修正，17 项模拟回归通过，安装包与说明见[11 修复报告](docs/11-android-0.1.2-state-fix.md)。**0.1.2 已于一加 9R 完成同机复验**（见[12 真机复验](docs/12-android-0.1.2-reverify.md)）；真实 Windows 与导师预检查尚未完成。
 - 上游代码与权重：项目根目录 [`MobileIE/`](../../MobileIE)
 - 关联：[2 号复现](../../research/2.reproduction/README.md)、[5 号前期调研](../../research/5.prior-art-survey/README.md)、[6B06-01 会议记录](../../docs/会议记录/6B06-01/audio%20-%20Transcription.txt)
 - 进展报告：[0009-T-261108-6 号工作启动与手机演示方案](../../docs/进展报告/0009-T-261108-6号工作启动与手机演示方案.md)
@@ -73,7 +73,8 @@
 | 个人安卓开发环境报告 | [`docs/06-android-environment.md`](docs/06-android-environment.md) | 工具、编译签名、AVD 启动及安装门控通过 |
 | 自主交付门控 | [`docs/07-delivery-gates.md`](docs/07-delivery-gates.md) | 实施与可靠验收的结束条件 |
 | 双端首轮交付及验收报告 | [`docs/09-app-v011-final.md`](docs/09-app-v011-final.md) | 0.1.1 安装包、Python ZIP、录像与证据已交付 |
-| Android 状态刷新修复报告 | [`docs/11-android-0.1.2-state-fix.md`](docs/11-android-0.1.2-state-fix.md) | 0.1.2 APK、受控复现及 17 项通过记录；同机复验待做 |
+| Android 状态刷新修复报告 | [`docs/11-android-0.1.2-state-fix.md`](docs/11-android-0.1.2-state-fix.md) | 0.1.2 APK、受控复现及 17 项通过记录 |
+| 0.1.2 一加 9R 复验 | [`docs/12-android-0.1.2-reverify.md`](docs/12-android-0.1.2-reverify.md)、[`results/phone-0.1.2/`](results/phone-0.1.2) | 完成（2026-11-13，覆盖升级与多轮往返选样例通过） |
 | 模型结构解析脚本 | [`scripts/inspect_tflite.py`](scripts/inspect_tflite.py) | 完成 |
 | 演示图片预处理脚本 | [`scripts/prepare_demo_images.py`](scripts/prepare_demo_images.py) | 完成 |
 | 官方推理脚本包装 | [`scripts/run_official_tflite.py`](scripts/run_official_tflite.py) | 完成 |
@@ -125,7 +126,7 @@
 - [x] Python 伴随版及 Linux/Xvfb 完整 5 项测试、三样例精确一致与便携 ZIP 核验通过。
 - [x] 安装包、28.837 秒模拟录像、摘要、配置/最终报告和操作说明交付。
 - [x] 0.1.1 一加 9R 主要功能实测，保留样例失效问题记录及 0.1.2 受控修复。
-- [ ] 0.1.2 一加 9R 复验、真实 Windows 和导师预检查接续；不以模拟器结果替代。
+- [x] 0.1.2 一加 9R 复验（2026-11-13，见[12](docs/12-android-0.1.2-reverify.md)）；真实 Windows 和导师预检查待接续，不以模拟器结果替代。
 
 ## 6. 复现
 
@@ -166,6 +167,7 @@ PYD=F:/dev-tools/python-envs/MobileIE-Demo/Scripts/python.exe
 ## 8. 修订记录
 
 - 2026-11-13 · claude code (local)：一加 9R 安装微光实验室 0.1.1，完成样例/拍照/相册/对比/保存/AI Benchmark 跳转真机检查（拍照推理 106.7 ms），记录 1 个待修复的样例选择失效问题。
+- 2026-11-13 · claude code (local)：`--no-ff` 合入 0.1.2 修复；一加 9R 覆盖升级保留数据，根因链与相机/选择器/AI Benchmark 多轮往返后连续选样例均通过，见 [12 复验](docs/12-android-0.1.2-reverify.md)。
 - 2026-11-13 · Codex  (sqs_A100)：补充拍照、相册选图和 Gamma 传统对照的微 App 设计，记录只写文档、暂不制作的用户要求；保留旧演示方案为备份。
 - 2026-11-13 · Codex  (sqs_A100)：接手 `demo.org`；记录周一上午最终验收、导师提前检查及用户协助演示分工，新增预检查清单，修订演示包操作顺序，重申禁止 fast-forward 与阶段推送约定。此次仅完成文档准备，未进行新一轮真机测试。
 - 2026-11-08 · claude code (local)：创建 6 号工作，确定 B 方案，完成模型解析与文档首版。
