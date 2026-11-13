@@ -37,3 +37,7 @@ HF连接器实测为gated、imagefolder、少于1K条样本；说明要求先申
 ## CRVD原生训练输入已取得（2026-11-13 09:03 CST）
 
 后续按[独立来源资格协议](../../4.temporal-consistency/docs/crvd-source-qualification-protocol.md)推进，现已实际取得[scene1/ISO1600/frame1固定四TIFF](../../4.temporal-consistency/data/external-crvd/README.md)，不再将该来源当前状态笼统描述为“只有元数据”。其中两个噪声重复和原始平均为uint16，BM3D参考为float32；ZIP CRC/大小及原生TIFF标签/读出类型核验正常，未渲染/转换或评价模型。仅一个训练时刻，不是完整视频、传感器标定、自然暗夜或独立最终；测试像素仍未读。官方包实际按场景ZIP发布，初始路径记录错误及按注册结构停止均保留，完整过程/有限Range传输见[日志](../../4.temporal-consistency/process/external-crvd/journal.md)。原文主§3.1和补充§1.1/表1的人工运动/多帧平均假设已进一步核查，不直接移入现有RGB方法主表。
+
+## DarkVision获取状态接续（2026-11-13 11:40 CST）
+
+[定向补读56](56-darkvision-access-and-temporal-baseline-scope.md)核v1末尾Data Availability的通讯作者合理申请声明，并补TC-DVE §4.1/评价§5.2；当前出版/作者页仍未取得可确认的官方数据入口，未核同名HF不作来源。未下载像素、联系作者或复现模型；这不是证明不存在公开版本，暂不循环重复查找，先完成原R74。
