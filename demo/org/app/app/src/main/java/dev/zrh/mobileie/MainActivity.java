@@ -41,8 +41,12 @@ public final class MainActivity extends Activity {
         }
         createUi();
         if(state!=null) comparison.position(state.getFloat("split",.5f));
-        app.attach(observer);
     }
+
+    // A newer Activity can replace the process's observer. Rebind on every return
+    // so this page receives both the current snapshot and later worker results.
+    @Override protected void onResume() { super.onResume(); app.attach(observer); }
+    @Override protected void onPause() { app.detach(observer); super.onPause(); }
 
     private void createUi() {
         ScrollView scroll=new ScrollView(this); scroll.setFillViewport(true); scroll.setBackgroundColor(BACKGROUND);
