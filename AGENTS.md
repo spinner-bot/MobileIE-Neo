@@ -4,6 +4,8 @@
 
 更新：2026-11-13；作者：Codex  (sqs_A100)。
 
+- 当前最新0121/progress004：22:31:21原两seed均9000/64000、各9000可恢复marker已分别提交，1K..9K共18正规marker；完整行日志前缀另交，原持续parent/progress/training/window/waiting仍待终态，不假装清空。训练4160205/start48844067、4160204/start48844061、原协调4163819/start48956211、补充39049/start51721359同身份活跃，17/27/37源保持。无重启/恢复/改预算/中途DEV/JOD/新训练或方法；原两final→R75完整评价→R76补充评价及两套actual review仍待。R77严格条件/无自动启动器/完整trainer-evaluator尚未实现仍按0119，禁止提前投入。paper018/旧STOP/所有获取与论文缺口/目标active保持；后续先查真实PID/runtime，不据旧snapshot重开作业。
+
 - 当前最新0120：原R75两seed最近8700/64000、四原PID/start仍活跃，17/27/37源不变。仅纠正research2早期README/HTML“手机1100FPS”误标与4047/4075混用；实际v1表1 GPU .895ms/SoC6.72ms分开，后者倒数149仅算术非实测；代码4075注册/FSTS28。0forward/训练权重/视频/GPU，原Windows速度及两图payload保持。note61与inspection/correction-check/过程均另交，paper018参数口径已正确/手机仍缺，不重建。R77仍按下条严格条件登记、未正式训练/GPU资格；旧STOP和自然动态/手机/最终缺口不改，目标active。不要将源论文GPU吞吐写成手机或重复检查已纠正标签。
 
 - 当前最新0119/R77 prerequisite001：原R75两seed最近8400/64000、原4160205/4160204/4163819及补充39049同身份仍活跃，17/27/37源不变。R77只登记独立空间训练控制并完成CPU人工输入6.399秒资格/一次完整累积更新丢弃，0真实视频/已训练checkpoint/正式更新/GPU。旧current/self4非独立空间训练；R77保留XS890275/数据seed-step/384/64K，改每帧F(x,x)，预算双seed128K。**仅原八门槛+R76四支持全部True且原/补充两套20图actual review后才实施新资源资格/训练；当前pending，没有后台自动启动器，完整trainer/evaluator未实现。** 有False停止额外投资，不为等待期扩训练/长度/seed网格。正式若准入还须独立空间raw及其strong递归.5/原全部100条件完整对比，不能称创新。原作业按下条0117实际身份/冻结要求继续；SMOID404/所有旧STOP/paper018/自然动态手机最终缺口保持，目标active。
