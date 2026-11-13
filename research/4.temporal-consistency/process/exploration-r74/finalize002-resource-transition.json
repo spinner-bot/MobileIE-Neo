@@ -1,0 +1,55 @@
+{
+  "at": "2026-11-13T12:15:35.197790+08:00",
+  "original_identity": {
+    "pid": 4119253,
+    "start_ticks": "47929830",
+    "state": "S",
+    "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/finalize_motion_transport_r74.py --attempt 2 --device cpu "
+  },
+  "completed_formal_updates": 16000,
+  "completed_new_quality_rows": 80,
+  "completed_rendered_contacts": 20,
+  "reason": "Explicit resource-only handoff to user-authorized occupied-GPU capacity admission. No observation timeout, scientific retry or algorithm-budget change.",
+  "frozen42_unchanged": true,
+  "stopped_identity": {
+    "pid": 4119253,
+    "start_ticks": "47929830",
+    "state": "T",
+    "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/finalize_motion_transport_r74.py --attempt 2 --device cpu "
+  },
+  "observed_children": [
+    {
+      "pid": 4136614,
+      "start_ticks": "48325368",
+      "state": "Z",
+      "commandline": ""
+    }
+  ],
+  "resource_wait": {
+    "at": "2026-11-13T12:15:23.477809+08:00",
+    "resource_only": true,
+    "stage": "Waiting for fresh idle same-group GPU samples"
+  },
+  "resource_wait_only": true,
+  "no_scientific_child_interrupted": true,
+  "signals_sent": [
+    "SIGSTOP",
+    "SIGINT",
+    "SIGCONT"
+  ],
+  "ended": "2026-11-13T12:15:53.912805+08:00",
+  "original_controller_terminal": true,
+  "terminal_identity": null,
+  "original_runtime": {
+    "completed_normally": false,
+    "seconds": 4241.549453332031,
+    "ended": "2026-11-13T12:15:53.646637+08:00",
+    "training_execution_device": "cpu",
+    "quality_gates_passed": null,
+    "cost_executed": false,
+    "actual_visual_review_still_required": true,
+    "scope": "Coordinator terminal only; not method success, phone cost or independent final."
+  },
+  "no_SIGTERM_sent": true,
+  "new_scoring_started": false
+}
