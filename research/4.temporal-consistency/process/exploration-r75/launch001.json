@@ -1,0 +1,52 @@
+{
+  "at": "2026-11-13T13:37:09.414393+08:00",
+  "seeds": [
+    {
+      "seed": 0,
+      "requested_GPU": 0,
+      "parent_pid": 4160081,
+      "parent_start_ticks": "48841713",
+      "command": [
+        "/data/Users/zrh/repo/MobileIE-Neo/scripts/project-python",
+        "/data/Users/zrh/repo/MobileIE-Neo/scripts/prebind_shared_gpu.py",
+        "--gpu",
+        "0",
+        "--record",
+        "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/process/exploration-r75/launch001-seed0-parent.json",
+        "--",
+        "/data/Users/zrh/repo/MobileIE-Neo/scripts/project-python",
+        "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/train_causal_reference_r75.py",
+        "--seed",
+        "0",
+        "--attempt",
+        "1"
+      ],
+      "parent_record": "research/4.temporal-consistency/process/exploration-r75/launch001-seed0-parent.json",
+      "stdout": "research/4.temporal-consistency/process/exploration-r75/launch001-seed0.log"
+    },
+    {
+      "seed": 1,
+      "requested_GPU": 1,
+      "parent_pid": 4160082,
+      "parent_start_ticks": "48841713",
+      "command": [
+        "/data/Users/zrh/repo/MobileIE-Neo/scripts/project-python",
+        "/data/Users/zrh/repo/MobileIE-Neo/scripts/prebind_shared_gpu.py",
+        "--gpu",
+        "1",
+        "--record",
+        "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/process/exploration-r75/launch001-seed1-parent.json",
+        "--",
+        "/data/Users/zrh/repo/MobileIE-Neo/scripts/project-python",
+        "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/train_causal_reference_r75.py",
+        "--seed",
+        "1",
+        "--attempt",
+        "1"
+      ],
+      "parent_record": "research/4.temporal-consistency/process/exploration-r75/launch001-seed1-parent.json",
+      "stdout": "research/4.temporal-consistency/process/exploration-r75/launch001-seed1.log"
+    }
+  ],
+  "scope": "Detached original formal launch; no auto retries, no implied admission or completed training."
+}
