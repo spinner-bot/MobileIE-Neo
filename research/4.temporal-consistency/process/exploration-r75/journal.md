@@ -33,3 +33,11 @@
 progress004保存两训练4160205/start48844067、4160204/start48844061及原协调4163819/start48956211、补充39049/start51721359同身份活跃、新资源快照与两waiting元数据。running-prefix004只复制完整行training/window和当次progress；原持续流/父/等待文件保留活态，终态后再交。无模型评价、新GPU、训练重启/恢复或预算变化。
 
 0121阶段报告及入口各自提交，fetch只取main/查分歧/自有diff检查/阶段推送。paper018、全部旧STOP/缺口与远期active保持；R77额外128K仍须原八门槛+self4四支持全True及两套actual review，当前没有原最终分数，禁止把CPU资格当已训练方法或新阶段已通过。
+
+## 23:28后10000里程碑（progress005）
+
+上一回合为verified wait。本回合先核原两训练和两协调真实PID/start、progress/runtime及实际正规marker文件名，不把进度声明代替落盘。23:27:57观察seed1已10000/实际regular-step010000，seed0仍9900；先核/data、自有资产大小/提交步/预算/非final后独立提交seed1。23:28:19再核seed0实际10000及marker，另作一份提交，不回写成同时完成。
+
+随后核原17训练源/协议、27及37评价联合源保持；两原训练4160205/4160204与原协调4163819、补充39049均同身份活跃，无runtime终态。progress005另存实际资源/waiting快照；running-prefix005仅复制已解析完整行training/window与当次progress，不把原活态文件当完整终态。1K..10K共20份正规marker，Tensor检查点仍仅自有data，不重读Tensor/重放SGD或打开中途DEV。
+
+没有新模型/预算变化/训练恢复重启/质量/JOD或方法结论。R75完整64000→原完整评价→R76补充及实际图审边界保持；R77仍条件登记/CPU资格，保留OLiVES仍只metadata、不因原门槛通过自动解封。0123报告及接续入口分开小步提交，阶段fetch仅main/实际分歧no-ff/自有diff/推送；paper018、旧STOP/全部论文缺口和远期active保持。
