@@ -1,0 +1,104 @@
+{
+  "at": "2026-11-13T11:35:27.823480+08:00",
+  "seed": 1,
+  "models": [
+    "task",
+    "proxy"
+  ],
+  "new_motion_steps_each": 4000,
+  "spatial_updates": 8000,
+  "spatial_always_frozen_eval": true,
+  "spatial_source": {
+    "marker": "research/4.temporal-consistency/results/exploration-r44-stage001-seed1/square_mse-step4000.json",
+    "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+    "frozen": true,
+    "project_updates": 8000,
+    "parameters": 4075
+  },
+  "motion_initial_seed": 7401,
+  "first_data_step": 8000,
+  "last_data_step": 11999,
+  "batch": 4,
+  "frames": 4,
+  "crop": 128,
+  "lr": 0.0001,
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "eps": 1e-08,
+  "weight_decay": 0,
+  "clip": 1,
+  "losses": {
+    "task": "clipped output all-frame MSE",
+    "proxy": "covered native L1/4 plus unit coverage BCE"
+  },
+  "execution_device": "cpu",
+  "CPU_qualified_calculations_unchanged": true,
+  "original_CPU_qualified_protocol_sha256": "441436b4aa79c19f3704200339401bdd99affdf3ea878eb93572a45aed15a308",
+  "execution_amendment_sha256": "982eb0466fb62457a2648d583fbd52b521033d11edad5d029cd5372894aa16df",
+  "same_initial_motion_weights": true,
+  "shared_frozen_raw_computation": true,
+  "expected_frozen_enhancement_batch_calls": 16000,
+  "expected_frozen_enhancement_centers": 64000,
+  "expected_motion_batch_pair_calls": 24000,
+  "expected_motion_individual_pair_predictions": 96000,
+  "training_FLOPs_not_matched": true,
+  "data": {
+    "manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "verified_files": 384,
+    "scenes": [
+      "video_11",
+      "video_35",
+      "video_92",
+      "video_131",
+      "video_12",
+      "video_20",
+      "video_29",
+      "video_52",
+      "video_59",
+      "video_95",
+      "video_104",
+      "video_122"
+    ],
+    "native_bytes": 2388787200,
+    "real_training_ids": [
+      "video_104",
+      "video_11",
+      "video_12",
+      "video_122",
+      "video_131",
+      "video_20",
+      "video_29",
+      "video_35",
+      "video_52",
+      "video_59",
+      "video_92",
+      "video_95"
+    ],
+    "excluded_native_DEV": [
+      "video_121",
+      "video_15",
+      "video_47",
+      "video_91"
+    ],
+    "all_real_assets_owned": true,
+    "source_manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "synthetic_manifest_sha256": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+    "synthetic_training_videos": 57,
+    "real_tensor_dtype": "uint8 native inputs/GT; float32 /255 after crops",
+    "timing_scope": "Consecutive registered frame indices, not independently verified sensor timing."
+  },
+  "pre_CUDA_admission": null,
+  "protocol_sha256": "4b3614ddceb1c530d0767b697ade06ad4b82a8da14b99d1a41f307cf1c652283",
+  "source_sha256": {
+    "motion_transport_r74.py": "da48fe1b67113aba60a7bc3f61458c56ce52785728094413b734ee6d892529c8",
+    "train_motion_transport_r74.py": "da5d81dae624744a8f682ff0ea35f6939dd8c25c1cd366029ef6cb45158e3751",
+    "mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5",
+    "half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+    "budget_causal_r33.py": "7cfe138a286fdb488973ffe7c5bc93b69ad505af981e22cba824402c491b2e3b",
+    "training_form_r41.py": "4392fdceb16750ca0a763f4485beec873dc7316d758c95e9eaef042ffceb4ded"
+  },
+  "revision": "7210141194070f9cef76a29c1a8694b18550753e",
+  "selection": "Only final4000; no inherited qualification updates, wall cutoff or scientific retry."
+}
