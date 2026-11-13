@@ -1,0 +1,52 @@
+{
+  "at": "2026-11-13T09:02:52.197969+08:00",
+  "original_processes": {
+    "coordinator": {
+      "pid": 4060901,
+      "start_ticks": "46715399",
+      "state": "S",
+      "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/finalize_native_moment_r73.py --attempt 2 --qualification-start 2 "
+    },
+    "trainer_seed1": {
+      "pid": 4072180,
+      "start_ticks": "46976017",
+      "state": "S",
+      "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/train_native_moment_r73.py --seed 1 --admission-attempt 1 "
+    },
+    "guard_seed1": {
+      "pid": 4072168,
+      "start_ticks": "46975855",
+      "state": "S",
+      "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 5 --record research/4.temporal-consistency/process/exploration-r73/finalize002/seed1-guard001.json -- ./scripts/project-python research/4.temporal-consistency/scripts/train_native_moment_r73.py --seed 1 --admission-attempt 1 "
+    },
+    "completed_CPU0": {
+      "pid": 4072083,
+      "start_ticks": "46975532",
+      "state": "Z",
+      "commandline": ""
+    }
+  },
+  "seed0_training_final": true,
+  "seed0_quality": {
+    "completed_normally": true,
+    "quality_rows": 100,
+    "frame_rows": 4480,
+    "CNN_sequences": 50,
+    "CNN_centers": 2240,
+    "CUDA_initialized": false,
+    "seconds": 1054.3139058820088,
+    "ended": "2026-11-13T08:43:43.561163+08:00"
+  },
+  "seed1_physical_GPU": 5,
+  "seed1_complete_steps": {
+    "spatial": 3432,
+    "mean": 3432,
+    "moment": 3432
+  },
+  "seed1_three_step3000_backups_verified": true,
+  "seed1_runtime_exists": false,
+  "all31_scientific_sources_unchanged": true,
+  "CRVD_training_packet_qualified_files": 4,
+  "CRVD_scope": "One training pose, no rendered RGB/sequence/model/GPU; independent preparation only.",
+  "scope": "Complete first-seed quality, original second-seed training continues; no joint/perceptual acceptance or partial selection."
+}
