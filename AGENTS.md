@@ -4,6 +4,8 @@
 
 更新：2026-11-13；作者：Codex  (sqs_A100)。
 
+- 当前最新0122/olives-reserved-metadata followup001：原两seed最近9700/64000、四原PID/start同身份活跃，17/27/37源保持，无新训练/DEV/JOD。R9原保留video43/71/83仅做8个固定revision目录API/383301字节JSON资格，0PNG/resolve/viewer/缩略图/解码/GPU；目录无next且与旧40GT/137input相同，实际31train+9test，不能把40当test。三段200/225/161共同帧名、对736既有唯一资产SHA精确重合0，仍不能认证物理场景独立或预训练未见；canonical图像目录仍无，已完成基准数不增加。全部像素继续保留，R75/R76/R77过门槛亦不自动解封；最终方法/权重/预处理/完整参考/评价与读取范围另冻结。首16元数据指针非最终长度决定，DAVIS test-dev30保持未读。data/external-olives-reserved README/协议/代码/真实metadata/runtime/过程/报告分别提交；原训练与固定完整评价按下条继续，旧STOP/paper018/论文全部缺口/目标active保持。
+
 - 当前最新0121/progress004：22:31:21原两seed均9000/64000、各9000可恢复marker已分别提交，1K..9K共18正规marker；完整行日志前缀另交，原持续parent/progress/training/window/waiting仍待终态，不假装清空。训练4160205/start48844067、4160204/start48844061、原协调4163819/start48956211、补充39049/start51721359同身份活跃，17/27/37源保持。无重启/恢复/改预算/中途DEV/JOD/新训练或方法；原两final→R75完整评价→R76补充评价及两套actual review仍待。R77严格条件/无自动启动器/完整trainer-evaluator尚未实现仍按0119，禁止提前投入。paper018/旧STOP/所有获取与论文缺口/目标active保持；后续先查真实PID/runtime，不据旧snapshot重开作业。
 
 - 当前最新0120：原R75两seed最近8700/64000、四原PID/start仍活跃，17/27/37源不变。仅纠正research2早期README/HTML“手机1100FPS”误标与4047/4075混用；实际v1表1 GPU .895ms/SoC6.72ms分开，后者倒数149仅算术非实测；代码4075注册/FSTS28。0forward/训练权重/视频/GPU，原Windows速度及两图payload保持。note61与inspection/correction-check/过程均另交，paper018参数口径已正确/手机仍缺，不重建。R77仍按下条严格条件登记、未正式训练/GPU资格；旧STOP和自然动态/手机/最终缺口不改，目标active。不要将源论文GPU吞吐写成手机或重复检查已纠正标签。
