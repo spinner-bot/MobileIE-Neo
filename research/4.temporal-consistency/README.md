@@ -2,12 +2,12 @@
 
 目标：以论文为最终产出，深入核查 MobileIE 的架构与训练机制，在移动端计算预算内设计视频增强模型，用传统方法、后处理和已有视频模型对照验证画质、时间稳定性与效率收益。
 
-当前接续（2026-11-13 11:36 CST）：R74 seed0已于11:34:59正常完成两个motion各4000/共8000更新，两个final重载差0；完整trace/窗口/marker/runtime/stdout分别保留，旧4119380已退出，不重启。原协调4119253/start47929830自动于11:35:00启动CPU seed1训练4127778/start48108800；progress003核同身份真活跃，两目标已写40，42源未变。先读[0108报告](../../docs/进展报告/0108-T-26111311-首种子完整训练终态与第二种子原链接续.md)、[CPU执行修订](docs/exploration-r74-cpu-execution-amendment.md)、[固定协议](docs/exploration-r74-motion-supervision-protocol.md)和[过程](process/exploration-r74/journal.md)。原第二seed继续完整预算，不改活跃源/中途换设备；两seed完整才共同质量/感知/16门槛，不由部分loss或备份选模。GPU按用户授权有余量可共享，后续[完整感知资源修订](docs/exploration-r74-shared-perception-execution.md)入口已准备但未启动，避免与原链重复评分；所有旧STOP保持。
+当前接续（2026-11-13 11:36 CST）：R74 seed0已于11:34:59正常完成两个motion各4000/共8000更新，两个final重载差0；完整trace/窗口/marker/runtime/stdout分别保留，旧4119380已退出，不重启。原协调4119253/start47929830自动于11:35:00启动CPU seed1训练4127778/start48108800；progress003核同身份真活跃，两目标已写40，42源未变。先读[0109报告](../../docs/进展报告/0109-T-26111311-原生状态完整负结果入稿与原训练接续.md)、[CPU执行修订](docs/exploration-r74-cpu-execution-amendment.md)、[固定协议](docs/exploration-r74-motion-supervision-protocol.md)和[过程](process/exploration-r74/journal.md)。原第二seed继续完整预算，不改活跃源/中途换设备；两seed完整才共同质量/感知/16门槛，不由部分loss或备份选模。GPU按用户授权有余量可共享，后续[完整感知资源修订](docs/exploration-r74-shared-perception-execution.md)入口已准备但未启动，避免与原链重复评分；所有旧STOP保持。
 
 - 当前性质：前期机制预实验，尚无已建立的新方法、联合收益或最终测试。双矩/递归融合已有先例，[note54](../5.prior-art-survey/docs/54-moment-history-equivalence-and-noise-boundaries.md)明确混合离散度不等于噪声方差；不从loss或中间备份宣称成功。
 - 最近完整外部来源参考：[0098报告](../../docs/进展报告/0098-T-26111307-原生跨来源联合评价完整收口.md)、[R72完整联合表](report/exploration-r72-reds-joint/tables.md)/[决定](docs/exploration-r72-decision.md)。四REDS源原720p/24fps、152质量与156感知行、16固定图actual review及原协调均正常结束。强自身rec仍须保留；这是合成低光DEV，不是自然夜间/独立最终，不再扩大参考家族或损失网格。
 - 完整传统与已发表参考：[0096](../../docs/进展报告/0096-T-26111306-传统对照写入论文与迁移版本记录复核.md)、[R70传统参考决定](docs/exploration-r70-decision.md)，以及既有R53/R56/R65共同适配。原方法/预算/收敛限制仍适用，不把适配或负结果当新贡献。
-- 论文当前为已实际审阅build016、20页/13表/11引用的内部证据稿；新增完整R72原生REDS双seed19行表，原12表不变，0编译warning/未解析引用。来源24fps合成DEV与旧30fps表分开，公开预训练像素史仍未完全核实。创新、自然动态配对、手机和独立最终未完成；[构建说明](../../paper/BUILDING.txt)现要求五生成器顺序，不录R74部分结果。
+- 论文当前为已实际审阅build018、22页/14表/12引用的内部证据稿；新增完整R72原生REDS双seed19行表及R73原生状态双seed全部注册参考24行表；后者加入时原13表不变，0编译warning/未解析引用。来源24fps合成DEV与旧30fps表分开，公开预训练像素史仍未完全核实。创新、自然动态配对、手机和独立最终未完成；[构建说明](../../paper/BUILDING.txt)现要求五生成器顺序，不录R74部分结果。
 
 以下索引和后半部为历史阶段记录，所述“最新/正在运行/下一步”仅对应原记录日期，均服从上述接续入口和真实runtime。R44及其他旧任务已结束，旧止损决定不回写。
 
