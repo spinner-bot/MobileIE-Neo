@@ -1,0 +1,106 @@
+{
+  "created_at": "2026-11-13T08:26:42.373951+08:00",
+  "seed": 1,
+  "models": [
+    "spatial",
+    "mean",
+    "moment"
+  ],
+  "new_steps_each": 4000,
+  "inherited_updates_each": 8000,
+  "data_steps": [
+    8000,
+    11999
+  ],
+  "initialization": {
+    "source_marker": "research/4.temporal-consistency/results/exploration-r44-stage001-seed1/square_mse-step4000.json",
+    "source_training_sha256": "450d55e60333655019c820321ad9ae4afe78d012aefe3615b9490ef61a3943ba",
+    "inherited_updates": 8000,
+    "optimizer_inherited": false,
+    "field_seed": 7301,
+    "source_plain12000": "research/4.temporal-consistency/results/exploration-r64-stage001-seed1/plain-step4000.json",
+    "deployment_parameters": {
+      "spatial": 4562,
+      "mean": 4550,
+      "moment": 4562
+    }
+  },
+  "data": {
+    "manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "verified_files": 384,
+    "scenes": [
+      "video_11",
+      "video_35",
+      "video_92",
+      "video_131",
+      "video_12",
+      "video_20",
+      "video_29",
+      "video_52",
+      "video_59",
+      "video_95",
+      "video_104",
+      "video_122"
+    ],
+    "native_bytes": 2388787200,
+    "real_training_ids": [
+      "video_104",
+      "video_11",
+      "video_12",
+      "video_122",
+      "video_131",
+      "video_20",
+      "video_29",
+      "video_35",
+      "video_52",
+      "video_59",
+      "video_92",
+      "video_95"
+    ],
+    "excluded_native_DEV": [
+      "video_121",
+      "video_15",
+      "video_47",
+      "video_91"
+    ],
+    "all_real_assets_owned": true,
+    "source_manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "synthetic_manifest_sha256": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+    "synthetic_training_videos": 57,
+    "real_tensor_dtype": "uint8 native inputs/GT; float32 /255 after crops",
+    "timing_scope": "Consecutive registered frame indices, not independently verified sensor timing."
+  },
+  "batch": 4,
+  "frames": 4,
+  "crop": 128,
+  "loss": "Identical clipped raw MSE, all four frames",
+  "fresh_Adam_lr": 0.0001,
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "eps": 1e-08,
+  "weight_decay": 0,
+  "global_clip": 1,
+  "BN_calls_per_update": 4,
+  "history_detached_in_window": false,
+  "FP32": true,
+  "TF32": false,
+  "selection": "Final new4000 only; discarded qualification is not inherited",
+  "protocol_sha256": "98e224b57a646bda63571be10578af96f51718c6d2407b01242a55387ec582d1",
+  "gates": {
+    "research/4.temporal-consistency/process/exploration-r73/cpu-gate001/runtime.json": "79a5c31cefa731f0bca39aff6055f7d187f4379dec58c032f4cc1e1b6f137a6b",
+    "research/4.temporal-consistency/process/exploration-r73/cuda-gate002/runtime.json": "deedb40b1a907924f2668e0a76c6e22f4c845a5631d54fa6782bab242842b701"
+  },
+  "source_sha256": {
+    "train_native_moment_r73.py": "9b8138ed0b53a9a9609c6c87af93a3206c17c7ed2dc740c194faba61ef510c55",
+    "native_moment_core_r73.py": "eda65892c62aa9532167841cb5bc796e3fed9dc1232c042fe71bb9ea92ff9f73",
+    "check_native_moment_r73.py": "5f619eade7df3f26562ee72d42b9ad21fc56e3dae3eefffb9ec0af6f590329b6",
+    "budget_causal_r33.py": "7cfe138a286fdb488973ffe7c5bc93b69ad505af981e22cba824402c491b2e3b",
+    "mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5",
+    "dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498",
+    "training_form_r41.py": "4392fdceb16750ca0a763f4485beec873dc7316d758c95e9eaef042ffceb4ded",
+    "gpu_guard.py": "e0a5050f47d64dbf75fab4146a276f50e3464d07e6a799ad8ccd2c69e8e3a535"
+  },
+  "revision": "36bc7cb27e5d217d19804f9a238985466fe61837"
+}
