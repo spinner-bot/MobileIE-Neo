@@ -1,0 +1,59 @@
+{
+  "at": "2026-11-13T12:04:18.975994+08:00",
+  "seed": 1,
+  "checkpoints": {
+    "task": {
+      "model": "task",
+      "seed": 1,
+      "new_step": 4000,
+      "spatial_updates": 8000,
+      "motion_updates": 4000,
+      "path": ".cache/checkpoints/exploration-r74/stage001/seed1/task-step4000.pt",
+      "sha256": "7b74a1efc8e908ff31558aab6d8033ec965e0b60f9c484b6a0a70e6e44689376",
+      "motion_parameters": 21918,
+      "total_parameters_including_frozen_spatial": 25993,
+      "spatial_source": {
+        "marker": "research/4.temporal-consistency/results/exploration-r44-stage001-seed1/square_mse-step4000.json",
+        "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+        "frozen": true,
+        "project_updates": 8000,
+        "parameters": 4075
+      },
+      "final_reload_max_delta": 0.0,
+      "final_reload_passed": true
+    },
+    "proxy": {
+      "model": "proxy",
+      "seed": 1,
+      "new_step": 4000,
+      "spatial_updates": 8000,
+      "motion_updates": 4000,
+      "path": ".cache/checkpoints/exploration-r74/stage001/seed1/proxy-step4000.pt",
+      "sha256": "49da2cb879573a82fbb1f7d22b6080c9f6218881b1a2f1671b4bc84ec614e620",
+      "motion_parameters": 21918,
+      "total_parameters_including_frozen_spatial": 25993,
+      "spatial_source": {
+        "marker": "research/4.temporal-consistency/results/exploration-r44-stage001-seed1/square_mse-step4000.json",
+        "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+        "frozen": true,
+        "project_updates": 8000,
+        "parameters": 4075
+      },
+      "final_reload_max_delta": 0.0,
+      "final_reload_passed": true
+    }
+  },
+  "protocol_sha256": "4b3614ddceb1c530d0767b697ade06ad4b82a8da14b99d1a41f307cf1c652283",
+  "sources": {
+    "research/4.temporal-consistency/results/exploration-r30-cache/index.json": "424fa278b2fe66d29de476e2b47328619438f97cf71926448433d1191bb722c1",
+    "research/4.temporal-consistency/results/exploration-r10-cache/index.json": "ec00801b04b873ead0025af91af441b783da3f08c87cf24e9c136a4268ffb43c",
+    "research/4.temporal-consistency/process/exploration-r73/references001/prediction_manifest.jsonl": "f13efe382a4401f1dbcbcdf638e0e3516163ff5b0ce119402656f3ef879563f9"
+  },
+  "expected_rows": 40,
+  "expected_frames": 1792,
+  "expected_motion_sequences": 20,
+  "expected_nonfirst_motion_pairs": 876,
+  "new_enhancement_CNN": 0,
+  "first_frame_serialization": "Exact cached raw; functional normalized-unit equality checked before avoiding a /255*255 round trip.",
+  "scope": "Final motion4000/frozen spatial8000, reused paired DEV. Two routes share identical predicted fields. Not mobile/final."
+}
