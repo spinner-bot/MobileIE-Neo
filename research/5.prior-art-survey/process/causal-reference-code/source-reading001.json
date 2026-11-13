@@ -1,0 +1,98 @@
+{
+  "date": "2026-11-13",
+  "author": "Codex  (sqs_A100)",
+  "phase": "Post-R74 targeted public causal RGB reference feasibility",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2012.02228v1",
+      "read": [
+        "3.1 current/previous RGB and 2-channel latent",
+        "4.1 PReLU and 50epoch/~50K training",
+        "appendix architecture/denoising size"
+      ],
+      "not_verified": [
+        "official code",
+        "first-state initialization",
+        "full final ACM MM paper"
+      ]
+    },
+    {
+      "url": "https://akumarcv.github.io/",
+      "read": [
+        "EVRNet publication entry ACM MM2021 and linked arXiv"
+      ],
+      "official_code_link_confirmed": false
+    },
+    {
+      "url": "https://sacmehta.github.io/",
+      "read": [
+        "2021-07-08 ACM MM oral acceptance and 2020 preprint news"
+      ],
+      "official_code_link_confirmed": false
+    },
+    {
+      "url": "https://github.com/BrandnerKasper/URTSR/blob/9f48cc259ac429be89b83235be87fc19d39ece89/SRcode/models/evrnet.py",
+      "read": [
+        "complete model source",
+        "master-thesis gaming SR project README",
+        "pinned root listing"
+      ],
+      "not_executed": true,
+      "not_vendored": true,
+      "limitations": [
+        "3 latent channels and random CUDA initialization",
+        "PReLU absent",
+        "scale2 channel coupling",
+        "hidden detach is port fact, not demonstrated original-paper difference",
+        "root license not listed; not whole-tree legal conclusion"
+      ]
+    },
+    {
+      "url": "https://jeya-maria-jose.github.io/rebotnet-web/",
+      "read": [
+        "author affiliations",
+        "Code link targets jeya-maria-jose/rebot-net"
+      ]
+    },
+    {
+      "url": "https://github.com/jeya-maria-jose/rebot-net",
+      "commit": "dff81d3cbd484b01ef2d42da2dd1ad1332598a09",
+      "read": [
+        "complete7blob/tree paths",
+        "README",
+        "LICENSE CC0",
+        "complete models/archs.py",
+        "complete configs.py"
+      ],
+      "not_used": [
+        "dataset_loader.py only commit patch inspected, no training pipeline imported"
+      ],
+      "no_published_weights_in_tree": true,
+      "no_trainer_in_tree": true
+    },
+    {
+      "url": "https://arxiv.org/html/2303.13504v1",
+      "read": [
+        "3.4 GT initialization",
+        "4.3 evaluation initialization/timing",
+        "appendix S/M/L configs"
+      ],
+      "limitations": [
+        "2023 v1; not formal WACV2025 complete-text read",
+        "code-release configuration differs from v1 appendix; do not assert equal"
+      ]
+    }
+  ],
+  "access_limits": [
+    {
+      "url": "https://openaccess.thecvf.com/content/WACV2025/html/Valanarasu_ReBotNet_Fast_Real-Time_Video_Enhancement_WACV_2025_paper.html",
+      "result": "403 retained; previously denied PDF not retried or bypassed"
+    }
+  ],
+  "search_limits": "Bounded GitHub plugin name/code search plus author pages; empty index results do not prove no official code anywhere.",
+  "data_frames_acquired": 0,
+  "models_executed_at_reading": 0,
+  "training_updates": 0,
+  "gpu_launched": false,
+  "next": "One CPU-only artificial-input function qualification of pinned ReBotNet XS. No full performance/phone/convergence claim; old STOPs stay closed."
+}
