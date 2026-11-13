@@ -27,3 +27,5 @@
 [qualification001](../process/causal-reference-code/cpu-qualification001.json)正常结束，3.361秒、两CPU线程、CUDA未初始化。384方形及256×576同token矩形有效；原4D例子、128方形、320×640矩形均在预期位置失败。因此准确限制是固定token数量和各级尺寸约束，不能绝对说只支持384方形。两个连续预测的历史梯度非零，仅证明可反传，不证明时间收益。注册890275参数；一个384两帧调用的Conv/Linear MAC为784862208，未计norm/激活/加法/拷贝/分块融合，不外推成手机时延。GPU没有被占用。
 
 环境仅在自有data下新增可选导入依赖；Torch仍2.9.1+cu126，vision0.24.1+cu126、timm1.0.22等版本及真实导入路径已记录，原架构不作替换。原文v1另确认8×A100、500000更新、Adam初始4e-4/cosine至1e-7及Charbonnier；绝不能把本次3秒功能检查或以后短预算适配当充分训练的原表结果。完整自启动原生分块训练参考仍待独立协议与实测资源资格。
+
+后续资格已按独立[preflight协议](../../4.temporal-consistency/docs/rebotnet-reference-preflight.md)完成：[原生CPU检查](../process/causal-reference-code/native-qualification001.json)正常，两次丢弃[共享GPU试跑](../process/causal-reference-code/shared-trial001/result.json)正常且已释放，0正式预算/质量行。原架构不能直接运行任意画幅，外部分块适配改变上下文，不当等价全幅原模型；三角融合与递归正确性不证明训练后无缝隙。R75另有正式协议，训练实现/数据资格尚未完成或启动，详见[0114](../../../docs/进展报告/0114-T-26111313-原生因果参考共享GPU试跑完成与正式预算登记.md)；不据资源结果填质量表或缩短原方法收敛限制。
