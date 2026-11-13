@@ -45,10 +45,9 @@ screens all fail, including the same-weight history and independent
 moment tests. More parameters or a nonzero historical gradient did not
 establish useful temporal information in this setting.
 
-The two FP32 native feature states alone require 199,065,600 bytes at
-1080p, excluding workspace and matching operations. Low parameter count
-therefore does not establish a handset advantage. The fixed moment-state
-search was stopped; no width, scale, coefficient, objective, learning-rate
-or training-length grid follows these results. This does not rule out
-other recurrent models, moment methods or longer training, and it does
-not isolate a single cause of the limited historical effect.
+At 1080p, the two FP32 states alone occupy 199,065,600 bytes, before
+workspace and matching. The fixed search stops without grids over width,
+scale, coefficients, objectives, learning rate or training length.
+This pilot does not establish handset efficiency, rule out other
+recurrent or moment methods, or isolate one cause of the weak historical
+effect.
