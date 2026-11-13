@@ -1,0 +1,51 @@
+\section{Does a learned native state provide useful history?}
+\label{sec:native-state}
+The completed R73 study changes the information entering the first FST,
+rather than adding a temporal loss. It maintains a transported native
+12-channel mean and, in the moment arm, an additional noncentral second
+moment. The first square reads the squared mean plus a learned
+channel-wise multiple of the nonnegative moment difference. This
+empirical mixture dispersion includes texture, interpolation and motion
+differences; it is not calibrated sensor-noise variance. Neither the
+moment identity nor recurrent fusion is claimed as a new contribution.
+
+Three independently optimized controls inherit the same 8,000-update
+spatial checkpoint per seed and each receive 4,000 further updates on
+the fixed mixed windows, using clipped frame MSE and four-frame BPTT.
+Spatial and moment arms have 4,562 deployment parameters; mean history
+has 4,550 because it omits the 12 moment coefficients. The spatial arm
+retains current-frame adaptive sampling without past observations.
+The moment/current evaluation disables history in the same trained
+moment weights. This distinguishes retained history from changes in the
+spatial mapping, while the independently trained mean arm tests the
+incremental role of the second moment.
+
+\input{generated/native-state-table}
+All six final folds, 200 new quality conditions, 240 new perceptual
+comparisons and 20 fixed contact sheets complete normally. The contacts
+were inspected separately after rendering. Combining the completed
+plain references gives 280 joint conditions; Table~\ref{tab:native-state}
+retains the target and every registered reference for both seeds and
+domains. The 8K reference is the original spatial model; the 12K reference
+matches the new arms' cumulative update count. Neither the six synthetic
+conditions from three videos nor the four daytime ND sources constitute
+independent final or natural nighttime testing.
+
+Relative to its own current-frame path, native moment history lowers
+temporal error by only 0.159--1.152\% across the four domain/seed means.
+Relative to mean history, its PSNR changes by $-0.0032$ to $+0.0047$\,dB
+and its temporal-error ratio spans 0.999795--1.000189. This numerical
+proximity under the fixed pilot is not statistical or functional
+equivalence. Against the matched 12K plain model with classical
+recursion, temporal error is 37.1--50.8\% higher. The 20 registered joint
+screens all fail, including the same-weight history and independent
+moment tests. More parameters or a nonzero historical gradient did not
+establish useful temporal information in this setting.
+
+The two FP32 native feature states alone require 199,065,600 bytes at
+1080p, excluding workspace and matching operations. Low parameter count
+therefore does not establish a handset advantage. The fixed moment-state
+search was stopped; no width, scale, coefficient, objective, learning-rate
+or training-length grid follows these results. This does not rule out
+other recurrent models, moment methods or longer training, and it does
+not isolate a single cause of the limited historical effect.
