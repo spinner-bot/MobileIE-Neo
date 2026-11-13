@@ -1,0 +1,168 @@
+{
+  "at": "2026-11-13T21:13:50.521826+08:00",
+  "classification": "progress",
+  "previous_interrupted_turn": "Verified original live handles and bounded reading; no extra experiment launch or source mutation.",
+  "seeds": [
+    {
+      "seed": 0,
+      "pid": 4160205,
+      "start_ticks": "48844067",
+      "observed_live": true,
+      "last_recorded_steps": 7600,
+      "last_recorded_at": "2026-11-13T21:08:19.101234+08:00",
+      "latest_checkpoint": {
+        "at": "2026-11-13T20:33:23.633656+08:00",
+        "seed": 0,
+        "completed_steps": 7000,
+        "next_data_step": 7000,
+        "registered_steps": 64000,
+        "attempt": 1,
+        "kind": "regular",
+        "path": ".cache/checkpoints/exploration-r75/seed0/attempt001/regular-step007000.pt",
+        "sha256": "c383003b890fefb13d02403869ff429088a71358e0985bcd8869a17a9b0f4ca2",
+        "bytes": 10621579,
+        "parameters": 890275,
+        "source_freeze_sha256": "929d6faca944bff5d59712e15947cf41d9e28c59c30881335cc8b568750804c8",
+        "final_quality_eligible": false
+      },
+      "registered_steps": 64000,
+      "terminal_runtime_exists": false
+    },
+    {
+      "seed": 1,
+      "pid": 4160204,
+      "start_ticks": "48844061",
+      "observed_live": true,
+      "last_recorded_steps": 7600,
+      "last_recorded_at": "2026-11-13T21:09:38.223969+08:00",
+      "latest_checkpoint": {
+        "at": "2026-11-13T20:34:45.539637+08:00",
+        "seed": 1,
+        "completed_steps": 7000,
+        "next_data_step": 7000,
+        "registered_steps": 64000,
+        "attempt": 1,
+        "kind": "regular",
+        "path": ".cache/checkpoints/exploration-r75/seed1/attempt001/regular-step007000.pt",
+        "sha256": "fa093ff1f9b5ca65b3d996ba741a35391c438e553aa60147d18192cbe79801e4",
+        "bytes": 10621579,
+        "parameters": 890275,
+        "source_freeze_sha256": "929d6faca944bff5d59712e15947cf41d9e28c59c30881335cc8b568750804c8",
+        "final_quality_eligible": false
+      },
+      "registered_steps": 64000,
+      "terminal_runtime_exists": false
+    }
+  ],
+  "training17_and_evaluation27_unchanged": true,
+  "coordinator": {
+    "pid": 4163819,
+    "start_ticks": "48956211",
+    "observed_live": true,
+    "waiting": {
+      "at": "2026-11-13T21:13:42.349192+08:00",
+      "verified_live_training_handles": [
+        {
+          "seed": 0,
+          "pid": 4160205,
+          "start_ticks": "48844067",
+          "already_final": false
+        },
+        {
+          "seed": 1,
+          "pid": 4160204,
+          "start_ticks": "48844061",
+          "already_final": false
+        }
+      ],
+      "final_count": 0,
+      "scope": "Live PID/start-time observation, not a completed model."
+    }
+  },
+  "resource_snapshot": {
+    "at": "2026-11-13T21:13:50.768055+08:00",
+    "GPUs": [
+      {
+        "index": 0,
+        "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+        "total_mib": 40960,
+        "used_mib": 1345,
+        "utilization_percent": 41,
+        "processes": [
+          "GPU-81550800-367d-1855-0f35-c61c274edfdf, 4160205, 1336"
+        ]
+      },
+      {
+        "index": 1,
+        "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+        "total_mib": 40960,
+        "used_mib": 1345,
+        "utilization_percent": 0,
+        "processes": [
+          "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150, 4160204, 1336"
+        ]
+      },
+      {
+        "index": 2,
+        "uuid": "GPU-e7f8224e-43d7-f7d6-10ff-8412dc30aa9e",
+        "total_mib": 40960,
+        "used_mib": 1359,
+        "utilization_percent": 35,
+        "processes": [
+          "GPU-e7f8224e-43d7-f7d6-10ff-8412dc30aa9e, 24918, 1350"
+        ]
+      },
+      {
+        "index": 3,
+        "uuid": "GPU-3a66f673-05de-ba45-3f5c-308b333fea68",
+        "total_mib": 40960,
+        "used_mib": 1101,
+        "utilization_percent": 0,
+        "processes": [
+          "GPU-3a66f673-05de-ba45-3f5c-308b333fea68, 23726, 1092"
+        ]
+      },
+      {
+        "index": 4,
+        "uuid": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+        "total_mib": 40960,
+        "used_mib": 0,
+        "utilization_percent": 0,
+        "processes": []
+      },
+      {
+        "index": 5,
+        "uuid": "GPU-83b3ac27-3e78-fb30-a5f6-d5daf4aac4fb",
+        "total_mib": 40960,
+        "used_mib": 14331,
+        "utilization_percent": 98,
+        "processes": [
+          "GPU-83b3ac27-3e78-fb30-a5f6-d5daf4aac4fb, 31703, 14322"
+        ]
+      },
+      {
+        "index": 6,
+        "uuid": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+        "total_mib": 40960,
+        "used_mib": 0,
+        "utilization_percent": 0,
+        "processes": []
+      },
+      {
+        "index": 7,
+        "uuid": "GPU-7d263daa-6d13-02a6-b0ea-29c2c09a2c8b",
+        "total_mib": 40960,
+        "used_mib": 0,
+        "utilization_percent": 0,
+        "processes": []
+      }
+    ]
+  },
+  "new_final_quality_or_JOD": 0,
+  "R76_status": "Prerecorded self4 attribution control; CPU toy functional gate passed, CPU final evaluator compiled. No real model/DEV output, GPU or extra training; metric/summary/visual/companion implementation still pending.",
+  "R_DID_status": "Primary capture/method metadata read; author share403/unacquired, 0new pixels.",
+  "paper_build": 18,
+  "method_success_established": false,
+  "goal_status": "active",
+  "limits": "Copied complete-line prefixes/immutable milestone metadata only; original processes keep running. Do not treat this as final or restart from this snapshot."
+}
