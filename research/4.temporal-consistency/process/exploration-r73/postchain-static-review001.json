@@ -1,0 +1,54 @@
+{
+  "at": "2026-11-13T08:01:20.384213+08:00",
+  "author": "Codex  (sqs_A100)",
+  "scope": "Static code/old metadata review while original training is live; not execution qualification, new DEV inference or final pipeline success.",
+  "files_read": [
+    "finalize_native_moment_r73.py",
+    "train_native_moment_r73.py",
+    "evaluate_native_moment_r73.py",
+    "summarize_native_moment_r73.py",
+    "evaluate_cvvdp_native_moment_r73.py",
+    "render_native_moment_r73.py"
+  ],
+  "observed_static_contract": {
+    "training_final_each": 4000,
+    "seed_order": [
+      0,
+      1
+    ],
+    "new_quality_rows_each_seed": 100,
+    "new_frame_rows_each_seed": 4480,
+    "new_CNN_sequences_each_seed": 50,
+    "new_CNN_centers_each_seed": 2240,
+    "old_quality_rows": 80,
+    "all_quality_rows": 280,
+    "domain_seed_means": 56,
+    "new_perceptual_rows": 240,
+    "new_perceptual_compare_frames": 10752,
+    "registered_boolean_gates": 20,
+    "contacts_requiring_later_actual_review": 20
+  },
+  "checks": [
+    "Final normal training and final4000 fold required before each CPU quality child",
+    "Spatial current; mean/moment causal and own-current; raw and own-output recursion retained",
+    "Old R44 quality with JOD reused; R64 plain quality reused and its40 JOD rows newly computed",
+    "Raw reference paths reused; only old recursive arrays reconstructed before perception",
+    "Keys include seed/scene/model/history/method; gate includes domain/seed quality, JOD, temporal ratio and worst-condition PSNR",
+    "Source24fps R72 not mixed into existing nominal30fps comparison",
+    "Single GPU training seed at a time; own CPU child begins only after release; no quality success inferred from static review"
+  ],
+  "storage_planning_from_old_manifest_shapes": {
+    "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl",
+    "one_seed_one_route_float32_payload_bytes": 2002157568,
+    "new_output_payload_bytes": 40043151360,
+    "reconstructed_old_recursive_payload_bytes": 8008630272,
+    "combined_payload_bytes_excluding_np_headers_and_perceptual_features": 48051781632,
+    "free_asset_volume_bytes_at_observation": 5504111005696,
+    "sufficient_at_observation": true
+  },
+  "new_CNN": 0,
+  "new_SGD": 0,
+  "new_GPU_job": 0,
+  "frozen_source_changed": false,
+  "next_action": "Keep original fixed-budget training, then inspect real terminal and automatic child identities; static review is not authority to rerun or select backups."
+}
