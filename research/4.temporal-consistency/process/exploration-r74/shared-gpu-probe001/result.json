@@ -1,0 +1,315 @@
+{
+  "completed": true,
+  "selected_gpu": {
+    "index": 2,
+    "uuid": "GPU-e7f8224e-43d7-f7d6-10ff-8412dc30aa9e",
+    "allowed": true,
+    "mean_utilization_percent": 18,
+    "busy_sample_fraction": 0.0,
+    "max_used_mib": 3743,
+    "minimum_free_mib": 37217,
+    "total_mib": 40960,
+    "incumbent_growth_reserve_mib": 8192,
+    "expected_own_increment_mib": 4096,
+    "required_free_mib": 13312
+  },
+  "measured_peak_allocated_mib": 86.609375,
+  "measured_peak_reserved_mib": 108.0,
+  "measurements": [
+    {
+      "batch_iteration": 1,
+      "synchronized_work_seconds": 0.9633863299968652,
+      "cooperative_pause_seconds": 5.45918920331557,
+      "diagnostics": [
+        {
+          "model": "task",
+          "loss": 0.0027610412798821926,
+          "gradient_norm": 0.005024520680308342
+        },
+        {
+          "model": "proxy",
+          "loss": 1.6770856380462646,
+          "gradient_norm": 3.0923044681549072
+        }
+      ]
+    },
+    {
+      "batch_iteration": 2,
+      "synchronized_work_seconds": 0.28722724196268246,
+      "cooperative_pause_seconds": 1.627621037788534,
+      "diagnostics": [
+        {
+          "model": "task",
+          "loss": 0.0027558207511901855,
+          "gradient_norm": 0.004800399765372276
+        },
+        {
+          "model": "proxy",
+          "loss": 1.675562858581543,
+          "gradient_norm": 2.912533760070801
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "2026-11-13T11:21:53.218718+08:00",
+      "GPUs": [
+        {
+          "index": 0,
+          "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+          "total_mib": 40960,
+          "used_mib": 985,
+          "utilization_percent": 39,
+          "processes": [
+            "GPU-81550800-367d-1855-0f35-c61c274edfdf, 4074264, 976"
+          ]
+        },
+        {
+          "index": 1,
+          "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+          "total_mib": 40960,
+          "used_mib": 987,
+          "utilization_percent": 42,
+          "processes": [
+            "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150, 4069955, 978"
+          ]
+        },
+        {
+          "index": 2,
+          "uuid": "GPU-e7f8224e-43d7-f7d6-10ff-8412dc30aa9e",
+          "total_mib": 40960,
+          "used_mib": 3743,
+          "utilization_percent": 0,
+          "processes": [
+            "GPU-e7f8224e-43d7-f7d6-10ff-8412dc30aa9e, 4072590, 3734"
+          ]
+        },
+        {
+          "index": 3,
+          "uuid": "GPU-3a66f673-05de-ba45-3f5c-308b333fea68",
+          "total_mib": 40960,
+          "used_mib": 1153,
+          "utilization_percent": 47,
+          "processes": [
+            "GPU-3a66f673-05de-ba45-3f5c-308b333fea68, 4074663, 1144"
+          ]
+        },
+        {
+          "index": 4,
+          "uuid": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+          "total_mib": 40960,
+          "used_mib": 18869,
+          "utilization_percent": 99,
+          "processes": [
+            "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e, 4106920, 18860"
+          ]
+        },
+        {
+          "index": 5,
+          "uuid": "GPU-83b3ac27-3e78-fb30-a5f6-d5daf4aac4fb",
+          "total_mib": 40960,
+          "used_mib": 18871,
+          "utilization_percent": 56,
+          "processes": [
+            "GPU-83b3ac27-3e78-fb30-a5f6-d5daf4aac4fb, 4106921, 18862"
+          ]
+        },
+        {
+          "index": 6,
+          "uuid": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+          "total_mib": 40960,
+          "used_mib": 18873,
+          "utilization_percent": 59,
+          "processes": [
+            "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249, 4106922, 18864"
+          ]
+        },
+        {
+          "index": 7,
+          "uuid": "GPU-7d263daa-6d13-02a6-b0ea-29c2c09a2c8b",
+          "total_mib": 40960,
+          "used_mib": 18851,
+          "utilization_percent": 24,
+          "processes": [
+            "GPU-7d263daa-6d13-02a6-b0ea-29c2c09a2c8b, 4106923, 18842"
+          ]
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T11:21:55.844686+08:00",
+      "GPUs": [
+        {
+          "index": 0,
+          "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+          "total_mib": 40960,
+          "used_mib": 985,
+          "utilization_percent": 38,
+          "processes": [
+            "GPU-81550800-367d-1855-0f35-c61c274edfdf, 4074264, 976"
+          ]
+        },
+        {
+          "index": 1,
+          "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+          "total_mib": 40960,
+          "used_mib": 987,
+          "utilization_percent": 37,
+          "processes": [
+            "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150, 4069955, 978"
+          ]
+        },
+        {
+          "index": 2,
+          "uuid": "GPU-e7f8224e-43d7-f7d6-10ff-8412dc30aa9e",
+          "total_mib": 40960,
+          "used_mib": 4333,
+          "utilization_percent": 75,
+          "processes": [
+            "GPU-e7f8224e-43d7-f7d6-10ff-8412dc30aa9e, 4072590, 3734",
+            "GPU-e7f8224e-43d7-f7d6-10ff-8412dc30aa9e, 4123814, 584"
+          ]
+        },
+        {
+          "index": 3,
+          "uuid": "GPU-3a66f673-05de-ba45-3f5c-308b333fea68",
+          "total_mib": 40960,
+          "used_mib": 1153,
+          "utilization_percent": 43,
+          "processes": [
+            "GPU-3a66f673-05de-ba45-3f5c-308b333fea68, 4074663, 1144"
+          ]
+        },
+        {
+          "index": 4,
+          "uuid": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+          "total_mib": 40960,
+          "used_mib": 18869,
+          "utilization_percent": 26,
+          "processes": [
+            "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e, 4106920, 18860"
+          ]
+        },
+        {
+          "index": 5,
+          "uuid": "GPU-83b3ac27-3e78-fb30-a5f6-d5daf4aac4fb",
+          "total_mib": 40960,
+          "used_mib": 18871,
+          "utilization_percent": 22,
+          "processes": [
+            "GPU-83b3ac27-3e78-fb30-a5f6-d5daf4aac4fb, 4106921, 18862"
+          ]
+        },
+        {
+          "index": 6,
+          "uuid": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+          "total_mib": 40960,
+          "used_mib": 18873,
+          "utilization_percent": 18,
+          "processes": [
+            "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249, 4106922, 18864"
+          ]
+        },
+        {
+          "index": 7,
+          "uuid": "GPU-7d263daa-6d13-02a6-b0ea-29c2c09a2c8b",
+          "total_mib": 40960,
+          "used_mib": 18851,
+          "utilization_percent": 28,
+          "processes": [
+            "GPU-7d263daa-6d13-02a6-b0ea-29c2c09a2c8b, 4106923, 18842"
+          ]
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T11:22:01.896463+08:00",
+      "GPUs": [
+        {
+          "index": 0,
+          "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+          "total_mib": 40960,
+          "used_mib": 985,
+          "utilization_percent": 1,
+          "processes": [
+            "GPU-81550800-367d-1855-0f35-c61c274edfdf, 4074264, 976"
+          ]
+        },
+        {
+          "index": 1,
+          "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+          "total_mib": 40960,
+          "used_mib": 987,
+          "utilization_percent": 36,
+          "processes": [
+            "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150, 4069955, 978"
+          ]
+        },
+        {
+          "index": 2,
+          "uuid": "GPU-e7f8224e-43d7-f7d6-10ff-8412dc30aa9e",
+          "total_mib": 40960,
+          "used_mib": 4357,
+          "utilization_percent": 52,
+          "processes": [
+            "GPU-e7f8224e-43d7-f7d6-10ff-8412dc30aa9e, 4072590, 3734",
+            "GPU-e7f8224e-43d7-f7d6-10ff-8412dc30aa9e, 4123814, 608"
+          ]
+        },
+        {
+          "index": 3,
+          "uuid": "GPU-3a66f673-05de-ba45-3f5c-308b333fea68",
+          "total_mib": 40960,
+          "used_mib": 1153,
+          "utilization_percent": 43,
+          "processes": [
+            "GPU-3a66f673-05de-ba45-3f5c-308b333fea68, 4074663, 1144"
+          ]
+        },
+        {
+          "index": 4,
+          "uuid": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+          "total_mib": 40960,
+          "used_mib": 18869,
+          "utilization_percent": 49,
+          "processes": [
+            "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e, 4106920, 18860"
+          ]
+        },
+        {
+          "index": 5,
+          "uuid": "GPU-83b3ac27-3e78-fb30-a5f6-d5daf4aac4fb",
+          "total_mib": 40960,
+          "used_mib": 18871,
+          "utilization_percent": 39,
+          "processes": [
+            "GPU-83b3ac27-3e78-fb30-a5f6-d5daf4aac4fb, 4106921, 18862"
+          ]
+        },
+        {
+          "index": 6,
+          "uuid": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+          "total_mib": 40960,
+          "used_mib": 18873,
+          "utilization_percent": 58,
+          "processes": [
+            "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249, 4106922, 18864"
+          ]
+        },
+        {
+          "index": 7,
+          "uuid": "GPU-7d263daa-6d13-02a6-b0ea-29c2c09a2c8b",
+          "total_mib": 40960,
+          "used_mib": 18851,
+          "utilization_percent": 27,
+          "processes": [
+            "GPU-7d263daa-6d13-02a6-b0ea-29c2c09a2c8b, 4106923, 18842"
+          ]
+        }
+      ]
+    }
+  ],
+  "frozen42_sources_unchanged": true,
+  "limitations": "128-crop training only; context/external allocations excluded from allocator cap. No incumbent throughput measurement; no zero-slowdown guarantee. Full-resolution perceptual metric requires a separate estimate."
+}
