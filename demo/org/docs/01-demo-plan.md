@@ -4,6 +4,8 @@
 - 触发：6B06-01 会议，导师要求尽快在安卓手机上演示 MobileIE，用于项目申报现场考察。
 - 关联：[工作 README](../README.md)、[AI Benchmark 手册](02-ai-benchmark-guide.md)、[官方 TFLite 脚本说明](03-official-tflite-inference.md)
 
+> 2026-11-13 更新：本文保留 11 月 8 日 B 方案的决策背景。用户现提出拍照增强与传统 baseline 微 App，并明确先写文档、暂不制作；新增方案见[05 · 微 App 设计草案](05-micro-app-design.md)，尚待审阅。既有 B 方案作为新 App 通过真机核验前的可用备份。
+
 ## 1. 背景与约束
 
 ### 1.1 会议原话要点

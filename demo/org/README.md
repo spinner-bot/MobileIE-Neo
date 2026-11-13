@@ -4,6 +4,8 @@
 
 - 分支：**`demo.org`**；本目录 `demo/org/` 是这项演示工作的主文件夹。`main` 单向同步到本分支，演示改动不合并回 `main`
 - 状态：**P1 完成**（2026-11-12，备用机一加 9R 跑通自定义模型：GPU FP16 **5.8 ms**、CPU **86–91 ms**），现场演示准备待做
+- 验收安排（2026-11-13 用户确认）：**2026-11-16（下周一）上午最终验收**；导师提前检查演示，用户主要协助演示。预检查时间、验收具体时刻与地点待确认，见[预检查与验收清单](docs/04-acceptance-checklist.md)。
+- 新增交付（2026-11-13）：**微光实验室 0.1.1 已完成 Android/Python 实现、模拟验收与迭代**，支持现场拍照（Android）、选图、MobileIE/Gamma 对照、滑动/总览和保存。[个人安卓环境报告](docs/06-android-environment.md)已先行提交；安装包、录像、测试与设备待检查项见[最终交付报告](docs/09-app-v011-final.md)。新 App 的真实 9R、真实 Windows 与导师预检查尚未完成。
 - 上游代码与权重：项目根目录 [`MobileIE/`](../../MobileIE)
 - 关联：[2 号复现](../../research/2.reproduction/README.md)、[5 号前期调研](../../research/5.prior-art-survey/README.md)、[6B06-01 会议记录](../../docs/会议记录/6B06-01/audio%20-%20Transcription.txt)
 - 进展报告：[0009-T-261108-6 号工作启动与手机演示方案](../../docs/进展报告/0009-T-261108-6号工作启动与手机演示方案.md)
@@ -13,6 +15,7 @@
 - 本仓库是唯一数据站：日志、结论、截图、脚本等全部入库，不依赖本地或服务器临时文件；
 - 小步、密集提交，阶段性 `git push origin demo.org`；
 - 同步 `main` 只用 `git fetch origin` + `git merge --no-ff origin/main`，**禁止 `git pull`**，以保留完整合并历史；`main` 由 Codex 在服务器上快速迭代，合并前先看 `git log --oneline HEAD..origin/main`。
+- 用户于 2026-11-13 重申：**严禁 fast-forward，所有合并必须 `--no-ff`**。推送因远端分歧失败时，先 fetch，以 `--no-ff` 合并并解决冲突后重试；不 rebase、squash 或强推。
 
 ## 1. 任务边界（先看这里）
 
@@ -24,12 +27,14 @@
 2. 官方 README 给出的手机流程是：`lolv1.tflite` → 导入 **AI Benchmark** → 得到推理速度；
 3. 因此“论文原做法”只能给速度，给不了画面。
 
-**决策（2026-11-08）**：采用 **B 方案**，不新写安卓 App、不造轮子：
+**历史决策（2026-11-08）**：当时采用 **B 方案**：
 
 - **手机端（严格照论文）**：AI Benchmark v7 PRO Mode 加载 `lolv1.tflite`，现场展示实测延迟；
 - **效果端（复用官方脚本）**：在电脑上运行仓库自带的 `MobileIE/test_TFLite_RGB.py`，用同一份 TFLite 模型生成低光增强前后对比图，放到手机/投影上展示。
 
 现场表述：同一份 TFLite 模型，手机实测 X ms；效果对比由官方推理脚本输出。
+
+**2026-11-13 需求更新**：用户先要求设计，随后授权环境、报告、App、模拟测试与自主迭代。当前 0.1.1 已完成本轮开发与模拟交付，详见[09 最终报告](docs/09-app-v011-final.md)。真机彩排通过后采用微 App 图片效果 + AI Benchmark 独立测速；上述 B 方案保留备用。
 
 ## 2. 模型事实（已解析 `lolv1.tflite`）
 
@@ -63,6 +68,11 @@
 | 演示方案与任务拆解 | [`docs/01-demo-plan.md`](docs/01-demo-plan.md) | 完成 |
 | AI Benchmark 手机操作手册 | [`docs/02-ai-benchmark-guide.md`](docs/02-ai-benchmark-guide.md) | 完成 |
 | 官方 TFLite 脚本使用说明 | [`docs/03-official-tflite-inference.md`](docs/03-official-tflite-inference.md) | 完成 |
+| 导师预检查与验收清单 | [`docs/04-acceptance-checklist.md`](docs/04-acceptance-checklist.md) | 已整理，真机彩排与导师反馈待完成 |
+| 拍照增强与传统对照微 App 设计 | [`docs/05-micro-app-design.md`](docs/05-micro-app-design.md) | 0.1.1 已实现，模拟验收通过 |
+| 个人安卓开发环境报告 | [`docs/06-android-environment.md`](docs/06-android-environment.md) | 工具、编译签名、AVD 启动及安装门控通过 |
+| 自主交付门控 | [`docs/07-delivery-gates.md`](docs/07-delivery-gates.md) | 实施与可靠验收的结束条件 |
+| 双端最终交付及验收报告 | [`docs/09-app-v011-final.md`](docs/09-app-v011-final.md) | 0.1.1 安装包、Python ZIP、录像与证据已交付；真实设备检查待接续 |
 | 模型结构解析脚本 | [`scripts/inspect_tflite.py`](scripts/inspect_tflite.py) | 完成 |
 | 演示图片预处理脚本 | [`scripts/prepare_demo_images.py`](scripts/prepare_demo_images.py) | 完成 |
 | 官方推理脚本包装 | [`scripts/run_official_tflite.py`](scripts/run_official_tflite.py) | 完成 |
@@ -101,11 +111,18 @@
 | Arm NN | FP16 | 崩溃 | OpenCL 导入输入张量异常，见 `data/armnn-crash.txt` |
 
 ### P2 —— 现场演示
+- 最终验收定于 **2026-11-16 上午**；导师将在此之前检查，用户主要协助演示。
+- [ ] 完成[预检查清单](docs/04-acceptance-checklist.md)，复跑 GPU FP16 并记录本次结果与导师反馈；
 - [ ] 按 [`docs/01-demo-plan.md`](docs/01-demo-plan.md) 的演示脚本串场；
 - [ ] 准备离线素材：手机本地模型、前后对比图、录屏，避免现场依赖网络。
 
-### P3 —— 备选（仅在要求“手机实时处理画面”时启用）
-- Termux 跑官方脚本（不写新 App）或最小安卓 App；需重新评估工作量。
+### P3 —— 微 App（2026-11-13，0.1.1 开发与模拟交付完成）
+- 需求为系统拍照后单张处理、相册选图、MobileIE / 传统方法 / 原图对比，详见[设计草案](docs/05-micro-app-design.md)。
+- [x] 用户授权自主实现，环境报告已提交，门控已登记。
+- [x] Android 功能、6 组数值、14 项仪器回归、异常/生命周期、视觉与交付门控通过。
+- [x] Python 伴随版及 Linux/Xvfb 完整 5 项测试、三样例精确一致与便携 ZIP 核验通过。
+- [x] 安装包、28.837 秒模拟录像、摘要、配置/最终报告和操作说明交付。
+- [ ] 真实一加 9R、真实 Windows 和导师预检查接续；不以模拟器结果替代。
 
 ## 6. 复现
 
@@ -136,7 +153,7 @@ PYD=F:/dev-tools/python-envs/MobileIE-Demo/Scripts/python.exe
 
 ## 7. 风险与待确认
 
-1. **现场预期**：AI Benchmark 只给延迟。若评审要求“手机摄像头实时增强”，B 方案不满足，需要 P3；
+1. **现场预期**：AI Benchmark 只给延迟；微 App 提供拍照后单张处理，未实现摄像头实时增强取景；
 2. **模型输入固定 400×600**：手机原图必须预处理，否则无法推理；
 3. **依赖环境**：本机 `tensorflow-cpu` 2.20/2.21 原生库初始化失败，已改用 `ai-edge-litert` + 关闭默认 XNNPACK delegate；换机器时需重新验证；
 4. **AI Benchmark**：v4 起支持自定义模型，v7.0.0（2026-10）仍保留；需跑完标准测试后进入 PRO Mode，APK 较大；国内网络下优先用官网直连 APK；
@@ -145,6 +162,8 @@ PYD=F:/dev-tools/python-envs/MobileIE-Demo/Scripts/python.exe
 
 ## 8. 修订记录
 
+- 2026-11-13 · Codex  (sqs_A100)：补充拍照、相册选图和 Gamma 传统对照的微 App 设计，记录只写文档、暂不制作的用户要求；保留旧演示方案为备份。
+- 2026-11-13 · Codex  (sqs_A100)：接手 `demo.org`；记录周一上午最终验收、导师提前检查及用户协助演示分工，新增预检查清单，修订演示包操作顺序，重申禁止 fast-forward 与阶段推送约定。此次仅完成文档准备，未进行新一轮真机测试。
 - 2026-11-08 · claude code (local)：创建 6 号工作，确定 B 方案，完成模型解析与文档首版。
 - 2026-11-08 · claude code (local)：P0 跑通，LOL eval15 PSNR 23.619 dB；补充 ai-edge-litert 兼容层与结果对比图。
 - 2026-11-10 · claude code (local)：建立 `demo.org` 演示分支；打包手机演示包（模型 + 对比图 + 中文操作说明）。
