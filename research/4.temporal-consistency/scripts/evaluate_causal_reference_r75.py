@@ -26,13 +26,16 @@ def main():
     torch.use_deterministic_algorithms(True)
     markers=final_markers();model=load_final(args.seed,markers)
     scenes,sources=metas()
+    expected_calls=2*sum(r['shape'][0]*len(tile_layout(*r['shape'][1:3])) for r in scenes)
+    assert expected_calls==4864
     out=BASE/f'results/exploration-r75-eval-seed{args.seed}'
     cache=ROOT/f'.cache/experiments/exploration-r75/eval001/seed{args.seed}'
     assert cache.resolve().is_relative_to('/data/Users/zrh/data/MobileIE-Neo')
     out.mkdir(exist_ok=False);cache.mkdir(parents=True,exist_ok=False)
     write(out/'config.json',dict(at=stamp(),seed=args.seed,checkpoint=markers[args.seed],
         cache_indices=sources,protocol_sha256=digest(PROTOCOL),device='cpu',torch_threads=2,
-        expected_rows=20,expected_frames=896,expected_tile_CNN_calls=8192,
+        expected_rows=20,expected_frames=896,expected_tile_CNN_calls=expected_calls,
+        input_shapes={r['scene']:r['shape'] for r in scenes},
         source_sha256={name:digest(BASE/'scripts'/name) for name in
             ['evaluate_causal_reference_r75.py','causal_reference_evaluation_r75.py','rebotnet_reference.py',
              'exploration_r2_data.py','video_metrics.py','prepare_cache_r5.py']},
@@ -84,7 +87,7 @@ def main():
                 print(json.dumps(dict(**identity,completed_rows=count)),flush=True)
                 del output
             del data
-        assert (count,frames,calls)==(20,896,8192) and not torch.cuda.is_initialized()
+        assert (count,frames,calls)==(20,896,expected_calls) and not torch.cuda.is_initialized()
         complete=True
     except BaseException:
         (out/'failure.txt').write_text(traceback.format_exc());raise
