@@ -2,7 +2,7 @@
 
 目标：以论文为最终产出，深入核查 MobileIE 的架构与训练机制，在移动端计算预算内设计视频增强模型，用传统方法、后处理和已有视频模型对照验证画质、时间稳定性与效率收益。
 
-当前最新（[0116](../../docs/进展报告/0116-T-26111321-正式训练里程碑与自条件解释对照.md)/[progress002](process/exploration-r75/progress002.json)）：R75原两seed最近归档均7600/64000，1K..7K14份marker分别提交，训练/协调真实存活，17/27源不变。尚无最终DEV/JOD。另已登记[R76同帧self4解释控制](docs/exploration-r76-self-conditioning-control-protocol.md)，固定四次完整拼接/更多计算/0过去观测/0新训练，补充而不改原八门槛；CPU toy合同通过、最终CPU读出已编译，真实推理/JOD/汇总/固定图/补充协调仍待实现或执行。下一完善剩余入口，等原完整final，不改活跃科学源，不重跑原训练。note58的R-DID403获取未完成，非新已完成自然动态基准；旧STOP及paper018保持，目标active。
+当前最新（[0117](../../docs/进展报告/0117-T-26111321-自条件补充评价链冻结与实际等待接续.md)/[progress003](process/exploration-r75/progress003.json)）：R75原两seed最近归档8100/8000，各64000目标，1K..8K16份marker分别提交，训练/协调真实存活，17/27源不变。尚无最终DEV/JOD。[R76同帧self4解释控制](docs/exploration-r76-self-conditioning-control-protocol.md)已补齐CPU/官方感知/100条件汇总/20追加固定图，编译/metadata屏障资格通过、37源冻结；实际补充协调39049/start51721359仅等待原4163819及完整原结果，无新增GPU/训练/真实DEV读出。固定四次完整拼接/更多计算/0过去观测，补充而不改原八门槛；实际数值、四支持检查与图审仍待。下一按真实终态接续，不改活跃37源、不重跑原训练。note58 R-DID403获取未完成；旧STOP及paper018保持，目标active。
 
 首次正式启动归档（[0115](../../docs/进展报告/0115-T-26111314-原生因果参考正式双种子启动与最终评价链接入.md)/[progress001](process/exploration-r75/progress001.json)）：R75已正式运行，seed0 PID4160205/实际0、seed1 PID4160204/实际1，各64000，当时归档各300步。CPU原生数据/更新恢复资格和17源冻结完成；源码/完整行前缀/固定准入等分别入库，无新DEV/JOD或方法成功。协调PID4163819按真实PID/start等待两final，再跑完整40新质量/40JOD/80共同条件/20图，手工实际图审仍待执行。17训练源/协议及评价联合27源活跃时保持，不重启原训练。SYN480×854、ND288×512原生裁块，非整幅1080p，每seed最终4864 tile调用/896帧，见[执行边界](docs/exploration-r75-evaluation-execution.md)。未来真实resource退出只用latest验证入口恢复，不选旧marker重放或自动重试科学失败；当前进度以上述0116及真实runtime为准。
 
