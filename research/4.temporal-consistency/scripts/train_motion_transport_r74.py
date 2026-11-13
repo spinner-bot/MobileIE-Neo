@@ -46,27 +46,41 @@ def checkpoint(net, optimizer, name, seed, step, raw, spatial_source, cache, out
 
 def main():
     parser = argparse.ArgumentParser(); parser.add_argument('--seed', type=int, choices=[0, 1], required=True)
+    parser.add_argument('--device', choices=['cpu', 'cuda'], default='cuda')
     parser.add_argument('--admission-attempt', type=int, default=1); args = parser.parse_args()
     cpu_gate = BASE/'process/exploration-r74/cpu-gate001/runtime.json'
-    assert json.loads(cpu_gate.read_text())['passed']
-    qualified = json.loads((BASE/'process/exploration-r74/cuda-qualification.json').read_text())
-    gate = ROOT/qualified['gate_runtime']
-    assert qualified['passed'] and digest(gate) == qualified['gate_sha256']
-    cuda_gate = json.loads(gate.read_text()); assert cuda_gate['passed'] and cuda_gate['discarded_motion_updates'] == 8
-    assert json.loads((ROOT/qualified['guard']).read_text())['returncode'] == 0
+    cpu = json.loads(cpu_gate.read_text()); assert cpu['passed'] and cpu['discarded_motion_updates'] == 8
+    cpu_config = json.loads((cpu_gate.parent/'config.json').read_text())
+    assert all(digest(BASE/'scripts'/n) == sha for n, sha in cpu_config['source_sha256'].items())
+    amendment = BASE/'docs/exploration-r74-cpu-execution-amendment.md'
+    if args.device == 'cuda':
+        qualified = json.loads((BASE/'process/exploration-r74/cuda-qualification.json').read_text())
+        gate = ROOT/qualified['gate_runtime']
+        assert qualified['passed'] and digest(gate) == qualified['gate_sha256']
+        cuda_gate = json.loads(gate.read_text()); assert cuda_gate['passed'] and cuda_gate['discarded_motion_updates'] == 8
+        assert json.loads((ROOT/qualified['guard']).read_text())['returncode'] == 0
+    else:
+        assert amendment.is_file()
     cv2.setNumThreads(1); torch.set_num_threads(2); configure_precision()
     torch.use_deterministic_algorithms(True); torch.backends.cudnn.deterministic = True
     torch.backends.cudnn.benchmark = False; assert not torch.cuda.is_initialized()
     spatial, spatial_source = load_spatial(args.seed); nets = make_models(args.seed); pool = MixedPool()
     first_low, first_gt, first_context = pool.batch(args.seed, 8000)
     first_proxy = teacher_proxy(first_gt)
-    admission = cuda_headroom()
-    write(BASE/f'process/exploration-r74/seed{args.seed}-internal-admission{args.admission_attempt:03d}.json', admission)
-    if not admission['allowed']: raise SystemExit(75)
+    admission = None
+    if args.device == 'cuda':
+        admission = cuda_headroom()
+        write(BASE/f'process/exploration-r74/seed{args.seed}-internal-admission{args.admission_attempt:03d}.json', admission)
+        if not admission['allowed']: raise SystemExit(75)
+    else:
+        write(BASE/f'process/exploration-r74/seed{args.seed}-cpu-preparation.json', dict(
+              at=datetime.now().astimezone().isoformat(), device='cpu', Torch_threads=2, OpenCV_threads=1,
+              first_window_and_proxy_prepared=True, CUDA_initialized=False,
+              execution_amendment_sha256=digest(amendment), scope='CPU execution, no GPU admission claimed.'))
     out = BASE/f'results/exploration-r74-stage001-seed{args.seed}'; out.mkdir(exist_ok=False)
     began, complete, updates, final = time.perf_counter(), False, {name: 0 for name in MODES}, {}
     try:
-        spatial = spatial.cuda().eval(); nets = {name: net.cuda().train() for name, net in nets.items()}
+        spatial = spatial.to(args.device).eval(); nets = {name: net.to(args.device).train() for name, net in nets.items()}
         optimizers = {name: torch.optim.Adam(net.parameters(), lr=1e-4, betas=(.9, .999),
                       eps=1e-8, weight_decay=0) for name, net in nets.items()}
         cache = ROOT/f'.cache/checkpoints/exploration-r74/stage001/seed{args.seed}'
@@ -79,6 +93,9 @@ def main():
               spatial_source=spatial_source, motion_initial_seed=7400+args.seed, first_data_step=8000, last_data_step=11999,
               batch=4, frames=4, crop=128, lr=1e-4, betas=[.9, .999], eps=1e-8, weight_decay=0, clip=1,
               losses=dict(task='clipped output all-frame MSE', proxy='covered native L1/4 plus unit coverage BCE'),
+              execution_device=args.device, CPU_qualified_calculations_unchanged=True,
+              original_CPU_qualified_protocol_sha256=cpu_config['protocol_sha256'],
+              execution_amendment_sha256=digest(amendment) if args.device == 'cpu' else None,
               same_initial_motion_weights=True, shared_frozen_raw_computation=True,
               expected_frozen_enhancement_batch_calls=16000, expected_frozen_enhancement_centers=64000,
               expected_motion_batch_pair_calls=24000, expected_motion_individual_pair_predictions=96000,
@@ -93,7 +110,7 @@ def main():
                 else:
                     low, gt, context = pool.batch(args.seed, 8000+step); target = teacher_proxy(gt)
                 windows.write(json.dumps(dict(new_step=step+1, data_step=8000+step, windows=context))+'\n')
-                low, gt = low.cuda(), gt.cuda(); target = tuple(value.cuda() for value in target)
+                low, gt = low.to(args.device), gt.to(args.device); target = tuple(value.to(args.device) for value in target)
                 raw = frozen_raw(spatial, low)
                 last = []
                 for name, net in nets.items():
@@ -126,6 +143,7 @@ def main():
     finally:
         write(out/'runtime.json', dict(completed_normally=complete, motion_model_updates=updates,
               total_new_motion_updates=sum(updates.values()), spatial_model_updates=0, final_markers=final,
+              execution_device=args.device, CUDA_initialized=torch.cuda.is_initialized(),
               seconds=time.perf_counter()-began, ended=datetime.now().astimezone().isoformat(),
               scope='Fixed formal motion budget; frozen spatial network stays at8000. No quality or phone claim.'))
 
