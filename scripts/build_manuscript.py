@@ -80,6 +80,17 @@ def main():
         assert all(sha(REPO/name) == value for name, value in external['source_sha256'].items())
         assert all((paper/'generated'/name).exists() for name in external['generated_tables'])
         sources.append(extension)
+    if r'\input{sections/state-evidence}' in (paper/'main.tex').read_text():
+        extension = paper/'state-evidence-snapshot.json'
+        state = json.loads(extension.read_text())
+        assert state['R73_complete'] and state['table_rows'] == 24
+        assert (state['registered_gates'], state['passed_gates'], state['formal_updates']) == (20, 0, 24000)
+        assert state['metric_playback_fps'] == 30 and not state['active_R74_included']
+        assert snapshot['R73_complete_state_included']
+        assert not state['independent_final'] and not state['handset_measured']
+        assert all(sha(REPO/name) == value for name, value in state['source_sha256'].items())
+        assert all((paper/'generated'/name).exists() for name in state['generated_tables'])
+        sources.append(extension)
     command = [str(binary), '--untrusted', '--keep-logs', '--keep-intermediates', '--outdir', str(work), 'main.tex']
     record = {'started_at': datetime.now().astimezone().isoformat(), 'command': command,
               'source_sha256': {str(p.relative_to(REPO)): sha(p) for p in sources},
