@@ -1,0 +1,40 @@
+{
+  "at": "2026-11-13T12:05:58.408405+08:00",
+  "identities": [
+    {
+      "pid": 4119253,
+      "start_ticks": "47929830",
+      "state": "S",
+      "actual_commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/finalize_motion_transport_r74.py --attempt 2 --device cpu "
+    },
+    {
+      "pid": 4134763,
+      "start_ticks": "48284482",
+      "state": "R",
+      "actual_commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/evaluate_motion_transport_r74.py --seed 0 "
+    },
+    {
+      "pid": 4134827,
+      "start_ticks": "48284502",
+      "state": "R",
+      "actual_commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/evaluate_motion_transport_r74.py --seed 1 "
+    }
+  ],
+  "formal_training_completed_normally": true,
+  "total_new_motion_updates": 16000,
+  "new_spatial_updates": 0,
+  "all_four_final_reload_max_delta": 0,
+  "seed0_training_seconds": 1755.9435496969963,
+  "seed1_training_seconds": 1729.3448470510193,
+  "frozen_sources": 42,
+  "frozen_unchanged": true,
+  "quality_rows_written_by_seed": {
+    "0": 6,
+    "1": 7
+  },
+  "quality_runtimes_present": {
+    "0": false,
+    "1": false
+  },
+  "scope": "Complete training and actual original live CPU quality evaluation only; no final quality, ranking, JOD or phone claim."
+}
