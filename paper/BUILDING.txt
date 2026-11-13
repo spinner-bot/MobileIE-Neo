@@ -2,18 +2,20 @@
 
 manuscript.pdf 是可阅读的阶段性研究稿，不是投稿终稿。当前版本包括问题、
 候选定义、训练和评价协议、已结束 R36/R41/R42/R44/R45 证据、R53/R56完整适配参考、R62原公开StableLLVE clean共同CPU迁移参考及明确的验证缺口。
-R44 全部三个注册门槛失败，局部网格已停止。R45内部提示也未通过独立收益门槛并已停止。当前 build009 为13页，六张数值表，其中公开/适配参考表含完整18行。
+R44 全部三个注册门槛失败，局部网格已停止。R45内部提示也未通过独立收益门槛并已停止。当前 build013 为18页、12张数值表、10项引用，已加入完整视频/目标/传统参考扩展并实际审阅；见末条构建记录。R73仍在固定预算训练，不录入部分结果。
 
 从仓库根目录执行，始终使用项目独立环境：
 
   ./scripts/project-python scripts/build_manuscript_snapshot.py
-  ./scripts/project-python scripts/prepare_paper_toolchain.py
+  ./scripts/project-python scripts/build_paper_video_evidence.py
+  ./scripts/project-python scripts/build_paper_objective_evidence.py
+  ./scripts/project-python scripts/build_paper_classical_evidence.py
   ./scripts/project-python scripts/build_manuscript.py --attempt N
 
-首项从完整结果生成 generated/*.tex 和 evidence-snapshot.json；R44只有协调器与
+前四项按顺序从完整结果生成 generated/*.tex 与基础/扩展 evidence-snapshot.json；不能只运行第一项后编译。R44只有协调器与
 240行完整评价正常终态后才纳入；R45需finalize002及180行正常终态；新增公开参考表要求R53/R56双seed8000和各40行及协调器正常；R62须20行/896逐帧/448中心、共同CPU数据索引及协调器正常，未完成时生成器在写表前拒绝。中间检查点与loss曲线不能填表。
-第二项只用于首次准备固定的官方 Tectonic；已有 process/toolchain.json 时无需重跑。
-N 必须是尚未使用的编号。已保留001–009；001有段落越界、002修正，
+prepare_paper_toolchain.py 只用于首次准备固定的官方 Tectonic；已有 process/toolchain.json 时无需重跑。
+N 必须是尚未使用的编号。已保留001–013，下一未用编号14；以下001–009为历史说明，010–013见后续扩展记录。001有段落越界、002修正，
 003/004加入相关工作，005写入完整R44，006写入完整R45，007写入R53/R56和原公开Nano；008加入R62与训练差异说明，出现孤立参考文献末页；009采用标准小号参考文献并更新证据日期，恢复13页。既有小警告与修正尝试均保留日志。
 编译时不要修改本次的 tex/bib/证据快照；完成后才修改并用新编号重编。
 源码引用仓库已有 R41/R44/R45 图，其来源仍保留在对应实验报告目录。
