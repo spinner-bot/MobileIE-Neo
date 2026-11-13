@@ -3,9 +3,9 @@
 目标：为项目申报的现场考察，按 MobileIE 官方流程把模型跑在安卓手机上，并提供“手机实测速度 + 处理前后效果对比”的演示材料。**这是演示任务，不是研究任务**，不改变 3/4/5 号工作的技术路线。
 
 - 分支：**`demo.org`**；本目录 `demo/org/` 是这项演示工作的主文件夹。`main` 单向同步到本分支，演示改动不合并回 `main`
-- 状态：**P1 完成**（2026-11-12，备用机一加 9R 跑通自定义模型：GPU FP16 **5.8 ms**、CPU **86–91 ms**），现场演示准备待做
+- 状态：**P1 完成**（2026-11-12，备用机一加 9R 跑通自定义模型：GPU FP16 **5.8 ms**、CPU **86–91 ms**）；**微光实验室 0.1.1 已于 2026-11-13 在一加 9R 真机跑通**（拍照推理 106.7 ms，见 [10 真机检查](docs/10-real-device-0.1.1.md)），现场演示准备待做
 - 验收安排（2026-11-13 用户确认）：**2026-11-16（下周一）上午最终验收**；导师提前检查演示，用户主要协助演示。预检查时间、验收具体时刻与地点待确认，见[预检查与验收清单](docs/04-acceptance-checklist.md)。
-- 新增交付（2026-11-13）：**微光实验室 0.1.1 已完成 Android/Python 实现、模拟验收与迭代**，支持现场拍照（Android）、选图、MobileIE/Gamma 对照、滑动/总览和保存。[个人安卓环境报告](docs/06-android-environment.md)已先行提交；安装包、录像、测试与设备待检查项见[最终交付报告](docs/09-app-v011-final.md)。新 App 的真实 9R、真实 Windows 与导师预检查尚未完成。
+- 新增交付（2026-11-13）：**微光实验室 0.1.1 已完成 Android/Python 实现、模拟验收与迭代**，支持现场拍照（Android）、选图、MobileIE/Gamma 对照、滑动/总览和保存。[个人安卓环境报告](docs/06-android-environment.md)已先行提交；安装包、录像、测试与设备待检查项见[最终交付报告](docs/09-app-v011-final.md)。**真实一加 9R 检查已于 2026-11-13 完成**（见[10 真机检查](docs/10-real-device-0.1.1.md)）；真实 Windows 与导师预检查尚未完成。
 - 上游代码与权重：项目根目录 [`MobileIE/`](../../MobileIE)
 - 关联：[2 号复现](../../research/2.reproduction/README.md)、[5 号前期调研](../../research/5.prior-art-survey/README.md)、[6B06-01 会议记录](../../docs/会议记录/6B06-01/audio%20-%20Transcription.txt)
 - 进展报告：[0009-T-261108-6 号工作启动与手机演示方案](../../docs/进展报告/0009-T-261108-6号工作启动与手机演示方案.md)
@@ -81,6 +81,7 @@
 | 前后对比图 | [`results/compare_lol_eval15/`](results/compare_lol_eval15)、[`results/compare_sample/`](results/compare_sample) | 完成 |
 | 增强结果 | [`results/lol_eval15/`](results/lol_eval15)、[`results/demo_output_sample/`](results/demo_output_sample) | 完成 |
 | 手机实测截图/录屏 | [`results/phone/`](results/phone) | 完成（启动、标准跑分、自定义模型 8 张后端截图） |
+| 微光实验室真机检查 | [`results/phone-0.1.1/`](results/phone-0.1.1)、[10 真机检查](docs/10-real-device-0.1.1.md) | 完成（2026-11-13，一加 9R；含 1 个待修复问题） |
 | 手机演示包 | [`demo-package/MobileIE-Demo/`](demo-package/MobileIE-Demo/)（本地压缩件 `demo-package/MobileIE-手机演示包.zip`） | 完成（模型 + 3 张对比图 + 中文操作说明） |
 | 汇报 HTML | [`report/mobile-deployment.html`](report/mobile-deployment.html) | 完成（含 P0 结果，单文件内嵌图片） |
 
@@ -162,6 +163,7 @@ PYD=F:/dev-tools/python-envs/MobileIE-Demo/Scripts/python.exe
 
 ## 8. 修订记录
 
+- 2026-11-13 · claude code (local)：一加 9R 安装微光实验室 0.1.1，完成样例/拍照/相册/对比/保存/AI Benchmark 跳转真机检查（拍照推理 106.7 ms），记录 1 个待修复的样例选择失效问题。
 - 2026-11-13 · Codex  (sqs_A100)：补充拍照、相册选图和 Gamma 传统对照的微 App 设计，记录只写文档、暂不制作的用户要求；保留旧演示方案为备份。
 - 2026-11-13 · Codex  (sqs_A100)：接手 `demo.org`；记录周一上午最终验收、导师提前检查及用户协助演示分工，新增预检查清单，修订演示包操作顺序，重申禁止 fast-forward 与阶段推送约定。此次仅完成文档准备，未进行新一轮真机测试。
 - 2026-11-08 · claude code (local)：创建 6 号工作，确定 B 方案，完成模型解析与文档首版。
