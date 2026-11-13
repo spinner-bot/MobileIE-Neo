@@ -4,9 +4,9 @@
 
 ## 当前研究状态
 
-截至2026-11-13，项目仍处于方法探索阶段，尚未建立可投稿的新方法。接续先读[进展报告0106](docs/进展报告/0106-T-26111310-完整实验链冻结等待与跨来源证据入稿.md)、[4号研究入口](research/4.temporal-consistency/README.md)和[服务器约定](AGENTS.md)。主线在 `main` 推进，移动演示由独立支线处理。
+截至2026-11-13，项目仍处于方法探索阶段，尚未建立可投稿的新方法。接续先读[进展报告0107](docs/进展报告/0107-T-26111311-完整CPU训练接续与共享GPU资源准入.md)、[4号研究入口](research/4.temporal-consistency/README.md)和[服务器约定](AGENTS.md)。主线在 `main` 推进，移动演示由独立支线处理。
 
-R74的冻结空间映射/RGB传输[固定检验](research/4.temporal-consistency/docs/exploration-r74-motion-supervision-protocol.md)已完成CPU资格和全部后续执行链，41科学依赖冻结。原协调器已实际启动并等待4–7号卡新的空闲准入，尚无CUDA资格/正式训练；按原进程身份接续，不因等待重启，不把资格更新当正式预算。
+R74的冻结空间映射/RGB传输[固定检验](research/4.temporal-consistency/docs/exploration-r74-motion-supervision-protocol.md)已通过原CPU资格，并按明确的[执行修订](research/4.temporal-consistency/docs/exploration-r74-cpu-execution-amendment.md)在CPU执行两seed完整16000 motion更新。原GPU纯等待控制器已退出，新finalize002于11:05:11启动，42科学依赖冻结；seed0已越过2000备份点，最终质量/感知与16联合门槛尚待执行。按原进程身份接续，不因GPU有空重启或由部分训练损失宣称收益。用户明确允许评估余量后同卡并行，新GPU工作按[共享准入规范](specs/项目规范/GPU资源使用规范.md)连续采样、估算峰值并预留既有任务增长空间。
 
 R73原生一/二阶历史矩进入第一次FST的固定检验已全部正常结束：24000正式更新、六最终导出、200新CPU质量、240感知、280联合条件和20固定图实际检查完整保留。20项联合门槛全部失败，按[完整决定](research/4.temporal-consistency/docs/exploration-r73-decision.md)停止该组合的局部网格；没有因此建立新方法。当前无活跃R73任务，不依据历史报告中的活跃提示重启旧训练或评价。
 
@@ -14,7 +14,7 @@ R28/R34/R37/R44/R45/R48/R64等既有具体候选已按各自完整结果止损�
 
 现有[论文工作稿](paper/manuscript.pdf)为已审阅build016、20页/13表，包含完整R72原生REDS合成开发对照；尚缺可辩护创新、画质—时序—效率联合改善、自然动态配对、实际手机成本及独立最终验证。轻量移动端目标需要完整成本证据；原MobileIE的4075参数不是用户给定的硬性参数上限，含历史状态的模型也不能称零推理开销。
 
-2026-11-12 03:06，自有环境和数据迁移已核验完成，两个仓库相对链接已入Git，后续统一用 `./scripts/project-python`；不重复迁移。详情见[迁移日志](research/4.temporal-consistency/process/asset-migration/journal.md)。代码、过程、结果、报告分别小步提交，阶段SSH推送，保持 `--no-ff`。新GPU任务须先检查共享卡的显存、利用率及计算进程，使用同组最多4张空闲卡。
+2026-11-12 03:06，自有环境和数据迁移已核验完成，两个仓库相对链接已入Git，后续统一用 `./scripts/project-python`；不重复迁移。详情见[迁移日志](research/4.temporal-consistency/process/asset-migration/journal.md)。代码、过程、结果、报告分别小步提交，阶段SSH推送，保持 `--no-ff`。新GPU任务须先检查共享卡的显存、利用率及计算进程，确认双方资源余量后可同卡并行，使用同组最多4张卡。
 
 ## 目录结构
 
