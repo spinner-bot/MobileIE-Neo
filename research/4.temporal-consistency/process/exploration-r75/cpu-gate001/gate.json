@@ -1,0 +1,651 @@
+{
+  "at": "2026-11-13T13:32:25.943959+08:00",
+  "passed": true,
+  "data": {
+    "manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "verified_files": 384,
+    "scenes": [
+      "video_11",
+      "video_35",
+      "video_92",
+      "video_131",
+      "video_12",
+      "video_20",
+      "video_29",
+      "video_52",
+      "video_59",
+      "video_95",
+      "video_104",
+      "video_122"
+    ],
+    "native_bytes": 2388787200,
+    "real_training_ids": [
+      "video_104",
+      "video_11",
+      "video_12",
+      "video_122",
+      "video_131",
+      "video_20",
+      "video_29",
+      "video_35",
+      "video_52",
+      "video_59",
+      "video_92",
+      "video_95"
+    ],
+    "excluded_native_DEV": [
+      "video_121",
+      "video_15",
+      "video_47",
+      "video_91"
+    ],
+    "all_real_assets_owned": true,
+    "source_manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "synthetic_manifest_sha256": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+    "synthetic_training_videos": 57,
+    "real_tensor_dtype": "uint8 native inputs/GT; float32 /255 after crops",
+    "timing_scope": "Consecutive registered frame indices, not independently verified sensor timing."
+  },
+  "samples": [
+    {
+      "seed": 0,
+      "data_step": 0,
+      "identities": [
+        {
+          "source": "davis_synthetic",
+          "video": "rallye",
+          "members": [
+            "DAVIS/JPEGImages/480p/rallye/00010.jpg",
+            "DAVIS/JPEGImages/480p/rallye/00011.jpg",
+            "DAVIS/JPEGImages/480p/rallye/00012.jpg",
+            "DAVIS/JPEGImages/480p/rallye/00013.jpg"
+          ],
+          "photons": 20,
+          "degradation_seed_sequence": [
+            75,
+            0,
+            0,
+            0,
+            1
+          ],
+          "source_start": 10,
+          "native_hw": [
+            480,
+            854
+          ],
+          "xy": [
+            95,
+            14
+          ],
+          "flip_horizontal": true,
+          "flip_vertical": true,
+          "crop": 384,
+          "targets": 4,
+          "resize": false
+        },
+        {
+          "source": "davis_synthetic",
+          "video": "rollerblade",
+          "members": [
+            "DAVIS/JPEGImages/480p/rollerblade/00023.jpg",
+            "DAVIS/JPEGImages/480p/rollerblade/00024.jpg",
+            "DAVIS/JPEGImages/480p/rollerblade/00025.jpg",
+            "DAVIS/JPEGImages/480p/rollerblade/00026.jpg"
+          ],
+          "photons": 80,
+          "degradation_seed_sequence": [
+            75,
+            0,
+            0,
+            1,
+            1
+          ],
+          "source_start": 23,
+          "native_hw": [
+            480,
+            854
+          ],
+          "xy": [
+            439,
+            33
+          ],
+          "flip_horizontal": true,
+          "flip_vertical": true,
+          "crop": 384,
+          "targets": 4,
+          "resize": false
+        },
+        {
+          "source": "olives_real",
+          "video": "video_95",
+          "indices": [
+            12,
+            13,
+            14,
+            15
+          ],
+          "source_start": 12,
+          "native_hw": [
+            1080,
+            1920
+          ],
+          "xy": [
+            1069,
+            604
+          ],
+          "flip_horizontal": false,
+          "flip_vertical": false,
+          "crop": 384,
+          "targets": 4,
+          "resize": false
+        },
+        {
+          "source": "olives_real",
+          "video": "video_52",
+          "indices": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "source_start": 5,
+          "native_hw": [
+            1080,
+            1920
+          ],
+          "xy": [
+            294,
+            573
+          ],
+          "flip_horizontal": true,
+          "flip_vertical": false,
+          "crop": 384,
+          "targets": 4,
+          "resize": false
+        }
+      ],
+      "direct_source_crop_max_errors": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "seed": 1,
+      "data_step": 0,
+      "identities": [
+        {
+          "source": "davis_synthetic",
+          "video": "swing",
+          "members": [
+            "DAVIS/JPEGImages/480p/swing/00004.jpg",
+            "DAVIS/JPEGImages/480p/swing/00005.jpg",
+            "DAVIS/JPEGImages/480p/swing/00006.jpg",
+            "DAVIS/JPEGImages/480p/swing/00007.jpg"
+          ],
+          "photons": 20,
+          "degradation_seed_sequence": [
+            75,
+            1,
+            0,
+            0,
+            1
+          ],
+          "source_start": 4,
+          "native_hw": [
+            480,
+            854
+          ],
+          "xy": [
+            297,
+            58
+          ],
+          "flip_horizontal": false,
+          "flip_vertical": true,
+          "crop": 384,
+          "targets": 4,
+          "resize": false
+        },
+        {
+          "source": "davis_synthetic",
+          "video": "paragliding",
+          "members": [
+            "DAVIS/JPEGImages/480p/paragliding/00059.jpg",
+            "DAVIS/JPEGImages/480p/paragliding/00060.jpg",
+            "DAVIS/JPEGImages/480p/paragliding/00061.jpg",
+            "DAVIS/JPEGImages/480p/paragliding/00062.jpg"
+          ],
+          "photons": 80,
+          "degradation_seed_sequence": [
+            75,
+            1,
+            0,
+            1,
+            1
+          ],
+          "source_start": 59,
+          "native_hw": [
+            480,
+            854
+          ],
+          "xy": [
+            442,
+            68
+          ],
+          "flip_horizontal": false,
+          "flip_vertical": true,
+          "crop": 384,
+          "targets": 4,
+          "resize": false
+        },
+        {
+          "source": "olives_real",
+          "video": "video_59",
+          "indices": [
+            11,
+            12,
+            13,
+            14
+          ],
+          "source_start": 11,
+          "native_hw": [
+            1080,
+            1920
+          ],
+          "xy": [
+            1050,
+            210
+          ],
+          "flip_horizontal": true,
+          "flip_vertical": false,
+          "crop": 384,
+          "targets": 4,
+          "resize": false
+        },
+        {
+          "source": "olives_real",
+          "video": "video_122",
+          "indices": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "source_start": 5,
+          "native_hw": [
+            1080,
+            1920
+          ],
+          "xy": [
+            973,
+            397
+          ],
+          "flip_horizontal": true,
+          "flip_vertical": false,
+          "crop": 384,
+          "targets": 4,
+          "resize": false
+        }
+      ],
+      "direct_source_crop_max_errors": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "seed": 0,
+      "data_step": 63999,
+      "identities": [
+        {
+          "source": "davis_synthetic",
+          "video": "disc-jockey",
+          "members": [
+            "DAVIS/JPEGImages/480p/disc-jockey/00012.jpg",
+            "DAVIS/JPEGImages/480p/disc-jockey/00013.jpg",
+            "DAVIS/JPEGImages/480p/disc-jockey/00014.jpg",
+            "DAVIS/JPEGImages/480p/disc-jockey/00015.jpg"
+          ],
+          "photons": 80,
+          "degradation_seed_sequence": [
+            75,
+            0,
+            63999,
+            0,
+            1
+          ],
+          "source_start": 12,
+          "native_hw": [
+            480,
+            1138
+          ],
+          "xy": [
+            484,
+            0
+          ],
+          "flip_horizontal": false,
+          "flip_vertical": true,
+          "crop": 384,
+          "targets": 4,
+          "resize": false
+        },
+        {
+          "source": "davis_synthetic",
+          "video": "tractor-sand",
+          "members": [
+            "DAVIS/JPEGImages/480p/tractor-sand/00041.jpg",
+            "DAVIS/JPEGImages/480p/tractor-sand/00042.jpg",
+            "DAVIS/JPEGImages/480p/tractor-sand/00043.jpg",
+            "DAVIS/JPEGImages/480p/tractor-sand/00044.jpg"
+          ],
+          "photons": 20,
+          "degradation_seed_sequence": [
+            75,
+            0,
+            63999,
+            1,
+            1
+          ],
+          "source_start": 41,
+          "native_hw": [
+            480,
+            854
+          ],
+          "xy": [
+            358,
+            43
+          ],
+          "flip_horizontal": false,
+          "flip_vertical": true,
+          "crop": 384,
+          "targets": 4,
+          "resize": false
+        },
+        {
+          "source": "olives_real",
+          "video": "video_92",
+          "indices": [
+            10,
+            11,
+            12,
+            13
+          ],
+          "source_start": 10,
+          "native_hw": [
+            1080,
+            1920
+          ],
+          "xy": [
+            536,
+            470
+          ],
+          "flip_horizontal": true,
+          "flip_vertical": true,
+          "crop": 384,
+          "targets": 4,
+          "resize": false
+        },
+        {
+          "source": "olives_real",
+          "video": "video_11",
+          "indices": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "source_start": 1,
+          "native_hw": [
+            1080,
+            1920
+          ],
+          "xy": [
+            309,
+            337
+          ],
+          "flip_horizontal": true,
+          "flip_vertical": true,
+          "crop": 384,
+          "targets": 4,
+          "resize": false
+        }
+      ],
+      "direct_source_crop_max_errors": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "seed": 1,
+      "data_step": 63999,
+      "identities": [
+        {
+          "source": "davis_synthetic",
+          "video": "night-race",
+          "members": [
+            "DAVIS/JPEGImages/480p/night-race/00000.jpg",
+            "DAVIS/JPEGImages/480p/night-race/00001.jpg",
+            "DAVIS/JPEGImages/480p/night-race/00002.jpg",
+            "DAVIS/JPEGImages/480p/night-race/00003.jpg"
+          ],
+          "photons": 20,
+          "degradation_seed_sequence": [
+            75,
+            1,
+            63999,
+            0,
+            1
+          ],
+          "source_start": 0,
+          "native_hw": [
+            480,
+            854
+          ],
+          "xy": [
+            65,
+            51
+          ],
+          "flip_horizontal": false,
+          "flip_vertical": true,
+          "crop": 384,
+          "targets": 4,
+          "resize": false
+        },
+        {
+          "source": "davis_synthetic",
+          "video": "drift-turn",
+          "members": [
+            "DAVIS/JPEGImages/480p/drift-turn/00046.jpg",
+            "DAVIS/JPEGImages/480p/drift-turn/00047.jpg",
+            "DAVIS/JPEGImages/480p/drift-turn/00048.jpg",
+            "DAVIS/JPEGImages/480p/drift-turn/00049.jpg"
+          ],
+          "photons": 20,
+          "degradation_seed_sequence": [
+            75,
+            1,
+            63999,
+            1,
+            1
+          ],
+          "source_start": 46,
+          "native_hw": [
+            480,
+            854
+          ],
+          "xy": [
+            80,
+            3
+          ],
+          "flip_horizontal": false,
+          "flip_vertical": false,
+          "crop": 384,
+          "targets": 4,
+          "resize": false
+        },
+        {
+          "source": "olives_real",
+          "video": "video_131",
+          "indices": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "source_start": 9,
+          "native_hw": [
+            1080,
+            1920
+          ],
+          "xy": [
+            1256,
+            329
+          ],
+          "flip_horizontal": false,
+          "flip_vertical": false,
+          "crop": 384,
+          "targets": 4,
+          "resize": false
+        },
+        {
+          "source": "olives_real",
+          "video": "video_92",
+          "indices": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "source_start": 3,
+          "native_hw": [
+            1080,
+            1920
+          ],
+          "xy": [
+            225,
+            652
+          ],
+          "flip_horizontal": false,
+          "flip_vertical": false,
+          "crop": 384,
+          "targets": 4,
+          "resize": false
+        }
+      ],
+      "direct_source_crop_max_errors": [
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "replayed_first_data_equal": true,
+  "discarded_CPU_updates": 1,
+  "four_train_video_losses": [
+    0.45130646228790283,
+    0.4257284104824066,
+    0.38289400935173035,
+    0.39379650354385376
+  ],
+  "gradient_norm_before_clip": 5.7206501960754395,
+  "checkpoint_path": ".cache/experiments/exploration-r75/cpu-gate001/discarded.pt",
+  "restored_completed_step": 1,
+  "restored_next_data_step": 1,
+  "eval_reload_max_delta": 0.0,
+  "learning_rate": 0.00039999999975910314,
+  "scheduler_epoch": 1,
+  "read_only_NVML": {
+    "at": "2026-11-13T13:32:25.943852+08:00",
+    "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+    "total_mib": 40960,
+    "used_mib": 2554,
+    "free_mib": 38405,
+    "utilization_percent": 40
+  },
+  "CLI_observation": {
+    "at": "2026-11-13T13:32:25.888006+08:00",
+    "GPUs": [
+      {
+        "index": 0,
+        "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+        "total_mib": 40960,
+        "used_mib": 2035,
+        "utilization_percent": 36,
+        "processes": [
+          "GPU-81550800-367d-1855-0f35-c61c274edfdf, 4144126, 2026"
+        ]
+      },
+      {
+        "index": 1,
+        "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+        "total_mib": 40960,
+        "used_mib": 1669,
+        "utilization_percent": 21,
+        "processes": [
+          "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150, 4136950, 1660"
+        ]
+      },
+      {
+        "index": 2,
+        "uuid": "GPU-e7f8224e-43d7-f7d6-10ff-8412dc30aa9e",
+        "total_mib": 40960,
+        "used_mib": 1729,
+        "utilization_percent": 30,
+        "processes": [
+          "GPU-e7f8224e-43d7-f7d6-10ff-8412dc30aa9e, 4149401, 1720"
+        ]
+      },
+      {
+        "index": 3,
+        "uuid": "GPU-3a66f673-05de-ba45-3f5c-308b333fea68",
+        "total_mib": 40960,
+        "used_mib": 2573,
+        "utilization_percent": 45,
+        "processes": [
+          "GPU-3a66f673-05de-ba45-3f5c-308b333fea68, 4145124, 2564"
+        ]
+      },
+      {
+        "index": 4,
+        "uuid": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+        "total_mib": 40960,
+        "used_mib": 18869,
+        "utilization_percent": 83,
+        "processes": [
+          "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e, 4106920, 18860"
+        ]
+      },
+      {
+        "index": 5,
+        "uuid": "GPU-83b3ac27-3e78-fb30-a5f6-d5daf4aac4fb",
+        "total_mib": 40960,
+        "used_mib": 18873,
+        "utilization_percent": 66,
+        "processes": [
+          "GPU-83b3ac27-3e78-fb30-a5f6-d5daf4aac4fb, 4106921, 18864"
+        ]
+      },
+      {
+        "index": 6,
+        "uuid": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+        "total_mib": 40960,
+        "used_mib": 18873,
+        "utilization_percent": 44,
+        "processes": [
+          "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249, 4106922, 18864"
+        ]
+      },
+      {
+        "index": 7,
+        "uuid": "GPU-7d263daa-6d13-02a6-b0ea-29c2c09a2c8b",
+        "total_mib": 40960,
+        "used_mib": 18851,
+        "utilization_percent": 100,
+        "processes": [
+          "GPU-7d263daa-6d13-02a6-b0ea-29c2c09a2c8b, 4106923, 18842"
+        ]
+      }
+    ]
+  },
+  "formal_updates": 0,
+  "new_DEV_or_test_pixels": 0,
+  "cuda_initialized": false,
+  "limits": "One discarded CPU optimizer step and portable state loading; no Adam bitwise trajectory audit, new quality or convergence evidence. Resource-trial state is not inherited."
+}
