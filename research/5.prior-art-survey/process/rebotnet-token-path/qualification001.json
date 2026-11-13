@@ -1,0 +1,114 @@
+{
+  "at": "2026-11-13T21:40:48.361218+08:00",
+  "passed": true,
+  "source": "third_party/rebotnet/archs.py",
+  "source_sha256": "0e4cbd6bfdb88bfdc74a795a89e705426f8f813994605669ef6614f8328d0ab3",
+  "released_commit": "dff81d3cbd484b01ef2d42da2dd1ad1332598a09",
+  "native_tile": 384,
+  "big_patch": 16,
+  "per_slot_tokens": 576,
+  "concatenated_tokens": 1152,
+  "pooled_tokens": 576,
+  "previous_slot_output_range": [
+    0,
+    287
+  ],
+  "current_slot_output_range": [
+    288,
+    575
+  ],
+  "pool_pairs_cross_frame": 0,
+  "pool_pairs_within_same_frame": 576,
+  "first_pairs": [
+    {
+      "output_token": 0,
+      "input_slot": "previous",
+      "input_row": 0,
+      "input_columns": [
+        0,
+        1
+      ]
+    },
+    {
+      "output_token": 1,
+      "input_slot": "previous",
+      "input_row": 0,
+      "input_columns": [
+        2,
+        3
+      ]
+    },
+    {
+      "output_token": 2,
+      "input_slot": "previous",
+      "input_row": 0,
+      "input_columns": [
+        4,
+        5
+      ]
+    }
+  ],
+  "boundary_pairs": [
+    {
+      "output_token": 286,
+      "input_slot": "previous",
+      "input_row": 23,
+      "input_columns": [
+        20,
+        21
+      ]
+    },
+    {
+      "output_token": 287,
+      "input_slot": "previous",
+      "input_row": 23,
+      "input_columns": [
+        22,
+        23
+      ]
+    },
+    {
+      "output_token": 288,
+      "input_slot": "current",
+      "input_row": 0,
+      "input_columns": [
+        0,
+        1
+      ]
+    },
+    {
+      "output_token": 289,
+      "input_slot": "current",
+      "input_row": 0,
+      "input_columns": [
+        2,
+        3
+      ]
+    }
+  ],
+  "last_pairs": [
+    {
+      "output_token": 574,
+      "input_slot": "current",
+      "input_row": 23,
+      "input_columns": [
+        20,
+        21
+      ]
+    },
+    {
+      "output_token": 575,
+      "input_slot": "current",
+      "input_row": 23,
+      "input_columns": [
+        22,
+        23
+      ]
+    }
+  ],
+  "actual_learned_model_forward": 0,
+  "new_DEV_pixels": 0,
+  "SGD": 0,
+  "CUDA_initialized": false,
+  "scope": "Exact isolated token-index primitive check, not quality, learned effective receptive field, loss attribution or final-paper reproduction. Both slots also enter joint six-channel ConvNeXt stem; global learned token MLP can mix both pooled halves."
+}
