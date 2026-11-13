@@ -85,7 +85,7 @@ def main():
     record = dict(created_at=datetime.now().astimezone().isoformat(), source_sha256=sources,
         generated_tables=[name], R73_complete=True, table_rows=24, registered_gates=20, passed_gates=0,
         new_quality_rows=200, joint_quality_rows=280, new_perceptual_rows=240,
-        formal_updates=24000, source_fps=30, handset_measured=False, independent_final=False,
+        formal_updates=24000, metric_playback_fps=30, handset_measured=False, independent_final=False,
         active_R74_included=False, scope='Complete fixed failed state study, not a new method or general impossibility result.')
     child = ROOT/'paper/state-evidence-snapshot.json'
     child.write_text(json.dumps(record, indent=2)+'\n')
