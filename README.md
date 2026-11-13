@@ -4,7 +4,9 @@
 
 ## 当前研究状态
 
-截至2026-11-13，项目仍处于方法探索阶段，尚未建立可投稿的新方法。接续先读[进展报告0104](docs/进展报告/0104-T-26111309-原生双矩完整闭环与核心路线止损.md)、[4号研究入口](research/4.temporal-consistency/README.md)和[服务器约定](AGENTS.md)。主线在 `main` 推进，移动演示由独立支线处理。
+截至2026-11-13，项目仍处于方法探索阶段，尚未建立可投稿的新方法。接续先读[进展报告0105](docs/进展报告/0105-T-26111310-运动监督新问题登记与RGB传输CPU资格.md)、[4号研究入口](research/4.temporal-consistency/README.md)和[服务器约定](AGENTS.md)。主线在 `main` 推进，移动演示由独立支线处理。
+
+当前准备R74的冻结空间映射/RGB传输检验：[固定协议](research/4.temporal-consistency/docs/exploration-r74-motion-supervision-protocol.md)与实际CPU资格已完成，正式训练入口已准备；CUDA资格、正式训练及新质量评价尚未启动。须先补齐完整评价链再冻结和共享GPU准入，不能把8次资格更新当正式实验。
 
 R73原生一/二阶历史矩进入第一次FST的固定检验已全部正常结束：24000正式更新、六最终导出、200新CPU质量、240感知、280联合条件和20固定图实际检查完整保留。20项联合门槛全部失败，按[完整决定](research/4.temporal-consistency/docs/exploration-r73-decision.md)停止该组合的局部网格；没有因此建立新方法。当前无活跃R73任务，不依据历史报告中的活跃提示重启旧训练或评价。
 
