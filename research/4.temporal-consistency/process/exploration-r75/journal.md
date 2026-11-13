@@ -15,3 +15,11 @@
 11. progress001于13:59:58实际核两训练和协调PID均活跃、源17未变，snapshot两seed各300；原CUDA UUID配置/准入/首步marker均为不可变metadata，分别提交。活跃training/stdout只复制完整行前缀、parent/progress复制前缀元数据，原完整stream和终态以后独立提交。没有将原live文件当终态或复跑旧实验。所有checkpoint与环境仍仅自有data。
 12. 0115报告单独提交，根/研究README和AGENTS按文件更新实际状态，保留旧STOP/paper018/目标active。没有新DEV/JOD/方法成功、自然动态、手机或独立最终结论；普通ReBotNet-XS64K自启动/分块适配与原500K/GT初始化/旧MobileIE8K像素预算差异保留。
 13. 阶段fetch只取origin main，查分歧；必要时显式no-ff合并，禁止rebase/squash/强推。自有diff空白检查排除原终端流和原样vendor上游空白。阶段SSH推送后仍核真实训练/协调句柄；活跃parent/progress/training/window/waiting留在运行态，已核验前缀入库，终态再归档完整流，不为工作树表面干净隐藏或伪造它们。
+
+## 后续7K里程碑与解释性控制
+
+本轮恢复后重新核原训练4160205/4160204与协调4163819真实PID/start，原7小时连续训练仍在执行；17/27源保持，不根据较早600步快照重启。1K..7K14份不可变marker检查seed/预算/owned路径/文件大小后逐文件提交，不重跑模型或Adam轨迹。progress002归档时两seed均7600，原日志/窗口只复制完整行前缀，所有live原件仍等终态完整归档。
+
+实际代码的history槽分布差异促成R76固定self4解释控制，原模型、优化、数据和八主门槛未改变。R76仅CPU toy合同及新最终CPU读出代码已完成，没有真实模型推理或新增GPU；其JOD/汇总/固定图/补充协调仍待实现，不能把原最终协调器视作已包含它。R-DID获取403后的边界独立记在prior-art process，不扩大基准数或循环请求。0116报告与入口分别提交，paper018、旧STOP与目标active保持。
+
+本阶段仍只fetch origin main/查分歧/检查自有diff/阶段SSH推送。所有源码改动已提交，运行中parent/progress/training/window/waiting是刻意保留的活态，不把它们伪装成已结束记录；新快照以progress002为准，后续仍必须读真实进程和runtime。
