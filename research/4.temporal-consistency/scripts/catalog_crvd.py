@@ -67,7 +67,7 @@ def main():
         raise ValueError('Positive new attempt required')
     mounted_data()
     out = BASE/f'process/external-crvd/catalog{args.attempt:03d}'
-    cache = ASSETS/f'cache/datasets/CRVD/catalog{args.attempt:03d}'
+    cache = ROOT/f'.cache/datasets/CRVD/catalog{args.attempt:03d}'
     assert cache.resolve().is_relative_to(ASSETS.resolve())
     out.mkdir(parents=True, exist_ok=False)
     cache.mkdir(parents=True, exist_ok=False)
