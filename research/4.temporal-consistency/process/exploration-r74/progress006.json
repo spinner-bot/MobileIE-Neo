@@ -1,0 +1,35 @@
+{
+  "at": "2026-11-13T12:28:19.259110+08:00",
+  "identities": [
+    {
+      "pid": 4138937,
+      "start_ticks": "48358655",
+      "state": "S",
+      "actual_commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python scripts/run_motion_perception_shared_gpu.py --attempt 1 "
+    },
+    {
+      "pid": 4140916,
+      "start_ticks": "48389130",
+      "state": "S",
+      "actual_commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python scripts/supervise_metric_actual_gpu.py --pid 4138937 --start-ticks 48358655 --gpu 0 "
+    }
+  ],
+  "formal_motion_updates_complete": 16000,
+  "CPU_quality_completed": true,
+  "new_quality_rows": 80,
+  "all_quality_rows": 120,
+  "frame_rows": 3584,
+  "fixed_contacts_rendered": 20,
+  "fixed_contacts_actually_reviewed": 20,
+  "original_controller_terminal": true,
+  "shared_metric_row_prefix": 55,
+  "original_selected_gpu": 1,
+  "actual_gpu": 0,
+  "actual_gpu_was_also_eligible_in_original_samples": true,
+  "actual_device_supervision_admitted": true,
+  "same_metric_process_resumed": true,
+  "no_scores_recomputed": true,
+  "frozen_sources": 42,
+  "frozen_unchanged": true,
+  "scope": "Complete CPU/visual evidence, live actual-device-corrected original perception; no complete joint acceptance or method success."
+}
