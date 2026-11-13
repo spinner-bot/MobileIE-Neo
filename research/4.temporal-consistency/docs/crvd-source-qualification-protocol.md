@@ -19,3 +19,9 @@ catalog001取得根HTML后因记录路径转换错误退出，0图像；已保�
 因此阶段A改为三个串行公开HTML请求：根、indoor_raw_gt、indoor_raw_noisy；只选择各目录中与`{目录名}_scene1.zip`完全同名且MIME为application/zip的一个档案，保留全部当次可见元数据。仍≤2MiB/页、不取图像，不遍历其他场景内容。新编号catalog003，不覆盖既有失败；这是实际发布格式修正，不变更训练场景或引入测试像素。
 
 下一阶段先对两个选定公开训练档案作只读HEAD，确定可访问性/长度；若允许，再单独登记有界ZIP目录Range与四个固定成员的获取，不能把HTTP200目录等同完整资产可用。配额/权限问题不绕过，不扩其他数据主机或场景。原文与补充参照[CVPR论文](https://openaccess.thecvf.com/content_CVPR_2020/papers/Yue_Supervised_Raw_Video_Denoising_With_a_Benchmark_Dataset_on_Dynamic_CVPR_2020_paper.pdf)、[补充§1.1/表1](https://openaccess.thecvf.com/content_CVPR_2020/supplemental/Yue_Supervised_Raw_Video_CVPR_2020_supplemental.pdf)：当前ISO1600平均150帧，参考并非独立无误差真值；七个手动静止位置不当作连续20fps自然运动。
+
+## 阶段B目录登记（08:52 CST）
+
+catalog003正常3页，scene1 GT/noisy档案ID已固定；head001正常返回200、application/octet-stream、Accept-Ranges=bytes，长度分别130912326与1230174943，0 body读取。阶段B只取各ZIP最后65536字节及中央目录，每目录≤4MiB、单请求≤1MiB，复用既有SplitArchive的严格206/Content-Range/长度检查；无全档案下载或图像解码。尾段可能包含压缩图像字节，明确计入传输量，不称0图像字节。仅网络技术故障至多三次，权限/配额立即停止，不换来源。
+
+中央目录正常后按实际原始成员名固定scene1/ISO1600/frame1：GT档案clean、noisy档案原始平均clean及noisy0/noisy1。若精确成员不存在，停止并保留目录，不更换场景/ISO/时刻。获取前另写四成员大小、CRC/偏移/压缩方式清单并提交；仅在清单已冻结后取对应压缩数据，合计传输上限32MiB、单文件解压≤8MiB。资格仅原生TIFF容器、uint16/尺寸/值域与参考类型，无渲染、调亮、CNN/SGD/GPU或新模型评价，不作完整噪声标定/独立GT或夜间连续视频结论。
