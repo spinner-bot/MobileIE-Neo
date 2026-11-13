@@ -1,0 +1,68 @@
+{
+  "completed": true,
+  "setup_seconds": 26.047459030000027,
+  "measurements": [
+    {
+      "batch_iteration": 1,
+      "complete_batch_seconds": 0.5622830179636367,
+      "diagnostics": [
+        {
+          "model": "task",
+          "loss": 0.00276104174554348,
+          "reconstruction_MSE": 0.00276104174554348,
+          "gradient_norm_before_clip": 0.005024520680308342,
+          "native_flow_abs_mean": 0.0,
+          "history_coefficient_mean": 0.25,
+          "proxy_native_abs_error": 3.9357542991638184,
+          "coverage_BCE": 0.6931473612785339,
+          "accepted_proxy_fraction": 0.84405517578125
+        },
+        {
+          "model": "proxy",
+          "loss": 1.6770858764648438,
+          "reconstruction_MSE": 0.00276104174554348,
+          "gradient_norm_before_clip": 3.0923044681549072,
+          "native_flow_abs_mean": 0.0,
+          "history_coefficient_mean": 0.25,
+          "proxy_native_abs_error": 3.9357542991638184,
+          "coverage_BCE": 0.6931473612785339,
+          "accepted_proxy_fraction": 0.84405517578125
+        }
+      ]
+    },
+    {
+      "batch_iteration": 2,
+      "complete_batch_seconds": 0.34910707303788513,
+      "diagnostics": [
+        {
+          "model": "task",
+          "loss": 0.00275582168251276,
+          "reconstruction_MSE": 0.00275582168251276,
+          "gradient_norm_before_clip": 0.004800399765372276,
+          "native_flow_abs_mean": 0.019983286038041115,
+          "history_coefficient_mean": 0.24990467727184296,
+          "proxy_native_abs_error": 3.935455322265625,
+          "coverage_BCE": 0.6934235692024231,
+          "accepted_proxy_fraction": 0.84405517578125
+        },
+        {
+          "model": "proxy",
+          "loss": 1.6755627393722534,
+          "reconstruction_MSE": 0.002756470115855336,
+          "gradient_norm_before_clip": 2.9125335216522217,
+          "native_flow_abs_mean": 0.020299138501286507,
+          "history_coefficient_mean": 0.2500956356525421,
+          "proxy_native_abs_error": 3.930771589279175,
+          "coverage_BCE": 0.6928698420524597,
+          "accepted_proxy_fraction": 0.84405517578125
+        }
+      ]
+    }
+  ],
+  "max_batch_seconds": 0.5622830179636367,
+  "CPU_execution_initially_feasible": false,
+  "estimated8000_batches_seconds": 4498.264143709093,
+  "no_wall_cutoff": true,
+  "limitations": "Only two repeats of first training window; excludes resampling, checkpoints, setup and load variation. Not guaranteed whole-run time.",
+  "original41_sources_unchanged": true
+}
