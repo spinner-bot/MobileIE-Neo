@@ -2,7 +2,9 @@
 
 目标：以论文为最终产出，深入核查 MobileIE 的架构与训练机制，在移动端计算预算内设计视频增强模型，用传统方法、后处理和已有视频模型对照验证画质、时间稳定性与效率收益。
 
-最新接续（2026-11-13 13:12 CST）：[0113](../../docs/进展报告/0113-T-26111313-公开因果视频参考代码资格与成本边界.md)与[note57](../5.prior-art-survey/docs/57-causal-reference-code-feasibility.md)完成公开因果RGB代码资格。ReBotNet作者原架构/CC0/配置已固定，CPU正常、890275参数、384调用Conv/Linear .784862208GMAC，0SGD/质量/新视频像素/GPU。固定576token、原文GT启动/500K训练与未提供完整trainer的边界均保留；功能资格不等于充分复现。下一另定自启动原生分块/预算/资源实测，当前无新正式训练或活跃研究GPU；所有旧STOP/下述R74完整失败不变，paper仍018，目标active。
+最新接续（2026-11-13；[0114](../../docs/进展报告/0114-T-26111313-原生因果参考共享GPU试跑完成与正式预算登记.md)）：原生ReBotNet分块CPU资格和两次丢弃共享GPU更新均正常，实际0号匹配/own最高1242MiB/最少空闲37677MiB，PID4155198已退出，0正式更新/检查点，不重跑资源小试。[R75正式协议](docs/exploration-r75-causal-reference-protocol.md)已登记，发布XS/两seed各64000/均匀native384/自启动四帧BPTT，最终40新质量+40感知及强rec/current完整八门槛/20固定图；正式采样/训练/评价代码及CPU数据资格仍未完成，正式GPU未启动。下一实现并资格，再按实际余量同组至多两卡各seed并行、初始25%合作节流。旧STOP和paper018不变，参考适配不是创新/充分原表复现，目标active。
+
+前一代码资格阶段：[0113](../../docs/进展报告/0113-T-26111313-公开因果视频参考代码资格与成本边界.md)与[note57](../5.prior-art-survey/docs/57-causal-reference-code-feasibility.md)完成公开因果RGB代码资格。ReBotNet作者原架构/CC0/配置已固定，CPU正常、890275参数、384调用Conv/Linear .784862208GMAC，阶段内0SGD/质量/新视频像素/GPU。固定576token、原文GT启动/500K训练与未提供完整trainer的边界均保留；功能资格不等于充分复现。之后的资源实测与正式登记以上述0114为准。
 
 当前接续（2026-11-13 12:46 CST）：R74完整收口，16000正式motion、80新CPU质量/3584逐帧、80感知/3584比较帧、120条件24均值及20固定图actual review全正常，16门槛全部False，cost未运行。按[决定](docs/exploration-r74-decision.md)停止本组合局部网格，不再加教师/权重/宽度/长度等挽救。先读[0112报告](../../docs/进展报告/0112-T-26111312-运动代理监督完整止损与共享设备绑定修复.md)、[progress007](process/exploration-r74/progress007.json)和[过程](process/exploration-r74/journal.md)。所有原训练/CPU/renderer/指标/监督PID已退出，原控制器纯资源等待False终态与实际选卡错误保留；不能按旧提示重启。原科学42源未变，指标同PID恢复不重算。后续[进程前绑定入口](docs/prebound-shared-gpu-entry.md)已修复并通过真实CPU metric后物理1号的一字节零评分验证，不重跑旧80。当前无新候选登记，下一仅定向核查一个公开因果参考的实际可用性/信息/成本条件，所有旧STOP保持；paper仍build018内部证据稿，创新/自然动态/手机/最终未完成，远期目标active。
 
