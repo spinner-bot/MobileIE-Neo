@@ -1,0 +1,86 @@
+{
+  "at": "2026-11-13T22:14:29.726344+08:00",
+  "parameters_registered": 4075,
+  "FSTS_registered": 28,
+  "registered_except_FSTS": 4047,
+  "parameter_breakdown": [
+    {
+      "name": "head",
+      "type": "FSTS",
+      "parameters": 14
+    },
+    {
+      "name": "head.block1.0",
+      "type": "Conv2d",
+      "parameters": 912
+    },
+    {
+      "name": "head.block1.1",
+      "type": "PReLU",
+      "parameters": 12
+    },
+    {
+      "name": "head.block1.2",
+      "type": "Conv2d",
+      "parameters": 1308
+    },
+    {
+      "name": "body",
+      "type": "FSTS",
+      "parameters": 14
+    },
+    {
+      "name": "body.block1",
+      "type": "Conv2d",
+      "parameters": 1308
+    },
+    {
+      "name": "att.1",
+      "type": "Conv2d",
+      "parameters": 156
+    },
+    {
+      "name": "att1.0",
+      "type": "Conv2d",
+      "parameters": 24
+    },
+    {
+      "name": "tail",
+      "type": "Conv2d",
+      "parameters": 327
+    }
+  ],
+  "source_sha256": {
+    "MobileIE/model/lle.py": "c569c48f4fb4d25d227db85d078ce763e68dd89d304a623d8125dcd6808e8bff",
+    "MobileIE/model/utils.py": "76b5c97b99add030af5d42b8a424aeaa672b159925d92139d0d12d804cf8d992",
+    "research/2.reproduction/README.md": "2c2c8271ff002baa444e5487450595b5f15c3d9408403dde3cb9b70ec7e99a0b",
+    "research/2.reproduction/report/reproduction-report.html": "d4d522b8b560bd9862b06bf49691671873500c106f42dbbf3b3bfc9b1297bce4"
+  },
+  "primary_arxiv": "https://arxiv.org/html/2507.01838v1",
+  "primary_read_scope": [
+    "Table1 LLE GPU/SoC latency and FPS/input size",
+    "Section4.2 device identities",
+    "Table2 task-specific input/latency distinction"
+  ],
+  "LLE_source_values": {
+    "input_wh": [
+      600,
+      400
+    ],
+    "GPU_ms": 0.895,
+    "SoC_ms": 6.72,
+    "source_FPS": 1120.584
+  },
+  "derived_reciprocal_rates": {
+    "GPU_1000_over_latency": 1117.31843575419,
+    "SoC_1000_over_latency": 148.80952380952382
+  },
+  "interpretation": "Published FPS aligns with GPU-scale latency, not SoC6.72ms. Reciprocals are arithmetic, not new measured rates; rounded table columns need not exactly invert.",
+  "historical_count_tool_replayed": false,
+  "learned_model_forwards": 0,
+  "trained_checkpoint_read": false,
+  "new_video_pixels": 0,
+  "SGD": 0,
+  "CUDA_initialized": false,
+  "scope": "Parameter inspection and primary-source efficiency correction only. No handset or A100 latency measurement; historical Windows timing not rerun."
+}
