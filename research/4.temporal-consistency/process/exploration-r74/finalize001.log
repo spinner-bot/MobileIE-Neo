@@ -1,0 +1,9 @@
+{"at": "2026-11-13T10:28:24.909561+08:00", "stage": "Complete source chain frozen; separately admitted actual-window CUDA qualification next"}
+Traceback (most recent call last):
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/finalize_motion_transport_r74.py", line 159, in <module>
+    if __name__ == '__main__': main()
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/finalize_motion_transport_r74.py", line 111, in main
+    guard, attempt = guarded('check_motion_transport_r74.py', 'qualification', ['--device', 'cuda'])
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/finalize_motion_transport_r74.py", line 75, in guarded
+    time.sleep(30); continue
+KeyboardInterrupt
