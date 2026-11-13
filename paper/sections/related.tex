@@ -20,14 +20,14 @@ alone distinguishes a new method. Our classical recursive reference tests
 the benefit of retained history, without claiming to reproduce EMVD.
 
 \paragraph{Correspondence and decomposition.}
-The 2026 VLLVE/VLLVE++ preprint~\cite{vllveplus} couples video-consistent
+The 2026 VLLVE/VLLVE++ preprint~\cite{vllveplus} couples consistent
 decomposition with deep cross-frame interaction. Its described inference
-uses a nearby reference frame, and its ablations also investigate operation
-without a reference. Correspondence refinement is a training component;
-removing that estimator does not by itself remove the enhancement network's
-cross-frame dependence. These precedents require us to state precisely
-which information and operators remain in deployment. We do not infer
-equivalence to current-frame inference from a training-only component.
+path uses a nearby reference frame; ablations also consider operation
+without a reference. Correspondence refinement operates during training.
+Removing that estimator alone does not remove the enhancement network's
+reference dependence. The deployed information and operators must therefore
+be stated explicitly. A training-only component does not establish
+single-frame inference.
 
 The present draft differentiates experimental questions and information
 budgets, not an established novel method. A publishable contribution still
