@@ -33,3 +33,7 @@ HF连接器实测为gated、imagefolder、少于1K条样本；说明要求先申
 [SMOID原文](https://openaccess.thecvf.com/content_ICCV_2019/papers/Jiang_Learning_to_See_Moving_Objects_in_the_Dark_ICCV_2019_paper.pdf)§3.1–3.2和§4.1描述在足够照明下以1%透过率ND和双相机采集亮暗对；这是实测衰减观察，不等于全为自然暗夜。12-bit值存16-bit容器、RAW Bayer及裁剪奇偶性影响渲染，原方法还作片段强度缩放，不能直接替代既有RGB接口。[作者README](https://github.com/MichaelHYJiang/Learning-to-See-Moving-Objects-in-the-Dark)只给示例入口；读取下载脚本也只确认三组标明example的ZIP，未执行或请求其数据主机，不把它计为完整179对及公开划分已取得。
 
 上述核查只完善准备度边界，未补齐自然夜间/独立最终证据。若后续确需RAW噪声验证，先单独登记来源、固定训练/开发范围、原始参考类型及公共渲染，不把元数据变成下载完成，也不为新增一张表绕开当前候选的质量门槛。
+
+## CRVD原生训练输入已取得（2026-11-13 09:03 CST）
+
+后续按[独立来源资格协议](../../4.temporal-consistency/docs/crvd-source-qualification-protocol.md)推进，现已实际取得[scene1/ISO1600/frame1固定四TIFF](../../4.temporal-consistency/data/external-crvd/README.md)，不再将该来源当前状态笼统描述为“只有元数据”。其中两个噪声重复和原始平均为uint16，BM3D参考为float32；ZIP CRC/大小及原生TIFF标签/读出类型核验正常，未渲染/转换或评价模型。仅一个训练时刻，不是完整视频、传感器标定、自然暗夜或独立最终；测试像素仍未读。官方包实际按场景ZIP发布，初始路径记录错误及按注册结构停止均保留，完整过程/有限Range传输见[日志](../../4.temporal-consistency/process/external-crvd/journal.md)。原文主§3.1和补充§1.1/表1的人工运动/多帧平均假设已进一步核查，不直接移入现有RGB方法主表。
