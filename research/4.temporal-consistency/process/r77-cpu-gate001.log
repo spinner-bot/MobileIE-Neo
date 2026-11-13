@@ -1,0 +1,75 @@
+/data/Users/zrh/data/MobileIE-Neo/.venv/lib/python3.10/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/check_trained_spatial_control_r77.py:45: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  calls.append(dict(shape=list(pair.shape),slot_difference=float((pair[:,0]-pair[:,1]).abs().max())))
+{
+  "at": "2026-11-13T21:58:04.570560+08:00",
+  "passed": true,
+  "parameters": 890275,
+  "artificial_eval_calls": [
+    {
+      "shape": [
+        1,
+        2,
+        3,
+        384,
+        384
+      ],
+      "slot_difference": 0.0
+    },
+    {
+      "shape": [
+        1,
+        2,
+        3,
+        384,
+        384
+      ],
+      "slot_difference": 0.0
+    },
+    {
+      "shape": [
+        1,
+        2,
+        3,
+        384,
+        384
+      ],
+      "slot_difference": 0.0
+    },
+    {
+      "shape": [
+        1,
+        2,
+        3,
+        384,
+        384
+      ],
+      "slot_difference": 0.0
+    }
+  ],
+  "last_output_gradient_to_other_frames_max": 0.0,
+  "last_output_gradient_to_current_frame_max": 1.262546174984891e-05,
+  "training_videos": 4,
+  "training_frames": 16,
+  "discarded_full_CPU_updates": 1,
+  "formal_updates": 0,
+  "losses": [
+    0.27894219756126404,
+    0.27903443574905396,
+    0.278825044631958,
+    0.2790112793445587
+  ],
+  "gradient_norm_before_clip": 6.819940567016602,
+  "scheduler_step": 1,
+  "lr": 0.00039999999975910314,
+  "numerical_investment_status": "pending_complete_original_and_self4_results",
+  "formal_GPU_launch_authorized": false,
+  "R75_training17_and_evaluation27_R76_evaluation37_unchanged": true,
+  "trained_checkpoint_read": false,
+  "real_video_read": false,
+  "CUDA_initialized": false,
+  "scope": "CPU observation-path and discarded update qualification only; not complete trainer, quality, convergence or GPU readiness."
+}
+
