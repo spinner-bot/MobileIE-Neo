@@ -1,0 +1,56 @@
+{
+  "completed_normally": true,
+  "motion_model_updates": {
+    "task": 4000,
+    "proxy": 4000
+  },
+  "total_new_motion_updates": 8000,
+  "spatial_model_updates": 0,
+  "final_markers": {
+    "task": {
+      "model": "task",
+      "seed": 1,
+      "new_step": 4000,
+      "spatial_updates": 8000,
+      "motion_updates": 4000,
+      "path": ".cache/checkpoints/exploration-r74/stage001/seed1/task-step4000.pt",
+      "sha256": "7b74a1efc8e908ff31558aab6d8033ec965e0b60f9c484b6a0a70e6e44689376",
+      "motion_parameters": 21918,
+      "total_parameters_including_frozen_spatial": 25993,
+      "spatial_source": {
+        "marker": "research/4.temporal-consistency/results/exploration-r44-stage001-seed1/square_mse-step4000.json",
+        "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+        "frozen": true,
+        "project_updates": 8000,
+        "parameters": 4075
+      },
+      "final_reload_max_delta": 0.0,
+      "final_reload_passed": true
+    },
+    "proxy": {
+      "model": "proxy",
+      "seed": 1,
+      "new_step": 4000,
+      "spatial_updates": 8000,
+      "motion_updates": 4000,
+      "path": ".cache/checkpoints/exploration-r74/stage001/seed1/proxy-step4000.pt",
+      "sha256": "49da2cb879573a82fbb1f7d22b6080c9f6218881b1a2f1671b4bc84ec614e620",
+      "motion_parameters": 21918,
+      "total_parameters_including_frozen_spatial": 25993,
+      "spatial_source": {
+        "marker": "research/4.temporal-consistency/results/exploration-r44-stage001-seed1/square_mse-step4000.json",
+        "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+        "frozen": true,
+        "project_updates": 8000,
+        "parameters": 4075
+      },
+      "final_reload_max_delta": 0.0,
+      "final_reload_passed": true
+    }
+  },
+  "execution_device": "cpu",
+  "CUDA_initialized": false,
+  "seconds": 1729.3448470510193,
+  "ended": "2026-11-13T12:04:16.483989+08:00",
+  "scope": "Fixed formal motion budget; frozen spatial network stays at8000. No quality or phone claim."
+}
