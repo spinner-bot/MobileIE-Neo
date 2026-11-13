@@ -4,9 +4,9 @@
 
 ## 当前研究状态
 
-截至2026-11-13，项目仍处于方法探索阶段，尚未建立可投稿的新方法。接续先读[进展报告0111](docs/进展报告/0111-T-26111312-完整CPU质量与固定图收口及实际设备纠正.md)、[4号研究入口](research/4.temporal-consistency/README.md)和[服务器约定](AGENTS.md)。主线在 `main` 推进，移动演示由独立支线处理。
+截至2026-11-13，项目仍处于方法探索阶段，尚未建立可投稿的新方法。接续先读[进展报告0112](docs/进展报告/0112-T-26111312-运动代理监督完整止损与共享设备绑定修复.md)、[4号研究入口](research/4.temporal-consistency/README.md)和[服务器约定](AGENTS.md)。主线在 `main` 推进，移动演示由独立支线处理。
 
-R74的冻结空间映射/RGB传输[固定检验](research/4.temporal-consistency/docs/exploration-r74-motion-supervision-protocol.md)已通过原CPU资格，并按明确的[执行修订](research/4.temporal-consistency/docs/exploration-r74-cpu-execution-amendment.md)在CPU执行两seed完整16000 motion更新。原GPU纯等待控制器已退出，新finalize002于11:05:11启动，42科学依赖冻结；两个seed已正常完成四模型各4000/共16000更新，四final重载差0；共同CPU80质量和20固定图实际审阅已完整结束，共享GPU感知在同一原进程接续；完整感知与16联合门槛仍待完成。按原进程身份接续，不因GPU有空重启或由部分训练损失宣称收益。用户明确允许评估余量后同卡并行，新GPU工作按[共享准入规范](specs/项目规范/GPU资源使用规范.md)连续采样、估算峰值并预留既有任务增长空间。
+R74冻结空间映射/RGB传输的[固定检验](research/4.temporal-consistency/docs/exploration-r74-motion-supervision-protocol.md)已完整结束：16000 motion更新、80新CPU质量、80感知、20固定图实际审阅及120条件联合表全部保留。16门槛全部失败，按[完整决定](research/4.temporal-consistency/docs/exploration-r74-decision.md)停止其局部搜索，未运行成本实验；当前无活跃R74任务，不依据历史提示重启。共享GPU实际设备问题已透明纠正，后续[入口](research/4.temporal-consistency/docs/prebound-shared-gpu-entry.md)在整个子进程前绑定并核实际UUID，非0卡零评分检查通过；旧错误记录和所有原分数保持。创新和适当因果视频参考仍需继续建立，不把普通模块组合或负结果称方法成功。
 
 R73原生一/二阶历史矩进入第一次FST的固定检验已全部正常结束：24000正式更新、六最终导出、200新CPU质量、240感知、280联合条件和20固定图实际检查完整保留。20项联合门槛全部失败，按[完整决定](research/4.temporal-consistency/docs/exploration-r73-decision.md)停止该组合的局部网格；没有因此建立新方法。当前无活跃R73任务，不依据历史报告中的活跃提示重启旧训练或评价。
 
