@@ -1,0 +1,45 @@
+\section{Cross-source development on native REDS frames}
+\label{sec:external-reds}
+REDS was released for video deblurring and super-resolution~\cite{reds}.
+We use its sharp validation source for a separate synthetic low-light
+development check, without changing any reference weights. Clips 000,
+009, 019 and 029 and their first 64 frames were fixed before pixel
+acquisition. All 256 source frames retain their native $720\times1280$
+resolution. The existing degradation applies a numerical sRGB power of
+2.2, exposure factor 0.35, Poisson counts of 20 or 80, Gaussian standard
+deviation 0.008, clipping and uint8 quantization, with JPEG disabled.
+One registered PCG64 stream per source/condition is shared by all models.
+This is not a calibrated RAW/ISP simulator or the official REDS task.
+
+\input{generated/external-reds-table}
+The five reference networks retain their completed 8,000-update
+adaptations and both seeds. There is no REDS fine-tuning or checkpoint
+selection. All 152 quality rows and 156 perceptual comparisons, including
+four unique GT controls scoring 10, complete normally. The four videos
+are the source units; two noise conditions and many frames do not add
+independent scenes. Source-rate 24\,fps perceptual evaluation is kept
+separate from the earlier nominal 30\,fps results.
+
+MobileIE MSE recursion improves mean PSNR by 1.58--1.85\,dB at 20 photons
+and 0.23--0.39\,dB at 80 photons across the two seeds. Temporal-error
+ratios are 0.556--0.560 and 0.635--0.646, respectively. Yet two of its 16
+source/condition/seed PSNR differences are negative, with the worst losing
+0.284\,dB; all 16 JOD differences are positive. Strong recursion remains
+necessary, without implying uniform per-source improvement.
+
+The adapted spatial U-Net with recursion exceeds MobileIE MSE with
+recursion by 1.356--1.833\,dB and 0.228--0.476 JOD across these four
+condition/seed means. Its own recursion lowers temporal error in every
+pair, but loses PSNR in six and JOD in five of 16 pairs. The largest
+losses are 0.687\,dB and 0.176 JOD. Lower temporal error therefore does
+not establish preserved image quality, even for a stronger spatial
+reference. Capacity, public pretraining and training computation are not
+matched by the common development updates.
+
+Project adaptation uses the registered 57 DAVIS and 12 paired OLiVES
+training source IDs, with no REDS source IDs. That does not establish
+unseen public pretraining: author declarations and checkpoint/config
+lineages are available, but public per-image training manifests and a
+cross-source pixel audit are not. These four REDS sources have now been
+used for development. They cannot be relabelled as a blind final test,
+natural low-light evidence or a newly successful method.
