@@ -25,3 +25,9 @@ catalog001取得根HTML后因记录路径转换错误退出，0图像；已保�
 catalog003正常3页，scene1 GT/noisy档案ID已固定；head001正常返回200、application/octet-stream、Accept-Ranges=bytes，长度分别130912326与1230174943，0 body读取。阶段B只取各ZIP最后65536字节及中央目录，每目录≤4MiB、单请求≤1MiB，复用既有SplitArchive的严格206/Content-Range/长度检查；无全档案下载或图像解码。尾段可能包含压缩图像字节，明确计入传输量，不称0图像字节。仅网络技术故障至多三次，权限/配额立即停止，不换来源。
 
 中央目录正常后按实际原始成员名固定scene1/ISO1600/frame1：GT档案clean、noisy档案原始平均clean及noisy0/noisy1。若精确成员不存在，停止并保留目录，不更换场景/ISO/时刻。获取前另写四成员大小、CRC/偏移/压缩方式清单并提交；仅在清单已冻结后取对应压缩数据，合计传输上限32MiB、单文件解压≤8MiB。资格仅原生TIFF容器、uint16/尺寸/值域与参考类型，无渲染、调亮、CNN/SGD/GPU或新模型评价，不作完整噪声标定/独立GT或夜间连续视频结论。
+
+## 四成员的原生格式资格（目录已正常，输入尚未读取）
+
+GT原始成员实际名为`scene1/ISO1600/frame1_clean_and_slightly_denoised.tiff`，noisy档案另有同位置`frame1_clean.tiff`和`frame1_noisy0.tiff`、`frame1_noisy1.tiff`；只用这四项，不改变场景/ISO/时刻。官方test_indoor.py同样读取带slightly_denoised后缀的原生TIFF，再转float并使用240/4095归一；本阶段不执行该模型或归一。
+
+目录显示前三个noisy侧成员各4147322字节，BM3D参考8294534字节，后者仍≤8MiB；因此不预设四项都为uint16。传感器噪声及平均参考保留uint16，轻度去噪参考保留实际TIFF原生数值类型并检查有限值/1080×1920形状，记录其值域而不按假定范围裁剪或转换。每个单请求无技术重试，源CRC/大小与实际解压核对后才产生完整TIFF，四项32MiB传输总上限保持。两个噪声观测与平均参考可能共享采样，不能称与GT独立。
