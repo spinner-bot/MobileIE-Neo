@@ -15,7 +15,7 @@
 |paired_real_ND_DEV|0|-2.283187|-0.888606|-2.322781|-0.847697|1.287247|
 |paired_real_ND_DEV|1|-1.927183|-0.719540|-1.846570|-0.679347|1.272910|
 
-对同权重zero-flow的motion独立作用：
+对同权重zero-flow的实际输出差异：
 
 |域|seed|proxy ΔPSNR|proxy ΔJOD|proxy Etemp/zero|task Etemp/zero|
 |---|---:|---:|---:|---:|---:|
@@ -24,7 +24,9 @@
 |paired_real_ND_DEV|0|+0.003069|+0.005252|0.994916|1.000073|
 |paired_real_ND_DEV|1|+0.024865|+0.019369|0.992398|1.000005|
 
-原16项注册联合门槛全部False。proxy对raw损失1.927..3.129dB及.720...889JOD，对strong-rec时序还高27.3%..30.4%；同权重zero-flow的时间改善也未达5%。task输出更接近原raw，但不建立双域双seed的独立motion收益。完整逐源、最差条件和全部四对照门槛见[full table](../report/exploration-r74-joint/tables.md)与[gates](../report/exploration-r74-joint/gates.json)。
+zero-flow保留相同场预测的置信，但零位移亦改变边界有效性；不能把该比较描述成同时固定所有边界接纳像素的纯位移隔离。
+
+原16项注册联合门槛全部False。proxy对raw损失1.927..3.129dB及0.720–0.889JOD，对strong-rec时序还高27.3%..30.4%；同权重zero-flow的时间改善也未达5%。task输出更接近原raw，但不建立双域双seed的独立motion收益。完整逐源、最差条件和全部四对照门槛见[full table](../report/exploration-r74-joint/tables.md)与[gates](../report/exploration-r74-joint/gates.json)。
 
 ## 推论边界与止损
 
