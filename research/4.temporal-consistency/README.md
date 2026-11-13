@@ -2,6 +2,8 @@
 
 目标：以论文为最终产出，深入核查 MobileIE 的架构与训练机制，在移动端计算预算内设计视频增强模型，用传统方法、后处理和已有视频模型对照验证画质、时间稳定性与效率收益。
 
+最新里程碑（[0121](../../docs/进展报告/0121-T-26111322-正式训练双种子九千步里程碑归档.md)/[progress004](process/exploration-r75/progress004.json)）：原两seed均9000/64000、各9000marker及完整行前缀已分别提交，1K..9K共18正规marker，原四PID/start同身份仍活跃。17/27/37冻结源保持，无重启/恢复/中途DEV/JOD或新方法。R75→R76固定完整评价和实际图审仍待，R77仍严格条件登记/人工CPU资格，无新增正式训练/自动启动器。paper018、全部旧STOP/自然动态手机最终缺口保持，目标active；以下旧进度仅作历史，不据此重启原任务。
+
 最新有条件准备（[0119](../../docs/进展报告/0119-T-26111322-同容量空间训练控制登记与CPU资格.md)）：R75两seed最近8400/64000、原两训练/两协调同身份活跃，17/27/37源保持。另登记[R77独立空间训练控制](docs/exploration-r77-trained-spatial-control-protocol.md)，补same-weight current/self4不能代替同容量独立训练的归因边界；原XS/数据seed-step/预算不变、每帧F(x,x)。CPU人工输入资格6.399秒/一次丢弃完整更新通过，0真实视频/正式更新/GPU。**仅原八门槛与self4四支持全部True及两套20图实际审阅后，才实施额外训练/GPU资格；当前pending、无自动启动器、完整trainer/evaluator未实现。** 有False停止额外128K投资，不扩长度/seed网格。paper018、旧STOP及全部论文缺口保持，目标active。
 
 当前最新（[0117](../../docs/进展报告/0117-T-26111321-自条件补充评价链冻结与实际等待接续.md)/[progress003](process/exploration-r75/progress003.json)）：R75原两seed最近归档8100/8000，各64000目标，1K..8K16份marker分别提交，训练/协调真实存活，17/27源不变。尚无最终DEV/JOD。[R76同帧self4解释控制](docs/exploration-r76-self-conditioning-control-protocol.md)已补齐CPU/官方感知/100条件汇总/20追加固定图，编译/metadata屏障资格通过、37源冻结；实际补充协调39049/start51721359仅等待原4163819及完整原结果，无新增GPU/训练/真实DEV读出。固定四次完整拼接/更多计算/0过去观测，补充而不改原八门槛；实际数值、四支持检查与图审仍待。下一按真实终态接续，不改活跃37源、不重跑原训练。note58 R-DID403获取未完成；旧STOP及paper018保持，目标active。
