@@ -49,3 +49,12 @@ progress004保存两训练4160205/start48844067、4160204/start48844061及原协
 00:27:11的progress006核两训练4160205/start48844067、4160204/start48844061和原协调4163819/start48956211、补充39049/start51721359同身份活跃，无runtime终态；17训练源/协议及27/37评价联合源保持。running-prefix006按seed分别保存已解析完整行training/window及当次progress，原持续流仍等终态。1K..11K周期marker现22份，另有首步marker两份，实际regular文件共24；大体量Tensor仍只存自有data，未加载Tensor、重放SGD或做中途DEV。
 
 首次过程追加补丁误用了报告结尾作上下文，校验失败且无文件变更，随后按真实journal末段追加。无训练/评价源码修改、重启、恢复、额外预算或新质量/JOD。0124报告和入口逐文件另交，本阶段fetch仅main、如有分歧显式no-ff，完成检查后推送。R75→R76及两套实际图审仍待；R77严格条件、全部保留像素限制、paper018、旧STOP与论文缺口保持，远期目标active。
+
+
+## 01:24双种子12000里程碑（progress007）
+
+前序回合均为原PID/start真实存活后的verified wait。01:22:38观察seed1实际12000及regular-step012000落盘、seed0仍11900；确认/data挂载、seed/提交步/下一步/64000预算/非final、自有data资产路径和大小后单独提交seed1。01:23:42再核seed0实际12000及marker，另交seed0，不写成同时完成。
+
+progress007于01:24:18核两训练4160205/start48844067、4160204/start48844061及原协调4163819/start48956211、补充39049/start51721359同身份活跃，无runtime终态；17训练源/协议和27/37评价联合源保持。running-prefix007按seed分别保存已解析完整行training/window与当次progress，原持续流仍待终态。1K..12K周期marker共24份，另有首步2份，总26；Tensor仍只存自有data，未加载Tensor/重放SGD/做中途DEV。
+
+无训练或评价源码改动、重启、恢复、预算变化、额外训练或最终质量/JOD。0125报告与入口逐文件另交，本阶段仅fetch main、必要时显式no-ff合并、检查后推送。R75→R76完整评价与两套actual review仍待；R77严格条件、保留像素保护、paper018、旧STOP、全部论文缺口和目标active保持。
