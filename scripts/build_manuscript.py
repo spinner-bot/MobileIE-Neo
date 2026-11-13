@@ -70,6 +70,16 @@ def main():
         assert all(sha(REPO/name) == value for name, value in classical['source_sha256'].items())
         assert all((paper/'generated'/name).exists() for name in classical['generated_tables'])
         sources.append(extension)
+    if r'\input{sections/external-evidence}' in (paper/'main.tex').read_text():
+        extension = paper/'external-evidence-snapshot.json'
+        external = json.loads(extension.read_text())
+        assert external['R72_complete'] and external['table_rows'] == 19
+        assert (external['quality_rows'], external['perceptual_rows'], external['source_fps']) == (152, 156, 24)
+        assert snapshot['R72_complete_external_development_included']
+        assert not external['independent_final'] and not external['handset_measured']
+        assert all(sha(REPO/name) == value for name, value in external['source_sha256'].items())
+        assert all((paper/'generated'/name).exists() for name in external['generated_tables'])
+        sources.append(extension)
     command = [str(binary), '--untrusted', '--keep-logs', '--keep-intermediates', '--outdir', str(work), 'main.tex']
     record = {'started_at': datetime.now().astimezone().isoformat(), 'command': command,
               'source_sha256': {str(p.relative_to(REPO)): sha(p) for p in sources},
