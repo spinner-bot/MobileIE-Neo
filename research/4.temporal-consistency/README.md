@@ -2,7 +2,7 @@
 
 目标：以论文为最终产出，深入核查 MobileIE 的架构与训练机制，在移动端计算预算内设计视频增强模型，用传统方法、后处理和已有视频模型对照验证画质、时间稳定性与效率收益。
 
-当前接续（2026-11-13 10:42 CST）：R74九模块完整执行链已提交并冻结41科学依赖，原协调4109512/start47709094/finalize001于10:28:24实际启动，仅等待共享GPU4–7新空闲准入，尚无CUDA资格/正式seed0目录。先读[0106报告](../../docs/进展报告/0106-T-26111310-完整实验链冻结等待与跨来源证据入稿.md)、[固定协议](docs/exploration-r74-motion-supervision-protocol.md)、[原启动](process/exploration-r74/finalize001-launch.json)及[过程](process/exploration-r74/journal.md)。CPU资格8丢弃更新正常且不继承，正式两seed两motion各4000共16000、空间冻结8000；完整新质量/感知/16门槛均为预定，不能当已完成或因等待重启。R73完整失败/局部STOP不变。
+当前接续（2026-11-13 11:22 CST）：R74原finalize001纯GPU等待已于10:59:39退出，失败/False runtime保留；按CPU执行修订，finalize002于11:05:11实际启动。协调4119253/start47929830、seed0训练4119380/start47929982保持原身份，已越过共同2000备份点；两个seed顺序CPU全预算共16000，空间冻结8000。42科学依赖未变，不能改活跃源/中途换设备/由部分loss选模。先读[0107报告](../../docs/进展报告/0107-T-26111311-完整CPU训练接续与共享GPU资源准入.md)、[CPU执行修订](docs/exploration-r74-cpu-execution-amendment.md)、[固定协议](docs/exploration-r74-motion-supervision-protocol.md)和[过程](process/exploration-r74/journal.md)。完整新质量/感知/16门槛仍待执行。用户明确允许有余量时共享GPU，新工作遵守[资源规范](../../specs/项目规范/GPU资源使用规范.md)；独立首窗口资源试跑不继承权重，不改被冻结的父链。R73完整失败/所有旧局部STOP保持。
 
 - 当前性质：前期机制预实验，尚无已建立的新方法、联合收益或最终测试。双矩/递归融合已有先例，[note54](../5.prior-art-survey/docs/54-moment-history-equivalence-and-noise-boundaries.md)明确混合离散度不等于噪声方差；不从loss或中间备份宣称成功。
 - 最近完整外部来源参考：[0098报告](../../docs/进展报告/0098-T-26111307-原生跨来源联合评价完整收口.md)、[R72完整联合表](report/exploration-r72-reds-joint/tables.md)/[决定](docs/exploration-r72-decision.md)。四REDS源原720p/24fps、152质量与156感知行、16固定图actual review及原协调均正常结束。强自身rec仍须保留；这是合成低光DEV，不是自然夜间/独立最终，不再扩大参考家族或损失网格。
