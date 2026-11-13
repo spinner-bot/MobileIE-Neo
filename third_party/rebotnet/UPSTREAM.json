@@ -1,0 +1,34 @@
+{
+  "repository": "https://github.com/jeya-maria-jose/rebot-net",
+  "commit": "dff81d3cbd484b01ef2d42da2dd1ad1332598a09",
+  "author_project": "https://jeya-maria-jose.github.io/rebotnet-web/",
+  "paper_actually_read": "https://arxiv.org/html/2303.13504v1",
+  "license": "CC0-1.0",
+  "files": [
+    {
+      "local": "archs.py",
+      "upstream": "models/archs.py",
+      "git_blob_sha1": "c7df4f97b375972e55a91396811be7f1078a8489",
+      "bytes": 15329
+    },
+    {
+      "local": "configs.py",
+      "upstream": "configs.py",
+      "git_blob_sha1": "a81a6999c3a23cc151a3b58e441842f2a715a52d",
+      "bytes": 2729
+    },
+    {
+      "local": "LICENSE",
+      "upstream": "LICENSE",
+      "git_blob_sha1": "0e259d42c996742e9e3cba14c677129b2c1b6311",
+      "bytes": 7048
+    }
+  ],
+  "scope": "Only author architecture, example configurations and license retained. configs.py is an upstream example, NOT our executable evaluator: it supplies a 4D input but archs.py requires B,T,C,H,W. Repository has no training/recursive-evaluation entry or weights in this pinned tree. Our qualification uses the released XS architecture at 384x384 with a 5D pair; no paper performance reproduction or method novelty is claimed.",
+  "constraints": [
+    "Fixed576 token mixers; arbitrary-size native enhancement is not supported by simply changing img_size.",
+    "Recurrence initial prediction is specified as GT in paper v1; any self-start deployment evaluation must be labeled an adaptation.",
+    "Config XS is code-release configuration, not a verified table of the formal WACV final paper.",
+    "Do not invoke configs.py .cuda() example in shared server; use prebound admission for any future GPU work."
+  ]
+}
