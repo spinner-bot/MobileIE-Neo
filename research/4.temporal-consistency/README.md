@@ -2,7 +2,7 @@
 
 目标：以论文为最终产出，深入核查 MobileIE 的架构与训练机制，在移动端计算预算内设计视频增强模型，用传统方法、后处理和已有视频模型对照验证画质、时间稳定性与效率收益。
 
-当前接续（2026-11-13 09:42 CST）：R73两seed三控制共24000正式更新、六最终导出、200新CPU质量/8960逐帧、240感知/10752比较帧、280联合条件/56域-seed均值及20固定图实际审阅全部正常完成，原协调09:37:45正常结束。先读[0104报告](../../docs/进展报告/0104-T-26111309-原生双矩完整闭环与核心路线止损.md)、[完整决定](docs/exploration-r73-decision.md)、[联合表](report/exploration-r73-joint/tables.md)和[过程](process/exploration-r73/journal.md)。20联合门槛全部False，停止本原生双矩的rho/匹配器/状态宽度尺度/目标/LR/长度/追加seed局部网格；无活跃R73任务，不重启旧进程或修改原门槛来挽救结论。
+当前接续（2026-11-13 10:10 CST）：R74已登记冻结空间映射、task与训练GT运动代理监督两个小型RGB传输条件，原CPU资格正常28.587185秒、8丢弃更新/32冻结空间中心、0正式/DEV/CUDA；几何/首帧/紧凑state/真实梯度/保存重载通过。先读[0105报告](../../docs/进展报告/0105-T-26111310-运动监督新问题登记与RGB传输CPU资格.md)、[固定协议](docs/exploration-r74-motion-supervision-protocol.md)、[先例边界](../5.prior-art-survey/docs/55-motion-supervision-and-output-transport-boundaries.md)和[过程](process/exploration-r74/journal.md)。正式trainer已准备但未启动，先补齐完整评价/感知/汇总/图/成本/协调链再冻结及新GPU准入；不是方法质量/新颖性结论。R73完整原链已结束且20联合门槛全False，[decision](docs/exploration-r73-decision.md)规定的局部STOP保持，无任何旧任务重启。
 
 - 当前性质：前期机制预实验，尚无已建立的新方法、联合收益或最终测试。双矩/递归融合已有先例，[note54](../5.prior-art-survey/docs/54-moment-history-equivalence-and-noise-boundaries.md)明确混合离散度不等于噪声方差；不从loss或中间备份宣称成功。
 - 最近完整外部来源参考：[0098报告](../../docs/进展报告/0098-T-26111307-原生跨来源联合评价完整收口.md)、[R72完整联合表](report/exploration-r72-reds-joint/tables.md)/[决定](docs/exploration-r72-decision.md)。四REDS源原720p/24fps、152质量与156感知行、16固定图actual review及原协调均正常结束。强自身rec仍须保留；这是合成低光DEV，不是自然夜间/独立最终，不再扩大参考家族或损失网格。
