@@ -1,0 +1,7 @@
+# Optional author-architecture imports in the owned Python3.10 / torch2.9.1+cu126 env.
+# Install torchvision from https://download.pytorch.org/whl/cu126 with --no-deps.
+torchvision==0.24.1+cu126
+# Install the remaining packages from PyPI; do not replace the existing torch build.
+timm==1.0.22
+huggingface-hub==0.36.0
+safetensors==0.6.2
