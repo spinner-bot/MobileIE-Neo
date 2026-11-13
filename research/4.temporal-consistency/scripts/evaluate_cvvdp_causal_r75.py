@@ -1,6 +1,7 @@
 """Complete40 cached final R75 comparisons with the unchanged official perceptual metric."""
 import argparse
 import fcntl
+import json
 import os
 from pathlib import Path
 import sys
@@ -35,7 +36,7 @@ def main():
     entries=[];sources={}
     for seed in (0,1):
         run=BASE/f'results/exploration-r75-eval-seed{seed}'
-        terminal=__import__('json').loads((run/'runtime.json').read_text())
+        terminal=json.loads((run/'runtime.json').read_text())
         assert terminal['completed_normally'] and terminal['quality_rows']==20 and terminal['frame_rows']==896
         path=run/'prediction_manifest.jsonl'
         rows=lines(path);assert len(rows)==20
@@ -47,7 +48,8 @@ def main():
     assert not torch.cuda.is_initialized()
     out=BASE/f'results/exploration-r75-perceptual{args.attempt:03d}'
     out.mkdir(exist_ok=False)
-    started,complete,count,frames,schedule,lock=False,False,0,0,None,None
+    complete,count,frames,schedule,lock=False,0,0,None,None
+    reason='error'
     started=time.perf_counter()
     try:
         samples=sustained_samples()
@@ -92,16 +94,22 @@ def main():
                 identity={k:entry[k] for k in ['seed','domain','scene','source_video','model','history','method','label','parameters','project_updates']}
                 append(out/'per_sequence.jsonl',dict(**identity,JOD=score,frames=len(values),metric_work_seconds=seconds))
                 count+=1;frames+=len(values)
-                schedule.yield_after_work(seconds)
+                if count<40:
+                    schedule.yield_after_work(seconds)
+                else:
+                    schedule.work_seconds+=seconds
                 append(out/'resource-observations.jsonl',dict(completed_rows=count,**schedule.summary()))
-                print(__import__('json').dumps(dict(**identity,completed_rows=count)),flush=True)
+                print(json.dumps(dict(**identity,completed_rows=count)),flush=True)
                 del values,test
             del data,target
-        assert (count,frames)==(40,1792);complete=True
+        assert (count,frames)==(40,1792);complete=True;reason='complete'
+    except ResourcePressure:
+        reason='resource'
+        (out/'failure.txt').write_text(traceback.format_exc());raise
     except BaseException:
         (out/'failure.txt').write_text(traceback.format_exc());raise
     finally:
-        write(out/'runtime.json',dict(ended=stamp(),completed_normally=complete,quality_rows=count,
+        write(out/'runtime.json',dict(ended=stamp(),completed_normally=complete,stop_reason=reason,quality_rows=count,
             comparison_frames=frames,new_enhancement_CNN=0,SGD=0,seconds=time.perf_counter()-started,
             resource=schedule.summary() if schedule is not None else None,
             peak_allocated_bytes=torch.cuda.max_memory_allocated() if torch.cuda.is_initialized() else None))
