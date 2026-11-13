@@ -154,6 +154,7 @@ def main():
             began=time.perf_counter()
             norm=finish_update(model,optimizer,scheduler)
             torch.cuda.synchronize()
+            optimizer_seconds=time.perf_counter()-began
             updates=step+1; partial_videos=0; start_rng=None
             row=dict(at=stamp(),completed_steps=updates,data_step=step,loss=sum(losses)/4,
                      synthetic_loss=sum(losses[:2])/2,real_loss=sum(losses[2:])/2,
@@ -172,7 +173,11 @@ def main():
                 write(out/'progress.json',dict(**row,seed=args.seed,attempt=args.attempt,
                     pid=os.getpid(),registered_steps=STEPS,completed_normally=False,latest_checkpoint=latest_marker))
                 print(json.dumps({k:v for k,v in row.items() if k!='resource'}),flush=True)
-            schedule.yield_after_work(time.perf_counter()-began)
+            if updates<STEPS:
+                schedule.yield_after_work(optimizer_seconds)
+            else:
+                # No next batch: record this work and release the context on normal exit.
+                schedule.work_seconds+=optimizer_seconds
         assert updates==STEPS and final_marker is not None
         completed=True; reason='complete'
     except ResourcePressure:
