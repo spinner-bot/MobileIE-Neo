@@ -6,7 +6,7 @@
 
 截至2026-11-13，项目仍处于方法探索阶段，尚未建立可投稿的新方法。接续先读[进展报告0114](docs/进展报告/0114-T-26111313-原生因果参考共享GPU试跑完成与正式预算登记.md)、[4号研究入口](research/4.temporal-consistency/README.md)和[服务器约定](AGENTS.md)。主线在 `main` 推进，移动演示由独立支线处理。
 
-最新定向来源核查已确认ReBotNet作者发布架构，CPU人工输入资格通过，原代码/许可已固定入库。固定token/GT首帧/500K原训练与任意原生分辨率的差异见[57号阅读](research/5.prior-art-survey/docs/57-causal-reference-code-feasibility.md)；0新训练/质量/视频像素/GPU，不称方法或原论文充分复现。下一需独立登记自启动分块与预算，再做共享GPU需求实测。
+定向来源核查已确认ReBotNet作者发布架构，CPU人工输入资格通过，原代码/许可已固定入库。固定token/GT首帧/500K原训练与任意原生分辨率的差异见[57号阅读](research/5.prior-art-survey/docs/57-causal-reference-code-feasibility.md)；代码资格阶段没有训练/质量/视频像素/GPU结果，不称方法或原论文充分复现。
 
 上述代码资格后，已另完成原生分块CPU检查和两次丢弃共享GPU更新，实际0号上本进程观测最高1242MiB，已退出释放；资源状态不继承。R75自启动原生参考的[正式预算](research/4.temporal-consistency/docs/exploration-r75-causal-reference-protocol.md)已登记，训练代码/CPU数据资格仍待实现，正式GPU未启动。资源资格与有质量收益的新方法严格分开，旧STOP全部保持。
 
