@@ -4,7 +4,9 @@
 
 ## 当前研究状态
 
-截至2026-11-13，项目仍处于方法探索阶段，尚未建立可投稿的新方法。接续先读[进展报告0121](docs/进展报告/0121-T-26111322-正式训练双种子九千步里程碑归档.md)、[4号研究入口](research/4.temporal-consistency/README.md)和[服务器约定](AGENTS.md)。主线在 `main` 推进，移动演示由独立支线处理。
+截至2026-11-13，项目仍处于方法探索阶段，尚未建立可投稿的新方法。接续先读[进展报告0122](docs/进展报告/0122-T-26111323-保留实拍来源纯元数据资格与最终像素保护.md)、[4号研究入口](research/4.temporal-consistency/README.md)和[服务器约定](AGENTS.md)。主线在 `main` 推进，移动演示由独立支线处理。
+
+原两seed最近9700/64000、四原句柄活跃，无新正式训练/质量/JOD；当前可恢复里程碑归档仍是下述9000。[原保留实拍来源](research/4.temporal-consistency/data/external-olives-reserved/README.md)只做纯目录元数据资格，三段586对帧名、0像素/模型/解码；不增加已完成独立基准数，不开放为DEV，也不因原门槛通过自动解封。最终方法、权重、预处理和完整评价范围须另冻结；原训练与既定完整评价链继续，paper018和研究缺口保持。
 
 最近[progress004](research/4.temporal-consistency/process/exploration-r75/progress004.json)归档R75两seed各9000/64000、各9000可恢复marker和完整行日志前缀；原训练及原/补充协调器继续，17/27/37源保持，无中途DEV/JOD或新方法结论。R77只预先登记同架构独立空间控制并通过CPU人工输入资格；必须先过原八门槛、self4四支持及两套实际图审才投入额外训练，否则停止该投资。当前没有新正式训练/GPU，未完成完整trainer/evaluator，不把current/self4的输入干预当独立空间训练或创新。SMOID demo来源核查也未取得新配对外部基准；paper018及验证缺口保持。
 
