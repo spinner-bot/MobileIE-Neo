@@ -2,7 +2,7 @@
 
 目标：以论文为最终产出，深入核查 MobileIE 的架构与训练机制，在移动端计算预算内设计视频增强模型，用传统方法、后处理和已有视频模型对照验证画质、时间稳定性与效率收益。
 
-当前接续（2026-11-13 08:28 CST）：R73 seed0三模型各4000/共12000更新及最终导出全部正常，原CPU0质量与新空闲准入GPU5的seed1训练正在运行。先读[0102报告](../../docs/进展报告/0102-T-26111308-首种子预算完成与第二种子实际接续.md)、[固定协议](docs/exploration-r73-native-moment-core-protocol.md)、[过程](process/exploration-r73/journal.md)和[已核进度](process/exploration-r73/progress004.json)。seed0旧训练已退出；核实真实PID/start/runtime再操作，不根据历史提示重启任务。八模块、协议及完整科学依赖仍冻结，最终质量/感知与方法采用尚待。
+当前接续（2026-11-13 09:11 CST）：R73两个seed三个控制共24000正式更新及六个最终导出全部正常，seed0完整CPU100质量行也已正常，最后CPU1由原协调启动并运行。先读[0103报告](../../docs/进展报告/0103-T-26111309-双种子训练预算完成与原生RAW资料资格收口.md)、[固定协议](docs/exploration-r73-native-moment-core-protocol.md)、[过程](process/exploration-r73/journal.md)和[已核进度](process/exploration-r73/progress006.json)。旧训练/CPU0已退出/回收，不能重启；八模块/31科学依赖冻结，完整感知/联合门槛/视觉审阅尚待，预算完成不等于方法成功。
 
 - 当前性质：前期机制预实验，尚无已建立的新方法、联合收益或最终测试。双矩/递归融合已有先例，[note54](../5.prior-art-survey/docs/54-moment-history-equivalence-and-noise-boundaries.md)明确混合离散度不等于噪声方差；不从loss或中间备份宣称成功。
 - 最近完整外部来源参考：[0098报告](../../docs/进展报告/0098-T-26111307-原生跨来源联合评价完整收口.md)、[R72完整联合表](report/exploration-r72-reds-joint/tables.md)/[决定](docs/exploration-r72-decision.md)。四REDS源原720p/24fps、152质量与156感知行、16固定图actual review及原协调均正常结束。强自身rec仍须保留；这是合成低光DEV，不是自然夜间/独立最终，不再扩大参考家族或损失网格。
