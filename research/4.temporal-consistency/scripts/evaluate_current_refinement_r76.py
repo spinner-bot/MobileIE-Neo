@@ -11,6 +11,7 @@ import torch
 
 from causal_reference_io_r75 import ROOT,BASE,write,append,digest,stamp
 from causal_reference_evaluation_r75 import metas,final_markers,load_final
+from self_conditioning_evaluation_r76 import require_primary_pipeline
 from current_refinement_r76 import refine_current,PASSES
 from rebotnet_reference import tile_layout
 from prepare_cache_r5 import load_one
@@ -25,7 +26,7 @@ def main():
         raise SystemExit('Require an initially empty CUDA mask for CPU inference.')
     torch.set_num_threads(2);cv2.setNumThreads(1)
     torch.use_deterministic_algorithms(True)
-    markers=final_markers()
+    markers,_,_=require_primary_pipeline()
     for seed in (0,1):
         run=BASE/f'results/exploration-r75-eval-seed{seed}/runtime.json'
         terminal=json.loads(run.read_text())
