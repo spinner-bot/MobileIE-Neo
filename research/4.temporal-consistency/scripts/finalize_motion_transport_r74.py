@@ -33,11 +33,14 @@ def scientific_sources():
                     candidate = BASE/'scripts'/(name.split('.')[0]+'.py')
                     if candidate.is_file(): pending.append(candidate)
     paths.update((ROOT/'MobileIE/model').glob('*.py')); paths.add(PROTOCOL)
+    amendment = BASE/'docs/exploration-r74-cpu-execution-amendment.md'
+    if amendment.is_file(): paths.add(amendment)
     return {str(path.relative_to(ROOT)): digest(path) for path in sorted(paths)}
 
 
 def main():
     parser = argparse.ArgumentParser(); parser.add_argument('--attempt', type=int, default=1)
+    parser.add_argument('--device', choices=['cpu', 'cuda'], default='cuda')
     parser.add_argument('--qualification-start', type=int, default=1); args = parser.parse_args()
     process = BASE/'process/exploration-r74'; cpu_path = process/'cpu-gate001/runtime.json'
     cpu = json.loads(cpu_path.read_text())
@@ -47,6 +50,7 @@ def main():
     write(out/'config.json', dict(at=stamp(), source_sha256=frozen, expected_formal_motion_updates=16000,
           new_spatial_updates=0, GPU_seeds_sequential=True, no_wall_cutoff=True,
           no_automatic_scientific_retry=True, CPU_qualification_sha256=digest(cpu_path),
+          execution_device=args.device, CUDA_training_qualification_required=args.device == 'cuda',
           scope='One registered supervision/transport pilot, final4000 only. Not a novelty, quality, phone or final-test claim.'))
     started, complete, cost_executed = time.perf_counter(), False, False
     children, streams, render, render_stream = [], [], None, None
@@ -107,22 +111,41 @@ def main():
             return record, admission_number
 
     try:
-        state('Complete source chain frozen; separately admitted actual-window CUDA qualification next')
-        guard, attempt = guarded('check_motion_transport_r74.py', 'qualification', ['--device', 'cuda'])
-        gate = process/f'cuda-gate{attempt:03d}/runtime.json'
-        assert json.loads(gate.read_text())['passed']
-        write(process/'cuda-qualification.json', dict(passed=True, at=stamp(), gate_runtime=str(gate.relative_to(ROOT)),
-              gate_sha256=digest(gate), guard=str(guard.relative_to(ROOT)), guard_sha256=digest(guard),
-              discarded_updates_not_inherited=True))
+        if args.device == 'cuda':
+            state('Complete source chain frozen; separately admitted actual-window CUDA qualification next')
+            guard, attempt = guarded('check_motion_transport_r74.py', 'qualification', ['--device', 'cuda'])
+            gate = process/f'cuda-gate{attempt:03d}/runtime.json'
+            assert json.loads(gate.read_text())['passed']
+            write(process/'cuda-qualification.json', dict(passed=True, at=stamp(), gate_runtime=str(gate.relative_to(ROOT)),
+                  gate_sha256=digest(gate), guard=str(guard.relative_to(ROOT)), guard_sha256=digest(guard),
+                  discarded_updates_not_inherited=True))
+        else:
+            amendment = BASE/'docs/exploration-r74-cpu-execution-amendment.md'; assert amendment.is_file()
+            qualified = json.loads((process/'cpu-gate001/config.json').read_text())
+            assert all(digest(BASE/'scripts'/n) == sha for n, sha in qualified['source_sha256'].items())
+            write(process/'cpu-qualification-used.json', dict(at=stamp(), runtime=str(cpu_path.relative_to(ROOT)),
+                  runtime_sha256=digest(cpu_path), original_qualified_protocol_sha256=qualified['protocol_sha256'],
+                  execution_amendment_sha256=digest(amendment), original_computations_unchanged=True,
+                  discarded_updates_not_inherited=True, no_CUDA_qualification_claimed=True))
+            state('Complete CPU execution chain frozen; original numerical CPU qualification reused, fresh motion initialization next')
         for seed in [0, 1]:
-            state(f'Freshly initialized formal seed{seed} waits new external/internal GPU admission')
-            guarded('train_motion_transport_r74.py', f'seed{seed}', ['--seed', str(seed)])
+            if args.device == 'cuda':
+                state(f'Freshly initialized formal seed{seed} waits new external/internal GPU admission')
+                guarded('train_motion_transport_r74.py', f'seed{seed}', ['--seed', str(seed)])
+            else:
+                check(); cmd = command('train_motion_transport_r74.py', ['--seed', str(seed), '--device', 'cpu'])
+                with (out/f'seed{seed}-cpu.log').open('x') as stream:
+                    child = subprocess.Popen(cmd, cwd=ROOT, stdout=stream, stderr=subprocess.STDOUT)
+                    time.sleep(.2)
+                    write(out/f'seed{seed}-cpu-launch.json', dict(at=stamp(), pid=child.pid, identity=process_identity(child.pid), command=cmd))
+                    state(f'Original formal CPU seed{seed} child actually started; full4000 each and frozen spatial weights, no GPU')
+                    assert child.wait() == 0, 'CPU admitted scientific failure preserved; no automatic retry'
             runtime = json.loads((BASE/f'results/exploration-r74-stage001-seed{seed}/runtime.json').read_text())
             assert runtime['completed_normally'] and runtime['motion_model_updates'] == {n: 4000 for n in MODES}
             for name in MODES:
                 marker = json.loads((BASE/f'results/exploration-r74-stage001-seed{seed}/{name}-step4000.json').read_text())
                 assert marker['final_reload_passed']
-        state('Both formal budgets normal and GPUs released; original two CPU evaluations actually starting')
+        state('Both formal budgets normal, no training GPU held; original two CPU evaluations actually starting')
         for seed in [0, 1]:
             stream = (out/f'quality-seed{seed}.log').open('x'); streams.append(stream)
             cmd = command('evaluate_motion_transport_r74.py', ['--seed', str(seed)])
@@ -152,6 +175,7 @@ def main():
         for stream in streams: stream.close()
         if render_stream: render_stream.close()
         write(out/'runtime.json', dict(completed_normally=complete, seconds=time.perf_counter()-started, ended=stamp(),
+              training_execution_device=args.device,
               quality_gates_passed=quality_passed, cost_executed=cost_executed, actual_visual_review_still_required=True,
               scope='Coordinator terminal only; not method success, phone cost or independent final.'))
 
