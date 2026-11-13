@@ -1,0 +1,36 @@
+{
+  "at": "2026-11-13T11:35:48.599425+08:00",
+  "identities": [
+    {
+      "pid": 4119253,
+      "start_ticks": "47929830",
+      "state": "S",
+      "actual_commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/finalize_motion_transport_r74.py --attempt 2 --device cpu "
+    },
+    {
+      "pid": 4127778,
+      "start_ticks": "48108800",
+      "state": "R",
+      "actual_commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/train_motion_transport_r74.py --seed 1 --device cpu "
+    }
+  ],
+  "seed0_completed_normally": true,
+  "seed0_motion_updates": {
+    "task": 4000,
+    "proxy": 4000
+  },
+  "seed0_final_reload_max_delta": {
+    "task": 0,
+    "proxy": 0
+  },
+  "seed0_training_rows": 8000,
+  "seed0_windows": 4000,
+  "seed1_observed_written_steps": {
+    "task": 40,
+    "proxy": 40
+  },
+  "frozen_source_count": 42,
+  "frozen_unchanged": true,
+  "quality_evaluation_started": false,
+  "scope": "Actual original sequential full-budget training continuation, no partial model ranking or quality conclusion."
+}
