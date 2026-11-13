@@ -1,0 +1,185 @@
+{
+  "at": "2026-11-13T13:59:58.017317+08:00",
+  "classification": "progress",
+  "previous_goal_turn": "Progress: original author code/native tiling/shared discarded trial completed; R75 registered but previously unstarted.",
+  "current_stage": "Both fixed-budget formal training children and final coordinator now live.",
+  "seeds": [
+    {
+      "seed": 0,
+      "pid": 4160205,
+      "start_ticks": "48844067",
+      "observed_live": true,
+      "last_recorded_completed_steps": 300,
+      "last_recorded_at": "2026-11-13T13:58:19.471580+08:00",
+      "registered_steps": 64000,
+      "checkpoint": {
+        "at": "2026-11-13T13:39:40.347825+08:00",
+        "seed": 0,
+        "completed_steps": 1,
+        "next_data_step": 1,
+        "registered_steps": 64000,
+        "attempt": 1,
+        "kind": "regular",
+        "path": ".cache/checkpoints/exploration-r75/seed0/attempt001/regular-step000001.pt",
+        "sha256": "1a78b3af2de97e411a3324f1a4c09e5eae4b5b610cc32bf94b2df770fb2cd2e4",
+        "bytes": 10621579,
+        "parameters": 890275,
+        "source_freeze_sha256": "929d6faca944bff5d59712e15947cf41d9e28c59c30881335cc8b568750804c8",
+        "final_quality_eligible": false
+      },
+      "runtime_exists": false,
+      "expected_physical_GPU": 0,
+      "actual_device": [
+        0
+      ]
+    },
+    {
+      "seed": 1,
+      "pid": 4160204,
+      "start_ticks": "48844061",
+      "observed_live": true,
+      "last_recorded_completed_steps": 300,
+      "last_recorded_at": "2026-11-13T13:58:36.917386+08:00",
+      "registered_steps": 64000,
+      "checkpoint": {
+        "at": "2026-11-13T13:40:10.422966+08:00",
+        "seed": 1,
+        "completed_steps": 1,
+        "next_data_step": 1,
+        "registered_steps": 64000,
+        "attempt": 1,
+        "kind": "regular",
+        "path": ".cache/checkpoints/exploration-r75/seed1/attempt001/regular-step000001.pt",
+        "sha256": "775f214f064f418fe8ab8d15c80cd9a2872c97ed2da38157966e517e0a7e0abf",
+        "bytes": 10621579,
+        "parameters": 890275,
+        "source_freeze_sha256": "929d6faca944bff5d59712e15947cf41d9e28c59c30881335cc8b568750804c8",
+        "final_quality_eligible": false
+      },
+      "runtime_exists": false,
+      "expected_physical_GPU": 1,
+      "actual_device": [
+        1
+      ]
+    }
+  ],
+  "training_sources_unchanged": 17,
+  "final_coordinator": {
+    "pid": 4163819,
+    "start_ticks": "48956211",
+    "observed_live": true,
+    "waiting": {
+      "at": "2026-11-13T13:59:44.680659+08:00",
+      "verified_live_training_handles": [
+        {
+          "seed": 0,
+          "pid": 4160205,
+          "start_ticks": "48844067",
+          "already_final": false
+        },
+        {
+          "seed": 1,
+          "pid": 4160204,
+          "start_ticks": "48844061",
+          "already_final": false
+        }
+      ],
+      "final_count": 0,
+      "scope": "Live PID/start-time observation, not a completed model."
+    }
+  },
+  "resource_snapshot": {
+    "at": "2026-11-13T13:59:58.304541+08:00",
+    "GPUs": [
+      {
+        "index": 0,
+        "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+        "total_mib": 40960,
+        "used_mib": 3377,
+        "utilization_percent": 27,
+        "processes": [
+          "GPU-81550800-367d-1855-0f35-c61c274edfdf, 4144126, 2026",
+          "GPU-81550800-367d-1855-0f35-c61c274edfdf, 4160205, 1336"
+        ]
+      },
+      {
+        "index": 1,
+        "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+        "total_mib": 40960,
+        "used_mib": 3011,
+        "utilization_percent": 59,
+        "processes": [
+          "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150, 4136950, 1660",
+          "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150, 4160204, 1336"
+        ]
+      },
+      {
+        "index": 2,
+        "uuid": "GPU-e7f8224e-43d7-f7d6-10ff-8412dc30aa9e",
+        "total_mib": 40960,
+        "used_mib": 1729,
+        "utilization_percent": 41,
+        "processes": [
+          "GPU-e7f8224e-43d7-f7d6-10ff-8412dc30aa9e, 4149401, 1720"
+        ]
+      },
+      {
+        "index": 3,
+        "uuid": "GPU-3a66f673-05de-ba45-3f5c-308b333fea68",
+        "total_mib": 40960,
+        "used_mib": 2573,
+        "utilization_percent": 37,
+        "processes": [
+          "GPU-3a66f673-05de-ba45-3f5c-308b333fea68, 4145124, 2564"
+        ]
+      },
+      {
+        "index": 4,
+        "uuid": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+        "total_mib": 40960,
+        "used_mib": 18869,
+        "utilization_percent": 37,
+        "processes": [
+          "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e, 4106920, 18860"
+        ]
+      },
+      {
+        "index": 5,
+        "uuid": "GPU-83b3ac27-3e78-fb30-a5f6-d5daf4aac4fb",
+        "total_mib": 40960,
+        "used_mib": 18873,
+        "utilization_percent": 26,
+        "processes": [
+          "GPU-83b3ac27-3e78-fb30-a5f6-d5daf4aac4fb, 4106921, 18864"
+        ]
+      },
+      {
+        "index": 6,
+        "uuid": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+        "total_mib": 40960,
+        "used_mib": 18873,
+        "utilization_percent": 94,
+        "processes": [
+          "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249, 4106922, 18864"
+        ]
+      },
+      {
+        "index": 7,
+        "uuid": "GPU-7d263daa-6d13-02a6-b0ea-29c2c09a2c8b",
+        "total_mib": 40960,
+        "used_mib": 18851,
+        "utilization_percent": 50,
+        "processes": [
+          "GPU-7d263daa-6d13-02a6-b0ea-29c2c09a2c8b, 4106923, 18842"
+        ]
+      }
+    ]
+  },
+  "new_quality_rows": 0,
+  "new_JOD_rows": 0,
+  "final_visuals": 0,
+  "paper_build": 18,
+  "method_success_established": false,
+  "goal_status": "active",
+  "limits": "Partial100-step checkpoint metadata and copied completed-line prefixes; not final training/quality evidence. Current state must be re-read from real PIDs and terminal runtime."
+}
