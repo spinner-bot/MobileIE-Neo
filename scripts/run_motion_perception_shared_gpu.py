@@ -12,6 +12,7 @@ import traceback
 
 os.environ.setdefault('CUBLAS_WORKSPACE_CONFIG', ':4096:8')
 from shared_gpu_admission import ROOT, assess, snapshot, sustained_samples, write
+from prebind_shared_gpu import require_initial_binding, actual_device
 sys.path.insert(0, str(ROOT/'research/4.temporal-consistency/scripts'))
 import torch
 import evaluate_cvvdp_motion_transport_r74 as evaluator
@@ -53,6 +54,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--attempt', type=int, default=1)
     args = parser.parse_args()
+    bound_uuid = require_initial_binding()
     frozen = prerequisites()
     out = BASE/f'process/exploration-r74/shared-perception{args.attempt:03d}'
     out.mkdir(exist_ok=False)
@@ -73,10 +75,12 @@ def main():
     def admission():
         nonlocal lock, selected
         assert not torch.cuda.is_initialized()
-        samples = sustained_samples(); assessment = assess(samples); selected = assessment['selected']
-        record = dict(samples=samples, **assessment, allowed=selected is not None)
+        samples = sustained_samples(); assessment = assess(samples)
+        selected = next(r for r in assessment['candidates'] if r['uuid'] == bound_uuid)
+        record = dict(samples=samples, **assessment, allowed=selected['allowed'])
+        record.update(selected=selected, binding_from_initial_process_environment=True)
         write(out/'admission.json', record)
-        if selected is None:
+        if not selected['allowed']:
             return record
         lock = (ROOT/f'.cache/gpu-{selected["index"]}.lock').open('a')
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
@@ -86,8 +90,11 @@ def main():
             record['allowed'] = False; record['reason'] = 'Headroom changed before CUDA'
             write(out/'admission.json', record)
             return record
-        os.environ['CUDA_VISIBLE_DEVICES'] = selected['uuid']
         torch.cuda.set_per_process_memory_fraction(2048/row['total_mib'], device=0)
+        marker = torch.empty(1, device='cuda'); torch.cuda.synchronize()
+        actual = actual_device(bound_uuid); write(out/'actual-device-check.json', actual)
+        assert actual['matched'], 'Actual CUDA UUID differs before any metric prediction'
+        del marker
         return record
 
     def paced_predict(metric, test, reference):
