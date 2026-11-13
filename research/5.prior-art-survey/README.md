@@ -10,6 +10,8 @@
 
 [60 SMOID公开demo接口](docs/60-smoid-public-demo-reference-and-temporal-scope.md)固定作者53e81c4、六源blob核验：demo清单input/GT同路径，packed RAW/整片段HE/32帧窗口不直接等价因果RGB配对参考。Cam1一次匿名HEAD404后停止、0body/像素，不循环同入口，不推断完整数据无GT或另两包失效。仍未增加外部配对基准；原任务同身份活跃/双seed8300及阶段过程见[0118](../../docs/进展报告/0118-T-26111321-SMOID公开样例参考身份与获取边界.md)。
 
+[61 原模型效率引用纠正](docs/61-mobileie-efficiency-attribution-correction.md)修正早期research2“手机1100FPS”及4047/4075混用；v1表1 GPU .895ms/SoC6.72ms分开、当前代码4075注册/FSTS28。0forward/已训练权重/视频/GPU，原Windows速度和两嵌图保持；当前paper018的4075/手机ms缺失不改。双seed8700、四原PID活跃及完整边界见[0120](../../docs/进展报告/0120-T-26111322-原模型效率引用与注册参数口径纠正.md)。
+
 1. 是否已经有人解决 MobileIE 的视频闪烁？（避免重复）
 2. 导师提到的“电信接续研究”具体是什么？能否证实？
 3. 我们的选题还剩下什么可发表的空间？哪些表述会被审稿人指为重复？
