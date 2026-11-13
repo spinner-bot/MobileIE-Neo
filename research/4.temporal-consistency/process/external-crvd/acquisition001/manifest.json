@@ -1,0 +1,125 @@
+{
+  "completed": true,
+  "files": [
+    {
+      "role": "bm3d_reference",
+      "member": "scene1/ISO1600/frame1_clean_and_slightly_denoised.tiff",
+      "source_archive": "indoor_raw_gt",
+      "path": ".cache/datasets/CRVD/qualification001/bm3d_reference.tiff",
+      "sha256": "561c1d4abdd489c3b6ed00f00d2337fabcac01d47ab0e0183c5110e047dcea29",
+      "bytes": 8294534,
+      "crc32": "bd6466e5",
+      "compressed_path": ".cache/datasets/CRVD/qualification001/bm3d_reference.deflate",
+      "compressed_sha256": "d0c959aa9651c5fd38bc18f02c22c266bcf128d33acc317e035a24362974e542",
+      "transferred_bytes": 3815207,
+      "shape": [
+        1080,
+        1920
+      ],
+      "dtype": "float32",
+      "minimum": 249.0,
+      "maximum": 4095.0,
+      "native_tags": {
+        "256": 1920,
+        "257": 1080,
+        "258": 32,
+        "259": 1,
+        "339": 3
+      },
+      "reference_type": "Average plus BM3D",
+      "rendered": false,
+      "clipped": false,
+      "cast": false
+    },
+    {
+      "role": "averaged_reference",
+      "member": "scene1/ISO1600/frame1_clean.tiff",
+      "source_archive": "indoor_raw_noisy",
+      "path": ".cache/datasets/CRVD/qualification001/averaged_reference.tiff",
+      "sha256": "e622771167eaf4c3a19fc4a85596fc20a24b6bc4a0c528968392551b1653703e",
+      "bytes": 4147322,
+      "crc32": "b4eee55b",
+      "compressed_path": ".cache/datasets/CRVD/qualification001/averaged_reference.deflate",
+      "compressed_sha256": "3d687f21e2f2380c4110754c889235537a73c6177cb66a6b970207da31c02dea",
+      "transferred_bytes": 3168083,
+      "shape": [
+        1080,
+        1920
+      ],
+      "dtype": "uint16",
+      "minimum": 244.0,
+      "maximum": 4094.0,
+      "native_tags": {
+        "256": 1920,
+        "257": 1080,
+        "258": 16,
+        "259": 1
+      },
+      "reference_type": "Original multi-capture average",
+      "rendered": false,
+      "clipped": false,
+      "cast": false
+    },
+    {
+      "role": "noisy0",
+      "member": "scene1/ISO1600/frame1_noisy0.tiff",
+      "source_archive": "indoor_raw_noisy",
+      "path": ".cache/datasets/CRVD/qualification001/noisy0.tiff",
+      "sha256": "94152408917bd7d762f1b790758e3ee9e9730c02f254d5e66041e3d2f229f553",
+      "bytes": 4147322,
+      "crc32": "b4453096",
+      "compressed_path": ".cache/datasets/CRVD/qualification001/noisy0.deflate",
+      "compressed_sha256": "64822fd1688f895d2fde421571c75cfa3e0ebeb677107754cf90367e091fe469",
+      "transferred_bytes": 3258361,
+      "shape": [
+        1080,
+        1920
+      ],
+      "dtype": "uint16",
+      "minimum": 215.0,
+      "maximum": 4094.0,
+      "native_tags": {
+        "256": 1920,
+        "257": 1080,
+        "258": 16,
+        "259": 1
+      },
+      "reference_type": "Noisy sensor repetition",
+      "rendered": false,
+      "clipped": false,
+      "cast": false
+    },
+    {
+      "role": "noisy1",
+      "member": "scene1/ISO1600/frame1_noisy1.tiff",
+      "source_archive": "indoor_raw_noisy",
+      "path": ".cache/datasets/CRVD/qualification001/noisy1.tiff",
+      "sha256": "32c15d38e67321195e5743d6df05d9371937a4d2c28b9a50acc1d62f9eeaff0c",
+      "bytes": 4147322,
+      "crc32": "005452e9",
+      "compressed_path": ".cache/datasets/CRVD/qualification001/noisy1.deflate",
+      "compressed_sha256": "93a81e8ccc2034a935dd7e79e043fb3be82f9bf35d42aa62ef108b3e97296ee6",
+      "transferred_bytes": 3258548,
+      "shape": [
+        1080,
+        1920
+      ],
+      "dtype": "uint16",
+      "minimum": 215.0,
+      "maximum": 4094.0,
+      "native_tags": {
+        "256": 1920,
+        "257": 1080,
+        "258": 16,
+        "259": 1
+      },
+      "reference_type": "Noisy sensor repetition",
+      "rendered": false,
+      "clipped": false,
+      "cast": false
+    }
+  ],
+  "selection_sha256": "c756841f2d7220ec566d6f47c3aa5ba4954c5b90d5a2bd491acb42de465db17e",
+  "source_documented_Bayer": "GBRG",
+  "scope": "Four native training TIFFs only; no noise calibration, benchmark, model or independent GT claim."
+}
