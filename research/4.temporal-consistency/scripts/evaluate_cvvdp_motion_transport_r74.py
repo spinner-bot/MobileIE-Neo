@@ -36,6 +36,8 @@ def main():
     scenes, _ = metas(); first = load_one(scenes[0])
     assert cached(entries[0]).shape == first['gt'].shape
     gate = json.loads((BASE/'process/exploration-r66/cpu-gate001/gate.json').read_text()); assert gate['passed']
+    prepared_metric, prepared_source = load_metric('cpu')
+    assert prepared_metric.device.type == 'cpu' and not torch.cuda.is_initialized()
     admission = cuda_headroom()
     write(BASE/f'process/exploration-r74/metric-internal-admission{args.admission_attempt:03d}.json', admission)
     if not admission['allowed']: raise SystemExit(75)
@@ -45,9 +47,12 @@ def main():
     try:
         write(out/'cuda-gate.json', qualify('cuda', gate['scores']))
         metric, source = load_metric('cuda'); assert source['playback_fps'] == 30
+        assert source['package_sources'] == prepared_source['package_sources']
+        del prepared_metric
         write(out/'metric-source.json', source)
         write(out/'config.json', dict(at=datetime.now().astimezone().isoformat(), expected_rows=80,
               expected_comparison_frames=3584, sources=sources, protocol_sha256=digest(PROTOCOL),
+              complete_CPU_metric_prepared_before_internal_admission=True,
               scope='Fixed complete cached conditions, nominal30fps standard_fhd replicate; not enhancement CNN, phone, MOS or final.'))
         torch.cuda.reset_peak_memory_stats()
         for ordinal, meta in enumerate(scenes):
