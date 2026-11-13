@@ -1,0 +1,38 @@
+\begin{table}[!htbp]
+\centering\small\setlength{\tabcolsep}{4pt}
+\caption{Completed native-state study (R73): target and all five registered references, both domains and seeds. New spatial/mean/moment models inherit 8K updates and receive 4K more each; the plain references retain their indicated totals. Current uses the same moment weights with history disabled. Rec. adds classical motion/RGB recursion. The 20 joint screens all fail. Reused development sources and nominal 30\,fps perceptual evaluation; no phone or final-test result.}
+\label{tab:native-state}
+\begin{tabular}{lllr rrr}
+\toprule
+Domain & Seed & Predictor/output & Params & PSNR & $E_{\rm temp}$ & JOD\\
+\midrule
+SYN & 0 & Spatial & 4562 & 26.103 & 9.385 & 7.086\\
+SYN & 0 & Mean history & 4550 & 26.069 & 9.396 & 7.097\\
+SYN & 0 & Moments/current & 4562 & 26.132 & 9.482 & 7.100\\
+SYN & 0 & Moments/history & 4562 & 26.070 & 9.398 & 7.096\\
+SYN & 0 & Plain 8K + rec. & 4075 & 26.800 & 6.546 & 7.424\\
+SYN & 0 & Plain 12K + rec. & 4075 & 26.251 & 6.305 & 7.428\\
+\midrule
+SYN & 1 & Spatial & 4562 & 26.445 & 9.442 & 7.139\\
+SYN & 1 & Mean history & 4550 & 26.384 & 9.606 & 7.113\\
+SYN & 1 & Moments/current & 4562 & 26.428 & 9.622 & 7.117\\
+SYN & 1 & Moments/history & 4562 & 26.381 & 9.607 & 7.112\\
+SYN & 1 & Plain 8K + rec. & 4075 & 26.613 & 6.393 & 7.409\\
+SYN & 1 & Plain 12K + rec. & 4075 & 26.561 & 6.371 & 7.437\\
+\midrule
+ND & 0 & Spatial & 4562 & 25.682 & 3.422 & 8.261\\
+ND & 0 & Mean history & 4550 & 25.604 & 3.428 & 8.288\\
+ND & 0 & Moments/current & 4562 & 25.648 & 3.469 & 8.288\\
+ND & 0 & Moments/history & 4562 & 25.605 & 3.429 & 8.289\\
+ND & 0 & Plain 8K + rec. & 4075 & 27.292 & 2.605 & 8.373\\
+ND & 0 & Plain 12K + rec. & 4075 & 25.411 & 2.502 & 8.197\\
+\midrule
+ND & 1 & Spatial & 4562 & 29.428 & 3.603 & 8.584\\
+ND & 1 & Mean history & 4550 & 29.340 & 3.580 & 8.601\\
+ND & 1 & Moments/current & 4562 & 29.333 & 3.617 & 8.600\\
+ND & 1 & Moments/history & 4562 & 29.345 & 3.579 & 8.602\\
+ND & 1 & Plain 8K + rec. & 4075 & 26.923 & 2.534 & 8.512\\
+ND & 1 & Plain 12K + rec. & 4075 & 29.328 & 2.520 & 8.588\\
+\bottomrule
+\end{tabular}
+\end{table}
