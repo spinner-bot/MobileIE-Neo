@@ -92,3 +92,11 @@ progress010于04:17:32核两训练4160205/start48844067、4160204/start48844061�
 progress011于05:15:11核原4160205/start48844067、4160204/start48844061、原协调4163819/start48956211及补充39049/start51721359同身份活跃，无runtime终态；17训练源/协议及27/37评价联合源保持。running-prefix011按seed另存完整可解析行，各161条training/17条window及当次progress；原活态流待终态。周期1K..16K共32marker，另首步2份；Tensor仅自有data，无加载Tensor、重放SGD或中途DEV。
 
 两路各完成完整预算的四分之一，尚无final或质量/JOD/方法结论。无源码改动、重启、恢复、改预算或额外训练。0129和入口另交、仅fetch main/分歧显式no-ff、检查后阶段推送。原完整R75→R76及两套实际图审、R77严格条件、保留像素保护、paper018、旧STOP、全部论文缺口与目标active保持。
+
+## 06:12双种子17000里程碑（progress012）
+
+前序为真实原PID/start核活后的verified wait。本轮持续核查，06:10:43观察seed1实际17000及regular-step017000落盘、seed0仍16900；确认/data、seed/提交步/下一步/64000预算/非final、自有资产路径和大小后独立提交seed1。06:11:39再核seed0仍无新marker，继续等待同一进程；06:12:09观察实际17000及marker后另交，不写成同时完成。
+
+progress012于06:12:41核原4160205/start48844067、4160204/start48844061、原协调4163819/start48956211及补充39049/start51721359同身份活跃，无runtime终态；17训练源/协议及27/37评价联合源保持。running-prefix012按seed另存完整可解析行，各171条training/18条window及当次progress；原活态流待终态。周期1K..17K共34marker，另首步2份；Tensor仅自有data，无加载Tensor、重放SGD或中途DEV。
+
+尚无final或质量/JOD/方法结论，无源码改动、重启、恢复、改预算或额外训练。0130和入口另交、仅fetch main/分歧显式no-ff、检查后阶段推送。原完整R75→R76及两套实际图审、R77严格条件、保留像素保护、paper018、旧STOP、全部论文缺口与目标active保持。
