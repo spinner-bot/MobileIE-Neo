@@ -1,0 +1,112 @@
+{
+  "at": "2026-11-13T10:54:11.956310+08:00",
+  "seed": 0,
+  "data_step": 8000,
+  "repeated_first_window": true,
+  "context": [
+    {
+      "video": "boxing-fisheye",
+      "members": [
+        "DAVIS/JPEGImages/480p/boxing-fisheye/00030.jpg",
+        "DAVIS/JPEGImages/480p/boxing-fisheye/00031.jpg",
+        "DAVIS/JPEGImages/480p/boxing-fisheye/00032.jpg",
+        "DAVIS/JPEGImages/480p/boxing-fisheye/00033.jpg"
+      ],
+      "xy": [
+        537,
+        270
+      ],
+      "flip_horizontal": true,
+      "flip_vertical": true,
+      "photons": 20,
+      "source": "davis_synthetic"
+    },
+    {
+      "video": "swing",
+      "members": [
+        "DAVIS/JPEGImages/480p/swing/00039.jpg",
+        "DAVIS/JPEGImages/480p/swing/00040.jpg",
+        "DAVIS/JPEGImages/480p/swing/00041.jpg",
+        "DAVIS/JPEGImages/480p/swing/00042.jpg"
+      ],
+      "xy": [
+        116,
+        264
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": false,
+      "photons": 20,
+      "source": "davis_synthetic"
+    },
+    {
+      "source": "olives_real",
+      "video": "video_95",
+      "indices": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "xy": [
+        1317,
+        932
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": true,
+      "input_sources": [
+        ".cache/data/olives-r4/Frames/input/video_95/00007.png",
+        ".cache/data/olives-r4/Frames/input/video_95/00008.png",
+        ".cache/data/olives-r4/Frames/input/video_95/00009.png",
+        ".cache/data/olives-r4/Frames/input/video_95/00010.png"
+      ],
+      "target_sources": [
+        ".cache/data/olives-r4/Frames/gt/video_95/00007.png",
+        ".cache/data/olives-r4/Frames/gt/video_95/00008.png",
+        ".cache/data/olives-r4/Frames/gt/video_95/00009.png",
+        ".cache/data/olives-r4/Frames/gt/video_95/00010.png"
+      ]
+    },
+    {
+      "source": "olives_real",
+      "video": "video_35",
+      "indices": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "xy": [
+        166,
+        633
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": false,
+      "input_sources": [
+        ".cache/data/olives-r4/Frames/input/video_35/00005.png",
+        ".cache/data/olives-r4/Frames/input/video_35/00006.png",
+        ".cache/data/olives-r4/Frames/input/video_35/00007.png",
+        ".cache/data/olives-r4/Frames/input/video_35/00008.png"
+      ],
+      "target_sources": [
+        ".cache/data/olives-r4/Frames/gt/video_35/00005.png",
+        ".cache/data/olives-r4/Frames/gt/video_35/00006.png",
+        ".cache/data/olives-r4/Frames/gt/video_35/00007.png",
+        ".cache/data/olives-r4/Frames/gt/video_35/00008.png"
+      ]
+    }
+  ],
+  "spatial_source": {
+    "marker": "research/4.temporal-consistency/results/exploration-r44-stage001-seed0/square_mse-step4000.json",
+    "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+    "frozen": true,
+    "project_updates": 8000,
+    "parameters": 4075
+  },
+  "torch_threads": 2,
+  "OpenCV_threads": 1,
+  "discarded_updates_expected": 4,
+  "protocol_sha256": "58ebeae6a2f61f960fb2338adb44143e75f60a2eb93502f146085a5522789865",
+  "original_frozen_config_sha256": "c56226e3fcb293b4453e46b4ad9de34df086a76023d721736d3192273c4a68c7",
+  "core_sha256": "da48fe1b67113aba60a7bc3f61458c56ce52785728094413b734ee6d892529c8",
+  "scope": "Training throughput only, not another numerical qualification or inference/phone cost. No weight inherited."
+}
