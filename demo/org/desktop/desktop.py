@@ -94,7 +94,7 @@ class Desktop:
     def change_task(self,task_id):
         if self.busy or task_id not in TASKS:return
         self.active_task=task_id;self.task_choice.set(TASKS[task_id]['name']);self.prepared=self.input=None;self.images={'Input':None,'MobileIE':None,'Baseline':None};self.record={};self.split=.5
-        self.result_task.set('当前任务：'+TASKS[task_id]['name']+' · 待处理');self.metrics.set('处理后显示本次计算耗时');self.choose_sample()
+        self.result_task.set('当前任务：'+TASKS[task_id]['name']+' · 待处理');self.source.set('已切换任务，正在准备匹配输入');self.metrics.set('处理后显示本次计算耗时');self.redraw();self.choose_sample()
     def choose(self):
         kinds=[('Huawei RAW 样例文件','*.rggb')] if self.active_task=='isp' else [('照片','*.png *.jpg *.jpeg *.webp')]
         filename=self.filedialog.askopenfilename(filetypes=kinds+[('所有文件','*.*')])
