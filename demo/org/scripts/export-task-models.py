@@ -61,7 +61,10 @@ def build(weights,task):
         return g.binary(s.BuiltinOperator.ADD,product,g.constant(key+'/bias',weights[key+'.bias'].transpose(0,2,3,1)),shape,key+'/output')
     x=fst(x,'head');x=g.conv(x,weights,'body.block1',shape);x=fst(x,'body')
     option=s.ReducerOptionsT();option.keepDims=True
-    mean=g.op(s.BuiltinOperator.MEAN,[x,g.constant('spatial_axes',[1,2],np.int32)],[1,1,1,12],'attention/mean',option)
+    # Stage the spatial mean to avoid a single long FP32 accumulation on mobile.
+    row_mean=g.op(s.BuiltinOperator.MEAN,[x,g.constant('width_axis',[2],np.int32)],[1,h,1,12],'attention/row_mean',option)
+    option=s.ReducerOptionsT();option.keepDims=True
+    mean=g.op(s.BuiltinOperator.MEAN,[row_mean,g.constant('height_axis',[1],np.int32)],[1,1,1,12],'attention/mean',option)
     attention=g.conv(mean,weights,'att.1',[1,1,1,12]);attention=g.op(s.BuiltinOperator.LOGISTIC,[attention],[1,1,1,12],'attention/sigmoid')
     weighted=g.binary(s.BuiltinOperator.MUL,attention,x,shape,'attention/weighted')
     option=s.ReducerOptionsT();option.keepDims=True
