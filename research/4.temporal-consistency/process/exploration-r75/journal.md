@@ -186,3 +186,11 @@ progress021于16:06:41核原4160205/start48844067、4160204/start48844061、原�
 progress022于17:47:14核四原PID/start活跃、17训练源/协议及27/37评价联合源未变。running-prefix022按seed另交，seed0 288条training/29条window及28700进度，seed1 289条training/29条window及28800进度；原live流待终态。没有源码改动、重启、恢复、改预算/调度或额外训练，尚无final质量/JOD/方法成功。
 
 0140及入口逐文件另交，仅fetch main/必要分歧显式no-ff、检查后阶段推送。原R75→R76完整评价与两套实际图审、R77严格条件、保留像素保护、paper018、旧STOP和论文全部缺口保持，目标active。
+
+## 18:03双种子29000里程碑（progress023）
+
+前一轮完成28000补归档并推送61d949c1；本轮连续核同一原PID/start及CPU计时增长，保持verified wait。17:58:15观察seed1实际29000和regular-step029000落盘、seed0仍28900；确认/data已挂载，核seed/提交步/下一步/64000预算/非final、自有资产路径及大小后独立提交seed1。继续等待同一seed0原进程，18:01:35仍无marker；18:02:22再核实际29000及marker后另交，不伪写为同时完成。marker实际写入分别17:57:30、18:01:53。
+
+progress023于18:03:07核原4160205/start48844067、4160204/start48844061、原协调4163819/start48956211及补充39049/start51721359同身份活跃，无runtime终态；17训练源/协议及27/37评价联合源保持。running-prefix023按seed另交完整可解析行，各291条training/30条window及当次progress，原live流待终态。周期1K..29K共58marker，另首步2份；Tensor仅自有data，无Tensor加载/SGD重放或中途DEV。
+
+没有源码改动、重启、恢复、改预算/调度或额外训练，尚无final质量/JOD/方法成功。0141与入口逐文件另交，仅fetch main/必要分歧显式no-ff、检查后阶段推送。原R75→R76完整评价与两套实际图审、R77严格条件、保留像素保护、paper018、旧STOP和论文全部缺口保持，目标active。
