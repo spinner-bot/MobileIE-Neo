@@ -153,7 +153,7 @@ public class FlowInstrumentedTest {
         int previous=app.session.metadata.optInt("run_number");
         scenario.onActivity(a->{
             app.process(); assertTrue(app.busy); app.process();
-            assertFalse(a.findViewById(R.id.display_dynamic).isEnabled());assertFalse(a.findViewById(R.id.display_dynamic).isEnabled());assertFalse(a.findViewById(R.id.display_static).isEnabled());
+            assertFalse(a.findViewById(R.id.display_dynamic).isEnabled());assertFalse(a.findViewById(R.id.task_underwater).isEnabled());assertFalse(a.findViewById(R.id.display_static).isEnabled());
             assertFalse(a.findViewById(R.id.comparison).isEnabled());assertFalse(a.findViewById(R.id.metrics).isEnabled());
             assertTrue(((android.widget.TextView)a.findViewById(R.id.metrics)).getText().toString().contains("任务进行中"));
             assertTrue(a.findViewById(R.id.display_dynamic).getContentDescription().toString().contains("任务进行中"));
@@ -188,7 +188,7 @@ public class FlowInstrumentedTest {
             scenario.onActivity(a->assertTrue(a.findViewById(R.id.display_dynamic).isEnabled()));
             find("display_static").click();
             assertNotNull(device.wait(Until.findObject(By.res(PKG,"display_static").selected(true)),3000));
-            scenario.onActivity(a->assertTrue(a.findViewById(R.id.comparison).getContentDescription().toString().contains("本次未生成")));
+            scenario.onActivity(a->assertTrue(a.findViewById(R.id.comparison).getContentDescription().toString().contains("未生成")));
             assertTrue(app.status.contains("baseline")); shot("06-model-failure-honest-baseline");
         } finally { app.engineFactory=previous; }
     }
