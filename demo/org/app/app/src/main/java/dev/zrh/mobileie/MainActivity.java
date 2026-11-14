@@ -117,6 +117,7 @@ public final class MainActivity extends Activity {
         process.setEnabled(loaded&&!app.busy); process.setText(app.busy?"处理中…":done?"重新处理":"开始对比");
         save.setEnabled(done&&!app.busy);modes.setVisibility(View.VISIBLE);
         displayDynamic.setEnabled(!app.busy);displayStatic.setEnabled(!app.busy);
+        displayDynamic.setContentDescription(app.busy?"任务进行中，暂不可切换":"动态并列对比，两窗口同步滑动");
         comparison.setEnabled(!app.busy); metrics.setEnabled(!app.busy);
         hint.setText(mode==ComparisonView.STATIC?"独立三图总览：原图 / MobileIE / baseline":"拖动任一窗口，两条分界线同步移动");
         select(displayDynamic,mode==ComparisonView.DYNAMIC);select(displayStatic,mode==ComparisonView.STATIC);

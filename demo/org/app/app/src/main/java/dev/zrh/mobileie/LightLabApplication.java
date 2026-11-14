@@ -54,8 +54,10 @@ public final class LightLabApplication extends Application {
                     restored = new Session(); restored.id = id; restored.directory = dir; restored.label = m.optString("source_label", "上次照片");
                     restored.metadata = m;
                     restored.task=TaskSpec.get(this,m.optString("task_id","lowlight"));
+                    m.put("task_id",restored.task.id).put("task_name",restored.task.name).put("baseline_id",restored.task.baselineId).put("baseline_name",restored.task.baselineName);
                     restored.input = BitmapFactory.decodeFile(new File(dir, "input.png").getPath());
                     if (restored.input == null) throw new IOException("Missing input");
+                    if(restored.input.getWidth()!=restored.task.width()||restored.input.getHeight()!=restored.task.height())throw new IOException("Restored task size mismatch");
                     if(restored.task.raw)restored.raw=RawInput.read(new File(dir,"source.image"));
                     if (m.optBoolean("baseline_complete",m.optBoolean("gamma_complete"))) {
                         File baselineFile=new File(dir,"baseline.png");if(!baselineFile.exists())baselineFile=new File(dir,"gamma.png");

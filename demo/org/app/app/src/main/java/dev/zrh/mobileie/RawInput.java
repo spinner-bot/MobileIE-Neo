@@ -39,10 +39,10 @@ public final class RawInput {
         }
         double average=(means[0]+means[1]+means[2])/3;int[] pixels=new int[mosaic.length];
         for(int i=0;i<pixels.length;i++){
-            int[] rgb=new int[3];for(int c=0;c<3;c++){
+            int pixel=0xff000000;for(int c=0;c<3;c++){
                 double v=Math.max(0,Math.min(1,channels[c][i]*Math.min(4,average/Math.max(means[c],1e-8))));
-                double encoded=v<=.0031308?12.92*v:1.055*Math.pow(v,1/2.4)-.055;rgb[c]=(int)Math.max(0,Math.min(255,encoded*255));
-            }pixels[i]=Color.rgb(rgb[0],rgb[1],rgb[2]);
+                double encoded=v<=.0031308?12.92*v:1.055*Math.pow(v,1/2.4)-.055;pixel|=((int)Math.max(0,Math.min(255,encoded*255)))<<(16-c*8);
+            }pixels[i]=pixel;
         }
         return Bitmap.createBitmap(pixels,SIZE,SIZE,Bitmap.Config.ARGB_8888);
     }
