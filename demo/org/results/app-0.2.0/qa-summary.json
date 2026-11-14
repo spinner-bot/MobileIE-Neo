@@ -1,0 +1,75 @@
+{
+  "version": "0.2.0",
+  "date": "2026-11-14",
+  "accepted_for_simulated_delivery": true,
+  "package_artifacts_verified": false,
+  "device": "Android 15 API35 x86_64 emulator / Linux Xvfb",
+  "source_stage_commit": "79d0eeec",
+  "product_apk_sha256": "d28471059033fb4e77367a4f73d97a7bb9284bca7354662fa93eecaf74f79b4b",
+  "instrumentation": {
+    "tests": 26,
+    "failures": 0,
+    "seconds": 187.719
+  },
+  "numerics": {
+    "cases": 6,
+    "all_pass": true
+  },
+  "task_numerics": {
+    "cases": 9,
+    "all_pass": true,
+    "max_raw_abs": 1.3113021850585938e-06,
+    "max_uint8_abs": 1,
+    "input_exact": true,
+    "baseline_max_abs": 0
+  },
+  "camera_foreground_process_recovery": {
+    "lowlight": true,
+    "underwater": true
+  },
+  "raw_cold_restore": true,
+  "actual_apk_upgrade_from_0_1_2": true,
+  "same_signing_certificate_as_0_1_2": true,
+  "visual_review": {
+    "pass": true,
+    "actual_images_viewed": true,
+    "android_tasks": 3,
+    "android_modes_per_task": 2,
+    "desktop_tasks": 3,
+    "desktop_modes_per_task": 2,
+    "checked": [
+      "task heading above result",
+      "two simultaneous horizontal panes",
+      "synchronized divider coordinates",
+      "independent three-image view",
+      "matching RAW input visualization",
+      "small desktop window and baseline-only failure status"
+    ],
+    "scope": "Visual inspection of actual emulator and Linux Tk screenshots; not real phone/Windows"
+  },
+  "recording": {
+    "pass": true,
+    "duration_ms": 63392,
+    "width": 720,
+    "height": 1560,
+    "decoded_midpoint": true,
+    "frame_luminance_std": 61.10790041411147
+  },
+  "lint": {
+    "errors": 0,
+    "warnings": 9,
+    "categories": {
+      "GradleDependency": 6,
+      "SetTextI18n": 3
+    }
+  },
+  "external_launch": {
+    "pass": true,
+    "stub_only": true,
+    "stub_removed": true,
+    "real_ai_benchmark_0_2_0_tested": false
+  },
+  "native_oneplus_0_2_0_tested": false,
+  "native_windows_0_2_0_tested": false,
+  "next_gate": "Verify extracted release ZIPs and immutable historical artifacts before final push"
+}
