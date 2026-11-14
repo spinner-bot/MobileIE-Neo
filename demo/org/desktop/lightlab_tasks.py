@@ -91,8 +91,10 @@ class Engine:
     def __init__(self,task_id='lowlight'):
         from ai_edge_litert.interpreter import Interpreter,OpResolverType
         self.task_id=task_id;self.task=TASKS[task_id];source=ASSETS/self.task['model_asset'];start=time.perf_counter()
-        if hashlib.sha256(source.read_bytes()).hexdigest()!=self.task['model_sha256']:raise ValueError('模型校验失败，请重新获取演示包')
-        self.interpreter=Interpreter(model_path=str(source),num_threads=1,experimental_op_resolver_type=OpResolverType.BUILTIN_WITHOUT_DEFAULT_DELEGATES);self.interpreter.allocate_tensors()
+        data=source.read_bytes()
+        if hashlib.sha256(data).hexdigest()!=self.task['model_sha256']:raise ValueError('模型校验失败，请重新获取演示包')
+        # 传字节而非路径：LiteRT 原生层按窄字符打开路径，非 ASCII（如中文目录）会失败
+        self.interpreter=Interpreter(model_content=data,num_threads=1,experimental_op_resolver_type=OpResolverType.BUILTIN_WITHOUT_DEFAULT_DELEGATES);self.interpreter.allocate_tensors()
         inputs=self.interpreter.get_input_details();outputs=self.interpreter.get_output_details();assert len(inputs)==len(outputs)==1
         self.input,self.output=inputs[0],outputs[0]
         assert self.input['shape'].tolist()==self.task['input_shape'] and self.output['shape'].tolist()==self.task['output_shape']
