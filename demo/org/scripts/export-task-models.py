@@ -48,7 +48,7 @@ class Graph:
 
 
 def build(weights,task):
-    g=Graph();h,w,channels=(200,300,4) if task=='isp' else (400,600,3);shape=[1,h,w,12]
+    g=Graph();h,w,channels=(224,224,4) if task=='isp' else (400,600,3);shape=[1,h,w,12]
     inp=g.tensor('image',[1,h,w,channels]);g.graph.inputs=[inp]
     x=g.conv(inp,weights,'head.block1.0',shape)
     alpha=g.constant('head/PReLU',weights['head.block1.1.weight'].reshape(1,1,12))
@@ -60,9 +60,12 @@ def build(weights,task):
         product=g.binary(s.BuiltinOperator.MUL,a,b,shape,key+'/product')
         return g.binary(s.BuiltinOperator.ADD,product,g.constant(key+'/bias',weights[key+'.bias'].transpose(0,2,3,1)),shape,key+'/output')
     x=fst(x,'head');x=g.conv(x,weights,'body.block1',shape);x=fst(x,'body')
+    # Hierarchical power-of-two pooling limits long FP32 summation error while
+    # preserving the exact mathematical global average and all learned weights.
+    pool=s.Pool2DOptionsT();pool.padding=s.Padding.VALID;pool.filterWidth=pool.filterHeight=4;pool.strideW=pool.strideH=4
+    local_mean=g.op(s.BuiltinOperator.AVERAGE_POOL_2D,[x],[1,h//4,w//4,12],'attention/local_mean',pool)
     option=s.ReducerOptionsT();option.keepDims=True
-    # Stage the spatial mean to avoid a single long FP32 accumulation on mobile.
-    row_mean=g.op(s.BuiltinOperator.MEAN,[x,g.constant('width_axis',[2],np.int32)],[1,h,1,12],'attention/row_mean',option)
+    row_mean=g.op(s.BuiltinOperator.MEAN,[local_mean,g.constant('width_axis',[2],np.int32)],[1,h//4,1,12],'attention/row_mean',option)
     option=s.ReducerOptionsT();option.keepDims=True
     mean=g.op(s.BuiltinOperator.MEAN,[row_mean,g.constant('height_axis',[1],np.int32)],[1,1,1,12],'attention/mean',option)
     attention=g.conv(mean,weights,'att.1',[1,1,1,12]);attention=g.op(s.BuiltinOperator.LOGISTIC,[attention],[1,1,1,12],'attention/sigmoid')
@@ -79,7 +82,7 @@ def build(weights,task):
         x=g.op(s.BuiltinOperator.TRANSPOSE,[x,g.constant('shuffle/permutation',[0,1,4,2,5,3],np.int32)],[1,h,2,w,2,3],'shuffle/interleave',s.TransposeOptionsT())
         option=s.ReshapeOptionsT();option.newShape=[1,h*2,w*2,3]
         x=g.op(s.BuiltinOperator.RESHAPE,[x],[1,h*2,w*2,3],'shuffle/output',option)
-        out=g.conv(x,weights,'tail.1',[1,400,600,3])
+        out=g.conv(x,weights,'tail.1',[1,h*2,w*2,3])
     else:out=g.conv(x,weights,'tail',[1,400,600,3])
     g.graph.outputs=[out];g.model.description=f'Official MobileIE {task}; frozen FP32; image input only'.encode()
     builder=flatbuffers.Builder(32768);offset=g.model.Pack(builder);builder.Finish(offset,file_identifier=b'TFL3');return bytes(builder.Output())
@@ -92,7 +95,7 @@ def main():
         runtime=Interpreter(model_content=data,num_threads=1,experimental_op_resolver_type=OpResolverType.BUILTIN_WITHOUT_DEFAULT_DELEGATES);runtime.allocate_tensors()
         inputs=runtime.get_input_details();outputs=runtime.get_output_details();assert len(inputs)==len(outputs)==1
         cases=[]
-        for name in ('black','white','random','ramp'):
+        for name in ('black','white','random','ramp','sample1','sample2','sample3'):
             x=np.load(a.weights_dir/f'{task}-{name}-input.npy');expected=np.load(a.weights_dir/f'{task}-{name}-reference.npy')
             runtime.set_tensor(inputs[0]['index'],x);runtime.invoke();actual=runtime.get_tensor(outputs[0]['index'])
             raw=float(np.max(np.abs(actual.astype(np.float64)-expected.astype(np.float64))));pixels=np.abs((np.clip(actual,0,1)*255).astype(np.uint8).astype(int)-(np.clip(expected,0,1)*255).astype(np.uint8).astype(int));maximum=int(pixels.max())

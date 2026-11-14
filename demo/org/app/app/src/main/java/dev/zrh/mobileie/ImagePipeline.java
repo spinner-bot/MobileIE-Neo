@@ -72,6 +72,17 @@ public final class ImagePipeline {
         return Bitmap.createBitmap(pixels, w, h, Bitmap.Config.ARGB_8888);
     }
 
+    public static Bitmap grayWorld(Bitmap input) {
+        int w=input.getWidth(),h=input.getHeight();int[] pixels=new int[w*h];input.getPixels(pixels,0,w,0,0,w,h);double[] means=new double[3];
+        for(int p:pixels){means[0]+=(p>>>16)&255;means[1]+=(p>>>8)&255;means[2]+=p&255;}
+        for(int c=0;c<3;c++)means[c]/=pixels.length;double average=(means[0]+means[1]+means[2])/3;
+        for(int i=0;i<pixels.length;i++){
+            int p=pixels[i];int r=(int)Math.min(255,((p>>>16)&255)*Math.min(4,average/Math.max(means[0],1)));
+            int g=(int)Math.min(255,((p>>>8)&255)*Math.min(4,average/Math.max(means[1],1)));int b=(int)Math.min(255,(p&255)*Math.min(4,average/Math.max(means[2],1)));pixels[i]=Color.rgb(r,g,b);
+        }
+        return Bitmap.createBitmap(pixels,w,h,Bitmap.Config.ARGB_8888);
+    }
+
     public static void savePng(Bitmap bitmap, File destination) throws IOException {
         try (OutputStream out = new FileOutputStream(destination)) {
             if (!bitmap.compress(Bitmap.CompressFormat.PNG, 100, out)) throw new IOException("图片保存失败");

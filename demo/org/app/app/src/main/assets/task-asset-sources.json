@@ -1,0 +1,202 @@
+{
+  "samples": [
+    {
+      "asset": "samples/underwater/01.png",
+      "dataset": "UIEB",
+      "source": "https://huggingface.co/datasets/Hikari0608/UIEB",
+      "split": "val",
+      "row_index": 0,
+      "source_sha256": "469ce667974c1fdfbec1cb100b73cae8db8702e8ac7349534b8c8416b1ed4dc8",
+      "asset_sha256": "db5910f72bf7356ff3d9ebf2c2600897d32b3dae5da242b5b59ad60c11284a75",
+      "transform": "center 3:2 crop and bilinear resize 600x400",
+      "use": "academic demonstration; retain dataset authors attribution"
+    },
+    {
+      "asset": "samples/isp/01.rggb",
+      "dataset": "Zurich RAW-to-RGB",
+      "author_page": "https://aiff22.github.io/pynet.html",
+      "archive_member": "test/huawei_raw/0.png",
+      "source_sha256": "975406a73497d3765aec4284a6ebffc5e430323ec2e38cd6f4faffed1ccfcff6",
+      "asset_sha256": "8faf88bc85f5ba004ac85fab324144df7fddee5c3f711ba612a0aa2a59c796cb",
+      "transform": "lossless uint16 little-endian container; no resize, value edits or generated RAW",
+      "sensor": "Huawei P20 RGGB, 10-bit in uint16; official MobileIE divisor 4095"
+    },
+    {
+      "asset": "samples/underwater/02.png",
+      "dataset": "UIEB",
+      "source": "https://huggingface.co/datasets/Hikari0608/UIEB",
+      "split": "val",
+      "row_index": 1,
+      "source_sha256": "4ced9b36ff56950c46b7e361f10046e9017a310a40e55c063f7a879a1a5bbf26",
+      "asset_sha256": "e87cf8af504ebc02441b1ad6447dba3f405d4205f5e357365b43e26122faa12b",
+      "transform": "center 3:2 crop and bilinear resize 600x400",
+      "use": "academic demonstration; retain dataset authors attribution"
+    },
+    {
+      "asset": "samples/isp/02.rggb",
+      "dataset": "Zurich RAW-to-RGB",
+      "author_page": "https://aiff22.github.io/pynet.html",
+      "archive_member": "test/huawei_raw/1.png",
+      "source_sha256": "9e896fcd4ae1d9b1157e1c65e63704a51a1245762d7f874e11cf85ca390c909d",
+      "asset_sha256": "edcba69c0c4cd8c7a9b9b4380013729028e84f6bf565c3597ee3457f59271af1",
+      "transform": "lossless uint16 little-endian container; no resize, value edits or generated RAW",
+      "sensor": "Huawei P20 RGGB, 10-bit in uint16; official MobileIE divisor 4095"
+    },
+    {
+      "asset": "samples/underwater/03.png",
+      "dataset": "UIEB",
+      "source": "https://huggingface.co/datasets/Hikari0608/UIEB",
+      "split": "val",
+      "row_index": 2,
+      "source_sha256": "f3241a88241938ed2a3407372718e9e63973a7b42a937a62b2487638a19ce90e",
+      "asset_sha256": "ed8190924d053c8f1924c77e3d089692236cc995007829659eaec0fe21702940",
+      "transform": "center 3:2 crop and bilinear resize 600x400",
+      "use": "academic demonstration; retain dataset authors attribution"
+    },
+    {
+      "asset": "samples/isp/03.rggb",
+      "dataset": "Zurich RAW-to-RGB",
+      "author_page": "https://aiff22.github.io/pynet.html",
+      "archive_member": "test/huawei_raw/10.png",
+      "source_sha256": "498ac376ebfc3117bf248e668709182e7f886116a802e2be26b28321e2fa9dcd",
+      "asset_sha256": "76bd35327390070751c4ba85f44e9f8d880ab9f29c13d3ca0841f7527f945fb8",
+      "transform": "lossless uint16 little-endian container; no resize, value edits or generated RAW",
+      "sensor": "Huawei P20 RGGB, 10-bit in uint16; official MobileIE divisor 4095"
+    }
+  ],
+  "models": [
+    {
+      "task_id": "underwater",
+      "sha256": "a36e22b042052f1d9a8bdf5bfbf648d63df3ad10c3ab4511e98272070a7a0edf",
+      "bytes": 21200,
+      "input_shape": [
+        1,
+        400,
+        600,
+        3
+      ],
+      "output_shape": [
+        1,
+        400,
+        600,
+        3
+      ],
+      "input_count": 1,
+      "native_control_inputs": [],
+      "parameter_panel": false,
+      "reference": "official PyTorch forward, CPU",
+      "cases": [
+        {
+          "case": "black",
+          "raw_max_abs": 7.152557373046875e-07,
+          "uint8_max_abs": 0,
+          "pass": true
+        },
+        {
+          "case": "white",
+          "raw_max_abs": 4.470348358154297e-07,
+          "uint8_max_abs": 0,
+          "pass": true
+        },
+        {
+          "case": "random",
+          "raw_max_abs": 2.86102294921875e-06,
+          "uint8_max_abs": 1,
+          "pass": true
+        },
+        {
+          "case": "ramp",
+          "raw_max_abs": 1.3113021850585938e-06,
+          "uint8_max_abs": 1,
+          "pass": true
+        },
+        {
+          "case": "sample1",
+          "raw_max_abs": 9.5367431640625e-07,
+          "uint8_max_abs": 1,
+          "pass": true
+        },
+        {
+          "case": "sample2",
+          "raw_max_abs": 5.364418029785156e-07,
+          "uint8_max_abs": 1,
+          "pass": true
+        },
+        {
+          "case": "sample3",
+          "raw_max_abs": 9.5367431640625e-07,
+          "uint8_max_abs": 1,
+          "pass": true
+        }
+      ],
+      "all_pass": true
+    },
+    {
+      "task_id": "isp",
+      "sha256": "2db579740483ddb1c8df84d17c1ea82194ac319543ca527a8b942c5c247d9e63",
+      "bytes": 21964,
+      "input_shape": [
+        1,
+        224,
+        224,
+        4
+      ],
+      "output_shape": [
+        1,
+        448,
+        448,
+        3
+      ],
+      "input_count": 1,
+      "native_control_inputs": [],
+      "parameter_panel": false,
+      "reference": "official PyTorch forward, CPU",
+      "cases": [
+        {
+          "case": "black",
+          "raw_max_abs": 6.732344627380371e-05,
+          "uint8_max_abs": 0,
+          "pass": true
+        },
+        {
+          "case": "white",
+          "raw_max_abs": 1.8477439880371094e-06,
+          "uint8_max_abs": 0,
+          "pass": true
+        },
+        {
+          "case": "random",
+          "raw_max_abs": 1.1086463928222656e-05,
+          "uint8_max_abs": 1,
+          "pass": true
+        },
+        {
+          "case": "ramp",
+          "raw_max_abs": 9.47713851928711e-06,
+          "uint8_max_abs": 1,
+          "pass": true
+        },
+        {
+          "case": "sample1",
+          "raw_max_abs": 1.043081283569336e-06,
+          "uint8_max_abs": 1,
+          "pass": true
+        },
+        {
+          "case": "sample2",
+          "raw_max_abs": 5.960464477539062e-07,
+          "uint8_max_abs": 1,
+          "pass": true
+        },
+        {
+          "case": "sample3",
+          "raw_max_abs": 6.556510925292969e-07,
+          "uint8_max_abs": 1,
+          "pass": true
+        }
+      ],
+      "all_pass": true
+    }
+  ],
+  "RAW_format": "28-byte <8s5I header: MIE_RAW1,width,height,normalization_divisor,black_level,ADC_white; then row-major uint16 LE. Fixed supported profile 448x448 RGGB, 4095/64/1023. No black subtraction (same as upstream)."
+}

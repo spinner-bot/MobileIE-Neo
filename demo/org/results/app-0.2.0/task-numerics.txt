@@ -1,0 +1,111 @@
+{
+  "all_pass": true,
+  "cases": [
+    {
+      "task_id": "lowlight",
+      "sample": 1,
+      "raw_max_abs": 2.384185791015625e-07,
+      "uint8_max_abs": 1,
+      "baseline_max_abs": 0,
+      "original_max_abs": 0,
+      "raw_input_exact": true,
+      "all_finite": true,
+      "pass": true
+    },
+    {
+      "task_id": "lowlight",
+      "sample": 2,
+      "raw_max_abs": 2.384185791015625e-07,
+      "uint8_max_abs": 1,
+      "baseline_max_abs": 0,
+      "original_max_abs": 0,
+      "raw_input_exact": true,
+      "all_finite": true,
+      "pass": true
+    },
+    {
+      "task_id": "lowlight",
+      "sample": 3,
+      "raw_max_abs": 1.7881393432617188e-07,
+      "uint8_max_abs": 1,
+      "baseline_max_abs": 0,
+      "original_max_abs": 0,
+      "raw_input_exact": true,
+      "all_finite": true,
+      "pass": true
+    },
+    {
+      "task_id": "underwater",
+      "sample": 1,
+      "raw_max_abs": 9.5367431640625e-07,
+      "uint8_max_abs": 1,
+      "baseline_max_abs": 0,
+      "original_max_abs": 0,
+      "raw_input_exact": true,
+      "all_finite": true,
+      "pass": true
+    },
+    {
+      "task_id": "underwater",
+      "sample": 2,
+      "raw_max_abs": 5.364418029785156e-07,
+      "uint8_max_abs": 1,
+      "baseline_max_abs": 0,
+      "original_max_abs": 0,
+      "raw_input_exact": true,
+      "all_finite": true,
+      "pass": true
+    },
+    {
+      "task_id": "underwater",
+      "sample": 3,
+      "raw_max_abs": 1.3113021850585938e-06,
+      "uint8_max_abs": 1,
+      "baseline_max_abs": 0,
+      "original_max_abs": 0,
+      "raw_input_exact": true,
+      "all_finite": true,
+      "pass": true
+    },
+    {
+      "task_id": "isp",
+      "sample": 1,
+      "raw_max_abs": 1.043081283569336e-06,
+      "uint8_max_abs": 1,
+      "baseline_max_abs": 0,
+      "original_max_abs": 0,
+      "raw_input_exact": true,
+      "all_finite": true,
+      "pass": true
+    },
+    {
+      "task_id": "isp",
+      "sample": 2,
+      "raw_max_abs": 6.258487701416016e-07,
+      "uint8_max_abs": 1,
+      "baseline_max_abs": 0,
+      "original_max_abs": 0,
+      "raw_input_exact": true,
+      "all_finite": true,
+      "pass": true
+    },
+    {
+      "task_id": "isp",
+      "sample": 3,
+      "raw_max_abs": 6.556510925292969e-07,
+      "uint8_max_abs": 1,
+      "baseline_max_abs": 0,
+      "original_max_abs": 0,
+      "raw_input_exact": true,
+      "all_finite": true,
+      "pass": true
+    }
+  ],
+  "gates": {
+    "raw_max_abs": 0.0001,
+    "uint8_max_abs": 1,
+    "baseline_uint8_max_abs": 1,
+    "input_exact": true
+  },
+  "reference": "official PyTorch CPU for UIE/ISP; original published TFLite CPU for lowlight; independently validated fixed baselines"
+}

@@ -1,274 +1,196 @@
-"""MobileIE Light Lab: portable Python desktop companion (no native build tools)."""
+"""MobileIE Light Lab: three tasks, paired dynamic or static comparison."""
 from __future__ import annotations
-
-import hashlib
-import io
-import json
+import hashlib,json,os,queue,shutil,sys,threading,time,uuid
 from pathlib import Path
-import queue
-import sys
-import threading
-import time
-import uuid
-
-import numpy as np
-from PIL import Image, ImageDraw, ImageOps, ImageCms, ImageFont
-
-VERSION = "0.1.1"
-MODEL_SHA = "2ea09b840634469eceab5263bf7b549c33fcd5df2a25701ce5fefc585402ad44"
-HERE = Path(__file__).resolve().parent
-ASSETS = HERE / "assets" if (HERE / "assets").is_dir() else HERE.parent / "app/app/src/main/assets"
-GAMMA_LUT = [int(255 * (i / 255.0) ** .5) for i in range(256)]
+from PIL import Image,ImageDraw,ImageFont
+HERE=Path(__file__).resolve().parent
+sys.path.insert(0,str(HERE))
+from lightlab_tasks import ASSETS,TASKS,Engine,Prepared,prepare as prepare_task,prepare_rgb as prepare,gamma,GAMMA_LUT,baseline
+VERSION='0.2.0'
+MODEL_SHA=TASKS['lowlight']['model_sha256']
+MODES=('动态对比','静态总览')
 
 
-def prepare(path: Path) -> Image.Image:
-    if path.stat().st_size > 32 * 1024 * 1024:
-        raise ValueError("图片超过 32 MB，请选择较小的 JPG / PNG")
-    with Image.open(path) as image:
-        if max(image.size) > 50000:
-            raise ValueError("图片尺寸过大，请选择较小的照片")
-        image.draft("RGB", (2048, 2048))
-        corrected = ImageOps.exif_transpose(image)
-        profile = image.info.get("icc_profile")
-        if corrected.mode in ("RGBA", "LA") or "transparency" in corrected.info:
-            rgba = corrected.convert("RGBA")
-            background = Image.new("RGBA", rgba.size, "white")
-            corrected = Image.alpha_composite(background, rgba).convert("RGB")
-        else:
-            corrected = corrected.convert("RGB")
-        if profile:
-            corrected = ImageCms.profileToProfile(corrected, ImageCms.ImageCmsProfile(io.BytesIO(profile)), ImageCms.createProfile("sRGB"), outputMode="RGB")
-        corrected.thumbnail((2048, 2048), Image.Resampling.BILINEAR)
-        w, h = corrected.size
-        cw, ch = (max(1, h * 3 // 2), h) if w * 2 > h * 3 else (w, max(1, w * 2 // 3))
-        x, y = (w-cw)//2, (h-ch)//2
-        return corrected.crop((x, y, x+cw, y+ch)).resize((600, 400), Image.Resampling.BILINEAR)
+def export_font(size):
+    for p in (Path(os.environ.get('WINDIR','C:/Windows'))/'Fonts/msyh.ttc',Path('/data/Users/zrh/.envs/android/validation/desktop-host/root/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc'),Path('/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc')):
+        if p.exists():return ImageFont.truetype(str(p),size)
+    return ImageFont.load_default(size=size)
 
 
-def gamma(image: Image.Image) -> Image.Image:
-    return image.point(GAMMA_LUT * 3)
+def comparison(images,record=None):
+    record=record or {};source=next(im for im in images.values() if im is not None);w,h=source.size
+    sheet=Image.new('RGB',(3*w,h+110),'#f6f5ef');draw=ImageDraw.Draw(sheet)
+    draw.text((16,6),'本次任务：'+record.get('task_name','低光增强'),fill='#243d35',font=export_font(24))
+    labels=(('Input','RAW 可视化' if record.get('task_id')=='isp' else '原图'),('MobileIE','MobileIE'),('Baseline',record.get('baseline_name','Gamma 0.5')))
+    for i,(key,label) in enumerate(labels):
+        draw.text((i*w+16,40),label,fill='#243d35',font=export_font(20))
+        if images.get(key) is not None:sheet.paste(images[key],(i*w,76))
+        else:draw.text((i*w+w//3,76+h//2),'未生成',fill='#68766c',font=export_font(20))
+    draw.text((16,h+82),'同一输入与坐标 · 本地计算 · 固定传统 baseline',fill='#68766c',font=export_font(17));return sheet
 
 
-class Engine:
-    def __init__(self):
-        from ai_edge_litert.interpreter import Interpreter, OpResolverType
-        start = time.perf_counter()
-        model = ASSETS / "model.tflite"
-        if hashlib.sha256(model.read_bytes()).hexdigest() != MODEL_SHA:
-            raise ValueError("模型校验失败，请重新获取演示包")
-        self.interpreter = Interpreter(model_path=str(model), num_threads=1,
-                                       experimental_op_resolver_type=OpResolverType.BUILTIN_WITHOUT_DEFAULT_DELEGATES)
-        self.interpreter.allocate_tensors()
-        self.input = self.interpreter.get_input_details()[0]
-        self.output = self.interpreter.get_output_details()[0]
-        assert self.input["shape"].tolist() == self.output["shape"].tolist() == [1, 400, 600, 3]
-        assert self.input["dtype"] == self.output["dtype"] == np.float32
-        self.initialization_ms = (time.perf_counter()-start)*1000
-
-    def run(self, image: Image.Image):
-        if image.size != (600, 400) or image.mode != "RGB":
-            raise ValueError("需要统一的 600 × 400 RGB 输入")
-        values = np.asarray(image, dtype=np.float32)[None] / np.float32(255)
-        self.interpreter.set_tensor(self.input["index"], values)
-        start = time.perf_counter()
-        self.interpreter.invoke()
-        milliseconds = (time.perf_counter()-start)*1000
-        raw = self.interpreter.get_tensor(self.output["index"]).copy()
-        if not np.isfinite(raw).all():
-            raise ValueError("模型输出异常，请重新处理")
-        result = Image.fromarray((np.clip(raw[0], 0, 1)*np.float32(255)).astype(np.uint8))
-        return result, raw, milliseconds
-
-
-def comparison(images: dict[str, Image.Image | None]):
-    sheet = Image.new("RGB", (1800, 478), "#f6f5ef")
-    draw = ImageDraw.Draw(sheet)
-    label_font, footer_font = ImageFont.load_default(size=24), ImageFont.load_default(size=18)
-    for i, name in enumerate(("Input", "MobileIE", "Gamma 0.5")):
-        draw.text((i*600+16, 10), name, fill="#243d35", font=label_font)
-        if images[name] is not None:
-            sheet.paste(images[name], (i*600, 44))
-        else:
-            draw.text((i*600+180, 220), "Not generated", fill="#68766c", font=label_font)
-    draw.text((16, 450), "Same 600 x 400 input | local CPU | fixed Gamma exponent 0.5, no denoising", fill="#68766c", font=footer_font)
-    return sheet
-
-
-def save_results(directory: Path, images: dict, record: dict) -> Path:
-    # Build in a new directory and rename only after every output succeeds.
-    directory.mkdir(parents=True, exist_ok=True)
-    token = uuid.uuid4().hex[:10]
-    temporary = directory / (".MobileIE-"+token)
-    target = directory / ("MobileIE-"+token)
-    temporary.mkdir()
+def save_results(directory,images,record,prepared=None):
+    directory=Path(directory);directory.mkdir(parents=True,exist_ok=True);token=uuid.uuid4().hex[:10]
+    temporary=directory/('.MobileIE-'+token+'.part');target=directory/('MobileIE-'+token);temporary.mkdir()
     try:
-        for name, filename in (("Input", "input.png"), ("MobileIE", "mobileie.png"), ("Gamma 0.5", "gamma-0.5.png")):
-            if images[name] is not None:
-                images[name].save(temporary / filename)
-        comparison(images).save(temporary / "comparison.png")
-        (temporary / "record.json").write_text(json.dumps(record, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
-        temporary.rename(target)
-    except Exception:
-        import shutil
-        shutil.rmtree(temporary, ignore_errors=True)
-        raise
-    return target
+        for key,name in (('Input','input.png'),('MobileIE','mobileie.png'),('Baseline','baseline.png')):
+            if images.get(key) is not None:images[key].save(temporary/name)
+        comparison(images,record).save(temporary/'comparison.png')
+        if prepared is not None and prepared.original_bytes is not None:(temporary/'input.rggb').write_bytes(prepared.original_bytes)
+        (temporary/'record.json').write_text(json.dumps(record,ensure_ascii=False,indent=2),encoding='utf-8');temporary.rename(target);return target
+    except Exception:shutil.rmtree(temporary,ignore_errors=True);raise
 
 
 class Desktop:
-    def __init__(self, root):
+    def __init__(self,root):
         import tkinter as tk
-        from tkinter import filedialog, messagebox
+        from tkinter import ttk,filedialog,messagebox
         from PIL import ImageTk
-        self.tk, self.filedialog, self.messagebox, self.ImageTk = tk, filedialog, messagebox, ImageTk
-        self.root, self.input, self.engine = root, None, None
-        self.images = {"Input": None, "MobileIE": None, "Gamma 0.5": None}
-        self.record, self.mode, self.split, self.busy = {}, "MobileIE", .5, False
-        self.tasks, self.results = queue.Queue(), queue.Queue()
-        self.closed = False
-        self.font = "Microsoft YaHei" if sys.platform == "win32" else "Noto Sans CJK SC"
-        root.title("微光实验室 · MobileIE Python"); root.geometry("1180x850"); root.minsize(900, 650); root.configure(bg="#f6f5ef")
-        header=tk.Frame(root,bg="#f6f5ef");header.pack(fill="x",padx=28,pady=(24,18))
-        tk.Label(header,text="◒  微光实验室",font=(self.font,24,"bold"),fg="#243d35",bg="#f6f5ef").pack(side="left")
-        tk.Label(header,text="PYTHON DESKTOP  /  本机 · 离线",font=(self.font,11),fg="#68766c",bg="#f6f5ef").pack(side="right")
-        body=tk.Frame(root,bg="#f6f5ef");body.pack(fill="both",expand=True,padx=28)
-        rail_shell=tk.Frame(body,bg="#e8ecdf",width=250);rail_shell.pack(side="left",fill="y",padx=(0,20));rail_shell.pack_propagate(False)
-        self.info_button=self.button(rail_shell,"查看计算记录",self.info,False);self.info_button.pack(side="bottom",fill="x",padx=20,pady=12)
-        rail_bar=tk.Scrollbar(rail_shell,orient="vertical");rail_bar.pack(side="right",fill="y")
-        self.rail_scroll=tk.Canvas(rail_shell,bg="#e8ecdf",highlightthickness=0,yscrollcommand=rail_bar.set);self.rail_scroll.pack(side="left",fill="both",expand=True);rail_bar.configure(command=self.rail_scroll.yview)
-        rail=tk.Frame(self.rail_scroll,bg="#e8ecdf");self.rail=rail
-        rail_window=self.rail_scroll.create_window((0,0),window=rail,anchor="nw")
-        rail.bind("<Configure>",lambda event:self.rail_scroll.configure(scrollregion=self.rail_scroll.bbox("all")))
-        self.rail_scroll.bind("<Configure>",lambda event:self.rail_scroll.itemconfigure(rail_window,width=event.width))
-        def scroll_rail(event):
-            if self.rail_scroll.winfo_rootx()<=event.x_root<=self.rail_scroll.winfo_rootx()+self.rail_scroll.winfo_width():self.rail_scroll.yview_scroll(-1 if event.delta>0 else 1,"units")
-        root.bind("<MouseWheel>",scroll_rail)
-        tk.Label(rail,text="同一张照片，\n看见不同处理。",justify="left",font=(self.font,20,"bold"),fg="#243d35",bg="#e8ecdf").pack(anchor="w",padx=20,pady=(20,8))
+        self.tk,self.filedialog,self.messagebox,self.ImageTk=tk,filedialog,messagebox,ImageTk
+        self.root=root;self.active_task='lowlight';self.prepared=self.input=None;self.images={'Input':None,'MobileIE':None,'Baseline':None}
+        self.record={};self.mode=MODES[0];self.split=.5;self.busy=self.closed=False;self.rects=[];self._photos=[]
+        self.tasks,self.results=queue.Queue(),queue.Queue();self.engines={};self.font='Microsoft YaHei' if sys.platform=='win32' else 'Noto Sans CJK SC'
+        root.title('微光实验室 · 三任务对比');root.geometry('1280x850');root.minsize(900,650);root.configure(bg='#f6f5ef')
+        head=tk.Frame(root,bg='#f6f5ef');head.pack(fill='x',padx=24,pady=(18,14))
+        tk.Label(head,text='◒  微光实验室',font=(self.font,23,'bold'),fg='#243d35',bg='#f6f5ef').pack(side='left')
+        tk.Label(head,text='三类任务 / 本机 · 离线 / v'+VERSION,font=(self.font,10),fg='#68766c',bg='#f6f5ef').pack(side='right')
+        body=tk.Frame(root,bg='#f6f5ef');body.pack(fill='both',expand=True,padx=24)
+        shell=tk.Frame(body,bg='#e8ecdf',width=235);shell.pack(side='left',fill='y',padx=(0,16));shell.pack_propagate(False)
+        self.info_button=self.button(shell,'查看计算记录',self.info,False);self.info_button.pack(side='bottom',fill='x',padx=16,pady=10)
+        bar=tk.Scrollbar(shell);bar.pack(side='right',fill='y')
+        self.rail_scroll=tk.Canvas(shell,bg='#e8ecdf',highlightthickness=0,yscrollcommand=bar.set);self.rail_scroll.pack(side='left',fill='both',expand=True);bar.configure(command=self.rail_scroll.yview)
+        self.rail=tk.Frame(self.rail_scroll,bg='#e8ecdf');window=self.rail_scroll.create_window((0,0),window=self.rail,anchor='nw')
+        self.rail.bind('<Configure>',lambda e:self.rail_scroll.configure(scrollregion=self.rail_scroll.bbox('all')));self.rail_scroll.bind('<Configure>',lambda e:self.rail_scroll.itemconfigure(window,width=e.width))
+        def wheel(e):
+            if self.rail_scroll.winfo_rootx()<=e.x_root<=self.rail_scroll.winfo_rootx()+self.rail_scroll.winfo_width():self.rail_scroll.yview_scroll(-1 if e.delta>0 else 1,'units')
+        root.bind('<MouseWheel>',wheel)
+        tk.Label(self.rail,text='选择任务',font=(self.font,15,'bold'),fg='#243d35',bg='#e8ecdf').pack(anchor='w',padx=16,pady=(18,8))
+        names=[t['name'] for t in TASKS.values()];self.task_choice=tk.StringVar(value=names[0]);self.task_box=ttk.Combobox(self.rail,textvariable=self.task_choice,values=names,state='readonly',font=(self.font,11))
+        self.task_box.pack(fill='x',padx=16,pady=(0,12));self.task_box.bind('<<ComboboxSelected>>',lambda e:self.change_task(next(k for k,t in TASKS.items() if t['name']==self.task_choice.get())))
         self.actions=[]
-        for label,command,primary in (("选择图片",self.choose,True),("内置暗光样例",self.choose_sample,False),("开始对比",self.process,True),("保存结果",self.save,False)):
-            button=self.button(rail,label,command,primary);button.pack(fill="x",padx=20,pady=4);self.actions.append(button)
-        tk.Label(rail,text="01  选图并确认处理范围\n02  处理后拖动分界线\n03  切换传统 Gamma 对照",justify="left",font=(self.font,11),fg="#68766c",bg="#e8ecdf").pack(anchor="w",padx=20,pady=12)
-        tk.Label(rail,text="统一输入 600 × 400\nGamma 指数固定为 0.5\nGamma 不包含降噪",justify="left",font=(self.font,10),fg="#68766c",bg="#e8ecdf").pack(anchor="w",padx=20)
-        content=tk.Frame(body,bg="white");content.pack(side="left",fill="both",expand=True)
-        self.status=tk.StringVar(value="选一张暗光照片，开始本机对比")
-        status_label=tk.Label(content,textvariable=self.status,anchor="w",wraplength=760,font=(self.font,12),bg="white",fg="#243d35");status_label.pack(fill="x",padx=20,pady=(18,6))
-        self.source=tk.StringVar(value="原图指校正方向、居中裁剪后的同一处理范围")
-        source_label=tk.Label(content,textvariable=self.source,anchor="w",font=(self.font,10),bg="white",fg="#68766c");source_label.pack(fill="x",padx=20)
-        self.canvas=tk.Canvas(content,bg="#243d35",highlightthickness=0,height=300)
-        self.canvas.pack(fill="both",expand=True,padx=20,pady=16)
-        self.canvas.bind("<Configure>",self.redraw);self.canvas.bind("<B1-Motion>",self.drag);self.canvas.bind("<Button-1>",self.drag)
-        chips=tk.Frame(content,bg="white");chips.pack(fill="x",padx=20,pady=(0,12));self.chips={}
-        for label in ("MobileIE","Gamma 0.5","三图总览"):
-            b=self.button(chips,label,lambda name=label:self.select(name),False);b.pack(side="left",expand=True,fill="x",padx=4);self.chips[label]=b
-        self.metrics=tk.StringVar(value="处理后显示本次 CPU 耗时；安卓测速请使用 AI Benchmark")
-        metrics_label=tk.Label(content,textvariable=self.metrics,font=(self.font,10),fg="#68766c",bg="white",wraplength=740);metrics_label.pack(padx=20,pady=(0,18))
-        content.bind("<Configure>",lambda event:[label.configure(wraplength=max(280,event.width-40)) for label in (status_label,source_label,metrics_label)])
-        tk.Label(root,text="MobileIE 官方模型  ·  原图 / 学习增强 / 固定 Gamma  ·  单张本地处理",font=(self.font,10),fg="#68766c",bg="#f6f5ef").pack(pady=14)
-        self.worker_thread=threading.Thread(target=self.worker,daemon=True);self.worker_thread.start();root.after(40,self.poll);root.protocol("WM_DELETE_WINDOW",self.close)
-        self.update_controls()
+        for label,command,primary in (('选择图片',self.choose,True),('内置样例',self.show_samples,False),('开始对比',self.process,True),('保存结果',self.save,False)):
+            b=self.button(self.rail,label,command,primary);b.pack(fill='x',padx=16,pady=4);self.actions.append(b)
+        tk.Label(self.rail,text='01  选择任务与匹配输入\n02  开始对比\n03  两组分界线同步滑动\n04  保存图像与任务记录',justify='left',font=(self.font,10),fg='#68766c',bg='#e8ecdf').pack(anchor='w',padx=16,pady=16)
+        self.task_note=tk.StringVar();tk.Label(self.rail,textvariable=self.task_note,wraplength=186,justify='left',font=(self.font,10),fg='#68766c',bg='#e8ecdf').pack(anchor='w',padx=16,pady=(0,18))
+        content=tk.Frame(body,bg='white');content.pack(side='left',fill='both',expand=True)
+        self.result_task=tk.StringVar(value='当前任务：低光增强 · 待处理')
+        tk.Label(content,textvariable=self.result_task,anchor='w',font=(self.font,17,'bold'),fg='#243d35',bg='white').pack(fill='x',padx=18,pady=(16,5))
+        self.status=tk.StringVar(value='选图或使用内置样例，确认后开始对比');self.source=tk.StringVar(value='三种任务分别使用对应官方权重和输入格式')
+        status_label=tk.Label(content,textvariable=self.status,anchor='w',font=(self.font,11),fg='#243d35',bg='white');status_label.pack(fill='x',padx=18)
+        source_label=tk.Label(content,textvariable=self.source,anchor='w',font=(self.font,10),fg='#68766c',bg='white');source_label.pack(fill='x',padx=18,pady=5)
+        chips=tk.Frame(content,bg='white');chips.pack(fill='x',padx=14,pady=(6,0));self.chips={}
+        for label in MODES:
+            b=self.button(chips,label,lambda name=label:self.select(name),False);b.pack(side='left',expand=True,fill='x',padx=4);self.chips[label]=b
+        self.canvas=tk.Canvas(content,bg='#eef0e7',highlightthickness=0,height=300,takefocus=True);self.canvas.pack(fill='both',expand=True,padx=18,pady=14)
+        self.canvas.bind('<Configure>',self.redraw);self.canvas.bind('<B1-Motion>',self.drag);self.canvas.bind('<Button-1>',self.drag)
+        self.canvas.bind('<Left>',lambda e:self.move_split(-.05));self.canvas.bind('<Right>',lambda e:self.move_split(.05))
+        self.metrics=tk.StringVar(value='处理后显示本次计算耗时');metrics_label=tk.Label(content,textvariable=self.metrics,fg='#68766c',bg='white',font=(self.font,10));metrics_label.pack(fill='x',padx=18,pady=(0,12))
+        content.bind('<Configure>',lambda e:[label.configure(wraplength=max(260,e.width-36)) for label in (status_label,source_label,metrics_label)])
+        tk.Label(root,text='动态：两组原图对照同步滑动     静态：原图 / MobileIE / baseline 三图总览',font=(self.font,10),fg='#68766c',bg='#f6f5ef').pack(pady=10)
+        self.worker_thread=threading.Thread(target=self.worker,daemon=True);self.worker_thread.start();root.after(40,self.poll);root.protocol('WM_DELETE_WINDOW',self.close);self.update_controls()
 
     def button(self,parent,label,command,primary):
-        return self.tk.Button(parent,text=label,command=command,font=(self.font,11,"bold"),bg="#c45738" if primary else "#e8ecdf",fg="white" if primary else "#243d35",activebackground="#d7b098",relief="flat",borderwidth=0,padx=14,pady=11,cursor="hand2")
-
+        return self.tk.Button(parent,text=label,command=command,font=(self.font,11,'bold'),bg='#c45738' if primary else '#e8ecdf',fg='white' if primary else '#243d35',activebackground='#d7b098',relief='flat',borderwidth=0,padx=12,pady=10,cursor='hand2')
+    def change_task(self,task_id):
+        if self.busy or task_id not in TASKS:return
+        self.active_task=task_id;self.task_choice.set(TASKS[task_id]['name']);self.prepared=self.input=None;self.images={'Input':None,'MobileIE':None,'Baseline':None};self.record={};self.split=.5
+        self.result_task.set('当前任务：'+TASKS[task_id]['name']+' · 待处理');self.source.set('已切换任务，正在准备匹配输入');self.metrics.set('处理后显示本次计算耗时');self.redraw();self.choose_sample()
     def choose(self):
-        filename=self.filedialog.askopenfilename(filetypes=[("照片","*.png *.jpg *.jpeg *.webp"),("所有文件","*.*")])
+        kinds=[('Huawei RAW 样例文件','*.rggb')] if self.active_task=='isp' else [('照片','*.png *.jpg *.jpeg *.webp')]
+        filename=self.filedialog.askopenfilename(filetypes=kinds+[('所有文件','*.*')])
         if filename:self.load(Path(filename))
-
-    def choose_sample(self):
-        self.load(ASSETS/"samples/01.png")
-
+    def show_samples(self):
+        if self.busy:return
+        menu=self.tk.Menu(self.root,tearoff=False)
+        for i in range(3):menu.add_command(label=f'{i+1:02d} · '+TASKS[self.active_task]['name']+'样例',command=lambda n=i:self.choose_sample(n))
+        menu.tk_popup(self.actions[1].winfo_rootx(),self.actions[1].winfo_rooty()+self.actions[1].winfo_height())
+    def choose_sample(self,index=0):self.load(ASSETS/TASKS[self.active_task]['sample_assets'][index])
     def load(self,path):
         if self.busy:return
-        self.busy=True;self.status.set("正在准备图片…");self.update_controls();self.tasks.put(("load",Path(path)))
-
+        self.busy=True;self.status.set('正在准备本任务输入…');self.update_controls();self.tasks.put(('load',(Path(path),self.active_task)))
     def process(self):
-        if self.busy or self.input is None:return
-        self.busy=True;self.status.set("正在本机处理，请稍候…");self.metrics.set("正在计算本次结果…");self.images={"Input":self.input,"MobileIE":None,"Gamma 0.5":None};self.update_controls();self.tasks.put(("process",self.input.copy()))
-
+        if self.busy or self.prepared is None:return
+        self.busy=True;self.status.set('正在本机处理，请稍候…');self.metrics.set('正在计算本次结果…');self.update_controls();self.tasks.put(('process',self.prepared))
     def worker(self):
         while True:
             kind,value=self.tasks.get()
-            if kind=="stop":self.engine=None;return
+            if kind=='stop':self.engines.clear();return
             try:
-                if kind=="load":self.results.put((kind,(prepare(value),value.name)))
-                elif kind=="process":
-                    start=time.perf_counter();g=gamma(value);gamma_ms=(time.perf_counter()-start)*1000;error=None;mie=None;init=self.engine is None
+                if kind=='load':path,task=value;self.results.put((kind,(prepare_task(path,task),path.name)))
+                elif kind=='process':
+                    task=TASKS[value.task_id];start=time.perf_counter();traditional=baseline(value);baseline_ms=(time.perf_counter()-start)*1000;error=None;mie=None;init=value.task_id not in self.engines
                     try:
-                        if self.engine is None:self.engine=Engine()
-                        mie,_,ms=self.engine.run(value)
-                    except Exception as exc:error=type(exc).__name__;ms=None;self.engine=None
-                    record={"app_version":VERSION,"model_sha256":MODEL_SHA,"width":600,"height":400,"gamma_exponent":.5,"gamma_ms":gamma_ms,"inference_ms":ms,"initialization_in_this_run":init,"runtime":"ai-edge-litert 2.3.0, CPU builtin, 1 thread","mobileie_complete":mie is not None,"gamma_complete":True,"mobileie_error":error,"input_rgb_sha256":hashlib.sha256(value.tobytes()).hexdigest()}
-                    self.results.put((kind,(mie,g,record)))
-            except Exception as exc:self.results.put(("error",type(exc).__name__))
-
+                        if init:self.engines[value.task_id]=Engine(value.task_id)
+                        mie,_,ms=self.engines[value.task_id].run(value)
+                    except Exception as exc:error=type(exc).__name__;ms=None;self.engines.pop(value.task_id,None)
+                    record={'app_version':VERSION,'task_id':value.task_id,'task_name':task['name'],'model_sha256':task['model_sha256'],'input_shape':task['input_shape'],'output_shape':task['output_shape'],'native_control_inputs':[],'baseline_id':task['baseline_id'],'baseline_name':task['baseline_name'],'baseline_ms':baseline_ms,'inference_ms':ms,'initialization_in_this_run':init,'runtime':'ai-edge-litert 2.3.0, CPU builtin, 1 thread','mobileie_complete':mie is not None,'baseline_complete':True,'mobileie_error':error,'input_tensor_sha256':hashlib.sha256(value.tensor.tobytes()).hexdigest(),'input_visualization':'10-bit RAW intensity (not RGB model input)' if value.task_id=='isp' else 'shared RGB input'}
+                    if value.original_bytes is not None:record['original_raw_sha256']=hashlib.sha256(value.original_bytes).hexdigest()
+                    self.results.put((kind,(value,mie,traditional,record)))
+            except Exception as exc:self.results.put(('error',str(exc)))
     def poll(self):
         if self.closed:return
         try:
             while True:
                 kind,value=self.results.get_nowait();self.busy=False
-                if kind=="load":
-                    self.input,name=value;self.images={"Input":self.input,"MobileIE":None,"Gamma 0.5":None};self.record={};self.mode="MobileIE";self.split=.5;self.metrics.set("处理后显示本次 CPU 耗时；安卓测速请使用 AI Benchmark");self.source.set(name+"  ·  600 × 400 居中处理范围");self.status.set("图片已准备，请确认取景范围再开始对比")
-                elif kind=="process":
-                    mie,g,self.record=value;self.images={"Input":self.input,"MobileIE":mie,"Gamma 0.5":g};self.mode="MobileIE" if mie else "Gamma 0.5";self.status.set("处理完成 · 两种方法均在本机计算" if mie else "MobileIE 未生成；Gamma 结果仍可查看，请核对依赖或模型")
-                    self.metrics.set(f"MobileIE {self.record['inference_ms']:.1f} ms  ·  Gamma {self.record['gamma_ms']:.1f} ms" if mie else "MobileIE 本次未生成；Gamma 已完成")
-                else:self.status.set("图片未加载或处理失败，请重新选择有效的 JPG / PNG")
+                if kind=='load':
+                    self.prepared,name=value;self.input=self.prepared.image;self.images={'Input':self.input,'MobileIE':None,'Baseline':None};self.record={};self.split=.5;self.metrics.set('处理后显示本次计算耗时')
+                    task=TASKS[self.prepared.task_id];self.result_task.set('当前任务：'+task['name']+' · 待处理');self.source.set(name+f'  ·  {self.input.width} × {self.input.height}'+(' RAW 强度可视化' if self.prepared.task_id=='isp' else ' 共同取景范围'));self.status.set('输入已准备，请确认后开始对比')
+                elif kind=='process':
+                    self.prepared,mie,traditional,self.record=value;self.input=self.prepared.image;self.images={'Input':self.input,'MobileIE':mie,'Baseline':traditional}
+                    self.result_task.set('本次任务：'+self.record['task_name']);self.status.set('处理完成 · 两组对照使用同一输入' if mie else 'MobileIE 未生成，固定 baseline 仍可查看')
+                    self.metrics.set((f"MobileIE {self.record['inference_ms']:.1f} ms" if mie else 'MobileIE 未生成')+f"  ·  {self.record['baseline_name']} {self.record['baseline_ms']:.1f} ms")
+                else:self.status.set('输入未加载：'+value)
                 self.update_controls();self.redraw()
         except queue.Empty:pass
         self.root.after(40,self.poll)
-
     def update_controls(self):
-        for b in self.actions:b.configure(state="disabled" if self.busy else "normal")
-        self.actions[2].configure(state="normal" if self.input is not None and not self.busy else "disabled")
-        self.actions[3].configure(state="normal" if self.images["Gamma 0.5"] is not None and not self.busy else "disabled")
-        for label,b in self.chips.items():b.configure(bg="#243d35" if label==self.mode else "#e8ecdf",fg="white" if label==self.mode else "#243d35",state="disabled" if self.images["Gamma 0.5"] is None or (label=="MobileIE" and self.images["MobileIE"] is None) else "normal")
-
+        for b in self.actions:b.configure(state='disabled' if self.busy else 'normal')
+        self.task_box.configure(state='disabled' if self.busy else 'readonly');self.actions[0].configure(text='选择 RAW 文件' if self.active_task=='isp' else '选择图片')
+        self.actions[2].configure(state='normal' if self.prepared is not None and not self.busy else 'disabled');self.actions[3].configure(state='normal' if self.images['Baseline'] is not None and not self.busy else 'disabled');self.info_button.configure(state='disabled' if self.busy else 'normal')
+        for label,b in self.chips.items():b.configure(bg='#243d35' if label==self.mode else '#e8ecdf',fg='white' if label==self.mode else '#243d35',state='disabled' if self.busy else 'normal')
+        self.task_note.set('本任务 baseline：'+TASKS[self.active_task]['baseline_name']+('\nISP 使用真实 Huawei RAW 样例或配套 .rggb 文件，普通照片不能作为 RAW。' if self.active_task=='isp' else '\n三种任务使用不同官方权重。'))
     def select(self,mode):
+        if self.busy or mode not in MODES:return
         self.mode=mode;self.update_controls();self.redraw()
-
     def redraw(self,event=None):
-        c=self.canvas;c.delete("all");w,h=max(c.winfo_width(),1),max(c.winfo_height(),1)
+        c=self.canvas;c.delete('all');self._photos=[];self.rects=[];w,h=max(c.winfo_width(),1),max(c.winfo_height(),1)
         if self.input is None:
-            c.create_oval(w*.55,h*.08,w*.85,h*.50,fill="#e9c28e",outline="");c.create_oval(w*.61,h*.02,w*.91,h*.44,fill="#243d35",outline="")
-            c.create_text(32,h*.68,text="让暗处的细节，重新被看见。",anchor="w",fill="#f6f5ef",font=(self.font,18,"bold"));return
-        if self.mode=="三图总览":
-            image=Image.new("RGB",(1800,400),"#e8ecdf")
-            for i,name in enumerate(("Input","MobileIE","Gamma 0.5")):
-                if self.images[name] is not None:image.paste(self.images[name],(i*600,0))
-        else:
-            image=self.input.copy();processed=self.images.get(self.mode)
-            if processed is not None:
-                x=int(600*self.split);image.paste(processed.crop((x,0,600,400)),(x,0))
-        ratio=min(w/image.width,(h-36 if self.mode=="三图总览" else h)/image.height);size=(max(1,int(image.width*ratio)),max(1,int(image.height*ratio)))
-        self.rect=((w-size[0])//2,(h-size[1])//2,size[0],size[1]);self._photo=self.ImageTk.PhotoImage(image.resize(size,Image.Resampling.BILINEAR));c.create_image(w//2,h//2,image=self._photo)
-        if self.mode=="三图总览":
-            x0,y0,iw,ih=self.rect
-            for i,(name,label) in enumerate((("Input","原图"),("MobileIE","MobileIE"),("Gamma 0.5","Gamma 0.5"))):
-                cx=x0+(i+.5)*iw/3;c.create_text(cx,y0+ih+18,text=label,fill="white",font=(self.font,11))
-                if self.images[name] is None:c.create_text(cx,y0+ih/2,text="未生成",fill="#68766c",font=(self.font,11))
-        if self.mode!="三图总览" and self.images.get(self.mode) is not None:
-            x0,y0,iw,ih=self.rect;x=x0+int(iw*self.split);c.create_line(x,y0,x,y0+ih,fill="white",width=2);c.create_oval(x-16,h/2-16,x+16,h/2+16,fill="white",outline="");c.create_text(x,h/2,text="↔",fill="#243d35",font=(self.font,12))
-
+            c.create_text(w/2,h/2,text='选择对应任务的图片或内置样例\n在同一位置，看清两种处理',justify='center',fill='#243d35',font=(self.font,15,'bold'));return
+        dynamic=self.mode==MODES[0];keys=('Baseline','MobileIE') if dynamic else ('Input','MobileIE','Baseline');n=len(keys);gap=14;cell=(w-(n-1)*gap)/n
+        ratio=min(cell/self.input.width,max(1,h-56)/self.input.height);iw,ih=max(1,int(self.input.width*ratio)),max(1,int(self.input.height*ratio));y=(h-ih)//2+12
+        task=TASKS[self.prepared.task_id];original_label='RAW 可视化' if self.prepared.task_id=='isp' else '原图'
+        for index,key in enumerate(keys):
+            x=int(index*(cell+gap)+(cell-iw)/2);self.rects.append((x,y,iw,ih));label=original_label if key=='Input' else 'MobileIE' if key=='MobileIE' else task['baseline_name']
+            c.create_text(x+iw/2,max(14,y-19),text=original_label+' ↔ '+label if dynamic else label,fill='#243d35',font=(self.font,11,'bold'));processed=self.images[key]
+            if dynamic:
+                image=self.input.copy();cut=int(image.width*self.split)
+                if processed is not None:image.paste(processed.crop((cut,0,image.width,image.height)),(cut,0))
+                else:ImageDraw.Draw(image).rectangle((cut,0,image.width,image.height),fill='#e8ecdf')
+            else:image=processed or Image.new('RGB',self.input.size,'#e8ecdf')
+            photo=self.ImageTk.PhotoImage(image.resize((iw,ih),Image.Resampling.BILINEAR));self._photos.append(photo);c.create_image(x,y,image=photo,anchor='nw')
+            if processed is None and key!='Input':c.create_text(x+iw*.75 if dynamic else x+iw/2,y+ih/2,text='未生成' if self.record else '待处理',fill='#68766c',font=(self.font,11))
+            if dynamic:
+                xx=x+iw*self.split;c.create_line(xx,y,xx,y+ih,fill='white',width=2);c.create_oval(xx-12,y+ih/2-12,xx+12,y+ih/2+12,fill='white',outline='#dce0d4');c.create_text(xx,y+ih/2,text='↔',fill='#243d35',font=(self.font,11))
+    def move_split(self,amount):
+        if self.busy or self.mode!=MODES[0] or self.input is None:return
+        self.split=max(0,min(1,self.split+amount));self.redraw()
     def drag(self,event):
-        if self.input is None or self.mode=="三图总览":return
-        x,y,w,h=self.rect;self.split=max(.03,min(.97,(event.x-x)/max(w,1)));self.redraw()
-
+        if self.busy or self.mode!=MODES[0] or self.input is None:return
+        for x,y,w,h in self.rects:
+            if x<=event.x<=x+w and y<=event.y<=y+h:self.canvas.focus_set();self.split=max(0,min(1,(event.x-x)/w));self.redraw();break
     def save(self):
-        if self.images["Gamma 0.5"] is None or self.busy:return
-        directory=self.filedialog.askdirectory(title="选择结果保存目录")
+        if self.busy or self.images['Baseline'] is None:return
+        directory=self.filedialog.askdirectory(title='选择保存目录')
         if not directory:return
-        try:target=save_results(Path(directory),self.images,self.record);self.status.set("已保存："+str(target))
-        except Exception:self.status.set("保存失败，请检查目录与可用空间，当前结果仍可查看")
-
-    def info(self):
-        self.messagebox.showinfo("计算记录",json.dumps(self.record,ensure_ascii=False,indent=2) if self.record else "选择图片并处理后可查看本次记录。")
-
-    def close(self):
-        self.closed=True;self.tasks.put(("stop",None));self._photo=None;self.root.destroy()
+        try:target=save_results(directory,self.images,self.record,self.prepared);self.status.set('已保存：'+str(target))
+        except Exception:self.status.set('保存失败，当前结果仍可查看')
+    def info(self):self.messagebox.showinfo('本次计算记录',json.dumps(self.record,ensure_ascii=False,indent=2) if self.record else '选择任务与输入，处理后查看本次记录。')
+    def close(self):self.closed=True;self.tasks.put(('stop',None));self._photos=[];self.root.destroy()
 
 
 def main():
     import tkinter as tk
-    root=tk.Tk();desktop=Desktop(root);root.mainloop();desktop.worker_thread.join(timeout=5)
+    root=tk.Tk();app=Desktop(root);root.mainloop();app.worker_thread.join(timeout=5)
 
 
-if __name__=="__main__":main()
+if __name__=='__main__':main()
