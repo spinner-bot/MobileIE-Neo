@@ -1,0 +1,42 @@
+{
+  "source_label": "内置RAW→RGB ISP样例 1",
+  "created_at_utc": "2026-11-14T14:20:11.244576Z",
+  "width": 448,
+  "height": 448,
+  "task_id": "isp",
+  "task_name": "RAW→RGB ISP",
+  "baseline_id": "bilinear_isp",
+  "baseline_name": "双线性传统 ISP",
+  "input_shape": [
+    1,
+    224,
+    224,
+    4
+  ],
+  "output_shape": [
+    1,
+    448,
+    448,
+    3
+  ],
+  "native_control_inputs": [],
+  "crop": "Lossless 448x448 RGGB; official normalization \/4095; no black subtraction",
+  "preparation_ms": 13.311197,
+  "input_visualization": "10-bit RAW intensity, not RGB model input",
+  "input_sha256": "5ed14c7749edae1ca9d5f94f74ef82d269e5ecb19742c25ebb8ab661b4e660f0",
+  "model_sha256": "2db579740483ddb1c8df84d17c1ea82194ac319543ca527a8b942c5c247d9e63",
+  "app_version": "0.2.0",
+  "runtime": "LiteRT 1.4.2 CPU built-in, 4 threads",
+  "baseline_complete": true,
+  "mobileie_complete": true,
+  "original_raw_sha256": "8faf88bc85f5ba004ac85fab324144df7fddee5c3f711ba612a0aa2a59c796cb",
+  "run_number": 1,
+  "baseline_ms": 90.002344,
+  "initialization_ms": 2.734427,
+  "initialization_in_this_run": true,
+  "packing_ms": 19.128125,
+  "inference_ms": 48.589791,
+  "rendering_ms": 41.790677,
+  "processing_total_ms": 204.935781,
+  "processed_at_utc": "2026-11-14T14:20:15.005135Z"
+}
