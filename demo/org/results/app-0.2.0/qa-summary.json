@@ -2,7 +2,7 @@
   "version": "0.2.0",
   "date": "2026-11-14",
   "accepted_for_simulated_delivery": true,
-  "package_artifacts_verified": false,
+  "package_artifacts_verified": true,
   "device": "Android 15 API35 x86_64 emulator / Linux Xvfb",
   "source_stage_commit": "79d0eeec",
   "product_apk_sha256": "d28471059033fb4e77367a4f73d97a7bb9284bca7354662fa93eecaf74f79b4b",
@@ -71,5 +71,11 @@
   },
   "native_oneplus_0_2_0_tested": false,
   "native_windows_0_2_0_tested": false,
-  "next_gate": "Verify extracted release ZIPs and immutable historical artifacts before final push"
+  "portable_inference_and_export_cases": 9,
+  "old_releases_unchanged": [
+    "0.1.0",
+    "0.1.1",
+    "0.1.2"
+  ],
+  "acceptance_scope": "Dual-platform server simulated delivery accepted; native OnePlus and Windows 0.2.0 rehearsal pending"
 }

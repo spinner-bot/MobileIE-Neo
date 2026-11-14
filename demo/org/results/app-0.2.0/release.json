@@ -1,0 +1,126 @@
+{
+  "version": "0.2.0",
+  "date": "2026-11-14",
+  "application_id": "dev.zrh.mobileie",
+  "apk_signing": "development debug signature; not an app-store release",
+  "abis": [
+    "arm64-v8a",
+    "x86_64"
+  ],
+  "min_sdk": 29,
+  "target_sdk": 36,
+  "tasks": [
+    {
+      "id": "lowlight",
+      "name": "低光增强",
+      "model_asset": "model.tflite",
+      "model_sha256": "2ea09b840634469eceab5263bf7b549c33fcd5df2a25701ce5fefc585402ad44",
+      "input_shape": [
+        1,
+        400,
+        600,
+        3
+      ],
+      "output_shape": [
+        1,
+        400,
+        600,
+        3
+      ],
+      "native_control_inputs": [],
+      "baseline_id": "gamma_05",
+      "baseline_name": "Gamma 0.5",
+      "sample_assets": [
+        "samples/01.png",
+        "samples/02.png",
+        "samples/03.png"
+      ]
+    },
+    {
+      "id": "underwater",
+      "name": "水下增强",
+      "model_asset": "model_underwater.tflite",
+      "model_sha256": "a36e22b042052f1d9a8bdf5bfbf648d63df3ad10c3ab4511e98272070a7a0edf",
+      "input_shape": [
+        1,
+        400,
+        600,
+        3
+      ],
+      "output_shape": [
+        1,
+        400,
+        600,
+        3
+      ],
+      "native_control_inputs": [],
+      "baseline_id": "gray_world",
+      "baseline_name": "灰度世界白平衡",
+      "sample_assets": [
+        "samples/underwater/01.png",
+        "samples/underwater/02.png",
+        "samples/underwater/03.png"
+      ]
+    },
+    {
+      "id": "isp",
+      "name": "RAW→RGB ISP",
+      "model_asset": "model_isp.tflite",
+      "model_sha256": "2db579740483ddb1c8df84d17c1ea82194ac319543ca527a8b942c5c247d9e63",
+      "input_shape": [
+        1,
+        224,
+        224,
+        4
+      ],
+      "output_shape": [
+        1,
+        448,
+        448,
+        3
+      ],
+      "native_control_inputs": [],
+      "baseline_id": "bilinear_isp",
+      "baseline_name": "双线性传统 ISP",
+      "sample_assets": [
+        "samples/isp/01.rggb",
+        "samples/isp/02.rggb",
+        "samples/isp/03.rggb"
+      ]
+    }
+  ],
+  "display_modes": [
+    "paired synchronized sliders",
+    "independent three-image overview"
+  ],
+  "android_cpu_threads": 4,
+  "desktop_cpu_threads": 1,
+  "native_oneplus_tested": false,
+  "native_windows_tested": false,
+  "artifacts": [
+    {
+      "name": "MobileIE-LightLab-0.2.0.apk",
+      "path": "/data/Users/zrh/data/MobileIE-Neo/demo/org/releases/0.2.0/MobileIE-LightLab-0.2.0.apk",
+      "bytes": 19624028,
+      "sha256": "d28471059033fb4e77367a4f73d97a7bb9284bca7354662fa93eecaf74f79b4b"
+    },
+    {
+      "name": "MobileIE-LightLab-Android-Demo-0.2.0.zip",
+      "path": "/data/Users/zrh/data/MobileIE-Neo/demo/org/releases/0.2.0/MobileIE-LightLab-Android-Demo-0.2.0.zip",
+      "bytes": 13174946,
+      "sha256": "a2dd7b4efdd3800cd646fc63d1d1ee5e79df49f9ade5d7cf94705a7f6a990157"
+    },
+    {
+      "name": "MobileIE-LightLab-Desktop-Python-0.2.0.zip",
+      "path": "/data/Users/zrh/data/MobileIE-Neo/demo/org/releases/0.2.0/MobileIE-LightLab-Desktop-Python-0.2.0.zip",
+      "bytes": 2425651,
+      "sha256": "3f172eeddb4ce5501b9d85e42ee6a44300c767b0ad72f5489d4545d94fbc6af1"
+    },
+    {
+      "name": "MobileIE-LightLab-0.2.0-emulator-demo.mp4",
+      "path": "/data/Users/zrh/data/MobileIE-Neo/demo/org/releases/0.2.0/MobileIE-LightLab-0.2.0-emulator-demo.mp4",
+      "bytes": 4015487,
+      "sha256": "f2ea69a3911c99c831af668698c2c267247cbf172304feb0d2ca701ed0491bc8"
+    }
+  ]
+}
