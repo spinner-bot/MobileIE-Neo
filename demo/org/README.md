@@ -27,6 +27,7 @@ Android保留拍照、系统选图、保存、进程恢复与AI Benchmark跳转�
 | --- | --- |
 | 本版范围、取消参数面板与阶段门控 | [13设计确认](docs/13-three-task-and-display-plan.md) |
 | 0.2.0交付、测试证据与安装包索引 | [14验收报告](docs/14-three-task-0.2.0-delivery.md) |
+| 分支改名 `demo.org` → `demo/org` | [15改名记录](docs/15-branch-rename.md) |
 | Android构建与验收命令 | [App说明](app/README.md) |
 | Python启动与输入限制 | [桌面快速说明](desktop/QUICKSTART.txt) |
 | 手机操作、AI Benchmark配合与彩排清单 | [中文操作说明](demo-package/微光实验室操作说明.txt) |
