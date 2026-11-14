@@ -4,15 +4,15 @@
 
 ## 当前研究状态
 
-截至2026-11-14，项目仍处于方法探索阶段，尚未建立可投稿的新方法。接续先读[进展报告0139](docs/进展报告/0139-T-26111416-正式训练双种子两万七千步里程碑归档.md)、[4号研究入口](research/4.temporal-consistency/README.md)和[服务器约定](AGENTS.md)。主线在 `main` 推进，移动演示由独立支线处理。
+截至2026-11-14，项目仍处于方法探索阶段，尚未建立可投稿的新方法。接续先读[进展报告0140](docs/进展报告/0140-T-26111417-观察中断后原训练接续与两万八千步归档.md)、[4号研究入口](research/4.temporal-consistency/README.md)和[服务器约定](AGENTS.md)。主线在 `main` 推进，移动演示由独立支线处理。
 
 [原保留实拍来源](research/4.temporal-consistency/data/external-olives-reserved/README.md)只做纯目录元数据资格，三段586对帧名、0像素/模型/解码；不增加已完成独立基准数，不开放为DEV，也不因原门槛通过自动解封。最终方法、权重、预处理和完整评价范围须另冻结；原训练与既定完整评价链继续，paper018和研究缺口保持。
 
-最近[progress021](research/4.temporal-consistency/process/exploration-r75/progress021.json)归档R75两seed各27000/64000、各27000可恢复marker和完整行日志前缀；原训练及原/补充协调器继续，17/27/37源保持，无中途DEV/JOD或新方法结论。R77只预先登记同架构独立空间控制并通过CPU人工输入资格；必须先过原八门槛、self4四支持及两套实际图审才投入额外训练，否则停止该投资。当前没有新正式训练/GPU，未完成完整trainer/evaluator，不把current/self4的输入干预当独立空间训练或创新。SMOID demo来源核查也未取得新配对外部基准；paper018及验证缺口保持。
+最近[progress022](research/4.temporal-consistency/process/exploration-r75/progress022.json)归档R75 seed0 28700/64000、seed1 28800/64000及各28000可恢复marker和完整行日志前缀；原训练及原/补充协调器继续，17/27/37源保持，无中途DEV/JOD或新方法结论。R77只预先登记同架构独立空间控制并通过CPU人工输入资格；必须先过原八门槛、self4四支持及两套实际图审才投入额外训练，否则停止该投资。当前没有新正式训练/GPU，未完成完整trainer/evaluator，不把current/self4的输入干预当独立空间训练或创新。SMOID demo来源核查也未取得新配对外部基准；paper018及验证缺口保持。
 
-先前[progress003](research/4.temporal-consistency/process/exploration-r75/progress003.json)归档R75两seed 8100/8000步和各8000检查点；后续以上述progress021/实际runtime为准。提前登记的[R76固定同帧self4控制](research/4.temporal-consistency/docs/exploration-r76-self-conditioning-control-protocol.md)已补齐质量/感知/100条件汇总/20固定图入口，编译与metadata屏障资格通过、37源冻结；补充协调39049只等待原完整结果，0新增GPU/训练或真实DEV读出。四倍计算的解释控制不改原八门槛、不当新方法；真实数值和实际图审仍待。R-DID获取未完成，不能增加已验证基准数。
+先前[progress003](research/4.temporal-consistency/process/exploration-r75/progress003.json)归档R75两seed 8100/8000步和各8000检查点；后续以上述progress022/实际runtime为准。提前登记的[R76固定同帧self4控制](research/4.temporal-consistency/docs/exploration-r76-self-conditioning-control-protocol.md)已补齐质量/感知/100条件汇总/20固定图入口，编译与metadata屏障资格通过、37源冻结；补充协调39049只等待原完整结果，0新增GPU/训练或真实DEV读出。四倍计算的解释控制不改原八门槛、不当新方法；真实数值和实际图审仍待。R-DID获取未完成，不能增加已验证基准数。
 
-R75公开因果参考的正式训练已启动：发布ReBotNet-XS、自启动native384四帧、两seed各64000，实际在同组0/1号卡按余量共享。首次启动快照为各300步，后续状态以上述progress021及真实runtime为准；完整最终质量/感知尚未执行，不能从训练loss宣称方法成功。最终评价协调器会核真实训练句柄、等两final后接续固定流程；训练/评价源码已冻结，见[首次启动快照](research/4.temporal-consistency/process/exploration-r75/progress001.json)及[执行边界](research/4.temporal-consistency/docs/exploration-r75-evaluation-execution.md)。共同表的ND输入为288×512原生裁块，非整幅1080p；普通参考适配不是创新或原500K充分复现，旧STOP保持。
+R75公开因果参考的正式训练已启动：发布ReBotNet-XS、自启动native384四帧、两seed各64000，实际在同组0/1号卡按余量共享。首次启动快照为各300步，后续状态以上述progress022及真实runtime为准；完整最终质量/感知尚未执行，不能从训练loss宣称方法成功。最终评价协调器会核真实训练句柄、等两final后接续固定流程；训练/评价源码已冻结，见[首次启动快照](research/4.temporal-consistency/process/exploration-r75/progress001.json)及[执行边界](research/4.temporal-consistency/docs/exploration-r75-evaluation-execution.md)。共同表的ND输入为288×512原生裁块，非整幅1080p；普通参考适配不是创新或原500K充分复现，旧STOP保持。
 
 定向来源核查已确认ReBotNet作者发布架构，CPU人工输入资格通过，原代码/许可已固定入库。固定token/GT首帧/500K原训练与任意原生分辨率的差异见[57号阅读](research/5.prior-art-survey/docs/57-causal-reference-code-feasibility.md)；代码资格阶段没有训练/质量/视频像素/GPU结果，不称方法或原论文充分复现。
 
