@@ -48,7 +48,7 @@ class Graph:
 
 
 def build(weights,task):
-    g=Graph();h,w,channels=(200,300,4) if task=='isp' else (400,600,3);shape=[1,h,w,12]
+    g=Graph();h,w,channels=(224,224,4) if task=='isp' else (400,600,3);shape=[1,h,w,12]
     inp=g.tensor('image',[1,h,w,channels]);g.graph.inputs=[inp]
     x=g.conv(inp,weights,'head.block1.0',shape)
     alpha=g.constant('head/PReLU',weights['head.block1.1.weight'].reshape(1,1,12))
@@ -79,7 +79,7 @@ def build(weights,task):
         x=g.op(s.BuiltinOperator.TRANSPOSE,[x,g.constant('shuffle/permutation',[0,1,4,2,5,3],np.int32)],[1,h,2,w,2,3],'shuffle/interleave',s.TransposeOptionsT())
         option=s.ReshapeOptionsT();option.newShape=[1,h*2,w*2,3]
         x=g.op(s.BuiltinOperator.RESHAPE,[x],[1,h*2,w*2,3],'shuffle/output',option)
-        out=g.conv(x,weights,'tail.1',[1,400,600,3])
+        out=g.conv(x,weights,'tail.1',[1,h*2,w*2,3])
     else:out=g.conv(x,weights,'tail',[1,400,600,3])
     g.graph.outputs=[out];g.model.description=f'Official MobileIE {task}; frozen FP32; image input only'.encode()
     builder=flatbuffers.Builder(32768);offset=g.model.Pack(builder);builder.Finish(offset,file_identifier=b'TFL3');return bytes(builder.Output())
@@ -92,7 +92,7 @@ def main():
         runtime=Interpreter(model_content=data,num_threads=1,experimental_op_resolver_type=OpResolverType.BUILTIN_WITHOUT_DEFAULT_DELEGATES);runtime.allocate_tensors()
         inputs=runtime.get_input_details();outputs=runtime.get_output_details();assert len(inputs)==len(outputs)==1
         cases=[]
-        for name in ('black','white','random','ramp'):
+        for name in ('black','white','random','ramp','sample1','sample2','sample3'):
             x=np.load(a.weights_dir/f'{task}-{name}-input.npy');expected=np.load(a.weights_dir/f'{task}-{name}-reference.npy')
             runtime.set_tensor(inputs[0]['index'],x);runtime.invoke();actual=runtime.get_tensor(outputs[0]['index'])
             raw=float(np.max(np.abs(actual.astype(np.float64)-expected.astype(np.float64))));pixels=np.abs((np.clip(actual,0,1)*255).astype(np.uint8).astype(int)-(np.clip(expected,0,1)*255).astype(np.uint8).astype(int));maximum=int(pixels.max())
