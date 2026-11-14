@@ -9,7 +9,7 @@ import desktop as lab
 import lightlab_tasks as tasks
 REPO=Path(__file__).resolve().parents[3]
 OUT=Path(os.environ.get('LIGHTLAB_TEST_OUTPUT',tempfile.gettempdir()))
-REF=Path('/data/Users/zrh/data/MobileIE-Neo/demo/org/three-task/models-v2')
+REF=Path(os.environ.get('LIGHTLAB_REFERENCE_DIR','/data/Users/zrh/data/MobileIE-Neo/demo/org/three-task/models-v2'))
 
 
 class CoreTests(unittest.TestCase):
@@ -52,14 +52,14 @@ class CoreTests(unittest.TestCase):
                 delta=float(np.abs(raw.astype(float)-expected.astype(float)).max());pixel=int(np.abs(np.asarray(image).astype(int)-(np.clip(expected[0],0,1)*255).astype(np.uint8).astype(int)).max());self.assertLessEqual(delta,1e-4);self.assertLessEqual(pixel,1)
                 if task=='lowlight':self.assertEqual(0,pixel)
                 records.append({'task':task,'sample':index,'raw_max_abs':delta,'uint8_max_abs':pixel})
-        OUT.mkdir(parents=True,exist_ok=True);(OUT/'desktop-numerics.json').write_text(json.dumps({'pass':True,'cases':records,'native_windows_tested':False},indent=2)+'\n')
+        OUT.mkdir(parents=True,exist_ok=True);(OUT/'desktop-numerics.json').write_text(json.dumps({'pass':True,'cases':records,'native_windows_tested':sys.platform.startswith('win')},indent=2)+'\n')
     def test_save_roundtrip_task_identity_and_rollback(self):
         for task in tasks.TASKS:
             value=tasks.prepare(tasks.ASSETS/tasks.TASKS[task]['sample_assets'][0],task);mie,_,_=tasks.Engine(task).run(value);images={'Input':value.image,'MobileIE':mie,'Baseline':tasks.baseline(value)};record={'task_id':task,'task_name':tasks.TASKS[task]['name'],'baseline_name':tasks.TASKS[task]['baseline_name']}
             with tempfile.TemporaryDirectory() as d:
                 target=lab.save_results(d,images,record,value)
                 for key,name in (('Input','input.png'),('MobileIE','mobileie.png'),('Baseline','baseline.png')):self.assertEqual(images[key].tobytes(),Image.open(target/name).tobytes())
-                self.assertEqual((3*value.image.width,value.image.height+110),Image.open(target/'comparison.png').size);self.assertEqual(record,json.loads((target/'record.json').read_text()))
+                self.assertEqual((3*value.image.width,value.image.height+110),Image.open(target/'comparison.png').size);self.assertEqual(record,json.loads((target/'record.json').read_text(encoding='utf-8')))
                 if task=='isp':self.assertEqual(value.original_bytes,(target/'input.rggb').read_bytes())
                 before=set(Path(d).iterdir());self.assertRaises(TypeError,lab.save_results,d,images,{'bad':object()},value);self.assertEqual(before,set(Path(d).iterdir()))
 
@@ -88,14 +88,14 @@ class GuiTests(unittest.TestCase):
                     for line,rect in zip(lines,app.rects):self.assertAlmostEqual(fraction,(line[0]-rect[0])/rect[2],places=2)
                 shot(task+'-dynamic.png');app.select(lab.MODES[1]);root.update();self.assertEqual(3,len(app.rects));self.assertEqual(rectangles[0][3],rectangles[1][3]);shot(task+'-static.png')
                 with tempfile.TemporaryDirectory() as d:
-                    app.filedialog.askdirectory=lambda **_:d;app.save();record=json.loads(next(Path(d).glob('MobileIE-*/record.json')).read_text());self.assertEqual(task,record['task_id'])
+                    app.filedialog.askdirectory=lambda **_:d;app.save();record=json.loads(next(Path(d).glob('MobileIE-*/record.json')).read_text(encoding='utf-8'));self.assertEqual(task,record['task_id'])
             app.change_task('underwater');wait()
             class Failure:
                 def run(self,_):raise RuntimeError('controlled model failure')
             app.engines['underwater']=Failure();app.process();wait();self.assertIsNone(app.images['MobileIE']);self.assertIsNotNone(app.images['Baseline']);self.assertIn('未生成',app.status.get());self.assertIn('水下增强',app.result_task.get());shot('desktop-model-failure.png')
             root.geometry('900x650');root.update();shot('desktop-small.png');app.rail_scroll.yview_moveto(1);root.update();shot('desktop-small-scrolled.png');self.assertLessEqual(app.info_button.winfo_rooty()+app.info_button.winfo_height(),root.winfo_rooty()+root.winfo_height())
         finally:app.close();app.worker_thread.join(timeout=5)
-        self.assertFalse(app.worker_thread.is_alive());(OUT/'desktop-gui.json').write_text(json.dumps({'pass':True,'tasks':3,'display_modes':2,'task_label_bound_to_record':True,'paired_slider_sync':True,'task_switch_clears_old_result':True,'model_failure_baseline_preserved':True,'small_window_checked':True,'native_windows_tested':False},indent=2)+'\n')
+        self.assertFalse(app.worker_thread.is_alive());(OUT/'desktop-gui.json').write_text(json.dumps({'pass':True,'tasks':3,'display_modes':2,'task_label_bound_to_record':True,'paired_slider_sync':True,'task_switch_clears_old_result':True,'model_failure_baseline_preserved':True,'small_window_checked':True,'native_windows_tested':sys.platform.startswith('win')},indent=2)+'\n')
 
 
 if __name__=='__main__':unittest.main(verbosity=2)
