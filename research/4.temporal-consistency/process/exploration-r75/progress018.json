@@ -1,0 +1,179 @@
+{
+  "at": "2026-11-14T12:57:58.924239+08:00",
+  "classification": "progress: both actual24000 committed milestones and complete-line prefixes archived",
+  "previous_goal_turn": "verified_wait",
+  "seeds": [
+    {
+      "seed": 0,
+      "pid": 4160205,
+      "start_ticks": "48844067",
+      "observed_live": true,
+      "last_recorded_steps": 24000,
+      "last_recorded_at": "2026-11-14T12:57:02.953859+08:00",
+      "latest_checkpoint": {
+        "at": "2026-11-14T12:57:03.149767+08:00",
+        "seed": 0,
+        "completed_steps": 24000,
+        "next_data_step": 24000,
+        "registered_steps": 64000,
+        "attempt": 1,
+        "kind": "regular",
+        "path": ".cache/checkpoints/exploration-r75/seed0/attempt001/regular-step024000.pt",
+        "sha256": "63862f47824e2e82cf860201777bccea9926bf76254a6652e514b130e9775b1c",
+        "bytes": 10621579,
+        "parameters": 890275,
+        "source_freeze_sha256": "929d6faca944bff5d59712e15947cf41d9e28c59c30881335cc8b568750804c8",
+        "final_quality_eligible": false
+      },
+      "registered_steps": 64000,
+      "terminal_runtime_exists": false
+    },
+    {
+      "seed": 1,
+      "pid": 4160204,
+      "start_ticks": "48844061",
+      "observed_live": true,
+      "last_recorded_steps": 24000,
+      "last_recorded_at": "2026-11-14T12:54:38.867999+08:00",
+      "latest_checkpoint": {
+        "at": "2026-11-14T12:54:39.071102+08:00",
+        "seed": 1,
+        "completed_steps": 24000,
+        "next_data_step": 24000,
+        "registered_steps": 64000,
+        "attempt": 1,
+        "kind": "regular",
+        "path": ".cache/checkpoints/exploration-r75/seed1/attempt001/regular-step024000.pt",
+        "sha256": "cf2637c05c2e5d3776da0171bc928b6cbdd0cc78d13c204848a6586f0d432396",
+        "bytes": 10621579,
+        "parameters": 890275,
+        "source_freeze_sha256": "929d6faca944bff5d59712e15947cf41d9e28c59c30881335cc8b568750804c8",
+        "final_quality_eligible": false
+      },
+      "registered_steps": 64000,
+      "terminal_runtime_exists": false
+    }
+  ],
+  "coordinators": [
+    {
+      "pid": 4163819,
+      "start_ticks": "48956211",
+      "observed_live": true
+    },
+    {
+      "pid": 39049,
+      "start_ticks": "51721359",
+      "observed_live": true
+    }
+  ],
+  "training17_evaluation27_and_supplement37_unchanged": true,
+  "resource_snapshot": {
+    "at": "2026-11-14T12:57:59.196593+08:00",
+    "GPUs": [
+      {
+        "index": 0,
+        "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+        "total_mib": 40960,
+        "used_mib": 1345,
+        "utilization_percent": 0,
+        "processes": [
+          "GPU-81550800-367d-1855-0f35-c61c274edfdf, 4160205, 1336"
+        ]
+      },
+      {
+        "index": 1,
+        "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+        "total_mib": 40960,
+        "used_mib": 1345,
+        "utilization_percent": 0,
+        "processes": [
+          "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150, 4160204, 1336"
+        ]
+      },
+      {
+        "index": 2,
+        "uuid": "GPU-e7f8224e-43d7-f7d6-10ff-8412dc30aa9e",
+        "total_mib": 40960,
+        "used_mib": 0,
+        "utilization_percent": 0,
+        "processes": []
+      },
+      {
+        "index": 3,
+        "uuid": "GPU-3a66f673-05de-ba45-3f5c-308b333fea68",
+        "total_mib": 40960,
+        "used_mib": 0,
+        "utilization_percent": 0,
+        "processes": []
+      },
+      {
+        "index": 4,
+        "uuid": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+        "total_mib": 40960,
+        "used_mib": 0,
+        "utilization_percent": 0,
+        "processes": []
+      },
+      {
+        "index": 5,
+        "uuid": "GPU-83b3ac27-3e78-fb30-a5f6-d5daf4aac4fb",
+        "total_mib": 40960,
+        "used_mib": 0,
+        "utilization_percent": 0,
+        "processes": []
+      },
+      {
+        "index": 6,
+        "uuid": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+        "total_mib": 40960,
+        "used_mib": 0,
+        "utilization_percent": 0,
+        "processes": []
+      },
+      {
+        "index": 7,
+        "uuid": "GPU-7d263daa-6d13-02a6-b0ea-29c2c09a2c8b",
+        "total_mib": 40960,
+        "used_mib": 0,
+        "utilization_percent": 0,
+        "processes": []
+      }
+    ]
+  },
+  "original_primary_waiting": {
+    "at": "2026-11-14T12:57:42.665109+08:00",
+    "verified_live_training_handles": [
+      {
+        "seed": 0,
+        "pid": 4160205,
+        "start_ticks": "48844067",
+        "already_final": false
+      },
+      {
+        "seed": 1,
+        "pid": 4160204,
+        "start_ticks": "48844061",
+        "already_final": false
+      }
+    ],
+    "final_count": 0,
+    "scope": "Live PID/start-time observation, not a completed model."
+  },
+  "supplement_waiting": {
+    "at": "2026-11-14T12:57:41.867709+08:00",
+    "primary_pid": 4163819,
+    "start_ticks": "48956211",
+    "primary_handle_state": "live",
+    "verified_live": true,
+    "primary_complete": false,
+    "scope": "No R76 inference or GPU yet. Unknown observations wait on the same handle."
+  },
+  "new_final_quality_or_JOD": 0,
+  "new_training_launched": 0,
+  "R77_status": "Conditional registration/artificial CPU qualification only; no full trainer/evaluator or new formal GPU.",
+  "reserved_OLiVES_status": "Metadata qualification only; three reserved clips remain unopened, no extra independent benchmark completed.",
+  "paper_build": 18,
+  "method_success_established": false,
+  "goal_status": "active",
+  "limits": "Recoverable milestone and live-job observation only; checkpoint assets owned data. No intermediate DEV, model evaluation, restart or budget change."
+}
