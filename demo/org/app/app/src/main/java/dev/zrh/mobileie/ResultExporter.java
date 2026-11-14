@@ -18,11 +18,12 @@ public final class ResultExporter {
         try {
             put(resolver, inserted, prefix+"_input.png", "image/png", "Pictures/MobileIE", s.input, null);
             if (s.mobileie != null) put(resolver, inserted, prefix+"_mobileie.png", "image/png", "Pictures/MobileIE", s.mobileie, null);
-            if (s.gamma != null) put(resolver, inserted, prefix+"_gamma-0.5.png", "image/png", "Pictures/MobileIE", s.gamma, null);
+            if (s.baseline != null) put(resolver, inserted, prefix+"_baseline.png", "image/png", "Pictures/MobileIE", s.baseline, null);
             Bitmap sheet = comparison(s);
             put(resolver, inserted, prefix+"_comparison.png", "image/png", "Pictures/MobileIE", sheet, null);
             sheet.recycle();
             put(resolver, inserted, prefix+"_record.json", "application/json", "Download/MobileIE", null, s.metadata.toString(2).getBytes(StandardCharsets.UTF_8));
+            if(s.task.raw)put(resolver,inserted,prefix+"_input.rggb","application/octet-stream","Download/MobileIE",null,java.nio.file.Files.readAllBytes(new File(s.directory,"source.image").toPath()));
             ContentValues published = new ContentValues(); published.put(MediaStore.MediaColumns.IS_PENDING, 0);
             for (Uri uri : inserted) resolver.update(uri, published, null, null);
         } catch (Exception e) {
@@ -47,17 +48,19 @@ public final class ResultExporter {
     }
 
     public static Bitmap comparison(LightLabApplication.Session s) {
-        Bitmap b = Bitmap.createBitmap(1800, 478, Bitmap.Config.ARGB_8888);
+        int width=s.task.width(),height=s.task.height();
+        Bitmap b = Bitmap.createBitmap(width*3, height+110, Bitmap.Config.ARGB_8888);
         Canvas c = new Canvas(b); c.drawColor(Color.rgb(246,245,239));
         Paint p = new Paint(Paint.ANTI_ALIAS_FLAG); p.setColor(Color.rgb(28,48,40)); p.setTextSize(24);
-        String[] labels = {"原图（处理范围）", "MobileIE · CPU", "Gamma · 指数 0.5"};
-        Bitmap[] images = {s.input, s.mobileie, s.gamma};
+        c.drawText("本次任务："+s.task.name,16,29,p);p.setTextSize(20);
+        String[] labels = {s.task.originalLabel(), "MobileIE · CPU", s.task.baselineName};
+        Bitmap[] images = {s.input, s.mobileie, s.baseline};
         for (int i = 0; i < 3; i++) {
-            c.drawText(labels[i], 16 + 600*i, 31, p);
-            if (images[i] != null) c.drawBitmap(images[i], 600*i, 44, null);
-            else c.drawText("本次未生成", 600*i+190, 240, p);
+            c.drawText(labels[i], 16 + width*i, 63, p);
+            if (images[i] != null) c.drawBitmap(images[i], width*i, 76, null);
+            else c.drawText("本次未生成", width*i+width/3f, 76+height/2f, p);
         }
-        p.setTextSize(18); c.drawText("同一 600 × 400 输入 · 手机本地处理 · Gamma 为固定亮度变换，不含降噪", 16, 466, p);
+        p.setTextSize(18); c.drawText("同一任务输入与坐标 · MobileIE / 固定传统 baseline · 本机计算", 16, height+100, p);
         return b;
     }
 }
