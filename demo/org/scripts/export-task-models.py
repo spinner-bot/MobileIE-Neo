@@ -60,9 +60,12 @@ def build(weights,task):
         product=g.binary(s.BuiltinOperator.MUL,a,b,shape,key+'/product')
         return g.binary(s.BuiltinOperator.ADD,product,g.constant(key+'/bias',weights[key+'.bias'].transpose(0,2,3,1)),shape,key+'/output')
     x=fst(x,'head');x=g.conv(x,weights,'body.block1',shape);x=fst(x,'body')
+    # Hierarchical power-of-two pooling limits long FP32 summation error while
+    # preserving the exact mathematical global average and all learned weights.
+    pool=s.Pool2DOptionsT();pool.padding=s.Padding.VALID;pool.filterWidth=pool.filterHeight=4;pool.strideW=pool.strideH=4
+    local_mean=g.op(s.BuiltinOperator.AVERAGE_POOL_2D,[x],[1,h//4,w//4,12],'attention/local_mean',pool)
     option=s.ReducerOptionsT();option.keepDims=True
-    # Stage the spatial mean to avoid a single long FP32 accumulation on mobile.
-    row_mean=g.op(s.BuiltinOperator.MEAN,[x,g.constant('width_axis',[2],np.int32)],[1,h,1,12],'attention/row_mean',option)
+    row_mean=g.op(s.BuiltinOperator.MEAN,[local_mean,g.constant('width_axis',[2],np.int32)],[1,h//4,1,12],'attention/row_mean',option)
     option=s.ReducerOptionsT();option.keepDims=True
     mean=g.op(s.BuiltinOperator.MEAN,[row_mean,g.constant('height_axis',[1],np.int32)],[1,1,1,12],'attention/mean',option)
     attention=g.conv(mean,weights,'att.1',[1,1,1,12]);attention=g.op(s.BuiltinOperator.LOGISTIC,[attention],[1,1,1,12],'attention/sigmoid')
