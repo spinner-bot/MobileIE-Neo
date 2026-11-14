@@ -74,7 +74,11 @@ class GuiTests(unittest.TestCase):
             while app.busy and time.monotonic()<end:root.update();time.sleep(.01)
             self.assertFalse(app.busy);root.update();time.sleep(.12);root.update()
         def shot(name):
-            root.update();time.sleep(.15);ImageGrab.grab(bbox=(root.winfo_rootx(),root.winfo_rooty(),root.winfo_rootx()+root.winfo_width(),root.winfo_rooty()+root.winfo_height())).save(OUT/name)
+            # 先置顶，避免截到压在窗口上的其他程序；再按系统缩放换算物理像素
+            root.lift();root.attributes('-topmost',True);root.update();time.sleep(.2);root.update()
+            full=ImageGrab.grab();sx=full.width/root.winfo_screenwidth();sy=full.height/root.winfo_screenheight()
+            box=(int(root.winfo_rootx()*sx),int(root.winfo_rooty()*sy),int((root.winfo_rootx()+root.winfo_width())*sx),int((root.winfo_rooty()+root.winfo_height())*sy))
+            full.crop(box).save(OUT/name)
         try:
             OUT.mkdir(parents=True,exist_ok=True);root.update();shot('desktop-home.png')
             for task in tasks.TASKS:
