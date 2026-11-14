@@ -35,7 +35,9 @@ def main():
         ('isp','RAW→RGB ISP','model_isp.tflite',[1,224,224,4],[1,448,448,3],'bilinear_isp','双线性传统 ISP',[f'samples/isp/{i:02d}.rggb' for i in range(1,4)])]:
         tasks.append({'id':task,'name':title,'model_asset':model,'model_sha256':sha(ASSETS/model),'input_shape':shape,'output_shape':out,'native_control_inputs':[],'baseline_id':baseline,'baseline_name':label,'sample_assets':paths})
     (ASSETS/'tasks.json').write_text(json.dumps({'schema_version':1,'tasks':tasks},ensure_ascii=False,indent=2)+'\n')
-    (REPO/'demo/org/app/task-asset-sources.json').write_text(json.dumps({'samples':provenance,'models':conversion,'RAW_format':'28-byte <8s5I header: MIE_RAW1,width,height,normalization_divisor,black_level,ADC_white; then row-major uint16 LE. Fixed supported profile 448x448 RGGB, 4095/64/1023. No black subtraction (same as upstream).'},ensure_ascii=False,indent=2)+'\n')
+    provenance_text=json.dumps({'samples':provenance,'models':conversion,'RAW_format':'28-byte <8s5I header: MIE_RAW1,width,height,normalization_divisor,black_level,ADC_white; then row-major uint16 LE. Fixed supported profile 448x448 RGGB, 4095/64/1023. No black subtraction (same as upstream).'},ensure_ascii=False,indent=2)+'\n'
+    (REPO/'demo/org/app/task-asset-sources.json').write_text(provenance_text)
+    (ASSETS/'task-asset-sources.json').write_text(provenance_text)
     print(json.dumps(tasks,ensure_ascii=False,indent=2))
 
 

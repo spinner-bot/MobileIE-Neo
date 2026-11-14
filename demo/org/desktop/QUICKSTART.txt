@@ -1,27 +1,29 @@
-微光实验室 · Windows Python 桌面版 0.1.1
+微光实验室 · Windows Python 桌面版 0.2.0
 =======================================
 
-1. 保留 desktop.py、requirements.txt、run.cmd、assets/ 的相对位置。
-2. 使用已有的演示 Python 环境运行：
-       python -m pip install -r requirements.txt
-       python desktop.py
-3. 或在命令提示符设置实际的 Python 路径后启动 run.cmd：
-       set MOBILEIE_PYTHON=F:\dev-tools\python-envs\MobileIE-Demo\Scripts\python.exe
-       run.cmd
+保留 desktop.py、lightlab_tasks.py、requirements.txt、run.cmd、assets/ 的相对位置。
+使用已有演示 Python（3.10+，含 Tcl/Tk）：
+    python -m pip install -r requirements.txt
+    python desktop.py
+也可设置 MOBILEIE_PYTHON 为实际 Python 路径后启动 run.cmd。
+python -m tkinter 可检查 Tk；不需要 Visual Studio 或安卓开发工具。
 
-需要 Python 3.10+，带 Tcl/Tk 组件；python -m tkinter 可检查。
-不需要 Visual Studio、Android SDK 或 C++ 编译工具。
+1. 选择任务：低光增强、水下增强、RAW→RGB ISP。
+2. 选择对应的内置样例或导入图片，然后开始对比。
+3. 动态对比：左侧原图↔baseline，右侧原图↔MobileIE，两条分界线同步。
+   静态总览：原图、MobileIE、baseline 独立三图。
+4. 展示上方“本次任务”来自结果记录。切换任务会清除旧结果并准备新样例。
+5. 保存结果：新建目录，含各张 PNG、带任务标题的 comparison.png 和 record.json。
+   ISP 同时保留原始 .rggb。桌面版处理已有文件；现场拍照使用安卓版本。
 
-操作：选图或内置样例 → 开始对比 → 拖动分界线 / Gamma / 三图总览 → 保存。
-保存时在所选位置新建带编号目录，包含 PNG 图片和 record.json。
-原图是方向校正、居中裁剪并缩放后的 600×400 输入；Gamma 固定指数 0.5，
-不包含降噪。现场拍照请使用安卓版本，桌面版处理已有照片。
+低光/水下使用600×400共同取景输入；Gamma 0.5 / 灰度世界白平衡为固定baseline。
+ISP 仅支持配套448×448 Huawei P20 RGGB .rggb；普通JPG/PNG及任意DNG均不支持。
+模型输入224×224×4，按原代码除4095，输出448×448 RGB；原图面板为RAW强度可视化。
+传统ISP为固定双线性去马赛克、灰度世界白平衡与sRGB编码。
+每种任务只有一个图像输入，没有可调模型参数，因此不提供参数面板。
 
-模型与安卓演示完全相同。桌面版沿用官方默认 CPU 单线程，关闭默认 delegate；
-安卓微 App 为 CPU 4 线程。各程序计时独立，不能与 AI Benchmark 数字混用。
+模型与安卓相同；桌面CPU1线程，安卓CPU4线程，均关闭默认delegate。
+各程序计时独立，不能与AI Benchmark数字混用。模型与数据出处见assets/credits.txt。
 
-该 Python 程序已在 Linux/Xvfb 下完成代码与界面模拟验收；
-尚未在真实 Windows 机器执行，需本地核对 Tcl/Tk、原生文件对话框、DPI 和运行库。
-运行依赖或 DLL 出错时，请优先使用此前已成功运行官方模型的演示 Python。
-
-完整源码、测试、模拟截图与验收报告保存在 MobileIE-Neo 的 demo.org 分支。
+已通过Linux/Xvfb界面模拟及三任务数值验收；尚未在真实Windows运行0.2.0。
+本地仍需检查Tcl/Tk、DLL、文件对话框、中文字体和DPI。
