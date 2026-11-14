@@ -26,7 +26,7 @@ public class FlowInstrumentedTest {
     private final UiDevice device=UiDevice.getInstance(InstrumentationRegistry.getInstrumentation());
     private ActivityScenario<MainActivity> scenario;
     private static final String PKG="dev.zrh.mobileie";
-    @Before public void launch() { new File(context.getFilesDir(),"gates").mkdirs(); scenario=ActivityScenario.launch(MainActivity.class); idle(); }
+    @Before public void launch() { new File(context.getFilesDir(),"gates").mkdirs(); scenario=ActivityScenario.launch(MainActivity.class); idle(); main(()->app.selectTask("lowlight"));idle(); }
     @After public void close() { if(scenario!=null) scenario.close(); }
     private void main(Runnable r) { InstrumentationRegistry.getInstrumentation().runOnMainSync(r); }
     private void idle() { long end=SystemClock.uptimeMillis()+30000; do {SystemClock.sleep(100);}while(app.busy&&SystemClock.uptimeMillis()<end); assertFalse("worker did not finish: "+app.status,app.busy); device.waitForIdle(); }
@@ -37,7 +37,7 @@ public class FlowInstrumentedTest {
         UiObject2 object=device.wait(Until.findObject(By.res(PKG,id)),3000); assertNotNull(id,object); return object;
     }
     private void prepared(int index) { main(()->app.loadSample(index)); idle(); assertNotNull(app.session); }
-    private void processed(int index) { prepared(index); main(()->app.process()); idle(); assertNotNull("MobileIE: "+app.status,app.session.mobileie); assertNotNull(app.session.gamma); }
+    private void processed(int index) { prepared(index); main(()->app.process()); idle(); assertNotNull("MobileIE: "+app.status,app.session.mobileie); assertNotNull(app.session.baseline); }
     private void shot(String name) {
         device.waitForIdle(); SystemClock.sleep(200);
         File directory=new File(context.getFilesDir(),"gates"); directory.mkdirs();
@@ -46,17 +46,17 @@ public class FlowInstrumentedTest {
 
     @Test public void aUiSampleProcessCompareSaveAndNoNetworkPermission() throws Exception {
         find("sample").click(); device.wait(Until.findObject(By.text("01 · 书柜")),3000).click(); idle();
-        assertNull(app.session.mobileie); assertNull(app.session.gamma);
-        find("process").click(); idle(); assertNotNull(app.session.mobileie); assertNotNull(app.session.gamma);
-        find("mode_gamma").click();
-        scenario.onActivity(a->assertTrue(a.findViewById(R.id.mode_gamma).isSelected()));
+        assertNull(app.session.mobileie); assertNull(app.session.baseline);
+        find("process").click(); idle(); assertNotNull(app.session.mobileie); assertNotNull(app.session.baseline);
+        find("display_dynamic").click();
+        scenario.onActivity(a->assertTrue(a.findViewById(R.id.display_dynamic).isSelected()));
         UiObject2 image=find("comparison"); android.graphics.Rect bounds=image.getVisibleBounds();
         device.swipe(bounds.left+bounds.width()/4,bounds.centerY(),bounds.left+bounds.width()*4/5,bounds.centerY(),12);
         scenario.onActivity(a->assertTrue(((ComparisonView)a.findViewById(R.id.comparison)).position()>.7f));
-        find("mode_mobileie").click(); device.waitForIdle();
-        scenario.onActivity(a->assertTrue(a.findViewById(R.id.mode_mobileie).isSelected())); shot("02-mobileie-comparison");
-        find("mode_overview").click();
-        assertNotNull(device.wait(Until.findObject(By.res(PKG,"mode_overview").selected(true)),3000));
+        find("display_dynamic").click(); device.waitForIdle();
+        scenario.onActivity(a->assertTrue(a.findViewById(R.id.display_dynamic).isSelected())); shot("02-mobileie-comparison");
+        find("display_static").click();
+        assertNotNull(device.wait(Until.findObject(By.res(PKG,"display_static").selected(true)),3000));
         shot("03-three-method-overview");
         find("save").click(); idle(); assertTrue(app.status,app.status.startsWith("已保存"));
         int images=0;
@@ -69,9 +69,9 @@ public class FlowInstrumentedTest {
                 try(InputStream in=context.getContentResolver().openInputStream(saved)) {
                     Bitmap decoded=BitmapFactory.decodeStream(in); assertNotNull(decoded);
                     String name=c.getString(1);
-                    if(name.endsWith("_comparison.png")) { assertEquals(1800,decoded.getWidth());assertEquals(478,decoded.getHeight());assertEquals(app.session.input.getPixel(300,200),decoded.getPixel(300,244)); }
+                    if(name.endsWith("_comparison.png")) { assertEquals(1800,decoded.getWidth());assertEquals(510,decoded.getHeight());assertEquals(app.session.input.getPixel(300,200),decoded.getPixel(300,276)); }
                     else {
-                        Bitmap expected=name.endsWith("_input.png")?app.session.input:name.endsWith("_mobileie.png")?app.session.mobileie:app.session.gamma;
+                        Bitmap expected=name.endsWith("_input.png")?app.session.input:name.endsWith("_mobileie.png")?app.session.mobileie:app.session.baseline;
                         assertArrayEquals(LightLabApplication.bitmapBytes(expected),LightLabApplication.bitmapBytes(decoded));
                     }
                     decoded.recycle();
@@ -95,10 +95,10 @@ public class FlowInstrumentedTest {
 
     @Test public void bRecreationPreservesResultAndSlider() throws Exception {
         processed(2); String id=app.session.id;
-        scenario.onActivity(a->{ ((ComparisonView)a.findViewById(R.id.comparison)).position(.73f); a.findViewById(R.id.mode_gamma).performClick(); });
+        scenario.onActivity(a->{ ((ComparisonView)a.findViewById(R.id.comparison)).position(.73f); a.findViewById(R.id.display_dynamic).performClick(); });
         scenario.recreate(); idle(); assertEquals(id,app.session.id);
-        scenario.onActivity(a->{assertEquals(.73f,((ComparisonView)a.findViewById(R.id.comparison)).position(),.001f); assertTrue(a.findViewById(R.id.mode_gamma).isSelected());});
-        assertNotNull(app.session.mobileie); assertNotNull(app.session.gamma);
+        scenario.onActivity(a->{assertEquals(.73f,((ComparisonView)a.findViewById(R.id.comparison)).position(),.001f); assertTrue(a.findViewById(R.id.display_dynamic).isSelected());});
+        assertNotNull(app.session.mobileie); assertNotNull(app.session.baseline);
     }
 
     @Test public void cCameraAndPickerCancelKeepResult() throws Exception {
@@ -153,10 +153,10 @@ public class FlowInstrumentedTest {
         int previous=app.session.metadata.optInt("run_number");
         scenario.onActivity(a->{
             app.process(); assertTrue(app.busy); app.process();
-            assertFalse(a.findViewById(R.id.mode_mobileie).isEnabled());assertFalse(a.findViewById(R.id.mode_gamma).isEnabled());assertFalse(a.findViewById(R.id.mode_overview).isEnabled());
+            assertFalse(a.findViewById(R.id.display_dynamic).isEnabled());assertFalse(a.findViewById(R.id.display_dynamic).isEnabled());assertFalse(a.findViewById(R.id.display_static).isEnabled());
             assertFalse(a.findViewById(R.id.comparison).isEnabled());assertFalse(a.findViewById(R.id.metrics).isEnabled());
             assertTrue(((android.widget.TextView)a.findViewById(R.id.metrics)).getText().toString().contains("任务进行中"));
-            assertTrue(a.findViewById(R.id.mode_mobileie).getContentDescription().toString().contains("任务进行中"));
+            assertTrue(a.findViewById(R.id.display_dynamic).getContentDescription().toString().contains("任务进行中"));
         });idle();
         assertEquals(previous+1,app.session.metadata.getInt("run_number")); assertNotNull(app.session.mobileie);
         invalid.delete();
@@ -181,27 +181,27 @@ public class FlowInstrumentedTest {
         MobileEngine engine=(MobileEngine)field.get(app); engine.close();field.set(app,null);
         LightLabApplication.EngineFactory previous=app.engineFactory;
         try {
-            app.engineFactory=c->{throw new IOException("controlled model failure");};
+            app.engineFactory=(c,task)->{throw new IOException("controlled model failure");};
             main(()->app.process()); idle();
-            assertNull(app.session.mobileie); assertNotNull(app.session.gamma);
+            assertNull(app.session.mobileie); assertNotNull(app.session.baseline);
             assertFalse(app.session.metadata.getBoolean("mobileie_complete")); assertFalse(app.session.metadata.has("inference_ms"));
-            scenario.onActivity(a->assertFalse(a.findViewById(R.id.mode_mobileie).isEnabled()));
-            find("mode_overview").click();
-            assertNotNull(device.wait(Until.findObject(By.res(PKG,"mode_overview").selected(true)),3000));
+            scenario.onActivity(a->assertTrue(a.findViewById(R.id.display_dynamic).isEnabled()));
+            find("display_static").click();
+            assertNotNull(device.wait(Until.findObject(By.res(PKG,"display_static").selected(true)),3000));
             scenario.onActivity(a->assertTrue(a.findViewById(R.id.comparison).getContentDescription().toString().contains("本次未生成")));
-            assertTrue(app.status.contains("Gamma")); shot("06-model-failure-honest-baseline");
+            assertTrue(app.status.contains("baseline")); shot("06-model-failure-honest-baseline");
         } finally { app.engineFactory=previous; }
     }
 
     @Test public void hExportFailureRollsBackPartialFiles() throws Exception {
         processed(1);
-        LightLabApplication.Session broken=new LightLabApplication.Session(); broken.id="rollback-test-0000"; broken.input=app.session.input;broken.mobileie=app.session.mobileie;broken.gamma=app.session.gamma;broken.metadata=null;
+        LightLabApplication.Session broken=new LightLabApplication.Session(); broken.id="rollback-test-0000"; broken.input=app.session.input;broken.mobileie=app.session.mobileie;broken.baseline=app.session.baseline;broken.task=app.session.task;broken.metadata=null;
         try { ResultExporter.save(context,broken); fail("Export must fail"); } catch(IOException expected) {}
         try(Cursor c=context.getContentResolver().query(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,new String[]{"_id"},"_display_name LIKE ?",new String[]{"MobileIE_rollback_%"},null)) { assertNotNull(c); assertEquals(0,c.getCount()); }
     }
 
     @Test public void zHealthyResultReadyForProcessRestoreReview() throws Exception {
-        processed(1); find("mode_mobileie").click(); shot("07-final-result");
+        processed(1); find("display_dynamic").click(); shot("07-final-result");
         assertTrue(new File(app.session.directory,"record.json").isFile());
     }
 }

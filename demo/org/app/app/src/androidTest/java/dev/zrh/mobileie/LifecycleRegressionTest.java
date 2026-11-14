@@ -31,7 +31,7 @@ public class LifecycleRegressionTest {
         assertFalse("Worker did not finish: "+app.status,app.busy);device.waitForIdle();
     }
     @Before public void launch() {
-        scenario=ActivityScenario.launch(MainActivity.class);idle();
+        scenario=ActivityScenario.launch(MainActivity.class);idle();main(()->app.selectTask("lowlight"));idle();
         scenario.onActivity(a->{first=a;app.session=null;app.message("选一张暗光照片，开始本机对比");});
     }
     @After public void close() {
@@ -92,7 +92,7 @@ public class LifecycleRegressionTest {
             catch(org.json.JSONException e) { throw new AssertionError(e); }
             first.findViewById(R.id.process).performClick();
         });idle();
-        assertNotNull(app.session.mobileie);assertNotNull(app.session.gamma);
+        assertNotNull(app.session.mobileie);assertNotNull(app.session.baseline);
         assertEquals("Reprocessing an upgraded session must record the running version",BuildConfig.VERSION_NAME,app.session.metadata.optString("app_version"));
         main(()->assertTrue(((TextView)first.findViewById(R.id.status)).getText().toString().contains("处理完成")));
     }
