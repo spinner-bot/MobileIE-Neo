@@ -4,6 +4,8 @@
 
 更新：2026-11-14；作者：Codex  (sqs_A100)。
 
+- 当前最新0136/progress018：12:55:33先核seed1实际24000/marker落盘、seed0仍23900，seed1另交；12:56:36 seed0仍无marker继续等待，12:57:23再核实际24000另交。各目标64000，1K..24K周期48marker另首步2份，Tensor仅自有data；完整行前缀按seed另交，原live待终态。原4160205/start48844067、4160204/start48844061、原协调4163819/start48956211、补充39049/start51721359同身份活跃，17/27/37源保持，无恢复/重启/预算调度变化/额外训练/中途DEV或最终JOD。原两final→R75完整评价→R76补充及两套actual review仍待；R77严格条件/无自动启动、保留像素保护/paper018/旧STOP/论文缺口与目标active保持。接续先核真实PID/start/runtime，不据旧快照或观察超时重开任务。
+
 - 当前最新0135/progress017：11:56:20先核seed1实际23000/marker落盘、seed0仍22900，seed1另交；继续等同一seed0原句柄，11:57:18再核实际23000另交。各目标64000，1K..23K周期46marker另首步2份，Tensor仅自有data；完整行前缀按seed另交，原live待终态。原4160205/start48844067、4160204/start48844061、原协调4163819/start48956211、补充39049/start51721359同身份活跃，17/27/37源保持，无恢复/重启/改预算/额外训练/中途DEV或最终JOD。原两final→R75完整评价→R76补充及两套actual review仍待；R77严格条件/无自动启动、保留像素保护/paper018/旧STOP/论文缺口与目标active保持。后续先核真实PID/start/runtime，不据旧快照或观察超时重开任务。
 
 - 当前最新0134/progress016：观察中断/目标暂停再恢复后，11:24:57实际重核原4160205/start48844067、4160204/start48844061及原协调4163819/start48956211、补充39049/start51721359仍同身份live；两seed最近22400/64000、最新checkpoint22000，无runtime/资源退出。恢复后逐份核验提交21K/22K四marker，不伪称原写入时驻守；周期44marker另首步2份，Tensor仅自有data，前缀各225training/23window另交。17/27/37源保持，无重启/恢复/改预算/调度/额外训练或中途DEV/JOD。原两final→R75完整评价→R76补充及两套actual review仍待；R77严格条件/无自动启动、保留像素/paper018/旧STOP/论文缺口与目标active保持。接续先核真实PID/start/runtime，不据旧快照或观察超时重开任务。
