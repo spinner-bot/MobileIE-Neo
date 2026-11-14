@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "seeds": {
+    "0": {
+      "passed": true,
+      "seed": 0,
+      "MSE_reference": {
+        "model": "square_mse",
+        "seed": 0,
+        "new_step": 4000,
+        "inherited_updates": 4000,
+        "path": ".cache/checkpoints/exploration-r44/stage001/seed0/square_mse-deploy-step4000.pt",
+        "sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+        "training_path": ".cache/checkpoints/exploration-r44/stage001/seed0/square_mse-training-step4000.pt",
+        "training_sha256": "91800b897a2b568d837cf92925b727bb71934f781437733c75323d3562f6998e",
+        "deployment_parameters": 4075,
+        "final_eval_export_max_abs_delta": 2.5033950805664062e-06,
+        "final_export_gate_passed": true
+      },
+      "source_sha256": {
+        "research/4.temporal-consistency/results/exploration-r41-stage002-seed0/config.json": "21897855c84addd11a2fde8496bcf15e3d3a55a31b9791ed6c8bedb5dd941ea9",
+        "research/4.temporal-consistency/results/exploration-r44-stage001-seed0/config.json": "bd65f0b51faf4a7aa130a8a4460a13eb6d94db68d94728051c585857f0657414",
+        "research/4.temporal-consistency/results/exploration-r41-stage002-seed0/runtime.json": "df22d29a1a3757b2270a4fe6eceeb627efb5a3d1f9793389e5e1672f1071a66e",
+        "research/4.temporal-consistency/results/exploration-r44-stage001-seed0/runtime.json": "581797363f581417cb4db1c19ee611d9f71fdc0edefa0f232d62fd5034f1a098",
+        "research/4.temporal-consistency/results/exploration-r44-stage001-seed0/square_mse-step4000.json": "056754b481828cb070310de6f792dbd9e9a10fe0829dc5aeb86d2e19b8edb840",
+        "research/4.temporal-consistency/results/exploration-r41-stage002-seed0/windows.jsonl": "ac4f6eddbe0da7b9adb85d83eee652096e9accf626d3550c649a41139ec6c49e",
+        "research/4.temporal-consistency/results/exploration-r44-stage001-seed0/windows.jsonl": "4c493d8932869fb262adeb42026c323bd4679540eea17298ea1edee26f06e2cc",
+        "research/4.temporal-consistency/results/exploration-r65-stage001-seed0/windows.jsonl": "6cd44d2121c6c57366bdfc7c7590343f2ca45af7abe0cbb348b491ecf30bdbbf"
+      },
+      "matched_window_identities": 8000,
+      "numerical_replay": false,
+      "scope": "Same recorded sampling identities and objective/optimizer setting; not GPU bit identity or isolated architecture/capacity causality."
+    },
+    "1": {
+      "passed": true,
+      "seed": 1,
+      "MSE_reference": {
+        "model": "square_mse",
+        "seed": 1,
+        "new_step": 4000,
+        "inherited_updates": 4000,
+        "path": ".cache/checkpoints/exploration-r44/stage001/seed1/square_mse-deploy-step4000.pt",
+        "sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+        "training_path": ".cache/checkpoints/exploration-r44/stage001/seed1/square_mse-training-step4000.pt",
+        "training_sha256": "450d55e60333655019c820321ad9ae4afe78d012aefe3615b9490ef61a3943ba",
+        "deployment_parameters": 4075,
+        "final_eval_export_max_abs_delta": 1.4901161193847656e-06,
+        "final_export_gate_passed": true
+      },
+      "source_sha256": {
+        "research/4.temporal-consistency/results/exploration-r41-stage002-seed1/config.json": "7e453bd65c3bd43f72452253ded8e80c2dea8eaa3a4d207f9a8a06d417504b0c",
+        "research/4.temporal-consistency/results/exploration-r44-stage001-seed1/config.json": "c8361e9df0b0c6cbf35966b54dc280928211e05cef9c693af3bf267c1cee9dfc",
+        "research/4.temporal-consistency/results/exploration-r41-stage002-seed1/runtime.json": "4099f48671df1a7f729b8e2ef4aee38c2e8ba6f97da924aca51e5f59eac9ab0c",
+        "research/4.temporal-consistency/results/exploration-r44-stage001-seed1/runtime.json": "f19aa57b1c37b5dfb19a1fce9b5711862ad67851a1062b55eb87a21ff9eb8305",
+        "research/4.temporal-consistency/results/exploration-r44-stage001-seed1/square_mse-step4000.json": "6b0d4970e3cf0fe22dc23d9a07e2b6d9f90a6fb0f5197a757b6561c8ec6ebd8c",
+        "research/4.temporal-consistency/results/exploration-r41-stage002-seed1/windows.jsonl": "e35d97a02556d0119dd2f7d33d2085567a200aced9f86a495cccd2f13cafe3ed",
+        "research/4.temporal-consistency/results/exploration-r44-stage001-seed1/windows.jsonl": "1198b7886e8496f725c2ea4223e63fc1ff518bc0aaad737f1127fc445ae19ae7",
+        "research/4.temporal-consistency/results/exploration-r65-stage001-seed1/windows.jsonl": "c049b98a8cea7d06abab51540de30df6a8f95fbf1abfbcf6d10832f517b5e87f"
+      },
+      "matched_window_identities": 8000,
+      "numerical_replay": false,
+      "scope": "Same recorded sampling identities and objective/optimizer setting; not GPU bit identity or isolated architecture/capacity causality."
+    }
+  },
+  "new_MSE_training": 0
+}

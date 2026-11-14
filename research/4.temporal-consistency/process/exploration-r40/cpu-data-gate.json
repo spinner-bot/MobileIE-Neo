@@ -1,0 +1,125 @@
+{
+  "passed": true,
+  "data": {
+    "manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "verified_files": 384,
+    "scenes": [
+      "video_11",
+      "video_35",
+      "video_92",
+      "video_131",
+      "video_12",
+      "video_20",
+      "video_29",
+      "video_52",
+      "video_59",
+      "video_95",
+      "video_104",
+      "video_122"
+    ],
+    "native_bytes": 2388787200,
+    "real_training_ids": [
+      "video_104",
+      "video_11",
+      "video_12",
+      "video_122",
+      "video_131",
+      "video_20",
+      "video_29",
+      "video_35",
+      "video_52",
+      "video_59",
+      "video_92",
+      "video_95"
+    ],
+    "excluded_native_DEV": [
+      "video_121",
+      "video_15",
+      "video_47",
+      "video_91"
+    ],
+    "all_real_assets_owned": true,
+    "source_manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "synthetic_manifest_sha256": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+    "synthetic_training_videos": 57,
+    "real_tensor_dtype": "uint8 native inputs/GT; float32 /255 after crops",
+    "timing_scope": "Consecutive registered frame indices, not independently verified sensor timing."
+  },
+  "shape": [
+    4,
+    4,
+    3,
+    128,
+    128
+  ],
+  "synthetic_first_two_equal_R34": true,
+  "real_windows": [
+    {
+      "source": "olives_real",
+      "video": "video_29",
+      "indices": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "xy": [
+        38,
+        660
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": true,
+      "input_sources": [
+        ".cache/data/olives-r4/Frames/input/video_29/00009.png",
+        ".cache/data/olives-r4/Frames/input/video_29/00010.png",
+        ".cache/data/olives-r4/Frames/input/video_29/00011.png",
+        ".cache/data/olives-r4/Frames/input/video_29/00012.png"
+      ],
+      "target_sources": [
+        ".cache/data/olives-r4/Frames/gt/video_29/00009.png",
+        ".cache/data/olives-r4/Frames/gt/video_29/00010.png",
+        ".cache/data/olives-r4/Frames/gt/video_29/00011.png",
+        ".cache/data/olives-r4/Frames/gt/video_29/00012.png"
+      ]
+    },
+    {
+      "source": "olives_real",
+      "video": "video_11",
+      "indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "xy": [
+        840,
+        658
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": true,
+      "input_sources": [
+        ".cache/data/olives-r4/Frames/input/video_11/00000.png",
+        ".cache/data/olives-r4/Frames/input/video_11/00001.png",
+        ".cache/data/olives-r4/Frames/input/video_11/00002.png",
+        ".cache/data/olives-r4/Frames/input/video_11/00003.png"
+      ],
+      "target_sources": [
+        ".cache/data/olives-r4/Frames/gt/video_11/00000.png",
+        ".cache/data/olives-r4/Frames/gt/video_11/00001.png",
+        ".cache/data/olives-r4/Frames/gt/video_11/00002.png",
+        ".cache/data/olives-r4/Frames/gt/video_11/00003.png"
+      ]
+    }
+  ],
+  "cpu_backward_finite": true,
+  "discarded_gate_mse": 0.5962610244750977,
+  "parameters": 4075,
+  "optimizer_updates": 0,
+  "source_sha256": {
+    "mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5",
+    "check_mixed_anchor_r40.py": "17ff37732606be66554521b91ab8c8704009dea9ea04e1cb69a64f42ace59be7",
+    "native_training_r14.py": "588b505ede11ac9f0d747ad1c16b1c118a7bbbbba7405ce918a6163d133d69a1",
+    "dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498"
+  },
+  "scope": "Complete owned training-source/shape/backward gate, no trained model or quality result."
+}

@@ -1,0 +1,38 @@
+{
+  "at": "2026-11-13T07:04:11.465016+08:00",
+  "author": "Codex  (sqs_A100)",
+  "actual_reviewed": true,
+  "contacts": 16,
+  "frames_each": [
+    0,
+    32,
+    63
+  ],
+  "all_registered_seeds_sources_and_photons": true,
+  "source_sha256": {
+    "research/4.temporal-consistency/report/exploration-r72-reds-contacts/fixed-000_photons20-seed0.png": "6b59e8f6827592f4821b1f0d6d0ae72fef9581fd1eeb0464fdb9805215fe7fc5",
+    "research/4.temporal-consistency/report/exploration-r72-reds-contacts/fixed-000_photons20-seed1.png": "7f8d81d4e29b0af98b7b6177eac87d6e1edac3f56713a9d5efa3aba0e93cb84e",
+    "research/4.temporal-consistency/report/exploration-r72-reds-contacts/fixed-000_photons80-seed0.png": "67a21d7d9a65eecf2ef649af6c0ee75bdfa40cd9044e956b91bd169a7b705d67",
+    "research/4.temporal-consistency/report/exploration-r72-reds-contacts/fixed-000_photons80-seed1.png": "0922f3f1f5da35f45d54387a49ac5711840f8be5894f0bfda839b711f65db188",
+    "research/4.temporal-consistency/report/exploration-r72-reds-contacts/fixed-009_photons20-seed0.png": "0b93dd022d7a070a814784b6475cdbea8396c5583a4a224b8399c1af4bd5c7dd",
+    "research/4.temporal-consistency/report/exploration-r72-reds-contacts/fixed-009_photons20-seed1.png": "dd5025bcbaf9e6955e413f807f556d741123d5b414609a822c81d01fadc7b29f",
+    "research/4.temporal-consistency/report/exploration-r72-reds-contacts/fixed-009_photons80-seed0.png": "9b15c30b8bbfc573adfbb7f809016b27b27157bbd13972a4ab2d943a2b059b4e",
+    "research/4.temporal-consistency/report/exploration-r72-reds-contacts/fixed-009_photons80-seed1.png": "1a8e2cc58c111bae1f2662bde02233208b0a0f4d09ac66923d4375e2347bf368",
+    "research/4.temporal-consistency/report/exploration-r72-reds-contacts/fixed-019_photons20-seed0.png": "0f5d6c9392ccce091fdc0838c3a434719cec353137d9f198aecb5b971c9c2f0e",
+    "research/4.temporal-consistency/report/exploration-r72-reds-contacts/fixed-019_photons20-seed1.png": "6a7d94d03f28a7585b300f1cb6eab55c653b9fbcf47d01690817880d6f50059e",
+    "research/4.temporal-consistency/report/exploration-r72-reds-contacts/fixed-019_photons80-seed0.png": "a12a5dab99e3e344f04f02bda837d3bf85f488e2d09361a3d0c619c6a8da794e",
+    "research/4.temporal-consistency/report/exploration-r72-reds-contacts/fixed-019_photons80-seed1.png": "adc710895cdb3aceeb4afd595216460357f77f42b1573c644578cccdbfa27bd4",
+    "research/4.temporal-consistency/report/exploration-r72-reds-contacts/fixed-029_photons20-seed0.png": "7db27ded34113e47c7105954a7edcd8c64f5070b34330f197deff2e69240063e",
+    "research/4.temporal-consistency/report/exploration-r72-reds-contacts/fixed-029_photons20-seed1.png": "10074fe212bc0c997d5867c81b29fb1c8d6bc3e735075539de6cd921073d0f9f",
+    "research/4.temporal-consistency/report/exploration-r72-reds-contacts/fixed-029_photons80-seed0.png": "05f40ad7bb6a83dee7c77654cf4be2ab5b849dcaec9bcd64eee7c2bbe54a9dab",
+    "research/4.temporal-consistency/report/exploration-r72-reds-contacts/fixed-029_photons80-seed1.png": "c66490bcafe976d31d6e706f973f2730e8a931d91525180b2253c6d8909457a5"
+  },
+  "observations": [
+    "All16 fixed11-column contacts actually viewed, both full-FOV thumbnails and native128 center patches. No exposure/color change or frame/seed selection.",
+    "At photons20 MobileIE and Nano raw retain obvious grain; own recursive outputs reduce grain at frames32/63. Static contacts cannot certify temporal flicker reduction.",
+    "StableLLVE_L1 and FastDVD outputs are smoother but fine texture is softened; Native center of scene000 includes people/clothes, scene009 slide,019 animal/ground,029 crowd/clothes.",
+    "FastDVD seed1 has conspicuous blown bright patches in scene000 sky/building and scene019 lit ground, particularly photons20; all seeds/conditions retained. No BN/noise-map or other causal diagnosis is inferred.",
+    "Nano differs in brightness/chroma and retains grain, especially scene019 highlights. Scene029 remains dark in central clothing."
+  ],
+  "scope": "Actual review of all registered static contacts only; not fullvideo/MOS, causal attribution, phone, independent final or new method. Full perception still executing separately."
+}

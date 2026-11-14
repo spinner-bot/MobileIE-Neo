@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "historical_replays": [
+    {
+      "mode": "copy",
+      "file": "per_sequence.jsonl",
+      "rows": 1472,
+      "max_abs_metric": 0.0
+    },
+    {
+      "mode": "r26_pre_mse_spatial",
+      "file": "per_sequence.jsonl",
+      "rows": 736,
+      "max_abs_metric": 0.0
+    },
+    {
+      "mode": "copy",
+      "file": "per_frame.jsonl",
+      "rows": 31744,
+      "max_abs_metric": 0.0
+    },
+    {
+      "mode": "r26_pre_mse_spatial",
+      "file": "per_frame.jsonl",
+      "rows": 15872,
+      "max_abs_metric": 0.0
+    }
+  ],
+  "source_sha256": {
+    "research/4.temporal-consistency/results/exploration-r26-eval-plain/per_sequence.jsonl": "1410b9e22ec2c8f84fc29791082b438bca3051833440da704ae023aa1c2f1a77",
+    "research/4.temporal-consistency/results/exploration-r26b-eval-pre_fixedhalf/per_sequence.jsonl": "b8fc37e57a38a4bc1e641b2841536c230a57761a0b181c95ebeea4cc93d4e71a",
+    "research/4.temporal-consistency/results/exploration-r28-eval-copy/per_sequence.jsonl": "0346a3197d856bc147abf690f6efe2904b288ef993aced5eb3326e7ac86cb4fe",
+    "research/4.temporal-consistency/results/exploration-r26-eval-plain/per_frame.jsonl": "5104dd82e789566048b4cd8c12e1bf32bed4ce01462fcb3d1204c7a4df60a12a",
+    "research/4.temporal-consistency/results/exploration-r26b-eval-pre_fixedhalf/per_frame.jsonl": "33840d4a6ed9757847c9bf4ce89627d7196aeecb3fd06e62ccdb49ac43c1cc86",
+    "research/4.temporal-consistency/results/exploration-r28-eval-copy/per_frame.jsonl": "5df75e00ec0947537557eaafac04e6882ad83ec546e8dbda545706afb8c772bf"
+  },
+  "scope": "Registered reused weights and cache on common CUDA; no new quality claim or repeated training."
+}

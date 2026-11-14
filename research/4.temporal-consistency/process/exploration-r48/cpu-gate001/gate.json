@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "analytic": [
+    {
+      "accepted": true,
+      "max_gradient_delta": 0.0,
+      "first_frame_exact": true,
+      "passed": true
+    },
+    {
+      "accepted": false,
+      "max_gradient_delta": 0.0,
+      "first_frame_exact": true,
+      "passed": true
+    }
+  ],
+  "initial_raw_delta": 0.0,
+  "initial_fold_deltas": {
+    "plain": 1.6689300537109375e-06,
+    "joint": 1.6689300537109375e-06
+  },
+  "recursive_OpenCV_delta": 5.960464477539063e-08,
+  "gradients": [
+    {
+      "model": "plain",
+      "step": 1,
+      "MSE": 0.0024533921387046576,
+      "norm_before_clip": 0.3363240361213684,
+      "reach": {
+        "head_first": 0.0018146495567634702,
+        "head_FST": 0.1972009539604187,
+        "body_FST": 0.08327873796224594,
+        "tail_readout": 0.07288454473018646
+      },
+      "seconds": 4.489392855961341
+    },
+    {
+      "model": "plain",
+      "step": 2,
+      "MSE": 0.00244222953915596,
+      "norm_before_clip": 0.3275821805000305,
+      "reach": {
+        "head_first": 0.0018092758255079389,
+        "head_FST": 0.1918039321899414,
+        "body_FST": 0.07863448560237885,
+        "tail_readout": 0.07278528809547424
+      },
+      "seconds": 3.776278253993951
+    },
+    {
+      "model": "joint",
+      "step": 1,
+      "MSE": 0.0022763197775930166,
+      "norm_before_clip": 0.2782343924045563,
+      "reach": {
+        "head_first": 0.0018079739529639482,
+        "head_FST": 0.14960557222366333,
+        "body_FST": 0.07373227179050446,
+        "tail_readout": 0.07615151256322861
+      },
+      "seconds": 3.399774099001661
+    },
+    {
+      "model": "joint",
+      "step": 2,
+      "MSE": 0.002269116463139653,
+      "norm_before_clip": 0.27188414335250854,
+      "reach": {
+        "head_first": 0.001803110702894628,
+        "head_FST": 0.14553514122962952,
+        "body_FST": 0.07012751698493958,
+        "tail_readout": 0.07620445638895035
+      },
+      "seconds": 3.677248317981139
+    }
+  ],
+  "discarded_updates": 4,
+  "inherit_into_formal": false,
+  "peak_cuda_allocated_bytes": null,
+  "dataset_scope": "MixedPool training only, DEV pixels0"
+}

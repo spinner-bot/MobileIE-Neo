@@ -1,0 +1,66 @@
+\documentclass[11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,graphicx,xcolor}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\pending}[1]{\textcolor{red!65!black}{#1}}
+\graphicspath{{../research/4.temporal-consistency/report/exploration-r41-training-form/}{../research/4.temporal-consistency/report/exploration-r42-tlc/}{../research/4.temporal-consistency/report/exploration-r44-bounded-video/}{../research/4.temporal-consistency/report/exploration-r45-response-recursion/}}
+\title{Temporally Stable Ultra-Compact Video Enhancement\\
+\large Working manuscript: problem, protocol, and verified preliminary evidence}
+\author{Internal research draft; authorship to be determined by the project team}
+\date{Evidence snapshot: 13 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Applying a compact image enhancer independently to video frames creates a
+quality--stability problem under a tight computation budget. We formulate the
+distinction between training-time temporal supervision and inference-time
+history, establish strong same-weight classical references, and document
+controlled evidence for adapting MobileIE. The completed experiments show that
+restoring the original expanded training parameterization improves a matched
+mixed-data baseline, while a fixed test-time local pooling conversion harms
+both evaluated domains. A completed factorial study of the root nonlinearity
+and a training-only temporal objective improves paired-real spatial quality
+but fails all three registered temporal/deployment screens. Its spatial and
+temporal effects must be separated. Matched learned-recursion controls also
+show negligible benefit of an internal feature-energy cue over an RGB gate,
+while exposing a quality--stability trade-off over fixed fusion weights.
+Completed fixed-budget adaptations of a published 696-parameter enhancer,
+a five-frame video denoiser, and a published deformation-consistency
+objective extend reference coverage while retaining training-history,
+convergence, and domain limitations. The fixed commutator adaptation
+reduces paired-real temporal error at a substantial spatial and perceptual
+cost; a fixed display-based metric further qualifies temporal-error gains.
+Common convolution budgets are reported without inferring phone speed.
+Completed native-resolution REDS development comparisons retain both seeds
+and show that recursion can reduce temporal error while harming some
+per-source spatial or perceptual scores.
+These findings do not establish a new video enhancement method.
+This internal draft contains no independent
+final-test claim or measured phone latency.
+\end{abstract}
+
+\paragraph{Draft status.}
+\pending{This is a research manuscript under development, not a submission-ready
+paper. The final method, verified novelty, independent low-light video
+evaluation, and handset measurements remain incomplete.}
+The numerical tables are generated from completed repository evidence.
+Training progress, partial checkpoints, and loss curves are excluded.
+
+\input{sections/problem}
+\input{sections/related}
+\input{sections/candidate}
+\input{sections/protocol}
+\input{sections/evidence}
+\input{sections/recursion}
+\input{sections/video-evidence}
+\input{sections/classical-reference}
+\input{sections/external-evidence}
+\input{sections/limitations}
+
+\clearpage
+\bibliographystyle{plain}
+\begingroup
+\small
+\bibliography{references}
+\endgroup
+\end{document}

@@ -1,0 +1,30 @@
+{
+  "samples": [
+    {
+      "gpu": 5,
+      "uuid": "GPU-83b3ac27-3e78-fb30-a5f6-d5daf4aac4fb",
+      "memory_mib": 0,
+      "utilization_percent": 0,
+      "compute_processes": [],
+      "time": "2026-11-12T14:17:37.120137+08:00"
+    },
+    {
+      "gpu": 5,
+      "uuid": "GPU-83b3ac27-3e78-fb30-a5f6-d5daf4aac4fb",
+      "memory_mib": 0,
+      "utilization_percent": 0,
+      "compute_processes": [],
+      "time": "2026-11-12T14:17:38.426152+08:00"
+    }
+  ],
+  "allowed": true,
+  "command": [
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/train_bounded_video_r44.py",
+    "--stage",
+    "stage001",
+    "--seed",
+    "1"
+  ],
+  "scope": "Immutable admission prefix only; live guard retained in full after terminal."
+}

@@ -34,6 +34,7 @@
 | 因果训练与多项式噪声 | [13](docs/13-training-objectives-and-causal-state.md)、[14](docs/14-polynomial-noise-and-bias-variance.md) | 近期训练先例、二次映射假设、偏差方差分析及未完成精读 |
 | 状态及优化控制 | [15](docs/15-temporal-shift-baseline-scope.md)、[16](docs/16-optimization-and-reparameterization-controls.md) | 原TSM范围、可折叠分支与训练等价边界 |
 | 已发表去噪复现入口 | [17](docs/17-published-denoiser-reproduction-readiness.md) | 官方权重/推理接入、未来等待与未完成LLVE对照 |
+| 递归、函数保持与来源接口 | [27](docs/27-recursive-fusion-baseline-boundaries.md)、[28](docs/28-preserving-spatial-function-and-state-stability.md)、[29](docs/29-raw-srgb-benchmark-boundaries.md) | 传统强参考、状态稳定性先例、RAW/sRGB和同名数据来源核验；均不独占创新 |
 | 汇报材料 | [`report/prior-art-survey.html`](report/prior-art-survey.html) | 单文件 HTML，资源内嵌，可离线打开 |
 | 原始数据 | [`data/`](data) | S2/OpenAlex 原始 JSON、Crossref 元数据、规范化 CSV |
 | 抓取脚本 | [`scripts/fetch_citations.py`](scripts/fetch_citations.py) | 可重跑的引用抓取（带退避） |
@@ -112,4 +113,21 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 
 - [24 对应校准与独立性](docs/24-alignment-calibration-and-independence.md)：STBN原文/固定代码与精确选择反例，区分有监督和blind-spot假设。
 
+- [25 骨干计算与流式状态](docs/25-compute-allocation-and-streaming-state.md)：R28路线冻结后的NAFNet/BSVD固定源码补读、TLC已知空间控制及未训练预算；乘法/移位/零初始化不作为新颖性，状态逻辑元素不替代真实storage/峰值。
+
 修改：2026-11-12T01:32:47.707565+08:00；作者：Codex  (sqs_A100)；原因：索引对应与统计依赖的深度核查。
+
+- [26 跨帧训练与推理边界](docs/26-cross-frame-training-and-inference-boundaries.md)：补读VLLVE++正文中的CFIM/训练期对应精化，区分参考帧依赖与单帧路径；近期方法的读取深度和未复现项分别保留。
+
+修改：2026-11-12T05:16:58+08:00；作者：Codex  (sqs_A100)；原因：索引训练/推理依赖和同信息比较边界。
+
+修改：2026-11-12T08:16:59+08:00；作者：Codex  (sqs_A100)；原因：索引递归强基线、函数保持及数据接口的有界增量核查。
+
+- 增量来源核查（2026-11-12T13:10:09.132243+08:00）：[LENVIZ图像/视频边界](docs/30-lenviz-image-and-video-scope.md)，作者交叉链接确认，未取得像素；[DarkVision版本说明](docs/29-raw-srgb-benchmark-boundaries.md)补正式2026出版信息，不以DOI年份代替文献年份。
+
+- [TLC空间强对照与实际成本](docs/31-tlc-strong-spatial-control.md)：补读固定算法源码，区别于R24门控替换；尚未进行新质量评价。
+
+- [时间归一化边界](docs/32-temporal-normalization-boundaries.md)：DNR正文与FLAIR未核验范围；不把BN打包当创新。
+- [有理激活先例与根部候选](docs/33-rational-activation-boundaries.md)：PAU明确已有，候选仅待原型，不称新视频方法或零开销。
+
+- 2026-11-13：[双矩历史的先例与噪声解释边界](docs/54-moment-history-equivalence-and-noise-boundaries.md)。SVGF已有重投影时间矩，MSTMN区分噪声/对齐权重；R73混合矩的条件二次展开与插值离散度分析限制创新措辞。原固定训练继续，不改活跃源码或注册门槛。

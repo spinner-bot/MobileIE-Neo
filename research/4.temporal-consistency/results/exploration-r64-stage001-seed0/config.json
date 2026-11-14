@@ -1,0 +1,113 @@
+{
+  "created_at": "2026-11-13T01:24:01.604374+08:00",
+  "seed": 0,
+  "models": [
+    "plain",
+    "spatial",
+    "causal"
+  ],
+  "new_steps_each": 4000,
+  "inherited_updates_each": 8000,
+  "data_steps": [
+    8000,
+    11999
+  ],
+  "initialization": {
+    "source_marker": "research/4.temporal-consistency/results/exploration-r44-stage001-seed0/square_mse-step4000.json",
+    "training_checkpoint_sha256": "91800b897a2b568d837cf92925b727bb71934f781437733c75323d3562f6998e",
+    "inherited_updates_each": 8000,
+    "new_branch_seed": 6300,
+    "optimizer_state_inherited": false,
+    "parameters": {
+      "plain": {
+        "total": 49978,
+        "active": 47239
+      },
+      "spatial": {
+        "total": 50521,
+        "active": 47782
+      },
+      "causal": {
+        "total": 50521,
+        "active": 47782
+      }
+    }
+  },
+  "data": {
+    "manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "verified_files": 384,
+    "scenes": [
+      "video_11",
+      "video_35",
+      "video_92",
+      "video_131",
+      "video_12",
+      "video_20",
+      "video_29",
+      "video_52",
+      "video_59",
+      "video_95",
+      "video_104",
+      "video_122"
+    ],
+    "native_bytes": 2388787200,
+    "real_training_ids": [
+      "video_104",
+      "video_11",
+      "video_12",
+      "video_122",
+      "video_131",
+      "video_20",
+      "video_29",
+      "video_35",
+      "video_52",
+      "video_59",
+      "video_92",
+      "video_95"
+    ],
+    "excluded_native_DEV": [
+      "video_121",
+      "video_15",
+      "video_47",
+      "video_91"
+    ],
+    "all_real_assets_owned": true,
+    "source_manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "synthetic_manifest_sha256": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+    "synthetic_training_videos": 57,
+    "real_tensor_dtype": "uint8 native inputs/GT; float32 /255 after crops",
+    "timing_scope": "Consecutive registered frame indices, not independently verified sensor timing."
+  },
+  "batch": 4,
+  "frames": 4,
+  "crop": 128,
+  "loss": "Identical clipped raw MSE, all four frames",
+  "fresh_Adam_lr": 0.0001,
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "eps": 1e-08,
+  "weight_decay": 0,
+  "global_clip": 1,
+  "BN_calls_per_update": 4,
+  "history_detached_in_window": false,
+  "FP32": true,
+  "TF32": false,
+  "selection": "Final new4000 only; old R63 stress gate still failed",
+  "protocol_sha256": "7b76dfd54e27bcb3744775d2ff5ae5cffa3a7b0084ae9d9725b5fe471ee34b25",
+  "gates": {
+    "research/4.temporal-consistency/process/exploration-r64/cpu-gate001.json": "f4ab7cc802fcb802f5ceb75cd9812c3d9a96d4faa2d9020765e3ae744b136620",
+    "research/4.temporal-consistency/process/exploration-r64/cuda-gate001.json": "51dbc0682bd445b08c876c6df8df6455c53a7e5cb0d74c4d2b8e02c5ffc5c892"
+  },
+  "source_sha256": {
+    "train_dense_history_r64.py": "ee6e7ee4c6bf351b4e0eaa4ab8d10f7c4ecfb9aecfe074afc1a38d9b5ac1f01f",
+    "dense_joint_state_r63.py": "54098da7ff4df117b63fbe809d1accf314d63308b26c0a083894a02c41f08297",
+    "budget_causal_r33.py": "7cfe138a286fdb488973ffe7c5bc93b69ad505af981e22cba824402c491b2e3b",
+    "mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5",
+    "dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498",
+    "training_form_r41.py": "4392fdceb16750ca0a763f4485beec873dc7316d758c95e9eaef042ffceb4ded",
+    "gpu_guard.py": "e0a5050f47d64dbf75fab4146a276f50e3464d07e6a799ad8ccd2c69e8e3a535"
+  },
+  "revision": "d978a9a8c2762834efc5630c9960d615ebb4e326"
+}

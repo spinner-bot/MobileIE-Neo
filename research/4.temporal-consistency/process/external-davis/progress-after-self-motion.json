@@ -1,0 +1,52 @@
+{
+  "observed_at": "2026-11-12T05:41:09.051379+08:00",
+  "completed_self_motion_baseline": {
+    "completed_normally": true,
+    "rows": 24,
+    "cnn_sequences": 12,
+    "cuda_initialized": false,
+    "wall_seconds": 368.7101362569956
+  },
+  "R32_download_logged_members": 2713,
+  "R32_registered_members": 3428,
+  "R32_final_manifest_present": false,
+  "R35_completed_rows": 10,
+  "R35_registered_rows": 36,
+  "R34_stage": "stage002",
+  "R34_events_snapshot": [
+    {
+      "time": "2026-11-12T05:37:25.425745+08:00",
+      "stage": "download",
+      "status": "waiting_for_existing_registered_process"
+    }
+  ],
+  "processes_confirmed_live": [
+    {
+      "pid": 3010011,
+      "argv": [
+        "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python",
+        "research/4.temporal-consistency/scripts/fetch_davis_training.py",
+        "--download"
+      ]
+    },
+    {
+      "pid": 3048459,
+      "argv": [
+        "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python",
+        "research/4.temporal-consistency/scripts/evaluate_published_davis_r35.py"
+      ]
+    },
+    {
+      "pid": 3094269,
+      "argv": [
+        "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python",
+        "research/4.temporal-consistency/scripts/launch_dynamic_stage_r34.py",
+        "--download-pid",
+        "3010011",
+        "--stage-id",
+        "2"
+      ]
+    }
+  ],
+  "scope": "Immutable checkpoint; only self-motion baseline is complete. Source acquisition, published transfer and gated stage remain live; no R34 training or final-test claim."
+}

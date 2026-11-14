@@ -1,0 +1,50 @@
+{
+  "at": "2026-11-12T21:11:14.802710+08:00",
+  "dependencies": [
+    {
+      "seed": 0,
+      "pid": 3587136,
+      "identity": {
+        "start_ticks": "42885622",
+        "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 5 --record research/4.temporal-consistency/process/exploration-r56/seed0-guard.json -- ./scripts/project-python research/4.temporal-consistency/scripts/train_tiny_task_r56.py --seed 0 "
+      }
+    },
+    {
+      "seed": 1,
+      "pid": 3587170,
+      "identity": {
+        "start_ticks": "42885627",
+        "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 6 --record research/4.temporal-consistency/process/exploration-r56/seed1-guard.json -- ./scripts/project-python research/4.temporal-consistency/scripts/train_tiny_task_r56.py --seed 1 "
+      }
+    }
+  ],
+  "source_sha256": {
+    "research/4.temporal-consistency/scripts/tiny_task_r56.py": "63fb9c8d3d5efd138199a460553dcdbff7ee378c6058f26dee8c730f2d992d31",
+    "research/4.temporal-consistency/scripts/train_tiny_task_r56.py": "67a6286d80ec6fa4d344bcc69a880b89ce90234354c9be8004b3387add751a5b",
+    "research/4.temporal-consistency/scripts/check_tiny_task_r56.py": "5e7b72274ca9d209514cf220955061abb35b3d877d9ba09c1dcd3e1379e7757e",
+    "research/4.temporal-consistency/scripts/tiny_adapted_reference_r56.py": "a62f60abe48875663ee98ce5a293080e89925ca8217b128818efb2f449d0fb7e",
+    "research/4.temporal-consistency/scripts/evaluate_tiny_reference_r56.py": "6c1237b543531f731c63a6afdab06828268dca81961bde2caf935f7d48192a04",
+    "research/4.temporal-consistency/scripts/summarize_tiny_task_r56.py": "1f4fe5bee488221251823dbfe0ae6fd4a1f8982dbc7b38586fbba3109ccc9b76",
+    "research/4.temporal-consistency/scripts/render_tiny_phone_r56.py": "458852d26b03d7805bf6074f0acd8242c8ae65b9a4ed1a1184a4c92f17d7e2b6",
+    "research/4.temporal-consistency/scripts/finalize_tiny_task_r56.py": "b51a4430b77becd77fdf9e0cd064d8e9809d3c604557c0579ef2a9554cf9f614",
+    "research/4.temporal-consistency/scripts/multinex_reference_r55.py": "7c3b12228c8e9624224a14e6ed020aad25efb120ba6baa8f04931903646299e0",
+    "research/4.temporal-consistency/scripts/mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5",
+    "research/4.temporal-consistency/scripts/dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498",
+    "research/4.temporal-consistency/scripts/native_training_r14.py": "588b505ede11ac9f0d747ad1c16b1c118a7bbbbba7405ce918a6163d133d69a1",
+    "research/4.temporal-consistency/scripts/half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+    "research/4.temporal-consistency/scripts/aligned_raw_history_r11.py": "e367727401f82ccf0bccaf8d88f904e4aebf8b78186f0539eedeed222b2d2227",
+    "research/4.temporal-consistency/scripts/prepare_cache_r5.py": "675860fc6ef1d97d28750815e99f5c923ecfd94e94254f1f7a7685f08d84f2c8",
+    "research/4.temporal-consistency/scripts/exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+    "research/4.temporal-consistency/scripts/video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0",
+    "research/4.temporal-consistency/scripts/finalize_task_fastdvd_r47.py": "39ea4259a71a46a897d4b50f147c0597d6f31f822c6ed5017fa3a06aae64f254",
+    "research/4.temporal-consistency/scripts/training_form_r41.py": "4392fdceb16750ca0a763f4485beec873dc7316d758c95e9eaef042ffceb4ded",
+    "research/4.temporal-consistency/scripts/gpu_guard.py": "e0a5050f47d64dbf75fab4146a276f50e3464d07e6a799ad8ccd2c69e8e3a535",
+    "third_party/multinex/basicsr/models/archs/MultinexNano_arch.py": "0a2d94f12e7de799b5e13f46905dd9e5c3f7cf005dee40412d18ec6b1adf2cdf",
+    "third_party/multinex/Options/Multinex-Nano_LOL-v1.yaml": "53c42fb0f782ef4acd58ba25d47f07db67f1da774eb8e588ca71773f6063484e",
+    "third_party/multinex/UPSTREAM.json": "6dd18639368ba7b93f7c2285f606edd63af94e04e11fc652f1e1888d7cd5e240"
+  },
+  "protocol_sha256": "0d637adb9f952c23cb28b4e4ec085c971b627f89e0433f5dc81a0ac6512e1dda",
+  "no_wall_cutoff": true,
+  "no_automatic_retry": true,
+  "selection": "both final8000, all fixed paired and phone frames"
+}

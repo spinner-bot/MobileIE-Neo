@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/fetch_sdsd_r67.py", line 74, in main
+    result = task.result(); results.append(result)
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/fetch_sdsd_r67.py", line 31, in fetch_one
+    stream.write(remote.read_span(disk, start+position, min(MAX_RANGE, row['compressed_size']-position)))
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/sdsd_archive_r67.py", line 72, in read_span
+    pieces.append(self.read_exact(disk, offset, take)); offset += take; count -= take
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/sdsd_archive_r67.py", line 49, in read_exact
+    assert response.status == 206, f'Expected206, got{response.status}; no quota/auth bypass or retry.'
+AssertionError: Expected206, got200; no quota/auth bypass or retry.

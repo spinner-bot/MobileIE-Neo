@@ -1,0 +1,141 @@
+{
+  "at": "2026-11-12T21:25:57.059449+08:00",
+  "source": {
+    "repository": "albrateanu/multinex",
+    "commit": "e15790a963935569fff1ba6a8b0d33a791765749",
+    "source_manifest_sha256": "6dd18639368ba7b93f7c2285f606edd63af94e04e11fc652f1e1888d7cd5e240",
+    "files": {
+      "basicsr/models/archs/MultinexNano_arch.py": {
+        "source": "basicsr/models/archs/MultinexNano_arch.py",
+        "role": "source",
+        "url": "https://raw.githubusercontent.com/albrateanu/multinex/e15790a963935569fff1ba6a8b0d33a791765749/basicsr/models/archs/MultinexNano_arch.py",
+        "path": "third_party/multinex/basicsr/models/archs/MultinexNano_arch.py",
+        "bytes": 23010,
+        "git_blob_sha": "279dca3cff7ec9075e8800b6aacb6218c13d7574",
+        "sha256": "0a2d94f12e7de799b5e13f46905dd9e5c3f7cf005dee40412d18ec6b1adf2cdf",
+        "reused_verified_file": false
+      },
+      "Options/Multinex-Nano_LOL-v1.yaml": {
+        "source": "Options/Multinex-Nano_LOL-v1.yaml",
+        "role": "source",
+        "url": "https://raw.githubusercontent.com/albrateanu/multinex/e15790a963935569fff1ba6a8b0d33a791765749/Options/Multinex-Nano_LOL-v1.yaml",
+        "path": "third_party/multinex/Options/Multinex-Nano_LOL-v1.yaml",
+        "bytes": 4910,
+        "git_blob_sha": "ffa840641eba1e488af122231bb09455e6fd1012",
+        "sha256": "53c42fb0f782ef4acd58ba25d47f07db67f1da774eb8e588ca71773f6063484e",
+        "reused_verified_file": false
+      },
+      "pretrained_weights/Multinex-Nano_LOL-v1.pth": {
+        "source": "pretrained_weights/Multinex-Nano_LOL-v1.pth",
+        "role": "weight",
+        "url": "https://raw.githubusercontent.com/albrateanu/multinex/e15790a963935569fff1ba6a8b0d33a791765749/pretrained_weights/Multinex-Nano_LOL-v1.pth",
+        "path": ".cache/weights/multinex/LOL-v1/Multinex-Nano_LOL-v1.pth",
+        "bytes": 20317,
+        "git_blob_sha": "395c4218d7e20ae3ceece91670dfe7c338741315",
+        "sha256": "ed3e9fafef4bc15a7e84450d002eb564bb1d1e18345432a30b0bfbc7b7b535e4",
+        "reused_verified_file": false
+      }
+    },
+    "network_kwargs": {
+      "in_ch": 3,
+      "out_ch": 3,
+      "base_channels": 3,
+      "width_mult": 1.0,
+      "use_depthwise": true,
+      "act": "ReLU",
+      "per_illum_proj": false,
+      "per_chroma_proj": false,
+      "use_illum_attn": true,
+      "use_chroma_attn": true,
+      "illum_mid": 1,
+      "chroma_mid": 1,
+      "reduction_ratio": 3,
+      "luma_head_act": null,
+      "chroma_head_act": null,
+      "retinex_residual": true,
+      "eps": 1e-09,
+      "illum_flags": {
+        "mean": false,
+        "rec709": true,
+        "vmax": true,
+        "lightness": true,
+        "ycgco": false,
+        "l2norm": true
+      },
+      "chroma_flags": {
+        "yuv_uv": false,
+        "ycbcr_cbcr": true,
+        "opponent": false,
+        "chroma_rg": true,
+        "hsv_s": true,
+        "litags": false
+      },
+      "target_params": 300
+    },
+    "parameters": 696,
+    "buffer_elements": 38,
+    "state_entries": 50,
+    "strict_load": true,
+    "input": "RGB FP32 [0,1]",
+    "inference": "Official even reflection pad, unpad and clip; no GT mean, ensemble or large-image splitting.",
+    "training": "R56 fixed MixedPool8000 adaptation, original BN kept, no full-convergence or new-method claim.",
+    "adapted_checkpoint": {
+      "path": ".cache/checkpoints/exploration-r56/stage001/seed1/nano-step8000.pt",
+      "sha256": "77912f30137e92d97bf413b0117526e7312310adb0293f77a6f4dc132bfbb833",
+      "step": 8000,
+      "seed": 1,
+      "parameters": 696,
+      "BN_counts": {
+        "illum_mid_seq.0.0.bn": 80970,
+        "chroma_mid_seq.0.0.bn": 80970
+      },
+      "Adam_phase": 2,
+      "loss_last_window": {
+        "step": 8000,
+        "data_step": 7999,
+        "MSE": 0.004397843033075333,
+        "synthetic_MSE": 0.006372305564582348,
+        "real_MSE": 0.0024233809672296047,
+        "gradient_norm_before_clip": 0.07260964065790176,
+        "Adam_reset": false,
+        "BN_counts": {
+          "illum_mid_seq.0.0.bn": 80970,
+          "chroma_mid_seq.0.0.bn": 80970
+        }
+      },
+      "final_quality_eligible": true
+    },
+    "adaptation_config_sha256": "ef30fd293a2a2814eba7842218491894b173e9e25019413b6ce7c07e0e3e40f5",
+    "train_seed": 1,
+    "adaptation_updates": 8000
+  },
+  "methods": [
+    "raw",
+    "recursive_self05"
+  ],
+  "device": "cpu",
+  "torch_threads": 2,
+  "opencv_threads": 1,
+  "adaptation_updates": 8000,
+  "unique_checkpoints": 1,
+  "CPU_gate_sha256": "831c7c244cd4c494e3f7200df4d0bc50b8edfc87b34ebeab72c0951612058f4d",
+  "protocol_sha256": "0d637adb9f952c23cb28b4e4ec085c971b627f89e0433f5dc81a0ac6512e1dda",
+  "input_indices": {
+    "research/4.temporal-consistency/results/exploration-r30-cache/index.json": "424fa278b2fe66d29de476e2b47328619438f97cf71926448433d1191bb722c1",
+    "research/4.temporal-consistency/results/exploration-r10-cache/index.json": "ec00801b04b873ead0025af91af441b783da3f08c87cf24e9c136a4268ffb43c",
+    "research/4.temporal-consistency/results/exploration-r49-full-phone-attempt001/index.json": "a43127fa876aff1790548899f0ed7623557c5f53289160b27b516c1dafd243b9"
+  },
+  "source_sha256": {
+    "evaluate_tiny_reference_r56.py": "6c1237b543531f731c63a6afdab06828268dca81961bde2caf935f7d48192a04",
+    "tiny_adapted_reference_r56.py": "a62f60abe48875663ee98ce5a293080e89925ca8217b128818efb2f449d0fb7e",
+    "multinex_reference_r55.py": "7c3b12228c8e9624224a14e6ed020aad25efb120ba6baa8f04931903646299e0",
+    "aligned_raw_history_r11.py": "e367727401f82ccf0bccaf8d88f904e4aebf8b78186f0539eedeed222b2d2227",
+    "half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+    "prepare_cache_r5.py": "675860fc6ef1d97d28750815e99f5c923ecfd94e94254f1f7a7685f08d84f2c8",
+    "evaluate_phone_references_r38.py": "ed4d06aebb8e666585faf9126dddec0e180cb32b9915e978c4e6e29f7feeac89",
+    "exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+    "video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0"
+  },
+  "revision": "e24240bb7b6444785240f6639f0afb61e2cc178e",
+  "scope": "R56 fixed-budget spatial reference, unequal training parameterization/compute; not independent final, new method, full convergence or phone cost."
+}

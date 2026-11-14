@@ -1,0 +1,141 @@
+{
+  "at": "2026-11-13T02:56:18.155352+08:00",
+  "scope": "Actual current process identity and flushed trace prefix; not final training/quality.",
+  "seed0": {
+    "guard_pid": 3885535,
+    "guard_identity": {
+      "command": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 5 --record research/4.temporal-consistency/process/exploration-r65/seed0-guard.json -- ./scripts/project-python research/4.temporal-consistency/scripts/train_stablellve_task_r65.py --seed 0 ",
+      "start_ticks": "44975469"
+    },
+    "children": [
+      {
+        "pid": 3885619,
+        "command": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/train_stablellve_task_r65.py --seed 0 ",
+        "start_ticks": "44975636"
+      }
+    ],
+    "last_flushed_arm_rows": {
+      "spatial_l1": {
+        "arm": "spatial_l1",
+        "step": 400,
+        "data_step": 399,
+        "total": 0.03561826050281525,
+        "spatial_L1": 0.03561826050281525,
+        "consistency_L1": 0.0,
+        "synthetic_MAE": 0.030633514747023582,
+        "real_MAE": 0.04060300812125206,
+        "unclipped_MSE": 0.0021356530487537384,
+        "gradient_norm_before_clip": 0.7764083743095398,
+        "Adam_reset": false
+      },
+      "commute20": {
+        "arm": "commute20",
+        "step": 400,
+        "data_step": 399,
+        "total": 0.10752902925014496,
+        "spatial_L1": 0.055843740701675415,
+        "consistency_L1": 0.002584264613687992,
+        "synthetic_MAE": 0.03700019419193268,
+        "real_MAE": 0.07468728721141815,
+        "unclipped_MSE": 0.0050253598019480705,
+        "gradient_norm_before_clip": 0.7871856093406677,
+        "Adam_reset": false
+      }
+    },
+    "terminal_runtime_exists": false,
+    "internal_admission": {
+      "allowed": true,
+      "samples": [
+        {
+          "gpu": 5,
+          "uuid": "GPU-83b3ac27-3e78-fb30-a5f6-d5daf4aac4fb",
+          "memory_mib": 0,
+          "utilization_percent": 0,
+          "compute_processes": [],
+          "time": "2026-11-13T02:53:18.772691+08:00"
+        },
+        {
+          "gpu": 5,
+          "uuid": "GPU-83b3ac27-3e78-fb30-a5f6-d5daf4aac4fb",
+          "memory_mib": 0,
+          "utilization_percent": 0,
+          "compute_processes": [],
+          "time": "2026-11-13T02:53:20.158144+08:00"
+        }
+      ],
+      "scope": "Fresh pre-CUDA check after full CPU data preparation; external project GPU lock remains held."
+    },
+    "CUDA_gate_passed": true
+  },
+  "seed1": {
+    "guard_pid": 3885536,
+    "guard_identity": {
+      "command": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 6 --record research/4.temporal-consistency/process/exploration-r65/seed1-guard.json -- ./scripts/project-python research/4.temporal-consistency/scripts/train_stablellve_task_r65.py --seed 1 ",
+      "start_ticks": "44975469"
+    },
+    "children": [
+      {
+        "pid": 3885554,
+        "command": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/train_stablellve_task_r65.py --seed 1 ",
+        "start_ticks": "44975627"
+      }
+    ],
+    "last_flushed_arm_rows": {
+      "spatial_l1": {
+        "arm": "spatial_l1",
+        "step": 412,
+        "data_step": 411,
+        "total": 0.031727924942970276,
+        "spatial_L1": 0.031727924942970276,
+        "consistency_L1": 0.0,
+        "synthetic_MAE": 0.026515472680330276,
+        "real_MAE": 0.03694037348031998,
+        "unclipped_MSE": 0.0015864919405430555,
+        "gradient_norm_before_clip": 2.763705015182495,
+        "Adam_reset": false
+      },
+      "commute20": {
+        "arm": "commute20",
+        "step": 412,
+        "data_step": 411,
+        "total": 0.11607751250267029,
+        "spatial_L1": 0.06907320767641068,
+        "consistency_L1": 0.002350215334445238,
+        "synthetic_MAE": 0.042804330587387085,
+        "real_MAE": 0.09534208476543427,
+        "unclipped_MSE": 0.007120753638446331,
+        "gradient_norm_before_clip": 1.6143876314163208,
+        "Adam_reset": false
+      }
+    },
+    "terminal_runtime_exists": false,
+    "internal_admission": {
+      "allowed": true,
+      "samples": [
+        {
+          "gpu": 6,
+          "uuid": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+          "memory_mib": 0,
+          "utilization_percent": 0,
+          "compute_processes": [],
+          "time": "2026-11-13T02:53:18.472705+08:00"
+        },
+        {
+          "gpu": 6,
+          "uuid": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+          "memory_mib": 0,
+          "utilization_percent": 0,
+          "compute_processes": [],
+          "time": "2026-11-13T02:53:19.707828+08:00"
+        }
+      ],
+      "scope": "Fresh pre-CUDA check after full CPU data preparation; external project GPU lock remains held."
+    },
+    "CUDA_gate_passed": true
+  },
+  "coordinator": {
+    "pid": 3887076,
+    "command": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/finalize_stablellve_task_r65.py ",
+    "start_ticks": "44994714"
+  }
+}

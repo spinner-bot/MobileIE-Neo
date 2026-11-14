@@ -1,0 +1,44 @@
+{
+  "at": "2026-11-13T08:28:38.057888+08:00",
+  "original_processes": {
+    "coordinator": {
+      "pid": 4060901,
+      "start_ticks": "46715399",
+      "state": "S",
+      "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/finalize_native_moment_r73.py --attempt 2 --qualification-start 2 "
+    },
+    "quality_seed0": {
+      "pid": 4072083,
+      "start_ticks": "46975532",
+      "state": "R",
+      "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/evaluate_native_moment_r73.py --seed 0 "
+    },
+    "guard_seed1": {
+      "pid": 4072168,
+      "start_ticks": "46975855",
+      "state": "S",
+      "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 5 --record research/4.temporal-consistency/process/exploration-r73/finalize002/seed1-guard001.json -- ./scripts/project-python research/4.temporal-consistency/scripts/train_native_moment_r73.py --seed 1 --admission-attempt 1 "
+    },
+    "trainer_seed1": {
+      "pid": 4072180,
+      "start_ticks": "46976017",
+      "state": "R",
+      "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/train_native_moment_r73.py --seed 1 --admission-attempt 1 "
+    }
+  },
+  "seed0_training_normal": true,
+  "seed0_guard_released": true,
+  "seed0_CPU_quality_started": true,
+  "seed0_complete_quality_prefix_rows": 8,
+  "seed0_quality_runtime_exists": false,
+  "seed1_physical_GPU": 5,
+  "seed1_external_lock_and_fresh_full_CPU_ready_internal_admission_passed": true,
+  "seed1_initial_window_passed": true,
+  "seed1_complete_training_steps": {
+    "spatial": 175,
+    "mean": 175,
+    "moment": 174
+  },
+  "total_formal_budget_still": 24000,
+  "scope": "Actual normal seed0 training and automatic independent CPU/seed1 GPU handoff; partial outputs are progress only, no selection or quality claim. No extra jobs or scientific retries."
+}

@@ -1,0 +1,31 @@
+{
+  "seed": 0,
+  "device": "cpu",
+  "torch_threads": 2,
+  "opencv_threads": 1,
+  "checkpoint": {
+    "path": ".cache/checkpoints/exploration-r40/seed0/step4000.pt",
+    "sha256": "18fb3ae1c1cb66b4346a5eb6c02e2dcfa9cd47529f4774dff72e24eda3b3556c",
+    "step": 4000,
+    "seed": 0,
+    "model": "mixed_original"
+  },
+  "parameters": 4075,
+  "torch_version": "2.9.1+cu126",
+  "cache_indices": {
+    "research/4.temporal-consistency/results/exploration-r30-cache/index.json": "424fa278b2fe66d29de476e2b47328619438f97cf71926448433d1191bb722c1",
+    "research/4.temporal-consistency/results/exploration-r10-cache/index.json": "ec00801b04b873ead0025af91af441b783da3f08c87cf24e9c136a4268ffb43c"
+  },
+  "protocol_sha256": "c2cb1eced1acca8fca8785f21f275d665b680b7e4c010d4b168b51dd1ca894b3",
+  "training_config_sha256": "86c7f42c7def5b24e816ec6c15d253cf86f8daa9e2b4c9e46b5234d77e19c7c0",
+  "source_sha256": {
+    "evaluate_mixed_anchor_r40.py": "8d43e4a4b41f0d733d3810e821bff019be845759f7185dfd72f9fe7ae5e71ec4",
+    "half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+    "aligned_raw_history_r11.py": "e367727401f82ccf0bccaf8d88f904e4aebf8b78186f0539eedeed222b2d2227",
+    "aggregation_controls_r20.py": "7b4541be8512ca1edb755b5a73f889351e376f9a8fc1fdec7ed633a4438c116c",
+    "exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+    "video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0"
+  },
+  "revision": "f6d5b6674a0aaca42ae99d6ce190d531e60c61c5",
+  "scope": "Fixed mixed-data baseline, separate synthetic and paired real ND DEV. No new architecture, independent final test or phone timing."
+}

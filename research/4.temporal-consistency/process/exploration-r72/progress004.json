@@ -1,0 +1,30 @@
+{
+  "at": "2026-11-13T06:49:16.842494+08:00",
+  "coordinator_pid": 4030342,
+  "coordinator_actual_identity": {
+    "start_ticks": "46167726",
+    "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/finalize_reds_r72.py "
+  },
+  "seeds": {
+    "0": {
+      "CPU_pid": 4037261,
+      "CPU_actual_identity": {
+        "start_ticks": "46247060",
+        "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/evaluate_reds_r72.py --seed 0 "
+      },
+      "quality_prefix_rows": 57,
+      "quality_terminal_exists": false
+    },
+    "1": {
+      "CPU_pid": 4040502,
+      "CPU_actual_identity": {
+        "start_ticks": "46279285",
+        "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/evaluate_reds_r72.py --seed 1 "
+      },
+      "quality_prefix_rows": 45,
+      "quality_terminal_exists": false
+    }
+  },
+  "source_sha256_unchanged": true,
+  "scope": "Original CPU jobs continue with unchanged frozen sources; prefixes are progress only, no final ranking or restart."
+}

@@ -1,0 +1,17 @@
+{
+  "at": "2026-11-13T03:17:41.895757+08:00",
+  "guard_pid": 3900583,
+  "gpu": 4,
+  "command": [
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/gpu_guard.py",
+    "--gpu",
+    "4",
+    "--record",
+    "research/4.temporal-consistency/process/exploration-r66/reference-guard.json",
+    "--",
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/evaluate_cvvdp_references_r66.py"
+  ],
+  "scope": "Only new external guard spawned; actual admission and CPU/CUDA qualification require live records."
+}

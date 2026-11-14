@@ -1,0 +1,103 @@
+{
+  "at": "2026-11-13T08:57:19.359655+08:00",
+  "author": "Codex  (sqs_A100)",
+  "protocol_sha256": "bade58673fd42808db7267cff11b5912a31448311f1d03b8a4cb3115fdce9c6e",
+  "members": [
+    {
+      "name": "scene1/ISO1600/frame1_clean_and_slightly_denoised.tiff",
+      "disk": 0,
+      "local_offset": 37034027,
+      "size": 8294534,
+      "compressed_size": 3814183,
+      "crc32": "bd6466e5",
+      "method": 8,
+      "flags": 0,
+      "directory": false,
+      "role": "bm3d_reference",
+      "archive": "indoor_raw_gt",
+      "volume": {
+        "disk": 0,
+        "name": "indoor_raw_gt_scene1.zip",
+        "bytes": 130912326,
+        "url": "https://drive.usercontent.google.com/download?id=1dSC748iD8O8G7JHQH0-Kap19sP8uRE05&export=download&confirm=t"
+      },
+      "output": "bm3d_reference.tiff"
+    },
+    {
+      "name": "scene1/ISO1600/frame1_clean.tiff",
+      "disk": 0,
+      "local_offset": 384400754,
+      "size": 4147322,
+      "compressed_size": 3167059,
+      "crc32": "b4eee55b",
+      "method": 8,
+      "flags": 0,
+      "directory": false,
+      "role": "averaged_reference",
+      "archive": "indoor_raw_noisy",
+      "volume": {
+        "disk": 0,
+        "name": "indoor_raw_noisy_scene1.zip",
+        "bytes": 1230174943,
+        "url": "https://drive.usercontent.google.com/download?id=1NmKbkBShdcy0qF_AYKSTAPCrDrHz9B13&export=download&confirm=t"
+      },
+      "output": "averaged_reference.tiff"
+    },
+    {
+      "name": "scene1/ISO1600/frame1_noisy0.tiff",
+      "disk": 0,
+      "local_offset": 285491694,
+      "size": 4147322,
+      "compressed_size": 3257337,
+      "crc32": "b4453096",
+      "method": 8,
+      "flags": 0,
+      "directory": false,
+      "role": "noisy0",
+      "archive": "indoor_raw_noisy",
+      "volume": {
+        "disk": 0,
+        "name": "indoor_raw_noisy_scene1.zip",
+        "bytes": 1230174943,
+        "url": "https://drive.usercontent.google.com/download?id=1NmKbkBShdcy0qF_AYKSTAPCrDrHz9B13&export=download&confirm=t"
+      },
+      "output": "noisy0.tiff"
+    },
+    {
+      "name": "scene1/ISO1600/frame1_noisy1.tiff",
+      "disk": 0,
+      "local_offset": 361947150,
+      "size": 4147322,
+      "compressed_size": 3257524,
+      "crc32": "005452e9",
+      "method": 8,
+      "flags": 0,
+      "directory": false,
+      "role": "noisy1",
+      "archive": "indoor_raw_noisy",
+      "volume": {
+        "disk": 0,
+        "name": "indoor_raw_noisy_scene1.zip",
+        "bytes": 1230174943,
+        "url": "https://drive.usercontent.google.com/download?id=1NmKbkBShdcy0qF_AYKSTAPCrDrHz9B13&export=download&confirm=t"
+      },
+      "output": "noisy1.tiff"
+    }
+  ],
+  "source_sha256": {
+    "research/4.temporal-consistency/process/external-crvd/archive-catalog001/indoor_raw_gt.json": "0551421b8961f51c3faca608a119ff01c137ea7ad9201406a6192fb3530261e6",
+    "research/4.temporal-consistency/process/external-crvd/archive-catalog001/indoor_raw_noisy.json": "53f38fdfd1fe44e9158d0dd570d1b60d5b90f7db401173f12094b3ebb19311df"
+  },
+  "compressed_payload_bytes": 13496103,
+  "uncompressed_bytes": 20736500,
+  "max_transfer_bytes": 33554432,
+  "max_member_bytes": 8388608,
+  "expected_shape": [
+    1080,
+    1920
+  ],
+  "source_documented_Bayer": "GBRG",
+  "black_level": 240,
+  "white_level": 4095,
+  "scope": "Training source I/O qualification only; four fixed native TIFFs, no GT fit/render/model/CNN/SGD/GPU or independent benchmark claim."
+}

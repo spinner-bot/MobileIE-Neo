@@ -1,0 +1,345 @@
+{
+  "at": "2026-11-12T18:45:04.970374+08:00",
+  "passed": true,
+  "analytic_mean_delta": 0.0,
+  "analytic_unbiased_batch_variance_delta": 0.0,
+  "actual_model": "square_mse",
+  "seed": 0,
+  "discarded_calibration_windows": 2,
+  "discarded_SGD_updates": 0,
+  "actual_model_check": {
+    "learned_parameters_unchanged": true,
+    "changed_buffers": [
+      "head.block1.0.conv_bn.0.running_mean",
+      "head.block1.0.conv_bn.0.running_var",
+      "head.block1.0.conv_bn.0.num_batches_tracked",
+      "head.block1.0.conv1_bn.0.running_mean",
+      "head.block1.0.conv1_bn.0.running_var",
+      "head.block1.0.conv1_bn.0.num_batches_tracked",
+      "head.block1.0.conv2_bn.0.running_mean",
+      "head.block1.0.conv2_bn.0.running_var",
+      "head.block1.0.conv2_bn.0.num_batches_tracked",
+      "head.block1.0.conv_crossh_bn.0.running_mean",
+      "head.block1.0.conv_crossh_bn.0.running_var",
+      "head.block1.0.conv_crossh_bn.0.num_batches_tracked",
+      "head.block1.0.conv_crossv_bn.0.running_mean",
+      "head.block1.0.conv_crossv_bn.0.running_var",
+      "head.block1.0.conv_crossv_bn.0.num_batches_tracked",
+      "head.block1.2.conv_bn.0.running_mean",
+      "head.block1.2.conv_bn.0.running_var",
+      "head.block1.2.conv_bn.0.num_batches_tracked",
+      "head.block1.2.conv1_bn.0.running_mean",
+      "head.block1.2.conv1_bn.0.running_var",
+      "head.block1.2.conv1_bn.0.num_batches_tracked",
+      "head.block1.2.conv_crossh_bn.0.running_mean",
+      "head.block1.2.conv_crossh_bn.0.running_var",
+      "head.block1.2.conv_crossh_bn.0.num_batches_tracked",
+      "head.block1.2.conv_crossv_bn.0.running_mean",
+      "head.block1.2.conv_crossv_bn.0.running_var",
+      "head.block1.2.conv_crossv_bn.0.num_batches_tracked",
+      "body.block1.conv_bn.0.running_mean",
+      "body.block1.conv_bn.0.running_var",
+      "body.block1.conv_bn.0.num_batches_tracked",
+      "body.block1.conv1_bn.0.running_mean",
+      "body.block1.conv1_bn.0.running_var",
+      "body.block1.conv1_bn.0.num_batches_tracked",
+      "body.block1.conv_crossh_bn.0.running_mean",
+      "body.block1.conv_crossh_bn.0.running_var",
+      "body.block1.conv_crossh_bn.0.num_batches_tracked",
+      "body.block1.conv_crossv_bn.0.running_mean",
+      "body.block1.conv_crossv_bn.0.running_var",
+      "body.block1.conv_crossv_bn.0.num_batches_tracked",
+      "att.1.conv_bn.0.running_mean",
+      "att.1.conv_bn.0.running_var",
+      "att.1.conv_bn.0.num_batches_tracked",
+      "att1.0.conv_bn.0.running_mean",
+      "att1.0.conv_bn.0.running_var",
+      "att1.0.conv_bn.0.num_batches_tracked",
+      "tail.conv_bn.0.running_mean",
+      "tail.conv_bn.0.running_var",
+      "tail.conv_bn.0.num_batches_tracked",
+      "tail.conv1_bn.0.running_mean",
+      "tail.conv1_bn.0.running_var",
+      "tail.conv1_bn.0.num_batches_tracked",
+      "tail.conv_crossh_bn.0.running_mean",
+      "tail.conv_crossh_bn.0.running_var",
+      "tail.conv_crossh_bn.0.num_batches_tracked",
+      "tail.conv_crossv_bn.0.running_mean",
+      "tail.conv_crossv_bn.0.running_var",
+      "tail.conv_crossv_bn.0.num_batches_tracked"
+    ],
+    "BN_counts": {
+      "head.block1.0.conv_bn.0": 8,
+      "head.block1.0.conv1_bn.0": 8,
+      "head.block1.0.conv2_bn.0": 8,
+      "head.block1.0.conv_crossh_bn.0": 8,
+      "head.block1.0.conv_crossv_bn.0": 8,
+      "head.block1.2.conv_bn.0": 8,
+      "head.block1.2.conv1_bn.0": 8,
+      "head.block1.2.conv_crossh_bn.0": 8,
+      "head.block1.2.conv_crossv_bn.0": 8,
+      "body.block1.conv_bn.0": 8,
+      "body.block1.conv1_bn.0": 8,
+      "body.block1.conv_crossh_bn.0": 8,
+      "body.block1.conv_crossv_bn.0": 8,
+      "att.1.conv_bn.0": 8,
+      "att1.0.conv_bn.0": 8,
+      "tail.conv_bn.0": 8,
+      "tail.conv1_bn.0": 8,
+      "tail.conv_crossh_bn.0": 8,
+      "tail.conv_crossv_bn.0": 8,
+      "tail_warm.conv_bn.0": 0,
+      "tail_warm.conv1_bn.0": 0,
+      "tail_warm.conv_crossh_bn.0": 0,
+      "tail_warm.conv_crossv_bn.0": 0
+    },
+    "gradients_absent": true
+  },
+  "fold_max_abs_delta": 1.9073486328125e-06,
+  "source": {
+    "model": "square_mse",
+    "seed": 0,
+    "new_step": 4000,
+    "inherited_updates": 4000,
+    "path": ".cache/checkpoints/exploration-r44/stage001/seed0/square_mse-deploy-step4000.pt",
+    "sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+    "training_path": ".cache/checkpoints/exploration-r44/stage001/seed0/square_mse-training-step4000.pt",
+    "training_sha256": "91800b897a2b568d837cf92925b727bb71934f781437733c75323d3562f6998e",
+    "deployment_parameters": 4075,
+    "final_eval_export_max_abs_delta": 2.5033950805664062e-06,
+    "final_export_gate_passed": true
+  },
+  "windows": [
+    [
+      {
+        "video": "drone",
+        "members": [
+          "DAVIS/JPEGImages/480p/drone/00033.jpg",
+          "DAVIS/JPEGImages/480p/drone/00034.jpg",
+          "DAVIS/JPEGImages/480p/drone/00035.jpg",
+          "DAVIS/JPEGImages/480p/drone/00036.jpg"
+        ],
+        "xy": [
+          244,
+          196
+        ],
+        "flip_horizontal": false,
+        "flip_vertical": false,
+        "photons": 80,
+        "source": "davis_synthetic"
+      },
+      {
+        "video": "boxing-fisheye",
+        "members": [
+          "DAVIS/JPEGImages/480p/boxing-fisheye/00047.jpg",
+          "DAVIS/JPEGImages/480p/boxing-fisheye/00048.jpg",
+          "DAVIS/JPEGImages/480p/boxing-fisheye/00049.jpg",
+          "DAVIS/JPEGImages/480p/boxing-fisheye/00050.jpg"
+        ],
+        "xy": [
+          710,
+          255
+        ],
+        "flip_horizontal": true,
+        "flip_vertical": true,
+        "photons": 80,
+        "source": "davis_synthetic"
+      },
+      {
+        "source": "olives_real",
+        "video": "video_104",
+        "indices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "xy": [
+          816,
+          180
+        ],
+        "flip_horizontal": true,
+        "flip_vertical": true,
+        "input_sources": [
+          ".cache/data/olives-r4/Frames/input/video_104/00004.png",
+          ".cache/data/olives-r4/Frames/input/video_104/00005.png",
+          ".cache/data/olives-r4/Frames/input/video_104/00006.png",
+          ".cache/data/olives-r4/Frames/input/video_104/00007.png"
+        ],
+        "target_sources": [
+          ".cache/data/olives-r4/Frames/gt/video_104/00004.png",
+          ".cache/data/olives-r4/Frames/gt/video_104/00005.png",
+          ".cache/data/olives-r4/Frames/gt/video_104/00006.png",
+          ".cache/data/olives-r4/Frames/gt/video_104/00007.png"
+        ]
+      },
+      {
+        "source": "olives_real",
+        "video": "video_52",
+        "indices": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "xy": [
+          165,
+          230
+        ],
+        "flip_horizontal": true,
+        "flip_vertical": false,
+        "input_sources": [
+          ".cache/data/olives-r4/Frames/input/video_52/00001.png",
+          ".cache/data/olives-r4/Frames/input/video_52/00002.png",
+          ".cache/data/olives-r4/Frames/input/video_52/00003.png",
+          ".cache/data/olives-r4/Frames/input/video_52/00004.png"
+        ],
+        "target_sources": [
+          ".cache/data/olives-r4/Frames/gt/video_52/00001.png",
+          ".cache/data/olives-r4/Frames/gt/video_52/00002.png",
+          ".cache/data/olives-r4/Frames/gt/video_52/00003.png",
+          ".cache/data/olives-r4/Frames/gt/video_52/00004.png"
+        ]
+      }
+    ],
+    [
+      {
+        "video": "car-turn",
+        "members": [
+          "DAVIS/JPEGImages/480p/car-turn/00033.jpg",
+          "DAVIS/JPEGImages/480p/car-turn/00034.jpg",
+          "DAVIS/JPEGImages/480p/car-turn/00035.jpg",
+          "DAVIS/JPEGImages/480p/car-turn/00036.jpg"
+        ],
+        "xy": [
+          680,
+          185
+        ],
+        "flip_horizontal": true,
+        "flip_vertical": false,
+        "photons": 20,
+        "source": "davis_synthetic"
+      },
+      {
+        "video": "rallye",
+        "members": [
+          "DAVIS/JPEGImages/480p/rallye/00007.jpg",
+          "DAVIS/JPEGImages/480p/rallye/00008.jpg",
+          "DAVIS/JPEGImages/480p/rallye/00009.jpg",
+          "DAVIS/JPEGImages/480p/rallye/00010.jpg"
+        ],
+        "xy": [
+          186,
+          1
+        ],
+        "flip_horizontal": false,
+        "flip_vertical": false,
+        "photons": 20,
+        "source": "davis_synthetic"
+      },
+      {
+        "source": "olives_real",
+        "video": "video_20",
+        "indices": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "xy": [
+          722,
+          782
+        ],
+        "flip_horizontal": false,
+        "flip_vertical": true,
+        "input_sources": [
+          ".cache/data/olives-r4/Frames/input/video_20/00006.png",
+          ".cache/data/olives-r4/Frames/input/video_20/00007.png",
+          ".cache/data/olives-r4/Frames/input/video_20/00008.png",
+          ".cache/data/olives-r4/Frames/input/video_20/00009.png"
+        ],
+        "target_sources": [
+          ".cache/data/olives-r4/Frames/gt/video_20/00006.png",
+          ".cache/data/olives-r4/Frames/gt/video_20/00007.png",
+          ".cache/data/olives-r4/Frames/gt/video_20/00008.png",
+          ".cache/data/olives-r4/Frames/gt/video_20/00009.png"
+        ]
+      },
+      {
+        "source": "olives_real",
+        "video": "video_11",
+        "indices": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "xy": [
+          634,
+          355
+        ],
+        "flip_horizontal": false,
+        "flip_vertical": false,
+        "input_sources": [
+          ".cache/data/olives-r4/Frames/input/video_11/00007.png",
+          ".cache/data/olives-r4/Frames/input/video_11/00008.png",
+          ".cache/data/olives-r4/Frames/input/video_11/00009.png",
+          ".cache/data/olives-r4/Frames/input/video_11/00010.png"
+        ],
+        "target_sources": [
+          ".cache/data/olives-r4/Frames/gt/video_11/00007.png",
+          ".cache/data/olives-r4/Frames/gt/video_11/00008.png",
+          ".cache/data/olives-r4/Frames/gt/video_11/00009.png",
+          ".cache/data/olives-r4/Frames/gt/video_11/00010.png"
+        ]
+      }
+    ]
+  ],
+  "data": {
+    "manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "verified_files": 384,
+    "scenes": [
+      "video_11",
+      "video_35",
+      "video_92",
+      "video_131",
+      "video_12",
+      "video_20",
+      "video_29",
+      "video_52",
+      "video_59",
+      "video_95",
+      "video_104",
+      "video_122"
+    ],
+    "native_bytes": 2388787200,
+    "real_training_ids": [
+      "video_104",
+      "video_11",
+      "video_12",
+      "video_122",
+      "video_131",
+      "video_20",
+      "video_29",
+      "video_35",
+      "video_52",
+      "video_59",
+      "video_92",
+      "video_95"
+    ],
+    "excluded_native_DEV": [
+      "video_121",
+      "video_15",
+      "video_47",
+      "video_91"
+    ],
+    "all_real_assets_owned": true,
+    "source_manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "synthetic_manifest_sha256": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+    "synthetic_training_videos": 57,
+    "real_tensor_dtype": "uint8 native inputs/GT; float32 /255 after crops",
+    "timing_scope": "Consecutive registered frame indices, not independently verified sensor timing."
+  },
+  "seconds": 31.397312361979857,
+  "cuda_initialized": false
+}

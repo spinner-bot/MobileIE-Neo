@@ -1,0 +1,65 @@
+{
+  "device": "cuda",
+  "seeds": [
+    0,
+    1
+  ],
+  "discarded_updates_each": 2,
+  "expected_discarded_updates": 12,
+  "data_step": 8000,
+  "source_sha256": {
+    "native_moment_core_r73.py": "eda65892c62aa9532167841cb5bc796e3fed9dc1232c042fe71bb9ea92ff9f73",
+    "check_native_moment_r73.py": "ce20f90f48951b6e365ba3b1766667736590041da174301c14891334673ba0bb",
+    "mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5",
+    "training_form_r41.py": "4392fdceb16750ca0a763f4485beec873dc7316d758c95e9eaef042ffceb4ded",
+    "budget_causal_r33.py": "7cfe138a286fdb488973ffe7c5bc93b69ad505af981e22cba824402c491b2e3b",
+    "dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498"
+  },
+  "protocol_sha256": "98e224b57a646bda63571be10578af96f51718c6d2407b01242a55387ec582d1",
+  "data": {
+    "manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "verified_files": 384,
+    "scenes": [
+      "video_11",
+      "video_35",
+      "video_92",
+      "video_131",
+      "video_12",
+      "video_20",
+      "video_29",
+      "video_52",
+      "video_59",
+      "video_95",
+      "video_104",
+      "video_122"
+    ],
+    "native_bytes": 2388787200,
+    "real_training_ids": [
+      "video_104",
+      "video_11",
+      "video_12",
+      "video_122",
+      "video_131",
+      "video_20",
+      "video_29",
+      "video_35",
+      "video_52",
+      "video_59",
+      "video_92",
+      "video_95"
+    ],
+    "excluded_native_DEV": [
+      "video_121",
+      "video_15",
+      "video_47",
+      "video_91"
+    ],
+    "all_real_assets_owned": true,
+    "source_manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "synthetic_manifest_sha256": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+    "synthetic_training_videos": 57,
+    "real_tensor_dtype": "uint8 native inputs/GT; float32 /255 after crops",
+    "timing_scope": "Consecutive registered frame indices, not independently verified sensor timing."
+  },
+  "scope": "Training-source window qualification only. No DEV, formal training, quality ranking or novelty proof."
+}

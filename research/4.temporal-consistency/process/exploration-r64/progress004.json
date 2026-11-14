@@ -1,0 +1,95 @@
+{
+  "at": "2026-11-13T02:05:44.893051+08:00",
+  "scope": "Complete registered training and live final CPU-prefix check; not a final quality summary.",
+  "training": [
+    {
+      "seed": 0,
+      "model_updates": {
+        "plain": 4000,
+        "spatial": 4000,
+        "causal": 4000
+      },
+      "total_new_updates": 12000,
+      "ended_at": "2026-11-13T02:00:26.734940+08:00",
+      "seconds": 2216.7925405759597,
+      "deployment_deltas": {
+        "plain": 1.4603137969970703e-06,
+        "spatial": 1.430511474609375e-06,
+        "causal": 1.6093254089355469e-06
+      }
+    },
+    {
+      "seed": 1,
+      "model_updates": {
+        "plain": 4000,
+        "spatial": 4000,
+        "causal": 4000
+      },
+      "total_new_updates": 12000,
+      "ended_at": "2026-11-13T02:00:21.909234+08:00",
+      "seconds": 2211.910365340009,
+      "deployment_deltas": {
+        "plain": 1.7881393432617188e-06,
+        "spatial": 1.9073486328125e-06,
+        "causal": 2.086162567138672e-06
+      }
+    }
+  ],
+  "CPU_prefix": [
+    {
+      "seed": 0,
+      "completed_newline_prefix_rows": {
+        "per_sequence.jsonl": 21,
+        "per_frame.jsonl": 1344,
+        "prediction_manifest.jsonl": 13
+      },
+      "terminal_runtime_exists": false
+    },
+    {
+      "seed": 1,
+      "completed_newline_prefix_rows": {
+        "per_sequence.jsonl": 21,
+        "per_frame.jsonl": 1344,
+        "prediction_manifest.jsonl": 13
+      },
+      "terminal_runtime_exists": false
+    }
+  ],
+  "processes": [
+    {
+      "pid": 3856930,
+      "argv": [
+        "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python",
+        "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/evaluate_dense_history_r64.py",
+        "--seed",
+        "0"
+      ],
+      "cwd": "/data/Users/zrh/repo/MobileIE-Neo",
+      "start_ticks": "44661869"
+    },
+    {
+      "pid": 3856931,
+      "argv": [
+        "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python",
+        "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/evaluate_dense_history_r64.py",
+        "--seed",
+        "1"
+      ],
+      "cwd": "/data/Users/zrh/repo/MobileIE-Neo",
+      "start_ticks": "44661870"
+    },
+    {
+      "pid": 3831670,
+      "argv": [
+        "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python",
+        "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/finalize_dense_history_r64.py"
+      ],
+      "cwd": "/data/Users/zrh/repo/MobileIE-Neo",
+      "start_ticks": "44445498"
+    }
+  ],
+  "frozen_sources_unchanged": true,
+  "formal_new_updates_total": 24000,
+  "expected_not_completed_quality_rows": 140,
+  "coordinator_terminal_exists": false
+}

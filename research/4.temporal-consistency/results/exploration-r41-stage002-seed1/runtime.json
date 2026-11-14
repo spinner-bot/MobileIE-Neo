@@ -1,0 +1,36 @@
+{
+  "completed_normally": true,
+  "model_updates": {
+    "slim_fp32": 4000,
+    "expanded_fp32": 4000
+  },
+  "total_updates": 8000,
+  "final_deployment_gates": {
+    "slim_fp32": {
+      "path": ".cache/checkpoints/exploration-r41/stage002/seed1/slim_fp32-deploy-step4000.pt",
+      "sha256": "e7d62cf45539dfdac2f194ebdb3eda0c7e3743738609e56fdeb0b01784282296",
+      "training_path": ".cache/checkpoints/exploration-r41/stage002/seed1/slim_fp32-training-step4000.pt",
+      "training_sha256": "ddd61960b5f523c59eb7edc8913482e3ed933c6b2266aa6a8f2f267cee0674a4",
+      "model": "slim_fp32",
+      "seed": 1,
+      "step": 4000,
+      "deployment_parameters": 4075,
+      "final_eval_fold_max_abs_delta": 0.0,
+      "final_fold_gate_passed": true
+    },
+    "expanded_fp32": {
+      "path": ".cache/checkpoints/exploration-r41/stage002/seed1/expanded_fp32-deploy-step4000.pt",
+      "sha256": "6e236e747e0aebc164b41c5647e270ca82aed1bfbf412f1abfef0b0e7bbeec69",
+      "training_path": ".cache/checkpoints/exploration-r41/stage002/seed1/expanded_fp32-training-step4000.pt",
+      "training_sha256": "327a9217f8b0d29f8bb24ea2aa73d83f3e7b8ca704b4be5fd1b5a8a54661b2e4",
+      "model": "expanded_fp32",
+      "seed": 1,
+      "step": 4000,
+      "deployment_parameters": 4075,
+      "final_eval_fold_max_abs_delta": 1.6093254089355469e-06,
+      "final_fold_gate_passed": true
+    }
+  },
+  "wall_seconds": 1062.4871864980087,
+  "scope": "Two matched FP32 training forms; quality is unproven until complete folded evaluation."
+}

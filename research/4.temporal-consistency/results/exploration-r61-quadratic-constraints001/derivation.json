@@ -1,0 +1,41 @@
+{
+  "at": "2026-11-12T23:58:55.733793+08:00",
+  "passed": true,
+  "sympy": "1.14.0",
+  "constraints_solution": {
+    "A": "C + a",
+    "B": "-2*C",
+    "D": "0",
+    "E": "0",
+    "H": "b"
+  },
+  "family": "a*u**2 + b - g*u**2 + 2*g*u*v - g*v**2",
+  "independent_bias": "a*sigma**2 - 2*g*sigma**2",
+  "independent_variance": "4*a**2*mu**2*sigma**2 + 2*a**2*sigma**4 - 4*a*g*sigma**4 + 8*g**2*sigma**4",
+  "correlated_bias": "a*sigma**2 + 2*g*rho*sigma**2 - 2*g*sigma**2",
+  "correlated_variance": "4*a**2*mu**2*sigma**2 + 2*a**2*sigma**4 - 4*a*g*rho**2*sigma**4 + 8*a*g*rho*sigma**4 - 4*a*g*sigma**4 + 8*g**2*rho**2*sigma**4 - 16*g**2*rho*sigma**4 + 8*g**2*sigma**4",
+  "drift_bias": "a*sigma**2 - g*mp**2 + 2*g*mp*mt - g*mt**2 - 2*g*sigma**2",
+  "independent_MSE": "4*a**2*mu**2*sigma**2 + 3*a**2*sigma**4 - 8*a*g*sigma**4 + 12*g**2*sigma**4",
+  "exact_zero_residuals": {
+    "family": "0",
+    "diagonal_consistency": "0",
+    "no_history_first_derivative_at_equal_means": "0",
+    "independent_bias": "0",
+    "independent_variance": "0",
+    "linear_variance_coefficient_for_all_rho": "0",
+    "correlated_bias": "0",
+    "deterministic_drift_penalty": "0",
+    "half_correction_zero_independent_bias": "0",
+    "half_correction_same_gaussian_variance_as_raw": "0",
+    "independent_mse": "0",
+    "mse_stationary_coefficient": "0"
+  },
+  "source_sha256": "ca3cf0af12472f43bb7d201d9fe9c567ec4b85e37717394aef9f18f32c43ce14",
+  "protocol_sha256": "4d711f78629590116abf4876894b7ac9d0ed7022e878f9190f8fb19367e724b4",
+  "new_CNN": 0,
+  "SGD": 0,
+  "image_draws": 0,
+  "Monte_Carlo_draws": 0,
+  "GPU": false,
+  "scope": "Elementary scalar constant-coefficient Gaussian calculation, not a full-network bound or new theory/method."
+}

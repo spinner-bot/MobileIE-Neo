@@ -1,0 +1,97 @@
+{
+  "raw_max_delta": 0.0,
+  "passed": true,
+  "context": [
+    {
+      "video": "classic-car",
+      "members": [
+        "DAVIS/JPEGImages/480p/classic-car/00003.jpg",
+        "DAVIS/JPEGImages/480p/classic-car/00004.jpg",
+        "DAVIS/JPEGImages/480p/classic-car/00005.jpg",
+        "DAVIS/JPEGImages/480p/classic-car/00006.jpg"
+      ],
+      "xy": [
+        38,
+        290
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": true,
+      "photons": 20,
+      "source": "davis_synthetic"
+    },
+    {
+      "video": "flamingo",
+      "members": [
+        "DAVIS/JPEGImages/480p/flamingo/00006.jpg",
+        "DAVIS/JPEGImages/480p/flamingo/00007.jpg",
+        "DAVIS/JPEGImages/480p/flamingo/00008.jpg",
+        "DAVIS/JPEGImages/480p/flamingo/00009.jpg"
+      ],
+      "xy": [
+        46,
+        83
+      ],
+      "flip_horizontal": true,
+      "flip_vertical": true,
+      "photons": 20,
+      "source": "davis_synthetic"
+    },
+    {
+      "source": "olives_real",
+      "video": "video_12",
+      "indices": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "xy": [
+        859,
+        187
+      ],
+      "flip_horizontal": true,
+      "flip_vertical": true,
+      "input_sources": [
+        ".cache/data/olives-r4/Frames/input/video_12/00005.png",
+        ".cache/data/olives-r4/Frames/input/video_12/00006.png",
+        ".cache/data/olives-r4/Frames/input/video_12/00007.png",
+        ".cache/data/olives-r4/Frames/input/video_12/00008.png"
+      ],
+      "target_sources": [
+        ".cache/data/olives-r4/Frames/gt/video_12/00005.png",
+        ".cache/data/olives-r4/Frames/gt/video_12/00006.png",
+        ".cache/data/olives-r4/Frames/gt/video_12/00007.png",
+        ".cache/data/olives-r4/Frames/gt/video_12/00008.png"
+      ]
+    },
+    {
+      "source": "olives_real",
+      "video": "video_52",
+      "indices": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "xy": [
+        1710,
+        56
+      ],
+      "flip_horizontal": true,
+      "flip_vertical": false,
+      "input_sources": [
+        ".cache/data/olives-r4/Frames/input/video_52/00006.png",
+        ".cache/data/olives-r4/Frames/input/video_52/00007.png",
+        ".cache/data/olives-r4/Frames/input/video_52/00008.png",
+        ".cache/data/olives-r4/Frames/input/video_52/00009.png"
+      ],
+      "target_sources": [
+        ".cache/data/olives-r4/Frames/gt/video_52/00006.png",
+        ".cache/data/olives-r4/Frames/gt/video_52/00007.png",
+        ".cache/data/olives-r4/Frames/gt/video_52/00008.png",
+        ".cache/data/olives-r4/Frames/gt/video_52/00009.png"
+      ]
+    }
+  ],
+  "BN_calls_each": 4
+}

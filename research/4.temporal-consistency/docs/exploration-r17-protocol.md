@@ -11,3 +11,5 @@ SDSD官方commit07330bb0ac124d2d56f6e92908d650dde3f7f7c2，train/test YAML blob�
 固定零SDSD更新迁移候选：原MobileIE、StableLLVE官方clean；R14 native plain双seed4000；R16 spatial/raw_history/aligned_history双seed4000。raw/共同官方MobileIE-teacher halfFB alpha.1，真实历史/current替代和reset对照。另以R14 native plain为增强基底接FastDVDnet sigma5/15的window/five_current，单独注明两未来。不得按该dev挑checkpoint、sigma或组合，全部固定项报告；若任何加载/来源检查失败，报告失败而非换更好模型。
 
 这是跨数据源探索，无新颖性或公平SOTA排名声明。后续独立正式验证还需完整官方测试协议、充分训练、自然夜景/更复杂动态、真实全链路效率。获取可访问性先在CPU推进，GPU评价待当前R16完成后另经空闲预检，不设墙钟截断。
+
+接续修正（2026-11-13T03:41:14.063299+08:00；作者Codex  (sqs_A100)）：R67官方源恢复后首次目录显示低光/GT文件名起点不同，原“同名”假设不适用。已读固定官方loader，两侧各自排序、按相同位置idx对应；R67在任何图像获取/解码前明确修订，仍四原train来源/各侧前16，不按同名交集或内容调时间偏移。R17历史候选评价不自动重启，后续模型另登记。

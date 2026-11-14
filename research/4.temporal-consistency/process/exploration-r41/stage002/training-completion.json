@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "observed_at": "2026-11-12T13:17:48.689906+08:00",
+  "total_new_stage002_updates": 16000,
+  "prior_aborted_stage001_updates": 1568,
+  "seeds": [
+    {
+      "seed": 0,
+      "model_updates": {
+        "slim_fp32": 4000,
+        "expanded_fp32": 4000
+      },
+      "trace_rows": 8000,
+      "window_contexts_equal_R40_all_steps": true,
+      "shared_windows_per_source": {
+        "davis_synthetic": 8000,
+        "olives_real": 8000
+      },
+      "wall_seconds": 1066.8689415870467,
+      "final_fold_max_abs_delta": {
+        "slim_fp32": 0.0,
+        "expanded_fp32": 1.6689300537109375e-06
+      }
+    },
+    {
+      "seed": 1,
+      "model_updates": {
+        "slim_fp32": 4000,
+        "expanded_fp32": 4000
+      },
+      "trace_rows": 8000,
+      "window_contexts_equal_R40_all_steps": true,
+      "shared_windows_per_source": {
+        "davis_synthetic": 8000,
+        "olives_real": 8000
+      },
+      "wall_seconds": 1062.4871864980087,
+      "final_fold_max_abs_delta": {
+        "slim_fp32": 0.0,
+        "expanded_fp32": 1.6093254089355469e-06
+      }
+    }
+  ],
+  "scope": "Scientific data and budget controls; no optimizer replay, no quality or phone-speed claim."
+}

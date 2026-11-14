@@ -1,0 +1,117 @@
+{
+  "device": "cpu",
+  "torch_threads": 2,
+  "opencv_threads": 1,
+  "anchor_ids": [
+    "official_LOL",
+    "R26_seed0",
+    "R26_seed1",
+    "R34_seed0",
+    "R34_seed1"
+  ],
+  "checkpoints": [
+    {
+      "mode": "copy",
+      "objective": "mse",
+      "train_seed": 0,
+      "path": ".cache/checkpoints/exploration-r26/plain-mse-seed0/step4000.pth",
+      "sha256": "2f9885d66e48fc22779c5e73a41b2c1f378bde3b4a5497a910274be216f85c7a",
+      "step": 4000,
+      "reused_R26_training": true,
+      "training_config_sha256": "11d99e8a69cc881dd6e7027080a7165ecb65cb57aacb6ea6896090f208b5be1d"
+    },
+    {
+      "mode": "copy",
+      "objective": "mse",
+      "train_seed": 1,
+      "path": ".cache/checkpoints/exploration-r26/plain-mse-seed1/step4000.pth",
+      "sha256": "d421b5a3b383deddd571cd0dd1abb35e45526cc76b6566a8052f7ab8abcc2111",
+      "step": 4000,
+      "reused_R26_training": true,
+      "training_config_sha256": "8af4529a4c41103fc7e003dfc43e61c7db2207fb0734c4aebecc79faf6c89242"
+    },
+    {
+      "anchor": "R34_seed0",
+      "path": ".cache/checkpoints/exploration-r34/seed0/original-step4000.pt",
+      "sha256": "d1da425a8df87fdce81f9e049c57115cbe23a66f7773f5c149b1f83ab9f32344",
+      "step": 4000,
+      "model": "original",
+      "seed": 0
+    },
+    {
+      "anchor": "R34_seed1",
+      "path": ".cache/checkpoints/exploration-r34/seed1/original-step4000.pt",
+      "sha256": "fd6a357b6d3bf087d8f78a35c323ef02becce34df52bfe342c31c8882aaf8ccd",
+      "step": 4000,
+      "model": "original",
+      "seed": 1
+    }
+  ],
+  "official_weights_sha256": "d40a930fbc0435f47ce08dda17b1c630b86a501be9423b8f48dab14722fb5548",
+  "input_index_sha256": "ec00801b04b873ead0025af91af441b783da3f08c87cf24e9c136a4268ffb43c",
+  "scenes": [
+    {
+      "domain": "native_crop",
+      "scene": "video_15",
+      "frames": 16,
+      "path": ".cache/experiments/exploration-r10/video_15_native_crop.npz",
+      "sha256": "08708be23625b82ff4da2c1679e2def9e4092e7018aa03dcd8072593dce2cc93",
+      "shape": [
+        16,
+        288,
+        512,
+        3
+      ]
+    },
+    {
+      "domain": "native_crop",
+      "scene": "video_47",
+      "frames": 16,
+      "path": ".cache/experiments/exploration-r10/video_47_native_crop.npz",
+      "sha256": "00b20972a571b776403fc7c65f28c2ae32dd6140f6569adf2190b38434c012f6",
+      "shape": [
+        16,
+        288,
+        512,
+        3
+      ]
+    },
+    {
+      "domain": "native_crop",
+      "scene": "video_91",
+      "frames": 16,
+      "path": ".cache/experiments/exploration-r10/video_91_native_crop.npz",
+      "sha256": "6e198a4a28ee814b67ae9237aa30f05ea1e086c785480da5c9c97d73adabb22a",
+      "shape": [
+        16,
+        288,
+        512,
+        3
+      ]
+    },
+    {
+      "domain": "native_crop",
+      "scene": "video_121",
+      "frames": 16,
+      "path": ".cache/experiments/exploration-r10/video_121_native_crop.npz",
+      "sha256": "a5e00a35c79271f57e269ea723c1bcecb4834abedce2db6098e73c33efd7b4e9",
+      "shape": [
+        16,
+        288,
+        512,
+        3
+      ]
+    }
+  ],
+  "protocol_sha256": "c9320556bdeabfb97e6200eb4366338305215871d4944438def37c1b547eda3c",
+  "source_sha256": {
+    "evaluate_anchor_transfer_r39.py": "6cfc38e105fae11b0b0a353e6b5bdaf00a1287f2200749926b61bd8a336c2db5",
+    "half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+    "aligned_raw_history_r11.py": "e367727401f82ccf0bccaf8d88f904e4aebf8b78186f0539eedeed222b2d2227",
+    "transport_evaluation_r28.py": "57dbcac83b4a079822be4c6b98bb6a2b2f4e58b80f73d5d16105459b8f42c0b2",
+    "exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+    "video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0"
+  },
+  "revision": "8295849372289d9d66d40c16dc2fe3714a9405a9",
+  "scope": "Four reused paired real ND DEV crops, common CPU. No new model training, held-out final pixels, natural-night benchmark or phone latency."
+}

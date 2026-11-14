@@ -1,0 +1,68 @@
+\section{Problem and deployment constraints}
+\label{sec:problem}
+An image enhancer maps a low-light observation $x_t$ to an enhanced frame
+$z_t=f_\theta(x_t)$. A video system must also preserve legitimate scene changes,
+avoid noise-driven fluctuations, and fit its computation and memory budget.
+Low parameter count alone does not establish any of these properties.
+MobileIE~\cite{mobileie} provides a useful compact starting point. Our
+12-channel low-light deployment instance has 4,075 parameters; \emph{4K parameters}
+does not mean a video resolution of $4\mathrm{K}$.
+
+We distinguish a stateless predictor from a stateful one:
+\[
+ z_t=f_\theta(x_t),\qquad
+ (z_t,h_t)=F_\theta(x_t,h_{t-1}).
+\]
+A training objective may use neighbouring frames without introducing
+$h_{t-1}$ at deployment. Conversely, a computation whose output changes for
+two histories with the same current frame cannot generally be represented
+exactly by a function of that current frame alone. Spatial convolution/BN
+folding does not eliminate this information dependency.
+
+Our evaluation therefore reports quality, temporal error, parameters,
+convolution operations, online history, and measured pipeline latency as
+separate quantities. A small parameter change can still introduce
+full-resolution arithmetic or memory traffic. Inference motion estimation,
+sampling, padding, and buffering belong to the deployed pipeline even when
+they have no learned parameters. Server CPU measurements are not phone
+measurements.
+
+\subsection{The original nonlinear pathway}
+The retained MobileIE backbone consists of a convolutional head, a second
+feature block, channel/spatial gates, and an RGB readout~\cite{mobileie}.
+Its feature self-transform (FST) has the form
+\[
+ q(u)=(w_1u)(w_2u)+b=a u^2+b,
+\]
+where $w_1,w_2$ are shared scalars and $b$ is channel-wise. Channel attention
+uses global average pooling followed by a $12\!\times\!12$ pointwise map and
+a sigmoid. The spatial gate depends on the channel-weighted feature maximum.
+The learned enhancement mapping, global statistics, and local nonlinear
+response can consequently interact.
+
+For a scalar perturbation $\epsilon$, the identity
+\[
+ q(u+\epsilon)-q(u)=2au\epsilon+a\epsilon^2
+\]
+motivates examining noise sensitivity at the root operator. If the
+perturbation has conditional mean zero, its conditional mean shift is
+$a\,\mathbb E[\epsilon^2]$. This elementary identity is not a new
+contribution. It neither proves that FST is the sole cause of video flicker
+nor establishes an unbiased correction for features after nonlinear
+convolutions, ISP processing, clipping, and quantization.
+
+\subsection{Known mechanisms and the remaining research question}
+Training-time reparameterization, channel multiplication, temporal
+regularization, and classical motion-compensated fusion are established
+tools. FastDVDnet~\cite{fastdvdnet}, for example, learns multiframe denoising
+without an explicit flow estimator. TLC~\cite{tlc} addresses a different issue:
+the spatial-statistic mismatch between patch training and whole-image
+inference. Learnable safe rational activations also have clear
+precedents~\cite{pau}.
+
+The unresolved question is whether an independently justified video
+adaptation can improve the quality--stability--cost trade-off over strong
+matched controls in this extremely compact setting. Neither assembling these
+known components nor obtaining a nonzero historical effect answers that
+question. The current candidate remains an experiment until its controlled
+results, external validity, and deployment costs support a defensible claim.

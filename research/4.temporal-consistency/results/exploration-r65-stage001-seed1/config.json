@@ -1,0 +1,124 @@
+{
+  "at": "2026-11-13T02:53:22.594999+08:00",
+  "seed": 1,
+  "arms": [
+    "spatial_l1",
+    "commute20"
+  ],
+  "steps_per_arm": 8000,
+  "total_formal_updates": 16000,
+  "data_steps": [
+    0,
+    7999
+  ],
+  "batch": 4,
+  "frames": 4,
+  "crop": 128,
+  "parameters_per_arm": 4316259,
+  "initialization": {
+    "repository": "https://github.com/zkawfanx/StableLLVE",
+    "commit": "4cc070da328ffadc8498285985aa98175e473bc5",
+    "url": "https://raw.githubusercontent.com/zkawfanx/StableLLVE/4cc070da328ffadc8498285985aa98175e473bc5/checkpoint.pth",
+    "path": ".cache/pretrained/stablellve/4cc070da328ffadc8498285985aa98175e473bc5/checkpoint.pth",
+    "sha256": "277e4d29566709a31f8f25c401396e9bd9c70395e6da36513cd9d9a83e005ad9",
+    "git_blob_sha1": "f819f8daf6f9ad7e2548480ae2584935f4922a45",
+    "bytes": 17274710,
+    "sources": [
+      {
+        "path": "third_party/stablellve/LICENSE",
+        "sha256": "2a09d7de462e5b18f53c283eb006f9546c729a46f4ae53def95654b0cc7fe475",
+        "git_blob_sha1": "f361df58be63bc15d953dd54ddf7bb83bd10c191",
+        "bytes": 1065
+      },
+      {
+        "path": "third_party/stablellve/model.py",
+        "sha256": "86b9d7e2b836dde336eb09aaea44b9e5c09b0e05576e6a1656d01ce3a84cd1a1",
+        "git_blob_sha1": "cccf6808fbea20ddedae55bdd5f83187b6797b7f",
+        "bytes": 3821
+      }
+    ],
+    "upstream_manifest_sha256": "e6964b3947f1987c18685cf7bb787c185bc100f3fc83e266e4a80652ba8a79a2",
+    "scope": "official synthetic-clean training, unsuitable-for-noise caveat retained; BGR source convention; no new training"
+  },
+  "data": {
+    "manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "verified_files": 384,
+    "scenes": [
+      "video_11",
+      "video_35",
+      "video_92",
+      "video_131",
+      "video_12",
+      "video_20",
+      "video_29",
+      "video_52",
+      "video_59",
+      "video_95",
+      "video_104",
+      "video_122"
+    ],
+    "native_bytes": 2388787200,
+    "real_training_ids": [
+      "video_104",
+      "video_11",
+      "video_12",
+      "video_122",
+      "video_131",
+      "video_20",
+      "video_29",
+      "video_35",
+      "video_52",
+      "video_59",
+      "video_92",
+      "video_95"
+    ],
+    "excluded_native_DEV": [
+      "video_121",
+      "video_15",
+      "video_47",
+      "video_91"
+    ],
+    "all_real_assets_owned": true,
+    "source_manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "synthetic_manifest_sha256": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+    "synthetic_training_videos": 57,
+    "real_tensor_dtype": "uint8 native inputs/GT; float32 /255 after crops",
+    "timing_scope": "Consecutive registered frame indices, not independently verified sensor timing."
+  },
+  "objective": "unclipped L1 or L1+20*mean absolute F(W(x))-W(F(x)), first3 source frames",
+  "flow": "half-FB training GT after crop/flip; field only, no next noisy input/teacher target/mask",
+  "warp": "official endpoint grid, reflection, align_corners=False; original CUDA nondeterminism retained",
+  "channel_convention": "training RGB converted to/from official BGR at every network call",
+  "optimizer": "fresh Adam initially and after4000",
+  "lr": 0.0001,
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "eps": 1e-08,
+  "weight_decay": 0,
+  "clip": 1,
+  "FP32": true,
+  "TF32": false,
+  "cudnn_deterministic": true,
+  "deterministic_algorithms_warn_only": true,
+  "selection": "final8000 only; no hyperparameter/seed search",
+  "CPU_gate_sha256": "63865c950f178de6021c947bf1034a68f8eac71859974864d0c719666e8ee843",
+  "discarded_cuda_gate_updates": 2,
+  "protocol_sha256": "e6c99b7175e30982b6038d6b4000d8a71fc7a522570c4d3a1f58c007865a5966",
+  "source_sha256": {
+    "train_stablellve_task_r65.py": "336b8e8cd1ca6bce32cd3d649c620bc37b3b12d0fb4d939387a70a30d68f1953",
+    "check_stablellve_task_r65.py": "ca5ec5034c4fa325a54a2122a6a0abda27de0d20328e55070cae62ec257e7947",
+    "stablellve_task_r65.py": "dec0e6afdb05fd2a6c3750710ee44a2234af34c0639646c5a85cb6afdb85ce78",
+    "stablellve_adapter_r15.py": "b9d61a40a6b16f143c9c4874d04dbae99b7d017d95ce917839319b011b575cbd",
+    "mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5",
+    "dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498",
+    "native_training_r14.py": "588b505ede11ac9f0d747ad1c16b1c118a7bbbbba7405ce918a6163d133d69a1",
+    "half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+    "training_form_r41.py": "4392fdceb16750ca0a763f4485beec873dc7316d758c95e9eaef042ffceb4ded",
+    "gpu_guard.py": "e0a5050f47d64dbf75fab4146a276f50e3464d07e6a799ad8ccd2c69e8e3a535"
+  },
+  "upstream_model_sha256": "86b9d7e2b836dde336eb09aaea44b9e5c09b0e05576e6a1656d01ce3a84cd1a1",
+  "revision": "5a152060fb6e051207cc3aec548bccab1e3995ce",
+  "scope": "Published network/loss fixed-budget adaptation; changed data/flow/crop/initialization, no full-paper reproduction/new method/phone cost."
+}

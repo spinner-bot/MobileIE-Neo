@@ -1,0 +1,583 @@
+{
+  "created_at": "2026-11-12T14:12:09.872485+08:00",
+  "device": "cpu",
+  "passed": true,
+  "seeds": [
+    {
+      "seed": 0,
+      "initialization": {
+        "source_checkpoint": {
+          "path": ".cache/checkpoints/exploration-r41/stage002/seed0/expanded_fp32-deploy-step4000.pt",
+          "sha256": "5dd7160408a8402646f61f1e2ed477a787b0e3075dba96e055f1e6c81e3e7232",
+          "training_path": ".cache/checkpoints/exploration-r41/stage002/seed0/expanded_fp32-training-step4000.pt",
+          "training_sha256": "6a22f1cf952074a2f4a29f52a38ff16cd9c13d4949013690eebba1b369124da0",
+          "model": "expanded_fp32",
+          "seed": 0,
+          "step": 4000,
+          "deployment_parameters": 4075,
+          "final_eval_fold_max_abs_delta": 1.6689300537109375e-06,
+          "final_fold_gate_passed": true
+        },
+        "scales": [
+          38.101352864041765,
+          34.6184807632113
+        ],
+        "calibration_sha256": "7b905855a391b4a09f472c200d16a69d15975ffbe7a5af3fe268bb9e0dd026ff",
+        "optimizer": "Common fresh Adam; old moments not restored",
+        "parameters": {
+          "square_mse": {
+            "total": 49978,
+            "active": 47239
+          },
+          "square_temporal": {
+            "total": 49978,
+            "active": 47239
+          },
+          "bounded_mse": {
+            "total": 49980,
+            "active": 47241
+          },
+          "bounded_temporal": {
+            "total": 49980,
+            "active": 47241
+          }
+        }
+      },
+      "windows": [
+        {
+          "video": "dog-agility",
+          "members": [
+            "DAVIS/JPEGImages/480p/dog-agility/00010.jpg",
+            "DAVIS/JPEGImages/480p/dog-agility/00011.jpg",
+            "DAVIS/JPEGImages/480p/dog-agility/00012.jpg",
+            "DAVIS/JPEGImages/480p/dog-agility/00013.jpg"
+          ],
+          "xy": [
+            242,
+            322
+          ],
+          "flip_horizontal": true,
+          "flip_vertical": false,
+          "photons": 20,
+          "source": "davis_synthetic"
+        },
+        {
+          "video": "dog-gooses",
+          "members": [
+            "DAVIS/JPEGImages/480p/dog-gooses/00053.jpg",
+            "DAVIS/JPEGImages/480p/dog-gooses/00054.jpg",
+            "DAVIS/JPEGImages/480p/dog-gooses/00055.jpg",
+            "DAVIS/JPEGImages/480p/dog-gooses/00056.jpg"
+          ],
+          "xy": [
+            345,
+            64
+          ],
+          "flip_horizontal": true,
+          "flip_vertical": false,
+          "photons": 80,
+          "source": "davis_synthetic"
+        },
+        {
+          "source": "olives_real",
+          "video": "video_29",
+          "indices": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "xy": [
+            738,
+            568
+          ],
+          "flip_horizontal": false,
+          "flip_vertical": true,
+          "input_sources": [
+            ".cache/data/olives-r4/Frames/input/video_29/00005.png",
+            ".cache/data/olives-r4/Frames/input/video_29/00006.png",
+            ".cache/data/olives-r4/Frames/input/video_29/00007.png",
+            ".cache/data/olives-r4/Frames/input/video_29/00008.png"
+          ],
+          "target_sources": [
+            ".cache/data/olives-r4/Frames/gt/video_29/00005.png",
+            ".cache/data/olives-r4/Frames/gt/video_29/00006.png",
+            ".cache/data/olives-r4/Frames/gt/video_29/00007.png",
+            ".cache/data/olives-r4/Frames/gt/video_29/00008.png"
+          ]
+        },
+        {
+          "source": "olives_real",
+          "video": "video_104",
+          "indices": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "xy": [
+            468,
+            842
+          ],
+          "flip_horizontal": true,
+          "flip_vertical": true,
+          "input_sources": [
+            ".cache/data/olives-r4/Frames/input/video_104/00005.png",
+            ".cache/data/olives-r4/Frames/input/video_104/00006.png",
+            ".cache/data/olives-r4/Frames/input/video_104/00007.png",
+            ".cache/data/olives-r4/Frames/input/video_104/00008.png"
+          ],
+          "target_sources": [
+            ".cache/data/olives-r4/Frames/gt/video_104/00005.png",
+            ".cache/data/olives-r4/Frames/gt/video_104/00006.png",
+            ".cache/data/olives-r4/Frames/gt/video_104/00007.png",
+            ".cache/data/olives-r4/Frames/gt/video_104/00008.png"
+          ]
+        }
+      ],
+      "valid_fraction": 0.6742350459098816,
+      "initial_checks": [
+        {
+          "model": "square_mse",
+          "train": true,
+          "max_abs_delta": 0.0
+        },
+        {
+          "model": "square_temporal",
+          "train": true,
+          "max_abs_delta": 0.0
+        },
+        {
+          "model": "bounded_mse",
+          "train": true,
+          "max_abs_delta": 0.0
+        },
+        {
+          "model": "bounded_temporal",
+          "train": true,
+          "max_abs_delta": 0.0
+        },
+        {
+          "model": "square_mse",
+          "train": false,
+          "max_abs_delta": 0.0
+        },
+        {
+          "model": "square_temporal",
+          "train": false,
+          "max_abs_delta": 0.0
+        },
+        {
+          "model": "bounded_mse",
+          "train": false,
+          "max_abs_delta": 0.0
+        },
+        {
+          "model": "bounded_temporal",
+          "train": false,
+          "max_abs_delta": 0.0
+        }
+      ],
+      "backward_checks": [
+        {
+          "model": "square_mse",
+          "MSE": 0.004069630056619644,
+          "time_MSE": 0.0015399034600704908,
+          "kappa_gradients": null
+        },
+        {
+          "model": "square_temporal",
+          "MSE": 0.004069630056619644,
+          "time_MSE": 0.0015399034600704908,
+          "kappa_gradients": null
+        },
+        {
+          "model": "bounded_mse",
+          "MSE": 0.004069630056619644,
+          "time_MSE": 0.0015399034600704908,
+          "kappa_gradients": {
+            "head": -0.01334038469940424,
+            "body": -0.029482059180736542
+          }
+        },
+        {
+          "model": "bounded_temporal",
+          "MSE": 0.004069630056619644,
+          "time_MSE": 0.0015399034600704908,
+          "kappa_gradients": {
+            "head": -0.016240984201431274,
+            "body": -0.028806321322917938
+          }
+        }
+      ],
+      "discarded_updates": [
+        {
+          "model": "bounded_temporal",
+          "step": 1,
+          "loss": 0.004454605747014284,
+          "gradient_norm_before_clip": 0.5494297742843628,
+          "kappa": {
+            "head": 1.6240983669035813e-08,
+            "body": 2.880632088420043e-08
+          }
+        },
+        {
+          "model": "bounded_temporal",
+          "step": 2,
+          "loss": 0.004454304929822683,
+          "gradient_norm_before_clip": 0.5492546558380127,
+          "kappa": {
+            "head": 3.248704416591863e-08,
+            "body": 5.76040051214477e-08
+          }
+        }
+      ],
+      "export_checks": [
+        {
+          "model": "square_mse",
+          "max_abs_delta": 2.86102294921875e-06,
+          "parameters": 4075
+        },
+        {
+          "model": "square_temporal",
+          "max_abs_delta": 2.86102294921875e-06,
+          "parameters": 4075
+        },
+        {
+          "model": "bounded_mse",
+          "max_abs_delta": 2.86102294921875e-06,
+          "parameters": 4077
+        },
+        {
+          "model": "bounded_temporal",
+          "max_abs_delta": 2.1457672119140625e-06,
+          "parameters": 4077
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "initialization": {
+        "source_checkpoint": {
+          "path": ".cache/checkpoints/exploration-r41/stage002/seed1/expanded_fp32-deploy-step4000.pt",
+          "sha256": "6e236e747e0aebc164b41c5647e270ca82aed1bfbf412f1abfef0b0e7bbeec69",
+          "training_path": ".cache/checkpoints/exploration-r41/stage002/seed1/expanded_fp32-training-step4000.pt",
+          "training_sha256": "327a9217f8b0d29f8bb24ea2aa73d83f3e7b8ca704b4be5fd1b5a8a54661b2e4",
+          "model": "expanded_fp32",
+          "seed": 1,
+          "step": 4000,
+          "deployment_parameters": 4075,
+          "final_eval_fold_max_abs_delta": 1.6093254089355469e-06,
+          "final_fold_gate_passed": true
+        },
+        "scales": [
+          38.7762679212063,
+          33.40227442171946
+        ],
+        "calibration_sha256": "7b905855a391b4a09f472c200d16a69d15975ffbe7a5af3fe268bb9e0dd026ff",
+        "optimizer": "Common fresh Adam; old moments not restored",
+        "parameters": {
+          "square_mse": {
+            "total": 49978,
+            "active": 47239
+          },
+          "square_temporal": {
+            "total": 49978,
+            "active": 47239
+          },
+          "bounded_mse": {
+            "total": 49980,
+            "active": 47241
+          },
+          "bounded_temporal": {
+            "total": 49980,
+            "active": 47241
+          }
+        }
+      },
+      "windows": [
+        {
+          "video": "flamingo",
+          "members": [
+            "DAVIS/JPEGImages/480p/flamingo/00034.jpg",
+            "DAVIS/JPEGImages/480p/flamingo/00035.jpg",
+            "DAVIS/JPEGImages/480p/flamingo/00036.jpg",
+            "DAVIS/JPEGImages/480p/flamingo/00037.jpg"
+          ],
+          "xy": [
+            508,
+            69
+          ],
+          "flip_horizontal": false,
+          "flip_vertical": false,
+          "photons": 80,
+          "source": "davis_synthetic"
+        },
+        {
+          "video": "scooter-gray",
+          "members": [
+            "DAVIS/JPEGImages/480p/scooter-gray/00047.jpg",
+            "DAVIS/JPEGImages/480p/scooter-gray/00048.jpg",
+            "DAVIS/JPEGImages/480p/scooter-gray/00049.jpg",
+            "DAVIS/JPEGImages/480p/scooter-gray/00050.jpg"
+          ],
+          "xy": [
+            514,
+            195
+          ],
+          "flip_horizontal": true,
+          "flip_vertical": true,
+          "photons": 80,
+          "source": "davis_synthetic"
+        },
+        {
+          "source": "olives_real",
+          "video": "video_20",
+          "indices": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "xy": [
+            866,
+            531
+          ],
+          "flip_horizontal": true,
+          "flip_vertical": true,
+          "input_sources": [
+            ".cache/data/olives-r4/Frames/input/video_20/00006.png",
+            ".cache/data/olives-r4/Frames/input/video_20/00007.png",
+            ".cache/data/olives-r4/Frames/input/video_20/00008.png",
+            ".cache/data/olives-r4/Frames/input/video_20/00009.png"
+          ],
+          "target_sources": [
+            ".cache/data/olives-r4/Frames/gt/video_20/00006.png",
+            ".cache/data/olives-r4/Frames/gt/video_20/00007.png",
+            ".cache/data/olives-r4/Frames/gt/video_20/00008.png",
+            ".cache/data/olives-r4/Frames/gt/video_20/00009.png"
+          ]
+        },
+        {
+          "source": "olives_real",
+          "video": "video_104",
+          "indices": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "xy": [
+            476,
+            40
+          ],
+          "flip_horizontal": true,
+          "flip_vertical": false,
+          "input_sources": [
+            ".cache/data/olives-r4/Frames/input/video_104/00008.png",
+            ".cache/data/olives-r4/Frames/input/video_104/00009.png",
+            ".cache/data/olives-r4/Frames/input/video_104/00010.png",
+            ".cache/data/olives-r4/Frames/input/video_104/00011.png"
+          ],
+          "target_sources": [
+            ".cache/data/olives-r4/Frames/gt/video_104/00008.png",
+            ".cache/data/olives-r4/Frames/gt/video_104/00009.png",
+            ".cache/data/olives-r4/Frames/gt/video_104/00010.png",
+            ".cache/data/olives-r4/Frames/gt/video_104/00011.png"
+          ]
+        }
+      ],
+      "valid_fraction": 0.6210734248161316,
+      "initial_checks": [
+        {
+          "model": "square_mse",
+          "train": true,
+          "max_abs_delta": 0.0
+        },
+        {
+          "model": "square_temporal",
+          "train": true,
+          "max_abs_delta": 0.0
+        },
+        {
+          "model": "bounded_mse",
+          "train": true,
+          "max_abs_delta": 0.0
+        },
+        {
+          "model": "bounded_temporal",
+          "train": true,
+          "max_abs_delta": 0.0
+        },
+        {
+          "model": "square_mse",
+          "train": false,
+          "max_abs_delta": 0.0
+        },
+        {
+          "model": "square_temporal",
+          "train": false,
+          "max_abs_delta": 0.0
+        },
+        {
+          "model": "bounded_mse",
+          "train": false,
+          "max_abs_delta": 0.0
+        },
+        {
+          "model": "bounded_temporal",
+          "train": false,
+          "max_abs_delta": 0.0
+        }
+      ],
+      "backward_checks": [
+        {
+          "model": "square_mse",
+          "MSE": 0.0016920751659199595,
+          "time_MSE": 0.0009931557578966022,
+          "kappa_gradients": null
+        },
+        {
+          "model": "square_temporal",
+          "MSE": 0.0016920751659199595,
+          "time_MSE": 0.0009931557578966022,
+          "kappa_gradients": null
+        },
+        {
+          "model": "bounded_mse",
+          "MSE": 0.0016920751659199595,
+          "time_MSE": 0.0009931557578966022,
+          "kappa_gradients": {
+            "head": -0.01184122171252966,
+            "body": -0.0058740475215017796
+          }
+        },
+        {
+          "model": "bounded_temporal",
+          "MSE": 0.0016920751659199595,
+          "time_MSE": 0.0009931557578966022,
+          "kappa_gradients": {
+            "head": -0.012569507583975792,
+            "body": -0.007213386707007885
+          }
+        }
+      ],
+      "discarded_updates": [
+        {
+          "model": "bounded_temporal",
+          "step": 1,
+          "loss": 0.0019403641344979405,
+          "gradient_norm_before_clip": 0.31559643149375916,
+          "kappa": {
+            "head": 1.256950721284511e-08,
+            "body": 7.213386776783182e-09
+          }
+        },
+        {
+          "model": "bounded_temporal",
+          "step": 2,
+          "loss": 0.0019402650650590658,
+          "gradient_norm_before_clip": 0.3153463900089264,
+          "kappa": {
+            "head": 2.5120250768395636e-08,
+            "body": 1.4417770977104283e-08
+          }
+        }
+      ],
+      "export_checks": [
+        {
+          "model": "square_mse",
+          "max_abs_delta": 1.7881393432617188e-06,
+          "parameters": 4075
+        },
+        {
+          "model": "square_temporal",
+          "max_abs_delta": 1.7881393432617188e-06,
+          "parameters": 4075
+        },
+        {
+          "model": "bounded_mse",
+          "max_abs_delta": 1.7881393432617188e-06,
+          "parameters": 4077
+        },
+        {
+          "model": "bounded_temporal",
+          "max_abs_delta": 2.078711986541748e-06,
+          "parameters": 4077
+        }
+      ]
+    }
+  ],
+  "discarded_optimizer_updates": 4,
+  "formal_updates": 0,
+  "source_sha256": {
+    "check_bounded_video_r44.py": "24398112f86e0f89d095f475888ec77ce288af57164495a5ecdec9fdcaa435ba",
+    "check_video_objective_r44.py": "aa541169d1a5df28231b610bd45b48f52b6cea5e3b2b903423021460ca597b1d",
+    "video_objective_r44.py": "79474e2fec26c51a09845ca9c43fb6ede9d8ca4d89e47b98f0fb997568623905",
+    "bounded_video_r44.py": "7510feb9881c52507b27dc5ad416ffd3be7719b10b23bc87345d48b67ac20c4c",
+    "bounded_fst_r43.py": "0aa8eeb9dab97aad65a25fa28d439cef5933025916058e29d78bd7f4bb57c41c",
+    "budget_causal_r33.py": "7cfe138a286fdb488973ffe7c5bc93b69ad505af981e22cba824402c491b2e3b",
+    "mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5"
+  },
+  "scope": "Four initial/backward checks; only bounded_temporal receives two discarded SGD updates per seed.",
+  "data": {
+    "manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "verified_files": 384,
+    "scenes": [
+      "video_11",
+      "video_35",
+      "video_92",
+      "video_131",
+      "video_12",
+      "video_20",
+      "video_29",
+      "video_52",
+      "video_59",
+      "video_95",
+      "video_104",
+      "video_122"
+    ],
+    "native_bytes": 2388787200,
+    "real_training_ids": [
+      "video_104",
+      "video_11",
+      "video_12",
+      "video_122",
+      "video_131",
+      "video_20",
+      "video_29",
+      "video_35",
+      "video_52",
+      "video_59",
+      "video_92",
+      "video_95"
+    ],
+    "excluded_native_DEV": [
+      "video_121",
+      "video_15",
+      "video_47",
+      "video_91"
+    ],
+    "all_real_assets_owned": true,
+    "source_manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "synthetic_manifest_sha256": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+    "synthetic_training_videos": 57,
+    "real_tensor_dtype": "uint8 native inputs/GT; float32 /255 after crops",
+    "timing_scope": "Consecutive registered frame indices, not independently verified sensor timing."
+  },
+  "objective": {
+    "device": "cpu",
+    "continuous_warp_max_abs_delta": 1.6689300537109375e-06,
+    "GT_prediction_time_MSE": 0.0,
+    "constant_residual_time_MSE": 2.447501965789097e-16,
+    "perturbed_frame_time_MSE": 0.001086866483092308,
+    "previous_current_gradient_norms": [
+      0.000868774252012372,
+      0.000868774252012372
+    ],
+    "all_invalid_time_MSE": 0.0,
+    "scope": "Known-motion synthetic target with genuine brightness change; no data quality or motion-truth claim."
+  },
+  "wall_seconds": 107.04547354398528,
+  "cuda_initialized": false
+}

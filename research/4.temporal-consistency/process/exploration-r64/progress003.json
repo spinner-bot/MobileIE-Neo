@@ -1,0 +1,62 @@
+{
+  "at": "2026-11-13T01:43:40.027193+08:00",
+  "scope": "Halfway immutable checkpoint metadata and actual live identities, not completed final quality.",
+  "processes": [
+    {
+      "pid": 3831145,
+      "argv": [
+        "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python",
+        "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/train_dense_history_r64.py",
+        "--seed",
+        "0"
+      ],
+      "cwd": "/data/Users/zrh/repo/MobileIE-Neo",
+      "start_ticks": "44439634"
+    },
+    {
+      "pid": 3831080,
+      "argv": [
+        "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python",
+        "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/train_dense_history_r64.py",
+        "--seed",
+        "1"
+      ],
+      "cwd": "/data/Users/zrh/repo/MobileIE-Neo",
+      "start_ticks": "44439626"
+    },
+    {
+      "pid": 3831670,
+      "argv": [
+        "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python",
+        "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/finalize_dense_history_r64.py"
+      ],
+      "cwd": "/data/Users/zrh/repo/MobileIE-Neo",
+      "start_ticks": "44445498"
+    }
+  ],
+  "seeds": [
+    {
+      "seed": 0,
+      "logged_updates": {
+        "plain": 2152,
+        "spatial": 2152,
+        "causal": 2152
+      },
+      "common_prefix": 2152,
+      "registered2000_backup_markers": 3,
+      "terminal_runtime_exists": false
+    },
+    {
+      "seed": 1,
+      "logged_updates": {
+        "plain": 2152,
+        "spatial": 2152,
+        "causal": 2152
+      },
+      "common_prefix": 2152,
+      "registered2000_backup_markers": 3,
+      "terminal_runtime_exists": false
+    }
+  ],
+  "frozen_sources_unchanged": true
+}

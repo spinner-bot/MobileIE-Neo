@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/finalize_training_form_r41.py", line 95, in <module>
+    main()
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/finalize_training_form_r41.py", line 36, in main
+    frozen = {name: digest(Path(__file__).parent/name) for name in names}
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/finalize_training_form_r41.py", line 36, in <dictcomp>
+    frozen = {name: digest(Path(__file__).parent/name) for name in names}
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/dynamic_training_r34.py", line 20, in digest
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+  File "/usr/lib/python3.10/pathlib.py", line 1126, in read_bytes
+    with self.open(mode='rb') as f:
+  File "/usr/lib/python3.10/pathlib.py", line 1119, in open
+    return self._accessor.open(self, mode, buffering, encoding, errors,
+FileNotFoundError: [Errno 2] No such file or directory: '/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/training_adaptation_r28.py'

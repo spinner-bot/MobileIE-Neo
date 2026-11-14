@@ -1,0 +1,113 @@
+{
+  "initial": {
+    "current_minus_original_max": 0.0,
+    "mean_minus_moment_max": 0.0,
+    "first_frame_causal_minus_current_max": 0.0,
+    "actual_history_minus_current_max": 0.5342811942100525
+  },
+  "initialization": {
+    "source_marker": "research/4.temporal-consistency/results/exploration-r44-stage001-seed1/square_mse-step4000.json",
+    "source_training_sha256": "450d55e60333655019c820321ad9ae4afe78d012aefe3615b9490ef61a3943ba",
+    "inherited_updates": 8000,
+    "optimizer_inherited": false,
+    "field_seed": 7301,
+    "source_plain12000": "research/4.temporal-consistency/results/exploration-r64-stage001-seed1/plain-step4000.json",
+    "deployment_parameters": {
+      "spatial": 4562,
+      "mean": 4550,
+      "moment": 4562
+    }
+  },
+  "context": [
+    {
+      "video": "classic-car",
+      "members": [
+        "DAVIS/JPEGImages/480p/classic-car/00003.jpg",
+        "DAVIS/JPEGImages/480p/classic-car/00004.jpg",
+        "DAVIS/JPEGImages/480p/classic-car/00005.jpg",
+        "DAVIS/JPEGImages/480p/classic-car/00006.jpg"
+      ],
+      "xy": [
+        38,
+        290
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": true,
+      "photons": 20,
+      "source": "davis_synthetic"
+    },
+    {
+      "video": "flamingo",
+      "members": [
+        "DAVIS/JPEGImages/480p/flamingo/00006.jpg",
+        "DAVIS/JPEGImages/480p/flamingo/00007.jpg",
+        "DAVIS/JPEGImages/480p/flamingo/00008.jpg",
+        "DAVIS/JPEGImages/480p/flamingo/00009.jpg"
+      ],
+      "xy": [
+        46,
+        83
+      ],
+      "flip_horizontal": true,
+      "flip_vertical": true,
+      "photons": 20,
+      "source": "davis_synthetic"
+    },
+    {
+      "source": "olives_real",
+      "video": "video_12",
+      "indices": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "xy": [
+        859,
+        187
+      ],
+      "flip_horizontal": true,
+      "flip_vertical": true,
+      "input_sources": [
+        ".cache/data/olives-r4/Frames/input/video_12/00005.png",
+        ".cache/data/olives-r4/Frames/input/video_12/00006.png",
+        ".cache/data/olives-r4/Frames/input/video_12/00007.png",
+        ".cache/data/olives-r4/Frames/input/video_12/00008.png"
+      ],
+      "target_sources": [
+        ".cache/data/olives-r4/Frames/gt/video_12/00005.png",
+        ".cache/data/olives-r4/Frames/gt/video_12/00006.png",
+        ".cache/data/olives-r4/Frames/gt/video_12/00007.png",
+        ".cache/data/olives-r4/Frames/gt/video_12/00008.png"
+      ]
+    },
+    {
+      "source": "olives_real",
+      "video": "video_52",
+      "indices": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "xy": [
+        1710,
+        56
+      ],
+      "flip_horizontal": true,
+      "flip_vertical": false,
+      "input_sources": [
+        ".cache/data/olives-r4/Frames/input/video_52/00006.png",
+        ".cache/data/olives-r4/Frames/input/video_52/00007.png",
+        ".cache/data/olives-r4/Frames/input/video_52/00008.png",
+        ".cache/data/olives-r4/Frames/input/video_52/00009.png"
+      ],
+      "target_sources": [
+        ".cache/data/olives-r4/Frames/gt/video_52/00006.png",
+        ".cache/data/olives-r4/Frames/gt/video_52/00007.png",
+        ".cache/data/olives-r4/Frames/gt/video_52/00008.png",
+        ".cache/data/olives-r4/Frames/gt/video_52/00009.png"
+      ]
+    }
+  ]
+}

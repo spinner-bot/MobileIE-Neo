@@ -1,0 +1,96 @@
+{
+  "seed": 1,
+  "model": "mixed_original",
+  "parameters": 4075,
+  "steps": 4000,
+  "batch": 4,
+  "frames": 4,
+  "patch": 128,
+  "domain_windows_per_batch": {
+    "synthetic": 2,
+    "real": 2
+  },
+  "scheduling": "Four B4 forwards, original R34 schedule; synthetic keeps R34 first two windows",
+  "objective": "MSE equally over all pixels, frames and batch elements",
+  "optimizer": "Adam",
+  "lr": 0.0001,
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "eps": 1e-08,
+  "weight_decay": 0,
+  "global_norm_clip": 1,
+  "dtype": "float32",
+  "data": {
+    "manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "verified_files": 384,
+    "scenes": [
+      "video_11",
+      "video_35",
+      "video_92",
+      "video_131",
+      "video_12",
+      "video_20",
+      "video_29",
+      "video_52",
+      "video_59",
+      "video_95",
+      "video_104",
+      "video_122"
+    ],
+    "native_bytes": 2388787200,
+    "real_training_ids": [
+      "video_104",
+      "video_11",
+      "video_12",
+      "video_122",
+      "video_131",
+      "video_20",
+      "video_29",
+      "video_35",
+      "video_52",
+      "video_59",
+      "video_92",
+      "video_95"
+    ],
+    "excluded_native_DEV": [
+      "video_121",
+      "video_15",
+      "video_47",
+      "video_91"
+    ],
+    "all_real_assets_owned": true,
+    "source_manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "synthetic_manifest_sha256": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+    "synthetic_training_videos": 57,
+    "real_tensor_dtype": "uint8 native inputs/GT; float32 /255 after crops",
+    "timing_scope": "Consecutive registered frame indices, not independently verified sensor timing."
+  },
+  "pretrained_sha256": "d40a930fbc0435f47ce08dda17b1c630b86a501be9423b8f48dab14722fb5548",
+  "pure_control_training_sha256": "d9629d2b535ee74ed43802d6c8ed7bbd405849e6a17aee9c01848ee9ce9879fe",
+  "pure_control_final_marker": {
+    "path": ".cache/checkpoints/exploration-r34/seed1/original-step4000.pt",
+    "sha256": "fd6a357b6d3bf087d8f78a35c323ef02becce34df52bfe342c31c8882aaf8ccd",
+    "step": 4000,
+    "model": "original",
+    "seed": 1
+  },
+  "gate_sha256": "7339addd3fd5ad792eca3ed405dd0ecc94d9f46781d907cd4c54ce961b46866b",
+  "protocol_sha256": "c2cb1eced1acca8fca8785f21f275d665b680b7e4c010d4b168b51dd1ca894b3",
+  "source_sha256": {
+    "train_mixed_anchor_r40.py": "16d07d94f90322b8161b6a01f2b4beb66c75b2ef5150954e4cfa3a59304f7a43",
+    "mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5",
+    "dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498",
+    "native_training_r14.py": "588b505ede11ac9f0d747ad1c16b1c118a7bbbbba7405ce918a6163d133d69a1",
+    "exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+    "train_exploration_r2.py": "30ba78b2439ffb6fdf10aafe384975326082129b03ebe562aa118f29ba5d8c7b",
+    "gpu_guard.py": "e0a5050f47d64dbf75fab4146a276f50e3464d07e6a799ad8ccd2c69e8e3a535"
+  },
+  "torch_version": "2.9.1+cu126",
+  "cudnn_tf32_allowed": true,
+  "matmul_tf32_allowed": false,
+  "selection": "final4000 only",
+  "resume_supported": false,
+  "revision": "eef51c81d233aa92689e2fa8bdc1748184966247"
+}

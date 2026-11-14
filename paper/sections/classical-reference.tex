@@ -1,0 +1,49 @@
+\section{Fixed classical block-matching reference}
+\label{sec:classical-reference}
+We evaluate the original numerical core and default initialization of the
+IPOL VBM3D implementation~\cite{vbm3d_ipol} through an array interface,
+without changing its filtering or color-transform code. The spatial-only
+control disables temporal search ($N_f=0$); the video control retains
+default temporal search ($N_f=4$) on each full offline clip. Both receive
+one blind noise estimate from the first low-light frame: the median over
+RGB channels of centered Haar-HH MAD estimates, divided by $0.67448975$
+in the implementation's 8-bit amplitude units. No clean frame or known
+degradation parameter enters this estimate. One filtered input is reused
+by the two frozen 8,000-update MobileIE seeds. The same optional
+own-output motion-compensated recursive reference is then applied.
+
+\input{generated/classical-block-reference-table}
+
+The two controls are deliberately limited: spatial-only VBM3D is not an
+optimized BM3D reproduction, and a full-clip video call is not a causal
+deployment. Its search radius alone does not certify an end-to-end
+future-wait bound across the filtering stages. An AWGN-oriented blind
+scalar is also not calibrated to the Poisson, clipping and quantization
+pipeline, or to a real camera ISP. Enhancement weights are held fixed,
+so changes in their input distribution remain another possible cause;
+these causes have not been isolated.
+
+All 16 domain--seed--filter--output means lower the temporal-error proxy
+but also lower PSNR and predicted JOD relative to the matching unfiltered
+enhancer output. On SYN, raw PSNR decreases by $2.124$--$2.649$\,dB and
+recursive PSNR by $2.522$--$2.976$\,dB. On paired-real ND, PSNR decreases
+by $0.513$--$0.651$\,dB and predicted JOD by $0.022$--$0.050$.
+The latter small metric differences are not human preference or a
+significance claim. All 20 registered first/middle/last-frame contacts
+were actually inspected: grain reduction coexists with softer fur,
+stone and grass details; filtered recursive walking outputs show
+building-edge distortions. These sparse contacts neither replace full
+video inspection nor establish a causal mechanism or subjective score.
+
+\input{generated/classical-filter-cost-table}
+
+Table~\ref{tab:classical-cost} retains descriptive complete filtering
+costs, including array I/O, from the registered shared-server CPU run
+with two CPU threads. Filtering is counted once across enhancement
+seeds. The measurements are not isolated repeated latency trials,
+handset measurements, full operation counts, or evidence for a 4K
+extrapolation. This fixed reference yields no robust joint quality and
+stability improvement. We retain it without searching noise estimates,
+windows, strengths or additional seeds, and keep the stronger
+unfiltered MobileIE recursive reference. This result neither rules out
+traditional denoising in general nor establishes a new method.

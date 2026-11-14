@@ -1,0 +1,66 @@
+{
+  "completed_normally": true,
+  "model_updates": {
+    "square_mse": 4000,
+    "square_temporal": 4000,
+    "bounded_mse": 4000,
+    "bounded_temporal": 4000
+  },
+  "total_new_updates": 16000,
+  "final_deployment_gates": {
+    "square_mse": {
+      "model": "square_mse",
+      "seed": 1,
+      "new_step": 4000,
+      "inherited_updates": 4000,
+      "path": ".cache/checkpoints/exploration-r44/stage001/seed1/square_mse-deploy-step4000.pt",
+      "sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+      "training_path": ".cache/checkpoints/exploration-r44/stage001/seed1/square_mse-training-step4000.pt",
+      "training_sha256": "450d55e60333655019c820321ad9ae4afe78d012aefe3615b9490ef61a3943ba",
+      "deployment_parameters": 4075,
+      "final_eval_export_max_abs_delta": 1.4901161193847656e-06,
+      "final_export_gate_passed": true
+    },
+    "square_temporal": {
+      "model": "square_temporal",
+      "seed": 1,
+      "new_step": 4000,
+      "inherited_updates": 4000,
+      "path": ".cache/checkpoints/exploration-r44/stage001/seed1/square_temporal-deploy-step4000.pt",
+      "sha256": "5317654f76cd899a16304208a44a36c0839f3d5f3338404540822de723d78103",
+      "training_path": ".cache/checkpoints/exploration-r44/stage001/seed1/square_temporal-training-step4000.pt",
+      "training_sha256": "707470202a7ae56288a69b801d891ac210b385688250839d36f5cfce98fde6f6",
+      "deployment_parameters": 4075,
+      "final_eval_export_max_abs_delta": 1.3113021850585938e-06,
+      "final_export_gate_passed": true
+    },
+    "bounded_mse": {
+      "model": "bounded_mse",
+      "seed": 1,
+      "new_step": 4000,
+      "inherited_updates": 4000,
+      "path": ".cache/checkpoints/exploration-r44/stage001/seed1/bounded_mse-deploy-step4000.pt",
+      "sha256": "9bd0d0a164d3e5818828694e4ef7a3e602e267d3c7deefc336b9237c38182366",
+      "training_path": ".cache/checkpoints/exploration-r44/stage001/seed1/bounded_mse-training-step4000.pt",
+      "training_sha256": "009cddd9e87316263a6eb5af94233a516571255fd5ae1bc4ed5a998c151ed1e1",
+      "deployment_parameters": 4077,
+      "final_eval_export_max_abs_delta": 1.3113021850585938e-06,
+      "final_export_gate_passed": true
+    },
+    "bounded_temporal": {
+      "model": "bounded_temporal",
+      "seed": 1,
+      "new_step": 4000,
+      "inherited_updates": 4000,
+      "path": ".cache/checkpoints/exploration-r44/stage001/seed1/bounded_temporal-deploy-step4000.pt",
+      "sha256": "171a0e9e677e652f4e3ff1506256aec6a829ab34ef32b8aed7985a3ddad9cc2d",
+      "training_path": ".cache/checkpoints/exploration-r44/stage001/seed1/bounded_temporal-training-step4000.pt",
+      "training_sha256": "8b779eda4711743673e30c1a3cf0fdd70aa5c24ed58ac1f7f620b0b6c705f355",
+      "deployment_parameters": 4077,
+      "final_eval_export_max_abs_delta": 1.3709068298339844e-06,
+      "final_export_gate_passed": true
+    }
+  },
+  "wall_seconds": 2869.863693760999,
+  "scope": "Shared R41 inherited4000 plus fixed4000 new per model; no quality or paper claim from loss."
+}

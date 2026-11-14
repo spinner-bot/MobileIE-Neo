@@ -1,0 +1,38 @@
+{
+  "at": "2026-11-13T05:25:06.478942+08:00",
+  "gpu": 4,
+  "guard_pid": 4011452,
+  "identity": {
+    "start_ticks": "45889420",
+    "commandline": "/usr/bin/python3.10 ./scripts/project-python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 4 --record research/4.temporal-consistency/process/exploration-r69/finalize001/perceptual-guard001.json -- ./scripts/project-python research/4.temporal-consistency/scripts/evaluate_cvvdp_spatial_l1_r69.py "
+  },
+  "command": [
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/gpu_guard.py",
+    "--gpu",
+    "4",
+    "--record",
+    "research/4.temporal-consistency/process/exploration-r69/finalize001/perceptual-guard001.json",
+    "--",
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/evaluate_cvvdp_spatial_l1_r69.py"
+  ],
+  "preguard_samples": [
+    {
+      "gpu": 4,
+      "uuid": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+      "memory_mib": 0,
+      "utilization_percent": 0,
+      "compute_processes": [],
+      "time": "2026-11-13T05:25:05.235689+08:00"
+    },
+    {
+      "gpu": 4,
+      "uuid": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+      "memory_mib": 0,
+      "utilization_percent": 0,
+      "compute_processes": [],
+      "time": "2026-11-13T05:25:06.477971+08:00"
+    }
+  ]
+}

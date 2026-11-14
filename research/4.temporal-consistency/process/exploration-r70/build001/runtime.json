@@ -1,0 +1,172 @@
+{
+  "completed_normally": true,
+  "commands_attempted": [
+    {
+      "command": [
+        "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/fftw-source/fftw-3.3.11/configure",
+        "--enable-float",
+        "--enable-shared",
+        "--disable-static",
+        "--disable-fortran",
+        "--enable-sse2",
+        "--disable-dependency-tracking",
+        "--prefix=/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/fftw-prefix"
+      ],
+      "cwd": "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/fftw-source/fftw-3.3.11"
+    },
+    {
+      "command": [
+        "make",
+        "-j2"
+      ],
+      "cwd": "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/fftw-source/fftw-3.3.11"
+    },
+    {
+      "command": [
+        "make",
+        "install"
+      ],
+      "cwd": "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/fftw-source/fftw-3.3.11"
+    },
+    {
+      "command": [
+        "/usr/bin/g++",
+        "-O3",
+        "-ftree-vectorize",
+        "-funroll-loops",
+        "-std=c++11",
+        "-fopenmp",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-I/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/fftw-prefix/include",
+        "-I/data/Users/zrh/repo/MobileIE-Neo/.cache/third_party/ipol-vbm3d/source001/src/vbm3d_1/src",
+        "-c",
+        "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/vbm3d_array_r70.cpp",
+        "-o",
+        "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/unit0.o"
+      ],
+      "cwd": "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001"
+    },
+    {
+      "command": [
+        "/usr/bin/g++",
+        "-O3",
+        "-ftree-vectorize",
+        "-funroll-loops",
+        "-std=c++11",
+        "-fopenmp",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-I/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/fftw-prefix/include",
+        "-I/data/Users/zrh/repo/MobileIE-Neo/.cache/third_party/ipol-vbm3d/source001/src/vbm3d_1/src",
+        "-c",
+        "/data/Users/zrh/repo/MobileIE-Neo/.cache/third_party/ipol-vbm3d/source001/src/vbm3d_1/src/vbm3d.cpp",
+        "-o",
+        "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/unit1.o"
+      ],
+      "cwd": "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001"
+    },
+    {
+      "command": [
+        "/usr/bin/g++",
+        "-O3",
+        "-ftree-vectorize",
+        "-funroll-loops",
+        "-std=c++11",
+        "-fopenmp",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-I/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/fftw-prefix/include",
+        "-I/data/Users/zrh/repo/MobileIE-Neo/.cache/third_party/ipol-vbm3d/source001/src/vbm3d_1/src",
+        "-c",
+        "/data/Users/zrh/repo/MobileIE-Neo/.cache/third_party/ipol-vbm3d/source001/src/vbm3d_1/src/lib_transforms.cpp",
+        "-o",
+        "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/unit2.o"
+      ],
+      "cwd": "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001"
+    },
+    {
+      "command": [
+        "/usr/bin/g++",
+        "-O3",
+        "-ftree-vectorize",
+        "-funroll-loops",
+        "-std=c++11",
+        "-fopenmp",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-I/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/fftw-prefix/include",
+        "-I/data/Users/zrh/repo/MobileIE-Neo/.cache/third_party/ipol-vbm3d/source001/src/vbm3d_1/src",
+        "-c",
+        "/data/Users/zrh/repo/MobileIE-Neo/.cache/third_party/ipol-vbm3d/source001/src/vbm3d_1/src/Utilities/Utilities.cpp",
+        "-o",
+        "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/unit3.o"
+      ],
+      "cwd": "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001"
+    },
+    {
+      "command": [
+        "/usr/bin/g++",
+        "-O3",
+        "-ftree-vectorize",
+        "-funroll-loops",
+        "-std=c++11",
+        "-fopenmp",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-I/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/fftw-prefix/include",
+        "-I/data/Users/zrh/repo/MobileIE-Neo/.cache/third_party/ipol-vbm3d/source001/src/vbm3d_1/src",
+        "-c",
+        "/data/Users/zrh/repo/MobileIE-Neo/.cache/third_party/ipol-vbm3d/source001/src/vbm3d_1/src/Utilities/LibVideoT.cpp",
+        "-o",
+        "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/unit4.o"
+      ],
+      "cwd": "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001"
+    },
+    {
+      "command": [
+        "/usr/bin/g++",
+        "-O3",
+        "-ftree-vectorize",
+        "-funroll-loops",
+        "-std=c++11",
+        "-fopenmp",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-I/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/fftw-prefix/include",
+        "-I/data/Users/zrh/repo/MobileIE-Neo/.cache/third_party/ipol-vbm3d/source001/src/vbm3d_1/src",
+        "-c",
+        "/data/Users/zrh/repo/MobileIE-Neo/.cache/third_party/ipol-vbm3d/source001/src/vbm3d_1/src/Utilities/LibImages.cpp",
+        "-o",
+        "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/unit5.o"
+      ],
+      "cwd": "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001"
+    },
+    {
+      "command": [
+        "/usr/bin/g++",
+        "-fopenmp",
+        "-Wl,--gc-sections",
+        "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/unit0.o",
+        "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/unit1.o",
+        "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/unit2.o",
+        "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/unit3.o",
+        "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/unit4.o",
+        "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/unit5.o",
+        "-L/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/fftw-prefix/lib",
+        "-Wl,-rpath,/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/fftw-prefix/lib",
+        "-lfftw3f",
+        "-lm",
+        "-o",
+        "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001/vbm3d-array"
+      ],
+      "cwd": "/data/Users/zrh/repo/MobileIE-Neo/.cache/tools/exploration-r70/build001"
+    }
+  ],
+  "seconds": 94.52162285102531,
+  "new_real_images": 0,
+  "new_CNN": 0,
+  "new_SGD": 0,
+  "new_GPU": 0,
+  "ended": "2026-11-13T05:10:32.000684+08:00"
+}

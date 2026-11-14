@@ -1,0 +1,19 @@
+{
+  "started_at": "2026-11-12T08:02:51.043108+08:00",
+  "guard_pid": 3179936,
+  "command": [
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/gpu_guard.py",
+    "--gpu",
+    "0",
+    "--record",
+    "research/4.temporal-consistency/process/exploration-r40/seed0-guard.json",
+    "--",
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/train_mixed_anchor_r40.py",
+    "--seed",
+    "0"
+  ],
+  "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+  "scope": "Guard process started, admission/config must confirm actual training; two cards in group0\u20133 only."
+}

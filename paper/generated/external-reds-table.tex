@@ -1,0 +1,30 @@
+\begin{table}[!htbp]
+\centering\small\setlength{\tabcolsep}{3pt}
+\caption{Cross-source synthetic development on four REDS sharp validation clips at native $720\times1280$, first 64 frames, with two fixed photon conditions. Every row averages the same four source videos; both adapted seeds are retained. Rec. adds the fixed classical motion/history reference to the corresponding raw output. ColorVideoVDP uses source-rate 24\,fps and the same standard FHD display/replicate padding; these scores are not pooled with the 30\,fps pilot tables. This is a custom low-light development protocol, not the official REDS task or independent final testing.}
+\label{tab:external-reds}
+\begin{tabular}{llrrrrrr}
+\toprule
+Network/output & Seed & 20: PSNR & $E_{\rm temp}$ & JOD & 80: PSNR & $E_{\rm temp}$ & JOD\\
+\midrule
+Input & -- & 8.691 & 12.643 & 3.481 & 8.754 & 7.511 & 4.391\\
+MobileIE MSE & 0 & 25.809 & 11.777 & 5.781 & 28.458 & 6.961 & 7.422\\
+MobileIE MSE & 1 & 25.873 & 11.315 & 5.910 & 28.278 & 6.706 & 7.513\\
+MobileIE MSE + rec. & 0 & 27.662 & 6.544 & 6.701 & 28.843 & 4.418 & 7.762\\
+MobileIE MSE + rec. & 1 & 27.451 & 6.340 & 6.759 & 28.503 & 4.333 & 7.758\\
+MobileIE L1 & 0 & 25.824 & 11.346 & 5.876 & 28.351 & 6.738 & 7.457\\
+MobileIE L1 & 1 & 26.147 & 10.802 & 5.973 & 28.582 & 6.451 & 7.511\\
+MobileIE L1 + rec. & 0 & 27.438 & 6.353 & 6.740 & 28.624 & 4.344 & 7.735\\
+MobileIE L1 + rec. & 1 & 27.563 & 6.127 & 6.771 & 28.721 & 4.257 & 7.708\\
+Nano & 0 & 22.129 & 15.922 & 5.654 & 23.898 & 9.139 & 7.024\\
+Nano & 1 & 21.573 & 15.842 & 5.791 & 23.266 & 9.156 & 7.139\\
+Nano + rec. & 0 & 24.444 & 8.627 & 6.530 & 24.571 & 5.380 & 7.296\\
+Nano + rec. & 1 & 23.549 & 8.586 & 6.559 & 23.847 & 5.386 & 7.326\\
+U-Net L1 & 0 & 28.265 & 7.894 & 6.920 & 30.562 & 5.512 & 8.031\\
+U-Net L1 & 1 & 28.156 & 7.807 & 6.896 & 30.432 & 5.475 & 8.023\\
+U-Net L1 + rec. & 0 & 29.018 & 4.853 & 7.177 & 30.467 & 3.872 & 8.018\\
+U-Net L1 + rec. & 1 & 28.848 & 4.820 & 7.137 & 30.336 & 3.865 & 7.986\\
+FastDVDnet window & 0 & 25.361 & 6.418 & 6.701 & 25.960 & 4.905 & 7.599\\
+FastDVDnet window & 1 & 22.428 & 8.157 & 5.771 & 25.671 & 5.242 & 7.107\\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,51 @@
+{
+  "created_at": "2026-11-13T01:23:26.931471+08:00",
+  "jobs": [
+    {
+      "seed": 0,
+      "physical_gpu": 5,
+      "guard_pid": 3831025,
+      "command": [
+        "/data/Users/zrh/repo/MobileIE-Neo/scripts/project-python",
+        "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/gpu_guard.py",
+        "--gpu",
+        "5",
+        "--record",
+        "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/process/exploration-r64/seed0-guard001.json",
+        "--",
+        "/data/Users/zrh/repo/MobileIE-Neo/scripts/project-python",
+        "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/train_dense_history_r64.py",
+        "--seed",
+        "0"
+      ],
+      "guard_record": "research/4.temporal-consistency/process/exploration-r64/seed0-guard001.json",
+      "log": "research/4.temporal-consistency/process/exploration-r64/seed0-training001.log",
+      "launched_at": "2026-11-13T01:23:26.930737+08:00"
+    },
+    {
+      "seed": 1,
+      "physical_gpu": 6,
+      "guard_pid": 3831026,
+      "command": [
+        "/data/Users/zrh/repo/MobileIE-Neo/scripts/project-python",
+        "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/gpu_guard.py",
+        "--gpu",
+        "6",
+        "--record",
+        "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/process/exploration-r64/seed1-guard001.json",
+        "--",
+        "/data/Users/zrh/repo/MobileIE-Neo/scripts/project-python",
+        "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/train_dense_history_r64.py",
+        "--seed",
+        "1"
+      ],
+      "guard_record": "research/4.temporal-consistency/process/exploration-r64/seed1-guard001.json",
+      "log": "research/4.temporal-consistency/process/exploration-r64/seed1-training001.log",
+      "launched_at": "2026-11-13T01:23:26.931458+08:00"
+    }
+  ],
+  "expected_not_completed_new_updates": 24000,
+  "fresh_admission_required_each": true,
+  "R63_stress_gate_unchanged_failed": true,
+  "scope": "Actual Popen launches; training status requires runtime/config and live process, not this record alone."
+}

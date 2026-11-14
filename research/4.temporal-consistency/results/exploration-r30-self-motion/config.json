@@ -1,0 +1,45 @@
+{
+  "device": "cpu",
+  "torch_threads": 2,
+  "opencv_threads": 1,
+  "torch_version": "2.9.1+cu126",
+  "alpha": 0.5,
+  "motion": "half-resolution Farneback/FB on own clipped enhancement",
+  "future_frames": 0,
+  "extra_teacher_parameters": 0,
+  "predictor_parameters": 4075,
+  "checkpoints": [
+    {
+      "mode": "copy",
+      "objective": "mse",
+      "train_seed": 0,
+      "path": ".cache/checkpoints/exploration-r26/plain-mse-seed0/step4000.pth",
+      "sha256": "2f9885d66e48fc22779c5e73a41b2c1f378bde3b4a5497a910274be216f85c7a",
+      "step": 4000,
+      "reused_R26_training": true,
+      "training_config_sha256": "11d99e8a69cc881dd6e7027080a7165ecb65cb57aacb6ea6896090f208b5be1d"
+    },
+    {
+      "mode": "copy",
+      "objective": "mse",
+      "train_seed": 1,
+      "path": ".cache/checkpoints/exploration-r26/plain-mse-seed1/step4000.pth",
+      "sha256": "d421b5a3b383deddd571cd0dd1abb35e45526cc76b6566a8052f7ab8abcc2111",
+      "step": 4000,
+      "reused_R26_training": true,
+      "training_config_sha256": "8af4529a4c41103fc7e003dfc43e61c7db2207fb0734c4aebecc79faf6c89242"
+    }
+  ],
+  "protocol_sha256": "bcd672a1b3570d52bb1616cd5da34b8fb05b428258b40b51512a06c6b1b911a6",
+  "cache_index_sha256": "424fa278b2fe66d29de476e2b47328619438f97cf71926448433d1191bb722c1",
+  "reference_rows_sha256": "b71323e6cce812804dc986198e535d44f37acdb8b28cfd9903e70bbe71008d3f",
+  "prediction_manifest_sha256": "ef41fbfb53fb556085176af2d54b465713612adc811e28bc2a8d245623d6c8c0",
+  "source_sha256": {
+    "evaluate_self_motion_post_r30.py": "48788d18b615cbec8d644788d4a9e2f323cf266ce24368ca5808e75be11054e2",
+    "half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+    "aligned_raw_history_r11.py": "e367727401f82ccf0bccaf8d88f904e4aebf8b78186f0539eedeed222b2d2227",
+    "aggregation_controls_r20.py": "7b4541be8512ca1edb755b5a73f889351e376f9a8fc1fdec7ed633a4438c116c"
+  },
+  "revision": "445fcfd9e30e735bda947d1483b21270fe80df16",
+  "scope": "CPU software pipeline with resident input and three warmups; excludes camera/display, IO, metrics and offline output retention; not phone latency or full peak-memory evidence."
+}

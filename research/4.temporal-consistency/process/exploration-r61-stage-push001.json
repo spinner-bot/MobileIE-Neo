@@ -1,0 +1,37 @@
+{
+  "at": "2026-11-13T00:15:29.469652+08:00",
+  "previous_stage_head": "9965e140d06b9c277f80393758f82ce813b581fb",
+  "pushed_head": "9afd0ac5e11a9a23b3d953d1acaa307673a828a7",
+  "remote_main_verified": "9afd0ac5e11a9a23b3d953d1acaa307673a828a7",
+  "commits": 20,
+  "fetch_ahead_behind_before_push": [
+    20,
+    0
+  ],
+  "merge_required": false,
+  "merge_policy": "explicit --no-ff; no rebase/squash/force",
+  "author": "Codex  (sqs_A100)",
+  "scope": "Complete R61 prior-work/exact scalar boundary/stop decision; R62 common-CPU published clean reference registered and actually running. No method or final results claimed.",
+  "process_identities_at_receipt": {
+    "3772075": {
+      "start_ticks": "43815209",
+      "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/evaluate_wenzhou_r60.py "
+    },
+    "3773674": {
+      "start_ticks": "43833474",
+      "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/finalize_wenzhou_references_r60.py "
+    },
+    "3785520": {
+      "start_ticks": "43998067",
+      "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/evaluate_stablellve_common_r62.py "
+    },
+    "3788570": {
+      "start_ticks": "44009242",
+      "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/finalize_stablellve_common_r62.py "
+    }
+  },
+  "R60_and_R62_results_complete": false,
+  "method_established": false,
+  "goal": "active",
+  "receipt_is_subsequent_commit": true
+}

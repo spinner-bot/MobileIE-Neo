@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering\small
+\caption{Reference deployment conditions at $1080\times1920$, batch one, per output frame. Conv GMAC counts only executed Conv2d multiply--accumulates; it omits bias, resizing, priors, pooling, activation, motion, warping and memory work. FastDVDnet uses the original uncached three first-stage and one second-stage calls. Rec. additionally retains two FP32 RGB frames plus motion/workspace; raw spatial networks have no temporal state. Identical StableLLVE graphs serve its public and adapted weights. No row is a measured handset latency or complete pipeline FLOP claim.}
+\label{tab:reference-budget}
+\begin{tabular}{lrrrrl}
+\toprule
+Network/output & Params & Conv GMAC & Future & Flow & Handset ms\\
+\midrule
+MobileIE raw & 4075 & 7.938 & 0 & no & --\\
+MobileIE + rec. & 4075 & 7.938 & 0 & yes & --\\
+Nano raw & 696 & 1.313 & 0 & no & --\\
+Nano + rec. & 696 & 1.313 & 0 & yes & --\\
+FastDVDnet window & 2479096 & 1319.208 & 2 & no & --\\
+StableLLVE raw & 4316259 & 317.240 & 0 & no & --\\
+StableLLVE + rec. & 4316259 & 317.240 & 0 & yes & --\\
+\bottomrule
+\end{tabular}
+\end{table}

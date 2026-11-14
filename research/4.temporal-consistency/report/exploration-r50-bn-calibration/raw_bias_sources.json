@@ -1,0 +1,1079 @@
+{
+  "at": "2026-11-12T19:00:50.892008+08:00",
+  "sources": {
+    "research/4.temporal-consistency/results/exploration-r50-stage001-eval-seed0/raw_bias_per_frame.jsonl": "245db8f81f113938360c2debe10a802a33ea29a15d39de553781a1fce1bf194d",
+    "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+    "research/4.temporal-consistency/results/exploration-r48-stage001-eval-seed0/prediction_manifest.jsonl": "c0b447d35b63e411c063489c83d4812cd750c013491d0cc2f9efde83ed3a52de",
+    "research/4.temporal-consistency/results/exploration-r50-stage001-eval-seed1/raw_bias_per_frame.jsonl": "64629179e2a2bf6a85452eb0dc8125d2ed761fb62204391cf409b40dbe4d81bf",
+    "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+    "research/4.temporal-consistency/results/exploration-r48-stage001-eval-seed1/prediction_manifest.jsonl": "5e4cea1be7cf8cfab219a3106d1b3a7a9573b5be6104f5a447faafb949a3b38a",
+    "research/4.temporal-consistency/results/exploration-r30-cache/index.json": "424fa278b2fe66d29de476e2b47328619438f97cf71926448433d1191bb722c1",
+    "research/4.temporal-consistency/results/exploration-r10-cache/index.json": "ec00801b04b873ead0025af91af441b783da3f08c87cf24e9c136a4268ffb43c"
+  },
+  "original_prediction_records": [
+    {
+      "domain": "davis_train_pilot",
+      "scene": "bear_photons20",
+      "source_video": "bear",
+      "anchor_family": "R44_square_mse",
+      "anchor": "R44_square_mse_seed0",
+      "train_seed": 0,
+      "model": "square_mse",
+      "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/bear_photons20--raw.npy",
+      "sha256": "c761eee1393e88e2deddd0fd07088057f1e3d4156943187ee039dac80b3f8e6c",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "dtype": "float32",
+      "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "bear_photons80",
+      "source_video": "bear",
+      "anchor_family": "R44_square_mse",
+      "anchor": "R44_square_mse_seed0",
+      "train_seed": 0,
+      "model": "square_mse",
+      "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/bear_photons80--raw.npy",
+      "sha256": "24ccddd5fa89d6d3127ac1da840571cacf6fec940a61532eee481e14ccf32ef0",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "dtype": "float32",
+      "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "lucia_photons20",
+      "source_video": "lucia",
+      "anchor_family": "R44_square_mse",
+      "anchor": "R44_square_mse_seed0",
+      "train_seed": 0,
+      "model": "square_mse",
+      "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/lucia_photons20--raw.npy",
+      "sha256": "c9b6121de62756049c4b8f6caeeffb67829702cfbb77310f6f14cf361b5d1440",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "dtype": "float32",
+      "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "lucia_photons80",
+      "source_video": "lucia",
+      "anchor_family": "R44_square_mse",
+      "anchor": "R44_square_mse_seed0",
+      "train_seed": 0,
+      "model": "square_mse",
+      "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/lucia_photons80--raw.npy",
+      "sha256": "ea5d38de226c10585cffeb58c45d562d23382db11c558d6e8421b59fa36b14de",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "dtype": "float32",
+      "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "walking_photons20",
+      "source_video": "walking",
+      "anchor_family": "R44_square_mse",
+      "anchor": "R44_square_mse_seed0",
+      "train_seed": 0,
+      "model": "square_mse",
+      "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/walking_photons20--raw.npy",
+      "sha256": "e958ad5c5b367105e94ae2888212c411af591e48c8fa9895176d5983a2039ad3",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "dtype": "float32",
+      "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "walking_photons80",
+      "source_video": "walking",
+      "anchor_family": "R44_square_mse",
+      "anchor": "R44_square_mse_seed0",
+      "train_seed": 0,
+      "model": "square_mse",
+      "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/walking_photons80--raw.npy",
+      "sha256": "2da2b065133477777323692a4a54723c7febaa7fb6cfe6237ca965b0a009d6f3",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "dtype": "float32",
+      "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7"
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "scene": "video_15",
+      "source_video": "video_15",
+      "anchor_family": "R44_square_mse",
+      "anchor": "R44_square_mse_seed0",
+      "train_seed": 0,
+      "model": "square_mse",
+      "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/video_15--raw.npy",
+      "sha256": "aff2da64f86c9755fb4b86148383700af8bf15ccad031bcd0a50a7cd447904ec",
+      "shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "dtype": "float32",
+      "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7"
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "scene": "video_47",
+      "source_video": "video_47",
+      "anchor_family": "R44_square_mse",
+      "anchor": "R44_square_mse_seed0",
+      "train_seed": 0,
+      "model": "square_mse",
+      "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/video_47--raw.npy",
+      "sha256": "0e668305f44e896fd8eaa6aa9169b0a142a645dc55cea0a8c21cd6c0c2c41330",
+      "shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "dtype": "float32",
+      "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7"
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "scene": "video_91",
+      "source_video": "video_91",
+      "anchor_family": "R44_square_mse",
+      "anchor": "R44_square_mse_seed0",
+      "train_seed": 0,
+      "model": "square_mse",
+      "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/video_91--raw.npy",
+      "sha256": "e0b61255e22f7ecf2b2861ea430de2ebf53cd3c91c5b800e770fd1533a59e2f0",
+      "shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "dtype": "float32",
+      "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7"
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "scene": "video_121",
+      "source_video": "video_121",
+      "anchor_family": "R44_square_mse",
+      "anchor": "R44_square_mse_seed0",
+      "train_seed": 0,
+      "model": "square_mse",
+      "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/video_121--raw.npy",
+      "sha256": "f2c80b9e1c5c88406d57f6adf38a96c3dcd39e334bf9c0469fe9b52145e7edad",
+      "shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "dtype": "float32",
+      "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "bear_photons20",
+      "source_video": "bear",
+      "train_seed": 0,
+      "model": "plain",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed0/plain/bear_photons20--raw.npy",
+      "sha256": "c3fbbacdb56e6871b2da4b03ded14fe75397ef70283cc751a5ab2d79850e6b18",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "checkpoint_sha256": "588192b7b6b5f8736c15910b075ce0ba967e533a999ce8f0ed3645ab076200cb"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "bear_photons20",
+      "source_video": "bear",
+      "train_seed": 0,
+      "model": "joint",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed0/joint/bear_photons20--raw.npy",
+      "sha256": "35369d6858b5ed96772d8d5c4e5943a246c769bd73e9ac32dbd783d797f81040",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "checkpoint_sha256": "c53fd1d7c442bc375f6d40aa6283ee689bb7c1f2cb17f92fd8c694c4895fe12b"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "bear_photons80",
+      "source_video": "bear",
+      "train_seed": 0,
+      "model": "plain",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed0/plain/bear_photons80--raw.npy",
+      "sha256": "206fd3407689603e0819580956820a436b2fdb2110e86c72e5b98b1324315238",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "checkpoint_sha256": "588192b7b6b5f8736c15910b075ce0ba967e533a999ce8f0ed3645ab076200cb"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "bear_photons80",
+      "source_video": "bear",
+      "train_seed": 0,
+      "model": "joint",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed0/joint/bear_photons80--raw.npy",
+      "sha256": "686f0acce63465dff3855b96bf1bed696f97d851f8891caa74ba6352b77237b8",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "checkpoint_sha256": "c53fd1d7c442bc375f6d40aa6283ee689bb7c1f2cb17f92fd8c694c4895fe12b"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "lucia_photons20",
+      "source_video": "lucia",
+      "train_seed": 0,
+      "model": "plain",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed0/plain/lucia_photons20--raw.npy",
+      "sha256": "f617380fa38cd8d18ed3ce40dea9357810402c76758634fa5989debb50532da9",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "checkpoint_sha256": "588192b7b6b5f8736c15910b075ce0ba967e533a999ce8f0ed3645ab076200cb"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "lucia_photons20",
+      "source_video": "lucia",
+      "train_seed": 0,
+      "model": "joint",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed0/joint/lucia_photons20--raw.npy",
+      "sha256": "dd515cebb5707b0a73544f5b08f7f0468aa8b8bc4fad73f757ae600e92bd1b64",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "checkpoint_sha256": "c53fd1d7c442bc375f6d40aa6283ee689bb7c1f2cb17f92fd8c694c4895fe12b"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "lucia_photons80",
+      "source_video": "lucia",
+      "train_seed": 0,
+      "model": "plain",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed0/plain/lucia_photons80--raw.npy",
+      "sha256": "39a1580d580a031fb29d24325836f3cbce8001d9b2a33cec9b1929e8b6ffc9df",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "checkpoint_sha256": "588192b7b6b5f8736c15910b075ce0ba967e533a999ce8f0ed3645ab076200cb"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "lucia_photons80",
+      "source_video": "lucia",
+      "train_seed": 0,
+      "model": "joint",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed0/joint/lucia_photons80--raw.npy",
+      "sha256": "3c5f41ce038808520d1dd7f1c427ed966d23e9dad7cf014c342c8f8dcfea6497",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "checkpoint_sha256": "c53fd1d7c442bc375f6d40aa6283ee689bb7c1f2cb17f92fd8c694c4895fe12b"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "walking_photons20",
+      "source_video": "walking",
+      "train_seed": 0,
+      "model": "plain",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed0/plain/walking_photons20--raw.npy",
+      "sha256": "7dedd2b3b6941d2ec3bf07425a14758f66c4356591301afd473953a8e1b5070e",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "checkpoint_sha256": "588192b7b6b5f8736c15910b075ce0ba967e533a999ce8f0ed3645ab076200cb"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "walking_photons20",
+      "source_video": "walking",
+      "train_seed": 0,
+      "model": "joint",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed0/joint/walking_photons20--raw.npy",
+      "sha256": "2073456a393d3ab4754a276d185b14c8c70bd2bae6f8161d7b7e040a2ff2f048",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "checkpoint_sha256": "c53fd1d7c442bc375f6d40aa6283ee689bb7c1f2cb17f92fd8c694c4895fe12b"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "walking_photons80",
+      "source_video": "walking",
+      "train_seed": 0,
+      "model": "plain",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed0/plain/walking_photons80--raw.npy",
+      "sha256": "4d76ec5f275a50bf1febb9e43688b71131460448aa71febdb58e3939cdfbe3a8",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "checkpoint_sha256": "588192b7b6b5f8736c15910b075ce0ba967e533a999ce8f0ed3645ab076200cb"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "walking_photons80",
+      "source_video": "walking",
+      "train_seed": 0,
+      "model": "joint",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed0/joint/walking_photons80--raw.npy",
+      "sha256": "d5015df1a4426acf260fb4fad62b99cd937fd07f38a6509f332375116a3bcbc9",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "checkpoint_sha256": "c53fd1d7c442bc375f6d40aa6283ee689bb7c1f2cb17f92fd8c694c4895fe12b"
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "scene": "video_15",
+      "source_video": "video_15",
+      "train_seed": 0,
+      "model": "plain",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed0/plain/video_15--raw.npy",
+      "sha256": "cde431285d46bf8d0ed30e6396866bc166b0e092016e28cd633afb11651cef79",
+      "shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "checkpoint_sha256": "588192b7b6b5f8736c15910b075ce0ba967e533a999ce8f0ed3645ab076200cb"
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "scene": "video_15",
+      "source_video": "video_15",
+      "train_seed": 0,
+      "model": "joint",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed0/joint/video_15--raw.npy",
+      "sha256": "a81f0a334df0aa042db9e20ae4fa8608365272fb9663375274eae70852f22202",
+      "shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "checkpoint_sha256": "c53fd1d7c442bc375f6d40aa6283ee689bb7c1f2cb17f92fd8c694c4895fe12b"
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "scene": "video_47",
+      "source_video": "video_47",
+      "train_seed": 0,
+      "model": "plain",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed0/plain/video_47--raw.npy",
+      "sha256": "0ada8ace0c68f94d0e39a677adfd32add2dfd8e7037c8d19a9dc6a60874e325b",
+      "shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "checkpoint_sha256": "588192b7b6b5f8736c15910b075ce0ba967e533a999ce8f0ed3645ab076200cb"
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "scene": "video_47",
+      "source_video": "video_47",
+      "train_seed": 0,
+      "model": "joint",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed0/joint/video_47--raw.npy",
+      "sha256": "b339a92570bd9e46de65cb3d5958c4593584a2193e09f6923862b9e3b4e966af",
+      "shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "checkpoint_sha256": "c53fd1d7c442bc375f6d40aa6283ee689bb7c1f2cb17f92fd8c694c4895fe12b"
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "scene": "video_91",
+      "source_video": "video_91",
+      "train_seed": 0,
+      "model": "plain",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed0/plain/video_91--raw.npy",
+      "sha256": "939b3f608565e9e55a4d7c6a644e03e61ea0886f10c9fcbc4d1ae996b354df7a",
+      "shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "checkpoint_sha256": "588192b7b6b5f8736c15910b075ce0ba967e533a999ce8f0ed3645ab076200cb"
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "scene": "video_91",
+      "source_video": "video_91",
+      "train_seed": 0,
+      "model": "joint",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed0/joint/video_91--raw.npy",
+      "sha256": "344650367a98d8bf70c33513950cdacaf23afa2a5a8f31054c4f301292f2c3d2",
+      "shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "checkpoint_sha256": "c53fd1d7c442bc375f6d40aa6283ee689bb7c1f2cb17f92fd8c694c4895fe12b"
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "scene": "video_121",
+      "source_video": "video_121",
+      "train_seed": 0,
+      "model": "plain",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed0/plain/video_121--raw.npy",
+      "sha256": "909a56117d404e4bccc82b72f4bf4c6f6a606e6efa51beec9ed47312c2cbfa6a",
+      "shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "checkpoint_sha256": "588192b7b6b5f8736c15910b075ce0ba967e533a999ce8f0ed3645ab076200cb"
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "scene": "video_121",
+      "source_video": "video_121",
+      "train_seed": 0,
+      "model": "joint",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed0/joint/video_121--raw.npy",
+      "sha256": "617f57c0a0556333232a65f6488fca4de6429c380e2bf7133f7c33ca13bebf84",
+      "shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "checkpoint_sha256": "c53fd1d7c442bc375f6d40aa6283ee689bb7c1f2cb17f92fd8c694c4895fe12b"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "bear_photons20",
+      "source_video": "bear",
+      "anchor_family": "R44_square_mse",
+      "anchor": "R44_square_mse_seed1",
+      "train_seed": 1,
+      "model": "square_mse",
+      "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/bear_photons20--raw.npy",
+      "sha256": "2e3822b9ed49bd500c76020364ab0a17d2c5757e53f35eaa7c929ebda298aa6c",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "dtype": "float32",
+      "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "bear_photons80",
+      "source_video": "bear",
+      "anchor_family": "R44_square_mse",
+      "anchor": "R44_square_mse_seed1",
+      "train_seed": 1,
+      "model": "square_mse",
+      "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/bear_photons80--raw.npy",
+      "sha256": "0019f4cbbb7c2a367dd3282cb9b6922833041d5e2fba9123bba410d75f430e75",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "dtype": "float32",
+      "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "lucia_photons20",
+      "source_video": "lucia",
+      "anchor_family": "R44_square_mse",
+      "anchor": "R44_square_mse_seed1",
+      "train_seed": 1,
+      "model": "square_mse",
+      "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/lucia_photons20--raw.npy",
+      "sha256": "a650f953f993bafd69528165c13b9f8bdebb64029fc6fc064a97497bd5d7b6bc",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "dtype": "float32",
+      "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "lucia_photons80",
+      "source_video": "lucia",
+      "anchor_family": "R44_square_mse",
+      "anchor": "R44_square_mse_seed1",
+      "train_seed": 1,
+      "model": "square_mse",
+      "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/lucia_photons80--raw.npy",
+      "sha256": "0084e9aec0b93faaa4560a31430bf77e16d4ac238a3f61f31479c09bb0177585",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "dtype": "float32",
+      "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "walking_photons20",
+      "source_video": "walking",
+      "anchor_family": "R44_square_mse",
+      "anchor": "R44_square_mse_seed1",
+      "train_seed": 1,
+      "model": "square_mse",
+      "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/walking_photons20--raw.npy",
+      "sha256": "aabd6e7b85e1eef6c7252ee208e58e40b3cf42c286e7c08017d9d84188c5f40b",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "dtype": "float32",
+      "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "walking_photons80",
+      "source_video": "walking",
+      "anchor_family": "R44_square_mse",
+      "anchor": "R44_square_mse_seed1",
+      "train_seed": 1,
+      "model": "square_mse",
+      "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/walking_photons80--raw.npy",
+      "sha256": "264c47d2eaf25c913033f002b1283bd9d59c6b73907dd8aaf19a014f4ea374bc",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "dtype": "float32",
+      "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e"
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "scene": "video_15",
+      "source_video": "video_15",
+      "anchor_family": "R44_square_mse",
+      "anchor": "R44_square_mse_seed1",
+      "train_seed": 1,
+      "model": "square_mse",
+      "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/video_15--raw.npy",
+      "sha256": "e3b359a455ec1cabf6ce8a78ca43a04384b068efbfb4c47c2ed8d4dbf31b49be",
+      "shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "dtype": "float32",
+      "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e"
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "scene": "video_47",
+      "source_video": "video_47",
+      "anchor_family": "R44_square_mse",
+      "anchor": "R44_square_mse_seed1",
+      "train_seed": 1,
+      "model": "square_mse",
+      "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/video_47--raw.npy",
+      "sha256": "ef297cb355b0fda9e8830a0a4136ebc9f5cda3ba8f90073dc4a0d8ffd76b2cb5",
+      "shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "dtype": "float32",
+      "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e"
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "scene": "video_91",
+      "source_video": "video_91",
+      "anchor_family": "R44_square_mse",
+      "anchor": "R44_square_mse_seed1",
+      "train_seed": 1,
+      "model": "square_mse",
+      "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/video_91--raw.npy",
+      "sha256": "182c7a9701eb9493b335e08fe1a2df11812d7813f1530763321da49158f0742a",
+      "shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "dtype": "float32",
+      "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e"
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "scene": "video_121",
+      "source_video": "video_121",
+      "anchor_family": "R44_square_mse",
+      "anchor": "R44_square_mse_seed1",
+      "train_seed": 1,
+      "model": "square_mse",
+      "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/video_121--raw.npy",
+      "sha256": "36cd47bcfa36d859befa06ce0eab1ee5a04c048ce695f0976302085cb763c967",
+      "shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "dtype": "float32",
+      "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "bear_photons20",
+      "source_video": "bear",
+      "train_seed": 1,
+      "model": "plain",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed1/plain/bear_photons20--raw.npy",
+      "sha256": "03c40e5be4e3a1a42ed54548e61722b8a254928def50d100e9157602d8c0eef9",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "checkpoint_sha256": "c895dfc46a56c24ef664a8dba97fe9aaac6a3be67563f5ba71a2969a7b3c9265"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "bear_photons20",
+      "source_video": "bear",
+      "train_seed": 1,
+      "model": "joint",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed1/joint/bear_photons20--raw.npy",
+      "sha256": "37cf9df5afbc9e228d4c5515e66ed4d5ec7157d7ca765daf7b4dac269990cd19",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "checkpoint_sha256": "6db3daf18d7862a36d8dc02253de43841dff899f29fcf0625bb31959a3ffe789"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "bear_photons80",
+      "source_video": "bear",
+      "train_seed": 1,
+      "model": "plain",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed1/plain/bear_photons80--raw.npy",
+      "sha256": "26d5034916263579bd64295619bae54f66d1055b5db1445f299cd59088cd5eb5",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "checkpoint_sha256": "c895dfc46a56c24ef664a8dba97fe9aaac6a3be67563f5ba71a2969a7b3c9265"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "bear_photons80",
+      "source_video": "bear",
+      "train_seed": 1,
+      "model": "joint",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed1/joint/bear_photons80--raw.npy",
+      "sha256": "abebed7082adc001910a6ec00cc27d6e2a90b212d9f4a5cd9a7261ffbed8d85c",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "checkpoint_sha256": "6db3daf18d7862a36d8dc02253de43841dff899f29fcf0625bb31959a3ffe789"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "lucia_photons20",
+      "source_video": "lucia",
+      "train_seed": 1,
+      "model": "plain",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed1/plain/lucia_photons20--raw.npy",
+      "sha256": "e6503e5b0d1554c6d4fcc9bec52389b7f2dfa82cfe679c8bfeab74ed9ccdbd6b",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "checkpoint_sha256": "c895dfc46a56c24ef664a8dba97fe9aaac6a3be67563f5ba71a2969a7b3c9265"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "lucia_photons20",
+      "source_video": "lucia",
+      "train_seed": 1,
+      "model": "joint",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed1/joint/lucia_photons20--raw.npy",
+      "sha256": "d9e73d7d544a342193557109a5a448904234accc89897d3962a7fdbf2bc07d4f",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "checkpoint_sha256": "6db3daf18d7862a36d8dc02253de43841dff899f29fcf0625bb31959a3ffe789"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "lucia_photons80",
+      "source_video": "lucia",
+      "train_seed": 1,
+      "model": "plain",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed1/plain/lucia_photons80--raw.npy",
+      "sha256": "6a500e7d37e7329c876c3fd7bf70d5f7a76e403acace11e6bf15cf8bb38cac98",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "checkpoint_sha256": "c895dfc46a56c24ef664a8dba97fe9aaac6a3be67563f5ba71a2969a7b3c9265"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "lucia_photons80",
+      "source_video": "lucia",
+      "train_seed": 1,
+      "model": "joint",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed1/joint/lucia_photons80--raw.npy",
+      "sha256": "eb10b63638947ed742477b52063d7106ac5eef380f48551ef1d8739b5ea56c73",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "checkpoint_sha256": "6db3daf18d7862a36d8dc02253de43841dff899f29fcf0625bb31959a3ffe789"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "walking_photons20",
+      "source_video": "walking",
+      "train_seed": 1,
+      "model": "plain",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed1/plain/walking_photons20--raw.npy",
+      "sha256": "3b874b2d6ac71c351149d15797c0fcc4351f0e4c455bcf0aeee2823c3c0faf39",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "checkpoint_sha256": "c895dfc46a56c24ef664a8dba97fe9aaac6a3be67563f5ba71a2969a7b3c9265"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "walking_photons20",
+      "source_video": "walking",
+      "train_seed": 1,
+      "model": "joint",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed1/joint/walking_photons20--raw.npy",
+      "sha256": "deb223a7f60b416e72aff2881d66f332ea3a0d49c9e8ae7e928e8cff19a24048",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "checkpoint_sha256": "6db3daf18d7862a36d8dc02253de43841dff899f29fcf0625bb31959a3ffe789"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "walking_photons80",
+      "source_video": "walking",
+      "train_seed": 1,
+      "model": "plain",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed1/plain/walking_photons80--raw.npy",
+      "sha256": "ded14b37df74774d504a1b70638cac5710ade427b1b7bd971e8781ad1f063d4d",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "checkpoint_sha256": "c895dfc46a56c24ef664a8dba97fe9aaac6a3be67563f5ba71a2969a7b3c9265"
+    },
+    {
+      "domain": "davis_train_pilot",
+      "scene": "walking_photons80",
+      "source_video": "walking",
+      "train_seed": 1,
+      "model": "joint",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed1/joint/walking_photons80--raw.npy",
+      "sha256": "ec1a9a53b70db16b577a526f4fe76e8659eaae777d20c3381be5cebca01a6b74",
+      "shape": [
+        64,
+        480,
+        854,
+        3
+      ],
+      "checkpoint_sha256": "6db3daf18d7862a36d8dc02253de43841dff899f29fcf0625bb31959a3ffe789"
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "scene": "video_15",
+      "source_video": "video_15",
+      "train_seed": 1,
+      "model": "plain",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed1/plain/video_15--raw.npy",
+      "sha256": "16bfe9cb737544e39c7e457c4f5268a49500ec35d36902706c74c030ec4f9be5",
+      "shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "checkpoint_sha256": "c895dfc46a56c24ef664a8dba97fe9aaac6a3be67563f5ba71a2969a7b3c9265"
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "scene": "video_15",
+      "source_video": "video_15",
+      "train_seed": 1,
+      "model": "joint",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed1/joint/video_15--raw.npy",
+      "sha256": "e2c20f09f5cc8a6b7d8965df629db55f1ec5b588eff0d5d477b2b92528186d1f",
+      "shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "checkpoint_sha256": "6db3daf18d7862a36d8dc02253de43841dff899f29fcf0625bb31959a3ffe789"
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "scene": "video_47",
+      "source_video": "video_47",
+      "train_seed": 1,
+      "model": "plain",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed1/plain/video_47--raw.npy",
+      "sha256": "e8866dce42554a7c5dc79be885bb73ad2dfaff17d0093371166e654479ad7dd4",
+      "shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "checkpoint_sha256": "c895dfc46a56c24ef664a8dba97fe9aaac6a3be67563f5ba71a2969a7b3c9265"
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "scene": "video_47",
+      "source_video": "video_47",
+      "train_seed": 1,
+      "model": "joint",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed1/joint/video_47--raw.npy",
+      "sha256": "3b1702c3da8e3e00d925d593662a8eaa23b370ff11be38bf510b2ff10c832f42",
+      "shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "checkpoint_sha256": "6db3daf18d7862a36d8dc02253de43841dff899f29fcf0625bb31959a3ffe789"
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "scene": "video_91",
+      "source_video": "video_91",
+      "train_seed": 1,
+      "model": "plain",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed1/plain/video_91--raw.npy",
+      "sha256": "9ba9c4fb0791e9c3d7eca784a863376b39afa77b12413fff2873c054f0c90040",
+      "shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "checkpoint_sha256": "c895dfc46a56c24ef664a8dba97fe9aaac6a3be67563f5ba71a2969a7b3c9265"
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "scene": "video_91",
+      "source_video": "video_91",
+      "train_seed": 1,
+      "model": "joint",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed1/joint/video_91--raw.npy",
+      "sha256": "fa557f8019c10d1be2c80c408dbbce0c680ae30ab5a07a7f36537699c84a6686",
+      "shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "checkpoint_sha256": "6db3daf18d7862a36d8dc02253de43841dff899f29fcf0625bb31959a3ffe789"
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "scene": "video_121",
+      "source_video": "video_121",
+      "train_seed": 1,
+      "model": "plain",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed1/plain/video_121--raw.npy",
+      "sha256": "76051e594d0610c1fde753f7e68d723d1e72637cad553a314476536c1129e82e",
+      "shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "checkpoint_sha256": "c895dfc46a56c24ef664a8dba97fe9aaac6a3be67563f5ba71a2969a7b3c9265"
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "scene": "video_121",
+      "source_video": "video_121",
+      "train_seed": 1,
+      "model": "joint",
+      "parameters": 4075,
+      "path": ".cache/experiments/exploration-r48/stage001/seed1/joint/video_121--raw.npy",
+      "sha256": "9789023a3980ac82cbc3dfaba02adf389ba5f01d6b53aa6ab2880c1cc35b5c4b",
+      "shape": [
+        16,
+        288,
+        512,
+        3
+      ],
+      "checkpoint_sha256": "6db3daf18d7862a36d8dc02253de43841dff899f29fcf0625bb31959a3ffe789"
+    }
+  ],
+  "new_neural_sequences": 0,
+  "output_correction": false,
+  "changes_primary_gates": false,
+  "scope": "All ten DEV conditions, two seeds, three families, before/after raw predictions; no GT fitting."
+}

@@ -1,0 +1,52 @@
+{
+  "domain": "REDS_synthetic_DEV",
+  "scene": "000_photons80",
+  "source_video": "000",
+  "photons": 80,
+  "source_fps": 24,
+  "input_rng_seed": 9253767626371341796,
+  "frames": 64,
+  "gt": {
+    "path": ".cache/experiments/exploration-r72/data001/000--gt.npy",
+    "sha256": "76dd64a87b3634ba7309ea1b04fdec33c1287030134d122edf98919d2cd3cc7a",
+    "shape": [
+      64,
+      720,
+      1280,
+      3
+    ],
+    "dtype": "uint8"
+  },
+  "low": {
+    "path": ".cache/experiments/exploration-r72/data001/000_photons80--low.npy",
+    "sha256": "314b63ae404aa459c924a0bd2e292e337201f2c42d7585fb7aa14876dfec0e77",
+    "shape": [
+      64,
+      720,
+      1280,
+      3
+    ],
+    "dtype": "uint8"
+  },
+  "reference_flow": {
+    "path": ".cache/experiments/exploration-r72/data001/000--reference-flow.npy",
+    "sha256": "1c2469ea80fee681932f1ba1f598c934f6eb3c1912f934639a46f5f6edf12c90",
+    "shape": [
+      63,
+      720,
+      1280,
+      2
+    ],
+    "dtype": "float32"
+  },
+  "reference_mask": {
+    "path": ".cache/experiments/exploration-r72/data001/000--reference-mask.npy",
+    "sha256": "77620ac17aafdf6e3c0f6d9e09474ad2199fb8472610278c616e9d36bc41b91f",
+    "shape": [
+      63,
+      720,
+      1280
+    ],
+    "dtype": "bool"
+  }
+}

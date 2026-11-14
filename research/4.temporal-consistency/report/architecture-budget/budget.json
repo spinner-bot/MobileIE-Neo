@@ -1,0 +1,274 @@
+{
+  "rows": [
+    {
+      "variant": "original",
+      "parameters": 4075,
+      "conv_MACs_1080p": 7937740944,
+      "layers": [
+        {
+          "layer": "head.block1.0",
+          "shape": [
+            1,
+            12,
+            1080,
+            1920
+          ],
+          "conv_MACs": 1866240000,
+          "parameters": 912
+        },
+        {
+          "layer": "head.block1.2",
+          "shape": [
+            1,
+            12,
+            1080,
+            1920
+          ],
+          "conv_MACs": 2687385600,
+          "parameters": 1308
+        },
+        {
+          "layer": "body.block1",
+          "shape": [
+            1,
+            12,
+            1080,
+            1920
+          ],
+          "conv_MACs": 2687385600,
+          "parameters": 1308
+        },
+        {
+          "layer": "att.1",
+          "shape": [
+            1,
+            12,
+            1,
+            1
+          ],
+          "conv_MACs": 144,
+          "parameters": 156
+        },
+        {
+          "layer": "att1.0",
+          "shape": [
+            1,
+            12,
+            1080,
+            1920
+          ],
+          "conv_MACs": 24883200,
+          "parameters": 24
+        },
+        {
+          "layer": "tail",
+          "shape": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "conv_MACs": 671846400,
+          "parameters": 327
+        }
+      ]
+    },
+    {
+      "variant": "separable_body",
+      "parameters": 3043,
+      "conv_MACs_1080p": 5772902544,
+      "layers": [
+        {
+          "layer": "head.block1.0",
+          "shape": [
+            1,
+            12,
+            1080,
+            1920
+          ],
+          "conv_MACs": 1866240000,
+          "parameters": 912
+        },
+        {
+          "layer": "head.block1.2",
+          "shape": [
+            1,
+            12,
+            1080,
+            1920
+          ],
+          "conv_MACs": 2687385600,
+          "parameters": 1308
+        },
+        {
+          "layer": "body.block1.0",
+          "shape": [
+            1,
+            12,
+            1080,
+            1920
+          ],
+          "conv_MACs": 223948800,
+          "parameters": 120
+        },
+        {
+          "layer": "body.block1.1",
+          "shape": [
+            1,
+            12,
+            1080,
+            1920
+          ],
+          "conv_MACs": 298598400,
+          "parameters": 156
+        },
+        {
+          "layer": "att.1",
+          "shape": [
+            1,
+            12,
+            1,
+            1
+          ],
+          "conv_MACs": 144,
+          "parameters": 156
+        },
+        {
+          "layer": "att1.0",
+          "shape": [
+            1,
+            12,
+            1080,
+            1920
+          ],
+          "conv_MACs": 24883200,
+          "parameters": 24
+        },
+        {
+          "layer": "tail",
+          "shape": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "conv_MACs": 671846400,
+          "parameters": 327
+        }
+      ]
+    },
+    {
+      "variant": "separable_head_body",
+      "parameters": 2011,
+      "conv_MACs_1080p": 3608064144,
+      "layers": [
+        {
+          "layer": "head.block1.0",
+          "shape": [
+            1,
+            12,
+            1080,
+            1920
+          ],
+          "conv_MACs": 1866240000,
+          "parameters": 912
+        },
+        {
+          "layer": "head.block1.2.0",
+          "shape": [
+            1,
+            12,
+            1080,
+            1920
+          ],
+          "conv_MACs": 223948800,
+          "parameters": 120
+        },
+        {
+          "layer": "head.block1.2.1",
+          "shape": [
+            1,
+            12,
+            1080,
+            1920
+          ],
+          "conv_MACs": 298598400,
+          "parameters": 156
+        },
+        {
+          "layer": "body.block1.0",
+          "shape": [
+            1,
+            12,
+            1080,
+            1920
+          ],
+          "conv_MACs": 223948800,
+          "parameters": 120
+        },
+        {
+          "layer": "body.block1.1",
+          "shape": [
+            1,
+            12,
+            1080,
+            1920
+          ],
+          "conv_MACs": 298598400,
+          "parameters": 156
+        },
+        {
+          "layer": "att.1",
+          "shape": [
+            1,
+            12,
+            1,
+            1
+          ],
+          "conv_MACs": 144,
+          "parameters": 156
+        },
+        {
+          "layer": "att1.0",
+          "shape": [
+            1,
+            12,
+            1080,
+            1920
+          ],
+          "conv_MACs": 24883200,
+          "parameters": 24
+        },
+        {
+          "layer": "tail",
+          "shape": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "conv_MACs": 671846400,
+          "parameters": 327
+        }
+      ]
+    }
+  ],
+  "illustrative_history_tensors": [
+    {
+      "description": "12ch full-resolution FP32",
+      "bytes": 99532800
+    },
+    {
+      "description": "8ch quarter-resolution FP32",
+      "bytes": 4147200
+    },
+    {
+      "description": "8ch quarter-resolution FP16",
+      "bytes": 2073600
+    }
+  ],
+  "cuda_initialized": false,
+  "device": "meta; no numerical inference or GPU context",
+  "trained_variants": 0,
+  "scope": "Known depthwise-separable spatial controls, not a new method or equivalent conversion. Conv-only MACs exclude activation/pooling/warping; tensor sizes exclude aliases, other buffers and peak memory. No latency or quality measured."
+}

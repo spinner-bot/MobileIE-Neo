@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-13",
+  "author": "Codex  (sqs_A100)",
+  "scope": "Targeted primary-source reading before registering a different information-supervision pilot; no downloaded model, source pixels, training or GPU.",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2610.33338v1",
+      "title": "TinyFlow: Breaking the Warping Bottleneck for Edge Optical Flow",
+      "version": "v1, 2026-10-23, preprint submitted to IEEE; not verified as a published conference paper",
+      "actually_read": ["III-C through III-H", "architecture and deployment discussion"],
+      "relevance": "Fixed-offset correlation, coarse-to-fine flow and teacher distillation already have explicit edge-deployment prior art. The flow estimator avoiding warping does not eliminate an enhancement system's final image resampling.",
+      "not_done": "No code execution, quantization, compiler validation or transfer of author benchmark numbers."
+    },
+    {
+      "url": "https://arxiv.org/html/2007.05146v1",
+      "title": "Optical Flow Distillation: Towards Efficient and Stable Video Style Transfer",
+      "version": "v1, 2020-07-10",
+      "actually_read": ["3.1 through 3.4", "teacher/student information paths"],
+      "relevance": "Residual output and low-rank temporal distillation precede this project. Its student consumes a current frame; that differs from retaining a small learned motion estimator and a recurrent RGB state.",
+      "not_done": "No reproduction, new style-transfer experiment or adoption of published speed figures as our measurements."
+    },
+    {
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/download/38019/41981",
+      "title": "FlowAnyTime: Efficient Fine-tuning with Intra-Inter Frame Distillation for All-Weather Optical Flow Estimation",
+      "access": "Search exposed abstract; direct full PDF tool access failed. Not used for method-detail claims."
+    }
+  ],
+  "existing_project_reading_retained": "note24 STBN already covers privileged flow distillation and independence caveats; note53 covers recurrent filtering and note48 covers lightweight recurrent enhancement.",
+  "novelty_conclusion": "Neither motion supervision, a tiny matcher, RGB recurrence nor teacher distillation alone is new. Next pilot tests usefulness and cost, not established novelty."
+}

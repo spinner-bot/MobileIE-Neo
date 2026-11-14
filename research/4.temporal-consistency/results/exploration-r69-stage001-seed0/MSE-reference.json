@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "seed": 0,
+  "MSE_reference": {
+    "model": "square_mse",
+    "seed": 0,
+    "new_step": 4000,
+    "inherited_updates": 4000,
+    "path": ".cache/checkpoints/exploration-r44/stage001/seed0/square_mse-deploy-step4000.pt",
+    "sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+    "training_path": ".cache/checkpoints/exploration-r44/stage001/seed0/square_mse-training-step4000.pt",
+    "training_sha256": "91800b897a2b568d837cf92925b727bb71934f781437733c75323d3562f6998e",
+    "deployment_parameters": 4075,
+    "final_eval_export_max_abs_delta": 2.5033950805664062e-06,
+    "final_export_gate_passed": true
+  },
+  "source_sha256": {
+    "research/4.temporal-consistency/results/exploration-r41-stage002-seed0/config.json": "21897855c84addd11a2fde8496bcf15e3d3a55a31b9791ed6c8bedb5dd941ea9",
+    "research/4.temporal-consistency/results/exploration-r44-stage001-seed0/config.json": "bd65f0b51faf4a7aa130a8a4460a13eb6d94db68d94728051c585857f0657414",
+    "research/4.temporal-consistency/results/exploration-r41-stage002-seed0/runtime.json": "df22d29a1a3757b2270a4fe6eceeb627efb5a3d1f9793389e5e1672f1071a66e",
+    "research/4.temporal-consistency/results/exploration-r44-stage001-seed0/runtime.json": "581797363f581417cb4db1c19ee611d9f71fdc0edefa0f232d62fd5034f1a098",
+    "research/4.temporal-consistency/results/exploration-r44-stage001-seed0/square_mse-step4000.json": "056754b481828cb070310de6f792dbd9e9a10fe0829dc5aeb86d2e19b8edb840",
+    "research/4.temporal-consistency/results/exploration-r41-stage002-seed0/windows.jsonl": "ac4f6eddbe0da7b9adb85d83eee652096e9accf626d3550c649a41139ec6c49e",
+    "research/4.temporal-consistency/results/exploration-r44-stage001-seed0/windows.jsonl": "4c493d8932869fb262adeb42026c323bd4679540eea17298ea1edee26f06e2cc",
+    "research/4.temporal-consistency/results/exploration-r65-stage001-seed0/windows.jsonl": "6cd44d2121c6c57366bdfc7c7590343f2ca45af7abe0cbb348b491ecf30bdbbf"
+  },
+  "matched_window_identities": 8000,
+  "numerical_replay": false,
+  "scope": "Same recorded sampling identities and objective/optimizer setting; not GPU bit identity or isolated architecture/capacity causality."
+}

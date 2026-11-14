@@ -1,0 +1,98 @@
+\section{Published-loss adaptation, perception and reference cost}
+\label{sec:video-evidence}
+\paragraph{A controlled published-loss reference.}
+We adapt the official 4,316,259-parameter StableLLVE U-Net
+and deformation-consistency loss form~\cite{stablellve} to the fixed mixed
+task. Both arms use the same public clean initialization, source windows,
+BGR ordering and 8,000 updates per seed. The spatial arm minimizes L1;
+the second adds $20\lVert F(Wx)-WF(x)\rVert_1$, retaining both prediction
+paths' gradients. Here $W$ uses training-GT motion as a deformation field
+applied to the same noisy source image. It does not create a separately
+noised adjacent observation. Compared with the paper, this changes CMP
+motion synthesis, crop size, initialization and training schedule. The
+original warp coordinate convention and CUDA backward nondeterminism
+are disclosed. This is a fixed-budget task adaptation, not a full
+reproduction, a convergence claim or a new method.
+
+\input{generated/stablellve-adapted-table}
+Table~\ref{tab:stablellve-adapted} contains only the four final 8,000-update
+models. Relative to its same-network spatial control, the commutator arm
+loses 2.59--2.88\,dB raw PSNR and 0.53--0.67 predicted JOD across domains
+and seeds. SYN temporal error increases by 1.63--3.32\%; paired-real
+error decreases by 10.19--21.44\%, with lower spatial and perceptual
+quality. Applying the same recursive reference does not remove this
+trade-off. This fixed loss setting is stopped without a local weight,
+geometry, learning-rate, crop or training-length search. It does not
+invalidate the original paper or all equivariance objectives.
+
+The L1 control is a useful stronger spatial reference: SYN raw PSNR is
+28.03--28.09\,dB, and its recursive temporal error is 5.49--5.50 versus
+6.39--6.55 for the MobileIE recursive reference. However, its raw temporal
+error remains worse than that strong recursive reference. On paired-real
+seed 1, even its recursive error is 2.74 versus MobileIE's 2.53. Capacity,
+loss, pretraining and compute differ together; their separate effects
+cannot be inferred from this comparison. All 20 preassigned static
+contacts were inspected, including native center crops. These contacts
+are not full-video playback or human flicker judgments.
+
+\paragraph{Matching the spatial objective does not close the gap.}
+\input{generated/matched-objective-table}
+We separately train original MobileIE with spatial L1 under the same
+source-window schedule and two-stage 8,000-update budget as its existing
+MSE reference (Table~\ref{tab:matched-objective}). The original expanded
+training graph and initialization are retained; both deploy the same
+4,075-parameter graph. The comparison concerns the full objective setting:
+different gradient scales interact with the shared gradient-clipping rule.
+Only the preassigned final weights are evaluated.
+
+L1 does not give a consistent joint improvement. Raw temporal error falls
+by 1.18--3.59\%, while paired-real raw PSNR falls by 0.37--1.03\,dB and
+predicted JOD by 0.12--0.48. Recursive temporal error falls by only
+0.22--1.80\%, again with quality costs. SYN seed 1 raw gains just
+0.036\,dB while predicted JOD decreases slightly. This fixed reference
+is retained without an objective-mixture, learning-rate or seed search.
+All 20 prescribed contacts were inspected, without full-video playback
+or a human temporal study.
+
+With both spatial references trained using L1, the U-Net still has
+1.54--1.79\,dB higher SYN raw PSNR and 1.79--2.51\,dB higher paired-real
+raw PSNR. Thus the objective difference alone does not account for the
+observed gap, but architecture, capacity, pretraining and optimization
+remain coupled. This comparison does not identify capacity as the cause
+or establish a new temporal method.
+
+\paragraph{Perceptual predictions qualify the temporal proxy.}
+\input{generated/perceptual-reference-table}
+We evaluate ColorVideoVDP~\cite{colorvideovdp} on the complete cached
+sequences with one fixed display configuration
+(Table~\ref{tab:perceptual}). The combined collection has 220
+sequence-condition rows and 9,856 comparison frames, reusing 448 input
+observations; ten GT identity controls return exactly 10. These are
+repeated conditions, not independent video samples. In particular, the
+six SYN conditions are three source videos under two noise conditions.
+No enhancement network is rerun to obtain these scores.
+
+For MobileIE on SYN, recursion improves predicted JOD by 0.30--0.38
+alongside lower temporal error. On paired-real, the mean JOD changes
+are about $-0.04$ despite roughly 29--30\% lower temporal error. The
+negative change is concentrated in video 15, while the other three
+sources have positive changes for both seeds. These small means are
+not evidence of statistically significant or human-perceived degradation.
+The spatially adapted U-Net also shows that lower temporal error need
+not improve JOD: on SYN its recursive JOD is about 0.026 below raw.
+Predicted perceptual quality, spatial fidelity and the temporal residual
+therefore need joint reporting. A dedicated human temporal study remains
+necessary; no display-condition grid is used to select favorable scores.
+
+\paragraph{Efficiency remains a separate empirical requirement.}
+\input{generated/reference-budget-table}
+The common Conv2d convention in Table~\ref{tab:reference-budget} gives
+317.24\,GMAC for StableLLVE versus 7.94 for MobileIE at 1080p. This
+approximately forty-fold convolution-budget difference cannot be
+translated into a phone-latency ratio. The count excludes motion,
+warping, point operations and memory traffic, and the largest individual
+convolution output is not peak memory. Neither the 4,075-parameter
+starting point nor zero added inference cost is an imposed hard limit.
+A defensible deployment claim requires actual full-pipeline phone
+measurements for a candidate that first demonstrates joint quality and
+stability gains. No such new candidate is established by these references.

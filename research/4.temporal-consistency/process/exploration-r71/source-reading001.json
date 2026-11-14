@@ -1,0 +1,38 @@
+{
+  "at": "2026-11-13T05:51:08.527881+08:00",
+  "author": "Codex  (sqs_A100)",
+  "sources": [
+    {
+      "url": "https://seungjunnah.github.io/Datasets/reds.html",
+      "read": "Author page data/task, March2025 HF release, sharp validation download and CC BY4.0; saved bytes in owned catalog assets."
+    },
+    {
+      "url": "https://huggingface.co/datasets/snah/REDS",
+      "read": "Connected hub_repo_details confirms author/license; public metadata API provides exact revision and target LFS metadata. Connector does not provide bounded ZIP member bytes."
+    },
+    {
+      "url": "https://gist.github.com/SeungjunNah/b10d369b92840cb8dd2118dd4f41d643",
+      "read": "Author April18 2022 response states sharp images subsampled at24fps from120fps source. Blurry interpolation/averaging is a different release and is not used."
+    }
+  ],
+  "access_limits": [
+    {
+      "source": "CVF official REDS dataset PDF",
+      "result": "Web tool403; no full-paper or figure reading claimed."
+    },
+    {
+      "source": "HF mutable main ZIP via browser",
+      "result": "Browser500/CDN redirect inaccessible; owned Python strict ranges on fixed official revision succeeded."
+    }
+  ],
+  "timing_for_future_evaluation": {
+    "source_sharp_fps": 24,
+    "existing_other_collections_nominal30_unchanged": true,
+    "R71_perceptual_evaluation_registered": false
+  },
+  "decoded_before_selection": 0,
+  "new_CNN": 0,
+  "new_SGD": 0,
+  "new_GPU": 0,
+  "new_method": false
+}

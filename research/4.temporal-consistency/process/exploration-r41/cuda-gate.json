@@ -1,0 +1,112 @@
+{
+  "passed": false,
+  "device": "cuda",
+  "created_at": "2026-11-12T12:41:02.351727+08:00",
+  "source_sha256": {
+    "training_form_r41.py": "37529fcbeaa399cb7914e2c5e1aada025ceb4baf0999593b26c1d700f9ee1dd2",
+    "check_training_form_r41.py": "8557bf85b28dc2cb9ec81d195815c8c3271d038dba13cc88828049ef9138e242",
+    "mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5"
+  },
+  "protocol_sha256": "5c156caf16749e874d0f12b62946cfdcd51150375185e6dd9f237ec870e14888",
+  "scope": "Functional gates with two discarded SGD updates; fresh initialization required for training. No quality or optimizer replay claim.",
+  "data": {
+    "manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "verified_files": 384,
+    "scenes": [
+      "video_11",
+      "video_35",
+      "video_92",
+      "video_131",
+      "video_12",
+      "video_20",
+      "video_29",
+      "video_52",
+      "video_59",
+      "video_95",
+      "video_104",
+      "video_122"
+    ],
+    "native_bytes": 2388787200,
+    "real_training_ids": [
+      "video_104",
+      "video_11",
+      "video_12",
+      "video_122",
+      "video_131",
+      "video_20",
+      "video_29",
+      "video_35",
+      "video_52",
+      "video_59",
+      "video_92",
+      "video_95"
+    ],
+    "excluded_native_DEV": [
+      "video_121",
+      "video_15",
+      "video_47",
+      "video_91"
+    ],
+    "all_real_assets_owned": true,
+    "source_manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "synthetic_manifest_sha256": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+    "synthetic_training_videos": 57,
+    "real_tensor_dtype": "uint8 native inputs/GT; float32 /255 after crops",
+    "timing_scope": "Consecutive registered frame indices, not independently verified sensor timing."
+  },
+  "parameters": {
+    "pretrained_sha256": "d40a930fbc0435f47ce08dda17b1c630b86a501be9423b8f48dab14722fb5548",
+    "rep_scale": 4,
+    "branch_seed": 4100,
+    "expanded_layers": [
+      "head.block1.0",
+      "head.block1.2",
+      "body.block1",
+      "att.1",
+      "att1.0",
+      "tail"
+    ],
+    "training_parameters_total": 49978,
+    "training_parameters_active": 47239,
+    "inactive_warm_parameters": 2739,
+    "deployment_parameters": 4075,
+    "initialization": "Copy each slim kernel/bias into first outputs of the largest raw branch; identity compression, zero other readout columns; copy FST/PReLU.",
+    "warmup": false,
+    "scope": "Original MBR parameterization control, not a reproduction of the complete official training protocol."
+  },
+  "pre_cuda_admission": {
+    "allowed": true,
+    "samples": [
+      {
+        "gpu": 4,
+        "uuid": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+        "memory_mib": 0,
+        "utilization_percent": 0,
+        "compute_processes": [],
+        "time": "2026-11-12T12:41:28.313860+08:00"
+      },
+      {
+        "gpu": 4,
+        "uuid": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+        "memory_mib": 0,
+        "utilization_percent": 0,
+        "compute_processes": [],
+        "time": "2026-11-12T12:41:29.541447+08:00"
+      }
+    ],
+    "scope": "Fresh pre-CUDA check after full CPU data preparation; external project GPU lock remains held."
+  },
+  "initial_shapes": [
+    {
+      "shape": [
+        2,
+        3,
+        32,
+        36
+      ],
+      "train_max_abs_delta": 0.14811432361602783,
+      "eval_max_abs_delta": 0.14811432361602783
+    }
+  ],
+  "failure": "Traceback (most recent call last):\n  File \"/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/check_training_form_r41.py\", line 58, in main\n    assert max(train_delta, eval_delta) <= 1e-5, row\nAssertionError: {'shape': [2, 3, 32, 36], 'train_max_abs_delta': 0.14811432361602783, 'eval_max_abs_delta': 0.14811432361602783}\n"
+}

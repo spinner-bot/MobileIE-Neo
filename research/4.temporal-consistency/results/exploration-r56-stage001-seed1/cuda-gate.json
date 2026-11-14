@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "initial_eval_MSE": 0.007823982276022434,
+  "training_MSE": 0.008699135854840279,
+  "branch_gradient_L2": {
+    "luminance": 0.33968041900019197,
+    "chrominance": 0.057546076879153606
+  },
+  "branch_max_parameter_change": {
+    "luminance": 2.191215753555298e-05,
+    "chrominance": 3.458932042121887e-06
+  },
+  "missing_gradient_names": [],
+  "norm_before_clip": 0.3445204496383667,
+  "BN_before": {
+    "illum_mid_seq.0.0.bn": 48970,
+    "chroma_mid_seq.0.0.bn": 48970
+  },
+  "BN_after": {
+    "illum_mid_seq.0.0.bn": 48974,
+    "chroma_mid_seq.0.0.bn": 48974
+  },
+  "discarded_SGD_updates": 1,
+  "inherited_into_formal_training": false
+}

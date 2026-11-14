@@ -1,0 +1,20 @@
+{
+  "at": "2026-11-12T21:04:28.551171+08:00",
+  "guard_pid": 3587170,
+  "gpu": 6,
+  "seed": 1,
+  "command": [
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/gpu_guard.py",
+    "--gpu",
+    "6",
+    "--record",
+    "research/4.temporal-consistency/process/exploration-r56/seed1-guard.json",
+    "--",
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/train_tiny_task_r56.py",
+    "--seed",
+    "1"
+  ],
+  "scope": "Fresh guarded admission; CUDA gate then full official reset before8000 new updates."
+}

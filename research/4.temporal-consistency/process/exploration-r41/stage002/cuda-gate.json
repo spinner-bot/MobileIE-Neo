@@ -1,0 +1,294 @@
+{
+  "passed": true,
+  "device": "cuda",
+  "created_at": "2026-11-12T12:57:22.778584+08:00",
+  "source_sha256": {
+    "training_form_r41.py": "4392fdceb16750ca0a763f4485beec873dc7316d758c95e9eaef042ffceb4ded",
+    "check_training_form_r41.py": "eed9ff24c1dd5c79b4b8840438e4acd8c72aa7e5e5c5d9db015e3826795ad524",
+    "mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5"
+  },
+  "protocol_sha256": "50e407d90a66fbbb38b870755d8a8b91a41fa897f1e4f5935c6d51638b7a705c",
+  "scope": "Functional gates with two discarded SGD updates; fresh initialization required for training. No quality or optimizer replay claim.",
+  "data": {
+    "manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "verified_files": 384,
+    "scenes": [
+      "video_11",
+      "video_35",
+      "video_92",
+      "video_131",
+      "video_12",
+      "video_20",
+      "video_29",
+      "video_52",
+      "video_59",
+      "video_95",
+      "video_104",
+      "video_122"
+    ],
+    "native_bytes": 2388787200,
+    "real_training_ids": [
+      "video_104",
+      "video_11",
+      "video_12",
+      "video_122",
+      "video_131",
+      "video_20",
+      "video_29",
+      "video_35",
+      "video_52",
+      "video_59",
+      "video_92",
+      "video_95"
+    ],
+    "excluded_native_DEV": [
+      "video_121",
+      "video_15",
+      "video_47",
+      "video_91"
+    ],
+    "all_real_assets_owned": true,
+    "source_manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "synthetic_manifest_sha256": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+    "synthetic_training_videos": 57,
+    "real_tensor_dtype": "uint8 native inputs/GT; float32 /255 after crops",
+    "timing_scope": "Consecutive registered frame indices, not independently verified sensor timing."
+  },
+  "parameters": {
+    "pretrained_sha256": "d40a930fbc0435f47ce08dda17b1c630b86a501be9423b8f48dab14722fb5548",
+    "rep_scale": 4,
+    "branch_seed": 4100,
+    "expanded_layers": [
+      "head.block1.0",
+      "head.block1.2",
+      "body.block1",
+      "att.1",
+      "att1.0",
+      "tail"
+    ],
+    "training_parameters_total": 49978,
+    "training_parameters_active": 47239,
+    "inactive_warm_parameters": 2739,
+    "deployment_parameters": 4075,
+    "raw_convolution_execution": "Preserved outputs and extra outputs convolved separately then concatenated; same MBR weights, BN and readout",
+    "initialization": "Copy each slim kernel/bias into first outputs of the largest raw branch; identity compression, zero other readout columns; copy FST/PReLU.",
+    "warmup": false,
+    "scope": "Original MBR parameterization control, not a reproduction of the complete official training protocol."
+  },
+  "pre_cuda_admission": {
+    "allowed": true,
+    "samples": [
+      {
+        "gpu": 4,
+        "uuid": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+        "memory_mib": 0,
+        "utilization_percent": 0,
+        "compute_processes": [],
+        "time": "2026-11-12T12:57:48.641286+08:00"
+      },
+      {
+        "gpu": 4,
+        "uuid": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+        "memory_mib": 0,
+        "utilization_percent": 0,
+        "compute_processes": [],
+        "time": "2026-11-12T12:57:49.890700+08:00"
+      }
+    ],
+    "scope": "Fresh pre-CUDA check after full CPU data preparation; external project GPU lock remains held."
+  },
+  "initial_shapes": [
+    {
+      "shape": [
+        2,
+        3,
+        32,
+        36
+      ],
+      "train_max_abs_delta": 0.0,
+      "eval_max_abs_delta": 0.0
+    },
+    {
+      "shape": [
+        2,
+        3,
+        33,
+        37
+      ],
+      "train_max_abs_delta": 0.0,
+      "eval_max_abs_delta": 0.0
+    }
+  ],
+  "real_initial_both_seeds": [
+    {
+      "seed": 0,
+      "shape": [
+        4,
+        4,
+        3,
+        128,
+        128
+      ],
+      "max_abs_delta": 0.0
+    },
+    {
+      "seed": 1,
+      "shape": [
+        4,
+        4,
+        3,
+        128,
+        128
+      ],
+      "max_abs_delta": 0.0
+    }
+  ],
+  "discarded_backward": [
+    {
+      "discarded_step": 1,
+      "mse": 0.5962610840797424,
+      "gradient_norm_before_clip": 158.94415283203125,
+      "other_readout_gradient_norms": {
+        "head.block1.0": 1.2319716215133667,
+        "head.block1.2": 2.1295244693756104,
+        "body.block1": 2.7883033752441406,
+        "att.1": 0.028413213789463043,
+        "att1.0": 1.1833405494689941,
+        "tail": 5.804714679718018
+      },
+      "unlocked_branch_gradient_norms": {}
+    },
+    {
+      "discarded_step": 2,
+      "mse": 0.5805795192718506,
+      "gradient_norm_before_clip": 154.82876586914062,
+      "other_readout_gradient_norms": {
+        "head.block1.0": 1.1963986158370972,
+        "head.block1.2": 2.070380449295044,
+        "body.block1": 2.711637496948242,
+        "att.1": 0.02871784381568432,
+        "att1.0": 1.1582461595535278,
+        "tail": 5.696889400482178
+      },
+      "unlocked_branch_gradient_norms": {
+        "head.block1.0": {
+          "extra_raw_channels": 1.9167370624018076e-07,
+          "additional_conv_or_BN": 5.737236463687623e-08
+        },
+        "head.block1.2": {
+          "extra_raw_channels": 1.0218415127383196e-06,
+          "additional_conv_or_BN": 7.632258984813234e-07
+        },
+        "body.block1": {
+          "extra_raw_channels": 1.9508659079292556e-06,
+          "additional_conv_or_BN": 1.221176376020594e-06
+        },
+        "att.1": {
+          "extra_raw_channels": 3.6586622620404796e-10,
+          "additional_conv_or_BN": 1.1143913916655812e-11
+        },
+        "att1.0": {
+          "extra_raw_channels": 2.1602367894502095e-07,
+          "additional_conv_or_BN": 1.0972633646133545e-07
+        },
+        "tail": {
+          "extra_raw_channels": 1.2455675459932536e-05,
+          "additional_conv_or_BN": 9.03092495718738e-06
+        }
+      }
+    }
+  ],
+  "real_window_eval_fold_max_abs_delta": 9.34600830078125e-05,
+  "real_windows": [
+    {
+      "video": "breakdance-flare",
+      "members": [
+        "DAVIS/JPEGImages/480p/breakdance-flare/00000.jpg",
+        "DAVIS/JPEGImages/480p/breakdance-flare/00001.jpg",
+        "DAVIS/JPEGImages/480p/breakdance-flare/00002.jpg",
+        "DAVIS/JPEGImages/480p/breakdance-flare/00003.jpg"
+      ],
+      "xy": [
+        634,
+        41
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": false,
+      "photons": 20,
+      "source": "davis_synthetic"
+    },
+    {
+      "video": "rallye",
+      "members": [
+        "DAVIS/JPEGImages/480p/rallye/00032.jpg",
+        "DAVIS/JPEGImages/480p/rallye/00033.jpg",
+        "DAVIS/JPEGImages/480p/rallye/00034.jpg",
+        "DAVIS/JPEGImages/480p/rallye/00035.jpg"
+      ],
+      "xy": [
+        20,
+        7
+      ],
+      "flip_horizontal": true,
+      "flip_vertical": true,
+      "photons": 20,
+      "source": "davis_synthetic"
+    },
+    {
+      "source": "olives_real",
+      "video": "video_29",
+      "indices": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "xy": [
+        38,
+        660
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": true,
+      "input_sources": [
+        ".cache/data/olives-r4/Frames/input/video_29/00009.png",
+        ".cache/data/olives-r4/Frames/input/video_29/00010.png",
+        ".cache/data/olives-r4/Frames/input/video_29/00011.png",
+        ".cache/data/olives-r4/Frames/input/video_29/00012.png"
+      ],
+      "target_sources": [
+        ".cache/data/olives-r4/Frames/gt/video_29/00009.png",
+        ".cache/data/olives-r4/Frames/gt/video_29/00010.png",
+        ".cache/data/olives-r4/Frames/gt/video_29/00011.png",
+        ".cache/data/olives-r4/Frames/gt/video_29/00012.png"
+      ]
+    },
+    {
+      "source": "olives_real",
+      "video": "video_11",
+      "indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "xy": [
+        840,
+        658
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": true,
+      "input_sources": [
+        ".cache/data/olives-r4/Frames/input/video_11/00000.png",
+        ".cache/data/olives-r4/Frames/input/video_11/00001.png",
+        ".cache/data/olives-r4/Frames/input/video_11/00002.png",
+        ".cache/data/olives-r4/Frames/input/video_11/00003.png"
+      ],
+      "target_sources": [
+        ".cache/data/olives-r4/Frames/gt/video_11/00000.png",
+        ".cache/data/olives-r4/Frames/gt/video_11/00001.png",
+        ".cache/data/olives-r4/Frames/gt/video_11/00002.png",
+        ".cache/data/olives-r4/Frames/gt/video_11/00003.png"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "created_at": "2026-11-12T08:08:20.435835+08:00",
+  "dependencies": [
+    {
+      "seed": 0,
+      "pid": 3179936,
+      "identity": {
+        "start_ticks": "38195876",
+        "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 0 --record research/4.temporal-consistency/process/exploration-r40/seed0-guard.json -- ./scripts/project-python research/4.temporal-consistency/scripts/train_mixed_anchor_r40.py --seed 0 "
+      }
+    },
+    {
+      "seed": 1,
+      "pid": 3179968,
+      "identity": {
+        "start_ticks": "38195881",
+        "commandline": "/data/Users/zrh/data/MobileIE-Neo/.venv/bin/python research/4.temporal-consistency/scripts/gpu_guard.py --gpu 1 --record research/4.temporal-consistency/process/exploration-r40/seed1-guard.json -- ./scripts/project-python research/4.temporal-consistency/scripts/train_mixed_anchor_r40.py --seed 1 "
+      }
+    }
+  ],
+  "source_sha256": {
+    "finalize_mixed_anchor_r40.py": "7054f639c39b021cb5f973272b273557f48a7ec8284b237fdc3fd02977790f9e",
+    "evaluate_mixed_anchor_r40.py": "8d43e4a4b41f0d733d3810e821bff019be845759f7185dfd72f9fe7ae5e71ec4",
+    "summarize_mixed_anchor_r40.py": "df92ff0b631977cbb6e14b05941041eb02d7ecb46a49ca9998f8762f79bbead4",
+    "half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+    "aligned_raw_history_r11.py": "e367727401f82ccf0bccaf8d88f904e4aebf8b78186f0539eedeed222b2d2227",
+    "exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+    "video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0",
+    "finalize_preserved_r37.py": "bc5bc7e848d703f34e3e5853a006b73a34d9204b5db4f4a8f12beb18e5d96f71"
+  },
+  "no_wall_cutoff": true,
+  "revision": "34bfe45257cff1a6e70b69e6c4d920abffb183f0",
+  "scope": "Both fixed4000 trainings must complete before final CPU quality; no automatic retry or checkpoint selection."
+}

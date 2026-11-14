@@ -1,0 +1,38 @@
+{
+  "completed_normally": true,
+  "model_updates": {
+    "plain": 4000,
+    "joint": 4000
+  },
+  "total_new_updates": 8000,
+  "final_checkpoints": {
+    "plain": {
+      "model": "plain",
+      "seed": 0,
+      "new_step": 4000,
+      "inherited_updates": 8000,
+      "path": ".cache/checkpoints/exploration-r48/stage001/seed0/plain-deploy-step4000.pt",
+      "sha256": "588192b7b6b5f8736c15910b075ce0ba967e533a999ce8f0ed3645ab076200cb",
+      "training_path": ".cache/checkpoints/exploration-r48/stage001/seed0/plain-training-step4000.pt",
+      "training_sha256": "a9c579678d4b2c4325e0ce619ea3ccbe53a1516cba8a09edb1eee17913e0dd8d",
+      "deployment_parameters": 4075,
+      "final_fold_delta": 1.4603137969970703e-06,
+      "final_fold_passed": true
+    },
+    "joint": {
+      "model": "joint",
+      "seed": 0,
+      "new_step": 4000,
+      "inherited_updates": 8000,
+      "path": ".cache/checkpoints/exploration-r48/stage001/seed0/joint-deploy-step4000.pt",
+      "sha256": "c53fd1d7c442bc375f6d40aa6283ee689bb7c1f2cb17f92fd8c694c4895fe12b",
+      "training_path": ".cache/checkpoints/exploration-r48/stage001/seed0/joint-training-step4000.pt",
+      "training_sha256": "0a60b0f0b947391de0a03e32e877f568e59a04036b902cd8e16a7c6e9c6b36db",
+      "deployment_parameters": 4075,
+      "final_fold_delta": 1.5497207641601562e-06,
+      "final_fold_passed": true
+    }
+  },
+  "seconds": 1769.8179735610029,
+  "ended": "2026-11-12T18:11:44.198190+08:00"
+}

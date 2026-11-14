@@ -1,0 +1,18 @@
+{
+  "started_at": "2026-11-12T15:54:29.079370+08:00",
+  "guard_pid": 3394716,
+  "physical_gpu": 4,
+  "command": [
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/gpu_guard.py",
+    "--gpu",
+    "4",
+    "--record",
+    "research/4.temporal-consistency/process/exploration-r45/cuda-attempt001-guard.json",
+    "--",
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/check_response_cuda_r45.py"
+  ],
+  "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+  "scope": "Six discarded CUDA implementation updates only, with fresh external and post-data idle checks; no formal training."
+}

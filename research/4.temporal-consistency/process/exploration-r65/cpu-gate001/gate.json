@@ -1,0 +1,210 @@
+{
+  "at": "2026-11-13T02:51:42.580462+08:00",
+  "passed": true,
+  "arms": {
+    "spatial_l1": {
+      "passed": true,
+      "arm": "spatial_l1",
+      "parameters": 4316259,
+      "total": 0.07932978868484497,
+      "spatial_L1": 0.07932978868484497,
+      "consistency_L1": 0.0,
+      "consistency_path_gradient_L2": {},
+      "endpoint_gradient_L2": {
+        "inc.double_conv.0.weight": 0.1817545788565479,
+        "outc.conv.weight": 0.09623739670887788
+      },
+      "endpoint_max_parameter_change": {
+        "inc.double_conv.0.weight": 1.952052116394043e-06,
+        "outc.conv.weight": 3.2261013984680176e-06
+      },
+      "gradient_norm_before_clip": 0.9486208558082581,
+      "original_warp_zero_flow_ramp_max_error": 0.0038750767707824707,
+      "discarded_SGD_updates": 1,
+      "inherited_into_formal_training": false
+    },
+    "commute20": {
+      "passed": true,
+      "arm": "commute20",
+      "parameters": 4316259,
+      "total": 0.17595350742340088,
+      "spatial_L1": 0.07932978868484497,
+      "consistency_L1": 0.0048311855643987656,
+      "consistency_path_gradient_L2": {
+        "F_W_input": 0.0013020745126868574,
+        "W_F_input": 0.0013020745126868574
+      },
+      "endpoint_gradient_L2": {
+        "inc.double_conv.0.weight": 0.6327869500705293,
+        "outc.conv.weight": 0.07860434114447988
+      },
+      "endpoint_max_parameter_change": {
+        "inc.double_conv.0.weight": 4.61190938949585e-06,
+        "outc.conv.weight": 1.3709068298339844e-06
+      },
+      "gradient_norm_before_clip": 2.2328178882598877,
+      "original_warp_zero_flow_ramp_max_error": 0.0038750767707824707,
+      "discarded_SGD_updates": 1,
+      "inherited_into_formal_training": false
+    }
+  },
+  "data": {
+    "manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "verified_files": 384,
+    "scenes": [
+      "video_11",
+      "video_35",
+      "video_92",
+      "video_131",
+      "video_12",
+      "video_20",
+      "video_29",
+      "video_52",
+      "video_59",
+      "video_95",
+      "video_104",
+      "video_122"
+    ],
+    "native_bytes": 2388787200,
+    "real_training_ids": [
+      "video_104",
+      "video_11",
+      "video_12",
+      "video_122",
+      "video_131",
+      "video_20",
+      "video_29",
+      "video_35",
+      "video_52",
+      "video_59",
+      "video_92",
+      "video_95"
+    ],
+    "excluded_native_DEV": [
+      "video_121",
+      "video_15",
+      "video_47",
+      "video_91"
+    ],
+    "all_real_assets_owned": true,
+    "source_manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "synthetic_manifest_sha256": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+    "synthetic_training_videos": 57,
+    "real_tensor_dtype": "uint8 native inputs/GT; float32 /255 after crops",
+    "timing_scope": "Consecutive registered frame indices, not independently verified sensor timing."
+  },
+  "original_first_window": [
+    {
+      "video": "breakdance-flare",
+      "members": [
+        "DAVIS/JPEGImages/480p/breakdance-flare/00000.jpg",
+        "DAVIS/JPEGImages/480p/breakdance-flare/00001.jpg",
+        "DAVIS/JPEGImages/480p/breakdance-flare/00002.jpg",
+        "DAVIS/JPEGImages/480p/breakdance-flare/00003.jpg"
+      ],
+      "xy": [
+        634,
+        41
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": false,
+      "photons": 20,
+      "source": "davis_synthetic"
+    },
+    {
+      "video": "rallye",
+      "members": [
+        "DAVIS/JPEGImages/480p/rallye/00032.jpg",
+        "DAVIS/JPEGImages/480p/rallye/00033.jpg",
+        "DAVIS/JPEGImages/480p/rallye/00034.jpg",
+        "DAVIS/JPEGImages/480p/rallye/00035.jpg"
+      ],
+      "xy": [
+        20,
+        7
+      ],
+      "flip_horizontal": true,
+      "flip_vertical": true,
+      "photons": 20,
+      "source": "davis_synthetic"
+    },
+    {
+      "source": "olives_real",
+      "video": "video_29",
+      "indices": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "xy": [
+        38,
+        660
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": true,
+      "input_sources": [
+        ".cache/data/olives-r4/Frames/input/video_29/00009.png",
+        ".cache/data/olives-r4/Frames/input/video_29/00010.png",
+        ".cache/data/olives-r4/Frames/input/video_29/00011.png",
+        ".cache/data/olives-r4/Frames/input/video_29/00012.png"
+      ],
+      "target_sources": [
+        ".cache/data/olives-r4/Frames/gt/video_29/00009.png",
+        ".cache/data/olives-r4/Frames/gt/video_29/00010.png",
+        ".cache/data/olives-r4/Frames/gt/video_29/00011.png",
+        ".cache/data/olives-r4/Frames/gt/video_29/00012.png"
+      ]
+    },
+    {
+      "source": "olives_real",
+      "video": "video_11",
+      "indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "xy": [
+        840,
+        658
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": true,
+      "input_sources": [
+        ".cache/data/olives-r4/Frames/input/video_11/00000.png",
+        ".cache/data/olives-r4/Frames/input/video_11/00001.png",
+        ".cache/data/olives-r4/Frames/input/video_11/00002.png",
+        ".cache/data/olives-r4/Frames/input/video_11/00003.png"
+      ],
+      "target_sources": [
+        ".cache/data/olives-r4/Frames/gt/video_11/00000.png",
+        ".cache/data/olives-r4/Frames/gt/video_11/00001.png",
+        ".cache/data/olives-r4/Frames/gt/video_11/00002.png",
+        ".cache/data/olives-r4/Frames/gt/video_11/00003.png"
+      ]
+    }
+  ],
+  "first_window_identity_matches_R56": true,
+  "offsets_shape": [
+    4,
+    3,
+    2,
+    128,
+    128
+  ],
+  "offset_abs_max": 23.17982292175293,
+  "offset_mean_absolute": 3.2991554737091064,
+  "discarded_SGD_updates": 2,
+  "protocol_sha256": "e6c99b7175e30982b6038d6b4000d8a71fc7a522570c4d3a1f58c007865a5966",
+  "source_sha256": {
+    "stablellve_task_r65.py": "dec0e6afdb05fd2a6c3750710ee44a2234af34c0639646c5a85cb6afdb85ce78",
+    "check_stablellve_task_r65.py": "ca5ec5034c4fa325a54a2122a6a0abda27de0d20328e55070cae62ec257e7947",
+    "stablellve_adapter_r15.py": "b9d61a40a6b16f143c9c4874d04dbae99b7d017d95ce917839319b011b575cbd",
+    "mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5",
+    "dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498",
+    "half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e"
+  },
+  "cuda_initialized": false,
+  "scope": "Only first original training window; not quality or full-convergence evidence."
+}

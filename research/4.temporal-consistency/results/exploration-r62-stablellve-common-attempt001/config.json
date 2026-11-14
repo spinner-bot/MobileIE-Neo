@@ -1,0 +1,57 @@
+{
+  "at": "2026-11-13T00:09:54.431739+08:00",
+  "method": "StableLLVE official synthetic-clean",
+  "project_updates": 0,
+  "claimed_seed": null,
+  "future_wait_max": 0,
+  "parameters": 4316259,
+  "original_manifest": {
+    "repository": "https://github.com/zkawfanx/StableLLVE",
+    "commit": "4cc070da328ffadc8498285985aa98175e473bc5",
+    "url": "https://raw.githubusercontent.com/zkawfanx/StableLLVE/4cc070da328ffadc8498285985aa98175e473bc5/checkpoint.pth",
+    "path": ".cache/pretrained/stablellve/4cc070da328ffadc8498285985aa98175e473bc5/checkpoint.pth",
+    "sha256": "277e4d29566709a31f8f25c401396e9bd9c70395e6da36513cd9d9a83e005ad9",
+    "git_blob_sha1": "f819f8daf6f9ad7e2548480ae2584935f4922a45",
+    "bytes": 17274710,
+    "sources": [
+      {
+        "path": "third_party/stablellve/LICENSE",
+        "sha256": "2a09d7de462e5b18f53c283eb006f9546c729a46f4ae53def95654b0cc7fe475",
+        "git_blob_sha1": "f361df58be63bc15d953dd54ddf7bb83bd10c191",
+        "bytes": 1065
+      },
+      {
+        "path": "third_party/stablellve/model.py",
+        "sha256": "86b9d7e2b836dde336eb09aaea44b9e5c09b0e05576e6a1656d01ce3a84cd1a1",
+        "git_blob_sha1": "cccf6808fbea20ddedae55bdd5f83187b6797b7f",
+        "bytes": 3821
+      }
+    ],
+    "upstream_manifest_sha256": "e6964b3947f1987c18685cf7bb787c185bc100f3fc83e266e4a80652ba8a79a2",
+    "scope": "official synthetic-clean training, unsuitable-for-noise caveat retained; BGR source convention; no new training"
+  },
+  "manifest_sha256": "c8cdcb8b165de11472e820513dfed6699a79a36de5f6f875c632e58192e0cc46",
+  "old_smoke_sha256": "ad241e9a7ad05b215a2453ad7cccb093a47dd9bca0bbf87dc7532979538cf379",
+  "cache_indices": {
+    "research/4.temporal-consistency/results/exploration-r30-cache/index.json": "424fa278b2fe66d29de476e2b47328619438f97cf71926448433d1191bb722c1",
+    "research/4.temporal-consistency/results/exploration-r10-cache/index.json": "ec00801b04b873ead0025af91af441b783da3f08c87cf24e9c136a4268ffb43c"
+  },
+  "protocol_sha256": "dc4926eb09b9b09149ebbc42a96e693d5d9a3071c53fb9188f8a0ede2a1fed7d",
+  "source_sha256": {
+    "evaluate_stablellve_common_r62.py": "35bbf974b9fd5d050af5535db88d37e1f493ed61ef60d1bfa982e45d1fc9286c",
+    "stablellve_adapter_r15.py": "b9d61a40a6b16f143c9c4874d04dbae99b7d017d95ce917839319b011b575cbd",
+    "drv_references_r59.py": "8c805ca335edb8294e13f0403ee1dde6e69a1e67eecb98102c25b000185ba9d8",
+    "half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+    "aligned_raw_history_r11.py": "e367727401f82ccf0bccaf8d88f904e4aebf8b78186f0539eedeed222b2d2227",
+    "exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+    "video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0"
+  },
+  "CPU_threads": 2,
+  "OpenCV_threads": 1,
+  "expected_sequences": 20,
+  "expected_per_frame_rows": 896,
+  "expected_CNN_sequences": 10,
+  "expected_CNN_centers": 448,
+  "revision": "b0076b00eca81eaad67a4cf391881eb3a70c982c",
+  "scope": "Published clean checkpoint transfer, not matched training, noisy-paper reproduction, new method or phone/final test."
+}

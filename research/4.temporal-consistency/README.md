@@ -2,10 +2,26 @@
 
 目标：以论文为最终产出，深入核查 MobileIE 的架构与训练机制，在移动端计算预算内设计视频增强模型，用传统方法、后处理和已有视频模型对照验证画质、时间稳定性与效率收益。
 
-- 状态：**前期探索，聚焦post_transport训练适配及强基线验证**（2026-11-12）；没有确定最终方法，实拍白天ND衰减开发集不代表自然夜景，标准外部基准/真实手机域/手机延迟仍缺
+当前接续（2026-11-13 10:42 CST）：R74九模块完整执行链已提交并冻结41科学依赖，原协调4109512/start47709094/finalize001于10:28:24实际启动，仅等待共享GPU4–7新空闲准入，尚无CUDA资格/正式seed0目录。先读[0106报告](../../docs/进展报告/0106-T-26111310-完整实验链冻结等待与跨来源证据入稿.md)、[固定协议](docs/exploration-r74-motion-supervision-protocol.md)、[原启动](process/exploration-r74/finalize001-launch.json)及[过程](process/exploration-r74/journal.md)。CPU资格8丢弃更新正常且不继承，正式两seed两motion各4000共16000、空间冻结8000；完整新质量/感知/16门槛均为预定，不能当已完成或因等待重启。R73完整失败/局部STOP不变。
+
+- 当前性质：前期机制预实验，尚无已建立的新方法、联合收益或最终测试。双矩/递归融合已有先例，[note54](../5.prior-art-survey/docs/54-moment-history-equivalence-and-noise-boundaries.md)明确混合离散度不等于噪声方差；不从loss或中间备份宣称成功。
+- 最近完整外部来源参考：[0098报告](../../docs/进展报告/0098-T-26111307-原生跨来源联合评价完整收口.md)、[R72完整联合表](report/exploration-r72-reds-joint/tables.md)/[决定](docs/exploration-r72-decision.md)。四REDS源原720p/24fps、152质量与156感知行、16固定图actual review及原协调均正常结束。强自身rec仍须保留；这是合成低光DEV，不是自然夜间/独立最终，不再扩大参考家族或损失网格。
+- 完整传统与已发表参考：[0096](../../docs/进展报告/0096-T-26111306-传统对照写入论文与迁移版本记录复核.md)、[R70传统参考决定](docs/exploration-r70-decision.md)，以及既有R53/R56/R65共同适配。原方法/预算/收敛限制仍适用，不把适配或负结果当新贡献。
+- 论文当前为已实际审阅build016、20页/13表/11引用的内部证据稿；新增完整R72原生REDS双seed19行表，原12表不变，0编译warning/未解析引用。来源24fps合成DEV与旧30fps表分开，公开预训练像素史仍未完全核实。创新、自然动态配对、手机和独立最终未完成；[构建说明](../../paper/BUILDING.txt)现要求五生成器顺序，不录R74部分结果。
+
+以下索引和后半部为历史阶段记录，所述“最新/正在运行/下一步”仅对应原记录日期，均服从上述接续入口和真实runtime。R44及其他旧任务已结束，旧止损决定不回写。
+
+- R28历史状态：**前期探索，post_transport收口验证失败，已冻结主方法投入**（2026-11-12）；没有确定最终方法，转向公共动态训练资料与骨干计算分配，实拍白天ND开发集不代表自然夜景，完整独立基准/手机方法评价/时延仍缺
 - 当前研究入口：[MobileIE 架构、训练核查与视频研究设计](docs/architecture-and-video-research-plan.md)
-- 最新状态：[进展报告0041](../../docs/进展报告/0041-T-26111202-内部时间算子训练收口与自有资产迁移.md)、[论文证据表草稿](report/paper-main-table/README.md)；R28 seed0十模型各4000步已正常完成，尚未得出训练后质量结论
-- 进行中：[R28生效收口协议](docs/exploration-r28-protocol.md)；待自有环境迁移核验后，只补post_transport双目标seed1共8000更新，复用R26 plain参考，主评价4416逻辑行；actual需要历史/flow/warp，current单帧映射单独评价
+- 最新结论：[进展报告0043](../../docs/进展报告/0043-T-26111204-内部时间算子双种子闭环与路线止损.md)、[路线决策](docs/exploration-r28-decision.md)、[论文证据表](report/paper-main-table/README.md)；R28重点双seed/双目标4000步及4416行主评价完成，主门槛未通过
+- 完成闭环：[原注册协议](docs/exploration-r28-protocol.md)、[全表](report/exploration-r28/tables.md)、[质量—时序图](report/exploration-r28/native_quality_stability.png)、[312行共同CPU外部表](report/exploration-r30/tables.md)。actual需要历史/flow/warp，current单帧映射单独评价；不继续沿该算子追加训练/相似网格
+- 接续准备：[R32公共训练池协议](docs/exploration-r32-data-protocol.md)/[57视频3428帧登记](data/exploration-r32-training/selection.json)已排除三开发片，[完整清单](data/exploration-r32-training/manifest.json)与[解码核验](results/exploration-r32-decode/audit.json)均完成；[未训练空间预算](report/architecture-budget/tables.md)与[门控/流式源码阅读](../5.prior-art-survey/docs/25-compute-allocation-and-streaming-state.md)只约束下一方案，不是质量或手机速度结果
+- 当前接续：[0051](../../docs/进展报告/0051-T-26111208-固定混合资料闭环与训练参数化边界.md)、[R40完整双域表](report/exploration-r40-mixed-anchor/tables.md)/[图](report/exploration-r40-mixed-anchor/cross_domain.png)/[决策](docs/exploration-r40-decision.md)。8000训练更新/60新质量行+96参考正常完成，固定混合呈现跨域取舍但门槛失败；停止比例/loss/LR网格。下一有限工作核查原模型训练参数化强对照，先登记函数保持/BN/fold与预算；不是新方法。
+- 当前终态：[0048](../../docs/进展报告/0048-T-26111207-动态骨干双种子闭环与公开方法迁移收口.md)：R34全部24000更新、120行质量与42次CPU成本正常结束，[止损决策](docs/exploration-r34-decision.md)冻结低分辨率状态+可分离body局部扩展；[完整质量](report/exploration-r34/tables.md)/[CPU成本](report/exploration-r34-runtime/tables.md)均为开发/服务器结果，无手机测量。
+- 最新强基线与来源边界：[0045](../../docs/进展报告/0045-T-26111205-自驱运动强后处理与公开预训练重叠.md)、[同底座自驱post全表](report/external-baselines-self-motion/tables.md)。双seed自驱运动post无需独立teacher，均值23.817dB/时序7.449；CPU驻留流水线200.612ms@480×854，不是手机延迟。R35三开发片与官方FastDVDnet文档训练ID重叠，不能当未见视频泛化；另30 test-dev来源只读元数据、未读JPEG。R34首次训练前已修订为120评价行，训练预算不变，stage002失败已留档；stage003接续实际训练。
+- 已止损原型：[R33协议](docs/exploration-r33-prototype-protocol.md)/[功能检查](report/exploration-r33-prototype/checks.json)曾通过CPU/CUDA功能门槛；后续完整R34未过质量门槛，功能通过不等于有效方法。
+- 已完成协议：[R34三控制训练](docs/exploration-r34-training-protocol.md)、[CPU成本](docs/exploration-r34-runtime-protocol.md)、[R35公开方法迁移](docs/exploration-r35-published-transfer-protocol.md)。R35完整36行及[同底座五方法表](report/external-baselines/tables.md)已归档；与R34训练底座不同，公开预训练来源重叠，不能合并为统一泛化排名。
+- 外部开发资料：[R30 DAVIS协议](docs/exploration-r30-protocol.md)/[6条件缓存](results/exploration-r30-cache/index.json)，3独立视频各64帧、合成低光，VAL图像未读；[R31手机协议](docs/exploration-r31-protocol.md)/[3设备输入](results/exploration-r31-data/index.json)/[原亮度预览](report/exploration-r31-data/phone_inputs.png)，无同步GT。R30候选双seed评价已完成，手机输入尚无方法质量结论，均非完整独立基准或手机时延实测
 - 运行资产：[迁移过程](process/asset-migration/journal.md)、[路径规范](../../specs/项目规范/路径与环境规范.md)；独立环境与运行数据已于2026-11-12 03:06迁入 `/data/Users/zrh/data/MobileIE-Neo`，2106文件摘要一致、16帧CPU参考指标差0，仓库链接已入Git；后续统一用 `./scripts/project-python`
 - 既有完整结果：[R26监督目标控制](../../docs/进展报告/0038-T-26111200-监督目标全评价与历史贡献分离.md)、[同权重强后处理](../../docs/进展报告/0039-T-26111200-同权重单帧后处理排除聚合伪收益.md)、[R27冻结探针](../../docs/进展报告/0040-T-26111201-FST内部时间算子冻结探针与实现门槛.md)；R29潜矩资料归档附录，不继续扩大逐bit诊断
 - 已知信息诊断：[进展报告0028](../../docs/进展报告/0028-T-26111121-可用时间信息与非线性聚合顺序.md)、[信息图](report/exploration-r19/known_temporal_information.png)、[顺序图](report/exploration-r19-aggregation/aggregation_order.png)、[过程](process/exploration-r19/journal.md)
@@ -216,3 +232,35 @@ PY=F:/dev-tools/python-envs/MobileIE-Neo/Scripts/python.exe
 [0040 FST内部算子](../../docs/进展报告/0040-T-26111201-FST内部时间算子冻结探针与实现门槛.md)：240冻结行/200前向、current与8段128帧CPU参考精确重放；五4075参数算子已实现，CUDA门槛等待共享卡空闲，尚未训练。首copy Adam失败未定位并完整保留。
 
 修改：2026-11-12T01:10:55.655899+08:00；作者：Codex  (sqs_A100)；原因：索引原算子深度探索及当前边界。
+
+修改：2026-11-12T05:10:57+08:00；作者：Codex  (sqs_A100)；原因：索引受预算原型、已登记训练门槛及正在执行的同底座公开方法评价。
+
+修改：2026-11-12T05:39:58+08:00；作者：Codex  (sqs_A100)；原因：索引强post实测、公开训练重叠和训练前修订。
+
+修改：2026-11-12T06:08:00+08:00；作者：Codex  (sqs_A100)；原因：索引真实数据/执行门槛和训练前batch口径修正。
+
+修改：2026-11-12T06:09:14+08:00；作者：Codex  (sqs_A100)；原因：替换入口顶部已过时的下载/CUDA等待状态。
+
+修改：2026-11-12T06:35:24+08:00；作者：Codex  (sqs_A100)；原因：索引首seed闭环及固定成本测量准备，不把活动输出当最终。
+
+修改：2026-11-12T07:17:16+08:00；作者：Codex  (sqs_A100)；原因：以完整结果更新接续入口，保留历史报告。
+
+修改：2026-11-12T07:34:27+08:00；作者：Codex  (sqs_A100)；原因：索引传统参考提升与已实际启动的新机制检验。
+
+修改：2026-11-12T07:57:36+08:00；作者：Codex  (sqs_A100)；原因：使用完成终态接续，新增真实输入与有GT域转移约束。
+
+修改：2026-11-12T08:23:58+08:00；作者：Codex  (sqs_A100)；原因：索引已结束的固定资料检验与原训练范式边界。
+
+修改：2026-11-12T13:05:50.485664+08:00；作者：Codex  (sqs_A100)；原因：索引R41实际训练与失败边界，保留已完成资产迁移。
+
+修改：2026-11-12T13:30:13.952419+08:00；作者：Codex  (sqs_A100)；原因：索引R41完整收益及失败边界、R42固定已知空间对照。
+
+修改：2026-11-12T13:48:57.243894+08:00；作者：Codex  (sqs_A100)；原因：索引R42完整止损与R43有界原型，不重启已结束作业。
+
+- 最新：[0055原型/标定](../../docs/进展报告/0055-T-26111214-FST根部原型与训练尺度标定.md)、[R44固定训练协议](docs/exploration-r44-bounded-video-training-protocol.md)；无新正式训练/质量。
+
+修改：2026-11-12T14:06:10.126056+08:00；作者：Codex  (sqs_A100)；原因：区分R43实际完成与R44登记，避免重复或提前启动GPU作业。
+
+- 正在运行：[0056启动报告](../../docs/进展报告/0056-T-26111214-根部激活与时间目标四组训练实际启动.md)、[R44过程](process/exploration-r44/journal.md)。
+
+修改：2026-11-12T14:26:45.433677+08:00；作者：Codex  (sqs_A100)；原因：将R44登记状态更新为已验证的实际训练，保持旧阶段冻结。

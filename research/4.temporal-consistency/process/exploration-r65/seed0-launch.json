@@ -1,0 +1,21 @@
+{
+  "at": "2026-11-13T02:52:46.975292+08:00",
+  "seed": 0,
+  "gpu": 5,
+  "guard_pid": 3885535,
+  "command": [
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/gpu_guard.py",
+    "--gpu",
+    "5",
+    "--record",
+    "research/4.temporal-consistency/process/exploration-r65/seed0-guard.json",
+    "--",
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/train_stablellve_task_r65.py",
+    "--seed",
+    "0"
+  ],
+  "log": "research/4.temporal-consistency/process/exploration-r65/seed0-guard.log",
+  "scope": "Actual external guard spawned; admission/training must be verified from original guard and proc."
+}

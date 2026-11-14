@@ -1,0 +1,717 @@
+{
+  "created_at": "2026-11-13T01:17:47.120946+08:00",
+  "passed": true,
+  "device": "cpu",
+  "formal_updates": 0,
+  "discarded_SGD_updates": 12,
+  "seeds": [
+    {
+      "seed": 0,
+      "initialization": {
+        "source_marker": "research/4.temporal-consistency/results/exploration-r44-stage001-seed0/square_mse-step4000.json",
+        "training_checkpoint_sha256": "91800b897a2b568d837cf92925b727bb71934f781437733c75323d3562f6998e",
+        "inherited_updates_each": 8000,
+        "new_branch_seed": 6300,
+        "optimizer_state_inherited": false,
+        "parameters": {
+          "plain": {
+            "total": 49978,
+            "active": 47239
+          },
+          "spatial": {
+            "total": 50521,
+            "active": 47782
+          },
+          "causal": {
+            "total": 50521,
+            "active": 47782
+          }
+        }
+      },
+      "windows": [
+        {
+          "video": "boxing-fisheye",
+          "members": [
+            "DAVIS/JPEGImages/480p/boxing-fisheye/00030.jpg",
+            "DAVIS/JPEGImages/480p/boxing-fisheye/00031.jpg",
+            "DAVIS/JPEGImages/480p/boxing-fisheye/00032.jpg",
+            "DAVIS/JPEGImages/480p/boxing-fisheye/00033.jpg"
+          ],
+          "xy": [
+            537,
+            270
+          ],
+          "flip_horizontal": true,
+          "flip_vertical": true,
+          "photons": 20,
+          "source": "davis_synthetic"
+        },
+        {
+          "video": "swing",
+          "members": [
+            "DAVIS/JPEGImages/480p/swing/00039.jpg",
+            "DAVIS/JPEGImages/480p/swing/00040.jpg",
+            "DAVIS/JPEGImages/480p/swing/00041.jpg",
+            "DAVIS/JPEGImages/480p/swing/00042.jpg"
+          ],
+          "xy": [
+            116,
+            264
+          ],
+          "flip_horizontal": false,
+          "flip_vertical": false,
+          "photons": 20,
+          "source": "davis_synthetic"
+        },
+        {
+          "source": "olives_real",
+          "video": "video_95",
+          "indices": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "xy": [
+            1317,
+            932
+          ],
+          "flip_horizontal": false,
+          "flip_vertical": true,
+          "input_sources": [
+            ".cache/data/olives-r4/Frames/input/video_95/00007.png",
+            ".cache/data/olives-r4/Frames/input/video_95/00008.png",
+            ".cache/data/olives-r4/Frames/input/video_95/00009.png",
+            ".cache/data/olives-r4/Frames/input/video_95/00010.png"
+          ],
+          "target_sources": [
+            ".cache/data/olives-r4/Frames/gt/video_95/00007.png",
+            ".cache/data/olives-r4/Frames/gt/video_95/00008.png",
+            ".cache/data/olives-r4/Frames/gt/video_95/00009.png",
+            ".cache/data/olives-r4/Frames/gt/video_95/00010.png"
+          ]
+        },
+        {
+          "source": "olives_real",
+          "video": "video_35",
+          "indices": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "xy": [
+            166,
+            633
+          ],
+          "flip_horizontal": false,
+          "flip_vertical": false,
+          "input_sources": [
+            ".cache/data/olives-r4/Frames/input/video_35/00005.png",
+            ".cache/data/olives-r4/Frames/input/video_35/00006.png",
+            ".cache/data/olives-r4/Frames/input/video_35/00007.png",
+            ".cache/data/olives-r4/Frames/input/video_35/00008.png"
+          ],
+          "target_sources": [
+            ".cache/data/olives-r4/Frames/gt/video_35/00005.png",
+            ".cache/data/olives-r4/Frames/gt/video_35/00006.png",
+            ".cache/data/olives-r4/Frames/gt/video_35/00007.png",
+            ".cache/data/olives-r4/Frames/gt/video_35/00008.png"
+          ]
+        }
+      ],
+      "initial_checks": [
+        {
+          "model": "plain",
+          "training": true,
+          "raw_max_delta": 0.0
+        },
+        {
+          "model": "spatial",
+          "training": true,
+          "raw_max_delta": 0.0
+        },
+        {
+          "model": "causal",
+          "training": true,
+          "raw_max_delta": 0.0
+        },
+        {
+          "model": "plain",
+          "training": false,
+          "raw_max_delta": 0.0
+        },
+        {
+          "model": "spatial",
+          "training": false,
+          "raw_max_delta": 0.0
+        },
+        {
+          "model": "causal",
+          "training": false,
+          "raw_max_delta": 0.0
+        }
+      ],
+      "models": {
+        "plain": {
+          "before_updates_export": {
+            "raw_max_abs_delta": 1.7881393432617188e-06,
+            "passed": true,
+            "parameters": 4075,
+            "raw_range": [
+              0.044134464114904404,
+              1.1066750288009644
+            ]
+          },
+          "updates": [
+            {
+              "step": 1,
+              "clipped_MSE": 0.0024533921387046576,
+              "gradient_norm_before_clip": 0.33632406486985833,
+              "backbone_key_gradients": {
+                "head.weight1": 0.1972009539604187,
+                "body.weight1": 0.08327873796224594,
+                "tail.conv_out.weight": 0.7894366979598999
+              },
+              "branch_gradient_norms": null
+            },
+            {
+              "step": 2,
+              "clipped_MSE": 0.0024532796815037727,
+              "gradient_norm_before_clip": 0.3362355343917889,
+              "backbone_key_gradients": {
+                "head.weight1": 0.1971464455127716,
+                "body.weight1": 0.08323214203119278,
+                "tail.conv_out.weight": 0.7894253730773926
+              },
+              "branch_gradient_norms": null
+            }
+          ],
+          "after_two_updates_gradient_norms": {
+            "plain": 0.3361529455286774
+          },
+          "after_updates_export": {
+            "raw_max_abs_delta": 1.8477439880371094e-06,
+            "passed": true,
+            "parameters": 4075,
+            "raw_range": [
+              0.045051898807287216,
+              1.0991427898406982
+            ]
+          }
+        },
+        "spatial": {
+          "before_updates_export": {
+            "raw_max_abs_delta": 1.7881393432617188e-06,
+            "passed": true,
+            "parameters": 4618,
+            "raw_range": [
+              0.044134464114904404,
+              1.1066750288009644
+            ]
+          },
+          "updates": [
+            {
+              "step": 1,
+              "clipped_MSE": 0.0024533921387046576,
+              "gradient_norm_before_clip": 0.33638426586566,
+              "backbone_key_gradients": {
+                "head.weight1": 0.1972009539604187,
+                "body.weight1": 0.08327873796224594,
+                "tail.conv_out.weight": 0.7894366979598999
+              },
+              "branch_gradient_norms": {
+                "backbone": 0.33632406486985833,
+                "project": 0.0,
+                "mix": 0.0,
+                "field": 0.0,
+                "readout": 0.006363781218296765
+              }
+            },
+            {
+              "step": 2,
+              "clipped_MSE": 0.0024532796815037727,
+              "gradient_norm_before_clip": 0.33629574243774246,
+              "backbone_key_gradients": {
+                "head.weight1": 0.1971464455127716,
+                "body.weight1": 0.08323214203119278,
+                "tail.conv_out.weight": 0.7894253730773926
+              },
+              "branch_gradient_norms": {
+                "backbone": 0.33623553440098,
+                "project": 7.589297049162995e-11,
+                "mix": 0.0,
+                "field": 2.070124686020287e-12,
+                "readout": 0.006363315789731722
+              }
+            }
+          ],
+          "after_two_updates_gradient_norms": {
+            "backbone": 0.3361529409275634,
+            "project": 1.5177247626695948e-10,
+            "mix": 0.0,
+            "field": 4.123906200921057e-12,
+            "readout": 0.006362868394408714
+          },
+          "after_updates_export": {
+            "raw_max_abs_delta": 1.8477439880371094e-06,
+            "passed": true,
+            "parameters": 4618,
+            "raw_range": [
+              0.045051898807287216,
+              1.0991427898406982
+            ]
+          },
+          "past_input_gradient_abs_sum": 0.0
+        },
+        "causal": {
+          "before_updates_export": {
+            "raw_max_abs_delta": 1.7881393432617188e-06,
+            "passed": true,
+            "parameters": 4618,
+            "raw_range": [
+              0.044134464114904404,
+              1.1066750288009644
+            ]
+          },
+          "updates": [
+            {
+              "step": 1,
+              "clipped_MSE": 0.0024533921387046576,
+              "gradient_norm_before_clip": 0.33638431565893917,
+              "backbone_key_gradients": {
+                "head.weight1": 0.1972009539604187,
+                "body.weight1": 0.08327873796224594,
+                "tail.conv_out.weight": 0.7894366979598999
+              },
+              "branch_gradient_norms": {
+                "backbone": 0.33632406486985833,
+                "project": 0.0,
+                "mix": 0.0,
+                "field": 0.0,
+                "readout": 0.006366412706394205
+              }
+            },
+            {
+              "step": 2,
+              "clipped_MSE": 0.0024532796815037727,
+              "gradient_norm_before_clip": 0.33629579229522627,
+              "backbone_key_gradients": {
+                "head.weight1": 0.1971464455127716,
+                "body.weight1": 0.08323214203119278,
+                "tail.conv_out.weight": 0.7894253730773926
+              },
+              "branch_gradient_norms": {
+                "backbone": 0.33623553440652054,
+                "project": 7.576145475555167e-11,
+                "mix": 0.0,
+                "field": 2.6759281468300856e-12,
+                "readout": 0.006365949876924724
+              }
+            }
+          ],
+          "after_two_updates_gradient_norms": {
+            "backbone": 0.33615294299315346,
+            "project": 1.5151622634574026e-10,
+            "mix": 0.0,
+            "field": 5.345135780346516e-12,
+            "readout": 0.006365850105386517
+          },
+          "after_updates_export": {
+            "raw_max_abs_delta": 1.8477439880371094e-06,
+            "passed": true,
+            "parameters": 4618,
+            "raw_range": [
+              0.045051898807287216,
+              1.0991427898406982
+            ]
+          },
+          "past_input_gradient_abs_sum": 9.708974069155829e-09
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "initialization": {
+        "source_marker": "research/4.temporal-consistency/results/exploration-r44-stage001-seed1/square_mse-step4000.json",
+        "training_checkpoint_sha256": "450d55e60333655019c820321ad9ae4afe78d012aefe3615b9490ef61a3943ba",
+        "inherited_updates_each": 8000,
+        "new_branch_seed": 6301,
+        "optimizer_state_inherited": false,
+        "parameters": {
+          "plain": {
+            "total": 49978,
+            "active": 47239
+          },
+          "spatial": {
+            "total": 50521,
+            "active": 47782
+          },
+          "causal": {
+            "total": 50521,
+            "active": 47782
+          }
+        }
+      },
+      "windows": [
+        {
+          "video": "classic-car",
+          "members": [
+            "DAVIS/JPEGImages/480p/classic-car/00003.jpg",
+            "DAVIS/JPEGImages/480p/classic-car/00004.jpg",
+            "DAVIS/JPEGImages/480p/classic-car/00005.jpg",
+            "DAVIS/JPEGImages/480p/classic-car/00006.jpg"
+          ],
+          "xy": [
+            38,
+            290
+          ],
+          "flip_horizontal": false,
+          "flip_vertical": true,
+          "photons": 20,
+          "source": "davis_synthetic"
+        },
+        {
+          "video": "flamingo",
+          "members": [
+            "DAVIS/JPEGImages/480p/flamingo/00006.jpg",
+            "DAVIS/JPEGImages/480p/flamingo/00007.jpg",
+            "DAVIS/JPEGImages/480p/flamingo/00008.jpg",
+            "DAVIS/JPEGImages/480p/flamingo/00009.jpg"
+          ],
+          "xy": [
+            46,
+            83
+          ],
+          "flip_horizontal": true,
+          "flip_vertical": true,
+          "photons": 20,
+          "source": "davis_synthetic"
+        },
+        {
+          "source": "olives_real",
+          "video": "video_12",
+          "indices": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "xy": [
+            859,
+            187
+          ],
+          "flip_horizontal": true,
+          "flip_vertical": true,
+          "input_sources": [
+            ".cache/data/olives-r4/Frames/input/video_12/00005.png",
+            ".cache/data/olives-r4/Frames/input/video_12/00006.png",
+            ".cache/data/olives-r4/Frames/input/video_12/00007.png",
+            ".cache/data/olives-r4/Frames/input/video_12/00008.png"
+          ],
+          "target_sources": [
+            ".cache/data/olives-r4/Frames/gt/video_12/00005.png",
+            ".cache/data/olives-r4/Frames/gt/video_12/00006.png",
+            ".cache/data/olives-r4/Frames/gt/video_12/00007.png",
+            ".cache/data/olives-r4/Frames/gt/video_12/00008.png"
+          ]
+        },
+        {
+          "source": "olives_real",
+          "video": "video_52",
+          "indices": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "xy": [
+            1710,
+            56
+          ],
+          "flip_horizontal": true,
+          "flip_vertical": false,
+          "input_sources": [
+            ".cache/data/olives-r4/Frames/input/video_52/00006.png",
+            ".cache/data/olives-r4/Frames/input/video_52/00007.png",
+            ".cache/data/olives-r4/Frames/input/video_52/00008.png",
+            ".cache/data/olives-r4/Frames/input/video_52/00009.png"
+          ],
+          "target_sources": [
+            ".cache/data/olives-r4/Frames/gt/video_52/00006.png",
+            ".cache/data/olives-r4/Frames/gt/video_52/00007.png",
+            ".cache/data/olives-r4/Frames/gt/video_52/00008.png",
+            ".cache/data/olives-r4/Frames/gt/video_52/00009.png"
+          ]
+        }
+      ],
+      "initial_checks": [
+        {
+          "model": "plain",
+          "training": true,
+          "raw_max_delta": 0.0
+        },
+        {
+          "model": "spatial",
+          "training": true,
+          "raw_max_delta": 0.0
+        },
+        {
+          "model": "causal",
+          "training": true,
+          "raw_max_delta": 0.0
+        },
+        {
+          "model": "plain",
+          "training": false,
+          "raw_max_delta": 0.0
+        },
+        {
+          "model": "spatial",
+          "training": false,
+          "raw_max_delta": 0.0
+        },
+        {
+          "model": "causal",
+          "training": false,
+          "raw_max_delta": 0.0
+        }
+      ],
+      "models": {
+        "plain": {
+          "before_updates_export": {
+            "raw_max_abs_delta": 1.7285346984863281e-06,
+            "passed": true,
+            "parameters": 4075,
+            "raw_range": [
+              0.02550780214369297,
+              1.0302225351333618
+            ]
+          },
+          "updates": [
+            {
+              "step": 1,
+              "clipped_MSE": 0.0022467763628810644,
+              "gradient_norm_before_clip": 0.2532206937701677,
+              "backbone_key_gradients": {
+                "head.weight1": 0.07013838738203049,
+                "body.weight1": 0.11473111808300018,
+                "tail.conv_out.weight": 0.8089901208877563
+              },
+              "branch_gradient_norms": null
+            },
+            {
+              "step": 2,
+              "clipped_MSE": 0.002246713964268565,
+              "gradient_norm_before_clip": 0.2531833106076281,
+              "backbone_key_gradients": {
+                "head.weight1": 0.07012259215116501,
+                "body.weight1": 0.11470513045787811,
+                "tail.conv_out.weight": 0.8089630603790283
+              },
+              "branch_gradient_norms": null
+            }
+          ],
+          "after_two_updates_gradient_norms": {
+            "plain": 0.2531457474508648
+          },
+          "after_updates_export": {
+            "raw_max_abs_delta": 1.4901161193847656e-06,
+            "passed": true,
+            "parameters": 4075,
+            "raw_range": [
+              0.02663220278918743,
+              1.025810718536377
+            ]
+          }
+        },
+        "spatial": {
+          "before_updates_export": {
+            "raw_max_abs_delta": 1.7285346984863281e-06,
+            "passed": true,
+            "parameters": 4618,
+            "raw_range": [
+              0.02550780214369297,
+              1.0302225351333618
+            ]
+          },
+          "updates": [
+            {
+              "step": 1,
+              "clipped_MSE": 0.0022467763628810644,
+              "gradient_norm_before_clip": 0.25338750373930025,
+              "backbone_key_gradients": {
+                "head.weight1": 0.07013838738203049,
+                "body.weight1": 0.11473111808300018,
+                "tail.conv_out.weight": 0.8089901208877563
+              },
+              "branch_gradient_norms": {
+                "backbone": 0.2532206937701677,
+                "project": 0.0,
+                "mix": 0.0,
+                "field": 0.0,
+                "readout": 0.009192785094240073
+              }
+            },
+            {
+              "step": 2,
+              "clipped_MSE": 0.002246713964268565,
+              "gradient_norm_before_clip": 0.25335012239828486,
+              "backbone_key_gradients": {
+                "head.weight1": 0.07012259215116501,
+                "body.weight1": 0.11470513045787811,
+                "tail.conv_out.weight": 0.8089630603790283
+              },
+              "branch_gradient_norms": {
+                "backbone": 0.25318331081676715,
+                "project": 1.463469997884467e-10,
+                "mix": 0.0,
+                "field": 8.938929508307922e-12,
+                "readout": 0.009192151167501252
+              }
+            }
+          ],
+          "after_two_updates_gradient_norms": {
+            "backbone": 0.2531457494307996,
+            "project": 2.926667996053298e-10,
+            "mix": 0.0,
+            "field": 1.7320283453382495e-11,
+            "readout": 0.00919151510467729
+          },
+          "after_updates_export": {
+            "raw_max_abs_delta": 1.4901161193847656e-06,
+            "passed": true,
+            "parameters": 4618,
+            "raw_range": [
+              0.02663220278918743,
+              1.025810718536377
+            ]
+          },
+          "past_input_gradient_abs_sum": 0.0
+        },
+        "causal": {
+          "before_updates_export": {
+            "raw_max_abs_delta": 1.7285346984863281e-06,
+            "passed": true,
+            "parameters": 4618,
+            "raw_range": [
+              0.02550780214369297,
+              1.0302225351333618
+            ]
+          },
+          "updates": [
+            {
+              "step": 1,
+              "clipped_MSE": 0.0022467763628810644,
+              "gradient_norm_before_clip": 0.2533851564951216,
+              "backbone_key_gradients": {
+                "head.weight1": 0.07013838738203049,
+                "body.weight1": 0.11473111808300018,
+                "tail.conv_out.weight": 0.8089901208877563
+              },
+              "branch_gradient_norms": {
+                "backbone": 0.2532206937701677,
+                "project": 0.0,
+                "mix": 0.0,
+                "field": 0.0,
+                "readout": 0.009127857284830756
+              }
+            },
+            {
+              "step": 2,
+              "clipped_MSE": 0.002246713964268565,
+              "gradient_norm_before_clip": 0.2533477754437981,
+              "backbone_key_gradients": {
+                "head.weight1": 0.07012259215116501,
+                "body.weight1": 0.11470513045787811,
+                "tail.conv_out.weight": 0.8089630603790283
+              },
+              "branch_gradient_norms": {
+                "backbone": 0.2531833108174418,
+                "project": 1.4557513100320555e-10,
+                "mix": 0.0,
+                "field": 1.2788416654776623e-11,
+                "readout": 0.009127236484270735
+              }
+            }
+          ],
+          "after_two_updates_gradient_norms": {
+            "backbone": 0.25314574741076795,
+            "project": 2.9111336773816205e-10,
+            "mix": 0.0,
+            "field": 2.5146805871220638e-11,
+            "readout": 0.009126985703202427
+          },
+          "after_updates_export": {
+            "raw_max_abs_delta": 1.4901161193847656e-06,
+            "passed": true,
+            "parameters": 4618,
+            "raw_range": [
+              0.02663220278918743,
+              1.025810718536377
+            ]
+          },
+          "past_input_gradient_abs_sum": 1.5064633984707143e-08
+        }
+      }
+    }
+  ],
+  "protocol_sha256": "7b76dfd54e27bcb3744775d2ff5ae5cffa3a7b0084ae9d9725b5fe471ee34b25",
+  "source_sha256": {
+    "check_dense_history_task_r64.py": "655fee30538d08f80264fe9426af9c5f94703fcf6e53bf644245ed4d046410dc",
+    "dense_joint_state_r63.py": "54098da7ff4df117b63fbe809d1accf314d63308b26c0a083894a02c41f08297",
+    "budget_causal_r33.py": "7cfe138a286fdb488973ffe7c5bc93b69ad505af981e22cba824402c491b2e3b",
+    "mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5",
+    "training_form_r41.py": "4392fdceb16750ca0a763f4485beec873dc7316d758c95e9eaef042ffceb4ded",
+    "dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498"
+  },
+  "scope": "Actual task windows only, not an arbitrary-input fold proof. R63 failures retained.",
+  "data": {
+    "manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "verified_files": 384,
+    "scenes": [
+      "video_11",
+      "video_35",
+      "video_92",
+      "video_131",
+      "video_12",
+      "video_20",
+      "video_29",
+      "video_52",
+      "video_59",
+      "video_95",
+      "video_104",
+      "video_122"
+    ],
+    "native_bytes": 2388787200,
+    "real_training_ids": [
+      "video_104",
+      "video_11",
+      "video_12",
+      "video_122",
+      "video_131",
+      "video_20",
+      "video_29",
+      "video_35",
+      "video_52",
+      "video_59",
+      "video_92",
+      "video_95"
+    ],
+    "excluded_native_DEV": [
+      "video_121",
+      "video_15",
+      "video_47",
+      "video_91"
+    ],
+    "all_real_assets_owned": true,
+    "source_manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "synthetic_manifest_sha256": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+    "synthetic_training_videos": 57,
+    "real_tensor_dtype": "uint8 native inputs/GT; float32 /255 after crops",
+    "timing_scope": "Consecutive registered frame indices, not independently verified sensor timing."
+  },
+  "wall_seconds": 145.72073064395227,
+  "cuda_initialized": false,
+  "ended_at": "2026-11-13T01:20:12.841703+08:00"
+}

@@ -1,0 +1,23 @@
+\begin{table}[t]
+\centering\small
+\caption{Full-reference ColorVideoVDP v0.5.7 predictions for the existing references, with both adapted seeds. The original StableLLVE clean checkpoint has zero project updates and no training seed. Nominal 30\,fps, original-sized SDR arrays, standard FHD display, 37.84 pixels/degree, 200\,cd/m$^2$ peak and replicate temporal padding are assumed. These JOD predictions are not measured handset viewing, capture timing, human MOS or a separately calibrated flicker score.}
+\label{tab:perceptual}
+\begin{tabular}{llrr}
+\toprule
+Reference/output & Seed & SYN JOD & ND JOD\\
+\midrule
+MobileIE raw & 0 & 7.040 & 8.414\\
+MobileIE raw & 1 & 7.111 & 8.552\\
+MobileIE + rec. & 0 & 7.424 & 8.373\\
+MobileIE + rec. & 1 & 7.409 & 8.512\\
+Nano raw & 0 & 6.742 & 8.169\\
+Nano raw & 1 & 6.872 & 8.141\\
+Nano + rec. & 0 & 7.118 & 8.114\\
+Nano + rec. & 1 & 7.178 & 8.080\\
+FastDVDnet window & 0 & 7.432 & 7.680\\
+FastDVDnet window & 1 & 6.304 & 7.257\\
+StableLLVE clean raw & -- & 6.262 & 6.802\\
+StableLLVE clean + rec. & -- & 6.266 & 6.632\\
+\bottomrule
+\end{tabular}
+\end{table}
