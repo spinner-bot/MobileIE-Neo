@@ -6,7 +6,7 @@ from PIL import Image,ImageDraw,ImageFont
 HERE=Path(__file__).resolve().parent
 sys.path.insert(0,str(HERE))
 from lightlab_tasks import ASSETS,TASKS,Engine,Prepared,prepare as prepare_task,prepare_rgb as prepare,gamma,GAMMA_LUT,baseline
-VERSION='0.2.0'
+VERSION='0.2.1'
 MODEL_SHA=TASKS['lowlight']['model_sha256']
 MODES=('动态对比','静态总览')
 

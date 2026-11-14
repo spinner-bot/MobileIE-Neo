@@ -1,4 +1,4 @@
-微光实验室 · Windows Python 桌面版 0.2.0
+微光实验室 · Windows Python 桌面版 0.2.1
 =======================================
 
 保留 desktop.py、lightlab_tasks.py、requirements.txt、run.cmd、assets/ 的相对位置。
@@ -25,5 +25,5 @@ ISP 仅支持配套448×448 Huawei P20 RGGB .rggb；普通JPG/PNG及任意DNG均
 模型与安卓相同；桌面CPU1线程，安卓CPU4线程，均关闭默认delegate。
 各程序计时独立，不能与AI Benchmark数字混用。模型与数据出处见assets/credits.txt。
 
-已通过Linux/Xvfb界面模拟及三任务数值验收；尚未在真实Windows运行0.2.0。
-本地仍需检查Tcl/Tk、DLL、文件对话框、中文字体和DPI。
+已通过Linux/Xvfb界面模拟、三任务数值验收，以及在真实Windows（中文路径）下的原生运行。
+可在任意目录名（含中文）下运行，模型按字节加载，不依赖路径字符集。
