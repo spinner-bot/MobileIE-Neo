@@ -49,6 +49,17 @@ def ensure_tflite_runtime():
             "experimental_op_resolver_type",
             OpResolverType.BUILTIN_WITHOUT_DEFAULT_DELEGATES,
         )
+        # 原生层按窄字符打开路径，非 ASCII 目录（如中文）会失败；改传字节。
+        path = kwargs.get("model_path", args[0] if args else None)
+        if path is not None:
+            try:
+                str(path).encode("ascii")
+            except UnicodeEncodeError:
+                if "model_path" in kwargs:
+                    kwargs.pop("model_path")
+                else:
+                    args = args[1:]
+                kwargs["model_content"] = Path(path).read_bytes()
         return _Interpreter(*args, **kwargs)
 
     import types
