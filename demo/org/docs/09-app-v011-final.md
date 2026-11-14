@@ -1,6 +1,6 @@
 # 09 · 微光实验室 0.1.1 最终开发与模拟验收报告
 
-日期：2026-11-13；作者：Codex  (sqs_A100)；分支：`demo.org`。
+日期：2026-11-13；作者：Codex  (sqs_A100)；分支：`demo/org`。
 
 **后续更新：** 本文保留首轮 0.1.1 模拟交付时的结论。其后一加 9R 已完成主要功能检查，见[10 真机记录](10-real-device-0.1.1.md)；当前 Android 修复版为[0.1.2](11-android-0.1.2-state-fix.md)，Python 仍为 0.1.1。下列“尚未真机测试”描述的是本报告初次交付时状态。
 
@@ -81,7 +81,7 @@ source /root/android-dev/activate.sh
 "$ANDROID_DEV_ROOT/validation/reference-env/bin/python" -I demo/org/scripts/verify-android-lifecycle.py
 ```
 
-开发入口见[Android README](../app/README.md)、[Python README](../desktop/README.md)；手机安装与操作见[中文说明](../demo-package/微光实验室操作说明.txt)。全部演示改动在独立 `demo.org` 工作树小步提交、阶段推送；不修改 `main` 研究工作，所有合并要求显式 `--no-ff`，未 rebase、squash 或强推。
+开发入口见[Android README](../app/README.md)、[Python README](../desktop/README.md)；手机安装与操作见[中文说明](../demo-package/微光实验室操作说明.txt)。全部演示改动在独立 `demo/org` 工作树小步提交、阶段推送；不修改 `main` 研究工作，所有合并要求显式 `--no-ff`，未 rebase、squash 或强推。
 
 剩余设备及人员环节已列入[预检查清单](04-acceptance-checklist.md)：
 
