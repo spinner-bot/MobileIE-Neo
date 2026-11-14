@@ -50,7 +50,7 @@ def record():
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--task', choices=('lowlight', 'underwater'), default='lowlight')
+    parser.add_argument('--task', choices=('lowlight', 'underwater', 'isp'), default='lowlight')
     args = parser.parse_args()
     BASE.mkdir(parents=True, exist_ok=True)
     adb("shell", "settings", "put", "system", "font_scale", "1.0")
@@ -62,6 +62,23 @@ def main():
         tap_resource(PKG+":id/task_"+args.task)
         wait_text("图片已准备")
     previous = session()
+    if args.task == 'isp':
+        tap_resource(PKG+':id/process');wait_text('处理完成')
+        before = record()
+        adb('shell', 'am', 'force-stop', PKG)
+        adb('shell', 'am', 'start', '-W', '-n', PKG+'/.MainActivity')
+        wait_text('已恢复上次照片');wait_text('本次任务：RAW→RGB ISP')
+        after = record()
+        assert session() == previous and after == before
+        assert after['task_id'] == 'isp' and after['mobileie_complete'] and after['baseline_complete']
+        capture = [n for n in ui().iter('node') if n.get('resource-id') == PKG+':id/capture']
+        assert len(capture) == 1 and capture[0].get('enabled') == 'false'
+        (BASE/'raw-cold-restored.png').write_bytes(adb('exec-out', 'screencap', '-p'))
+        report = {'pass': True, 'task_id': 'isp', 'record_and_session_unchanged': True,
+                  'task_header_correct': True, 'rgb_camera_disabled': True,
+                  'scope': 'Android 15 emulator, not OnePlus hardware'}
+        (BASE/'raw-cold-restore.json').write_text(json.dumps(report, indent=2)+'\n')
+        print(json.dumps(report, indent=2));return
     tap_resource(PKG+":id/capture")
     for _ in range(12):
         if any(n.get("resource-id") == "com.android.camera2:id/shutter_button" for n in ui().iter("node")):
