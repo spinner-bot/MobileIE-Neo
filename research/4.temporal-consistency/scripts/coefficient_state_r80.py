@@ -12,7 +12,8 @@ WARM_FRAMES = 8
 class ConditionalReadout:
     def __init__(self, model):
         self.model = model.eval().requires_grad_(False)
-        assert model.channels == 12 and model.body.weight1.numel() == model.body.weight2.numel() == 1
+        assert model.body.bias.shape == (1, 12, 1, 1)
+        assert model.body.weight1.numel() == model.body.weight2.numel() == 1
         assert model.tail.weight.shape == (3, 12, 3, 3)
 
     def parts(self, value):
