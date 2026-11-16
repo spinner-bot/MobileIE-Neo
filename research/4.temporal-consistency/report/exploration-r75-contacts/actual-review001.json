@@ -1,0 +1,271 @@
+{
+  "at": "2026-11-16T18:35:49.243410+08:00",
+  "author": "Codex  (sqs_A100)",
+  "actual_review_completed": true,
+  "contacts_reviewed": 20,
+  "tool": "view_image: each of20 original local contact PNGs displayed and inspected during this turn",
+  "renderer_manifest_sha256": "129e10a4f7e35631323e8c055444b289b72fe984320c9084009257a8815fd752",
+  "limits": "Static first/middle/last contacts, not full playback, human MOS, phone or independent final. Generation-time actual_reviewed=false remains unchanged; this subsequent record documents inspection.",
+  "observations": [
+    {
+      "seed": 0,
+      "scene": "bear_photons20",
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/bear_photons20--seed0.png",
+      "sha256": "19d047dcc0d3cab8db74cbe9c12982cde3d23d7310940897e2ac89cbdebc8eea",
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "熊毛和石壁仍有明显噪声；递归参考在后两帧降低颗粒，XS的causal/current视觉接近。"
+    },
+    {
+      "seed": 0,
+      "scene": "bear_photons80",
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/bear_photons80--seed0.png",
+      "sha256": "56a66f6fe7e1823f7a6a984f9798f00311e2f0b62529fa66cebec12a2b950c11",
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "噪声比photons20弱；XS石壁和毛发有平滑，causal/current的差别很小。"
+    },
+    {
+      "seed": 0,
+      "scene": "lucia_photons20",
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/lucia_photons20--seed0.png",
+      "sha256": "0127a424937a9b37435107e7803c2a69894283996c63770515c7bd96276ce787",
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "XS草地纹理较平滑；递归参考后帧人物手臂附近可见混合残影，XS两读出视觉接近。"
+    },
+    {
+      "seed": 0,
+      "scene": "lucia_photons80",
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/lucia_photons80--seed0.png",
+      "sha256": "74d2c775626e4f23469f6a176872771d219ed8c7cc6c97038d5d60bbaea55d46",
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "高光子草地仍存在细节差异；递归参考运动手臂/长椅边缘可见混合，XS两读出接近。"
+    },
+    {
+      "seed": 0,
+      "scene": "walking_photons20",
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/walking_photons20--seed0.png",
+      "sha256": "a1f60dea7ab5ca1b3576232fb2465fa4082b75d4ff47c6a69a293c9f12442bdb",
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "面部和衣物仍有噪声/平滑；递归参考中末帧建筑和脸侧误差集中，causal/current相近。"
+    },
+    {
+      "seed": 0,
+      "scene": "walking_photons80",
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/walking_photons80--seed0.png",
+      "sha256": "baec830d4b6f9d9afa1bb7066d0ec0633c969ac0fdfcbf358a23bc3d4f80264a",
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "XS面部纹理较平滑；递归参考建筑与脸侧运动边界有明显混合误差，不能只由低Etemp判优。"
+    },
+    {
+      "seed": 0,
+      "scene": "video_15",
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/video_15--seed0.png",
+      "sha256": "6d427baf8f48767a03af9def659ea192074ade31a9dc72de4eaf86ad18fae978",
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "observation": "XS枝条/土坡色调恢复较好；细枝和背景仍平滑，三固定帧中causal/current接近。"
+    },
+    {
+      "seed": 0,
+      "scene": "video_47",
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/video_47--seed0.png",
+      "sha256": "f5eb5ebb2ca3eeb1a4e5c4853483cdadc2ec45b9bd6bfd8a23df5fcbbd64e5f3",
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "observation": "XS墙面和横梁色调更接近GT；MobileIE有偏色/横梁误差，不能将此空间收益归因历史。"
+    },
+    {
+      "seed": 0,
+      "scene": "video_91",
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/video_91--seed0.png",
+      "sha256": "82b8d385f3269f081df12712fddd1bf08ae13509cf2e71a962a34fe271420ddd",
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "observation": "XS栅栏和草地色调较接近GT，细线仍软；seed1末帧误差较前帧明显，不据静态图宣称播放稳定。"
+    },
+    {
+      "seed": 0,
+      "scene": "video_121",
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/video_121--seed0.png",
+      "sha256": "5d776fab6e984bb786d73da888203801d289a6242108e1bb42eef818b22ed0a5",
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "observation": "XS天空色调更接近GT且细噪声较少，但塔架细边缘较软；causal/current未见一致明显区别。"
+    },
+    {
+      "seed": 1,
+      "scene": "bear_photons20",
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/bear_photons20--seed1.png",
+      "sha256": "96bb483b27aabae1c26f3064427a0f1c22f82e764996fe749a4452e5c85ea98e",
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "熊毛和石壁仍有明显噪声；递归参考在后两帧降低颗粒，XS的causal/current视觉接近。"
+    },
+    {
+      "seed": 1,
+      "scene": "bear_photons80",
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/bear_photons80--seed1.png",
+      "sha256": "af43adee30db7df9d3ba527fb369ba70f1c2b7e96ac1a8c57bf463c2452ddb74",
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "噪声比photons20弱；XS石壁和毛发有平滑，causal/current的差别很小。"
+    },
+    {
+      "seed": 1,
+      "scene": "lucia_photons20",
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/lucia_photons20--seed1.png",
+      "sha256": "71196862c8d6f807cead17c6b3cf08cd40678be9d8560adaec6a9fcfd307cfad",
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "XS草地纹理较平滑；递归参考后帧人物手臂附近可见混合残影，XS两读出视觉接近。"
+    },
+    {
+      "seed": 1,
+      "scene": "lucia_photons80",
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/lucia_photons80--seed1.png",
+      "sha256": "628039a238607125a11a38721ea6114402e956422a3565c9af1b7eaf306ee8f3",
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "高光子草地仍存在细节差异；递归参考运动手臂/长椅边缘可见混合，XS两读出接近。"
+    },
+    {
+      "seed": 1,
+      "scene": "walking_photons20",
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/walking_photons20--seed1.png",
+      "sha256": "f13e74c7a72a5e7fe259e5733fd8634bdb9ccc2bdd61148ba618df4ff3ca60d0",
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "面部和衣物仍有噪声/平滑；递归参考中末帧建筑和脸侧误差集中，causal/current相近。"
+    },
+    {
+      "seed": 1,
+      "scene": "walking_photons80",
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/walking_photons80--seed1.png",
+      "sha256": "e70f0155bfe696114d733a7673456d82556d20c647f70d37695f0304f0cbfa21",
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "observation": "XS面部纹理较平滑；递归参考建筑与脸侧运动边界有明显混合误差，不能只由低Etemp判优。"
+    },
+    {
+      "seed": 1,
+      "scene": "video_15",
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/video_15--seed1.png",
+      "sha256": "02e9f321cd32c1f384fb4bd937738ff0c57b298788ad39d913b86747f1f81814",
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "observation": "XS枝条/土坡色调恢复较好；细枝和背景仍平滑，三固定帧中causal/current接近。"
+    },
+    {
+      "seed": 1,
+      "scene": "video_47",
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/video_47--seed1.png",
+      "sha256": "a309d358685b04c4bba0e5381f4940028853c1896401b18f1c6b1de924e4a3f0",
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "observation": "XS墙面和横梁色调更接近GT；MobileIE有偏色/横梁误差，不能将此空间收益归因历史。"
+    },
+    {
+      "seed": 1,
+      "scene": "video_91",
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/video_91--seed1.png",
+      "sha256": "48f2e921f3549d2f16bb8e9a8e5452b1a05f3f6c12316ddcd966ce2d8f200be5",
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "observation": "XS栅栏和草地色调较接近GT，细线仍软；seed1末帧误差较前帧明显，不据静态图宣称播放稳定。"
+    },
+    {
+      "seed": 1,
+      "scene": "video_121",
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/video_121--seed1.png",
+      "sha256": "eab34b76a11c8308ab10e7bda28a4ca3971ea4c699ff510a66f172e917bd45cb",
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "observation": "XS天空色调更接近GT且细噪声较少，但塔架细边缘较软；causal/current未见一致明显区别。"
+    }
+  ]
+}
