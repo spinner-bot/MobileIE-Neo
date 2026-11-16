@@ -20,7 +20,9 @@ SOURCES = ['research/4.temporal-consistency/scripts/'+name for name in (
     'exploration_r2_data.py', 'train_exploration_r2.py', 'explore_temporal_controls.py',
     'causal_reference_io_r75.py', 'noise_role_io_r79.py', 'causal_reference_evaluation_r75.py',
     'prepare_cache_r5.py', 'evaluate_cvvdp_references_r66.py', 'cvvdp_adapter_r66.py',
-    'render_dense_history_r64.py', 'half_motion_r4.py')]
+    'render_dense_history_r64.py', 'half_motion_r4.py', 'aggregation_controls_r20.py',
+    'aligned_raw_history_r11.py', 'video_metrics.py', 'bounded_fst.py', 'prepare_cache_r4.py',
+    'real_data_r4.py', 'train_real_r4.py')]
 SOURCES += ['scripts/'+name for name in (
     'prebind_shared_gpu.py', 'shared_gpu_admission.py', 'bound_gpu_observer.py',
     'shared_training_schedule.py', 'project-python', 'project_assets.py')]
