@@ -4,11 +4,13 @@
 
 ## 当前研究状态
 
-截至2026-11-17，项目仍处于方法探索阶段，尚未建立可投稿的新方法。接续先读[进展报告0157](docs/进展报告/0157-T-26111703-有限前缀条件读出完整负结果与先例边界.md)、[4号研究入口](research/4.temporal-consistency/README.md)和[服务器约定](AGENTS.md)。主线在 `main` 推进，移动演示由独立支线处理。
+截至2026-11-17，项目仍处于方法探索阶段，尚未建立可投稿的新方法。接续先读[进展报告0158](docs/进展报告/0158-T-26111704-训练噪声门控干预与局部路线止损.md)、[4号研究入口](research/4.temporal-consistency/README.md)和[服务器约定](AGENTS.md)。主线在 `main` 推进，移动演示由独立支线处理。
 
 
 
-当前R80已完整收口（[0157](docs/进展报告/0157-T-26111703-有限前缀条件读出完整负结果与先例边界.md)/[停止决定](research/4.temporal-consistency/docs/exploration-r80-decision.md)）：160新质量及160官方JOD、各6368比较帧，联合200条件/40均值/24比较通过4，tail0/12，20固定图已逐张实际查看；原CPU/指标/协调全部正常退出、31源保持，无活跃R80作业。tail相对raw时序仅降.81%–1.88%，对强rec仍高38.13%–50.96%，停止本13basis/ridge/暖机/teacher/seed局部网格。GT诊断ND PSNR虽明显改善但时间几乎不降，非部署结果；note65核少量通道适配/线性展开已有先例。尚无有效新方法，旧STOP/最终像素保护及paper020保持。
+最新R81（[0158](docs/进展报告/0158-T-26111704-训练噪声门控干预与局部路线止损.md)/[停止决定](research/4.temporal-consistency/docs/exploration-r81-decision.md)）：一次固定训练图块静态噪声干预已正常结束，8主条件0/8。128唯一噪声图由双seed共用、272骨干/1040tail、0SGD/DEV/GPU；8固定图均已实际查看。无噪参照localgate有部分PSNR/7.5%–9.2%波动收益但不稳，global替换可能与当前特征失配，均非部署/最佳门控上界。不继续此小门控/温度/滞回/EMA等网格；R80及全部旧STOP/最终像素/paper020保持，尚无新方法。
+
+此前R80已完整收口（[0157](docs/进展报告/0157-T-26111703-有限前缀条件读出完整负结果与先例边界.md)/[停止决定](research/4.temporal-consistency/docs/exploration-r80-decision.md)）：160新质量及160官方JOD、各6368比较帧，联合200条件/40均值/24比较通过4，tail0/12，20固定图已逐张实际查看；原CPU/指标/协调全部正常退出、31源保持，无活跃R80作业。tail相对raw时序仅降.81%–1.88%，对强rec仍高38.13%–50.96%，停止本13basis/ridge/暖机/teacher/seed局部网格。GT诊断ND PSNR虽明显改善但时间几乎不降，非部署结果；note65核少量通道适配/线性展开已有先例。尚无有效新方法，旧STOP/最终像素保护及paper020保持。
 
 当前[R79完整决定](research/4.temporal-consistency/docs/exploration-r79-decision.md)：24000更新、100新质量/4480帧与100 JOD均正常结束，联合140条件/28域均值/16比较全部False，全部20固定图已实际查看。课程相对同权重current时间代理仅降.48%–.83%，相对强rec仍高32.68%–51.74%；正负条件/seed都保留，按协议停止本课程局部网格，不推广为所有课程无效。原CPU/感知/协调均退出，禁止据旧快照重启；21/11源未变。[note63](research/5.prior-art-survey/docs/63-fip-diagnostics-and-curriculum-novelty-boundary.md)核明FIP训练/诊断已有先例，非创新。完整结果暂独立、paper020未变；有效新方法、自然动态/手机/独立最终仍缺，保留像素/旧STOP保持。
 
