@@ -2,7 +2,7 @@
   "at": "2026-11-17T07:51:33.128637+08:00",
   "author": "Codex  (sqs_A100)",
   "expected_contacts": 20,
-  "reviewed_contacts": 12,
+  "reviewed_contacts": 16,
   "all_actual_reviewed": false,
   "renderer_manifest_sha256": "5171cfcffd4cff97b75c0874dcb4e54d0b794074ef9e683e7195c6e1129011d1",
   "renderer_flags_preserved": true,
@@ -234,8 +234,84 @@
         554
       ],
       "observation": "三行八列完整；街景高photon人物轮廓一致，t32/63两递归列颗粒较少，centered/wrong有细微色调与颗粒差别，不作错源因果结论。"
+    },
+    {
+      "seed": 0,
+      "scene": "video_15",
+      "path": "research/4.temporal-consistency/report/exploration-r82-contacts/seed0--video_15.png",
+      "sha256": "88a3066d947a94161e5ebfe99934f0e685761e9752c005ae2ec54db92b93409b",
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "reviewed_at": "2026-11-17T07:57:45.139696+08:00",
+      "tool": "view_image detail=original",
+      "display_size": [
+        2048,
+        554
+      ],
+      "observation": "三行八列完整；实拍枝条和斜木面在各固定时间对应，增强与GT有细微明度/色调差异，centered与wrong未显示整幅异场景；不作时序或因果证明。"
+    },
+    {
+      "seed": 1,
+      "scene": "video_15",
+      "path": "research/4.temporal-consistency/report/exploration-r82-contacts/seed1--video_15.png",
+      "sha256": "eef47bbc369c54af3aa8feb2612ba4c0fcf58d03ea92cb89044c03fb6c09763a",
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "reviewed_at": "2026-11-17T07:57:45.256495+08:00",
+      "tool": "view_image detail=original",
+      "display_size": [
+        2048,
+        554
+      ],
+      "observation": "三行八列完整；实拍枝条/木面细节较软，后两行direct、递归与centered亮度有细小差别，没有单凭此图作全域画质排序。"
+    },
+    {
+      "seed": 0,
+      "scene": "video_47",
+      "path": "research/4.temporal-consistency/report/exploration-r82-contacts/seed0--video_47.png",
+      "sha256": "d069053c6421f98825e94ae2b464245dc653e358df689ed700b9fd48c4979d80",
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "reviewed_at": "2026-11-17T07:57:45.357445+08:00",
+      "tool": "view_image detail=original",
+      "display_size": [
+        2048,
+        554
+      ],
+      "observation": "三行八列完整；墙面水平边缘随时间移动，增强后仍有色调与细纹差异，递归列较平滑；静态三帧不能证明墙面已去闪烁。"
+    },
+    {
+      "seed": 1,
+      "scene": "video_47",
+      "path": "research/4.temporal-consistency/report/exploration-r82-contacts/seed1--video_47.png",
+      "sha256": "bfe4fb357693caa334c475cdad2e4a817e0f0967211cc2507b18cd87734638fa",
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "reviewed_at": "2026-11-17T07:57:45.452620+08:00",
+      "tool": "view_image detail=original",
+      "display_size": [
+        2048,
+        554
+      ],
+      "observation": "三行八列完整；墙面各列几何对应，t8/15增益和细颗粒有轻微差异，GT与增强色调仍不同；wrong列保留为诊断。"
     }
   ],
   "scope": "Actual static contact review only; no video playback/MOS or temporal/novelty proof. Original renderer false flags preserved separately.",
-  "updated_at": "2026-11-17T07:54:55.292252+08:00"
+  "updated_at": "2026-11-17T07:57:45.535591+08:00"
 }
