@@ -1,0 +1,58 @@
+{
+  "at": "2026-11-16T03:55:55.491691+08:00",
+  "completed": true,
+  "new_quality_rows": 40,
+  "new_frame_rows": 1792,
+  "tile_CNN_calls": 9728,
+  "all_quality_rows": 80,
+  "domain_seed_means": 16,
+  "new_perceptual_rows": 40,
+  "formal_updates": 128000,
+  "checkpoints": {
+    "0": {
+      "at": "2026-11-16T03:40:52.824480+08:00",
+      "seed": 0,
+      "completed_steps": 64000,
+      "next_data_step": 64000,
+      "registered_steps": 64000,
+      "attempt": 1,
+      "kind": "regular",
+      "path": ".cache/checkpoints/exploration-r75/seed0/attempt001/regular-step064000.pt",
+      "sha256": "347186ed1a12db33e13a2c4a0c2c3da8f0a871c9c058e41c5008cc56222be9de",
+      "bytes": 10621579,
+      "parameters": 890275,
+      "source_freeze_sha256": "929d6faca944bff5d59712e15947cf41d9e28c59c30881335cc8b568750804c8",
+      "final_quality_eligible": true,
+      "runtime": "research/4.temporal-consistency/results/exploration-r75-stage001-seed0/attempt001/runtime.json",
+      "completed_normally": true,
+      "formal_updates": 64000
+    },
+    "1": {
+      "at": "2026-11-16T03:16:44.303853+08:00",
+      "seed": 1,
+      "completed_steps": 64000,
+      "next_data_step": 64000,
+      "registered_steps": 64000,
+      "attempt": 1,
+      "kind": "regular",
+      "path": ".cache/checkpoints/exploration-r75/seed1/attempt001/regular-step064000.pt",
+      "sha256": "ee3952827b51b089531bbcb0fb814b1b9afe08b0168c4198337f0b50dd8b61cd",
+      "bytes": 10621579,
+      "parameters": 890275,
+      "source_freeze_sha256": "929d6faca944bff5d59712e15947cf41d9e28c59c30881335cc8b568750804c8",
+      "final_quality_eligible": true,
+      "runtime": "research/4.temporal-consistency/results/exploration-r75-stage001-seed1/attempt001/runtime.json",
+      "completed_normally": true,
+      "formal_updates": 64000
+    }
+  },
+  "all_quality_time_necessary_passed": false,
+  "full_gates_evaluated": true,
+  "all8_gates_passed": false,
+  "further_mechanism_or_cost_allowed": false,
+  "novelty_established": false,
+  "independent_final": false,
+  "phone_measured": false,
+  "scope": "Released XS/self-start/tiled/final64K; unequal training budgets disclosed; repeated DEV with ND native crop, not full1080p or original500K replication."
+}
+
