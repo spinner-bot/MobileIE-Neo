@@ -1,0 +1,24 @@
+{
+  "at": "2026-11-16T22:17:08.164068+08:00",
+  "pid": 879959,
+  "start_ticks": 77881588,
+  "seed": 0,
+  "physical_gpu_requested": 0,
+  "command": [
+    "./scripts/project-python",
+    "scripts/prebind_shared_gpu.py",
+    "--gpu",
+    "0",
+    "--record",
+    "research/4.temporal-consistency/process/exploration-r79/seed0-external001.json",
+    "--",
+    "./scripts/project-python",
+    "research/4.temporal-consistency/scripts/train_noise_role_r79.py",
+    "--seed",
+    "0",
+    "--attempt",
+    "1"
+  ],
+  "log": ".cache/experiments/exploration-r79/launch001/seed0.log",
+  "scope": "Original parent launched, child post-CPU admission and formal updates not yet observed."
+}
