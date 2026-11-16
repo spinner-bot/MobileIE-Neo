@@ -131,7 +131,7 @@ def main():
             scope='Only triage of fixed known-clean local gate intervention on static synthetic training patches. Not a universal upper bound, real-video result or method.'))
         table = ['# R81完整训练图块静态独立噪声干预', '',
             'clean_*需要已知clean-dark训练参照，全部不可部署；recursive05为完美静止对应参考。非DEV/自然噪声/完整视频/手机证据。', '',
-            '|seed|训练源|photons|路径|PSNR均值|相邻差/255尺度|方差|均值偏差平方|',
+            '|seed|训练源|photons|路径|PSNR均值|相邻差(0–255)|方差|均值偏差平方|',
             '|---:|---|---:|---|---:|---:|---:|---:|']
         for r in results:
             table.append(f"|{r['seed']}|{r['source_video']}|{r['photons']}|{r['label']}|{r['mean_psnr_rgb']:.6f}|{r['temporal_difference_255']:.6f}|{r['variance']:.9f}|{r['squared_bias']:.9f}|")
