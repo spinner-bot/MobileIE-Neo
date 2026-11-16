@@ -12,7 +12,7 @@ MobileIE的通道max满足 `|max(a)-max(b)| <= max|a-b|`；argmax索引改变不
 
 沿用R32正式训练清单的57个DAVIS源，按名称排序前两个源的第0帧、中心128裁块，不按图像/成绩选择。只解码这两个已有训练RGB图像；不读取DEV/保留源或另取像素。两源各photons20/80，用原degrade、gamma2.2/乘.35、Gaussian.008/clip/uint8、jpeg=False，每条件32个独立draw，SeedSequence([81,source_ordinal,photons,draw])。噪声前参照同暗化/clip/uint8但不加Poisson/Gaussian；它不等于clipped随机观测的严格期望。
 
-两个R44 square_mse最终4075参数/累计8000权重，全部eval/冻结。两个模型使用相同两训练图块和噪声数组，共8条件。每条件32共享noisy core，共256；两模型×两源各一次clean core共4。每clean及每个条件第一个noisy另执行原完整forward作函数比较，共12额外原forward；合272实际骨干调用。每noisy core的raw及三干预各一次tail，另4clean及12原whole tail，总1040 tail调用。0SGD/拟合/新GPU，全CPU2/OpenCV1、初始CUDA mask为空、确定性FP32。
+两个R44 square_mse最终4075参数/累计8000权重，全部eval/冻结。两个模型使用相同两训练图块和噪声数组，共8个模型-源-噪声条件；128份独立噪声图像由两模型共同使用。每条件32共享noisy core，共256次模型调用；两模型×两源各一次clean core共4。每clean及每个条件第一个noisy另执行原完整forward作函数比较，共12额外原forward；合272实际骨干调用。每noisy core的raw及三干预各一次tail，另4clean及12原whole tail，总1040 tail调用。0SGD/拟合/新GPU，全CPU2/OpenCV1、初始CUDA mask为空、确定性FP32。
 
 令 `u=body(head(x))`，`g=att(u)`，`m=max(g*u)`；无噪暗输入给g*和m*。五个输出：
 
@@ -24,7 +24,7 @@ MobileIE的通道max满足 `|max(a)-max(b)| <= max|a-b|`；argmax索引改变不
 
 原节点重组对原forward最大归一化差≤2e-5、所有参数不变/有限，raw或干预非有限则保留并停止，不调整容差重做。每组输出clamp[0,1]后作同GT RGB重建；连续32draw按固定顺序计算平均相邻RGB绝对差，GT静止故无GT运动项。保留均值PSNR、MSE、时间差、总体逐像素方差/均值偏差分解（用于解释，不以逐bit精度作研究成果）；四前向路径另记录unclipped方差，排除只看clip造成的表面降噪。记录winner相对clean参照变化比例及max值变化大小，但不以相关性认定根因。
 
-40条件输出行、1280逐draw输出帧比较，全8条件/两seed/两源/两噪声保留。运行数组放自有cache，Git保留来源/参数/40指标/必要逐draw数值与终态；八张固定noise0/1/31静态对照必须实际查看，非全视频/MOS。256噪声样本按生成数组独立计数，不称256个真实视频帧。
+40条件输出行、1280逐draw输出帧比较，全8条件/两seed/两源/两噪声保留。运行数组放自有cache，Git保留来源/参数/40指标/必要逐draw数值与终态；八张固定noise0/1/31静态对照必须实际查看，非全视频/MOS。128份唯一噪声实现、256次noisy模型调用分别计数；两模型的同seed数组相同，不虚增独立样本数，不称真实视频帧。
 
 ## 先验判断规则与停止范围
 
