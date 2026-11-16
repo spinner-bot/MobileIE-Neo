@@ -1,6 +1,9 @@
 # 4. 时序一致性方法（Temporal Consistency）
 
-最新[R82 / 0159](../../docs/进展报告/0159-T-26111706-核预测先例收口与自参照修正原型资格.md)：[CPU资格](process/exploration-r82/progress001.json)正常完成12丢弃更新，304新增参数，0正式/DEV/GPU。centered self恒等/流式差均0，非零过去梯度仅说明可训练。[正式协议](docs/exploration-r82-self-reference-training-protocol.md)已登记双seed三控制48000更新、完整100新质量/JOD、24门槛和20图；完整实现/冻结/CUDA资格尚待，无活跃正式作业。旧STOP/保留最终/paper020保持，尚无有效方法或创新证明。
+最新[R82 / 0160](../../docs/进展报告/0160-T-26111706-自参照修正正式双种子训练与完整评价链启动.md)：[progress002](process/exploration-r82/progress002.json)核原CUDA资格正常12丢弃更新、692MiB，41源/两协议冻结。原正式seed0=959461/start80951882在0卡、seed1=959460/start80951876在1卡、协调958803/start80941711均live，快照各100/8000而非最终；不要重启/改活跃源。固定两seed三控制共48000更新，唯一最终后原100质量/JOD、140条件/24门槛和20图完整链才启动；无新方法/收益。按检查点密集分别提交，阶段推送，旧STOP/最终像素/paper020保持。
+
+
+此前R82 CPU资格[R82 / 0159](../../docs/进展报告/0159-T-26111706-核预测先例收口与自参照修正原型资格.md)：[CPU资格](process/exploration-r82/progress001.json)正常完成12丢弃更新，304新增参数，0正式/DEV/GPU。centered self恒等/流式差均0，非零过去梯度仅说明可训练。[正式协议](docs/exploration-r82-self-reference-training-protocol.md)已登记双seed三控制48000更新、完整100新质量/JOD、24门槛和20图；完整实现/冻结/CUDA资格尚待，无活跃正式作业。旧STOP/保留最终/paper020保持，尚无有效方法或创新证明。
 
 
 目标：以论文为最终产出，深入核查 MobileIE 的架构与训练机制，在移动端计算预算内设计视频增强模型，用传统方法、后处理和已有视频模型对照验证画质、时间稳定性与效率收益。
