@@ -2,6 +2,8 @@
 
 目标：在动模型之前，把 MobileIE 的引用图、同组接续工作、TeleAI/工业界线索、以及视频时序一致性方向梳理完整，回答三个问题：
 
+最新2026-11-16：[62 训练信息课程与低光光度迁移](docs/62-training-information-curricula-and-photometric-transfer.md)固定作者FIP/LVD代码，核遮帧/插帧及不平衡噪声的直接先例、未来信息和flow边界；R78人工光度资格92/92，亮GT残差缩放无噪也改曝光。0真实视频/模型/SGD/GPU，非新方法或课程有效性证据。见[0152](../../docs/进展报告/0152-T-26111620-训练信息课程先例与低光光度资格.md)；R75/R76已完整结束、R77停止、paper020，以下活跃/等待提示均为历史。
+
 2026-11-13定向增量：[57 公开因果RGB参考代码资格](docs/57-causal-reference-code-feasibility.md)，区分EVRNet第三方超分移植与ReBotNet作者发布架构，保留固定token/初始化/训练预算及CPU功能结果边界；不是新方法、画质表或完整原文复现。
 
 同日后续：[58 DID/R-DID连续性与获取边界](docs/58-did-rdid-continuity-and-acquisition-boundaries.md)，区分逐帧合成与连续配准视频；作者入口403后停止，资料未取得，不增加已完成基准数。R75正式活跃与R76补充等待以[0117报告](../../docs/进展报告/0117-T-26111321-自条件补充评价链冻结与实际等待接续.md)和真实runtime为准。
