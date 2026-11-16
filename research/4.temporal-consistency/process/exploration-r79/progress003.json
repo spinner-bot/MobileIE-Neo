@@ -1,0 +1,433 @@
+{
+  "at": "2026-11-16T22:35:55.195065+08:00",
+  "seeds": [
+    {
+      "seed": 0,
+      "pid": 880224,
+      "start_ticks": 77883893,
+      "state": "S",
+      "cpu_ticks": 43477,
+      "latest_observed_progress": {
+        "at": "2026-11-16T22:35:45.063703+08:00",
+        "completed_steps": 2100,
+        "gain": 1.0,
+        "models": [
+          {
+            "model": "spatial",
+            "loss": 0.03612885996699333,
+            "gradient_norm_before_clip": 5.443953037261963
+          },
+          {
+            "model": "balanced",
+            "loss": 0.038846783339977264,
+            "gradient_norm_before_clip": 9.09859561920166
+          },
+          {
+            "model": "curriculum",
+            "loss": 0.04079176485538483,
+            "gradient_norm_before_clip": 4.704624176025391
+          }
+        ],
+        "peak_allocated_bytes": 523452928,
+        "peak_reserved_bytes": 692060160,
+        "resource": {
+          "UUID": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+          "observations": 6298,
+          "minimum_free_mib": 39271,
+          "maximum_used_mib": 1688,
+          "maximum_observed_utilization_percent": 48,
+          "synchronized_work_seconds": 214.64074727799743,
+          "cooperative_pause_seconds": 643.9222418339923,
+          "current_consecutive_busy_decisions": 0,
+          "last16": [
+            {
+              "at": "2026-11-16T22:35:42.444747+08:00",
+              "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 45
+            },
+            {
+              "at": "2026-11-16T22:35:42.630676+08:00",
+              "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 2
+            },
+            {
+              "at": "2026-11-16T22:35:42.931799+08:00",
+              "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 43
+            },
+            {
+              "at": "2026-11-16T22:35:42.931877+08:00",
+              "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 43
+            },
+            {
+              "at": "2026-11-16T22:35:43.112495+08:00",
+              "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 0
+            },
+            {
+              "at": "2026-11-16T22:35:43.413394+08:00",
+              "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 47
+            },
+            {
+              "at": "2026-11-16T22:35:43.413472+08:00",
+              "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 47
+            },
+            {
+              "at": "2026-11-16T22:35:43.606156+08:00",
+              "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 0
+            },
+            {
+              "at": "2026-11-16T22:35:43.907932+08:00",
+              "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 29
+            },
+            {
+              "at": "2026-11-16T22:35:43.908007+08:00",
+              "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 29
+            },
+            {
+              "at": "2026-11-16T22:35:44.082664+08:00",
+              "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 0
+            },
+            {
+              "at": "2026-11-16T22:35:44.383788+08:00",
+              "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 47
+            },
+            {
+              "at": "2026-11-16T22:35:44.383869+08:00",
+              "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 47
+            },
+            {
+              "at": "2026-11-16T22:35:44.573510+08:00",
+              "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 0
+            },
+            {
+              "at": "2026-11-16T22:35:44.874440+08:00",
+              "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 11
+            },
+            {
+              "at": "2026-11-16T22:35:44.874520+08:00",
+              "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 11
+            }
+          ],
+          "scope": "Lifetime resource minima/maxima and bounded recent observations; no phone or incumbent throughput claim."
+        },
+        "seed": 0,
+        "pid": 880224,
+        "attempt": 1,
+        "registered_steps": 4000,
+        "completed_normally": false,
+        "latest_checkpoint": {
+          "at": "2026-11-16T22:34:56.081845+08:00",
+          "seed": 0,
+          "attempt": 1,
+          "completed_steps": 2000,
+          "next_data_step": 2000,
+          "registered_steps": 4000,
+          "kind": "regular",
+          "path": ".cache/checkpoints/exploration-r79/seed0/attempt001/regular-step2000.pt",
+          "sha256": "ad88292210debac393e1da3707a9bb5d0ad58e8783eca553c7f039be8219f00b",
+          "bytes": 1007219,
+          "freeze_sha256": "0ba30d79e383869f1224edfdef6e8a42e6a117fccb79b2f5cfb95033d920c591",
+          "parameters_each": 24955,
+          "completed_optimizer_updates": 6000,
+          "final_quality_eligible": false
+        }
+      },
+      "checkpoint2000": {
+        "at": "2026-11-16T22:34:56.081845+08:00",
+        "seed": 0,
+        "attempt": 1,
+        "completed_steps": 2000,
+        "next_data_step": 2000,
+        "registered_steps": 4000,
+        "kind": "regular",
+        "path": ".cache/checkpoints/exploration-r79/seed0/attempt001/regular-step2000.pt",
+        "sha256": "ad88292210debac393e1da3707a9bb5d0ad58e8783eca553c7f039be8219f00b",
+        "bytes": 1007219,
+        "freeze_sha256": "0ba30d79e383869f1224edfdef6e8a42e6a117fccb79b2f5cfb95033d920c591",
+        "parameters_each": 24955,
+        "completed_optimizer_updates": 6000,
+        "final_quality_eligible": false
+      },
+      "terminal_present": false
+    },
+    {
+      "seed": 1,
+      "pid": 880225,
+      "start_ticks": 77883900,
+      "state": "R",
+      "cpu_ticks": 43464,
+      "latest_observed_progress": {
+        "at": "2026-11-16T22:35:39.176731+08:00",
+        "completed_steps": 2100,
+        "gain": 1.0,
+        "models": [
+          {
+            "model": "spatial",
+            "loss": 0.048133742064237595,
+            "gradient_norm_before_clip": 2.666266679763794
+          },
+          {
+            "model": "balanced",
+            "loss": 0.04893273115158081,
+            "gradient_norm_before_clip": 2.7031774520874023
+          },
+          {
+            "model": "curriculum",
+            "loss": 0.05775516480207443,
+            "gradient_norm_before_clip": 6.559988021850586
+          }
+        ],
+        "peak_allocated_bytes": 523452928,
+        "peak_reserved_bytes": 692060160,
+        "resource": {
+          "UUID": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+          "observations": 6298,
+          "minimum_free_mib": 39271,
+          "maximum_used_mib": 1688,
+          "maximum_observed_utilization_percent": 49,
+          "synchronized_work_seconds": 213.46675058000255,
+          "cooperative_pause_seconds": 640.4002517400077,
+          "current_consecutive_busy_decisions": 0,
+          "last16": [
+            {
+              "at": "2026-11-16T22:35:36.583240+08:00",
+              "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 0
+            },
+            {
+              "at": "2026-11-16T22:35:36.770908+08:00",
+              "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 5
+            },
+            {
+              "at": "2026-11-16T22:35:37.074940+08:00",
+              "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 43
+            },
+            {
+              "at": "2026-11-16T22:35:37.075028+08:00",
+              "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 43
+            },
+            {
+              "at": "2026-11-16T22:35:37.249489+08:00",
+              "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 0
+            },
+            {
+              "at": "2026-11-16T22:35:37.552272+08:00",
+              "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 0
+            },
+            {
+              "at": "2026-11-16T22:35:37.552351+08:00",
+              "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 0
+            },
+            {
+              "at": "2026-11-16T22:35:37.736310+08:00",
+              "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 23
+            },
+            {
+              "at": "2026-11-16T22:35:38.040243+08:00",
+              "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 24
+            },
+            {
+              "at": "2026-11-16T22:35:38.040321+08:00",
+              "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 24
+            },
+            {
+              "at": "2026-11-16T22:35:38.214050+08:00",
+              "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 0
+            },
+            {
+              "at": "2026-11-16T22:35:38.517699+08:00",
+              "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 0
+            },
+            {
+              "at": "2026-11-16T22:35:38.517784+08:00",
+              "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 0
+            },
+            {
+              "at": "2026-11-16T22:35:38.697718+08:00",
+              "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 0
+            },
+            {
+              "at": "2026-11-16T22:35:39.001744+08:00",
+              "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 3
+            },
+            {
+              "at": "2026-11-16T22:35:39.001942+08:00",
+              "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+              "total_mib": 40960,
+              "used_mib": 1688,
+              "free_mib": 39271,
+              "utilization_percent": 3
+            }
+          ],
+          "scope": "Lifetime resource minima/maxima and bounded recent observations; no phone or incumbent throughput claim."
+        },
+        "seed": 1,
+        "pid": 880225,
+        "attempt": 1,
+        "registered_steps": 4000,
+        "completed_normally": false,
+        "latest_checkpoint": {
+          "at": "2026-11-16T22:34:50.179475+08:00",
+          "seed": 1,
+          "attempt": 1,
+          "completed_steps": 2000,
+          "next_data_step": 2000,
+          "registered_steps": 4000,
+          "kind": "regular",
+          "path": ".cache/checkpoints/exploration-r79/seed1/attempt001/regular-step2000.pt",
+          "sha256": "19e94cfb261bdfc5c88308925b2f629d4d6c4ff29688758d7b7e90e7034f3ae1",
+          "bytes": 1007219,
+          "freeze_sha256": "0ba30d79e383869f1224edfdef6e8a42e6a117fccb79b2f5cfb95033d920c591",
+          "parameters_each": 24955,
+          "completed_optimizer_updates": 6000,
+          "final_quality_eligible": false
+        }
+      },
+      "checkpoint2000": {
+        "at": "2026-11-16T22:34:50.179475+08:00",
+        "seed": 1,
+        "attempt": 1,
+        "completed_steps": 2000,
+        "next_data_step": 2000,
+        "registered_steps": 4000,
+        "kind": "regular",
+        "path": ".cache/checkpoints/exploration-r79/seed1/attempt001/regular-step2000.pt",
+        "sha256": "19e94cfb261bdfc5c88308925b2f629d4d6c4ff29688758d7b7e90e7034f3ae1",
+        "bytes": 1007219,
+        "freeze_sha256": "0ba30d79e383869f1224edfdef6e8a42e6a117fccb79b2f5cfb95033d920c591",
+        "parameters_each": 24955,
+        "completed_optimizer_updates": 6000,
+        "final_quality_eligible": false
+      },
+      "terminal_present": false
+    }
+  ],
+  "coordinator": {
+    "pid": 881791,
+    "start_ticks": 77901803,
+    "state": "S"
+  },
+  "training_sources_unchanged": true,
+  "quality_started": false,
+  "scope": "Both2000-step checkpoints verified: saved12000/24000 optimizer updates; original training still live, not final quality."
+}
