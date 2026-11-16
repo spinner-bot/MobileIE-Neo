@@ -25,7 +25,7 @@ def choose(prefer=0):
                 available.append(row)
             except BlockingIOError:
                 pass
-    return min(available, key=lambda r: (bool(r['maximum_process_count']),
+    return min(available, key=lambda r: (r['max_used_mib'] > 64,
         r['index'] != prefer, r['mean_utilization_percent'], -r['minimum_free_mib'])) if available else None
 
 
@@ -97,7 +97,10 @@ def main():
                     assert marker['kind'] == 'resource'
                     resume = run/f'resource-step{marker["completed_steps"]:04d}.json'
                 else:
-                    assert runtime['completed_steps'] == 0
+                    # Admission may fail after loading an existing resource marker,
+                    # before new CUDA work. Keep the same prior checkpoint.
+                    assert runtime['completed_steps'] == runtime['inherited_steps']
+                    assert runtime['completed_steps'] == 0 or resume is not None
                 time.sleep(15)
         else:
             assert not (PROCESS/'cuda-gate001').exists(), 'Inspect existing qualification; do not duplicate it.'
