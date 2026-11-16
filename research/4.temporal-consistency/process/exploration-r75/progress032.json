@@ -1,0 +1,202 @@
+{
+  "at": "2026-11-16T18:36:54.972906+08:00",
+  "classification": "progress: original two64K training and R75/R76 evaluations terminal; complete artifacts and40 actual image reviews archived after observation gap",
+  "previous_goal_turn": "verified wait then observation interrupted; resume verified62000/62400 on Nov16 01:45; next resume18:23 found original jobs normally terminal, no restart",
+  "seeds": [
+    {
+      "seed": 0,
+      "pid": 4160205,
+      "start_ticks": "48844067",
+      "current_handle_state": "missing",
+      "completed_steps": 64000,
+      "completed_normally": true,
+      "ended": "2026-11-16T03:40:52.851289+08:00",
+      "runtime": "research/4.temporal-consistency/results/exploration-r75-stage001-seed0/attempt001/runtime.json",
+      "training_rows": 641,
+      "checkpoint_windows": 65,
+      "final_checkpoint": {
+        "at": "2026-11-16T03:40:52.824480+08:00",
+        "seed": 0,
+        "completed_steps": 64000,
+        "next_data_step": 64000,
+        "registered_steps": 64000,
+        "attempt": 1,
+        "kind": "regular",
+        "path": ".cache/checkpoints/exploration-r75/seed0/attempt001/regular-step064000.pt",
+        "sha256": "347186ed1a12db33e13a2c4a0c2c3da8f0a871c9c058e41c5008cc56222be9de",
+        "bytes": 10621579,
+        "parameters": 890275,
+        "source_freeze_sha256": "929d6faca944bff5d59712e15947cf41d9e28c59c30881335cc8b568750804c8",
+        "final_quality_eligible": true,
+        "runtime": "research/4.temporal-consistency/results/exploration-r75-stage001-seed0/attempt001/runtime.json",
+        "completed_normally": true,
+        "formal_updates": 64000
+      }
+    },
+    {
+      "seed": 1,
+      "pid": 4160204,
+      "start_ticks": "48844061",
+      "current_handle_state": "missing",
+      "completed_steps": 64000,
+      "completed_normally": true,
+      "ended": "2026-11-16T03:16:44.330303+08:00",
+      "runtime": "research/4.temporal-consistency/results/exploration-r75-stage001-seed1/attempt001/runtime.json",
+      "training_rows": 641,
+      "checkpoint_windows": 65,
+      "final_checkpoint": {
+        "at": "2026-11-16T03:16:44.303853+08:00",
+        "seed": 1,
+        "completed_steps": 64000,
+        "next_data_step": 64000,
+        "registered_steps": 64000,
+        "attempt": 1,
+        "kind": "regular",
+        "path": ".cache/checkpoints/exploration-r75/seed1/attempt001/regular-step064000.pt",
+        "sha256": "ee3952827b51b089531bbcb0fb814b1b9afe08b0168c4198337f0b50dd8b61cd",
+        "bytes": 10621579,
+        "parameters": 890275,
+        "source_freeze_sha256": "929d6faca944bff5d59712e15947cf41d9e28c59c30881335cc8b568750804c8",
+        "final_quality_eligible": true,
+        "runtime": "research/4.temporal-consistency/results/exploration-r75-stage001-seed1/attempt001/runtime.json",
+        "completed_normally": true,
+        "formal_updates": 64000
+      }
+    }
+  ],
+  "coordinators": [
+    {
+      "stage": "r75",
+      "pid": 4163819,
+      "start_ticks": "48956211",
+      "current_handle_state": "missing",
+      "runtime": "research/4.temporal-consistency/process/exploration-r75/finalize001/runtime.json",
+      "ended": "2026-11-16T03:55:55.512114+08:00",
+      "completed_normally": true
+    },
+    {
+      "stage": "r76",
+      "pid": 39049,
+      "start_ticks": "51721359",
+      "current_handle_state": "missing",
+      "runtime": "research/4.temporal-consistency/process/exploration-r76/finalize001/runtime.json",
+      "ended": "2026-11-16T04:13:00.438582+08:00",
+      "completed_normally": true
+    }
+  ],
+  "training17_evaluation27_and_supplement37_unchanged": true,
+  "resource_snapshot": {
+    "at": "2026-11-16T18:36:55.246806+08:00",
+    "GPUs": [
+      {
+        "index": 0,
+        "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+        "total_mib": 40960,
+        "used_mib": 0,
+        "utilization_percent": 0,
+        "processes": []
+      },
+      {
+        "index": 1,
+        "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+        "total_mib": 40960,
+        "used_mib": 0,
+        "utilization_percent": 0,
+        "processes": []
+      },
+      {
+        "index": 2,
+        "uuid": "GPU-e7f8224e-43d7-f7d6-10ff-8412dc30aa9e",
+        "total_mib": 40960,
+        "used_mib": 0,
+        "utilization_percent": 0,
+        "processes": []
+      },
+      {
+        "index": 3,
+        "uuid": "GPU-3a66f673-05de-ba45-3f5c-308b333fea68",
+        "total_mib": 40960,
+        "used_mib": 15229,
+        "utilization_percent": 0,
+        "processes": [
+          "GPU-3a66f673-05de-ba45-3f5c-308b333fea68, 581802, 15202"
+        ]
+      },
+      {
+        "index": 4,
+        "uuid": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+        "total_mib": 40960,
+        "used_mib": 0,
+        "utilization_percent": 0,
+        "processes": []
+      },
+      {
+        "index": 5,
+        "uuid": "GPU-83b3ac27-3e78-fb30-a5f6-d5daf4aac4fb",
+        "total_mib": 40960,
+        "used_mib": 15255,
+        "utilization_percent": 0,
+        "processes": [
+          "GPU-83b3ac27-3e78-fb30-a5f6-d5daf4aac4fb, 581803, 15228"
+        ]
+      },
+      {
+        "index": 6,
+        "uuid": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+        "total_mib": 40960,
+        "used_mib": 15277,
+        "utilization_percent": 0,
+        "processes": [
+          "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249, 581804, 15250"
+        ]
+      },
+      {
+        "index": 7,
+        "uuid": "GPU-7d263daa-6d13-02a6-b0ea-29c2c09a2c8b",
+        "total_mib": 40960,
+        "used_mib": 15253,
+        "utilization_percent": 39,
+        "processes": [
+          "GPU-7d263daa-6d13-02a6-b0ea-29c2c09a2c8b, 581805, 15226"
+        ]
+      }
+    ]
+  },
+  "new_training_launched": 0,
+  "formal_updates": 128000,
+  "periodic_markers": 128,
+  "initial_step1_markers": 2,
+  "R75": {
+    "new_quality_rows": 40,
+    "new_frame_rows": 1792,
+    "tile_CNN_calls": 9728,
+    "new_JOD_rows": 40,
+    "JOD_comparison_frames": 1792,
+    "all_conditions": 80,
+    "domain_seed_means": 16,
+    "passed_gates": 0,
+    "total_gates": 8,
+    "contacts_actually_reviewed": 20
+  },
+  "R76": {
+    "new_training": 0,
+    "added_quality_rows": 20,
+    "added_output_frames": 896,
+    "added_frame_CNN_calls": 3584,
+    "added_tile_CNN_calls": 19456,
+    "added_JOD_rows": 20,
+    "JOD_comparison_frames": 896,
+    "all_conditions": 100,
+    "domain_seed_means": 20,
+    "passed_support": 1,
+    "total_support": 4,
+    "contacts_actually_reviewed": 20
+  },
+  "R77_status": "STOP: pre-registered investment prerequisites false, no formal trainer/GPU/evaluation or128K added updates",
+  "reserved_OLiVES_status": "Metadata-only reserved43/71/83 remain unopened; no final unsealing",
+  "paper_build": 18,
+  "paper_integration_pending": true,
+  "method_success_established": false,
+  "goal_status": "active",
+  "limits": "Repeated DEV; ND288x512 native crop, SYN480x854. Unequal MobileIE8K/128 vs XS64K/384 training. Static contacts not playback/MOS. Not original500K replication, novel method, phone timing, natural-night validation or independent final."
+}
