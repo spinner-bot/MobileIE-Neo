@@ -1,46 +1,38 @@
 {
-  "at": "2026-11-16T22:27:32.437649+08:00",
-  "completed_steps": 1100,
+  "at": "2026-11-16T22:36:33.926489+08:00",
+  "completed_steps": 2200,
   "gain": 1.0,
   "models": [
     {
       "model": "spatial",
-      "loss": 0.05068698525428772,
-      "gradient_norm_before_clip": 2.7774617671966553
+      "loss": 0.051206089556217194,
+      "gradient_norm_before_clip": 5.450104713439941
     },
     {
       "model": "balanced",
-      "loss": 0.05242474004626274,
-      "gradient_norm_before_clip": 2.8471713066101074
+      "loss": 0.04987012594938278,
+      "gradient_norm_before_clip": 5.292490005493164
     },
     {
       "model": "curriculum",
-      "loss": 0.06185032054781914,
-      "gradient_norm_before_clip": 5.089880466461182
+      "loss": 0.04891004413366318,
+      "gradient_norm_before_clip": 4.965210437774658
     }
   ],
   "peak_allocated_bytes": 523452928,
   "peak_reserved_bytes": 692060160,
   "resource": {
     "UUID": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
-    "observations": 3298,
+    "observations": 6598,
     "minimum_free_mib": 39271,
     "maximum_used_mib": 1688,
     "maximum_observed_utilization_percent": 48,
-    "synchronized_work_seconds": 112.9839652273804,
-    "cooperative_pause_seconds": 338.9518956821412,
+    "synchronized_work_seconds": 224.6932050178293,
+    "cooperative_pause_seconds": 674.0796150534879,
     "current_consecutive_busy_decisions": 0,
     "last16": [
       {
-        "at": "2026-11-16T22:27:29.727216+08:00",
-        "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
-        "total_mib": 40960,
-        "used_mib": 1688,
-        "free_mib": 39271,
-        "utilization_percent": 1
-      },
-      {
-        "at": "2026-11-16T22:27:29.922182+08:00",
+        "at": "2026-11-16T22:36:31.287882+08:00",
         "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
         "total_mib": 40960,
         "used_mib": 1688,
@@ -48,7 +40,31 @@
         "utilization_percent": 0
       },
       {
-        "at": "2026-11-16T22:27:30.231354+08:00",
+        "at": "2026-11-16T22:36:31.473950+08:00",
+        "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+        "total_mib": 40960,
+        "used_mib": 1688,
+        "free_mib": 39271,
+        "utilization_percent": 10
+      },
+      {
+        "at": "2026-11-16T22:36:31.778987+08:00",
+        "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+        "total_mib": 40960,
+        "used_mib": 1688,
+        "free_mib": 39271,
+        "utilization_percent": 37
+      },
+      {
+        "at": "2026-11-16T22:36:31.779088+08:00",
+        "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+        "total_mib": 40960,
+        "used_mib": 1688,
+        "free_mib": 39271,
+        "utilization_percent": 37
+      },
+      {
+        "at": "2026-11-16T22:36:31.968700+08:00",
         "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
         "total_mib": 40960,
         "used_mib": 1688,
@@ -56,7 +72,7 @@
         "utilization_percent": 0
       },
       {
-        "at": "2026-11-16T22:27:30.231456+08:00",
+        "at": "2026-11-16T22:36:32.272492+08:00",
         "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
         "total_mib": 40960,
         "used_mib": 1688,
@@ -64,7 +80,7 @@
         "utilization_percent": 0
       },
       {
-        "at": "2026-11-16T22:27:30.428570+08:00",
+        "at": "2026-11-16T22:36:32.272590+08:00",
         "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
         "total_mib": 40960,
         "used_mib": 1688,
@@ -72,31 +88,39 @@
         "utilization_percent": 0
       },
       {
-        "at": "2026-11-16T22:27:30.737849+08:00",
+        "at": "2026-11-16T22:36:32.459596+08:00",
         "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
         "total_mib": 40960,
         "used_mib": 1688,
         "free_mib": 39271,
-        "utilization_percent": 43
+        "utilization_percent": 0
       },
       {
-        "at": "2026-11-16T22:27:30.737948+08:00",
+        "at": "2026-11-16T22:36:32.763871+08:00",
         "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
         "total_mib": 40960,
         "used_mib": 1688,
         "free_mib": 39271,
-        "utilization_percent": 43
+        "utilization_percent": 29
       },
       {
-        "at": "2026-11-16T22:27:30.928066+08:00",
+        "at": "2026-11-16T22:36:32.763969+08:00",
         "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
         "total_mib": 40960,
         "used_mib": 1688,
         "free_mib": 39271,
-        "utilization_percent": 4
+        "utilization_percent": 29
       },
       {
-        "at": "2026-11-16T22:27:31.237328+08:00",
+        "at": "2026-11-16T22:36:32.953395+08:00",
+        "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+        "total_mib": 40960,
+        "used_mib": 1688,
+        "free_mib": 39271,
+        "utilization_percent": 0
+      },
+      {
+        "at": "2026-11-16T22:36:33.257426+08:00",
         "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
         "total_mib": 40960,
         "used_mib": 1688,
@@ -104,7 +128,7 @@
         "utilization_percent": 47
       },
       {
-        "at": "2026-11-16T22:27:31.237432+08:00",
+        "at": "2026-11-16T22:36:33.257520+08:00",
         "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
         "total_mib": 40960,
         "used_mib": 1688,
@@ -112,7 +136,7 @@
         "utilization_percent": 47
       },
       {
-        "at": "2026-11-16T22:27:31.431407+08:00",
+        "at": "2026-11-16T22:36:33.442888+08:00",
         "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
         "total_mib": 40960,
         "used_mib": 1688,
@@ -120,44 +144,20 @@
         "utilization_percent": 0
       },
       {
-        "at": "2026-11-16T22:27:31.741865+08:00",
+        "at": "2026-11-16T22:36:33.747893+08:00",
         "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
         "total_mib": 40960,
         "used_mib": 1688,
         "free_mib": 39271,
-        "utilization_percent": 45
+        "utilization_percent": 18
       },
       {
-        "at": "2026-11-16T22:27:31.741973+08:00",
+        "at": "2026-11-16T22:36:33.747978+08:00",
         "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
         "total_mib": 40960,
         "used_mib": 1688,
         "free_mib": 39271,
-        "utilization_percent": 45
-      },
-      {
-        "at": "2026-11-16T22:27:31.931392+08:00",
-        "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
-        "total_mib": 40960,
-        "used_mib": 1688,
-        "free_mib": 39271,
-        "utilization_percent": 3
-      },
-      {
-        "at": "2026-11-16T22:27:32.243625+08:00",
-        "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
-        "total_mib": 40960,
-        "used_mib": 1688,
-        "free_mib": 39271,
-        "utilization_percent": 47
-      },
-      {
-        "at": "2026-11-16T22:27:32.243735+08:00",
-        "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
-        "total_mib": 40960,
-        "used_mib": 1688,
-        "free_mib": 39271,
-        "utilization_percent": 47
+        "utilization_percent": 18
       }
     ],
     "scope": "Lifetime resource minima/maxima and bounded recent observations; no phone or incumbent throughput claim."
@@ -168,19 +168,19 @@
   "registered_steps": 4000,
   "completed_normally": false,
   "latest_checkpoint": {
-    "at": "2026-11-16T22:26:42.650840+08:00",
+    "at": "2026-11-16T22:34:56.081845+08:00",
     "seed": 0,
     "attempt": 1,
-    "completed_steps": 1000,
-    "next_data_step": 1000,
+    "completed_steps": 2000,
+    "next_data_step": 2000,
     "registered_steps": 4000,
     "kind": "regular",
-    "path": ".cache/checkpoints/exploration-r79/seed0/attempt001/regular-step1000.pt",
-    "sha256": "8490c0d4c0508a8c01b4c9a9cf6886b282e48deb9fd2289d1a8a364f00c229d7",
+    "path": ".cache/checkpoints/exploration-r79/seed0/attempt001/regular-step2000.pt",
+    "sha256": "ad88292210debac393e1da3707a9bb5d0ad58e8783eca553c7f039be8219f00b",
     "bytes": 1007219,
     "freeze_sha256": "0ba30d79e383869f1224edfdef6e8a42e6a117fccb79b2f5cfb95033d920c591",
     "parameters_each": 24955,
-    "completed_optimizer_updates": 3000,
+    "completed_optimizer_updates": 6000,
     "final_quality_eligible": false
   }
 }
