@@ -80,10 +80,11 @@ def main():
                     self_delta = float((same-raw).abs().max())
                     if mode == 'centered':
                         assert self_delta <= 1e-6
-                    # Compare the existing final training-window output to the
-                    # streaming route without introducing another window call.
+                    functional = model.window(raw)
                     model.reset()
                     streamed = torch.stack([model.step(frame) for frame in raw.unbind(1)], dim=1)
+                    streaming_delta = float((functional-streamed).abs().max())
+                    assert streaming_delta <= 1e-6
                     state_bytes = model.state_bytes(); model.reset()
                     assert model.state_bytes() == 0
                 # Direct pair sensitivity after the two discarded updates.
@@ -100,6 +101,7 @@ def main():
                 records.append(dict(seed=seed, mode=mode, checkpoint=marker, parameters=304,
                     total_frozen_plus_new_parameters=4379, initial_max_delta=initial_delta,
                     final_current_replacement_max_delta=self_delta, final_parameter_max_change=delta,
+                    streaming_max_delta=streaming_delta,
                     final_past_gradient_L1=past_gradient, actual_stream_batch_state_bytes=state_bytes,
                     state_bytes_per_image=state_bytes//4, final_readout_gradient_norm=step_records[-1]['gradient_norms']['head.4.weight'],
                     actual_H_calls=model.head_calls, streamed_finite=bool(torch.isfinite(streamed).all())))
