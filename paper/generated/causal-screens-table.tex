@@ -1,0 +1,23 @@
+\begin{table}[!htbp]
+\centering\small\setlength{\tabcolsep}{4pt}
+\caption{Every registered causal-versus-reference joint screen and fixed self4 support check. Differences/ratios are causal relative to the indicated reference. Quality requires $\Delta$PSNR$\geq-0.05$\,dB and $\Delta$JOD$\geq-0.02$; temporal ratios must be at most 0.90 for rec. and 0.95 for current/self4. Only one supplementary cell passes; none of the eight primary screens passes. Supplementary results do not replace the primary screens.}
+\label{tab:causal-screens}
+\begin{tabular}{lllr rrl}
+\toprule
+Domain & Seed & Reference & $\Delta$PSNR & $E_{\rm temp}$ ratio & $\Delta$JOD & Pass\\
+\midrule
+SYN & 0 & MobileIE + rec. & -1.635 & 1.603523 & -0.434 & no\\
+SYN & 0 & XS current & +0.009 & 0.997083 & -0.035 & no\\
+SYN & 0 & XS self4 & -0.012 & 0.995676 & +0.004 & no\\
+SYN & 1 & MobileIE + rec. & -1.044 & 1.616967 & -0.122 & no\\
+SYN & 1 & XS current & +0.014 & 0.992039 & -0.009 & no\\
+SYN & 1 & XS self4 & +0.002 & 0.992306 & -0.000 & no\\
+ND & 0 & MobileIE + rec. & +5.334 & 1.228833 & +0.289 & no\\
+ND & 0 & XS current & +0.050 & 1.000724 & +0.000 & no\\
+ND & 0 & XS self4 & -0.014 & 0.992047 & -0.003 & no\\
+ND & 1 & MobileIE + rec. & +4.129 & 1.528491 & -0.027 & no\\
+ND & 1 & XS current & -0.183 & 0.973082 & +0.018 & no\\
+ND & 1 & XS self4 & -0.027 & 0.866236 & +0.112 & yes\\
+\bottomrule
+\end{tabular}
+\end{table}
