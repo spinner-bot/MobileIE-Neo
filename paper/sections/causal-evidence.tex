@@ -1,0 +1,93 @@
+\section{A self-starting published causal reference}
+\label{sec:causal-reference}
+\paragraph{A learned-motion pilot does not supply the missing gain.}
+The completed fixed motion-supervision pilot (R74) first freezes the
+8K spatial mapping and trains two small motion predictors per seed,
+with task and training-GT-derived transport targets respectively.
+The four predictors receive 16K new updates in total. All 80 new
+quality and 80 perceptual conditions complete, together with inspection
+of all 20 preassigned contacts. The transport-target arm loses
+1.93--3.13\,dB and 0.72--0.89 JOD relative to the spatial raw reference;
+its temporal error remains 27.3--30.4\% above strong recursion.
+All 16 joint screens fail. This fixed predictor/target setting is stopped
+without a radius, teacher, width, loss-weight or length search. It does
+not rule out other motion models or identify one cause of failure.
+
+\paragraph{Released architecture, task-specific adaptation.}
+ReBotNet~\cite{rebotnet} uses the previous enhanced prediction and
+current input in a recurrent dual-branch bottleneck-mixer architecture.
+We use its released XS configuration, with 890,275 parameters, without
+altering the architecture. This adds a causal RGB reference without
+future frames or an external deployment flow estimator. The released
+code's token dimensions constrain its input shape. Native-resolution
+deployment uses overlapping 384-pixel tiles, stride 256, short-edge
+replication and normalized triangular blending; the full stitched,
+unclamped prediction becomes the next history. Only reported outputs
+are clamped. This changes context relative to a full-image network call.
+
+Each seed starts from random initialization and receives exactly
+64K Adam updates at learning rate $4\times10^{-4}$, cosine-decayed to
+$10^{-7}$, using Charbonnier loss and gradient clipping at one.
+Each update averages four four-frame videos from the fixed synthetic/real
+mixture, with native 384-pixel crops and full four-frame backpropagation.
+The first history is the current degraded input; no GT history,
+teacher forcing or future observation is supplied. Both original runs
+finish normally, for 128K new updates in total. Only their preassigned
+64K final weights enter development evaluation. This is not the original
+500K-update, high-quality-initial-frame paper setting, or a convergence
+claim. MobileIE's 8K/128 training differs in capacity, pixels,
+initialization and computation, so cross-network differences cannot
+be assigned to architecture or history alone.
+
+\paragraph{Full spatial, temporal and perceptual evidence.}
+\input{generated/causal-reference-table}
+The causal output reads its own previous prediction. Current uses
+the same trained weights with the current degraded input in both slots.
+Self4 independently resets at each real frame and makes four complete
+stitched calls, reusing only that frame's observation. Current changes
+the history-slot distribution as well as removing past information;
+self4 spends four times as many enhancement calls. Neither is an
+independently trained same-capacity spatial network or a compute-matched
+causal test. All first frames remain in the evaluation.
+
+The primary pipeline completes 40 new quality and 40 JOD conditions,
+with 1,792 output/comparison frames. The supplement adds 20 conditions
+and 896 frames without new training. All original 80 primary conditions
+and eight screens remain unchanged in the combined 100-condition
+collection. Table~\ref{tab:causal-reference} retains all 20 domain/seed
+means, rather than selecting a favorable seed. SYN is six conditions
+from three source videos at $480\times854$/64 frames; ND is four native
+$288\times512$ crops/16 frames, not full 1080p. Both remain repeated
+development evidence. All 20 primary and 20 supplemental fixed contacts
+were actually inspected after rendering. Static first/middle/last views
+do not constitute full-video playback, human MOS or a temporal study.
+
+\input{generated/causal-screens-table}
+None of the eight primary screens passes
+(Table~\ref{tab:causal-screens}). On SYN, causal loses 1.04--1.64\,dB
+relative to strong recursion while temporal error is 60--62\% higher.
+On ND it gains 4.13--5.33\,dB, but temporal error is still 23--53\%
+higher. Relative to same-weight current, the temporal change ranges
+from a 0.072\% increase to a 2.692\% decrease, below the registered
+5\% improvement in every cell. Spatial recovery does not establish
+useful historical information.
+
+Only ND seed 1 passes the fixed self4 support check: its causal
+temporal error is 13.38\% lower, with $-0.027$\,dB PSNR and
+$+0.112$ JOD differences. The other three cells improve temporal
+error by less than one percent. This isolated support does not rescue
+the primary failures or establish a general causal advantage. The
+pre-registered additional 128K independent-spatial-control investment
+therefore stops; that control has not been trained. No width, unroll,
+loss, learning-rate, length, seed or self4-pass grid is used to rescue
+this setting. A failed adaptation does not invalidate the published
+method or all recurrent enhancement models.
+
+Inspection retains grain and smoothed textures, similar-looking
+causal/current/self4 outputs in many contacts, and motion-boundary
+blending in the classical recursive reference. Neither smoothness nor
+lower temporal error alone proves better video quality. The XS
+adaptation remains an ordinary reference, with no verified novelty,
+handset measurement or independent final result. Its theoretical
+1080p tiling uses 28 calls and 21.976G Conv/Linear MACs per output,
+excluding other operations and memory work; it is not phone latency.
