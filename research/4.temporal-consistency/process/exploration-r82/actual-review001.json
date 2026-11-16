@@ -2,7 +2,7 @@
   "at": "2026-11-17T07:51:33.128637+08:00",
   "author": "Codex  (sqs_A100)",
   "expected_contacts": 20,
-  "reviewed_contacts": 8,
+  "reviewed_contacts": 12,
   "all_actual_reviewed": false,
   "renderer_manifest_sha256": "5171cfcffd4cff97b75c0874dcb4e54d0b794074ef9e683e7195c6e1129011d1",
   "renderer_flags_preserved": true,
@@ -158,8 +158,84 @@
         554
       ],
       "observation": "三行八列完整；高photon人物、草地与长椅可见，路线间亮度/细颗粒差异细小，完整三固定时间均存在；不能推断时序一致性。"
+    },
+    {
+      "seed": 0,
+      "scene": "walking_photons20",
+      "path": "research/4.temporal-consistency/report/exploration-r82-contacts/seed0--walking_photons20.png",
+      "sha256": "6cd227d3e9a16612c4e1bd46e38bfb38a98b10fc32a55f99e00131795c424d7b",
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "reviewed_at": "2026-11-17T07:54:54.833142+08:00",
+      "tool": "view_image detail=original",
+      "display_size": [
+        2048,
+        554
+      ],
+      "observation": "三行八列完整；低photon街头人像脸和蓝衣有明显颗粒，t32/63两递归列较平滑，centered/direct残余颗粒明显；不由三帧推断闪烁原因。"
+    },
+    {
+      "seed": 1,
+      "scene": "walking_photons20",
+      "path": "research/4.temporal-consistency/report/exploration-r82-contacts/seed1--walking_photons20.png",
+      "sha256": "4a0486c8f4e5bfbcab3065f954f41d54600b654c8aee0219608dddca87b2b2f3",
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "reviewed_at": "2026-11-17T07:54:54.950587+08:00",
+      "tool": "view_image detail=original",
+      "display_size": [
+        2048,
+        554
+      ],
+      "observation": "三行八列完整；低photon后两行人脸、暗衣仍有颗粒，递归脸部较平滑；GT与增强肤色/细节仍有差别，所有固定时间可读。"
+    },
+    {
+      "seed": 0,
+      "scene": "walking_photons80",
+      "path": "research/4.temporal-consistency/report/exploration-r82-contacts/seed0--walking_photons80.png",
+      "sha256": "e24e13b17c748c1a629566fc449fb5a226d7fc96c947617edf2a328b590f2f7c",
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "reviewed_at": "2026-11-17T07:54:55.069533+08:00",
+      "tool": "view_image detail=original",
+      "display_size": [
+        2048,
+        554
+      ],
+      "observation": "三行八列完整；高photon较低photon干净，centered/direct脸与衣服仍有细颗粒，两递归列较平滑；首帧共同输出清楚。"
+    },
+    {
+      "seed": 1,
+      "scene": "walking_photons80",
+      "path": "research/4.temporal-consistency/report/exploration-r82-contacts/seed1--walking_photons80.png",
+      "sha256": "b059e018d0c0bec4a60839aa8802c5e67eb40ee6e68a0e2a64cea98b3a832df4",
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "actual_reviewed": true,
+      "reviewed_at": "2026-11-17T07:54:55.184120+08:00",
+      "tool": "view_image detail=original",
+      "display_size": [
+        2048,
+        554
+      ],
+      "observation": "三行八列完整；街景高photon人物轮廓一致，t32/63两递归列颗粒较少，centered/wrong有细微色调与颗粒差别，不作错源因果结论。"
     }
   ],
   "scope": "Actual static contact review only; no video playback/MOS or temporal/novelty proof. Original renderer false flags preserved separately.",
-  "updated_at": "2026-11-17T07:52:52.675532+08:00"
+  "updated_at": "2026-11-17T07:54:55.292252+08:00"
 }
