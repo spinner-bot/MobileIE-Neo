@@ -4,7 +4,10 @@
 
 ## 当前研究状态
 
-截至2026-11-16，项目仍处于方法探索阶段，尚未建立可投稿的新方法。接续先读[进展报告0150](docs/进展报告/0150-T-26111618-公开因果参考与同帧控制完整收口.md)、[4号研究入口](research/4.temporal-consistency/README.md)和[服务器约定](AGENTS.md)。主线在 `main` 推进，移动演示由独立支线处理。
+截至2026-11-16，项目仍处于方法探索阶段，尚未建立可投稿的新方法。接续先读[进展报告0151](docs/进展报告/0151-T-26111619-完整因果证据入稿与二十四页审阅.md)、[4号研究入口](research/4.temporal-consistency/README.md)和[服务器约定](AGENTS.md)。主线在 `main` 推进，移动演示由独立支线处理。
+
+
+完整R74负结果与R75/R76最终证据已接入[论文工作稿](paper/manuscript.pdf)：build020为24页、16张数值表、13项引用，无编译warning/未解析引用，整份缩略和变化页已实际查看。旧14张数值表不变；两张新表保留全部双seed读出与八主门槛/四支持。R75八项0/8、R76支持1/4、R77停止额外投资保持；这仍是内部证据稿，创新方法、自然动态配对、手机和独立最终未完成。下一回到不同信息/学习问题的假设选择，不重开旧网格。
 
 [原保留实拍来源](research/4.temporal-consistency/data/external-olives-reserved/README.md)只做纯目录元数据资格，三段586对帧名、0像素/模型/解码；不增加已完成独立基准数，不开放为DEV，也不因原门槛通过自动解封。最终方法、权重、预处理和完整评价范围须另冻结；原训练与既定完整评价链继续，paper018和研究缺口保持。
 
@@ -12,7 +15,7 @@
 
 完整[因果参考表](research/4.temporal-consistency/report/exploration-r75-joint/tables.md)为80条件/16均值，[self4补充表](research/4.temporal-consistency/report/exploration-r76-joint/tables.md)为100条件/20均值，原80条件与八门槛原样保留。ND空间PSNR较好但未建立跨条件时间优势，见[R75决定](research/4.temporal-consistency/docs/exploration-r75-decision.md)和[R76决定](research/4.temporal-consistency/docs/exploration-r76-decision.md)。current/self4是同权重输入控制，非独立训练空间模型；四次self4非同计算。
 
-这只是发布ReBotNet-XS的自启动/原生分块任务适配，MobileIE8K/128与XS64K/384训练条件不等，不是原论文500K复现、原创方法或SOTA。SYN480×854和ND288×512原生裁块均重复DEV，非整幅1080p/自然夜间/手机/独立最终。下一先接入完整论文证据，paper当前仍018、整合待做；旧STOP与保留像素保护保持。以下启动/资格叙述仅为历史，不据此重开已结束任务。
+这只是发布ReBotNet-XS的自启动/原生分块任务适配，MobileIE8K/128与XS64K/384训练条件不等，不是原论文500K复现、原创方法或SOTA。SYN480×854和ND288×512原生裁块均重复DEV，非整幅1080p/自然夜间/手机/独立最终。完整证据现已接入上述build020；旧STOP与保留像素保护保持。以下启动/资格叙述仅为历史，不据此重开已结束任务。
 
 定向来源核查已确认ReBotNet作者发布架构，CPU人工输入资格通过，原代码/许可已固定入库。固定token/GT首帧/500K原训练与任意原生分辨率的差异见[57号阅读](research/5.prior-art-survey/docs/57-causal-reference-code-feasibility.md)；代码资格阶段没有训练/质量/视频像素/GPU结果，不称方法或原论文充分复现。
 
