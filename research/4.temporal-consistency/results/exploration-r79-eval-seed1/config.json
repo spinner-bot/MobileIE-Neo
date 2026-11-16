@@ -1,0 +1,82 @@
+{
+  "at": "2026-11-16T22:51:18.945852+08:00",
+  "seed": 1,
+  "checkpoints": {
+    "0": {
+      "at": "2026-11-16T22:51:05.991199+08:00",
+      "seed": 0,
+      "attempt": 1,
+      "completed_steps": 4000,
+      "next_data_step": 4000,
+      "registered_steps": 4000,
+      "kind": "regular",
+      "path": ".cache/checkpoints/exploration-r79/seed0/attempt001/regular-step4000.pt",
+      "sha256": "8992b01c5feb5fae822c070cf8f962f3ad0ca616a7eab7143ff60cd0cba246ff",
+      "bytes": 1007219,
+      "freeze_sha256": "0ba30d79e383869f1224edfdef6e8a42e6a117fccb79b2f5cfb95033d920c591",
+      "parameters_each": 24955,
+      "completed_optimizer_updates": 12000,
+      "final_quality_eligible": true,
+      "final_reload": {
+        "spatial": 0.0,
+        "balanced": 0.0,
+        "curriculum": 0.0
+      },
+      "completed_normally": true,
+      "runtime": "research/4.temporal-consistency/results/exploration-r79-stage001-seed0/attempt001/runtime.json"
+    },
+    "1": {
+      "at": "2026-11-16T22:51:02.624301+08:00",
+      "seed": 1,
+      "attempt": 1,
+      "completed_steps": 4000,
+      "next_data_step": 4000,
+      "registered_steps": 4000,
+      "kind": "regular",
+      "path": ".cache/checkpoints/exploration-r79/seed1/attempt001/regular-step4000.pt",
+      "sha256": "c3cc65ed591be59d5fd6550b7d6a77e2de624f8a93d60465a4486b7e48bdb684",
+      "bytes": 1007219,
+      "freeze_sha256": "0ba30d79e383869f1224edfdef6e8a42e6a117fccb79b2f5cfb95033d920c591",
+      "parameters_each": 24955,
+      "completed_optimizer_updates": 12000,
+      "final_quality_eligible": true,
+      "final_reload": {
+        "spatial": 0.0,
+        "balanced": 0.0,
+        "curriculum": 0.0
+      },
+      "completed_normally": true,
+      "runtime": "research/4.temporal-consistency/results/exploration-r79-stage001-seed1/attempt001/runtime.json"
+    }
+  },
+  "sources": {
+    "research/4.temporal-consistency/results/exploration-r30-cache/index.json": "424fa278b2fe66d29de476e2b47328619438f97cf71926448433d1191bb722c1",
+    "research/4.temporal-consistency/results/exploration-r10-cache/index.json": "ec00801b04b873ead0025af91af441b783da3f08c87cf24e9c136a4268ffb43c"
+  },
+  "expected_rows": 50,
+  "expected_frame_rows": 2240,
+  "expected_CNN_centers": 2240,
+  "routes": [
+    [
+      "spatial",
+      "current"
+    ],
+    [
+      "balanced",
+      "causal"
+    ],
+    [
+      "balanced",
+      "current"
+    ],
+    [
+      "curriculum",
+      "causal"
+    ],
+    [
+      "curriculum",
+      "current"
+    ]
+  ],
+  "scope": "Repeated paired DEV, full spatial shape and raw previous frame, final4000 only. Not final test or phone."
+}
