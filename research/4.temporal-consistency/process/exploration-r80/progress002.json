@@ -1,0 +1,84 @@
+{
+  "at": "2026-11-17T02:55:26.646617+08:00",
+  "source_freeze_unchanged": true,
+  "source_count": 31,
+  "children": [
+    {
+      "at": "2026-11-17T02:48:12.571960+08:00",
+      "name": "quality-seed0",
+      "command": [
+        "./scripts/project-python",
+        "research/4.temporal-consistency/scripts/evaluate_coefficient_state_r80.py",
+        "--seed",
+        "0"
+      ],
+      "pid": 920108,
+      "start_ticks": 79508029,
+      "log": ".cache/experiments/exploration-r80/finalize001/quality-seed0.log",
+      "state": "exited"
+    },
+    {
+      "at": "2026-11-17T02:48:12.572503+08:00",
+      "name": "quality-seed1",
+      "command": [
+        "./scripts/project-python",
+        "research/4.temporal-consistency/scripts/evaluate_coefficient_state_r80.py",
+        "--seed",
+        "1"
+      ],
+      "pid": 920109,
+      "start_ticks": 79508029,
+      "log": ".cache/experiments/exploration-r80/finalize001/quality-seed1.log",
+      "state": "exited"
+    },
+    {
+      "at": "2026-11-17T02:55:03.573807+08:00",
+      "name": "metric-guard001",
+      "command": [
+        "./scripts/project-python",
+        "scripts/prebind_shared_gpu.py",
+        "--gpu",
+        "0",
+        "--record",
+        "research/4.temporal-consistency/process/exploration-r80/finalize001/metric-external001.json",
+        "--",
+        "./scripts/project-python",
+        "research/4.temporal-consistency/scripts/evaluate_cvvdp_coefficient_r80.py"
+      ],
+      "pid": 921423,
+      "start_ticks": 79549129,
+      "log": ".cache/experiments/exploration-r80/finalize001/metric-guard001.log",
+      "actual_start_ticks": 79549129,
+      "state": "S",
+      "cpu_ticks": 7
+    }
+  ],
+  "CPU_completed_normally": [
+    {
+      "ended": "2026-11-17T02:54:58.972795+08:00",
+      "completed_normally": true,
+      "seed": 0,
+      "new_quality_rows": 80,
+      "frame_rows": 3184,
+      "shared_core_frames": 448,
+      "ridge_updates": 240,
+      "global_SGD_updates": 0,
+      "CUDA_initialized": false,
+      "seconds": 404.79372430511285
+    },
+    {
+      "ended": "2026-11-17T02:55:02.980649+08:00",
+      "completed_normally": true,
+      "seed": 1,
+      "new_quality_rows": 80,
+      "frame_rows": 3184,
+      "shared_core_frames": 448,
+      "ridge_updates": 240,
+      "global_SGD_updates": 0,
+      "CUDA_initialized": false,
+      "seconds": 408.8218587060692
+    }
+  ],
+  "perception_and_full_decision_pending": true,
+  "scope": "Original complete CPU jobs, no rerun, no method-success claim."
+}
