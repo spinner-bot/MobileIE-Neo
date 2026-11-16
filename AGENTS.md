@@ -4,7 +4,7 @@
 
 更新：2026-11-17；作者：Codex  (sqs_A100)。
 
-- R82最新0160四分之三补记/progress008：5K已归档；seed1于07:16:52先保存6000并先单独交marker，原seed0于07:17:46保存6000后另交。各42481B、三H/三Adam6000、next_data14000、原freeze/摘要过，合36000/48000更新已保存，非最终。原959461/start80951882在0、959460/start80951876在1、协调958803/start80941711同身份live，41源保持，无runtime/resource/新DEV/JOD；最低空余39823MiB、持续busy0。CPU检查0新forward/SGD/GPU，marker/窗口/训练/进度前缀与过程/报告分别提交；5K/6K阶段推送。interpretation-limits说明同304注册参数非等有效自由度/优化过程、双H和wrong分布限制，不改活动41源/协议/预算/门槛或追加实验。下一观察原7000及唯一8000/原完整评价链，不据中途loss修改、选权重或重启。旧STOP/保留最终/paper020/论文缺口/目标active保持。
+- R82最新progress009/0160接续：seed1于07:21:23先交7000 marker，原seed0于07:22:19保存7000后另交；各42481B、三H/三Adam7000、next_data15000、原freeze/摘要过，合42000/48000更新已保存、非最终。原959461/start80951882在0、959460/start80951876在1、协调958803/start80941711仍live，41源保持、无runtime/resource/新DEV/JOD；最低空余39823MiB、持续busy0。CPU检查0新forward/SGD/GPU，各marker及窗口/训练/进度前缀/过程独立提交，7K随8K完成阶段推送；上一5K/6K26小步已推b1937db2。下一只核原唯一8000最终/原CPU→感知→联合→图链，原PID正常退出据runtime确认，不因缺PID或等待超时重启。interpretation-limits/旧STOP/保留最终/paper020与论文缺口/目标active保持。
 
 - 当前最新0160/R82 progress002：41源/两协议已冻结、完整正式/评价链已实现；原CUDA958859/start80944060于06:48:26正常52.043831秒、12丢弃SGD/32骨干图/152H、自参照及六流式差0，实际进程692MiB/allocated178908160B/reserved201326592B，全部资格状态丢弃。原正式seed0=959461/start80951882在物理0、seed1=959460/start80951876在1，实际UUID匹配，协调958803/start80941711及两worker959352/959353均live；快照各100/8000/共600已观察更新，无新DEV/JOD，不能当最终/方法收益。每seed三H各8K、合48K，MixedPool8000..15999共享冻结F0、独立Adam/MSE/BPTT；按1K marker分别提交、阶段推送。只核原PID/start/runtime，不按旧状态/观察超时重启或改活跃41源；资源暂停仅原resource marker续接，无科学重试。唯一最终正常后原全链100新质量/JOD、140条件/28均值/24门槛与20固定图，实际审阅另记。用户允许有余量共卡、优先空闲0/1、新双采样/预绑定/锁/实际UUID/4GiB估计/2GiB allocator/增长保留/25%让步保持；本次无共用3卡必要。旧STOP/保留最终/paper020及论文缺口/目标active保持。以下0159及旧活跃条目均历史。
 
