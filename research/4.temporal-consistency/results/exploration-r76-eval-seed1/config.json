@@ -1,0 +1,42 @@
+{
+  "at": "2026-11-16T03:56:03.051550+08:00",
+  "seed": 1,
+  "checkpoint": {
+    "at": "2026-11-16T03:16:44.303853+08:00",
+    "seed": 1,
+    "completed_steps": 64000,
+    "next_data_step": 64000,
+    "registered_steps": 64000,
+    "attempt": 1,
+    "kind": "regular",
+    "path": ".cache/checkpoints/exploration-r75/seed1/attempt001/regular-step064000.pt",
+    "sha256": "ee3952827b51b089531bbcb0fb814b1b9afe08b0168c4198337f0b50dd8b61cd",
+    "bytes": 10621579,
+    "parameters": 890275,
+    "source_freeze_sha256": "929d6faca944bff5d59712e15947cf41d9e28c59c30881335cc8b568750804c8",
+    "final_quality_eligible": true,
+    "runtime": "research/4.temporal-consistency/results/exploration-r75-stage001-seed1/attempt001/runtime.json",
+    "completed_normally": true,
+    "formal_updates": 64000
+  },
+  "cache_indices": {
+    "research/4.temporal-consistency/results/exploration-r30-cache/index.json": "424fa278b2fe66d29de476e2b47328619438f97cf71926448433d1191bb722c1",
+    "research/4.temporal-consistency/results/exploration-r10-cache/index.json": "ec00801b04b873ead0025af91af441b783da3f08c87cf24e9c136a4268ffb43c"
+  },
+  "protocol_sha256": "ba24b186ae2be845899e779445b500f40a5fe8472406264895265d8378aaa2c8",
+  "CPU_gate_sha256": "7b117d5c725df92491c51a98f85b145ccbbabfeb1b74191cc1ddc3e153382a4d",
+  "passes": 4,
+  "expected_rows": 10,
+  "expected_frames": 448,
+  "expected_frame_level_CNN_calls": 1792,
+  "expected_tile_CNN_calls": 9728,
+  "source_sha256": {
+    "evaluate_current_refinement_r76.py": "8745866fed5ca3c934e55b4240a4f7539c11f1310aa3ed4a9baeb37b804ff785",
+    "current_refinement_r76.py": "763a82d1f9dd519e920a99d524708cd6293e14e737d88b4fa3fe263097128bb9",
+    "rebotnet_reference.py": "ad8040658599bb52c41150b86f0d70099b9d50458d804c38a2ad10bc79821fb0",
+    "causal_reference_evaluation_r75.py": "4ce1c00e2220565fa930efc097e501b7a1847d86a961e18033658731d243e193",
+    "exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+    "video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0"
+  },
+  "scope": "More-computation single-observation diagnostic, not a matched-compute spatial model or new method."
+}
