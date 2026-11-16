@@ -45,6 +45,8 @@ def main():
     args = parser.parse_args()
     assert os.environ.get('CUDA_VISIBLE_DEVICES') == ''
     cv2.setNumThreads(1); precision()
+    from noise_role_evidence_r79 import verify_evaluation
+    verify_evaluation()
     markers = final_markers(); scenes, sources = metas()
     saved = torch.load(ROOT/markers[args.seed]['path'], map_location='cpu', weights_only=True)
     assert saved['experiment'] == 'R79' and saved['completed_steps'] == 4000 and saved['seed'] == args.seed
