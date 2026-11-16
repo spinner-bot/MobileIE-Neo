@@ -1,0 +1,2729 @@
+{
+  "at": "2026-11-16T03:51:06.775339+08:00",
+  "contacts": [
+    {
+      "seed": 0,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "native_source_hw": [
+        480,
+        854
+      ],
+      "native_crop_xywh": [
+        363,
+        176,
+        128,
+        128
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "MobileIE raw",
+        "MobileIE recursive .5",
+        "ReBotNet causal",
+        "ReBotNet current"
+      ],
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/bear_photons20--seed0.png",
+      "sha256": "19d047dcc0d3cab8db74cbe9c12982cde3d23d7310940897e2ac89cbdebc8eea",
+      "sources": [
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons20",
+          "source_video": "bear",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/bear_photons20--raw.npy",
+          "sha256": "c761eee1393e88e2deddd0fd07088057f1e3d4156943187ee039dac80b3f8e6c",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "seed": 0,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "raw",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl",
+          "source_manifest_sha256": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+          "label": "MobileIE_raw"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons20",
+          "source_video": "bear",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r73/references001/R44_plain--seed0--bear_photons20--recursive.npy",
+          "sha256": "75e1ff86bf5f3623d0d4729f428b50fde64d533f0aa8c1f0c7da9010cca9ed05",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "seed": 0,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "recursive_self05",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl",
+          "source_manifest_sha256": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+          "label": "MobileIE_recursive_self05"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons20",
+          "source_video": "bear",
+          "seed": 0,
+          "train_seed": 0,
+          "model": "ReBotNet_XS",
+          "history": "causal",
+          "method": "raw",
+          "label": "ReBotNet_causal",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed0/bear_photons20--causal.npy",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "c9fbb48e2651d7df916a58843377a7ebd38a2327c392da9e67f42f6c0d5e22a2",
+          "checkpoint_sha256": "347186ed1a12db33e13a2c4a0c2c3da8f0a871c9c058e41c5008cc56222be9de"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons20",
+          "source_video": "bear",
+          "seed": 0,
+          "train_seed": 0,
+          "model": "ReBotNet_XS",
+          "history": "current",
+          "method": "raw",
+          "label": "ReBotNet_current",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed0/bear_photons20--current.npy",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "61d2b6dd6d618674fbbbfd49d81ad45970a6c0c0758860447eee368b6a569b91",
+          "checkpoint_sha256": "347186ed1a12db33e13a2c4a0c2c3da8f0a871c9c058e41c5008cc56222be9de"
+        }
+      ],
+      "actual_reviewed": false,
+      "new_CNN": 0
+    },
+    {
+      "seed": 0,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "native_source_hw": [
+        480,
+        854
+      ],
+      "native_crop_xywh": [
+        363,
+        176,
+        128,
+        128
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "MobileIE raw",
+        "MobileIE recursive .5",
+        "ReBotNet causal",
+        "ReBotNet current"
+      ],
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/bear_photons80--seed0.png",
+      "sha256": "56a66f6fe7e1823f7a6a984f9798f00311e2f0b62529fa66cebec12a2b950c11",
+      "sources": [
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons80",
+          "source_video": "bear",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/bear_photons80--raw.npy",
+          "sha256": "24ccddd5fa89d6d3127ac1da840571cacf6fec940a61532eee481e14ccf32ef0",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "seed": 0,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "raw",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl",
+          "source_manifest_sha256": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+          "label": "MobileIE_raw"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons80",
+          "source_video": "bear",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r73/references001/R44_plain--seed0--bear_photons80--recursive.npy",
+          "sha256": "129356e021dcfc538444fb6e9709d3c1a13d9ffb00f69566126bd478b7d40b0b",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "seed": 0,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "recursive_self05",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl",
+          "source_manifest_sha256": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+          "label": "MobileIE_recursive_self05"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons80",
+          "source_video": "bear",
+          "seed": 0,
+          "train_seed": 0,
+          "model": "ReBotNet_XS",
+          "history": "causal",
+          "method": "raw",
+          "label": "ReBotNet_causal",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed0/bear_photons80--causal.npy",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "905d5ee307667facf1f613a1d58986958490545a648b283fde323e091b07584d",
+          "checkpoint_sha256": "347186ed1a12db33e13a2c4a0c2c3da8f0a871c9c058e41c5008cc56222be9de"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons80",
+          "source_video": "bear",
+          "seed": 0,
+          "train_seed": 0,
+          "model": "ReBotNet_XS",
+          "history": "current",
+          "method": "raw",
+          "label": "ReBotNet_current",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed0/bear_photons80--current.npy",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "921a2b5e1b5af375a6a34359194614ddf08dcf57fb1dc5b207d57886174f6211",
+          "checkpoint_sha256": "347186ed1a12db33e13a2c4a0c2c3da8f0a871c9c058e41c5008cc56222be9de"
+        }
+      ],
+      "actual_reviewed": false,
+      "new_CNN": 0
+    },
+    {
+      "seed": 0,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "native_source_hw": [
+        480,
+        854
+      ],
+      "native_crop_xywh": [
+        363,
+        176,
+        128,
+        128
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "MobileIE raw",
+        "MobileIE recursive .5",
+        "ReBotNet causal",
+        "ReBotNet current"
+      ],
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/lucia_photons20--seed0.png",
+      "sha256": "0127a424937a9b37435107e7803c2a69894283996c63770515c7bd96276ce787",
+      "sources": [
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons20",
+          "source_video": "lucia",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/lucia_photons20--raw.npy",
+          "sha256": "c9b6121de62756049c4b8f6caeeffb67829702cfbb77310f6f14cf361b5d1440",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "seed": 0,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "raw",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl",
+          "source_manifest_sha256": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+          "label": "MobileIE_raw"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons20",
+          "source_video": "lucia",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r73/references001/R44_plain--seed0--lucia_photons20--recursive.npy",
+          "sha256": "982e8b0a32cf6be1d9b255d35c3ab7238ba761f9974248e2aa2af99f7cc27177",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "seed": 0,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "recursive_self05",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl",
+          "source_manifest_sha256": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+          "label": "MobileIE_recursive_self05"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons20",
+          "source_video": "lucia",
+          "seed": 0,
+          "train_seed": 0,
+          "model": "ReBotNet_XS",
+          "history": "causal",
+          "method": "raw",
+          "label": "ReBotNet_causal",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed0/lucia_photons20--causal.npy",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "65cc1b78b78a4d360ec3adf052056a10fdebb40f8c49d49a33d9be8eae29b07f",
+          "checkpoint_sha256": "347186ed1a12db33e13a2c4a0c2c3da8f0a871c9c058e41c5008cc56222be9de"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons20",
+          "source_video": "lucia",
+          "seed": 0,
+          "train_seed": 0,
+          "model": "ReBotNet_XS",
+          "history": "current",
+          "method": "raw",
+          "label": "ReBotNet_current",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed0/lucia_photons20--current.npy",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "727606aba39b575ec76d896e35fc972701b80d0e1655da7e8c678dad48108514",
+          "checkpoint_sha256": "347186ed1a12db33e13a2c4a0c2c3da8f0a871c9c058e41c5008cc56222be9de"
+        }
+      ],
+      "actual_reviewed": false,
+      "new_CNN": 0
+    },
+    {
+      "seed": 0,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "native_source_hw": [
+        480,
+        854
+      ],
+      "native_crop_xywh": [
+        363,
+        176,
+        128,
+        128
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "MobileIE raw",
+        "MobileIE recursive .5",
+        "ReBotNet causal",
+        "ReBotNet current"
+      ],
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/lucia_photons80--seed0.png",
+      "sha256": "74d2c775626e4f23469f6a176872771d219ed8c7cc6c97038d5d60bbaea55d46",
+      "sources": [
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons80",
+          "source_video": "lucia",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/lucia_photons80--raw.npy",
+          "sha256": "ea5d38de226c10585cffeb58c45d562d23382db11c558d6e8421b59fa36b14de",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "seed": 0,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "raw",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl",
+          "source_manifest_sha256": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+          "label": "MobileIE_raw"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons80",
+          "source_video": "lucia",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r73/references001/R44_plain--seed0--lucia_photons80--recursive.npy",
+          "sha256": "9767e0d1785c510557d45596981b182e7cd353b2a1eefc4252ade1f8b27494d0",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "seed": 0,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "recursive_self05",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl",
+          "source_manifest_sha256": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+          "label": "MobileIE_recursive_self05"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons80",
+          "source_video": "lucia",
+          "seed": 0,
+          "train_seed": 0,
+          "model": "ReBotNet_XS",
+          "history": "causal",
+          "method": "raw",
+          "label": "ReBotNet_causal",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed0/lucia_photons80--causal.npy",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "931ec64952a72ff21188a7740dfc80d57371e1211c78d77fc91db7658f27665b",
+          "checkpoint_sha256": "347186ed1a12db33e13a2c4a0c2c3da8f0a871c9c058e41c5008cc56222be9de"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons80",
+          "source_video": "lucia",
+          "seed": 0,
+          "train_seed": 0,
+          "model": "ReBotNet_XS",
+          "history": "current",
+          "method": "raw",
+          "label": "ReBotNet_current",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed0/lucia_photons80--current.npy",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "d1573c6d850f1292fbc09c48b0f057601d0b1fc9e49915e56a8b7c6a980c0ecf",
+          "checkpoint_sha256": "347186ed1a12db33e13a2c4a0c2c3da8f0a871c9c058e41c5008cc56222be9de"
+        }
+      ],
+      "actual_reviewed": false,
+      "new_CNN": 0
+    },
+    {
+      "seed": 0,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "native_source_hw": [
+        480,
+        854
+      ],
+      "native_crop_xywh": [
+        363,
+        176,
+        128,
+        128
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "MobileIE raw",
+        "MobileIE recursive .5",
+        "ReBotNet causal",
+        "ReBotNet current"
+      ],
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/walking_photons20--seed0.png",
+      "sha256": "a1f60dea7ab5ca1b3576232fb2465fa4082b75d4ff47c6a69a293c9f12442bdb",
+      "sources": [
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons20",
+          "source_video": "walking",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/walking_photons20--raw.npy",
+          "sha256": "e958ad5c5b367105e94ae2888212c411af591e48c8fa9895176d5983a2039ad3",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "seed": 0,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "raw",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl",
+          "source_manifest_sha256": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+          "label": "MobileIE_raw"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons20",
+          "source_video": "walking",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r73/references001/R44_plain--seed0--walking_photons20--recursive.npy",
+          "sha256": "4a800d1b05ba716342ecb7e8e3b6ebf25492291e875a6a2680b0ea0190513e8f",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "seed": 0,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "recursive_self05",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl",
+          "source_manifest_sha256": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+          "label": "MobileIE_recursive_self05"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons20",
+          "source_video": "walking",
+          "seed": 0,
+          "train_seed": 0,
+          "model": "ReBotNet_XS",
+          "history": "causal",
+          "method": "raw",
+          "label": "ReBotNet_causal",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed0/walking_photons20--causal.npy",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "a748b9144862f100992d8c63296480af694169d2cba3cf329939f6c8d833bc18",
+          "checkpoint_sha256": "347186ed1a12db33e13a2c4a0c2c3da8f0a871c9c058e41c5008cc56222be9de"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons20",
+          "source_video": "walking",
+          "seed": 0,
+          "train_seed": 0,
+          "model": "ReBotNet_XS",
+          "history": "current",
+          "method": "raw",
+          "label": "ReBotNet_current",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed0/walking_photons20--current.npy",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "fd23ec5f9af81768b2cee6c297b5a972c8cb7dd8fd913ed3ca674b43f4b050b4",
+          "checkpoint_sha256": "347186ed1a12db33e13a2c4a0c2c3da8f0a871c9c058e41c5008cc56222be9de"
+        }
+      ],
+      "actual_reviewed": false,
+      "new_CNN": 0
+    },
+    {
+      "seed": 0,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "native_source_hw": [
+        480,
+        854
+      ],
+      "native_crop_xywh": [
+        363,
+        176,
+        128,
+        128
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "MobileIE raw",
+        "MobileIE recursive .5",
+        "ReBotNet causal",
+        "ReBotNet current"
+      ],
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/walking_photons80--seed0.png",
+      "sha256": "baec830d4b6f9d9afa1bb7066d0ec0633c969ac0fdfcbf358a23bc3d4f80264a",
+      "sources": [
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons80",
+          "source_video": "walking",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/walking_photons80--raw.npy",
+          "sha256": "2da2b065133477777323692a4a54723c7febaa7fb6cfe6237ca965b0a009d6f3",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "seed": 0,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "raw",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl",
+          "source_manifest_sha256": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+          "label": "MobileIE_raw"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons80",
+          "source_video": "walking",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r73/references001/R44_plain--seed0--walking_photons80--recursive.npy",
+          "sha256": "b514caaae53ac97029d50e82f1a19809958c33404e3d9696a54f6d8a2067ad6a",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "seed": 0,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "recursive_self05",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl",
+          "source_manifest_sha256": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+          "label": "MobileIE_recursive_self05"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons80",
+          "source_video": "walking",
+          "seed": 0,
+          "train_seed": 0,
+          "model": "ReBotNet_XS",
+          "history": "causal",
+          "method": "raw",
+          "label": "ReBotNet_causal",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed0/walking_photons80--causal.npy",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "4c92af07e95f68b341ce50342bc281725f5006303b9350b61d8269a1aad43c5b",
+          "checkpoint_sha256": "347186ed1a12db33e13a2c4a0c2c3da8f0a871c9c058e41c5008cc56222be9de"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons80",
+          "source_video": "walking",
+          "seed": 0,
+          "train_seed": 0,
+          "model": "ReBotNet_XS",
+          "history": "current",
+          "method": "raw",
+          "label": "ReBotNet_current",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed0/walking_photons80--current.npy",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "aff0339a7372c162f330f5e13daf150d890a1da0ab19270f7d02d11f57b25e49",
+          "checkpoint_sha256": "347186ed1a12db33e13a2c4a0c2c3da8f0a871c9c058e41c5008cc56222be9de"
+        }
+      ],
+      "actual_reviewed": false,
+      "new_CNN": 0
+    },
+    {
+      "seed": 0,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "native_source_hw": [
+        288,
+        512
+      ],
+      "native_crop_xywh": [
+        192,
+        80,
+        128,
+        128
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "MobileIE raw",
+        "MobileIE recursive .5",
+        "ReBotNet causal",
+        "ReBotNet current"
+      ],
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/video_15--seed0.png",
+      "sha256": "6d427baf8f48767a03af9def659ea192074ade31a9dc72de4eaf86ad18fae978",
+      "sources": [
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_15",
+          "source_video": "video_15",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/video_15--raw.npy",
+          "sha256": "aff2da64f86c9755fb4b86148383700af8bf15ccad031bcd0a50a7cd447904ec",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "seed": 0,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "raw",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl",
+          "source_manifest_sha256": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+          "label": "MobileIE_raw"
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_15",
+          "source_video": "video_15",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r73/references001/R44_plain--seed0--video_15--recursive.npy",
+          "sha256": "84f99c06bf0e8261e8fc262da47e09e44532bc8a8485f1e2158acfeb075a76a0",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "seed": 0,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "recursive_self05",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl",
+          "source_manifest_sha256": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+          "label": "MobileIE_recursive_self05"
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_15",
+          "source_video": "video_15",
+          "seed": 0,
+          "train_seed": 0,
+          "model": "ReBotNet_XS",
+          "history": "causal",
+          "method": "raw",
+          "label": "ReBotNet_causal",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed0/video_15--causal.npy",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "029621d43e1c08d4c48e878899e8cd752f804b21e25d63c648c00783f20a3513",
+          "checkpoint_sha256": "347186ed1a12db33e13a2c4a0c2c3da8f0a871c9c058e41c5008cc56222be9de"
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_15",
+          "source_video": "video_15",
+          "seed": 0,
+          "train_seed": 0,
+          "model": "ReBotNet_XS",
+          "history": "current",
+          "method": "raw",
+          "label": "ReBotNet_current",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed0/video_15--current.npy",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "f2cee4487f9282e05dbf219c51156a876e82aec15dcbe9edc7cf6f9ef75ebd20",
+          "checkpoint_sha256": "347186ed1a12db33e13a2c4a0c2c3da8f0a871c9c058e41c5008cc56222be9de"
+        }
+      ],
+      "actual_reviewed": false,
+      "new_CNN": 0
+    },
+    {
+      "seed": 0,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "native_source_hw": [
+        288,
+        512
+      ],
+      "native_crop_xywh": [
+        192,
+        80,
+        128,
+        128
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "MobileIE raw",
+        "MobileIE recursive .5",
+        "ReBotNet causal",
+        "ReBotNet current"
+      ],
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/video_47--seed0.png",
+      "sha256": "f5eb5ebb2ca3eeb1a4e5c4853483cdadc2ec45b9bd6bfd8a23df5fcbbd64e5f3",
+      "sources": [
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_47",
+          "source_video": "video_47",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/video_47--raw.npy",
+          "sha256": "0e668305f44e896fd8eaa6aa9169b0a142a645dc55cea0a8c21cd6c0c2c41330",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "seed": 0,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "raw",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl",
+          "source_manifest_sha256": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+          "label": "MobileIE_raw"
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_47",
+          "source_video": "video_47",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r73/references001/R44_plain--seed0--video_47--recursive.npy",
+          "sha256": "4de22663c328d03609dbcf2cbb8f34b3a9c33dbae05212e3bee639300098b93b",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "seed": 0,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "recursive_self05",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl",
+          "source_manifest_sha256": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+          "label": "MobileIE_recursive_self05"
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_47",
+          "source_video": "video_47",
+          "seed": 0,
+          "train_seed": 0,
+          "model": "ReBotNet_XS",
+          "history": "causal",
+          "method": "raw",
+          "label": "ReBotNet_causal",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed0/video_47--causal.npy",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "59e5ef71aa140e1f62fd5c75f72ab39446a4ac1a564514f638aaf2decb6f3e10",
+          "checkpoint_sha256": "347186ed1a12db33e13a2c4a0c2c3da8f0a871c9c058e41c5008cc56222be9de"
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_47",
+          "source_video": "video_47",
+          "seed": 0,
+          "train_seed": 0,
+          "model": "ReBotNet_XS",
+          "history": "current",
+          "method": "raw",
+          "label": "ReBotNet_current",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed0/video_47--current.npy",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "d66673e3a5839290992ad9a70f1fd0b1f335ad6d1b45551e9e873dc515555906",
+          "checkpoint_sha256": "347186ed1a12db33e13a2c4a0c2c3da8f0a871c9c058e41c5008cc56222be9de"
+        }
+      ],
+      "actual_reviewed": false,
+      "new_CNN": 0
+    },
+    {
+      "seed": 0,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "native_source_hw": [
+        288,
+        512
+      ],
+      "native_crop_xywh": [
+        192,
+        80,
+        128,
+        128
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "MobileIE raw",
+        "MobileIE recursive .5",
+        "ReBotNet causal",
+        "ReBotNet current"
+      ],
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/video_91--seed0.png",
+      "sha256": "82b8d385f3269f081df12712fddd1bf08ae13509cf2e71a962a34fe271420ddd",
+      "sources": [
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_91",
+          "source_video": "video_91",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/video_91--raw.npy",
+          "sha256": "e0b61255e22f7ecf2b2861ea430de2ebf53cd3c91c5b800e770fd1533a59e2f0",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "seed": 0,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "raw",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl",
+          "source_manifest_sha256": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+          "label": "MobileIE_raw"
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_91",
+          "source_video": "video_91",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r73/references001/R44_plain--seed0--video_91--recursive.npy",
+          "sha256": "41118fd896385061d1ff73ac2b49515287e337579e3ae261c435a07476690876",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "seed": 0,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "recursive_self05",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl",
+          "source_manifest_sha256": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+          "label": "MobileIE_recursive_self05"
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_91",
+          "source_video": "video_91",
+          "seed": 0,
+          "train_seed": 0,
+          "model": "ReBotNet_XS",
+          "history": "causal",
+          "method": "raw",
+          "label": "ReBotNet_causal",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed0/video_91--causal.npy",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "8d19bee0d6ed6bf8c12203ec0b72d84175d636bbd467141ee52a2631eaaeafa4",
+          "checkpoint_sha256": "347186ed1a12db33e13a2c4a0c2c3da8f0a871c9c058e41c5008cc56222be9de"
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_91",
+          "source_video": "video_91",
+          "seed": 0,
+          "train_seed": 0,
+          "model": "ReBotNet_XS",
+          "history": "current",
+          "method": "raw",
+          "label": "ReBotNet_current",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed0/video_91--current.npy",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "65e89f57cb1168cacff5207e514ae6c3dbf90921cd92ebbaa9192da8c1ced10e",
+          "checkpoint_sha256": "347186ed1a12db33e13a2c4a0c2c3da8f0a871c9c058e41c5008cc56222be9de"
+        }
+      ],
+      "actual_reviewed": false,
+      "new_CNN": 0
+    },
+    {
+      "seed": 0,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "native_source_hw": [
+        288,
+        512
+      ],
+      "native_crop_xywh": [
+        192,
+        80,
+        128,
+        128
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "MobileIE raw",
+        "MobileIE recursive .5",
+        "ReBotNet causal",
+        "ReBotNet current"
+      ],
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/video_121--seed0.png",
+      "sha256": "5d776fab6e984bb786d73da888203801d289a6242108e1bb42eef818b22ed0a5",
+      "sources": [
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_121",
+          "source_video": "video_121",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r44/stage001/seed0/square_mse/video_121--raw.npy",
+          "sha256": "f2c80b9e1c5c88406d57f6adf38a96c3dcd39e334bf9c0469fe9b52145e7edad",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "seed": 0,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "raw",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl",
+          "source_manifest_sha256": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+          "label": "MobileIE_raw"
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_121",
+          "source_video": "video_121",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed0",
+          "train_seed": 0,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r73/references001/R44_plain--seed0--video_121--recursive.npy",
+          "sha256": "7c63814b7685166ce1125fc34569ca14735f34f095e90b54f575bdc750342a8b",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+          "seed": 0,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "recursive_self05",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed0/prediction_manifest.jsonl",
+          "source_manifest_sha256": "07d8eb285dc82ee48d105096d1d2a14c5bff3e812e73e8c346f58b00f3a9dca0",
+          "label": "MobileIE_recursive_self05"
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_121",
+          "source_video": "video_121",
+          "seed": 0,
+          "train_seed": 0,
+          "model": "ReBotNet_XS",
+          "history": "causal",
+          "method": "raw",
+          "label": "ReBotNet_causal",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed0/video_121--causal.npy",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "578c40501968698780dc4b10b7228f8afdad9e8cb33c147c76fd96ed25c4d1e1",
+          "checkpoint_sha256": "347186ed1a12db33e13a2c4a0c2c3da8f0a871c9c058e41c5008cc56222be9de"
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_121",
+          "source_video": "video_121",
+          "seed": 0,
+          "train_seed": 0,
+          "model": "ReBotNet_XS",
+          "history": "current",
+          "method": "raw",
+          "label": "ReBotNet_current",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed0/video_121--current.npy",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "0d8e3aee616b34c172d29daf03bacb32f98a95b93995f7e2b3c328cd12c7087a",
+          "checkpoint_sha256": "347186ed1a12db33e13a2c4a0c2c3da8f0a871c9c058e41c5008cc56222be9de"
+        }
+      ],
+      "actual_reviewed": false,
+      "new_CNN": 0
+    },
+    {
+      "seed": 1,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "native_source_hw": [
+        480,
+        854
+      ],
+      "native_crop_xywh": [
+        363,
+        176,
+        128,
+        128
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "MobileIE raw",
+        "MobileIE recursive .5",
+        "ReBotNet causal",
+        "ReBotNet current"
+      ],
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/bear_photons20--seed1.png",
+      "sha256": "96bb483b27aabae1c26f3064427a0f1c22f82e764996fe749a4452e5c85ea98e",
+      "sources": [
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons20",
+          "source_video": "bear",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/bear_photons20--raw.npy",
+          "sha256": "2e3822b9ed49bd500c76020364ab0a17d2c5757e53f35eaa7c929ebda298aa6c",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "seed": 1,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "raw",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl",
+          "source_manifest_sha256": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+          "label": "MobileIE_raw"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons20",
+          "source_video": "bear",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r73/references001/R44_plain--seed1--bear_photons20--recursive.npy",
+          "sha256": "61062d0bb66446851803bc838fbe82b4c26ee71e29857e541644e9680505969b",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "seed": 1,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "recursive_self05",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl",
+          "source_manifest_sha256": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+          "label": "MobileIE_recursive_self05"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons20",
+          "source_video": "bear",
+          "seed": 1,
+          "train_seed": 1,
+          "model": "ReBotNet_XS",
+          "history": "causal",
+          "method": "raw",
+          "label": "ReBotNet_causal",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed1/bear_photons20--causal.npy",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "0d4f84c2b8798854b4be4037c14b2e790efaaf8f3e3eac5e15a43b6d05fcbd0d",
+          "checkpoint_sha256": "ee3952827b51b089531bbcb0fb814b1b9afe08b0168c4198337f0b50dd8b61cd"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons20",
+          "source_video": "bear",
+          "seed": 1,
+          "train_seed": 1,
+          "model": "ReBotNet_XS",
+          "history": "current",
+          "method": "raw",
+          "label": "ReBotNet_current",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed1/bear_photons20--current.npy",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "3789f6786d4703bb8a14d8572f4ba804a1e76c0342356fc301d2bf3925cac985",
+          "checkpoint_sha256": "ee3952827b51b089531bbcb0fb814b1b9afe08b0168c4198337f0b50dd8b61cd"
+        }
+      ],
+      "actual_reviewed": false,
+      "new_CNN": 0
+    },
+    {
+      "seed": 1,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "native_source_hw": [
+        480,
+        854
+      ],
+      "native_crop_xywh": [
+        363,
+        176,
+        128,
+        128
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "MobileIE raw",
+        "MobileIE recursive .5",
+        "ReBotNet causal",
+        "ReBotNet current"
+      ],
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/bear_photons80--seed1.png",
+      "sha256": "af43adee30db7df9d3ba527fb369ba70f1c2b7e96ac1a8c57bf463c2452ddb74",
+      "sources": [
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons80",
+          "source_video": "bear",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/bear_photons80--raw.npy",
+          "sha256": "0019f4cbbb7c2a367dd3282cb9b6922833041d5e2fba9123bba410d75f430e75",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "seed": 1,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "raw",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl",
+          "source_manifest_sha256": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+          "label": "MobileIE_raw"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons80",
+          "source_video": "bear",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r73/references001/R44_plain--seed1--bear_photons80--recursive.npy",
+          "sha256": "75f4c18808e1905f31c5a728f008d8da474fd38a071e958da85d44df7ab47fd8",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "seed": 1,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "recursive_self05",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl",
+          "source_manifest_sha256": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+          "label": "MobileIE_recursive_self05"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons80",
+          "source_video": "bear",
+          "seed": 1,
+          "train_seed": 1,
+          "model": "ReBotNet_XS",
+          "history": "causal",
+          "method": "raw",
+          "label": "ReBotNet_causal",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed1/bear_photons80--causal.npy",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "6261b734a640787076bea3c6e6f3d0c4d7b1039d8b5357d0f1094e6857961ae9",
+          "checkpoint_sha256": "ee3952827b51b089531bbcb0fb814b1b9afe08b0168c4198337f0b50dd8b61cd"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "bear_photons80",
+          "source_video": "bear",
+          "seed": 1,
+          "train_seed": 1,
+          "model": "ReBotNet_XS",
+          "history": "current",
+          "method": "raw",
+          "label": "ReBotNet_current",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed1/bear_photons80--current.npy",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "4ff89bbc9ae0c9106821df2d78ea7a8b36c7cafe473a63d81e3ebe6a18578d7a",
+          "checkpoint_sha256": "ee3952827b51b089531bbcb0fb814b1b9afe08b0168c4198337f0b50dd8b61cd"
+        }
+      ],
+      "actual_reviewed": false,
+      "new_CNN": 0
+    },
+    {
+      "seed": 1,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "native_source_hw": [
+        480,
+        854
+      ],
+      "native_crop_xywh": [
+        363,
+        176,
+        128,
+        128
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "MobileIE raw",
+        "MobileIE recursive .5",
+        "ReBotNet causal",
+        "ReBotNet current"
+      ],
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/lucia_photons20--seed1.png",
+      "sha256": "71196862c8d6f807cead17c6b3cf08cd40678be9d8560adaec6a9fcfd307cfad",
+      "sources": [
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons20",
+          "source_video": "lucia",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/lucia_photons20--raw.npy",
+          "sha256": "a650f953f993bafd69528165c13b9f8bdebb64029fc6fc064a97497bd5d7b6bc",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "seed": 1,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "raw",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl",
+          "source_manifest_sha256": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+          "label": "MobileIE_raw"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons20",
+          "source_video": "lucia",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r73/references001/R44_plain--seed1--lucia_photons20--recursive.npy",
+          "sha256": "14392217b3d5ec0f18a9860344ee35f23dd054b44bb01c3f0c746019ceae7d94",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "seed": 1,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "recursive_self05",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl",
+          "source_manifest_sha256": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+          "label": "MobileIE_recursive_self05"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons20",
+          "source_video": "lucia",
+          "seed": 1,
+          "train_seed": 1,
+          "model": "ReBotNet_XS",
+          "history": "causal",
+          "method": "raw",
+          "label": "ReBotNet_causal",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed1/lucia_photons20--causal.npy",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "29e6e26d0777091c01bcaf0e556e3984554f5a6bd6b647bc20ee17baa8410d1d",
+          "checkpoint_sha256": "ee3952827b51b089531bbcb0fb814b1b9afe08b0168c4198337f0b50dd8b61cd"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons20",
+          "source_video": "lucia",
+          "seed": 1,
+          "train_seed": 1,
+          "model": "ReBotNet_XS",
+          "history": "current",
+          "method": "raw",
+          "label": "ReBotNet_current",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed1/lucia_photons20--current.npy",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "21da13095c6469638823a2e04019e2f159e5f69398224a56366f1c40903f5252",
+          "checkpoint_sha256": "ee3952827b51b089531bbcb0fb814b1b9afe08b0168c4198337f0b50dd8b61cd"
+        }
+      ],
+      "actual_reviewed": false,
+      "new_CNN": 0
+    },
+    {
+      "seed": 1,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "native_source_hw": [
+        480,
+        854
+      ],
+      "native_crop_xywh": [
+        363,
+        176,
+        128,
+        128
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "MobileIE raw",
+        "MobileIE recursive .5",
+        "ReBotNet causal",
+        "ReBotNet current"
+      ],
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/lucia_photons80--seed1.png",
+      "sha256": "628039a238607125a11a38721ea6114402e956422a3565c9af1b7eaf306ee8f3",
+      "sources": [
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons80",
+          "source_video": "lucia",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/lucia_photons80--raw.npy",
+          "sha256": "0084e9aec0b93faaa4560a31430bf77e16d4ac238a3f61f31479c09bb0177585",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "seed": 1,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "raw",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl",
+          "source_manifest_sha256": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+          "label": "MobileIE_raw"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons80",
+          "source_video": "lucia",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r73/references001/R44_plain--seed1--lucia_photons80--recursive.npy",
+          "sha256": "6e7c119e57e2f71e66fb20c138406b03b7fa00653ba059855115f65782a3d1f7",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "seed": 1,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "recursive_self05",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl",
+          "source_manifest_sha256": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+          "label": "MobileIE_recursive_self05"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons80",
+          "source_video": "lucia",
+          "seed": 1,
+          "train_seed": 1,
+          "model": "ReBotNet_XS",
+          "history": "causal",
+          "method": "raw",
+          "label": "ReBotNet_causal",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed1/lucia_photons80--causal.npy",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "804c2538ea2c1150985cca021d0558dd55114056dc94bcb7e5b3c6e44eb772c5",
+          "checkpoint_sha256": "ee3952827b51b089531bbcb0fb814b1b9afe08b0168c4198337f0b50dd8b61cd"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "lucia_photons80",
+          "source_video": "lucia",
+          "seed": 1,
+          "train_seed": 1,
+          "model": "ReBotNet_XS",
+          "history": "current",
+          "method": "raw",
+          "label": "ReBotNet_current",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed1/lucia_photons80--current.npy",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "7586e412736794ccb34682583afd7a6523a90e6305969624e02aa099473d87a7",
+          "checkpoint_sha256": "ee3952827b51b089531bbcb0fb814b1b9afe08b0168c4198337f0b50dd8b61cd"
+        }
+      ],
+      "actual_reviewed": false,
+      "new_CNN": 0
+    },
+    {
+      "seed": 1,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "native_source_hw": [
+        480,
+        854
+      ],
+      "native_crop_xywh": [
+        363,
+        176,
+        128,
+        128
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "MobileIE raw",
+        "MobileIE recursive .5",
+        "ReBotNet causal",
+        "ReBotNet current"
+      ],
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/walking_photons20--seed1.png",
+      "sha256": "f13e74c7a72a5e7fe259e5733fd8634bdb9ccc2bdd61148ba618df4ff3ca60d0",
+      "sources": [
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons20",
+          "source_video": "walking",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/walking_photons20--raw.npy",
+          "sha256": "aabd6e7b85e1eef6c7252ee208e58e40b3cf42c286e7c08017d9d84188c5f40b",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "seed": 1,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "raw",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl",
+          "source_manifest_sha256": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+          "label": "MobileIE_raw"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons20",
+          "source_video": "walking",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r73/references001/R44_plain--seed1--walking_photons20--recursive.npy",
+          "sha256": "75310b8d282696bc2ba2e3ba53429629d2682991a75382b6339b63347dcd0b97",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "seed": 1,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "recursive_self05",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl",
+          "source_manifest_sha256": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+          "label": "MobileIE_recursive_self05"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons20",
+          "source_video": "walking",
+          "seed": 1,
+          "train_seed": 1,
+          "model": "ReBotNet_XS",
+          "history": "causal",
+          "method": "raw",
+          "label": "ReBotNet_causal",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed1/walking_photons20--causal.npy",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "e85fb0ecf20625ec0a86b8f0ba3c04bb0e3438e7a1f0db4baa5a564b2f59eb1f",
+          "checkpoint_sha256": "ee3952827b51b089531bbcb0fb814b1b9afe08b0168c4198337f0b50dd8b61cd"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons20",
+          "source_video": "walking",
+          "seed": 1,
+          "train_seed": 1,
+          "model": "ReBotNet_XS",
+          "history": "current",
+          "method": "raw",
+          "label": "ReBotNet_current",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed1/walking_photons20--current.npy",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "e04fc02b4058c148c6965b70d3563904db11e08442f1bfff692503f1c8d10561",
+          "checkpoint_sha256": "ee3952827b51b089531bbcb0fb814b1b9afe08b0168c4198337f0b50dd8b61cd"
+        }
+      ],
+      "actual_reviewed": false,
+      "new_CNN": 0
+    },
+    {
+      "seed": 1,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "frames": [
+        0,
+        32,
+        63
+      ],
+      "native_source_hw": [
+        480,
+        854
+      ],
+      "native_crop_xywh": [
+        363,
+        176,
+        128,
+        128
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "MobileIE raw",
+        "MobileIE recursive .5",
+        "ReBotNet causal",
+        "ReBotNet current"
+      ],
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/walking_photons80--seed1.png",
+      "sha256": "e70f0155bfe696114d733a7673456d82556d20c647f70d37695f0304f0cbfa21",
+      "sources": [
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons80",
+          "source_video": "walking",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/walking_photons80--raw.npy",
+          "sha256": "264c47d2eaf25c913033f002b1283bd9d59c6b73907dd8aaf19a014f4ea374bc",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "seed": 1,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "raw",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl",
+          "source_manifest_sha256": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+          "label": "MobileIE_raw"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons80",
+          "source_video": "walking",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r73/references001/R44_plain--seed1--walking_photons80--recursive.npy",
+          "sha256": "3cf096d06d5d9b169f9045ae8a1d3d9d4995e3269a8cf70a04c0703feee02f13",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "seed": 1,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "recursive_self05",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl",
+          "source_manifest_sha256": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+          "label": "MobileIE_recursive_self05"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons80",
+          "source_video": "walking",
+          "seed": 1,
+          "train_seed": 1,
+          "model": "ReBotNet_XS",
+          "history": "causal",
+          "method": "raw",
+          "label": "ReBotNet_causal",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed1/walking_photons80--causal.npy",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "7132fa5c04abb3613d11a327f8ff46f84d8790efa78ff0f6ddbf1e18011c8da3",
+          "checkpoint_sha256": "ee3952827b51b089531bbcb0fb814b1b9afe08b0168c4198337f0b50dd8b61cd"
+        },
+        {
+          "domain": "davis_train_pilot",
+          "scene": "walking_photons80",
+          "source_video": "walking",
+          "seed": 1,
+          "train_seed": 1,
+          "model": "ReBotNet_XS",
+          "history": "current",
+          "method": "raw",
+          "label": "ReBotNet_current",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed1/walking_photons80--current.npy",
+          "shape": [
+            64,
+            480,
+            854,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "13552cff33017e013e3d1b4926d20c076ae36ab43342e9adc932f69ee2482e7a",
+          "checkpoint_sha256": "ee3952827b51b089531bbcb0fb814b1b9afe08b0168c4198337f0b50dd8b61cd"
+        }
+      ],
+      "actual_reviewed": false,
+      "new_CNN": 0
+    },
+    {
+      "seed": 1,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "native_source_hw": [
+        288,
+        512
+      ],
+      "native_crop_xywh": [
+        192,
+        80,
+        128,
+        128
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "MobileIE raw",
+        "MobileIE recursive .5",
+        "ReBotNet causal",
+        "ReBotNet current"
+      ],
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/video_15--seed1.png",
+      "sha256": "02e9f321cd32c1f384fb4bd937738ff0c57b298788ad39d913b86747f1f81814",
+      "sources": [
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_15",
+          "source_video": "video_15",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/video_15--raw.npy",
+          "sha256": "e3b359a455ec1cabf6ce8a78ca43a04384b068efbfb4c47c2ed8d4dbf31b49be",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "seed": 1,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "raw",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl",
+          "source_manifest_sha256": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+          "label": "MobileIE_raw"
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_15",
+          "source_video": "video_15",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r73/references001/R44_plain--seed1--video_15--recursive.npy",
+          "sha256": "529f5d9cd370a9dbdf860fd80e872771a6321ed19f296638ac7bc5b723519c20",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "seed": 1,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "recursive_self05",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl",
+          "source_manifest_sha256": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+          "label": "MobileIE_recursive_self05"
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_15",
+          "source_video": "video_15",
+          "seed": 1,
+          "train_seed": 1,
+          "model": "ReBotNet_XS",
+          "history": "causal",
+          "method": "raw",
+          "label": "ReBotNet_causal",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed1/video_15--causal.npy",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "acbfc1203f72cdbcd3278fd63e35450124509967b1e2620638568ebbccf06373",
+          "checkpoint_sha256": "ee3952827b51b089531bbcb0fb814b1b9afe08b0168c4198337f0b50dd8b61cd"
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_15",
+          "source_video": "video_15",
+          "seed": 1,
+          "train_seed": 1,
+          "model": "ReBotNet_XS",
+          "history": "current",
+          "method": "raw",
+          "label": "ReBotNet_current",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed1/video_15--current.npy",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "9704772f127d311f0ec3b9fd2230a19e3d2660e778b595c08cce7feb36a21fcf",
+          "checkpoint_sha256": "ee3952827b51b089531bbcb0fb814b1b9afe08b0168c4198337f0b50dd8b61cd"
+        }
+      ],
+      "actual_reviewed": false,
+      "new_CNN": 0
+    },
+    {
+      "seed": 1,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "native_source_hw": [
+        288,
+        512
+      ],
+      "native_crop_xywh": [
+        192,
+        80,
+        128,
+        128
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "MobileIE raw",
+        "MobileIE recursive .5",
+        "ReBotNet causal",
+        "ReBotNet current"
+      ],
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/video_47--seed1.png",
+      "sha256": "a309d358685b04c4bba0e5381f4940028853c1896401b18f1c6b1de924e4a3f0",
+      "sources": [
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_47",
+          "source_video": "video_47",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/video_47--raw.npy",
+          "sha256": "ef297cb355b0fda9e8830a0a4136ebc9f5cda3ba8f90073dc4a0d8ffd76b2cb5",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "seed": 1,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "raw",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl",
+          "source_manifest_sha256": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+          "label": "MobileIE_raw"
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_47",
+          "source_video": "video_47",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r73/references001/R44_plain--seed1--video_47--recursive.npy",
+          "sha256": "ebea0ba730929471af7f3ae591db6351d26fcf6318807b7f00cb902fc1cd358a",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "seed": 1,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "recursive_self05",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl",
+          "source_manifest_sha256": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+          "label": "MobileIE_recursive_self05"
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_47",
+          "source_video": "video_47",
+          "seed": 1,
+          "train_seed": 1,
+          "model": "ReBotNet_XS",
+          "history": "causal",
+          "method": "raw",
+          "label": "ReBotNet_causal",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed1/video_47--causal.npy",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "5d839fa2052c5d2927a9d64addaf9c949d0b853f1d93db328892b6286246e198",
+          "checkpoint_sha256": "ee3952827b51b089531bbcb0fb814b1b9afe08b0168c4198337f0b50dd8b61cd"
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_47",
+          "source_video": "video_47",
+          "seed": 1,
+          "train_seed": 1,
+          "model": "ReBotNet_XS",
+          "history": "current",
+          "method": "raw",
+          "label": "ReBotNet_current",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed1/video_47--current.npy",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "c7f58c086ec407db432861b2d62144393b5871a221b8c600214493bb09356e6b",
+          "checkpoint_sha256": "ee3952827b51b089531bbcb0fb814b1b9afe08b0168c4198337f0b50dd8b61cd"
+        }
+      ],
+      "actual_reviewed": false,
+      "new_CNN": 0
+    },
+    {
+      "seed": 1,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "native_source_hw": [
+        288,
+        512
+      ],
+      "native_crop_xywh": [
+        192,
+        80,
+        128,
+        128
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "MobileIE raw",
+        "MobileIE recursive .5",
+        "ReBotNet causal",
+        "ReBotNet current"
+      ],
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/video_91--seed1.png",
+      "sha256": "48f2e921f3549d2f16bb8e9a8e5452b1a05f3f6c12316ddcd966ce2d8f200be5",
+      "sources": [
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_91",
+          "source_video": "video_91",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/video_91--raw.npy",
+          "sha256": "182c7a9701eb9493b335e08fe1a2df11812d7813f1530763321da49158f0742a",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "seed": 1,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "raw",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl",
+          "source_manifest_sha256": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+          "label": "MobileIE_raw"
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_91",
+          "source_video": "video_91",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r73/references001/R44_plain--seed1--video_91--recursive.npy",
+          "sha256": "bad2722ed5399e3f829cd734512d838ec6e641332d2daa9bcb158dcf33cbd099",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "seed": 1,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "recursive_self05",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl",
+          "source_manifest_sha256": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+          "label": "MobileIE_recursive_self05"
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_91",
+          "source_video": "video_91",
+          "seed": 1,
+          "train_seed": 1,
+          "model": "ReBotNet_XS",
+          "history": "causal",
+          "method": "raw",
+          "label": "ReBotNet_causal",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed1/video_91--causal.npy",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "264a3319b622ad6faa195e2aa7676bb20ca8bebb7e1e70ecc1742270dc151ce4",
+          "checkpoint_sha256": "ee3952827b51b089531bbcb0fb814b1b9afe08b0168c4198337f0b50dd8b61cd"
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_91",
+          "source_video": "video_91",
+          "seed": 1,
+          "train_seed": 1,
+          "model": "ReBotNet_XS",
+          "history": "current",
+          "method": "raw",
+          "label": "ReBotNet_current",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed1/video_91--current.npy",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "26048a3bb6d4c6d322774d4d2fb9cb7dc153b2339a4f1f17d6beacf16c0b9bde",
+          "checkpoint_sha256": "ee3952827b51b089531bbcb0fb814b1b9afe08b0168c4198337f0b50dd8b61cd"
+        }
+      ],
+      "actual_reviewed": false,
+      "new_CNN": 0
+    },
+    {
+      "seed": 1,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "native_source_hw": [
+        288,
+        512
+      ],
+      "native_crop_xywh": [
+        192,
+        80,
+        128,
+        128
+      ],
+      "labels": [
+        "Input",
+        "GT",
+        "MobileIE raw",
+        "MobileIE recursive .5",
+        "ReBotNet causal",
+        "ReBotNet current"
+      ],
+      "contact": "research/4.temporal-consistency/report/exploration-r75-contacts/video_121--seed1.png",
+      "sha256": "eab34b76a11c8308ab10e7bda28a4ca3971ea4c699ff510a66f172e917bd45cb",
+      "sources": [
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_121",
+          "source_video": "video_121",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r44/stage001/seed1/square_mse/video_121--raw.npy",
+          "sha256": "36cd47bcfa36d859befa06ce0eab1ee5a04c048ce695f0976302085cb763c967",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "seed": 1,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "raw",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl",
+          "source_manifest_sha256": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+          "label": "MobileIE_raw"
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_121",
+          "source_video": "video_121",
+          "anchor_family": "R44_square_mse",
+          "anchor": "R44_square_mse_seed1",
+          "train_seed": 1,
+          "model": "R44_plain",
+          "path": ".cache/experiments/exploration-r73/references001/R44_plain--seed1--video_121--recursive.npy",
+          "sha256": "f559c0f9c1f5f28f460951647a12d6f4104c1fa4944f0931fbc4c5ac096af2e1",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+          "seed": 1,
+          "project_updates": 8000,
+          "parameters": 4075,
+          "history": "current",
+          "method": "recursive_self05",
+          "source_manifest": "research/4.temporal-consistency/results/exploration-r44-stage001-eval-seed1/prediction_manifest.jsonl",
+          "source_manifest_sha256": "3015fd3fe779f1407b1b1d4b62b25c101a9d4a0bdefd21694e6fff5738277430",
+          "label": "MobileIE_recursive_self05"
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_121",
+          "source_video": "video_121",
+          "seed": 1,
+          "train_seed": 1,
+          "model": "ReBotNet_XS",
+          "history": "causal",
+          "method": "raw",
+          "label": "ReBotNet_causal",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed1/video_121--causal.npy",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "207bb245f7e3c0538a935d6f76f3f9c244675e9cc662c4bc9f57abb738e6d6a6",
+          "checkpoint_sha256": "ee3952827b51b089531bbcb0fb814b1b9afe08b0168c4198337f0b50dd8b61cd"
+        },
+        {
+          "domain": "paired_real_ND_DEV",
+          "scene": "video_121",
+          "source_video": "video_121",
+          "seed": 1,
+          "train_seed": 1,
+          "model": "ReBotNet_XS",
+          "history": "current",
+          "method": "raw",
+          "label": "ReBotNet_current",
+          "parameters": 890275,
+          "project_updates": 64000,
+          "future_wait_max": 0,
+          "path": ".cache/experiments/exploration-r75/eval001/seed1/video_121--current.npy",
+          "shape": [
+            16,
+            288,
+            512,
+            3
+          ],
+          "dtype": "float32",
+          "sha256": "e0f9d4b78619a49840080666df615437265c69a070dbdc08858a225a1bdf3301",
+          "checkpoint_sha256": "ee3952827b51b089531bbcb0fb814b1b9afe08b0168c4198337f0b50dd8b61cd"
+        }
+      ],
+      "actual_reviewed": false,
+      "new_CNN": 0
+    }
+  ],
+  "actual_review_required_separately": true,
+  "new_CNN": 0,
+  "SGD": 0,
+  "scope": "All fixed conditions/seeds; no contact chosen from candidate errors."
+}
