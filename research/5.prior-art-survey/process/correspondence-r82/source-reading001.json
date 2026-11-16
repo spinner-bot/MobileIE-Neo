@@ -1,0 +1,96 @@
+{
+  "at": "2026-11-17T05:55:56.986571+08:00",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1712.02327v2",
+      "scope": "Revisit known KPN section4 equations2-6 and noise parameters/auxiliary loss, prior note20 unchanged. No new score reproduction."
+    },
+    {
+      "url": "https://arxiv.org/html/1912.04421",
+      "observed_version": "1912.04421v2,2020-12-03",
+      "scope": "BPN sections3.1-3.3 and training paragraph4, signed versus positive/unit-normalized bases and kernel-field factorization, no figures/code/model reproduction."
+    },
+    {
+      "url": "https://openaccess.thecvf.com/content_CVPR_2020/papers/Xia_Basis_Prediction_Networks_for_Effective_Burst_Denoising_With_Large_Kernels_CVPR_2020_paper.pdf",
+      "outcome": "One ordinary403, stopped this URL; separate normal author arXiv HTML used, no restriction bypass."
+    },
+    {
+      "url": "https://arxiv.org/html/2603.10417",
+      "observed_version": "2603.10417v2,2026-06-29",
+      "scope": "F2R section3 residual target, frame exclusion, flow and recorruption inputs; no full experimental reproduction or independently verified venue status."
+    }
+  ],
+  "F2R_repository": "m1NGGi/F2R",
+  "F2R_commit": "064a86c41112b9be960340df159a995dba515e9f",
+  "source_transport": "Read-only GitHub plugin repository/commit/tree/fetch_file; no author-code execution.",
+  "source_files": [
+    {
+      "path": "README.md",
+      "git_blob_sha": "9d5f3bcfeeeb604ce2819213b91461d5c30a9ff8",
+      "cache_path": ".cache/literature/correspondence-r82/F2R-064a86c41112b9be960340df159a995dba515e9f/README.md",
+      "cache_sha256": "09c82a72d272f1ae70bbb7ba7a1785c59dde6073c3b69f936d94fd88d0a7fb40",
+      "bytes": 6522
+    },
+    {
+      "path": "train_s1_rgb.py",
+      "git_blob_sha": "feab92c8a5464619de093caf06d17785079c1308",
+      "cache_path": ".cache/literature/correspondence-r82/F2R-064a86c41112b9be960340df159a995dba515e9f/train_s1_rgb.py",
+      "cache_sha256": "3d201fe1922f9688fccd70bce83d3a95935bafb71e4ace6e7eed12c0725d05c9",
+      "bytes": 13922
+    },
+    {
+      "path": "train_s2_rgb.py",
+      "git_blob_sha": "e8b969a8e57d00d85038cad5a0200e2df1992627",
+      "cache_path": ".cache/literature/correspondence-r82/F2R-064a86c41112b9be960340df159a995dba515e9f/train_s2_rgb.py",
+      "cache_sha256": "15fa9425f74d962e0a326c6cb28550b99a1c3be6f10f667fa0b586c4692d362f",
+      "bytes": 14760
+    },
+    {
+      "path": "models/fusion_s1.py",
+      "git_blob_sha": "f1e2a7f7fe3f923e4a5c21eed7f3f6c77a4ea8bb",
+      "cache_path": ".cache/literature/correspondence-r82/F2R-064a86c41112b9be960340df159a995dba515e9f/models/fusion_s1.py",
+      "cache_sha256": "cf66ca2b08950360885b6788dcd7f3121232ea17d7a9e98cd93bf87f0b187a7e",
+      "bytes": 9854
+    },
+    {
+      "path": "models/fusion_s2.py",
+      "git_blob_sha": "529594ad0f41ab79535823da99079ccebe84347f",
+      "cache_path": ".cache/literature/correspondence-r82/F2R-064a86c41112b9be960340df159a995dba515e9f/models/fusion_s2.py",
+      "cache_sha256": "d8df83acce977e4721f6b90f3c98562d2ffbbddbf31870035936aaa29058c283",
+      "bytes": 11009
+    }
+  ],
+  "cache_normalization": "UTF8 text snapshot, CRLF normalized to LF and trailing newline from patch snapshot; cache hash is separate from upstream Git blob.",
+  "read_code_sections": {
+    "train_s1_rgb.py": [
+      "flow_to_ref",
+      "default len9",
+      "202-216 training inputs/loss",
+      "259-273 validation inputs"
+    ],
+    "train_s2_rgb.py": [
+      "default len9",
+      "206-229 center recorruption, new D/flow and target"
+    ],
+    "models/fusion_s1.py": [
+      "FlowGuidedBlock",
+      "Fusion.forward",
+      "return out+coarse_img"
+    ],
+    "models/fusion_s2.py": [
+      "FlowGuidedBlock with reference feature and deformable convolution",
+      "Fusion.forward",
+      "return out+coarse_img"
+    ]
+  },
+  "local_dedup": [
+    "docs/进展报告/0035-T-26111123-冻结全局通道读出干预.md",
+    "research/5.prior-art-survey/docs/20-reference-collapse-and-aggregation-training.md",
+    "research/5.prior-art-survey/docs/47-brightness-noise-bias-and-adaptation-boundaries.md",
+    "research/4.temporal-consistency/scripts/budget_causal_r33.py",
+    "research/4.temporal-consistency/scripts/native_moment_core_r73.py",
+    "research/4.temporal-consistency/scripts/motion_transport_r74.py",
+    "research/4.temporal-consistency/scripts/preserved_state_r37.py"
+  ],
+  "scope": "Bounded operator/learning information-path reading. No claim that kernel prediction, positive weights, low rank, signed residuals or frame exclusion are novel; no new pixels/weights/models/GPU/SGD or final-test access."
+}
