@@ -1,5 +1,8 @@
 # 4. 时序一致性方法（Temporal Consistency）
 
+最新[R82 / 0159](../../docs/进展报告/0159-T-26111706-核预测先例收口与自参照修正原型资格.md)：[CPU资格](process/exploration-r82/progress001.json)正常完成12丢弃更新，304新增参数，0正式/DEV/GPU。centered self恒等/流式差均0，非零过去梯度仅说明可训练。[正式协议](docs/exploration-r82-self-reference-training-protocol.md)已登记双seed三控制48000更新、完整100新质量/JOD、24门槛和20图；完整实现/冻结/CUDA资格尚待，无活跃正式作业。旧STOP/保留最终/paper020保持，尚无有效方法或创新证明。
+
+
 目标：以论文为最终产出，深入核查 MobileIE 的架构与训练机制，在移动端计算预算内设计视频增强模型，用传统方法、后处理和已有视频模型对照验证画质、时间稳定性与效率收益。
 
 最新R81有限预实验（[0158](../../docs/进展报告/0158-T-26111704-训练噪声门控干预与局部路线止损.md)/[progress001](process/exploration-r81/progress001.json)/[决定](docs/exploration-r81-decision.md)）：原934742/start79922028已03:57:20正常结束6.274232秒，固定bmx-bumps/boat各一训练帧中心128、两photon/双权重，128独立噪声图共同使用、256 noisy+4 clean+12whole=272骨干/1040tail，40条件/1280逐draw、0SGD/DEV/GPU。17源不变，8固定图均实际查看。主0/8；local有PSNR正值及boat7.52%–9.19%相邻差下降，但bmx ph80反升9.69%/10.69%，global/both可能失配，无噪参照非上界或部署。winner差异仅相对固定clean参照，非相邻帧切换率，max连续不能凭索引推因果。不扩localgate/温度/滞回/EMA/draw/源/seed局部网格，不启动训练/DEV/GPU/手机。无活跃R81/R80任务，全部旧STOP/最终像素/paper020保持，论文目标active；以下等待/活跃提示均历史。
