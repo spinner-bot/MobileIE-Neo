@@ -4,11 +4,11 @@
 
 ## 当前研究状态
 
-截至2026-11-16，项目仍处于方法探索阶段，尚未建立可投稿的新方法。接续先读[进展报告0154](docs/进展报告/0154-T-26111622-课程对照完整训练与最终评价接续.md)、[4号研究入口](research/4.temporal-consistency/README.md)和[服务器约定](AGENTS.md)。主线在 `main` 推进，移动演示由独立支线处理。
+截至2026-11-17，项目仍处于方法探索阶段，尚未建立可投稿的新方法。接续先读[进展报告0155](docs/进展报告/0155-T-26111702-课程完整负结果与训练诊断先例收口.md)、[4号研究入口](research/4.temporal-consistency/README.md)和[服务器约定](AGENTS.md)。主线在 `main` 推进，移动演示由独立支线处理。
 
 
 
-当前[R79](research/4.temporal-consistency/docs/exploration-r79-causal-noise-role-protocol.md)真实训练已全部正常结束：24955参数、独立空间/普通双帧/合成噪声课程三组，两seed每组4000、共24000新更新，六final重载误差0；原880224/880225已退出并释放GPU，不能据旧活跃快照重启。原协调在22:51:17启动CPU评价889002/889003/start78086507，21/11训练/评价源未变。完整100新质量/JOD、140共同条件/28均值/16门槛和20固定图及实际查看仍待，不能由训练完成称有效方法。FIP/LVD已有课程先例，不当创新/零推理开销；保留像素、旧STOP、paper020与论文缺口保持。
+当前[R79完整决定](research/4.temporal-consistency/docs/exploration-r79-decision.md)：24000更新、100新质量/4480帧与100 JOD均正常结束，联合140条件/28域均值/16比较全部False，全部20固定图已实际查看。课程相对同权重current时间代理仅降.48%–.83%，相对强rec仍高32.68%–51.74%；正负条件/seed都保留，按协议停止本课程局部网格，不推广为所有课程无效。原CPU/感知/协调均退出，禁止据旧快照重启；21/11源未变。[note63](research/5.prior-art-survey/docs/63-fip-diagnostics-and-curriculum-novelty-boundary.md)核明FIP训练/诊断已有先例，非创新。完整结果暂独立、paper020未变；有效新方法、自然动态/手机/独立最终仍缺，保留像素/旧STOP保持。
 
 前序定向核查[训练信息课程先例](research/5.prior-art-survey/docs/62-training-information-curricula-and-photometric-transfer.md)：FIP遮中心预训练/LVD不平衡噪声已有作者代码，不能直接作为创新。R78仅人工光度资格（8行、92/92），显示把暗输入−亮GT当噪声缩放会在无噪时也改变曝光；真实暗clean/噪声与课程有效性未被识别。该人工资格已关闭、不再追加同类网格；实际网络学习另登记为上述R79。
 
