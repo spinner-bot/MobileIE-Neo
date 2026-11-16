@@ -4,9 +4,11 @@
 
 ## 当前研究状态
 
-截至2026-11-17，项目仍处于方法探索阶段，尚未建立可投稿的新方法。接续先读[进展报告0155](docs/进展报告/0155-T-26111702-课程完整负结果与训练诊断先例收口.md)、[4号研究入口](research/4.temporal-consistency/README.md)和[服务器约定](AGENTS.md)。主线在 `main` 推进，移动演示由独立支线处理。
+截至2026-11-17，项目仍处于方法探索阶段，尚未建立可投稿的新方法。接续先读[进展报告0156](docs/进展报告/0156-T-26111702-有限前缀条件读出资格与完整CPU评价.md)、[4号研究入口](research/4.temporal-consistency/README.md)和[服务器约定](AGENTS.md)。主线在 `main` 推进，移动演示由独立支线处理。
 
 
+
+当前R80（[0156](docs/进展报告/0156-T-26111702-有限前缀条件读出资格与完整CPU评价.md)/[过程](research/4.temporal-consistency/process/exploration-r80/journal.md)）：过去信息只暖机前8帧的条件读出系数；两原CPU已正常完成160新质量/6368逐帧/896骨干帧/480前缀ridge更新，0全局SGD，31源保持。原协调正接续受保护GPU感知、200联合条件/24门槛和20图实际审阅，尚无完整收益/方法结论。52B仅暖机后额外时间状态，非峰值RAM/零成本/手机；note64保留在线适配先例。以下R79等为完整历史，全部旧STOP/最终像素保护及paper020保持。
 
 当前[R79完整决定](research/4.temporal-consistency/docs/exploration-r79-decision.md)：24000更新、100新质量/4480帧与100 JOD均正常结束，联合140条件/28域均值/16比较全部False，全部20固定图已实际查看。课程相对同权重current时间代理仅降.48%–.83%，相对强rec仍高32.68%–51.74%；正负条件/seed都保留，按协议停止本课程局部网格，不推广为所有课程无效。原CPU/感知/协调均退出，禁止据旧快照重启；21/11源未变。[note63](research/5.prior-art-survey/docs/63-fip-diagnostics-and-curriculum-novelty-boundary.md)核明FIP训练/诊断已有先例，非创新。完整结果暂独立、paper020未变；有效新方法、自然动态/手机/独立最终仍缺，保留像素/旧STOP保持。
 
