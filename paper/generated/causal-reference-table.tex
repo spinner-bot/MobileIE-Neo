@@ -1,0 +1,21 @@
+\begin{table}[!htbp]
+\centering\scriptsize\setlength{\tabcolsep}{4pt}
+\caption{Completed causal-reference and fixed self-conditioning controls (R75/R76), both seeds and all domain means. MobileIE has 4,075 parameters and 8K/128 training; released ReBotNet-XS has 890,275 parameters and 64K/384 training from scratch. Causal uses the previous prediction; current substitutes the current dark input in both slots; self4 resets each real frame and calls the same weights four times. These are unequal-budget adaptations, not a matched independent spatial training experiment or new methods. SYN: six repeated conditions, $480\times854$/64 frames; ND: four repeated native crops, $288\times512$/16 frames. JOD retains nominal 30\,fps and the fixed display of Table~\ref{tab:perceptual}.}
+\label{tab:causal-reference}
+\begin{tabular}{llrrrrrr}
+\toprule
+Output & Seed & SYN PSNR & SYN $E_{\rm temp}$ & SYN JOD & ND PSNR & ND $E_{\rm temp}$ & ND JOD\\
+\midrule
+MobileIE raw & 0 & 26.475 & 10.102 & 7.040 & 27.252 & 3.729 & 8.414\\
+MobileIE raw & 1 & 26.456 & 9.699 & 7.111 & 27.004 & 3.577 & 8.552\\
+MobileIE + rec. & 0 & 26.800 & 6.546 & 7.424 & 27.292 & 2.605 & 8.373\\
+MobileIE + rec. & 1 & 26.613 & 6.393 & 7.409 & 26.923 & 2.534 & 8.512\\
+XS causal & 0 & 25.165 & 10.497 & 6.989 & 32.626 & 3.202 & 8.662\\
+XS causal & 1 & 25.569 & 10.338 & 7.287 & 31.053 & 3.874 & 8.485\\
+XS current & 0 & 25.156 & 10.527 & 7.025 & 32.576 & 3.199 & 8.662\\
+XS current & 1 & 25.555 & 10.421 & 7.295 & 31.236 & 3.981 & 8.468\\
+XS self4 & 0 & 25.177 & 10.542 & 6.985 & 32.641 & 3.227 & 8.665\\
+XS self4 & 1 & 25.567 & 10.418 & 7.287 & 31.080 & 4.472 & 8.374\\
+\bottomrule
+\end{tabular}
+\end{table}
