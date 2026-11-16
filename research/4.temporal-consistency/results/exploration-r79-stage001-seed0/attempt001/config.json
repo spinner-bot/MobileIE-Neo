@@ -1,0 +1,225 @@
+{
+  "at": "2026-11-16T22:17:57.425522+08:00",
+  "pid": 880224,
+  "seed": 0,
+  "attempt": 1,
+  "git_revision": "089b14fd9bf2efae136a2c98c1ea3cad3c6f27a7",
+  "frozen_sources": {
+    "at": "2026-11-16T22:13:20.243529+08:00",
+    "source_sha256": {
+      "research/4.temporal-consistency/scripts/noise_role_data_r79.py": "efae1fbf0e78e248e794ae55ee918a81e04046a18fd0bbe6c2b40294224945f5",
+      "research/4.temporal-consistency/scripts/noise_role_model_r79.py": "decf3b1ff54fbdcf27e6a64ccc38f266c493c8367b8bc752eeddd4d86e5985b5",
+      "research/4.temporal-consistency/scripts/noise_role_io_r79.py": "35baed1c48738c9a0365d72985187727bb287388234b6fbd894734f4d917506b",
+      "research/4.temporal-consistency/scripts/check_noise_role_r79.py": "6bd8876281980bcd42bd06fa5abdac529cd0f5c25a2d6def8248dafe8bccdb25",
+      "research/4.temporal-consistency/scripts/train_noise_role_r79.py": "785d780cf9197552db6271aa9e27555f2ad5b4e247a00fee8fde114480a66b37",
+      "research/4.temporal-consistency/scripts/multiscale_fst_r16.py": "63afd43dcfdaa2b65e9cfeaded0c5e8661291a466edf9c57be4e3dc0d81b2164",
+      "research/4.temporal-consistency/scripts/mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5",
+      "research/4.temporal-consistency/scripts/dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498",
+      "research/4.temporal-consistency/scripts/native_training_r14.py": "588b505ede11ac9f0d747ad1c16b1c118a7bbbbba7405ce918a6163d133d69a1",
+      "research/4.temporal-consistency/scripts/train_mixture_r4b.py": "152e8f59e1b2f45bd5898a5480cabc84c37bfec89f63dbefaa4c2579c2de33b7",
+      "research/4.temporal-consistency/scripts/train_exploration_r2.py": "30ba78b2439ffb6fdf10aafe384975326082129b03ebe562aa118f29ba5d8c7b",
+      "research/4.temporal-consistency/scripts/explore_temporal_controls.py": "04a72a82943f1e43aa03cf2e8997a26c76e467b306ceb8fc42094dfdc5398d54",
+      "research/4.temporal-consistency/scripts/exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+      "research/4.temporal-consistency/scripts/causal_reference_io_r75.py": "181906fa8ccce29eb2e2bfcd79bf78035abd15a1f3ed12adf8ba8312ab367d93",
+      "scripts/prebind_shared_gpu.py": "0c8f65ff5b13be286de70ba71758e9ce6a43eea674d8eb1a7e599b3b83da0475",
+      "scripts/shared_gpu_admission.py": "c62befebbc5b6d7eaabf69ef393dc703a00c78aff9a3a8e67b40a47b606f7e27",
+      "scripts/bound_gpu_observer.py": "6770cf2cfb2cbbc8b14bf7593fc986579bdda60d73bf79693d84d14763a2d8ce",
+      "scripts/shared_training_schedule.py": "343d7fecbff8cc59ce3255f5302831e0e8d167ab9374dfead1cab3f6cf7f70ab",
+      "scripts/project-python": "db9f3a0398d76c67fdc86255dd6277adba078b2871abb8a8618fe1601ea5e4b2",
+      "scripts/project_assets.py": "65979a86cd009d82c5620191a9d3eb727b4bf6589815c3ccd9fc065cad91ae07",
+      "MobileIE/pretrain/lolv1_best_slim.pkl": "d40a930fbc0435f47ce08dda17b1c630b86a501be9423b8f48dab14722fb5548"
+    },
+    "protocol_sha256": "6fe931e097ca7943bd32ce41e311cef6c8a08705c4cb7c99c262236e97247713",
+    "scope": "R79 training and qualification source freeze, no scientific outcomes."
+  },
+  "freeze_sha256": "0ba30d79e383869f1224edfdef6e8a42e6a117fccb79b2f5cfb95033d920c591",
+  "gates": {
+    "cpu": "fa92deb8e21d244bd58eef43de022f084e90a2267f635aa68edd68e393ee201f",
+    "cuda": "9c57a2196ec9adc20009837bca42526011283eb4625c08b4be8a7cdc433011fe"
+  },
+  "data": {
+    "manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "verified_files": 384,
+    "scenes": [
+      "video_11",
+      "video_35",
+      "video_92",
+      "video_131",
+      "video_12",
+      "video_20",
+      "video_29",
+      "video_52",
+      "video_59",
+      "video_95",
+      "video_104",
+      "video_122"
+    ],
+    "native_bytes": 2388787200,
+    "real_training_ids": [
+      "video_104",
+      "video_11",
+      "video_12",
+      "video_122",
+      "video_131",
+      "video_20",
+      "video_29",
+      "video_35",
+      "video_52",
+      "video_59",
+      "video_92",
+      "video_95"
+    ],
+    "excluded_native_DEV": [
+      "video_121",
+      "video_15",
+      "video_47",
+      "video_91"
+    ],
+    "all_real_assets_owned": true,
+    "source_manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "synthetic_manifest_sha256": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+    "synthetic_training_videos": 57,
+    "real_tensor_dtype": "uint8 native inputs/GT; float32 /255 after crops",
+    "timing_scope": "Consecutive registered frame indices, not independently verified sensor timing."
+  },
+  "inherited_steps": 0,
+  "registered_steps_each": 4000,
+  "models": [
+    "spatial",
+    "balanced",
+    "curriculum"
+  ],
+  "initial_seed": 7900,
+  "first_window": [
+    {
+      "source": "davis_synthetic",
+      "video": "cat-girl",
+      "members": [
+        "DAVIS/JPEGImages/480p/cat-girl/00056.jpg",
+        "DAVIS/JPEGImages/480p/cat-girl/00057.jpg",
+        "DAVIS/JPEGImages/480p/cat-girl/00058.jpg",
+        "DAVIS/JPEGImages/480p/cat-girl/00059.jpg"
+      ],
+      "photons": 20,
+      "noise_seed_sequence": [
+        79,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gain": 16.0,
+      "ordinary_endpoint_fraction": 0.5850270589192709,
+      "current_role_endpoint_fraction": 0.621124267578125,
+      "history_role_endpoint_fraction": 0.5221659342447916,
+      "source_start": 56,
+      "native_hw": [
+        480,
+        911
+      ],
+      "xy": [
+        696,
+        25
+      ],
+      "flip_horizontal": true,
+      "flip_vertical": true,
+      "crop": 128,
+      "resize": false
+    },
+    {
+      "source": "davis_synthetic",
+      "video": "boxing-fisheye",
+      "members": [
+        "DAVIS/JPEGImages/480p/boxing-fisheye/00037.jpg",
+        "DAVIS/JPEGImages/480p/boxing-fisheye/00038.jpg",
+        "DAVIS/JPEGImages/480p/boxing-fisheye/00039.jpg",
+        "DAVIS/JPEGImages/480p/boxing-fisheye/00040.jpg"
+      ],
+      "photons": 20,
+      "noise_seed_sequence": [
+        79,
+        0,
+        0,
+        1,
+        1
+      ],
+      "gain": 16.0,
+      "ordinary_endpoint_fraction": 0.3216196695963542,
+      "current_role_endpoint_fraction": 0.68902587890625,
+      "history_role_endpoint_fraction": 0.0278167724609375,
+      "source_start": 37,
+      "native_hw": [
+        480,
+        854
+      ],
+      "xy": [
+        63,
+        305
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": false,
+      "crop": 128,
+      "resize": false
+    },
+    {
+      "source": "olives_real",
+      "video": "video_59",
+      "indices": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "gain": 1.0,
+      "real_noise_decomposed": false,
+      "source_start": 4,
+      "native_hw": [
+        1080,
+        1920
+      ],
+      "xy": [
+        1320,
+        98
+      ],
+      "flip_horizontal": true,
+      "flip_vertical": true,
+      "crop": 128,
+      "resize": false
+    },
+    {
+      "source": "olives_real",
+      "video": "video_59",
+      "indices": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "gain": 1.0,
+      "real_noise_decomposed": false,
+      "source_start": 6,
+      "native_hw": [
+        1080,
+        1920
+      ],
+      "xy": [
+        1432,
+        589
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": false,
+      "crop": 128,
+      "resize": false
+    }
+  ],
+  "batch": 4,
+  "frames": 4,
+  "crop": 128,
+  "all_frames_unclamped_Charbonnier": true,
+  "lr": 0.001,
+  "optimizer": "Adam",
+  "gradient_clip": 1,
+  "TF32": false,
+  "schedule": "existing 25% cooperative work duty; no scientific wall-clock cutoff",
+  "scope": "Known curriculum learning-problem control, not a new architecture/method or handset result."
+}
