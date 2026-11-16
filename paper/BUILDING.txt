@@ -1,8 +1,29 @@
-内部论文工作稿（2026-11-13）
+内部论文工作稿（2026-11-16；Codex  (sqs_A100)）
 
-manuscript.pdf 是可阅读的阶段性研究稿，不是投稿终稿。当前版本包括问题、
-候选定义、训练和评价协议、完整结构/目标/传统与已发表参考，以及R72原生REDS跨来源开发证据和明确的验证缺口。
-R44 全部三个注册门槛失败，局部网格已停止。R45内部提示也未通过独立收益门槛并已停止。当前 build016 为20页、13张数值表、11项引用，含完整R72的19行双seed/双光子跨来源表。整份联系表及1/18/19/20页实际查看，0编译warning/未解析引用；原12数值表不变。R73已完整失败并按原门槛止损；R74完整协调链已启动，实际GPU准入/训练状态以原进程及runtime为准，不录入部分结果。
+当前manuscript.pdf为已实际审阅的build020：24页、16张数值表、13项引用，
+无编译warning/未解析引用。包含完整R74负结果、R75原两seed各64K与八门槛0/8、
+R76固定self4四支持1/4和按预登记停止R77额外128K投资。不是投稿终稿，
+创新方法、自然动态配对、手机测量和独立最终仍未完成。原14数值表逐字节不变。
+整份24页缩略图及1/21/22/23/24全页已实际查看；019段落越界记录保留，020已修正。
+既有独立figure页7/10、table页20和段落续页不作为投稿排版完成。
+
+完整从头生成顺序（只能从已正常终态及实际图审来源生成）：
+  CUDA_VISIBLE_DEVICES='' ./scripts/project-python scripts/build_manuscript_snapshot.py
+  CUDA_VISIBLE_DEVICES='' ./scripts/project-python scripts/build_paper_video_evidence.py
+  CUDA_VISIBLE_DEVICES='' ./scripts/project-python scripts/build_paper_objective_evidence.py
+  CUDA_VISIBLE_DEVICES='' ./scripts/project-python scripts/build_paper_classical_evidence.py
+  CUDA_VISIBLE_DEVICES='' ./scripts/project-python scripts/build_paper_external_evidence.py
+  CUDA_VISIBLE_DEVICES='' ./scripts/project-python scripts/build_paper_state_evidence.py
+  CUDA_VISIBLE_DEVICES='' ./scripts/project-python scripts/build_paper_causal_evidence.py
+  CUDA_VISIBLE_DEVICES='' ./scripts/project-python scripts/build_manuscript.py --attempt N
+  CUDA_VISIBLE_DEVICES='' ./scripts/project-python scripts/review_manuscript.py --build N
+
+若仅新增一个已完成扩展，可在验证现有完整主快照后直接追加，不必重写既有数值表。
+新causal扩展--check-only资格通过后才写两表，核原80条件原样保留于100条件、
+原八门槛不变、两套20图实际审阅和R77条件停止；31完整来源指针、两新表与
+旧14表摘要入独立快照，编译入口会拒绝缺失或已变来源。0CNN/SGD/GPU。
+已保留build001–020，下一编号21；旧工具已在自有data下，无需重装。
+以下说明和旧构建状态为历史，当前顺序与状态以上述为准。
 
 从仓库根目录执行，始终使用项目独立环境：
 
