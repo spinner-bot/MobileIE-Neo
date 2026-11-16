@@ -91,6 +91,20 @@ def main():
         assert all(sha(REPO/name) == value for name, value in state['source_sha256'].items())
         assert all((paper/'generated'/name).exists() for name in state['generated_tables'])
         sources.append(extension)
+    if r'\input{sections/causal-evidence}' in (paper/'main.tex').read_text():
+        extension = paper/'causal-evidence-snapshot.json'
+        causal = json.loads(extension.read_text())
+        assert causal['R74_complete'] and causal['R75_complete'] and causal['R76_complete']
+        assert (causal['R75_formal_updates'], causal['R75_primary_gates'], causal['R75_passed']) == (128000, 8, 0)
+        assert (causal['R76_support'], causal['R76_passed']) == (4, 1)
+        assert (causal['quality_table_rows'], causal['screen_table_rows']) == (10, 12)
+        assert causal['R77_additional_training_stopped']
+        assert causal['actual_R75_contacts_reviewed'] == causal['actual_R76_contacts_reviewed'] == 20
+        assert snapshot['R75_complete_causal_reference_included'] and snapshot['R76_complete_self4_included']
+        assert not causal['new_method'] and not causal['independent_final'] and not causal['handset_measured']
+        for mapping in ('source_sha256', 'generated_sha256', 'prior_tables_sha256'):
+            assert all(sha(REPO/name) == value for name, value in causal[mapping].items())
+        sources.append(extension)
     command = [str(binary), '--untrusted', '--keep-logs', '--keep-intermediates', '--outdir', str(work), 'main.tex']
     record = {'started_at': datetime.now().astimezone().isoformat(), 'command': command,
               'source_sha256': {str(p.relative_to(REPO)): sha(p) for p in sources},
