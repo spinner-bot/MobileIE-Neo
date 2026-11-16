@@ -1,0 +1,238 @@
+{
+  "at": "2026-11-16T22:13:53.741507+08:00",
+  "passed": true,
+  "device": "cpu",
+  "seed": 0,
+  "frozen_sources_sha256": "0ba30d79e383869f1224edfdef6e8a42e6a117fccb79b2f5cfb95033d920c591",
+  "data": {
+    "manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "verified_files": 384,
+    "scenes": [
+      "video_11",
+      "video_35",
+      "video_92",
+      "video_131",
+      "video_12",
+      "video_20",
+      "video_29",
+      "video_52",
+      "video_59",
+      "video_95",
+      "video_104",
+      "video_122"
+    ],
+    "native_bytes": 2388787200,
+    "real_training_ids": [
+      "video_104",
+      "video_11",
+      "video_12",
+      "video_122",
+      "video_131",
+      "video_20",
+      "video_29",
+      "video_35",
+      "video_52",
+      "video_59",
+      "video_92",
+      "video_95"
+    ],
+    "excluded_native_DEV": [
+      "video_121",
+      "video_15",
+      "video_47",
+      "video_91"
+    ],
+    "all_real_assets_owned": true,
+    "source_manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "synthetic_manifest_sha256": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+    "synthetic_training_videos": 57,
+    "real_tensor_dtype": "uint8 native inputs/GT; float32 /255 after crops",
+    "timing_scope": "Consecutive registered frame indices, not independently verified sensor timing."
+  },
+  "window": [
+    {
+      "source": "davis_synthetic",
+      "video": "cat-girl",
+      "members": [
+        "DAVIS/JPEGImages/480p/cat-girl/00056.jpg",
+        "DAVIS/JPEGImages/480p/cat-girl/00057.jpg",
+        "DAVIS/JPEGImages/480p/cat-girl/00058.jpg",
+        "DAVIS/JPEGImages/480p/cat-girl/00059.jpg"
+      ],
+      "photons": 20,
+      "noise_seed_sequence": [
+        79,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gain": 16.0,
+      "ordinary_endpoint_fraction": 0.5850270589192709,
+      "current_role_endpoint_fraction": 0.621124267578125,
+      "history_role_endpoint_fraction": 0.5221659342447916,
+      "source_start": 56,
+      "native_hw": [
+        480,
+        911
+      ],
+      "xy": [
+        696,
+        25
+      ],
+      "flip_horizontal": true,
+      "flip_vertical": true,
+      "crop": 128,
+      "resize": false
+    },
+    {
+      "source": "davis_synthetic",
+      "video": "boxing-fisheye",
+      "members": [
+        "DAVIS/JPEGImages/480p/boxing-fisheye/00037.jpg",
+        "DAVIS/JPEGImages/480p/boxing-fisheye/00038.jpg",
+        "DAVIS/JPEGImages/480p/boxing-fisheye/00039.jpg",
+        "DAVIS/JPEGImages/480p/boxing-fisheye/00040.jpg"
+      ],
+      "photons": 20,
+      "noise_seed_sequence": [
+        79,
+        0,
+        0,
+        1,
+        1
+      ],
+      "gain": 16.0,
+      "ordinary_endpoint_fraction": 0.3216196695963542,
+      "current_role_endpoint_fraction": 0.68902587890625,
+      "history_role_endpoint_fraction": 0.0278167724609375,
+      "source_start": 37,
+      "native_hw": [
+        480,
+        854
+      ],
+      "xy": [
+        63,
+        305
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": false,
+      "crop": 128,
+      "resize": false
+    },
+    {
+      "source": "olives_real",
+      "video": "video_59",
+      "indices": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "gain": 1.0,
+      "real_noise_decomposed": false,
+      "source_start": 4,
+      "native_hw": [
+        1080,
+        1920
+      ],
+      "xy": [
+        1320,
+        98
+      ],
+      "flip_horizontal": true,
+      "flip_vertical": true,
+      "crop": 128,
+      "resize": false
+    },
+    {
+      "source": "olives_real",
+      "video": "video_59",
+      "indices": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "gain": 1.0,
+      "real_noise_decomposed": false,
+      "source_start": 6,
+      "native_hw": [
+        1080,
+        1920
+      ],
+      "xy": [
+        1432,
+        589
+      ],
+      "flip_horizontal": false,
+      "flip_vertical": false,
+      "crop": 128,
+      "resize": false
+    }
+  ],
+  "initial_function_errors": {
+    "spatial": 0.0,
+    "balanced": 0.0,
+    "curriculum": 0.0
+  },
+  "endpoint_g1_legacy_pixels_equal": true,
+  "real_role_pixels_unchanged": true,
+  "first_frame_ordinary_fallback": true,
+  "checks": {
+    "spatial": {
+      "future_change_prefix_max_delta": 0.0,
+      "history_replacement_max_delta": 0.0,
+      "parameters": 24955
+    },
+    "balanced": {
+      "future_change_prefix_max_delta": 0.0,
+      "history_replacement_max_delta": 0.003626227378845215,
+      "parameters": 24955
+    },
+    "curriculum": {
+      "future_change_prefix_max_delta": 0.0,
+      "history_replacement_max_delta": 0.0018886327743530273,
+      "parameters": 24955
+    }
+  },
+  "updates": [
+    {
+      "model": "spatial",
+      "loss": 0.07294780761003494,
+      "gradient_norm_before_clip": 2.5268139839172363
+    },
+    {
+      "model": "spatial",
+      "loss": 0.06228259578347206,
+      "gradient_norm_before_clip": 0.7843181490898132
+    },
+    {
+      "model": "balanced",
+      "loss": 0.07294780761003494,
+      "gradient_norm_before_clip": 2.5268146991729736
+    },
+    {
+      "model": "balanced",
+      "loss": 0.06228098273277283,
+      "gradient_norm_before_clip": 0.784435510635376
+    },
+    {
+      "model": "curriculum",
+      "loss": 2.769390106201172,
+      "gradient_norm_before_clip": 388.8332214355469
+    },
+    {
+      "model": "curriculum",
+      "loss": 1.963265299797058,
+      "gradient_norm_before_clip": 283.9324951171875
+    }
+  ],
+  "discarded_updates": 6,
+  "formal_updates": 0,
+  "observed_own_process_mib": null,
+  "peak_allocated_bytes": null,
+  "peak_reserved_bytes": null,
+  "resource": null,
+  "scope": "Real train window qualification only; all states discarded. No DEV, quality, novelty or speed claim."
+}
