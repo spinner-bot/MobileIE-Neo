@@ -4,11 +4,11 @@
 
 ## 当前研究状态
 
-截至2026-11-16，项目仍处于方法探索阶段，尚未建立可投稿的新方法。接续先读[进展报告0153](docs/进展报告/0153-T-26111622-噪声信息课程真实对照与双卡启动.md)、[4号研究入口](research/4.temporal-consistency/README.md)和[服务器约定](AGENTS.md)。主线在 `main` 推进，移动演示由独立支线处理。
+截至2026-11-16，项目仍处于方法探索阶段，尚未建立可投稿的新方法。接续先读[进展报告0154](docs/进展报告/0154-T-26111622-课程对照完整训练与最终评价接续.md)、[4号研究入口](research/4.temporal-consistency/README.md)和[服务器约定](AGENTS.md)。主线在 `main` 推进，移动演示由独立支线处理。
 
 
 
-当前[R79](research/4.temporal-consistency/docs/exploration-r79-causal-noise-role-protocol.md)已从人工资格转向真实训练信息对照：固定24955参数/三组同初始化，独立空间、普通双帧、合成噪声课程，实拍不变；两seed每组4000，共24000更新。CPU/CUDA各6丢弃更新通过、实际进程显存1160MiB；原训练880224/880225分别0/1卡，22:21快照各300/4000，完整评价协调已启动但未评分。先核真实PID/start/runtime，不据旧快照重启；课程已有FIP/LVD先例，不当创新或零推理开销。完整100新质量/JOD、140共同条件和20固定图仍待，保留像素与旧STOP保持。
+当前[R79](research/4.temporal-consistency/docs/exploration-r79-causal-noise-role-protocol.md)真实训练已全部正常结束：24955参数、独立空间/普通双帧/合成噪声课程三组，两seed每组4000、共24000新更新，六final重载误差0；原880224/880225已退出并释放GPU，不能据旧活跃快照重启。原协调在22:51:17启动CPU评价889002/889003/start78086507，21/11训练/评价源未变。完整100新质量/JOD、140共同条件/28均值/16门槛和20固定图及实际查看仍待，不能由训练完成称有效方法。FIP/LVD已有课程先例，不当创新/零推理开销；保留像素、旧STOP、paper020与论文缺口保持。
 
 前序定向核查[训练信息课程先例](research/5.prior-art-survey/docs/62-training-information-curricula-and-photometric-transfer.md)：FIP遮中心预训练/LVD不平衡噪声已有作者代码，不能直接作为创新。R78仅人工光度资格（8行、92/92），显示把暗输入−亮GT当噪声缩放会在无噪时也改变曝光；真实暗clean/噪声与课程有效性未被识别。该人工资格已关闭、不再追加同类网格；实际网络学习另登记为上述R79。
 
