@@ -1,0 +1,103 @@
+{
+  "at": "2026-11-16T03:41:14.355006+08:00",
+  "seed": 1,
+  "checkpoint": {
+    "at": "2026-11-16T03:16:44.303853+08:00",
+    "seed": 1,
+    "completed_steps": 64000,
+    "next_data_step": 64000,
+    "registered_steps": 64000,
+    "attempt": 1,
+    "kind": "regular",
+    "path": ".cache/checkpoints/exploration-r75/seed1/attempt001/regular-step064000.pt",
+    "sha256": "ee3952827b51b089531bbcb0fb814b1b9afe08b0168c4198337f0b50dd8b61cd",
+    "bytes": 10621579,
+    "parameters": 890275,
+    "source_freeze_sha256": "929d6faca944bff5d59712e15947cf41d9e28c59c30881335cc8b568750804c8",
+    "final_quality_eligible": true,
+    "runtime": "research/4.temporal-consistency/results/exploration-r75-stage001-seed1/attempt001/runtime.json",
+    "completed_normally": true,
+    "formal_updates": 64000
+  },
+  "cache_indices": {
+    "research/4.temporal-consistency/results/exploration-r30-cache/index.json": "424fa278b2fe66d29de476e2b47328619438f97cf71926448433d1191bb722c1",
+    "research/4.temporal-consistency/results/exploration-r10-cache/index.json": "ec00801b04b873ead0025af91af441b783da3f08c87cf24e9c136a4268ffb43c"
+  },
+  "protocol_sha256": "30136815d977af759372182aaf059adb28792023be8821c49cd37935adfa6d33",
+  "device": "cpu",
+  "torch_threads": 2,
+  "expected_rows": 20,
+  "expected_frames": 896,
+  "expected_tile_CNN_calls": 4864,
+  "input_shapes": {
+    "bear_photons20": [
+      64,
+      480,
+      854,
+      3
+    ],
+    "bear_photons80": [
+      64,
+      480,
+      854,
+      3
+    ],
+    "lucia_photons20": [
+      64,
+      480,
+      854,
+      3
+    ],
+    "lucia_photons80": [
+      64,
+      480,
+      854,
+      3
+    ],
+    "walking_photons20": [
+      64,
+      480,
+      854,
+      3
+    ],
+    "walking_photons80": [
+      64,
+      480,
+      854,
+      3
+    ],
+    "video_15": [
+      16,
+      288,
+      512,
+      3
+    ],
+    "video_47": [
+      16,
+      288,
+      512,
+      3
+    ],
+    "video_91": [
+      16,
+      288,
+      512,
+      3
+    ],
+    "video_121": [
+      16,
+      288,
+      512,
+      3
+    ]
+  },
+  "source_sha256": {
+    "evaluate_causal_reference_r75.py": "4d86440aa02ef9caefe32d8e68c97fe2e574188f1ce2b9a114299dd4cbfef9ed",
+    "causal_reference_evaluation_r75.py": "4ce1c00e2220565fa930efc097e501b7a1847d86a961e18033658731d243e193",
+    "rebotnet_reference.py": "ad8040658599bb52c41150b86f0d70099b9d50458d804c38a2ad10bc79821fb0",
+    "exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+    "video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0",
+    "prepare_cache_r5.py": "675860fc6ef1d97d28750815e99f5c923ecfd94e94254f1f7a7685f08d84f2c8"
+  },
+  "scope": "Released XS final64K/self-start native-tile adaptation, reused DEV; no new post/GT state/future/flow."
+}
