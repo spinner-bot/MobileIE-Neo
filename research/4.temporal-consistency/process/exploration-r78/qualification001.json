@@ -1,0 +1,29 @@
+{
+  "at": "2026-11-16T20:01:59.179388+08:00",
+  "author": "Codex  (sqs_A100)",
+  "command": "CUDA_VISIBLE_DEVICES='' ./scripts/project-python research/4.temporal-consistency/scripts/qualify_noise_curriculum_photometry_r78.py --out research/4.temporal-consistency/results/exploration-r78-photometric001",
+  "returncode": 0,
+  "completed_normally": true,
+  "seconds": 0.04139659903012216,
+  "rows": 8,
+  "checks": 92,
+  "checks_passed": 92,
+  "source_sha256": {
+    "research/4.temporal-consistency/scripts/qualify_noise_curriculum_photometry_r78.py": "5e9fee2d9aa8cdd0392d3e3f0d4222f2586bcfaf8cf24801f7727a18942a1f06",
+    "research/4.temporal-consistency/docs/exploration-r78-noise-curriculum-photometric-protocol.md": "98b5a6360a7844a356c1c7aa721494f4c4fbc25a54980883283766468cca2935",
+    "research/4.temporal-consistency/results/exploration-r78-photometric001/result.json": "aff6826e2b6008a4b4cb1d45b1668b69fae48a9c82531c6e9259dc5d9dc5e265",
+    "research/4.temporal-consistency/results/exploration-r78-photometric001/runtime.json": "d2c356be30e2d94eb207aa1fd2039ca98753b40b92499b76fbc99789b650a241"
+  },
+  "stdout_summary": {
+    "qualification_passed": true,
+    "noiseless_neighbor_shift_range": [
+      0.09167967121342437,
+      0.5835107243162466
+    ]
+  },
+  "new_video_pixels": 0,
+  "new_CNN": 0,
+  "new_SGD": 0,
+  "new_GPU_jobs": 0,
+  "decision": "Close scalar photometric qualification; no model training launched, no extension of stopped R75/R77. Unknown real dark mean remains unidentified."
+}
