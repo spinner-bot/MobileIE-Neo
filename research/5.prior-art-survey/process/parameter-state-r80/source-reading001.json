@@ -1,0 +1,62 @@
+{
+  "at": "2026-11-17T02:51:27.338444+08:00",
+  "author": "Codex  (sqs_A100)",
+  "scope": "Only bounded literature/old-protocol source reading, separate from the actual R80 CNN/ridge experiment.",
+  "primary_sources": [
+    {
+      "title": "Self-Supervised training for blind multi-frame video denoising",
+      "url": "https://arxiv.org/html/2004.06957v4",
+      "version": "v4",
+      "read_sections": [
+        "2.1-2.3 target/input separation, warp mask and online/offline adaptation",
+        "3.2 noise-map parameter adaptation",
+        "AppendixG partial weights",
+        "AppendixI reported adaptation computation, not our phone timing"
+      ],
+      "limits": "Targeted textual reading; no full figure/table or performance reproduction. CVF ordinary PDF access403 stopped, public author arXiv text used without modifying that URL."
+    },
+    {
+      "title": "Fast Context-Based Low-Light Image Enhancement via Neural Implicit Representations",
+      "url": "https://arxiv.org/html/2407.12511",
+      "read_sections": [
+        "3 implicit illumination formulation",
+        "implementation downscale/guided-filter paragraph"
+      ],
+      "limits": "Targeted method/context reading, no code/weights/model run or video consistency evidence."
+    },
+    {
+      "title": "AdaEnlight: Energy-aware Low-light Video Stream Enhancement on Mobile Devices",
+      "url": "https://arxiv.org/html/2211.16135",
+      "observed_version": "v2",
+      "read_sections": [
+        "3.4.3 runtime reuse/resolution knobs",
+        "4 controller scope"
+      ],
+      "limits": "Configuration/resource adaptation distinguished from photometric neural weight learning; no handset reproduction."
+    }
+  ],
+  "project_source_files": [
+    "research/4.temporal-consistency/docs/exploration-r1-protocol.md",
+    "research/4.temporal-consistency/docs/exploration-r20-protocol.md",
+    "research/4.temporal-consistency/docs/exploration-r21-protocol.md",
+    "research/4.temporal-consistency/docs/exploration-r26-protocol.md",
+    "research/5.prior-art-survey/docs/44-mapping-state-and-factor-identifiability.md",
+    "research/5.prior-art-survey/docs/47-brightness-noise-bias-and-adaptation-boundaries.md",
+    "MobileIE/model/lle.py",
+    "MobileIE/model/utils.py"
+  ],
+  "external_code_executed": false,
+  "new_external_weights": false,
+  "new_external_video_pixels": 0,
+  "new_GPU_jobs_for_reading": 0,
+  "limits": [
+    "No third-party summary used for technical findings",
+    "No new prior-art-free claim for online parameter updates, ridge regression or pseudo-target distillation",
+    "No global SGD-free statement is equated to zero test-time learning/cost"
+  ],
+  "verified_completed_project_controls": [
+    "research/4.temporal-consistency/report/exploration-r20/audit.json",
+    "research/4.temporal-consistency/report/exploration-r21/audit.json",
+    "research/4.temporal-consistency/report/exploration-r26/audit.json"
+  ]
+}
