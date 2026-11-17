@@ -1,0 +1,65 @@
+{
+  "at": "2026-11-17T17:28:37.284110+08:00",
+  "seeds": [
+    {
+      "seed": 0,
+      "pid": 1151700,
+      "start_ticks": 84737580,
+      "state": "S",
+      "CPU_ticks": 16943,
+      "logged_steps": 200,
+      "last_training_rows": {
+        "plain": {
+          "CE": 6.721405982971191,
+          "flow_MSE_over16": 0.4593716263771057,
+          "loss": 7.180777549743652,
+          "preclip_gradient_norm": 30.367679595947266
+        },
+        "complement": {
+          "CE": 6.881694316864014,
+          "flow_MSE_over16": 0.4329935908317566,
+          "loss": 7.314687728881836,
+          "preclip_gradient_norm": 15.605245590209961
+        }
+      },
+      "peak_allocated_bytes": 91325952,
+      "peak_reserved_bytes": 125829120,
+      "minimum_free_mib": 39749,
+      "resource_exit": false,
+      "checkpoint_markers": []
+    },
+    {
+      "seed": 1,
+      "pid": 1151699,
+      "start_ticks": 84737578,
+      "state": "S",
+      "CPU_ticks": 17069,
+      "logged_steps": 200,
+      "last_training_rows": {
+        "plain": {
+          "CE": 7.204258918762207,
+          "flow_MSE_over16": 0.5642203688621521,
+          "loss": 7.768479347229004,
+          "preclip_gradient_norm": 19.05061149597168
+        },
+        "complement": {
+          "CE": 7.476966857910156,
+          "flow_MSE_over16": 0.7374389171600342,
+          "loss": 8.21440601348877,
+          "preclip_gradient_norm": 22.192169189453125
+        }
+      },
+      "peak_allocated_bytes": 91325952,
+      "peak_reserved_bytes": 125829120,
+      "minimum_free_mib": 39749,
+      "resource_exit": false,
+      "checkpoint_markers": []
+    }
+  ],
+  "observed_optimizer_updates": 800,
+  "formal_budget": 8000,
+  "source_unchanged": true,
+  "new_DEV_results": 0,
+  "actual_causal_video_gain_unmeasured": true,
+  "scope": "Original live PID/start identities; these are logged training prefixes, not checkpointed completion or quality."
+}
