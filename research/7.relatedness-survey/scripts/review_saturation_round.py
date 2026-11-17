@@ -4,7 +4,8 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 BASE=Path(__file__).resolve().parents[1];C=BASE/'collection'
 def main():
- ap=argparse.ArgumentParser();ap.add_argument('--round',type=int,required=True);ap.add_argument('--academic',required=True);args=ap.parse_args();n=args.round
+ ap=argparse.ArgumentParser();ap.add_argument('--round',type=int,required=True);ap.add_argument('--academic',required=True);ap.add_argument('--resolutions');args=ap.parse_args();n=args.round
+ manual=json.loads((C/args.resolutions).read_text()) if args.resolutions else {}
  resources=json.loads((C/'candidate-resources.json').read_text());repos={r.get('repo'):r['temporary_key'] for r in resources if r.get('repo')}
  web_file=C/f'web-supplement-round{n}.json';code_file=C/f'plugin-code-supplement-round{n}.json'
  web=json.loads(web_file.read_text());code=json.loads(code_file.read_text());prior_urls=set()
@@ -24,7 +25,8 @@ def main():
    m=re.match(r'(.+) \((https?://[^\s]+)\)$',entry.strip().split('\n')[0])
    if not m:continue
    title,url=m.groups()
-   if url in prior_urls:disposition='previously reviewed source/identity'
+   if url in manual:disposition=manual[url]['disposition']
+   elif url in prior_urls:disposition='previously reviewed source/identity'
    elif 'MobileIE' in title and ('Extremely Lightweight' in title or '/YanLZLSZZ25/' in url):disposition='same original-paper bibliographic/translation alias'
    elif url.startswith('https://github.com/AVC2-UESTC/MobileIE/'):disposition='same original repository subresource; branches/main, no releases or PRs verified separately'
    elif any(t in title for t in ['Hailong Yan','Ce Zhu','Ce ZHU','Le Zhang','Zenglin Shi','Ao Li']):disposition='author directory/profile, not a new technical artifact'
@@ -48,7 +50,7 @@ def main():
   else:pending.append(dict(kind='academic',reason='response is not a citation-list shape'))
  else:pending.append(dict(kind='academic',reason='no usable independent academic response; preserve limitation, do not fabricate a zero count'))
  if academic['new']:pending.extend(dict(kind='academic-new-identity',record=x) for x in academic['new'])
- result=dict(round=n,reviewed_at=datetime.datetime.now(ZoneInfo('Asia/Shanghai')).isoformat(),baseline_candidate_count=len(resources),web_queries=web.get('queries'),web_rows=web_rows,code_query=code.get('query'),code_rows=code_rows,academic=academic,pending=pending,new_eligible_resources=0 if not pending else None,zero_new_review_passed=not pending,gate1_passed=False,input_hashes={f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in [web_file,code_file,C/'candidate-resources.json']})
+ result=dict(round=n,reviewed_at=datetime.datetime.now(ZoneInfo('Asia/Shanghai')).isoformat(),baseline_candidate_count=len(resources),manual_identity_resolutions=manual,web_queries=web.get('queries'),web_rows=web_rows,code_query=code.get('query'),code_rows=code_rows,academic=academic,pending=pending,new_eligible_resources=0 if not pending else None,zero_new_review_passed=not pending,gate1_passed=False,input_hashes={f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in [web_file,code_file,C/'candidate-resources.json']})
  path=C/f'saturation-round{n}-review.json';path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
  print('round',n,'web',len(web_rows),'code',len(code_rows),'academic',academic.get('count'),'pending',len(pending),'zero-new passed',not pending)
  for r in pending:print(json.dumps(r,ensure_ascii=False)[:1100])
