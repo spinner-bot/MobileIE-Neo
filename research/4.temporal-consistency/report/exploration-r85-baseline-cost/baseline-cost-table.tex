@@ -1,0 +1,15 @@
+\begin{table}[t]
+\centering\small
+\caption{Current 4,075-parameter F0 and its strong-rec resident CPU pipeline. Two warmups and three measured sixteen-frame runs per condition, both seeds. Values are means of per-condition median ms/frame. Torch intra2/inter1, OpenCV1, FP32, batch1; shared nonexclusive server CPU. Includes conversions, actual backbone, motion/warp/fusion and output copy; excludes file/camera/display I/O. Quality tables use full sequences; these cost prefixes are not handset measurements.}
+\label{tab:current-baseline-cpu}
+\begin{tabular}{llrrr}
+\toprule
+Domain/size & Seed & Raw ms & Rec. ms & Mean paired ratio\\
+\midrule
+SYN $480\times854$ & 0 & 107.218 & 204.910 & 1.915\\
+SYN $480\times854$ & 1 & 112.490 & 208.734 & 1.856\\
+ND $288\times512$ & 0 & 45.272 & 81.201 & 1.794\\
+ND $288\times512$ & 1 & 44.662 & 82.614 & 1.850\\
+\bottomrule
+\end{tabular}
+\end{table}
