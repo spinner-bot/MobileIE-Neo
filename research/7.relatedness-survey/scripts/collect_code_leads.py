@@ -4,7 +4,7 @@ Collection only: retain all discovered files and provenance before any value gra
 import collections,hashlib,json
 from pathlib import Path
 BASE=Path(__file__).resolve().parents[1];C=BASE/'collection'
-CORE={'nlsidf/vnrit','nlsidf/ndk-vnrit','KrakeCZ/AIchat-Android-Local-AI-Agent-','khaihoang004/dewarp','tediyankov/reef-track','SKKUAutoLab/ETSS-07-ImageEnhance','Foadsf/neural-enhance-bench','xuhangc/Plumbing','Kazuhito00/Multimodal-Node-Editor','miaory/test','gugugu531/Hispark_SocChina_2026','wbzuo/dl-modules-toolkit','FangruLinghu/PaperCode','gogoworker/FSOD','wujunye1212/wjy_vault','pbobip/wd_bishe'}
+CORE={'benderick/DEIM-DEIM','lrbob/deim','369pro/DEIMv8','ccz308476-ai/General_yu','nlsidf/vnrit','nlsidf/ndk-vnrit','KrakeCZ/AIchat-Android-Local-AI-Agent-','khaihoang004/dewarp','tediyankov/reef-track','SKKUAutoLab/ETSS-07-ImageEnhance','Foadsf/neural-enhance-bench','xuhangc/Plumbing','Kazuhito00/Multimodal-Node-Editor','miaory/test','gugugu531/Hispark_SocChina_2026','wbzuo/dl-modules-toolkit','FangruLinghu/PaperCode','gogoworker/FSOD','wujunye1212/wjy_vault','pbobip/wd_bishe'}
 PORTS={'FifthGentleness/RTDETRU','daidaidaidaidaidai-cat/duomotai-yolo','XuYuanDaWang/Yolo-Project','Alleluia1/RTDETR-10.20','helloshuaige520/RT-DETR','mahongwei-bot/RTDETR','mahongwei-bot/RTDETR20260307-main','tpiece/RTDETR-main','lightxiu/yolo26','linchuan232/myrtdetr','Wzhi997/YOLO','cui123000/rtdetr_indoor','pls-Kaguya/LSO-RT-DETR','Alleluia1/RTDETR-main-distill1'}
 NOTES={'heniath/underwater-image-enhancement','TheComplianceAide/Drone_EnhancedVision','Synapse-iiserk/beautiful_ppt','zhaoyang97/Paper-Notes','zhaoyang97/Paper-Notes-en','zms618/paper-cards','38260/topconf-4-pillars','dnguyennk/portfolio','ZejunCao/ZejunCao.github.io'}
 EXISTING={'AVC2-UESTC/MobileIE','horizon921/Computational-Photography-26Fall-MobileIE','38260/MobileIE-repro','viplab-fudan/FJNDF-Pytorch','z1069614715/objectdetection_script'}
@@ -17,6 +17,7 @@ def main():
    if url not in hits:hits[url]=dict(repo=repo,revision=sha,path=path,url=url,discoveries=[],matches=r.get('text_matches',[]))
    hits[url]['discoveries'].append(f.name)
  rows=list(hits.values());jobs=[]
+ decisions=json.loads((C/'code-hit-scope-decisions.json').read_text()) if (C/'code-hit-scope-decisions.json').exists() else {}
  for x in rows:
   repo=x['repo']
   if repo in CORE:x.update(disposition='new-implementation-candidate',reason='Explicit MobileIE implementation/module/weight use in source; fidelity and value not yet evaluated')
@@ -24,9 +25,9 @@ def main():
   elif repo in NOTES:x.update(disposition='interpretation-or-application-note-candidate',reason='Original public source discusses MobileIE; identity vs independent contribution still to verify')
   elif repo in EXISTING:x.update(disposition='existing-resource-additional-evidence',reason='Already included project identity')
   else:
-   fragments=' '.join(m.get('fragment','') for m in x['matches'])
-   ua=any(t in fragments.lower() for t in ['useragent','msie','youtube','mobileie":','mobileie/','mobileie\'','mobileie =','mobileie('])
-   x.update(disposition='excluded-browser-identifier' if ua else 'bibliographic-or-search-index-evidence',reason='MobileIE keyword has browser/user-agent homonyms; otherwise daily lists, author directory or existing-paper indexing are not new implementation evidence')
+   if x['url'] in decisions:
+    x.update(disposition=decisions[x['url']]['disposition'],reason=decisions[x['url']]['reason'],scope_decision='code-hit-scope-decisions.json')
+   else:x.update(disposition='needs_identity_review',reason='New immutable file match has not received an explicit eligibility/identity decision; do not silently classify as a bibliography or zero-new hit')
   if repo in CORE|PORTS|NOTES|EXISTING:
    label='codehit-'+hashlib.sha256(x['url'].encode()).hexdigest()[:16]
    x['acquisition_label']=label
