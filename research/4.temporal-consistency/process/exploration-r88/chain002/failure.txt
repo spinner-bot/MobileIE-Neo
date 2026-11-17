@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/run_shared_geometry_r88.py", line 59, in main
+    batch([gpu('metric', 0, 'evaluate_cvvdp_shared_geometry_r88.py')])
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/run_shared_geometry_r88.py", line 47, in batch
+    assert all(value['returncode'] == 0 for _, _, value in active), 'No automatic scientific retry.'
+AssertionError: No automatic scientific retry.
