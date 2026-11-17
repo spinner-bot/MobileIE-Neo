@@ -17,7 +17,9 @@
       "--attempt",
       "1"
     ],
-    "began": "2026-11-17T17:18:58.179003+08:00"
+    "began": "2026-11-17T17:18:58.179003+08:00",
+    "returncode": 0,
+    "ended": "2026-11-17T18:27:15.575428+08:00"
   },
   {
     "name": "train-seed1",
@@ -37,6 +39,52 @@
       "--attempt",
       "1"
     ],
-    "began": "2026-11-17T17:18:58.179393+08:00"
+    "began": "2026-11-17T17:18:58.179393+08:00",
+    "returncode": 0,
+    "ended": "2026-11-17T18:28:05.951697+08:00"
+  },
+  {
+    "name": "quality-seed0",
+    "pid": 1230401,
+    "command": [
+      "/data/Users/zrh/repo/MobileIE-Neo/scripts/project-python",
+      "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/evaluate_shared_geometry_r88.py",
+      "--seed",
+      "0"
+    ],
+    "began": "2026-11-17T18:28:05.953773+08:00",
+    "returncode": 0,
+    "ended": "2026-11-17T18:34:48.097798+08:00"
+  },
+  {
+    "name": "quality-seed1",
+    "pid": 1230402,
+    "command": [
+      "/data/Users/zrh/repo/MobileIE-Neo/scripts/project-python",
+      "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/evaluate_shared_geometry_r88.py",
+      "--seed",
+      "1"
+    ],
+    "began": "2026-11-17T18:28:05.954409+08:00",
+    "returncode": 0,
+    "ended": "2026-11-17T18:35:09.217419+08:00"
+  },
+  {
+    "name": "metric",
+    "pid": 1234808,
+    "command": [
+      "/data/Users/zrh/repo/MobileIE-Neo/scripts/project-python",
+      "/data/Users/zrh/repo/MobileIE-Neo/scripts/prebind_shared_gpu.py",
+      "--gpu",
+      "0",
+      "--record",
+      "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/process/exploration-r88/chain002/metric-binding.json",
+      "--",
+      "/data/Users/zrh/repo/MobileIE-Neo/scripts/project-python",
+      "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/evaluate_cvvdp_shared_geometry_r88.py"
+    ],
+    "began": "2026-11-17T18:35:09.219092+08:00",
+    "returncode": 75,
+    "ended": "2026-11-17T18:36:05.324538+08:00"
   }
 ]
