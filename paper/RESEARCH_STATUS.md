@@ -1,10 +1,10 @@
 # 论文证据与下一实验决策入口
 
-2026-11-17T11:25:00.042085+08:00；Codex  (sqs_A100)。本页只整合已完成证据，不执行新CNN/SGD/DEV/GPU；R85原3200计时前向另有完整记录。这是研究决策板，不是投稿主表完成声明。内部PDF仍为已审阅build020。
+2026-11-17T11:25:00.042085+08:00；Codex  (sqs_A100)。本页只整合已完成证据，不执行新CNN/SGD/DEV/GPU；R85/R86各原3200计时前向另有完整记录。这是研究决策板，不是投稿主表完成声明。内部PDF仍为已审阅build020。
 
 ## 当前可直接比较的开发表
 
-以下逐项取自R82完整140共同条件/28域均值；两seed分别保留，不选择最好seed或checkpoint。SYN是三源六退化条件、64帧，ND为四实拍DEV源、16帧；均已反复使用，不能称独立最终或自然夜间。PSNR↑、Etemp↓、JOD↑；两域不平均成一个总分。JOD采用原固定名义30fps与显示条件，非MOS。训练窗R83/R84数值不加入该表。
+原六输出取自R82完整140共同条件/28域均值；新增固定DIS取自R86完整20质量/20JOD，复用相同原F0/half-FB参照。两seed分别保留，不选择最好seed或checkpoint。SYN是三源六退化条件、64帧，ND为四实拍DEV源、16帧；均已反复使用，不能称独立最终或自然夜间。PSNR↑、Etemp↓、JOD↑；两域不平均成一个总分。JOD采用原固定名义30fps与显示条件，非MOS。训练窗R83/R84数值不加入该表。
 
 |输出|seed|SYN PSNR|SYN Etemp|SYN JOD|ND PSNR|ND Etemp|ND JOD|
 |---|---:|---:|---:|---:|---:|---:|---:|
@@ -21,6 +21,9 @@
 |R82 centered|0|26.730275|8.813486|7.077999|27.241632|3.458869|8.398499|
 |R82 centered|1|26.824044|8.469819|7.117442|27.337593|3.285188|8.539045|
 
+|MobileIE + DIS rec|0|27.050821|6.520286|7.447420|27.336567|2.821074|8.400475|
+|MobileIE + DIS rec|1|26.882562|6.349339|7.440672|27.001759|2.719274|8.535978|
+
 R82 centered相对raw四组联合门槛均过，时序降7.24%–12.75%；但对F0 strong-rec时序仍高29.63%–34.64%，对独立空间H再strong-rec高30.26%–41.57%。新空间H也有明显逐源损失，不能仅看正面域均值。A/B各8/24比较通过，均未形成完整质量资格，完整成本资格False，方法/创新均未建立。[原完整表](../research/4.temporal-consistency/report/exploration-r82-joint/tables.md)、[门槛与逐源解释](../research/4.temporal-consistency/docs/exploration-r82-decision.md)。
 
 ## 效率列及不能混接的测量
@@ -29,6 +32,7 @@ R82 centered相对raw四组联合门槛均过，时序降7.24%–12.75%；但对
 |---|---:|---:|---|---|
 |MobileIE raw|4075|7.938|R85已测，下面分域/seed报告|未测|
 |MobileIE strong-rec|4075|7.938 + 未计运动/warp等|R85已测，下面分域/seed报告|未测|
+|MobileIE DIS rec|4075|7.938 + 未计DIS/warp等|R86同轮配对成本已测，下面另列|未测|
 |R82 spatial/direct/centered|4379|未测；centered调用H两次|按失败协议未扩成本|未测|
 
 R85原唯一CPU1010313于11:20:34正常完成，3200真实骨干/1500 half-FB、80warmup/120正式/40等价资格，原输出与同权重前缀最大差0；无新SGD/GPU/质量指标。下表主量为每条件三次完整序列ms/frame的中位数，再在域内等条件平均；比值为匹配条件比值的平均，未必等于域均值相除。
@@ -44,7 +48,18 @@ R85原唯一CPU1010313于11:20:34正常完成，3200真实骨干/1500 half-FB、
 
 strong-rec稳定持久RGB状态为SYN9838080B、ND3538944B；共用16帧宿主输出sink另外为78704640B/28311552B，不是模型历史状态。当前输入/flow/workspace/CNN激活不计入持久状态，不称峰值RAM或手机内存。[完整20条件/重复极值表](../research/4.temporal-consistency/report/exploration-r85-baseline-cost/tables.md)、[原结果](../research/4.temporal-consistency/process/exploration-r85/cpu001/summary.json)、[终态](../research/4.temporal-consistency/process/exploration-r85/terminal001.json)。
 
-1.79–1.91倍仅属于当前half-FB参考的域-seed平均条件比，不能概括所有传统运动；[已核快速DIS参考缺口](../research/5.prior-art-survey/docs/69-fast-classical-flow-reference-gap.md)尚未有本项目质量/速度结果，不把其文献速度挪入本表。
+1.79–1.91倍仅属于R85 half-FB参考的域-seed平均条件比，不能概括所有传统运动。R86现已完成单一native DIS ULTRAFAST质量与**同轮两rec配对**成本，不将R85异轮raw/FB拼成因果速度。
+
+|域|seed|DIS−FB PSNR|DIS−FB JOD|DIS/FB Etemp|DIS ms/frame|FB ms/frame|平均配对时延比|
+|---|---:|---:|---:|---:|---:|---:|---:|
+|SYN|0|+.250778|+.023892|.996080|166.500|198.736|.838125|
+|SYN|1|+.269585|+.031686|.993101|157.637|194.445|.810719|
+|ND|0|+.044520|+.027315|1.082798|50.817|68.326|.743738|
+|ND|1|+.078276|+.023972|1.072967|52.176|69.440|.751373|
+
+固定DIS四组平均PSNR/JOD皆正，CPU快约16%–26%，仍未过完整联合资格（质量0/4、速度2/4、联合0/4）：bear_photons20 JOD−.137536/−.132164超逐源保护，ND时间误差高8.28%/7.30%，SYN成本未达.80。正例walking_photons80 PSNR+.908623/+.955517也保留，不只报最差或平均。两种经典pipeline作为明确trade-off参照，不调preset/尺度/阈值追分或称新方法。[完整四门槛/逐源表](../research/4.temporal-consistency/report/exploration-r86-joint/tables.md)、[原决定](../research/4.temporal-consistency/docs/exploration-r86-decision.md)。
+
+[当前描述性质量—时间图](../research/4.temporal-consistency/report/exploration-r86-joint/current-dev-tradeoffs.png)把原F0、两个经典rec与最近R82学习参照的两seed分开；PNG实际查看，PDF只导出、未进入paper020。均值点不能替代逐源门槛，不是完整Pareto最优、独立样本或置信区间。R86成本仍为同源前16帧常驻CPU、2warmup+3正式、非独占/非手机，全部原重复及首帧/非首帧保留。DIS内部工作区未作为RGB持久状态计入，不称完整RAM。
 
 Conv数字仅现有统一分辨率预算的卷积乘加，不计pool/activation/memory/运动等；不是端侧完整推理量。R34的CPU计时使用不同权重与限定16帧，不接到本表作为同模型手机速度。[原预算表](generated/reference-budget-table.tex)、[限定CPU参考](generated/classical-table.tex)。304注册H参数相同不等于严格相同有效自由度/优化过程，空间(c,c)输入有冗余方向，centered双H约束不同。
 
