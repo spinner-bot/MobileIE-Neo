@@ -1,38 +1,38 @@
 {
-  "at": "2026-11-17T17:37:28.644108+08:00",
-  "completed_steps": 500,
+  "at": "2026-11-17T17:53:52.388330+08:00",
+  "completed_steps": 1000,
   "models": {
     "plain": {
-      "CE": 7.338776588439941,
-      "flow_MSE_over16": 0.16298234462738037,
-      "loss": 7.501759052276611,
-      "preclip_gradient_norm": 4.1570611000061035
+      "CE": 6.918741226196289,
+      "flow_MSE_over16": 0.3143264055252075,
+      "loss": 7.233067512512207,
+      "preclip_gradient_norm": 10.694673538208008
     },
     "complement": {
-      "CE": 7.203356742858887,
-      "flow_MSE_over16": 0.2736777067184448,
-      "loss": 7.477034568786621,
-      "preclip_gradient_norm": 4.6364850997924805
+      "CE": 7.258953094482422,
+      "flow_MSE_over16": 0.4475412368774414,
+      "loss": 7.706494331359863,
+      "preclip_gradient_norm": 10.566811561584473
     }
   },
-  "stem_batch_calls": 500,
-  "stem_image_frames": 4000,
-  "descriptor_image_forwards": 8000,
-  "individual_directional_train_fields": 4000,
+  "stem_batch_calls": 1000,
+  "stem_image_frames": 8000,
+  "descriptor_image_forwards": 16000,
+  "individual_directional_train_fields": 8000,
   "peak_allocated_bytes": 91325952,
   "peak_reserved_bytes": 125829120,
   "resource": {
     "UUID": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
-    "observations": 1498,
+    "observations": 2998,
     "minimum_free_mib": 39749,
     "maximum_used_mib": 1210,
-    "maximum_observed_utilization_percent": 65,
-    "synchronized_work_seconds": 222.70128452486824,
-    "cooperative_pause_seconds": 668.1038535746047,
+    "maximum_observed_utilization_percent": 66,
+    "synchronized_work_seconds": 444.44641081488226,
+    "cooperative_pause_seconds": 1333.3392324446468,
     "current_consecutive_busy_decisions": 0,
     "last16": [
       {
-        "at": "2026-11-17T17:37:18.113115+08:00",
+        "at": "2026-11-17T17:53:41.192007+08:00",
         "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
         "total_mib": 40960,
         "used_mib": 1210,
@@ -40,15 +40,7 @@
         "utilization_percent": 0
       },
       {
-        "at": "2026-11-17T17:37:18.777616+08:00",
-        "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
-        "total_mib": 40960,
-        "used_mib": 1210,
-        "free_mib": 39749,
-        "utilization_percent": 45
-      },
-      {
-        "at": "2026-11-17T17:37:20.322163+08:00",
+        "at": "2026-11-17T17:53:42.217427+08:00",
         "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
         "total_mib": 40960,
         "used_mib": 1210,
@@ -56,7 +48,7 @@
         "utilization_percent": 0
       },
       {
-        "at": "2026-11-17T17:37:20.322300+08:00",
+        "at": "2026-11-17T17:53:43.504894+08:00",
         "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
         "total_mib": 40960,
         "used_mib": 1210,
@@ -64,15 +56,7 @@
         "utilization_percent": 0
       },
       {
-        "at": "2026-11-17T17:37:20.917171+08:00",
-        "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
-        "total_mib": 40960,
-        "used_mib": 1210,
-        "free_mib": 39749,
-        "utilization_percent": 4
-      },
-      {
-        "at": "2026-11-17T17:37:22.218126+08:00",
+        "at": "2026-11-17T17:53:43.505019+08:00",
         "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
         "total_mib": 40960,
         "used_mib": 1210,
@@ -80,7 +64,15 @@
         "utilization_percent": 0
       },
       {
-        "at": "2026-11-17T17:37:22.218250+08:00",
+        "at": "2026-11-17T17:53:44.063563+08:00",
+        "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+        "total_mib": 40960,
+        "used_mib": 1210,
+        "free_mib": 39749,
+        "utilization_percent": 53
+      },
+      {
+        "at": "2026-11-17T17:53:45.622298+08:00",
         "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
         "total_mib": 40960,
         "used_mib": 1210,
@@ -88,15 +80,7 @@
         "utilization_percent": 0
       },
       {
-        "at": "2026-11-17T17:37:22.810103+08:00",
-        "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
-        "total_mib": 40960,
-        "used_mib": 1210,
-        "free_mib": 39749,
-        "utilization_percent": 24
-      },
-      {
-        "at": "2026-11-17T17:37:24.112394+08:00",
+        "at": "2026-11-17T17:53:45.624412+08:00",
         "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
         "total_mib": 40960,
         "used_mib": 1210,
@@ -104,7 +88,15 @@
         "utilization_percent": 0
       },
       {
-        "at": "2026-11-17T17:37:24.112523+08:00",
+        "at": "2026-11-17T17:53:46.235334+08:00",
+        "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+        "total_mib": 40960,
+        "used_mib": 1210,
+        "free_mib": 39749,
+        "utilization_percent": 35
+      },
+      {
+        "at": "2026-11-17T17:53:47.525748+08:00",
         "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
         "total_mib": 40960,
         "used_mib": 1210,
@@ -112,15 +104,7 @@
         "utilization_percent": 0
       },
       {
-        "at": "2026-11-17T17:37:24.707779+08:00",
-        "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
-        "total_mib": 40960,
-        "used_mib": 1210,
-        "free_mib": 39749,
-        "utilization_percent": 61
-      },
-      {
-        "at": "2026-11-17T17:37:26.136897+08:00",
+        "at": "2026-11-17T17:53:47.525885+08:00",
         "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
         "total_mib": 40960,
         "used_mib": 1210,
@@ -128,7 +112,15 @@
         "utilization_percent": 0
       },
       {
-        "at": "2026-11-17T17:37:26.137163+08:00",
+        "at": "2026-11-17T17:53:48.114824+08:00",
+        "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+        "total_mib": 40960,
+        "used_mib": 1210,
+        "free_mib": 39749,
+        "utilization_percent": 44
+      },
+      {
+        "at": "2026-11-17T17:53:49.604593+08:00",
         "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
         "total_mib": 40960,
         "used_mib": 1210,
@@ -136,15 +128,7 @@
         "utilization_percent": 0
       },
       {
-        "at": "2026-11-17T17:37:26.734830+08:00",
-        "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
-        "total_mib": 40960,
-        "used_mib": 1210,
-        "free_mib": 39749,
-        "utilization_percent": 5
-      },
-      {
-        "at": "2026-11-17T17:37:28.043634+08:00",
+        "at": "2026-11-17T17:53:49.604923+08:00",
         "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
         "total_mib": 40960,
         "used_mib": 1210,
@@ -152,7 +136,23 @@
         "utilization_percent": 0
       },
       {
-        "at": "2026-11-17T17:37:28.043762+08:00",
+        "at": "2026-11-17T17:53:50.245934+08:00",
+        "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+        "total_mib": 40960,
+        "used_mib": 1210,
+        "free_mib": 39749,
+        "utilization_percent": 35
+      },
+      {
+        "at": "2026-11-17T17:53:51.783219+08:00",
+        "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+        "total_mib": 40960,
+        "used_mib": 1210,
+        "free_mib": 39749,
+        "utilization_percent": 0
+      },
+      {
+        "at": "2026-11-17T17:53:51.783751+08:00",
         "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
         "total_mib": 40960,
         "used_mib": 1210,
@@ -168,16 +168,16 @@
   "registered_steps": 2000,
   "completed_normally": false,
   "latest_checkpoint": {
-    "at": "2026-11-17T17:37:28.642478+08:00",
+    "at": "2026-11-17T17:53:52.386654+08:00",
     "seed": 0,
     "attempt": 1,
     "kind": "regular",
-    "completed_steps": 500,
-    "next_step": 500,
-    "next_data_step": 8500,
+    "completed_steps": 1000,
+    "next_step": 1000,
+    "next_data_step": 9000,
     "registered_steps": 2000,
-    "path": ".cache/checkpoints/exploration-r88/seed0/attempt001/regular-step0500.pt",
-    "sha256": "8c816f027f492d6b86f3fd5e749d2d9b722ab7b616054fd64b4226a2b4dd4076",
+    "path": ".cache/checkpoints/exploration-r88/seed0/attempt001/regular-step1000.pt",
+    "sha256": "44d37afa8c05fc7d3eecd8ba9723a803dda32addf25ce923ff8ec544e92c0c14",
     "bytes": 65824,
     "freeze_sha256": "ec85e5c05de687920ee6965f2de77d952c215b17b7c4e695b38bdd65276f41ca",
     "backbone": {
@@ -188,7 +188,7 @@
       "parameters": 4075
     },
     "deployed_parameters_each": 4507,
-    "completed_optimizer_updates": 1000,
+    "completed_optimizer_updates": 2000,
     "final_quality_eligible": false
   }
 }
