@@ -1,0 +1,35 @@
+{
+  "at": "2026-11-17T14:00:49.240675+08:00",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2203.03996",
+      "actually_read": "Around2.2/3 overview and3.1 delta linear/nonlinear propagation and truncation accumulation, beginning3.2; no author CUDA execution or speed reproduction"
+    },
+    {
+      "url": "https://arxiv.org/html/1611.02024",
+      "actually_read": "3.2 Algorithm3/Eq2/current rounding equivalence and beginning3.3; appendix proof not read"
+    },
+    {
+      "url": "https://arxiv.org/html/2210.09887",
+      "actually_read": "Contribution list, Figure3 caption and beginning related work, not full methods/experiments; figures not viewed"
+    },
+    {
+      "url": "https://arxiv.org/html/1906.04721",
+      "version": "v3",
+      "actually_read": "4.1 positive scaling/PReLU and4.1.1-4.1.2 diagonal rescaling equations, not quantitative reproduction"
+    }
+  ],
+  "local_sources": [
+    "MobileIE/model/lle.py",
+    "MobileIE/model/utils.py",
+    "note09",
+    "note14",
+    "note16",
+    "R84 protocol/decision",
+    "R86 complete decision"
+  ],
+  "not_adopted": "MR-VNet official search index/PDF snippet only; no full architecture or baseline claim. Unrelated broad hits and third-party summaries not used as method evidence.",
+  "new_external_code_execution": false,
+  "new_external_weights_or_data": false,
+  "decision": "Do not run a delta/truncation grid; only bounded function-preserving diagonal metric known-geometry calibration. Degree-two scale compensation is elementary, weighted-cosine equivalence is not a novelty claim."
+}
