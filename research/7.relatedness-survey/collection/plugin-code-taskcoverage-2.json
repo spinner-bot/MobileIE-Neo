@@ -1,0 +1,1955 @@
+{
+  "recorded_at": "2026-11-17T10:40:50.372Z",
+  "query": "\"MobileIE\" \"underwater\"",
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "results": [
+        {
+          "url": "https://github.com/tediyankov/reef-track/blob/af76a927c568795e800f8d8e0c28c3b939fd6f1f/src/reeftrack/enhance/__init__.py",
+          "path": "src/reeftrack/enhance/__init__.py",
+          "display_url": "https://github.com/tediyankov/reef-track/blob/af76a927c568795e800f8d8e0c28c3b939fd6f1f/src/reeftrack/enhance/__init__.py",
+          "display_title": "src/reeftrack/enhance/__init__.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    return cv2.convertScaleAbs(np.maximum(out, 0, out=out))  # saturating cast to uint8\n\n\nclass MobileIE:\n    \"\"\"Re-parameterised (\"slim\") MobileIE-LLE network, written out with plain conv ops.\"\"\"\n\n    WEIGHTS = Path(__file__).with_name(\"mobileie_uieb.npz\")",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    96,
+                    104
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    139,
+                    147
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    238,
+                    246
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/zhaoyang97/Paper-Notes-en/blob/148a16dd45b148e890b4428db21133e5a1589b77/docs/ICCV2025/image_restoration/mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md",
+          "path": "docs/ICCV2025/image_restoration/mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md",
+          "display_url": "https://github.com/zhaoyang97/Paper-Notes-en/blob/148a16dd45b148e890b4428db21133e5a1589b77/docs/ICCV2025/image_restoration/mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md",
+          "display_title": "docs/ICCV2025/image_restoration/mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "| Zero-DCE++ | 10.6K | 1.974 | 57.91 | 14.68 | 17.23 |\n| **MobileIE** | **4.0K** | **0.895** | **6.72** | **23.62** | **25.08** |\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    59,
+                    67
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\n**Underwater Image Enhancement (UIEB)**\n",
+              "matches": [
+                {
+                  "text": "Underwater",
+                  "indices": [
+                    3,
+                    13
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/scripts/train_lsui_underwater.sh",
+          "path": "scripts/train_lsui_underwater.sh",
+          "display_url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/scripts/train_lsui_underwater.sh",
+          "display_title": "scripts/train_lsui_underwater.sh",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "#!/usr/bin/env bash\n# Train MobileIE on LSUI (underwater) from UIEB pretrained weights.\nset -euo pipefail\ncd \"$(dirname \"$0\")/..\"\n\nsource \"$(conda info --base)/etc/profile.d/conda.sh\"\nconda activate hyworld2",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    28,
+                    36
+                  ]
+                },
+                {
+                  "text": "underwater",
+                  "indices": [
+                    46,
+                    56
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/README.md",
+          "path": "shared/mon/mon/vision/enhance/multitask/mobileie/README.md",
+          "display_url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/README.md",
+          "display_title": "shared/mon/mon/vision/enhance/multitask/mobileie/README.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "<h1 align=\"center\">[ICCV 2025] MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices</h1>\n\n<div align=\"center\">",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    31,
+                    39
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "4. You can use the TFLite model and import it into AI Benchmark (https://ai-benchmark.com/) to obtain the inference speed on mobile devices.\n5. If you want to perform UIE task, replace the dataset path in config/lle.yaml with your underwater image dataset.\n",
+              "matches": [
+                {
+                  "text": "underwater",
+                  "indices": [
+                    231,
+                    241
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Underwater-AI/underwater-ai.github.io/blob/44fb9e758d02f5f638fc48f572c8090dc6a85103/underwater_ai.html",
+          "path": "underwater_ai.html",
+          "display_url": "https://github.com/Underwater-AI/underwater-ai.github.io/blob/44fb9e758d02f5f638fc48f572c8090dc6a85103/underwater_ai.html",
+          "display_title": "underwater_ai.html",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                        <div class=\"timeline-item pb-6\">\n                            <div class=\"font-bold text-white mb-1\">1. Training Phase (Server)</div>\n                            <ul class=\"text-sm text-gray-400 space-y-1\">\n                                <li>• Train UDnet using unpaired data from EUVP, UIEB, Underwater ImageNet</li>\n                                <li>• Generate pseudo-paired data for LU2net & MobileIE</li>\n                                <li>• Validate with CLIP & YOLO to remove bad samples</li>\n                                <li>• Custom Indian Ocean Dataset (IOD) for regional specificity</li>",
+              "matches": [
+                {
+                  "text": "Underwater",
+                  "indices": [
+                    319,
+                    329
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    425,
+                    433
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/memgrafter/research-digests/blob/491d1e597ee1384396057fbe72e2bdec9f11c2c6/ml_research_analysis_2025/2509.16415_stereoadapter-adapting-stereo-depth-estimation-to-underwater-scenes_20260211_013033.md",
+          "path": "ml_research_analysis_2025/2509.16415_stereoadapter-adapting-stereo-depth-estimation-to-underwater-scenes_20260211_013033.md",
+          "display_url": "https://github.com/memgrafter/research-digests/blob/491d1e597ee1384396057fbe72e2bdec9f11c2c6/ml_research_analysis_2025/2509.16415_stereoadapter-adapting-stereo-depth-estimation-to-underwater-scenes_20260211_013033.md",
+          "display_title": "ml_research_analysis_2025/2509.16415_stereoadapter-adapting-stereo-depth-estimation-to-underwater-scenes_20260211_013033.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "- **Basis in paper:** Explicit statement in Limitations section noting UE5 pipeline simplifies \"participating-media multiple scattering, polarization effects, dynamic turbidity/particles, [and] sensor/ISP idiosyncrasies\"\n- **Why unresolved:** Current method relies on synthetic pre-training that may not fully capture complex light transport physics of real dense underwater environments\n- **What evidence would resolve it:** Quantitative analysis of performance degradation when transferring models trained on UE5 data to real-world data enriched with physics-based participating media rendering",
+              "matches": [
+                {
+                  "text": "underwater",
+                  "indices": [
+                    364,
+                    374
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "### Open Question 3\n- **Question:** Is depth estimation performance sensitive to failure modes of the MobileIE visual enhancement pre-processing step?\n- **Basis in paper:** Inferred from Implementation Details stating method relies on MobileIE module to remove water-induced effects before feature extraction, but evaluations don't isolate error propagation",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    102,
+                    110
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    235,
+                    243
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/README.md",
+          "path": "README.md",
+          "display_url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/README.md",
+          "display_title": "README.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "<h1 align=\"center\">[ICCV 2025] MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices</h1>\n\n<div align=\"center\">",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    31,
+                    39
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "4. You can use the TFLite model and import it into AI Benchmark (https://ai-benchmark.com/) to obtain the inference speed on mobile devices.\n5. If you want to perform UIE task, replace the dataset path in config/lle.yaml with your underwater image dataset.\n",
+              "matches": [
+                {
+                  "text": "underwater",
+                  "indices": [
+                    231,
+                    241
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/zhaoyang97/Paper-Notes/blob/de63c0e13b242cadcc5faa8cc2017fcc8c235026/docs/ICCV2025/TODO.md",
+          "path": "docs/ICCV2025/TODO.md",
+          "display_url": "https://github.com/zhaoyang97/Paper-Notes/blob/de63c0e13b242cadcc5faa8cc2017fcc8c235026/docs/ICCV2025/TODO.md",
+          "display_title": "docs/ICCV2025/TODO.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "- [ ] mmreason an open-ended multi-modal multi-step reasoning benchmark for mllms towa\n- [x] [mobileie an extremely lightweight and effective convnet for real-time image enha](image_restoration/mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md) | arXiv: 2507.01838\n- [x] [mobileviclip an efficient video-text model for mobile devices](video_understanding/mobileviclip_an_efficient_video-text_model_for_mobile_devices.md) | arXiv: 2508.07312",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    94,
+                    102
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    194,
+                    202
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "- [x] [reinforcement learning-guided data selection via redundancy assessment](reinforcement_learning/reinforcement_learning-guided_data_selection_via_redundancy_assessment.md) | arXiv: 2506.21037\n- [x] [relative illumination fields learning medium and light independent underwater sc](3d_vision/relative_illumination_fields_learning_medium_and_light_independent_underwater_sc.md) | arXiv: 2504.10024\n- [ ] removing out-of-focus reflective flares via color alignment",
+              "matches": [
+                {
+                  "text": "underwater",
+                  "indices": [
+                    271,
+                    281
+                  ]
+                },
+                {
+                  "text": "underwater",
+                  "indices": [
+                    363,
+                    373
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Synapse-iiserk/beautiful_ppt/blob/257b89fbd55fda334a18e5dec6922d3f1b9881a0/presentations/underwater_ai.html",
+          "path": "presentations/underwater_ai.html",
+          "display_url": "https://github.com/Synapse-iiserk/beautiful_ppt/blob/257b89fbd55fda334a18e5dec6922d3f1b9881a0/presentations/underwater_ai.html",
+          "display_title": "presentations/underwater_ai.html",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                        <div class=\"timeline-item pb-6\">\n                            <div class=\"font-bold text-white mb-1\">1. Training Phase (Server)</div>\n                            <ul class=\"text-sm text-gray-400 space-y-1\">\n                                <li>• Train UDnet using unpaired data from EUVP, UIEB, Underwater ImageNet</li>\n                                <li>• Generate pseudo-paired data for LU2net & MobileIE</li>\n                                <li>• Validate with CLIP & YOLO to remove bad samples</li>\n                                <li>• Custom Indian Ocean Dataset (IOD) for regional specificity</li>",
+              "matches": [
+                {
+                  "text": "Underwater",
+                  "indices": [
+                    319,
+                    329
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    425,
+                    433
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/zhaoyang97/Paper-Notes-en/blob/148a16dd45b148e890b4428db21133e5a1589b77/docs/ICCV2025/image_restoration/index.md",
+          "path": "docs/ICCV2025/image_restoration/index.md",
+          "display_url": "https://github.com/zhaoyang97/Paper-Notes-en/blob/148a16dd45b148e890b4428db21133e5a1589b77/docs/ICCV2025/image_restoration/index.md",
+          "display_title": "docs/ICCV2025/image_restoration/index.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n**[MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices](mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md)**\n\n:   This paper proposes MobileIE, an extremely lightweight CNN framework with approximately 4K parameters, which achieves real-time image enhancement at over 1100 FPS on mobile devices for the first time. This is accomplished through multi-branch re-parameterizable convolution (MBRConv), a feature self-transformation (FST) module, hierarchical dual-path attention (HDPA), and an incremental weight optimization (IWO) strategy. MobileIE achieves state-of-the-art speed–performance trade-offs across three tasks: low-light enhancement, underwater enhancement, and ISP.\n\n**[MP-HSIR: A Multi-Prompt Framework for Universal Hyperspectral Image Restoration](mp-hsir_a_multi-prompt_framework_for_universal_hyperspectral_image_restoration.md)**\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    4,
+                    12
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    112,
+                    120
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    224,
+                    232
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    629,
+                    637
+                  ]
+                },
+                {
+                  "text": "underwater",
+                  "indices": [
+                    738,
+                    748
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE-main/MobileIE-main/README.md",
+          "path": "MobileIE-main/MobileIE-main/README.md",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE-main/MobileIE-main/README.md",
+          "display_title": "MobileIE-main/MobileIE-main/README.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "<h1 align=\"center\">[ICCV 2025] MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices</h1>\n\n<div align=\"center\">",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    31,
+                    39
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "4. You can use the TFLite model and import it into AI Benchmark (https://ai-benchmark.com/) to obtain the inference speed on mobile devices.\n5. If you want to perform UIE task, replace the dataset path in config/lle.yaml with your underwater image dataset.\n",
+              "matches": [
+                {
+                  "text": "underwater",
+                  "indices": [
+                    231,
+                    241
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/TTXS123OK/CVPapers/blob/3eb58fb1c65586392bafa20becebceb11ca03884/cs.CV/2025/07/20250702.md",
+          "path": "cs.CV/2025/07/20250702.md",
+          "display_url": "https://github.com/TTXS123OK/CVPapers/blob/3eb58fb1c65586392bafa20becebceb11ca03884/cs.CV/2025/07/20250702.md",
+          "display_title": "cs.CV/2025/07/20250702.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "- **Journal**: None\n- **Summary**: Recent advancements in deep neural networks have driven significant progress in image enhancement (IE). However, deploying deep learning models on resource-constrained platforms, such as mobile devices, remains challenging due to high computation and memory demands. To address these challenges and facilitate real-time IE on mobile, we introduce an extremely lightweight Convolutional Neural Network (CNN) framework with around 4K parameters. Our approach integrates reparameterization with an Incremental Weight Optimization strategy to ensure efficiency. Additionally, we enhance performance with a Feature Self-Transform module and a Hierarchical Dual-Path Attention mechanism, optimized with a Local Variance-Weighted loss. With this efficient framework, we are the first to achieve real-time IE inference at up to 1,100 frames per second (FPS) while delivering competitive image quality, achieving the best trade-off between speed and performance across multiple IE tasks. The code will be available at https://github.com/AVC2-UESTC/MobileIE.git.\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    1074,
+                    1082
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\n### Underwater Monocular Metric Depth Estimation: Real-World Benchmarks and Synthetic Fine-Tuning with Vision Foundation Models\n- **Arxiv ID**: http://arxiv.org/abs/2507.02148v2",
+              "matches": [
+                {
+                  "text": "Underwater",
+                  "indices": [
+                    5,
+                    15
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/scripts/prepare_uieb.py",
+          "path": "scripts/prepare_uieb.py",
+          "display_url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/scripts/prepare_uieb.py",
+          "display_title": "scripts/prepare_uieb.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "#!/usr/bin/env python3\n\"\"\"\nPrepare UIEB for MobileIE (official underwater / UIE task).\n\nExpected download layout (from https://li-chongyi.github.io/proj_benchmark.html):\n  <src>/raw-890/          # input (degraded underwater)\n  <src>/reference-890/    # GT (reference enhancement)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    44,
+                    52
+                  ]
+                },
+                {
+                  "text": "underwater",
+                  "indices": [
+                    63,
+                    73
+                  ]
+                },
+                {
+                  "text": "underwater",
+                  "indices": [
+                    214,
+                    224
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/scripts/train_uieb.sh",
+          "path": "scripts/train_uieb.sh",
+          "display_url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/scripts/train_uieb.sh",
+          "display_title": "scripts/train_uieb.sh",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "#!/usr/bin/env bash\n# Train MobileIE on UIEB (official underwater dataset for UIE / model_task lle).\nset -euo pipefail\ncd \"$(dirname \"$0\")/..\"\n\nsource \"$(conda info --base)/etc/profile.d/conda.sh\"\nconda activate hyworld2",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    28,
+                    36
+                  ]
+                },
+                {
+                  "text": "underwater",
+                  "indices": [
+                    55,
+                    65
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/khaihoang004/dewarp/blob/39eef66524919078836ec0f9122fda27d07a43e8/research.md",
+          "path": "research.md",
+          "display_url": "https://github.com/khaihoang004/dewarp/blob/39eef66524919078836ec0f9122fda27d07a43e8/research.md",
+          "display_title": "research.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "Sauvola | | algorithm| |\nNiblack | | algorithm| |\nNUnet | | no read access yet | [Link](https://www.researchgate.net/publication/377100444_A_Lightweight_NUet_Model_for_Document_Image_Restoration)|\nMobileIE |  Low-Light Enhancement (LLE), Underwater Image Enhancement (UIE), and end-to-end Image Signal Processing (ISP).| 4K parameters ???| [Link](https://arxiv.org/pdf/2507.01838)|\nLiR | Image Restoration, denoise|  7.31 params| [Link](https://arxiv.org/pdf/2402.01368)|\n| | | | [Link](https://arxiv.org/pdf/2406.00629)|\n|||| [Link](https://arxiv.org/pdf/2401.11831)|",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    197,
+                    205
+                  ]
+                },
+                {
+                  "text": "Underwater",
+                  "indices": [
+                    238,
+                    248
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/heniath/underwater-image-enhancement/blob/c0c7c928fc7a30ba11286212bdce0fbfbfcbffa7/docs/uwlyt_literature_review.md",
+          "path": "docs/uwlyt_literature_review.md",
+          "display_url": "https://github.com/heniath/underwater-image-enhancement/blob/c0c7c928fc7a30ba11286212bdce0fbfbfcbffa7/docs/uwlyt_literature_review.md",
+          "display_title": "docs/uwlyt_literature_review.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "| [Zero-UAE](https://doi.org/10.3389/fmars.2024.1378817) | Underwater, zero reference | 17,699 | 1.15 G at 256² | Learned curve estimation; no external image prior | 128.75 MB reported resource occupancy | — |\n| [LU2Net](https://arxiv.org/abs/2406.14973) | Underwater | — | — | None reported | — | RTX 3060 laptop: 100 fps; i7-10750H CPU: 12 fps |\n| [LPS-Net](https://doi.org/10.3390/app13169419) | Underwater | 80.12k | 99.02 G at 1280×720 | None reported | — | RTX 3090 timing is reported in its efficiency table; retain the paper value only with that resolution/hardware |\n| [LiteEnhanceNet](https://doi.org/10.1016/j.eswa.2023.122546) | Underwater | 13.688k | — | None reported | 0.05 MB model size in a later unified study | Later 640×480 study: 6.654 ms GPU / 190.02 ms mobile SoC |\n| [MobileIE](https://openaccess.thecvf.com/content/ICCV2025/html/Yan_MobileIE_An_Extremely_Lightweight_and_Effective_ConvNet_for_Real-Time_Image_ICCV_2025_paper.html) | General/mobile enhancement | 4.047k | 0.924 G at 640×480 | None | 0.02 MB model size | 0.910 ms GPU / 8.94 ms mobile SoC at 640×480 |\n\nThe later unified 640×480 measurements cited above come from MobileIE's ICCV",
+              "matches": [
+                {
+                  "text": "Underwater",
+                  "indices": [
+                    59,
+                    69
+                  ]
+                },
+                {
+                  "text": "Underwater",
+                  "indices": [
+                    260,
+                    270
+                  ]
+                },
+                {
+                  "text": "Underwater",
+                  "indices": [
+                    408,
+                    418
+                  ]
+                },
+                {
+                  "text": "Underwater",
+                  "indices": [
+                    653,
+                    663
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    807,
+                    815
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    873,
+                    881
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    1172,
+                    1180
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/tediyankov/reef-track/blob/af76a927c568795e800f8d8e0c28c3b939fd6f1f/README.md",
+          "path": "README.md",
+          "display_url": "https://github.com/tediyankov/reef-track/blob/af76a927c568795e800f8d8e0c28c3b939fd6f1f/README.md",
+          "display_title": "README.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "| tiny fish: zoom in | **drag a box** around the fish → the box fills the view and follows the fish (its mask where tracked, otherwise template matching, smoothed against shake). Display only. While zoomed, clicks/tracking give SAM **only that window**, re-centred on the fish each frame (saved as `roi` on the segment; masks stay in full-frame pixels). **Z** / **Esc** back to full view, **Z** again to zoom back in; drag again to re-box |\n| undo / save | **Ctrl+Z** / autosaves after every change (**Ctrl+S** to force) |\n| playback | **Space**, **←/→** (±1 frame), **Shift+←/→** (±1 s), timeline click/drag |\n| enhance murky footage | **E** cycles *Off → CLAHE → Retinex → MobileIE* (Display panel). View only, ~2–25 ms/frame so playback stays at 30 fps; applied after the zoom crop. *SAM sees the enhanced image too* (on by default) feeds the same image to SAM, recorded as `enhance` on the segment. MobileIE = 4k-parameter underwater CNN (Yan et al., ICCV 2025, Apache-2.0 weights in `src/reeftrack/enhance/`), needs PyTorch, so it is greyed out in the annotator environment |\n| rotate view (portrait videos) | **R** / **Shift+R** (View menu); display only, saved per video in `run.yaml` (`view.rotation`) |\n| behaviour event (Behaviour tab) | **I** at first frame → **O** at last frame → pick behaviour (number key) + optional comment → OK |\n| edit / delete behaviour | click a row to jump, double-click to edit, *Delete* button; click a chunk on the timeline to select its row |",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    693,
+                    701
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    923,
+                    931
+                  ]
+                },
+                {
+                  "text": "underwater",
+                  "indices": [
+                    947,
+                    957
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/docs/final_project/README.md",
+          "path": "docs/final_project/README.md",
+          "display_url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/docs/final_project/README.md",
+          "display_title": "docs/final_project/README.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "```bash\nPYTHONPATH=. .venv-mobileie/bin/python docs/final_project/scripts/build_presentation.py\n```",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    27,
+                    35
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\n- `figures/underwater_metrics.png`\n- `figures/assets_metrics.png`",
+              "matches": [
+                {
+                  "text": "underwater",
+                  "indices": [
+                    12,
+                    22
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/docs/final_project/project_report.tex",
+          "path": "docs/final_project/project_report.tex",
+          "display_url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/docs/final_project/project_report.tex",
+          "display_title": "docs/final_project/project_report.tex",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n\\begin{itemize}\n  \\item commit: \\texttt{414834c44e85e6d4fc885439749ac8388f0d2ccf}\n  \\item message: \\texttt{Add UIEB/LSUI underwater training support for MobileIE.}\n\\end{itemize}\n\n合并为 fast-forward，无冲突。新增或修改的关键文件包括：",
+              "matches": [
+                {
+                  "text": "underwater",
+                  "indices": [
+                    122,
+                    132
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    154,
+                    162
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/scripts/prepare_lsui.py",
+          "path": "scripts/prepare_lsui.py",
+          "display_url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/scripts/prepare_lsui.py",
+          "display_title": "scripts/prepare_lsui.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\"\"\"\nPrepare LSUI for MobileIE (paired input/gt, same filenames).\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "  B) LSUI_划分.zip layout (side-by-side pairs in one image):\n       <src>/train/*.jpg  — left=input (underwater), right=gt (reference)\n",
+              "matches": [
+                {
+                  "text": "underwater",
+                  "indices": [
+                    105,
+                    115
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/TheComplianceAide/Drone_EnhancedVision/blob/25ac9a3df478f4935c6a9927516589e35500ce76/research/night_vision_2026_07_04/synthesis.md",
+          "path": "research/night_vision_2026_07_04/synthesis.md",
+          "display_url": "https://github.com/TheComplianceAide/Drone_EnhancedVision/blob/25ac9a3df478f4935c6a9927516589e35500ce76/research/night_vision_2026_07_04/synthesis.md",
+          "display_title": "research/night_vision_2026_07_04/synthesis.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "- Realtime temporal video: `Wenhao-Li-777/FastLLVE`, `zkawfanx/StableLLVE`, `xiaogang00/LLVE_STCD`\n- Event-guided video: `intelpro/ELEDNet`, `sherrycattt/EvLowLight`, `YuXie1/CompEvent`\n- Modern LLIE baselines: `caiyuanhao1998/Retinexformer`, `Fediory/HVI-CIDNet`, `JIA-Lab-research/SNR-Aware-Low-Light-Enhance`, `Li-Chongyi/Zero-DCE`\n- Edge/mobile/export examples: `AVC2-UESTC/MobileIE`, `hpc203/Low-Light-Image-Enhancement-onnxrun`, `hpc203/low-light-image-enhancement-opencv-dnn`, `Kazuhito00/LYT-Net-ONNX-Sample`, `Kazuhito00/Retinexformer-ONNX-Sample`\n- Underwater/dehaze ideas: `suhas-srinath/undive`, `xahidbuffon/FUnIE-GAN`, `Tian-Yu-CAO/DNnet-A-Lightweight-Network-For-Real-Time-4K-Underwater-Image-Enhancement`, `wangyanckxx/Single-Underwater-Image-Enhancement-and-Color-Restoration`\n\nRepo signal counts from the 80-README sample:",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    378,
+                    386
+                  ]
+                },
+                {
+                  "text": "Underwater",
+                  "indices": [
+                    559,
+                    569
+                  ]
+                },
+                {
+                  "text": "Underwater",
+                  "indices": [
+                    691,
+                    701
+                  ]
+                },
+                {
+                  "text": "Underwater",
+                  "indices": [
+                    742,
+                    752
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/freezed-corpse-143/topaperlist/blob/647153919e1fb503bc04e860f8eff7b611d68075/PAPERS/A/ICCV/2025.txt",
+          "path": "PAPERS/A/ICCV/2025.txt",
+          "display_url": "https://github.com/freezed-corpse-143/topaperlist/blob/647153919e1fb503bc04e860f8eff7b611d68075/PAPERS/A/ICCV/2025.txt",
+          "display_title": "PAPERS/A/ICCV/2025.txt",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "ConformalSAM: Unlocking the Potential of Foundational Segmentation Models in Semi-Supervised Semantic Segmentation with Conformal Prediction\nUnderwater Visual SLAM with Depth Uncertainty and Medium Modeling\nMuGS: Multi-Baseline Generalizable Gaussian Splatting Reconstruction",
+              "matches": [
+                {
+                  "text": "Underwater",
+                  "indices": [
+                    141,
+                    151
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "MCOP: Multi-UAV Collaborative Occupancy Prediction\nMobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices\nFixTalk: Taming Identity Leakage for High-Quality Talking Head Generation in Extreme Cases",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    51,
+                    59
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/paper/bilingual/body.txt",
+          "path": "paper/bilingual/body.txt",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/paper/bilingual/body.txt",
+          "display_title": "paper/bilingual/body.txt",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "5. Conclusion\n\n@@85 para\nIn this paper, we introduce MobileIE, a lightweight CNN with only 4K parameters designed for real-time image enhancement on mobile devices. MobileIE combines simplicity with high performance across low-light image enhancement, underwater image enhancement, and image signal processing tasks. Key components such as the MBRConv, Feature Self-Transform module, Hierarchical Dual-Path Attention mechanism, and Local Variance-Weighted loss enable MobileIE to achieve superior results while maintaining an inference time of around 0.9 ms. Furthermore, MobileIE can be easily deployed on any commercial mobile device with minimal computational overhead and efficient resource utilization. Future work will explore optimizations to expand MobileIE’s application to more different tasks.\n\n@@86 para\nAcknowledgements. This work was supported by the Key Program for International Cooperation of Ministry of Science and Technology, China (No.2024YFE0100700).",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    53,
+                    61
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    165,
+                    173
+                  ]
+                },
+                {
+                  "text": "underwater",
+                  "indices": [
+                    252,
+                    262
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    468,
+                    476
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    572,
+                    580
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    757,
+                    765
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/xuhangc/Plumbing/blob/ea6d788ba16cdd4f7c1e8e7685b735b13e9e9352/INDEX.md",
+          "path": "INDEX.md",
+          "display_url": "https://github.com/xuhangc/Plumbing/blob/ea6d788ba16cdd4f7c1e8e7685b735b13e9e9352/INDEX.md",
+          "display_title": "INDEX.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "| `DFE` | CVPR 2022 | MonoDTR: Monocular 3D Object Detection with Depth-Aware Transformer | - | dawang |\n| `DICAM` | — | DICAM: Deep Inception and Channel-wise Attention Modules for underwater imag… | 即插即用注意力模块 | 原仓 |\n| `dip` | — | Inter-modal Distance Invariant Position Encoding — 跨模态距离不变位置编码 | - | bug423 |",
+              "matches": [
+                {
+                  "text": "underwater",
+                  "indices": [
+                    184,
+                    194
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "| `LKLGLBlock` | ACM MM 2025 | [ACM MM 2025] Mobile U-ViT: Revisiting large kernel and U-shaped ViT for eff… | 2025最新代码 | 原仓 |\n| `mie` | — | MobileIE Enhancement Block — MobileIE 轻量增强块 | - | bug423 |\n| `MSPLCK_EPA` | — | MixDehazeNet : Mix Structure Block For Image Dehazing Network | 图像恢复，去模糊，去噪，去雾 | 原仓 |",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    157,
+                    165
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    188,
+                    196
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/config/uieb.yaml",
+          "path": "config/uieb.yaml",
+          "display_url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/config/uieb.yaml",
+          "display_title": "config/uieb.yaml",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "# Official MobileIE UIE task: train on UIEB (Underwater Image Enhancement Benchmark)\n# README: replace paths in lle.yaml with underwater dataset; uieb_best_slim.pkl is the released UIEB checkpoint.\n# Download: https://li-chongyi.github.io/proj_benchmark.html\n# Prepare:  python scripts/prepare_uieb.py --src /data/zhanyang/UIEB\nexp_name: uieb_train\n\ntrain:",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    11,
+                    19
+                  ]
+                },
+                {
+                  "text": "Underwater",
+                  "indices": [
+                    45,
+                    55
+                  ]
+                },
+                {
+                  "text": "underwater",
+                  "indices": [
+                    126,
+                    136
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/tediyankov/reef-track/blob/af76a927c568795e800f8d8e0c28c3b939fd6f1f/src/reeftrack/gui/app.py",
+          "path": "src/reeftrack/gui/app.py",
+          "display_url": "https://github.com/tediyankov/reef-track/blob/af76a927c568795e800f8d8e0c28c3b939fd6f1f/src/reeftrack/gui/app.py",
+          "display_title": "src/reeftrack/gui/app.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                self.enhance_box.model().item(i).setEnabled(False)\n                self.enhance_box.setItemData(i, \"needs PyTorch (full reef-track environment)\", Qt.ItemDataRole.ToolTipRole)\n        self.enhance_box.setToolTip(\"Display only (the video is not changed). CLAHE: local contrast. Retinex: removes the \"\n                                    \"water veil and colour cast. MobileIE: tiny CNN trained on underwater images (ICCV'25).\")\n        saved = self.settings.value(\"enhance\", None)\n        i = self.enhance_box.findData(saved) if saved else 0\n        if i > 0 and enhance.available(saved):",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    380,
+                    388
+                  ]
+                },
+                {
+                  "text": "underwater",
+                  "indices": [
+                    410,
+                    420
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/scripts/download_uieb_zrr.py",
+          "path": "repro/scripts/download_uieb_zrr.py",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/scripts/download_uieb_zrr.py",
+          "display_title": "repro/scripts/download_uieb_zrr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\"\"\"Fetch the MobileIE UIEB (underwater) and ZRR (RAW->sRGB) benchmarks.\n\nNetwork reality on this box (verified 2026-09-26): huggingface.co direct,\ndrive.google.com and openbayes.com are unreachable; hf-mirror.com, github.com\nand download.ai-benchmark.com work.\n\nUIEB",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    13,
+                    21
+                  ]
+                },
+                {
+                  "text": "underwater",
+                  "indices": [
+                    28,
+                    38
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Underwater-AI/underwater-ai.github.io/blob/44fb9e758d02f5f638fc48f572c8090dc6a85103/index.html",
+          "path": "index.html",
+          "display_url": "https://github.com/Underwater-AI/underwater-ai.github.io/blob/44fb9e758d02f5f638fc48f572c8090dc6a85103/index.html",
+          "display_title": "index.html",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    <p class=\"hero__sub\">\n      You are looking through the eye of an underwater rover, 2,400 metres down.\n      The water has taken almost everything from this frame. Keep scrolling —",
+              "matches": [
+                {
+                  "text": "underwater",
+                  "indices": [
+                    70,
+                    80
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "        <li>UDnet unpaired restoration</li>\n        <li>LU2net + MobileIE on Jetson, INT8</li>\n        <li>30 fps on-vehicle inside 15 W</li>",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    65,
+                    73
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/docs/final_project/scripts/build_presentation.py",
+          "path": "docs/final_project/scripts/build_presentation.py",
+          "display_url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/docs/final_project/scripts/build_presentation.py",
+          "display_title": "docs/final_project/scripts/build_presentation.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "            \"数据：24 组自采真实低光 input/gt\",\n            \"权重：LOL-v1 / LOL-v2 MobileIE checkpoint\",\n            \"结果：baseline 复现、Zero-DCE/SNR 风格自适应、结构保持融合\",",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    96,
+                    104
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "        [\n            \"代码：合并 zhanyang/uieb-underwater-training\",\n            \"新增：UIEB/LSUI config、prepare scripts、UIEB 500ep checkpoint\",",
+              "matches": [
+                {
+                  "text": "underwater",
+                  "indices": [
+                    53,
+                    63
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Lumos-Leo/Lumos-Leo.github.io/blob/1dec788f891635a2faa0b19cd416c89d3b471f1f/index.html",
+          "path": "index.html",
+          "display_url": "https://github.com/Lumos-Leo/Lumos-Leo.github.io/blob/1dec788f891635a2faa0b19cd416c89d3b471f1f/index.html",
+          "display_title": "index.html",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "          <li data-title=\"Real-Time Underwater Image Enhancement via Frequency-Guided Dual-Path Attention\">\n            <p class=\"paper-title\">Real-Time Underwater Image Enhancement via Frequency-Guided Dual-Path Attention</p>\n            <p>Leshen Zhang, <strong>Ao Li</strong>, Ce Zhu</p>",
+              "matches": [
+                {
+                  "text": "Underwater",
+                  "indices": [
+                    36,
+                    46
+                  ]
+                },
+                {
+                  "text": "Underwater",
+                  "indices": [
+                    153,
+                    163
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "          </li>\n          <li data-title=\"MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices\">\n            <p class=\"paper-title\">MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices</p>",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    42,
+                    50
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    186,
+                    194
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/paper/bilingual/bilingual.html",
+          "path": "paper/bilingual/bilingual.html",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/paper/bilingual/bilingual.html",
+          "display_title": "paper/bilingual/bilingual.html",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "<figure><img src=\"assets/p08_table_85.png\" alt=\"Table 7. Ablation on different module efficiency.\"><figcaption><b>Table 7（中文）</b>　各模块对轻量化的贡献（效率消融）。</figcaption></figure>\n<h2 class=\"en\">5. Conclusion</h2>\n<h2 class=\"zh\">5. 结论</h2>\n<p class=\"para en\">In this paper, we introduce MobileIE, a lightweight CNN with only 4K parameters designed for real-time image enhancement on mobile devices. MobileIE combines simplicity with high performance across low-light image enhancement, underwater image enhancement, and image signal processing tasks. Key components such as the MBRConv, Feature Self-Transform module, Hierarchical Dual-Path Attention mechanism, and Local Variance-Weighted loss enable MobileIE to achieve superior results while maintaining an inference time of around 0.9 ms. Furthermore, MobileIE can be easily deployed on any commercial mobile device with minimal computational overhead and efficient resource utilization. Future work will explore optimizations to expand MobileIE’s application to more different tasks.</p>\n<p class=\"para zh\">本文提出 MobileIE——一个只需 4K 参数、面向移动设备实时图像增强的轻量 CNN。在低光增强、水下增强与图像信号处理三类任务上，MobileIE 同时做到了结构简单与性能出色。MBRConv、特征自变换模块、分层双路注意力机制与局部方差加权损失等关键组件，使 MobileIE 在保持约 0.9 ms 推理耗时的同时取得更优结果。此外，MobileIE 可以方便地部署在任何商用移动设备上，计算开销极小、资源利用高效。未来工作将探索更多优化，把 MobileIE 的应用扩展到更多样的任务。</p>\n<p class=\"para en\">Acknowledgements. This work was supported by the Key Program for International Cooperation of Ministry of Science and Technology, China (No.2024YFE0100700).</p>\n<p class=\"para zh\">致谢。本工作得到国家自然科学基金委科技部国际合作重点专项（项目编号 2024YFE0100700）资助。</p>",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    325,
+                    333
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    437,
+                    445
+                  ]
+                },
+                {
+                  "text": "underwater",
+                  "indices": [
+                    524,
+                    534
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    740,
+                    748
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    844,
+                    852
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    1029,
+                    1037
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    1115,
+                    1123
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    1275,
+                    1283
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    1439,
+                    1447
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    1519,
+                    1527
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    1664,
+                    1672
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/JackyLiuAI/Findpaper/blob/5612e162d7a090d90cdae86cf42e3b8a2c051a9f/papers/ICCV2025.txt",
+          "path": "papers/ICCV2025.txt",
+          "display_url": "https://github.com/JackyLiuAI/Findpaper/blob/5612e162d7a090d90cdae86cf42e3b8a2c051a9f/papers/ICCV2025.txt",
+          "display_title": "papers/ICCV2025.txt",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "B-VLLM: A Vision Large Language Model with Balanced Spatio-Temporal Tokens.\nMobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices.\nVITAL: More Understandable Feature Visualization through Distribution Alignment and Relevant Information Flow.",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    76,
+                    84
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "OMNI-DC: Highly Robust Depth Completion with Multiresolution Depth Integration.\nUnderwater Visual SLAM with Depth Uncertainty and Medium Modeling.\nIQA-Adapter: Exploring Knowledge Transfer from Image Quality Assessment to Diffusion-based Generative Models.",
+              "matches": [
+                {
+                  "text": "Underwater",
+                  "indices": [
+                    80,
+                    90
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/x2x5/find/blob/51574e3ea7c54afb7b1a5a3445c8a7b164add175/papers/iccv/2025.txt",
+          "path": "papers/iccv/2025.txt",
+          "display_url": "https://github.com/x2x5/find/blob/51574e3ea7c54afb7b1a5a3445c8a7b164add175/papers/iccv/2025.txt",
+          "display_title": "papers/iccv/2025.txt",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "Mobile Video Diffusion\nMobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices\nMobileViCLIP: An Efficient Video-Text Model for Mobile Devices",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    23,
+                    31
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "Reinforcement Learning-Guided Data Selection via Redundancy Assessment\nRelative Illumination Fields: Learning Medium and Light Independent Underwater Scenes\nReminiscence Attack on Residuals: Exploiting Approximate Machine Unlearning for Privacy",
+              "matches": [
+                {
+                  "text": "Underwater",
+                  "indices": [
+                    139,
+                    149
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/lhnows/alignai/blob/df4db6ca831821b01cea2756b527027c54c020a0/docs/Arxiv/2025-07-03.md",
+          "path": "docs/Arxiv/2025-07-03.md",
+          "display_url": "https://github.com/lhnows/alignai/blob/df4db6ca831821b01cea2756b527027c54c020a0/docs/Arxiv/2025-07-03.md",
+          "display_title": "docs/Arxiv/2025-07-03.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "effectiveness on the more specific real-world task of salmon segmentation and\ndetection in low-visibility underwater videos, for which we introduce\nDeepSalmon, the largest dataset of its kind in the literature.",
+              "matches": [
+                {
+                  "text": "underwater",
+                  "indices": [
+                    106,
+                    116
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\n### [117] [MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices](https://arxiv.org/abs/2507.01838)\n*Hailong Yan,Ao Li,Xiangtao Zhang,Zhe Liu,Zenglin Shi,Ce Zhu,Le Zhang*",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    12,
+                    20
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/xuhangc/Plumbing/blob/ea6d788ba16cdd4f7c1e8e7685b735b13e9e9352/catalog.csv",
+          "path": "catalog.csv",
+          "display_url": "https://github.com/xuhangc/Plumbing/blob/ea6d788ba16cdd4f7c1e8e7685b735b13e9e9352/catalog.csv",
+          "display_title": "catalog.csv",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "01_attention,DFE,CVPR 2022,MonoDTR: Monocular 3D Object Detection with Depth-Aware Transformer,-,dawang,01_attention/DFE.py,,https://arxiv.org/pdf/2203.13310\n01_attention,DICAM,,DICAM: Deep Inception and Channel-wise Attention Modules for underwater image enhancement,即插即用注意力模块,原仓,01_attention/DICAM.py,,https://www.sciencedirect.com/science/article/abs/pii/S0925231224003564\n01_attention,dip,,Inter-modal Distance Invariant Position Encoding — 跨模态距离不变位置编码,-,bug423,01_attention/dip.py,,",
+              "matches": [
+                {
+                  "text": "underwater",
+                  "indices": [
+                    239,
+                    249
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "02_convolution,LKLGLBlock,ACM MM 2025,[ACM MM 2025] Mobile U-ViT: Revisiting large kernel and U-shaped ViT for efficient medical image segmentation,2025最新代码,原仓,02_convolution/LKLGLBlock.py,,https://arxiv.org/pdf/2508.01064\n02_convolution,mie,,MobileIE Enhancement Block — MobileIE 轻量增强块,-,bug423,02_convolution/mie.py,,\n02_convolution,MSPLCK_EPA,,MixDehazeNet : Mix Structure Block For Image Dehazing Network,图像恢复，去模糊，去噪，去雾,原仓,02_convolution/MSPLCK_EPA.py,,https://arxiv.org/abs/2305.17654",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    255,
+                    263
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    286,
+                    294
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/topconf-4-pillars/blob/9904065be6c87ebf58d6c46830a2bc96a7bec8eb/web/data/repro/batch-03.json",
+          "path": "web/data/repro/batch-03.json",
+          "display_url": "https://github.com/38260/topconf-4-pillars/blob/9904065be6c87ebf58d6c46830a2bc96a7bec8eb/web/data/repro/batch-03.json",
+          "display_title": "web/data/repro/batch-03.json",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "   \"title\": \"MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices\",\n   \"github\": \"https://github.com/AVC2-UESTC/MobileIE\",\n   \"github_official\": true,",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    13,
+                    21
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    166,
+                    174
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "    {\n     \"name\": \"UIEB (Underwater Image Enhancement Benchmark)\",\n     \"url\": null,",
+              "matches": [
+                {
+                  "text": "Underwater",
+                  "indices": [
+                    26,
+                    36
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/configs/uieb_pretrained.yaml",
+          "path": "repro/configs/uieb_pretrained.yaml",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/configs/uieb_pretrained.yaml",
+          "display_title": "repro/configs/uieb_pretrained.yaml",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "# The release runs UIE through the SAME lle pipeline - README item 5 says to just point\n# the dataset paths at the underwater data - so model.type stays \"slim\"/task \"lle\".\nexp_name: uieb_pretrained",
+              "matches": [
+                {
+                  "text": "underwater",
+                  "indices": [
+                    115,
+                    125
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "  task: lle\n  pretrained: ../MobileIE-main/MobileIE-main/pretrain/uieb_best_slim.pkl\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    29,
+                    37
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    43,
+                    51
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/topconf-4-pillars/blob/9904065be6c87ebf58d6c46830a2bc96a7bec8eb/data/repro.json",
+          "path": "data/repro.json",
+          "display_url": "https://github.com/38260/topconf-4-pillars/blob/9904065be6c87ebf58d6c46830a2bc96a7bec8eb/data/repro.json",
+          "display_title": "data/repro.json",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "  \"iccv-025-ICCV2025-p959\": {\n   \"github\": \"https://github.com/AVC2-UESTC/MobileIE\",\n   \"github_official\": true,",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    74,
+                    82
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "    {\n     \"name\": \"UIEB (Underwater Image Enhancement Benchmark)\",\n     \"url\": null,",
+              "matches": [
+                {
+                  "text": "Underwater",
+                  "indices": [
+                    26,
+                    36
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/paper/bilingual/items.json",
+          "path": "paper/bilingual/items.json",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/paper/bilingual/items.json",
+          "display_title": "paper/bilingual/items.json",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "  \"page\": 8,\n  \"col\": 1,\n  \"y\": 548.0,\n  \"text\": \"In this paper, we introduce MobileIE, a lightweight CNN with only 4K parameters designed for real-time image enhancement on mobile devices. MobileIE combines simplicity with high performance across low-light image enhancement, underwater image enhancement, and image signal processing tasks. Key components such as the MBRConv, Feature Self-Transform module, Hierarchical Dual-Path Attention mechanism, and Local Variance-Weighted loss enable MobileIE to achieve superior results while maintaining an inference time of around 0.9 ms. Furthermore, MobileIE can be easily deployed on any commercial mobile device with minimal computational overhead and efficient resource utilization. Future work will explore optimizations to expand MobileIE’s application to more different tasks.\",\n  \"i\": 87\n },\n {",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    78,
+                    86
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    190,
+                    198
+                  ]
+                },
+                {
+                  "text": "underwater",
+                  "indices": [
+                    277,
+                    287
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    493,
+                    501
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    597,
+                    605
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    782,
+                    790
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/TheComplianceAide/Drone_EnhancedVision/blob/25ac9a3df478f4935c6a9927516589e35500ce76/research/night_vision_2026_07_04/github_repos_80_readmes.json",
+          "path": "research/night_vision_2026_07_04/github_repos_80_readmes.json",
+          "display_url": "https://github.com/TheComplianceAide/Drone_EnhancedVision/blob/25ac9a3df478f4935c6a9927516589e35500ce76/research/night_vision_2026_07_04/github_repos_80_readmes.json",
+          "display_title": "research/night_vision_2026_07_04/github_repos_80_readmes.json",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "        \"temporal\",\n        \"underwater\",\n        \"mobile_edge\",",
+              "matches": [
+                {
+                  "text": "underwater",
+                  "indices": [
+                    29,
+                    39
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "      ],\n      \"readme_excerpt\": \"<h1 align=\\\"center\\\">[ICCV 2025] MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices</h1> <div align=\\\"center\\\"> <hr> Hailong Yan<sup>1</sup>&nbsp; Ao Li<sup>1</sup>&nbsp; Xiangtao Zhang<sup>1</sup>&nbsp; Zhe Liu<sup>1</sup>&nbsp; Zenglin Shi<sup>2</sup>&nbsp; Ce Zhu<sup>1</sup>&nbsp; Le Zhang<sup>1,\\u2020</sup>&nbsp; <br> <sup>1</sup> UESTC&nbsp;&nbsp; <sup>2</sup> Hefei University of Technology<br> <sup>\\u2020</sup> Corresponding author.<br> <h4> <a href=\\\"https://www.arxiv.org/pdf/2507.01838\\\">\\ud83d\\udcc4 arXiv Paper</a> &nbsp; </h4> </div> <blockquote> <b>Abstract:</b> <i>Recent advancements in deep neural networks have driven significant progress in image enhancement (IE). However, deploying deep learning models on resource-constrained platforms, such as mobile devices, remains challenging due to high computation and memory demands. To address these challenges and facilitate real-time IE on mobile, we introduce an extremely lightweight Convolutional Neural Network (CNN) framework with around 4K parameters. Our approach integrates reparameterization with an Incremental Weight Optimization strategy to ensure efficiency. Additionally, we enhance performance with a Feature Self-Transform module and a Hierarchical Dual-Path Attention mechanism, optimized with a Local Variance-Weighted loss. With this efficient framework, we are the first to achieve real-time IE inference at up to 1,100 frames per second (FPS) while delivering competitive image quality, achieving the best trade-off between speed and performance across multiple IE tasks.</i> </blockquote> <p align=\\\"center\\\"> <img width=\\\"1000\\\" src=\\\"figs/framework.png\\\"> </p> --- ### Preparation 1. Replace the dataset path in the config file. 2. If you want to train the model, set the type in config to \\\"original\\\" and need_slims to \\\"false\\\". 3. If you want to test the pretrain model, set the type in config to \\\"re-parameterized\\\", need_slims to \\\"true\\\", and load the re-parameterized pre-trained model. You can also run inference with TFLite model by executing \\\"test_TFLite_RGB.py/test_TFLite_ISP.py\\\". 4. You can use the TFLite model and import it into AI Benchmark (https://ai-benchmark.com/) to obtain the inference speed on mobile devices. 5. If you want to perform UIE task, replace the dataset path in config/lle.yaml with your underwater image dataset. ### Train ```bash python main.py -task train -model_task lle/isp -device cuda ``` ### Test ```bash python main.py -task test -model_task lle/isp -device cuda ``` ### Demo ```bash python main.py -task demo -model_task lle/isp -device cuda ``` ### Contact If you have any questions, please contact me by e-mail (yanhailong@std.uestc.edu.cn; yhl00825@163.com). ### Citation If you find the code helpful in your research or work, please cite the following paper: ``` @InProceedings{yan2025mobileie, author = {Yan, Hailong and Li, Ao and Zhang, Xiangtao and Liu, Zhe and Shi, Zenglin and Zhu, Ce and Zhang, Le}, title = {MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices}, booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision}, month = {October}, year = {2025}, } ```\"\n    },",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    67,
+                    75
+                  ]
+                },
+                {
+                  "text": "underwater",
+                  "indices": [
+                    2411,
+                    2421
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    2922,
+                    2930
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    3053,
+                    3061
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/TheComplianceAide/Drone_EnhancedVision/blob/25ac9a3df478f4935c6a9927516589e35500ce76/research/night_vision_2026_07_04/github_repos_100.json",
+          "path": "research/night_vision_2026_07_04/github_repos_100.json",
+          "display_url": "https://github.com/TheComplianceAide/Drone_EnhancedVision/blob/25ac9a3df478f4935c6a9927516589e35500ce76/research/night_vision_2026_07_04/github_repos_100.json",
+          "display_title": "research/night_vision_2026_07_04/github_repos_100.json",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "      \"updatedAt\": \"2026-07-03T03:36:54Z\",\n      \"url\": \"https://github.com/AVC2-UESTC/MobileIE\",\n      \"matchedQueries\": [",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    87,
+                    95
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "      \"defaultBranch\": \"main\",\n      \"description\": \"Official Code for \\\"Reti-Diff: Illumination Degradation Image Restoration with Retinex-based Latent Diffusion Model\\\". A SOTA algorithm in low-light image enhancement, underwater image enhancement, and backlit image enhancement.\",\n      \"forksCount\": 2,",
+              "matches": [
+                {
+                  "text": "underwater",
+                  "indices": [
+                    221,
+                    231
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/FangruLinghu/PaperCode/blob/e987af245f74ab47e50187acc95926a8f1a4b3d2/arxiv_data_process/structured_papers/2507/2507.01838.json",
+          "path": "arxiv_data_process/structured_papers/2507/2507.01838.json",
+          "display_url": "https://github.com/FangruLinghu/PaperCode/blob/e987af245f74ab47e50187acc95926a8f1a4b3d2/arxiv_data_process/structured_papers/2507/2507.01838.json",
+          "display_title": "arxiv_data_process/structured_papers/2507/2507.01838.json",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "      \"subsections\": {\n        \"Low-Level Vision Tasks\": \"This section covers three key tasks: Low-Light Enhancement (LLE), Underwater Image Enhancement (UIE), and end-to-end Image Signal Processing (ISP). \\\\textbf{LLE.} LLE focuses on mitigating color distortion and noise in degraded images. Retinex-based \\\\cite{wu2022uretinex, liu2021retinex,bai2024retinexmamba,yi2023diff,cai2023retinexformer} enhance images by separating illumination and reflectance. Zero-DCE \\\\cite{guo2020zero} adjusts underexposed images using a luminance enhancement curve, and PairLIE \\\\cite{fu2023learning} learns enhancement from varying lighting conditions. Transformer-based \\\\cite{cai2023retinexformer,wen2024illumination,wang2023ultra} and Mamba-based \\\\cite{bai2024retinexmamba,zhang2024llemamba} methods have also achieved notable success, while Diffusion-based \\\\cite{yi2023diff, jiang2023low} methods excel at generating accurate images in extremely low-light conditions, even with noise and limited data. \\\\textbf{UIE.} Compared to traditional UIE methods \\\\cite{zhuang2022underwater, drews2016underwater}, CNN-based \\\\cite{islam2020fast, naik2021shallow, ma2022wavelet, sharma2023wavelength} directly learn feature representations from underwater images. Five A+ \\\\cite{jiang2023five} proposed a two-stage framework with a pixel attention module for real-time enhancement. Transformer-based \\\\cite{peng2023u,khan2024spectroformer} and Mamba-based \\\\cite{an2024uwmamba,chen2024mambauie} models more effectively handle complex underwater scenes with their global receptive fields. Additionally, Diffusion-based \\\\cite{zhao2024wavelet,tang2023underwater} approaches reduce noise and enhance contrast efficiently. \\\\textbf{ISP.} Learning-based ISP pipelines replace traditional multi-module systems by employing end-to-end models that directly process RAW input into RGB images. PyNet \\\\cite{ignatov2020replacing} focuses on mobile ISPs, while MW-ISP \\\\cite{ignatov2020aim} and AWNet \\\\cite{dai2020awnet} improve performance using wavelet transforms. LiteISP \\\\cite{zhang2021learning} resolves misalignment between RAW and sRGB images, achieving better results through joint learning. Rawformer \\\\cite{perevozchikov2024rawformer} eliminates the need for paired datasets with an unsupervised Transformer, and DiffRAW \\\\cite{yi2024diffraw} introduces diffusion models into ISP. Several ISP challenge works \\\\cite{ignatov2020aim,ignatov2022learned,ignatov2021learned} have also produced notable results.\",\n        \"Efficient Architectures Design\": \"Efficient neural networks aim to balance computational complexity and performance. Models like MobileNet \\\\cite{howard2019searching} and ShuffleNet \\\\cite{zhang2018shufflenet} achieve high performance with fewer FLOPs, while GhostNet \\\\cite{han2020ghostnet} and FasterNet \\\\cite{chen2023run} generate feature maps through cost-effective operations. StarNet \\\\cite{ma2024rewrite} excels in extracting rich representations with star-shaped operations, and VanillaNet \\\\cite{chen2024vanillanet} demonstrates minimalism's power using only a few convolutions. Furthermore, re-parameterization strategies have also proven successful in efficient network design. Models like ACNet \\\\cite{ding2019acnet}, DBB \\\\cite{ding2021diverse}, and RepVGG \\\\cite{ding2021repvgg} use multi-branch topologies to accelerate inference, while RepGhost \\\\cite{ding2021repvgg}, RepViT \\\\cite{wang2024repvit}, and MobileOne \\\\cite{vasu2023mobileone} adopt similar approaches to enhance performance. Several NTIRE challenge submissions \\\\cite{ren2024ninth,li2023ntire,conde2023efficient} have utilized re-parameterized structures to accelerate inference in efficient IE tasks.\"",
+              "matches": [
+                {
+                  "text": "Underwater",
+                  "indices": [
+                    124,
+                    134
+                  ]
+                },
+                {
+                  "text": "underwater",
+                  "indices": [
+                    1063,
+                    1073
+                  ]
+                },
+                {
+                  "text": "underwater",
+                  "indices": [
+                    1084,
+                    1094
+                  ]
+                },
+                {
+                  "text": "underwater",
+                  "indices": [
+                    1227,
+                    1237
+                  ]
+                },
+                {
+                  "text": "underwater",
+                  "indices": [
+                    1516,
+                    1526
+                  ]
+                },
+                {
+                  "text": "underwater",
+                  "indices": [
+                    1631,
+                    1641
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "        \"Experimental Settings\": \"\\\\textbf{Implementation Details.} We implemented MobileIE in PyTorch. The model uses the Adam optimizer with a cosine annealing learning rate schedule, starting at 0.001. The learning rate is reset every 50 epochs with gradual decay. A 10-epoch warm-up phase \\\\cite{he2022masked} is applied with a fixed learning rate of 1e-6. The model is trained for 2,000 epochs, incorporating an Incremental Weight Optimization Strategy for improved convergence. For the ISP task, input data is preprocessed into a $256 \\\\times 256$ Bayer pattern. \\\\textbf{Dataset and Metrics.} For LLE task, the LOLv1 \\\\cite{wei2018deep} and LOLv2 \\\\cite{yang2020fidelity} datasets are used for both training and testing. For UIE and ISP tasks, the UIEB \\\\cite{li2019underwater} and ZRR \\\\cite{ignatov2020replacing} datasets are utilized, respectively.\",\n        \"Quantitative and Visual Comparisons\": \"In this section, we compare the proposed MobileIE with current lightweight SOTA methods across three IE tasks, focusing on visual comparisons and performance metrics. Specifically, PSNR, SSIM, LPIPS, and SCORE \\\\cite{ignatov2022learned} are used as evaluation metrics, while computational complexity is tested on a single NVIDIA 4090 (GPU) and a smartphone with a Snapdragon 8 Gen 3 System on Chip (SoC). \\\\textbf{LLE:} The quantitative results on the LOLv1 \\\\cite{wei2018deep} and LOLv2 \\\\cite{yang2020fidelity} datasets are presented in Table \\\\ref{tab:1}. MobileIE achieves superior or comparable PSNR and SSIM scores across all metrics, with an inference speed of \\\\textbf{0.895 ms}. Compared to the lightweight SOTA method IAT \\\\cite{cui2022you}, MobileIE delivers comparable PSNR gains while using only \\\\textbf{4.7\\\\ \\\\begin{figure}[b] \\\\centering \\\\vspace{-12pt} \\\\begin{minipage}[htbp]{0.242\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{LOLv1/low/79.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(a) Input}} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{LOLv1/PairLIE/79.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(f) PairLIE~\\\\cite{fu2023learning}}} \\\\end{minipage} \\\\hspace{0.0000000001\\\\linewidth} \\\\begin{minipage}[htbp]{0.242\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{LOLv1/Zero-DCE/79.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(b) Zero-DCE~\\\\cite{guo2020zero} }} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{LOLv1/SYENet/79.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(e) SYELLE~\\\\cite{gou2023syenet}}} \\\\end{minipage} \\\\hspace{0.0000000001\\\\linewidth} \\\\begin{minipage}[htbp]{0.242\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{LOLv1/RUAS/79.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(c) RUAS~\\\\cite{liu2021retinex}}} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{LOLv1/our/79.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(i) Ours}} \\\\end{minipage} \\\\hspace{0.0000000001\\\\linewidth} \\\\begin{minipage}[htbp]{0.242\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{LOLv1/IAT/79.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(h) IAT~\\\\cite{cui2022you}}} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{LOLv1/high/79.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(j) Ground Truth}} \\\\end{minipage} \\\\vspace{-6pt} \\\\caption{\\\\label{lle} Visualization comparison of LLE on LOLv1 \\\\cite{wei2018deep}.} \\\\end{figure} \\\\textbf{UIE:} The quantitative results in Table \\\\ref{tab:2} show that MobileIE achieves a PSNR of 22.81 dB. Remarkably, MobileIE surpasses FiveA+ \\\\cite{jiang2023five} by 0.3 dB in PSNR while using only \\\\textbf{$45\\\\ \\\\begin{figure}[b] \\\\centering \\\\vspace{-6pt} \\\\begin{minipage}[htbp]{0.242\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{UIE/input/470_img_.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(a) Input}} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{UIE/LiteEnhanceNet/470_img_.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(e) LiteEnhanceNet~\\\\cite{zhang2024liteenhancenet}}} \\\\end{minipage} \\\\hspace{0.000001\\\\linewidth} \\\\begin{minipage}[htbp]{0.242\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{UIE/PUIE-mc/470_img_.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(b) PUIE~\\\\cite{fu2022uncertainty}}} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{UIE/LSNet/470_img_.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(f) LSNet~\\\\cite{zhou20247k}}} \\\\end{minipage} \\\\hspace{0.000001\\\\linewidth} \\\\begin{minipage}[htbp]{0.242\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{UIE/fivea/470_img_.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(c) FivaA+~\\\\cite{jiang2023five}}} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{UIE/our/470_img_.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(g) Ours}} \\\\end{minipage} \\\\hspace{0.000001\\\\linewidth} \\\\begin{minipage}[htbp]{0.242\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{UIE/Boths/470_img_.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(d) Boths~\\\\cite{liu2022boths}}} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{UIE/GT/470_img_.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(h) Ground Truth}} \\\\end{minipage} \\\\vspace{-6pt} \\\\caption{\\\\label{uie}Visualization comparison of UIE on UIEB \\\\cite{li2019underwater}.} \\\\end{figure} \\\\textbf{ISP:} On the ZRR \\\\cite{li2019underwater} dataset, the quantitative results in Table \\\\ref{tab:3} show that MobileIE maintains competitive performance while delivering \\\\textbf{3x} faster inference than existing lightweight SOTA models. Figure \\\\ref{isp} provides the corresponding visual comparisons. \\\\begin{figure}[htbp] \\\\centering \\\\begin{minipage}[htbp]{0.226\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{ISP/input.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(a) Raw visualized}} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{ISP/LiteISPNet.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(e) LiteISPNet \\\\cite{zhang2021learning}}} \\\\end{minipage} \\\\hspace{0.001\\\\linewidth} \\\\begin{minipage}[htbp]{0.226\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{ISP/PyNet.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(b) PyNet \\\\cite{ignatov2020replacing}}} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{ISP/syenet.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(f) SYEISP \\\\cite{gou2023syenet}}} \\\\end{minipage} \\\\hspace{0.001\\\\linewidth} \\\\begin{minipage}[htbp]{0.226\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{ISP/AWNet.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(c) AWNet \\\\cite{dai2020awnet}}} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{ISP/our.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(g) Ours}} \\\\end{minipage} \\\\hspace{0.001\\\\linewidth} \\\\begin{minipage}[htbp]{0.226\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{ISP/MW-ISPNet.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(d) MW-ISPNet \\\\cite{ignatov2020aim}}} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{ISP/gt.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(h) Ground Truth}} \\\\end{minipage} \\\\caption{\\\\label{isp}Visualization comparison of ISP on ZRR \\\\cite{ignatov2020replacing}.} \\\\vspace{-6pt} \\\\end{figure} \\\\begin{table}[h] \\\\centering \\\\vspace{-2pt} \\\\resizebox{\\\\columnwidth}{!}{ \\\\begin{tabular}{cccccc|ccc} \\\\toprule \\\\multicolumn{1}{c}{Method} & \\\\multicolumn{1}{c}{Venue} & \\\\multicolumn{1}{c}{\\\\#Params$\\\\downarrow$} & \\\\multicolumn{1}{c}{Latency$\\\\downarrow$} & \\\\multicolumn{1}{c}{Latency$\\\\downarrow$} & \\\\multicolumn{1}{c|}{FPS$\\\\uparrow$} & \\\\multicolumn{3}{c}{ZRR \\\\cite{ignatov2020replacing}} \\\\\\\\ \\\\cmidrule{7-9} & & (K)& (GPU,ms) & (SoC,ms) & (448$\\\\times$448) & PSNR$\\\\uparrow$ & SSIM$\\\\uparrow$ & SCORE$\\\\uparrow$\\\\\\\\ \\\\hline PyNet \\\\cite{ignatov2020replacing} & CVPRW'20 & 47,548& 118.339& \\\\textgreater 500 & \\\\textless 10 & 21.19 & 0.747 & 0.024 \\\\\\\\ AWNet(raw) \\\\cite{dai2020awnet} & ECCVW'20 & 45,408& 102.932 & \\\\textgreater 500 & \\\\textless 10 & 21.42 & \\\\textcolor{blue}{0.748} & 0.038\\\\\\\\ MW-ISP \\\\cite{ignatov2020aim} & ECCVW'20 & 29,200& / & / & / & 21.16 & 0.732 & / \\\\\\\\ LiteISP \\\\cite{zhang2021learning} & ICCV'21 & 11,900 & 46.326 & \\\\textgreater 500 & 21.334 & 21.28 & 0.739 & 0.070\\\\\\\\ NAFNet \\\\cite{chen2022simple} & ECCV'22 & 7.844 & 3.108 & 78.62 & 321.760 & 21.12 & 0.736 & 0.836 \\\\\\\\ SYEISP \\\\cite{gou2023syenet} & ICCV'23 & \\\\textcolor{blue}{5.616} & \\\\textcolor{blue}{1.156} & \\\\textcolor{blue}{16.47} & \\\\textcolor{blue}{865.247} & 20.84 & 0.728 & \\\\textcolor{blue}{1.524}\\\\\\\\ FourierISP \\\\cite{he2024enhancing} & AAAI'24 & 7,590& 22.869 & \\\\textgreater 500 & 43.731 & \\\\textcolor{red}{21.65} & \\\\textcolor{red}{0.755} & 0.237 \\\\\\\\ \\\\hline Ours & / & \\\\textcolor{red}{4.104} & \\\\textcolor{red}{1.020} & \\\\textcolor{red}{14.40} & \\\\textcolor{red}{980.516} & \\\\textcolor{blue}{21.43} & 0.731 & \\\\textcolor{red}{3.913}\\\\\\\\ \\\\bottomrule \\\\end{tabular}} \\\\caption{Performance comparison of different image signal processing models on ZRR datasets. SCORE \\\\cite{ignatov2022learned} represents a comprehensive measure of model performance and efficiency. The top results are marked: best in red and second in blue.} \\\\label{tab:3} \\\\vspace{-12pt} \\\\end{table} \\\\textbf{Mobile Deployment:} As shown in Tables \\\\ref{tab:1}, \\\\ref{tab:2}, and \\\\ref{tab:3}, MobileIE’s streamlined design (4K parameters and 0.924 GFLOPs) enables seamless deployment on commercial mobile devices, achieving real-time image enhancement at over 100 FPS. This efficiency paves the way for real-time UHD images (2K-8K) enhancement on mobile platforms.\",\n        \"Ablation Studies and Analyses\": \"We conducted a series of ablation studies to verify the effectiveness of MobileIE’s modules. First, MBRConv was compared with other re-parameterization methods \\\\cite{ding2021repvgg,zhang2023repnas,zhang2021edge}, and LVW loss was replaced by conventional loss functions. As shown in Table \\\\ref{tab:4}, both MBRConv and LVW loss significantly improved the model's performance. Importantly, MBRConv merges into standard convolutions during inference, adding no computational or memory overhead. \\\\begin{table}[htbp] \\\\centering \\\\resizebox{1\\\\columnwidth}{!}{ \\\\begin{tabular}{cccccc} \\\\toprule Datasets & \\\\multicolumn{5}{c}{UIEB \\\\cite{li2019underwater}} \\\\\\\\ \\\\hline Metrics & \\\\multicolumn{1}{c}{PSNR$\\\\uparrow$} & \\\\multicolumn{1}{c}{SSIM$\\\\uparrow$} & \\\\multicolumn{1}{c}{LPIPS$\\\\downarrow$} & \\\\multicolumn{1}{c}{LOE$\\\\downarrow$} & \\\\multicolumn{1}{c}{MAE$\\\\downarrow$} \\\\\\\\ \\\\hline Only inference network & 21.48 & 0.887 & 0.192 & 0.108 & 0.086 \\\\\\\\ \\\\hline L1 loss & 22.20 & 0.902 & 0.168 & 0.098 & 0.078 \\\\\\\\ L2 loss & 21.74 & 0.894 & 0.175 & 0.095 & 0.083 \\\\\\\\ Smooth L1 loss & 22.27 & 0.904 & 0.164 & 0.097 & 0.078 \\\\\\\\ Charbonnier loss & 22.31 & 0.905 & 0.162 & 0.097 & 0.077 \\\\\\\\ Robust loss \\\\cite{barron2019general} & 22.34 & 0.905 & 0.167 & 0.099 & 0.077 \\\\\\\\ \\\\hline LVW loss & \\\\textbf{22.57} & \\\\textbf{0.906} & \\\\textbf{0.160} & \\\\textbf{0.097} & \\\\textbf{0.075} \\\\\\\\ \\\\bottomrule \\\\bottomrule Datasets & \\\\multicolumn{5}{c}{LOLv1 \\\\cite{wei2018deep}+LOLv2-Real \\\\cite{yang2020fidelity}} \\\\\\\\ \\\\hline RepVGG \\\\cite{ding2021repvgg} & 22.69 & 0.821 & 0.202 & 0.257 & 0.089 \\\\\\\\ RepNAS \\\\cite{zhang2023repnas} & 21.90 & 0.810 & 0.210 & 0.259 & 0.099 \\\\\\\\ ECBSR \\\\cite{zhang2021edge} & 23.96 & 0.816 & 0.204 & 0.240 & 0.080 \\\\\\\\ MBRConv(No BN) & 23.27 & 0.821 & 0.232 & 0.258 & 0.082 \\\\\\\\ MBRConv(No IWO) & 24.02 & 0.823 & 0.199 & 0.257 & 0.078 \\\\\\\\ \\\\hline Ours & \\\\textbf{24.35} & \\\\textbf{0.829} & \\\\textbf{0.189} & \\\\textbf{0.254} & \\\\textbf{0.074} \\\\\\\\ \\\\bottomrule \\\\end{tabular}} \\\\caption{Performance comparison of Loss and Re-param modules.} \\\\label{tab:4} \\\\vspace{-12pt} \\\\end{table} \\\\textbf{(1) Why does MBRConv + IWO work?} \\\\textbf{IWO enhances the kernel skeletons.} To explore the impact of IWO on MBRConv kernels, we visualized the weight increments $\\\\Delta W$ in the last convolutional layer of the MobileIE model trained on the UIEB dataset. Here, $\\\\Delta W$ is defined as the difference between the weights trained with IWO ($W_{IWO}$) and those trained without it ($W_{base}$), i.e., $\\\\Delta W = W_{IWO} - W_{base}$. As shown in Figure \\\\ref{weight}, most $\\\\Delta W$ values reinforce the center-row and center-column characteristics of the convolutional kernels, which contributes to improved model performance \\\\cite{ding2019acnet,cai2023refconv}. \\\\begin{figure}[htbp] \\\\vspace{-4pt} \\\\begin{minipage}[htbp]{0.74\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{image/uie-weight.png}} \\\\end{minipage} \\\\hspace{0.001\\\\linewidth} \\\\begin{minipage}[htbp]{0.243\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{image/uie.jpg}} \\\\end{minipage} \\\\caption{\\\\label{weight} Visualization of kernel differences pre- and post-IWO.} \\\\vspace{-8pt} \\\\end{figure} \\\\begin{figure}[b] \\\\vspace{-8pt} \\\\begin{minipage}[htbp]{0.235\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{image/e100.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(a) Epoch = 100}} \\\\end{minipage} \\\\begin{minipage}[htbp]{0.235\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{image/e500.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(b) Epoch = 500}} \\\\end{minipage} \\\\begin{minipage}[htbp]{0.235\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{image/base.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(c) Epoch = 1,000}} \\\\end{minipage} \\\\begin{minipage}[htbp]{0.28\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{image/our.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(d) Applying IWO}} \\\\end{minipage} \\\\caption{\\\\label{feature} KL similarity matrix for the last convolutional layer of MBRConv at different training stages.} \\\\vspace{-8pt} \\\\end{figure} \\\\textbf{IWO reduces channel redundancy}, validated by comparing the last Conv$1\\\\times1$ layer of MBRConv$5\\\\times5$ before and after IWO optimization. Channel similarity was measured using Kullback-Leibler (KL) \\\\cite{zhou2019accelerate,wang2021tied,cai2023refconv} divergence, with higher values indicating lower redundancy. We trained MobileIE on the LOLv1, saving checkpoints at different stages. Applying softmax across channels and calculating KL divergence between channel pairs, we generated KL matrices at different training stages (Figure \\\\ref{feature}). As training progressed, KL divergence increased, and after IWO, it rose significantly, underscoring MBRConv’s effectiveness in reducing redundancy and improving feature representation. \\\\textbf{Impact of IWO on Training Convergence}. Similar to the Pre-training stage, $W_{pre}$ is the well-performing weight obtained after the first 1000 epochs. As shown in the training curves (Figure \\\\ref{lossv}), without IWO, the loss stagnates in the later training stages, whereas with IWO, it continues to decrease. This demonstrates that IWO facilitates further optimization of the weights, enhancing the model's convergence performance. The oscillation is due to cosine decay. \\\\begin{figure}[!h] \\\\vspace{-14pt} \\\\centering \\\\includegraphics[width=\\\\linewidth]{image/1loss.pdf} \\\\caption{\\\\label{lossv} Training loss curves showing the effect of IWO.} \\\\vspace{-8pt} \\\\end{figure} \\\\textbf{(2) FST can enhance nonlinear feature interaction.} The FST uses a nonlinear squaring transformation to enhance high-frequency sensitivity, highlighting image details and edges (Figure \\\\ref{fusion}). In the Fourier spectrum, squaring shows a stronger high-frequency response than ReLU, effectively preserving detail. The learnable parameters, $Scale$, and $bias$, further adaptively adjust the feature dynamic range, enhancing restoration performance. \\\\begin{figure}[htbp] \\\\begin{minipage}[htbp]{0.238\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{image/input.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(a) Original Feature:$F$}} \\\\end{minipage} \\\\hspace{0.001\\\\linewidth} \\\\begin{minipage}[htbp]{0.238\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{image/ReLU.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(b) ReLU($F$)}} \\\\end{minipage} \\\\hspace{0.001\\\\linewidth} \\\\begin{minipage}[htbp]{0.238\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{image/x_2.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(c) $F\\\\ast F$}} \\\\end{minipage} \\\\hspace{0.001\\\\linewidth} \\\\begin{minipage}[htbp]{0.238\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{image/FSF.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(d) FST($F$)}} \\\\end{minipage} \\\\caption{\\\\label{fusion} Feature Transformation Fourier Spectrum.} \\\\vspace{-8pt} \\\\end{figure} Figure \\\\ref{loss1} shows that the FST achieves a faster convergence rate during training compared to other feature transform methods. In the initial epochs, the FST rapidly reduces loss, demonstrating its ability to enhance feature representation early and accelerate convergence. Additionally, the FST’s final stabilized loss is lower than other methods, highlighting its robustness and effectiveness in complex tasks. Table \\\\ref{tab:5} further confirms that FST delivers the best feature transform performance on the UIEB \\\\cite{li2019underwater} dataset. \\\\begin{table}[htbp] \\\\centering \\\\resizebox{0.85\\\\columnwidth}{!}{ \\\\begin{tabular}{cccccc} \\\\toprule Methods & PSNR$\\\\uparrow$ & SSIM$\\\\uparrow$ & LPIPS$\\\\downarrow$ & LOE$\\\\downarrow$ & MAE$\\\\downarrow$ \\\\\\\\ \\\\midrule Baseline & 21.12 & 0.884 & 0.199 & 0.101 & 0.088 \\\\\\\\ ADD & 21.50 & 0.896 & 0.178 & 0.107 & 0.084 \\\\\\\\ Scale$\\\\ast$ADD & 21.34 & 0.893 & 0.173 & 0.105 & 0.087 \\\\\\\\ ADD+Bias & 21.58 & 0.890 & 0.177 & 0.093 & 0.086 \\\\\\\\ CAT & 21.44 & 0.893 & 0.181 & 0.095 & 0.085 \\\\\\\\ MUL & 21.80 & 0.901 & 0.173 & 0.095 & 0.084 \\\\\\\\ MUL+Bias & 21.84 & 0.901 & 0.168 & 0.092 & 0.081 \\\\\\\\ Scale$\\\\ast$MUL & 21.95 & 0.902 & 0.167 & 0.092 & 0.081 \\\\\\\\ \\\\hline Ours & \\\\textbf{22.60} & \\\\textbf{0.906} & \\\\textbf{0.157} & \\\\textbf{0.092} & \\\\textbf{0.075} \\\\\\\\ \\\\bottomrule \\\\end{tabular}} \\\\caption{Performance comparison of different feature transform. \\\"Baseline\\\" represents the model without any feature transform.} \\\\label{tab:5} \\\\vspace{-8pt} \\\\end{table} \\\\begin{figure}[h] \\\\centering \\\\includegraphics[width=0.97\\\\linewidth]{image/loss.jpg} \\\\caption{Training loss comparison of different feature transform.} \\\\label{loss1} \\\\vspace{-8pt} \\\\end{figure} \\\\textbf{(3) Dual-path fusion enables precise feature capture.} How can one achieve both efficiency and precise capture of local and global feature dependencies? Following Occam’s Razor principle, HDPA adopts a streamlined design language, utilizing a dual-path structure and adaptive feature interaction to decompose and aggregate features hierarchically, thereby extracting critical information across different scales. This dual-path design also supports mutual optimization during backpropagation. \\\\begin{figure}[htbp] \\\\begin{minipage}[htbp]{0.243\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{HDPA/1.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(a) RGB image}} \\\\end{minipage} \\\\hspace{0.00001\\\\linewidth} \\\\begin{minipage}[htbp]{0.243\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{HDPA/input_feature.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(b) Input feature}} \\\\end{minipage} \\\\hspace{0.00001\\\\linewidth} \\\\begin{minipage}[htbp]{0.243\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{HDPA/HDPA.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(c) HDPA heat map}} \\\\end{minipage} \\\\hspace{0.00001\\\\linewidth} \\\\begin{minipage}[htbp]{0.243\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{HDPA/output_feature.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(d) Output feature}} \\\\end{minipage} \\\\caption{\\\\label{att} Visualization of feature maps at different stages.} \\\\vspace{-8pt} \\\\end{figure} Figure \\\\ref{att} illustrates HDPA’s effectiveness. The initial convolution preserves key edges and structures, while the HDPA heatmap highlights important regions, focusing attention on key details. This produces a sharper output feature map, demonstrating how HDPA’s attention improves image enhancement by refining key details. \\\\begin{table}[htbp] \\\\centering \\\\resizebox{\\\\columnwidth}{!}{ \\\\begin{tabular}{ccccc|cccc} \\\\toprule \\\\multicolumn{1}{c}{Method} & \\\\multicolumn{1}{c}{\\\\#Params$\\\\downarrow$} & \\\\multicolumn{1}{c}{FLOPs$\\\\downarrow$} & \\\\multicolumn{1}{c}{Latency$\\\\downarrow$} & \\\\multicolumn{1}{c|}{Latency$\\\\downarrow$} & \\\\multicolumn{4}{c}{LOLv1 \\\\cite{ignatov2020replacing}} \\\\\\\\ \\\\cmidrule{6-9} & (K) & (G) & (GPU,ms) & (SoC,ms) & PSNR$\\\\uparrow$ & SSIM$\\\\uparrow$ & LPIPS$\\\\downarrow$ & SCORE$\\\\uparrow$ \\\\\\\\ \\\\midrule SE-Net\\\\cite{hu2018squeeze} & 4.179 & 0.922 & 0.948 & 7.41 & 22.27 & 0.804 & 0.217 & 17.259\\\\\\\\ CBAM\\\\cite{woo2018cbam} & 4.254 & 0.945 & 6.573 & 95.71 & 22.38 & 0.796 & 0.231 & 1.556\\\\\\\\ ECA-Net\\\\cite{wang2020eca} & \\\\textbf{3.870} & 0.922 & 0.805 & 6.65 & 21.79 & 0.799 & 0.221 & 9.886 \\\\\\\\ EA\\\\cite{shen2021efficient} & 4.491 & 1.057 & 1.232 & 11.45 & 19.93 & 0.779 & 0.260 & 0.436\\\\\\\\ NAM\\\\cite{liu2021nam} & 3.891 & 0.930 & 0.905 & 7.02 & 20.10 & 0.761 & 0.252 & 0.900\\\\\\\\ SCA\\\\cite{chen2022simple} & 4.023 & 0.922 & \\\\textbf{0.769} & 6.33 & 20.82 & 0.786 & 0.250 & 2.707\\\\\\\\ DFC\\\\cite{tang2022ghostnetv2} & 3.979 & \\\\textbf{0.921} & 0.890 & \\\\textbf{6.29} & 21.50 & 0.802 & 0.208 & 6.992\\\\\\\\ EMA\\\\cite{ouyang2023efficient} & 4.239 & 1.086 & 1.569 & 9.79 & 20.78 & 0.792 & 0.233 & 1.656\\\\\\\\ SPAN\\\\cite{wan2024swift} & 5.511 & 1.308 & 1.835 & 10.24 & 19.79 & 0.767 & 0.260 & 0.401\\\\\\\\ CGA\\\\cite{chen2024dea} & 6.330 & 1.486 & 1.437 & 9.62 & 22.33 & 0.803 & 0.209 & 14.447\\\\\\\\ LKA\\\\cite{azad2024beyond} & 5.247 & 1,236 & 1.082 & 8.96 & 19.76 & 0.782 & 0.227 & 0.440\\\\\\\\ \\\\midrule Ours & 4.035 & 0.924 & 0.886 & 6.72 & \\\\textbf{23.26} & \\\\textbf{0.805} & \\\\textbf{0.213} & \\\\textbf{75.079}\\\\\\\\ \\\\bottomrule \\\\end{tabular}} \\\\caption{Performance comparison of different Attention mechanisms on LOLv1 \\\\cite{wei2018deep} dataset. SCORE \\\\cite{ignatov2022learned} reflects the efficiency.} \\\\label{tab:6} \\\\vspace{-8pt} \\\\end{table} Finally, we replaced it with mainstream attention mechanisms and conducted ablation experiments, as shown in Table \\\\ref{tab:6}. With minimal added parameters (+0.168 K) and FLOPs (+5.76 M), HDPA achieved a PSNR gain of +3.08 dB. Tests on mobile devices confirmed HDPA’s high performance with minimal latency, underscoring the efficiency of our edge-focused IE design in MobileIE. \\\\textbf{(4) Effectiveness of LVW in Outlier Optimization.} We observed that the pixel error histograms follow a Laplace-like distribution, suggesting the model optimizes accurate pixels while neglecting outliers \\\\cite{gou2023syenet}. Based on L1 Loss, LVW adjusts weights to increase the constraint on outliers. Normalization standardizes errors, bringing the data distribution closer to uniform and ensuring balanced pixel weights. Additionally, we visualized the pixel prediction error histograms for different loss functions, as shown in Figure \\\\ref{losshis}. LVW exhibits lower mean and median pixel errors, improving effectiveness in optimizing challenging regions. \\\\begin{figure}[htbp] \\\\begin{minipage}[htbp]{0.5\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{image/L1.png}} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{image/sml1.png}} \\\\end{minipage} \\\\begin{minipage}[htbp]{0.5\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{image/char.png}} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{image/Ours.png}} \\\\end{minipage} \\\\caption{\\\\label{losshis} Visualization of pixel prediction error histograms for various loss functions.} \\\\vspace{-8pt} \\\\end{figure} \\\\textbf{(5) Module-Wise Lightweight Contributions.} Table \\\\ref{tab:7} demonstrates that re-parameterization significantly reduces model complexity during inference. IWO and LVW introduce no extra cost, making them suitable for efficient deployment. Re-parameterization combined with cost-free strategies enables efficient and lightweight inference. \\\\begin{table}[!h] \\\\centering \\\\vspace{-6pt} \\\\resizebox{\\\\columnwidth}{!}{ \\\\begin{tabular}{cccc|ccc|cc} \\\\toprule Model & Training & w/o FST & w/o HDPA & Inference & w/o FST & w/o HDPA & IWO & LVW \\\\\\\\ \\\\toprule Params (K) & 75.243 & 75.243 & 71.283 & 4.047 & 4.047 & 3.867 & & \\\\\\\\ Model Size (MB) & 0.29 & 0.29 & 0.27 & 0.02 & 0.02 & 0.01 & \\\\multicolumn{2}{c}{Cost-Free} \\\\\\\\ FLOPs (G) & 17.447 & 17.447 & 17.099 & 0.924 & 0.924 & 0.919 & \\\\multicolumn{2}{c}{Optimization} \\\\\\\\ Latency (ms) & 12.83 & 12.61 & 11.31 & 0.895 & 0.864 & 0.732 & & \\\\\\\\ \\\\bottomrule \\\\end{tabular} } \\\\caption{Ablation on Module Efficiency (RTX 3090).} \\\\label{tab:7} \\\\vspace{-13pt} \\\\end{table}\"",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    83,
+                    91
+                  ]
+                },
+                {
+                  "text": "underwater",
+                  "indices": [
+                    773,
+                    783
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    950,
+                    958
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    1468,
+                    1476
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    1661,
+                    1669
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    3352,
+                    3360
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    3402,
+                    3410
+                  ]
+                },
+                {
+                  "text": "underwater",
+                  "indices": [
+                    5067,
+                    5077
+                  ]
+                },
+                {
+                  "text": "underwater",
+                  "indices": [
+                    5134,
+                    5144
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    5212,
+                    5220
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    9005,
+                    9013
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    9396,
+                    9404
+                  ]
+                },
+                {
+                  "text": "underwater",
+                  "indices": [
+                    9969,
+                    9979
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    11662,
+                    11670
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    13781,
+                    13789
+                  ]
+                },
+                {
+                  "text": "underwater",
+                  "indices": [
+                    16800,
+                    16810
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    22078,
+                    22086
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Calebdee/CommunicativeEffectsOfAnonymityOnline/blob/2ea33d706e92e0fc3693359726955ed09d30ab34/multiply/extract-306.csv",
+          "path": "multiply/extract-306.csv",
+          "display_url": "https://github.com/Calebdee/CommunicativeEffectsOfAnonymityOnline/blob/2ea33d706e92e0fc3693359726955ed09d30ab34/multiply/extract-306.csv",
+          "display_title": "multiply/extract-306.csv",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "1259738538431713300,40440330,\"Hey @netflix as you place Obama in every other TV series make a proper one now! As you are biased and fake, time to… https://t.co/ijenHeU2PE\",\"somewhat-identifiable\",\"Sandra\"\n1259077860914016300,40440330,\"@HuaweiMobileIE @Huawei_Europe can you please explain why in @HuaweiItalia you have this good offer and in Ireland… https://t.co/Y3lMtRAbpR\",\"somewhat-identifiable\",\"Sandra\"\n1258107024996524000,40440330,\"@Naughty_Dog Hopefully you have improved the controls and made them customizable this time cos I hated them on the first one.\",\"somewhat-identifiable\",\"Sandra\"",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    244,
+                    252
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\"\"...Eh. Nobody's perfect.\"\" Great dialogue, and I mean that sincerely.\",\"somewhat-identifiable\",\"Sandra\"\n1266950470796488700,24815916,\"@dogunderwater even weirder considering they hired a guy known for being an outlandish character on a wild ass show\",\"somewhat-identifiable\",\"Sandra\"\n1266487779996901400,39189928,\"A bronze serpent and an oracle of Balaam?—two things you will find in today's download from #ChristianHelps on the… https://t.co/gKACMUgWLj\",\"somewhat-identifiable\",\"Sandra\"",
+              "matches": [
+                {
+                  "text": "underwater",
+                  "indices": [
+                    140,
+                    150
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Calebdee/CommunicativeEffectsOfAnonymityOnline/blob/2ea33d706e92e0fc3693359726955ed09d30ab34/multiply/multiply306.json",
+          "path": "multiply/multiply306.json",
+          "display_url": "https://github.com/Calebdee/CommunicativeEffectsOfAnonymityOnline/blob/2ea33d706e92e0fc3693359726955ed09d30ab34/multiply/multiply306.json",
+          "display_title": "multiply/multiply306.json",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "        \"user_id\": 40440330,\n        \"text\": \"@HuaweiMobileIE @Huawei_Europe can you please explain why in @HuaweiItalia you have this good offer and in Ireland\\u2026 https://t.co/Y3lMtRAbpR\",\n        \"classifier\": \"somewhat-identifiable\",",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    53,
+                    61
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "        \"user_id\": 24815916,\n        \"text\": \"@dogunderwater even weirder considering they hired a guy known for being an outlandish character on a wild ass show\",\n        \"classifier\": \"somewhat-identifiable\",",
+              "matches": [
+                {
+                  "text": "underwater",
+                  "indices": [
+                    50,
+                    60
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Calebdee/CommunicativeEffectsOfAnonymityOnline/blob/2ea33d706e92e0fc3693359726955ed09d30ab34/multiply copy/multiply306.json",
+          "path": "multiply copy/multiply306.json",
+          "display_url": "https://github.com/Calebdee/CommunicativeEffectsOfAnonymityOnline/blob/2ea33d706e92e0fc3693359726955ed09d30ab34/multiply copy/multiply306.json",
+          "display_title": "multiply copy/multiply306.json",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "        \"user_id\": 40440330,\n        \"text\": \"@HuaweiMobileIE @Huawei_Europe can you please explain why in @HuaweiItalia you have this good offer and in Ireland\\u2026 https://t.co/Y3lMtRAbpR\",\n        \"classifier\": \"somewhat-identifiable\",",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    53,
+                    61
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "        \"user_id\": 24815916,\n        \"text\": \"@dogunderwater even weirder considering they hired a guy known for being an outlandish character on a wild ass show\",\n        \"classifier\": \"somewhat-identifiable\",",
+              "matches": [
+                {
+                  "text": "underwater",
+                  "indices": [
+                    50,
+                    60
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/draumaz/searchoney-dev/blob/4d42f6086f6c70316558e3d31e5e6278a8ba4fa3/TRANSCRIPTS/ABC/ALL of Boney Plays 2017 (Complete Series) [28sWCpPFFCU].json",
+          "path": "TRANSCRIPTS/ABC/ALL of Boney Plays 2017 (Complete Series) [28sWCpPFFCU].json",
+          "display_url": "https://github.com/draumaz/searchoney-dev/blob/4d42f6086f6c70316558e3d31e5e6278a8ba4fa3/TRANSCRIPTS/ABC/ALL of Boney Plays 2017 (Complete Series) [28sWCpPFFCU].json",
+          "display_title": "TRANSCRIPTS/ABC/ALL of Boney Plays 2017 (Complete Series) [28sWCpPFFCU].json",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "[\"02:11:34,860\",\"02:11:44,060\",\"\\\"Do you think he had a horse yeah, do I didn't know how to do his castle was\\\"\"]\n[\"02:11:44,060\",\"02:11:50,520\",\"\\\"There were no automobileies Lambert in these back then he built one out of people\\\"\"]\n[\"02:11:51,240\",\"02:11:56,520\",\"\\\"You should have made a horse out of dead parts. Yeah out of people parts. They should have just made a car\\\"\"]",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    166,
+                    174
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "[\"02:16:30,360\",\"02:16:34,820\",\"\\\"Look at that water. Yeah, they po they they paused you at this really odd angle Wow\\\"\"]\n[\"02:16:34,820\",\"02:16:38,420\",\"\\\"They can pause you underwater and then you just you just drown you just drown\\\"\"]\n[\"02:16:38,420\",\"02:16:44,060\",\"\\\"You like that part in Star Wars episode one with the little guy who runs up and makes fun of Anakin's pod and\\\"\"]",
+              "matches": [
+                {
+                  "text": "underwater",
+                  "indices": [
+                    175,
+                    185
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/draumaz/searchoney-dev/blob/4d42f6086f6c70316558e3d31e5e6278a8ba4fa3/TRANSCRIPTS/MNO/Oney Plays Mad Panic Coaster WITH FRIENDS - BONEY PLAYS [3ksL97oyrD4].json",
+          "path": "TRANSCRIPTS/MNO/Oney Plays Mad Panic Coaster WITH FRIENDS - BONEY PLAYS [3ksL97oyrD4].json",
+          "display_url": "https://github.com/draumaz/searchoney-dev/blob/4d42f6086f6c70316558e3d31e5e6278a8ba4fa3/TRANSCRIPTS/MNO/Oney Plays Mad Panic Coaster WITH FRIENDS - BONEY PLAYS [3ksL97oyrD4].json",
+          "display_title": "TRANSCRIPTS/MNO/Oney Plays Mad Panic Coaster WITH FRIENDS - BONEY PLAYS [3ksL97oyrD4].json",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "[\"08:47,120\",\"08:50,040\",\"\\\"the book. I didn't read the book. I didn't get to his castle. It was fucking huge. Yeah,\\\"\"]\n[\"08:50,040\",\"08:55,560\",\"\\\"exactly. There were no automobileies, Lamborghini's back then. He built one out of people.\\\"\"]\n[\"08:55,560\",\"09:00,480\",\"\\\"He should have made a horse out of dead parts. Yeah. Out of people parts. He should have\\\"\"]",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    176,
+                    184
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "[\"14:09,280\",\"14:13,740\",\"\\\"Look at that water. Yeah, they po they they paused you at this really odd angle Wow\\\"\"]\n[\"14:13,740\",\"14:17,340\",\"\\\"They can pause you underwater and then you just you just drown you just drown\\\"\"]\n[\"14:17,340\",\"14:22,960\",\"\\\"You like that part in Star Wars episode one with the little guy who runs up and makes fun of Anakin's pod and\\\"\"]",
+              "matches": [
+                {
+                  "text": "underwater",
+                  "indices": [
+                    163,
+                    173
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "isError": false
+  }
+}
