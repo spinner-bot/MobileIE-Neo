@@ -13,7 +13,7 @@ def main():
    elif x.get('http_status')!=200:r['reason']='non-200 response, not assumed to be material'
    elif not data:r['reason']='empty response'
    elif re.search(br'(?i)<title[^>]*>\s*(just a moment|access denied|security|robot|captcha|challenge)',data[:5000]):r['reason']='HTML access challenge'
-   else:r.update(usable=True,reason='nonempty HTTP200 acquisition; content-specific adequacy still requires reading',file=x['archive_path'],bytes=len(data),format='pdf' if data.startswith(b'%PDF') else 'json' if data.lstrip()[:1] in (b'[',b'{') else 'text/html')
+   else:r.update(usable=True,reason='nonempty HTTP200 acquisition; content-specific adequacy still requires reading',file=x['archive_path'],bytes=len(data),format='zip' if data.startswith(b'PK\x03\x04') else 'pdf' if data.startswith(b'%PDF') else 'json' if data.lstrip()[:1] in (b'[',b'{') else 'text/html')
   rows.append(r)
  out=dict(archive_checks=len(rows),counts=dict(collections.Counter(x['transport'] for x in rows)),usable_acquisitions=sum(x['usable'] for x in rows),records=rows,scope='Integrity and transport audit ONLY; not Gate1 approval or fulltext adequacy proof')
  (BASE/'collection/acquisition-audit.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n')
