@@ -34,7 +34,7 @@ def main():
     import torch
     from mixed_anchor_r40 import MixedPool
     from motion_transport_r74 import load_spatial
-    from shared_geometry_r88 import make_heads, stem, update
+    from shared_geometry_r88 import make_heads, stem, update, initialize_backend
     from shared_geometry_data_r88 import batch
     precision(); cv2.setNumThreads(1)
     began, complete, steps, inherited, reason = time.perf_counter(), False, 0, 0, 'error'
@@ -42,7 +42,7 @@ def main():
     stem_batches = stem_images = 0
     stop = [False]
     signal.signal(signal.SIGTERM, lambda *_: stop.__setitem__(0, True))
-    frozen_path = PROCESS/'training-source-freeze001.json'
+    frozen_path = PROCESS/'training-source-freeze002.json'
     frozen_sha = digest(frozen_path)
 
     def save(kind):
@@ -67,9 +67,9 @@ def main():
     try:
         frozen = verify(json.loads(frozen_path.read_text()))
         for device in ('cpu', 'cuda'):
-            config = json.loads((PROCESS/f'{device}-gate001/config.json').read_text())
+            config = json.loads((PROCESS/f'{device}-gate002/config.json').read_text())
             verify(config['frozen'])
-            gate = json.loads((PROCESS/f'{device}-gate001/gate.json').read_text())
+            gate = json.loads((PROCESS/f'{device}-gate002/gate.json').read_text())
             assert gate['passed'] and gate['discarded_updates'] == 8 and gate['formal_updates'] == 0
         saved = None
         if args.resume:
@@ -104,7 +104,9 @@ def main():
             no_DEV_selection=True, scientific_retry=False))
         gpu_lock, schedule, selected = acquire_gpu(bound, out)
         backbone = backbone.cuda()
-        heads = {name: head.cuda().train() for name, head in heads.items()}
+        heads = initialize_backend(heads, torch.device('cuda'))
+        for head in heads.values():
+            head.train()
         optimizers = {name: torch.optim.Adam(head.parameters(), lr=1e-3, betas=(.9, .999), eps=1e-8,
                                             weight_decay=0) for name, head in heads.items()}
         if saved:
