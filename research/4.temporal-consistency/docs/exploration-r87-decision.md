@@ -1,0 +1,29 @@
+# R87决定：RGB映射可数值保持，但正对角匹配校准不足
+
+2026-11-17T14:26:02.161539+08:00；Codex  (sqs_A100)。[原协议](exploration-r87-functional-gauge-preflight-protocol.md)、[原全部查询/汇总](../process/exploration-r87/preflight001/summary.json)、[正常终态](../process/exploration-r87/terminal001.json)保持。唯一原CPU1054252/exec46358于14:01:22正常结束32.178922秒，64 B4/256实际骨干图、1024度量Adam更新、0骨干更新、4800查询行/24组summary全部完成，21源及协议未改，原PID退出。无科学重试/新DEV/最终/光流/视频融合/GPU。
+
+这次直接校准平方前内部匹配度量，保持原RGB函数的代数关系为head最后卷积输出乘D、head FSTS bias乘D²、body输入通道卷积权重除D²，其余不变。两fold导出仍4075参数且实际读取检查全部权重有限。learned gain并非identity：seed0约.748–1.987，seed1约.729–1.924。不是添加输出修正头或训练原F0。
+
+|F0 seed|unclipped RGB最大差|clipped RGB最大差|folded/显式加权logit最大差|数值资格|
+|---|---:|---:|---:|---|
+|0|3.576279e−7|3.576279e−7|3.197789e−5|True|
+|1|4.768372e−7|4.172325e−7|3.194809e−5|True|
+
+实数函数保持由该结构的缩放代数得到；上表只是全部登记输入的FP32核验，不是任意浮点输入逐bit保证/BN训练等价或量化结果。这一参数变化确实能改变匹配相似度；原协议“没有新特征函数族”指匹配仍等价于已知正对角加权余弦，没有额外观测信息或超出该度量类，不是说相似度恒等于canonical。
+
+|图像来源类别|F0 seed|check baseline top1|check final top1|绝对变化|final/base CE|必要前提|
+|---|---:|---:|---:|---:|---:|---|
+|DAVIS-GT|0|4.0%|5.5%|+1.5pp|.905081|False|
+|OLiVES-GT|0|6.5%|5.0%|−1.5pp|.848293|False|
+|DAVIS-GT|1|4.5%|6.0%|+1.5pp|.902333|False|
+|OLiVES-GT|1|4.5%|3.5%|−1.0pp|.853841|False|
+
+CE四组降低约9.5%–15.2%，但全部未达绝对top1+.05。OLiVES来源在calibration上也出现CE降而正确率降，不能用优化器正常/loss下降替代实际匹配改善；并未识别唯一原因或证明全局最优不可达。作为解析背景，81类均匀分布CE=log81约4.39445，四组check最终CE仍为4.6927–5.2917；此非新增选择门槛/训练变体或独立实验。必要匹配前提0/4，不启动后续核心或正式视频训练。
+
+资料只有原四训练窗GT第0帧的8裁块，每图四已知quarter整数位移与previous/current独立photon40/noJPEG噪声、固定25查询。两个来源类别均是重新合成噪声，OLiVES-GT不等于实拍噪声验证。calibration四裁块来自boxing-fisheye/disc-jockey/video_95三个视频，check四裁块来自classic-car/soccerball/video_12/video_131四视频，本次源身份无交集；但均在原F0训练池内，不是未见基线训练/开发或最终测试。各200查询共享两源图，不当200独立样本或新视频基准。
+
+按事前停止本正对角保持函数度量校准的投影/尺度/温度/噪声/长度/seed局部网格，不增加矩阵/descriptor宽度救分，不将变换权重接回R84 hard matcher或R74旧字段学习器。它没有建立真实flow、视频时序、端侧成本或创新方法，也不否定所有可学习共享表征。DFQ跨层均衡、加权余弦等直接先例不因可fold而消失。
+
+本轮也核明DeltaCNN已覆盖非线性差分/截断累计，Sigma-Delta特定等价输出取决于当前rounding输入，MotionDeltaCNN已有相机对齐/缓冲；未执行其作者代码或移入速度。故不另起差分/阈值加速网格。后续新核心需要更明确的不同信息/表示机制与直接先例差异，不能凭缓存、参数重标度或更多隐层维度自动获得训练资格，当前尚未确定符合条件的核心。
+
+原R86两经典trade-off/84个论文开发质量数与paper020均保持；本训练源检索不混进PSNR/Etemp/JOD主表，创新/自然动态/真实手机/独立最终仍缺。所有权重在自有data、原始结果/过程/解释/报告分文件提交与阶段推送，main/指定作者/no-ff和长期目标active保持。
