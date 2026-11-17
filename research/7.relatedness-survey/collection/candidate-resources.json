@@ -1222,6 +1222,21 @@
     ]
   },
   {
+    "temporary_key": "related-edgeaware-review",
+    "type": "paper",
+    "title": "Edge-Aware Diffusion for Mobile Photo Enhancement: ASystematic Review and Comparative Latency Analysis",
+    "dois": [
+      "10.21203/rs.3.rs-9025777/v1"
+    ],
+    "relation": "Additional Research Square preprint located through web supplement; primary PDF explicitly mentions MobileIE, but correct bibliographic citation is NOT yet verified and is not assumed from title/index",
+    "sources": [
+      "web-new-review-trace.json",
+      "receipts/newreview-primary-pdf.json",
+      "receipts/newreview-crossref.json",
+      "new-review-identity-check.json"
+    ]
+  },
+  {
     "temporary_key": "code-AVC2-UESTC--NTIRE2025-LLIE",
     "type": "code",
     "title": "AVC2-UESTC/NTIRE2025-LLIE",
@@ -1521,6 +1536,19 @@
     ]
   },
   {
+    "temporary_key": "code-W-ayivi--ML-ConvNet",
+    "type": "code",
+    "title": "W-ayivi/ML-ConvNet",
+    "repo": "W-ayivi/ML-ConvNet",
+    "revision": "c7c3a6c92cf485a23473e477af51f754a0272341",
+    "tree": "016e878d9b0c8ab21f6ffd81dc7e449504f30f02",
+    "relation": "official MobileIE project, distinct MobileIE-derived tree, or author-linked implementation of an included paper",
+    "sources": [
+      "plugin-head-W-ayivi--ML-ConvNet.json",
+      "receipts/sourcezip-W-ayivi--ML-ConvNet.json"
+    ]
+  },
+  {
     "temporary_key": "other-mobileie-explanations",
     "type": "other",
     "title": "MobileIE 中英文解读、转载与传播资料族",
@@ -1549,6 +1577,22 @@
     "sources": [
       "receipts/chinese-objectdetection.json",
       "web-initial-5.json"
+    ]
+  },
+  {
+    "temporary_key": "code-369pro--DEIMv8",
+    "type": "code",
+    "title": "369pro/DEIMv8",
+    "repo": "369pro/DEIMv8",
+    "revision": "8379939c2b7dd4b88570023ddb76b4dc23ab004e",
+    "relation": "Explicit MobileIE implementation/module reuse; module-port claim requires independent source review, no fidelity/performance assumed",
+    "sources": [
+      {
+        "url": "https://github.com/369pro/DEIMv8/blob/8379939c2b7dd4b88570023ddb76b4dc23ab004e/engine/extre_module/custom_nn/conv_module/MBRConv.py",
+        "path": "engine/extre_module/custom_nn/conv_module/MBRConv.py",
+        "revision": "8379939c2b7dd4b88570023ddb76b4dc23ab004e",
+        "acquisition": "receipts/codehit-a737a72bcd1dd893.json"
+      }
     ]
   },
   {
@@ -1608,6 +1652,30 @@
         "path": "arxiv_data_process/code_model_definition/pytorch_model_definitions/2507.01838.txt",
         "revision": "e987af245f74ab47e50187acc95926a8f1a4b3d2",
         "acquisition": "receipts/codehit-bb29c8b69a6be579.json"
+      },
+      {
+        "url": "https://github.com/FangruLinghu/PaperCode/blob/e987af245f74ab47e50187acc95926a8f1a4b3d2/arxiv_data_process/papers_classification/classified_papers/2507.01838_classified.json",
+        "path": "arxiv_data_process/papers_classification/classified_papers/2507.01838_classified.json",
+        "revision": "e987af245f74ab47e50187acc95926a8f1a4b3d2",
+        "acquisition": "receipts/codehit-741efc241b2399ce.json"
+      },
+      {
+        "url": "https://github.com/FangruLinghu/PaperCode/blob/e987af245f74ab47e50187acc95926a8f1a4b3d2/arxiv_data_process/filter_new_model_papers/papers_w_new_model/2507.01838_classified.json",
+        "path": "arxiv_data_process/filter_new_model_papers/papers_w_new_model/2507.01838_classified.json",
+        "revision": "e987af245f74ab47e50187acc95926a8f1a4b3d2",
+        "acquisition": "receipts/codehit-e77f911e1eb98fcb.json"
+      },
+      {
+        "url": "https://github.com/FangruLinghu/PaperCode/blob/e987af245f74ab47e50187acc95926a8f1a4b3d2/arxiv_data_process/dataset/output.log",
+        "path": "arxiv_data_process/dataset/output.log",
+        "revision": "e987af245f74ab47e50187acc95926a8f1a4b3d2",
+        "acquisition": "receipts/codehit-effcd2163988a55c.json"
+      },
+      {
+        "url": "https://github.com/FangruLinghu/PaperCode/blob/e987af245f74ab47e50187acc95926a8f1a4b3d2/arxiv_data_process/papers_classification/classified_papers/processed_log.json",
+        "path": "arxiv_data_process/papers_classification/classified_papers/processed_log.json",
+        "revision": "e987af245f74ab47e50187acc95926a8f1a4b3d2",
+        "acquisition": "receipts/codehit-86270bbd9209da33.json"
       }
     ]
   },
@@ -1826,6 +1894,12 @@
         "path": "shared/mon/mon/vision/enhance/multitask/mobileie/config/mobileie_lle_lolv2real.yaml",
         "revision": "44122d61f193b2de04a9465f17a0948965ef09a4",
         "acquisition": "receipts/codehit-205b3f48e4fabfcd.json"
+      },
+      {
+        "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/tools/torch_to_onnx.py",
+        "path": "shared/mon/mon/vision/enhance/multitask/mobileie/tools/torch_to_onnx.py",
+        "revision": "44122d61f193b2de04a9465f17a0948965ef09a4",
+        "acquisition": "receipts/codehit-6cfc5ede591e3f0e.json"
       }
     ]
   },
@@ -1864,6 +1938,38 @@
         "path": "YOLOV11配置文件.md",
         "revision": "113b5bffd3ac4e51e08165c008b4e79f59fb6423",
         "acquisition": "receipts/codehit-4bc80b33c6588324.json"
+      }
+    ]
+  },
+  {
+    "temporary_key": "code-benderick--DEIM-DEIM",
+    "type": "code",
+    "title": "benderick/DEIM-DEIM",
+    "repo": "benderick/DEIM-DEIM",
+    "revision": "ec2bb2d4625993ab35bdfd1c7cd4845cabe7a2b0",
+    "relation": "Explicit MobileIE implementation/module reuse; module-port claim requires independent source review, no fidelity/performance assumed",
+    "sources": [
+      {
+        "url": "https://github.com/benderick/DEIM-DEIM/blob/ec2bb2d4625993ab35bdfd1c7cd4845cabe7a2b0/engine/extre_module/custom_nn/conv_module/MBRConv.py",
+        "path": "engine/extre_module/custom_nn/conv_module/MBRConv.py",
+        "revision": "ec2bb2d4625993ab35bdfd1c7cd4845cabe7a2b0",
+        "acquisition": "receipts/codehit-b9dcf4039c6cf0a1.json"
+      }
+    ]
+  },
+  {
+    "temporary_key": "code-ccz308476-ai--General_yu",
+    "type": "code",
+    "title": "ccz308476-ai/General_yu",
+    "repo": "ccz308476-ai/General_yu",
+    "revision": "7c86d87a07851466f4047eae79cd893a9c61d71f",
+    "relation": "Explicit MobileIE implementation/module reuse; module-port claim requires independent source review, no fidelity/performance assumed",
+    "sources": [
+      {
+        "url": "https://github.com/ccz308476-ai/General_yu/blob/7c86d87a07851466f4047eae79cd893a9c61d71f/engine/extre_module/custom_nn/conv_module/MBRConv.py",
+        "path": "engine/extre_module/custom_nn/conv_module/MBRConv.py",
+        "revision": "7c86d87a07851466f4047eae79cd893a9c61d71f",
+        "acquisition": "receipts/codehit-8e4626611ddafb5b.json"
       }
     ]
   },
@@ -1952,6 +2058,12 @@
         "path": "models/ctbg/export_ctbg.py",
         "revision": "c3bdfbb0f6b45a918598d7e23f332bf731620914",
         "acquisition": "receipts/codehit-73246c0969fdf2f0.json"
+      },
+      {
+        "url": "https://github.com/gugugu531/Hispark_SocChina_2026/blob/c3bdfbb0f6b45a918598d7e23f332bf731620914/docs/isp-auto-tuning-prompt.md",
+        "path": "docs/isp-auto-tuning-prompt.md",
+        "revision": "c3bdfbb0f6b45a918598d7e23f332bf731620914",
+        "acquisition": "receipts/codehit-5c211161fe86d212.json"
       }
     ]
   },
@@ -2022,6 +2134,22 @@
         "path": "RTDETR-main/使用教程.md",
         "revision": "d0a21cc0dccfc4f97619cc3757011a033a1f2aa8",
         "acquisition": "receipts/codehit-162a0b75a8139c0a.json"
+      }
+    ]
+  },
+  {
+    "temporary_key": "code-lrbob--deim",
+    "type": "code",
+    "title": "lrbob/deim",
+    "repo": "lrbob/deim",
+    "revision": "716a0c2f2f5b9b75785cc4c6d9830ddd8841645a",
+    "relation": "Explicit MobileIE implementation/module reuse; module-port claim requires independent source review, no fidelity/performance assumed",
+    "sources": [
+      {
+        "url": "https://github.com/lrbob/deim/blob/716a0c2f2f5b9b75785cc4c6d9830ddd8841645a/engine/extre_module/custom_nn/conv_module/MBRConv.py",
+        "path": "engine/extre_module/custom_nn/conv_module/MBRConv.py",
+        "revision": "716a0c2f2f5b9b75785cc4c6d9830ddd8841645a",
+        "acquisition": "receipts/codehit-9b48355206708e45.json"
       }
     ]
   },
@@ -2451,6 +2579,12 @@
         "path": "data/citations.json",
         "revision": "9904065be6c87ebf58d6c46830a2bc96a7bec8eb",
         "acquisition": "receipts/codehit-c35426db6c22937b.json"
+      },
+      {
+        "url": "https://github.com/38260/topconf-4-pillars/blob/9904065be6c87ebf58d6c46830a2bc96a7bec8eb/data/repro.json",
+        "path": "data/repro.json",
+        "revision": "9904065be6c87ebf58d6c46830a2bc96a7bec8eb",
+        "acquisition": "receipts/codehit-7907b3ea216e263f.json"
       }
     ]
   }
