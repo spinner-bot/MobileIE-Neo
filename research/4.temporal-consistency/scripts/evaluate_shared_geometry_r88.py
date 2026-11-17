@@ -56,7 +56,7 @@ def main():
                       for name in heads for route in ('true', 'zero')}
             started = time.perf_counter()
             with torch.inference_mode():
-                for t, low in enumerate(data['input']):
+                for t, low in enumerate(data['low']):
                     tensor = torch.from_numpy(low.transpose(2, 0, 1).copy()[None].astype(np.float32))/255
                     features = stem(backbone, tensor); stem_frames += 1
                     for name, head in heads.items():
