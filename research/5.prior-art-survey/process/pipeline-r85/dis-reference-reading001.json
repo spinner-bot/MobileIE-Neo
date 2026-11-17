@@ -1,0 +1,29 @@
+{
+  "at": "2026-11-17T11:24:08.442181+08:00",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/abs/1603.03590",
+      "actually_read": "Official v1 abstract only; no original PDF/Hz reproduction"
+    },
+    {
+      "url": "https://docs.opencv.org/4.11.0/de/d4f/classcv_1_1DISOpticalFlow.html",
+      "actually_read": "API presets, finest scale, patch/gradient/mean/spatial/initial-flow interface; no original algorithm execution"
+    }
+  ],
+  "local_search": "research4/5 and specs markdown/python had no DIS implementation/report match for fixed terms; not universal absence claim",
+  "OpenCV": "4.11.0",
+  "preset": "ULTRAFAST",
+  "actual_getters": {
+    "finest_scale": 2,
+    "gradient_descent_iterations": 12,
+    "patch_size": 8,
+    "patch_stride": 4,
+    "mean_normalization": true,
+    "spatial_propagation": true,
+    "variational_iterations": 0
+  },
+  "new_DIS_calc_calls": 0,
+  "new_CNN_calls": 0,
+  "new_dependency_installation": false,
+  "scope": "Concrete future classical baseline rationale, not a new measured speed/quality or innovative method."
+}
