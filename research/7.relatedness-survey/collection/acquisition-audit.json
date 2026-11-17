@@ -1,0 +1,2150 @@
+{
+  "archive_checks": 212,
+  "counts": {
+    "success": 192,
+    "transport_error": 2,
+    "size_limit_incomplete": 4,
+    "http_error": 14
+  },
+  "usable_acquisitions": 147,
+  "records": [
+    {
+      "label": "aoli-home",
+      "receipt": "collection/receipts/aoli-home.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/aoli-home.html",
+      "bytes": 15044,
+      "format": "text/html"
+    },
+    {
+      "label": "cezhu-publications",
+      "receipt": "collection/receipts/cezhu-publications.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/cezhu-publications.html",
+      "bytes": 295195,
+      "format": "text/html"
+    },
+    {
+      "label": "cnki-exact",
+      "receipt": "collection/receipts/cnki-exact.json",
+      "transport": "transport_error",
+      "http": null,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "hailong-home",
+      "receipt": "collection/receipts/hailong-home.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/hailong-home.html",
+      "bytes": 12815,
+      "format": "text/html"
+    },
+    {
+      "label": "initial-arxiv",
+      "receipt": "collection/receipts/initial-arxiv.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/initial-arxiv.html",
+      "bytes": 42262,
+      "format": "text/html"
+    },
+    {
+      "label": "initial-crossref",
+      "receipt": "collection/receipts/initial-crossref.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/initial-crossref.json",
+      "bytes": 12637,
+      "format": "json"
+    },
+    {
+      "label": "initial-cvf",
+      "receipt": "collection/receipts/initial-cvf.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/initial-cvf.html",
+      "bytes": 6372,
+      "format": "text/html"
+    },
+    {
+      "label": "initial-github-search",
+      "receipt": "collection/receipts/initial-github-search.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/initial-github-search.json",
+      "bytes": 54396,
+      "format": "json"
+    },
+    {
+      "label": "initial-openalex-citing",
+      "receipt": "collection/receipts/initial-openalex-citing.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/initial-openalex-citing.json",
+      "bytes": 826258,
+      "format": "json"
+    },
+    {
+      "label": "initial-openalex",
+      "receipt": "collection/receipts/initial-openalex.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/initial-openalex.json",
+      "bytes": 23154,
+      "format": "json"
+    },
+    {
+      "label": "initial-s2-citing",
+      "receipt": "collection/receipts/initial-s2-citing.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/initial-s2-citing.json",
+      "bytes": 86390,
+      "format": "json"
+    },
+    {
+      "label": "lezhang-publications",
+      "receipt": "collection/receipts/lezhang-publications.json",
+      "transport": "transport_error",
+      "http": null,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "official-commits",
+      "receipt": "collection/receipts/official-commits.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/official-commits.json",
+      "bytes": 230811,
+      "format": "json"
+    },
+    {
+      "label": "official-forks",
+      "receipt": "collection/receipts/official-forks.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/official-forks.json",
+      "bytes": 110582,
+      "format": "json"
+    },
+    {
+      "label": "official-issues",
+      "receipt": "collection/receipts/official-issues.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/official-issues.json",
+      "bytes": 34004,
+      "format": "json"
+    },
+    {
+      "label": "official-org",
+      "receipt": "collection/receipts/official-org.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/official-org.json",
+      "bytes": 86918,
+      "format": "json"
+    },
+    {
+      "label": "official-paper-pdf",
+      "receipt": "collection/receipts/official-paper-pdf.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/official-paper-pdf.pdf",
+      "bytes": 14306209,
+      "format": "pdf"
+    },
+    {
+      "label": "official-supplement",
+      "receipt": "collection/receipts/official-supplement.json",
+      "transport": "size_limit_incomplete",
+      "http": 200,
+      "usable": false,
+      "reason": "size_limit_incomplete"
+    },
+    {
+      "label": "paper-0a9226026550-index-link1",
+      "receipt": "collection/receipts/paper-0a9226026550-index-link1.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-0a9226026550-publisher",
+      "receipt": "collection/receipts/paper-0a9226026550-publisher.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-16d83021297b-index-link1",
+      "receipt": "collection/receipts/paper-16d83021297b-index-link1.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-16d83021297b-publisher",
+      "receipt": "collection/receipts/paper-16d83021297b-publisher.json",
+      "transport": "http_error",
+      "http": 403,
+      "usable": false,
+      "reason": "http_error"
+    },
+    {
+      "label": "paper-1bcaf3288599-arxiv-abs",
+      "receipt": "collection/receipts/paper-1bcaf3288599-arxiv-abs.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-1bcaf3288599-arxiv-abs.html",
+      "bytes": 41415,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-1bcaf3288599-arxiv-html",
+      "receipt": "collection/receipts/paper-1bcaf3288599-arxiv-html.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-1bcaf3288599-arxiv-html.html",
+      "bytes": 166006,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-1bcaf3288599-arxiv-pdf",
+      "receipt": "collection/receipts/paper-1bcaf3288599-arxiv-pdf.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-1bcaf3288599-arxiv-pdf.pdf",
+      "bytes": 4570082,
+      "format": "pdf"
+    },
+    {
+      "label": "paper-1bcaf3288599-index-link2",
+      "receipt": "collection/receipts/paper-1bcaf3288599-index-link2.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-1bcaf3288599-publisher",
+      "receipt": "collection/receipts/paper-1bcaf3288599-publisher.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-1bcaf3288599-publisher.html",
+      "bytes": 41415,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-1dcbe67a6111-publisher",
+      "receipt": "collection/receipts/paper-1dcbe67a6111-publisher.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-22650a5cc376-arxiv-abs",
+      "receipt": "collection/receipts/paper-22650a5cc376-arxiv-abs.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-22650a5cc376-arxiv-abs.html",
+      "bytes": 41364,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-22650a5cc376-arxiv-html",
+      "receipt": "collection/receipts/paper-22650a5cc376-arxiv-html.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-22650a5cc376-arxiv-html.html",
+      "bytes": 293067,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-22650a5cc376-arxiv-pdf",
+      "receipt": "collection/receipts/paper-22650a5cc376-arxiv-pdf.json",
+      "transport": "size_limit_incomplete",
+      "http": 200,
+      "usable": false,
+      "reason": "size_limit_incomplete"
+    },
+    {
+      "label": "paper-22650a5cc376-index-link2",
+      "receipt": "collection/receipts/paper-22650a5cc376-index-link2.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-22650a5cc376-publisher",
+      "receipt": "collection/receipts/paper-22650a5cc376-publisher.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-341fd806b764-arxiv-abs",
+      "receipt": "collection/receipts/paper-341fd806b764-arxiv-abs.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-341fd806b764-arxiv-abs.html",
+      "bytes": 40205,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-341fd806b764-arxiv-html",
+      "receipt": "collection/receipts/paper-341fd806b764-arxiv-html.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-341fd806b764-arxiv-html.html",
+      "bytes": 279736,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-341fd806b764-arxiv-pdf",
+      "receipt": "collection/receipts/paper-341fd806b764-arxiv-pdf.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-341fd806b764-arxiv-pdf.pdf",
+      "bytes": 15921752,
+      "format": "pdf"
+    },
+    {
+      "label": "paper-341fd806b764-index-link2",
+      "receipt": "collection/receipts/paper-341fd806b764-index-link2.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-341fd806b764-publisher",
+      "receipt": "collection/receipts/paper-341fd806b764-publisher.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-341fd806b764-publisher.html",
+      "bytes": 40205,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-3efaea0cc22d-arxiv-abs",
+      "receipt": "collection/receipts/paper-3efaea0cc22d-arxiv-abs.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-3efaea0cc22d-arxiv-abs.html",
+      "bytes": 41741,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-3efaea0cc22d-arxiv-html",
+      "receipt": "collection/receipts/paper-3efaea0cc22d-arxiv-html.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-3efaea0cc22d-arxiv-html.html",
+      "bytes": 263196,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-3efaea0cc22d-arxiv-pdf",
+      "receipt": "collection/receipts/paper-3efaea0cc22d-arxiv-pdf.json",
+      "transport": "size_limit_incomplete",
+      "http": 200,
+      "usable": false,
+      "reason": "size_limit_incomplete"
+    },
+    {
+      "label": "paper-3efaea0cc22d-index-link2",
+      "receipt": "collection/receipts/paper-3efaea0cc22d-index-link2.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-3efaea0cc22d-publisher",
+      "receipt": "collection/receipts/paper-3efaea0cc22d-publisher.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-3f61be7ca70f-index-link1",
+      "receipt": "collection/receipts/paper-3f61be7ca70f-index-link1.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-3f61be7ca70f-publisher",
+      "receipt": "collection/receipts/paper-3f61be7ca70f-publisher.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-3f61be7ca70f-publisher.html",
+      "bytes": 3038,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-44b494323e15-index-link1",
+      "receipt": "collection/receipts/paper-44b494323e15-index-link1.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-44b494323e15-publisher",
+      "receipt": "collection/receipts/paper-44b494323e15-publisher.json",
+      "transport": "http_error",
+      "http": 403,
+      "usable": false,
+      "reason": "http_error"
+    },
+    {
+      "label": "paper-55a5f49c80ff-publisher",
+      "receipt": "collection/receipts/paper-55a5f49c80ff-publisher.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-55a5f49c80ff-publisher.html",
+      "bytes": 15075,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-57ace90aa47c-arxiv-abs",
+      "receipt": "collection/receipts/paper-57ace90aa47c-arxiv-abs.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-57ace90aa47c-arxiv-abs.html",
+      "bytes": 41475,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-57ace90aa47c-arxiv-html",
+      "receipt": "collection/receipts/paper-57ace90aa47c-arxiv-html.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-57ace90aa47c-arxiv-html.html",
+      "bytes": 261586,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-57ace90aa47c-arxiv-pdf",
+      "receipt": "collection/receipts/paper-57ace90aa47c-arxiv-pdf.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-57ace90aa47c-arxiv-pdf.pdf",
+      "bytes": 4947565,
+      "format": "pdf"
+    },
+    {
+      "label": "paper-57ace90aa47c-index-link2",
+      "receipt": "collection/receipts/paper-57ace90aa47c-index-link2.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-57ace90aa47c-publisher",
+      "receipt": "collection/receipts/paper-57ace90aa47c-publisher.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-57ace90aa47c-publisher.html",
+      "bytes": 41475,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-60b938aa3e58-index-link1",
+      "receipt": "collection/receipts/paper-60b938aa3e58-index-link1.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-60b938aa3e58-publisher",
+      "receipt": "collection/receipts/paper-60b938aa3e58-publisher.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-60b938aa3e58-publisher.html",
+      "bytes": 2716,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-6d3a7aeada51-index-link1",
+      "receipt": "collection/receipts/paper-6d3a7aeada51-index-link1.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-6d3a7aeada51-publisher",
+      "receipt": "collection/receipts/paper-6d3a7aeada51-publisher.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-6d3a7aeada51-publisher.html",
+      "bytes": 2730,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-6e4bacda0b1c-index-link1",
+      "receipt": "collection/receipts/paper-6e4bacda0b1c-index-link1.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-6e4bacda0b1c-publisher",
+      "receipt": "collection/receipts/paper-6e4bacda0b1c-publisher.json",
+      "transport": "http_error",
+      "http": 403,
+      "usable": false,
+      "reason": "http_error"
+    },
+    {
+      "label": "paper-795dc091ef40-publisher",
+      "receipt": "collection/receipts/paper-795dc091ef40-publisher.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-795dc091ef40-publisher.html",
+      "bytes": 2722,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-84fce6e0de61-arxiv-abs",
+      "receipt": "collection/receipts/paper-84fce6e0de61-arxiv-abs.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-84fce6e0de61-arxiv-abs.html",
+      "bytes": 40580,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-84fce6e0de61-arxiv-html",
+      "receipt": "collection/receipts/paper-84fce6e0de61-arxiv-html.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-84fce6e0de61-arxiv-html.html",
+      "bytes": 329530,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-84fce6e0de61-arxiv-pdf",
+      "receipt": "collection/receipts/paper-84fce6e0de61-arxiv-pdf.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-84fce6e0de61-arxiv-pdf.pdf",
+      "bytes": 10324690,
+      "format": "pdf"
+    },
+    {
+      "label": "paper-84fce6e0de61-index-link0",
+      "receipt": "collection/receipts/paper-84fce6e0de61-index-link0.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-84fce6e0de61-publisher",
+      "receipt": "collection/receipts/paper-84fce6e0de61-publisher.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-84fce6e0de61-publisher.html",
+      "bytes": 40580,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-87af308337d8-index-link1",
+      "receipt": "collection/receipts/paper-87af308337d8-index-link1.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-87af308337d8-publisher",
+      "receipt": "collection/receipts/paper-87af308337d8-publisher.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-87af308337d8-publisher.txt",
+      "bytes": 14375,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-887bbc2f51f6-arxiv-abs",
+      "receipt": "collection/receipts/paper-887bbc2f51f6-arxiv-abs.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-887bbc2f51f6-arxiv-abs.html",
+      "bytes": 41401,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-887bbc2f51f6-arxiv-html",
+      "receipt": "collection/receipts/paper-887bbc2f51f6-arxiv-html.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-887bbc2f51f6-arxiv-html.html",
+      "bytes": 220548,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-887bbc2f51f6-arxiv-pdf",
+      "receipt": "collection/receipts/paper-887bbc2f51f6-arxiv-pdf.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-887bbc2f51f6-arxiv-pdf.pdf",
+      "bytes": 411355,
+      "format": "pdf"
+    },
+    {
+      "label": "paper-887bbc2f51f6-index-link2",
+      "receipt": "collection/receipts/paper-887bbc2f51f6-index-link2.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-887bbc2f51f6-publisher",
+      "receipt": "collection/receipts/paper-887bbc2f51f6-publisher.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-887bbc2f51f6-publisher.html",
+      "bytes": 41401,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-893873efd7e8-index-link1",
+      "receipt": "collection/receipts/paper-893873efd7e8-index-link1.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-893873efd7e8-publisher",
+      "receipt": "collection/receipts/paper-893873efd7e8-publisher.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-893873efd7e8-publisher.html",
+      "bytes": 3038,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-8c2b6dd7c01c-publisher",
+      "receipt": "collection/receipts/paper-8c2b6dd7c01c-publisher.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-8c2b6dd7c01c-publisher.html",
+      "bytes": 2683,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-8d6758ebbfb1-index-link1",
+      "receipt": "collection/receipts/paper-8d6758ebbfb1-index-link1.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-8d6758ebbfb1-publisher",
+      "receipt": "collection/receipts/paper-8d6758ebbfb1-publisher.json",
+      "transport": "http_error",
+      "http": 403,
+      "usable": false,
+      "reason": "http_error"
+    },
+    {
+      "label": "paper-96ef47024f57-index-link0",
+      "receipt": "collection/receipts/paper-96ef47024f57-index-link0.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-96ef47024f57-publisher",
+      "receipt": "collection/receipts/paper-96ef47024f57-publisher.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-96ef47024f57-publisher.html",
+      "bytes": 212,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-a17fb9b898a7-index-link1",
+      "receipt": "collection/receipts/paper-a17fb9b898a7-index-link1.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-a17fb9b898a7-publisher",
+      "receipt": "collection/receipts/paper-a17fb9b898a7-publisher.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-abe88a6f55ac-arxiv-abs",
+      "receipt": "collection/receipts/paper-abe88a6f55ac-arxiv-abs.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-abe88a6f55ac-arxiv-abs.html",
+      "bytes": 43961,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-abe88a6f55ac-arxiv-html",
+      "receipt": "collection/receipts/paper-abe88a6f55ac-arxiv-html.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-abe88a6f55ac-arxiv-html.html",
+      "bytes": 219082,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-abe88a6f55ac-arxiv-pdf",
+      "receipt": "collection/receipts/paper-abe88a6f55ac-arxiv-pdf.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-abe88a6f55ac-arxiv-pdf.pdf",
+      "bytes": 10315466,
+      "format": "pdf"
+    },
+    {
+      "label": "paper-abe88a6f55ac-index-link2",
+      "receipt": "collection/receipts/paper-abe88a6f55ac-index-link2.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-abe88a6f55ac-publisher",
+      "receipt": "collection/receipts/paper-abe88a6f55ac-publisher.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-abe88a6f55ac-publisher.html",
+      "bytes": 43961,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-b4357fa1db29-index-link1",
+      "receipt": "collection/receipts/paper-b4357fa1db29-index-link1.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-b4357fa1db29-publisher",
+      "receipt": "collection/receipts/paper-b4357fa1db29-publisher.json",
+      "transport": "http_error",
+      "http": 403,
+      "usable": false,
+      "reason": "http_error"
+    },
+    {
+      "label": "paper-bad3990114bb-index-link1",
+      "receipt": "collection/receipts/paper-bad3990114bb-index-link1.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-bad3990114bb-index-link1.txt",
+      "bytes": 14375,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-bad3990114bb-index-link2",
+      "receipt": "collection/receipts/paper-bad3990114bb-index-link2.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-bad3990114bb-publisher",
+      "receipt": "collection/receipts/paper-bad3990114bb-publisher.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-bad3990114bb-publisher.txt",
+      "bytes": 14375,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-bb2867f2c184-index-link1",
+      "receipt": "collection/receipts/paper-bb2867f2c184-index-link1.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-bb2867f2c184-publisher",
+      "receipt": "collection/receipts/paper-bb2867f2c184-publisher.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-bb2867f2c184-publisher.html",
+      "bytes": 3038,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-c38d889dae32-index-link1",
+      "receipt": "collection/receipts/paper-c38d889dae32-index-link1.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-c38d889dae32-publisher",
+      "receipt": "collection/receipts/paper-c38d889dae32-publisher.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-c43f136adb82-index-link1",
+      "receipt": "collection/receipts/paper-c43f136adb82-index-link1.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-c43f136adb82-index-link1.pdf",
+      "bytes": 2682179,
+      "format": "pdf"
+    },
+    {
+      "label": "paper-c43f136adb82-index-link2",
+      "receipt": "collection/receipts/paper-c43f136adb82-index-link2.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-c43f136adb82-publisher",
+      "receipt": "collection/receipts/paper-c43f136adb82-publisher.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-c43f136adb82-publisher.html",
+      "bytes": 97975,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-c574b16f70d1-publisher",
+      "receipt": "collection/receipts/paper-c574b16f70d1-publisher.json",
+      "transport": "http_error",
+      "http": 403,
+      "usable": false,
+      "reason": "http_error"
+    },
+    {
+      "label": "paper-c98e473fe94c-arxiv-abs",
+      "receipt": "collection/receipts/paper-c98e473fe94c-arxiv-abs.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-c98e473fe94c-arxiv-abs.html",
+      "bytes": 43571,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-c98e473fe94c-arxiv-html",
+      "receipt": "collection/receipts/paper-c98e473fe94c-arxiv-html.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-c98e473fe94c-arxiv-html.html",
+      "bytes": 236318,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-c98e473fe94c-arxiv-pdf",
+      "receipt": "collection/receipts/paper-c98e473fe94c-arxiv-pdf.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-c98e473fe94c-arxiv-pdf.pdf",
+      "bytes": 6110283,
+      "format": "pdf"
+    },
+    {
+      "label": "paper-c98e473fe94c-index-link2",
+      "receipt": "collection/receipts/paper-c98e473fe94c-index-link2.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-c98e473fe94c-publisher",
+      "receipt": "collection/receipts/paper-c98e473fe94c-publisher.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-c98e473fe94c-publisher.html",
+      "bytes": 43571,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-d30c15c2155b-publisher",
+      "receipt": "collection/receipts/paper-d30c15c2155b-publisher.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-d30c15c2155b-publisher.pdf",
+      "bytes": 228055,
+      "format": "pdf"
+    },
+    {
+      "label": "paper-d8b08509a128-publisher",
+      "receipt": "collection/receipts/paper-d8b08509a128-publisher.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-d8b08509a128-publisher.html",
+      "bytes": 2719,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-dce553dc3465-arxiv-abs",
+      "receipt": "collection/receipts/paper-dce553dc3465-arxiv-abs.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-dce553dc3465-arxiv-abs.html",
+      "bytes": 42431,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-dce553dc3465-arxiv-html",
+      "receipt": "collection/receipts/paper-dce553dc3465-arxiv-html.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-dce553dc3465-arxiv-html.html",
+      "bytes": 318424,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-dce553dc3465-arxiv-pdf",
+      "receipt": "collection/receipts/paper-dce553dc3465-arxiv-pdf.json",
+      "transport": "size_limit_incomplete",
+      "http": 200,
+      "usable": false,
+      "reason": "size_limit_incomplete"
+    },
+    {
+      "label": "paper-dce553dc3465-index-link0",
+      "receipt": "collection/receipts/paper-dce553dc3465-index-link0.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-dce553dc3465-index-link0.html",
+      "bytes": 42431,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-dce553dc3465-index-link2",
+      "receipt": "collection/receipts/paper-dce553dc3465-index-link2.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-dce553dc3465-publisher",
+      "receipt": "collection/receipts/paper-dce553dc3465-publisher.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-dce553dc3465-publisher.html",
+      "bytes": 42431,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-e00a0e3ed4c6-arxiv-abs",
+      "receipt": "collection/receipts/paper-e00a0e3ed4c6-arxiv-abs.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-e00a0e3ed4c6-arxiv-abs.html",
+      "bytes": 41647,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-e00a0e3ed4c6-arxiv-html",
+      "receipt": "collection/receipts/paper-e00a0e3ed4c6-arxiv-html.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-e00a0e3ed4c6-arxiv-html.html",
+      "bytes": 465056,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-e00a0e3ed4c6-arxiv-pdf",
+      "receipt": "collection/receipts/paper-e00a0e3ed4c6-arxiv-pdf.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-e00a0e3ed4c6-arxiv-pdf.pdf",
+      "bytes": 4043180,
+      "format": "pdf"
+    },
+    {
+      "label": "paper-e00a0e3ed4c6-index-link1",
+      "receipt": "collection/receipts/paper-e00a0e3ed4c6-index-link1.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-e00a0e3ed4c6-publisher",
+      "receipt": "collection/receipts/paper-e00a0e3ed4c6-publisher.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-e1895147023d-index-link1",
+      "receipt": "collection/receipts/paper-e1895147023d-index-link1.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-e1895147023d-index-link1.html",
+      "bytes": 3038,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-e1895147023d-index-link2",
+      "receipt": "collection/receipts/paper-e1895147023d-index-link2.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-e1895147023d-publisher",
+      "receipt": "collection/receipts/paper-e1895147023d-publisher.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-e1895147023d-publisher.html",
+      "bytes": 3038,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-e18f0ed64604-arxiv-abs",
+      "receipt": "collection/receipts/paper-e18f0ed64604-arxiv-abs.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-e18f0ed64604-arxiv-abs.html",
+      "bytes": 42504,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-e18f0ed64604-arxiv-html",
+      "receipt": "collection/receipts/paper-e18f0ed64604-arxiv-html.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-e18f0ed64604-arxiv-html.html",
+      "bytes": 262156,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-e18f0ed64604-arxiv-pdf",
+      "receipt": "collection/receipts/paper-e18f0ed64604-arxiv-pdf.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-e18f0ed64604-arxiv-pdf.pdf",
+      "bytes": 7461994,
+      "format": "pdf"
+    },
+    {
+      "label": "paper-e18f0ed64604-index-link0",
+      "receipt": "collection/receipts/paper-e18f0ed64604-index-link0.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-e18f0ed64604-publisher",
+      "receipt": "collection/receipts/paper-e18f0ed64604-publisher.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-e18f0ed64604-publisher.html",
+      "bytes": 42504,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-e7bdc84c11eb-index-link1",
+      "receipt": "collection/receipts/paper-e7bdc84c11eb-index-link1.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-e7bdc84c11eb-publisher",
+      "receipt": "collection/receipts/paper-e7bdc84c11eb-publisher.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-e7bdc84c11eb-publisher.html",
+      "bytes": 2702,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-e8e06b399dbb-index-link1",
+      "receipt": "collection/receipts/paper-e8e06b399dbb-index-link1.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-e8e06b399dbb-publisher",
+      "receipt": "collection/receipts/paper-e8e06b399dbb-publisher.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-eb11981f7b39-index-link1",
+      "receipt": "collection/receipts/paper-eb11981f7b39-index-link1.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-eb11981f7b39-publisher",
+      "receipt": "collection/receipts/paper-eb11981f7b39-publisher.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-eb15389276ff-arxiv-abs",
+      "receipt": "collection/receipts/paper-eb15389276ff-arxiv-abs.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-eb15389276ff-arxiv-abs.html",
+      "bytes": 41846,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-eb15389276ff-arxiv-html",
+      "receipt": "collection/receipts/paper-eb15389276ff-arxiv-html.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-eb15389276ff-arxiv-html.html",
+      "bytes": 183300,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-eb15389276ff-arxiv-pdf",
+      "receipt": "collection/receipts/paper-eb15389276ff-arxiv-pdf.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-eb15389276ff-arxiv-pdf.pdf",
+      "bytes": 23586863,
+      "format": "pdf"
+    },
+    {
+      "label": "paper-eb15389276ff-index-link2",
+      "receipt": "collection/receipts/paper-eb15389276ff-index-link2.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-eb15389276ff-publisher",
+      "receipt": "collection/receipts/paper-eb15389276ff-publisher.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-eb15389276ff-publisher.html",
+      "bytes": 41846,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-f2b2063bbd33-arxiv-abs",
+      "receipt": "collection/receipts/paper-f2b2063bbd33-arxiv-abs.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-f2b2063bbd33-arxiv-abs.html",
+      "bytes": 41868,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-f2b2063bbd33-arxiv-html",
+      "receipt": "collection/receipts/paper-f2b2063bbd33-arxiv-html.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-f2b2063bbd33-arxiv-html.html",
+      "bytes": 340597,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-f2b2063bbd33-arxiv-pdf",
+      "receipt": "collection/receipts/paper-f2b2063bbd33-arxiv-pdf.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-f2b2063bbd33-arxiv-pdf.pdf",
+      "bytes": 18565561,
+      "format": "pdf"
+    },
+    {
+      "label": "paper-f2b2063bbd33-index-link2",
+      "receipt": "collection/receipts/paper-f2b2063bbd33-index-link2.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-f2b2063bbd33-index-link3",
+      "receipt": "collection/receipts/paper-f2b2063bbd33-index-link3.json",
+      "transport": "http_error",
+      "http": 403,
+      "usable": false,
+      "reason": "http_error"
+    },
+    {
+      "label": "paper-f2b2063bbd33-publisher",
+      "receipt": "collection/receipts/paper-f2b2063bbd33-publisher.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-f2b2063bbd33-publisher.html",
+      "bytes": 2693,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-fa6a345f0269-arxiv-abs",
+      "receipt": "collection/receipts/paper-fa6a345f0269-arxiv-abs.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-fa6a345f0269-arxiv-abs.html",
+      "bytes": 41190,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-fa6a345f0269-arxiv-html",
+      "receipt": "collection/receipts/paper-fa6a345f0269-arxiv-html.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-fa6a345f0269-arxiv-html.html",
+      "bytes": 143981,
+      "format": "text/html"
+    },
+    {
+      "label": "paper-fa6a345f0269-arxiv-pdf",
+      "receipt": "collection/receipts/paper-fa6a345f0269-arxiv-pdf.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-fa6a345f0269-arxiv-pdf.pdf",
+      "bytes": 5820758,
+      "format": "pdf"
+    },
+    {
+      "label": "paper-fa6a345f0269-index-link2",
+      "receipt": "collection/receipts/paper-fa6a345f0269-index-link2.json",
+      "transport": "success",
+      "http": 202,
+      "usable": false,
+      "reason": "no archived response"
+    },
+    {
+      "label": "paper-fa6a345f0269-publisher",
+      "receipt": "collection/receipts/paper-fa6a345f0269-publisher.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/paper-fa6a345f0269-publisher.html",
+      "bytes": 41190,
+      "format": "text/html"
+    },
+    {
+      "label": "repo-38260--MobileIE-repro-metadata",
+      "receipt": "collection/receipts/repo-38260--MobileIE-repro-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-38260--MobileIE-repro-metadata.json",
+      "bytes": 5258,
+      "format": "json"
+    },
+    {
+      "label": "repo-38260--MobileIE-repro-readme",
+      "receipt": "collection/receipts/repo-38260--MobileIE-repro-readme.json",
+      "transport": "http_error",
+      "http": 404,
+      "usable": false,
+      "reason": "http_error"
+    },
+    {
+      "label": "repo-AI-ALL--MobileIE-metadata",
+      "receipt": "collection/receipts/repo-AI-ALL--MobileIE-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-AI-ALL--MobileIE-metadata.json",
+      "bytes": 16772,
+      "format": "json"
+    },
+    {
+      "label": "repo-AI-ALL--MobileIE-readme",
+      "receipt": "collection/receipts/repo-AI-ALL--MobileIE-readme.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-AI-ALL--MobileIE-readme.txt",
+      "bytes": 3306,
+      "format": "text/html"
+    },
+    {
+      "label": "repo-AVC2-UESTC--MobileIE-metadata",
+      "receipt": "collection/receipts/repo-AVC2-UESTC--MobileIE-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-AVC2-UESTC--MobileIE-metadata.json",
+      "bytes": 6374,
+      "format": "json"
+    },
+    {
+      "label": "repo-AVC2-UESTC--MobileIE-readme",
+      "receipt": "collection/receipts/repo-AVC2-UESTC--MobileIE-readme.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-AVC2-UESTC--MobileIE-readme.txt",
+      "bytes": 3306,
+      "format": "text/html"
+    },
+    {
+      "label": "repo-Barry1749--MobileIE-metadata",
+      "receipt": "collection/receipts/repo-Barry1749--MobileIE-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-Barry1749--MobileIE-metadata.json",
+      "bytes": 15959,
+      "format": "json"
+    },
+    {
+      "label": "repo-Barry1749--MobileIE-readme",
+      "receipt": "collection/receipts/repo-Barry1749--MobileIE-readme.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-Barry1749--MobileIE-readme.txt",
+      "bytes": 3306,
+      "format": "text/html"
+    },
+    {
+      "label": "repo-HengJiang95--MobileIE-metadata",
+      "receipt": "collection/receipts/repo-HengJiang95--MobileIE-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-HengJiang95--MobileIE-metadata.json",
+      "bytes": 16061,
+      "format": "json"
+    },
+    {
+      "label": "repo-HengJiang95--MobileIE-readme",
+      "receipt": "collection/receipts/repo-HengJiang95--MobileIE-readme.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-HengJiang95--MobileIE-readme.txt",
+      "bytes": 3306,
+      "format": "text/html"
+    },
+    {
+      "label": "repo-J-jxr--MobileIE-metadata",
+      "receipt": "collection/receipts/repo-J-jxr--MobileIE-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-J-jxr--MobileIE-metadata.json",
+      "bytes": 15725,
+      "format": "json"
+    },
+    {
+      "label": "repo-J-jxr--MobileIE-readme",
+      "receipt": "collection/receipts/repo-J-jxr--MobileIE-readme.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-J-jxr--MobileIE-readme.txt",
+      "bytes": 3306,
+      "format": "text/html"
+    },
+    {
+      "label": "repo-Lexdian--MobileIE-metadata",
+      "receipt": "collection/receipts/repo-Lexdian--MobileIE-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-Lexdian--MobileIE-metadata.json",
+      "bytes": 15698,
+      "format": "json"
+    },
+    {
+      "label": "repo-Lexdian--MobileIE-readme",
+      "receipt": "collection/receipts/repo-Lexdian--MobileIE-readme.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-Lexdian--MobileIE-readme.txt",
+      "bytes": 3306,
+      "format": "text/html"
+    },
+    {
+      "label": "repo-LiHao-XUPT--MobileIE-metadata",
+      "receipt": "collection/receipts/repo-LiHao-XUPT--MobileIE-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-LiHao-XUPT--MobileIE-metadata.json",
+      "bytes": 15971,
+      "format": "json"
+    },
+    {
+      "label": "repo-LiHao-XUPT--MobileIE-readme",
+      "receipt": "collection/receipts/repo-LiHao-XUPT--MobileIE-readme.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-LiHao-XUPT--MobileIE-readme.txt",
+      "bytes": 3306,
+      "format": "text/html"
+    },
+    {
+      "label": "repo-LukasYan30--MobileIE-metadata",
+      "receipt": "collection/receipts/repo-LukasYan30--MobileIE-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-LukasYan30--MobileIE-metadata.json",
+      "bytes": 16000,
+      "format": "json"
+    },
+    {
+      "label": "repo-LukasYan30--MobileIE-readme",
+      "receipt": "collection/receipts/repo-LukasYan30--MobileIE-readme.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-LukasYan30--MobileIE-readme.txt",
+      "bytes": 3307,
+      "format": "text/html"
+    },
+    {
+      "label": "repo-M1guelSantos--mobileIesb-metadata",
+      "receipt": "collection/receipts/repo-M1guelSantos--mobileIesb-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-M1guelSantos--mobileIesb-metadata.json",
+      "bytes": 5280,
+      "format": "json"
+    },
+    {
+      "label": "repo-M1guelSantos--mobileIesb-readme",
+      "receipt": "collection/receipts/repo-M1guelSantos--mobileIesb-readme.json",
+      "transport": "http_error",
+      "http": 404,
+      "usable": false,
+      "reason": "http_error"
+    },
+    {
+      "label": "repo-SamuellMS--MobileIESB-metadata",
+      "receipt": "collection/receipts/repo-SamuellMS--MobileIESB-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-SamuellMS--MobileIESB-metadata.json",
+      "bytes": 5133,
+      "format": "json"
+    },
+    {
+      "label": "repo-SamuellMS--MobileIESB-readme",
+      "receipt": "collection/receipts/repo-SamuellMS--MobileIESB-readme.json",
+      "transport": "http_error",
+      "http": 404,
+      "usable": false,
+      "reason": "http_error"
+    },
+    {
+      "label": "repo-ctrl-av--MobileIE-metadata",
+      "receipt": "collection/receipts/repo-ctrl-av--MobileIE-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-ctrl-av--MobileIE-metadata.json",
+      "bytes": 15823,
+      "format": "json"
+    },
+    {
+      "label": "repo-ctrl-av--MobileIE-readme",
+      "receipt": "collection/receipts/repo-ctrl-av--MobileIE-readme.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-ctrl-av--MobileIE-readme.txt",
+      "bytes": 3306,
+      "format": "text/html"
+    },
+    {
+      "label": "repo-fenyunxing--MobileIE-metadata",
+      "receipt": "collection/receipts/repo-fenyunxing--MobileIE-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-fenyunxing--MobileIE-metadata.json",
+      "bytes": 16006,
+      "format": "json"
+    },
+    {
+      "label": "repo-fenyunxing--MobileIE-readme",
+      "receipt": "collection/receipts/repo-fenyunxing--MobileIE-readme.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-fenyunxing--MobileIE-readme.txt",
+      "bytes": 3306,
+      "format": "text/html"
+    },
+    {
+      "label": "repo-horizon921--Computational-Photography-26Fall-MobileIE-metadata",
+      "receipt": "collection/receipts/repo-horizon921--Computational-Photography-26Fall-MobileIE-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-horizon921--Computational-Photography-26Fall-MobileIE-metadata.json",
+      "bytes": 6677,
+      "format": "json"
+    },
+    {
+      "label": "repo-horizon921--Computational-Photography-26Fall-MobileIE-readme",
+      "receipt": "collection/receipts/repo-horizon921--Computational-Photography-26Fall-MobileIE-readme.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-horizon921--Computational-Photography-26Fall-MobileIE-readme.txt",
+      "bytes": 16860,
+      "format": "text/html"
+    },
+    {
+      "label": "repo-kongdemingwang--MobileIE-metadata",
+      "receipt": "collection/receipts/repo-kongdemingwang--MobileIE-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-kongdemingwang--MobileIE-metadata.json",
+      "bytes": 16224,
+      "format": "json"
+    },
+    {
+      "label": "repo-kongdemingwang--MobileIE-readme",
+      "receipt": "collection/receipts/repo-kongdemingwang--MobileIE-readme.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-kongdemingwang--MobileIE-readme.txt",
+      "bytes": 3306,
+      "format": "text/html"
+    },
+    {
+      "label": "repo-ldy1002--MobileIE-metadata",
+      "receipt": "collection/receipts/repo-ldy1002--MobileIE-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-ldy1002--MobileIE-metadata.json",
+      "bytes": 15839,
+      "format": "json"
+    },
+    {
+      "label": "repo-ldy1002--MobileIE-readme",
+      "receipt": "collection/receipts/repo-ldy1002--MobileIE-readme.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-ldy1002--MobileIE-readme.txt",
+      "bytes": 3306,
+      "format": "text/html"
+    },
+    {
+      "label": "repo-lincolnzhouzi--MobileIE-metadata",
+      "receipt": "collection/receipts/repo-lincolnzhouzi--MobileIE-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-lincolnzhouzi--MobileIE-metadata.json",
+      "bytes": 16163,
+      "format": "json"
+    },
+    {
+      "label": "repo-lincolnzhouzi--MobileIE-readme",
+      "receipt": "collection/receipts/repo-lincolnzhouzi--MobileIE-readme.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-lincolnzhouzi--MobileIE-readme.txt",
+      "bytes": 3306,
+      "format": "text/html"
+    },
+    {
+      "label": "repo-llin44894-stack--MobileIE-metadata",
+      "receipt": "collection/receipts/repo-llin44894-stack--MobileIE-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-llin44894-stack--MobileIE-metadata.json",
+      "bytes": 16275,
+      "format": "json"
+    },
+    {
+      "label": "repo-llin44894-stack--MobileIE-readme",
+      "receipt": "collection/receipts/repo-llin44894-stack--MobileIE-readme.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-llin44894-stack--MobileIE-readme.txt",
+      "bytes": 3306,
+      "format": "text/html"
+    },
+    {
+      "label": "repo-longph3105--mobileie-metadata",
+      "receipt": "collection/receipts/repo-longph3105--mobileie-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-longph3105--mobileie-metadata.json",
+      "bytes": 16004,
+      "format": "json"
+    },
+    {
+      "label": "repo-longph3105--mobileie-readme",
+      "receipt": "collection/receipts/repo-longph3105--mobileie-readme.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-longph3105--mobileie-readme.txt",
+      "bytes": 3306,
+      "format": "text/html"
+    },
+    {
+      "label": "repo-lxyjyy--MobileIE-metadata",
+      "receipt": "collection/receipts/repo-lxyjyy--MobileIE-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-lxyjyy--MobileIE-metadata.json",
+      "bytes": 15784,
+      "format": "json"
+    },
+    {
+      "label": "repo-lxyjyy--MobileIE-readme",
+      "receipt": "collection/receipts/repo-lxyjyy--MobileIE-readme.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-lxyjyy--MobileIE-readme.txt",
+      "bytes": 3306,
+      "format": "text/html"
+    },
+    {
+      "label": "repo-marcotutulio--MobileIesb2026-metadata",
+      "receipt": "collection/receipts/repo-marcotutulio--MobileIesb2026-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-marcotutulio--MobileIesb2026-metadata.json",
+      "bytes": 11071,
+      "format": "json"
+    },
+    {
+      "label": "repo-marcotutulio--MobileIesb2026-readme",
+      "receipt": "collection/receipts/repo-marcotutulio--MobileIesb2026-readme.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-marcotutulio--MobileIesb2026-readme.txt",
+      "bytes": 3514,
+      "format": "text/html"
+    },
+    {
+      "label": "repo-oliveirasandrine123--MobileIesb-metadata",
+      "receipt": "collection/receipts/repo-oliveirasandrine123--MobileIesb-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-oliveirasandrine123--MobileIesb-metadata.json",
+      "bytes": 5702,
+      "format": "json"
+    },
+    {
+      "label": "repo-oliveirasandrine123--MobileIesb-readme",
+      "receipt": "collection/receipts/repo-oliveirasandrine123--MobileIesb-readme.json",
+      "transport": "http_error",
+      "http": 404,
+      "usable": false,
+      "reason": "http_error"
+    },
+    {
+      "label": "repo-ppaulomartinss--MobileIESB-metadata",
+      "receipt": "collection/receipts/repo-ppaulomartinss--MobileIESB-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-ppaulomartinss--MobileIESB-metadata.json",
+      "bytes": 5408,
+      "format": "json"
+    },
+    {
+      "label": "repo-ppaulomartinss--MobileIESB-readme",
+      "receipt": "collection/receipts/repo-ppaulomartinss--MobileIESB-readme.json",
+      "transport": "http_error",
+      "http": 404,
+      "usable": false,
+      "reason": "http_error"
+    },
+    {
+      "label": "repo-shanks200199--MobileIE-metadata",
+      "receipt": "collection/receipts/repo-shanks200199--MobileIE-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-shanks200199--MobileIE-metadata.json",
+      "bytes": 16108,
+      "format": "json"
+    },
+    {
+      "label": "repo-shanks200199--MobileIE-readme",
+      "receipt": "collection/receipts/repo-shanks200199--MobileIE-readme.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-shanks200199--MobileIE-readme.txt",
+      "bytes": 3306,
+      "format": "text/html"
+    },
+    {
+      "label": "repo-songyang86--MobileIE-metadata",
+      "receipt": "collection/receipts/repo-songyang86--MobileIE-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-songyang86--MobileIE-metadata.json",
+      "bytes": 16006,
+      "format": "json"
+    },
+    {
+      "label": "repo-songyang86--MobileIE-readme",
+      "receipt": "collection/receipts/repo-songyang86--MobileIE-readme.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-songyang86--MobileIE-readme.txt",
+      "bytes": 3307,
+      "format": "text/html"
+    },
+    {
+      "label": "repo-strategist922--MobileIE-metadata",
+      "receipt": "collection/receipts/repo-strategist922--MobileIE-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-strategist922--MobileIE-metadata.json",
+      "bytes": 16169,
+      "format": "json"
+    },
+    {
+      "label": "repo-strategist922--MobileIE-readme",
+      "receipt": "collection/receipts/repo-strategist922--MobileIE-readme.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-strategist922--MobileIE-readme.txt",
+      "bytes": 3306,
+      "format": "text/html"
+    },
+    {
+      "label": "repo-w-xb--MobileIE-6Ch-metadata",
+      "receipt": "collection/receipts/repo-w-xb--MobileIE-6Ch-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-w-xb--MobileIE-6Ch-metadata.json",
+      "bytes": 5252,
+      "format": "json"
+    },
+    {
+      "label": "repo-w-xb--MobileIE-6Ch-readme",
+      "receipt": "collection/receipts/repo-w-xb--MobileIE-6Ch-readme.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-w-xb--MobileIE-6Ch-readme.txt",
+      "bytes": 9224,
+      "format": "text/html"
+    },
+    {
+      "label": "repo-wenqi-deng--Computational-Photography-26Fall-MobileIE-metadata",
+      "receipt": "collection/receipts/repo-wenqi-deng--Computational-Photography-26Fall-MobileIE-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-wenqi-deng--Computational-Photography-26Fall-MobileIE-metadata.json",
+      "bytes": 19919,
+      "format": "json"
+    },
+    {
+      "label": "repo-wenqi-deng--Computational-Photography-26Fall-MobileIE-readme",
+      "receipt": "collection/receipts/repo-wenqi-deng--Computational-Photography-26Fall-MobileIE-readme.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-wenqi-deng--Computational-Photography-26Fall-MobileIE-readme.txt",
+      "bytes": 12253,
+      "format": "text/html"
+    },
+    {
+      "label": "repo-wenyu1206--MobileIE-metadata",
+      "receipt": "collection/receipts/repo-wenyu1206--MobileIE-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-wenyu1206--MobileIE-metadata.json",
+      "bytes": 15951,
+      "format": "json"
+    },
+    {
+      "label": "repo-wenyu1206--MobileIE-readme",
+      "receipt": "collection/receipts/repo-wenyu1206--MobileIE-readme.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-wenyu1206--MobileIE-readme.txt",
+      "bytes": 3306,
+      "format": "text/html"
+    },
+    {
+      "label": "repo-xiaobo1789--MobileIE-metadata",
+      "receipt": "collection/receipts/repo-xiaobo1789--MobileIE-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-xiaobo1789--MobileIE-metadata.json",
+      "bytes": 15998,
+      "format": "json"
+    },
+    {
+      "label": "repo-xiaobo1789--MobileIE-readme",
+      "receipt": "collection/receipts/repo-xiaobo1789--MobileIE-readme.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-xiaobo1789--MobileIE-readme.txt",
+      "bytes": 3306,
+      "format": "text/html"
+    },
+    {
+      "label": "repo-yclinhh--MobileIE-metadata",
+      "receipt": "collection/receipts/repo-yclinhh--MobileIE-metadata.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-yclinhh--MobileIE-metadata.json",
+      "bytes": 15839,
+      "format": "json"
+    },
+    {
+      "label": "repo-yclinhh--MobileIE-readme",
+      "receipt": "collection/receipts/repo-yclinhh--MobileIE-readme.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/repo-yclinhh--MobileIE-readme.txt",
+      "bytes": 3306,
+      "format": "text/html"
+    },
+    {
+      "label": "s2-arxiv-citing",
+      "receipt": "collection/receipts/s2-arxiv-citing.json",
+      "transport": "http_error",
+      "http": 429,
+      "usable": false,
+      "reason": "http_error"
+    },
+    {
+      "label": "scholar-exact",
+      "receipt": "collection/receipts/scholar-exact.json",
+      "transport": "http_error",
+      "http": 403,
+      "usable": false,
+      "reason": "http_error"
+    },
+    {
+      "label": "wanfang-exact",
+      "receipt": "collection/receipts/wanfang-exact.json",
+      "transport": "success",
+      "http": 200,
+      "usable": true,
+      "reason": "nonempty HTTP200 acquisition; content-specific adequacy still requires reading",
+      "file": "archive/wanfang-exact.html",
+      "bytes": 171424,
+      "format": "text/html"
+    }
+  ],
+  "scope": "Integrity and transport audit ONLY; not Gate1 approval or fulltext adequacy proof"
+}
