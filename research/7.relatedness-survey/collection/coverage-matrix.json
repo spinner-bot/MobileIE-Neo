@@ -1,0 +1,135 @@
+{
+  "recorded_at": "2026-11-17T18:36:46.274164+08:00",
+  "source_matrix": {
+    "A-scholarly": [
+      {
+        "name": "Semantic Scholar DOI citation list",
+        "evidence": [
+          "receipts/initial-s2-citing.json",
+          "raw/initial-s2-citing.json",
+          "receipts/supp2-s2-list.json"
+        ],
+        "result": "36 records; offset 0, no next page in successful response; arXiv alias request was rate limited"
+      },
+      {
+        "name": "OpenAlex referenced_works citation list",
+        "evidence": [
+          "receipts/initial-openalex-citing.json",
+          "raw/initial-openalex-citing.json",
+          "receipts/oa-count-discrepancy-check.json"
+        ],
+        "result": "40 list results, pagination exhausted; work metadata reports 41, discrepancy retained rather than assumed reconciled"
+      },
+      {
+        "name": "Crossref",
+        "evidence": [
+          "receipts/initial-crossref.json",
+          "raw/initial-crossref.json"
+        ],
+        "result": "Metadata count 16; not a forward-citation list"
+      },
+      {
+        "name": "Google Scholar",
+        "evidence": [
+          "receipts/scholar-exact.json"
+        ],
+        "result": "403; no claim of Scholar exhaustive coverage"
+      }
+    ],
+    "B-official-and-code": [
+      {
+        "name": "Original publication/preprint/supplement and repository",
+        "evidence": [
+          "receipts/initial-cvf.json",
+          "receipts/official-paper-pdf.json",
+          "receipts/official-supplement-large.json",
+          "receipts/official-commits.json",
+          "receipts/official-issues.json"
+        ],
+        "result": "Primary versions, full original PDF/supplement and official pinned source acquired"
+      },
+      {
+        "name": "Repository-name, fork-tree and file-content discovery",
+        "evidence": [
+          "github-plugin-initial.json",
+          "code-duplicate-ledger.json",
+          "code-file-discovery-ledger.json",
+          "plugin-code-coverage-2.json",
+          "plugin-code-coverage-3.json"
+        ],
+        "result": "Broader queries hit provider cap of 100 even with topn=300; exact-title query 75, MBRConv+MobileIE 71, MobileIELLENetS 18, temporal 39, flicker 17, TFLite 33; source limits disclosed, not claimed to enumerate all GitHub"
+      }
+    ],
+    "C-authors-institutions-industry": [
+      {
+        "name": "Original author and group pages",
+        "evidence": [
+          "receipts/hailong-home.json",
+          "receipts/aoli-home.json",
+          "receipts/cezhu-publications.json",
+          "receipts/lezhang-publications.json",
+          "receipts/aoli-cqnu-home.json"
+        ],
+        "result": "Available pages archived; Le Zhang website transport failure recorded"
+      },
+      {
+        "name": "TeleAI",
+        "evidence": [
+          "receipts/teleai-primary-html.json",
+          "plugin-repo-Cloudyu1215--UIE.json"
+        ],
+        "result": "Primary arXiv2603.16363 affiliation explicitly names TeleAI/China Telecom; method novelty/video applicability deferred to Gate2"
+      }
+    ],
+    "D-chinese-english-web": [
+      {
+        "name": "Open web query matrix",
+        "evidence": [
+          "web-initial-1.json",
+          "web-initial-2.json",
+          "web-initial-3.json",
+          "web-initial-4.json",
+          "web-initial-5.json",
+          "web-initial-6.json",
+          "web-initial-7.json",
+          "web-initial-8.json",
+          "web-initial-9.json",
+          "web-lead-review.json"
+        ],
+        "result": "160 initial URL leads identity-reviewed; original papers/projects, aliases, directories and unrelated homonyms distinguished"
+      },
+      {
+        "name": "Chinese academic entrances",
+        "evidence": [
+          "web-initial-3.json",
+          "receipts/cnki-exact.json",
+          "receipts/wanfang-exact.json"
+        ],
+        "result": "CNKI transport failure; Wanfang returns client-rendered page, not verified complete query results; web site-qualified searches are an additional attempt, not proof of Chinese fulltext coverage"
+      }
+    ],
+    "E-historical": [
+      {
+        "name": "Old S2 and OpenAlex lists",
+        "evidence": [
+          "historical-reconciliation.json",
+          "paper-candidates.json"
+        ],
+        "result": "All 33 historical S2 and 18 historical OA records mapped into current candidate identities; old conclusions not adopted as new evidence"
+      }
+    ]
+  },
+  "candidate_counts": {
+    "paper": 46,
+    "code": 53,
+    "other": 8
+  },
+  "gate_hashes_unchanged": true,
+  "gate1_status": "NOT_APPROVED",
+  "known_limitations": [
+    "Snapshot only, not mathematical completeness of the web",
+    "Scholar403, CNKI failure, Wanfang client rendering and restricted publishers",
+    "GitHub broad search hard-capped; complementary exact queries reduce but cannot prove no omissions",
+    "OpenAlex metadata41/list40 mismatch; list40 reproduced through distinct API query; no imaginary 41st item added"
+  ]
+}
