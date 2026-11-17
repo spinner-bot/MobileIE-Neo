@@ -1,0 +1,42 @@
+[
+  {
+    "name": "train-seed0",
+    "pid": 1150999,
+    "command": [
+      "/data/Users/zrh/repo/MobileIE-Neo/scripts/project-python",
+      "/data/Users/zrh/repo/MobileIE-Neo/scripts/prebind_shared_gpu.py",
+      "--gpu",
+      "0",
+      "--record",
+      "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/process/exploration-r88/chain002/train-seed0-binding.json",
+      "--",
+      "/data/Users/zrh/repo/MobileIE-Neo/scripts/project-python",
+      "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/train_shared_geometry_r88.py",
+      "--seed",
+      "0",
+      "--attempt",
+      "1"
+    ],
+    "began": "2026-11-17T17:18:58.179003+08:00"
+  },
+  {
+    "name": "train-seed1",
+    "pid": 1151000,
+    "command": [
+      "/data/Users/zrh/repo/MobileIE-Neo/scripts/project-python",
+      "/data/Users/zrh/repo/MobileIE-Neo/scripts/prebind_shared_gpu.py",
+      "--gpu",
+      "1",
+      "--record",
+      "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/process/exploration-r88/chain002/train-seed1-binding.json",
+      "--",
+      "/data/Users/zrh/repo/MobileIE-Neo/scripts/project-python",
+      "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/train_shared_geometry_r88.py",
+      "--seed",
+      "1",
+      "--attempt",
+      "1"
+    ],
+    "began": "2026-11-17T17:18:58.179393+08:00"
+  }
+]
