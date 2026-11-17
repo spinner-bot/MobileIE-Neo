@@ -1,0 +1,85 @@
+{
+  "paper_info": {
+    "title": "MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices",
+    "github_url": "https://github.com/AVC2-UESTC/MobileIE.git",
+    "abstract_summary": "Introduces MobileIE, an extremely lightweight CNN framework with around 4K parameters for real-time image enhancement on mobile devices, integrating re-parameterization, Incremental Weight Optimization, Feature Self-Transform module, Hierarchical Dual-Path Attention mechanism, and Local Variance-Weighted loss to achieve high speed and competitive image quality.",
+    "keywords": [
+      "image enhancement",
+      "mobile devices",
+      "lightweight CNN"
+    ]
+  },
+  "model_architecture": {
+    "overall_description": "MobileIE employs a streamlined topology with deployable operators, decoupling training and inference phases. It uses MBRConv for multi-scale feature capture, FST for nonlinear feature interactions, and HDPA for fusing global and local features, re-parameterizing into standard convolution during inference.",
+    "components": [
+      {
+        "name": "MBRConv",
+        "type": "Multi-Branch Re-parameterized Convolution",
+        "input_output": "Captures multi-scale features, processed through concatenation, compression, and mapping to output dimensions",
+        "layers_or_blocks": "Uses various convolution sizes",
+        "activation": "Not specified",
+        "remarks": "Re-parameterizes into standard convolution during inference"
+      },
+      {
+        "name": "FST",
+        "type": "Feature Self-Transform module",
+        "input_output": "Enhances feature representation capability",
+        "layers_or_blocks": "Captures nonlinear relationships through secondary feature interactions",
+        "activation": "Not specified",
+        "remarks": "Improves linear convolutions"
+      },
+      {
+        "name": "HDPA",
+        "type": "Hierarchical Dual-Path Attention mechanism",
+        "input_output": "Fuses global and local features",
+        "layers_or_blocks": "Simplified attention mechanism",
+        "activation": "Not specified",
+        "remarks": "Hardware-friendly, enhances focus on critical regions"
+      }
+    ],
+    "special_mechanisms": [
+      {
+        "name": "Incremental Weight Optimization (IWO) Strategy",
+        "description": "Freezes prior knowledge, integrates it into trainable convolutional kernels, and re-parameterizes these into new kernels to boost model performance"
+      },
+      {
+        "name": "Re-parameterization",
+        "description": "Used in MBRConv to convert multi-branch convolutions into standard convolution during inference, reducing model size"
+      }
+    ],
+    "equations_or_loss_terms": "Local Variance Weighted (LVW) Loss"
+  },
+  "training_configuration": {
+    "loss_functions": [
+      "Local Variance Weighted (LVW) Loss"
+    ],
+    "optimizer": "Not specified",
+    "learning_rate": "Not specified",
+    "batch_size": "Not specified",
+    "epochs": "Not specified",
+    "scheduler": "Not specified",
+    "regularization": "Not specified",
+    "dropout_rate": "Not specified",
+    "random_seed": "Not specified",
+    "gradient_clipping": "Not specified",
+    "mixed_precision": "Not specified",
+    "distributed_training": "Not specified",
+    "hardware": "Not specified",
+    "framework": "Not specified"
+  },
+  "datasets_for_training": [
+    {
+      "name": "Not specified",
+      "description": "Not specified",
+      "source": "Not specified",
+      "preprocessing": "Not specified",
+      "split_info": "Not specified"
+    }
+  ],
+  "notes_on_training_behavior": "IWO strategy addresses training bottlenecks by freezing prior knowledge and re-parameterizing kernels; LVW Loss enhances accuracy without increasing parameters.",
+  "reproducibility_related_info": {
+    "implementation_availability": "Code will be available at https://github.com/AVC2-UESTC/MobileIE.git",
+    "code_structure_described": "Detailed architecture settings provided in the Appendix",
+    "environment_details": "Not specified"
+  }
+}
