@@ -1,0 +1,61 @@
+{
+  "at": "2026-11-17T18:44:49.095435+08:00",
+  "completed_normally": true,
+  "records": [
+    {
+      "seed": 0,
+      "pid": 1230401,
+      "original_PID_exited": true,
+      "completed_normally": true,
+      "seconds": 400.14829019398894,
+      "quality_rows": 40,
+      "frame_rows": 1792,
+      "unique_prediction_keys": 40,
+      "sources": {
+        "runtime.json": "d5f58e193ae6cf5b8d69b2a170503cfafc2f7d10d33d99f4ab67dc09fdb43498",
+        "config.json": "2eff71b9bdd017d46c6fe08f4b1483af23bc02c0275f99eef9b513ee509e997b",
+        "per_frame.jsonl": "7b5293c6fe96538170d356eb88598efe9632c7753a18901af13536b4291f9626",
+        "per_sequence.jsonl": "8c843bced7952bfed9de4d68e30219ae4849e6b7ecd1adb0fd11165ea9fddd34",
+        "prediction_manifest.jsonl": "08b86ab3e21384a786924be21a675b7993e0184e4c4f6cdb1f39722cd0f295d1",
+        "stage-cost.jsonl": "d49a8af902de1a9fe5b5504849d72e1b19325dcdb3a1b82ebc59f9f5d7fbffed"
+      },
+      "all_registered_conditions_present": true,
+      "finite_quality_metrics": true
+    },
+    {
+      "seed": 1,
+      "pid": 1230402,
+      "original_PID_exited": true,
+      "completed_normally": true,
+      "seconds": 421.2643340489594,
+      "quality_rows": 40,
+      "frame_rows": 1792,
+      "unique_prediction_keys": 40,
+      "sources": {
+        "runtime.json": "bf1d0d91a004ce3f98fd3344654eb0e30b67e842229a2d78bac69794042684dd",
+        "config.json": "7e47e41767d96ec3aa6d0e3865e8b8eeaff11304f7017618b52d30b63213ccbd",
+        "per_frame.jsonl": "e63df8165a23579dee29e749f006400b45105b9f26ceb1e9f8926671f5c2f701",
+        "per_sequence.jsonl": "522b1422e706cbb5816756e7fa52db370951c13587e23eae147062f81cbf8302",
+        "prediction_manifest.jsonl": "0db01cfaf675ec07d95f39d5a93981f37420cd1771b05ad85764846d579161f4",
+        "stage-cost.jsonl": "962ba7fa57bde1a6c7f7685cb556f3a73425fa36edfdb4efb824c4a45c4a355a"
+      },
+      "all_registered_conditions_present": true,
+      "finite_quality_metrics": true
+    }
+  ],
+  "totals": {
+    "quality_rows": 80,
+    "frame_rows": 3584,
+    "stem_frames": 896,
+    "descriptor_frames": 1792,
+    "bidirectional_pairs": 1752
+  },
+  "source_unchanged": true,
+  "prediction_assets_owned": true,
+  "prediction_binary_reread_for_this_audit": false,
+  "new_CNN_forwards_for_this_audit": 0,
+  "new_SGD": 0,
+  "perceptual_complete": false,
+  "partial_rankings_used": false,
+  "scope": "Complete registered quality outputs retained; prediction binary digests were computed by original evaluator and will be verified by original perceptual reader. No extra inference or final gain conclusion."
+}
