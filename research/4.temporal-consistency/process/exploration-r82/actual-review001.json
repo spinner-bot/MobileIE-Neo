@@ -2,8 +2,8 @@
   "at": "2026-11-17T07:51:33.128637+08:00",
   "author": "Codex  (sqs_A100)",
   "expected_contacts": 20,
-  "reviewed_contacts": 16,
-  "all_actual_reviewed": false,
+  "reviewed_contacts": 20,
+  "all_actual_reviewed": true,
   "renderer_manifest_sha256": "5171cfcffd4cff97b75c0874dcb4e54d0b794074ef9e683e7195c6e1129011d1",
   "renderer_flags_preserved": true,
   "records": [
@@ -310,8 +310,84 @@
         554
       ],
       "observation": "三行八列完整；墙面各列几何对应，t8/15增益和细颗粒有轻微差异，GT与增强色调仍不同；wrong列保留为诊断。"
+    },
+    {
+      "seed": 0,
+      "scene": "video_91",
+      "path": "research/4.temporal-consistency/report/exploration-r82-contacts/seed0--video_91.png",
+      "sha256": "ccba1393afe70b9239a28fcdaf0bdbde0b20f424f738a0ddae8254c0256a164e",
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "reviewed_at": "2026-11-17T08:01:41.802586+08:00",
+      "tool": "view_image detail=original",
+      "display_size": [
+        2048,
+        554
+      ],
+      "observation": "三行八列完整；实拍围栏/草木在各时间对应，增强与GT有色调和细节柔化差，centered/direct/wrong差异较细；静态图不作时序优劣判断。"
+    },
+    {
+      "seed": 1,
+      "scene": "video_91",
+      "path": "research/4.temporal-consistency/report/exploration-r82-contacts/seed1--video_91.png",
+      "sha256": "ea8b6c75f7506011d6860945748b93edba28a99b0b2f93dc9839bbf0e7e2db9c",
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "reviewed_at": "2026-11-17T08:01:41.912731+08:00",
+      "tool": "view_image detail=original",
+      "display_size": [
+        2048,
+        554
+      ],
+      "observation": "三行八列完整；围栏竖横线与草木可见，各增强路线有轻微明度/色调差，GT细节仍较清楚；没有把缩略图当全面画质或因果证明。"
+    },
+    {
+      "seed": 0,
+      "scene": "video_121",
+      "path": "research/4.temporal-consistency/report/exploration-r82-contacts/seed0--video_121.png",
+      "sha256": "e6a1660fadbf80d837e2a0dadeea480de18c423a3d29abd0ab3d135abb57cdbd",
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "reviewed_at": "2026-11-17T08:01:42.020315+08:00",
+      "tool": "view_image detail=original",
+      "display_size": [
+        2048,
+        554
+      ],
+      "observation": "三行八列完整；塔架与天空对应，增强天空与GT有色调/颗粒差，递归较平滑，centered/direct/wrong塔架主要结构接近；不是手机或视频实测。"
+    },
+    {
+      "seed": 1,
+      "scene": "video_121",
+      "path": "research/4.temporal-consistency/report/exploration-r82-contacts/seed1--video_121.png",
+      "sha256": "f9413021e85fb4075bcb0d069d7ca83ef6ef4372e772b30326ffc2b1afc767c0",
+      "frames": [
+        0,
+        8,
+        15
+      ],
+      "actual_reviewed": true,
+      "reviewed_at": "2026-11-17T08:01:42.116165+08:00",
+      "tool": "view_image detail=original",
+      "display_size": [
+        2048,
+        554
+      ],
+      "observation": "三行八列完整；塔架三固定时间均显示，后两行天空细颗粒/色调仍与GT不同，各路线结构相近；不能由三静态帧证明无闪烁或无拖影。"
     }
   ],
   "scope": "Actual static contact review only; no video playback/MOS or temporal/novelty proof. Original renderer false flags preserved separately.",
-  "updated_at": "2026-11-17T07:57:45.535591+08:00"
+  "updated_at": "2026-11-17T08:01:42.209277+08:00"
 }
