@@ -43,14 +43,14 @@ def precision():
 
 def final_markers():
     values = {}
-    verify(json.loads((PROCESS/'training-source-freeze001.json').read_text()))
+    verify(json.loads((PROCESS/'training-source-freeze002.json').read_text()))
     for seed in (0, 1):
         marker = json.loads((BASE/f'results/exploration-r88-stage001-seed{seed}/final.json').read_text())
         runtime = json.loads((ROOT/marker['runtime']).read_text())
         assert marker['final_quality_eligible'] and marker['completed_steps'] == STEPS
         assert runtime['completed_normally'] and runtime['stop_reason'] == 'complete'
         assert runtime['completed_steps'] == STEPS
-        assert marker['freeze_sha256'] == digest(PROCESS/'training-source-freeze001.json')
+        assert marker['freeze_sha256'] == digest(PROCESS/'training-source-freeze002.json')
         assert (ROOT/marker['path']).resolve().is_relative_to('/data/Users/zrh/data/MobileIE-Neo')
         assert digest(ROOT/marker['path']) == marker['sha256']
         values[seed] = marker
