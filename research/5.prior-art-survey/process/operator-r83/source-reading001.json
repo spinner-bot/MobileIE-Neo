@@ -1,0 +1,61 @@
+{
+  "at": "2026-11-17T09:30:17.514368+08:00",
+  "author": "Codex  (sqs_A100)",
+  "scope": "Bounded direct-prior and local target-provenance reading; no external code/weights/dataset execution or downloads.",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2007.05146v1",
+      "title": "Optical Flow Distillation",
+      "read": "§3.2 Eq2–5 and §3.3–3.4 text",
+      "revisit_existing_note55": true,
+      "finding": "Two-teacher residual and vanilla distillation already published; not a new proposal."
+    },
+    {
+      "url": "https://arxiv.org/html/2601.16780",
+      "version": "v1 2026-01-23",
+      "title": "PocketDVDNet",
+      "read": "§2.1–2.4 and §3.1/table1 text, no figures actually viewed",
+      "finding": "Structured pruning, domain-adapted teacher and teacher/GT loss mixture are known; 648096 params and 5-frame patches not evidence of this project phone/casual latency."
+    },
+    {
+      "url": "https://arxiv.org/html/2610.33338v1",
+      "read": "Revisit III-H QAT teacher text and III-G headings",
+      "revisit_existing_note55": true,
+      "finding": "Quarter-resolution flow-coordinate distillation; not a claim all operator losses absent."
+    },
+    {
+      "url": "https://arxiv.org/html/1706.04859",
+      "version": "v3",
+      "read": "Introduction and Figure1 text on stochastic projections only",
+      "finding": "Derivative matching and random-vector projections already known."
+    },
+    {
+      "url": "https://arxiv.org/html/1803.00443",
+      "version": "v1",
+      "read": "Abstract/introduction/contribution list only",
+      "finding": "Jacobian matching related to input-noise distillation; no full proof reproduction."
+    }
+  ],
+  "failed_entries": [
+    {
+      "url": "https://openaccess.thecvf.com/content/CVPR2021/html/Xiao_Space-Time_Distillation_for_Video_Super-Resolution_CVPR_2021_paper.html",
+      "status": 403,
+      "action": "Stop this URL; search PDF snippet only, no full reading claim."
+    },
+    {
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Pochimireddy_Efficient_Real-Time_Raw-to-Raw_Denoising_for_Extreme_Low-Light_Ultra_HD_Video_CVPR_2026_paper.html",
+      "status": 403,
+      "action": "Stop this URL; no paper details inferred beyond search snippet."
+    }
+  ],
+  "local_sources": {
+    "research/4.temporal-consistency/scripts/train_transport_fst_r28.py": "e846699be48ee83c6326ea22018a65faf1a7a0f00e570fa562f24a3dd7b4d4e9",
+    "research/4.temporal-consistency/docs/exploration-r28-protocol.md": "41224cb7f472e9a6b92439cde152b6c26573d3675f1ca62c5c5953670e7d1221",
+    "research/4.temporal-consistency/docs/exploration-r80-coefficient-state-protocol.md": "613f3659a50fd07770a888f6367c8851b1d8286f13ee9eafd779ee8a5869af62",
+    "research/4.temporal-consistency/scripts/self_reference_r82.py": "c3cfd7df07bd086f8811929f8ad4f6304a71f2b3e4615d76b9010e536892fd14",
+    "research/4.temporal-consistency/scripts/half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+    "research/4.temporal-consistency/scripts/aligned_raw_history_r11.py": "e367727401f82ccf0bccaf8d88f904e4aebf8b78186f0539eedeed222b2d2227",
+    "research/4.temporal-consistency/scripts/video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0"
+  },
+  "important_correction": "R80 protocol calls R28 postprocessing distillation, but actual R28 reconstruction targets are GT; teacher supplies correspondence fields. Preserve historical frozen artifacts and add separate erratum."
+}
