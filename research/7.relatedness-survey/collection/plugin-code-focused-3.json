@@ -1,0 +1,1421 @@
+{
+  "recorded_at": "2026-11-17T10:35:20.978Z",
+  "input": {
+    "query": "MobileIE TFLite",
+    "topn": 100
+  },
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "results": [
+        {
+          "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/tools/onnx2tflite/onnx2tflite.py",
+          "path": "shared/mon/mon/vision/enhance/multitask/mobileie/tools/onnx2tflite/onnx2tflite.py",
+          "display_url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/tools/onnx2tflite/onnx2tflite.py",
+          "display_title": "shared/mon/mon/vision/enhance/multitask/mobileie/tools/onnx2tflite/onnx2tflite.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "onnx_converter(\n    onnx_model_path = onnx_path,\n    need_simplify = True,\n    output_path = \"//data2/yanhailong/IR-Based/ICCV2025/MobileIE/\", \n    target_formats = ['tflite'], # or ['keras'], ['keras', 'tflite']\n    weight_quant = False,\n    int8_model = False,",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    131,
+                    139
+                  ]
+                },
+                {
+                  "text": "tflite",
+                  "indices": [
+                    167,
+                    173
+                  ]
+                },
+                {
+                  "text": "tflite",
+                  "indices": [
+                    204,
+                    210
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/onnx2tflite/onnx2tflite.py",
+          "path": "onnx2tflite/onnx2tflite.py",
+          "display_url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/onnx2tflite/onnx2tflite.py",
+          "display_title": "onnx2tflite/onnx2tflite.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "onnx_converter(\n    onnx_model_path = onnx_path,\n    need_simplify = True,\n    output_path = \"//data2/yanhailong/IR-Based/ICCV2025/MobileIE/\", \n    target_formats = ['tflite'], # or ['keras'], ['keras', 'tflite']\n    weight_quant = False,\n    int8_model = False,",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    131,
+                    139
+                  ]
+                },
+                {
+                  "text": "tflite",
+                  "indices": [
+                    167,
+                    173
+                  ]
+                },
+                {
+                  "text": "tflite",
+                  "indices": [
+                    204,
+                    210
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/README.md",
+          "path": "shared/mon/mon/vision/enhance/multitask/mobileie/README.md",
+          "display_url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/README.md",
+          "display_title": "shared/mon/mon/vision/enhance/multitask/mobileie/README.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "<h1 align=\"center\">[ICCV 2025] MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices</h1>\n\n<div align=\"center\">",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    31,
+                    39
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "3. If you want to test the pretrain model, set the type in config to \"re-parameterized\", need_slims to \"true\", and load the re-parameterized pre-trained model. You can also run inference with TFLite model by executing \"test_TFLite_RGB.py/test_TFLite_ISP.py\".\n4. You can use the TFLite model and import it into AI Benchmark (https://ai-benchmark.com/) to obtain the inference speed on mobile devices.\n5. If you want to perform UIE task, replace the dataset path in config/lle.yaml with your underwater image dataset.",
+              "matches": [
+                {
+                  "text": "TFLite",
+                  "indices": [
+                    192,
+                    198
+                  ]
+                },
+                {
+                  "text": "TFLite",
+                  "indices": [
+                    224,
+                    230
+                  ]
+                },
+                {
+                  "text": "TFLite",
+                  "indices": [
+                    243,
+                    249
+                  ]
+                },
+                {
+                  "text": "TFLite",
+                  "indices": [
+                    278,
+                    284
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/scripts/verify_tflite.py",
+          "path": "repro/scripts/verify_tflite.py",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/scripts/verify_tflite.py",
+          "display_title": "repro/scripts/verify_tflite.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "from mobileie.data import PairedImageDataset\nfrom mobileie.metrics import mae, psnr_official, psnr_rgb, ssim_rgb\n",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    5,
+                    13
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    50,
+                    58
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nMODEL = OFFICIAL_ROOT / \"pretrain\" / \"lolv1.tflite\"\n",
+              "matches": [
+                {
+                  "text": "tflite",
+                  "indices": [
+                    45,
+                    51
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE-main/MobileIE-main/onnx2tflite/onnx2tflite.py",
+          "path": "MobileIE-main/MobileIE-main/onnx2tflite/onnx2tflite.py",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE-main/MobileIE-main/onnx2tflite/onnx2tflite.py",
+          "display_title": "MobileIE-main/MobileIE-main/onnx2tflite/onnx2tflite.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "onnx_converter(\n    onnx_model_path = onnx_path,\n    need_simplify = True,\n    output_path = \"//data2/yanhailong/IR-Based/ICCV2025/MobileIE/\", \n    target_formats = ['tflite'], # or ['keras'], ['keras', 'tflite']\n    weight_quant = False,\n    int8_model = False,",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    131,
+                    139
+                  ]
+                },
+                {
+                  "text": "tflite",
+                  "indices": [
+                    167,
+                    173
+                  ]
+                },
+                {
+                  "text": "tflite",
+                  "indices": [
+                    204,
+                    210
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/results/tflite_lolv1.json",
+          "path": "repro/results/tflite_lolv1.json",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/results/tflite_lolv1.json",
+          "display_title": "repro/results/tflite_lolv1.json",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "{\n  \"model\": \"D:\\\\AIWorkSpace\\\\MobileIE\\\\MobileIE-main\\\\MobileIE-main\\\\pretrain\\\\lolv1.tflite\",\n  \"summary\": {\n    \"psnr\": 23.632122294108072,\n    \"psnr_per_channel\": 23.956338119506835,\n    \"ssim\": 0.8111965696016947,\n    \"mae\": 0.061784782881538075,",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    31,
+                    39
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    41,
+                    49
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    56,
+                    64
+                  ]
+                },
+                {
+                  "text": "tflite",
+                  "indices": [
+                    87,
+                    93
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/README.md",
+          "path": "README.md",
+          "display_url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/README.md",
+          "display_title": "README.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "<h1 align=\"center\">[ICCV 2025] MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices</h1>\n\n<div align=\"center\">",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    31,
+                    39
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "3. If you want to test the pretrain model, set the type in config to \"re-parameterized\", need_slims to \"true\", and load the re-parameterized pre-trained model. You can also run inference with TFLite model by executing \"test_TFLite_RGB.py/test_TFLite_ISP.py\".\n4. You can use the TFLite model and import it into AI Benchmark (https://ai-benchmark.com/) to obtain the inference speed on mobile devices.\n5. If you want to perform UIE task, replace the dataset path in config/lle.yaml with your underwater image dataset.",
+              "matches": [
+                {
+                  "text": "TFLite",
+                  "indices": [
+                    192,
+                    198
+                  ]
+                },
+                {
+                  "text": "TFLite",
+                  "indices": [
+                    224,
+                    230
+                  ]
+                },
+                {
+                  "text": "TFLite",
+                  "indices": [
+                    243,
+                    249
+                  ]
+                },
+                {
+                  "text": "TFLite",
+                  "indices": [
+                    278,
+                    284
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/config/mobileie_lle_lolv1.yaml",
+          "path": "shared/mon/mon/vision/enhance/multitask/mobileie/config/mobileie_lle_lolv1.yaml",
+          "display_url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/config/mobileie_lle_lolv1.yaml",
+          "display_title": "shared/mon/mon/vision/enhance/multitask/mobileie/config/mobileie_lle_lolv1.yaml",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "save_dir    : &save_dir ~                                                       # Saving directory. If not set, it will be `root/arch/model/data`.\nweights     : &weights \"zoo/vision/enhance/multitask/mobileie/mobileie_lle/lolv1/mobileie_lle_lolv1_slim.pt\"  # Path to the pretrained weights.\ndevice      : &device 0                                                         # Running device (i.e., cuda:0 | cuda:0,1,2,3 | cpu).",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    200,
+                    208
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    209,
+                    217
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    228,
+                    236
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "export:\n  format        : \"onnx\"                                                        # Export format (e.g., onnx, engine, torchscript, coreml, tflite, openvino).\n  opset         : 16                                                            # ONNX: opset version.",
+              "matches": [
+                {
+                  "text": "tflite",
+                  "indices": [
+                    146,
+                    152
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/onnx2tflite/onnx2tflite.py",
+          "path": "onnx2tflite/onnx2tflite.py",
+          "display_url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/onnx2tflite/onnx2tflite.py",
+          "display_title": "onnx2tflite/onnx2tflite.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "# 保存修复后的模型\nfixed_onnx_path = \"/home/featurize/work/MobileIE_LLE_slim_fixed.onnx\"\nonnx.save(model, fixed_onnx_path)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    67,
+                    75
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nfrom onnx2tflite.converter import onnx_converter\n",
+              "matches": [
+                {
+                  "text": "tflite",
+                  "indices": [
+                    11,
+                    17
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/config/mobileie_lle_lolv2real.yaml",
+          "path": "shared/mon/mon/vision/enhance/multitask/mobileie/config/mobileie_lle_lolv2real.yaml",
+          "display_url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/config/mobileie_lle_lolv2real.yaml",
+          "display_title": "shared/mon/mon/vision/enhance/multitask/mobileie/config/mobileie_lle_lolv2real.yaml",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "save_dir    : &save_dir ~                                                       # Saving directory. If not set, it will be `root/arch/model/data`.\nweights     : &weights \"zoo/vision/enhance/multitask/mobileie/mobileie_lle/lolv2real/mobileie_lle_lolv2real_slim.pt\"  # Path to the pretrained weights.\ndevice      : &device 0                                                         # Running device (i.e., cuda:0 | cuda:0,1,2,3 | cpu).",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    200,
+                    208
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    209,
+                    217
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    232,
+                    240
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "export:\n  format        : \"onnx\"                                                        # Export format (e.g., onnx, engine, torchscript, coreml, tflite, openvino).\n  opset         : 16                                                            # ONNX: opset version.",
+              "matches": [
+                {
+                  "text": "tflite",
+                  "indices": [
+                    146,
+                    152
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE-main/MobileIE-main/README.md",
+          "path": "MobileIE-main/MobileIE-main/README.md",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE-main/MobileIE-main/README.md",
+          "display_title": "MobileIE-main/MobileIE-main/README.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "<h1 align=\"center\">[ICCV 2025] MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices</h1>\n\n<div align=\"center\">",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    31,
+                    39
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "3. If you want to test the pretrain model, set the type in config to \"re-parameterized\", need_slims to \"true\", and load the re-parameterized pre-trained model. You can also run inference with TFLite model by executing \"test_TFLite_RGB.py/test_TFLite_ISP.py\".\n4. You can use the TFLite model and import it into AI Benchmark (https://ai-benchmark.com/) to obtain the inference speed on mobile devices.\n5. If you want to perform UIE task, replace the dataset path in config/lle.yaml with your underwater image dataset.",
+              "matches": [
+                {
+                  "text": "TFLite",
+                  "indices": [
+                    192,
+                    198
+                  ]
+                },
+                {
+                  "text": "TFLite",
+                  "indices": [
+                    224,
+                    230
+                  ]
+                },
+                {
+                  "text": "TFLite",
+                  "indices": [
+                    243,
+                    249
+                  ]
+                },
+                {
+                  "text": "TFLite",
+                  "indices": [
+                    278,
+                    284
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Kazuhito00/Multimodal-Node-Editor/blob/b4e82ad8c5b7c68ae263cb26989195af1d803d18/download_weights.py",
+          "path": "download_weights.py",
+          "display_url": "https://github.com/Kazuhito00/Multimodal-Node-Editor/blob/b4e82ad8c5b7c68ae263cb26989195af1d803d18/download_weights.py",
+          "display_title": "download_weights.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    (\"v0.0.0\", \"face_detection_yunet_2023mar.onnx\", \"src/nodes/image/deep_learning/face_detection/YuNet/model/face_detection_yunet_2023mar.onnx\"),\n    (\"v0.0.0\", \"mobileie_lolv1.onnx\", \"src/nodes/image/deep_learning/low_light_image_enhancement/MobileIE/model/mobileie_lolv1.onnx\"),\n    (\"v0.0.0\", \"cpga_net.onnx\", \"src/nodes/image/deep_learning/low_light_image_enhancement/CPGA-Net/model/cpga_net.onnx\"),",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    163,
+                    171
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    244,
+                    252
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    259,
+                    267
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "    (\"v0.0.0\", \"ppliteseg_stdc2.onnx\", \"src/nodes/image/deep_learning/semantic_segmentation/PP-LiteSeg/model/ppliteseg_stdc2.onnx\"),\n    (\"v0.0.0\", \"blaze_face_short_range_float16.tflite\", \"src/nodes/image/deep_learning/face_detection/MediaPipe/model/blaze_face_short_range_float16.tflite\"),\n    (\"v0.0.0\", \"selfie_segmenter_float16.tflite\", \"src/nodes/image/deep_learning/semantic_segmentation/MediaPipe/model/selfie_segmenter_float16.tflite\"),",
+              "matches": [
+                {
+                  "text": "tflite",
+                  "indices": [
+                    180,
+                    186
+                  ]
+                },
+                {
+                  "text": "tflite",
+                  "indices": [
+                    282,
+                    288
+                  ]
+                },
+                {
+                  "text": "tflite",
+                  "indices": [
+                    333,
+                    339
+                  ]
+                },
+                {
+                  "text": "tflite",
+                  "indices": [
+                    436,
+                    442
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/deploy/README.md",
+          "path": "deploy/README.md",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/deploy/README.md",
+          "display_title": "deploy/README.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "   python -m http.server 8000 -d D:\\AIWorkSpace\\MobileIE\n   ```\n   平板浏览器打开 `http://<PC 的局域网 IP>:8000/`，下载这两个文件：\n   - `deploy/bench_tflite.py`\n   - `MobileIE-main/MobileIE-main/pretrain/lolv1.tflite`\n   （查 PC 的 IP：`ipconfig` 看无线网卡的 IPv4。平板和 PC 要连同一个 Wi-Fi。）\n5. 跑（先测 4 线程，再测单线程，两个数都要）：",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    48,
+                    56
+                  ]
+                },
+                {
+                  "text": "tflite",
+                  "indices": [
+                    171,
+                    177
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    188,
+                    196
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    202,
+                    210
+                  ]
+                },
+                {
+                  "text": "tflite",
+                  "indices": [
+                    231,
+                    237
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/xuhangc/Plumbing/blob/ea6d788ba16cdd4f7c1e8e7685b735b13e9e9352/blocks/02_convolution/mie.py",
+          "path": "blocks/02_convolution/mie.py",
+          "display_url": "https://github.com/xuhangc/Plumbing/blob/ea6d788ba16cdd4f7c1e8e7685b735b13e9e9352/blocks/02_convolution/mie.py",
+          "display_title": "blocks/02_convolution/mie.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "   响应图为线索生成像素级权重，二者相乘对主体特征逐点加权；\n4. 全部算子为纯 conv/BN/PReLU，对 TFLite/移动端部署友好。\n",
+              "matches": [
+                {
+                  "text": "TFLite",
+                  "indices": [
+                    130,
+                    136
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "如果在论文中使用该模块，可以描述为：\n\"本文采用 MobileIE（ICCV 2025）提出的轻量增强块 MIE：以多分支重参数卷积\nMBRConv3（3×3/1×1/十字交叉分支训练并联、推理可融合）作为主体，并用 FST",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    69,
+                    77
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/deploy/bootstrap.sh",
+          "path": "deploy/bootstrap.sh",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/deploy/bootstrap.sh",
+          "display_title": "deploy/bootstrap.sh",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "echo \"[2/5] 取离线 wheel / 测速脚本 / 模型\"\nwget -q -O wheels.zip \"$PC/deploy/wheels.zip\"\nwget -q -O bench_tflite.py \"$PC/deploy/bench_tflite.py\"\nwget -q -O lolv1.tflite \"$PC/MobileIE-main/MobileIE-main/pretrain/lolv1.tflite\"\nunzip -o -q wheels.zip -d wheels\n\necho \"[3/5] 装 LiteRT（完全离线，从本地 wheel 装，避开 Termux/pip 联网失败）\"",
+              "matches": [
+                {
+                  "text": "tflite",
+                  "indices": [
+                    116,
+                    122
+                  ]
+                },
+                {
+                  "text": "tflite",
+                  "indices": [
+                    144,
+                    150
+                  ]
+                },
+                {
+                  "text": "tflite",
+                  "indices": [
+                    172,
+                    178
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    184,
+                    192
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    198,
+                    206
+                  ]
+                },
+                {
+                  "text": "tflite",
+                  "indices": [
+                    227,
+                    233
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/论文复现对照.md",
+          "path": "repro/论文复现对照.md",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/论文复现对照.md",
+          "display_title": "repro/论文复现对照.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "python scripts/report.py               # 汇总生成 results/report.md\npython scripts/dashboard.py            # 单文件离线曲线（含坐标轴与悬停）\npython scripts/complexity.py ...       # 参数/MACs/延迟\n../deploy/bench_tflite.py --model ../MobileIE-main/MobileIE-main/pretrain/lolv1.tflite   # 延迟基线\nrun.cmd status | watch | eval | verify | report | dash | board        # 根目录一键入口\n\n# 无-IWO 对照组：等当前链结束后自动开跑（脱离会话，60 s 探测一次）",
+              "matches": [
+                {
+                  "text": "tflite",
+                  "indices": [
+                    238,
+                    244
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    259,
+                    267
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    273,
+                    281
+                  ]
+                },
+                {
+                  "text": "tflite",
+                  "indices": [
+                    302,
+                    308
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/README.md",
+          "path": "repro/README.md",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/README.md",
+          "display_title": "repro/README.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                    train 46839 + test 1204 tiles of 448x448; mixed PNG bit depth is benign\n  src/mobileie/     the reproduction layer\n    config.py       YAML config, dotted CLI overrides, run directories, path resolution",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    98,
+                    106
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "    verify_dataset.py     dataset gate: pairing, decodability, sizes, true >8-bit RAW\n    verify_tflite.py      the deployable .tflite vs the .pkl it came from\n    report.py             writes results/report.md (Tables 1/2/3/7) and curves.png",
+              "matches": [
+                {
+                  "text": "tflite",
+                  "indices": [
+                    97,
+                    103
+                  ]
+                },
+                {
+                  "text": "tflite",
+                  "indices": [
+                    128,
+                    134
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/KrakeCZ/AIchat-Android-Local-AI-Agent-/blob/e701008557c758876a3da75ed373d91dd959b1bf/examples/llama.android/app/src/main/java/com/example/llama/agent/vision/nightmode/plugins/LiteIETflitePlugin.kt",
+          "path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/nightmode/plugins/LiteIETflitePlugin.kt",
+          "display_url": "https://github.com/KrakeCZ/AIchat-Android-Local-AI-Agent-/blob/e701008557c758876a3da75ed373d91dd959b1bf/examples/llama.android/app/src/main/java/com/example/llama/agent/vision/nightmode/plugins/LiteIETflitePlugin.kt",
+          "display_title": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/nightmode/plugins/LiteIETflitePlugin.kt",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    private val settingsManager: com.example.llama.SettingsManager\n) : NightModePlugin {\n\n    override val pluginId = \"night_tflite_mobileie\"\n    override val displayName = \"TFLite Edge (Zero-DCE/MobileIE)\"\n\n    private var interpreter: Interpreter? = null",
+              "matches": [
+                {
+                  "text": "tflite",
+                  "indices": [
+                    125,
+                    131
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    132,
+                    140
+                  ]
+                },
+                {
+                  "text": "TFLite",
+                  "indices": [
+                    174,
+                    180
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    196,
+                    204
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Foadsf/neural-enhance-bench/blob/04a08307a91dd0f17e2810d0766a559c1b5905d9/FLOSS Tool for CNN and VLM Image Enhancement Testing.md",
+          "path": "FLOSS Tool for CNN and VLM Image Enhancement Testing.md",
+          "display_url": "https://github.com/Foadsf/neural-enhance-bench/blob/04a08307a91dd0f17e2810d0766a559c1b5905d9/FLOSS Tool for CNN and VLM Image Enhancement Testing.md",
+          "display_title": "FLOSS Tool for CNN and VLM Image Enhancement Testing.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "- **PMRID**, **NBNet**, and other mobile-oriented denoisers from AI-ISP literature.\n- Extremely lightweight recent work: **MobileIE** (~4K parameters, reparameterized CNN for real-time enhancement on mobile), **LiteIE** (ultra-light unsupervised low-light), and similar Mobile AI challenge winners (often <100–500 KB quantized).<grok:render card_id=\"799b42\" card_type=\"citation_card\" type=\"render_inline_citation\"><argument name=\"citation_id\">26</argument></grok:render>\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    123,
+                    131
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "- Efficient one-step or distilled diffusion-style SR (e.g., lighter variants of SinSR / OSEDiff / AdcSR / PocketSR ideas) if you can keep the footprint under ~100–300 MB and use aggressive tiling + quantization. Full modern VLMs or large DiT-based models are generally too heavy without severe compromises.\n- Community ONNX/TFLite packs from Real-ESRGAN repos, Chainner exports, and Hugging Face mobile-optimized uploads.\n",
+              "matches": [
+                {
+                  "text": "TFLite",
+                  "indices": [
+                    326,
+                    332
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/results/report.md",
+          "path": "repro/results/report.md",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/results/report.md",
+          "display_title": "repro/results/report.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "# MobileIE (ICCV 2025) reproduction report\n\n作者权重侧覆盖 LLE(LOLv1) / UIE(UIEB) / ISP(ZRR) 三张表；从零训练见文末 From-scratch 段。",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    2,
+                    10
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\n### 部署产物一致性（`pretrain/lolv1.tflite`，x86 CPU + XNNPACK）\n",
+              "matches": [
+                {
+                  "text": "tflite",
+                  "indices": [
+                    45,
+                    51
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/cloud/pack.ps1",
+          "path": "cloud/pack.ps1",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/cloud/pack.ps1",
+          "display_title": "cloud/pack.ps1",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "$xdArgs = @()\nforeach ($n in $bareDrop) { $xdArgs += \"/XD\"; $xdArgs += $n }\nforeach ($r in $pruneRel) { if ($r) { $xdArgs += \"/XD\"; $xdArgs += (Join-Path $Repro $r) } }\n$xdArgs += \"/XD\"; $xdArgs += (Join-Path $Official \"MobileIE-main\\onnx2tflite\\build\")\n$xdArgs += \"/XD\"; $xdArgs += (Join-Path $Official \"MobileIE-main\\onnx2tflite\\dist\")\n\nfunction Staged([string]$rel) { Join-Path $Stage (Join-Path \"repro\" $rel) }",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    220,
+                    228
+                  ]
+                },
+                {
+                  "text": "tflite",
+                  "indices": [
+                    239,
+                    245
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    305,
+                    313
+                  ]
+                },
+                {
+                  "text": "tflite",
+                  "indices": [
+                    324,
+                    330
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/算法复现说明.md",
+          "path": "repro/算法复现说明.md",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/算法复现说明.md",
+          "display_title": "repro/算法复现说明.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "| `src/mobileie/engine.py` | 预热 → 训练 → 验证 → 折叠保存 → IWO 权重迁移 → `state_last.pt` 断点 → 评估 |\n| `src/mobileie/config.py` | YAML + 点号覆盖 + 相对路径解析（配置也可传绝对/相对路径给云端配置用） |\n| `scripts/selfcheck.py` | **15 条断言**：折叠等价性、IWO 语义、loader 与官方逐像素一致、裁剪 inp/gt 对齐、loss 有限性 |",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    7,
+                    15
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    143,
+                    151
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "| `scripts/verify_dataset.py` | 数据集签收门：配对、可解码、分辨率直方图、**`--raw` 验真 >8-bit 单通道 Bayer** |\n| `scripts/verify_tflite.py` | 部署产物（`.tflite`，NHWC 固定形状）与 `.pkl` 的精度一致性 |\n| `scripts/download_lolv1.py` / `download_uieb_zrr.py` | 走 hf-mirror 取数据；ZRR 用 HTTP Range 从 23.8 GB 包定点抽取 |",
+              "matches": [
+                {
+                  "text": "tflite",
+                  "indices": [
+                    157,
+                    163
+                  ]
+                },
+                {
+                  "text": "tflite",
+                  "indices": [
+                    187,
+                    193
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/scripts/report.py",
+          "path": "repro/scripts/report.py",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/scripts/report.py",
+          "display_title": "repro/scripts/report.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "from mobileie.config import RESULTS_ROOT, RUNS_ROOT\nfrom mobileie import model as M\n",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    5,
+                    13
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    57,
+                    65
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "        out[Path(path).stem[len(\"eval_\"):]] = data\n    tp = RESULTS_ROOT / \"tflite_lolv1.json\"\n    if tp.exists():",
+              "matches": [
+                {
+                  "text": "tflite",
+                  "indices": [
+                    76,
+                    82
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/deploy/x86_baseline.json",
+          "path": "deploy/x86_baseline.json",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/deploy/x86_baseline.json",
+          "display_title": "deploy/x86_baseline.json",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "{\n  \"model\": \"MobileIE-main/MobileIE-main/pretrain/lolv1.tflite\",\n  \"input_shape\": [\n    1,\n    400,\n    600,\n    3",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    14,
+                    22
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    28,
+                    36
+                  ]
+                },
+                {
+                  "text": "tflite",
+                  "indices": [
+                    57,
+                    63
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/KrakeCZ/AIchat-Android-Local-AI-Agent-/blob/e701008557c758876a3da75ed373d91dd959b1bf/examples/llama.android/app/src/main/java/com/example/llama/SettingsManager.kt",
+          "path": "examples/llama.android/app/src/main/java/com/example/llama/SettingsManager.kt",
+          "display_url": "https://github.com/KrakeCZ/AIchat-Android-Local-AI-Agent-/blob/e701008557c758876a3da75ed373d91dd959b1bf/examples/llama.android/app/src/main/java/com/example/llama/SettingsManager.kt",
+          "display_title": "examples/llama.android/app/src/main/java/com/example/llama/SettingsManager.kt",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "        get() = prefs.getBoolean(KEY_NIGHT_MODE_ENABLED, DEFAULT_NIGHT_MODE_ENABLED)\n        set(v) = prefs.edit { putBoolean(KEY_NIGHT_MODE_ENABLED, v) }\n\n    /** ID aktivního Night Mode pluginu (např. night_retinex, night_tflite_mobileie). */\n    var activeNightModePluginId: String\n        get() = prefs.getString(KEY_NIGHT_MODE_PLUGIN, DEFAULT_NIGHT_MODE_PLUGIN) ?: DEFAULT_NIGHT_MODE_PLUGIN\n        set(v) = prefs.edit { putString(KEY_NIGHT_MODE_PLUGIN, v) }",
+              "matches": [
+                {
+                  "text": "tflite",
+                  "indices": [
+                    226,
+                    232
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    233,
+                    241
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/dnguyennk/portfolio/blob/6d3a67421385ea0cd33f86ae9e094387d4cbe92f/index.html",
+          "path": "index.html",
+          "display_url": "https://github.com/dnguyennk/portfolio/blob/6d3a67421385ea0cd33f86ae9e094387d4cbe92f/index.html",
+          "display_title": "index.html",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "           data-vi=\"Nghiên cứu sâu PLU-Net (hạng 1, DaHua-IIG) và MobileIE (hạng 4, AVC2-UESTC). Xác minh số lượng tham số qua toán reparameterization MBRConv. Phân tích tổ hợp hàm loss: LVW, MS-SSIM, VGG content loss, RaSGAN.\">\n          Deep study of PLU-Net and MobileIE architectures. Verified parameter counts through MBRConv reparameterization math. Analyzed loss function combinations: LVW, MS-SSIM, VGG content loss, RaSGAN.\n        </p>",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    73,
+                    81
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    290,
+                    298
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "        <h3 data-en=\"Edge AI & Object Tracking\" data-vi=\"AI Biên & Theo dõi Đối tượng\">Edge AI & Object Tracking</h3>\n        <p data-en=\"SSD MobileNet V1 detection + SORT/DeepSORT tracking for maritime objects. Solved boat/truck misclassification, implemented NMS and movement-based filtering. Explored TFLite mobile deployment.\"\n           data-vi=\"Phát hiện SSD MobileNet V1 + theo dõi SORT/DeepSORT cho đối tượng hàng hải. Giải quyết nhầm lẫn tàu/xe tải, triển khai NMS và lọc dựa trên chuyển động. Khám phá triển khai di động TFLite.\">",
+              "matches": [
+                {
+                  "text": "TFLite",
+                  "indices": [
+                    312,
+                    318
+                  ]
+                },
+                {
+                  "text": "TFLite",
+                  "indices": [
+                    583,
+                    589
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/KrakeCZ/AIchat-Android-Local-AI-Agent-/blob/e701008557c758876a3da75ed373d91dd959b1bf/examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/ObjectDetectorStudioActivity.kt",
+          "path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/ObjectDetectorStudioActivity.kt",
+          "display_url": "https://github.com/KrakeCZ/AIchat-Android-Local-AI-Agent-/blob/e701008557c758876a3da75ed373d91dd959b1bf/examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/ObjectDetectorStudioActivity.kt",
+          "display_title": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/ObjectDetectorStudioActivity.kt",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                            var selectedNightPluginId by remember { mutableStateOf(settingsManager.activeNightModePluginId) }\n                            val nightPlugins = listOf(\n                                Pair(\"night_retinex\", \"Fast Retinex (CPU Math)\"),\n                                Pair(\"night_tflite_mobileie\", \"TFLite Edge (Zero-DCE/MobileIE)\")\n                            )\n\n                            nightPlugins.forEach { (id, name) ->",
+              "matches": [
+                {
+                  "text": "tflite",
+                  "indices": [
+                    307,
+                    313
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    314,
+                    322
+                  ]
+                },
+                {
+                  "text": "TFLite",
+                  "indices": [
+                    326,
+                    332
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    348,
+                    356
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/KrakeCZ/AIchat-Android-Local-AI-Agent-/blob/e701008557c758876a3da75ed373d91dd959b1bf/examples/llama.android/app/src/main/java/com/example/llama/ui/thanks/ThanksActivity.kt",
+          "path": "examples/llama.android/app/src/main/java/com/example/llama/ui/thanks/ThanksActivity.kt",
+          "display_url": "https://github.com/KrakeCZ/AIchat-Android-Local-AI-Agent-/blob/e701008557c758876a3da75ed373d91dd959b1bf/examples/llama.android/app/src/main/java/com/example/llama/ui/thanks/ThanksActivity.kt",
+          "display_title": "examples/llama.android/app/src/main/java/com/example/llama/ui/thanks/ThanksActivity.kt",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "        \"Ultralytics (YOLO)\",\n        \"Díky za výzkum a architektury YOLOv5/YOLOv8. Tato aplikace obsahuje nezávislý parser pro čtení jejich .tflite výstupů, a neobsahuje žádný zdrojový kód Ultralytics (BYOM infrastruktura).\",\n        \"Copyright (c) 2024 Ultralytics\",",
+              "matches": [
+                {
+                  "text": "tflite",
+                  "indices": [
+                    148,
+                    154
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "        \"NTIRE / AIM Research\",\n        \"Vývoj našeho AcademicYuvEngine vděčí za mnohé autorům výzkumů LiteIE a MobileIE. Aplikace obsahuje nezávislé implementace algoritmů (MIT).\",\n        \"Copyright (c) Research Authors\",",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    121,
+                    129
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/ZhangCurosr/zhangcursor-papers-arxiv-ai-002/blob/15417a095257756166bbb38b3ef6c7ff8b7524af/2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_f7a4fa1c/full.md",
+          "path": "2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_f7a4fa1c/full.md",
+          "display_url": "https://github.com/ZhangCurosr/zhangcursor-papers-arxiv-ai-002/blob/15417a095257756166bbb38b3ef6c7ff8b7524af/2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_f7a4fa1c/full.md",
+          "display_title": "2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_f7a4fa1c/full.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nA notable progress that should be highlighted is the ease of model conversion to the target TFLite format. Table 1 shows that the majority of solutions in this challenge were developed using the PyTorch ML framework. Due to the recently presented litert-torch plugin <sup>4</sup> developed by the LiteRT team, one can now directly convert the majority of PyTorch models to the TFLite format without the need for TensorFlow / Keras model re-implementation or use of ONNX as an intermediary format. This significantly simplifies the development process of mobile-friendly deep learning architectures for the majority of researchers using Py-Torch as their main framework for AI model development and training.\n",
+              "matches": [
+                {
+                  "text": "TFLite",
+                  "indices": [
+                    93,
+                    99
+                  ]
+                },
+                {
+                  "text": "TFLite",
+                  "indices": [
+                    378,
+                    384
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nTeam AVC2 introduced a simplified version of MobileIE [91], a lightweight image signal processing network designed for mobile deployment that balances performance and efficiency using reparameterization, as illustrated in Figure 4. The architecture first employs an MBRConv 3 × 3 layer followed by a Tanh activation for initial feature extraction. Subsequently, the feature maps are fed into two parallel branches. Each branch consists of an MBRConv 3 × 3 layer with a residual connection. The outputs of the two branches are fused via element-wise multiplication. After these blocks, a simplified version of the Hierarchical Dual-Path Attention (HDPA) module is employed to refine features. Upsampling is achieved through a Pixel Shuffle layer, followed by a final MBRConv 3 × 3 layer generating the output image. A key aspect is the MBRConv block, which utilizes multiple parallel convolutional branches with batch normalization during training; these blocks are reparameterized into standard single convolutional layers for efficient inference.\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    46,
+                    54
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/ZhangCurosr/zhangcursor-papers-arxiv-ai-002/blob/15417a095257756166bbb38b3ef6c7ff8b7524af/2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_ec530fd3/full.md",
+          "path": "2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_ec530fd3/full.md",
+          "display_url": "https://github.com/ZhangCurosr/zhangcursor-papers-arxiv-ai-002/blob/15417a095257756166bbb38b3ef6c7ff8b7524af/2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_ec530fd3/full.md",
+          "display_title": "2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_ec530fd3/full.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nA notable progress that should be highlighted is the ease of model conversion to the target TFLite format. Table 1 shows that the majority of solutions in this challenge were developed using the PyTorch ML framework. Due to the recently presented litert-torch plugin <sup>4</sup> developed by the LiteRT team, one can now directly convert the majority of PyTorch models to the TFLite format without the need for TensorFlow / Keras model re-implementation or use of ONNX as an intermediary format. This significantly simplifies the development process of mobile-friendly deep learning architectures for the majority of researchers using Py-Torch as their main framework for AI model development and training.\n",
+              "matches": [
+                {
+                  "text": "TFLite",
+                  "indices": [
+                    93,
+                    99
+                  ]
+                },
+                {
+                  "text": "TFLite",
+                  "indices": [
+                    378,
+                    384
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nTeam AVC2 introduced a simplified version of MobileIE [91], a lightweight image signal processing network designed for mobile deployment that balances performance and efficiency using reparameterization, as illustrated in Figure 4. The architecture first employs an MBRConv 3 × 3 layer followed by a Tanh activation for initial feature extraction. Subsequently, the feature maps are fed into two parallel branches. Each branch consists of an MBRConv 3 × 3 layer with a residual connection. The outputs of the two branches are fused via element-wise multiplication. After these blocks, a simplified version of the Hierarchical Dual-Path Attention (HDPA) module is employed to refine features. Upsampling is achieved through a Pixel Shuffle layer, followed by a final MBRConv 3 × 3 layer generating the output image. A key aspect is the MBRConv block, which utilizes multiple parallel convolutional branches with batch normalization during training; these blocks are reparameterized into standard single convolutional layers for efficient inference.\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    46,
+                    54
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/ZhangCurosr/zhangcursor-papers-arxiv-cv-002/blob/05f81f004803d1b9f486eec89c1f9e45dec9b183/2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_728efbcd/full.md",
+          "path": "2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_728efbcd/full.md",
+          "display_url": "https://github.com/ZhangCurosr/zhangcursor-papers-arxiv-cv-002/blob/05f81f004803d1b9f486eec89c1f9e45dec9b183/2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_728efbcd/full.md",
+          "display_title": "2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_728efbcd/full.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nA notable progress that should be highlighted is the ease of model conversion to the target TFLite format. Table 1 shows that the majority of solutions in this challenge were developed using the PyTorch ML framework. Due to the recently presented litert-torch plugin <sup>4</sup> developed by the LiteRT team, one can now directly convert the majority of PyTorch models to the TFLite format without the need for TensorFlow / Keras model re-implementation or use of ONNX as an intermediary format. This significantly simplifies the development process of mobile-friendly deep learning architectures for the majority of researchers using Py-Torch as their main framework for AI model development and training.\n",
+              "matches": [
+                {
+                  "text": "TFLite",
+                  "indices": [
+                    93,
+                    99
+                  ]
+                },
+                {
+                  "text": "TFLite",
+                  "indices": [
+                    378,
+                    384
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nTeam AVC2 introduced a simplified version of MobileIE [91], a lightweight image signal processing network designed for mobile deployment that balances performance and efficiency using reparameterization, as illustrated in Figure 4. The architecture first employs an MBRConv 3 × 3 layer followed by a Tanh activation for initial feature extraction. Subsequently, the feature maps are fed into two parallel branches. Each branch consists of an MBRConv 3 × 3 layer with a residual connection. The outputs of the two branches are fused via element-wise multiplication. After these blocks, a simplified version of the Hierarchical Dual-Path Attention (HDPA) module is employed to refine features. Upsampling is achieved through a Pixel Shuffle layer, followed by a final MBRConv 3 × 3 layer generating the output image. A key aspect is the MBRConv block, which utilizes multiple parallel convolutional branches with batch normalization during training; these blocks are reparameterized into standard single convolutional layers for efficient inference.\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    46,
+                    54
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/ZhangCurosr/zhangcursor-papers-arxiv-cv-002/blob/05f81f004803d1b9f486eec89c1f9e45dec9b183/2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_863a518f/full.md",
+          "path": "2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_863a518f/full.md",
+          "display_url": "https://github.com/ZhangCurosr/zhangcursor-papers-arxiv-cv-002/blob/05f81f004803d1b9f486eec89c1f9e45dec9b183/2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_863a518f/full.md",
+          "display_title": "2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_863a518f/full.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nA notable progress that should be highlighted is the ease of model conversion to the target TFLite format. Table 1 shows that the majority of solutions in this challenge were developed using the PyTorch ML framework. Due to the recently presented litert-torch plugin <sup>4</sup> developed by the LiteRT team, one can now directly convert the majority of PyTorch models to the TFLite format without the need for TensorFlow / Keras model re-implementation or use of ONNX as an intermediary format. This significantly simplifies the development process of mobile-friendly deep learning architectures for the majority of researchers using Py-Torch as their main framework for AI model development and training.\n",
+              "matches": [
+                {
+                  "text": "TFLite",
+                  "indices": [
+                    93,
+                    99
+                  ]
+                },
+                {
+                  "text": "TFLite",
+                  "indices": [
+                    378,
+                    384
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nTeam AVC2 introduced a simplified version of MobileIE [91], a lightweight image signal processing network designed for mobile deployment that balances performance and efficiency using reparameterization, as illustrated in Figure 4. The architecture first employs an MBRConv 3 × 3 layer followed by a Tanh activation for initial feature extraction. Subsequently, the feature maps are fed into two parallel branches. Each branch consists of an MBRConv 3 × 3 layer with a residual connection. The outputs of the two branches are fused via element-wise multiplication. After these blocks, a simplified version of the Hierarchical Dual-Path Attention (HDPA) module is employed to refine features. Upsampling is achieved through a Pixel Shuffle layer, followed by a final MBRConv 3 × 3 layer generating the output image. A key aspect is the MBRConv block, which utilizes multiple parallel convolutional branches with batch normalization during training; these blocks are reparameterized into standard single convolutional layers for efficient inference.\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    46,
+                    54
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/onnx2tflite/onnx2tflite.py",
+          "path": "onnx2tflite/onnx2tflite.py",
+          "display_url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/onnx2tflite/onnx2tflite.py",
+          "display_title": "onnx2tflite/onnx2tflite.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "onnx_converter(\n    onnx_model_path = onnx_path,\n    need_simplify = True,\n    output_path = \"//data2/yanhailong/IR-Based/ICCV2025/MobileIE/\", \n    target_formats = ['tflite'], # or ['keras'], ['keras', 'tflite']\n    weight_quant = False,\n    int8_model = False,",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    131,
+                    139
+                  ]
+                },
+                {
+                  "text": "tflite",
+                  "indices": [
+                    167,
+                    173
+                  ]
+                },
+                {
+                  "text": "tflite",
+                  "indices": [
+                    204,
+                    210
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "isError": false
+  }
+}
