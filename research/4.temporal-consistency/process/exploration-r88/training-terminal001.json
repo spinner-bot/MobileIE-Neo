@@ -1,0 +1,89 @@
+{
+  "at": "2026-11-17T18:30:18.704494+08:00",
+  "completed_normally": true,
+  "registered_budget_complete": true,
+  "records": [
+    {
+      "seed": 0,
+      "pid": 1151700,
+      "start_ticks": 84737580,
+      "original_PID_exited": true,
+      "marker": "research/4.temporal-consistency/results/exploration-r88-stage001-seed0/final.json",
+      "checkpoint_sha256": "3c5269b3fda6c66727a3d9c36a853c3adb7c672e81fe2e368c1c62a2935eb3f2",
+      "bytes": 65824,
+      "saved_steps": 2000,
+      "saved_optimizer_updates": 4000,
+      "next_data_step": 10000,
+      "controls": {
+        "plain": {
+          "trainable_degrees": 432,
+          "folded_weights": 432,
+          "Adam_completed_steps": [
+            2000
+          ],
+          "final_reload_max_difference": 0.0,
+          "all_saved_model_and_moment_tensors_finite": true
+        },
+        "complement": {
+          "trainable_degrees": 384,
+          "folded_weights": 432,
+          "Adam_completed_steps": [
+            2000
+          ],
+          "final_reload_max_difference": 0.0,
+          "all_saved_model_and_moment_tensors_finite": true
+        }
+      },
+      "final_eligible": true
+    },
+    {
+      "seed": 1,
+      "pid": 1151699,
+      "start_ticks": 84737578,
+      "original_PID_exited": true,
+      "marker": "research/4.temporal-consistency/results/exploration-r88-stage001-seed1/final.json",
+      "checkpoint_sha256": "c45d6be4293c6a0acdabb185741da89a8cba8e2ca03af71aa1e1dcb3f5108303",
+      "bytes": 65824,
+      "saved_steps": 2000,
+      "saved_optimizer_updates": 4000,
+      "next_data_step": 10000,
+      "controls": {
+        "plain": {
+          "trainable_degrees": 432,
+          "folded_weights": 432,
+          "Adam_completed_steps": [
+            2000
+          ],
+          "final_reload_max_difference": 0.0,
+          "all_saved_model_and_moment_tensors_finite": true
+        },
+        "complement": {
+          "trainable_degrees": 384,
+          "folded_weights": 432,
+          "Adam_completed_steps": [
+            2000
+          ],
+          "final_reload_max_difference": 0.0,
+          "all_saved_model_and_moment_tensors_finite": true
+        }
+      },
+      "final_eligible": true
+    }
+  ],
+  "totals": {
+    "new_optimizer_updates": 8000,
+    "stem_batch_calls": 4000,
+    "stem_image_frames": 32000,
+    "descriptor_image_forwards": 64000,
+    "individual_directional_train_fields": 32000
+  },
+  "original_PIDs_exited": true,
+  "scientific_retries": 0,
+  "resource_resumes": 0,
+  "final_reload_descriptor_image_forwards_from_frozen_call_graph": 64,
+  "descriptor_counter_scope": "64000 training images; the two-head original/folded final reloads additionally reuse B8 features,32 descriptor images per seed; no extra stem/F0/updates.",
+  "evaluation_complete": false,
+  "new_method_established": false,
+  "phone_measured": false,
+  "independent_final": false
+}
