@@ -1,0 +1,192 @@
+{
+  "at": "2026-11-17T14:26:02.161539+08:00",
+  "phase": "R87 original normal complete",
+  "runtime": {
+    "ended": "2026-11-17T14:01:22.920048+08:00",
+    "pid": 1054252,
+    "completed_normally": true,
+    "seconds": 32.17892200103961,
+    "B4_calls": 64,
+    "backbone_image_frames": 256,
+    "metric_optimizer_updates": 1024,
+    "backbone_optimizer_updates": 0,
+    "query_rows": 4800,
+    "CUDA_initialized": false,
+    "new_DEV_pixels": 0,
+    "final_pixels": 0
+  },
+  "original_PID_exited": true,
+  "source_count": 21,
+  "source_and_protocol_unchanged": true,
+  "fold_qualifications": [
+    {
+      "model_seed": 0,
+      "unclipped_RGB_max_abs": 3.5762786865234375e-07,
+      "clipped_RGB_max_abs": 3.5762786865234375e-07,
+      "folded_vs_explicit_metric_logit_max_abs": 3.197789192199707e-05,
+      "deployment_parameters": 4075,
+      "F0_parameters_have_gradient": false,
+      "gain": [
+        1.9805039167404175,
+        0.7545585036277771,
+        0.759890079498291,
+        0.8517925143241882,
+        1.9867024421691895,
+        0.7557833194732666,
+        0.7480886578559875,
+        0.9558561444282532,
+        1.9717494249343872,
+        0.755258321762085,
+        0.856761634349823,
+        0.7546816468238831
+      ],
+      "passed": true
+    },
+    {
+      "model_seed": 1,
+      "unclipped_RGB_max_abs": 4.76837158203125e-07,
+      "clipped_RGB_max_abs": 4.172325134277344e-07,
+      "folded_vs_explicit_metric_logit_max_abs": 3.1948089599609375e-05,
+      "deployment_parameters": 4075,
+      "F0_parameters_have_gradient": false,
+      "gain": [
+        1.9171836376190186,
+        0.729481041431427,
+        0.793451189994812,
+        1.019294261932373,
+        1.923505187034607,
+        0.7303103804588318,
+        0.7359065413475037,
+        0.8614448308944702,
+        1.9070250988006592,
+        0.7325379252433777,
+        0.9738432168960571,
+        0.7297530174255371
+      ],
+      "passed": true
+    }
+  ],
+  "matching_preconditions": [
+    {
+      "model_seed": 0,
+      "category": "DAVIS_GT_source",
+      "baseline": {
+        "model_seed": 0,
+        "phase": "baseline",
+        "part": "check",
+        "category": "DAVIS_GT_source",
+        "queries": 200,
+        "correct": 8,
+        "top1": 0.04,
+        "CE": 5.1848673820495605
+      },
+      "final": {
+        "model_seed": 0,
+        "phase": "final",
+        "part": "check",
+        "category": "DAVIS_GT_source",
+        "queries": 200,
+        "correct": 11,
+        "top1": 0.055,
+        "CE": 4.692725658416748
+      },
+      "absolute_top1_gain": 0.015,
+      "CE_ratio": 0.905081135664791,
+      "passed": false
+    },
+    {
+      "model_seed": 0,
+      "category": "OLiVES_GT_source",
+      "baseline": {
+        "model_seed": 0,
+        "phase": "baseline",
+        "part": "check",
+        "category": "OLiVES_GT_source",
+        "queries": 200,
+        "correct": 13,
+        "top1": 0.065,
+        "CE": 6.168275356292725
+      },
+      "final": {
+        "model_seed": 0,
+        "phase": "final",
+        "part": "check",
+        "category": "OLiVES_GT_source",
+        "queries": 200,
+        "correct": 10,
+        "top1": 0.05,
+        "CE": 5.232502460479736
+      },
+      "absolute_top1_gain": -0.015,
+      "CE_ratio": 0.8482926196123305,
+      "passed": false
+    },
+    {
+      "model_seed": 1,
+      "category": "DAVIS_GT_source",
+      "baseline": {
+        "model_seed": 1,
+        "phase": "baseline",
+        "part": "check",
+        "category": "DAVIS_GT_source",
+        "queries": 200,
+        "correct": 9,
+        "top1": 0.045,
+        "CE": 5.258852958679199
+      },
+      "final": {
+        "model_seed": 1,
+        "phase": "final",
+        "part": "check",
+        "category": "DAVIS_GT_source",
+        "queries": 200,
+        "correct": 12,
+        "top1": 0.06,
+        "CE": 4.745235443115234
+      },
+      "absolute_top1_gain": 0.015,
+      "CE_ratio": 0.9023327863319905,
+      "passed": false
+    },
+    {
+      "model_seed": 1,
+      "category": "OLiVES_GT_source",
+      "baseline": {
+        "model_seed": 1,
+        "phase": "baseline",
+        "part": "check",
+        "category": "OLiVES_GT_source",
+        "queries": 200,
+        "correct": 9,
+        "top1": 0.045,
+        "CE": 6.197561264038086
+      },
+      "final": {
+        "model_seed": 1,
+        "phase": "final",
+        "part": "check",
+        "category": "OLiVES_GT_source",
+        "queries": 200,
+        "correct": 7,
+        "top1": 0.035,
+        "CE": 5.291728973388672
+      },
+      "absolute_top1_gain": -0.01,
+      "CE_ratio": 0.8538405266107512,
+      "passed": false
+    }
+  ],
+  "all_matching_preconditions": false,
+  "matching_passed_groups": 0,
+  "fold_passed_models": 2,
+  "backbone_updates": 0,
+  "metric_optimizer_updates": 1024,
+  "new_video_model": false,
+  "new_method_established": false,
+  "decision": "research/4.temporal-consistency/docs/exploration-r87-decision.md",
+  "report": "docs/进展报告/0167-T-26111714-平方表征保持函数校准与匹配前提止损.md",
+  "paper_build": 20,
+  "paper_DEV_quality_values_unchanged": 84,
+  "next": "Stop diagonal gauge/projection/scale/temperature/noise/length/seed grid; no old matcher revival. Require a distinct information/representation mechanism and direct-prior difference before new core training.",
+  "long_term_goal": "active"
+}
