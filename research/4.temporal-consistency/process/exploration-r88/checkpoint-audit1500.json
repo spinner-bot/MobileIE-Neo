@@ -1,0 +1,75 @@
+{
+  "at": "2026-11-17T18:11:37.614779+08:00",
+  "records": [
+    {
+      "seed": 0,
+      "pid": 1151700,
+      "start_ticks": 84737580,
+      "live_state": "S",
+      "marker": "research/4.temporal-consistency/results/exploration-r88-stage001-seed0/attempt001/regular-step1500.json",
+      "checkpoint_sha256": "f0cb95788a0ba421185351707bdccf966c8db3941f03bb5aa04fe50bde2fcda3",
+      "bytes": 65824,
+      "saved_steps": 1500,
+      "saved_optimizer_updates": 3000,
+      "next_data_step": 9500,
+      "controls": {
+        "plain": {
+          "trainable_degrees": 432,
+          "folded_weights": 432,
+          "Adam_completed_steps": [
+            1500
+          ],
+          "all_saved_model_and_moment_tensors_finite": true
+        },
+        "complement": {
+          "trainable_degrees": 384,
+          "folded_weights": 432,
+          "Adam_completed_steps": [
+            1500
+          ],
+          "all_saved_model_and_moment_tensors_finite": true
+        }
+      },
+      "final_eligible": false
+    },
+    {
+      "seed": 1,
+      "pid": 1151699,
+      "start_ticks": 84737578,
+      "live_state": "R",
+      "marker": "research/4.temporal-consistency/results/exploration-r88-stage001-seed1/attempt001/regular-step1500.json",
+      "checkpoint_sha256": "3a73d3ce53e8eb553ea32aa487389322af92c89ec7cffb1602841aa3ccae4e9d",
+      "bytes": 65824,
+      "saved_steps": 1500,
+      "saved_optimizer_updates": 3000,
+      "next_data_step": 9500,
+      "controls": {
+        "plain": {
+          "trainable_degrees": 432,
+          "folded_weights": 432,
+          "Adam_completed_steps": [
+            1500
+          ],
+          "all_saved_model_and_moment_tensors_finite": true
+        },
+        "complement": {
+          "trainable_degrees": 384,
+          "folded_weights": 432,
+          "Adam_completed_steps": [
+            1500
+          ],
+          "all_saved_model_and_moment_tensors_finite": true
+        }
+      },
+      "final_eligible": false
+    }
+  ],
+  "saved_optimizer_updates": 6000,
+  "registered_optimizer_updates": 8000,
+  "source_unchanged": true,
+  "new_CNN_forwards": 0,
+  "new_optimizer_updates": 0,
+  "new_DEV": 0,
+  "CUDA_initialized": false,
+  "scope": "Read actual partial checkpoints and Adam state only; no final selection, video score or new experiment."
+}
