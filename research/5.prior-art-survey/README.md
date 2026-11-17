@@ -1,5 +1,7 @@
 # 5. 前期调研与重复性风险（Prior-Art Survey）
 
+最新2026-11-17：[70 增量执行与保持函数度量的边界](docs/70-incremental-inference-and-functional-gauge-boundaries.md)实际核DeltaCNN差分/非线性/截断累计、Sigma-Delta特定当前rounding等价、MotionDeltaCNN贡献/图注和DFQ通道尺度公式，不执行外部代码/采用其速度；MR-VNet仅索引/PDF检索片段未作架构证据。[R87/0167](../../docs/进展报告/0167-T-26111714-平方表征保持函数校准与匹配前提止损.md)原CPU32秒正常，RGB数值保持但四组匹配前提0/4，停止全局度量网格，非新方法。下一[更早stem信息问题](../4.temporal-consistency/docs/next-core-question-after-r87.md)仍待共享/几何描述/正交分支直接先例核查与完整因果设计，不能把普通共享或正交约束当创新。paper020/旧STOP/保留最终保持。
+
 最新实验接续：[R86/0166](../../docs/进展报告/0166-T-26111711-固定快速DIS经典参考完整质量与配对成本.md)已完成note69所提唯一固定native DIS ULTRAFAST传统对照；并非新论文/新方法或改先例读过范围。域平均PSNR/JOD正、CPU快约16%–26%，但逐源JOD/ND时间失败，联合0/4，保留trade-off、不扩preset/尺度/阈值或传统家族。原note69“0图像calc”描述的是执行前getter核查，当前完整实验证据以R86为准；来源/脚本/全部结果与20图实际审阅已分开提交。创新/自然动态/手机/独立最终仍缺，paper020/旧STOP保持。
 
 最新2026-11-17：[68 联合流-特征学习先例及成本优先级](docs/68-joint-feature-motion-learning-and-cost-priority.md)、[69 快速经典DIS缺口](docs/69-fast-classical-flow-reference-gap.md)。JFFRA方法节选实际核查，IFRNet仅官方检索线索/HTML404与PDF403后停止；UbiEnlight仅摘要回访，不虚称新全文阅读。DIS仅原作者摘要/正式OpenCV4.11 API和现库ULTRAFAST getter，尚未输入图像或调用calc，不移入文献速度。R85现有half-FB完整CPU计时正常、1.79–1.91倍raw，仅限本参考而非所有flow/手机；[0165](../../docs/进展报告/0165-T-26111711-现有强基线完整CPU流水线成本与快速传统参考缺口.md)。下一固定快速经典对照待另立协议，不以普通共享/softmax/蒸馏/已知DIS宣称创新或解封旧STOP；paper020/保留最终/论文缺口保持。
