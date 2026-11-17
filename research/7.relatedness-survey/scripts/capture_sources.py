@@ -16,10 +16,11 @@ def capture(job):
     data=b''
     try:
         with urllib.request.urlopen(req,timeout=25) as r:
-            data=r.read(24*1024*1024+1)
+            limit=job.get('max_bytes',24*1024*1024)
+            data=r.read(limit+1)
             record.update(http_status=r.status,final_url=r.url,content_type=r.headers.get('Content-Type'),headers={k:v for k,v in r.headers.items() if k.lower() in ('etag','last-modified','content-length','content-type')})
-            if len(data)>24*1024*1024:
-                record.update(status='size_limit_incomplete',complete=False); data=data[:24*1024*1024]
+            if len(data)>limit:
+                record.update(status='size_limit_incomplete',complete=False); data=data[:limit]
             else:record.update(status='success',complete=True)
     except urllib.error.HTTPError as e:
         data=e.read(1024*1024)
