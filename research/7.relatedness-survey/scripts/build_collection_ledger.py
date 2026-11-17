@@ -29,6 +29,16 @@ def main():
  resources.append(dict(temporary_key='other-mobileie-explanations',type='other',title='MobileIE 中英文解读、转载与传播资料族',relation='directly explains or republishes the original MobileIE claims; sources are provenance variants, not independent scientific confirmations',sources=['receipts/chinese-hyperai.json','receipts/chinese-csdn.json','receipts/chinese-papernotes.json','receipts/chinese-eggtargaryen.json']))
  resources.append(dict(temporary_key='other-mobileie-reading-notes',type='other',title='谢袁学习主页：MobileIE 与小模型蒸馏阅读资料',relation='explicit MobileIE reading entry in a public research-notes site; deeper page to be traced',sources=['receipts/chinese-reading-notes.json']))
  resources.append(dict(temporary_key='other-mobileie-rtdetr-port',type='other',title='objectdetection_script：MobileIE MBRConv3移植至RT-DETR的公开变更说明',relation='explicit module reuse; accessible changelog is evidence, full claimed commercial code not assumed available',sources=['receipts/chinese-objectdetection.json','web-initial-5.json']))
+ from collect_code_leads import CORE,PORTS,NOTES
+ known_repos={r.get('repo') for r in resources}
+ all_hits=json.loads((C/'code-file-discovery-ledger.json').read_text()) if (C/'code-file-discovery-ledger.json').exists() else []
+ for repo in sorted(CORE|PORTS):
+  if repo in known_repos:continue
+  hits=[x for x in all_hits if x['repo']==repo]
+  resources.append(dict(temporary_key='code-'+repo.replace('/','--'),type='code',title=repo,repo=repo,revision=hits[0]['revision'],relation='Explicit MobileIE implementation/module reuse; module-port claim requires independent source review, no fidelity/performance assumed',sources=[dict(url=x['url'],path=x['path'],revision=x['revision'],acquisition='receipts/'+x['acquisition_label']+'.json') for x in hits]))
+ for repo in ['heniath/underwater-image-enhancement','TheComplianceAide/Drone_EnhancedVision','Synapse-iiserk/beautiful_ppt','dnguyennk/portfolio','38260/topconf-4-pillars']:
+  hits=[x for x in all_hits if x['repo']==repo]
+  resources.append(dict(temporary_key='other-'+repo.replace('/','--'),type='other',title=repo+' : MobileIE related research/application material',repo=repo,relation='Explicit MobileIE discussion in independent public research/application notes; evidence and depth not yet graded',sources=[dict(url=x['url'],path=x['path'],revision=x['revision'],acquisition='receipts/'+x['acquisition_label']+'.json') for x in hits]))
  web=[]
  for f in sorted(C.glob('web-initial-*.json')):
   x=json.loads(f.read_text())
