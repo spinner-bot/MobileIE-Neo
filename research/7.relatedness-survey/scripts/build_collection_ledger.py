@@ -9,8 +9,9 @@ def main():
  dict(temporary_key='anchor-mobileie-paper',type='paper',title='MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices',dois=['10.1109/ICCV51701.2025.02038'],arxivs=['2507.01838'],relation='original research anchor',sources=['receipts/official-paper-pdf.json','receipts/official-supplement-large.json','receipts/official-paper-arxiv-html.json']),
  dict(temporary_key='related-ntire2025-report',type='paper',title='NTIRE 2025 Challenge on Low Light Image Enhancement: Methods and Results',arxivs=['2510.13670'],relation='official report includes MobileIE named team method; older association independent of forward citation index',sources=['web-initial-9.json','receipts/ntire2025-paper.json','receipts/ntire2025-html.json'])])
  resources.append(dict(temporary_key='related-rgb2025-report',type='paper',title='RGB Photo Enhancement on Mobile GPUs, Mobile AI 2025 Challenge: Report',relation='official Mobile AI image-enhancement challenge report found through explicit MobileIE search; exact method/context pending Gate2',sources=['web-initial-2.json','receipts/related-rgb2025-paper.json']))
+ resources.append(dict(temporary_key='related-edgeaware-review',type='paper',title='Edge-Aware Diffusion for Mobile Photo Enhancement: ASystematic Review and Comparative Latency Analysis',dois=['10.21203/rs.3.rs-9025777/v1'],relation='Additional Research Square preprint located through web supplement; primary PDF explicitly mentions MobileIE, but correct bibliographic citation is NOT yet verified and is not assumed from title/index',sources=['web-new-review-trace.json','receipts/newreview-primary-pdf.json','receipts/newreview-crossref.json','new-review-identity-check.json']))
  revs=json.loads((C/'immutable-revisions.json').read_text())
- for repo in ['lhfgghc/LLVE-AMNet','lhfgghc/LLVE-AMNet-NPU','clarkren/LLVE-AMNet']:
+ for repo in ['lhfgghc/LLVE-AMNet','lhfgghc/LLVE-AMNet-NPU','clarkren/LLVE-AMNet','W-ayivi/ML-ConvNet']:
   f=C/('plugin-head-'+repo.replace('/','--')+'.json')
   if f.exists():
    d=json.loads(json.loads(f.read_text())['result']['structuredContent']['content'])[0]
