@@ -1,6 +1,6 @@
 # 论文证据与下一实验决策入口
 
-2026-11-17T10:57:19.604677+08:00；Codex  (sqs_A100)。只整合已完成证据，0新CNN/SGD/DEV/GPU；这是研究决策板，不是新增实验或投稿主表完成声明。内部PDF仍为已审阅build020。
+2026-11-17T11:25:00.042085+08:00；Codex  (sqs_A100)。本页只整合已完成证据，不执行新CNN/SGD/DEV/GPU；R85原3200计时前向另有完整记录。这是研究决策板，不是投稿主表完成声明。内部PDF仍为已审阅build020。
 
 ## 当前可直接比较的开发表
 
@@ -25,11 +25,26 @@ R82 centered相对raw四组联合门槛均过，时序降7.24%–12.75%；但对
 
 ## 效率列及不能混接的测量
 
-|输出|注册参数|1080p Conv GMAC|完整pipeline实测|手机时延|
+|输出|注册参数|1080p Conv GMAC|完整计算流水线：常驻CPU/前16帧|手机时延|
 |---|---:|---:|---|---|
-|MobileIE raw|4075|7.938|没有与本表同步的完整新测量|未测|
-|MobileIE strong-rec|4075|7.938 + 未计运动/warp等|没有与本表同步的完整新测量|未测|
+|MobileIE raw|4075|7.938|R85已测，下面分域/seed报告|未测|
+|MobileIE strong-rec|4075|7.938 + 未计运动/warp等|R85已测，下面分域/seed报告|未测|
 |R82 spatial/direct/centered|4379|未测；centered调用H两次|按失败协议未扩成本|未测|
+
+R85原唯一CPU1010313于11:20:34正常完成，3200真实骨干/1500 half-FB、80warmup/120正式/40等价资格，原输出与同权重前缀最大差0；无新SGD/GPU/质量指标。下表主量为每条件三次完整序列ms/frame的中位数，再在域内等条件平均；比值为匹配条件比值的平均，未必等于域均值相除。
+
+|域/原尺寸|seed|raw ms/frame|strong-rec ms/frame|平均条件rec/raw比|
+|---|---:|---:|---:|---:|
+|SYN 480×854|0|107.218|204.910|1.915|
+|SYN 480×854|1|112.490|208.734|1.856|
+|ND 288×512|0|45.272|81.201|1.794|
+|ND 288×512|1|44.662|82.614|1.850|
+
+硬件Xeon Gold6248R，Torch2.9.1+cu126 intra2/inter1、OpenCV4.11.0 thread1、CPU FP32/B1，非独占。含输入/输出转换、真实CNN、原half-FB/warp/.5融合与输出sink拷贝；不含加载/解码、相机/文件/display I/O、sink分配、JOD或服务排队。原每模式2warmup+3正式全保留，不给三次样本虚假置信区间。质量表SYN用64帧，这里同源同权重成本用前16帧；不是逐帧完全对应的质量—成本配对，不能隐去startup占比和窗口范围。
+
+strong-rec稳定持久RGB状态为SYN9838080B、ND3538944B；共用16帧宿主输出sink另外为78704640B/28311552B，不是模型历史状态。当前输入/flow/workspace/CNN激活不计入持久状态，不称峰值RAM或手机内存。[完整20条件/重复极值表](../research/4.temporal-consistency/report/exploration-r85-baseline-cost/tables.md)、[原结果](../research/4.temporal-consistency/process/exploration-r85/cpu001/summary.json)、[终态](../research/4.temporal-consistency/process/exploration-r85/terminal001.json)。
+
+1.79–1.91倍仅属于当前half-FB参考的域-seed平均条件比，不能概括所有传统运动；[已核快速DIS参考缺口](../research/5.prior-art-survey/docs/69-fast-classical-flow-reference-gap.md)尚未有本项目质量/速度结果，不把其文献速度挪入本表。
 
 Conv数字仅现有统一分辨率预算的卷积乘加，不计pool/activation/memory/运动等；不是端侧完整推理量。R34的CPU计时使用不同权重与限定16帧，不接到本表作为同模型手机速度。[原预算表](generated/reference-budget-table.tex)、[限定CPU参考](generated/classical-table.tex)。304注册H参数相同不等于严格相同有效自由度/优化过程，空间(c,c)输入有冗余方向，centered双H约束不同。
 
