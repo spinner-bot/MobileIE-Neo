@@ -1,38 +1,38 @@
 {
-  "at": "2026-11-17T17:27:43.119226+08:00",
-  "completed_steps": 200,
+  "at": "2026-11-17T17:37:26.349128+08:00",
+  "completed_steps": 500,
   "models": {
     "plain": {
-      "CE": 7.204258918762207,
-      "flow_MSE_over16": 0.5642203688621521,
-      "loss": 7.768479347229004,
-      "preclip_gradient_norm": 19.05061149597168
+      "CE": 7.024675369262695,
+      "flow_MSE_over16": 0.4637165665626526,
+      "loss": 7.488391876220703,
+      "preclip_gradient_norm": 20.202844619750977
     },
     "complement": {
-      "CE": 7.476966857910156,
-      "flow_MSE_over16": 0.7374389171600342,
-      "loss": 8.21440601348877,
-      "preclip_gradient_norm": 22.192169189453125
+      "CE": 6.880867958068848,
+      "flow_MSE_over16": 0.2585659623146057,
+      "loss": 7.139433860778809,
+      "preclip_gradient_norm": 163.5426025390625
     }
   },
-  "stem_batch_calls": 200,
-  "stem_image_frames": 1600,
-  "descriptor_image_forwards": 3200,
-  "individual_directional_train_fields": 1600,
+  "stem_batch_calls": 500,
+  "stem_image_frames": 4000,
+  "descriptor_image_forwards": 8000,
+  "individual_directional_train_fields": 4000,
   "peak_allocated_bytes": 91325952,
   "peak_reserved_bytes": 125829120,
   "resource": {
     "UUID": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
-    "observations": 598,
+    "observations": 1498,
     "minimum_free_mib": 39749,
     "maximum_used_mib": 1210,
     "maximum_observed_utilization_percent": 70,
-    "synchronized_work_seconds": 89.61111686739605,
-    "cooperative_pause_seconds": 268.83335060218815,
+    "synchronized_work_seconds": 222.37248067720793,
+    "cooperative_pause_seconds": 667.1174420316238,
     "current_consecutive_busy_decisions": 0,
     "last16": [
       {
-        "at": "2026-11-17T17:27:33.021972+08:00",
+        "at": "2026-11-17T17:37:16.136552+08:00",
         "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
         "total_mib": 40960,
         "used_mib": 1210,
@@ -40,23 +40,15 @@
         "utilization_percent": 0
       },
       {
-        "at": "2026-11-17T17:27:33.602805+08:00",
+        "at": "2026-11-17T17:37:16.746430+08:00",
         "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
         "total_mib": 40960,
         "used_mib": 1210,
         "free_mib": 39749,
-        "utilization_percent": 38
+        "utilization_percent": 40
       },
       {
-        "at": "2026-11-17T17:27:34.899497+08:00",
-        "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
-        "total_mib": 40960,
-        "used_mib": 1210,
-        "free_mib": 39749,
-        "utilization_percent": 0
-      },
-      {
-        "at": "2026-11-17T17:27:34.899644+08:00",
+        "at": "2026-11-17T17:37:18.068598+08:00",
         "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
         "total_mib": 40960,
         "used_mib": 1210,
@@ -64,15 +56,7 @@
         "utilization_percent": 0
       },
       {
-        "at": "2026-11-17T17:27:35.503576+08:00",
-        "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
-        "total_mib": 40960,
-        "used_mib": 1210,
-        "free_mib": 39749,
-        "utilization_percent": 12
-      },
-      {
-        "at": "2026-11-17T17:27:36.818130+08:00",
+        "at": "2026-11-17T17:37:18.068715+08:00",
         "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
         "total_mib": 40960,
         "used_mib": 1210,
@@ -80,7 +64,15 @@
         "utilization_percent": 0
       },
       {
-        "at": "2026-11-17T17:27:36.818243+08:00",
+        "at": "2026-11-17T17:37:18.665669+08:00",
+        "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+        "total_mib": 40960,
+        "used_mib": 1210,
+        "free_mib": 39749,
+        "utilization_percent": 61
+      },
+      {
+        "at": "2026-11-17T17:37:19.986130+08:00",
         "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
         "total_mib": 40960,
         "used_mib": 1210,
@@ -88,15 +80,7 @@
         "utilization_percent": 0
       },
       {
-        "at": "2026-11-17T17:27:37.384574+08:00",
-        "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
-        "total_mib": 40960,
-        "used_mib": 1210,
-        "free_mib": 39749,
-        "utilization_percent": 43
-      },
-      {
-        "at": "2026-11-17T17:27:38.683989+08:00",
+        "at": "2026-11-17T17:37:19.986245+08:00",
         "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
         "total_mib": 40960,
         "used_mib": 1210,
@@ -104,7 +88,15 @@
         "utilization_percent": 0
       },
       {
-        "at": "2026-11-17T17:27:38.684113+08:00",
+        "at": "2026-11-17T17:37:20.590749+08:00",
+        "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+        "total_mib": 40960,
+        "used_mib": 1210,
+        "free_mib": 39749,
+        "utilization_percent": 44
+      },
+      {
+        "at": "2026-11-17T17:37:21.901840+08:00",
         "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
         "total_mib": 40960,
         "used_mib": 1210,
@@ -112,15 +104,7 @@
         "utilization_percent": 0
       },
       {
-        "at": "2026-11-17T17:27:39.279572+08:00",
-        "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
-        "total_mib": 40960,
-        "used_mib": 1210,
-        "free_mib": 39749,
-        "utilization_percent": 31
-      },
-      {
-        "at": "2026-11-17T17:27:40.598156+08:00",
+        "at": "2026-11-17T17:37:21.901955+08:00",
         "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
         "total_mib": 40960,
         "used_mib": 1210,
@@ -128,7 +112,15 @@
         "utilization_percent": 0
       },
       {
-        "at": "2026-11-17T17:27:40.598280+08:00",
+        "at": "2026-11-17T17:37:22.504971+08:00",
+        "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+        "total_mib": 40960,
+        "used_mib": 1210,
+        "free_mib": 39749,
+        "utilization_percent": 7
+      },
+      {
+        "at": "2026-11-17T17:37:23.830133+08:00",
         "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
         "total_mib": 40960,
         "used_mib": 1210,
@@ -136,15 +128,7 @@
         "utilization_percent": 0
       },
       {
-        "at": "2026-11-17T17:27:41.205914+08:00",
-        "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
-        "total_mib": 40960,
-        "used_mib": 1210,
-        "free_mib": 39749,
-        "utilization_percent": 62
-      },
-      {
-        "at": "2026-11-17T17:27:42.525378+08:00",
+        "at": "2026-11-17T17:37:23.830249+08:00",
         "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
         "total_mib": 40960,
         "used_mib": 1210,
@@ -152,7 +136,23 @@
         "utilization_percent": 0
       },
       {
-        "at": "2026-11-17T17:27:42.525495+08:00",
+        "at": "2026-11-17T17:37:24.429158+08:00",
+        "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+        "total_mib": 40960,
+        "used_mib": 1210,
+        "free_mib": 39749,
+        "utilization_percent": 42
+      },
+      {
+        "at": "2026-11-17T17:37:25.736013+08:00",
+        "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+        "total_mib": 40960,
+        "used_mib": 1210,
+        "free_mib": 39749,
+        "utilization_percent": 0
+      },
+      {
+        "at": "2026-11-17T17:37:25.736127+08:00",
         "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
         "total_mib": 40960,
         "used_mib": 1210,
@@ -167,5 +167,28 @@
   "attempt": 1,
   "registered_steps": 2000,
   "completed_normally": false,
-  "latest_checkpoint": null
+  "latest_checkpoint": {
+    "at": "2026-11-17T17:37:26.347762+08:00",
+    "seed": 1,
+    "attempt": 1,
+    "kind": "regular",
+    "completed_steps": 500,
+    "next_step": 500,
+    "next_data_step": 8500,
+    "registered_steps": 2000,
+    "path": ".cache/checkpoints/exploration-r88/seed1/attempt001/regular-step0500.pt",
+    "sha256": "4770d28818af504c08db1ced98859dfad853c6baa1d3d31288f5bdea2d159298",
+    "bytes": 65824,
+    "freeze_sha256": "ec85e5c05de687920ee6965f2de77d952c215b17b7c4e695b38bdd65276f41ca",
+    "backbone": {
+      "marker": "research/4.temporal-consistency/results/exploration-r44-stage001-seed1/square_mse-step4000.json",
+      "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+      "frozen": true,
+      "project_updates": 8000,
+      "parameters": 4075
+    },
+    "deployed_parameters_each": 4507,
+    "completed_optimizer_updates": 1000,
+    "final_quality_eligible": false
+  }
 }
