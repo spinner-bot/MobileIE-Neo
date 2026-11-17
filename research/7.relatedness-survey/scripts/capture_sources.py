@@ -1,8 +1,8 @@
 """Read-only URL acquisition; preserve successes AND failures without executing sources.
-Use --jobs JSON [{label,url,category}] and optional --refresh for a new dated capture.
+Use --jobs JSON [{label,url,category}] and choose fresh labels for new captures.
 All archives are zrh-owned, and every response has a hash and actual timestamp.
 """
-import argparse, concurrent.futures, datetime, hashlib, json, os, re, urllib.request, urllib.error
+import argparse, concurrent.futures, datetime, hashlib, json, os, re, urllib.request, urllib.error, urllib.parse
 from pathlib import Path
 from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parents[3]
@@ -12,7 +12,10 @@ def capture(job):
     at=datetime.datetime.now(ZoneInfo('Asia/Shanghai')).isoformat()
     key=re.sub(r'[^a-zA-Z0-9_.-]', '_', job['label'])
     record=dict(job, requested_at=at, author='Codex  (sqs_A100)', request_method='GET')
-    req=urllib.request.Request(job['url'],headers={'User-Agent':'MobileIE-Neo-relatedness-survey/1.0 (public research; langxibielangle@qq.com)'})
+    parts=urllib.parse.urlsplit(job['url'])
+    request_url=urllib.parse.urlunsplit(parts._replace(path=urllib.parse.quote(parts.path,safe='/%:@')))
+    record['request_url']=request_url
+    req=urllib.request.Request(request_url,headers={'User-Agent':'MobileIE-Neo-relatedness-survey/1.0 (public research; langxibielangle@qq.com)'})
     data=b''
     try:
         with urllib.request.urlopen(req,timeout=25) as r:
@@ -27,7 +30,7 @@ def capture(job):
         record.update(status='http_error',http_status=e.code,error=str(e),complete=False)
     except Exception as e:record.update(status='transport_error',error=repr(e),complete=False)
     if data:
-        suffix='.pdf' if data.startswith(b'%PDF') else '.json' if data.lstrip()[:1] in (b'{',b'[') else '.html' if b'<html' in data[:1000].lower() or b'<!doctype' in data[:1000].lower() else '.txt'
+        suffix='.zip' if data.startswith(b'PK\x03\x04') else '.pdf' if data.startswith(b'%PDF') else '.json' if data.lstrip()[:1] in (b'{',b'[') else '.html' if b'<html' in data[:1000].lower() or b'<!doctype' in data[:1000].lower() else '.txt'
         archive=ARCHIVE/(key+suffix); archive.write_bytes(data)
         record.update(bytes=len(data),sha256=hashlib.sha256(data).hexdigest(),archive_path=str(Path('archive')/archive.name))
         if suffix=='.json' and len(data)<3*1024*1024:
