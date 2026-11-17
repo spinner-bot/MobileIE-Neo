@@ -77,6 +77,18 @@ def make_heads(backbone, seed):
     return {'plain': Descriptor(effective), 'complement': Descriptor(coefficients, basis)}, rank
 
 
+def initialize_backend(heads, device):
+    """Copy the actually computed FP32 kernel on the target backend, once only.
+
+    CPU and CUDA GEMM need not round V@N.T identically. Never call after loading
+    trained state; this establishes the registered common starting function.
+    """
+    heads = {name: head.to(device) for name, head in heads.items()}
+    with torch.no_grad():
+        heads['plain'].weight.copy_(heads['complement'].kernel().reshape(4, 108))
+    return heads
+
+
 def gradient(value):
     padded = F.pad(value, (1, 1, 1, 1), mode='replicate')
     return ((padded[:, :, 1:-1, 2:]-padded[:, :, 1:-1, :-2])*.5,
