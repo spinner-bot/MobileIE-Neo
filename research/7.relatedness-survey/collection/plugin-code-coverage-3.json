@@ -1,0 +1,3808 @@
+{
+  "recorded_at": "2026-11-17T10:28:05.505Z",
+  "input": {
+    "query": "MBRConv MobileIE",
+    "topn": 100
+  },
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "results": [
+        {
+          "url": "https://github.com/khaihoang004/dewarp/blob/39eef66524919078836ec0f9122fda27d07a43e8/src/model/refinement/mobile_ie.py",
+          "path": "src/model/refinement/mobile_ie.py",
+          "display_url": "https://github.com/khaihoang004/dewarp/blob/39eef66524919078836ec0f9122fda27d07a43e8/src/model/refinement/mobile_ie.py",
+          "display_title": "src/model/refinement/mobile_ie.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass MBRConv(nn.Module):\n    def __init__(self, in_channels, out_channels, kernel_size=3, stride=1, padding=1, deploy=False):",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    7,
+                    14
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass MobileIE(nn.Module):\n    def __init__(self, in_channels=3, out_channels=3, mid_channels=16, num_blocks=2, deploy=False):",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    7,
+                    15
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/zhaoyang97/Paper-Notes/blob/de63c0e13b242cadcc5faa8cc2017fcc8c235026/docs/ICCV2025/image_restoration/mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md",
+          "path": "docs/ICCV2025/image_restoration/mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md",
+          "display_url": "https://github.com/zhaoyang97/Paper-Notes/blob/de63c0e13b242cadcc5faa8cc2017fcc8c235026/docs/ICCV2025/image_restoration/mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md",
+          "display_title": "docs/ICCV2025/image_restoration/mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n### 整体框架\n\nMobileIE 架构极其精简：\n浅层特征提取（MBRConv5×5 + PReLU）→ 深层特征提取（2×MBRConv3×3 + FST）→ 注意力（HDPA）→ 输出精修（MBRConv3×3）\n\n推理时所有 MBRConv 重参数化为标准卷积，模型仅约 4K 参数。",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    19,
+                    27
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    71,
+                    78
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    121,
+                    128
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    183,
+                    190
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    215,
+                    222
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/zhaoyang97/Paper-Notes-en/blob/148a16dd45b148e890b4428db21133e5a1589b77/docs/ICCV2025/image_restoration/mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md",
+          "path": "docs/ICCV2025/image_restoration/mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md",
+          "display_url": "https://github.com/zhaoyang97/Paper-Notes-en/blob/148a16dd45b148e890b4428db21133e5a1589b77/docs/ICCV2025/image_restoration/mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md",
+          "display_title": "docs/ICCV2025/image_restoration/mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nThis paper proposes MobileIE, an extremely lightweight CNN framework with approximately 4K parameters, which achieves real-time image enhancement at over 1100 FPS on mobile devices for the first time. This is accomplished through multi-branch re-parameterizable convolution (MBRConv), a feature self-transformation (FST) module, hierarchical dual-path attention (HDPA), and an incremental weight optimization (IWO) strategy. MobileIE achieves state-of-the-art speed–performance trade-offs across three tasks: low-light enhancement, underwater enhancement, and ISP.\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    276,
+                    283
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    426,
+                    434
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nThe MobileIE architecture is highly compact:\nShallow feature extraction (MBRConv5×5 + PReLU) → Deep feature extraction (2× MBRConv3×3 + FST) → Attention (HDPA) → Output refinement (MBRConv3×3)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    5,
+                    13
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    74,
+                    81
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    128,
+                    135
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    191,
+                    198
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE_论文对齐与偏差复核报告.md",
+          "path": "MobileIE_论文对齐与偏差复核报告.md",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE_论文对齐与偏差复核报告.md",
+          "display_title": "MobileIE_论文对齐与偏差复核报告.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n| 论文 | 代码实现 | 判定 |\n|---|---|---|\n| Fig.2：head(MBRConv5+PReLU+MBRConv3) → body(MBRConv3+FST) → HDPA → MBRConv3 | `repro/src/mobileie/model.py:73-97` 与官方 `model/lle.py:16-39` **同构**（channels=12, rep_scale=4） | ✅ |\n| §3.2 MBRConv：多分支 + **每分支独立 BN** + Conv1×1 压缩 | 直接复用官方 `model/utils.py` 的 `MBRConv{1,3,5}`（折叠数学脆弱，未重写） | ✅ |\n| §3.1 推理期重参数化成单一卷积 | `model.py:128-156 slim()`；实测训练图 49,978 → 推理图 4,075 参数 | ✅ |\n| §3.3 FST：`Scale·(f⊙f)+bias` | 官方 `utils.py:315-327` 的 `FST`（`w1·x * w2·x + bias`，即 `w1w2·x²+b`） | ✅ 结构在位 |",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    65,
+                    72
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    80,
+                    87
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    99,
+                    106
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    126,
+                    133
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    148,
+                    156
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    261,
+                    268
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    367,
+                    374
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/zhaoyang97/Paper-Notes/blob/de63c0e13b242cadcc5faa8cc2017fcc8c235026/docs/ICCV2025/image_restoration/index.md",
+          "path": "docs/ICCV2025/image_restoration/index.md",
+          "display_url": "https://github.com/zhaoyang97/Paper-Notes/blob/de63c0e13b242cadcc5faa8cc2017fcc8c235026/docs/ICCV2025/image_restoration/index.md",
+          "display_title": "docs/ICCV2025/image_restoration/index.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n**[MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices](mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md)**\n\n:   提出 MobileIE，一个仅有约 4K 参数的极致轻量 CNN 框架，通过多分支重参数化卷积（MBRConv）、特征自变换（FST）模块、分层双路径注意力（HDPA）以及增量权重优化（IWO）策略，首次在移动设备上实现超过 1100 FPS 的实时图像增强，同时在低光增强、水下增强和 ISP 三个任务上取得最优的速度-性能平衡。\n\n**[MP-HSIR: A Multi-Prompt Framework for Universal Hyperspectral Image Restoration](mp-hsir_a_multi-prompt_framework_for_universal_hyperspectral_image_restoration.md)**\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    4,
+                    12
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    112,
+                    120
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    211,
+                    219
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    312,
+                    319
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/z1069614715/objectdetection_script/blob/e8434707de87430b494ab794d98663a4a663e815/yolo-improve/yolov11-project.md",
+          "path": "yolo-improve/yolov11-project.md",
+          "display_url": "https://github.com/z1069614715/objectdetection_script/blob/e8434707de87430b494ab794d98663a4a663e815/yolo-improve/yolov11-project.md",
+          "display_title": "yolo-improve/yolov11-project.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv3改进C3k2.\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv5改进C3k2.\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/z1069614715/objectdetection_script/blob/e8434707de87430b494ab794d98663a4a663e815/yolo-improve/rtdetr-project.md",
+          "path": "yolo-improve/rtdetr-project.md",
+          "display_url": "https://github.com/z1069614715/objectdetection_script/blob/e8434707de87430b494ab794d98663a4a663e815/yolo-improve/rtdetr-project.md",
+          "display_title": "yolo-improve/rtdetr-project.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv3与CSP改进backbone.\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv5改进RepC3.\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/src/mobileie/model.py",
+          "path": "repro/src/mobileie/model.py",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/src/mobileie/model.py",
+          "display_title": "repro/src/mobileie/model.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\"\"\"MobileIE-LLE network.\n\nThe re-parameterisation maths (``MBRConv{1,3,5}.slim``) is delicate, so it is not\nre-implemented here: the official module files are loaded straight from the\nreleased repository and used as-is.  Only the *topology* is rebuilt so that the\nplain modules (paper Fig. 2 \"Training Stage\") and the IWO modules\n(``utils_IWO.py``, paper Sec. 3.2 / Eq. 1-2) become interchangeable, which the",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    3,
+                    11
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    59,
+                    66
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/model.py",
+          "path": "shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/model.py",
+          "display_url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/model.py",
+          "display_title": "shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/model.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n@MODELS.register(name=\"mobileie_lle\", arch=\"mobileie\")\nclass MobileIELLE(nn.Module, ModelMixin):",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    24,
+                    32
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    45,
+                    53
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    62,
+                    70
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "        for name, mod in self.named_modules():\n            if isinstance(mod, MBRConv3) or isinstance(mod, MBRConv5) or isinstance(mod, MBRConv1):\n               if \"%s.weight\" % name in weight_slim:",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    78,
+                    85
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    107,
+                    114
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    136,
+                    143
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/zhaoyang97/Paper-Notes-en/blob/148a16dd45b148e890b4428db21133e5a1589b77/docs/ICCV2025/image_restoration/index.md",
+          "path": "docs/ICCV2025/image_restoration/index.md",
+          "display_url": "https://github.com/zhaoyang97/Paper-Notes-en/blob/148a16dd45b148e890b4428db21133e5a1589b77/docs/ICCV2025/image_restoration/index.md",
+          "display_title": "docs/ICCV2025/image_restoration/index.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n**[MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices](mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md)**\n\n:   This paper proposes MobileIE, an extremely lightweight CNN framework with approximately 4K parameters, which achieves real-time image enhancement at over 1100 FPS on mobile devices for the first time. This is accomplished through multi-branch re-parameterizable convolution (MBRConv), a feature self-transformation (FST) module, hierarchical dual-path attention (HDPA), and an incremental weight optimization (IWO) strategy. MobileIE achieves state-of-the-art speed–performance trade-offs across three tasks: low-light enhancement, underwater enhancement, and ISP.\n\n**[MP-HSIR: A Multi-Prompt Framework for Universal Hyperspectral Image Restoration](mp-hsir_a_multi-prompt_framework_for_universal_hyperspectral_image_restoration.md)**\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    4,
+                    12
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    112,
+                    120
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    224,
+                    232
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    479,
+                    486
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    629,
+                    637
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/wbzuo/dl-modules-toolkit/blob/4eada47a67a3663bedea1ef793123d966b4a87b8/Modules/code/conv/MBRConv(CV，ICCV2025).py",
+          "path": "Modules/code/conv/MBRConv(CV，ICCV2025).py",
+          "display_url": "https://github.com/wbzuo/dl-modules-toolkit/blob/4eada47a67a3663bedea1ef793123d966b4a87b8/Modules/code/conv/MBRConv(CV，ICCV2025).py",
+          "display_title": "Modules/code/conv/MBRConv(CV，ICCV2025).py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\r\n\"\"\"《MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices》ICCV 2025\r\n深度神经网络的最新进展推动了图像增强 (IE) 领域的重大进展。然而，由于计算量和内存需求高，在资源受限的平台（例如移动设备）上部署深度学习模型仍然颇具挑战性。\r",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    8,
+                    16
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\r\nclass MBRConv5(nn.Module):\r\n    def __init__(self, in_channels, out_channels, rep_scale=4):\r",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    8,
+                    15
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/xuhangc/Plumbing/blob/ea6d788ba16cdd4f7c1e8e7685b735b13e9e9352/blocks/02_convolution/mie.py",
+          "path": "blocks/02_convolution/mie.py",
+          "display_url": "https://github.com/xuhangc/Plumbing/blob/ea6d788ba16cdd4f7c1e8e7685b735b13e9e9352/blocks/02_convolution/mie.py",
+          "display_title": "blocks/02_convolution/mie.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "# 模块出处：model/lle.py 的 MobileIELLENet（body/att/att1 核心增强单元）+ model/utils.py 的\n#          MBRConv3 / MBRConv1 / FST\n# 提取者：MiMoCode ExtractAgent",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    34,
+                    42
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    118,
+                    125
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    129,
+                    136
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "如果在论文中使用该模块，可以描述为：\n\"本文采用 MobileIE（ICCV 2025）提出的轻量增强块 MIE：以多分支重参数卷积\nMBRConv3（3×3/1×1/十字交叉分支训练并联、推理可融合）作为主体，并用 FST",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    69,
+                    77
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    151,
+                    158
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/network/lle.py",
+          "path": "shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/network/lle.py",
+          "display_url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/network/lle.py",
+          "display_title": "shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/network/lle.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nfrom .utils import DropBlock, FST, FSTS, MBRConv1, MBRConv3, MBRConv5\n",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    42,
+                    49
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    52,
+                    59
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    62,
+                    69
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "# Training Model\nclass MobileIELLENet(nn.Module):\n    ",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    23,
+                    31
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/network/isp.py",
+          "path": "shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/network/isp.py",
+          "display_url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/network/isp.py",
+          "display_title": "shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/network/isp.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nfrom .utils import DropBlock, FST, FSTS, MBRConv1, MBRConv3, MBRConv5\n",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    42,
+                    49
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    52,
+                    59
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    62,
+                    69
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "# Training Model\nclass MobileIEISPNet(nn.Module):\n    ",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    23,
+                    31
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/gogoworker/FSOD/blob/d57ebb0bfd2660f4fb87e13839fa8e4d757eb85f/tools/MBRConv(CV，ICCV2025).py",
+          "path": "tools/MBRConv(CV，ICCV2025).py",
+          "display_url": "https://github.com/gogoworker/FSOD/blob/d57ebb0bfd2660f4fb87e13839fa8e4d757eb85f/tools/MBRConv(CV，ICCV2025).py",
+          "display_title": "tools/MBRConv(CV，ICCV2025).py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\r\n\"\"\"《MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices》ICCV 2025\r\n深度神经网络的最新进展推动了图像增强 (IE) 领域的重大进展。然而，由于计算量和内存需求高，在资源受限的平台（例如移动设备）上部署深度学习模型仍然颇具挑战性。\r",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    8,
+                    16
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\r\nclass MBRConv5(nn.Module):\r\n    def __init__(self, in_channels, out_channels, rep_scale=4):\r",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    8,
+                    15
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/gugugu531/Hispark_SocChina_2026/blob/c3bdfbb0f6b45a918598d7e23f332bf731620914/models/ctbg/export_ctbg.py",
+          "path": "models/ctbg/export_ctbg.py",
+          "display_url": "https://github.com/gugugu531/Hispark_SocChina_2026/blob/c3bdfbb0f6b45a918598d7e23f332bf731620914/models/ctbg/export_ctbg.py",
+          "display_title": "models/ctbg/export_ctbg.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "import litmodule_coeff as M\nREPO = Path(__file__).resolve().parents[1] / \"repos/MobileIE\"\nsys.path.insert(0, str(REPO))",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    80,
+                    88
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "class CTBGSlimEstimator(nn.Module):\n    \"\"\"CTBG backbone 的 reparam slim 版:多分支 MBRConv→单 conv,tail 18ch,残差式 + FiLM。\n    forward 严格镜像 CoeffNetCTBG._backbone(residual_spatial=True)。\"\"\"",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    88,
+                    95
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/viplab-fudan/FJNDF-Pytorch/blob/3b46739e4f524c205c9c277f9c4b1673b9d5aedc/pyjnd/models/iccv_yan_2025_model.py",
+          "path": "pyjnd/models/iccv_yan_2025_model.py",
+          "display_url": "https://github.com/viplab-fudan/FJNDF-Pytorch/blob/3b46739e4f524c205c9c277f9c4b1673b9d5aedc/pyjnd/models/iccv_yan_2025_model.py",
+          "display_title": "pyjnd/models/iccv_yan_2025_model.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "This implementation is based on the official open-source project.\nFor the original code, please refer to: https://github.com/AVC2-UESTC/MobileIE.git\n\"\"\"",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    136,
+                    144
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "        base_channels (int): Number of channels in the main network body.\n        rep_scale (int): Expansion factor used in MBRConv blocks.\n        only_train_y (bool): If True, only the Y channel (the first channel) will be processed.",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    124,
+                    131
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/zms618/paper-cards/blob/ef9cd02e88b7569045e2866104ffbba00f75f51b/data/iccv2025/MobileIE_An Extremely Lightweight and Effective ConvNet for Real-Time.json",
+          "path": "data/iccv2025/MobileIE_An Extremely Lightweight and Effective ConvNet for Real-Time.json",
+          "display_url": "https://github.com/zms618/paper-cards/blob/ef9cd02e88b7569045e2866104ffbba00f75f51b/data/iccv2025/MobileIE_An Extremely Lightweight and Effective ConvNet for Real-Time.json",
+          "display_title": "data/iccv2025/MobileIE_An Extremely Lightweight and Effective ConvNet for Real-Time.json",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "  \"增量权重优化(IWO)策略\",\r\n  \"局部方差加权损失(LVW)\"\r\n ],\r\n \"method_framework\": \"MobileIE采用重参数化技术，结合MBRConv、特征自变换模块和分层双路径注意力机制，训练时多分支，推理时合并为标准卷积，实现高效推理。\",\r\n \"experiment_framework\": \"在LOL、UIEB和ZRR三个数据集上评估，与轻量级SOTA方法比较PSNR、SSIM、LPIPS和SCORE指标，测试GPU和移动端SoC延迟。\",\r\n \"takeaways\": [\r\n  \"重参数化技术在轻量模型中的有效应用\",\r",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    98,
+                    106
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    139,
+                    146
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/wbzuo/dl-modules-toolkit/blob/4eada47a67a3663bedea1ef793123d966b4a87b8/Modules/conv.md",
+          "path": "Modules/conv.md",
+          "display_url": "https://github.com/wbzuo/dl-modules-toolkit/blob/4eada47a67a3663bedea1ef793123d966b4a87b8/Modules/conv.md",
+          "display_title": "Modules/conv.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n## MBRConv(CV，ICCV2025)\n",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    4,
+                    11
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\n> MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    3,
+                    11
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/model/lle.py",
+          "path": "model/lle.py",
+          "display_url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/model/lle.py",
+          "display_title": "model/lle.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    MBRConv3,\n    MBRConv1,\n    DropBlock,",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    4,
+                    11
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    18,
+                    25
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass MobileIELLENet(nn.Module):\n    def __init__(self, channels, rep_scale=4):",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    7,
+                    15
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/model/isp.py",
+          "path": "model/isp.py",
+          "display_url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/model/isp.py",
+          "display_title": "model/isp.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    MBRConv3,\n    MBRConv1,\n    DropBlock,",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    4,
+                    11
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    18,
+                    25
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass MobileIEISPNet(nn.Module):\n    def __init__(self, channels, rep_scale=4):",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    7,
+                    15
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/算法复现说明.md",
+          "path": "repro/算法复现说明.md",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/算法复现说明.md",
+          "display_title": "repro/算法复现说明.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "| 位置 | 内容 |\n|---|---|\n| `../run.cmd` | 一键入口：`start`/`status`/`watch`/`stop`/`eval`/`verify`/`report`（ASCII + CRLF，中文由 Python 输出） |\n| `src/mobileie/model.py` | 训练图 / 推理图重建；`variant` 可切 `plain`/`iwo`，`task` 可切 `lle`(3→3) / `isp`(4ch RGGB→PixelShuffle→3ch)；`slim()` 折叠并校验覆盖 6 个 MBRConv |\n| `src/mobileie/data.py` | `PairedImageDataset`（RGB，含可选 `train_crop`/`resize_wh`）与 `BayerPairedDataset`（12-bit Bayer → 4×H/2×W/2、÷4095），按 `data.kind` 路由 |\n| `src/mobileie/losses.py` | `LVWOfficial`、`LVWPaper`、`PSNRLoss`、`WarmupLoss`、`MobileIELoss` 组合式 |\n| `src/mobileie/metrics.py` | 两种 PSNR 口径、SSIM(高斯窗)、LPIPS、MAE，`Evaluator` 聚合 |",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    172,
+                    180
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    361,
+                    368
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    378,
+                    386
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    566,
+                    574
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    646,
+                    654
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    679,
+                    687
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/paper/bilingual/body.txt",
+          "path": "paper/bilingual/body.txt",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/paper/bilingual/body.txt",
+          "display_title": "paper/bilingual/body.txt",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "4.3. Ablation Studies and Analyses\n\n@@66 para\nWe conducted a series of ablation studies to verify the effectiveness of MobileIE’s modules. First, MBRConv was compared with other re-parameterization methods [23, 89, 92], and LVW loss was replaced by conventional loss functions. As shown in Table 4, both MBRConv and LVW loss significantly improved the model’s performance. Importantly, MBRConv merges into standard convolutions during inference, adding no computational or memory overhead. (1) Why does MBRConv + IWO work? IWO enhances the kernel skeletons. To explore the impact of IWO on MBRConv kernels, we visualized the weight increments ∆W in the last convolutional layer of the MobileIE model trained on the UIEB dataset. Here, ∆W is defined as the difference between the weights trained with IWO (WIW O) and those trained without it (Wbase), i.e., ∆W = WIW O −Wbase. As shown in Figure 8, most ∆W values reinforce the center-row and center-column characteristics of the convolutional kernels, which contributes to improved model performance [6, 21].\n\n@@71 para\n(2) FST can enhance nonlinear feature interaction. The FST uses a nonlinear squaring transformation to enhance high-frequency sensitivity, highlighting image details and edges (Figure 11). In the Fourier spectrum, squaring shows a stronger high-frequency response than ReLU, effectively preserving detail. The learnable parameters, Scale, and bias, further adaptively adjust the feature dynamic range, enhancing restoration performance.",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    119,
+                    127
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    148,
+                    155
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    306,
+                    313
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    390,
+                    397
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    507,
+                    514
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    594,
+                    601
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    691,
+                    699
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/viplab-fudan/FJNDF-Pytorch/blob/3b46739e4f524c205c9c277f9c4b1673b9d5aedc/pyjnd/models/iccv_yan_2025_lite_model.py",
+          "path": "pyjnd/models/iccv_yan_2025_lite_model.py",
+          "display_url": "https://github.com/viplab-fudan/FJNDF-Pytorch/blob/3b46739e4f524c205c9c277f9c4b1673b9d5aedc/pyjnd/models/iccv_yan_2025_lite_model.py",
+          "display_title": "pyjnd/models/iccv_yan_2025_lite_model.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "These changes result in a 45% reduction in computational cost (FLOPs) compared to the \noriginal MobileIE network, making it exceptionally efficient for real-time applications \non resource-constrained devices.",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    96,
+                    104
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "        base_channels (int): Number of channels in the main network body.\n        rep_scale (int): Expansion factor used in MBRConv blocks.\n        only_train_y (bool): If True, only the Y channel (the first channel) will be processed.",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    124,
+                    131
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/QA.md",
+          "path": "QA.md",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/QA.md",
+          "display_title": "QA.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "  - 模块本体：`_load_module()` 直接 exec 官方 `utils_IWO.py`，**一行没改** → IWO 前向计算与作者逐位一致。\n  - 接线（作者没给的部分）：`MobileIELLE(variant=\"iwo\")` 把 7 个 MBRConv 换成 IWO 版；\n    阶段二独立 run 从阶段一 best 载入；`W_learn` 置零；`slim()` 折叠也接通。",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    175,
+                    183
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    213,
+                    220
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "| 2026-09-29 13:00 | 新增 **D5**（作者公布的是\"零件\"不是\"接线\"：全仓 0 处引用 `utils_IWO`；我们的接线状态 + `selfcheck.py` 实跑全 PASS；用训练出的权重实测 ΔW 规模 27.5%–163%、`tail_warm` 的 Δ 恒为 0、Fig.8 中心行列说法只有弱支持；并定位了 `model_best_slim.pkl` 与 CPU 重折叠差 4.6e-04 的根因是训练时开了 TF32）。 |\n| 2026-09-29 14:55 | 新增 **F1**（上传 GitHub：18 GB → 176 文件 / 7.83 MB；体积体检、敏感信息扫描、作者仓库 Apache-2.0 可随附、论文材料排除、`git rev-list` 全对象库复核、重建首次提交的做法）。**遗留**：`gh auth login` 未完成，建仓与推送未执行。 |\n| 2026-09-29 15:00 | **F1 收口**：用户改判为 **公开**仓库，已发布 **https://github.com/38260/MobileIE-repro**（PUBLIC，main）。作者身份经用户确认改为 `BJTU-Yibo` + GitHub 匿名邮箱（**仅仓库级**，全局配置未动），首次提交 amend 为 `755c44e`。远端 API 复核：176 文件 / 最大 1.9 MB / 论文材料 0 / 数据集与产物 0。 |",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    828,
+                    836
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/论文复现对照.md",
+          "path": "repro/论文复现对照.md",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/论文复现对照.md",
+          "display_title": "repro/论文复现对照.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "|---|---|---|\n| 摘要/结论：约 **4K 参数**的极轻量 CNN | 装配 `src/mobileie/model.py:51-127`，模块本体复用官方 `model/utils.py` | ✅ 推理图 **4,075** 参数（论文 4.047 K，+0.7%） |\n| Fig.2：head(MBRConv5+PReLU+MBRConv3) → body(MBRConv3+FST) → HDPA → MBRConv3 | `model.py:73-97` 逐块装配；`channels=12`、`rep_scale=4` | ✅ 与官方 `model/lle.py:13-38` 同构；`channels=12` 由官方 `complexity.py:49` 与参数量反推双重确认 |",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    80,
+                    88
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    228,
+                    235
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    243,
+                    250
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    262,
+                    269
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    289,
+                    296
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "| §3.3 FST：`Scale·(f⊙f)+bias` | 官方 `utils.py:315/329`，装配在 head/body 上 | ✅ 结构在位（参数量吻合即证明）；**FST 单独消融未做** ⛔ |\n| §3.4 HDPA：全局均值路 + 通道最大值路，两路 Sigmoid | `model.py:82-91`（`AdaptiveAvgPool2d(1)`→MBRConv1→Sigmoid；`max(dim=1)`→MBRConv1(1→C)→Sigmoid），前向 `model.py:110-118` | ✅ 结构在位；**HDPA 消融（论文 Table 6 的 +3.08 dB）未做** ⛔ |\n| 任务变体：LLE 3→3；ISP 吃 12-bit Bayer | `model.py:60-97` 的 `task` 分支，ISP 用 `PixelShuffle(2)` + 4 通道输入，Bayer 打包照官方 `bayer2rggb` 逐维复刻 | ✅ ZRR 表对上（下节） |",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    289,
+                    296
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    325,
+                    332
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/paper/bilingual/zh.py",
+          "path": "paper/bilingual/zh.py",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/paper/bilingual/zh.py",
+          "display_title": "paper/bilingual/zh.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    (\"4.3. Ablation Studies and Analyses\".replace(chr(8217),chr(39)) if False else \"4.3. Ablation Studies and Analyses\",\n     \"4.3. 消融实验与分析\"),\n    (\"We conducted a series of ablation studies\".replace(chr(8217),chr(39)) if False else \"We conducted a series of ablation studies\",\n     \"我们做了一系列消融实验以验证 MobileIE 各模块的有效性。首先把 MBRConv 与其他重参数化方法 [23, 89, 92] 对比，并把 LVW 损失替换为常规损失函数。如表 4 所示，MBRConv 与 LVW 损失都显著提升了模型性能；更重要的是，MBRConv 在推理时合并为标准卷积，不增加任何计算或显存开销。（1）为什么 MBRConv + IWO 有效？IWO 强化了卷积核骨架。为探究 IWO 对 MBRConv 卷积核的影响，我们可视化了在 UIEB 上训练的 MobileIE 最后一层卷积的权重增量 ∆W。此处 ∆W 定义为使用 IWO 训练得到的权重 W_IWO 与不使用 IWO 的权重 W_base 之差，即 ∆W = W_IWO − W_base。如图 8 所示，大多数 ∆W 数值强化了卷积核中心行与中心列的特征，这有助于模型性能的提升 [6, 21]。\"),\n    (\"IWO reduces channel redundancy, validated by\".replace(chr(8217),chr(39)) if False else \"IWO reduces channel redundancy, validated by\",\n     \"IWO 降低了通道冗余。我们通过对比 MBRConv5×5 中最后一个 Conv1×1 层在 IWO 优化前后的表现来验证这一点：用 KL（Kullback-Leibler）[6, 73, 100] 散度度量通道相似度，数值越高表示冗余越低。我们在 LOLv1 上训练 MobileIE 并保存不同阶段的检查点，对通道施加 softmax 并计算通道两两之间的 KL 散度，得到不同训练阶段的 KL 矩阵（图 9）。随着训练推进 KL 散度增大，施加 IWO 之后显著上升，说明 MBRConv 在降低冗余、改善特征表示方面有效。IWO 对训练收敛的影响。与预训练阶段类似，W_pre 是前 1000 个 epoch 之后得到的性能良好的权重。由训练曲线（图 10）可见，不使用 IWO 时损失在训练后期停滞，而使用 IWO 时损失继续下降，说明 IWO 促成了权重的进一步优化，提升了模型的收敛性能。曲线中的振荡来自余弦衰减。\"),\n    (\"(2) FST can enhance nonlinear feature\".replace(chr(8217),chr(39)) if False else \"(2) FST can enhance nonlinear feature\",",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    341,
+                    349
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    384,
+                    391
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    507,
+                    514
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    580,
+                    587
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    680,
+                    687
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    752,
+                    759
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    821,
+                    829
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    1336,
+                    1343
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    1556,
+                    1564
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    1795,
+                    1802
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/model/lle-Copy1.py",
+          "path": "model/lle-Copy1.py",
+          "display_url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/model/lle-Copy1.py",
+          "display_title": "model/lle-Copy1.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    def slim(self):\n        \"\"\"\n        将当前（MBR + 门控FST）模型压缩为轻量版（MobileIELLENetS）：\n        - MBRConv* → 单一 Conv2d（通过各自 slim() 折叠）\n        - FST（门控版：含 u/v 逐通道1×1）→ FSTS（同门控结构）参数直拷\n        - PReLU 参数直拷\n        \"\"\"",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    97,
+                    105
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    129,
+                    136
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/model/lle.py",
+          "path": "model/lle.py",
+          "display_url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/model/lle.py",
+          "display_title": "model/lle.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    def __init__(self, channels, rep_scale=4):\n        super(MobileIELLENet, self).__init__()\n        self.channels = channels",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "        for name, mod in self.named_modules():\n            # 1) MBRConv 折叠\n            if isinstance(mod, (MBRConv3, MBRConv5, MBRConv1)):",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    64,
+                    71
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    111,
+                    118
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    121,
+                    128
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    131,
+                    138
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/scripts/selfcheck.py",
+          "path": "repro/scripts/selfcheck.py",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/scripts/selfcheck.py",
+          "display_title": "repro/scripts/selfcheck.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    diff = (a - b).abs().max().item()\n    check(\"MBRConv folds to single conv (plain)\", diff < 2e-5, f\"max|dy|={diff:.2e}\")\n    check(\"slim parameter count ~4K\", abs(M.count_parameters(slim) - 4047) < 100,",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    49,
+                    56
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "    sd = stage1.state_dict()\n    iwo = M.MobileIELLE(channels=12, rep_scale=4, variant=\"iwo\", iwo_learn_init=\"zero\")\n    missing, unexpected = iwo.load_state_dict(sd, strict=False)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    41,
+                    49
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/FifthGentleness/RTDETRU/blob/19d5e909a6f71365fcba6057aeb67a12306eaddb/mydocs/配置文件模块改进总结.md",
+          "path": "mydocs/配置文件模块改进总结.md",
+          "display_url": "https://github.com/FifthGentleness/RTDETRU/blob/19d5e909a6f71365fcba6057aeb67a12306eaddb/mydocs/配置文件模块改进总结.md",
+          "display_title": "mydocs/配置文件模块改进总结.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "| rtdetr-C2f-SMPCGLU.yaml | C2f_SMPCGLU（SMPCGLU） | SMP（结构重参数化多路径卷积）+ CGLU 门控前馈的组合块：多分支卷积重参数化与门控线性单元叠加 |\n| rtdetr-C2f-EBlock.yaml | C2f_EBlock（EBlock, CVPR2025 DarkIR） | 图像修复编码块：1×1 升维 + 多膨胀率深度卷积分支（dilation=1）+ 通道注意力 SCA + 简化前馈，强调高效恢复高频细节 |\n| rtdetr-C2f-DBlock.yaml | C2f_DBlock（DBlock, DarkIR） | 同源的解码块：dilation=[1,2,3] 三条膨胀深度卷积分支并联 + SCA 通道注意力，多膨胀率扩大感受野 |\n| rtdetr-C2f-MBRConv3.yaml | C2f_MBRConv3（Bottleneck_MBRConv3, ICCV2025 MobileIE） | 多分支重参数化 3×3 卷积：训练时 3×3/1×1/3×1/1×3 四种卷积各配 BN 共 8 路并联，推理时数学等价融合为单个 3×3 卷积，零推理开销增容 |\n| rtdetr-C2f-MBRConv5.yaml | C2f_MBRConv5（Bottleneck_MBRConv5） | 同上机制的 5×5 核版本，更大原生感受野，同样训练多分支、推理融合为单分支 |\n| rtdetr-C2f-RCB.yaml | C2f_RCB（RepConvBlock, CVPR2025 OverLoCK） | OverLoCK 残差卷积块：DilatedReparamBlock（多膨胀率小核训练并行、部署融合为单个大核深度卷积）+ SEModule + GRN 归一化 MLP，兼得大感受野与部署效率 |\n",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    615,
+                    622
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    635,
+                    642
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    657,
+                    664
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    676,
+                    684
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    884,
+                    891
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    904,
+                    911
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    926,
+                    933
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/enable_iwo.py",
+          "path": "enable_iwo.py",
+          "display_url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/enable_iwo.py",
+          "display_title": "enable_iwo.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    \"\"\"\n    扫描模型，找到 MBRConv* 中的 conv_out (1×1 卷积)，\n    将其替换为 IWOConv1x1(W_pre + W_learn)。",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    34,
+                    41
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "    Args:\n        model: 已训练好的 baseline 模型（MobileIELLENet）\n        config: IWO 配置字典，包含：",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    59,
+                    67
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/gugugu531/Hispark_SocChina_2026/blob/c3bdfbb0f6b45a918598d7e23f332bf731620914/models/ctbg/litmodule_coeff.py",
+          "path": "models/ctbg/litmodule_coeff.py",
+          "display_url": "https://github.com/gugugu531/Hispark_SocChina_2026/blob/c3bdfbb0f6b45a918598d7e23f332bf731620914/models/ctbg/litmodule_coeff.py",
+          "display_title": "models/ctbg/litmodule_coeff.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nREPO_MOBILEIE = Path(__file__).resolve().parents[1] / \"repos/MobileIE\"\nsys.path.insert(0, str(REPO_MOBILEIE))",
+              "matches": [
+                {
+                  "text": "MOBILEIE",
+                  "indices": [
+                    6,
+                    14
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    62,
+                    70
+                  ]
+                },
+                {
+                  "text": "MOBILEIE",
+                  "indices": [
+                    100,
+                    108
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "        self.bb = MobileIELLENet(channels=channels, rep_scale=rep_scale)\n        self.bb.tail = MBRConv3(channels, 6, rep_scale=rep_scale)  # dark(3)+bright(3)\n        self.down = down",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    18,
+                    26
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    96,
+                    103
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/dnguyennk/portfolio/blob/6d3a67421385ea0cd33f86ae9e094387d4cbe92f/index.html",
+          "path": "index.html",
+          "display_url": "https://github.com/dnguyennk/portfolio/blob/6d3a67421385ea0cd33f86ae9e094387d4cbe92f/index.html",
+          "display_title": "index.html",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "        <h3 data-en=\"Mobile AI Enhancement Architectures\" data-vi=\"Kiến trúc Nâng cao Ảnh Mobile AI\">Mobile AI Enhancement Architectures</h3>\n        <p data-en=\"Deep study of PLU-Net (1st place, DaHua-IIG) and MobileIE (4th place, AVC2-UESTC). Verified parameter counts through MBRConv reparameterization math. Analyzed loss function combinations: LVW, MS-SSIM, VGG content loss, RaSGAN.\"\n           data-vi=\"Nghiên cứu sâu PLU-Net (hạng 1, DaHua-IIG) và MobileIE (hạng 4, AVC2-UESTC). Xác minh số lượng tham số qua toán reparameterization MBRConv. Phân tích tổ hợp hàm loss: LVW, MS-SSIM, VGG content loss, RaSGAN.\">\n          Deep study of PLU-Net and MobileIE architectures. Verified parameter counts through MBRConv reparameterization math. Analyzed loss function combinations: LVW, MS-SSIM, VGG content loss, RaSGAN.\n        </p>\n        <div class=\"journal-tags\"><span>Mobile AI</span><span>Reparameterization</span><span>Loss Functions</span></div>\n      </div>",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    217,
+                    225
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    285,
+                    292
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    469,
+                    477
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    565,
+                    572
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    686,
+                    694
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    744,
+                    751
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE-main/MobileIE-main/model/isp.py",
+          "path": "MobileIE-main/MobileIE-main/model/isp.py",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE-main/MobileIE-main/model/isp.py",
+          "display_title": "MobileIE-main/MobileIE-main/model/isp.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    MBRConv3,\n    MBRConv1,\n    DropBlock,",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    4,
+                    11
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    18,
+                    25
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass MobileIEISPNet(nn.Module):\n    def __init__(self, channels, rep_scale=4):",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    7,
+                    15
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE-main/MobileIE-main/model/lle.py",
+          "path": "MobileIE-main/MobileIE-main/model/lle.py",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE-main/MobileIE-main/model/lle.py",
+          "display_title": "MobileIE-main/MobileIE-main/model/lle.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    MBRConv3,\n    MBRConv1,\n    DropBlock,",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    4,
+                    11
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    18,
+                    25
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass MobileIELLENet(nn.Module):\n    def __init__(self, channels, rep_scale=4):",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    7,
+                    15
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/daidaidaidaidaidai-cat/duomotai-yolo/blob/e1db0af1b99dd8664995a4ed606a2e6f5614ce18/YOLOV11配置文件.md",
+          "path": "YOLOV11配置文件.md",
+          "display_url": "https://github.com/daidaidaidaidaidai-cat/duomotai-yolo/blob/e1db0af1b99dd8664995a4ed606a2e6f5614ce18/YOLOV11配置文件.md",
+          "display_title": "YOLOV11配置文件.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv3改进C3k2.\n    项目视频百度云链接:20250721版本更新说明",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv5改进C3k2.\n    项目视频百度云链接:20250721版本更新说明",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/XuYuanDaWang/Yolo-Project/blob/113b5bffd3ac4e51e08165c008b4e79f59fb6423/YOLOV11配置文件.md",
+          "path": "YOLOV11配置文件.md",
+          "display_url": "https://github.com/XuYuanDaWang/Yolo-Project/blob/113b5bffd3ac4e51e08165c008b4e79f59fb6423/YOLOV11配置文件.md",
+          "display_title": "YOLOV11配置文件.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv3改进C3k2.\n    项目视频百度云链接:20250721版本更新说明",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv5改进C3k2.\n    项目视频百度云链接:20250721版本更新说明",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Alleluia1/RTDETR-10.20/blob/3d8980c24e1dbd95a162c69e03f7f7fde00ca538/使用教程.md",
+          "path": "使用教程.md",
+          "display_url": "https://github.com/Alleluia1/RTDETR-10.20/blob/3d8980c24e1dbd95a162c69e03f7f7fde00ca538/使用教程.md",
+          "display_title": "使用教程.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv3与CSP改进backbone.\n    项目视频百度云链接:20250727版本更新说明",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv5改进RepC3.\n    项目视频百度云链接:20250727版本更新说明",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/helloshuaige520/RT-DETR/blob/411caa91714d4ef2841e438e37ec0bf75531f3eb/使用教程.md",
+          "path": "使用教程.md",
+          "display_url": "https://github.com/helloshuaige520/RT-DETR/blob/411caa91714d4ef2841e438e37ec0bf75531f3eb/使用教程.md",
+          "display_title": "使用教程.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv3与CSP改进backbone.\n    项目视频百度云链接:20250727版本更新说明",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv5改进RepC3.\n    项目视频百度云链接:20250727版本更新说明",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/mahongwei-bot/RTDETR/blob/6aa8fbaa29035813a858cd3aaa798e9209377b8e/使用教程.md",
+          "path": "使用教程.md",
+          "display_url": "https://github.com/mahongwei-bot/RTDETR/blob/6aa8fbaa29035813a858cd3aaa798e9209377b8e/使用教程.md",
+          "display_title": "使用教程.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv3与CSP改进backbone.\n    项目视频百度云链接:20250727版本更新说明",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv5改进RepC3.\n    项目视频百度云链接:20250727版本更新说明",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/mahongwei-bot/RTDETR20260307-main/blob/125085db8691cdd7912058d94011a8efc33c877a/使用教程.md",
+          "path": "使用教程.md",
+          "display_url": "https://github.com/mahongwei-bot/RTDETR20260307-main/blob/125085db8691cdd7912058d94011a8efc33c877a/使用教程.md",
+          "display_title": "使用教程.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv3与CSP改进backbone.\n    项目视频百度云链接:20250727版本更新说明",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv5改进RepC3.\n    项目视频百度云链接:20250727版本更新说明",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/tpiece/RTDETR-main/blob/86d9a59b2a532b51a39f34cf50c8e7c8bb4fda92/使用教程.md",
+          "path": "使用教程.md",
+          "display_url": "https://github.com/tpiece/RTDETR-main/blob/86d9a59b2a532b51a39f34cf50c8e7c8bb4fda92/使用教程.md",
+          "display_title": "使用教程.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv3与CSP改进backbone.\n    项目视频百度云链接:20250727版本更新说明",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv5改进RepC3.\n    项目视频百度云链接:20250727版本更新说明",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/paper/bilingual/bilingual.html",
+          "path": "paper/bilingual/bilingual.html",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/paper/bilingual/bilingual.html",
+          "display_title": "paper/bilingual/bilingual.html",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "<figure><img src=\"assets/p06_table_63.png\" alt=\"Table 3. Performance comparison of different image signal pr\"><figcaption><b>Table 3（中文）</b>　不同图像信号处理模型在 ZRR 数据集上的性能对比。SCORE [37] 为性能与效率的综合度量；最优标红、次优标蓝。</figcaption></figure>\n<h3 class=\"en\">4.3. Ablation Studies and Analyses</h3>\n<h3 class=\"zh\">4.3. 消融实验与分析</h3>\n<p class=\"para en\">We conducted a series of ablation studies to verify the effectiveness of MobileIE’s modules. First, MBRConv was compared with other re-parameterization methods [23, 89, 92], and LVW loss was replaced by conventional loss functions. As shown in Table 4, both MBRConv and LVW loss significantly improved the model’s performance. Importantly, MBRConv merges into standard convolutions during inference, adding no computational or memory overhead. (1) Why does MBRConv + IWO work? IWO enhances the kernel skeletons. To explore the impact of IWO on MBRConv kernels, we visualized the weight increments ∆W in the last convolutional layer of the MobileIE model trained on the UIEB dataset. Here, ∆W is defined as the difference between the weights trained with IWO (WIW O) and those trained without it (Wbase), i.e., ∆W = WIW O −Wbase. As shown in Figure 8, most ∆W values reinforce the center-row and center-column characteristics of the convolutional kernels, which contributes to improved model performance [6, 21].</p>\n<p class=\"para zh\">我们做了一系列消融实验以验证 MobileIE 各模块的有效性。首先把 MBRConv 与其他重参数化方法 [23, 89, 92] 对比，并把 LVW 损失替换为常规损失函数。如表 4 所示，MBRConv 与 LVW 损失都显著提升了模型性能；更重要的是，MBRConv 在推理时合并为标准卷积，不增加任何计算或显存开销。（1）为什么 MBRConv + IWO 有效？IWO 强化了卷积核骨架。为探究 IWO 对 MBRConv 卷积核的影响，我们可视化了在 UIEB 上训练的 MobileIE 最后一层卷积的权重增量 ∆W。此处 ∆W 定义为使用 IWO 训练得到的权重 W_IWO 与不使用 IWO 的权重 W_base 之差，即 ∆W = W_IWO − W_base。如图 8 所示，大多数 ∆W 数值强化了卷积核中心行与中心列的特征，这有助于模型性能的提升 [6, 21]。</p>\n<figure><img src=\"assets/p07_table_66.png\" alt=\"Table 4. Performance comparison of Loss and Re-param modules\"><figcaption><b>Table 4（中文）</b>　损失函数与重参数化模块的性能对比。</figcaption></figure>\n<figure><img src=\"assets/p07_figure_67.png\" alt=\"Figure 8. Visualization of kernel differences pre- and post-\"><figcaption><b>Figure 8（中文）</b>　IWO 优化前后卷积核权重差异的可视化。</figcaption></figure>",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    513,
+                    521
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    542,
+                    549
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    700,
+                    707
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    784,
+                    791
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    901,
+                    908
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    988,
+                    995
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    1085,
+                    1093
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    1532,
+                    1540
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    1575,
+                    1582
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    1698,
+                    1705
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    1771,
+                    1778
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    1871,
+                    1878
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    1943,
+                    1950
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    2012,
+                    2020
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/lightxiu/yolo26/blob/b89fb24a9543facc4d3dcd73c8038b2d956654a4/YOLOV11配置文件.md",
+          "path": "YOLOV11配置文件.md",
+          "display_url": "https://github.com/lightxiu/yolo26/blob/b89fb24a9543facc4d3dcd73c8038b2d956654a4/YOLOV11配置文件.md",
+          "display_title": "YOLOV11配置文件.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv3改进C3k2.\n    项目视频百度云链接:20250721版本更新说明",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv5改进C3k2.\n    项目视频百度云链接:20250721版本更新说明",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/FifthGentleness/RTDETRU/blob/19d5e909a6f71365fcba6057aeb67a12306eaddb/mydocs/使用教程.md",
+          "path": "mydocs/使用教程.md",
+          "display_url": "https://github.com/FifthGentleness/RTDETRU/blob/19d5e909a6f71365fcba6057aeb67a12306eaddb/mydocs/使用教程.md",
+          "display_title": "mydocs/使用教程.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv3与CSP改进backbone.\n    项目视频百度云链接:20250727版本更新说明",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv5改进RepC3.\n    项目视频百度云链接:20250727版本更新说明",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/linchuan232/myrtdetr/blob/d0a21cc0dccfc4f97619cc3757011a033a1f2aa8/RTDETR-main/使用教程.md",
+          "path": "RTDETR-main/使用教程.md",
+          "display_url": "https://github.com/linchuan232/myrtdetr/blob/d0a21cc0dccfc4f97619cc3757011a033a1f2aa8/RTDETR-main/使用教程.md",
+          "display_title": "RTDETR-main/使用教程.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv3与CSP改进backbone.\n    项目视频百度云链接:20250727版本更新说明",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv5改进RepC3.\n    项目视频百度云链接:20250727版本更新说明",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Wzhi997/YOLO/blob/c875ec756e429553f1a11b3c8ccdcada3cb19652/yolo-improve/yolov11-project.md",
+          "path": "yolo-improve/yolov11-project.md",
+          "display_url": "https://github.com/Wzhi997/YOLO/blob/c875ec756e429553f1a11b3c8ccdcada3cb19652/yolo-improve/yolov11-project.md",
+          "display_title": "yolo-improve/yolov11-project.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv3改进C3k2.\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv5改进C3k2.\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Wzhi997/YOLO/blob/c875ec756e429553f1a11b3c8ccdcada3cb19652/yolo-improve/rtdetr-project.md",
+          "path": "yolo-improve/rtdetr-project.md",
+          "display_url": "https://github.com/Wzhi997/YOLO/blob/c875ec756e429553f1a11b3c8ccdcada3cb19652/yolo-improve/rtdetr-project.md",
+          "display_title": "yolo-improve/rtdetr-project.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv3与CSP改进backbone.\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv5改进RepC3.\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/cui123000/rtdetr_indoor/blob/0206a44e0590eb078f5e990618606c39aa4821da/RTDETR-main/USE.md",
+          "path": "RTDETR-main/USE.md",
+          "display_url": "https://github.com/cui123000/rtdetr_indoor/blob/0206a44e0590eb078f5e990618606c39aa4821da/RTDETR-main/USE.md",
+          "display_title": "RTDETR-main/USE.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv3与CSP改进backbone.\n    项目视频百度云链接:20250727版本更新说明",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv5改进RepC3.\n    项目视频百度云链接:20250727版本更新说明",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/wbzuo/dl-modules-toolkit/blob/4eada47a67a3663bedea1ef793123d966b4a87b8/Modules/布尔大学士/即插即用2025.md",
+          "path": "Modules/布尔大学士/即插即用2025.md",
+          "display_url": "https://github.com/wbzuo/dl-modules-toolkit/blob/4eada47a67a3663bedea1ef793123d966b4a87b8/Modules/布尔大学士/即插即用2025.md",
+          "display_title": "Modules/布尔大学士/即插即用2025.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "| 179 | Channel Attention and Spatial Attention Block | 注意力 | CVPR 2025 | `ConvBlock`、`ChannelAttention`、`SpatialAttention`… | 重新思考解码器设计：利用深度到空间恢复和残差线性注意力改进生物标志物分割(CVPR 2025) | — | `[1, 32, 50, 50]` | [`.py`](<即插即用2025/179 Channel Attention and Spatial Attention Block（CVPR 2025） .py>) | [链接](https://arxiv.org/abs/2506.18335) | [B站](https://www.bilibili.com/video/BV1j8pNzmEey/) |\n| 180 | Sparse Prompt Channel Self-Attention | 自注意力与高效 Transformer | ACM 2025 | `SPCS` | 用于图像去雨的跨范式表示与对齐 Transformer(CCF-A 2025) | `einops` | `[1, 32, 50, 50]` | [`.py`](<即插即用2025/180 Sparse Prompt Channel Self-Attention（ACM 2025）.py>) | [链接](https://arxiv.org/abs/2504.16455) | [B站](https://www.bilibili.com/video/BV1BwWgzNEiL/) |\n| 181 | Spatial Pixel Refinement Self-attention | 自注意力与高效 Transformer | ACM 2025 | `SPRS` | 用于图像去雨的跨范式表示与对齐 Transformer(CCF-A 2025) | — | `[1, 32, 50, 50]` | [`.py`](<即插即用2025/181 Spatial Pixel Refinement Self-attention（ACM 2025）.py>) | [链接](https://arxiv.org/abs/2504.16455) | [B站](https://www.bilibili.com/video/BV1henFzQEcb/) |\n| 182 | Hierarchical Dual-Path Attention | 注意力 | ICCV 2025 | `MBRConv1X1`、`HDPA` | MobileIE：一种用于移动设备实时图像增强的超轻量级高效卷积神经网络 (ICCV 2025) | — | `[1, 32, 50, 50]` | [`.py`](<即插即用2025/182 Hierarchical Dual-Path Attention (ICCV 2025).py>) | [链接](https://arxiv.org/abs/2507.01838) | [B站](https://www.bilibili.com/video/BV17JfEBbExp/) |\n| 183 | InverseConv2DLayer | 卷积算子 | ICCV 2025 | `InverseConv2DLayer` | 反向卷积及其在图像恢复中的应用 (ICCV 2025) | — | `[1, 32, 50, 50]` | [`.py`](<即插即用2025/183 InverseConv2DLayer（ICCV 2025）.py>) | [链接](https://arxiv.org/abs/2508.09824) | [B站](https://www.bilibili.com/video/BV12NnezzEJ3/) |\n| 184 | Convolution and Attention Fusion Module | 特征融合 | TOP | `CAFM` | 用于高光谱图像去噪的混合卷积和注意力网络 (2024 TOP) | `einops` | `[2, 32, 50, 50]` | [`.py`](<即插即用2025/184 Convolution and Attention Fusion Module（TOP）.py>) | [链接](https://arxiv.org/pdf/2403.10067) | [B站](https://www.bilibili.com/video/BV1ojkVBTEq5/) |\n| 185 | MixStyle Neural Networks | 归一化与域泛化 | CCF-A | `MixStyle` | 用于领域泛化与领域适应的 MixStyle 神经网络 (CCF-A) | — | `[2, 32, 50, 50]` | [`.py`](<即插即用2025/185 MixStyle Neural Networks（CCF-A）.py>) | [链接](https://arxiv.org/pdf/2403.10067) | [B站](https://www.bilibili.com/video/BV1ny6MBdEMB/) |",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    1343,
+                    1350
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    1366,
+                    1374
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/pls-Kaguya/LSO-RT-DETR/blob/91d7cba9ae9bda2224b12b4dd381d3fa9475d07e/readme/使用教程.md",
+          "path": "readme/使用教程.md",
+          "display_url": "https://github.com/pls-Kaguya/LSO-RT-DETR/blob/91d7cba9ae9bda2224b12b4dd381d3fa9475d07e/readme/使用教程.md",
+          "display_title": "readme/使用教程.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv3与CSP改进backbone.\n    项目视频百度云链接:20250727版本更新说明",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv5改进RepC3.\n    项目视频百度云链接:20250727版本更新说明",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/paper/bilingual/items.json",
+          "path": "paper/bilingual/items.json",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/paper/bilingual/items.json",
+          "display_title": "paper/bilingual/items.json",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "  \"page\": 6,\n  \"col\": 1,\n  \"y\": 583.0,\n  \"text\": \"We conducted a series of ablation studies to verify the effectiveness of MobileIE’s modules. First, MBRConv was compared with other re-parameterization methods [23, 89, 92], and LVW loss was replaced by conventional loss functions. As shown in Table 4, both MBRConv and LVW loss significantly improved the model’s performance. Importantly, MBRConv merges into standard convolutions during inference, adding no computational or memory overhead. (1) Why does MBRConv + IWO work? IWO enhances the kernel skeletons. To explore the impact of IWO on MBRConv kernels, we visualized the weight increments ∆W in the last convolutional layer of the MobileIE model trained on the UIEB dataset. Here, ∆W is defined as the difference between the weights trained with IWO (WIW O) and those trained without it (Wbase), i.e., ∆W = WIW O −Wbase. As shown in Figure 8, most ∆W values reinforce the center-row and center-column characteristics of the convolutional kernels, which contributes to improved model performance [6, 21].\",\n  \"i\": 65\n },\n {",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    123,
+                    131
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    152,
+                    159
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    310,
+                    317
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    394,
+                    401
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    511,
+                    518
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    598,
+                    605
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    695,
+                    703
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/FangruLinghu/PaperCode/blob/e987af245f74ab47e50187acc95926a8f1a4b3d2/arxiv_data_process/train_template_outputs/2507.01838_train.json",
+          "path": "arxiv_data_process/train_template_outputs/2507.01838_train.json",
+          "display_url": "https://github.com/FangruLinghu/PaperCode/blob/e987af245f74ab47e50187acc95926a8f1a4b3d2/arxiv_data_process/train_template_outputs/2507.01838_train.json",
+          "display_title": "arxiv_data_process/train_template_outputs/2507.01838_train.json",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    ]\n  },\n  \"model_architecture\": {\n    \"overall_description\": \"MobileIE employs a streamlined topology with deployable operators, decoupling training and inference phases. It uses MBRConv for multi-scale feature capture, FST for nonlinear feature interactions, and HDPA for fusing global and local features, re-parameterizing into standard convolution during inference.\",\n    \"components\": [\n      {\n        \"name\": \"MBRConv\",",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    65,
+                    73
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    182,
+                    189
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    419,
+                    426
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/FangruLinghu/PaperCode/blob/e987af245f74ab47e50187acc95926a8f1a4b3d2/arxiv_data_process/structured_papers/2507/2507.01838.json",
+          "path": "arxiv_data_process/structured_papers/2507/2507.01838.json",
+          "display_url": "https://github.com/FangruLinghu/PaperCode/blob/e987af245f74ab47e50187acc95926a8f1a4b3d2/arxiv_data_process/structured_papers/2507/2507.01838.json",
+          "display_title": "arxiv_data_process/structured_papers/2507/2507.01838.json",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "      \"subsections\": {\n        \"Experimental Settings\": \"\\\\textbf{Implementation Details.} We implemented MobileIE in PyTorch. The model uses the Adam optimizer with a cosine annealing learning rate schedule, starting at 0.001. The learning rate is reset every 50 epochs with gradual decay. A 10-epoch warm-up phase \\\\cite{he2022masked} is applied with a fixed learning rate of 1e-6. The model is trained for 2,000 epochs, incorporating an Incremental Weight Optimization Strategy for improved convergence. For the ISP task, input data is preprocessed into a $256 \\\\times 256$ Bayer pattern. \\\\textbf{Dataset and Metrics.} For LLE task, the LOLv1 \\\\cite{wei2018deep} and LOLv2 \\\\cite{yang2020fidelity} datasets are used for both training and testing. For UIE and ISP tasks, the UIEB \\\\cite{li2019underwater} and ZRR \\\\cite{ignatov2020replacing} datasets are utilized, respectively.\",\n        \"Quantitative and Visual Comparisons\": \"In this section, we compare the proposed MobileIE with current lightweight SOTA methods across three IE tasks, focusing on visual comparisons and performance metrics. Specifically, PSNR, SSIM, LPIPS, and SCORE \\\\cite{ignatov2022learned} are used as evaluation metrics, while computational complexity is tested on a single NVIDIA 4090 (GPU) and a smartphone with a Snapdragon 8 Gen 3 System on Chip (SoC). \\\\textbf{LLE:} The quantitative results on the LOLv1 \\\\cite{wei2018deep} and LOLv2 \\\\cite{yang2020fidelity} datasets are presented in Table \\\\ref{tab:1}. MobileIE achieves superior or comparable PSNR and SSIM scores across all metrics, with an inference speed of \\\\textbf{0.895 ms}. Compared to the lightweight SOTA method IAT \\\\cite{cui2022you}, MobileIE delivers comparable PSNR gains while using only \\\\textbf{4.7\\\\ \\\\begin{figure}[b] \\\\centering \\\\vspace{-12pt} \\\\begin{minipage}[htbp]{0.242\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{LOLv1/low/79.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(a) Input}} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{LOLv1/PairLIE/79.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(f) PairLIE~\\\\cite{fu2023learning}}} \\\\end{minipage} \\\\hspace{0.0000000001\\\\linewidth} \\\\begin{minipage}[htbp]{0.242\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{LOLv1/Zero-DCE/79.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(b) Zero-DCE~\\\\cite{guo2020zero} }} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{LOLv1/SYENet/79.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(e) SYELLE~\\\\cite{gou2023syenet}}} \\\\end{minipage} \\\\hspace{0.0000000001\\\\linewidth} \\\\begin{minipage}[htbp]{0.242\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{LOLv1/RUAS/79.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(c) RUAS~\\\\cite{liu2021retinex}}} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{LOLv1/our/79.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(i) Ours}} \\\\end{minipage} \\\\hspace{0.0000000001\\\\linewidth} \\\\begin{minipage}[htbp]{0.242\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{LOLv1/IAT/79.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(h) IAT~\\\\cite{cui2022you}}} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{LOLv1/high/79.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(j) Ground Truth}} \\\\end{minipage} \\\\vspace{-6pt} \\\\caption{\\\\label{lle} Visualization comparison of LLE on LOLv1 \\\\cite{wei2018deep}.} \\\\end{figure} \\\\textbf{UIE:} The quantitative results in Table \\\\ref{tab:2} show that MobileIE achieves a PSNR of 22.81 dB. Remarkably, MobileIE surpasses FiveA+ \\\\cite{jiang2023five} by 0.3 dB in PSNR while using only \\\\textbf{$45\\\\ \\\\begin{figure}[b] \\\\centering \\\\vspace{-6pt} \\\\begin{minipage}[htbp]{0.242\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{UIE/input/470_img_.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(a) Input}} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{UIE/LiteEnhanceNet/470_img_.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(e) LiteEnhanceNet~\\\\cite{zhang2024liteenhancenet}}} \\\\end{minipage} \\\\hspace{0.000001\\\\linewidth} \\\\begin{minipage}[htbp]{0.242\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{UIE/PUIE-mc/470_img_.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(b) PUIE~\\\\cite{fu2022uncertainty}}} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{UIE/LSNet/470_img_.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(f) LSNet~\\\\cite{zhou20247k}}} \\\\end{minipage} \\\\hspace{0.000001\\\\linewidth} \\\\begin{minipage}[htbp]{0.242\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{UIE/fivea/470_img_.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(c) FivaA+~\\\\cite{jiang2023five}}} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{UIE/our/470_img_.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(g) Ours}} \\\\end{minipage} \\\\hspace{0.000001\\\\linewidth} \\\\begin{minipage}[htbp]{0.242\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{UIE/Boths/470_img_.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(d) Boths~\\\\cite{liu2022boths}}} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{UIE/GT/470_img_.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(h) Ground Truth}} \\\\end{minipage} \\\\vspace{-6pt} \\\\caption{\\\\label{uie}Visualization comparison of UIE on UIEB \\\\cite{li2019underwater}.} \\\\end{figure} \\\\textbf{ISP:} On the ZRR \\\\cite{li2019underwater} dataset, the quantitative results in Table \\\\ref{tab:3} show that MobileIE maintains competitive performance while delivering \\\\textbf{3x} faster inference than existing lightweight SOTA models. Figure \\\\ref{isp} provides the corresponding visual comparisons. \\\\begin{figure}[htbp] \\\\centering \\\\begin{minipage}[htbp]{0.226\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{ISP/input.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(a) Raw visualized}} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{ISP/LiteISPNet.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(e) LiteISPNet \\\\cite{zhang2021learning}}} \\\\end{minipage} \\\\hspace{0.001\\\\linewidth} \\\\begin{minipage}[htbp]{0.226\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{ISP/PyNet.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(b) PyNet \\\\cite{ignatov2020replacing}}} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{ISP/syenet.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(f) SYEISP \\\\cite{gou2023syenet}}} \\\\end{minipage} \\\\hspace{0.001\\\\linewidth} \\\\begin{minipage}[htbp]{0.226\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{ISP/AWNet.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(c) AWNet \\\\cite{dai2020awnet}}} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{ISP/our.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(g) Ours}} \\\\end{minipage} \\\\hspace{0.001\\\\linewidth} \\\\begin{minipage}[htbp]{0.226\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{ISP/MW-ISPNet.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(d) MW-ISPNet \\\\cite{ignatov2020aim}}} \\\\centerline{\\\\includegraphics[width=\\\\textwidth]{ISP/gt.jpg}} \\\\centerline{\\\\scriptsize\\\\textbf{(h) Ground Truth}} \\\\end{minipage} \\\\caption{\\\\label{isp}Visualization comparison of ISP on ZRR \\\\cite{ignatov2020replacing}.} \\\\vspace{-6pt} \\\\end{figure} \\\\begin{table}[h] \\\\centering \\\\vspace{-2pt} \\\\resizebox{\\\\columnwidth}{!}{ \\\\begin{tabular}{cccccc|ccc} \\\\toprule \\\\multicolumn{1}{c}{Method} & \\\\multicolumn{1}{c}{Venue} & \\\\multicolumn{1}{c}{\\\\#Params$\\\\downarrow$} & \\\\multicolumn{1}{c}{Latency$\\\\downarrow$} & \\\\multicolumn{1}{c}{Latency$\\\\downarrow$} & \\\\multicolumn{1}{c|}{FPS$\\\\uparrow$} & \\\\multicolumn{3}{c}{ZRR \\\\cite{ignatov2020replacing}} \\\\\\\\ \\\\cmidrule{7-9} & & (K)& (GPU,ms) & (SoC,ms) & (448$\\\\times$448) & PSNR$\\\\uparrow$ & SSIM$\\\\uparrow$ & SCORE$\\\\uparrow$\\\\\\\\ \\\\hline PyNet \\\\cite{ignatov2020replacing} & CVPRW'20 & 47,548& 118.339& \\\\textgreater 500 & \\\\textless 10 & 21.19 & 0.747 & 0.024 \\\\\\\\ AWNet(raw) \\\\cite{dai2020awnet} & ECCVW'20 & 45,408& 102.932 & \\\\textgreater 500 & \\\\textless 10 & 21.42 & \\\\textcolor{blue}{0.748} & 0.038\\\\\\\\ MW-ISP \\\\cite{ignatov2020aim} & ECCVW'20 & 29,200& / & / & / & 21.16 & 0.732 & / \\\\\\\\ LiteISP \\\\cite{zhang2021learning} & ICCV'21 & 11,900 & 46.326 & \\\\textgreater 500 & 21.334 & 21.28 & 0.739 & 0.070\\\\\\\\ NAFNet \\\\cite{chen2022simple} & ECCV'22 & 7.844 & 3.108 & 78.62 & 321.760 & 21.12 & 0.736 & 0.836 \\\\\\\\ SYEISP \\\\cite{gou2023syenet} & ICCV'23 & \\\\textcolor{blue}{5.616} & \\\\textcolor{blue}{1.156} & \\\\textcolor{blue}{16.47} & \\\\textcolor{blue}{865.247} & 20.84 & 0.728 & \\\\textcolor{blue}{1.524}\\\\\\\\ FourierISP \\\\cite{he2024enhancing} & AAAI'24 & 7,590& 22.869 & \\\\textgreater 500 & 43.731 & \\\\textcolor{red}{21.65} & \\\\textcolor{red}{0.755} & 0.237 \\\\\\\\ \\\\hline Ours & / & \\\\textcolor{red}{4.104} & \\\\textcolor{red}{1.020} & \\\\textcolor{red}{14.40} & \\\\textcolor{red}{980.516} & \\\\textcolor{blue}{21.43} & 0.731 & \\\\textcolor{red}{3.913}\\\\\\\\ \\\\bottomrule \\\\end{tabular}} \\\\caption{Performance comparison of different image signal processing models on ZRR datasets. SCORE \\\\cite{ignatov2022learned} represents a comprehensive measure of model performance and efficiency. The top results are marked: best in red and second in blue.} \\\\label{tab:3} \\\\vspace{-12pt} \\\\end{table} \\\\textbf{Mobile Deployment:} As shown in Tables \\\\ref{tab:1}, \\\\ref{tab:2}, and \\\\ref{tab:3}, MobileIE’s streamlined design (4K parameters and 0.924 GFLOPs) enables seamless deployment on commercial mobile devices, achieving real-time image enhancement at over 100 FPS. This efficiency paves the way for real-time UHD images (2K-8K) enhancement on mobile platforms.\",\n        \"Ablation Studies and Analyses\": \"We conducted a series of ablation studies to verify the effectiveness of MobileIE’s modules. First, MBRConv was compared with other re-parameterization methods \\\\cite{ding2021repvgg,zhang2023repnas,zhang2021edge}, and LVW loss was replaced by conventional loss functions. As shown in Table \\\\ref{tab:4}, both MBRConv and LVW loss significantly improved the model's performance. Importantly, MBRConv merges into standard convolutions during inference, adding no computational or memory overhead. \\\\begin{table}[htbp] \\\\centering \\\\resizebox{1\\\\columnwidth}{!}{ \\\\begin{tabular}{cccccc} \\\\toprule Datasets & \\\\multicolumn{5}{c}{UIEB \\\\cite{li2019underwater}} \\\\\\\\ \\\\hline Metrics & \\\\multicolumn{1}{c}{PSNR$\\\\uparrow$} & \\\\multicolumn{1}{c}{SSIM$\\\\uparrow$} & \\\\multicolumn{1}{c}{LPIPS$\\\\downarrow$} & \\\\multicolumn{1}{c}{LOE$\\\\downarrow$} & \\\\multicolumn{1}{c}{MAE$\\\\downarrow$} \\\\\\\\ \\\\hline Only inference network & 21.48 & 0.887 & 0.192 & 0.108 & 0.086 \\\\\\\\ \\\\hline L1 loss & 22.20 & 0.902 & 0.168 & 0.098 & 0.078 \\\\\\\\ L2 loss & 21.74 & 0.894 & 0.175 & 0.095 & 0.083 \\\\\\\\ Smooth L1 loss & 22.27 & 0.904 & 0.164 & 0.097 & 0.078 \\\\\\\\ Charbonnier loss & 22.31 & 0.905 & 0.162 & 0.097 & 0.077 \\\\\\\\ Robust loss \\\\cite{barron2019general} & 22.34 & 0.905 & 0.167 & 0.099 & 0.077 \\\\\\\\ \\\\hline LVW loss & \\\\textbf{22.57} & \\\\textbf{0.906} & \\\\textbf{0.160} & \\\\textbf{0.097} & \\\\textbf{0.075} \\\\\\\\ \\\\bottomrule \\\\bottomrule Datasets & \\\\multicolumn{5}{c}{LOLv1 \\\\cite{wei2018deep}+LOLv2-Real \\\\cite{yang2020fidelity}} \\\\\\\\ \\\\hline RepVGG \\\\cite{ding2021repvgg} & 22.69 & 0.821 & 0.202 & 0.257 & 0.089 \\\\\\\\ RepNAS \\\\cite{zhang2023repnas} & 21.90 & 0.810 & 0.210 & 0.259 & 0.099 \\\\\\\\ ECBSR \\\\cite{zhang2021edge} & 23.96 & 0.816 & 0.204 & 0.240 & 0.080 \\\\\\\\ MBRConv(No BN) & 23.27 & 0.821 & 0.232 & 0.258 & 0.082 \\\\\\\\ MBRConv(No IWO) & 24.02 & 0.823 & 0.199 & 0.257 & 0.078 \\\\\\\\ \\\\hline Ours & \\\\textbf{24.35} & \\\\textbf{0.829} & \\\\textbf{0.189} & \\\\textbf{0.254} & \\\\textbf{0.074} \\\\\\\\ \\\\bottomrule \\\\end{tabular}} \\\\caption{Performance comparison of Loss and Re-param modules.} \\\\label{tab:4} \\\\vspace{-12pt} \\\\end{table} \\\\textbf{(1) Why does MBRConv + IWO work?} \\\\textbf{IWO enhances the kernel skeletons.} To explore the impact of IWO on MBRConv kernels, we visualized the weight increments $\\\\Delta W$ in the last convolutional layer of the MobileIE model trained on the UIEB dataset. Here, $\\\\Delta W$ is defined as the difference between the weights trained with IWO ($W_{IWO}$) and those trained without it ($W_{base}$), i.e., $\\\\Delta W = W_{IWO} - W_{base}$. As shown in Figure \\\\ref{weight}, most $\\\\Delta W$ values reinforce the center-row and center-column characteristics of the convolutional kernels, which contributes to improved model performance \\\\cite{ding2019acnet,cai2023refconv}. \\\\begin{figure}[htbp] \\\\vspace{-4pt} \\\\begin{minipage}[htbp]{0.74\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{image/uie-weight.png}} \\\\end{minipage} \\\\hspace{0.001\\\\linewidth} \\\\begin{minipage}[htbp]{0.243\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{image/uie.jpg}} \\\\end{minipage} \\\\caption{\\\\label{weight} Visualization of kernel differences pre- and post-IWO.} \\\\vspace{-8pt} \\\\end{figure} \\\\begin{figure}[b] \\\\vspace{-8pt} \\\\begin{minipage}[htbp]{0.235\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{image/e100.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(a) Epoch = 100}} \\\\end{minipage} \\\\begin{minipage}[htbp]{0.235\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{image/e500.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(b) Epoch = 500}} \\\\end{minipage} \\\\begin{minipage}[htbp]{0.235\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{image/base.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(c) Epoch = 1,000}} \\\\end{minipage} \\\\begin{minipage}[htbp]{0.28\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{image/our.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(d) Applying IWO}} \\\\end{minipage} \\\\caption{\\\\label{feature} KL similarity matrix for the last convolutional layer of MBRConv at different training stages.} \\\\vspace{-8pt} \\\\end{figure} \\\\textbf{IWO reduces channel redundancy}, validated by comparing the last Conv$1\\\\times1$ layer of MBRConv$5\\\\times5$ before and after IWO optimization. Channel similarity was measured using Kullback-Leibler (KL) \\\\cite{zhou2019accelerate,wang2021tied,cai2023refconv} divergence, with higher values indicating lower redundancy. We trained MobileIE on the LOLv1, saving checkpoints at different stages. Applying softmax across channels and calculating KL divergence between channel pairs, we generated KL matrices at different training stages (Figure \\\\ref{feature}). As training progressed, KL divergence increased, and after IWO, it rose significantly, underscoring MBRConv’s effectiveness in reducing redundancy and improving feature representation. \\\\textbf{Impact of IWO on Training Convergence}. Similar to the Pre-training stage, $W_{pre}$ is the well-performing weight obtained after the first 1000 epochs. As shown in the training curves (Figure \\\\ref{lossv}), without IWO, the loss stagnates in the later training stages, whereas with IWO, it continues to decrease. This demonstrates that IWO facilitates further optimization of the weights, enhancing the model's convergence performance. The oscillation is due to cosine decay. \\\\begin{figure}[!h] \\\\vspace{-14pt} \\\\centering \\\\includegraphics[width=\\\\linewidth]{image/1loss.pdf} \\\\caption{\\\\label{lossv} Training loss curves showing the effect of IWO.} \\\\vspace{-8pt} \\\\end{figure} \\\\textbf{(2) FST can enhance nonlinear feature interaction.} The FST uses a nonlinear squaring transformation to enhance high-frequency sensitivity, highlighting image details and edges (Figure \\\\ref{fusion}). In the Fourier spectrum, squaring shows a stronger high-frequency response than ReLU, effectively preserving detail. The learnable parameters, $Scale$, and $bias$, further adaptively adjust the feature dynamic range, enhancing restoration performance. \\\\begin{figure}[htbp] \\\\begin{minipage}[htbp]{0.238\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{image/input.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(a) Original Feature:$F$}} \\\\end{minipage} \\\\hspace{0.001\\\\linewidth} \\\\begin{minipage}[htbp]{0.238\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{image/ReLU.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(b) ReLU($F$)}} \\\\end{minipage} \\\\hspace{0.001\\\\linewidth} \\\\begin{minipage}[htbp]{0.238\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{image/x_2.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(c) $F\\\\ast F$}} \\\\end{minipage} \\\\hspace{0.001\\\\linewidth} \\\\begin{minipage}[htbp]{0.238\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{image/FSF.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(d) FST($F$)}} \\\\end{minipage} \\\\caption{\\\\label{fusion} Feature Transformation Fourier Spectrum.} \\\\vspace{-8pt} \\\\end{figure} Figure \\\\ref{loss1} shows that the FST achieves a faster convergence rate during training compared to other feature transform methods. In the initial epochs, the FST rapidly reduces loss, demonstrating its ability to enhance feature representation early and accelerate convergence. Additionally, the FST’s final stabilized loss is lower than other methods, highlighting its robustness and effectiveness in complex tasks. Table \\\\ref{tab:5} further confirms that FST delivers the best feature transform performance on the UIEB \\\\cite{li2019underwater} dataset. \\\\begin{table}[htbp] \\\\centering \\\\resizebox{0.85\\\\columnwidth}{!}{ \\\\begin{tabular}{cccccc} \\\\toprule Methods & PSNR$\\\\uparrow$ & SSIM$\\\\uparrow$ & LPIPS$\\\\downarrow$ & LOE$\\\\downarrow$ & MAE$\\\\downarrow$ \\\\\\\\ \\\\midrule Baseline & 21.12 & 0.884 & 0.199 & 0.101 & 0.088 \\\\\\\\ ADD & 21.50 & 0.896 & 0.178 & 0.107 & 0.084 \\\\\\\\ Scale$\\\\ast$ADD & 21.34 & 0.893 & 0.173 & 0.105 & 0.087 \\\\\\\\ ADD+Bias & 21.58 & 0.890 & 0.177 & 0.093 & 0.086 \\\\\\\\ CAT & 21.44 & 0.893 & 0.181 & 0.095 & 0.085 \\\\\\\\ MUL & 21.80 & 0.901 & 0.173 & 0.095 & 0.084 \\\\\\\\ MUL+Bias & 21.84 & 0.901 & 0.168 & 0.092 & 0.081 \\\\\\\\ Scale$\\\\ast$MUL & 21.95 & 0.902 & 0.167 & 0.092 & 0.081 \\\\\\\\ \\\\hline Ours & \\\\textbf{22.60} & \\\\textbf{0.906} & \\\\textbf{0.157} & \\\\textbf{0.092} & \\\\textbf{0.075} \\\\\\\\ \\\\bottomrule \\\\end{tabular}} \\\\caption{Performance comparison of different feature transform. \\\"Baseline\\\" represents the model without any feature transform.} \\\\label{tab:5} \\\\vspace{-8pt} \\\\end{table} \\\\begin{figure}[h] \\\\centering \\\\includegraphics[width=0.97\\\\linewidth]{image/loss.jpg} \\\\caption{Training loss comparison of different feature transform.} \\\\label{loss1} \\\\vspace{-8pt} \\\\end{figure} \\\\textbf{(3) Dual-path fusion enables precise feature capture.} How can one achieve both efficiency and precise capture of local and global feature dependencies? Following Occam’s Razor principle, HDPA adopts a streamlined design language, utilizing a dual-path structure and adaptive feature interaction to decompose and aggregate features hierarchically, thereby extracting critical information across different scales. This dual-path design also supports mutual optimization during backpropagation. \\\\begin{figure}[htbp] \\\\begin{minipage}[htbp]{0.243\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{HDPA/1.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(a) RGB image}} \\\\end{minipage} \\\\hspace{0.00001\\\\linewidth} \\\\begin{minipage}[htbp]{0.243\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{HDPA/input_feature.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(b) Input feature}} \\\\end{minipage} \\\\hspace{0.00001\\\\linewidth} \\\\begin{minipage}[htbp]{0.243\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{HDPA/HDPA.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(c) HDPA heat map}} \\\\end{minipage} \\\\hspace{0.00001\\\\linewidth} \\\\begin{minipage}[htbp]{0.243\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{HDPA/output_feature.png}} \\\\centerline{\\\\scriptsize\\\\textbf{(d) Output feature}} \\\\end{minipage} \\\\caption{\\\\label{att} Visualization of feature maps at different stages.} \\\\vspace{-8pt} \\\\end{figure} Figure \\\\ref{att} illustrates HDPA’s effectiveness. The initial convolution preserves key edges and structures, while the HDPA heatmap highlights important regions, focusing attention on key details. This produces a sharper output feature map, demonstrating how HDPA’s attention improves image enhancement by refining key details. \\\\begin{table}[htbp] \\\\centering \\\\resizebox{\\\\columnwidth}{!}{ \\\\begin{tabular}{ccccc|cccc} \\\\toprule \\\\multicolumn{1}{c}{Method} & \\\\multicolumn{1}{c}{\\\\#Params$\\\\downarrow$} & \\\\multicolumn{1}{c}{FLOPs$\\\\downarrow$} & \\\\multicolumn{1}{c}{Latency$\\\\downarrow$} & \\\\multicolumn{1}{c|}{Latency$\\\\downarrow$} & \\\\multicolumn{4}{c}{LOLv1 \\\\cite{ignatov2020replacing}} \\\\\\\\ \\\\cmidrule{6-9} & (K) & (G) & (GPU,ms) & (SoC,ms) & PSNR$\\\\uparrow$ & SSIM$\\\\uparrow$ & LPIPS$\\\\downarrow$ & SCORE$\\\\uparrow$ \\\\\\\\ \\\\midrule SE-Net\\\\cite{hu2018squeeze} & 4.179 & 0.922 & 0.948 & 7.41 & 22.27 & 0.804 & 0.217 & 17.259\\\\\\\\ CBAM\\\\cite{woo2018cbam} & 4.254 & 0.945 & 6.573 & 95.71 & 22.38 & 0.796 & 0.231 & 1.556\\\\\\\\ ECA-Net\\\\cite{wang2020eca} & \\\\textbf{3.870} & 0.922 & 0.805 & 6.65 & 21.79 & 0.799 & 0.221 & 9.886 \\\\\\\\ EA\\\\cite{shen2021efficient} & 4.491 & 1.057 & 1.232 & 11.45 & 19.93 & 0.779 & 0.260 & 0.436\\\\\\\\ NAM\\\\cite{liu2021nam} & 3.891 & 0.930 & 0.905 & 7.02 & 20.10 & 0.761 & 0.252 & 0.900\\\\\\\\ SCA\\\\cite{chen2022simple} & 4.023 & 0.922 & \\\\textbf{0.769} & 6.33 & 20.82 & 0.786 & 0.250 & 2.707\\\\\\\\ DFC\\\\cite{tang2022ghostnetv2} & 3.979 & \\\\textbf{0.921} & 0.890 & \\\\textbf{6.29} & 21.50 & 0.802 & 0.208 & 6.992\\\\\\\\ EMA\\\\cite{ouyang2023efficient} & 4.239 & 1.086 & 1.569 & 9.79 & 20.78 & 0.792 & 0.233 & 1.656\\\\\\\\ SPAN\\\\cite{wan2024swift} & 5.511 & 1.308 & 1.835 & 10.24 & 19.79 & 0.767 & 0.260 & 0.401\\\\\\\\ CGA\\\\cite{chen2024dea} & 6.330 & 1.486 & 1.437 & 9.62 & 22.33 & 0.803 & 0.209 & 14.447\\\\\\\\ LKA\\\\cite{azad2024beyond} & 5.247 & 1,236 & 1.082 & 8.96 & 19.76 & 0.782 & 0.227 & 0.440\\\\\\\\ \\\\midrule Ours & 4.035 & 0.924 & 0.886 & 6.72 & \\\\textbf{23.26} & \\\\textbf{0.805} & \\\\textbf{0.213} & \\\\textbf{75.079}\\\\\\\\ \\\\bottomrule \\\\end{tabular}} \\\\caption{Performance comparison of different Attention mechanisms on LOLv1 \\\\cite{wei2018deep} dataset. SCORE \\\\cite{ignatov2022learned} reflects the efficiency.} \\\\label{tab:6} \\\\vspace{-8pt} \\\\end{table} Finally, we replaced it with mainstream attention mechanisms and conducted ablation experiments, as shown in Table \\\\ref{tab:6}. With minimal added parameters (+0.168 K) and FLOPs (+5.76 M), HDPA achieved a PSNR gain of +3.08 dB. Tests on mobile devices confirmed HDPA’s high performance with minimal latency, underscoring the efficiency of our edge-focused IE design in MobileIE. \\\\textbf{(4) Effectiveness of LVW in Outlier Optimization.} We observed that the pixel error histograms follow a Laplace-like distribution, suggesting the model optimizes accurate pixels while neglecting outliers \\\\cite{gou2023syenet}. Based on L1 Loss, LVW adjusts weights to increase the constraint on outliers. Normalization standardizes errors, bringing the data distribution closer to uniform and ensuring balanced pixel weights. Additionally, we visualized the pixel prediction error histograms for different loss functions, as shown in Figure \\\\ref{losshis}. LVW exhibits lower mean and median pixel errors, improving effectiveness in optimizing challenging regions. \\\\begin{figure}[htbp] \\\\begin{minipage}[htbp]{0.5\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{image/L1.png}} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{image/sml1.png}} \\\\end{minipage} \\\\begin{minipage}[htbp]{0.5\\\\linewidth} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{image/char.png}} \\\\centerline{\\\\includegraphics[width=\\\\linewidth]{image/Ours.png}} \\\\end{minipage} \\\\caption{\\\\label{losshis} Visualization of pixel prediction error histograms for various loss functions.} \\\\vspace{-8pt} \\\\end{figure} \\\\textbf{(5) Module-Wise Lightweight Contributions.} Table \\\\ref{tab:7} demonstrates that re-parameterization significantly reduces model complexity during inference. IWO and LVW introduce no extra cost, making them suitable for efficient deployment. Re-parameterization combined with cost-free strategies enables efficient and lightweight inference. \\\\begin{table}[!h] \\\\centering \\\\vspace{-6pt} \\\\resizebox{\\\\columnwidth}{!}{ \\\\begin{tabular}{cccc|ccc|cc} \\\\toprule Model & Training & w/o FST & w/o HDPA & Inference & w/o FST & w/o HDPA & IWO & LVW \\\\\\\\ \\\\toprule Params (K) & 75.243 & 75.243 & 71.283 & 4.047 & 4.047 & 3.867 & & \\\\\\\\ Model Size (MB) & 0.29 & 0.29 & 0.27 & 0.02 & 0.02 & 0.01 & \\\\multicolumn{2}{c}{Cost-Free} \\\\\\\\ FLOPs (G) & 17.447 & 17.447 & 17.099 & 0.924 & 0.924 & 0.919 & \\\\multicolumn{2}{c}{Optimization} \\\\\\\\ Latency (ms) & 12.83 & 12.61 & 11.31 & 0.895 & 0.864 & 0.732 & & \\\\\\\\ \\\\bottomrule \\\\end{tabular} } \\\\caption{Ablation on Module Efficiency (RTX 3090).} \\\\label{tab:7} \\\\vspace{-13pt} \\\\end{table}\"\n      }\n    },\n    \"Conclusion\": {",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    106,
+                    114
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    973,
+                    981
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    1491,
+                    1499
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    1684,
+                    1692
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    3375,
+                    3383
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    3425,
+                    3433
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    5235,
+                    5243
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    9028,
+                    9036
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    9419,
+                    9427
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    9448,
+                    9455
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    9657,
+                    9664
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    9739,
+                    9746
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    11095,
+                    11102
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    11155,
+                    11162
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    11483,
+                    11490
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    11581,
+                    11588
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    11685,
+                    11693
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    13397,
+                    13404
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    13564,
+                    13571
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    13804,
+                    13812
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    14132,
+                    14139
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    22101,
+                    22109
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/ZhangCurosr/zhangcursor-papers-arxiv-ai-002/blob/15417a095257756166bbb38b3ef6c7ff8b7524af/2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_f7a4fa1c/full.md",
+          "path": "2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_f7a4fa1c/full.md",
+          "display_url": "https://github.com/ZhangCurosr/zhangcursor-papers-arxiv-ai-002/blob/15417a095257756166bbb38b3ef6c7ff8b7524af/2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_f7a4fa1c/full.md",
+          "display_title": "2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_f7a4fa1c/full.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n## 4.2. AVC2\n\nTeam AVC2 introduced a simplified version of MobileIE [91], a lightweight image signal processing network designed for mobile deployment that balances performance and efficiency using reparameterization, as illustrated in Figure 4. The architecture first employs an MBRConv 3 × 3 layer followed by a Tanh activation for initial feature extraction. Subsequently, the feature maps are fed into two parallel branches. Each branch consists of an MBRConv 3 × 3 layer with a residual connection. The outputs of the two branches are fused via element-wise multiplication. After these blocks, a simplified version of the Hierarchical Dual-Path Attention (HDPA) module is employed to refine features. Upsampling is achieved through a Pixel Shuffle layer, followed by a final MBRConv 3 × 3 layer generating the output image. A key aspect is the MBRConv block, which utilizes multiple parallel convolutional branches with batch normalization during training; these blocks are reparameterized into standard single convolutional layers for efficient inference.\n\nThe network was trained using the $L _ { 1 }$ loss function, favored for promoting sharper image reconstruction [4, 90, 92]. The Adam optimizer was utilized with a cosine annealing learning rate schedule. The schedule started with an initial learning rate of 1e–3, preceded by a 10-epoch warm-up phase at a fixed rate of 1e–6. The learning rate was subsequently reset every 50 epochs before decaying. The model was trained for a total of 5000 epochs with a batch size of 32. The training employed 24000 aligned raw-sRGB image pairs, partitioned into 22000 for training and 2000 for testing.\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    60,
+                    68
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    281,
+                    288
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    458,
+                    465
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    783,
+                    790
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    853,
+                    860
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/ZhangCurosr/zhangcursor-papers-arxiv-ai-002/blob/15417a095257756166bbb38b3ef6c7ff8b7524af/2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_ec530fd3/full.md",
+          "path": "2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_ec530fd3/full.md",
+          "display_url": "https://github.com/ZhangCurosr/zhangcursor-papers-arxiv-ai-002/blob/15417a095257756166bbb38b3ef6c7ff8b7524af/2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_ec530fd3/full.md",
+          "display_title": "2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_ec530fd3/full.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n## 4.2. AVC2\n\nTeam AVC2 introduced a simplified version of MobileIE [91], a lightweight image signal processing network designed for mobile deployment that balances performance and efficiency using reparameterization, as illustrated in Figure 4. The architecture first employs an MBRConv 3 × 3 layer followed by a Tanh activation for initial feature extraction. Subsequently, the feature maps are fed into two parallel branches. Each branch consists of an MBRConv 3 × 3 layer with a residual connection. The outputs of the two branches are fused via element-wise multiplication. After these blocks, a simplified version of the Hierarchical Dual-Path Attention (HDPA) module is employed to refine features. Upsampling is achieved through a Pixel Shuffle layer, followed by a final MBRConv 3 × 3 layer generating the output image. A key aspect is the MBRConv block, which utilizes multiple parallel convolutional branches with batch normalization during training; these blocks are reparameterized into standard single convolutional layers for efficient inference.\n\nThe network was trained using the $L _ { 1 }$ loss function, favored for promoting sharper image reconstruction [4, 90, 92]. The Adam optimizer was utilized with a cosine annealing learning rate schedule. The schedule started with an initial learning rate of 1e–3, preceded by a 10-epoch warm-up phase at a fixed rate of 1e–6. The learning rate was subsequently reset every 50 epochs before decaying. The model was trained for a total of 5000 epochs with a batch size of 32. The training employed 24000 aligned raw-sRGB image pairs, partitioned into 22000 for training and 2000 for testing.\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    60,
+                    68
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    281,
+                    288
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    458,
+                    465
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    783,
+                    790
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    853,
+                    860
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/ZhangCurosr/zhangcursor-papers-arxiv-cv-002/blob/05f81f004803d1b9f486eec89c1f9e45dec9b183/2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_728efbcd/full.md",
+          "path": "2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_728efbcd/full.md",
+          "display_url": "https://github.com/ZhangCurosr/zhangcursor-papers-arxiv-cv-002/blob/05f81f004803d1b9f486eec89c1f9e45dec9b183/2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_728efbcd/full.md",
+          "display_title": "2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_728efbcd/full.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n## 4.2. AVC2\n\nTeam AVC2 introduced a simplified version of MobileIE [91], a lightweight image signal processing network designed for mobile deployment that balances performance and efficiency using reparameterization, as illustrated in Figure 4. The architecture first employs an MBRConv 3 × 3 layer followed by a Tanh activation for initial feature extraction. Subsequently, the feature maps are fed into two parallel branches. Each branch consists of an MBRConv 3 × 3 layer with a residual connection. The outputs of the two branches are fused via element-wise multiplication. After these blocks, a simplified version of the Hierarchical Dual-Path Attention (HDPA) module is employed to refine features. Upsampling is achieved through a Pixel Shuffle layer, followed by a final MBRConv 3 × 3 layer generating the output image. A key aspect is the MBRConv block, which utilizes multiple parallel convolutional branches with batch normalization during training; these blocks are reparameterized into standard single convolutional layers for efficient inference.\n\nThe network was trained using the $L _ { 1 }$ loss function, favored for promoting sharper image reconstruction [4, 90, 92]. The Adam optimizer was utilized with a cosine annealing learning rate schedule. The schedule started with an initial learning rate of 1e–3, preceded by a 10-epoch warm-up phase at a fixed rate of 1e–6. The learning rate was subsequently reset every 50 epochs before decaying. The model was trained for a total of 5000 epochs with a batch size of 32. The training employed 24000 aligned raw-sRGB image pairs, partitioned into 22000 for training and 2000 for testing.\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    60,
+                    68
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    281,
+                    288
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    458,
+                    465
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    783,
+                    790
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    853,
+                    860
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/ZhangCurosr/zhangcursor-papers-arxiv-cv-002/blob/05f81f004803d1b9f486eec89c1f9e45dec9b183/2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_863a518f/full.md",
+          "path": "2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_863a518f/full.md",
+          "display_url": "https://github.com/ZhangCurosr/zhangcursor-papers-arxiv-cv-002/blob/05f81f004803d1b9f486eec89c1f9e45dec9b183/2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_863a518f/full.md",
+          "display_title": "2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_863a518f/full.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n## 4.2. AVC2\n\nTeam AVC2 introduced a simplified version of MobileIE [91], a lightweight image signal processing network designed for mobile deployment that balances performance and efficiency using reparameterization, as illustrated in Figure 4. The architecture first employs an MBRConv 3 × 3 layer followed by a Tanh activation for initial feature extraction. Subsequently, the feature maps are fed into two parallel branches. Each branch consists of an MBRConv 3 × 3 layer with a residual connection. The outputs of the two branches are fused via element-wise multiplication. After these blocks, a simplified version of the Hierarchical Dual-Path Attention (HDPA) module is employed to refine features. Upsampling is achieved through a Pixel Shuffle layer, followed by a final MBRConv 3 × 3 layer generating the output image. A key aspect is the MBRConv block, which utilizes multiple parallel convolutional branches with batch normalization during training; these blocks are reparameterized into standard single convolutional layers for efficient inference.\n\nThe network was trained using the $L _ { 1 }$ loss function, favored for promoting sharper image reconstruction [4, 90, 92]. The Adam optimizer was utilized with a cosine annealing learning rate schedule. The schedule started with an initial learning rate of 1e–3, preceded by a 10-epoch warm-up phase at a fixed rate of 1e–6. The learning rate was subsequently reset every 50 epochs before decaying. The model was trained for a total of 5000 epochs with a batch size of 32. The training employed 24000 aligned raw-sRGB image pairs, partitioned into 22000 for training and 2000 for testing.\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    60,
+                    68
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    281,
+                    288
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    458,
+                    465
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    783,
+                    790
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    853,
+                    860
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/FifthGentleness/RTDETRU/blob/19d5e909a6f71365fcba6057aeb67a12306eaddb/mydocs/RTDETR扩展模块解析.txt",
+          "path": "mydocs/RTDETR扩展模块解析.txt",
+          "display_url": "https://github.com/FifthGentleness/RTDETRU/blob/19d5e909a6f71365fcba6057aeb67a12306eaddb/mydocs/RTDETR扩展模块解析.txt",
+          "display_title": "mydocs/RTDETR扩展模块解析.txt",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "  ▸ C2f_ESC: C2f瓶颈结构，内部bottleneck替换为 ESC 模块\n  ▸ Bottleneck_ConvAttn: PResNet残差瓶颈变体：3x3卷积替换为 ConvAttn（卷积注意力瓶颈（Bottleneck_ConvAttn））\n  ▸ C2f_ConvAttn: C2f瓶颈结构，内部bottleneck替换为 ConvAttn 模块。组件: 卷积注意力瓶颈（Bottleneck_ConvAttn）\n  ▸ MBRConv3: MobileIE多分支重参数3x3卷积（推理时分支合并）\n  ▸ MBRConv5: MobileIE多分支重参数5x5卷积（含十字形分支，推理时合并）\n  ▸ Bottleneck_MBRConv3: PResNet残差瓶颈变体：3x3卷积替换为 MBRConv3（MobileIE多分支重参数3x3卷积（推理时分支合并））\n  ▸ C2f_MBRConv3: C2f瓶颈结构，内部bottleneck替换为 MBRConv3 模块。组件: MobileIE多分支重参数3x3卷积（推理时分支合并）",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    348,
+                    355
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    358,
+                    366
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    427,
+                    434
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    437,
+                    445
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    532,
+                    539
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    589,
+                    596
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    600,
+                    608
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    676,
+                    683
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    730,
+                    737
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    756,
+                    764
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/FifthGentleness/RTDETRU/blob/19d5e909a6f71365fcba6057aeb67a12306eaddb/mydocs/RTDETR配置文件解析.txt",
+          "path": "mydocs/RTDETR配置文件解析.txt",
+          "display_url": "https://github.com/FifthGentleness/RTDETRU/blob/19d5e909a6f71365fcba6057aeb67a12306eaddb/mydocs/RTDETR配置文件解析.txt",
+          "display_title": "mydocs/RTDETR配置文件解析.txt",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "     用法: - [-1, 1, C2f_MBRConv3, [128]]\n    作用: C2f瓶颈结构，内部bottleneck替换为 MBRConv3 模块。组件: MobileIE多分支重参数3x3卷积（推理时分支合并）\n",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    27,
+                    34
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    100,
+                    107
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    126,
+                    134
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "     用法: - [-1, 1, C2f_MBRConv5, [128]]\n    作用: C2f瓶颈结构，内部bottleneck替换为 MBRConv5 模块。组件: MobileIE多分支重参数5x5卷积（含十字形分支，推理时合并）\n",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    27,
+                    34
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    100,
+                    107
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    126,
+                    134
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/config/lle_iwo.yaml",
+          "path": "config/lle_iwo.yaml",
+          "display_url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/config/lle_iwo.yaml",
+          "display_title": "config/lle_iwo.yaml",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "# Stage-1 (正常训练):\n#   - 使用 config/lle.yaml 训练原始 MobileIE-LLE\n#   - 得到 best.pkl (PSNR ≈ 21-22+)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    68,
+                    76
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "    lr_scale: 0.7  # IWO参数(weight1)的学习率倍数（相对lr_iwo），可试0.5-1.5\n    target_layers: null  # 启用IWO的层（null=所有MBRConv；或指定层名列表）\n  ",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    148,
+                    155
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/wbzuo/dl-modules-toolkit/blob/4eada47a67a3663bedea1ef793123d966b4a87b8/Modules/布尔大学士/即插即用2025/182 Hierarchical Dual-Path Attention (ICCV 2025).py",
+          "path": "Modules/布尔大学士/即插即用2025/182 Hierarchical Dual-Path Attention (ICCV 2025).py",
+          "display_url": "https://github.com/wbzuo/dl-modules-toolkit/blob/4eada47a67a3663bedea1ef793123d966b4a87b8/Modules/布尔大学士/即插即用2025/182 Hierarchical Dual-Path Attention (ICCV 2025).py",
+          "display_title": "Modules/布尔大学士/即插即用2025/182 Hierarchical Dual-Path Attention (ICCV 2025).py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    论文题目：MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices (ICCV 2025)\r\n    中文题目：MobileIE：一种用于移动设备实时图像增强的超轻量级高效卷积神经网络 (ICCV 2025)\r\n    讲解视频：https://www.bilibili.com/video/BV17JfEBbExp/\r",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    19,
+                    27
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    158,
+                    166
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "        self.localatt = nn.Sequential(\r\n            MBRConv1X1(1, channels, rep_scale=rep_scale),  # 输出 [B, C, H, W]\r\n            nn.Sigmoid()\r",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    52,
+                    59
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/wujunye1212/wjy_vault/blob/f1068348c76382dcf9236b714af44638c55fe210/others-code/bool-code/182 Hierarchical Dual-Path Attention (ICCV 2025).py",
+          "path": "others-code/bool-code/182 Hierarchical Dual-Path Attention (ICCV 2025).py",
+          "display_url": "https://github.com/wujunye1212/wjy_vault/blob/f1068348c76382dcf9236b714af44638c55fe210/others-code/bool-code/182 Hierarchical Dual-Path Attention (ICCV 2025).py",
+          "display_title": "others-code/bool-code/182 Hierarchical Dual-Path Attention (ICCV 2025).py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    论文题目：MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices (ICCV 2025)\r\n    中文题目：MobileIE：一种用于移动设备实时图像增强的超轻量级高效卷积神经网络 (ICCV 2025)\r\n    讲解视频：https://www.bilibili.com/video/BV1NMJDzUEAH/\r",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    19,
+                    27
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    158,
+                    166
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "        self.localatt = nn.Sequential(\r\n            MBRConv1X1(1, channels, rep_scale=rep_scale),  # 输出 [B, C, H, W]\r\n            nn.Sigmoid()\r",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    52,
+                    59
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/pbobip/wd_bishe/blob/ea623a5f66f6b80f19da98fbea0a268133e67a7e/tools/module_reference_sync/sources/bilibili_daily_py/182 Hierarchical Dual-Path Attention (ICCV 2025).py",
+          "path": "tools/module_reference_sync/sources/bilibili_daily_py/182 Hierarchical Dual-Path Attention (ICCV 2025).py",
+          "display_url": "https://github.com/pbobip/wd_bishe/blob/ea623a5f66f6b80f19da98fbea0a268133e67a7e/tools/module_reference_sync/sources/bilibili_daily_py/182 Hierarchical Dual-Path Attention (ICCV 2025).py",
+          "display_title": "tools/module_reference_sync/sources/bilibili_daily_py/182 Hierarchical Dual-Path Attention (ICCV 2025).py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    论文题目：MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices (ICCV 2025)\n    中文题目：MobileIE：一种用于移动设备实时图像增强的超轻量级高效卷积神经网络 (ICCV 2025)\n    讲解视频：https://www.bilibili.com/video/BV1NMJDzUEAH/",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    19,
+                    27
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    157,
+                    165
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "        self.localatt = nn.Sequential(\n            MBRConv1X1(1, channels, rep_scale=rep_scale),  # 输出 [B, C, H, W]\n            nn.Sigmoid()",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    51,
+                    58
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/ZejunCao/ZejunCao.github.io/blob/e400ef3a03b2facac9fac83dd6f2592c0c116b3a/2025/07/10/1000002571-2247631972-2-1752119409/index.html",
+          "path": "2025/07/10/1000002571-2247631972-2-1752119409/index.html",
+          "display_url": "https://github.com/ZejunCao/ZejunCao.github.io/blob/e400ef3a03b2facac9fac83dd6f2592c0c116b3a/2025/07/10/1000002571-2247631972-2-1752119409/index.html",
+          "display_title": "2025/07/10/1000002571-2247631972-2-1752119409/index.html",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "<p>仅用于站内搜索，没有排版格式，具体信息请跳转上方微信公众号内链接</p>\n</blockquote>\n<p>点击上方“小白学视觉”，选择加\\“星标\\“或“置顶”<br>重磅干货，第一时间送达</p>\n<p>图像增强（IE）旨在恢复因各种因素而退化的图像。随着智能设备和嵌入式系统的普及，实时图像增强在移动设备等应用中变得至关重要。然而，目前基于Transformer和扩散的方法虽在图像增强任务中取得显著进展，但因计算成本高昂，不适用于移动设备。轻量级模型虽降低了计算复杂度，但往往牺牲了增强质量，难以在各种退化场景中实现高性能。此外，当前的IE方法通常针对特定退化类型优化，适应性有限，设计一个能在资源受限设备上进行实时IE的通用且高效网络仍是重大挑战。<br>论文提出的MobileIE框架专为移动设备实时图像增强设计，集成了重参数化与增量权重优化策略。它包含浅层特征提取、深层特征提取、特征变换和注意力机制等组件，仅约4K参数，能在资源受限环境下兼顾速度与性能。<br>设计的MBRConv（多分支重参数化卷积）针对图像增强，以不同卷积核尺寸分支捕获多尺度特征。推理时可重参数化为单个卷积，降低计算成本。并行BatchNorm层提升了非线性与模型鲁棒性。结合增量权重优化（IWO）策略，融合先验知识与可学习权重，改善特征整合，提升模型性能与收敛性。<br>引入特征自变换（FST）模块，通过二次交互机制增强模型非线性表达，捕捉特征间更复杂关系，提升特征表示能力。提出分层双路径注意力（HDPA）机制，以双路径结构自适应提取全局与局部特征，融合空间与通道交互，提升特征精度与全面性，且结构简单，计算成本低。<br>针对紧凑型CNN优化难题，提出LVW损失。根据预测输出与真实值的局部均值和方差计算加权因子，动态调整每个像素对总损失的贡献，更关注异常像素优化，平衡损失函数的鲁棒性与细节保留能力。<br>作者在PyTorch中实现了MobileIE，使用Adam优化器和余弦退火学习率调度。对于不同任务，使用了相应的数据集进行训练和测试。<br>在低光图像增强（LLE）、水下图像增强（UIE）和图像信号处理（ISP）三个任务上，MobileIE与当前轻量级最先进方法进行比较。结果显示，MobileIE在各项指标上表现卓越或可比，且推理速度快。例如在LLE任务中，与轻量级最先进方法IAT相比，MobileIE在仅使用4. 7%参数的情况下实现了可比的PSNR提升，推理速度快6. 9倍。<br>通过一系列消融研究，验证了MobileIE各模块的有效性。MBRConv和LVW损失显著提高了模型性能；IWO增强内核骨架、减少通道冗余、促进训练收敛；FST增强非线性特征交互；HDPA实现精确特征捕获；LVW在异常值优化中表现出色。<br>MobileIE作为一种仅含4K参数的轻量级CNN，在移动设备实时图像增强方面展现出了巨大的优势。它将简洁性与高性能相结合，能够在保持约0. 9ms推理时间的同时取得优异结果，且可在任何商用移动设备上轻松部署。未来，研究团队将探索优化方法，将MobileIE的应用扩展到更多不同的任务中。相信随着技术的不断发展，MobileIE将为我们的移动视觉体验带来更多的惊喜！<br>下载1：OpenCV-Contrib扩展模块中文版教程<br>在「小白学视觉」公众号后台回复：扩展模块中文教程，即可下载全网第一份OpenCV扩展模块教程中文版，涵盖扩展模块安装、SFM算法、立体视觉、目标跟踪、生物视觉、超分辨率处理等二十多章内容。<br>下载2：Python视觉实战项目52讲<br>在「小白学视觉」公众号后台回复：Python视觉实战项目，即可下载包括图像分割、口罩检测、车道线检测、车辆计数、添加眼线、车牌识别、字符识别、情绪检测、文本内容提取、面部识别等31个视觉实战项目，助力快速学校计算机视觉。<br>下载3：人工智能0基础学习攻略手册<br>在「小白学视觉」公众号后台回复：攻略手册，即可获取《从0入门人工智能学习攻略手册》文档，包含视频课件、习题、电子书、代码、数据等人工智能学习相关资源，可以下载离线学习。<br>交流群<br>欢迎加入公众号读者群一起和同行交流，目前有SLAM、三维视觉、传感器、自动驾驶、计算摄影、检测、分割、识别、医学影像、GAN、算法竞赛等微信群（以后会逐渐细分），请扫描下面微信号加群，备注：”昵称+学校&#x2F;公司+研究方向“，例如：”张三+上海交大+视觉SLAM“。请按照格式备注，否则不予通过。添加成功后会根据研究方向邀请进入相关微信群。请勿在群内发送广告，否则会请出群，谢谢理解~</p>\n\n                \n            </div>",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    900,
+                    908
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    1184,
+                    1191
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    2210,
+                    2218
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    2457,
+                    2465
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    2528,
+                    2536
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    2662,
+                    2670
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    2804,
+                    2812
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    2836,
+                    2843
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    3058,
+                    3066
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    3383,
+                    3391
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    3472,
+                    3480
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/FangruLinghu/PaperCode/blob/e987af245f74ab47e50187acc95926a8f1a4b3d2/arxiv_data_process/code_model_definition/pytorch_model_definitions/2507.01838.txt",
+          "path": "arxiv_data_process/code_model_definition/pytorch_model_definitions/2507.01838.txt",
+          "display_url": "https://github.com/FangruLinghu/PaperCode/blob/e987af245f74ab47e50187acc95926a8f1a4b3d2/arxiv_data_process/code_model_definition/pytorch_model_definitions/2507.01838.txt",
+          "display_title": "arxiv_data_process/code_model_definition/pytorch_model_definitions/2507.01838.txt",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    def __init__(self, channels, rep_scale=4):\n        super(MobileIELLENet, self).__init__()\n        self.channels = channels",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            nn.Sequential(\n                MBRConv5(3, channels, rep_scale=rep_scale),\n                nn.PReLU(channels),",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    43,
+                    50
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/model/lle.py",
+          "path": "model/lle.py",
+          "display_url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/model/lle.py",
+          "display_title": "model/lle.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    MBRConv3,\n    MBRConv1,\n    DropBlock,",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    4,
+                    11
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    18,
+                    25
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass MobileIELLENet(nn.Module):\n    def __init__(self, channels, rep_scale=4):",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    7,
+                    15
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/model/isp.py",
+          "path": "model/isp.py",
+          "display_url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/model/isp.py",
+          "display_title": "model/isp.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    MBRConv3,\n    MBRConv1,\n    DropBlock,",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    4,
+                    11
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    18,
+                    25
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass MobileIEISPNet(nn.Module):\n    def __init__(self, channels, rep_scale=4):",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    7,
+                    15
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/model/isp.py",
+          "path": "model/isp.py",
+          "display_url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/model/isp.py",
+          "display_title": "model/isp.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    MBRConv3,\n    MBRConv1,\n    DropBlock,",
+              "matches": [
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    4,
+                    11
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    18,
+                    25
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass MobileIEISPNet(nn.Module):\n    def __init__(self, channels, rep_scale=4):",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    7,
+                    15
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Alleluia1/RTDETR-main-distill1/blob/683782b44971f7e076e79cf51be1e8c3d38dd4d6/使用教程.md",
+          "path": "使用教程.md",
+          "display_url": "https://github.com/Alleluia1/RTDETR-main-distill1/blob/683782b44971f7e076e79cf51be1e8c3d38dd4d6/使用教程.md",
+          "display_title": "使用教程.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv3与CSP改进backbone.\n    项目视频百度云链接:20250727版本更新说明",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv5改进RepC3.\n    项目视频百度云链接:20250727版本更新说明",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    61,
+                    69
+                  ]
+                },
+                {
+                  "text": "MBRConv",
+                  "indices": [
+                    76,
+                    83
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "isError": false
+  }
+}
