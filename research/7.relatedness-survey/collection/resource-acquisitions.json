@@ -392,6 +392,13 @@
         "http": 403,
         "archive": "archive/paper-16d83021297b-publisher.html",
         "sha256": "0012bbcea6aa30f994ac90a0a6e079ae04b4b58238aecf2ccf4f582dbcaaf3cd"
+      },
+      {
+        "path": "receipts/pmc-primary-13165963.json",
+        "status": "success",
+        "http": 200,
+        "archive": "archive/pmc-primary-13165963.html",
+        "sha256": "23f349da1ad10b96dddd1cf9cf831122abce189490a18f063f1ff29d4af323c4"
       }
     ],
     "adequacy": "NOT reviewed: transport/file availability is not Gate2 analysis",
@@ -430,6 +437,20 @@
         "http": 200,
         "archive": "archive/paper-bb2867f2c184-publisher.html",
         "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea"
+      },
+      {
+        "path": "receipts/sup6-medical-pmc.json",
+        "status": "success",
+        "http": 200,
+        "archive": "archive/sup6-medical-pmc.html",
+        "sha256": "bf9a8a0aee7c53fcb876822bdfb5757b18950736b13f0af5d5d0c4dd1091dacb"
+      },
+      {
+        "path": "receipts/sup6-medical-oscr.json",
+        "status": "success",
+        "http": 200,
+        "archive": "archive/sup6-medical-oscr.html",
+        "sha256": "6440daa3d5d0732a2aee33494250aa624df72cfd58d3667080de038ecd03adc5"
       }
     ],
     "adequacy": "NOT reviewed: transport/file availability is not Gate2 analysis",
@@ -884,6 +905,13 @@
         "http": 403,
         "archive": "archive/paper-6e4bacda0b1c-publisher.html",
         "sha256": "e7467630e3213dbfd4094351d7959967f82fa49323857d6c396cb133bc114001"
+      },
+      {
+        "path": "receipts/pmc-primary-13165815.json",
+        "status": "success",
+        "http": 200,
+        "archive": "archive/pmc-primary-13165815.html",
+        "sha256": "27460ad0c5dc9eaed92fe38768235d32927ba029542f0d407a90398f9910f773"
       }
     ],
     "adequacy": "NOT reviewed: transport/file availability is not Gate2 analysis",
@@ -1278,6 +1306,13 @@
         "http": 202,
         "archive": null,
         "sha256": null
+      },
+      {
+        "path": "receipts/pmc-primary-13517162.json",
+        "status": "success",
+        "http": 200,
+        "archive": "archive/pmc-primary-13517162.html",
+        "sha256": "f09640c6755df360e5f3606301074eb169e41e7b5bedde55eb8986f297660adf"
       }
     ],
     "adequacy": "NOT reviewed: transport/file availability is not Gate2 analysis",
@@ -2020,6 +2055,33 @@
     "supplementary_sources": [
       "web-initial-2.json",
       "receipts/related-rgb2025-paper.json"
+    ]
+  },
+  {
+    "temporary_key": "related-edgeaware-review",
+    "type": "paper",
+    "receipts": [
+      {
+        "path": "receipts/newreview-primary-pdf.json",
+        "status": "success",
+        "http": 200,
+        "archive": "archive/newreview-primary-pdf.pdf",
+        "sha256": "82d796722cdbfb6c65cadcea031efbf1dd39fc6e6333e43a806b7c4a7a58b7d9"
+      },
+      {
+        "path": "receipts/newreview-crossref.json",
+        "status": "success",
+        "http": 200,
+        "archive": "archive/newreview-crossref.json",
+        "sha256": "70b68d5e6c78b61c61c24394d61d9078a98b3a9f85c7642e7ed5a7e8bf23e424"
+      }
+    ],
+    "adequacy": "NOT reviewed: transport/file availability is not Gate2 analysis",
+    "supplementary_sources": [
+      "web-new-review-trace.json",
+      "receipts/newreview-primary-pdf.json",
+      "receipts/newreview-crossref.json",
+      "new-review-identity-check.json"
     ]
   },
   {
@@ -3081,6 +3143,24 @@
     ]
   },
   {
+    "temporary_key": "code-W-ayivi--ML-ConvNet",
+    "type": "code",
+    "receipts": [
+      {
+        "path": "receipts/sourcezip-W-ayivi--ML-ConvNet.json",
+        "status": "success",
+        "http": 200,
+        "archive": "archive/sourcezip-W-ayivi--ML-ConvNet.zip",
+        "sha256": "3d270b149064495cb4547267fe56b53d7e2ac772f6c94856aded13a5cc2a0f0b"
+      }
+    ],
+    "adequacy": "NOT reviewed: transport/file availability is not Gate2 analysis",
+    "supplementary_sources": [
+      "plugin-head-W-ayivi--ML-ConvNet.json",
+      "receipts/sourcezip-W-ayivi--ML-ConvNet.json"
+    ]
+  },
+  {
     "temporary_key": "other-mobileie-explanations",
     "type": "other",
     "receipts": [
@@ -3157,6 +3237,28 @@
     ]
   },
   {
+    "temporary_key": "code-369pro--DEIMv8",
+    "type": "code",
+    "receipts": [
+      {
+        "path": "receipts/codehit-a737a72bcd1dd893.json",
+        "status": "success",
+        "http": 200,
+        "archive": "archive/codehit-a737a72bcd1dd893.txt",
+        "sha256": "f691fde3e04012be6265704a07a14f4df4ed078d5eccbd3b35fae508c0cba983"
+      }
+    ],
+    "adequacy": "NOT reviewed: transport/file availability is not Gate2 analysis",
+    "supplementary_sources": [
+      {
+        "url": "https://github.com/369pro/DEIMv8/blob/8379939c2b7dd4b88570023ddb76b4dc23ab004e/engine/extre_module/custom_nn/conv_module/MBRConv.py",
+        "path": "engine/extre_module/custom_nn/conv_module/MBRConv.py",
+        "revision": "8379939c2b7dd4b88570023ddb76b4dc23ab004e",
+        "acquisition": "receipts/codehit-a737a72bcd1dd893.json"
+      }
+    ]
+  },
+  {
     "temporary_key": "code-Alleluia1--RTDETR-10.20",
     "type": "code",
     "receipts": [
@@ -3224,6 +3326,34 @@
         "http": 200,
         "archive": "archive/codehit-bb29c8b69a6be579.txt",
         "sha256": "02354b198989d675cc5e8ed6b87c84ff518a4d1cb98e1637693a4dfdc7711fc0"
+      },
+      {
+        "path": "receipts/codehit-741efc241b2399ce.json",
+        "status": "success",
+        "http": 200,
+        "archive": "archive/codehit-741efc241b2399ce.json",
+        "sha256": "2a32a9f92dbb70c27d2d547eddb904d4191817fa78db3019da7c1305c827e530"
+      },
+      {
+        "path": "receipts/codehit-e77f911e1eb98fcb.json",
+        "status": "success",
+        "http": 200,
+        "archive": "archive/codehit-e77f911e1eb98fcb.json",
+        "sha256": "2a32a9f92dbb70c27d2d547eddb904d4191817fa78db3019da7c1305c827e530"
+      },
+      {
+        "path": "receipts/codehit-effcd2163988a55c.json",
+        "status": "success",
+        "http": 200,
+        "archive": "archive/codehit-effcd2163988a55c.json",
+        "sha256": "e08612bc405d3045f64e6b941d6806bdf9e4d1bdb02ae282ef5446873c5f6fc5"
+      },
+      {
+        "path": "receipts/codehit-86270bbd9209da33.json",
+        "status": "success",
+        "http": 200,
+        "archive": "archive/codehit-86270bbd9209da33.json",
+        "sha256": "fe04c1d22e1ca9bf2c1ec9286e0788d1fd0f4dd6f3deba8828a94b44e26271c3"
       }
     ],
     "adequacy": "NOT reviewed: transport/file availability is not Gate2 analysis",
@@ -3245,6 +3375,30 @@
         "path": "arxiv_data_process/code_model_definition/pytorch_model_definitions/2507.01838.txt",
         "revision": "e987af245f74ab47e50187acc95926a8f1a4b3d2",
         "acquisition": "receipts/codehit-bb29c8b69a6be579.json"
+      },
+      {
+        "url": "https://github.com/FangruLinghu/PaperCode/blob/e987af245f74ab47e50187acc95926a8f1a4b3d2/arxiv_data_process/papers_classification/classified_papers/2507.01838_classified.json",
+        "path": "arxiv_data_process/papers_classification/classified_papers/2507.01838_classified.json",
+        "revision": "e987af245f74ab47e50187acc95926a8f1a4b3d2",
+        "acquisition": "receipts/codehit-741efc241b2399ce.json"
+      },
+      {
+        "url": "https://github.com/FangruLinghu/PaperCode/blob/e987af245f74ab47e50187acc95926a8f1a4b3d2/arxiv_data_process/filter_new_model_papers/papers_w_new_model/2507.01838_classified.json",
+        "path": "arxiv_data_process/filter_new_model_papers/papers_w_new_model/2507.01838_classified.json",
+        "revision": "e987af245f74ab47e50187acc95926a8f1a4b3d2",
+        "acquisition": "receipts/codehit-e77f911e1eb98fcb.json"
+      },
+      {
+        "url": "https://github.com/FangruLinghu/PaperCode/blob/e987af245f74ab47e50187acc95926a8f1a4b3d2/arxiv_data_process/dataset/output.log",
+        "path": "arxiv_data_process/dataset/output.log",
+        "revision": "e987af245f74ab47e50187acc95926a8f1a4b3d2",
+        "acquisition": "receipts/codehit-effcd2163988a55c.json"
+      },
+      {
+        "url": "https://github.com/FangruLinghu/PaperCode/blob/e987af245f74ab47e50187acc95926a8f1a4b3d2/arxiv_data_process/papers_classification/classified_papers/processed_log.json",
+        "path": "arxiv_data_process/papers_classification/classified_papers/processed_log.json",
+        "revision": "e987af245f74ab47e50187acc95926a8f1a4b3d2",
+        "acquisition": "receipts/codehit-86270bbd9209da33.json"
       }
     ]
   },
@@ -3573,6 +3727,13 @@
         "http": 200,
         "archive": "archive/codehit-205b3f48e4fabfcd.txt",
         "sha256": "1ddbfce018bbd7da67290a0875506f83d2a897734da58ea44499e16dae9a5774"
+      },
+      {
+        "path": "receipts/codehit-6cfc5ede591e3f0e.json",
+        "status": "success",
+        "http": 200,
+        "archive": "archive/codehit-6cfc5ede591e3f0e.txt",
+        "sha256": "d14c48263c73986a038e01a39a254ff9ddbe092f3233ae1b92330f52a8c1a770"
       }
     ],
     "adequacy": "NOT reviewed: transport/file availability is not Gate2 analysis",
@@ -3654,6 +3815,12 @@
         "path": "shared/mon/mon/vision/enhance/multitask/mobileie/config/mobileie_lle_lolv2real.yaml",
         "revision": "44122d61f193b2de04a9465f17a0948965ef09a4",
         "acquisition": "receipts/codehit-205b3f48e4fabfcd.json"
+      },
+      {
+        "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/tools/torch_to_onnx.py",
+        "path": "shared/mon/mon/vision/enhance/multitask/mobileie/tools/torch_to_onnx.py",
+        "revision": "44122d61f193b2de04a9465f17a0948965ef09a4",
+        "acquisition": "receipts/codehit-6cfc5ede591e3f0e.json"
       }
     ]
   },
@@ -3711,6 +3878,50 @@
         "path": "YOLOV11配置文件.md",
         "revision": "113b5bffd3ac4e51e08165c008b4e79f59fb6423",
         "acquisition": "receipts/codehit-4bc80b33c6588324.json"
+      }
+    ]
+  },
+  {
+    "temporary_key": "code-benderick--DEIM-DEIM",
+    "type": "code",
+    "receipts": [
+      {
+        "path": "receipts/codehit-b9dcf4039c6cf0a1.json",
+        "status": "success",
+        "http": 200,
+        "archive": "archive/codehit-b9dcf4039c6cf0a1.txt",
+        "sha256": "9eb302fef01c87546b214b15fc4661b66716d83abafce0444a6c569763e72ce2"
+      }
+    ],
+    "adequacy": "NOT reviewed: transport/file availability is not Gate2 analysis",
+    "supplementary_sources": [
+      {
+        "url": "https://github.com/benderick/DEIM-DEIM/blob/ec2bb2d4625993ab35bdfd1c7cd4845cabe7a2b0/engine/extre_module/custom_nn/conv_module/MBRConv.py",
+        "path": "engine/extre_module/custom_nn/conv_module/MBRConv.py",
+        "revision": "ec2bb2d4625993ab35bdfd1c7cd4845cabe7a2b0",
+        "acquisition": "receipts/codehit-b9dcf4039c6cf0a1.json"
+      }
+    ]
+  },
+  {
+    "temporary_key": "code-ccz308476-ai--General_yu",
+    "type": "code",
+    "receipts": [
+      {
+        "path": "receipts/codehit-8e4626611ddafb5b.json",
+        "status": "success",
+        "http": 200,
+        "archive": "archive/codehit-8e4626611ddafb5b.txt",
+        "sha256": "80b9f35b044147782a8fd36cf831acb92e85b2c4936164bb9eedee7cfa5a4f40"
+      }
+    ],
+    "adequacy": "NOT reviewed: transport/file availability is not Gate2 analysis",
+    "supplementary_sources": [
+      {
+        "url": "https://github.com/ccz308476-ai/General_yu/blob/7c86d87a07851466f4047eae79cd893a9c61d71f/engine/extre_module/custom_nn/conv_module/MBRConv.py",
+        "path": "engine/extre_module/custom_nn/conv_module/MBRConv.py",
+        "revision": "7c86d87a07851466f4047eae79cd893a9c61d71f",
+        "acquisition": "receipts/codehit-8e4626611ddafb5b.json"
       }
     ]
   },
@@ -3818,6 +4029,13 @@
         "http": 200,
         "archive": "archive/codehit-73246c0969fdf2f0.txt",
         "sha256": "5ac1c4cf4b41bd20d9feab955e720430902fc02f27a14c6ae21fa79db66116a2"
+      },
+      {
+        "path": "receipts/codehit-5c211161fe86d212.json",
+        "status": "success",
+        "http": 200,
+        "archive": "archive/codehit-5c211161fe86d212.txt",
+        "sha256": "aea4d83ce271220c10a3df45962cdf5e6b0dd3b38a355ff2bbc14136386e8f8f"
       }
     ],
     "adequacy": "NOT reviewed: transport/file availability is not Gate2 analysis",
@@ -3851,6 +4069,12 @@
         "path": "models/ctbg/export_ctbg.py",
         "revision": "c3bdfbb0f6b45a918598d7e23f332bf731620914",
         "acquisition": "receipts/codehit-73246c0969fdf2f0.json"
+      },
+      {
+        "url": "https://github.com/gugugu531/Hispark_SocChina_2026/blob/c3bdfbb0f6b45a918598d7e23f332bf731620914/docs/isp-auto-tuning-prompt.md",
+        "path": "docs/isp-auto-tuning-prompt.md",
+        "revision": "c3bdfbb0f6b45a918598d7e23f332bf731620914",
+        "acquisition": "receipts/codehit-5c211161fe86d212.json"
       }
     ]
   },
@@ -3952,6 +4176,28 @@
         "path": "RTDETR-main/使用教程.md",
         "revision": "d0a21cc0dccfc4f97619cc3757011a033a1f2aa8",
         "acquisition": "receipts/codehit-162a0b75a8139c0a.json"
+      }
+    ]
+  },
+  {
+    "temporary_key": "code-lrbob--deim",
+    "type": "code",
+    "receipts": [
+      {
+        "path": "receipts/codehit-9b48355206708e45.json",
+        "status": "success",
+        "http": 200,
+        "archive": "archive/codehit-9b48355206708e45.txt",
+        "sha256": "1c41f1e30573f50188910a38e4b36a78d1a232660c0120ff3300546a8d48fdfa"
+      }
+    ],
+    "adequacy": "NOT reviewed: transport/file availability is not Gate2 analysis",
+    "supplementary_sources": [
+      {
+        "url": "https://github.com/lrbob/deim/blob/716a0c2f2f5b9b75785cc4c6d9830ddd8841645a/engine/extre_module/custom_nn/conv_module/MBRConv.py",
+        "path": "engine/extre_module/custom_nn/conv_module/MBRConv.py",
+        "revision": "716a0c2f2f5b9b75785cc4c6d9830ddd8841645a",
+        "acquisition": "receipts/codehit-9b48355206708e45.json"
       }
     ]
   },
@@ -4614,6 +4860,13 @@
         "http": 200,
         "archive": "archive/codehit-c35426db6c22937b.json",
         "sha256": "dd853b41ce8270f70e497ce83e178a934e841376f959cd886ef6ff5444098ac5"
+      },
+      {
+        "path": "receipts/codehit-7907b3ea216e263f.json",
+        "status": "success",
+        "http": 200,
+        "archive": "archive/codehit-7907b3ea216e263f.json",
+        "sha256": "830eefa9952c3e0aa302541c9792d8c22042193295d9ab7055cc9328268e178d"
       }
     ],
     "adequacy": "NOT reviewed: transport/file availability is not Gate2 analysis",
@@ -4677,6 +4930,12 @@
         "path": "data/citations.json",
         "revision": "9904065be6c87ebf58d6c46830a2bc96a7bec8eb",
         "acquisition": "receipts/codehit-c35426db6c22937b.json"
+      },
+      {
+        "url": "https://github.com/38260/topconf-4-pillars/blob/9904065be6c87ebf58d6c46830a2bc96a7bec8eb/data/repro.json",
+        "path": "data/repro.json",
+        "revision": "9904065be6c87ebf58d6c46830a2bc96a7bec8eb",
+        "acquisition": "receipts/codehit-7907b3ea216e263f.json"
       }
     ]
   }
