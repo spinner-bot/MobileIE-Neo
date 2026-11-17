@@ -48,7 +48,9 @@ class RecursivePipeline:
             field = self.motion(self.previous_raw, raw)
             moved, _ = align_history(self.previous_fused, raw, *field)
             output = blend(raw, moved, .5)
-        self.previous_raw, self.previous_fused = raw, output
+        self.previous_raw = raw if raw.flags.owndata else raw.copy()
+        self.previous_fused = (self.previous_raw if output is raw else
+                               output if output.flags.owndata else output.copy())
         return output, field
 
 
