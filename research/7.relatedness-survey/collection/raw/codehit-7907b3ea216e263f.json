@@ -1,0 +1,2914 @@
+{
+ "generated_at": null,
+ "note": "外部调研（GitHub/数据集/算力）派生信息，非出版方数据",
+ "papers": {
+  "cvpr-001-CVPR2026-p1164": {
+   "github": "https://github.com/SJTU-MVCLab/SeeLe",
+   "github_official": true,
+   "github_stars": 58,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "MipNeRF360 场景数据集",
+     "url": "https://jonbarron.info/mipnerf360/",
+     "accessibility": "public"
+    },
+    {
+     "name": "Tank & Temple 场景（仓库 README 给出的网盘下载）",
+     "url": "https://drive.google.com/file/d/1xfqSLFSLvx5IrpEZU62dw7xm1YZHiyYu/view",
+     "accessibility": "public"
+    },
+    {
+     "name": "3D Gaussian Splatting 参考实现/场景预处理",
+     "url": "https://github.com/graphdeco-inria/gaussian-splatting",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "single_gpu",
+   "reason": "官方代码与公开场景数据齐备、训练只需单卡，但论文核心指标要在 NVIDIA AGX Orin 移动端 SoC 上编译 CUDA/嵌入式内核实测实时性，缺该硬件难以完整复现。",
+   "source_batch": "batch-01.json"
+  },
+  "cvpr-002-CVPR2026-p69": {
+   "github": "https://github.com/ucas-xiang/QIG",
+   "github_official": true,
+   "github_stars": 25,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "COCO 校准集（ShareGPT4V 版本图文对）",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "Pileval 校准数据与 MMMU 评测基准",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "被量化模型权重：InternVL2-8B、LLaVA-OneVision-Qwen2-7B-OV",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "作者发布官方仓库，PTQ 属免训练方法，校准与评测数据、7B/8B 开源权重均可直接下载，单张 24GB 级显卡即可完成量化与评测。",
+   "source_batch": "batch-01.json"
+  },
+  "cvpr-003-CVPR2026-p613": {
+   "github": "https://github.com/YU-deep/MACT",
+   "github_official": true,
+   "github_stars": 18,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "文档理解基准：DocVQA、DUDE、SlideVQA、MMLongBench-Doc、VisualMRC、InfographicVQA",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "图表/表格基准：ChartQA、CharXiv、TableVQA-Bench、TableBench",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "推理类基准：ScienceQA、MathVista、Math-Vision、MathVerse、RealWorldQA",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "single_gpu",
+   "reason": "论文写明的官方仓库 README 仍是\"录用后开源\"占位、未放出可运行代码，且多智能体+逐智能体自适应 test-time scaling 需自行搭建多个 VLM 推理管线，评测集虽公开但调用成本不小。",
+   "source_batch": "batch-01.json"
+  },
+  "cvpr-004-CVPR2026-p2342": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [],
+   "difficulty": "hard",
+   "compute": "single_gpu",
+   "reason": "CVF 与聚合列表中均未检索到官方或第三方实现，摘要只提到\"单模态与跨模态基准\"而未给出数据集名称与链接，需自行复现跨任务重要性预测、分块显存预测器与 DP 调度器，判为难。",
+   "source_batch": "batch-01.json"
+  },
+  "cvpr-005-CVPR2026-p356": {
+   "github": "https://github.com/top-yun/MAD",
+   "github_official": true,
+   "github_stars": 15,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "AVHBench（跨模态幻觉基准，ICLR'25 官方仓库）",
+     "url": "https://github.com/kaist-ami/AVHBench",
+     "accessibility": "public"
+    },
+    {
+     "name": "CMM 跨模态误配幻觉基准",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "官方实现已开源，方法只改解码过程、无需训练，AVHBench 与 CMM 两个评测集均公开，单卡跑多模态模型推理即可复现。",
+   "source_batch": "batch-01.json"
+  },
+  "cvpr-006-CVPR2026-p376": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "HiCoPrompt（论文自建分层组合提示集，未确认已释出）",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "DrawBench、T2I-CompBench、T2I-CompBench++、DPG-Bench、LongBench-T2I",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "FLUX 基座扩散模型权重",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "multi_gpu",
+   "reason": "arXiv/OpenReview 与 CVPR 代码合集均无官方仓库，需在 FLUX 上复现分层奖励建模与 RL 微调（多卡训练）并自建 HiCoPrompt 提示集，门槛高。",
+   "source_batch": "batch-01.json"
+  },
+  "cvpr-007-CVPR2026-p1054": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "预训练语料 RH20T、Real10K 等真实机器人视频/多视图数据",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "ScanNet 场景数据（需签署许可后下载）",
+     "url": null,
+     "accessibility": "application"
+    },
+    {
+     "name": "下游评测：LIBERO、Meta-World、MvBench 及真机实验",
+     "url": null,
+     "accessibility": "private"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "multi_gpu",
+   "reason": "未找到任何公开代码，论文实现需 8 张 A100 做多视图扩散预训练，且真机操作与部分 3D 数据（ScanNet 需申请、自采机器人数据）不可得。",
+   "source_batch": "batch-01.json"
+  },
+  "cvpr-008-CVPR2026-p757": {
+   "github": "https://github.com/CNU-MedAI-Lab/PGR-Net",
+   "github_official": true,
+   "github_stars": 3,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "Medical Segmentation Decathlon Task01 (brain_tumor)",
+     "url": "http://medicaldecathlon.com/",
+     "accessibility": "public"
+    },
+    {
+     "name": "BraTS 2019 / BraTS 2023（需注册并同意数据许可）",
+     "url": null,
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "single_gpu",
+   "reason": "官方 PyTorch 实现已放出且单卡（论文用 RTX 2080Ti）可训，但 BraTS 数据需注册申请获取，仓库 star 很低、文档未给数据下载路径，预处理需自行对齐。",
+   "source_batch": "batch-01.json"
+  },
+  "cvpr-009-CVPR2026-p2509": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "MS-COCO 自然图像",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "DiffusionDB 生成图像",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "single_gpu",
+   "reason": "arXiv 正文无代码发布声明、CVPR2026 代码合集亦未收录，虽然数据公开且单卡（RTX 4090）可训，但需完全自行实现解耦防御水印框架与攻击组合。",
+   "source_batch": "batch-01.json"
+  },
+  "cvpr-010-CVPR2026-p224": {
+   "github": "https://github.com/liblacklucy/DSLO",
+   "github_official": true,
+   "github_stars": 0,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "VOC20/VOC21、COCO-Stuff/COCO-Obj、Pascal-Context 59/60、ADE20K",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "Cityscapes（需注册申请后下载）",
+     "url": null,
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "single_gpu",
+   "reason": "论文声明的代码仓库目前为空、无任何实现，方法虽为免训练推理且八个基准公开，但仍须自行复现无 logits 优化的直接分割流程。",
+   "source_batch": "batch-01.json"
+  },
+  "cvpr-011-CVPR2026-p3875": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "LongVideoBench、Video-MME、MLVU、Video Holmes、Video MMMU、MMR-V、VSIBench、Charades-STA",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "基座模型 Qwen3-8B 权重与 RL 训练数据",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "multi_gpu",
+   "reason": "未检索到官方或第三方代码，多智能体协同策略需基于 Qwen3-8B 做 RL 训练（论文用 8 张 A100 80G），显存与调参成本远超单卡。",
+   "source_batch": "batch-01.json"
+  },
+  "cvpr-012-CVPR2026-p2534": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "ALOI、DHA、LandUse-21、ProteinFold 多视图聚类基准",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "single_gpu",
+   "reason": "arXiv 页面与代码合集均未给出仓库链接，虽然基准小而公开、单卡可跑，但全局图引导+局部图加权对比框架与全部消融需从零实现。",
+   "source_batch": "batch-01.json"
+  },
+  "aaai-013-aaai-2026-w1632": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [],
+   "difficulty": "hard",
+   "compute": "single_gpu",
+   "reason": "仅检索到 AAAI/ACM 页面，无官方或第三方代码；论文只在 NVIDIA Jetson 端侧平台上做实验，未公布可下载的评测数据，需自行重建 LUT 草稿与动态 token 树，复现门槛高。",
+   "source_batch": "batch-02.json"
+  },
+  "aaai-014-aaai-2026-w3487": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "LLaVA-1.5 (7B/13B) 与 Qwen-VL 模型权重及图像描述/VQA/图文检索多模态基准",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "single_gpu",
+   "reason": "未找到任何官方仓库或第三方实现，需自行在多模态模型中实现 per-channel/per-token 混合量化与动态分组，无代码是主要障碍（模型与基准本身公开，算力单卡即可）。",
+   "source_batch": "batch-02.json"
+  },
+  "aaai-015-aaai-2026-w4812": {
+   "github": "https://github.com/miaozhongjian/span",
+   "github_official": true,
+   "github_stars": 0,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "SPAN 跨历法时间推理基准（随仓库发布，含 baselines.py 与评测协议）",
+     "url": "https://github.com/miaozhongjian/span",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "作者官方仓库已放出评测协议、基线脚本与基准数据，代码与数据齐备；但对齐论文结果需跑 Llama-3.3-70B、DeepSeek-V3、Qwen-2.5-72B 等大模型及闭源 API，算力偏高。",
+   "source_batch": "batch-02.json"
+  },
+  "aaai-016-aaai-2026-w1223": {
+   "github": "https://github.com/MrLYG/CDCR-SFT",
+   "github_official": true,
+   "github_stars": 12,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "CLADDER / WIQA / HaluEval（仓库 data/ 目录已含测试集）",
+     "url": "https://github.com/MrLYG/CDCR-SFT",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "官方仓库含代码与三个公开基准数据，模型均为 7B/8B 开源权重；但因果推理数据构造 + SFT 训练在原论文用 4 张 A40，非单卡可完成。",
+   "source_batch": "batch-02.json"
+  },
+  "aaai-017-aaai-2026-w996": {
+   "github": "https://github.com/WinstonCHEN1/LiR3AG",
+   "github_official": true,
+   "github_stars": 5,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "HotpotQA",
+     "url": "https://hotpotqa.github.io/",
+     "accessibility": "public"
+    },
+    {
+     "name": "2WikiMultiHopQA",
+     "url": "https://github.com/Alab-NII/2wikimultihop",
+     "accessibility": "public"
+    },
+    {
+     "name": "MultiHop-RAG",
+     "url": "https://github.com/yixuantt/MultiHop-RAG",
+     "accessibility": "public"
+    },
+    {
+     "name": "MuSiQue",
+     "url": "https://github.com/StonyBrookNLP/musique",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "官方仓库提供环境、复现与推理脚本，四个 RAG 基准全部公开可直接下载，用 Ollama + FAISS 跑 14B 级模型即可复现，属轻量重排推理框架。",
+   "source_batch": "batch-02.json"
+  },
+  "aaai-018-aaai-2026-w3928": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "CC3M / CC12M（LAION 风格网络图文对）",
+     "url": null,
+     "accessibility": "application"
+    },
+    {
+     "name": "MSCOCO / Flickr30k（检索与描述）",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "ImageNet / CIFAR-100 / Food-101 / Oxford-IIIT PET（分类与迁移）",
+     "url": null,
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "multi_gpu",
+   "reason": "arXiv 与 GitHub 检索均未见官方代码仓库（同名 learngene 项目属于其它工作），且实验需在 8 张 Ascend 910B 上大规模训练，CC 系列与 ImageNet 还需签协议获取。",
+   "source_batch": "batch-02.json"
+  },
+  "aaai-019-aaai-2026-w489": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "Pexels 视频数据",
+     "url": "https://www.pexels.com/search/videos/videos",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "large_scale",
+   "reason": "官方项目页 Code 标注为 Coming Soon，代码尚未发布；同时需要训练 3D 因果 VAE 分层 tokenizer 加 Llama-3B 自回归视频模型，显存与训练成本都很高。",
+   "source_batch": "batch-02.json"
+  },
+  "aaai-020-aaai-2026-w662": {
+   "github": "https://github.com/HongzheBi/H_RDT",
+   "github_official": true,
+   "github_stars": 160,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "EgoDex 人类第一视角操作数据（预训练阶段）",
+     "url": "https://openreview.net/forum?id=FFxkFMU89E",
+     "accessibility": "public"
+    },
+    {
+     "name": "RoboTwin 2.0 双臂机器人数据与基准",
+     "url": "https://robotwin-platform.github.io/",
+     "accessibility": "public"
+    },
+    {
+     "name": "H-RDT 预训练权重",
+     "url": "https://huggingface.co/embodiedfoundation/H-RDT",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "官方仓库含完整预训练/微调与推理脚本，数据（EgoDex、RoboTwin 2.0）与 HuggingFace 权重均可下载；但 1B 级扩散策略基座的人手数据预训练需要多卡集群，且真机评测依赖硬件。",
+   "source_batch": "batch-02.json"
+  },
+  "aaai-021-aaai-2026-w787": {
+   "github": "https://github.com/AQ-MedAI/PulseMind",
+   "github_official": true,
+   "github_stars": 21,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "MediScope 精选子集 + MedDiagnose / MedDiagnose-plus / CMtMedQA-test 基准",
+     "url": "https://huggingface.co/datasets/AQ-MedAI/PulseMind",
+     "accessibility": "public"
+    },
+    {
+     "name": "PulseMind-72B 模型权重",
+     "url": "https://huggingface.co/AQ-MedAI/PulseMind-72B",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "AAAI 2026 Oral 官方仓库提供评测代码、HuggingFace 基准与 72B 权重；但仓库只有评测脚本，完整 MediScope 数据分批释出，72B 多模态模型评测必须多卡。",
+   "source_batch": "batch-02.json"
+  },
+  "aaai-022-aaai-2026-w1569": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "CIFAR-10",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "ImageNet",
+     "url": null,
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "multi_gpu",
+   "reason": "AAAI 与 arXiv/GitHub 检索均未找到官方或第三方实现，需自行串联后门注入、触发器攻击与遗忘学习擦除三阶段并在 ImageNet 上训练，工作量与算力都不低。",
+   "source_batch": "batch-02.json"
+  },
+  "aaai-023-aaai-2026-w627": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "SMAC（StarCraftII 多智能体挑战）",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "Multi-agent MuJoCo",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "Multi-agent Particle Environment",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "multi_gpu",
+   "reason": "三个基准环境本身开源可下载，但论文未发布任何代码仓库， conductor 分层结构与单调性优化需从零实现并在 SMAC/MA-MuJoCo 上做长周期训练调参。",
+   "source_batch": "batch-02.json"
+  },
+  "aaai-024-aaai-2026-w1169": {
+   "github": "https://github.com/hexin5515/DMbaGCN",
+   "github_official": true,
+   "github_stars": 3,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "CoraFull / Pubmed / Photo / CS / Physics / Computers 引文与商品共现图（代码运行时自动下载）",
+     "url": "https://github.com/hexin5515/DMbaGCN",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "官方实现一条命令即可跑通，图数据集由 PyTorch Geometric 自动下载，论文实验仅用单张 L40 48G，属于小模型单卡复现。",
+   "source_batch": "batch-02.json"
+  },
+  "iccv-025-ICCV2025-p959": {
+   "github": "https://github.com/AVC2-UESTC/MobileIE",
+   "github_official": true,
+   "github_stars": 134,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "LOLv1 / LOLv2 (Low-Light)",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "UIEB (Underwater Image Enhancement Benchmark)",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "ZRR (Zero-Reference Low-Light)",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "作者（UESTC AVC2）官方仓库已开源且有 134 star，低光/水下增强数据集全部公开，极轻量 ConvNet 单卡即可训练与移动端评测",
+   "source_batch": "batch-03.json"
+  },
+  "iccv-026-ICCV2025-p217": {
+   "github": "https://github.com/YuchenLiu98/METEOR",
+   "github_official": true,
+   "github_stars": 6,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "11 个 MLLM 评测基准：SQA、AI2D、OK-VQA、GQA、POPE、SEED、MMB、TextVQA、DocVQA、ChartQA、OCRBench",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "基座模型 Vicuna-7B / LLaMA3-8B 驱动的多模态模型",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "single_gpu",
+   "reason": "官方仓库仅为占位（README 写明 code coming soon），实际剪枝代码未发布，虽基准数据公开但无法直接跑通复现",
+   "source_batch": "batch-03.json"
+  },
+  "iccv-027-ICCV2025-p175": {
+   "github": "https://github.com/mm-vl/corvid",
+   "github_official": true,
+   "github_stars": 6,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "Corvid-1M / MCoT-Instruct-287K（作者发布的思维链指令数据）",
+     "url": "https://huggingface.co/datasets/mm-vl/Corvid-dataset",
+     "accessibility": "public"
+    },
+    {
+     "name": "Corvid 模型与数据集合（HuggingFace collection）",
+     "url": "https://huggingface.co/collections/mm-vl/corvid-686f6591f2ea83dcb94c8e46",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "large_scale",
+   "reason": "GitHub 仓库仅为项目页（描述为 Corvid Project Page）无训练/推理代码，复现需做多模态大模型思维链 SFT/强化学习，算力为大规模集群",
+   "source_batch": "batch-03.json"
+  },
+  "iccv-028-ICCV2025-p1834": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "3D ReasonSeg（论文自建推理分割数据集）",
+     "url": null,
+     "accessibility": "application"
+    },
+    {
+     "name": "ScanRefer / ScanQA 等 3D 视觉语言基准（基于 ScanNet）",
+     "url": null,
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "multi_gpu",
+   "reason": "arXiv 全文未给出任何代码链接，自建 3D ReasonSeg 与底层 ScanNet 数据均需签署协议申请，且要微调多模态大模型分割流水线",
+   "source_batch": "batch-03.json"
+  },
+  "iccv-029-ICCV2025-p275": {
+   "github": "https://github.com/jiyt17/Prompt-A-Video",
+   "github_official": true,
+   "github_stars": 25,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "WebVid 视频-文本数据（HuggingFace 分发）",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "偏好对齐用的 prompt 改写/偏好对（仓库内构造）",
+     "url": null,
+     "accessibility": "synthetic"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "第一作者仓库提供了完整代码（基于 Open-Sora 1.2、CogVideoX），但视频扩散加 LLM 偏好对齐训练需多卡，WebVid 授权与规模也受限",
+   "source_batch": "batch-03.json"
+  },
+  "iccv-030-ICCV2025-p604": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "LAION-5B",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "Coyo-700M",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "JourneyDB",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "GenEval / DPG-Bench / T2I-CompBench 评测",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "large_scale",
+   "reason": "未检索到任何官方或第三方代码，以 FLUX.1-dev 为基座做稠密转 MoE 蒸馏，论文使用 32 张 A100 与十亿级图文数据",
+   "source_batch": "batch-03.json"
+  },
+  "iccv-031-ICCV2025-p2522": {
+   "github": "https://github.com/segs-slam/SEGS-SLAM",
+   "github_official": true,
+   "github_stars": 18,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "TUM RGB-D",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "Replica",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "EuRoC",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "single_gpu",
+   "reason": "官方仓库仅标注为 rebuttal code（18 star），3DGS CUDA 环境与单目深度预处理需自行调试，数据集公开且单张 RTX 4090 可逐场景跑",
+   "source_batch": "batch-03.json"
+  },
+  "iccv-032-ICCV2025-p578": {
+   "github": "https://github.com/YkiWu/EmbodiedOcc",
+   "github_official": true,
+   "github_stars": 92,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "Occ-ScanNet / EmbodiedOcc-ScanNet（含 mini 版）",
+     "url": null,
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "官方代码已开源（92 star）但无预训练权重，Occ-ScanNet 派生自需签协议的 ScanNet，README 训练配置为 8 卡",
+   "source_batch": "batch-03.json"
+  },
+  "iccv-033-ICCV2025-p132": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "M-Path Skin Biopsy WSI（皮肤科全切片临床队列）",
+     "url": null,
+     "accessibility": "application"
+    },
+    {
+     "name": "LLaVA-Med / Quilt-LLaVA 对比基线模型",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "single_gpu",
+   "reason": "项目页 pathfinder-dx.github.io 的 GitHub 链接仍为占位空链接，未放码；核心 M-Path 活检 WSI 数据需机构授权，且依赖 GPT-4o 商用接口",
+   "source_batch": "batch-03.json"
+  },
+  "iccv-034-ICCV2025-p1515": {
+   "github": "https://github.com/adobe/trustmark",
+   "github_official": true,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "仓库提供的水印/去水印示例与用户自选图像数据",
+     "url": "https://github.com/adobe/trustmark",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "Adobe 官方开源仓库 README 明确说明含水印嵌入与水印去除实现，模型即开可用，不依赖专有数据集，单卡即可完成推理与鲁棒性测试",
+   "source_batch": "batch-03.json"
+  },
+  "iccv-035-ICCV2025-p102": {
+   "github": "https://github.com/Kimsure/SFP",
+   "github_official": true,
+   "github_stars": 51,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "PASCAL VOC",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "PASCAL-Context",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "Cityscapes",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "ADE20K",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "COCO-Stuff164k",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "ICCV25 highlight 官方仓库（51 star）方法为 training-free，只需 CLIP 特征加 test.sh 推理，五个分割基准全部公开，单卡可跑",
+   "source_batch": "batch-03.json"
+  },
+  "iccv-036-ICCV2025-p422": {
+   "github": "https://github.com/zcxcf/EA-ViT",
+   "github_official": true,
+   "github_stars": 27,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "ImageNet-1K",
+     "url": null,
+     "accessibility": "application"
+    },
+    {
+     "name": "ADE20K（语义分割迁移）",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "官方 ICCV 2025 代码已发布，但弹性子网需 ImageNet-1K 注册下载并做两阶段长周期预训练，实践上需多卡集群",
+   "source_batch": "batch-03.json"
+  },
+  "iccv-073-ICCV2023-p1288": {
+   "github": "https://github.com/Amshaker/SwiftFormer",
+   "github_official": true,
+   "github_stars": 317,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "ImageNet-1K",
+     "url": "http://image-net.org",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "作者官方仓库、代码与预训练权重齐全，ImageNet 公开可下，但要复现论文精度需按 README 用 8~16 卡 DDP 跑完整训练，仅推理则单卡足够。",
+   "source_batch": "batch-07.json"
+  },
+  "iccv-074-ICCV2023-p1009": {
+   "github": "https://github.com/sanechips-multimedia/syenet",
+   "github_official": true,
+   "github_stars": 68,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "DIV2K（超分训练/测试，含 Set5/Set14/BSD100/Urban100）",
+     "url": "https://data.vision.ee.ethz.ch/cvl/DIV2K/",
+     "accessibility": "public"
+    },
+    {
+     "name": "LOL 低光照数据集",
+     "url": "https://huggingface.co/datasets/geekyrakshit/LoL-Dataset",
+     "accessibility": "public"
+    },
+    {
+     "name": "MAI21 / MAI22 ISP  RAW 数据集",
+     "url": null,
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "官方实现公开且模型轻量（面向移动端），单卡即可训练 SR 与低光任务，公开数据充足；只有 ISP 管线的 MAI21 数据需签协议获取。",
+   "source_batch": "batch-07.json"
+  },
+  "iccv-075-ICCV2023-p76": {
+   "github": "https://github.com/Yushi-Hu/PromptCap",
+   "github_official": true,
+   "github_stars": 89,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "OK-VQA",
+     "url": "https://github.com/prdwb/okvqa-release",
+     "accessibility": "public"
+    },
+    {
+     "name": "A-OKVQA",
+     "url": "https://github.com/allenai/aokvqa",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "single_gpu",
+   "reason": "官方代码与 VQA 数据均公开、任务只需推理，但原方法主干依赖已停服的 OpenAI Codex/GPT-3 接口，需换成开源 LLM 才能完整跑通。",
+   "source_batch": "batch-07.json"
+  },
+  "iccv-076-ICCV2023-p93": {
+   "github": "https://github.com/NMS05/Audio-Visual-Deception-Detection-DOLOS-Dataset-and-Parameter-Efficient-Crossmodal-Learning",
+   "github_official": true,
+   "github_stars": 36,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "DOLOS（自建音视频欺骗检测数据集）",
+     "url": "https://rose1.ntu.edu.sg/dataset/DOLOS/",
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "single_gpu",
+   "reason": "官方仓库随论文发布、参数高效模型单卡可训，但核心是作者自建 DOLOS，官网下载需先接受使用协议并申请标注，数据获取是主要阻碍。",
+   "source_batch": "batch-07.json"
+  },
+  "iccv-077-ICCV2023-p874": {
+   "github": "https://github.com/showlab/Tune-A-Video",
+   "github_official": true,
+   "github_stars": 4364,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "任意单段自采/网络视频（one-shot 微调输入，无需标注数据集）",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "Stable Diffusion v1.4 / v2.1 预训练权重",
+     "url": "https://huggingface.co/CompVis/stable-diffusion-v1-4",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "官方仓库高星、脚本与 Gradio 演示完备，只需一段视频加公开的 SD 权重即可单卡微调，无数据授权障碍，显存 10~15GB 足够。",
+   "source_batch": "batch-07.json"
+  },
+  "iccv-078-ICCV2023-p605": {
+   "github": "https://github.com/eriksandstroem/Point-SLAM",
+   "github_official": true,
+   "github_stars": 486,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "Replica",
+     "url": "https://github.com/facebookresearch/replica-dataset",
+     "accessibility": "public"
+    },
+    {
+     "name": "TUM-RGBD",
+     "url": "https://cove.thecvf.com/datasets/867",
+     "accessibility": "public"
+    },
+    {
+     "name": "ScanNet",
+     "url": "http://www.scan-net.org/ScanNet/",
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "官方代码带数据下载脚本，Replica 与 TUM-RGBD 可直接公开下载，SLAM 单卡逐序列运行，主要成本是 CUDA 扩展与旧版依赖的环境编译。",
+   "source_batch": "batch-07.json"
+  },
+  "iccv-079-ICCV2023-p1118": {
+   "github": "https://github.com/zhjohnchan/PTUnifier",
+   "github_official": true,
+   "github_stars": 78,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "MIMIC-CXR",
+     "url": "https://physionet.org/content/mimic-cxr/",
+     "accessibility": "application"
+    },
+    {
+     "name": "ROCO（放射影像图文）",
+     "url": "https://github.com/razorx89/roco-dataset",
+     "accessibility": "public"
+    },
+    {
+     "name": "下游评测集 VQA-RAD / SLAKE / ImageCLEF 等",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "multi_gpu",
+   "reason": "虽有官方代码与 checkpoint，但复现预训练必须拿到需 PhysioNet 资质申请的 MIMIC-CXR，并多卡重跑百万级医学图文对比预训练，数据与算力双重受限。",
+   "source_batch": "batch-07.json"
+  },
+  "iccv-080-ICCV2023-p2005": {
+   "github": "https://github.com/CHENBIN99/AdaEA",
+   "github_official": true,
+   "github_stars": 45,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "ImageNet-1K（迁移评测）",
+     "url": "http://image-net.org",
+     "accessibility": "public"
+    },
+    {
+     "name": "CIFAR-10 / CIFAR-100",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "官方代码公开，攻击为白盒/黑盒迁移实验，全部使用公开的预训练代理模型与标准分类数据，作者单张 RTX A6000 即完成，单卡可复现。",
+   "source_batch": "batch-07.json"
+  },
+  "iccv-081-ICCV2023-p938": {
+   "github": "https://github.com/IDEA-Research/OpenSeeD",
+   "github_official": true,
+   "github_stars": 764,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "COCO（OVOD 训练与评测）",
+     "url": "https://cocodataset.org/",
+     "accessibility": "public"
+    },
+    {
+     "name": "Objects365（基础类训练）",
+     "url": "https://www.objects365.org/download.html",
+     "accessibility": "application"
+    },
+    {
+     "name": "ADE20K / PASCAL / Cityscapes / BDD / SUN / ODinW（OVSS 与开放词表评测）",
+     "url": "https://ade20k.csail.mit.edu/",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "IDEA 官方实现且权重齐备，但 README 训练命令为 8 卡，需同时准备 COCO+Objects365 的大规模检测/分割数据，工程与算力负担都不小。",
+   "source_batch": "batch-07.json"
+  },
+  "iccv-082-ICCV2023-p308": {
+   "github": "https://github.com/LeapLabTHU/FLatten-Transformer",
+   "github_official": true,
+   "github_stars": 448,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "ImageNet-1K",
+     "url": "http://image-net.org",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "官方 PyTorch 代码与预训练权重可得、数据公开，但要复现 83%+ 精度需按 README 用 8 卡跑满数百 epoch，512 高分辨率分割实验更吃资源。",
+   "source_batch": "batch-07.json"
+  },
+  "iccv-083-ICCV2023-p148": {
+   "github": "https://github.com/snumprlab/capeam",
+   "github_official": true,
+   "github_stars": 16,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "ALFRED（Room-to-Room 指令任务）",
+     "url": "https://github.com/askforalfred/alfred",
+     "accessibility": "public"
+    },
+    {
+     "name": "Habitat-Matterport3D 场景资产",
+     "url": null,
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "single_gpu",
+   "reason": "官方实现公开、评测单卡即可跑，但强依赖 FILM 权重与 habitat-lab v0.1.5 + PyTorch 1.8 旧环境，还需授权的 Matterport3D 场景和 GPT-3 生成的低级指令。",
+   "source_batch": "batch-07.json"
+  },
+  "iccv-084-ICCV2023-p704": {
+   "github": "https://github.com/mlvlab/OVQA",
+   "github_official": true,
+   "github_stars": 18,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "OVQA 基准标注 + 预处理 CLIP 视觉特征与 checkpoint",
+     "url": "https://drive.google.com/drive/folders/1HcrMsINkNcRUfnZMd15l9AH0R9X4qvQG",
+     "accessibility": "public"
+    },
+    {
+     "name": "ActivityNet-QA / MSVD-QA / TGIF-QA / MSRVTT-QA 原视频",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "DeBERTa-v2-xlarge 语言编码器",
+     "url": "https://huggingface.co/microsoft/deberta-v2-xlarge",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "官方仓库直接给出标注、预提特征和权重，数据无授权障碍，但训练脚本是 4 卡分布式且主干为 DeBERTa-xlarge，单卡复现成本偏高。",
+   "source_batch": "batch-07.json"
+  },
+  "acl-037-acl-2026.acl-long.1454": {
+   "github": "https://github.com/ydyhello/VecInfer",
+   "github_official": true,
+   "github_stars": 11,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "VecInfer 量化码本（作者预生成表，HuggingFace）",
+     "url": "https://huggingface.co/ydydy/vecinfer-codebooks",
+     "accessibility": "public"
+    },
+    {
+     "name": "评测基准 LongBench / MATH / Qasper",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "基座模型 Llama-3.1-8B-Instruct、Mistral-7B-Instruct-v0.3、Qwen2.5-14B-Instruct、Qwen3-8B、DeepSeek-R1-Distill 系列",
+     "url": null,
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "single_gpu",
+   "reason": "README 标注 ACL 2026 Main 官方实现（11 star）并给出码本下载，评测数据公开，但需自行编译 CUDA 算子（CUDA 12.4）、生成校准码本并下载受许可限制的 Llama/Qwen 权重，14B 模型单卡跑满",
+   "source_batch": "batch-04.json"
+  },
+  "acl-038-acl-2026.acl-industry.51": {
+   "github": "https://github.com/facebookresearch/mobilellm",
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "MobileLLM 系列公开权重（MobileLLM-Pro / MobileLLM-R1-350M 量级）",
+     "url": "https://huggingface.co/facebook/MobileLLM-Pro",
+     "accessibility": "public"
+    },
+    {
+     "name": "工业级预训练语料与 hardware-in-the-loop 延迟测量集群（手机端真机阵列）",
+     "url": null,
+     "accessibility": "private"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "large_scale",
+   "reason": "论文与 arXiv 页面均未发布 Flash 的架构搜索/延迟建模代码，facebookresearch/mobilellm 只是同系列早期模型仓库；复现需亚十亿参数模型继续预训练加真机延迟回环搜索，工业语料不可得",
+   "source_batch": "batch-04.json"
+  },
+  "acl-039-acl-2026.acl-long.376": {
+   "github": "https://github.com/albert-y1n/Reasoning_Trap",
+   "github_official": true,
+   "github_stars": 3,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "SimpleToolHalluBench（作者自建工具幻觉诊断集，源自 AgentSafetyBench 的 296 个函数，仓库内 data/test_case.json 与 environments.json）",
+     "url": "https://github.com/albert-y1n/Reasoning_Trap",
+     "accessibility": "synthetic"
+    },
+    {
+     "name": "SynTool 与 GSM8K（推理增益对照实验数据）",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "被测模型 Qwen2.5-7B-Instruct、ReCall-7B、DeepSeek-R1-Distill-Qwen-7B、Qwen3-8B/32B",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "作者官方实现（自称 official implementation）含完整基准启动器与启发式/LLM-judge 评测模块，测试用例随仓库分发，只需 OpenAI 兼容推理接口，7B-8B 模型单卡即可复现",
+   "source_batch": "batch-04.json"
+  },
+  "acl-040-acl-2026.acl-long.756": {
+   "github": "https://github.com/twweeb/llm-similarity-risk",
+   "github_official": true,
+   "github_stars": 1,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "llm-similarity-risk（作者发布的对齐/微调相似度数据，HuggingFace）",
+     "url": "https://huggingface.co/datasets/hsiung/llm-similarity-risk",
+     "accessibility": "public"
+    },
+    {
+     "name": "下游微调与安全性评测集 UltraChat、Beavertails、List/Pure Bad、Alpaca、SAMSum",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "基座与安全裁判模型 meta-llama/Llama-2-7b-hf、PKU-Alignment/beaver-dam-7b",
+     "url": "https://huggingface.co/meta-llama/Llama-2-7b-hf",
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "与作者主页 hsiung.cc/llm-similarity-risk 同名的官方仓库已开放（1 star），数据在 HuggingFace，但脚本示例统一使用 4 卡 DeepSpeed/Accelerate 做对齐与微调，且 Llama-2 权重需 Meta 授权，重活仍依赖 AlignAnything/Booster 等外部仓库",
+   "source_batch": "batch-04.json"
+  },
+  "acl-041-acl-2026.findings-acl.917": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "医学推理基准 MMLU-Med、MedQA-US、MedMCQA、PubMedQA、BioASQ",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "论文所用五个闭源/商用 LLM 后端（deepseek-v3.1、kimi-k2、qwen3-coder-plus、gemini-2.0-flash、glm-4.0-flash）",
+     "url": null,
+     "accessibility": "private"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "single_gpu",
+   "reason": "ACL 页面与 arXiv 全文均未给出代码或数据仓库链接，多智能体自演化 RAG 流水线需自行重建，且主实验依赖需付费 API 的商用模型，难以严格对齐原文数值",
+   "source_batch": "batch-04.json"
+  },
+  "acl-042-acl-2026.acl-long.444": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "MULTIPUN（作者自建的多模态双关语理解基准，含图像与 pun 标注）",
+     "url": null,
+     "accessibility": "application"
+    },
+    {
+     "name": "被测开源/闭源大视觉语言模型（GPT-4o、Gemini、Qwen-VL 等类别）",
+     "url": null,
+     "accessibility": "private"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "n/a",
+   "reason": "ACL Anthology 页面与检索结果均未出现代码或数据仓库，新基准仅见数据集名 MULTIPUN 而未公开下载入口，复现需重建标注流程并调用闭源 VLM 接口",
+   "source_batch": "batch-04.json"
+  },
+  "acl-043-acl-2026.acl-long.1251": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "文生图评测 GenEval、UniGen-Bench、DPG-Bench、T2I-CompBench",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "基座离散扩散语言模型 Lumina-DiMOO",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "single_gpu",
+   "reason": "arXiv v2 全文未提供任何代码或项目页链接，方法虽 training-free 且单张 A100-80G 推理即可，但局部感知动态救援调度必须按论文自行实现才能对齐结果",
+   "source_batch": "batch-04.json"
+  },
+  "acl-044-acl-2026.acl-long.743": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "Simple English Wikipedia 全量 dump（构建本地图谱）",
+     "url": "https://dumps.wikimedia.org",
+     "accessibility": "public"
+    },
+    {
+     "name": "StatPearls 临床医学文本库",
+     "url": "https://www.statpearls.com/",
+     "accessibility": "public"
+    },
+    {
+     "name": "评测基准 PubMedQA、MedQA、MMLU 医学子集与 GLKB 图谱知识源",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "single_gpu",
+   "reason": "论文（工业实验室署名）未公开任何仓库或构建好的本地知识图谱，复现要从维基 dump 与 StatPearls 重新做实体抽取、摘要分层与图谱索引，检索与重排序组件虽公开但工程量大",
+   "source_batch": "batch-04.json"
+  },
+  "acl-045-acl-2026.acl-long.1944": {
+   "github": "https://github.com/pbaghershahi/GSPELL",
+   "github_official": true,
+   "github_stars": 1,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "Cora、WikiCS、Amazon-Product、Liar（各自 YAML 配置）",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "作者预训练权重与缓存特征（Google Drive）",
+     "url": "https://drive.google.com/file/d/18fb80U0An8fTnmgL_oNFCKZCAcsvUzKC/view?usp=sharing",
+     "accessibility": "public"
+    },
+    {
+     "name": "语言模型骨干 meta-llama/Llama-3.1-8B-Instruct 等（需 HF token）",
+     "url": null,
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "论文正文直接给出官方参考实现链接，训练/评测脚本、配置与预训练权重齐备，四个图数据集均公开，实验全程在单张 RTX 3090 上完成",
+   "source_batch": "batch-04.json"
+  },
+  "acl-046-acl-2026.acl-long.470": {
+   "github": "https://github.com/hckuo145/Mamba-based-HuBERT",
+   "github_official": true,
+   "github_stars": 8,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "LibriSpeech 960 小时全量（预训练）",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "TED-LIUM3（长序列实验）",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "SUPERB 探针任务 PR、SID、ER、IC、SF",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "论文正文明确给出官方仓库（自称 official implementation，含 fairseq-mamba 预训练 run_hubert_*.sh 脚本），语料与 SUPERB 全部公开，硬件为单张 V100，仅需忍受 65 万步预训练的耗时",
+   "source_batch": "batch-04.json"
+  },
+  "acl-047-acl-2026.acl-long.647": {
+   "github": "https://github.com/Aman-4-Real/DPWriter",
+   "github_official": true,
+   "github_stars": 15,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "DPWriterData（作者发布的 SFT/RL 训练与规划数据，HuggingFace）",
+     "url": "https://huggingface.co/datasets/Aman/DPWriterData",
+     "accessibility": "public"
+    },
+    {
+     "name": "长文本创作评测与奖励模型所需初始 checkpoint（仓库说明需自备 initial ckpt）",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "一作官方仓库（15 star）提供 conda 环境、SFT/RL 训练脚本与规划分支和奖励模块，数据已上 HuggingFace，但 LLM 强化学习多阶段训练与长文本生成本质上需多卡集群，README 未给单卡配方",
+   "source_batch": "batch-04.json"
+  },
+  "acl-048-acl-2026.findings-acl.2116": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "论文整理并指令微调所用的五个室内场景数据集（3D 物体布局/RGB 图像对，如 3D-FRONT 一类）",
+     "url": null,
+     "accessibility": "application"
+    },
+    {
+     "name": "对比用的多模态大模型基线（开源 VLM 与闭源 API）",
+     "url": null,
+     "accessibility": "private"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "multi_gpu",
+   "reason": "ACL Anthology 页面与检索结果均无代码或数据链接，方法需对语言模型做指令微调并训练几何预测分支，场景数据集派生自需签协议的 3D 室内数据集，多卡微调门槛高",
+   "source_batch": "batch-04.json"
+  },
+  "cvpr-049-CVPR2024-p2411": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "MSCOCO 5K retrieval test set",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "ImageNet 等零样本分类基准",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "n/a",
+   "reason": "未找到作者官方代码仓库(arXiv/GitHub 检索均无)，虽评估用的 MSCOCO/ImageNet 数据公开，但需按论文从零复现剪枝与蒸馏流程",
+   "source_batch": "batch-05.json"
+  },
+  "cvpr-050-CVPR2024-p567": {
+   "github": "https://github.com/Pico-AI-Team/HMD-Poser",
+   "github_official": true,
+   "github_stars": 46,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "AMASS 运动捕捉数据",
+     "url": "https://amass.is.tue.mpg.de/",
+     "accessibility": "application"
+    },
+    {
+     "name": "SMPL+H/Mano 人体模型",
+     "url": "https://mano.is.tue.mpg.de/",
+     "accessibility": "application"
+    },
+    {
+     "name": "PICO-FreeDancing 头显传感器数据集(官方发布)",
+     "url": "https://drive.google.com/file/d/1xEj3J0vJilx-jPCPbbsX6a6IF9LQ5URu/view?usp=drive_link",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "single_gpu",
+   "reason": "Pico 官方训练测试代码已开源且单卡可训，但 AMASS 与 SMPL 模型需注册申请才能下载",
+   "source_batch": "batch-05.json"
+  },
+  "cvpr-051-CVPR2024-p976": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [],
+   "difficulty": "hard",
+   "compute": "n/a",
+   "reason": "GitHub 检索无该 CVPR2024 论文的官方或第三方实现(同名 PromptCoT 仓库属另一篇 2025 论文)，且依赖 SDXL 等文生图模型的推理级联，复现门槛高",
+   "source_batch": "batch-05.json"
+  },
+  "cvpr-052-CVPR2024-p322": {
+   "github": "https://github.com/SunzeY/AlphaCLIP",
+   "github_official": true,
+   "github_stars": 875,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "MaskImageNet (官方发布的带 alpha 遮罩数据)",
+     "url": "https://huggingface.co/datasets/Zery/MaskImageNet",
+     "accessibility": "public"
+    },
+    {
+     "name": "ImageNet/COCO/Pascal-5i 等微调评测集",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "作者官方仓库、权重与遮罩数据公开，推理单卡可行，但论文级微调需多卡分布式训练",
+   "source_batch": "batch-05.json"
+  },
+  "cvpr-053-CVPR2024-p1629": {
+   "github": "https://github.com/choijeongsoo/av2av",
+   "github_official": true,
+   "github_stars": 48,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "LRS3 唇读语料",
+     "url": "https://mmai.io/datasets/lip_reading",
+     "accessibility": "public"
+    },
+    {
+     "name": "MuST-C v2 中文-英语音翻译语料",
+     "url": null,
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "官方代码与预处理脚本齐全、LRS3 可下载，但需按论文流程做大规模音视频多阶段训练且 MuST-C 需签署授权协议",
+   "source_batch": "batch-05.json"
+  },
+  "cvpr-054-CVPR2024-p2548": {
+   "github": "https://github.com/xuyanwu/SIDDMs-UFOGen",
+   "github_official": false,
+   "github_stars": 20,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "LAION-Aesthetics 子集(论文内部筛选 6 亿图文)",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "ImageNet 256 (Kaggle 镜像，用于小规模验证)",
+     "url": "https://www.kaggle.com/datasets/dimensi0n/imagenet-256",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "large_scale",
+   "reason": "NVIDIA 未发布官方训练代码(仅第三方实现和 diffusers 社区管线)，论文训练依赖数亿级图文数据与数百卡算力",
+   "source_batch": "batch-05.json"
+  },
+  "cvpr-055-CVPR2024-p2222": {
+   "github": "https://github.com/Anttwo/SuGaR",
+   "github_official": true,
+   "github_stars": 3517,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "NeRF synthetic 合成场景",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "Tanks & Temples / Mip-NeRF 360 (COLMAP 采集数据)",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "官方 PyTorch 实现成熟、文档完善，输入为公开采集场景，单卡几分钟即可完成重建管线",
+   "source_batch": "batch-05.json"
+  },
+  "cvpr-056-CVPR2024-p2343": {
+   "github": "https://github.com/yhygao/universal-medical-image-segmentation",
+   "github_official": true,
+   "github_stars": 84,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "11 个公开 3D 医学分割集(AMOS/BCV/CHAOS/MSD 等, 2438 例)",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "作者官方代码并提供各数据集预处理脚本，数据均公开，但 11 个数据集的通用分割训练需多卡长时间运行",
+   "source_batch": "batch-05.json"
+  },
+  "cvpr-057-CVPR2024-p218": {
+   "github": "https://github.com/kuai-lab/cvpr2024_WateRF",
+   "github_official": true,
+   "github_stars": 20,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "NeRF synthetic 场景数据",
+     "url": "https://drive.google.com/drive/folders/128yBriW1IG_3NJ5Rp7APSTZsJqdJdfc1",
+     "accessibility": "public"
+    },
+    {
+     "name": "TensoRF 预训练权重",
+     "url": "https://github.com/apchenstu/TensoRF",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "官方实现含全部场景权重，基于 TensoRF 在公开 NeRF 合成数据上逐场景训练，单卡即可完成",
+   "source_batch": "batch-05.json"
+  },
+  "cvpr-058-CVPR2024-p235": {
+   "github": "https://github.com/NVlabs/FoundationPose",
+   "github_official": true,
+   "github_stars": 3597,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "FoundationPose 合成训练数据(官方发布)",
+     "url": "https://drive.google.com/drive/folders/1s4pB6p4ApfWMiMjmTXOFco8dHbNXikp-?usp=sharing",
+     "accessibility": "public"
+    },
+    {
+     "name": "YCB-Video / LINEMOD / BOP 评测集",
+     "url": "https://bop.felk.cvut.cz/leaderboards/pose-estimation-unseen-bop23/core-datasets/",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "官方代码权重与数据齐备，但推理显存要求高(需改配置适配 4090)且完整复现训练需多卡大规模合成渲染",
+   "source_batch": "batch-05.json"
+  },
+  "cvpr-059-CVPR2024-p975": {
+   "github": "https://github.com/Traffic-X/ViT-CoMer",
+   "github_official": true,
+   "github_stars": 346,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "ImageNet-1K 预训练",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "COCO 检测/实例分割 + ADE20K 语义分割",
+     "url": "https://paperswithcode.com/sota/object-detection-on-coco-minival?p=vit-comer-vision-transformer-with",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "官方实现与下游配置齐全、数据公开，但 ImageNet 级主干预训练需多卡 GPU 集群",
+   "source_batch": "batch-05.json"
+  },
+  "cvpr-060-CVPR2024-p77": {
+   "github": "https://github.com/kyoran/DMR",
+   "github_official": true,
+   "github_stars": 31,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "CARLA 仿真器生成的 RGB+事件模态 RL 环境数据",
+     "url": "https://github.com/carla-simulator/carla/releases",
+     "accessibility": "synthetic"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "README 明确为官方代码，事件相机数据由 CARLA 仿真自动生成无需外部授权，单卡可完成训练评测",
+   "source_batch": "batch-05.json"
+  },
+  "aaai-097-aaai-2025-w1187": {
+   "github": "https://github.com/amirzandieh/QJL",
+   "github_official": true,
+   "github_stars": 99,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "LLaMA-2/LLaMA-3 系列模型权重",
+     "url": "https://github.com/amirzandieh/QJL",
+     "accessibility": "application"
+    },
+    {
+     "name": "LongBench 评测数据",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "官方代码开源且含CUDA kernel，LongBench公开、7B模型单卡即可完成KV cache量化评测，仅需HF申请Llama权重",
+   "source_batch": "batch-09.json"
+  },
+  "aaai-098-aaai-2025-w312": {
+   "github": "https://github.com/bytedance/abq-llm",
+   "github_official": true,
+   "github_stars": 249,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "ABQ-LLM预量化模型(LLaMA/LLaMA-2)",
+     "url": "https://github.com/bytedance/ABQ-LLM",
+     "accessibility": "public"
+    },
+    {
+     "name": "LLaMA原始权重",
+     "url": null,
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "single_gpu",
+   "reason": "字节官方开源并提供量化权重，但需编译CUTL任意比特推理kernel且原始Llama权重受限，复现门槛中等",
+   "source_batch": "batch-09.json"
+  },
+  "aaai-099-aaai-2025-w2804": {
+   "github": "https://github.com/huziyi19/RMath",
+   "github_official": true,
+   "github_stars": 4,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "RMath中文/英文/训练集(JSON)",
+     "url": "https://github.com/huziyi19/RMath",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "官方repo含三套JSON数据集与unsloth训练代码，unsloth微调8B级模型单卡即可完成",
+   "source_batch": "batch-09.json"
+  },
+  "aaai-100-aaai-2025-w117": {
+   "github": "https://github.com/Mathews-Tom/LightPROF",
+   "github_official": true,
+   "github_stars": 46,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "WebQSP",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "CWQ",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "Freebase子图三元组",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "single_gpu",
+   "reason": "官方代码开源且仅训练约1M参数Knowledge Adapter，但需自行准备WebQSP/CWQ与Freebase大规模KG数据",
+   "source_batch": "batch-09.json"
+  },
+  "aaai-101-aaai-2025-w38": {
+   "github": "https://github.com/YuyangYe/MLLM-MSR",
+   "github_official": true,
+   "github_stars": 50,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "MicroLens",
+     "url": "https://github.com/westlake-repl/MicroLens",
+     "accessibility": "public"
+    },
+    {
+     "name": "Amazon Reviews 2023",
+     "url": "https://amazon-reviews-2023.github.io/#grouped-by-category",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "官方代码与两个公开数据集齐备，但需LLaVA多模态推荐模型的SFT训练，通常需要多卡",
+   "source_batch": "batch-09.json"
+  },
+  "aaai-102-aaai-2025-w813": {
+   "github": "https://github.com/design-edit/DesignEdit",
+   "github_official": true,
+   "github_stars": 368,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "Stable Diffusion XL 1.0基础模型",
+     "url": "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "training-free方法直接复用公开SDXL权重，官方代码+Gradio demo单卡推理即可复现",
+   "source_batch": "batch-09.json"
+  },
+  "aaai-103-aaai-2025-w3451": {
+   "github": "https://github.com/SparklingH/BloomScene",
+   "github_official": true,
+   "github_stars": 19,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "Runway图像修复模型权重(网盘分发)",
+     "url": "https://drive.google.com/drive/folders/1tP--db0MJtx1oaIRp-OU2hR0fzP_gWmm?usp=sharing",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "single_gpu",
+   "reason": "官方实现开源，但需编译3DGS栅格化/simple-knn/gridencoder等多个CUDA子模块并从网盘下载修复模型，环境配置成本高",
+   "source_batch": "batch-09.json"
+  },
+  "aaai-104-aaai-2025-w407": {
+   "github": "https://github.com/diaoshaoyou/ProtCLIP",
+   "github_official": true,
+   "github_stars": 12,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "ProtAnno(S/D两版本,Zenodo)",
+     "url": "https://zenodo.org/records/15245588",
+     "accessibility": "public"
+    },
+    {
+     "name": "UniProt(SwissProt/TrEMBL)",
+     "url": "https://www.uniprot.org/",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "官方AAAI2025 oral代码+Zenodo公开数据+checkpoint，下游22个基准单卡可测，但完整预训练需deepspeed多卡",
+   "source_batch": "batch-09.json"
+  },
+  "aaai-105-aaai-2025-w469": {
+   "github": "https://github.com/ediltwwj/AIBD-main",
+   "github_official": true,
+   "github_stars": 3,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "CIFAR-10/CIFAR-100(torchvision自动下载)",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "GTSRB",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "官方PyTorch实现，数据集均为torchvision公开基准，作者注明RTX 3060单卡即可运行",
+   "source_batch": "batch-09.json"
+  },
+  "aaai-106-aaai-2025-w983": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "PriMock57",
+     "url": "https://github.com/babylonhealth/primock57",
+     "accessibility": "public"
+    },
+    {
+     "name": "NoteChat-1000",
+     "url": null,
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "n/a",
+   "reason": "未找到官方代码仓库，需自行复现ASR错误注入与LLM合成对话管线，NoteChat-1000需向原作者申请",
+   "source_batch": "batch-09.json"
+  },
+  "aaai-107-aaai-2025-w593": {
+   "github": "https://github.com/marmotlab/LNS2-RL",
+   "github_official": true,
+   "github_stars": 55,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "MAPF标准地图基准(仓库内含)",
+     "url": "https://github.com/marmotlab/LNS2-RL",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "官方实现开源，但为C++/Python混合工程需CMake编译与boost/Eigen依赖，两阶段MARL训练借助ray推荐多卡",
+   "source_batch": "batch-09.json"
+  },
+  "aaai-108-aaai-2025-w2426": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "多模态图聚类基准(论文未给出仓库)",
+     "url": null,
+     "accessibility": "unknown"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "n/a",
+   "reason": "多轮检索未发现官方或第三方代码发布，只能按论文自行实现图Transformer多模态聚类",
+   "source_batch": "batch-09.json"
+  },
+  "acl-109-acl-2024.acl-long.133": {
+   "github": "https://github.com/lpyhdzx/DecoQuant_code",
+   "github_official": true,
+   "github_stars": 4,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "Data-free（无需校准数据集），评测用 GSM8K/HellaSwag/TruthfulQA 等公开基准",
+     "url": "https://github.com/openai/grade-school-math",
+     "accessibility": "public"
+    },
+    {
+     "name": "Llama-2-7B/13B、Mistral-7B 等模型权重",
+     "url": "https://huggingface.co/meta-llama",
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "一作维护的官方仓库存在但仅4 star，方法免校准数据、只做KV cache低比特量化推理，公开模型+单卡即可复现",
+   "source_batch": "batch-10.json"
+  },
+  "acl-110-acl-2024.findings-acl.178": {
+   "github": "https://github.com/aim-uofa/LoRAPrune",
+   "github_official": true,
+   "github_stars": 63,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "Alpaca（剪枝指令数据）",
+     "url": "https://github.com/tatsu-lab/stanford_alpaca",
+     "accessibility": "public"
+    },
+    {
+     "name": "WikiText2 / Winogrande / GSM8K / PIQA 等公开评测集",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "LLaMA-2-7B/13B 基座模型权重（需申请）",
+     "url": "https://huggingface.co/meta-llama",
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "single_gpu",
+   "reason": "官方开源完整训练代码，剪枝数据公开，但基座Llama-2权重需HF申请，7B剪枝+LoRA恢复训练需大显存GPU",
+   "source_batch": "batch-10.json"
+  },
+  "acl-111-acl-2024.acl-long.73": {
+   "github": "https://github.com/shizhediao/active-prompt",
+   "github_official": true,
+   "github_stars": 249,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "GSM8K",
+     "url": "https://github.com/openai/grade-school-math",
+     "accessibility": "public"
+    },
+    {
+     "name": "CommonSenseQA / StrategyQA / SVAMP 等推理基准",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "n/a",
+   "reason": "官方代码，全公开数据集，方法为训练式主动学习选样例+调用商用LLM API推理，无需本地GPU训练",
+   "source_batch": "batch-10.json"
+  },
+  "acl-112-acl-2024.acl-long.107": {
+   "github": "https://github.com/zhangxy-2019/Self-Alignment-for-Factuality",
+   "github_official": true,
+   "github_stars": 5,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "ShareGen（FactScore 事实性长文数据）",
+     "url": "https://github.com/shengyin1224/FActScore",
+     "accessibility": "public"
+    },
+    {
+     "name": "ELI5",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "Llama-2 基座模型权重",
+     "url": "https://huggingface.co/meta-llama",
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "有官方代码但star很少，需按FactScore流程自建事实性数据并对13B级模型做多轮自我评估RL微调，显存需求超单卡",
+   "source_batch": "batch-10.json"
+  },
+  "acl-113-acl-2024.acl-long.108": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "StrategyQA / HotpotQA / 2WikiMultihopQA / MuSiQue 等多跳问答集",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "Llama-2-13B / Vicuna-13B 模型权重",
+     "url": "https://huggingface.co/meta-llama",
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "single_gpu",
+   "reason": "arXiv/ACL页面与GitHub搜索均未找到官方代码仓库（论文亦未给出代码链接），只能依据论文自行重实现多分区推理流程",
+   "source_batch": "batch-10.json"
+  },
+  "acl-114-acl-2024.acl-long.404": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "论文自建多模态图理解基准（GraphBench，约1.1万样本，未检索到公开发布渠道）",
+     "url": null,
+     "accessibility": "private"
+    },
+    {
+     "name": "微调所用视觉语言模型（LLaVA 等）",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "multi_gpu",
+   "reason": "搜索ACL PDF/arXiv/SemanticScholar/GitHub均无官方代码与数据发布链接，基准图-问题数据不可得，复现需自建数据并微调7B级VLM",
+   "source_batch": "batch-10.json"
+  },
+  "acl-115-acl-2024.acl-long.335": {
+   "github": "https://github.com/Weili-NLP/UNIMO-G",
+   "github_official": false,
+   "github_stars": 88,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "LAION-COCO 等大规模图文对（论文两阶段预训练数据，阿里内部混合数据未公开）",
+     "url": "https://laion.ai/blog/laion-coco/",
+     "accessibility": "public"
+    },
+    {
+     "name": "MS-COCO / GenEval 评测",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "UNIMO-G 模型权重（通义官方经 ModelScope 释出，GitHub 无官方训练仓库）",
+     "url": "https://modelscope.cn/models",
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "large_scale",
+   "reason": "无官方GitHub代码，Weili-NLP仓库仅为社区复现；两阶段训练基于大规模私有图文数据与MLLM+扩散联合训练，算力门槛极高",
+   "source_batch": "batch-10.json"
+  },
+  "acl-116-acl-2024.acl-short.68": {
+   "github": "https://github.com/ritaranx/RAM-EHR",
+   "github_official": true,
+   "github_stars": 42,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "MIMIC-III（需 PhysioNet 资质培训与DUA申请）",
+     "url": "https://physionet.org/content/mimiciii/",
+     "accessibility": "application"
+    },
+    {
+     "name": "MIMIC-IV",
+     "url": "https://physionet.org/content/mimiciv/",
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "single_gpu",
+   "reason": "官方代码开源，但核心临床数据集MIMIC需资质申请与数据使用协议，通过后RAG推理流程单卡可跑",
+   "source_batch": "batch-10.json"
+  },
+  "acl-117-acl-2024.findings-acl.443": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "论文承诺发布的越狱攻击/防御数据集与测试框架（未检索到实际仓库链接）",
+     "url": null,
+     "accessibility": "private"
+    },
+    {
+     "name": "Aegis 安全数据集（论文防御模型训练所用，公开）",
+     "url": "https://github.com/automorphic-ai/aegis",
+     "accessibility": "public"
+    },
+    {
+     "name": "Llama-2-7B/13B/70B、GPT系列被测模型",
+     "url": "https://huggingface.co/meta-llama",
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "large_scale",
+   "reason": "未找到官方代码仓库，评测横跨多种攻击/防御组合与70B级模型+商用API，官方数据集链接也未释出，复现成本很高",
+   "source_batch": "batch-10.json"
+  },
+  "acl-118-acl-2024.acl-long.301": {
+   "github": "https://github.com/WeixiangYAN/CodeScope",
+   "github_official": true,
+   "github_stars": 105,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "CodeScope 基准（8620题、188语言任务，随仓库公开）",
+     "url": "https://github.com/WeixiangYAN/CodeScope",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "官方评测代码与基准数据全部公开，只需对开源代码LLM做推理+沙箱执行，单卡即可完成子集评测",
+   "source_batch": "batch-10.json"
+  },
+  "acl-119-acl-2024.acl-long.262": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "ESConv（情感支持对话公开数据）",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "论文使用的个性化/规划相关公开数据集",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "multi_gpu",
+   "reason": "arXiv页面与GitHub搜索均未见官方代码，双过程框架涉及GPT-4 API调用与LLM微调，仅凭论文难以完整复现",
+   "source_batch": "batch-10.json"
+  },
+  "acl-120-acl-2024.acl-long.780": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "MS MARCO / AllNLI 等句向量训练数据",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "STS12-STS18 / SICK / STS-B 等评测集",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "single_gpu",
+   "reason": "论文（arXiv:2402.18281）未给出代码链接，GitHub亦无官方或第三方实现，理论统一范式需从零按公式重推实现，尽管算力仅需单卡",
+   "source_batch": "batch-10.json"
+  },
+  "acl-121-acl-2025.acl-long.1140": {
+   "github": "https://github.com/EasonWheng/MobiLoRA_experiment",
+   "github_official": false,
+   "github_stars": 2,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "真实移动设备 trace 与 LoRA 推理负载（论文未随代码发布）",
+     "url": null,
+     "accessibility": "private"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "n/a",
+   "reason": "无官方代码仓库（ACL 页面与作者主页均未发布），实验依赖真实手机设备与未公开的移动 trace，仅有第三方复现原型。",
+   "source_batch": "batch-11.json"
+  },
+  "acl-122-acl-2025.acl-long.325": {
+   "github": "https://github.com/Little0o0/Quaff",
+   "github_official": true,
+   "github_stars": 11,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "HuggingFace 模型与数据集（Phi-3-mini / LLaMA 等微调任务，自动下载）",
+     "url": "https://huggingface.co/datasets",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "官方代码齐备，数据模型均由 HuggingFace 自动下载，7B 以下模型的量化 PEFT 微调单卡即可完成。",
+   "source_batch": "batch-11.json"
+  },
+  "acl-123-acl-2025.acl-long.1383": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "Humanity's Last Exam",
+     "url": null,
+     "accessibility": "application"
+    },
+    {
+     "name": "GPQA",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "GAIA",
+     "url": null,
+     "accessibility": "application"
+    },
+    {
+     "name": "FreshWiki",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "single_gpu",
+   "reason": "论文中给出的官方仓库 thewworldofagents/Agentic-Reasoning 已失效(404)，无可用官方代码，需完全自行 reimplement 框架。",
+   "source_batch": "batch-11.json"
+  },
+  "acl-124-acl-2025.acl-long.147": {
+   "github": "https://github.com/d223302/TRACT",
+   "github_official": true,
+   "github_stars": 24,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "prometheus-eval/Feedback-Collection（训练）",
+     "url": "https://huggingface.co/datasets/prometheus-eval/Feedback-Collection",
+     "accessibility": "public"
+    },
+    {
+     "name": "prometheus-eval/Feedback-Bench（评测）",
+     "url": "https://huggingface.co/datasets/prometheus-eval/Feedback-Bench",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "single_gpu",
+   "reason": "官方代码与公开 HF 数据齐备，但需 LLaMA-Factory 微调 + vLLM 评测的双环境流水线，且 CoT 分数蒸馏流程较繁琐。",
+   "source_batch": "batch-11.json"
+  },
+  "acl-125-acl-2025.acl-long.74": {
+   "github": "https://github.com/wangyu-ovo/MML",
+   "github_official": true,
+   "github_stars": 35,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "MML 加密图像数据集（作者上传）",
+     "url": "https://drive.google.com/drive/folders/10QlhyFvytmUsapcQf2xBBBsiB9N0zrpl?usp=sharing",
+     "accessibility": "public"
+    },
+    {
+     "name": "SafeBench",
+     "url": "https://github.com/trust-ai/SafeBench",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "官方攻击代码直接可用，攻击图像数据已公开在 Google Drive，仅需单卡推理开源 LVLM（GPT-4V 部分需 API）。",
+   "source_batch": "batch-11.json"
+  },
+  "acl-126-acl-2025.acl-long.327": {
+   "github": "https://github.com/THUDM/AlignMMBench",
+   "github_official": true,
+   "github_stars": 6,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "AlignMMBench（3000 样本中文多模态对齐基准，随仓库/HF 发布）",
+     "url": "https://github.com/THUDM/AlignMMBench",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "评测基准的官方代码与数据全部公开，评测开源中文 LVLM 单卡可跑，仅对齐打分依赖 GPT-4o API。",
+   "source_batch": "batch-11.json"
+  },
+  "acl-127-acl-2025.acl-long.210": {
+   "github": "https://github.com/SpaceHunterInf/Segment_Level_Diffusion",
+   "github_official": true,
+   "github_stars": 2,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "ROC Stories 长文故事数据集（仓库内附示例数据）",
+     "url": "https://github.com/SpaceHunterInf/Segment_Level_Diffusion",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "官方实现附完整训练/推理脚本与公开 ROC 数据，模型为 BART/T5 量级的段落级扩散模型，单卡可复现。",
+   "source_batch": "batch-11.json"
+  },
+  "acl-128-acl-2025.findings-acl.1313": {
+   "github": "https://github.com/WeijieyingRen/DiaLLMs",
+   "github_official": true,
+   "github_stars": 0,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "NHANES 数据集（糖尿病预测）",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "TriNetX 去标识化电子健康记录（代谢/呼吸/循环队列）",
+     "url": null,
+     "accessibility": "private"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "single_gpu",
+   "reason": "官方代码已发布且 NHANES 公开，但核心 EHR 对话实验依赖 TriNetX 机构订阅数据，无权限只能部分复现。",
+   "source_batch": "batch-11.json"
+  },
+  "acl-129-acl-2025.acl-long.897": {
+   "github": "https://github.com/LukeChen-go/pia-defense-by-attack",
+   "github_official": true,
+   "github_stars": 11,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "仓库自带的注入指令数据 crafted_instruction_data_qa.json",
+     "url": "https://github.com/LukeChen-go/pia-defense-by-attack",
+     "accessibility": "public"
+    },
+    {
+     "name": "StruQ 基线代码与数据",
+     "url": "https://github.com/Sizhe-Chen/StruQ",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "官方实现基于 StruQ 开源代码，数据随仓库公开，只需单卡推理 Llama-3-8B 即可完成攻防评测。",
+   "source_batch": "batch-11.json"
+  },
+  "acl-130-acl-2025.acl-long.741": {
+   "github": "https://github.com/Runxuan-Liu/ORT",
+   "github_official": true,
+   "github_stars": 6,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "WebQSP（Freebase 子图需自建 Neo4j）",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "ComplexWebQuestions (CWQ)（Freebase 子图需自建 Neo4j）",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "single_gpu",
+   "reason": "官方代码与公开基准齐备，但仓库不含完整数据集，需自行获取 Freebase 子图导入 Neo4j 并依赖商用 LLM API。",
+   "source_batch": "batch-11.json"
+  },
+  "acl-131-acl-2025.acl-long.1105": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "ARCDataset",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "MultiWOZ",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "TruthfulQA",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "large_scale",
+   "reason": "论文声明的代码仓库 collaborative-debate/role-differentiation 实际不存在(404)，且多智能体 RL 训练多LLM辩论需要大规模算力。",
+   "source_batch": "batch-11.json"
+  },
+  "acl-132-acl-2025.findings-acl.856": {
+   "github": "https://github.com/cmavro/GNN-RAG",
+   "github_official": true,
+   "github_stars": 448,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "WebQSP / CWQ / GrailQA（Freebase KGQA 基准，公开但需自行准备图谱）",
+     "url": "https://github.com/cmavro/GNN-RAG",
+     "accessibility": "public"
+    },
+    {
+     "name": "MetaQA（Wikidata 图谱）",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "高星官方代码且作者已附 GNN 检索结果，但完整复现需自备 Freebase/Wikidata 图谱训练 GNN 并跑 LLaMA-8B 级 LLM，环境较重。",
+   "source_batch": "batch-11.json"
+  },
+  "cvpr-061-CVPR2025-p2826": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "VFHQ",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "VoxCeleb2",
+     "url": null,
+     "accessibility": "application"
+    },
+    {
+     "name": "CelebV-HQ",
+     "url": null,
+     "accessibility": "application"
+    },
+    {
+     "name": "HDTF",
+     "url": null,
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "large_scale",
+   "reason": "未找到官方开源代码，论文在8张A100上训练并需手机端部署，VoxCeleb2/CelebV-HQ/HDTF等数据需申请授权",
+   "source_batch": "batch-06.json"
+  },
+  "cvpr-062-CVPR2025-p516": {
+   "github": "https://github.com/jsjangAI/VL2Lite",
+   "github_official": true,
+   "github_stars": 20,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "细粒度图像分类数据集(CUB-200-2011、Stanford Cars、DTD等)",
+     "url": "https://github.com/jsjangAI/VL2Lite",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "作者官方仓库，蒸馏轻量分类网络，数据均为公开细粒度分类集，单卡即可完成训练",
+   "source_batch": "batch-06.json"
+  },
+  "cvpr-063-CVPR2025-p59": {
+   "github": "https://github.com/zhengrongz/AoTD",
+   "github_official": true,
+   "github_stars": 61,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "AoTD视频推理指令数据(用GPT-4o经AoTD流水线自动构造)",
+     "url": "https://github.com/zhengrongz/AoTD",
+     "accessibility": "synthetic"
+    },
+    {
+     "name": "公开视频评测基准(MVBench、NextQA等)",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "官方代码已发布，但CoT训练数据需调用GPT-4o接口自行构造，蒸馏训练7B级Video-LLM需多卡",
+   "source_batch": "batch-06.json"
+  },
+  "cvpr-064-CVPR2025-p329": {
+   "github": "https://github.com/kyrieLei/Critic-V",
+   "github_official": true,
+   "github_stars": 18,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "critique-VQA(Critic-V训练数据)",
+     "url": "https://huggingface.co/datasets/huaXiaKyrie/critique-VQA",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "作者官方仓库且训练数据托管HuggingFace公开，但critic与policy多模态LLM的SFT/DPO/RLAIF训练需多卡",
+   "source_batch": "batch-06.json"
+  },
+  "cvpr-065-CVPR2025-p2046": {
+   "github": "https://github.com/yshinya6/clip-refine",
+   "github_official": true,
+   "github_stars": 41,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "COCO Caption 2017",
+     "url": "https://cocodataset.org/#home",
+     "accessibility": "public"
+    },
+    {
+     "name": "ImageNet-1K(评测)",
+     "url": "https://huggingface.co/datasets/ILSVRC/imagenet-1k",
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "官方代码(POSTRE)完整，COCO公开但ImageNet-1K在HuggingFace需授权，CLIP对比式后预训练建议多卡",
+   "source_batch": "batch-06.json"
+  },
+  "cvpr-066-CVPR2025-p393": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "CMU-MOSI",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "CMU-MOSEI",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "n/a",
+   "reason": "arXiv与官方页面均未给出代码仓库，多模态Mamba对齐架构需按论文自行实现",
+   "source_batch": "batch-06.json"
+  },
+  "cvpr-067-CVPR2025-p304": {
+   "github": "https://github.com/zhang0jhon/diffusion-4k",
+   "github_official": true,
+   "github_stars": 367,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "Aesthetic-4K",
+     "url": "https://huggingface.co/datasets/zhang0jhon/Aesthetic-4K",
+     "accessibility": "public"
+    },
+    {
+     "name": "Aesthetic-Train-V2",
+     "url": "https://huggingface.co/datasets/zhang0jhon/Aesthetic-Train-V2",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "large_scale",
+   "reason": "官方代码与4K数据集均公开，但复现需以SD3-2B/Flux-12B为底座做4K分辨率训练，算力要求极高",
+   "source_batch": "batch-06.json"
+  },
+  "cvpr-068-CVPR2025-p209": {
+   "github": "https://github.com/XDimLab/Prometheus",
+   "github_official": true,
+   "github_stars": 148,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "SAM-1B(单视图训练数据)",
+     "url": null,
+     "accessibility": "application"
+    },
+    {
+     "name": "MVImgNet",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "Objaverse",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "DL3DV-10K",
+     "url": null,
+     "accessibility": "application"
+    },
+    {
+     "name": "RealEstate10K",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "nuScenes",
+     "url": null,
+     "accessibility": "application"
+    },
+    {
+     "name": "Waymo Open Dataset",
+     "url": null,
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "large_scale",
+   "reason": "官方仓库提供训练脚本，但需聚合SAM-1B、DL3DV、nuScenes等海量多源数据训练3D感知潜在扩散模型，算力门槛高",
+   "source_batch": "batch-06.json"
+  },
+  "cvpr-069-CVPR2025-p743": {
+   "github": "https://github.com/carlinds/splatad",
+   "github_official": true,
+   "github_stars": 426,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "PandaSet",
+     "url": null,
+     "accessibility": "application"
+    },
+    {
+     "name": "Argoverse 2",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "nuScenes",
+     "url": null,
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "single_gpu",
+   "reason": "官方仓库已开源雷达/相机光栅化核心，但完整模型需经neurad-studio获取，且nuScenes/PandaSet需注册申请",
+   "source_batch": "batch-06.json"
+  },
+  "cvpr-070-CVPR2025-p2790": {
+   "github": "https://github.com/Zoew420/AdaCoMed",
+   "github_official": true,
+   "github_stars": 47,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "VQA-RAD",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "single_gpu",
+   "reason": "官方代码且VQA-RAD可公开获取、单卡可跑，但大小模型协作框架依赖调用闭源LLM API完成路由与诊断",
+   "source_batch": "batch-06.json"
+  },
+  "cvpr-071-CVPR2025-p357": {
+   "github": "https://github.com/adwardlee/t2i_safety",
+   "github_official": true,
+   "github_stars": 34,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "T2ISafety/ImageGuard训练测试集",
+     "url": "https://huggingface.co/datasets/OpenSafetyLab/t2i_safety_dataset",
+     "accessibility": "public"
+    },
+    {
+     "name": "T2ISafety评测数据",
+     "url": "https://huggingface.co/datasets/OpenSafetyLab/t2isafety_evaluation",
+     "accessibility": "public"
+    },
+    {
+     "name": "ImageGuard模型权重",
+     "url": "https://huggingface.co/OpenSafetyLab/ImageGuard",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "基准prompt与68K人工标注图像在HuggingFace全部公开，ImageGuard评估器单卡可训可评",
+   "source_batch": "batch-06.json"
+  },
+  "cvpr-072-CVPR2025-p39": {
+   "github": "https://github.com/Phil0212/SGC-Net",
+   "github_official": true,
+   "github_stars": 17,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "HICO-DET",
+     "url": "https://github.com/YueLiao/PPDM",
+     "accessibility": "public"
+    },
+    {
+     "name": "SWIG-HOI",
+     "url": "https://github.com/scwangdyd/large_vocabulary_hoi_detection",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "官方代码含训练/评测脚本与两个公开HOI数据集准备指引，但DETR类检测器训练需多卡，描述生成依赖GPT API",
+   "source_batch": "batch-06.json"
+  },
+  "aaai-085-aaai-2024-w1690": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "COCO",
+     "url": "https://cocodataset.org/",
+     "accessibility": "public"
+    },
+    {
+     "name": "YouTube-VIS",
+     "url": "https://youtube-vos.org/dataset/vis/",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "n/a",
+   "reason": "无官方代码发布（arXiv注明代码可用但至今未见），数据集公开，无法直接复现。",
+   "source_batch": "batch-08.json"
+  },
+  "aaai-086-aaai-2024-w244": {
+   "github": "https://github.com/shawnricecake/agile-quant",
+   "github_official": true,
+   "github_stars": 5,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "LLaMA-1 (7B-65B权重)",
+     "url": "https://github.com/facebookresearch/llama",
+     "accessibility": "application"
+    },
+    {
+     "name": "OPT",
+     "url": "https://huggingface.co/facebook/opt-6.7b",
+     "accessibility": "public"
+    },
+    {
+     "name": "GSM8K",
+     "url": "https://github.com/openai/grade-school-math",
+     "accessibility": "public"
+    },
+    {
+     "name": "MMLU",
+     "url": "https://github.com/hendrycks/test",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "single_gpu",
+   "reason": "官方代码可用，OPT/BLOOM公开但主实验用LLaMA-1需Meta申请，单卡可运行7B模型。",
+   "source_batch": "batch-08.json"
+  },
+  "aaai-087-aaai-2024-w3": {
+   "github": "https://github.com/chen700564/RGB",
+   "github_official": true,
+   "github_stars": 378,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "RGB Benchmark（英/中）",
+     "url": "https://github.com/chen700564/RGB",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "官方代码star数高，benchmark数据在仓库内公开，7B模型单卡可跑，API调用可复现。",
+   "source_batch": "batch-08.json"
+  },
+  "aaai-088-aaai-2024-w160": {
+   "github": "https://github.com/UMass-Foundation-Model/VisualCoT",
+   "github_official": true,
+   "github_stars": 40,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "COCO 2014/2017",
+     "url": "https://cocodataset.org/",
+     "accessibility": "public"
+    },
+    {
+     "name": "OK-VQA",
+     "url": "https://ok-vqa.github.io/",
+     "accessibility": "public"
+    },
+    {
+     "name": "A-OKVQA",
+     "url": "https://github.com/allenai/aokvqa",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "single_gpu",
+   "reason": "官方代码可用，数据集公开；需LLaVA（13B需约24GB显存）推理，单卡可行但资源需求较高。",
+   "source_batch": "batch-08.json"
+  },
+  "aaai-089-aaai-2024-w393": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "MSCOCO",
+     "url": "https://cocodataset.org/",
+     "accessibility": "public"
+    },
+    {
+     "name": "Flickr30k",
+     "url": "https://shannon.cs.illinois.edu/DenotationGraph/",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "single_gpu",
+   "reason": "无官方代码发布，数据集公开，需要自行实现多模态知识图谱对比哈希方法，复现难度高。",
+   "source_batch": "batch-08.json"
+  },
+  "aaai-090-aaai-2024-w891": {
+   "github": "https://github.com/Hankpipi/diffusers-hetu",
+   "github_official": true,
+   "github_stars": 6,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "InstructPix2Pix prompts",
+     "url": "https://github.com/timothybrooks/instruct-pix2pix",
+     "accessibility": "public"
+    },
+    {
+     "name": "FISEdit-Data",
+     "url": "https://github.com/101nobody/FISEdit-Data",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "官方代码可用，数据公开，Stable Diffusion缓存加速推理单卡（8GB显存）即可完成。",
+   "source_batch": "batch-08.json"
+  },
+  "aaai-091-aaai-2024-w1470": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "LLFF",
+     "url": "https://github.com/Fyusion/LLFF",
+     "accessibility": "public"
+    },
+    {
+     "name": "DTU",
+     "url": "http://roboimagedata.compute.dtu.dk/",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "single_gpu",
+   "reason": "无官方代码发布，数据集公开；需自行实现深度引导点云融合NeRF架构，复现困难。",
+   "source_batch": "batch-08.json"
+  },
+  "aaai-092-aaai-2024-w162": {
+   "github": "https://github.com/ktio89/ClinicalCoT",
+   "github_official": true,
+   "github_stars": 1,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "ADNI",
+     "url": "https://adni.loni.usc.edu/",
+     "accessibility": "application"
+    },
+    {
+     "name": "AIBL",
+     "url": "https://aibl.csiro.au/AIBL/",
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "single_gpu",
+   "reason": "虽有官方代码（star=1），但核心数据ADNI/AIBL均需申请授权，私有医疗数据获取困难。",
+   "source_batch": "batch-08.json"
+  },
+  "aaai-093-aaai-2024-w1281": {
+   "github": "https://github.com/zhuhai-ustc/limeattack",
+   "github_official": true,
+   "github_stars": 7,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "SST-2",
+     "url": "https://nlp.stanford.edu/sentiment/",
+     "accessibility": "public"
+    },
+    {
+     "name": "MR（Movie Reviews）",
+     "url": "https://www.cs.cornell.edu/people/pabo/movie-review-data/",
+     "accessibility": "public"
+    },
+    {
+     "name": "AG News",
+     "url": "https://huggingface.co/datasets/ag_news",
+     "accessibility": "public"
+    },
+    {
+     "name": "SNLI",
+     "url": "https://nlp.stanford.edu/projects/snli/",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "官方代码可用，全部使用公开文本分类数据集（GLUE等），BERT级模型单卡即可完成。",
+   "source_batch": "batch-08.json"
+  },
+  "aaai-094-aaai-2024-w367": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "SemEval-2014 ABSA（Restaurant/Laptop）",
+     "url": "https://alt.qcri.org/semeval2014/task4/",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "single_gpu",
+   "reason": "无官方代码发布，数据集公开但需自行实现显式情感增强方法，论文中方法细节不易完全复现。",
+   "source_batch": "batch-08.json"
+  },
+  "aaai-095-aaai-2024-w883": {
+   "github": "https://github.com/hyeon1996/FoX",
+   "github_official": true,
+   "github_stars": 26,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "SMAC（StarCraft Multi-Agent Challenge）",
+     "url": "https://github.com/oxwhirl/smac",
+     "accessibility": "public"
+    },
+    {
+     "name": "Google Research Football（GRF）",
+     "url": "https://github.com/google-research/football",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "single_gpu",
+   "reason": "官方代码可用，环境公开，但SMAC需额外安装StarCraft II本体，GRF也需较大下载，配置稍复杂。",
+   "source_batch": "batch-08.json"
+  },
+  "aaai-096-aaai-2024-w582": {
+   "github_official": false,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "OGB分子数据集（TOX21/BACE/BBBP/HIV/ESOL）",
+     "url": "https://ogb.stanford.edu/",
+     "accessibility": "public"
+    },
+    {
+     "name": "TUDataset（COLLAB/PROTEINS/D&D）",
+     "url": "https://chrsmrrs.github.io/datasets/",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "single_gpu",
+   "reason": "无官方代码（Awesome-Graph-OOD列表中标注N/A），数据集公开，需自行实现重加权GNN泛化方法。",
+   "source_batch": "batch-08.json"
+  }
+ }
+}
