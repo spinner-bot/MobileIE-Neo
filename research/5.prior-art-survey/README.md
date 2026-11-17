@@ -1,5 +1,7 @@
 # 5. 前期调研与重复性风险（Prior-Art Survey）
 
+最新2026-11-17：[68 联合流-特征学习先例及成本优先级](docs/68-joint-feature-motion-learning-and-cost-priority.md)、[69 快速经典DIS缺口](docs/69-fast-classical-flow-reference-gap.md)。JFFRA方法节选实际核查，IFRNet仅官方检索线索/HTML404与PDF403后停止；UbiEnlight仅摘要回访，不虚称新全文阅读。DIS仅原作者摘要/正式OpenCV4.11 API和现库ULTRAFAST getter，尚未输入图像或调用calc，不移入文献速度。R85现有half-FB完整CPU计时正常、1.79–1.91倍raw，仅限本参考而非所有flow/手机；[0165](../../docs/进展报告/0165-T-26111711-现有强基线完整CPU流水线成本与快速传统参考缺口.md)。下一固定快速经典对照待另立协议，不以普通共享/softmax/蒸馏/已知DIS宣称创新或解封旧STOP；paper020/保留最终/论文缺口保持。
+
 最新[note67：蒸馏目标与状态支持](docs/67-distillation-targets-and-state-operator-support.md)：2020差分KD与Sobolev/Jacobian随机导数匹配均有先例，普通KD不作为新点；R28源码实际GT监督/teacher仅对应，R80旧误称已独立勘误、不改原冻结协议。[0163](../../docs/进展报告/0163-T-26111710-状态算子范围检验与监督来源勘误.md)固定CPU前置H1/H2均过，支持下一不同核心设计，不是性能/原创证明；无外部代码执行/新权重数据，已记录两403原入口停止与实际阅读范围。旧STOP/保留最终/paper020和论文目标保持。
 
 此前实验边界：[0162/R82](../../docs/进展报告/0162-T-26111708-自参照修正完整联合结果与局部路线止损.md)原48K/全CPU与JOD/20实际图审完整结束，A/B各8/24而两资格False，按原线停止本H局部网格。对raw约7%–13%时序收益保留，但对强rec仍高约30%–42%，不凭恒等/注册参数/诊断主张创新。note66核混合/残差先例与解释边界保持，下一新假设先核与旧STOP/先例差异；paper020/最终像素/论文缺口保持，目标active。
