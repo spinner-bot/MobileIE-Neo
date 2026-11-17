@@ -1,0 +1,2074 @@
+{
+  "recorded_at": "2026-11-17T10:47:47.908Z",
+  "query": "\"MobileIE\" \"ONNX\"",
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "results": [
+        {
+          "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/tools/torch_to_onnx.py",
+          "path": "shared/mon/mon/vision/enhance/multitask/mobileie/tools/torch_to_onnx.py",
+          "display_url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/tools/torch_to_onnx.py",
+          "display_title": "shared/mon/mon/vision/enhance/multitask/mobileie/tools/torch_to_onnx.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "        return weighted_block1 * weighted_block2 + self.bias\n\n\ndef export_onnx(pretrained_model_path):\n    model = MobileIENetS(12)  \n    \n    checkpoint = torch.load(pretrained_model_path)",
+              "matches": [
+                {
+                  "text": "onnx",
+                  "indices": [
+                    74,
+                    78
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    115,
+                    123
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/tools/onnx2tflite/onnx2tflite.py",
+          "path": "shared/mon/mon/vision/enhance/multitask/mobileie/tools/onnx2tflite/onnx2tflite.py",
+          "display_url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/tools/onnx2tflite/onnx2tflite.py",
+          "display_title": "shared/mon/mon/vision/enhance/multitask/mobileie/tools/onnx2tflite/onnx2tflite.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "import os\nos.environ['CUDA_VISIBLE_DEVICES'] = '2'\nfrom onnx2tflite.converter import onnx_converter\nonnx_path = \"/data2/yanhailong/IR-Based/ICCV2025/MobileIE/LLE.onnx\" \n\nonnx_converter(\n    onnx_model_path = onnx_path,",
+              "matches": [
+                {
+                  "text": "onnx",
+                  "indices": [
+                    56,
+                    60
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    85,
+                    89
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    100,
+                    104
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    149,
+                    157
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    162,
+                    166
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    170,
+                    174
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    190,
+                    194
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    208,
+                    212
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/torch_to_onnx.py",
+          "path": "torch_to_onnx.py",
+          "display_url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/torch_to_onnx.py",
+          "display_title": "torch_to_onnx.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "        weighted_block2 = self.weight2 * x1\n        return weighted_block1 * weighted_block2 + self.bias\n\ndef export_onnx(pretrained_model_path):\n    model = MobileIENetS(12)  \n    \n    checkpoint = torch.load(pretrained_model_path)",
+              "matches": [
+                {
+                  "text": "onnx",
+                  "indices": [
+                    117,
+                    121
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    158,
+                    166
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/torch_to_onnx.py",
+          "path": "torch_to_onnx.py",
+          "display_url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/torch_to_onnx.py",
+          "display_title": "torch_to_onnx.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "INPUT_W = 256\n\n# ④ ONNX 输出路径\nONNX_PATH = \"MobileIE_LLE_slim.onnx\"\n\n# ⑤ ONNX opset 版本（17 一般够用）\nOPSET = 17",
+              "matches": [
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    21,
+                    25
+                  ]
+                },
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    39,
+                    43
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    52,
+                    60
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    70,
+                    74
+                  ]
+                },
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    83,
+                    87
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/onnx2tflite/onnx2tflite.py",
+          "path": "onnx2tflite/onnx2tflite.py",
+          "display_url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/onnx2tflite/onnx2tflite.py",
+          "display_title": "onnx2tflite/onnx2tflite.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "import os\nos.environ['CUDA_VISIBLE_DEVICES'] = '2'\nfrom onnx2tflite.converter import onnx_converter\nonnx_path = \"/data2/yanhailong/IR-Based/ICCV2025/MobileIE/LLE.onnx\" \n\nonnx_converter(\n    onnx_model_path = onnx_path,",
+              "matches": [
+                {
+                  "text": "onnx",
+                  "indices": [
+                    56,
+                    60
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    85,
+                    89
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    100,
+                    104
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    149,
+                    157
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    162,
+                    166
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    170,
+                    174
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    190,
+                    194
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    208,
+                    212
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE-main/MobileIE-main/torch_to_onnx.py",
+          "path": "MobileIE-main/MobileIE-main/torch_to_onnx.py",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE-main/MobileIE-main/torch_to_onnx.py",
+          "display_title": "MobileIE-main/MobileIE-main/torch_to_onnx.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "        weighted_block2 = self.weight2 * x1\n        return weighted_block1 * weighted_block2 + self.bias\n\ndef export_onnx(pretrained_model_path):\n    model = MobileIENetS(12)  \n    \n    checkpoint = torch.load(pretrained_model_path)",
+              "matches": [
+                {
+                  "text": "onnx",
+                  "indices": [
+                    117,
+                    121
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    158,
+                    166
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE-main/MobileIE-main/onnx2tflite/onnx2tflite.py",
+          "path": "MobileIE-main/MobileIE-main/onnx2tflite/onnx2tflite.py",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE-main/MobileIE-main/onnx2tflite/onnx2tflite.py",
+          "display_title": "MobileIE-main/MobileIE-main/onnx2tflite/onnx2tflite.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "import os\nos.environ['CUDA_VISIBLE_DEVICES'] = '2'\nfrom onnx2tflite.converter import onnx_converter\nonnx_path = \"/data2/yanhailong/IR-Based/ICCV2025/MobileIE/LLE.onnx\" \n\nonnx_converter(\n    onnx_model_path = onnx_path,",
+              "matches": [
+                {
+                  "text": "onnx",
+                  "indices": [
+                    56,
+                    60
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    85,
+                    89
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    100,
+                    104
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    149,
+                    157
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    162,
+                    166
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    170,
+                    174
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    190,
+                    194
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    208,
+                    212
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/onnx2tflite/onnx2tflite.py",
+          "path": "onnx2tflite/onnx2tflite.py",
+          "display_url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/onnx2tflite/onnx2tflite.py",
+          "display_title": "onnx2tflite/onnx2tflite.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n# 步骤1: 修复ONNX模型的动态输入\nprint(\"正在加载ONNX模型...\")\nonnx_path = \"/home/featurize/work/test9/MobileIE_LLE_slim.onnx\"\nmodel = onnx.load(onnx_path)\n\n# 查看原始输入信息",
+              "matches": [
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    18,
+                    22
+                  ]
+                },
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    63,
+                    67
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    79,
+                    83
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    119,
+                    127
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    137,
+                    141
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    151,
+                    155
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    161,
+                    165
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Kazuhito00/Multimodal-Node-Editor/blob/b4e82ad8c5b7c68ae263cb26989195af1d803d18/download_weights.py",
+          "path": "download_weights.py",
+          "display_url": "https://github.com/Kazuhito00/Multimodal-Node-Editor/blob/b4e82ad8c5b7c68ae263cb26989195af1d803d18/download_weights.py",
+          "display_title": "download_weights.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    (\"v0.0.0\", \"efficientnet-lite4-11.onnx\", \"src/nodes/image/deep_learning/classification/EfficientNetLite4/model/efficientnet-lite4-11.onnx\"),\n    (\"v0.0.0\", \"mnist-12.onnx\", \"src/nodes/image/deep_learning/classification/MNIST/model/mnist-12.onnx\"),\n    (\"v0.0.0\", \"face_detection_yunet_2023mar.onnx\", \"src/nodes/image/deep_learning/face_detection/YuNet/model/face_detection_yunet_2023mar.onnx\"),\n    (\"v0.0.0\", \"mobileie_lolv1.onnx\", \"src/nodes/image/deep_learning/low_light_image_enhancement/MobileIE/model/mobileie_lolv1.onnx\"),\n    (\"v0.0.0\", \"cpga_net.onnx\", \"src/nodes/image/deep_learning/low_light_image_enhancement/CPGA-Net/model/cpga_net.onnx\"),\n    (\"v0.0.0\", \"tbefn.onnx\", \"src/nodes/image/deep_learning/low_light_image_enhancement/TBEFN/model/tbefn.onnx\"),\n    (\"v0.0.0\", \"lite-mono-8m_1024x320.onnx\", \"src/nodes/image/deep_learning/monocular_depth_estimation/Lite-Mono/model/lite-mono-8m_1024x320.onnx\"),",
+              "matches": [
+                {
+                  "text": "onnx",
+                  "indices": [
+                    38,
+                    42
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    137,
+                    141
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    170,
+                    174
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    244,
+                    248
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    297,
+                    301
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    391,
+                    395
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    415,
+                    423
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    430,
+                    434
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    496,
+                    504
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    511,
+                    519
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    526,
+                    530
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    559,
+                    563
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    649,
+                    653
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    679,
+                    683
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    763,
+                    767
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    809,
+                    813
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    912,
+                    916
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/config/mobileie_lle_lolv1.yaml",
+          "path": "shared/mon/mon/vision/enhance/multitask/mobileie/config/mobileie_lle_lolv1.yaml",
+          "display_url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/config/mobileie_lle_lolv1.yaml",
+          "display_title": "shared/mon/mon/vision/enhance/multitask/mobileie/config/mobileie_lle_lolv1.yaml",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "save_dir    : &save_dir ~                                                       # Saving directory. If not set, it will be `root/arch/model/data`.\nweights     : &weights \"zoo/vision/enhance/multitask/mobileie/mobileie_lle/lolv1/mobileie_lle_lolv1_slim.pt\"  # Path to the pretrained weights.\ndevice      : &device 0                                                         # Running device (i.e., cuda:0 | cuda:0,1,2,3 | cpu).",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    200,
+                    208
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    209,
+                    217
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    228,
+                    236
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "export:\n  format        : \"onnx\"                                                        # Export format (e.g., onnx, engine, torchscript, coreml, tflite, openvino).\n  opset         : 16                                                            # ONNX: opset version.",
+              "matches": [
+                {
+                  "text": "onnx",
+                  "indices": [
+                    27,
+                    31
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    111,
+                    115
+                  ]
+                },
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    247,
+                    251
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/config/mobileie_lle_lolv2real.yaml",
+          "path": "shared/mon/mon/vision/enhance/multitask/mobileie/config/mobileie_lle_lolv2real.yaml",
+          "display_url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/config/mobileie_lle_lolv2real.yaml",
+          "display_title": "shared/mon/mon/vision/enhance/multitask/mobileie/config/mobileie_lle_lolv2real.yaml",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "save_dir    : &save_dir ~                                                       # Saving directory. If not set, it will be `root/arch/model/data`.\nweights     : &weights \"zoo/vision/enhance/multitask/mobileie/mobileie_lle/lolv2real/mobileie_lle_lolv2real_slim.pt\"  # Path to the pretrained weights.\ndevice      : &device 0                                                         # Running device (i.e., cuda:0 | cuda:0,1,2,3 | cpu).",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    200,
+                    208
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    209,
+                    217
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    232,
+                    240
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "export:\n  format        : \"onnx\"                                                        # Export format (e.g., onnx, engine, torchscript, coreml, tflite, openvino).\n  opset         : 16                                                            # ONNX: opset version.",
+              "matches": [
+                {
+                  "text": "onnx",
+                  "indices": [
+                    27,
+                    31
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    111,
+                    115
+                  ]
+                },
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    247,
+                    251
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Kazuhito00/Multimodal-Node-Editor/blob/b4e82ad8c5b7c68ae263cb26989195af1d803d18/src/nodes/image/deep_learning/low_light_image_enhancement/impl.py",
+          "path": "src/nodes/image/deep_learning/low_light_image_enhancement/impl.py",
+          "display_url": "https://github.com/Kazuhito00/Multimodal-Node-Editor/blob/b4e82ad8c5b7c68ae263cb26989195af1d803d18/src/nodes/image/deep_learning/low_light_image_enhancement/impl.py",
+          "display_title": "src/nodes/image/deep_learning/low_light_image_enhancement/impl.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "        base_path = os.path.dirname(os.path.abspath(__file__))\n\n        model_paths = {\n            \"MobileIE\": \"MobileIE/model/mobileie_lolv1.onnx\",\n            \"TBEFN\": \"TBEFN/model/tbefn.onnx\",\n            \"CPGA-Net\": \"CPGA-Net/model/cpga_net.onnx\",\n        }",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    101,
+                    109
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    113,
+                    121
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    128,
+                    136
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    143,
+                    147
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    190,
+                    194
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    246,
+                    250
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/gugugu531/Hispark_SocChina_2026/blob/c3bdfbb0f6b45a918598d7e23f332bf731620914/docs/isp-auto-tuning-prompt.md",
+          "path": "docs/isp-auto-tuning-prompt.md",
+          "display_url": "https://github.com/gugugu531/Hispark_SocChina_2026/blob/c3bdfbb0f6b45a918598d7e23f332bf731620914/docs/isp-auto-tuning-prompt.md",
+          "display_title": "docs/isp-auto-tuning-prompt.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "  - `board/src/ctbg_isp_map.c` — 启发式 17×15 块聚合 → DRC/LDCI 参数，已通过 `ss_mpi_isp_set_drc_attr()` / `ss_mpi_isp_set_ldci_attr()` 验证热刷新可用\n  - `board/src/isp.c:isp_gamma_apply_curve(curve[64], strength)` — 接受 64 节点浮点曲线，已封装，验证可用\n  - `ss_mpi_isp_set_dehaze_attr()` — Dehaze 参数热刷新，验证可用\n  - CTBG estimator 的 MobileIE backbone ONNX→OM 构建流程已跑通（ATC 5.20.T6.2.B060），可作为模型导出参考\n  - GPU 训练环境: RTX 4060 8GB, PyTorch 2.5.1 (conda torch2), CUDA 13.0\n- **SS928 ISP 参数结构**（来自 SDK 头文件和调优指南）:\n  - ISP 管线顺序: AE → DRC → Gamma → LDCI → Dehaze",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    400,
+                    408
+                  ]
+                },
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    418,
+                    422
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/TheComplianceAide/Drone_EnhancedVision/blob/25ac9a3df478f4935c6a9927516589e35500ce76/research/night_vision_2026_07_04/synthesis.md",
+          "path": "research/night_vision_2026_07_04/synthesis.md",
+          "display_url": "https://github.com/TheComplianceAide/Drone_EnhancedVision/blob/25ac9a3df478f4935c6a9927516589e35500ce76/research/night_vision_2026_07_04/synthesis.md",
+          "display_title": "research/night_vision_2026_07_04/synthesis.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nPhase 3: add fast model/export path.\n\n- Try LYT-Net / MobileIE / FastLLVE-style path.\n- Prefer ONNX or PyTorch first for evaluation.\n- Convert only the winning candidate to Core ML.\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    55,
+                    63
+                  ]
+                },
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    96,
+                    100
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Kazuhito00/Multimodal-Node-Editor/blob/b4e82ad8c5b7c68ae263cb26989195af1d803d18/src/nodes/image/deep_learning/low_light_image_enhancement/README.md",
+          "path": "src/nodes/image/deep_learning/low_light_image_enhancement/README.md",
+          "display_url": "https://github.com/Kazuhito00/Multimodal-Node-Editor/blob/b4e82ad8c5b7c68ae263cb26989195af1d803d18/src/nodes/image/deep_learning/low_light_image_enhancement/README.md",
+          "display_title": "src/nodes/image/deep_learning/low_light_image_enhancement/README.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "# Classification\n| モデル名 | 取得元リポジトリ | ライセンス | 備考 |\n| :--- | :--- | :--- | :--- |\n| TBEFN | [lukun199/TBEFN](https://github.com/lukun199/TBEFN) | BSD 3 | ONNX化したモデルを使用 |\n| MobileIE | [AVC2-UESTC/MobileIE](https://github.com/AVC2-UESTC/MobileIE) | Apache 2.0 | ONNX化したモデルを使用 |\n| CPGA-Net-Pytorch | [Shyandram/CPGA-Net-Pytorch](https://github.com/Shyandram/CPGA-Net-Pytorch) | MIT | ONNX化したモデルを使用 |\n",
+              "matches": [
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    190,
+                    194
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    226,
+                    234
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    249,
+                    257
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    289,
+                    297
+                  ]
+                },
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    314,
+                    318
+                  ]
+                },
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    453,
+                    457
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/gugugu531/Hispark_SocChina_2026/blob/c3bdfbb0f6b45a918598d7e23f332bf731620914/models/ctbg/README.md",
+          "path": "models/ctbg/README.md",
+          "display_url": "https://github.com/gugugu531/Hispark_SocChina_2026/blob/c3bdfbb0f6b45a918598d7e23f332bf731620914/models/ctbg/README.md",
+          "display_title": "models/ctbg/README.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n- **Estimator**：MobileIE backbone（12ch, down=4）+ tail Conv2d(12→6) + FiLM（mean_luma 全局调制）\n  - 输入：NCHW fp16 RGB 256×144",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    19,
+                    27
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\n# 导出 ONNX\npython models/ctbg/export_ctbg_6ch.py --ckpt runs/coeff_ctbg_v9_6ch/ckpt/best-*.ckpt",
+              "matches": [
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    10,
+                    14
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/gugugu531/Hispark_SocChina_2026/blob/c3bdfbb0f6b45a918598d7e23f332bf731620914/docs/TODO.md",
+          "path": "docs/TODO.md",
+          "display_url": "https://github.com/gugugu531/Hispark_SocChina_2026/blob/c3bdfbb0f6b45a918598d7e23f332bf731620914/docs/TODO.md",
+          "display_title": "docs/TODO.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "| **v9 (6ch)** | 从头训练, 标量系数 | **19.83** | 116 | **当前部署** |\n| v13 | MobileIE warmup + Dropout2d | **19.83** | 116 | 持平 v9，无早峰退化 |\n| v10 | v8 backbone warm-start | 18.80 | 13 | 证伪——backbone 跨尾不兼容 |",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    91,
+                    99
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "- ✅ `isp_gamma_apply_curve(curve[64], strength)` 已封装，接受 64 节点浮点曲线\n- ✅ ATC 构建环境已修复（ccec 编译器路径），ONNX→OM 流程跑通\n- ✅ AIPP OM 构建成功（182KB）但 Ascend 310 执行失败（aclError=507900）——根因是纯 elementwise 图缺 TransData 格式桥接，v8 OM（含 ConvTranspose）可正常执行",
+              "matches": [
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    152,
+                    156
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/gugugu531/Hispark_SocChina_2026/blob/c3bdfbb0f6b45a918598d7e23f332bf731620914/models/ctbg/export_ctbg.py",
+          "path": "models/ctbg/export_ctbg.py",
+          "display_url": "https://github.com/gugugu531/Hispark_SocChina_2026/blob/c3bdfbb0f6b45a918598d7e23f332bf731620914/models/ctbg/export_ctbg.py",
+          "display_title": "models/ctbg/export_ctbg.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    ws = slim.state_dict()\n    for name, mod in net.bb.named_modules():               # 镜像 MobileIELLENet.slim 的拷贝\n        if isinstance(mod, (MBRConv1, MBRConv3, MBRConv5)):",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    95,
+                    103
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\ndef scan_onnx(path):\n    import onnx",
+              "matches": [
+                {
+                  "text": "onnx",
+                  "indices": [
+                    10,
+                    14
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    33,
+                    37
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Foadsf/neural-enhance-bench/blob/04a08307a91dd0f17e2810d0766a559c1b5905d9/FLOSS Tool for CNN and VLM Image Enhancement Testing.md",
+          "path": "FLOSS Tool for CNN and VLM Image Enhancement Testing.md",
+          "display_url": "https://github.com/Foadsf/neural-enhance-bench/blob/04a08307a91dd0f17e2810d0766a559c1b5905d9/FLOSS Tool for CNN and VLM Image Enhancement Testing.md",
+          "display_title": "FLOSS Tool for CNN and VLM Image Enhancement Testing.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "- **Real-ESRGAN** family (especially `RealESRGAN_x4plus`, `x2plus`, `general-x4v3`, anime variants) — still one of the strongest open general-purpose real-world SR models. Open weights, widely converted to ONNX/TFLite. Qualcomm has published optimized TFLite/ONNX variants that run on similar mobile NPUs/GPUs. Use tiling + FP16/INT8.<grok:render card_id=\"fa898c\" card_type=\"citation_card\" type=\"render_inline_citation\"><argument name=\"citation_id\">35</argument></grok:render>\n- **ESRGAN / RRDBNet variants** and community fine-tunes (UltraSharp, Remacri, etc. from OpenModelDB / Chainner ecosystems). Many are available as ONNX.\n- **SwinIR** (real-world / lightweight variants) — strong for joint SR + denoising + JPEG artifact removal. Transformer but lighter versions exist; quantize carefully.",
+              "matches": [
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    208,
+                    212
+                  ]
+                },
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    261,
+                    265
+                  ]
+                },
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    626,
+                    630
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "- **PMRID**, **NBNet**, and other mobile-oriented denoisers from AI-ISP literature.\n- Extremely lightweight recent work: **MobileIE** (~4K parameters, reparameterized CNN for real-time enhancement on mobile), **LiteIE** (ultra-light unsupervised low-light), and similar Mobile AI challenge winners (often <100–500 KB quantized).<grok:render card_id=\"799b42\" card_type=\"citation_card\" type=\"render_inline_citation\"><argument name=\"citation_id\">26</argument></grok:render>\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    123,
+                    131
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/cloud/pack.ps1",
+          "path": "cloud/pack.ps1",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/cloud/pack.ps1",
+          "display_title": "cloud/pack.ps1",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "$xdArgs = @()\nforeach ($n in $bareDrop) { $xdArgs += \"/XD\"; $xdArgs += $n }\nforeach ($r in $pruneRel) { if ($r) { $xdArgs += \"/XD\"; $xdArgs += (Join-Path $Repro $r) } }\n$xdArgs += \"/XD\"; $xdArgs += (Join-Path $Official \"MobileIE-main\\onnx2tflite\\build\")\n$xdArgs += \"/XD\"; $xdArgs += (Join-Path $Official \"MobileIE-main\\onnx2tflite\\dist\")\n\nfunction Staged([string]$rel) { Join-Path $Stage (Join-Path \"repro\" $rel) }",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    220,
+                    228
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    234,
+                    238
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    305,
+                    313
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    319,
+                    323
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/scripts/report.py",
+          "path": "repro/scripts/report.py",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/scripts/report.py",
+          "display_title": "repro/scripts/report.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nfrom mobileie.complexity import count_parameters, count_macs\nfrom mobileie.config import RESULTS_ROOT, RUNS_ROOT",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    6,
+                    14
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    67,
+                    75
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "        lines.append(\"\")\n        lines.append(\"说明：转换链 fp32→ONNX→TFLite 无精度损失，所以拷进手机测速的文件与 .pkl 等价。\"\n                     \"延迟强烈依赖线程数与是否 warmup（本机 1/2/4 线程 = 72.4 / 36.7 / 19.9 ms，\"",
+              "matches": [
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    73,
+                    77
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Underwater-AI/underwater-ai.github.io/blob/44fb9e758d02f5f638fc48f572c8090dc6a85103/index.html",
+          "path": "index.html",
+          "display_url": "https://github.com/Underwater-AI/underwater-ai.github.io/blob/44fb9e758d02f5f638fc48f572c8090dc6a85103/index.html",
+          "display_title": "index.html",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "          <li>UDnet unpaired restoration</li>\n          <li>LU2net + MobileIE edge inference</li>\n          <li>4× super-resolution, 30 ms/frame</li>",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    69,
+                    77
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "        </ul>\n        <div class=\"tags\"><span class=\"tag\">YOLO</span><span class=\"tag\">OpenCV</span><span class=\"tag\">ONNX</span></div>\n      </article>",
+              "matches": [
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    118,
+                    122
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/results/report.md",
+          "path": "repro/results/report.md",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/results/report.md",
+          "display_title": "repro/results/report.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "# MobileIE (ICCV 2025) reproduction report\n\n作者权重侧覆盖 LLE(LOLv1) / UIE(UIEB) / ISP(ZRR) 三张表；从零训练见文末 From-scratch 段。",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    2,
+                    10
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\n说明：转换链 fp32→ONNX→TFLite 无精度损失，所以拷进手机测速的文件与 .pkl 等价。延迟强烈依赖线程数与是否 warmup（本机 1/2/4 线程 = 72.4 / 36.7 / 19.9 ms，测量时训练仍在跑，三者同条件可比），统一口径与端侧测法见仓库根目录 `deploy/README.md`。\n",
+              "matches": [
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    27,
+                    31
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/论文复现对照.md",
+          "path": "repro/论文复现对照.md",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/论文复现对照.md",
+          "display_title": "repro/论文复现对照.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "# MobileIE (ICCV 2025) 论文复现对照说明\n\n> 逐条回答三件事：**论文怎么说 → 我们怎么做 → 结果对不对得上**。",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    2,
+                    10
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "| | GPU 延迟 | 1.020 | 0.428 | −0.592 | ❓ 论文没写 ISP 测速的输入形状，只记录不解读 |\n| **部署链** | tflite vs pkl PSNR | — | 23.6321 vs 23.6343 | −0.0022 | ✅ fp32→ONNX→TFLite 无损 |\n",
+              "matches": [
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    199,
+                    203
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/enable_iwo.py",
+          "path": "enable_iwo.py",
+          "display_url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/enable_iwo.py",
+          "display_title": "enable_iwo.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    W_final = W_pre (冻结) + W_learn (可训练)\n- fuse_iwo() 时再把 IWOConv1x1 融合回普通 Conv2d，供 slim()/ONNX/INT8 使用\n\"\"\"",
+              "matches": [
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    121,
+                    125
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "    Args:\n        model: 已训练好的 baseline 模型（MobileIELLENet）\n        config: IWO 配置字典，包含：",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    59,
+                    67
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Underwater-AI/underwater-ai.github.io/blob/44fb9e758d02f5f638fc48f572c8090dc6a85103/underwater_ai.html",
+          "path": "underwater_ai.html",
+          "display_url": "https://github.com/Underwater-AI/underwater-ai.github.io/blob/44fb9e758d02f5f638fc48f572c8090dc6a85103/underwater_ai.html",
+          "display_title": "underwater_ai.html",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                <div class=\"glass-panel p-4 text-center\">\n                    <div class=\"text-2xl font-bold text-cyan-400\">ONNX</div>\n                    <div class=\"text-xs text-gray-500\">Runtime</div>",
+              "matches": [
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    124,
+                    128
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "                            <i data-lucide=\"cpu\" class=\"w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0\"></i>\n                            <span>Proven architectures (UDnet, LU2net, MobileIE) already validated in research literature</span>\n                        </li>",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    179,
+                    187
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/dnguyennk/portfolio/blob/6d3a67421385ea0cd33f86ae9e094387d4cbe92f/index.html",
+          "path": "index.html",
+          "display_url": "https://github.com/dnguyennk/portfolio/blob/6d3a67421385ea0cd33f86ae9e094387d4cbe92f/index.html",
+          "display_title": "index.html",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "          <span class=\"skill-tag pink\">Model Reparameterization</span>\n          <span class=\"skill-tag pink\">ONNX / TFLite</span>\n          <span class=\"skill-tag pink\">DGX Spark</span>",
+              "matches": [
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    110,
+                    114
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "          <h3 data-en=\"Mobile Image Enhancement\" data-vi=\"Nâng cao Ảnh Trên Thiết bị Di động\">Mobile Image Enhancement</h3>\n          <p data-en=\"Studying PLU-Net & MobileIE architectures for the Mobile AI 2025 RGB Enhancement Challenge. Exploring reparameterization techniques to shrink training models from ~35K to ~4K inference parameters.\"\n             data-vi=\"Nghiên cứu kiến trúc PLU-Net & MobileIE cho thử thách Mobile AI 2025 RGB Enhancement. Khám phá kỹ thuật reparameterization để thu nhỏ mô hình huấn luyện từ ~35K xuống ~4K tham số suy luận.\">",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    176,
+                    184
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    414,
+                    422
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Synapse-iiserk/beautiful_ppt/blob/257b89fbd55fda334a18e5dec6922d3f1b9881a0/presentations/underwater_ai.html",
+          "path": "presentations/underwater_ai.html",
+          "display_url": "https://github.com/Synapse-iiserk/beautiful_ppt/blob/257b89fbd55fda334a18e5dec6922d3f1b9881a0/presentations/underwater_ai.html",
+          "display_title": "presentations/underwater_ai.html",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                <div class=\"glass-panel p-4 text-center\">\n                    <div class=\"text-2xl font-bold text-cyan-400\">ONNX</div>\n                    <div class=\"text-xs text-gray-500\">Runtime</div>",
+              "matches": [
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    124,
+                    128
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "                            <i data-lucide=\"cpu\" class=\"w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0\"></i>\n                            <span>Proven architectures (UDnet, LU2net, MobileIE) already validated in research literature</span>\n                        </li>",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    179,
+                    187
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Alleluia1/RTDETR-10.20/blob/3d8980c24e1dbd95a162c69e03f7f7fde00ca538/使用教程.md",
+          "path": "使用教程.md",
+          "display_url": "https://github.com/Alleluia1/RTDETR-10.20/blob/3d8980c24e1dbd95a162c69e03f7f7fde00ca538/使用教程.md",
+          "display_title": "使用教程.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n272. ultralytics/cfg/models/rt-detr/rtdetr-MBRConv5C3.yaml\n\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv5改进RepC3.\n    项目视频百度云链接:20250727版本更新说明\n\n273. ultralytics/cfg/models/rt-detr/rtdetr-C2f-VSSD.yaml",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    81,
+                    89
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    121,
+                    129
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/helloshuaige520/RT-DETR/blob/411caa91714d4ef2841e438e37ec0bf75531f3eb/使用教程.md",
+          "path": "使用教程.md",
+          "display_url": "https://github.com/helloshuaige520/RT-DETR/blob/411caa91714d4ef2841e438e37ec0bf75531f3eb/使用教程.md",
+          "display_title": "使用教程.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n272. ultralytics/cfg/models/rt-detr/rtdetr-MBRConv5C3.yaml\n\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv5改进RepC3.\n    项目视频百度云链接:20250727版本更新说明\n\n273. ultralytics/cfg/models/rt-detr/rtdetr-C2f-VSSD.yaml",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    81,
+                    89
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    121,
+                    129
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/mahongwei-bot/RTDETR/blob/6aa8fbaa29035813a858cd3aaa798e9209377b8e/使用教程.md",
+          "path": "使用教程.md",
+          "display_url": "https://github.com/mahongwei-bot/RTDETR/blob/6aa8fbaa29035813a858cd3aaa798e9209377b8e/使用教程.md",
+          "display_title": "使用教程.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n272. ultralytics/cfg/models/rt-detr/rtdetr-MBRConv5C3.yaml\n\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv5改进RepC3.\n    项目视频百度云链接:20250727版本更新说明\n\n273. ultralytics/cfg/models/rt-detr/rtdetr-C2f-VSSD.yaml",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    81,
+                    89
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    121,
+                    129
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/mahongwei-bot/RTDETR20260307-main/blob/125085db8691cdd7912058d94011a8efc33c877a/使用教程.md",
+          "path": "使用教程.md",
+          "display_url": "https://github.com/mahongwei-bot/RTDETR20260307-main/blob/125085db8691cdd7912058d94011a8efc33c877a/使用教程.md",
+          "display_title": "使用教程.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n272. ultralytics/cfg/models/rt-detr/rtdetr-MBRConv5C3.yaml\n\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv5改进RepC3.\n    项目视频百度云链接:20250727版本更新说明\n\n273. ultralytics/cfg/models/rt-detr/rtdetr-C2f-VSSD.yaml",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    81,
+                    89
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    121,
+                    129
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/tpiece/RTDETR-main/blob/86d9a59b2a532b51a39f34cf50c8e7c8bb4fda92/使用教程.md",
+          "path": "使用教程.md",
+          "display_url": "https://github.com/tpiece/RTDETR-main/blob/86d9a59b2a532b51a39f34cf50c8e7c8bb4fda92/使用教程.md",
+          "display_title": "使用教程.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n272. ultralytics/cfg/models/rt-detr/rtdetr-MBRConv5C3.yaml\n\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv5改进RepC3.\n    项目视频百度云链接:20250727版本更新说明\n\n273. ultralytics/cfg/models/rt-detr/rtdetr-C2f-VSSD.yaml",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    81,
+                    89
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    121,
+                    129
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/FifthGentleness/RTDETRU/blob/19d5e909a6f71365fcba6057aeb67a12306eaddb/mydocs/使用教程.md",
+          "path": "mydocs/使用教程.md",
+          "display_url": "https://github.com/FifthGentleness/RTDETRU/blob/19d5e909a6f71365fcba6057aeb67a12306eaddb/mydocs/使用教程.md",
+          "display_title": "mydocs/使用教程.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n272. ultralytics/cfg/models/rt-detr/rtdetr-MBRConv5C3.yaml\n\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv5改进RepC3.\n    项目视频百度云链接:20250727版本更新说明\n\n273. ultralytics/cfg/models/rt-detr/rtdetr-C2f-VSSD.yaml",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    81,
+                    89
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    121,
+                    129
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/KrakeCZ/AIchat-Android-Local-AI-Agent-/blob/e701008557c758876a3da75ed373d91dd959b1bf/examples/llama.android/app/src/main/java/com/example/llama/ui/thanks/ThanksActivity.kt",
+          "path": "examples/llama.android/app/src/main/java/com/example/llama/ui/thanks/ThanksActivity.kt",
+          "display_url": "https://github.com/KrakeCZ/AIchat-Android-Local-AI-Agent-/blob/e701008557c758876a3da75ed373d91dd959b1bf/examples/llama.android/app/src/main/java/com/example/llama/ui/thanks/ThanksActivity.kt",
+          "display_title": "examples/llama.android/app/src/main/java/com/example/llama/ui/thanks/ThanksActivity.kt",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "        \"NTIRE / AIM Research\",\n        \"Vývoj našeho AcademicYuvEngine vděčí za mnohé autorům výzkumů LiteIE a MobileIE. Aplikace obsahuje nezávislé implementace algoritmů (MIT).\",\n        \"Copyright (c) Research Authors\",",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    121,
+                    129
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "    CreatorEntry(\n        \"Sherpa ONNX (Vocos & HiFi-GAN)\",\n        \"Díky tvůrcům repozitáře sherpa-onnx za rychlé on-device TTS modely (hifigan_v2.onnx, vocos_24khz.onnx), které v reálném čase pohání našeho agenta.\",",
+              "matches": [
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    34,
+                    38
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    105,
+                    109
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    154,
+                    158
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    172,
+                    176
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/KrakeCZ/AIchat-Android-Local-AI-Agent-/blob/e701008557c758876a3da75ed373d91dd959b1bf/examples/llama.android/app/src/main/java/com/example/llama/SettingsManager.kt",
+          "path": "examples/llama.android/app/src/main/java/com/example/llama/SettingsManager.kt",
+          "display_url": "https://github.com/KrakeCZ/AIchat-Android-Local-AI-Agent-/blob/e701008557c758876a3da75ed373d91dd959b1bf/examples/llama.android/app/src/main/java/com/example/llama/SettingsManager.kt",
+          "display_title": "examples/llama.android/app/src/main/java/com/example/llama/SettingsManager.kt",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n    /** ID aktivního Night Mode pluginu (např. night_retinex, night_tflite_mobileie). */\n    var activeNightModePluginId: String",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    78,
+                    86
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "     *                        \"whisper\" (whisper.cpp JNI — přesný offline, batch 3-15s latence)\n     *                        \"sherpa\"  (Sherpa-ONNX Zipformer — bleskový offline, realtime)\n     * Default \"android\" pro real-time titulky.",
+              "matches": [
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    148,
+                    152
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/linchuan232/myrtdetr/blob/d0a21cc0dccfc4f97619cc3757011a033a1f2aa8/RTDETR-main/使用教程.md",
+          "path": "RTDETR-main/使用教程.md",
+          "display_url": "https://github.com/linchuan232/myrtdetr/blob/d0a21cc0dccfc4f97619cc3757011a033a1f2aa8/RTDETR-main/使用教程.md",
+          "display_title": "RTDETR-main/使用教程.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n272. ultralytics/cfg/models/rt-detr/rtdetr-MBRConv5C3.yaml\n\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv5改进RepC3.\n    项目视频百度云链接:20250727版本更新说明\n\n273. ultralytics/cfg/models/rt-detr/rtdetr-C2f-VSSD.yaml",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    81,
+                    89
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    121,
+                    129
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/cui123000/rtdetr_indoor/blob/0206a44e0590eb078f5e990618606c39aa4821da/RTDETR-main/USE.md",
+          "path": "RTDETR-main/USE.md",
+          "display_url": "https://github.com/cui123000/rtdetr_indoor/blob/0206a44e0590eb078f5e990618606c39aa4821da/RTDETR-main/USE.md",
+          "display_title": "RTDETR-main/USE.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n272. ultralytics/cfg/models/rt-detr/rtdetr-MBRConv5C3.yaml\n\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv5改进RepC3.\n    项目视频百度云链接:20250727版本更新说明\n\n273. ultralytics/cfg/models/rt-detr/rtdetr-C2f-VSSD.yaml",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    81,
+                    89
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    121,
+                    129
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/pls-Kaguya/LSO-RT-DETR/blob/91d7cba9ae9bda2224b12b4dd381d3fa9475d07e/readme/使用教程.md",
+          "path": "readme/使用教程.md",
+          "display_url": "https://github.com/pls-Kaguya/LSO-RT-DETR/blob/91d7cba9ae9bda2224b12b4dd381d3fa9475d07e/readme/使用教程.md",
+          "display_title": "readme/使用教程.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n272. ultralytics/cfg/models/rt-detr/rtdetr-MBRConv5C3.yaml\n\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv5改进RepC3.\n    项目视频百度云链接:20250727版本更新说明\n\n273. ultralytics/cfg/models/rt-detr/rtdetr-C2f-VSSD.yaml",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    81,
+                    89
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    121,
+                    129
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/TheComplianceAide/Drone_EnhancedVision/blob/25ac9a3df478f4935c6a9927516589e35500ce76/research/night_vision_2026_07_04/github_repos_100.json",
+          "path": "research/night_vision_2026_07_04/github_repos_100.json",
+          "display_url": "https://github.com/TheComplianceAide/Drone_EnhancedVision/blob/25ac9a3df478f4935c6a9927516589e35500ce76/research/night_vision_2026_07_04/github_repos_100.json",
+          "display_title": "research/night_vision_2026_07_04/github_repos_100.json",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "      \"updatedAt\": \"2026-07-03T03:36:54Z\",\n      \"url\": \"https://github.com/AVC2-UESTC/MobileIE\",\n      \"matchedQueries\": [",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    87,
+                    95
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "      \"defaultBranch\": \"main\",\n      \"description\": \"\\u4f7f\\u7528onnxruntime\\u90e8\\u7f72LYT-Net\\u8f7b\\u91cf\\u7ea7\\u4f4e\\u5149\\u56fe\\u50cf\\u589e\\u5f3a\\uff0c\\u5305\\u542bC++\\u548cPython\\u4e24\\u4e2a\\u7248\\u672c\\u7684\\u7a0b\\u5e8f\",\n      \"forksCount\": 7,",
+              "matches": [
+                {
+                  "text": "onnx",
+                  "indices": [
+                    65,
+                    69
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/ZhangCurosr/zhangcursor-papers-arxiv-ai-002/blob/15417a095257756166bbb38b3ef6c7ff8b7524af/2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_f7a4fa1c/full.md",
+          "path": "2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_f7a4fa1c/full.md",
+          "display_url": "https://github.com/ZhangCurosr/zhangcursor-papers-arxiv-ai-002/blob/15417a095257756166bbb38b3ef6c7ff8b7524af/2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_f7a4fa1c/full.md",
+          "display_title": "2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_f7a4fa1c/full.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nA notable progress that should be highlighted is the ease of model conversion to the target TFLite format. Table 1 shows that the majority of solutions in this challenge were developed using the PyTorch ML framework. Due to the recently presented litert-torch plugin <sup>4</sup> developed by the LiteRT team, one can now directly convert the majority of PyTorch models to the TFLite format without the need for TensorFlow / Keras model re-implementation or use of ONNX as an intermediary format. This significantly simplifies the development process of mobile-friendly deep learning architectures for the majority of researchers using Py-Torch as their main framework for AI model development and training.\n",
+              "matches": [
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    466,
+                    470
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nTeam AVC2 introduced a simplified version of MobileIE [91], a lightweight image signal processing network designed for mobile deployment that balances performance and efficiency using reparameterization, as illustrated in Figure 4. The architecture first employs an MBRConv 3 × 3 layer followed by a Tanh activation for initial feature extraction. Subsequently, the feature maps are fed into two parallel branches. Each branch consists of an MBRConv 3 × 3 layer with a residual connection. The outputs of the two branches are fused via element-wise multiplication. After these blocks, a simplified version of the Hierarchical Dual-Path Attention (HDPA) module is employed to refine features. Upsampling is achieved through a Pixel Shuffle layer, followed by a final MBRConv 3 × 3 layer generating the output image. A key aspect is the MBRConv block, which utilizes multiple parallel convolutional branches with batch normalization during training; these blocks are reparameterized into standard single convolutional layers for efficient inference.\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    46,
+                    54
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/ZhangCurosr/zhangcursor-papers-arxiv-ai-002/blob/15417a095257756166bbb38b3ef6c7ff8b7524af/2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_ec530fd3/full.md",
+          "path": "2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_ec530fd3/full.md",
+          "display_url": "https://github.com/ZhangCurosr/zhangcursor-papers-arxiv-ai-002/blob/15417a095257756166bbb38b3ef6c7ff8b7524af/2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_ec530fd3/full.md",
+          "display_title": "2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_ec530fd3/full.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nA notable progress that should be highlighted is the ease of model conversion to the target TFLite format. Table 1 shows that the majority of solutions in this challenge were developed using the PyTorch ML framework. Due to the recently presented litert-torch plugin <sup>4</sup> developed by the LiteRT team, one can now directly convert the majority of PyTorch models to the TFLite format without the need for TensorFlow / Keras model re-implementation or use of ONNX as an intermediary format. This significantly simplifies the development process of mobile-friendly deep learning architectures for the majority of researchers using Py-Torch as their main framework for AI model development and training.\n",
+              "matches": [
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    466,
+                    470
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nTeam AVC2 introduced a simplified version of MobileIE [91], a lightweight image signal processing network designed for mobile deployment that balances performance and efficiency using reparameterization, as illustrated in Figure 4. The architecture first employs an MBRConv 3 × 3 layer followed by a Tanh activation for initial feature extraction. Subsequently, the feature maps are fed into two parallel branches. Each branch consists of an MBRConv 3 × 3 layer with a residual connection. The outputs of the two branches are fused via element-wise multiplication. After these blocks, a simplified version of the Hierarchical Dual-Path Attention (HDPA) module is employed to refine features. Upsampling is achieved through a Pixel Shuffle layer, followed by a final MBRConv 3 × 3 layer generating the output image. A key aspect is the MBRConv block, which utilizes multiple parallel convolutional branches with batch normalization during training; these blocks are reparameterized into standard single convolutional layers for efficient inference.\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    46,
+                    54
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/ZhangCurosr/zhangcursor-papers-arxiv-cv-002/blob/05f81f004803d1b9f486eec89c1f9e45dec9b183/2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_728efbcd/full.md",
+          "path": "2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_728efbcd/full.md",
+          "display_url": "https://github.com/ZhangCurosr/zhangcursor-papers-arxiv-cv-002/blob/05f81f004803d1b9f486eec89c1f9e45dec9b183/2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_728efbcd/full.md",
+          "display_title": "2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_728efbcd/full.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nA notable progress that should be highlighted is the ease of model conversion to the target TFLite format. Table 1 shows that the majority of solutions in this challenge were developed using the PyTorch ML framework. Due to the recently presented litert-torch plugin <sup>4</sup> developed by the LiteRT team, one can now directly convert the majority of PyTorch models to the TFLite format without the need for TensorFlow / Keras model re-implementation or use of ONNX as an intermediary format. This significantly simplifies the development process of mobile-friendly deep learning architectures for the majority of researchers using Py-Torch as their main framework for AI model development and training.\n",
+              "matches": [
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    466,
+                    470
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nTeam AVC2 introduced a simplified version of MobileIE [91], a lightweight image signal processing network designed for mobile deployment that balances performance and efficiency using reparameterization, as illustrated in Figure 4. The architecture first employs an MBRConv 3 × 3 layer followed by a Tanh activation for initial feature extraction. Subsequently, the feature maps are fed into two parallel branches. Each branch consists of an MBRConv 3 × 3 layer with a residual connection. The outputs of the two branches are fused via element-wise multiplication. After these blocks, a simplified version of the Hierarchical Dual-Path Attention (HDPA) module is employed to refine features. Upsampling is achieved through a Pixel Shuffle layer, followed by a final MBRConv 3 × 3 layer generating the output image. A key aspect is the MBRConv block, which utilizes multiple parallel convolutional branches with batch normalization during training; these blocks are reparameterized into standard single convolutional layers for efficient inference.\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    46,
+                    54
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/ZhangCurosr/zhangcursor-papers-arxiv-cv-002/blob/05f81f004803d1b9f486eec89c1f9e45dec9b183/2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_863a518f/full.md",
+          "path": "2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_863a518f/full.md",
+          "display_url": "https://github.com/ZhangCurosr/zhangcursor-papers-arxiv-cv-002/blob/05f81f004803d1b9f486eec89c1f9e45dec9b183/2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_863a518f/full.md",
+          "display_title": "2026-11-04/Learned-Smartphone-ISP-on-Mobile-GPUs-Mobile-AI-2026-Challen_863a518f/full.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nA notable progress that should be highlighted is the ease of model conversion to the target TFLite format. Table 1 shows that the majority of solutions in this challenge were developed using the PyTorch ML framework. Due to the recently presented litert-torch plugin <sup>4</sup> developed by the LiteRT team, one can now directly convert the majority of PyTorch models to the TFLite format without the need for TensorFlow / Keras model re-implementation or use of ONNX as an intermediary format. This significantly simplifies the development process of mobile-friendly deep learning architectures for the majority of researchers using Py-Torch as their main framework for AI model development and training.\n",
+              "matches": [
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    466,
+                    470
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nTeam AVC2 introduced a simplified version of MobileIE [91], a lightweight image signal processing network designed for mobile deployment that balances performance and efficiency using reparameterization, as illustrated in Figure 4. The architecture first employs an MBRConv 3 × 3 layer followed by a Tanh activation for initial feature extraction. Subsequently, the feature maps are fed into two parallel branches. Each branch consists of an MBRConv 3 × 3 layer with a residual connection. The outputs of the two branches are fused via element-wise multiplication. After these blocks, a simplified version of the Hierarchical Dual-Path Attention (HDPA) module is employed to refine features. Upsampling is achieved through a Pixel Shuffle layer, followed by a final MBRConv 3 × 3 layer generating the output image. A key aspect is the MBRConv block, which utilizes multiple parallel convolutional branches with batch normalization during training; these blocks are reparameterized into standard single convolutional layers for efficient inference.\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    46,
+                    54
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/TheComplianceAide/Drone_EnhancedVision/blob/25ac9a3df478f4935c6a9927516589e35500ce76/research/night_vision_2026_07_04/github_repos_80_readmes.json",
+          "path": "research/night_vision_2026_07_04/github_repos_80_readmes.json",
+          "display_url": "https://github.com/TheComplianceAide/Drone_EnhancedVision/blob/25ac9a3df478f4935c6a9927516589e35500ce76/research/night_vision_2026_07_04/github_repos_80_readmes.json",
+          "display_title": "research/night_vision_2026_07_04/github_repos_80_readmes.json",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "      ],\n      \"readme_excerpt\": \"<h1 align=\\\"center\\\">[ICCV 2025] MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices</h1> <div align=\\\"center\\\"> <hr> Hailong Yan<sup>1</sup>&nbsp; Ao Li<sup>1</sup>&nbsp; Xiangtao Zhang<sup>1</sup>&nbsp; Zhe Liu<sup>1</sup>&nbsp; Zenglin Shi<sup>2</sup>&nbsp; Ce Zhu<sup>1</sup>&nbsp; Le Zhang<sup>1,\\u2020</sup>&nbsp; <br> <sup>1</sup> UESTC&nbsp;&nbsp; <sup>2</sup> Hefei University of Technology<br> <sup>\\u2020</sup> Corresponding author.<br> <h4> <a href=\\\"https://www.arxiv.org/pdf/2507.01838\\\">\\ud83d\\udcc4 arXiv Paper</a> &nbsp; </h4> </div> <blockquote> <b>Abstract:</b> <i>Recent advancements in deep neural networks have driven significant progress in image enhancement (IE). However, deploying deep learning models on resource-constrained platforms, such as mobile devices, remains challenging due to high computation and memory demands. To address these challenges and facilitate real-time IE on mobile, we introduce an extremely lightweight Convolutional Neural Network (CNN) framework with around 4K parameters. Our approach integrates reparameterization with an Incremental Weight Optimization strategy to ensure efficiency. Additionally, we enhance performance with a Feature Self-Transform module and a Hierarchical Dual-Path Attention mechanism, optimized with a Local Variance-Weighted loss. With this efficient framework, we are the first to achieve real-time IE inference at up to 1,100 frames per second (FPS) while delivering competitive image quality, achieving the best trade-off between speed and performance across multiple IE tasks.</i> </blockquote> <p align=\\\"center\\\"> <img width=\\\"1000\\\" src=\\\"figs/framework.png\\\"> </p> --- ### Preparation 1. Replace the dataset path in the config file. 2. If you want to train the model, set the type in config to \\\"original\\\" and need_slims to \\\"false\\\". 3. If you want to test the pretrain model, set the type in config to \\\"re-parameterized\\\", need_slims to \\\"true\\\", and load the re-parameterized pre-trained model. You can also run inference with TFLite model by executing \\\"test_TFLite_RGB.py/test_TFLite_ISP.py\\\". 4. You can use the TFLite model and import it into AI Benchmark (https://ai-benchmark.com/) to obtain the inference speed on mobile devices. 5. If you want to perform UIE task, replace the dataset path in config/lle.yaml with your underwater image dataset. ### Train ```bash python main.py -task train -model_task lle/isp -device cuda ``` ### Test ```bash python main.py -task test -model_task lle/isp -device cuda ``` ### Demo ```bash python main.py -task demo -model_task lle/isp -device cuda ``` ### Contact If you have any questions, please contact me by e-mail (yanhailong@std.uestc.edu.cn; yhl00825@163.com). ### Citation If you find the code helpful in your research or work, please cite the following paper: ``` @InProceedings{yan2025mobileie, author = {Yan, Hailong and Li, Ao and Zhang, Xiangtao and Liu, Zhe and Shi, Zenglin and Zhu, Ce and Zhang, Le}, title = {MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices}, booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision}, month = {October}, year = {2025}, } ```\"\n    },",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    67,
+                    75
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    2922,
+                    2930
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    3053,
+                    3061
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "      ],\n      \"readme_excerpt\": \"# ZeroDCE-Realtime-Deploy \\u57fa\\u4e8e Zero-DCE \\u7b97\\u6cd5\\u7684\\u5b9e\\u65f6\\u4f4e\\u5149\\u7167\\u56fe\\u50cf\\u589e\\u5f3a\\u7cfb\\u7edf\\uff0c\\u652f\\u6301\\u6444\\u50cf\\u5934\\u5b9e\\u65f6\\u5904\\u7406\\u4e0e FastAPI \\u670d\\u52a1\\u90e8\\u7f72\\u3002 --- ## \\u9879\\u76ee\\u7b80\\u4ecb \\u672c\\u9879\\u76ee\\u590d\\u73b0\\u4e86 CVPR 2020 \\u8bba\\u6587 *Zero-Reference Deep Curve Estimation for Low-Light Image Enhancement*\\uff0c\\u5e76\\u5728\\u6b64\\u57fa\\u7840\\u4e0a\\u8fdb\\u884c\\u5de5\\u7a0b\\u5316\\u843d\\u5730\\uff1a - \\u65e0\\u76d1\\u7763\\u8bad\\u7ec3\\uff0c\\u4e0d\\u4f9d\\u8d56\\u6210\\u5bf9\\u7684\\u4f4e\\u5149/\\u6b63\\u5e38\\u5149\\u56fe\\u50cf - \\u6269\\u5c55\\u652f\\u6301\\u5b9e\\u65f6\\u6444\\u50cf\\u5934\\u89c6\\u9891\\u6d41\\u5904\\u7406\\uff0c\\u5e73\\u5747\\u5904\\u7406\\u901f\\u5ea6\\u8fbe\\u5230 **45 FPS** - \\u5c01\\u88c5\\u4e3a FastAPI \\u63a8\\u7406\\u670d\\u52a1\\uff0c\\u63d0\\u4f9b\\u6807\\u51c6\\u5316 HTTP \\u63a5\\u53e3 - \\u5bfc\\u51fa ONNX \\u683c\\u5f0f\\uff0c\\u5bf9\\u6bd4\\u4e0d\\u540c\\u90e8\\u7f72\\u65b9\\u5f0f\\u7684\\u63a8\\u7406\\u6027\\u80fd --- ## \\u6838\\u5fc3\\u7b97\\u6cd5 Zero-DCE \\u5c06\\u56fe\\u50cf\\u589e\\u5f3a\\u95ee\\u9898\\u8f6c\\u5316\\u4e3a**\\u50cf\\u7d20\\u7ea7\\u66f2\\u7ebf\\u53c2\\u6570\\u4f30\\u8ba1**\\uff0c\\u901a\\u8fc7\\u8f7b\\u91cf\\u7f51\\u7edc DCE-Net \\u4e3a\\u6bcf\\u5f20\\u56fe\\u7247\\u751f\\u6210\\u4e13\\u5c5e\\u7684\\u589e\\u5f3a\\u66f2\\u7ebf\\uff1a ``` LE(x, \\u03b1) = x + \\u03b1 \\u00b7 x \\u00b7 (1 - x) ``` \\u8bad\\u7ec3\\u91c7\\u7528\\u56db\\u4e2a\\u65e0\\u53c2\\u8003\\u635f\\u5931\\u51fd\\u6570\\uff0c\\u65e0\\u9700\\u6210\\u5bf9\\u8bad\\u7ec3\\u6570\\u636e\\uff1a - **\\u7a7a\\u95f4\\u4e00\\u81f4\\u6027\\u635f\\u5931**\\uff1a\\u4fdd\\u6301\\u589e\\u5f3a\\u524d\\u540e\\u90bb\\u57df\\u50cf\\u7d20\\u7684\\u4eae\\u5ea6\\u5dee\\u5f02\\u5173\\u7cfb - **\\u66dd\\u5149\\u63a7\\u5236\\u635f\\u5931**\\uff1a\\u7ea6\\u675f\\u5c40\\u90e8\\u533a\\u57df\\u5e73\\u5747\\u4eae\\u5ea6\\u8d8b\\u8fd1\\u76ee\\u6807\\u503c\\uff080.6\\uff09 - **\\u989c\\u8272\\u6052\\u5e38\\u635f\\u5931**\\uff1a\\u57fa\\u4e8e\\u7070\\u5ea6\\u4e16\\u754c\\u7406\\u8bba\\uff0c\\u9632\\u6b62\\u589e\\u5f3a\\u540e\\u8272\\u504f - **\\u5149\\u7167\\u5e73\\u6ed1\\u635f\\u5931**\\uff1a\\u5bf9\\u66f2\\u7ebf\\u53c2\\u6570\\u65bd\\u52a0 TV \\u6b63\\u5219\\uff0c\\u907f\\u514d\\u7a7a\\u95f4\\u4f2a\\u5f71 --- ## \\u73af\\u5883\\u4f9d\\u8d56 ``` Python 3.10.0 torch 2.1.1+cu118 torchvision fastapi uvicorn python-multipart opencv-python Pillow onnx onnxruntime-gpu seaborn matplotlib torchmetrics ``` \\u5b89\\u88c5\\u4f9d\\u8d56\\uff1a ```bash pip install -r requirements.txt ``` --- ## \\u6570\\u636e\\u96c6 \\u4f7f\\u7528 [LOL Dataset](https://daooshee.github.io/BMVC2018website/) \\u8fdb\\u884c\\u8bad\\u7ec3\\u548c\\u6d4b\\u8bd5\\u3002 \\u76ee\\u5f55\\u7ed3\\u6784\\uff1a ``` data/ train_data/ # \\u8bad\\u7ec3\\u96c6\\uff08\\u4ec5\\u4f4e\\u5149\\u7167\\u56fe\\u50cf\\uff09 test_data/ low/ # \\u6d4b\\u8bd5\\u96c6\\u4f4e\\u5149\\u7167\\u56fe\\u50cf high/ # \\u6d4b\\u8bd5\\u96c6\\u6b63\\u5e38\\u5149\\u56fe\\u50cf\\uff08\\u7528\\u4e8e\\u8bc4\\u4f30\\u6307\\u6807\\uff09 ``` --- ## \\u8bad\\u7ec3 ```bash python lowlight_train.py \\\\ --data_root_path data/train_data \\\\ --num_epochs 200 \\\\ --train_batch_size 4 \\\\ --lr 0.0001 ``` \\u8bad\\u7ec3\\u5b8c\\u6210\\u540e\\u6a21\\u578b\\u6743\\u91cd\\u4fdd\\u5b58\\u81f3 `snapshots/`\\uff0c\\u8bad\\u7ec3\\u66f2\\u7ebf\\u56fe\\u4fdd\\u5b58\\u81f3 `visualization/`\\u3002 --- ## \\u6d4b\\u8bd5 ```bash python lowlight_test.py ``` \\u589e\\u5f3a\\u7ed3\\u679c\\u4fdd\\u5b58\\u81f3 `data/result/`\\u3002 --- ## \\u5b9e\\u65f6\\u6444\\u50cf\\u5934\\u589e\\u5f3a ```bash python camera_enhance.py ``` \\u542f\\u52a8\\u540e\\u5f39\\u51fa\\u7a97\\u53e3\\uff0c\\u5de6\\u4fa7\\u4e3a\\u539f\\u59cb\\u6444\\u50cf\\u5934\\u753b\\u9762\\uff0c\\u53f3\\u4fa7\\u4e3a\\u5b9e\\u65f6\\u589e\\u5f3a\\u7ed3\\u679c\\uff0c\\u5de6\\u4e0a\\u89d2\\u663e\\u793a\\u5b9e\\u65f6 FPS\\u3002\\u6309 `Q` \\u9000\\u51fa\\u3002 **\\u5b9e\\u6d4b\\u6027\\u80fd\\uff1a\\u5e73\\u5747 45 FPS** --- ## FastAPI \\u670d\\u52a1\\u90e8\\u7f72 \\u542f\\u52a8\\u670d\\u52a1\\uff1a ```bash uvicorn app:app --host 0.0.0.0 --port 8000 --reload ``` \\u8bbf\\u95ee `http://localhost:8000/docs` \\u6253\\u5f00\\u4ea4\\u4e92\\u5f0f\\u6587\\u6863\\uff0c\\u76f4\\u63a5\\u4e0a\\u4f20\\u56fe\\u7247\\u6d4b\\u8bd5\\u3002 \\u63a5\\u53e3\\u8bf4\\u660e\\uff1a | \\u65b9\\u6cd5 | \\u8def\\u5f84 | \\u8bf4\\u660e | |------|------|------| | POST | `/enhance` | \\u4e0a\\u4f20\\u4f4e\\u5149\\u7167\\u56fe\\u7247\\uff0c\\u8fd4\\u56de\\u589e\\u5f3a\\u7ed3\\u679c | | GET | `/health` | \\u68c0\\u67e5\\u670d\\u52a1\\u72b6\\u6001 | --- ## ONNX \\u5bfc\\u51fa ```bash python export_onnx.py ``` \\u5bfc\\u51fa\\u6a21\\u578b\\u81f3 `snapshots/dce_net.onnx`\\uff0c\\u5e76\\u81ea\\u52a8\\u5bf9\\u6bd4 PyTorch \\u4e0e ONNX Runtime \\u7684\\u63a8\\u7406\\u901f\\u5ea6\\u3002 --- ## \\u9879\\u76ee\\u7ed3\\u6784 ``` ZeroDCE-Realtime-Enhancement/ \\u251c\\u2500\\u2500 data/ # \\u6570\\u636e\\u96c6 \\u251c\\u2500\\u2500 snapshots/ # \\u6a21\\u578b\\u6743\\u91cd \\u251c\\u2500\\u2500 visualization/ # \\u8bad\\u7ec3\\u66f2\\u7ebf\\u56fe \\u251c\\u2500\\u2500 model.py # DCE-Net \\u7f51\\u7edc\\u7ed3\\u6784 \\u251c\\u2500\\u2500 Myloss.py # \\u56db\\u4e2a\\u65e0\\u53c2\\u8003\\u635f\\u5931\\u51fd\\u6570 \\u251c\\u2500\\u2500 dataloader.py # \\u6570\\u636e\\u52a0\\u8f7d\\u5668 \\u251c\\u2500\\u2500 lowlight_train.py # \\u8bad\\u7ec3\\u811a\\u672c \\u251c\\u2500\\u2500 lowlight_test.py # \\u6d4b\\u8bd5\\u811a\\u672c \\u251c\\u2500\\u2500 camera_enhance.py # \\u5b9e\\u65f6\\u6444\\u50cf\\u5934\\u589e\\u5f3a \\u251c\\u2500\\u2500 app.py # FastAPI \\u670d\\u52a1 \\u251c\\u2500\\u2500 export_onnx.py # ONNX \\u5bfc\\u51fa\\u4e0e\\u901f\\u5ea6\\u5bf9\\u6bd4 \\u251c\\u2500\\u2500 gradio_app.py # Gradio \\u6f14\\u793a\\u754c\\u9762 \\u2514\\u2500\\u2500 requirements.txt # \\u4f9d\\u8d56\\u5217\\u8868 ``` --- ## \\u9e23\\u8c22 (Acknowledgements) \\u672c\\u9879\\u76ee\\u6838\\u5fc3\\u7b97\\u6cd5\\u53c2\\u8003\\u4e86\\u4ee5\\u4e0b\\u5f00\\u6e90\\u4ed3\\u5e93\\uff1a * **Zero-DCE (CVPR 2020)**: [Li-Chongyi/Zero-DCE](https://github.com/Li-Chongyi/Zero-DCE) * **\\u8bba\\u6587\\u5f15\\u7528**: ```text @inproceedings{guo2020zero, title={Zero-reference deep curve estimation for low-light image enhancement}, author={Guo, Chunle and Li, Chongyi and Guo, Jichang and Loy, Chen Change and Hou, Junhui and Kwong, Sam and Cong, Runmin}, booktitle={CVPR}, year={2020} } ``` ## \\u53c2\\u8003\\u8bba\\u6587 > Chunle Guo, Chongyi Li, et al. *Zero-Reference Deep Curve Estimation for Low-Light Image Enhancement*. CVPR 2020.\"\n    },",
+              "matches": [
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    918,
+                    922
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    2258,
+                    2262
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    2263,
+                    2267
+                  ]
+                },
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    4223,
+                    4227
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    4263,
+                    4267
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    4325,
+                    4329
+                  ]
+                },
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    4382,
+                    4386
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    5167,
+                    5171
+                  ]
+                },
+                {
+                  "text": "ONNX",
+                  "indices": [
+                    5177,
+                    5181
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/torch_to_onnx.py",
+          "path": "torch_to_onnx.py",
+          "display_url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/torch_to_onnx.py",
+          "display_title": "torch_to_onnx.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "        weighted_block2 = self.weight2 * x1\n        return weighted_block1 * weighted_block2 + self.bias\n\ndef export_onnx(pretrained_model_path):\n    model = MobileIENetS(12)  \n    \n    checkpoint = torch.load(pretrained_model_path)",
+              "matches": [
+                {
+                  "text": "onnx",
+                  "indices": [
+                    117,
+                    121
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    158,
+                    166
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/onnx2tflite/onnx2tflite.py",
+          "path": "onnx2tflite/onnx2tflite.py",
+          "display_url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/onnx2tflite/onnx2tflite.py",
+          "display_title": "onnx2tflite/onnx2tflite.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "import os\nos.environ['CUDA_VISIBLE_DEVICES'] = '2'\nfrom onnx2tflite.converter import onnx_converter\nonnx_path = \"/data2/yanhailong/IR-Based/ICCV2025/MobileIE/LLE.onnx\" \n\nonnx_converter(\n    onnx_model_path = onnx_path,",
+              "matches": [
+                {
+                  "text": "onnx",
+                  "indices": [
+                    56,
+                    60
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    85,
+                    89
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    100,
+                    104
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    149,
+                    157
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    162,
+                    166
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    170,
+                    174
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    190,
+                    194
+                  ]
+                },
+                {
+                  "text": "onnx",
+                  "indices": [
+                    208,
+                    212
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Alleluia1/RTDETR-main-distill1/blob/683782b44971f7e076e79cf51be1e8c3d38dd4d6/使用教程.md",
+          "path": "使用教程.md",
+          "display_url": "https://github.com/Alleluia1/RTDETR-main-distill1/blob/683782b44971f7e076e79cf51be1e8c3d38dd4d6/使用教程.md",
+          "display_title": "使用教程.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n272. ultralytics/cfg/models/rt-detr/rtdetr-MBRConv5C3.yaml\n\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv5改进RepC3.\n    项目视频百度云链接:20250727版本更新说明\n\n273. ultralytics/cfg/models/rt-detr/rtdetr-C2f-VSSD.yaml",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    81,
+                    89
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    121,
+                    129
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "isError": false
+  }
+}
