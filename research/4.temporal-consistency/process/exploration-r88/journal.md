@@ -16,3 +16,5 @@
 2026-11-17T17:28:37.284110+08:00；Codex  (sqs_A100)。progress002核原两seed同PID/start live，各已记录200/200步、已观察共800/8000 optimizer更新；暂无500步marker/runtime/final/DEV，不把RAM中的进度说成已保存检查点。两训练前缀分别提交，30训练源保持。实现/资格/原失败与启动中断/0168等84小步已推5b29057f并实际核远端，push001回执单独提交。继续原进程，不重启/改配置，正常唯一最终后原自动全视频链。
 
 2026-11-17T17:39:22.759261+08:00；Codex  (sqs_A100)。progress003确认原1151700/1151699同PID/start继续live，两500步检查点各65824B实际读回，权重/fold及Adam矩有限、Adam步数500、source/next-data-step8500保持，保存共2000/8000更新（四分之一），不是最终。marker/窗口/训练前缀/原始读取audit各自提交，0额外CNN/优化/DEV。原chain002继续，无资源/科学重试；新survey/pre已见于独立worktree，仅main操作，不进入新分支。下一原1000/1500/2000及正常后的完整评价链，未据部分loss改变算法或选择检查点。
+
+2026-11-17T17:46:16.922816+08:00；Codex  (sqs_A100)。在原训练继续时补读PRISE公开arXiv正文§3.1.2/3.2/3.3、式8–13/Algorithm1；未重试原CVF403、未审计证明/复现代码或实际看公式图像。CLKN仅官方索引摘要（直接403停止）、DeepLK2021仅作者摘要。详见R88 process/alignment-prior-reading002.md及prior-reading002.json；明确权重theta的训练目标与位移u的局部求解几何不同，不迁移其保证，不换当前loss/solver或追加网格。0新CNN/SGD/DEV，普通学得特征+LK先例边界保持，未建立创新或方法效果。
