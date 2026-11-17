@@ -1,0 +1,80 @@
+{
+  "at": "2026-11-17T11:26:35.095642+08:00",
+  "phase": "R85 original normal complete",
+  "original_pid": 1010313,
+  "start_ticks": 82536298,
+  "original_pid_exited": true,
+  "runtime": {
+    "ended": "2026-11-17T11:20:34.703712+08:00",
+    "pid": 1010313,
+    "completed_normally": true,
+    "seconds": 458.0514912419021,
+    "warmup_sequences": 80,
+    "measured_sequences": 120,
+    "qualified_pipelines": 40,
+    "backbone_image_frames": 3200,
+    "half_FB_pairs": 1500,
+    "optimizer_updates": 0,
+    "CUDA_initialized": false,
+    "final_host_load": [
+      5.79931640625,
+      5.53759765625,
+      4.8994140625
+    ]
+  },
+  "passed_equivalence_checks": 40,
+  "maximum_normalized_equivalence_difference": 0,
+  "source_count": 22,
+  "source_protocol_unchanged": true,
+  "groups": [
+    {
+      "domain": "davis_train_pilot",
+      "seed": 0,
+      "conditions": 6,
+      "mean_condition_median_raw_ms": 107.21790661458333,
+      "mean_condition_median_recursive_ms": 204.90950196874996,
+      "mean_condition_median_ratio": 1.91491793550985,
+      "minimum_condition_ratio": 1.8335977228490217,
+      "maximum_condition_ratio": 2.0760411024069803
+    },
+    {
+      "domain": "davis_train_pilot",
+      "seed": 1,
+      "conditions": 6,
+      "mean_condition_median_raw_ms": 112.49003918749999,
+      "mean_condition_median_recursive_ms": 208.73392006250003,
+      "mean_condition_median_ratio": 1.8560477576216001,
+      "minimum_condition_ratio": 1.8189746244228775,
+      "maximum_condition_ratio": 1.9163425040773434
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "seed": 0,
+      "conditions": 4,
+      "mean_condition_median_raw_ms": 45.271709656249996,
+      "mean_condition_median_recursive_ms": 81.20098446875,
+      "mean_condition_median_ratio": 1.7941234248592415,
+      "minimum_condition_ratio": 1.754292324268376,
+      "maximum_condition_ratio": 1.863233368611338
+    },
+    {
+      "domain": "paired_real_ND_DEV",
+      "seed": 1,
+      "conditions": 4,
+      "mean_condition_median_raw_ms": 44.6620269375,
+      "mean_condition_median_recursive_ms": 82.614487046875,
+      "mean_condition_median_ratio": 1.8502905322549839,
+      "minimum_condition_ratio": 1.8054240324647588,
+      "maximum_condition_ratio": 1.93844328552887
+    }
+  ],
+  "paper_evidence_board": "paper/RESEARCH_STATUS.md",
+  "board_snapshot": "paper/process/research-board-002.json",
+  "standalone_TeX_exported": true,
+  "manuscript_rebuilt": false,
+  "DIS_calc_calls_so_far": 0,
+  "new_method_established": false,
+  "next": "Register one fixed fast DIS classical reference with the same F0 quality and full cost controls; do not reopen stopped learned configurations or sweep presets.",
+  "report": "docs/进展报告/0165-T-26111711-现有强基线完整CPU流水线成本与快速传统参考缺口.md",
+  "long_term_goal": "active"
+}
