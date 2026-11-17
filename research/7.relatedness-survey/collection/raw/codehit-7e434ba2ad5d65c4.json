@@ -1,0 +1,305 @@
+{
+ "papers": [
+  {
+   "id": "iccv-025-ICCV2025-p959",
+   "title": "MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices",
+   "github": "https://github.com/AVC2-UESTC/MobileIE",
+   "github_official": true,
+   "github_stars": 134,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "LOLv1 / LOLv2 (Low-Light)",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "UIEB (Underwater Image Enhancement Benchmark)",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "ZRR (Zero-Reference Low-Light)",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "作者（UESTC AVC2）官方仓库已开源且有 134 star，低光/水下增强数据集全部公开，极轻量 ConvNet 单卡即可训练与移动端评测"
+  },
+  {
+   "id": "iccv-026-ICCV2025-p217",
+   "title": "METEOR: Multi-Encoder Collaborative Token Pruning for Efficient Vision Language Models",
+   "github": "https://github.com/YuchenLiu98/METEOR",
+   "github_official": true,
+   "github_stars": 6,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "11 个 MLLM 评测基准：SQA、AI2D、OK-VQA、GQA、POPE、SEED、MMB、TextVQA、DocVQA、ChartQA、OCRBench",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "基座模型 Vicuna-7B / LLaMA3-8B 驱动的多模态模型",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "single_gpu",
+   "reason": "官方仓库仅为占位（README 写明 code coming soon），实际剪枝代码未发布，虽基准数据公开但无法直接跑通复现"
+  },
+  {
+   "id": "iccv-027-ICCV2025-p175",
+   "title": "Corvid: Improving Multimodal Large Language Models Towards Chain-of-Thought Reasoning",
+   "github": "https://github.com/mm-vl/corvid",
+   "github_official": true,
+   "github_stars": 6,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "Corvid-1M / MCoT-Instruct-287K（作者发布的思维链指令数据）",
+     "url": "https://huggingface.co/datasets/mm-vl/Corvid-dataset",
+     "accessibility": "public"
+    },
+    {
+     "name": "Corvid 模型与数据集合（HuggingFace collection）",
+     "url": "https://huggingface.co/collections/mm-vl/corvid-686f6591f2ea83dcb94c8e46",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "large_scale",
+   "reason": "GitHub 仓库仅为项目页（描述为 Corvid Project Page）无训练/推理代码，复现需做多模态大模型思维链 SFT/强化学习，算力为大规模集群"
+  },
+  {
+   "id": "iccv-028-ICCV2025-p1834",
+   "title": "Enhancing Spatial Reasoning in Multimodal Large Language Models through Reasoning-based Segmentation",
+   "github": null,
+   "github_official": false,
+   "github_stars": null,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "3D ReasonSeg（论文自建推理分割数据集）",
+     "url": null,
+     "accessibility": "application"
+    },
+    {
+     "name": "ScanRefer / ScanQA 等 3D 视觉语言基准（基于 ScanNet）",
+     "url": null,
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "multi_gpu",
+   "reason": "arXiv 全文未给出任何代码链接，自建 3D ReasonSeg 与底层 ScanNet 数据均需签署协议申请，且要微调多模态大模型分割流水线"
+  },
+  {
+   "id": "iccv-029-ICCV2025-p275",
+   "title": "Prompt-A-Video: Prompt Your Video Diffusion Model via Preference-Aligned LLM",
+   "github": "https://github.com/jiyt17/Prompt-A-Video",
+   "github_official": true,
+   "github_stars": 25,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "WebVid 视频-文本数据（HuggingFace 分发）",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "偏好对齐用的 prompt 改写/偏好对（仓库内构造）",
+     "url": null,
+     "accessibility": "synthetic"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "第一作者仓库提供了完整代码（基于 Open-Sora 1.2、CogVideoX），但视频扩散加 LLM 偏好对齐训练需多卡，WebVid 授权与规模也受限"
+  },
+  {
+   "id": "iccv-030-ICCV2025-p604",
+   "title": "Dense2MoE: Restructuring Diffusion Transformer to MoE for Efficient Text-to-Image Generation",
+   "github": null,
+   "github_official": false,
+   "github_stars": null,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "LAION-5B",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "Coyo-700M",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "JourneyDB",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "GenEval / DPG-Bench / T2I-CompBench 评测",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "large_scale",
+   "reason": "未检索到任何官方或第三方代码，以 FLUX.1-dev 为基座做稠密转 MoE 蒸馏，论文使用 32 张 A100 与十亿级图文数据"
+  },
+  {
+   "id": "iccv-031-ICCV2025-p2522",
+   "title": "SEGS-SLAM: Structure-enhanced 3D Gaussian Splatting SLAM with Appearance Embedding",
+   "github": "https://github.com/segs-slam/SEGS-SLAM",
+   "github_official": true,
+   "github_stars": 18,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "TUM RGB-D",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "Replica",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "EuRoC",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "single_gpu",
+   "reason": "官方仓库仅标注为 rebuttal code（18 star），3DGS CUDA 环境与单目深度预处理需自行调试，数据集公开且单张 RTX 4090 可逐场景跑"
+  },
+  {
+   "id": "iccv-032-ICCV2025-p578",
+   "title": "EmbodiedOcc: Embodied 3D Occupancy Prediction for Vision-based Online Scene Understanding",
+   "github": "https://github.com/YkiWu/EmbodiedOcc",
+   "github_official": true,
+   "github_stars": 92,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "Occ-ScanNet / EmbodiedOcc-ScanNet（含 mini 版）",
+     "url": null,
+     "accessibility": "application"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "官方代码已开源（92 star）但无预训练权重，Occ-ScanNet 派生自需签协议的 ScanNet，README 训练配置为 8 卡"
+  },
+  {
+   "id": "iccv-033-ICCV2025-p132",
+   "title": "PathFinder: A Multi-Modal Multi-Agent System for Medical Diagnostic Decision-Making Applied to Histopathology",
+   "github": null,
+   "github_official": false,
+   "github_stars": null,
+   "no_code": true,
+   "datasets": [
+    {
+     "name": "M-Path Skin Biopsy WSI（皮肤科全切片临床队列）",
+     "url": null,
+     "accessibility": "application"
+    },
+    {
+     "name": "LLaVA-Med / Quilt-LLaVA 对比基线模型",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "hard",
+   "compute": "single_gpu",
+   "reason": "项目页 pathfinder-dx.github.io 的 GitHub 链接仍为占位空链接，未放码；核心 M-Path 活检 WSI 数据需机构授权，且依赖 GPT-4o 商用接口"
+  },
+  {
+   "id": "iccv-034-ICCV2025-p1515",
+   "title": "TrustMark: Robust Watermarking and Watermark Removal for Arbitrary Resolution Images",
+   "github": "https://github.com/adobe/trustmark",
+   "github_official": true,
+   "github_stars": null,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "仓库提供的水印/去水印示例与用户自选图像数据",
+     "url": "https://github.com/adobe/trustmark",
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "Adobe 官方开源仓库 README 明确说明含水印嵌入与水印去除实现，模型即开可用，不依赖专有数据集，单卡即可完成推理与鲁棒性测试"
+  },
+  {
+   "id": "iccv-035-ICCV2025-p102",
+   "title": "Feature Purification Matters: Suppressing Outlier Propagation for Training-Free Open-Vocabulary Semantic Segmentation",
+   "github": "https://github.com/Kimsure/SFP",
+   "github_official": true,
+   "github_stars": 51,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "PASCAL VOC",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "PASCAL-Context",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "Cityscapes",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "ADE20K",
+     "url": null,
+     "accessibility": "public"
+    },
+    {
+     "name": "COCO-Stuff164k",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "easy",
+   "compute": "single_gpu",
+   "reason": "ICCV25 highlight 官方仓库（51 star）方法为 training-free，只需 CLIP 特征加 test.sh 推理，五个分割基准全部公开，单卡可跑"
+  },
+  {
+   "id": "iccv-036-ICCV2025-p422",
+   "title": "EA-Vit: Efficient Adaptation for Elastic Vision Transformer",
+   "github": "https://github.com/zcxcf/EA-ViT",
+   "github_official": true,
+   "github_stars": 27,
+   "no_code": false,
+   "datasets": [
+    {
+     "name": "ImageNet-1K",
+     "url": null,
+     "accessibility": "application"
+    },
+    {
+     "name": "ADE20K（语义分割迁移）",
+     "url": null,
+     "accessibility": "public"
+    }
+   ],
+   "difficulty": "medium",
+   "compute": "multi_gpu",
+   "reason": "官方 ICCV 2025 代码已发布，但弹性子网需 ImageNet-1K 注册下载并做两阶段长周期预训练，实践上需多卡集群"
+  }
+ ]
+}
