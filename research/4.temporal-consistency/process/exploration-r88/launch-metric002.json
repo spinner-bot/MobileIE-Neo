@@ -1,0 +1,23 @@
+{
+  "at": "2026-11-17T18:42:35.512030+08:00",
+  "pid": 1268832,
+  "start_ticks": 85234323,
+  "command": [
+    "/data/Users/zrh/repo/MobileIE-Neo/scripts/project-python",
+    "/data/Users/zrh/repo/MobileIE-Neo/scripts/prebind_shared_gpu.py",
+    "--gpu",
+    "1",
+    "--record",
+    "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/process/exploration-r88/metric-binding002.json",
+    "--",
+    "/data/Users/zrh/repo/MobileIE-Neo/scripts/project-python",
+    "/data/Users/zrh/repo/MobileIE-Neo/research/4.temporal-consistency/scripts/evaluate_cvvdp_shared_geometry_r88.py"
+  ],
+  "stdout": "research/4.temporal-consistency/process/exploration-r88/metric002.stdout.log",
+  "evaluation_freeze_sha256": "553d1587af9306ab78296a5ce829a8e0e77042ef45fe52c2d49537d4f5388025",
+  "detached_session": true,
+  "metric_rows_already_done": 0,
+  "expected_new_rows": 80,
+  "physical_GPU": 1,
+  "reason": "Previous bound GPU0 denied before worker launch; do not rerun completed training/quality."
+}
