@@ -23,9 +23,9 @@ def main():
     else:
         from prebind_shared_gpu import require_initial_binding
         bound = require_initial_binding()
-        prior = json.loads((PROCESS/'cpu-gate001/gate.json').read_text())
+        prior = json.loads((PROCESS/'cpu-gate002/gate.json').read_text())
         assert prior['passed'] and prior['discarded_updates'] == 8
-        verify(json.loads((PROCESS/'cpu-gate001/config.json').read_text())['frozen'])
+        verify(json.loads((PROCESS/'cpu-gate002/config.json').read_text())['frozen'])
     import cv2
     import numpy as np
     import torch
@@ -33,9 +33,9 @@ def main():
     from mixed_anchor_r40 import MixedPool
     from motion_transport_r74 import load_spatial
     from shared_geometry_data_r88 import batch
-    from shared_geometry_r88 import make_heads, capture, stem, normalize, local_flow, transport, update, CausalCore
+    from shared_geometry_r88 import make_heads, capture, stem, normalize, local_flow, transport, update, CausalCore, initialize_backend
     precision(); cv2.setNumThreads(1)
-    out = PROCESS/f'{args.device}-gate001'; out.mkdir(parents=True, exist_ok=False)
+    out = PROCESS/f'{args.device}-gate002'; out.mkdir(parents=True, exist_ok=False)
     frozen = freeze(['check_shared_geometry_r88.py'])
     write(out/'config.json', dict(at=stamp(), pid=os.getpid(), frozen=frozen,
         expected_discarded_updates=8, expected_full_F0_frames=16, expected_stem_only_frames=16,
@@ -69,13 +69,15 @@ def main():
         for seed, (inputs, target, identity, backbone, marker, heads, rank) in enumerate(prepared):
             work_began = time.perf_counter()
             inputs, target, backbone = inputs.to(device), target.to(device), backbone.to(device)
-            heads = {name: head.to(device) for name, head in heads.items()}
+            heads = initialize_backend(heads, device)
             with torch.no_grad():
                 original = backbone(inputs[:4]); full_frames += 4
                 shared, _ = capture(backbone, inputs[:4]); full_frames += 4
                 features = stem(backbone, inputs); stem_frames += 8
                 initial_difference = float((heads['plain'](features)-heads['complement'](features)).abs().max())
                 RGB_difference = float((original-shared).abs().max())
+            write(out/f'seed{seed}-initial.json', dict(initial_descriptor_difference=initial_difference,
+                unchanged_RGB_difference=RGB_difference))
             assert initial_difference <= 1e-6 and RGB_difference <= 1e-6
             row = dict(seed=seed, rank=rank, backbone=marker, data=identity,
                 initial_descriptor_difference=initial_difference, unchanged_RGB_difference=RGB_difference,
