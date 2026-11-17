@@ -1,5 +1,7 @@
 内部论文工作稿（2026-11-16；Codex  (sqs_A100)）
 
+补充（2026-11-17，R85）：RESEARCH_STATUS.md已补同原F0权重的常驻CPU基线成本，source snapshot为process/research-board-002.json。完整独立表位于../research/4.temporal-consistency/report/exploration-r85-baseline-cost/，由scripts/build_baseline_pipeline_table.py只在原正常终态后导出，0额外CNN；该TeX尚未加入main.tex或当前PDF。原PDF仍build020/24页16表，不称新表已编译/实际版面审阅。未来若纳入须先扩展对应来源检查，再用新构建编号21及实际图审；本轮不为单个成本补充自动重建。质量全序列和成本前16帧范围不同，非手机性能，已有失败候选不借此获得新资格。
+
 当前manuscript.pdf为已实际审阅的build020：24页、16张数值表、13项引用，
 无编译warning/未解析引用。包含完整R74负结果、R75原两seed各64K与八门槛0/8、
 R76固定self4四支持1/4和按预登记停止R77额外128K投资。不是投稿终稿，
