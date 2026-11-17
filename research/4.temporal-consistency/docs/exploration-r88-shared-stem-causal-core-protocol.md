@@ -34,6 +34,6 @@ CPU先固定人工4通道32×40平滑随机特征、quarter已知位移(1,-.5)�
 
 每域-seed逐一报告plain/complement true对F0及两经典参考、各自zero。主候选complement：PSNR/JOD对每参照分别≥-.05dB/-.02，最差逐条件分别≥-.30/-.10；对同权重zero及独立plain_true需Etemp≤.95，各四组。A要求相对两个经典Etemp≤.90，B要求≤1.05；A/B只属不同质量—成本取舍，不回写旧失败或称B达成10%时间改善。普通plain与zero全部保留，若只有plain有益不得归因正交补或称新贡献。
 
-只有complement任一完整A/B质量资格过，才登记/执行同轮完整CPU成本，与原half-FB和DIS比较，各两seed十条件前16帧/每模式2warmup+3正式，3pipeline共4800真实F0、80?实际warmup120/正式180序列，加入head/全部solver/转换/warp/sink；A还需cost≤较快经典*1.05，B需≤*.80。未过不扩失败候选成本/外部/手机。任何结论均为反复DEV，未建立新颖性、自然动态/手机或独立最终。
+只有complement任一完整A/B质量资格过，才登记/执行同轮完整CPU成本，与原half-FB和DIS比较，各两seed十条件前16帧/每模式2warmup+3正式，3pipeline共4800真实F0、120 warmup/180正式序列，加入head/全部solver/转换/warp/sink；A还需cost≤较快经典*1.05，B需≤*.80。未过不扩失败候选成本/外部/手机。任何结论均为反复DEV，未建立新颖性、自然动态/手机或独立最终。
 
 依赖按CPU资格、CUDA/正式、评价阶段分别在执行前冻结，不改活跃源；实现/原资格/全部checkpoint前缀/原终态/结果/解释/过程/报告分文件小步提交并阶段推送，自有data/project-python/main/指定作者/no-ff。原全部STOP/保留最终/paper020和完整论文目标active保持。
