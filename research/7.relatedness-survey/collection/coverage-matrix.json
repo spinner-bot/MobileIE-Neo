@@ -1,5 +1,5 @@
 {
-  "recorded_at": "2026-11-17T18:36:46.274164+08:00",
+  "recorded_at": "2026-11-17T19:11:21.445863+08:00",
   "source_matrix": {
     "A-scholarly": [
       {
@@ -94,7 +94,8 @@
           "web-initial-7.json",
           "web-initial-8.json",
           "web-initial-9.json",
-          "web-lead-review.json"
+          "web-lead-review.json",
+          "all-web-lead-review.json"
         ],
         "result": "160 initial URL leads identity-reviewed; original papers/projects, aliases, directories and unrelated homonyms distinguished"
       },
@@ -117,11 +118,41 @@
         ],
         "result": "All 33 historical S2 and 18 historical OA records mapped into current candidate identities; old conclusions not adopted as new evidence"
       }
+    ],
+    "F-additional-host-coverage": [
+      {
+        "name": "Hugging Face models/datasets/Spaces",
+        "evidence": [
+          "hf-models-coverage.json",
+          "hf-datasets-coverage.json",
+          "hf-spaces-coverage.json",
+          "receipts/hf-public-models.json",
+          "receipts/hf-public-datasets.json",
+          "receipts/hf-public-spaces.json"
+        ],
+        "result": "Connector calls unavailable/disabled, original failures retained; public Hub name-search APIs all succeeded with empty arrays. This does not prove absence of unlabeled models or model-card uses"
+      },
+      {
+        "name": "Gitee/GitCode/Bilibili and HF site-qualified web search",
+        "evidence": [
+          "web-host-coverage-check.json"
+        ],
+        "result": "Actual search response reported no results; no claim of complete internal hosting-service search"
+      },
+      {
+        "name": "Official repository subresources",
+        "evidence": [
+          "plugin-official-branches.json",
+          "plugin-official-releases.json",
+          "plugin-official-pulls.json"
+        ],
+        "result": "One main branch at7030d125; empty releases and all-state pull-request lists"
+      }
     ]
   },
   "candidate_counts": {
-    "paper": 46,
-    "code": 53,
+    "paper": 47,
+    "code": 58,
     "other": 8
   },
   "gate_hashes_unchanged": true,
