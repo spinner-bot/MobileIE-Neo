@@ -1,0 +1,84 @@
+{
+  "at": "2026-11-17T14:00:50.740871+08:00",
+  "pid": 1054252,
+  "frozen": {
+    "at": "2026-11-17T14:00:49.239615+08:00",
+    "source_sha256": {
+      "research/4.temporal-consistency/scripts/causal_reference_io_r75.py": "181906fa8ccce29eb2e2bfcd79bf78035abd15a1f3ed12adf8ba8312ab367d93",
+      "research/4.temporal-consistency/scripts/mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5",
+      "research/4.temporal-consistency/scripts/motion_transport_r74.py": "da48fe1b67113aba60a7bc3f61458c56ce52785728094413b734ee6d892529c8",
+      "research/4.temporal-consistency/scripts/half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+      "research/4.temporal-consistency/scripts/aligned_raw_history_r11.py": "e367727401f82ccf0bccaf8d88f904e4aebf8b78186f0539eedeed222b2d2227",
+      "research/4.temporal-consistency/scripts/aggregation_controls_r20.py": "7b4541be8512ca1edb755b5a73f889351e376f9a8fc1fdec7ed633a4438c116c",
+      "research/4.temporal-consistency/scripts/video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0",
+      "research/4.temporal-consistency/scripts/dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498",
+      "research/4.temporal-consistency/scripts/budget_causal_r33.py": "7cfe138a286fdb488973ffe7c5bc93b69ad505af981e22cba824402c491b2e3b",
+      "research/4.temporal-consistency/scripts/native_training_r14.py": "588b505ede11ac9f0d747ad1c16b1c118a7bbbbba7405ce918a6163d133d69a1",
+      "research/4.temporal-consistency/scripts/train_mixture_r4b.py": "152e8f59e1b2f45bd5898a5480cabc84c37bfec89f63dbefaa4c2579c2de33b7",
+      "research/4.temporal-consistency/scripts/train_exploration_r2.py": "30ba78b2439ffb6fdf10aafe384975326082129b03ebe562aa118f29ba5d8c7b",
+      "research/4.temporal-consistency/scripts/explore_temporal_controls.py": "04a72a82943f1e43aa03cf2e8997a26c76e467b306ceb8fc42094dfdc5398d54",
+      "research/4.temporal-consistency/scripts/exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+      "research/4.temporal-consistency/scripts/bounded_fst.py": "ab3a542807c1de0553f556afee0645720d6749637e8a513a31286f4fb24dadb6",
+      "MobileIE/model/lle.py": "c569c48f4fb4d25d227db85d078ce763e68dd89d304a623d8125dcd6808e8bff",
+      "MobileIE/model/utils.py": "76b5c97b99add030af5d42b8a424aeaa672b159925d92139d0d12d804cf8d992",
+      "scripts/project-python": "db9f3a0398d76c67fdc86255dd6277adba078b2871abb8a8618fe1601ea5e4b2",
+      "scripts/project_assets.py": "65979a86cd009d82c5620191a9d3eb727b4bf6589815c3ccd9fc065cad91ae07",
+      "research/4.temporal-consistency/scripts/functional_gauge_r87.py": "845c2fca987650a7b48313052e95ae8a1f433bf3e8ad49772e646fac8c931f04",
+      "research/4.temporal-consistency/scripts/probe_functional_gauge_r87.py": "aa06b427f0e2fdae23b85ddf4e5dd1c807abc7f050168ec04d2d5cc63007c2cb"
+    },
+    "protocol_sha256": "01a636ca169ae23e630b3a5e79a3ecd71fa264a4607a17a8b290ccad044dd83b",
+    "pre_execution_compile_passed": true,
+    "new_R87_CNN_frames_so_far": 0,
+    "new_metric_optimizer_updates_so_far": 0,
+    "scope": "Frozen before known-motion noisy pairs, calibration updates and original/folded F0 comparisons."
+  },
+  "windows": [
+    [
+      0,
+      8000
+    ],
+    [
+      0,
+      8001
+    ],
+    [
+      1,
+      8000
+    ],
+    [
+      1,
+      8001
+    ]
+  ],
+  "source_batch_members": [
+    0,
+    2
+  ],
+  "target_frame": 0,
+  "photons": 40,
+  "quarter_translations": [
+    [
+      -2,
+      -1
+    ],
+    [
+      -2,
+      1
+    ],
+    [
+      2,
+      -1
+    ],
+    [
+      2,
+      1
+    ]
+  ],
+  "expected_source_crops": 8,
+  "expected_B4_calls": 64,
+  "expected_backbone_image_frames": 256,
+  "expected_metric_updates": 1024,
+  "expected_query_rows": 4800,
+  "backbone_updates": 0,
+  "scope": "Training-source known-motion synthetic noise only; check split is not independent DEV/video."
+}
