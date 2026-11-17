@@ -1,0 +1,3215 @@
+{
+  "recorded_at": "2026-11-17T10:25:57.186Z",
+  "query": "MobileIE",
+  "topn": 100,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "results": [
+        {
+          "url": "https://github.com/khaihoang004/dewarp/blob/39eef66524919078836ec0f9122fda27d07a43e8/src/model/refinement/mobile_ie.py",
+          "path": "src/model/refinement/mobile_ie.py",
+          "display_url": "https://github.com/khaihoang004/dewarp/blob/39eef66524919078836ec0f9122fda27d07a43e8/src/model/refinement/mobile_ie.py",
+          "display_title": "src/model/refinement/mobile_ie.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "        l_attn = self.local_conv(x)\n        return x * g_attn * l_attn\n\nclass MobileIE(nn.Module):\n    def __init__(self, in_channels=3, out_channels=3, mid_channels=16, num_blocks=2, deploy=False):\n        super(MobileIE, self).__init__()\n        ",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    78,
+                    86
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    213,
+                    221
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/tediyankov/reef-track/blob/af76a927c568795e800f8d8e0c28c3b939fd6f1f/src/reeftrack/enhance/__init__.py",
+          "path": "src/reeftrack/enhance/__init__.py",
+          "display_url": "https://github.com/tediyankov/reef-track/blob/af76a927c568795e800f8d8e0c28c3b939fd6f1f/src/reeftrack/enhance/__init__.py",
+          "display_title": "src/reeftrack/enhance/__init__.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    return cv2.convertScaleAbs(np.maximum(out, 0, out=out))  # saturating cast to uint8\n\n\nclass MobileIE:\n    \"\"\"Re-parameterised (\"slim\") MobileIE-LLE network, written out with plain conv ops.\"\"\"\n\n    WEIGHTS = Path(__file__).with_name(\"mobileie_uieb.npz\")",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    96,
+                    104
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    139,
+                    147
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    238,
+                    246
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/zhaoyang97/Paper-Notes/blob/de63c0e13b242cadcc5faa8cc2017fcc8c235026/docs/ICCV2025/image_restoration/mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md",
+          "path": "docs/ICCV2025/image_restoration/mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md",
+          "display_url": "https://github.com/zhaoyang97/Paper-Notes/blob/de63c0e13b242cadcc5faa8cc2017fcc8c235026/docs/ICCV2025/image_restoration/mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md",
+          "display_title": "docs/ICCV2025/image_restoration/mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "---\ntitle: >-\n  [论文解读] MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices\ndescription: >-\n  [ICCV 2025][图像恢复][移动端图像增强] 提出 MobileIE，一个仅有约 4K 参数的极致轻量 CNN 框架，通过多分支重参数化卷积（MBRConv）、特征自变换（FST）模块、分层双路径注意力（HDPA）以及增量权重优化（IWO）策略，首次在移动设备上实现超过 1100 FPS 的实时图像增强，同时在低光增强、水下增强和 ISP 三个任务上取得最优的速度-性能平衡。\ntags:\n  - \"ICCV 2025\"",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    31,
+                    39
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    212,
+                    220
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/README.md",
+          "path": "shared/mon/mon/vision/enhance/multitask/mobileie/README.md",
+          "display_url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/README.md",
+          "display_title": "shared/mon/mon/vision/enhance/multitask/mobileie/README.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "<h1 align=\"center\">[ICCV 2025] MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices</h1>\n\n<div align=\"center\">",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    31,
+                    39
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "    author    = {Yan, Hailong and Li, Ao and Zhang, Xiangtao and Liu, Zhe and Shi, Zenglin and Zhu, Ce and Zhang, Le},\n    title     = {MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices},\n    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision},",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    136,
+                    144
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/train.py",
+          "path": "shared/mon/mon/vision/enhance/multitask/mobileie/train.py",
+          "display_url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/train.py",
+          "display_title": "shared/mon/mon/vision/enhance/multitask/mobileie/train.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n\"\"\"Implements MobileIE model training pipeline for real-time image enhancement\non mobile devices.",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    15,
+                    23
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "References:\n    - Paper: \"MobileIE: An Extremely Lightweight and Effective ConvNet for\n      Real-Time Image Enhancement on Mobile Devices,\" ICCV 2025.",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    26,
+                    34
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/predict.py",
+          "path": "shared/mon/mon/vision/enhance/multitask/mobileie/predict.py",
+          "display_url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/predict.py",
+          "display_title": "shared/mon/mon/vision/enhance/multitask/mobileie/predict.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n\"\"\"Implements MobileIE model prediction pipeline for real-time image enhancement\non mobile devices.",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    15,
+                    23
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "References:\n    - Paper: \"MobileIE: An Extremely Lightweight and Effective ConvNet for\n      Real-Time Image Enhancement on Mobile Devices,\" ICCV 2025.",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    26,
+                    34
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/__init__.py",
+          "path": "shared/mon/mon/vision/enhance/multitask/mobileie/__init__.py",
+          "display_url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/__init__.py",
+          "display_title": "shared/mon/mon/vision/enhance/multitask/mobileie/__init__.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n\"\"\"Implements MobileIE model for real-time image enhancement on mobile devices.\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    15,
+                    23
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "References:\n    - Paper: \"MobileIE: An Extremely Lightweight and Effective ConvNet for\n      Real-Time Image Enhancement on Mobile Devices,\" ICCV 2025.",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    26,
+                    34
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/ytdl-org/youtube-dl/blob/bc069d2bb40bcbc5bdfdf352ca15bf586c7792cb/youtube_dl/extractor/extractors.py",
+          "path": "youtube_dl/extractor/extractors.py",
+          "display_url": "https://github.com/ytdl-org/youtube-dl/blob/bc069d2bb40bcbc5bdfdf352ca15bf586c7792cb/youtube_dl/extractor/extractors.py",
+          "display_title": "youtube_dl/extractor/extractors.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    WDRElefantIE,\n    WDRMobileIE,\n)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    25,
+                    33
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    22,
+                    30
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/z1069614715/objectdetection_script/blob/e8434707de87430b494ab794d98663a4a663e815/yolo-improve/rtdetr-project.md",
+          "path": "yolo-improve/rtdetr-project.md",
+          "display_url": "https://github.com/z1069614715/objectdetection_script/blob/e8434707de87430b494ab794d98663a4a663e815/yolo-improve/rtdetr-project.md",
+          "display_title": "yolo-improve/rtdetr-project.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n77. ultralytics/cfg/models/rt-detr/rtdetr-C2f-MBRConv3.yaml\n\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv3与CSP改进backbone.\n\n78. ultralytics/cfg/models/rt-detr/rtdetr-C2f-MBRConv5.yaml\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    82,
+                    90
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    122,
+                    130
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/docs/reports/mobileie-assets-zero-reference-20260603.md",
+          "path": "docs/reports/mobileie-assets-zero-reference-20260603.md",
+          "display_url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/docs/reports/mobileie-assets-zero-reference-20260603.md",
+          "display_title": "docs/reports/mobileie-assets-zero-reference-20260603.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "# MobileIE Assets Zero-Reference Evaluation - 2026-06-03\n\n## Scope",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    2,
+                    10
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "- Zero-DCE: image-specific higher-order curve adjustment plus no-reference losses.\n  Implemented in `tools/zero_refine_mobileie.py` as a per-image iterative curve\n  applied on top of the LOL-v2 pretrained MobileIE output. The optimization uses",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    119,
+                    127
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    205,
+                    213
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/z1069614715/objectdetection_script/blob/e8434707de87430b494ab794d98663a4a663e815/yolo-improve/yolov11-project.md",
+          "path": "yolo-improve/yolov11-project.md",
+          "display_url": "https://github.com/z1069614715/objectdetection_script/blob/e8434707de87430b494ab794d98663a4a663e815/yolo-improve/yolov11-project.md",
+          "display_title": "yolo-improve/yolov11-project.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n116. ultralytics/cfg/models/11/yolo11-C3k2-MBRConv3.yaml\n\n    使用[ICCV2025 MobileIE](https://github.com/AVC2-UESTC/MobileIE)中的MBRConv3改进C3k2.\n\n117. ultralytics/cfg/models/11/yolo11-C3k2-MBRConv5.yaml\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    79,
+                    87
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    119,
+                    127
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/docs/reports/mobileie-assets-fusion-improvements-20260603.md",
+          "path": "docs/reports/mobileie-assets-fusion-improvements-20260603.md",
+          "display_url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/docs/reports/mobileie-assets-fusion-improvements-20260603.md",
+          "display_title": "docs/reports/mobileie-assets-fusion-improvements-20260603.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "# MobileIE Assets Fusion Improvements - 2026-06-03\n\n## Goal",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    2,
+                    10
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nThe main empirical finding is that the pretrained MobileIE outputs are over-bright\nfor this local test set. Preserving part of the original input structure and fusing",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    51,
+                    59
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/zhaoyang97/Paper-Notes/blob/de63c0e13b242cadcc5faa8cc2017fcc8c235026/docs/ICCV2025/image_restoration/index.md",
+          "path": "docs/ICCV2025/image_restoration/index.md",
+          "display_url": "https://github.com/zhaoyang97/Paper-Notes/blob/de63c0e13b242cadcc5faa8cc2017fcc8c235026/docs/ICCV2025/image_restoration/index.md",
+          "display_title": "docs/ICCV2025/image_restoration/index.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    t: \"Low-Light Image Enhancement using Event-Based Illumination Estimation (RetinEV)\"\n  - u: \"metric_convolutions_a_unifying_theory_to_adaptive_image_convolutions/\"\n    t: \"Metric Convolutions: A Unifying Theory to Adaptive Image Convolutions\"\n  - u: \"mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha/\"\n    t: \"MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices\"\n  - u: \"mp-hsir_a_multi-prompt_framework_for_universal_hyperspectral_image_restoration/\"\n    t: \"MP-HSIR: A Multi-Prompt Framework for Universal Hyperspectral Image Restoration\"",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    255,
+                    263
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    346,
+                    354
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/zhaoyang97/Paper-Notes/blob/de63c0e13b242cadcc5faa8cc2017fcc8c235026/docs/ICCV2025/TODO.md",
+          "path": "docs/ICCV2025/TODO.md",
+          "display_url": "https://github.com/zhaoyang97/Paper-Notes/blob/de63c0e13b242cadcc5faa8cc2017fcc8c235026/docs/ICCV2025/TODO.md",
+          "display_title": "docs/ICCV2025/TODO.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "- [x] [mmaif multi-task and multi-degradation all-in-one for image fusion with language](image_generation/mmaif_multi-task_and_multi-degradation_all-in-one_for_image_fusion_with_language.md) | arXiv: 2503.14944\n- [x] [mmone representing multiple modalities in one scene](multimodal_vlm/mmone_representing_multiple_modalities_in_one_scene.md) | arXiv: 2507.11129\n- [ ] mmreason an open-ended multi-modal multi-step reasoning benchmark for mllms towa\n- [x] [mobileie an extremely lightweight and effective convnet for real-time image enha](image_restoration/mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md) | arXiv: 2507.01838\n- [x] [mobileviclip an efficient video-text model for mobile devices](video_understanding/mobileviclip_an_efficient_video-text_model_for_mobile_devices.md) | arXiv: 2508.07312\n- [ ] modaltune fine-tuning slide-level foundation models with multi-modal information\n- [ ] moerl when mixture-of-experts meet reinforcement learning for adverse weather im",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    456,
+                    464
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    556,
+                    564
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/tools/evaluate_mobileie.py",
+          "path": "tools/evaluate_mobileie.py",
+          "display_url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/tools/evaluate_mobileie.py",
+          "display_title": "tools/evaluate_mobileie.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "from skimage.metrics import structural_similarity\n\nfrom model import import_model\nfrom tools.mobileie_utils import (\n    apply_exposure_gate,\n    list_images,\n    load_rgb_uint8,",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    93,
+                    101
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/tools/zero_refine_mobileie.py",
+          "path": "tools/zero_refine_mobileie.py",
+          "display_url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/tools/zero_refine_mobileie.py",
+          "display_title": "tools/zero_refine_mobileie.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "from skimage.metrics import structural_similarity\n\nfrom model import import_model\nfrom tools.mobileie_utils import list_images, load_rgb_uint8, psnr_float, save_rgb_uint8, summarize_rgb_uint8\n\n\ndef apply_iterative_curve(image, curve):",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    93,
+                    101
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE_论文对齐与偏差复核报告.md",
+          "path": "MobileIE_论文对齐与偏差复核报告.md",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE_论文对齐与偏差复核报告.md",
+          "display_title": "MobileIE_论文对齐与偏差复核报告.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "# MobileIE 论文对齐与结果偏差复核报告\n\n> 复核对象：`MobileIE-main/`（ICCV 2025 官方发布代码）+ `repro/`（本项目复现工程）\n> 复核时间：2026-09-28 18:40–19:00\n> 模式：**只读**（未修改任何既有代码、配置、数据与运行产物；本报告为新增文件）\n> 证据来源：论文 `paper.txt` / `Yan_MobileIE_..._ICCV_2025_paper.pdf`、官方 `main.py`/`loss.py`/`model/*.py`/`config/lle.yaml`、`repro/src/mobileie/*`、`repro/runs/*/metrics.jsonl` 与 `train.log`、以及本轮对检查点的独立复算\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    2,
+                    10
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    70,
+                    78
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    357,
+                    365
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    464,
+                    472
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE_后续验证计划.md",
+          "path": "MobileIE_后续验证计划.md",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE_后续验证计划.md",
+          "display_title": "MobileIE_后续验证计划.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "# MobileIE 后续验证计划（待批准执行）\n\n> 前置：`MobileIE_论文对齐与偏差复核报告.md`\n> 本文件为**方案**，当前**未执行任何训练、未改动任何既有文件**。\n> 目标：把\"从零训练 −1.20 dB 偏差\"从**推断**收敛为**受控实验结论**，并给出可交付的最终数字区间。\n> 硬件：RTX 5070 Ti Laptop（12 GB）。单 epoch 实测 ≈ 27 s（bs=2，600×400）。\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    2,
+                    10
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    64,
+                    72
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/README.md",
+          "path": "README.md",
+          "display_url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/README.md",
+          "display_title": "README.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "<h1 align=\"center\">[ICCV 2025] MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices</h1>\n\n<div align=\"center\">",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    31,
+                    39
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "    author    = {Yan, Hailong and Li, Ao and Zhang, Xiangtao and Liu, Zhe and Shi, Zenglin and Zhu, Ce and Zhang, Le},\n    title     = {MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices},\n    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision},",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    136,
+                    144
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/model/__init__.py",
+          "path": "model/__init__.py",
+          "display_url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/model/__init__.py",
+          "display_title": "model/__init__.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "from importlib import import_module\nfrom .lle import MobileIELLENet, MobileIELLENetS\nfrom .isp import MobileIEISPNet, MobileIEISPNetS",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    53,
+                    61
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    69,
+                    77
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    102,
+                    110
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    118,
+                    126
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "def import_model(opt):\n    model_name = 'MobileIE'+opt.model_task.upper()\n    kwargs = {'channels': opt.config['model']['channels']}",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    41,
+                    49
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/src/mobileie/model.py",
+          "path": "repro/src/mobileie/model.py",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/src/mobileie/model.py",
+          "display_title": "repro/src/mobileie/model.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\"\"\"MobileIE-LLE network.\n\nThe re-parameterisation maths (``MBRConv{1,3,5}.slim``) is delicate, so it is not",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    3,
+                    11
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "_MODULES = {\n    \"plain\": lambda: _load_module(\"mobileie_official_utils\", \"utils.py\"),\n    \"iwo\": lambda: _load_module(\"mobileie_official_utils_iwo\", \"utils_IWO.py\"),",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    48,
+                    56
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    120,
+                    128
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/src/mobileie/__init__.py",
+          "path": "repro/src/mobileie/__init__.py",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/src/mobileie/__init__.py",
+          "display_title": "repro/src/mobileie/__init__.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\"\"\"MobileIE paper reproduction harness.\"\"\"\n\n__all__ = [\"config\", \"model\", \"data\", \"losses\", \"metrics\", \"engine\", \"complexity\"]",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    3,
+                    11
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/zhihengli-casia/AI-Paper-Trends/blob/d05ee223beeed67cd4373e4be53cb6321ab68cc0/docs/topic-atlas/2025/ICCV/topic-082.md",
+          "path": "docs/topic-atlas/2025/ICCV/topic-082.md",
+          "display_url": "https://github.com/zhihengli-casia/AI-Paper-Trends/blob/d05ee223beeed67cd4373e4be53cb6321ab68cc0/docs/topic-atlas/2025/ICCV/topic-082.md",
+          "display_title": "docs/topic-atlas/2025/ICCV/topic-082.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "<a id=\"paper-https-openaccess-thecvf-com-content-iccv2025-html-kim-lightweight-and-fast-real-\"></a>\n11. [Lightweight and Fast Real-time Image Enhancement via Decomposition of the Spatial-aware Lookup Tables](https://openaccess.thecvf.com/content/ICCV2025/html/Kim_Lightweight_and_Fast_Real-time_Image_Enhancement_via_Decomposition_of_the_ICCV_2025_paper.html)\n   - Wontae Kim, Keuntek Lee, Nam Ik Cho; assignment: `nearest_centroid`; source: `CVF Open Access`\n<a id=\"paper-https-openaccess-thecvf-com-content-iccv2025-html-yan-mobileie-an-extremely-ligh\"></a>\n12. [MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices](https://openaccess.thecvf.com/content/ICCV2025/html/Yan_MobileIE_An_Extremely_Lightweight_and_Effective_ConvNet_for_Real-Time_Image_ICCV_2025_paper.html)\n   - Hailong Yan, Ao Li, Xiangtao Zhang, Zhe Liu, Zenglin Shi, Ce Zhu, et al.; assignment: `nearest_centroid`; source: `CVF Open Access`\n<a id=\"paper-https-openaccess-thecvf-com-content-iccv2025-html-jin-pasd-a-pixel-adaptive-swar\"></a>",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    527,
+                    535
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    565,
+                    573
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    729,
+                    737
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/onnx2tflite/onnx2tflite.py",
+          "path": "onnx2tflite/onnx2tflite.py",
+          "display_url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/onnx2tflite/onnx2tflite.py",
+          "display_title": "onnx2tflite/onnx2tflite.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "from onnx2tflite.converter import onnx_converter\nonnx_path = \"/data2/yanhailong/IR-Based/ICCV2025/MobileIE/LLE.onnx\" \n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    98,
+                    106
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "    need_simplify = True,\n    output_path = \"//data2/yanhailong/IR-Based/ICCV2025/MobileIE/\", \n    target_formats = ['tflite'], # or ['keras'], ['keras', 'tflite']",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    82,
+                    90
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE-main/MobileIE-main/README.md",
+          "path": "MobileIE-main/MobileIE-main/README.md",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE-main/MobileIE-main/README.md",
+          "display_title": "MobileIE-main/MobileIE-main/README.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "<h1 align=\"center\">[ICCV 2025] MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices</h1>\n\n<div align=\"center\">",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    31,
+                    39
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "    author    = {Yan, Hailong and Li, Ao and Zhang, Xiangtao and Liu, Zhe and Shi, Zenglin and Zhu, Ce and Zhang, Le},\n    title     = {MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices},\n    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision},",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    136,
+                    144
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/src/mobileie/config.py",
+          "path": "repro/src/mobileie/config.py",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/src/mobileie/config.py",
+          "display_title": "repro/src/mobileie/config.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nREPRO_ROOT = Path(__file__).resolve().parents[2]\nPROJECT_ROOT = REPRO_ROOT.parent\nOFFICIAL_ROOT = PROJECT_ROOT / \"MobileIE-main\" / \"MobileIE-main\"\nDATA_ROOT = REPRO_ROOT / \"data\"\nRUNS_ROOT = REPRO_ROOT / \"runs\"\nRESULTS_ROOT = REPRO_ROOT / \"results\"",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    115,
+                    123
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    133,
+                    141
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/JasmineAIGC/ArXiv_CV_Papers_Daily/blob/f1e92ff979bc3862ba52e4cd4cb700668c38f457/data/2025-07/2025-07-02.md",
+          "path": "data/2025-07/2025-07-02.md",
+          "display_url": "https://github.com/JasmineAIGC/ArXiv_CV_Papers_Daily/blob/f1e92ff979bc3862ba52e4cd4cb700668c38f457/data/2025-07/2025-07-02.md",
+          "display_title": "data/2025-07/2025-07-02.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n|状态|英文标题|中文标题|作者|PDF链接|代码/贡献|\n|---|---|---|---|---|---|\n|🆕 发布|MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices|移动IE：一种极轻量级且高效的可用于移动设备实时图像增强的卷积神经网络|Hailong Yan, Ao Li, Xiangtao Zhang, Zhe Liu, Zenglin Shi, Ce Zhu, Le Zhang|<http://arxiv.org/pdf/2507.01838v1>|[代码](https://github.com/AVC2-UESTC/MobileIE.git.); 提出了一种极轻量级卷积神经网络框架MobileIE，实现了移动设备上实时图像增强的高效运行与性能优化...|\n|📝 更新|Graph-Based Deep Learning for Component Segmentation of Maize Plants|基于图的深度学习在玉米植株部件分割中的应用|J. I. Ruiz-Martinez, A. Mendez-Vazquez, E. Rodriguez-Tello|<http://arxiv.org/pdf/2507.00182v2>|提出了一种基于图神经网络的深度学习方法，用于精确农业中玉米植株部件的3D点云数据分割，显著提升了识别...|\n|🆕 发布|When Does Pruning Benefit Vision Representations?|剪枝何时有益于视觉表征？|Enrico Cassano, Riccardo Renzulli, Andrea Bragagnolo, Marco Grangetto|<http://arxiv.org/pdf/2507.01722v1>|探究了剪枝如何影响视觉模型的解释性、无监督物体发现和与人感知的匹配度，发现了特定稀疏度的模型表现更优...|\n|🆕 发布|How Weight Resampling and Optimizers Shape the Dynamics of Continual Learning and Forgetting in Neural Networks|《权重重采样与优化器如何塑造神经网络中持续学习与遗忘的动力机制》|Lapo Frati, Neil Traft, Jeff Clune, Nick Cheney|<http://arxiv.org/pdf/2507.01559v1>|探究了权重重采样和优化器如何影响神经网络的持续学习和遗忘动态。|",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    106,
+                    114
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    465,
+                    473
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    532,
+                    540
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/TTXS123OK/CVPapers/blob/f71527d79a563c110ee08d223702774c653cbcdf/cs.CV/2025/07/20250702.md",
+          "path": "cs.CV/2025/07/20250702.md",
+          "display_url": "https://github.com/TTXS123OK/CVPapers/blob/f71527d79a563c110ee08d223702774c653cbcdf/cs.CV/2025/07/20250702.md",
+          "display_title": "cs.CV/2025/07/20250702.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n### MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices\n- **Arxiv ID**: http://arxiv.org/abs/2507.01838v1",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    5,
+                    13
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "- **Journal**: None\n- **Summary**: Recent advancements in deep neural networks have driven significant progress in image enhancement (IE). However, deploying deep learning models on resource-constrained platforms, such as mobile devices, remains challenging due to high computation and memory demands. To address these challenges and facilitate real-time IE on mobile, we introduce an extremely lightweight Convolutional Neural Network (CNN) framework with around 4K parameters. Our approach integrates reparameterization with an Incremental Weight Optimization strategy to ensure efficiency. Additionally, we enhance performance with a Feature Self-Transform module and a Hierarchical Dual-Path Attention mechanism, optimized with a Local Variance-Weighted loss. With this efficient framework, we are the first to achieve real-time IE inference at up to 1,100 frames per second (FPS) while delivering competitive image quality, achieving the best trade-off between speed and performance across multiple IE tasks. The code will be available at https://github.com/AVC2-UESTC/MobileIE.git.\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    1074,
+                    1082
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/zhaoyang97/Paper-Notes-en/blob/148a16dd45b148e890b4428db21133e5a1589b77/docs/ICCV2025/image_restoration/index.md",
+          "path": "docs/ICCV2025/image_restoration/index.md",
+          "display_url": "https://github.com/zhaoyang97/Paper-Notes-en/blob/148a16dd45b148e890b4428db21133e5a1589b77/docs/ICCV2025/image_restoration/index.md",
+          "display_title": "docs/ICCV2025/image_restoration/index.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    t: \"Low-Light Image Enhancement using Event-Based Illumination Estimation (RetinEV)\"\n  - u: \"metric_convolutions_a_unifying_theory_to_adaptive_image_convolutions/\"\n    t: \"Metric Convolutions: A Unifying Theory to Adaptive Image Convolutions\"\n  - u: \"mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha/\"\n    t: \"MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices\"\n  - u: \"mp-hsir_a_multi-prompt_framework_for_universal_hyperspectral_image_restoration/\"\n    t: \"MP-HSIR: A Multi-Prompt Framework for Universal Hyperspectral Image Restoration\"",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    255,
+                    263
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    346,
+                    354
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/cirosantilli/expired-domain-names-by-day-2022/blob/36fb5eee7e0a11c9a1d227f86d4eb508fd7e7223/11/10/00",
+          "path": "11/10/00",
+          "display_url": "https://github.com/cirosantilli/expired-domain-names-by-day-2022/blob/36fb5eee7e0a11c9a1d227f86d4eb508fd7e7223/11/10/00",
+          "display_title": "11/10/00",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "364659.com\n365-cardauthorisation.com\n365-mobilebanking.com\n365-mobileie.com\n365-online-authenticate-now.com\n365-onlineauthorisation.net\n365-onlineauthorizationservice.com",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    63,
+                    71
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/cirosantilli/expired-domain-names-by-day-2022/blob/36fb5eee7e0a11c9a1d227f86d4eb508fd7e7223/12/18/53",
+          "path": "12/18/53",
+          "display_url": "https://github.com/cirosantilli/expired-domain-names-by-day-2022/blob/36fb5eee7e0a11c9a1d227f86d4eb508fd7e7223/12/18/53",
+          "display_title": "12/18/53",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "bogey360.com\nbohemianorchid.net\nboi-bankingsupport.com\nboi-mobileie.com\nboi365onlinesecurity.com\nboiler-hotline.com\nboisupport-banking.com",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    59,
+                    67
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/zhaoyang97/Paper-Notes/blob/de63c0e13b242cadcc5faa8cc2017fcc8c235026/docs/ICCV2025/image_restoration/learning_pixel-adaptive_multi-layer_perceptrons_for_real-time_image_enhancement.md",
+          "path": "docs/ICCV2025/image_restoration/learning_pixel-adaptive_multi-layer_perceptrons_for_real-time_image_enhancement.md",
+          "display_url": "https://github.com/zhaoyang97/Paper-Notes/blob/de63c0e13b242cadcc5faa8cc2017fcc8c235026/docs/ICCV2025/image_restoration/learning_pixel-adaptive_multi-layer_perceptrons_for_real-time_image_enhancement.md",
+          "display_title": "docs/ICCV2025/image_restoration/learning_pixel-adaptive_multi-layer_perceptrons_for_real-time_image_enhancement.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "## 相关论文\n\n- [\\[ICCV 2025\\] Lightweight and Fast Real-time Image Enhancement via Decomposition of the Spatial-aware Lookup Tables](lightweight_and_fast_real-time_image_enhancement_via_decomposition_of_the_spatia.md)\n- [\\[ICCV 2025\\] MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices](mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md)\n- [\\[CVPR 2026\\] RegionFuse: Region-Adaptive Pixel Distribution Learning for Infrared and Visible Image Fusion](../../CVPR2026/image_restoration/regionfuse_region-adaptive_pixel_distribution_learning_for_infrared_and_visible_.md)\n- [\\[ICCV 2025\\] Enhancing Image Restoration Transformer via Adaptive Translation Equivariance](enhancing_image_restoration_transformer_via_adaptive_translation_equivariance.md)\n- [\\[ICCV 2025\\] Metric Convolutions: A Unifying Theory to Adaptive Image Convolutions](metric_convolutions_a_unifying_theory_to_adaptive_image_convolutions.md)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    239,
+                    247
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    347,
+                    355
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Foadsf/neural-enhance-bench/blob/04a08307a91dd0f17e2810d0766a559c1b5905d9/app/src/main/java/org/floss/enhancetool/model/MobileIeDenoiser.java",
+          "path": "app/src/main/java/org/floss/enhancetool/model/MobileIeDenoiser.java",
+          "display_url": "https://github.com/Foadsf/neural-enhance-bench/blob/04a08307a91dd0f17e2810d0766a559c1b5905d9/app/src/main/java/org/floss/enhancetool/model/MobileIeDenoiser.java",
+          "display_title": "app/src/main/java/org/floss/enhancetool/model/MobileIeDenoiser.java",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "/**\n * MobileIE (Mobile Image Enhancement & SNR Denoising).\n * Reparameterized structural convolution blocks for real-time mobile low-light & sensor noise restoration.",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    7,
+                    15
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "    public String getName() {\n        return \"MobileIE (Low-Light & SNR Denoiser)\";\n    }",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    46,
+                    54
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/blackjack4494/yt-dlc/blob/f9401f2a91987068139c5f757b12fc711d4c0cee/youtube_dlc/extractor/wdr.py",
+          "path": "youtube_dlc/extractor/wdr.py",
+          "display_url": "https://github.com/blackjack4494/yt-dlc/blob/f9401f2a91987068139c5f757b12fc711d4c0cee/youtube_dlc/extractor/wdr.py",
+          "display_title": "youtube_dlc/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "        return self.url_result(zmdb_url_element.text, ie=WDRIE.ie_key())\n\n\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)\n        https?://mobile-ondemand\\.wdr\\.de/\n        .*?/fsk(?P<age_limit>[0-9]+)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    84,
+                    92
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/mashirozx/sakura/blob/9a7a597ac18219bf4202b76c150bec6c16664b7c/inc/js/addtohomescreen.js",
+          "path": "inc/js/addtohomescreen.js",
+          "display_url": "https://github.com/mashirozx/sakura/blob/9a7a597ac18219bf4202b76c150bec6c16664b7c/inc/js/addtohomescreen.js",
+          "display_title": "inc/js/addtohomescreen.js",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\tisMobileChrome: _ua.indexOf('Android') > -1 && (/Chrome\\/[.0-9]*/).test(_ua) && _ua.indexOf(\"Version\") == -1,\n\tisMobileIE: _ua.indexOf('Windows Phone') > -1,\n\tlanguage: _nav.language && _nav.language.toLowerCase().replace('-', '_') || ''",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    114,
+                    122
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "ath.isMobileSafari = ath.isIDevice && _ua.indexOf('Safari') > -1 && _ua.indexOf('CriOS') < 0;\nath.OS = ath.isIDevice ? 'ios' : ath.isMobileChrome ? 'android' : ath.isMobileIE ? 'windows' : 'unsupported';\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    166,
+                    174
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/xuhangc/Plumbing/blob/ea6d788ba16cdd4f7c1e8e7685b735b13e9e9352/blocks/02_convolution/mie.py",
+          "path": "blocks/02_convolution/mie.py",
+          "display_url": "https://github.com/xuhangc/Plumbing/blob/ea6d788ba16cdd4f7c1e8e7685b735b13e9e9352/blocks/02_convolution/mie.py",
+          "display_title": "blocks/02_convolution/mie.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "import torch.nn as nn\nimport torch.nn.functional as F\n\n# 论文：MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices (ICCV 2025)\n# 论文链接：https://arxiv.org/abs/2507.01838\n# 代码来源：https://github.com/AVC2-UESTC/MobileIE\n# 原始许可证：Apache-2.0",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    66,
+                    74
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    282,
+                    290
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/README.md",
+          "path": "README.md",
+          "display_url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/README.md",
+          "display_title": "README.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "- 参考 Zero-DCE、SNR-Aware LLIE、Retinexformer 的思想做 test-time refinement 和多输出融合；\n- **实现空间可变融合**：按像素 照明门控，在暗部保留结构、在可增强区域信任 MobileIE 输出；\n- 生成每个测试 case 的 `input / 多个 output / gt` 直观对比图；",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    214,
+                    222
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\n- 在原始 input 上估计局部 SNR（与 `zero_refine_mobileie.py` 同源思路）；\n- 用每张图内部的亮度分位数做相对照明门控（适配极暗实拍，绝对亮度阈值会失效）；",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    58,
+                    66
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE-main/MobileIE-main/model/__init__.py",
+          "path": "MobileIE-main/MobileIE-main/model/__init__.py",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE-main/MobileIE-main/model/__init__.py",
+          "display_title": "MobileIE-main/MobileIE-main/model/__init__.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "from importlib import import_module\nfrom .lle import MobileIELLENet, MobileIELLENetS\nfrom .isp import MobileIEISPNet, MobileIEISPNetS",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    53,
+                    61
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    69,
+                    77
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    102,
+                    110
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    118,
+                    126
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "def import_model(opt):\n    model_name = 'MobileIE'+opt.model_task.upper()\n    kwargs = {'channels': opt.config['model']['channels']}",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    41,
+                    49
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Foadsf/neural-enhance-bench/blob/04a08307a91dd0f17e2810d0766a559c1b5905d9/README.md",
+          "path": "README.md",
+          "display_url": "https://github.com/Foadsf/neural-enhance-bench/blob/04a08307a91dd0f17e2810d0766a559c1b5905d9/README.md",
+          "display_title": "README.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "- **RFDN (Residual Feature Distillation Network)**: 4x lightweight super-resolution with residual feature distillation.\n- **MobileIE**: Reparameterized low-light and underexposure restoration network.\n- **NAFNet (Nonlinear Activation Free Network)**: SimpleGate-based image restoration and denoising baseline.",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    124,
+                    132
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            │   ├── RfdnSuperResolution.java   # RFDN 4x SR model\n            │   ├── MobileIeDenoiser.java      # MobileIE low-light restoration\n            │   ├── NafNetRestoration.java     # NAFNet SimpleGate restoration",
+              "matches": [
+                {
+                  "text": "MobileIe",
+                  "indices": [
+                    102,
+                    110
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    131,
+                    139
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/blackjack4494/yt-dlc/blob/f9401f2a91987068139c5f757b12fc711d4c0cee/youtube_dlc/extractor/extractors.py",
+          "path": "youtube_dlc/extractor/extractors.py",
+          "display_url": "https://github.com/blackjack4494/yt-dlc/blob/f9401f2a91987068139c5f757b12fc711d4c0cee/youtube_dlc/extractor/extractors.py",
+          "display_title": "youtube_dlc/extractor/extractors.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    WDRElefantIE,\n    WDRMobileIE,\n)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    25,
+                    33
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    22,
+                    30
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Kazuhito00/Multimodal-Node-Editor/blob/b4e82ad8c5b7c68ae263cb26989195af1d803d18/download_weights.py",
+          "path": "download_weights.py",
+          "display_url": "https://github.com/Kazuhito00/Multimodal-Node-Editor/blob/b4e82ad8c5b7c68ae263cb26989195af1d803d18/download_weights.py",
+          "display_title": "download_weights.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    (\"v0.0.0\", \"efficientnet-lite4-11.onnx\", \"src/nodes/image/deep_learning/classification/EfficientNetLite4/model/efficientnet-lite4-11.onnx\"),\n    (\"v0.0.0\", \"mnist-12.onnx\", \"src/nodes/image/deep_learning/classification/MNIST/model/mnist-12.onnx\"),\n    (\"v0.0.0\", \"face_detection_yunet_2023mar.onnx\", \"src/nodes/image/deep_learning/face_detection/YuNet/model/face_detection_yunet_2023mar.onnx\"),\n    (\"v0.0.0\", \"mobileie_lolv1.onnx\", \"src/nodes/image/deep_learning/low_light_image_enhancement/MobileIE/model/mobileie_lolv1.onnx\"),\n    (\"v0.0.0\", \"cpga_net.onnx\", \"src/nodes/image/deep_learning/low_light_image_enhancement/CPGA-Net/model/cpga_net.onnx\"),\n    (\"v0.0.0\", \"tbefn.onnx\", \"src/nodes/image/deep_learning/low_light_image_enhancement/TBEFN/model/tbefn.onnx\"),\n    (\"v0.0.0\", \"lite-mono-8m_1024x320.onnx\", \"src/nodes/image/deep_learning/monocular_depth_estimation/Lite-Mono/model/lite-mono-8m_1024x320.onnx\"),",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    415,
+                    423
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    496,
+                    504
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    511,
+                    519
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Kazuhito00/Multimodal-Node-Editor/blob/b4e82ad8c5b7c68ae263cb26989195af1d803d18/src/nodes/image/deep_learning/low_light_image_enhancement/README.md",
+          "path": "src/nodes/image/deep_learning/low_light_image_enhancement/README.md",
+          "display_url": "https://github.com/Kazuhito00/Multimodal-Node-Editor/blob/b4e82ad8c5b7c68ae263cb26989195af1d803d18/src/nodes/image/deep_learning/low_light_image_enhancement/README.md",
+          "display_title": "src/nodes/image/deep_learning/low_light_image_enhancement/README.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "# Classification\n| モデル名 | 取得元リポジトリ | ライセンス | 備考 |\n| :--- | :--- | :--- | :--- |\n| TBEFN | [lukun199/TBEFN](https://github.com/lukun199/TBEFN) | BSD 3 | ONNX化したモデルを使用 |\n| MobileIE | [AVC2-UESTC/MobileIE](https://github.com/AVC2-UESTC/MobileIE) | Apache 2.0 | ONNX化したモデルを使用 |\n| CPGA-Net-Pytorch | [Shyandram/CPGA-Net-Pytorch](https://github.com/Shyandram/CPGA-Net-Pytorch) | MIT | ONNX化したモデルを使用 |\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    226,
+                    234
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    249,
+                    257
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    289,
+                    297
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/__init__.py",
+          "path": "shared/mon/mon/vision/enhance/multitask/__init__.py",
+          "display_url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/__init__.py",
+          "display_title": "shared/mon/mon/vision/enhance/multitask/__init__.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "restoration models.\n\"\"\"\n\nfrom .darkir import *\nfrom .fourierdiff import *\nfrom .mobileie import *\nfrom .zerorestore import *",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    80,
+                    88
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/sailfish009/paper/blob/f387ce7de3f262fc10a3092837ac53e43e155def/2025.07.03.txt",
+          "path": "2025.07.03.txt",
+          "display_url": "https://github.com/sailfish009/paper/blob/f387ce7de3f262fc10a3092837ac53e43e155def/2025.07.03.txt",
+          "display_title": "2025.07.03.txt",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "CATEGORY: cs.CV [cs.CV, cs.AI, cs.CL]\nHIGHLIGHT: In this paper, we present cRID, a novelcross-modal framework combining Large Vision-Language Models, Graph AttentionNetworks, and representation learning to detect textual describable clues ofPII and enhance person re-identification (Re-ID).\n\n83, TITLE: MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices\nAUTHORS: HAILONG YAN et. al.\nCATEGORY: cs.CV [cs.CV]\nHIGHLIGHT: However, deploying deep learning models onresource-constrained platforms, such as mobile devices, remains challenging dueto high computation and memory demands. To address these challenges andfacilitate real-time IE on mobile, we introduce an extremely lightweightConvolutional Neural Network (CNN) framework with around 4K parameters.",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    303,
+                    311
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/heniath/underwater-image-enhancement/blob/c0c7c928fc7a30ba11286212bdce0fbfbfcbffa7/docs/uwlyt_literature_review.md",
+          "path": "docs/uwlyt_literature_review.md",
+          "display_url": "https://github.com/heniath/underwater-image-enhancement/blob/c0c7c928fc7a30ba11286212bdce0fbfbfcbffa7/docs/uwlyt_literature_review.md",
+          "display_title": "docs/uwlyt_literature_review.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "| [LU2Net](https://arxiv.org/abs/2406.14973) | Underwater | — | — | None reported | — | RTX 3060 laptop: 100 fps; i7-10750H CPU: 12 fps |\n| [LPS-Net](https://doi.org/10.3390/app13169419) | Underwater | 80.12k | 99.02 G at 1280×720 | None reported | — | RTX 3090 timing is reported in its efficiency table; retain the paper value only with that resolution/hardware |\n| [LiteEnhanceNet](https://doi.org/10.1016/j.eswa.2023.122546) | Underwater | 13.688k | — | None reported | 0.05 MB model size in a later unified study | Later 640×480 study: 6.654 ms GPU / 190.02 ms mobile SoC |\n| [MobileIE](https://openaccess.thecvf.com/content/ICCV2025/html/Yan_MobileIE_An_Extremely_Lightweight_and_Effective_ConvNet_for_Real-Time_Image_ICCV_2025_paper.html) | General/mobile enhancement | 4.047k | 0.924 G at 640×480 | None | 0.02 MB model size | 0.910 ms GPU / 8.94 ms mobile SoC at 640×480 |\n\nThe later unified 640×480 measurements cited above come from MobileIE's ICCV\n2025 comparison table. They are useful deployment context, not substitutes for",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    594,
+                    602
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    660,
+                    668
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    959,
+                    967
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/soyoes/liberjs/blob/11f811e790098298b5b5545a24c9194f8d8940e6/src/liber.js",
+          "path": "src/liber.js",
+          "display_url": "https://github.com/soyoes/liberjs/blob/11f811e790098298b5b5545a24c9194f8d8940e6/src/liber.js",
+          "display_title": "src/liber.js",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\t\tn = ua.match(/Version\\/(\\d+\\.*\\d*)/);\n\t\tif(n) r.ver=parseFloat(n[1]);\n\t}\n\tif( u = ua.match(/(iphone|ipad|ipod|android|iemobile|blackberry)/i) ){//mobile, supports iphone, android, mobileIE only.\n\t\tr.os = u?u[0].toLowerCase():\"Unknown\";\n\t\tvar mptn = {'iphone':/^iphone/i,'ipad':/^ipad/i,'ipod':/^ipod/i,'android':/^linux\\s(arm|i)/i,'iemobile':/win/i};\n\t\tr.simulator = !p.match(mptn[r.os]); //check its device or simulator",
+              "matches": [
+                {
+                  "text": "mobileIE",
+                  "indices": [
+                    182,
+                    190
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/navarroJo/hereUgo/blob/5a7e7ccb2ccbd39ff4c3c235492f822230947860/js/hereUgo.js",
+          "path": "js/hereUgo.js",
+          "display_url": "https://github.com/navarroJo/hereUgo/blob/5a7e7ccb2ccbd39ff4c3c235492f822230947860/js/hereUgo.js",
+          "display_title": "js/hereUgo.js",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n\t\t\tvar mobileIE = false\n\t\t\t",
+              "matches": [
+                {
+                  "text": "mobileIE",
+                  "indices": [
+                    8,
+                    16
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\t\t\tif(navigator.userAgent.match(/Windows Phone/i)){\n\t\t\t\tmobileIE = true;\t\n\t\t\t}",
+              "matches": [
+                {
+                  "text": "mobileIE",
+                  "indices": [
+                    56,
+                    64
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE-main/MobileIE-main/onnx2tflite/onnx2tflite.py",
+          "path": "MobileIE-main/MobileIE-main/onnx2tflite/onnx2tflite.py",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE-main/MobileIE-main/onnx2tflite/onnx2tflite.py",
+          "display_title": "MobileIE-main/MobileIE-main/onnx2tflite/onnx2tflite.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "from onnx2tflite.converter import onnx_converter\nonnx_path = \"/data2/yanhailong/IR-Based/ICCV2025/MobileIE/LLE.onnx\" \n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    98,
+                    106
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "    need_simplify = True,\n    output_path = \"//data2/yanhailong/IR-Based/ICCV2025/MobileIE/\", \n    target_formats = ['tflite'], # or ['keras'], ['keras', 'tflite']",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    82,
+                    90
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/freezed-corpse-143/topaperlist/blob/647153919e1fb503bc04e860f8eff7b611d68075/PAPERS/A/ICCV/2025.txt",
+          "path": "PAPERS/A/ICCV/2025.txt",
+          "display_url": "https://github.com/freezed-corpse-143/topaperlist/blob/647153919e1fb503bc04e860f8eff7b611d68075/PAPERS/A/ICCV/2025.txt",
+          "display_title": "PAPERS/A/ICCV/2025.txt",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "RobustSplat: Decoupling Densification and Dynamics for Transient-Free 3DGS\nHigh-Resolution Spatiotemporal Modeling with Global-Local State Space Models for Video-Based Human Pose Estimation\nMCOP: Multi-UAV Collaborative Occupancy Prediction\nMobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices\nFixTalk: Taming Identity Leakage for High-Quality Talking Head Generation in Extreme Cases\nSerialization based Point Cloud Oversegmentation\nFrom Easy to Hard: Progressive Active Learning Framework for Infrared Small Target Detection with Single Point Supervision",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    241,
+                    249
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/cirosantilli/expired-domain-names-by-day-2013/blob/9fc0ca2e88fe4828da058efb0a87b0138b366a28/03/16/26",
+          "path": "03/16/26",
+          "display_url": "https://github.com/cirosantilli/expired-domain-names-by-day-2013/blob/9fc0ca2e88fe4828da058efb0a87b0138b366a28/03/16/26",
+          "display_title": "03/16/26",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "mobilehomeimprovement.org\nmobilehomeparkportal.net\nmobilehomesiding.org\nmobileie.com\nmobileinlife.com\nmobileinvestmentclub.com\nmobilelearningteam.com",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    72,
+                    80
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Kazuhito00/Multimodal-Node-Editor/blob/b4e82ad8c5b7c68ae263cb26989195af1d803d18/src/nodes/image/deep_learning/low_light_image_enhancement/impl.py",
+          "path": "src/nodes/image/deep_learning/low_light_image_enhancement/impl.py",
+          "display_url": "https://github.com/Kazuhito00/Multimodal-Node-Editor/blob/b4e82ad8c5b7c68ae263cb26989195af1d803d18/src/nodes/image/deep_learning/low_light_image_enhancement/impl.py",
+          "display_title": "src/nodes/image/deep_learning/low_light_image_enhancement/impl.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "Low Light Image Enhancement ノードの実装。\nMobileIE、TBEFN、CPGA-Net モデルで低照度画像を改善する。\n\"\"\"",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    50,
+                    58
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "# モデル設定\nMODEL_NAMES = [\"MobileIE\", \"TBEFN\", \"CPGA-Net\"]\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    34,
+                    42
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/xuhangc/Plumbing/blob/ea6d788ba16cdd4f7c1e8e7685b735b13e9e9352/blocks/02_convolution/README.md",
+          "path": "blocks/02_convolution/README.md",
+          "display_url": "https://github.com/xuhangc/Plumbing/blob/ea6d788ba16cdd4f7c1e8e7685b735b13e9e9352/blocks/02_convolution/README.md",
+          "display_title": "blocks/02_convolution/README.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "| `LDConv` | — | [论文链接](https://www.sciencedirect.com/science/article/abs/pii/S0262885624002956) | 即插即用卷积 | 原仓 |\n| `LIA` | ACCV 2024 | PlainUSR: Chasing Faster ConvNet for Efficient Super-Resolution | - | dawang |\n| `LKLGLBlock` | ACM MM 2025 | [ACM MM 2025] Mobile U-ViT: Revisiting large kernel and U-shaped ViT… | 2025最新代码 | 原仓 |\n| `mie` | — | MobileIE Enhancement Block — MobileIE 轻量增强块 | - | bug423 |\n| `MSPLCK_EPA` | — | MixDehazeNet : Mix Structure Block For Image Dehazing Network | 图像恢复，去模糊，去噪，去雾 | 原仓 |\n| `OKM` | AAAI2024 | [AAAI2024] Omni-Kernel Network for Image Restoration | 图像恢复，去模糊，去噪，去雾 | 原仓 |\n| `PConv` | — | Run, Don't Walk: Chasing Higher FLOPS for Faster Neural Networks | 即插即用卷积 | 原仓 |",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    389,
+                    397
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    420,
+                    428
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/xuhangc/Plumbing/blob/ea6d788ba16cdd4f7c1e8e7685b735b13e9e9352/INDEX.md",
+          "path": "INDEX.md",
+          "display_url": "https://github.com/xuhangc/Plumbing/blob/ea6d788ba16cdd4f7c1e8e7685b735b13e9e9352/INDEX.md",
+          "display_title": "INDEX.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "| `LDConv` | — | [论文链接](https://www.sciencedirect.com/science/article/abs/pii/S0262885624002956) | 即插即用卷积 | 原仓 |\n| `LIA` | ACCV 2024 | PlainUSR: Chasing Faster ConvNet for Efficient Super-Resolution | - | dawang |\n| `LKLGLBlock` | ACM MM 2025 | [ACM MM 2025] Mobile U-ViT: Revisiting large kernel and U-shaped ViT for eff… | 2025最新代码 | 原仓 |\n| `mie` | — | MobileIE Enhancement Block — MobileIE 轻量增强块 | - | bug423 |\n| `MSPLCK_EPA` | — | MixDehazeNet : Mix Structure Block For Image Dehazing Network | 图像恢复，去模糊，去噪，去雾 | 原仓 |\n| `OKM` | AAAI2024 | [AAAI2024] Omni-Kernel Network for Image Restoration | 图像恢复，去模糊，去噪，去雾 | 原仓 |\n| `PConv` | — | Run, Don't Walk: Chasing Higher FLOPS for Faster Neural Networks | 即插即用卷积 | 原仓 |",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    397,
+                    405
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    428,
+                    436
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/viplab-fudan/FJNDF-Pytorch/blob/3b46739e4f524c205c9c277f9c4b1673b9d5aedc/results/results.md",
+          "path": "results/results.md",
+          "display_url": "https://github.com/viplab-fudan/FJNDF-Pytorch/blob/3b46739e4f524c205c9c277f9c4b1673b9d5aedc/results/results.md",
+          "display_title": "results/results.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "[1] Byeongkeun Kang and Wonha Kim. “Human Perception-oriented Enhancement and Smoothing for Perceptual Video Coding.” IEEE Transactions on Broadcasting, 2023.\n\n[2] Huajie Tan, Guoqing Xiang, Xiaodong Xie, and Huizhu Jia. “Joint Frame-level and Block-level Rate-Perception Optimized Preprocessing for Video Coding.” Proceedings of the 6th ACM International Conference on Multimedia in Asia, 2024.\n\n[3] Sun, Yu-Han, Lee, Chiang Lo-Hsuan, and Chang, Tian-Sheuan, \"IQNet: Image quality assessment guided just noticeable difference prefiltering for versatile video coding,\" IEEE Open Journal of Circuits and Systems, vol. 5, pp. 17-27, 2023.\n\n[4] Yan, Hailong and Li, Ao and Zhang, Xiangtao and Liu, Zhe and Shi, Zenglin and Zhu, Ce and Zhang, Le, \"MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices,\" arXiv preprint arXiv:2507.01838, 2025.",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    752,
+                    760
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/torch_to_onnx.py",
+          "path": "torch_to_onnx.py",
+          "display_url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/torch_to_onnx.py",
+          "display_title": "torch_to_onnx.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n# # class MobileIENetS(nn.Module):\n# #     def __init__(self, channels):",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    11,
+                    19
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "# ④ ONNX 输出路径\nONNX_PATH = \"MobileIE_LLE_slim.onnx\"\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    37,
+                    45
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/viplab-fudan/FJNDF-Pytorch/blob/3b46739e4f524c205c9c277f9c4b1673b9d5aedc/pyjnd/models/iccv_yan_2025_model.py",
+          "path": "pyjnd/models/iccv_yan_2025_model.py",
+          "display_url": "https://github.com/viplab-fudan/FJNDF-Pytorch/blob/3b46739e4f524c205c9c277f9c4b1673b9d5aedc/pyjnd/models/iccv_yan_2025_model.py",
+          "display_title": "pyjnd/models/iccv_yan_2025_model.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\"\"\"\nImplementation of the MobileIE model, presented in the paper:\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    26,
+                    34
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "    Yan, Hailong and Li, Ao and Zhang, Xiangtao and Liu, Zhe and Shi, Zenglin and Zhu, Ce and Zhang, Le,\n    \"MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices,\"\n    arXiv preprint arXiv:2507.01838, 2025.",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    110,
+                    118
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/model/__init__.py",
+          "path": "model/__init__.py",
+          "display_url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/model/__init__.py",
+          "display_title": "model/__init__.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "from importlib import import_module\nfrom .lle import MobileIELLENet, MobileIELLENetS\nfrom .isp import MobileIEISPNet, MobileIEISPNetS",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    53,
+                    61
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    69,
+                    77
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    102,
+                    110
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    118,
+                    126
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "def import_model(opt):\n    model_name = 'MobileIE'+opt.model_task.upper()\n    kwargs = {'channels': opt.config['model']['channels']}",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    41,
+                    49
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/model/__init__.py",
+          "path": "model/__init__.py",
+          "display_url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/model/__init__.py",
+          "display_title": "model/__init__.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "from importlib import import_module\nfrom .lle import MobileIELLENet, MobileIELLENetS\nfrom .isp import MobileIEISPNet, MobileIEISPNetS",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    53,
+                    61
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    69,
+                    77
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    102,
+                    110
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    118,
+                    126
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "    \n    model_name = 'MobileIE' + actual_task.upper()\n    kwargs = {'channels': opt.config['model']['channels']}",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    23,
+                    31
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/docs/final_project/README.md",
+          "path": "docs/final_project/README.md",
+          "display_url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/docs/final_project/README.md",
+          "display_title": "docs/final_project/README.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "├── project_report.tex                 # 期末报告源文件\n├── mobileie_final_presentation.pptx   # 汇报 PPT（可由脚本重新生成）\n├── figures/                           # 报告与 PPT 引用的图片",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    79,
+                    87
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "```bash\npython -m venv .venv-mobileie\nsource .venv-mobileie/bin/activate",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    29,
+                    37
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    51,
+                    59
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/cirosantilli/expired-domain-names-by-day-2010/blob/3adc7fbd3cc93bed17b0e0f8c20916710ac18217/10/11/20",
+          "path": "10/11/20",
+          "display_url": "https://github.com/cirosantilli/expired-domain-names-by-day-2010/blob/3adc7fbd3cc93bed17b0e0f8c20916710ac18217/10/11/20",
+          "display_title": "10/11/20",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "mobilehomeschooling.com\nmobilehostmember.com\nmobilehostvisitor.com\nmobileie.com\nmobileliveadvertising.com\nmobileliveadvertising.net\nmobilemicrofranchise.com",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    67,
+                    75
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/gugugu531/Hispark_SocChina_2026/blob/c3bdfbb0f6b45a918598d7e23f332bf731620914/models/ctbg/losses.py",
+          "path": "models/ctbg/losses.py",
+          "display_url": "https://github.com/gugugu531/Hispark_SocChina_2026/blob/c3bdfbb0f6b45a918598d7e23f332bf731620914/models/ctbg/losses.py",
+          "display_title": "models/ctbg/losses.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\"\"\"P1 损失:复刻 MobileIE 官方 LossLLE(OutlierAware + 1-cosine + 2*PSNRLoss)。\n官方 loss.py 顶部 `from option import get_option` 是死 import(类里没用到),此处重写干净版。\"\"\"\nimport torch",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    20,
+                    28
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "class OutlierAwareLoss(nn.Module):\n    \"\"\"对离群残差加权的 L1(MobileIE 官方),抑制少数大误差像素主导。\"\"\"\n    def forward(self, out, lab):",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    70,
+                    78
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/scripts/train_uieb.sh",
+          "path": "scripts/train_uieb.sh",
+          "display_url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/scripts/train_uieb.sh",
+          "display_title": "scripts/train_uieb.sh",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "#!/usr/bin/env bash\n# Train MobileIE on UIEB (official underwater dataset for UIE / model_task lle).\nset -euo pipefail\ncd \"$(dirname \"$0\")/..\"\n\nsource \"$(conda info --base)/etc/profile.d/conda.sh\"\nconda activate hyworld2",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    28,
+                    36
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/tools/finetune_lle.py",
+          "path": "tools/finetune_lle.py",
+          "display_url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/tools/finetune_lle.py",
+          "display_title": "tools/finetune_lle.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "from model.lle import MobileIELLENetS\nfrom tools.mobileie_utils import list_images, psnr_float, save_rgb_uint8\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    22,
+                    30
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    49,
+                    57
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "def build_loss(name, device):\n    if name == \"mobileie\":\n        return import_loss(\"lle\").to(device)",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    46,
+                    54
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/cirosantilli/expired-domain-names-by-day-2012/blob/013b32d907472f2ec4066ab42e601d6390fb73ff/09/11/16",
+          "path": "09/11/16",
+          "display_url": "https://github.com/cirosantilli/expired-domain-names-by-day-2012/blob/013b32d907472f2ec4066ab42e601d6390fb73ff/09/11/16",
+          "display_title": "09/11/16",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "go-happy.biz\ngo-history.com\ngo-micro.co\ngo-mobileie.com\ngo-o.net\ngo-primetravel.com\ngo-riki-miyazaki.com",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    43,
+                    51
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/viplab-fudan/FJNDF-Pytorch/blob/3b46739e4f524c205c9c277f9c4b1673b9d5aedc/pyjnd/models/iccv_yan_2025_lite_model.py",
+          "path": "pyjnd/models/iccv_yan_2025_lite_model.py",
+          "display_url": "https://github.com/viplab-fudan/FJNDF-Pytorch/blob/3b46739e4f524c205c9c277f9c4b1673b9d5aedc/pyjnd/models/iccv_yan_2025_lite_model.py",
+          "display_title": "pyjnd/models/iccv_yan_2025_lite_model.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\"\"\"\nThis file defines the MobileIE-Lite model, a custom lightweight network proposed in this repository.\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    26,
+                    34
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nThe MobileIE-Lite architecture is a simplified version of the MobileIE model, presented in:\n    ",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    5,
+                    13
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    63,
+                    71
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/scripts/prepare_lsui.py",
+          "path": "scripts/prepare_lsui.py",
+          "display_url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/scripts/prepare_lsui.py",
+          "display_title": "scripts/prepare_lsui.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\"\"\"\nPrepare LSUI for MobileIE (paired input/gt, same filenames).\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "    print(f\"\\nMobileIE dataset ready:\\n  {DST}/train/{{input,gt}}\\n  {DST}/test/{{input,gt}}\")\n    print(\"\\nTrain:\\n  cd MobileIE && python main.py -task train -model_task lle -cfg lsui -device cuda\")\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    14,
+                    22
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    121,
+                    129
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/TMG-nl/sherman/blob/5c5e7ce4d6a083650aeb4e2bb6bb8a6df0360395/templates/boot/js/useragent.js",
+          "path": "templates/boot/js/useragent.js",
+          "display_url": "https://github.com/TMG-nl/sherman/blob/5c5e7ce4d6a083650aeb4e2bb6bb8a6df0360395/templates/boot/js/useragent.js",
+          "display_title": "templates/boot/js/useragent.js",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "        \"n900\": { \"type\": \"mobile\", \"device\": \"Nokia\", \"platform\": \"Linux\", \"browser\": \"Firefox\", \"capabilities\": { \"touchScreen\": true, \"cssPositionFixed\": false, \"keyup\": false } },\n        \"maemo\": { \"type\": \"mobile\", \"device\": \"Nokia\", \"platform\": \"Linux\", \"browser\": \"Firefox\" },\n        \"mobile\": { \"type\": \"mobile\", \"capabilities\": { \"touchScreen\": true } }, // assume all mobile devices (we support) have a touch interface\n        \"mobileie\": { \"type\": \"mobile\", \"platform\": \"Windows\", \"capabilities\": { \"keyup\": true, \"touchScreen\": true, \"cssPositionFixed\": true } },\n\n        // desktop browsers\n        \"mozilla\": { \"type\": \"desktop\" },",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    440,
+                    448
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/codefrau/SqueakJS/blob/40b9d9c57d479a94dcda867c72fb811473afa486/lib/addtohomescreen.js",
+          "path": "lib/addtohomescreen.js",
+          "display_url": "https://github.com/codefrau/SqueakJS/blob/40b9d9c57d479a94dcda867c72fb811473afa486/lib/addtohomescreen.js",
+          "display_title": "lib/addtohomescreen.js",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\tisMobileChrome: _ua.indexOf('Android') > -1 && (/Chrome\\/[.0-9]*/).test(_ua) && _ua.indexOf(\"Version\") == -1,\n\tisMobileIE: _ua.indexOf('Windows Phone') > -1,\n\tlanguage: _nav.language && _nav.language.toLowerCase().replace('-', '_') || ''",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    114,
+                    122
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "ath.isMobileSafari = ath.isIDevice && _ua.indexOf('Safari') > -1 && _ua.indexOf('CriOS') < 0;\nath.OS = ath.isIDevice ? 'ios' : ath.isMobileChrome ? 'android' : ath.isMobileIE ? 'windows' : 'unsupported';\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    166,
+                    174
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/advanced-cs/arXiv_daily/blob/c285c577bd09345121c7c15c07f9c54f39a4ebad/daily_papers/20250703_Thu/video.md",
+          "path": "daily_papers/20250703_Thu/video.md",
+          "display_url": "https://github.com/advanced-cs/arXiv_daily/blob/c285c577bd09345121c7c15c07f9c54f39a4ebad/daily_papers/20250703_Thu/video.md",
+          "display_title": "daily_papers/20250703_Thu/video.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "---\n#### [new 073] MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices\n- **分类: cs.CV**",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    19,
+                    27
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": ">\n> **摘要:** Recent advancements in deep neural networks have driven significant progress in image enhancement (IE). However, deploying deep learning models on resource-constrained platforms, such as mobile devices, remains challenging due to high computation and memory demands. To address these challenges and facilitate real-time IE on mobile, we introduce an extremely lightweight Convolutional Neural Network (CNN) framework with around 4K parameters. Our approach integrates reparameterization with an Incremental Weight Optimization strategy to ensure efficiency. Additionally, we enhance performance with a Feature Self-Transform module and a Hierarchical Dual-Path Attention mechanism, optimized with a Local Variance-Weighted loss. With this efficient framework, we are the first to achieve real-time IE inference at up to 1,100 frames per second (FPS) while delivering competitive image quality, achieving the best trade-off between speed and performance across multiple IE tasks. The code will be available at https://github.com/AVC2-UESTC/MobileIE.git.\n>",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    1055,
+                    1063
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/onnx2tflite/onnx2tflite.py",
+          "path": "onnx2tflite/onnx2tflite.py",
+          "display_url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/onnx2tflite/onnx2tflite.py",
+          "display_title": "onnx2tflite/onnx2tflite.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "print(\"正在加载ONNX模型...\")\nonnx_path = \"/home/featurize/work/test9/MobileIE_LLE_slim.onnx\"\nmodel = onnx.load(onnx_path)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    75,
+                    83
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "# 保存修复后的模型\nfixed_onnx_path = \"/home/featurize/work/MobileIE_LLE_slim_fixed.onnx\"\nonnx.save(model, fixed_onnx_path)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    67,
+                    75
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/scripts/prepare_uieb.py",
+          "path": "scripts/prepare_uieb.py",
+          "display_url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/scripts/prepare_uieb.py",
+          "display_title": "scripts/prepare_uieb.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\"\"\"\nPrepare UIEB for MobileIE (official underwater / UIE task).\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    21,
+                    29
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nOutput (MobileIE LLEData format):\n  datasets/uieb/train/{input,gt}",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    9,
+                    17
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/gugugu531/Hispark_SocChina_2026/blob/c3bdfbb0f6b45a918598d7e23f332bf731620914/models/ctbg/README.md",
+          "path": "models/ctbg/README.md",
+          "display_url": "https://github.com/gugugu531/Hispark_SocChina_2026/blob/c3bdfbb0f6b45a918598d7e23f332bf731620914/models/ctbg/README.md",
+          "display_title": "models/ctbg/README.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n### v9 6ch 模型细节\n\n- **Estimator**：MobileIE backbone（12ch, down=4）+ tail Conv2d(12→6) + FiLM（mean_luma 全局调制）\n  - 输入：NCHW fp16 RGB 256×144\n  - 输出：6ch raw logits（a_d, b_d, g_d, a_b, b_b, g_b）× 144×256\n  - 参数：53.3K（v8 的 74%）",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    44,
+                    52
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/cirosantilli/expired-domain-names-by-day-2011/blob/d6e3788dd8eff2c5829ee152b9103070aac9a120/12/27/21",
+          "path": "12/27/21",
+          "display_url": "https://github.com/cirosantilli/expired-domain-names-by-day-2011/blob/d6e3788dd8eff2c5829ee152b9103070aac9a120/12/27/21",
+          "display_title": "12/27/21",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "mobilegpstracking.info\nmobileguitardoctor.com\nmobilehomereversemortgages.com\nmobileie.com\nmobileisglobal.com\nmobilelocalacademy.com\nmobilemarketingassoc.com",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    77,
+                    85
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/cirosantilli/expired-domain-names-by-day-2011/blob/d6e3788dd8eff2c5829ee152b9103070aac9a120/05/07/27",
+          "path": "05/07/27",
+          "display_url": "https://github.com/cirosantilli/expired-domain-names-by-day-2011/blob/d6e3788dd8eff2c5829ee152b9103070aac9a120/05/07/27",
+          "display_title": "05/07/27",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "mobilegraphics.info\nmobilehackerz.com\nmobilehomeparkmagic.com\nmobileie.net\nmobileinsightspanel.com\nmobilelifetools.com\nmobilemediaindustry.com",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    62,
+                    70
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/gugugu531/Hispark_SocChina_2026/blob/c3bdfbb0f6b45a918598d7e23f332bf731620914/models/ctbg/litmodule_coeff.py",
+          "path": "models/ctbg/litmodule_coeff.py",
+          "display_url": "https://github.com/gugugu531/Hispark_SocChina_2026/blob/c3bdfbb0f6b45a918598d7e23f332bf731620914/models/ctbg/litmodule_coeff.py",
+          "display_title": "models/ctbg/litmodule_coeff.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\"\"\"路线 B 系数头模型:MobileIE backbone → 逐像素空间系数(空间变化→光照统一)。\n前向镜像部署:下采样输入→backbone 出低分辨率系数→上采样→施加。端到端可微。\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    28,
+                    36
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nREPO_MOBILEIE = Path(__file__).resolve().parents[1] / \"repos/MobileIE\"\nsys.path.insert(0, str(REPO_MOBILEIE))",
+              "matches": [
+                {
+                  "text": "MOBILEIE",
+                  "indices": [
+                    6,
+                    14
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    62,
+                    70
+                  ]
+                },
+                {
+                  "text": "MOBILEIE",
+                  "indices": [
+                    100,
+                    108
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/cirosantilli/expired-domain-names-by-day-2023/blob/35b1756a9255a3dfccede8624f724af869d812a1/03/15/39",
+          "path": "03/15/39",
+          "display_url": "https://github.com/cirosantilli/expired-domain-names-by-day-2023/blob/35b1756a9255a3dfccede8624f724af869d812a1/03/15/39",
+          "display_title": "03/15/39",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "mobilefieldservicemanagementsoftware.net\nmobilefieldservicesoftware.net\nmobilefieldsoftware.net\nmobileie-online.com\nmobileonline-team.com\nmobiles-solarpower.com\nmobilespysoftware.net",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    96,
+                    104
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/tools/evaluate_calibrated_lle.py",
+          "path": "tools/evaluate_calibrated_lle.py",
+          "display_url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/tools/evaluate_calibrated_lle.py",
+          "display_title": "tools/evaluate_calibrated_lle.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nfrom model.lle import MobileIELLENetS\nfrom tools.calibrated_lle import CalibratedLLE\nfrom tools.mobileie_utils import list_images, load_rgb_uint8, psnr_float, save_rgb_uint8, summarize_rgb_uint8\n\n\ndef build_model(args):",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    23,
+                    31
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    97,
+                    105
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/scripts/train_lsui_underwater.sh",
+          "path": "scripts/train_lsui_underwater.sh",
+          "display_url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/scripts/train_lsui_underwater.sh",
+          "display_title": "scripts/train_lsui_underwater.sh",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "#!/usr/bin/env bash\n# Train MobileIE on LSUI (underwater) from UIEB pretrained weights.\nset -euo pipefail\ncd \"$(dirname \"$0\")/..\"\n\nsource \"$(conda info --base)/etc/profile.d/conda.sh\"\nconda activate hyworld2",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    28,
+                    36
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/ytdl-patched/ytdl-patched/blob/7b475779cccec7f4ed9d64b7c5ce6c0d6213bfee/yt_dlp/extractor/weibo.py",
+          "path": "yt_dlp/extractor/weibo.py",
+          "display_url": "https://github.com/ytdl-patched/ytdl-patched/blob/7b475779cccec7f4ed9d64b7c5ce6c0d6213bfee/yt_dlp/extractor/weibo.py",
+          "display_title": "yt_dlp/extractor/weibo.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "        }\n\n\nclass WeiboMobileIE(InfoExtractor):\n    _VALID_URL = r'https?://m\\.weibo\\.cn/status/(?P<id>[0-9]+)(\\?.+)?'\n    _TEST = {\n        'url': 'https://m.weibo.cn/status/4189191225395228?wm=3333_2001&sourcetype=weixin&featurecode=newtitle&from=singlemessage&isappinstalled=0',",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    23,
+                    31
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Keloran/Framed-Hammer/blob/99f69e7028421f12a9add1953f9387cf664ffe16/traits/browser/browser.php",
+          "path": "traits/browser/browser.php",
+          "display_url": "https://github.com/Keloran/Framed-Hammer/blob/99f69e7028421f12a9add1953f9387cf664ffe16/traits/browser/browser.php",
+          "display_title": "traits/browser/browser.php",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\t\t\t$cReturn\t= \"ipad\";\n\t\t\t$bReturn\t= true;\n\t\t} else if (preg_match(\"`(MobileIE)`i\", $mBrowser)) {\n\t\t\t$cReturn\t= \"mobileie\";\n\t\t\t$bReturn\t= true;\n\t\t}\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    69,
+                    77
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    112,
+                    120
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/README.md",
+          "path": "repro/README.md",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/README.md",
+          "display_title": "repro/README.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "# MobileIE (ICCV 2025) — reproduction\n\nPaper: *MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image\nEnhancement on Mobile Devices* (Yan et al., ICCV 2025), `../Yan_MobileIE_..._paper.pdf`.\nOfficial code: `../MobileIE-main/MobileIE-main` (kept untouched, used as the reference\nimplementation of the re-parameterisation maths).\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    2,
+                    10
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    49,
+                    57
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    190,
+                    198
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    234,
+                    242
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    248,
+                    256
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/cloud/README.md",
+          "path": "cloud/README.md",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/cloud/README.md",
+          "display_title": "cloud/README.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "powershell -File cloud\\pack.ps1 -DryRun\npowershell -File cloud\\pack.ps1                 # -> cloud\\dist\\MobileIE-cloud.tar.gz (~340 MB)\n```",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    104,
+                    112
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "# ② 传上去（AutoDL/恒源云等给了 ssh 的都用这个；Kaggle 改成上传成 Dataset）\nscp -P <port> cloud/dist/MobileIE-cloud.tar.gz root@<host>:/root/\nssh  -p <port> root@<host>",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    125,
+                    133
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/OdyseeTeam/odysee-frontend/blob/b092a747eee79dacd23001716da0aaebdf96b0a6/ui/util/platform.ts",
+          "path": "ui/util/platform.ts",
+          "display_url": "https://github.com/OdyseeTeam/odysee-frontend/blob/b092a747eee79dacd23001716da0aaebdf96b0a6/ui/util/platform.ts",
+          "display_title": "ui/util/platform.ts",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "  isMobileSafari: function () {\n    return this.isMobile() && this.isSafari();\n  },\n  isMobileIE: function () {\n    return this.isMobile() && this.isIE();\n  },\n  isMobileOpera: function () {",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    88,
+                    96
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/deploy/README.md",
+          "path": "deploy/README.md",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/deploy/README.md",
+          "display_title": "deploy/README.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "# 端侧复现：把 4K 参数的 MobileIE 跑在骁龙 888 平板上\n\n论文只给了结果（Table 1 的 `Latency (SoC, ms) = 6.72`）和一句\"计算复杂度在单张 4090 与一台",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    34,
+                    42
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "| 运行时 | LiteRT（`ai-edge-litert`，纯 Python 接口，x86_64 与 aarch64 都有 wheel） |\n| 模型 | `MobileIE-main/pretrain/lolv1.tflite`，fp32，作者权重的折叠推理图 |\n| 输入 | `1×400×600×3` NHWC float32，随机数（与像素内容无关，纯算子耗时） |",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    111,
+                    119
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/tools/prepare_lolv2_real.py",
+          "path": "tools/prepare_lolv2_real.py",
+          "display_url": "https://github.com/horizon921/Computational-Photography-26Fall-MobileIE/blob/508e26fe3e2035602bff477bdc3834377f8bf299/tools/prepare_lolv2_real.py",
+          "display_title": "tools/prepare_lolv2_real.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nfrom huggingface_hub import snapshot_download\n\nfrom tools.mobileie_utils import list_images\n\n\ndef replace_link(link_path, target_path):",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    59,
+                    67
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/basebkc/tks/blob/d3471477b5509273a9c699d57cdca5c1fc959cb5/obox/software/html5.html.bak",
+          "path": "obox/software/html5.html.bak",
+          "display_url": "https://github.com/basebkc/tks/blob/d3471477b5509273a9c699d57cdca5c1fc959cb5/obox/software/html5.html.bak",
+          "display_title": "obox/software/html5.html.bak",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "  + 'W.gooutofiframe = true;W.splashonclickremove = true;W.viewportwidth = \"1024\";W.connectiontimeout = \"40\";W.connectionmessage = true;W.disconnectmessage = true;W.f5_for_refresh = true;W.printenabled = true;W.force_download_dialog = true;W.fake_file_extension = false;W.write_via_temp_file = false;W.emulate_tab = \"ios\";'\n  + 'W.topButtonWidth = \"100%\";W.frame_numbers = \"\";W.base6'+'4onbinary = false;W.send_lo'+'gof'+'f = true;W.showmousedrag = false;W.showrightclick = false;W.softMobileKeyboard = \"mobile\";'\n  + 'W.newMenuHideOnSoftKeybShow = true;W.show_button_prefer_soft = true;W.ios_cursor_into_view = true;W.show_fix_keyb_button = true;W.touch3_keyboard_show = true;W.sendTimeZone = true;W.maxLoudness = 0.2;W.nativerdp = \"no\";W.nativerdp_compression_level = 6;W.default_color = 24;W.usersPictograms = { };'\n  + 'W.cf = false;W.ieold = false;W.ieold67 = false;W.fixiepngs = false;W.loadIEStorage = function() { };W.entbutchar = \"<&not;\";W.nbsp = \"&nbsp;\";W.iefor = false;W.mobileie = ((na'+'vig'+'ator.use'+'rAg'+'ent.mat'+'ch(/(ie'+'mob)|(Win'+'dows'+' Ph'+'one)/) != null) ? true : false);if(!W.mobileie) { W.mobileie = ((n'+'avig'+'ator.us'+'erAge'+'nt.match(/(W'+'PDes'+'kto'+'p)/) != null) ? true : false);'\n  + 'if(W.mobileie) { W.mobileie = ((nav'+'igat'+'or.use'+'rAg'+'ent.mat'+'ch(/(To'+'uch)/) != null) ? true : false); } }if(W.mobileie && navi'+'gat'+'or.msM'+'axTo'+'uchP'+'oints && navi'+'gator.msMa'+'xTouchP'+'oints > 1) { } else { W.mobileie = false; }W.myxhrport = doc'+'um'+'ent.loca'+'tio'+'n.po'+'rt;'\n  + 'if(W.myxhrport.length < 1 || W.myxhrport < 1) { W.myxhrport = 80; if(do'+'cume'+'nt.locat'+'ion.proto'+'col.indexOf(\"https\") > -1) { W.myxhrport = 443; } }'\n  + 'W.thirdpathclean = \"\";' + 'W.e'+'ndsWi'+'th = function(str, suffix) { return str.indexOf(suffix, str.length - suffix.length) != -1; };W.path'+'named = wi'+'ndow.'+'loca'+'tion.pat'+'hname;'",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    984,
+                    992
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    1108,
+                    1116
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    1122,
+                    1130
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    1234,
+                    1242
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    1248,
+                    1256
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    1350,
+                    1358
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    1461,
+                    1469
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/board.bat",
+          "path": "board.bat",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/board.bat",
+          "display_title": "board.bat",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "@echo off\nREM ===========================================================================\nREM  MobileIE - start the live control board (progress + manual trigger).\nREM  ASCII only: cmd reads this file in the console codepage, Chinese here\nREM  breaks parsing. The board itself prints Chinese fine.\nREM\nREM    board.bat          start the board on port 8765 and open the browser",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    95,
+                    103
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/khaihoang004/dewarp/blob/39eef66524919078836ec0f9122fda27d07a43e8/research.md",
+          "path": "research.md",
+          "display_url": "https://github.com/khaihoang004/dewarp/blob/39eef66524919078836ec0f9122fda27d07a43e8/research.md",
+          "display_title": "research.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "Sauvola | | algorithm| |\nNiblack | | algorithm| |\nNUnet | | no read access yet | [Link](https://www.researchgate.net/publication/377100444_A_Lightweight_NUet_Model_for_Document_Image_Restoration)|\nMobileIE |  Low-Light Enhancement (LLE), Underwater Image Enhancement (UIE), and end-to-end Image Signal Processing (ISP).| 4K parameters ???| [Link](https://arxiv.org/pdf/2507.01838)|\nLiR | Image Restoration, denoise|  7.31 params| [Link](https://arxiv.org/pdf/2402.01368)|\n| | | | [Link](https://arxiv.org/pdf/2406.00629)|\n|||| [Link](https://arxiv.org/pdf/2401.11831)|",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    197,
+                    205
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/model/lle.py",
+          "path": "model/lle.py",
+          "display_url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/model/lle.py",
+          "display_title": "model/lle.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    FSTS,\n)\n\nclass MobileIELLENet(nn.Module):\n    def __init__(self, channels, rep_scale=4):\n        super(MobileIELLENet, self).__init__()\n        self.channels = channels",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    19,
+                    27
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    107,
+                    115
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/model/isp.py",
+          "path": "model/isp.py",
+          "display_url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/model/isp.py",
+          "display_title": "model/isp.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    FSTS,\n)\n\nclass MobileIEISPNet(nn.Module):\n    def __init__(self, channels, rep_scale=4):\n        super(MobileIEISPNet, self).__init__()\n        self.channels = channels",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    19,
+                    27
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    107,
+                    115
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/complexity.py",
+          "path": "complexity.py",
+          "display_url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/complexity.py",
+          "display_title": "complexity.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "def test_model_flops(width, height):\n    model = lle.MobileIES(channels=12) \n    model.cuda()",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    53,
+                    61
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "def test_fps_and_inference_time(width, height):\n    model = lle.MobileIES(channels=12)  \n    model.cuda()",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    64,
+                    72
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/tmp_proctree.txt",
+          "path": "repro/tmp_proctree.txt",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/tmp_proctree.txt",
+          "display_title": "repro/tmp_proctree.txt",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                          .109/dist/mcp-server.mjs^\"\"                          \n    30076           14996 \"D:\\AIWorkSpace\\MobileIE\\.venv\\Scripts\\python.exe\"  s\n                          cripts\\board.py --port 8765                          ",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    122,
+                    130
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "                          eIE\\train_ctrl.bat\" \"                                \n    13220           30828 \"D:\\AIWorkSpace\\MobileIE\\.venv\\Scripts\\python.exe\"  s\n                          cripts\\train.py --config lolv1_ctrl_noiwo            ",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    122,
+                    130
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/gugugu531/Hispark_SocChina_2026/blob/c3bdfbb0f6b45a918598d7e23f332bf731620914/docs/TODO.md",
+          "path": "docs/TODO.md",
+          "display_url": "https://github.com/gugugu531/Hispark_SocChina_2026/blob/c3bdfbb0f6b45a918598d7e23f332bf731620914/docs/TODO.md",
+          "display_title": "docs/TODO.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "|---|---|---|---|---|\n| v8 (18ch) | 从头训练, per-channel 系数 | 19.82 | 41 | 参考基线 |\n| **v9 (6ch)** | 从头训练, 标量系数 | **19.83** | 116 | **当前部署** |\n| v13 | MobileIE warmup + Dropout2d | **19.83** | 116 | 持平 v9，无早峰退化 |\n| v10 | v8 backbone warm-start | 18.80 | 13 | 证伪——backbone 跨尾不兼容 |\n| v11 | 从头, samples_per_epoch=500 | 16.01 | 7 | 证伪——梯度噪声过大 |\n| v12 | v9基底 + weight_decay=1e-4 | 18.02 | 77 | 证伪——压制拟合能力 |",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    190,
+                    198
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/basebkc/tks/blob/d3471477b5509273a9c699d57cdca5c1fc959cb5/obox/software/html5.html",
+          "path": "obox/software/html5.html",
+          "display_url": "https://github.com/basebkc/tks/blob/d3471477b5509273a9c699d57cdca5c1fc959cb5/obox/software/html5.html",
+          "display_title": "obox/software/html5.html",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "  + 'W.gooutofiframe = true;W.splashonclickremove = true;W.viewportwidth = \"1024\";W.connectiontimeout = \"40\";W.connectionmessage = true;W.disconnectmessage = true;W.f5_for_refresh = true;W.printenabled = true;W.force_download_dialog = true;W.fake_file_extension = false;W.write_via_temp_file = false;W.emulate_tab = \"ios\";'\n  + 'W.topButtonWidth = \"100%\";W.frame_numbers = \"\";W.base6'+'4onbinary = false;W.send_lo'+'gof'+'f = true;W.showmousedrag = false;W.showrightclick = false;W.softMobileKeyboard = \"mobile\";'\n  + 'W.newMenuHideOnSoftKeybShow = true;W.show_button_prefer_soft = true;W.ios_cursor_into_view = true;W.show_fix_keyb_button = true;W.touch3_keyboard_show = true;W.sendTimeZone = true;W.maxLoudness = 0.2;W.nativerdp = \"no\";W.nativerdp_compression_level = 6;W.default_color = 24;W.usersPictograms = { };'\n  + 'W.cf = false;W.ieold = false;W.ieold67 = false;W.fixiepngs = false;W.loadIEStorage = function() { };W.entbutchar = \"<&not;\";W.nbsp = \"&nbsp;\";W.iefor = false;W.mobileie = ((na'+'vig'+'ator.use'+'rAg'+'ent.mat'+'ch(/(ie'+'mob)|(Win'+'dows'+' Ph'+'one)/) != null) ? true : false);if(!W.mobileie) { W.mobileie = ((n'+'avig'+'ator.us'+'erAge'+'nt.match(/(W'+'PDes'+'kto'+'p)/) != null) ? true : false);'\n  + 'if(W.mobileie) { W.mobileie = ((nav'+'igat'+'or.use'+'rAg'+'ent.mat'+'ch(/(To'+'uch)/) != null) ? true : false); } }if(W.mobileie && navi'+'gat'+'or.msM'+'axTo'+'uchP'+'oints && navi'+'gator.msMa'+'xTouchP'+'oints > 1) { } else { W.mobileie = false; }W.myxhrport = doc'+'um'+'ent.loca'+'tio'+'n.po'+'rt;'\n  + 'if(W.myxhrport.length < 1 || W.myxhrport < 1) { W.myxhrport = 80; if(do'+'cume'+'nt.locat'+'ion.proto'+'col.indexOf(\"https\") > -1) { W.myxhrport = 443; } }'\n  + 'W.thirdpathclean = \"\";' + 'W.e'+'ndsWi'+'th = function(str, suffix) { return str.indexOf(suffix, str.length - suffix.length) != -1; };W.path'+'named = wi'+'ndow.'+'loca'+'tion.pat'+'hname;'",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    984,
+                    992
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    1108,
+                    1116
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    1122,
+                    1130
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    1234,
+                    1242
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    1248,
+                    1256
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    1350,
+                    1358
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    1461,
+                    1469
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/cloud/pack.ps1",
+          "path": "cloud/pack.ps1",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/cloud/pack.ps1",
+          "display_title": "cloud/pack.ps1",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "  powershell -File cloud\\pack.ps1 -DryRun      # show the plan + what the gates would see\n  powershell -File cloud\\pack.ps1              # -> cloud\\dist\\MobileIE-cloud.tar.gz\n  powershell -File cloud\\pack.ps1 -NoData      # leave LOLv1 out (re-download on the instance)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    153,
+                    161
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "$Repro = Join-Path $BUNDLE \"repro\"\n$Official = Join-Path $BUNDLE \"MobileIE-main\"\n$Dist = Join-Path $Cloud \"dist\"",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    66,
+                    74
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/setup.sh",
+          "path": "repro/setup.sh",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/setup.sh",
+          "display_title": "repro/setup.sh",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "#!/usr/bin/env bash\n# One-shot environment setup for the MobileIE reproduction (Linux / WSL2).\n# Windows: use setup.ps1 instead.",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    57,
+                    65
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "step \"Checking project layout\"\nfor need in requirements.txt src/mobileie scripts ../MobileIE-main/MobileIE-main/model/utils.py; do\n  if [[ ! -e \"$need\" ]]; then",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    64,
+                    72
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    84,
+                    92
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    98,
+                    106
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/zotero-wysiwyg-pdf-export/blob/491f6170982e22a2b403257e7561b5c3c7b9844d/TODO.md",
+          "path": "TODO.md",
+          "display_url": "https://github.com/38260/zotero-wysiwyg-pdf-export/blob/491f6170982e22a2b403257e7561b5c3c7b9844d/TODO.md",
+          "display_title": "TODO.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "| F09 | 可编辑批注导出（新增，需求变更） | 另存一份矢量页 + 真实批注对象的 PDF，重新导入 Zotero 后可继续编辑 | 已完成（见下） | 自动化 `sh test/f09/run.sh`：8 项隔离实测 + 10 项 PyMuPDF 检查，全部通过。实测 3 页样张：113 KB（同内容图片版 1.37 MB）、367–538 ms；页面保持矢量（0 张整页图片），可抽取 714 字符文字（含中英文）；写出 10 条批注对象（高亮 4、下划线 1、绘图 1、FreeText 4），全部带 `/Zotero:Key` 或 `NM (Zotero-)` 标记；把导出文件重新导入隔离库后，先得到 11 条 external 只读批注（含 PDF 自带便签），执行一次 Zotero 的「导入注释…」（即 `PDFWorker.import(..., transfer=true)`）后 11 条全部变为可编辑，类型、颜色、字号、矩形均还原。**未覆盖**：外部阅读器中的非文本批注外观（高亮偏实、下划线偏粗；文本批注的外观已由 F05 追加阅读器同源外观流）；页码范围（原生写入器只支持整份）；执行「导入注释」后 Zotero 会把文件里的批注移除并改由数据库保存（其设计如此）。 |\n| F05 | 固定文本批注保真 | 中英文、混排、多行、不同字号及重叠场景无新增截断、乱码或明显错位 | 已完成（见下） | 用用户真实样张「研读文献-mobileIE」（12 页、20 条中文文本批注 + 24 条高亮）实测。可编辑导出新增 `annotation-appearance.js`：在 Zotero 原生写入之后为每个 FreeText 追加与阅读器同源的 300 DPI 外观流（RGB + SMask），保留 `/Contents`、`/Zotero:Key` 等可编辑数据；排版复用 F04 的 `measureTextLayout`（同一字体栈、2 CSS px 内边距、normal 行高、DOM 断行）。验证 `sh test/f05/run.sh`（导出 + 重新导入）与 `test/f05/verify.py` 20/20 通过：44 条批注全部保留，20 条文本批注的 BBox=Rect、图像/SMask 尺寸正确；与阅读器截图逐条比对，行投影相关 0.85–0.98、列投影 0.68–0.93、包围盒偏差 ≤2 px、颜色准确，换行与参考一致；PyMuPDF 开/关批注渲染有差异，证明外部渲染器确实使用该外观流；并在 Chromium 内核 PDF 查看器（PDFium）中实机打开，中文批注正常显示、无方框。重新导入后 44 条 external，执行「导入注释…」后 44 条全部可编辑，20 条中文文本批注完整。**未覆盖**：旋转文本批注（样张均为 0°）、Adobe Acrobat 与系统打印预览、超长文本/极端字号。F04 31 项、F09 18 项回归通过。提交 `beeffe2` |\n| F06 | 完整文档导出与一致性 | 整份及指定页序完整；未浏览页面不缺失；忽略筛选；按原始配色输出；内容快照一致 | 未开始 | — |",
+              "matches": [
+                {
+                  "text": "mobileIE",
+                  "indices": [
+                    1372,
+                    1380
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\n2026-10-19（第七轮，F05 完成）：用户实测指出可编辑导出在外部阅读器里中文批注显示方框、字体不同、断行错误，要求以真实文献「研读文献-mobileIE」做到所见即所得。原因：Zotero 原生写入器只嵌入 Liberation Sans，含中文的 FreeText 不生成 `/AP`，查看器回退 Helvetica。修复分两部分：一、重写 `render.js` 的文字排版测量：不再以 1.2 倍字号估行高，而是在隐藏 DOM 中按阅读器 `<textarea>` 的字体栈、`line-height:normal`、2 CSS px 内边距与断行规则实测首行基线和行距，F04 与 F09 共用；二、新增 `annotation-appearance.js`，在 `PDFWorker.export` 之后为每个 FreeText 增量追加 Form XObject（300 DPI RGB + SMask，文字颜色按阅读器规则加深 5%），保留原批注字典与 `/Zotero:Key`，外部查看器直接渲染该外观，Zotero 仍可继续编辑；并在 Chromium 内核 PDF 查看器中实机确认中文批注无方框、颜色与换行正确。踩坑：bootstrap 全局没有 `CompressionStream`，需借用主窗口；压缩流若先 `writer.write` 后接读取端会背压死锁，改用 `Blob.pipeThrough`；Form 内容流曾漏传窗口参数导致首个批注即失败。验证：`sh test/f05/run.sh`：12 页、44 条批注、1.3 s、14.8 MB；20 条文本批注与阅读器截图逐条比对通过（行相关 ≥0.85、列相关 ≥0.68、包围盒 ≤2 px）；重新导入后 44 条全部可编辑，20 条中文批注内容完整。F04 31 项、F09 8+10 项回归通过。版本 0.5.0。提交 `beeffe2`。\n",
+              "matches": [
+                {
+                  "text": "mobileIE",
+                  "indices": [
+                    190,
+                    198
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/torch_to_onnx.py",
+          "path": "torch_to_onnx.py",
+          "display_url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/torch_to_onnx.py",
+          "display_title": "torch_to_onnx.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "import torch\nimport torch.nn as nn\n\nclass MobileIENetS(nn.Module):\n    def __init__(self, channels):\n        super(MobileIENetS, self).__init__()\n        self.head = FST(",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    42,
+                    50
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    115,
+                    123
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/tediyankov/reef-track/blob/af76a927c568795e800f8d8e0c28c3b939fd6f1f/README.md",
+          "path": "README.md",
+          "display_url": "https://github.com/tediyankov/reef-track/blob/af76a927c568795e800f8d8e0c28c3b939fd6f1f/README.md",
+          "display_title": "README.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "| tiny fish: zoom in | **drag a box** around the fish → the box fills the view and follows the fish (its mask where tracked, otherwise template matching, smoothed against shake). Display only. While zoomed, clicks/tracking give SAM **only that window**, re-centred on the fish each frame (saved as `roi` on the segment; masks stay in full-frame pixels). **Z** / **Esc** back to full view, **Z** again to zoom back in; drag again to re-box |\n| undo / save | **Ctrl+Z** / autosaves after every change (**Ctrl+S** to force) |\n| playback | **Space**, **←/→** (±1 frame), **Shift+←/→** (±1 s), timeline click/drag |\n| enhance murky footage | **E** cycles *Off → CLAHE → Retinex → MobileIE* (Display panel). View only, ~2–25 ms/frame so playback stays at 30 fps; applied after the zoom crop. *SAM sees the enhanced image too* (on by default) feeds the same image to SAM, recorded as `enhance` on the segment. MobileIE = 4k-parameter underwater CNN (Yan et al., ICCV 2025, Apache-2.0 weights in `src/reeftrack/enhance/`), needs PyTorch, so it is greyed out in the annotator environment |\n| rotate view (portrait videos) | **R** / **Shift+R** (View menu); display only, saved per video in `run.yaml` (`view.rotation`) |\n| behaviour event (Behaviour tab) | **I** at first frame → **O** at last frame → pick behaviour (number key) + optional comment → OK |\n| edit / delete behaviour | click a row to jump, double-click to edit, *Delete* button; click a chunk on the timeline to select its row |",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    693,
+                    701
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    923,
+                    931
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/setup.ps1",
+          "path": "repro/setup.ps1",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/setup.ps1",
+          "display_title": "repro/setup.ps1",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": ".SYNOPSIS\n  One-shot environment setup for the MobileIE reproduction, for moving the project\n  to another machine (desktop dGPU / WSL / CPU-only all supported).",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    47,
+                    55
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "Step \"Checking project layout\"\nforeach ($need in @(\"requirements.txt\", \"src/mobileie\", \"scripts\", \"..\\MobileIE-main\\MobileIE-main\\model\\utils.py\")) {\n    if (-not (Test-Path (Join-Path $Repro $need))) {",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    76,
+                    84
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    102,
+                    110
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    116,
+                    124
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "isError": false
+  }
+}
