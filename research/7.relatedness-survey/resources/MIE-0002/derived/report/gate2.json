@@ -1,0 +1,80 @@
+{
+  "resource_id": "MIE-0002",
+  "reviewed_at": "2026-11-20T12:45:58.499631+08:00",
+  "status": "pass_full",
+  "review_passed": true,
+  "completion_scope": "Full available evidence for appropriate core static project analysis; not all generic vendor code line-by-line and not numerical/runtime replication",
+  "reviewer": "Codex  (sqs_A100)",
+  "independent_external_reviewer": false,
+  "review_mode": "Separate second-pass self-audit",
+  "standard_sha256": "b5371150d788916763c891e0298b862ad0d9302a1286d698172bfa03dd90f57f",
+  "checklist": {
+    "a": {
+      "passed": true,
+      "evidence": [
+        "identity.json",
+        "derived/docs/reading-notes.md"
+      ],
+      "rationale": "See explicit self-review item a and stated scope/unknowns"
+    },
+    "b": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/reading-notes.md",
+        "derived/figures/framework.png",
+        "derived/figures/sample-contact.png"
+      ],
+      "rationale": "See explicit self-review item b and stated scope/unknowns"
+    },
+    "c": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/reading-notes.md",
+        "derived/docs/upstream-code-manifest.json",
+        "derived/docs/checkpoint-static-inspection.json"
+      ],
+      "rationale": "See explicit self-review item c and stated scope/unknowns"
+    },
+    "d": {
+      "passed": true,
+      "evidence": [
+        "derived/report/analysis.md",
+        "derived/docs/reading-notes.md"
+      ],
+      "rationale": "See explicit self-review item d and stated scope/unknowns"
+    },
+    "e": {
+      "passed": true,
+      "evidence": [
+        "derived/report/claims.json",
+        "derived/report/analysis.md"
+      ],
+      "rationale": "See explicit self-review item e and stated scope/unknowns"
+    },
+    "f": {
+      "passed": true,
+      "evidence": [
+        "derived/report/analysis.md"
+      ],
+      "rationale": "See explicit self-review item f and stated scope/unknowns"
+    },
+    "g": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/gate2-review.md",
+        "sources/manifest.json"
+      ],
+      "rationale": "See explicit self-review item g and stated scope/unknowns"
+    }
+  },
+  "known_gaps": [
+    "numerical/runtime replication and device deployment",
+    "complete IWO switching/checkpoint provenance and original paper evaluation scripts",
+    "generic third-party converter complete operator/build/test audit",
+    "full dataset licensing and per-example overlap",
+    "source parameter-count versus published profiling convention"
+  ],
+  "experiments_executed": 0,
+  "model_execution": false,
+  "next_resource_allowed_only_after_close_event": true
+}

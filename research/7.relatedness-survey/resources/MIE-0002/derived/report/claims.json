@@ -1,0 +1,103 @@
+{
+  "resource_id": "MIE-0002",
+  "created_at": "2026-11-20T12:45:58.499631+08:00",
+  "source_aliases": {
+    "code": "derived/docs/upstream-code-manifest.json; fixed source_path and 1-based line anchors",
+    "collection": "relative to workstation",
+    "MIE-0001": "preceding closed paper resource"
+  },
+  "claims": [
+    {
+      "claim_id": "C01",
+      "evidence_class": "primary_identity_and_static_check",
+      "claim": "官方README/论文身份吻合；固定提交与tree已核，根LICENSE为Apache-2.0。",
+      "anchors": [
+        "collection/raw/repo-AVC2-UESTC--MobileIE-head.json:sha,commit.author.date,commit.tree",
+        "code:README.md;LICENSE"
+      ],
+      "limitation": "提交日期非首次公开日期，根许可非全资产许可证明。"
+    },
+    {
+      "claim_id": "C02",
+      "evidence_class": "static_check",
+      "claim": "RGB/RAW模型为当前图像单输入，无history/future/state；slim保留FST/HDPA并移除辅助尾。",
+      "anchors": [
+        "code:model/lle.py:12–109;model/isp.py:12–109;model/utils.py:313–342"
+      ],
+      "limitation": "因果单帧不等于已经解决时间一致性。"
+    },
+    {
+      "claim_id": "C03",
+      "evidence_class": "static_check",
+      "claim": "默认主训练/加载缺完整IWO阶段接线，warmup有辅助尾；loss与论文公式不同；ISP默认1000轮/no-warmup。",
+      "anchors": [
+        "code:main.py:17–98;model/__init__.py;model/utils_IWO.py;loss.py:13–59;config/isp.yaml;config/lle.yaml",
+        "MIE-0001:main PDF p4–5 Eq1–10,§4.1"
+      ],
+      "limitation": "不推断作者未实施IWO或静态差异必然带来效果变化。"
+    },
+    {
+      "claim_id": "C04",
+      "evidence_class": "static_check_and_algebra",
+      "claim": "公开validation/test按空间维求每通道MSE再log平均，保存才clip；主测试无SSIM/LPIPS。",
+      "anchors": [
+        "code:main.py:69–78,103–122",
+        "derived/docs/reading-notes.md:默认评价的精确口径"
+      ],
+      "limitation": "未核作者论文表格是否由其他评价脚本生成，不能以此定性论文指标错误。"
+    },
+    {
+      "claim_id": "C05",
+      "evidence_class": "static_check",
+      "claim": "pretrained采用strict=False；默认路径/设备硬编码，complexity类名与固定模型不匹配。",
+      "anchors": [
+        "code:model/__init__.py:28–36;option.py;main.py:12;complexity.py:49,62;onnx_to_tf.py;onnx2tflite/onnx2tflite.py"
+      ],
+      "limitation": "运行是否失败和实际代价未测；不直接执行或修复上游。"
+    },
+    {
+      "claim_id": "C06",
+      "evidence_class": "static_file_inspection",
+      "claim": "五个slim权重FloatStorage总字节RGB16300/ISP16528，和源码4075/4132静态存储元素对账一致。",
+      "anchors": [
+        "derived/docs/checkpoint-static-inspection.json",
+        "derived/docs/archive-inventory.json:pretrain/*",
+        "code:model/lle.py:74–109;model/isp.py:74–109"
+      ],
+      "limitation": "只ZIP和pickletools opcode读取，未反序列化/加载/forward；不解释作者计数或证明质量。"
+    },
+    {
+      "claim_id": "C07",
+      "evidence_class": "static_check",
+      "claim": "多转换路线、固定ONNX尺寸和SELECT_TF_OPS；嵌入工具有可选FP16/INT8与全1输入输出检查、失败catch warning。",
+      "anchors": [
+        "code:torch_to_onnx.py;onnx_to_tf.py;tf_to_TFLite.py;test_TFLite_RGB.py;test_TFLite_ISP.py",
+        "code:onnx2tflite/onnx2tflite/{converter.py,components/builder.py,components/output_check.py,components/onnx_loader.py}",
+        "code:onnx2tflite/setup.py;onnx2tflite/onnx2tflite.egg-info/requires.txt"
+      ],
+      "limitation": "未核全部算子、运行等价/完整delegate支持或手机精度；工具选项非实验结果。"
+    },
+    {
+      "claim_id": "C08",
+      "evidence_class": "static_check_and_visual_inspection",
+      "claim": "附带6对单张图像，无序列/完整划分元数据；RGB/255、RAW RGGB/4095且无完整相机元数据。",
+      "anchors": [
+        "code:data/__init__.py;data/lledata.py;data/ispdata.py",
+        "derived/docs/sample-headers.json",
+        "derived/figures/sample-contact.png"
+      ],
+      "limitation": "未下载全数据、核许可或逐样本重叠；图片接触表非模型输出实验。"
+    },
+    {
+      "claim_id": "C09",
+      "evidence_class": "inference_with_explicit_limits",
+      "claim": "单帧官方骨干有基线价值，但不能从少参数/权重小推出完整流式视频低开销，需单独时序与部署控制。",
+      "anchors": [
+        "C02–C08",
+        "derived/report/analysis.md:可迁移价值与反证计划"
+      ],
+      "limitation": "当前0复现/训练/GPU，4组控制全是后续建议。"
+    }
+  ],
+  "experiments_executed": 0
+}
