@@ -4,7 +4,9 @@
 
 ## 当前研究状态
 
-2026-11-20最新[0187：三观测方差校准与骨干问题](docs/进展报告/0187-T-26112023-三观测方差识别校准与骨干问题收敛.md)：[N1](research/8.video-backbone/triple-variance/README.md)全11264NN/48组正常完成，固定photon8/8正例保留、跨photon4/16，完整实际运动资格False。增强后均值变化/相关误差不能忽略，固定估计网格STOP；无新视频质量或方法成功。两全点PNG已实际查看，[完整决定](research/8.video-backbone/triple-variance/decision.md)、[真实终态](research/8.video-backbone/triple-variance/process/terminal001.json)与[待核骨干问题](research/8.video-backbone/triple-variance/next-core-question.md)分别留存，无活跃作业。
+2026-11-20最新[0188：新骨干资格与空间恢复启动](docs/进展报告/0188-T-26112023-多线性骨干实现资格与空间恢复正式启动.md)：[M1](research/8.video-backbone/multiaffine-core/README.md)已实现并通过CPU/CUDA小资格，正式从随机M1/原Slim开始双seed各8K，共32000更新；GPU6按余量新准入/实际UUID核验，资格更新全丢弃。当前只检验空间恢复、尚无最终质量/方法结论；raw多线性性质不等于clip后RGB保证。40具名源/输入与[空间协议](research/8.video-backbone/multiaffine-core/spatial-protocol.md)冻结，实际进度查[链](research/8.video-backbone/multiaffine-core/process/spatial-chain001/state.json)，勿按历史PID重启。
+
+此前[0187：三观测方差校准与骨干问题](docs/进展报告/0187-T-26112023-三观测方差识别校准与骨干问题收敛.md)：[N1](research/8.video-backbone/triple-variance/README.md)全11264NN/48组正常完成，固定photon8/8正例保留、跨photon4/16，完整实际运动资格False。增强后均值变化/相关误差不能忽略，固定估计网格STOP；无新视频质量或方法成功。两全点PNG已实际查看，[完整决定](research/8.video-backbone/triple-variance/decision.md)、[真实终态](research/8.video-backbone/triple-variance/process/terminal001.json)与[待核骨干问题](research/8.video-backbone/triple-variance/next-core-question.md)分别留存，无活跃作业。
 
 此前[0186：单向传输筛查与止损](docs/进展报告/0186-T-26112022-单向传输贡献者离散度筛查与止损.md)：[S1](research/8.video-backbone/single-direction/README.md)已完成64NN/80输出条件、0更新/GPU/DEV/最终。三个完整门均False，对原双向DIS三个组质量低.51–.73dB，ND0和逐窗正例保留；固定目标贡献者矩/mass界/阈值/alpha/preset/field来源网格STOP。全20均值与16窗口联系图实际查看，[决定](research/8.video-backbone/single-direction/decision.md)和[真实终态](research/8.video-backbone/single-direction/process/terminal001.json)保持完整，无活跃实验，不按旧state重启。
 
