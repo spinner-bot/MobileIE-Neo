@@ -1,0 +1,164 @@
+{
+  "source": "archive/g1a0001-anymod-pmlr-pdf.pdf",
+  "sha256": "e7e61b24689655004be568e6131cbcc9c59d0bfa437eb2d15037c7215a06f6e1",
+  "prior_source": "archive/paper-57ace90aa47c-arxiv-pdf.pdf",
+  "prior_sha256": "2c57ce78f51438ecdf9e1af0b69275d3f92296771e35d71470f6a78e057b3976",
+  "pages": [
+    {
+      "page": 1,
+      "extracted_text_equal": false,
+      "diff": "--- arxiv-v1-p1\n\n+++ pmlr-p1\n\n@@ -33,7 +33,6 @@\n\n 1. Introduction\n Low-light video enhancement (LLVE) aims to restore vi-\n sually pleasing videos captured under insufficient illumi-\n-nation, and is crucial for real-world applications such as\n ∗ Hangfeng Liang and Yutao Hu contribute equally. 1School\n of Computer Science and Engineering, Southeast University 2Key\n Laboratory of New Generation Artificial Intelligence Technology\n@@ -42,7 +41,9 @@\n\n of Computer Science and Technology, Beijing Institute of Tech-\n nology. Correspondence to: Yutao Hu is the corresponding author\n <huyutao@seu.edu.cn>.\n-Preprint. June 10, 2026.\n+Proceedings of the 43 rd International Conference on Machine\n+Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026\n+by the author(s).\n Low-Light RGB Auxiliary Modality Enhanced RGB\n (a) RGB-based LLVE\n (b) Multimodal LLVE\n@@ -58,6 +59,7 @@\n\n missing at inference time.(c)Modality-agnostic LLVE enables\n robust enhancement by exploiting auxiliary modalities when avail-\n able and maintaining stable performance when they are absent.\n+nation, and is crucial for real-world applications such as\n autonomous driving and intelligent surveillance. To this end,\n extensive efforts have been devoted to illumination model-\n ing (Cai et al., 2023; Wang et al., 2025a; Wu et al., 2023)\n@@ -75,6 +77,4 @@\n\n Jha et al., 2025), to provide complementary temporal dy-\n namics and structural priors, which have demonstrated great\n effectiveness in improving detail restoration for LLVE.\n-However, recent multimodal LLVE methods still face practi-\n 1\n-arXiv:2606.11186v1  [cs.CV]  9 Jun 2026"
+    },
+    {
+      "page": 2,
+      "extracted_text_equal": false,
+      "diff": "--- arxiv-v1-p2\n\n+++ pmlr-p2\n\n@@ -1,4 +1,5 @@\n\n AnyMod-LLVE: Low-Light Video Enhancement with Modality-Agnostic Inference\n+However, recent multimodal LLVE methods still face practi-\n cal limitations. As illustrated in Fig. 1(b), these approaches\n typically assume that auxiliary modalities are always avail-\n able during both training and inference, resulting in a strong\n@@ -99,5 +100,4 @@\n\n 2.1. Low-Light Video Enhancement\n For low-light video enhancement, most existing methods\n are developed under the RGB-only setting. Many methods\n-design enhancement strategies based on illumination de-\n 2"
+    },
+    {
+      "page": 3,
+      "extracted_text_equal": false,
+      "diff": "--- arxiv-v1-p3\n\n+++ pmlr-p3\n\n@@ -1,4 +1,5 @@\n\n AnyMod-LLVE: Low-Light Video Enhancement with Modality-Agnostic Inference\n+design enhancement strategies based on illumination de-\n composition or Retinex formulations (Wu et al., 2023; Cai\n et al., 2023). Other approaches focus on temporal optimiza-\n tion and consistency modeling to improve stability across\n@@ -107,5 +108,4 @@\n\n When auxiliary modalities are unavailable, the generated fea-\n tures serve as supplements to support robust enhancement.\n Therefore, AMNet supports flexible modality-agnostic infer-\n-ence under arbitrary combinations of available modalities.\n 3"
+    },
+    {
+      "page": 4,
+      "extracted_text_equal": false,
+      "diff": "--- arxiv-v1-p4\n\n+++ pmlr-p4\n\n@@ -110,6 +110,7 @@\n\n 𝑺𝒔𝒑𝒆𝒄\n 𝑭𝒇𝒓𝒆𝒒\n Figure 3.The details of the proposed S2DG Translator.\n+ence under arbitrary combinations of available modalities.\n The RGB features and the auxiliary modality features are\n then fused and fed into a temporal modeling module to cap-\n ture inter-frame dependencies. Finally, a decoder predicts a"
+    },
+    {
+      "page": 5,
+      "extracted_text_equal": true,
+      "diff": ""
+    },
+    {
+      "page": 6,
+      "extracted_text_equal": true,
+      "diff": ""
+    },
+    {
+      "page": 7,
+      "extracted_text_equal": true,
+      "diff": ""
+    },
+    {
+      "page": 8,
+      "extracted_text_equal": true,
+      "diff": ""
+    },
+    {
+      "page": 9,
+      "extracted_text_equal": false,
+      "diff": "--- arxiv-v1-p9\n\n+++ pmlr-p9\n\n@@ -8,10 +8,12 @@\n\n auxiliary modalities are available.\n Acknowledgements\n This work was supported in part by the National Natural\n-Science Foundation of China under Grant 82441021 and\n-62331006, in part by the Start-up Research Fund of South-\n-east University under Grant RF1028624156, and in part by\n-the Big Data Computing Center of Southeast University.\n+Science Foundation of China under Grant 62501140 and\n+62331006, in part by the Funded of Basic Rescarch Pro-\n+gram of Jiangsu under Grant (BK20251279), in part by the\n+Start-up Research Fund of Southeast University under Grant\n+RF1028624156, and in part by the Big Data Computing Cen-\n+ter of Southeast University.\n Impact Statement\n This work aims to advance the field of low-light video en-\n hancement by improving robustness and flexibility under\n@@ -89,8 +91,4 @@\n\n detection and map segmentation. InProceedings of the\n IEEE/CVF International Conference on Computer Vision,\n pp. 8721–8731, 2023.\n-Hu, Y ., Liu, S.-C., and Delbruck, T. v2e: From video frames\n-to realistic dvs events. InProceedings of the IEEE/CVF\n-Conference on Computer Vision and Pattern Recognition\n-(CVPR) Workshops, pp. 1312–1321, June 2021.\n 9"
+    },
+    {
+      "page": 10,
+      "extracted_text_equal": false,
+      "diff": "--- arxiv-v1-p10\n\n+++ pmlr-p10\n\n@@ -1,4 +1,8 @@\n\n AnyMod-LLVE: Low-Light Video Enhancement with Modality-Agnostic Inference\n+Hu, Y ., Liu, S.-C., and Delbruck, T. v2e: From video frames\n+to realistic dvs events. InProceedings of the IEEE/CVF\n+Conference on Computer Vision and Pattern Recognition\n+(CVPR) Workshops, pp. 1312–1321, June 2021.\n Jha, R., Lenka, A., Ramanagopal, M., Sankaranarayanan,\n A., and Mitra, K. Rt-x net: Rgb-thermal cross attention\n network for low-light image enhancement.arXiv preprint\n@@ -90,10 +94,4 @@\n\n shared-specific feature modelling. InProceedings of the\n IEEE/CVF conference on computer vision and pattern\n recognition, pp. 15878–15887, 2023a.\n-Wang, H., Ma, C., Zhang, J., Zhang, Y ., Avery, J., Hull, L.,\n-and Carneiro, G. Learnable cross-modal knowledge dis-\n-tillation for multi-modal learning with missing modality.\n-InInternational Conference on Medical Image Comput-\n-ing and Computer-Assisted Intervention, pp. 216–226.\n-Springer, 2023b.\n 10"
+    },
+    {
+      "page": 11,
+      "extracted_text_equal": false,
+      "diff": "--- arxiv-v1-p11\n\n+++ pmlr-p11\n\n@@ -1,4 +1,10 @@\n\n AnyMod-LLVE: Low-Light Video Enhancement with Modality-Agnostic Inference\n+Wang, H., Ma, C., Zhang, J., Zhang, Y ., Avery, J., Hull, L.,\n+and Carneiro, G. Learnable cross-modal knowledge dis-\n+tillation for multi-modal learning with missing modality.\n+InInternational Conference on Medical Image Comput-\n+ing and Computer-Assisted Intervention, pp. 216–226.\n+Springer, 2023b.\n Wang, M., Kang, X., Lu, Y ., and Xu, J. Retinexmcnet:\n A memory controller dominated network for low-light\n video enhancement based on retinex. InProceedings of"
+    },
+    {
+      "page": 12,
+      "extracted_text_equal": true,
+      "diff": ""
+    },
+    {
+      "page": 13,
+      "extracted_text_equal": true,
+      "diff": ""
+    },
+    {
+      "page": 14,
+      "extracted_text_equal": true,
+      "diff": ""
+    },
+    {
+      "page": 15,
+      "extracted_text_equal": true,
+      "diff": ""
+    },
+    {
+      "page": 16,
+      "extracted_text_equal": true,
+      "diff": ""
+    },
+    {
+      "page": 17,
+      "extracted_text_equal": true,
+      "diff": ""
+    }
+  ],
+  "rendered_comparison": [
+    {
+      "page": 1,
+      "rendered_png_equal_to_original_preprint": false
+    },
+    {
+      "page": 2,
+      "rendered_png_equal_to_original_preprint": false
+    },
+    {
+      "page": 3,
+      "rendered_png_equal_to_original_preprint": false
+    },
+    {
+      "page": 4,
+      "rendered_png_equal_to_original_preprint": false
+    },
+    {
+      "page": 5,
+      "rendered_png_equal_to_original_preprint": true
+    },
+    {
+      "page": 6,
+      "rendered_png_equal_to_original_preprint": true
+    },
+    {
+      "page": 7,
+      "rendered_png_equal_to_original_preprint": true
+    },
+    {
+      "page": 8,
+      "rendered_png_equal_to_original_preprint": true
+    },
+    {
+      "page": 9,
+      "rendered_png_equal_to_original_preprint": false
+    },
+    {
+      "page": 10,
+      "rendered_png_equal_to_original_preprint": false
+    },
+    {
+      "page": 11,
+      "rendered_png_equal_to_original_preprint": false
+    },
+    {
+      "page": 12,
+      "rendered_png_equal_to_original_preprint": true
+    },
+    {
+      "page": 13,
+      "rendered_png_equal_to_original_preprint": true
+    },
+    {
+      "page": 14,
+      "rendered_png_equal_to_original_preprint": true
+    },
+    {
+      "page": 15,
+      "rendered_png_equal_to_original_preprint": true
+    },
+    {
+      "page": 16,
+      "rendered_png_equal_to_original_preprint": true
+    },
+    {
+      "page": 17,
+      "rendered_png_equal_to_original_preprint": true
+    }
+  ],
+  "scope": "Document version/text/PNG comparison only; no scientific model evaluation or reading claim"
+}

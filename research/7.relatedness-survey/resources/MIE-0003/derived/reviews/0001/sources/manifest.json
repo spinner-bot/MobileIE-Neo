@@ -1,0 +1,62 @@
+{
+  "resource_id": "MIE-0003",
+  "review_id": "0001",
+  "created_at": "2026-11-20T16:25:49.799864+08:00",
+  "path_conventions": {
+    "receipts[].path": "relative to workstation/collection",
+    "receipts[].archive": "relative to workstation"
+  },
+  "receipts": [
+    {
+      "path": "receipts/g1a0001-anymod-pmlr-html.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-anymod-pmlr-html.html",
+      "sha256": "6aae9b5757d56da5121b306c545d495e08a10b79bbc8dd2ccb1e6b41a5266bfd"
+    },
+    {
+      "path": "receipts/g1a0001-anymod-pmlr-pdf.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-anymod-pmlr-pdf.pdf",
+      "sha256": "e7e61b24689655004be568e6131cbcc9c59d0bfa437eb2d15037c7215a06f6e1"
+    },
+    {
+      "path": "receipts/g1a0001-openreview-forum.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-openreview-forum.html",
+      "sha256": "2f56417bc8987853632932f9e5395961109594789906d320f4232c48336e44f3"
+    },
+    {
+      "path": "receipts/g1a0001-openreview-note.json",
+      "status": "http_error",
+      "http": 403,
+      "complete": false,
+      "archive": "archive/g1a0001-openreview-note.json",
+      "sha256": "65965c429595b8bd64dc2ece681793b10b6bc3a29e53f3b740afa1639706e487"
+    },
+    {
+      "path": "receipts/g1a0001-openreview-replies.json",
+      "status": "http_error",
+      "http": 403,
+      "complete": false,
+      "archive": "archive/g1a0001-openreview-replies.json",
+      "sha256": "c24bbb09f5a69809685be7e86cf0ef388a96bc8fd3370986e381bc98d86365e0"
+    },
+    {
+      "path": "receipts/g1a0001-anymod-baai-pdf.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-anymod-baai-pdf.pdf",
+      "sha256": "2c57ce78f51438ecdf9e1af0b69275d3f92296771e35d71470f6a78e057b3976"
+    }
+  ],
+  "prior_audit_and_support": "resources/MIE-0003/derived/report/integrity.json; original code/notes retained unchanged",
+  "collection_evidence": "collection/gate1-addenda/0001/freeze-v1.json",
+  "scope": "Official publication and aliases/failed review access. OpenReview peer reviews not obtained, no claim read."
+}
