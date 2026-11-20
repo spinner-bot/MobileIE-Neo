@@ -1,0 +1,87 @@
+{
+  "resource_id": "MIE-0003",
+  "review_id": "0001",
+  "reviewed_at": "2026-11-20T16:38:27.170052+08:00",
+  "status": "pass_full",
+  "review_passed": true,
+  "completion_scope": "Official PMLR final17pages including appendix, actual key visuals, version relation and unchanged pinned public-code audit support; literature/static analysis only",
+  "reviewer": "Codex  (sqs_A100)",
+  "independent_external_reviewer": false,
+  "review_mode": "Separate second-pass self-audit under unchanged Gate2 v1",
+  "standard_sha256": "b5371150d788916763c891e0298b862ad0d9302a1286d698172bfa03dd90f57f",
+  "checklist": {
+    "a": {
+      "passed": true,
+      "evidence": [
+        "identity.json",
+        "docs/reading-notes.md",
+        "sources/manifest.json"
+      ],
+      "rationale": "Primary formal venue, author identity, conference interval and actual read scope checked; old source/close preserved"
+    },
+    "b": {
+      "passed": true,
+      "evidence": [
+        "docs/reading-notes.md",
+        "docs/paper-assets.json",
+        "docs/visual-review.json",
+        "docs/version-compare.json"
+      ],
+      "rationale": "All17 final pages including references/appendix reread; actual seven single-page images and whole contact viewed; exact comparison with old visuals disclosed"
+    },
+    "c": {
+      "passed": true,
+      "evidence": [
+        "docs/reading-notes.md",
+        "sources/manifest.json"
+      ],
+      "rationale": "Unchanged pinned author-code21-file audit verified and used as supporting consistency evidence; code/model not executed and data/licensing gaps preserved"
+    },
+    "d": {
+      "passed": true,
+      "evidence": [
+        "report/analysis.md",
+        "docs/reading-notes.md"
+      ],
+      "rationale": "Information/cost/causality/temporal-vs-spatial/fairness and counterexamples retained, no incompatible numerical comparisons"
+    },
+    "e": {
+      "passed": true,
+      "evidence": [
+        "report/claims.json",
+        "report/analysis.md"
+      ],
+      "rationale": "R01–R07 individually source-bound and evidence-limited; author data not reproduction"
+    },
+    "f": {
+      "passed": true,
+      "evidence": [
+        "report/analysis.md"
+      ],
+      "rationale": "Clear version correction, remaining gaps and falsifiable controls; no Gate3 execution"
+    },
+    "g": {
+      "passed": true,
+      "evidence": [
+        "docs/gate2-review.md",
+        "sources/manifest.json"
+      ],
+      "rationale": "Separate second-pass self-review; frozen standards/catalog verified; specific required old-resource review during hold, no next-resource advancement"
+    }
+  },
+  "prior_closed_gate_sha256": "39d93c38c145640a96a9d49e9649f25c9aefab3304776eca5811840dd0aedd2a",
+  "prior_closed_integrity_sha256": "e28f36add65b33b91e8b699bb892286d9d36bfed5baee22eb5d5f7addf24706b",
+  "known_gaps": [
+    "MobileIE baseline exact checkpoint and complete zero-shot assessment protocol",
+    "paper table conflicts/conditions not explained",
+    "pretraining construction/configs/data licensing and content overlaps",
+    "checkpoint runtime, stream quality, motion/exposure/cut behavior and true event time cutoff",
+    "device backend support/latency/peak memory/energy and full pipeline budgets",
+    "README MIT claim but no license file in pinned source ZIP",
+    "OpenReview peer reviews were not obtained; exact first online publication day not asserted",
+    "Formal proceedings does not explain table-condition or baseline-checkpoint/protocol differences"
+  ],
+  "experiments_executed": 0,
+  "model_execution": false,
+  "hold_release_requires_recorded_review_close_event": true
+}
