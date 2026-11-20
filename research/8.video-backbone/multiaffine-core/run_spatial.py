@@ -4,6 +4,7 @@ import subprocess
 import sys
 import time
 import traceback
+import itertools
 from study_io import ROOT, BASE, PROCESS, read, write, append, digest, stamp, verify, owned_cache, identity
 from shared_gpu_admission import sustained_samples, assess
 
@@ -34,7 +35,7 @@ def main():
     def training(seed, qualification):
         prefix = 'cuda-spatial-qualification' if qualification else f'spatial-seed{seed}-attempt'
         resume = None
-        for attempt in range(1, 1000000):
+        for attempt in itertools.count(1):
             label = f'{prefix}{attempt:03d}'
             samples = sustained_samples()
             assessed = assess(samples)
@@ -76,8 +77,9 @@ def main():
                 proof = read(PROCESS / label / 'qualification.json')
                 assert proof['passed'] and proof['all_updates_discarded']
                 assert runtime['max_reserved_bytes'] <= 2048 * 1024 * 1024
+                assert runtime['final_actual_device']['matched']
+                assert runtime['own_final_used_mib'] is not None and runtime['own_final_used_mib'] <= 4096
             return
-        raise RuntimeError('Resource wait counter exhausted; not a science wall-clock limit')
 
     write(out / 'config.json', dict(at=stamp(), process=identity(os.getpid()), source_freeze=frozen,
         formal_optimizer_updates=32000, GPU_group=[4, 5, 6, 7], wall_clock_cutoff=False,
