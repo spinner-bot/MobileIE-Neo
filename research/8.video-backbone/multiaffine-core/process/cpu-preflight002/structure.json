@@ -1,0 +1,99 @@
+{
+  "passed": true,
+  "fixture_seed": 89300,
+  "image_size": [
+    16,
+    16
+  ],
+  "dtype": "float64",
+  "nonzero_gamma": [
+    0.4,
+    0.3
+  ],
+  "stream_steps": 6,
+  "stream_max_abs_difference": 6.938893903907228e-17,
+  "source_sets": [
+    {
+      "index": 0,
+      "route": "startup_diagonal",
+      "frame": 0
+    },
+    {
+      "index": 1,
+      "route": "startup_diagonal",
+      "frame": 1
+    },
+    {
+      "index": 2,
+      "route": "startup_diagonal",
+      "frame": 2
+    },
+    {
+      "index": 3,
+      "route": "disjoint",
+      "factors": [
+        [
+          2,
+          3
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "index": 4,
+      "route": "disjoint",
+      "factors": [
+        [
+          3,
+          4
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "index": 5,
+      "route": "disjoint",
+      "factors": [
+        [
+          4,
+          5
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    }
+  ],
+  "actual_steady_state_bytes": 24576,
+  "Rademacher_corners": 16,
+  "disjoint_raw_expectation_max_abs_defect": 1.6653345369377348e-16,
+  "overlapping_raw_expectation_max_abs_defect": 0.0005380055753444815,
+  "final_clipped_expectation_max_abs_defect": 0.009691365806397439,
+  "structural_calls": {
+    "four_slot": 37,
+    "direct_diagonal": 3,
+    "stream_steps": 6
+  },
+  "B1_FP32_budget_128": {
+    "parameters": 5340,
+    "steady_convolution_MAC": 21430272,
+    "steady_persistent_state_bytes": 786432,
+    "extra_operations_not_counted": "bilinear arithmetic, copies, pixel shuffle, startup extra body; no phone timing"
+  },
+  "B1_FP32_budget_1080": {
+    "parameters": 5340,
+    "steady_convolution_MAC": 2712268800,
+    "steady_persistent_state_bytes": 99532800,
+    "extra_operations_not_counted": "bilinear arithmetic, copies, pixel shuffle, startup extra body; no phone timing"
+  },
+  "pretrained_function_inherited": false,
+  "quality_or_motion_evidence": false,
+  "scope": "Two fixed semantic checks, not Monte Carlo generalization or bit-level optimizer replay"
+}
