@@ -4,6 +4,8 @@
 
 ## 2026-11-20最新：主题8两完整对照已止损
 
+后续T2直接监督实际部署DIS递归，已完整16000正式更新/四唯一最终、120质量与120官方JOD各5376帧、360共同条件/72均值及四图实际审阅。恢复0/4、A成对0/44、B10/44、额外5%学习0/8、完整A/B及成本False。相对同起点/数据/预算/部署算法的独立clip-GT DIS，SYN PSNR+.10–.11dB、14/20条件PSNR更好，但全部20条件时间误差更高（四组+1.50%–2.46%）；raw对raw也全部20条件时间更高。保留取舍，不把已知递归监督/BPTT当新方法。[完整T2表](../research/8.video-backbone/recurrent-objective/report/joint/tables.md)、[全部差分](../research/8.video-backbone/recurrent-objective/report/analysis/differences.md)、[决定/限制](../research/8.video-backbone/recurrent-objective/decision.md)、[0184](../docs/进展报告/0184-T-26112021-部署递归监督完整评价与止损.md)。固定配置止损，不扩失败成本/外部/手机，也不继续给T1/T2加loss或延长诊断；下一须有实质不同的信息/结构问题。
+
 V1低计算packed骨干/输入递归已完成28000正式更新、220质量/JOD、280共同条件，空间保护0/4、A/B各0/28；原恢复能力未保住，固定/学习递归在全部20条件被自身DIS post三指标支配。[完整决定](../research/8.video-backbone/decision-v1.md)保留局部正例、初始化历史差异和固定配置STOP。
 
 T1保留同seed原4075参数F0架构与完整权重，gt/spatial/temporal三个监督源各4000×两seed、24000正式更新、六唯一最终；CPU6/CUDA6资格全丢弃。全部180质量和官方JOD各8064帧、240共同条件/48均值、四联系图实际审阅完成，恢复保护3/4、A/B各0/40、成本扩展False。temporal对spatial KD四组时间低1.49%–2.38%、全部20条件时间更好，仍比原F0两强post时间高约29%–48%；真实seed0恢复失守。普通输出KD已有OFD/PocketDVDNet直接先例，只作已完成已知训练基线，不主张创新。[完整T1表](../research/8.video-backbone/teacher-targets/report/joint/tables.md)、[全部差分](../research/8.video-backbone/teacher-targets/report/analysis/differences.md)、[决定/限制](../research/8.video-backbone/teacher-targets/decision.md)、[0180](../docs/进展报告/0180-T-26112019-同原骨干时序KD完整评价与止损.md)。
