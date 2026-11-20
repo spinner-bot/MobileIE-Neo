@@ -4,6 +4,8 @@
 
 ## 2026-11-20最新：主题8完整对照已止损
 
+后续S1检验单向field目标贡献者离散度，冻结原F0/训练窗口64NN、80输出条件，三个完整门均False：相对双向DIS+FB三个组平均PSNR低.51–.73dB，ND0有+.0195dB/时间低2.84%小正例；对原FB9/16窗口联合正例保留。未过同单向成本控制的5%时间门，停止固定算子网格，不扩训练/DEV/成本/手机。splat/flow方差有直接先例，尚无新颖性或加速结论；[决定](../research/8.video-backbone/single-direction/decision.md)、[0186](../docs/进展报告/0186-T-26112022-单向传输贡献者离散度筛查与止损.md)。新图仅训练窗，不并入原论文84值或PDF020。
+
 后续P1是不同粗能量状态的零更新筛查，不是另一loss训练：先核Riesz/幅度时间滤波直接先例，再固定训练纹理已知位移、四路由、双冻结F0，全1280NN/200输出条件正常完成。时间能量对raw四噪声组时间升.456%–.560%，对同尺寸feature EMA全部32 noisy条件时间更差；仅clean映射保护通过，完整训练资格False，固定能量/差分/alpha/尺度/clip/epsilon网格停止。clean两seed质量+.0785–.0874dB/时间降18.8%–22.8%及局部正例保留；不宣称所有频域方法无效。无新DEV/GPU/外部/手机/独立最终，[完整决定](../research/8.video-backbone/phase-envelope/decision.md)、[0185](../docs/进展报告/0185-T-26112022-粗能量历史零更新筛查与止损.md)。最新原论文核到OLiVES同步采集25fps，不能事后覆写旧nominal30fps JOD，也不能未经抽帧间隔核查就将缓存改称连续25fps。论文原84值/snapshot003/PDF020不变。
 
 后续T2直接监督实际部署DIS递归，已完整16000正式更新/四唯一最终、120质量与120官方JOD各5376帧、360共同条件/72均值及四图实际审阅。恢复0/4、A成对0/44、B10/44、额外5%学习0/8、完整A/B及成本False。相对同起点/数据/预算/部署算法的独立clip-GT DIS，SYN PSNR+.10–.11dB、14/20条件PSNR更好，但全部20条件时间误差更高（四组+1.50%–2.46%）；raw对raw也全部20条件时间更高。保留取舍，不把已知递归监督/BPTT当新方法。[完整T2表](../research/8.video-backbone/recurrent-objective/report/joint/tables.md)、[全部差分](../research/8.video-backbone/recurrent-objective/report/analysis/differences.md)、[决定/限制](../research/8.video-backbone/recurrent-objective/decision.md)、[0184](../docs/进展报告/0184-T-26112021-部署递归监督完整评价与止损.md)。固定配置止损，不扩失败成本/外部/手机，也不继续给T1/T2加loss或延长诊断；下一须有实质不同的信息/结构问题。
