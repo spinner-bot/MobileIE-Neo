@@ -1,0 +1,94 @@
+{
+  "at": "2026-11-21T01:10:45.557187+08:00",
+  "comparisons": [
+    {
+      "seed": 0,
+      "domain": "SYN",
+      "reference": "F0",
+      "windows": 32,
+      "PSNR_positive": 3,
+      "SSIM_positive": 18,
+      "edge_lower": 19
+    },
+    {
+      "seed": 0,
+      "domain": "SYN",
+      "reference": "original_scratch",
+      "windows": 32,
+      "PSNR_positive": 7,
+      "SSIM_positive": 9,
+      "edge_lower": 13
+    },
+    {
+      "seed": 0,
+      "domain": "ND",
+      "reference": "F0",
+      "windows": 32,
+      "PSNR_positive": 4,
+      "SSIM_positive": 4,
+      "edge_lower": 11
+    },
+    {
+      "seed": 0,
+      "domain": "ND",
+      "reference": "original_scratch",
+      "windows": 32,
+      "PSNR_positive": 10,
+      "SSIM_positive": 4,
+      "edge_lower": 11
+    },
+    {
+      "seed": 1,
+      "domain": "SYN",
+      "reference": "F0",
+      "windows": 32,
+      "PSNR_positive": 4,
+      "SSIM_positive": 18,
+      "edge_lower": 20
+    },
+    {
+      "seed": 1,
+      "domain": "SYN",
+      "reference": "original_scratch",
+      "windows": 32,
+      "PSNR_positive": 20,
+      "SSIM_positive": 7,
+      "edge_lower": 10
+    },
+    {
+      "seed": 1,
+      "domain": "ND",
+      "reference": "F0",
+      "windows": 32,
+      "PSNR_positive": 3,
+      "SSIM_positive": 16,
+      "edge_lower": 14
+    },
+    {
+      "seed": 1,
+      "domain": "ND",
+      "reference": "original_scratch",
+      "windows": 32,
+      "PSNR_positive": 9,
+      "SSIM_positive": 10,
+      "edge_lower": 13
+    }
+  ],
+  "PSNR_capped_frames": 0,
+  "frames": 1536,
+  "raw_student_ranges": {
+    "multiaffine": {
+      "min": -0.40043461322784424,
+      "max": 1.2682081460952759,
+      "mean_outside_fraction": 0.001302917798360189
+    },
+    "original_scratch": {
+      "min": -0.22232438623905182,
+      "max": 1.6130173206329346,
+      "mean_outside_fraction": 0.0023225148518880205
+    }
+  },
+  "F0_range_record_is_already_clipped": true,
+  "new_inference_or_metric_calls": 0,
+  "counts_are_descriptive_not_independent_trials": true
+}
