@@ -31,6 +31,14 @@
       "http": 200,
       "archive": "archive/codehit-95b9936ab137d23b.txt",
       "sha256": "9f0ddde92d494019b1c780c3fcdf3caabaddc34fec18440ceae591f301ec5e6c"
+    },
+    {
+      "path": "receipts/mie0008-pinned-sourcezip.json",
+      "status": "size_limit_incomplete",
+      "http": 200,
+      "archive": "archive/mie0008-pinned-sourcezip.zip",
+      "sha256": "5ba9bbe20e7526f6e0d45c43e700f28506468877850e718b51b7ffe88656f848",
+      "warning": "128MiB prefix only, incomplete ZIP not used as complete source archive"
     }
   ],
   "discovery_evidence": [
@@ -57,6 +65,22 @@
       "path": "examples/llama.android/app/src/main/java/com/example/llama/ui/thanks/ThanksActivity.kt",
       "revision": "e701008557c758876a3da75ed373d91dd959b1bf",
       "acquisition": "receipts/codehit-95b9936ab137d23b.json"
+    },
+    {
+      "source": "collection/mie8commit-metadata.json",
+      "note": "fixed commit metadata"
+    },
+    {
+      "source": "collection/mie8repo-metadata.json",
+      "note": "current repo metadata, not historical experiment evidence"
+    },
+    {
+      "source": "collection/mie0008-engine-primary.json",
+      "note": "pinned AcademicYuvEngine source through GitHub connector"
+    },
+    {
+      "source": "collection/mie0008-manager-primary.json",
+      "note": "pinned NightModePluginManager source through GitHub connector"
     }
   ],
   "adequacy": "Materials available for analysis; not yet read or qualified",
