@@ -1,0 +1,51 @@
+{
+  "at": "2026-11-20T18:12:46.149895+08:00",
+  "same_original_coordinator": {
+    "pid": 3163555,
+    "start_ticks": 110804390,
+    "state": "S"
+  },
+  "same_original_worker": {
+    "pid": 3165654,
+    "start_ticks": 110822947,
+    "state": "S"
+  },
+  "source_freeze_unchanged": true,
+  "seed0_last_completed_common_step": 2838,
+  "formal_updates_observed": 8514,
+  "seed1_updates_observed": 0,
+  "seed0_completed_normally": false,
+  "new_DEV_completed": false,
+  "actual_last_training_row": {
+    "at": "2026-11-20T18:12:45.613073+08:00",
+    "common_step": 2838,
+    "data_step": 10837,
+    "controls": {
+      "gt": {
+        "loss": 0.0044379280880093575,
+        "gradient_norm": 0.8540415167808533
+      },
+      "spatial": {
+        "loss": 0.002005784772336483,
+        "gradient_norm": 0.412105917930603
+      },
+      "temporal": {
+        "loss": 0.002134409500285983,
+        "gradient_norm": 0.4167197644710541
+      }
+    },
+    "synchronized_pipeline_work_seconds": 0.09760986594483256,
+    "optimizer_updates": 8514,
+    "teacher_images": 45408,
+    "student_images": 136224,
+    "DIS_pairs": 34056
+  },
+  "recent_common_step_wall_seconds": 0.515456,
+  "estimated_seed0_remaining_seconds": 598.959872,
+  "estimate_is_deadline": false,
+  "retained_backups": [
+    "step1000.json",
+    "step2000.json"
+  ],
+  "scope": "Original job after one 20-minute interruptible sleep; no restart or checkpoint selection; full live logs retained for terminal commit."
+}
