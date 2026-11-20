@@ -1,0 +1,162 @@
+{
+  "resource_id": "MIE-0012",
+  "at": "2026-11-20T20:30:18.166363+08:00",
+  "source_aliases": {
+    "paper": "derived/docs/paper-text.txt and derived/figures/paper-pNN.png physicalPDF page",
+    "code/log": "derived/docs/author-source/<source_path> with1-basedlines",
+    "other": "explicitresource-relativepath"
+  },
+  "claims": [
+    {
+      "claim_id": "C01",
+      "evidence_class": "primary_identity_and_citation_check",
+      "claim": "Ao Li/Ce Zhu与MobileIE署名重叠，论文直接保留FST并基于其骨干；作者仓库承认部分建立于官方项目。",
+      "anchors": [
+        "paper:p1 authors,p2 §II-A,p5 §III-C,p6 ref11",
+        "code:README.md:153–161"
+      ],
+      "limitation": "初索引An已核正；arXiv/README自述ICME录用非独立正式版本核验。"
+    },
+    {
+      "claim_id": "C02",
+      "evidence_class": "author_report_and_static_check",
+      "claim": "DCT训练线性分支可折3×3，FFT注意力本身仍在推理。",
+      "anchors": [
+        "paper:p2 Figure2,p3 Eq1–4,p5 §III-D",
+        "code:model/utils.py:60–124,323–452"
+      ],
+      "limitation": "折叠只针对仿射分支，FST/FFT/全图统计/内存不是零成本。"
+    },
+    {
+      "claim_id": "C03",
+      "evidence_class": "static_model_check",
+      "claim": "当前单帧FST/FFT/maxmean无历史/未来帧/时间目标；空间频谱非时间建模。",
+      "anchors": [
+        "paper:p2 Figure2,p3 §II-C",
+        "code:model/uie.py:96–151,238–286",
+        "code:loss.py:1–120"
+      ],
+      "limitation": "纯当前图前向可因果调用，但不证明视频无闪烁。"
+    },
+    {
+      "claim_id": "C04",
+      "evidence_class": "paper_code_discrepancy_check",
+      "claim": "空间attention代码2→C的1×1，正文As有1/C不一致、图又标3×3；非整除先resize，边<32可能不为32²。",
+      "anchors": [
+        "paper:p2 Figure2,p3 §II-C",
+        "code:model/uie.py:17–46,82–84,112–142,227–257"
+      ],
+      "limitation": "输入分辨率不变性和部署代价不能仅由固定grid宣传确定。"
+    },
+    {
+      "claim_id": "C05",
+      "evidence_class": "symbolic_inference_from_pinned_source",
+      "claim": "活跃DCT的PW及gamma双零，fresh默认/有限梯度/无外部非零state时两梯度为零，分支持续无信号。",
+      "anchors": [
+        "code:model/utils.py:60–104,343–354",
+        "code:config/uie.yaml:31–37",
+        "code:model/__init__.py:29–42",
+        "derived/docs/dct-initialization-review.md"
+      ],
+      "limitation": "没有autograd/训练实验；不证明历史作者运行使用此源码，不否定全部attention结果。"
+    },
+    {
+      "claim_id": "C06",
+      "evidence_class": "author_report_and_data_protocol_check",
+      "claim": "论文UIEB800/90、C12/r4/K4/1000epoch/b4；当前loader只有crop未flip/rotate，testlist不自动应用。",
+      "anchors": [
+        "paper:p3 §III-A",
+        "code:config/uie.yaml:1–37",
+        "code:data/uiedata.py:12–61",
+        "code:data/__init__.py:25–91",
+        "code:uieb_test.txt:1–90"
+      ],
+      "limitation": "90唯一名不是独立视频划分/无泄漏与第三方许可验证。"
+    },
+    {
+      "claim_id": "C07",
+      "evidence_class": "static_loss_and_entry_check",
+      "claim": "代码OA+clip余弦+2PSNRloss与逐图MSE验证选best；默认test不自动装slim权重/切slim。",
+      "anchors": [
+        "code:loss.py:16–59,93–120",
+        "code:main.py:100–184",
+        "code:model/__init__.py:13–42",
+        "code:config/uie.yaml:31–37"
+      ],
+      "limitation": "同名LVW不当完整protocol一致证明；未经模型测试。"
+    },
+    {
+      "claim_id": "C08",
+      "evidence_class": "literal_dimension_arithmetic_and_author_report",
+      "claim": "slim字面4234吻合论文，TableI比MobileIE+1.161dB/+3.90%参数，FPS慢约12.58%。",
+      "anchors": [
+        "paper:p4 TableI",
+        "code:model/uie.py:208–235",
+        "derived/docs/paper-code-audit.json"
+      ],
+      "limitation": "非加载checkpoint参数统计/计时/独立评价；GFLOPs减少仅约.313%。"
+    },
+    {
+      "claim_id": "C09",
+      "evidence_class": "author_report_and_ablation_scope_check",
+      "claim": "TableII baseline是去attention骨干，+4.71不能全归FFT；去magnitude22.81更贴近对应分量控制。",
+      "anchors": [
+        "paper:p5 TableII/§III-C/Figure5",
+        "derived/docs/dct-initialization-review.md"
+      ],
+      "limitation": "无多seed/完整K和FFT规模配置，DCT双零版本与消融关系待核。"
+    },
+    {
+      "claim_id": "C10",
+      "evidence_class": "author_report_and_visual_check",
+      "claim": "静态图/无参考EUVP/UIQS评价没有直接时间恢复证据；UIQS各指标第二而非全部第一。",
+      "anchors": [
+        "paper:p4 TableI/Figures3–4,p5 §III-B",
+        "derived/docs/author-source/qualitative_results.png"
+      ],
+      "limitation": "选图观察不替代GT时序、动态夜间/噪声/曝光/运动评估。"
+    },
+    {
+      "claim_id": "C11",
+      "evidence_class": "author_report_and_deployment_scope_check",
+      "claim": "RTX3090不同尺寸FPS与Jetson AGXOrin64GB/640×480/106.9FPS/9.35ms分别报告。",
+      "anchors": [
+        "paper:p5 §III-D,p6 TableIII/§III-D"
+      ],
+      "limitation": "非手机/NX；精度/backend/FFT落点/完整延迟/峰值内存/能耗热稳未知。"
+    },
+    {
+      "claim_id": "C12",
+      "evidence_class": "archived_author_log_text_check",
+      "claim": "日志有1000epoch、最佳657约23.969，日志lr.0009与当前源.001不同。",
+      "anchors": [
+        "code:main.py:106–108",
+        "log:experiments/pretrain/logger.log:1–4,1020–1025",
+        "derived/docs/paper-code-audit.json"
+      ],
+      "limitation": "有作者记录但不保证源码/config/checkpoint/论文表对应；本次无训练。"
+    },
+    {
+      "claim_id": "C13",
+      "evidence_class": "primary_archive_scope_check",
+      "claim": "21件包含slimcheckpoint/5pyc/ApacheLICENSE；只核SHA/header/ZIP不加载，论文CC-BY与第三方数据授权分开。",
+      "anchors": [
+        "derived/docs/author-source-manifest.json",
+        "derived/docs/binary-metadata.json",
+        "code:README.md:70–91"
+      ],
+      "limitation": "未证明权重数值/来源/数据许可或已成功部署，不能把二进制存在当运行证据。"
+    },
+    {
+      "claim_id": "C14",
+      "evidence_class": "resource_specific_research_inference",
+      "claim": "普通频谱/FST/折叠先例直接相关，后续先对账初始化/版本，再控逐帧与因果统计状态/完整成本。",
+      "anchors": [
+        "derived/docs/reading-notes.md",
+        "derived/report/analysis.md",
+        "derived/docs/dct-initialization-review.md"
+      ],
+      "limitation": "本项候选非全部124项综合、新颖性认证或已启动Gate3。"
+    }
+  ]
+}
