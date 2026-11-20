@@ -50,8 +50,10 @@ def main(args):
         assert args.seed == 0
     else:
         for backend in ('cpu', 'cuda'):
-            markers = sorted(PROCESS.glob(f'{backend}-qualification*/qualification.json'))
-            assert markers and read(markers[-1])['passed']
+            attempts = sorted(PROCESS.glob(f'{backend}-qualification*'))
+            assert attempts and read(attempts[-1] / 'qualification.json')['passed']
+            assert read(attempts[-1] / 'runtime.json')['completed_normally']
+            assert read(attempts[-1] / 'config.json')['source_freeze'] == frozen
     limit = 2 if args.qualify else 4000
     label = f'{args.device}-qualification{args.attempt:03d}' if args.qualify else f'train-seed{args.seed}-attempt{args.attempt:03d}'
     out = PROCESS / label
@@ -77,11 +79,14 @@ def main(args):
             inherited = torch.load(args.resume, map_location='cpu', weights_only=False)
             assert inherited['resource_pause'] and inherited['source_freeze'] == frozen
             assert (inherited['seed'], inherited['device'], inherited['qualification']) == (args.seed, args.device, args.qualify)
-            counts = inherited['counts']
+            counts = copy.deepcopy(inherited['counts'])
             assert 0 <= counts['common_steps'] <= limit
             for arm in ARMS:
                 models[arm].load_state_dict(inherited['models'][arm], strict=True)
-            latest = dict(path=str(args.resume.resolve().relative_to(ROOT)), sha256=digest(args.resume),
+            resume_path = ROOT / args.resume
+            assert resume_path.resolve().is_relative_to('/data/Users/zrh/data/MobileIE-Neo')
+            recorded_path = str(resume_path.relative_to(ROOT)) if resume_path.is_relative_to(ROOT) else str(resume_path)
+            latest = dict(path=recorded_path, sha256=digest(args.resume),
                           seed=args.seed, qualification=args.qualify, counts=copy.deepcopy(counts),
                           resource_pause=True, inherited_checkpoint=True)
         prepared_step = 8000 + min(counts['common_steps'], limit - 1)
