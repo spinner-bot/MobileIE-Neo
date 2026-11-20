@@ -79,3 +79,9 @@ train_cpu_v1逐行派生冻结原脚本，模型/data/loss/Adam/clip/阶段/计�
 CPU原spatial4000唯一最终于14:22:37正常保存/实际重载全部有限；原1000/2000/3000/4000及final marker逐文件提交，均不是中途DEV选择。progress010核原同CPU PID/start live，warm2000/spatial4000/fixed655/learned0，teacher32000/bone114340/DIS7860双向对，进入同暖起点固定融合GT适配。学习组与seed1仍按原顺序，后续所有质量/感知/成本门槛保持，当前0新DEV。
 
 从55db7d8d起44个小提交已普通SSH推送到1dbeca52，fetch为44/0、push正常、ls-remote核同完整commit，push005留证。所有代码/解释/原始结果/过程/报告分开，原34＋5与CPU4冻结保持；原论文全部表行/PDF020、旧STOP、最终封存及完整论文goal active保持。
+
+## 2026-11-20T14:45:26.279877+08:00：固定融合完整最终与学习融合1000
+
+原CPU worker3024402/start109481902持续同身份运行，fixed4000于14:39:08正常保存唯一final、实际重载全部有限；4000/final marker分别提交。progress011保留warm2000/spatial4000/fixed4000/learned478真实前缀、日志字节长度及摘要。由原日志读取固定和学习组首个data_step2000窗口标量loss均0.004582887049764395，差0；这只是起点标量一致证据，不推出全局输出/梯度/优化轨迹等价，新增模型forward为0。
+
+随后学习融合原1000备份已保存并核文件摘要，累计teacher32000/bone236000/双向DIS60000/gate12000图；34原科学质量源、5辅助源、4 CPU执行源均逐项核保持。尚无新DEV/JOD或方法结论，不从中间loss/备份挑选模型；两seed及原强参照完整评价继续由同一协调器推进。用户再次提醒7号由其他分支占用，现有入口约定已保留，新主题8与该预留无冲突，不改其他worktree。
