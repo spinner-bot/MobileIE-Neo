@@ -1,0 +1,38 @@
+{
+  "resource_id": "MIE-0080",
+  "created_at": "2026-11-20T12:24:23+08:00",
+  "source_root": "../../.. (workstation root from this sources directory)",
+  "snapshot_cutoff": "2026-11-17",
+  "receipts": [
+    {
+      "path": "receipts/codehit-974bf9a92cbdf1ee.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/codehit-974bf9a92cbdf1ee.txt",
+      "sha256": "ce35fa6950b41d98489366149c32916ce928276d89085bab66d410dce4a028a3"
+    },
+    {
+      "path": "receipts/codehit-bbd84c8c93bf1148.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/codehit-bbd84c8c93bf1148.txt",
+      "sha256": "5075b4c21ef4ebd883df9e52046b953b217d1641a829da565cf5507a69124aa9"
+    }
+  ],
+  "discovery_evidence": [
+    {
+      "url": "https://github.com/Wzhi997/YOLO/blob/c875ec756e429553f1a11b3c8ccdcada3cb19652/yolo-improve/yolov11-project.md",
+      "path": "yolo-improve/yolov11-project.md",
+      "revision": "c875ec756e429553f1a11b3c8ccdcada3cb19652",
+      "acquisition": "receipts/codehit-974bf9a92cbdf1ee.json"
+    },
+    {
+      "url": "https://github.com/Wzhi997/YOLO/blob/c875ec756e429553f1a11b3c8ccdcada3cb19652/yolo-improve/rtdetr-project.md",
+      "path": "yolo-improve/rtdetr-project.md",
+      "revision": "c875ec756e429553f1a11b3c8ccdcada3cb19652",
+      "acquisition": "receipts/codehit-bbd84c8c93bf1148.json"
+    }
+  ],
+  "adequacy": "Materials available for analysis; not yet read or qualified",
+  "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts"
+}
