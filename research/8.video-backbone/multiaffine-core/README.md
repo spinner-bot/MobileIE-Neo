@@ -2,7 +2,7 @@
 
 2026-11-20；Codex  (sqs_A100)。[直接先例](../../5.prior-art-survey/docs/76-polynomial-networks-and-observation-ancestry.md)、[原型](core.py)、[CPU资格](preflight-decision.md)、[固定空间恢复协议](spatial-protocol.md)。乘法/多项式/基础期望恒等式均已知，尚无确立创新、视频质量或手机结果。
 
-当前空间训练链已启动：CUDA资格4更新全部丢弃，正式从独立随机M1和原Slim开始，各8000×两seed、共32000更新。原协调3393743/start112972989、首正式worker3394474/start112988524，实际GPU6/UUID尾`f55fd249`。后续应查真实句柄与[链状态](process/spatial-chain001/state.json)，勿把本段快照当永远活跃；首个[观察记录](process/observations/checkpoint001.json)与进展报告另存。最终恢复结果未取得，不读新DEV/最终、不自动开启视频训练。
+当前空间首seed已完成两架构各8000/共16000更新及768NN/192窗口输出固定评价，原worker3394474/quality3414567均终态。原父3393743/start112972989已自动新准入启动第二seed原3415953/start113206445，GPU6/UUID尾f55fd249、继承计数0。[0189](../../../docs/进展报告/0189-T-26112100-多线性骨干首种子完整训练与第二种子接续.md)与[观察003](process/observations/checkpoint003.json)留00:30各1047/正式全局18094更新。恢复结果仍待完整双seed，不能按本段静态PID重启；后续核[实际链状态](process/spatial-chain001/state.json)。所有CPU/CUDA资格更新丢弃，不自动开启视频/DEV/最终。
 
 原始raw四槽路径如下，共享A/B权重，第一层两帧对、第二层分支来源不重叠：
 
