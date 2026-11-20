@@ -1,0 +1,153 @@
+{
+  "at": "2026-11-20T16:35:29.657472+08:00",
+  "live_processes": {
+    "coordinator": {
+      "pid": 3117047,
+      "start_ticks": 110362360,
+      "state": "S"
+    },
+    "prebind": {
+      "pid": 3118635,
+      "start_ticks": 110367454,
+      "state": "S"
+    },
+    "metric": {
+      "pid": 3118981,
+      "start_ticks": 110372429,
+      "state": "S"
+    }
+  },
+  "current_chain_state": {
+    "at": "2026-11-20T16:35:26.907848+08:00",
+    "coordinator": {
+      "pid": 3117047,
+      "start_ticks": 110362360,
+      "state": "R"
+    },
+    "status": "running",
+    "stage": "perceptual-attempt004",
+    "resource_polls": 1,
+    "guard_attempts": 1,
+    "child": {
+      "pid": 3118635,
+      "start_ticks": 110367454,
+      "state": "S"
+    },
+    "worker": {
+      "pid": 3118981,
+      "start_ticks": 110372429,
+      "state": "S"
+    },
+    "stdout": ".cache/experiments/topic8-v1/chain005/perceptual-attempt004-guard00001.stdout.txt"
+  },
+  "actual_bound_GPU": {
+    "index": 6,
+    "UUID": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+    "matched": true,
+    "snapshot_process_memory_mib": 952,
+    "snapshot_is_not_peak": true
+  },
+  "admission_selected": {
+    "index": 6,
+    "uuid": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+    "allowed": true,
+    "mean_utilization_percent": 0,
+    "busy_sample_fraction": 0.0,
+    "max_used_mib": 4,
+    "minimum_free_mib": 40956,
+    "total_mib": 40960,
+    "incumbent_growth_reserve_mib": 8192,
+    "expected_own_increment_mib": 4096,
+    "required_free_mib": 13312
+  },
+  "official_JOD_complete_prefix": {
+    "path": "research/8.video-backbone/results/v1-perceptual-attempt004/per_sequence.jsonl",
+    "bytes": 2038,
+    "sha256": "f1544a49a99e5e0876e1d8fb4d151fd8bcbe09e30bb22237ecf5301db8e2a2c8",
+    "rows": 12,
+    "comparison_frames": 768
+  },
+  "old_zero_score_attempts": [
+    {
+      "path": "research/8.video-backbone/results/v1-perceptual-attempt001",
+      "runtime": {
+        "at": "2026-11-20T16:23:52.544259+08:00",
+        "pid": 3112886,
+        "completed_normally": false,
+        "resource_pause": true,
+        "quality_rows": 0,
+        "comparison_frames": 0,
+        "inherited_rows": 0,
+        "newly_scored_rows": 0,
+        "seconds": 63.151496233884245,
+        "GPU": null,
+        "max_allocated_bytes": 0,
+        "max_reserved_bytes": 0
+      }
+    },
+    {
+      "path": "research/8.video-backbone/results/v1-perceptual-attempt002",
+      "runtime": {
+        "at": "2026-11-20T16:26:36.165483+08:00",
+        "pid": 3114557,
+        "completed_normally": false,
+        "resource_pause": true,
+        "quality_rows": 0,
+        "comparison_frames": 0,
+        "inherited_rows": 0,
+        "newly_scored_rows": 0,
+        "seconds": 63.28787915594876,
+        "GPU": null,
+        "max_allocated_bytes": 0,
+        "max_reserved_bytes": 0
+      }
+    },
+    {
+      "path": "research/8.video-backbone/results/v1-perceptual-attempt003",
+      "runtime": {
+        "at": "2026-11-20T16:29:18.421201+08:00",
+        "pid": 3116246,
+        "completed_normally": false,
+        "resource_pause": true,
+        "quality_rows": 0,
+        "comparison_frames": 0,
+        "inherited_rows": 0,
+        "newly_scored_rows": 0,
+        "seconds": 61.31683550099842,
+        "GPU": null,
+        "max_allocated_bytes": 0,
+        "max_reserved_bytes": 0
+      }
+    }
+  ],
+  "old_metadata_coordinators_closed": [
+    3024380,
+    3106031,
+    3111112
+  ],
+  "numeric_worker_signals": 0,
+  "source_checks": {
+    "source-freeze001.json": {
+      "files": 34,
+      "unchanged": true
+    },
+    "perceptual-source-freeze001.json": {
+      "files": 5,
+      "unchanged": true
+    },
+    "cpu-execution-freeze001.json": {
+      "files": 4,
+      "unchanged": true
+    },
+    "gpu-group-execution-freeze001.json": {
+      "files": 2,
+      "unchanged": true
+    },
+    "gpu-group-execution-freeze002.json": {
+      "files": 4,
+      "unchanged": true
+    }
+  },
+  "new_observation_model_forwards": 0,
+  "scope": "Actual first official scoring now runs on physically matched GPU6 with unchanged metric/resource criteria; prior3 inner-group refusals remain zero-score resource records, no interim-score method/gate conclusion."
+}
