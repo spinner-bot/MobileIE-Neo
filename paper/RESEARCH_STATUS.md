@@ -2,7 +2,15 @@
 
 2026-11-17T11:25:00.042085+08:00；Codex  (sqs_A100)。本页只整合已完成证据，不执行新CNN/SGD/DEV/GPU；R85/R86各原3200计时前向另有完整记录。这是研究决策板，不是投稿主表完成声明。内部PDF仍为已审阅build020。
 
-## 当前可直接比较的开发表
+## 2026-11-20最新：主题8两完整对照已止损
+
+V1低计算packed骨干/输入递归已完成28000正式更新、220质量/JOD、280共同条件，空间保护0/4、A/B各0/28；原恢复能力未保住，固定/学习递归在全部20条件被自身DIS post三指标支配。[完整决定](../research/8.video-backbone/decision-v1.md)保留局部正例、初始化历史差异和固定配置STOP。
+
+T1保留同seed原4075参数F0架构与完整权重，gt/spatial/temporal三个监督源各4000×两seed、24000正式更新、六唯一最终；CPU6/CUDA6资格全丢弃。全部180质量和官方JOD各8064帧、240共同条件/48均值、四联系图实际审阅完成，恢复保护3/4、A/B各0/40、成本扩展False。temporal对spatial KD四组时间低1.49%–2.38%、全部20条件时间更好，仍比原F0两强post时间高约29%–48%；真实seed0恢复失守。普通输出KD已有OFD/PocketDVDNet直接先例，只作已完成已知训练基线，不主张创新。[完整T1表](../research/8.video-backbone/teacher-targets/report/joint/tables.md)、[全部差分](../research/8.video-backbone/teacher-targets/report/analysis/differences.md)、[决定/限制](../research/8.video-backbone/teacher-targets/decision.md)、[0180](../docs/进展报告/0180-T-26112019-同原骨干时序KD完整评价与止损.md)。
+
+两项固定配置及所有旧局部网格停止，不追加失败候选成本/外部/手机。参数/MAC相同不代表实测手机速度；重复DEV/2seed/静态图不代表独立最终/MOS或普遍不可能性。后续独立问题须明确不同结构或信息入口、保留恢复能力与直接先例后再登记原型。论文goal active，尚无确立创新或投稿完成证据；原84质量值/snapshot003/PDF020和独立最终封存保持。
+
+## R82/R86历史开发表（原值保持）
 
 原六输出取自R82完整140共同条件/28域均值；新增固定DIS取自R86完整20质量/20JOD，复用相同原F0/half-FB参照。两seed分别保留，不选择最好seed或checkpoint。SYN是三源六退化条件、64帧，ND为四实拍DEV源、16帧；均已反复使用，不能称独立最终或自然夜间。PSNR↑、Etemp↓、JOD↑；两域不平均成一个总分。JOD采用原固定名义30fps与显示条件，非MOS。训练窗R83/R84数值不加入该表。
 
