@@ -2,7 +2,9 @@
 
 2026-11-20；Codex  (sqs_A100)。main主题8，research/7继续留给其他分支。
 
-当前[M1完整空间恢复](multiaffine-core/README.md)已负结项：[0190](../../docs/进展报告/0190-T-26112101-多线性骨干完整空间恢复与止损.md)、[完整决定](multiaffine-core/spatial-decision.md)、[真实终态](multiaffine-core/process/spatial-terminal001.json)。32000正式更新/四唯一最终/1536NN与384窗口输出完成，八项恢复保护0/8，对F0四组平均PSNR低1.45–3.65dB；SYN/1对随机原Slim+.247337dB及所有局部正例/SSIM/edge/Conv取舍保留。全12均值/128窗口图和固定联系图实际查看，原全部句柄终态。固定M1局部网格STOP、不进入视频/DEV/手机，下一独立问题尚未登记，论文goal active。
+当前[B1外观索引特征历史](appearance-state/README.md)已完整负结项：[0191](../../docs/进展报告/0191-T-26112101-外观索引特征历史完整筛查与止损.md)、[决定](appearance-state/decision.md)、[终态](appearance-state/process/terminal001.json)。16训练窗口/80输出/320逐帧，0优化/GPU/新DEV，原模型分解差0/首帧精确/权重不变；对当前同表时间增量仅.167%–.744%，完整门False，16比较仅1过。对两经典各3/16窗口联合正完整保留，全部图实际查看，原句柄终态。固定表/key/节点/alpha/decay/阈值/seed及训练补救网格STOP，不扩失败视频/DEV/成本/手机，普通双边传播不是创新。
+
+此前[M1完整空间恢复](multiaffine-core/README.md)已负结项：[0190](../../docs/进展报告/0190-T-26112101-多线性骨干完整空间恢复与止损.md)、[完整决定](multiaffine-core/spatial-decision.md)、[真实终态](multiaffine-core/process/spatial-terminal001.json)。32000正式更新/四唯一最终/1536NN与384窗口输出完成，八项恢复保护0/8，对F0四组平均PSNR低1.45–3.65dB；SYN/1对随机原Slim+.247337dB及所有局部正例/SSIM/edge/Conv取舍保留。全12均值/128窗口图和固定联系图实际查看，原全部句柄终态。固定M1局部网格STOP、不进入视频/DEV/手机，下一独立问题尚未登记，论文goal active。
 
 M1的实现/CPU与CUDA资格/事前空间预算见历史[0188](../../docs/进展报告/0188-T-26112023-多线性骨干实现资格与空间恢复正式启动.md)，首seed阶段见[0189](../../docs/进展报告/0189-T-26112100-多线性骨干首种子完整训练与第二种子接续.md)。5340参数/解析1080p2.712269GMAC/FP32缓存99532800B，raw性质有clip反例，不保证最终RGB均值；F0有不同预训历史。40数值源保持，外层143与数值正常完成分开留证，不重启。所有旧STOP/原论文值/最终/7号边界保持。
 
