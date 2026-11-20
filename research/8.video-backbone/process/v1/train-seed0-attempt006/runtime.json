@@ -1,0 +1,55 @@
+{
+  "at": "2026-11-20T15:00:21.288732+08:00",
+  "pid": 3024402,
+  "seed": 0,
+  "completed_normally": true,
+  "resource_pause": false,
+  "counts": {
+    "updates": {
+      "warm": 2000,
+      "spatial": 4000,
+      "fixed": 4000,
+      "learned": 4000
+    },
+    "teacher_images": 32000,
+    "backbone_images": 320000,
+    "DIS_pairs": 96000,
+    "gate_images": 48000
+  },
+  "latest_checkpoint": {
+    "path": ".cache/experiments/topic8-v1/train-seed0-attempt006/learned-step4000.pt",
+    "sha256": "a55379be89b2b4e0cab85491c8513b990110fc2ab6698b95a104dfa1495e48b2",
+    "seed": 0,
+    "phase": "learned",
+    "counts": {
+      "updates": {
+        "warm": 2000,
+        "spatial": 4000,
+        "fixed": 4000,
+        "learned": 4000
+      },
+      "teacher_images": 32000,
+      "backbone_images": 320000,
+      "DIS_pairs": 96000,
+      "gate_images": 48000
+    },
+    "resource_pause": false
+  },
+  "seconds": 3388.303534620907,
+  "GPU": null,
+  "training_backend": "cpu",
+  "CUDA_initialized": false,
+  "CPU_execution_freeze": {
+    "at": "2026-11-20T14:03:06.960573+08:00",
+    "source_sha256": {
+      "research/8.video-backbone/train_cpu_v1.py": "f8b83b56f30b3262fe0d8315ec62cc45f36d499aa7f77404112cf7133bfdcd45",
+      "research/8.video-backbone/run_cpu_v1.py": "908635f4b5a600284f40efabf921f470a8b00e9dc2ed6191978f80715369715b",
+      "research/8.video-backbone/run_v1.py": "b684136dd123420e21b98145fe85a198f761cd87a2d08a234d931d8757c49576",
+      "research/8.video-backbone/cpu-backend-amendment001.md": "b5c8c2747ce0a2581a97e4d323b74e2cd54950d438debaa862ac2da941bf8137"
+    },
+    "canonical_science_freeze": "research/8.video-backbone/process/v1/source-freeze001.json",
+    "scope": "Explicit CPU execution backend only; canonical original34 training/quality and auxiliary5 unchanged, no model/data/optimization/algorithm budget/gate change."
+  },
+  "CUDA_max_allocated_bytes": 0,
+  "CUDA_max_reserved_bytes": 0
+}
