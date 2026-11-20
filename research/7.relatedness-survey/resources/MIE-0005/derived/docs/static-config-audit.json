@@ -1,0 +1,478 @@
+{
+  "resource_id": "MIE-0005",
+  "at": "2026-11-20T17:47:07.672089+08:00",
+  "method": "YAML parsing and source arithmetic only; no import/execution of upstream code",
+  "configs": [
+    {
+      "path": "configs--experiments--amnet--did--rgb_only_ft.yaml.txt",
+      "sha256": "bbbc8640b99894cf4deb2a817e41be556901b950b6345b8cd837ff668b79b4de",
+      "model": {
+        "in_ch": 3,
+        "encoder_channels": [
+          64,
+          128,
+          256,
+          256
+        ],
+        "latent_dim": 256,
+        "convlstm_hidden_ch": 256,
+        "convlstm_layers": 1,
+        "encoder_num_blocks": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "decoder_num_blocks": [
+          2,
+          2,
+          1,
+          2
+        ],
+        "use_multimodal_illumination": true,
+        "snr_factor": 1.0,
+        "snr_threshold": 0.5,
+        "snr_fusion_depth": 1,
+        "use_snr_guided_fusion": true,
+        "use_checkpoint": true,
+        "checkpoint_encoder": true,
+        "checkpoint_decoder": true,
+        "checkpoint_aux_encoder": true,
+        "checkpoint_fusion": true,
+        "pretrain_model": "checkpoints/amnet_pretrained.pth"
+      },
+      "train": {
+        "batch_size": 8,
+        "accumulate_grad_batches": 1,
+        "use_amp": false,
+        "num_epochs": 100,
+        "lr": 0.0001,
+        "optim": "adamw",
+        "weight_decay": 0.0001,
+        "log_interval": 10,
+        "save_interval": 1,
+        "max_ckpt": 3,
+        "use_ema": true,
+        "ema_decay": 0.999,
+        "ema_start_epoch": 0,
+        "scheduler": {
+          "use": true,
+          "type": "cosine",
+          "warmup_epochs": 5,
+          "min_lr": "1e-6",
+          "num_cycles": 1
+        },
+        "loss_weight": {
+          "lambda_robust": 1.0,
+          "lambda_real": 0.6,
+          "lambda_distill_ir": 0.5,
+          "lambda_distill_event": 0.2,
+          "lambda_ssim": 0.1,
+          "distill_warmup_epochs": 5
+        },
+        "train_use_real_event": false,
+        "train_use_real_ir": false,
+        "freeze_backbone": false,
+        "freeze_aux_encoders": true,
+        "rgb_only": true
+      },
+      "dataset": {
+        "type": "did",
+        "root": "/path/to/DID_1080",
+        "clip_len": 8,
+        "clip_stride": 2,
+        "crop_size": [
+          128,
+          128
+        ],
+        "base_size": 256,
+        "num_workers": 6,
+        "split_json": "configs/splits/did_split.json"
+      },
+      "test_batch_size_hardcoded": 4
+    },
+    {
+      "path": "configs--experiments--amnet--sde--sde_in_mm.yaml.txt",
+      "sha256": "e3ab38c44aa892bef5457a5828643dddbea0120681f56777c3f453c60983d2da",
+      "model": {
+        "in_ch": 3,
+        "encoder_channels": [
+          64,
+          128,
+          256,
+          256
+        ],
+        "latent_dim": 256,
+        "convlstm_hidden_ch": 256,
+        "convlstm_layers": 1,
+        "encoder_num_blocks": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "decoder_num_blocks": [
+          2,
+          2,
+          1,
+          2
+        ],
+        "use_multimodal_illumination": true,
+        "snr_factor": 1.0,
+        "snr_threshold": 0.5,
+        "snr_fusion_depth": 1,
+        "use_snr_guided_fusion": true,
+        "use_checkpoint": true,
+        "checkpoint_encoder": true,
+        "checkpoint_decoder": true,
+        "checkpoint_aux_encoder": true,
+        "checkpoint_fusion": true,
+        "pretrain_model": "checkpoints/amnet_pretrained.pth"
+      },
+      "train": {
+        "batch_size": 4,
+        "accumulate_grad_batches": 1,
+        "use_amp": false,
+        "num_epochs": 100,
+        "lr": 1e-06,
+        "optim": "adamw",
+        "weight_decay": 0.0001,
+        "log_interval": 10,
+        "save_interval": 1,
+        "max_ckpt": 3,
+        "use_ema": true,
+        "ema_decay": 0.999,
+        "ema_start_epoch": 0,
+        "scheduler": {
+          "use": true,
+          "type": "cosine",
+          "warmup_epochs": 10,
+          "min_lr": "1e-8",
+          "num_cycles": 1
+        },
+        "loss_weight": {
+          "lambda_robust": 1.0,
+          "lambda_real": 0.6,
+          "lambda_distill_ir": 0.5,
+          "lambda_distill_event": 0.2,
+          "lambda_ssim": 0.1,
+          "distill_warmup_epochs": 5
+        },
+        "train_use_real_event": true,
+        "train_use_real_ir": false,
+        "freeze_backbone": true,
+        "freeze_aux_encoders": false,
+        "rgb_only": false
+      },
+      "dataset": {
+        "type": "sde_in_mm",
+        "root": "/path/to/SDE_indoor",
+        "clip_len": 8,
+        "clip_stride": 2,
+        "crop_size": [
+          128,
+          128
+        ],
+        "base_size": 256,
+        "num_workers": 6,
+        "split_json": "configs/splits/sde_indoor_split.json",
+        "use_event": true,
+        "use_ir": false,
+        "num_bins": 10,
+        "mask_mode": "strict",
+        "p_mask_event": 0.0
+      },
+      "test_batch_size_hardcoded": 4
+    },
+    {
+      "path": "configs--experiments--amnet--sde--sde_out_mm.yaml.txt",
+      "sha256": "1c7b3777f332ebf0d6cc65c87f352a2c0b2aa4447eed6dd86147adb7b11dc53a",
+      "model": {
+        "in_ch": 3,
+        "encoder_channels": [
+          64,
+          128,
+          256,
+          256
+        ],
+        "latent_dim": 256,
+        "convlstm_hidden_ch": 256,
+        "convlstm_layers": 1,
+        "encoder_num_blocks": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "decoder_num_blocks": [
+          2,
+          2,
+          1,
+          2
+        ],
+        "use_multimodal_illumination": true,
+        "snr_factor": 1.0,
+        "snr_threshold": 0.5,
+        "snr_fusion_depth": 1,
+        "use_snr_guided_fusion": true,
+        "use_checkpoint": true,
+        "checkpoint_encoder": true,
+        "checkpoint_decoder": true,
+        "checkpoint_aux_encoder": true,
+        "checkpoint_fusion": true,
+        "pretrain_model": "checkpoints/amnet_pretrained.pth"
+      },
+      "train": {
+        "batch_size": 4,
+        "accumulate_grad_batches": 1,
+        "use_amp": false,
+        "num_epochs": 100,
+        "lr": 1e-06,
+        "optim": "adamw",
+        "weight_decay": 0.0001,
+        "log_interval": 10,
+        "save_interval": 1,
+        "max_ckpt": 3,
+        "use_ema": true,
+        "ema_decay": 0.999,
+        "ema_start_epoch": 0,
+        "scheduler": {
+          "use": true,
+          "type": "cosine",
+          "warmup_epochs": 10,
+          "min_lr": "1e-8",
+          "num_cycles": 1
+        },
+        "loss_weight": {
+          "lambda_robust": 1.0,
+          "lambda_real": 0.6,
+          "lambda_distill_ir": 0.5,
+          "lambda_distill_event": 0.2,
+          "lambda_ssim": 0.1,
+          "distill_warmup_epochs": 5
+        },
+        "train_use_real_event": true,
+        "train_use_real_ir": false,
+        "freeze_backbone": true,
+        "freeze_aux_encoders": false,
+        "rgb_only": false
+      },
+      "dataset": {
+        "type": "sde_out_mm",
+        "root": "/path/to/SDE_outdoor",
+        "clip_len": 8,
+        "clip_stride": 2,
+        "crop_size": [
+          128,
+          128
+        ],
+        "base_size": 256,
+        "num_workers": 6,
+        "split_json": "configs/splits/sde_outdoor_split.json",
+        "use_event": true,
+        "use_ir": false,
+        "num_bins": 10,
+        "mask_mode": "strict",
+        "p_mask_event": 0.0
+      },
+      "test_batch_size_hardcoded": 4
+    },
+    {
+      "path": "configs--experiments--amnet--sdsd--sdsd_in_rgb.yaml.txt",
+      "sha256": "02119c72cc90e2a0b1b1ef3eb1cf88cde07b108f04ad7f13a79650c8f8e886d1",
+      "model": {
+        "in_ch": 3,
+        "encoder_channels": [
+          64,
+          128,
+          256,
+          256
+        ],
+        "latent_dim": 256,
+        "convlstm_hidden_ch": 256,
+        "convlstm_layers": 1,
+        "encoder_num_blocks": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "decoder_num_blocks": [
+          2,
+          2,
+          1,
+          2
+        ],
+        "use_multimodal_illumination": true,
+        "snr_factor": 1.0,
+        "snr_threshold": 0.5,
+        "snr_fusion_depth": 1,
+        "use_snr_guided_fusion": true,
+        "use_checkpoint": true,
+        "checkpoint_encoder": true,
+        "checkpoint_decoder": true,
+        "checkpoint_aux_encoder": true,
+        "checkpoint_fusion": true,
+        "pretrain_model": "checkpoints/amnet_pretrained.pth"
+      },
+      "train": {
+        "batch_size": 4,
+        "accumulate_grad_batches": 1,
+        "use_amp": false,
+        "num_epochs": 100,
+        "lr": 0.0001,
+        "optim": "adamw",
+        "weight_decay": 0.0001,
+        "log_interval": 10,
+        "save_interval": 1,
+        "max_ckpt": 3,
+        "use_ema": true,
+        "ema_decay": 0.999,
+        "ema_start_epoch": 0,
+        "scheduler": {
+          "use": true,
+          "type": "cosine",
+          "warmup_epochs": 5,
+          "min_lr": "1e-6",
+          "num_cycles": 1
+        },
+        "loss_weight": {
+          "lambda_robust": 1.0,
+          "lambda_real": 0.6,
+          "lambda_distill_ir": 0.5,
+          "lambda_distill_event": 0.2,
+          "lambda_ssim": 0.1,
+          "distill_warmup_epochs": 5
+        },
+        "train_use_real_event": false,
+        "train_use_real_ir": false,
+        "freeze_backbone": false,
+        "freeze_aux_encoders": true,
+        "rgb_only": true
+      },
+      "dataset": {
+        "type": "sdsd_in",
+        "root": "/path/to/SDSD/indoor_np",
+        "clip_len": 8,
+        "clip_stride": 2,
+        "crop_size": [
+          128,
+          128
+        ],
+        "base_size": 256,
+        "num_workers": 6,
+        "split_json": "configs/splits/sdsd_indoor_split.json"
+      },
+      "test_batch_size_hardcoded": 4
+    },
+    {
+      "path": "configs--experiments--amnet--sdsd--sdsd_out_rgb.yaml.txt",
+      "sha256": "b06573a04457d8fb586d8b4883474fe112e4f524667384c5e5f6b7d3a6a9fcd7",
+      "model": {
+        "in_ch": 3,
+        "encoder_channels": [
+          64,
+          128,
+          256,
+          256
+        ],
+        "latent_dim": 256,
+        "convlstm_hidden_ch": 256,
+        "convlstm_layers": 1,
+        "encoder_num_blocks": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "decoder_num_blocks": [
+          2,
+          2,
+          1,
+          2
+        ],
+        "use_multimodal_illumination": true,
+        "snr_factor": 1.0,
+        "snr_threshold": 0.5,
+        "snr_fusion_depth": 1,
+        "use_snr_guided_fusion": true,
+        "use_checkpoint": true,
+        "checkpoint_encoder": true,
+        "checkpoint_decoder": true,
+        "checkpoint_aux_encoder": true,
+        "checkpoint_fusion": true,
+        "pretrain_model": "checkpoints/amnet_pretrained.pth"
+      },
+      "train": {
+        "batch_size": 4,
+        "accumulate_grad_batches": 1,
+        "use_amp": false,
+        "num_epochs": 100,
+        "lr": 1e-06,
+        "optim": "adamw",
+        "weight_decay": 0.0001,
+        "log_interval": 10,
+        "save_interval": 1,
+        "max_ckpt": 3,
+        "use_ema": true,
+        "ema_decay": 0.999,
+        "ema_start_epoch": 0,
+        "scheduler": {
+          "use": true,
+          "type": "cosine",
+          "warmup_epochs": 10,
+          "min_lr": "1e-8",
+          "num_cycles": 1
+        },
+        "loss_weight": {
+          "lambda_robust": 1.0,
+          "lambda_real": 0.6,
+          "lambda_distill_ir": 0.5,
+          "lambda_distill_event": 0.2,
+          "lambda_ssim": 0.1,
+          "distill_warmup_epochs": 5
+        },
+        "train_use_real_event": false,
+        "train_use_real_ir": false,
+        "freeze_backbone": true,
+        "freeze_aux_encoders": true,
+        "rgb_only": true
+      },
+      "dataset": {
+        "type": "sdsd_out",
+        "root": "/path/to/SDSD/outdoor_np",
+        "clip_len": 8,
+        "clip_stride": 2,
+        "crop_size": [
+          128,
+          128
+        ],
+        "base_size": 256,
+        "num_workers": 6,
+        "split_json": "configs/splits/sdsd_outdoor_split.json"
+      },
+      "test_batch_size_hardcoded": 4
+    }
+  ],
+  "arithmetic_only": {
+    "rgb_input_7_frames_1080p_fp32_bytes": 174182400,
+    "rgb_input_MiB": 166.11328125,
+    "one_layer_HC_1080p_fp32_bytes": 66355200,
+    "one_layer_HC_MiB": 63.28125,
+    "cell_construction_params": 4719616,
+    "not_whole_model_or_peak_or_measured": true
+  },
+  "all_default_use_amp_false": true,
+  "entry_interfaces": {
+    "demo": "scripts/inference_full.py:73–90 offline whole clip directory buffering; no stream API invocation",
+    "model_offline": "models/amnet.py:149–283,383–393 reset state then chronological recurrence",
+    "model_stream": "models/amnet.py:395–479 explicit persistent H/C with caller lifecycle"
+  },
+  "unknown_runtime": [
+    "torch_npu/CANN/PyTorch versions and target device",
+    "FFT/complex/backend fallbacks",
+    "outputs/checkpoint numerical equivalence",
+    "actual memory/latency/energy/thermals"
+  ],
+  "model_executed": false
+}
