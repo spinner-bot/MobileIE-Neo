@@ -1,0 +1,49 @@
+{
+  "resource_id": "MIE-0007",
+  "temporary_key": "code-nlsidf--ndk-vnrit",
+  "type": "code",
+  "title": "nlsidf/ndk-vnrit",
+  "repo": "nlsidf/ndk-vnrit",
+  "revision": "b169f207b3766a4ab037bfd5202860ea9f553d43",
+  "tree": null,
+  "dois": null,
+  "arxivs": null,
+  "relation": "Explicit MobileIE implementation/module reuse; module-port claim requires independent source review, no fidelity/performance assumed",
+  "created_at": "2026-11-20T12:24:23+08:00",
+  "authors": [],
+  "dates": {
+    "years": [],
+    "published_date": null,
+    "date_verification": "pending Gate2"
+  },
+  "repository_owner": "nlsidf",
+  "family": "011-rust",
+  "analysis_order": 7,
+  "initial_preliminary": {
+    "R": 4,
+    "N": 3,
+    "U": 3,
+    "E": 2,
+    "score": 100,
+    "tier": "A",
+    "category": "explicit-temporal-claim",
+    "family": "011-rust",
+    "role_order": 2,
+    "summary": "相关NDK版本。核查与Rust上游、Android封装及所谓抗闪烁机制的实质关系。",
+    "reason_R": "任务联系：相关NDK版本。核查与Rust上游、Android封装及所谓抗闪烁机制的实质关系。",
+    "reason_N": "重复/混淆风险为初级待证判断；依据当前明确关联与基础/接续/移植角色，非已确立创新结论",
+    "reason_U": "可操作性：按所列机制、对照或来源核查用途评分；未运行外部代码",
+    "reason_E": "已有可读HTML/文本/局部固定源码；内容充分性留待Gate2",
+    "evidence": [
+      {
+        "url": "https://github.com/nlsidf/ndk-vnrit/blob/b169f207b3766a4ab037bfd5202860ea9f553d43/src/main.rs",
+        "path": "src/main.rs",
+        "revision": "b169f207b3766a4ab037bfd5202860ea9f553d43",
+        "acquisition": "receipts/codehit-eefc6c98cbbd2a4d.json"
+      }
+    ],
+    "not_gate2": true
+  },
+  "source_snapshot_cutoff": "2026-11-17",
+  "identity_verification": "pending Gate2; repository owner is not assumed to be the paper author"
+}
