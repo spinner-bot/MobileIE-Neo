@@ -12,11 +12,16 @@ def main():
    if not f.exists():f=B/r['path']
    assert hashlib.sha256(f.read_bytes()).hexdigest()==r['sha256'],str(f)
  order=json.loads((B/'catalog/order-v1.json').read_text())['order'];assert a.resource_id in order
+ log=B/'catalog/analysis-log.jsonl';events=[json.loads(s) for s in log.read_text().splitlines() if s] if log.exists() else []
  i=order.index(a.resource_id)
  for previous in order[:i]:
   f=B/'resources'/previous/'derived/report/gate2.json';assert f.exists(),f'Previous Gate2 missing: {previous}'
   g=json.loads(f.read_text());assert g.get('review_passed') and g.get('status') in ['pass_full','closed_limited'],previous
- log=B/'catalog/analysis-log.jsonl';events=[json.loads(s) for s in log.read_text().splitlines() if s] if log.exists() else []
+  closes=[e for e in events if e['event']=='close' and e['resource_id']==previous];assert len(closes)==1,previous
+  close=closes[0];assert hashlib.sha256(f.read_bytes()).hexdigest()==close['gate2_sha256'],previous+' Gate changed after close'
+  integrity=f.parent/'integrity.json';assert hashlib.sha256(integrity.read_bytes()).hexdigest()==close['integrity_sha256'],previous+' audit changed'
+  for item in json.loads(integrity.read_text())['files']:
+   asset=B/'resources'/previous/item['path'];assert asset.is_file() and hashlib.sha256(asset.read_bytes()).hexdigest()==item['sha256'],str(asset)
  if events and events[-1]['event']=='begin':
   assert events[-1]['resource_id']==a.resource_id,'Another resource still open'
   print('Existing active resource',a.resource_id,'no duplicate begin');return
