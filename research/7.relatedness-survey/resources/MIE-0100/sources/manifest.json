@@ -44,5 +44,12 @@
     }
   ],
   "adequacy": "Materials available for analysis; not yet read or qualified",
-  "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts"
+  "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts",
+  "path_conventions": {
+    "receipts[].path": "relative to workstation/collection",
+    "receipts[].archive": "relative to workstation",
+    "discovery_evidence strings": "relative to workstation/collection",
+    "discovery_evidence[].source": "collection/ prefix relative to workstation; research/ prefix relative to repository root",
+    "discovery_evidence[].acquisition": "relative to workstation/collection; path is remote repository path at revision"
+  }
 }

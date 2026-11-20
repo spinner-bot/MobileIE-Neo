@@ -14,7 +14,9 @@ def main():
    cross=json.loads((C/'raw/newreview-crossref.json').read_text())['message'];authors=[' '.join([a.get('given',''),a.get('family','')]).strip() for a in cross.get('author',[])]
   identity={k:r.get(k) for k in ['resource_id','temporary_key','type','title','repo','revision','tree','dois','arxivs','relation']};identity.update(created_at=now,authors=authors,dates=dates,repository_owner=(r['repo'].split('/')[0] if r.get('repo') else None),family=r['preliminary']['family'],analysis_order=r['analysis_order'],initial_preliminary=r['preliminary'],source_snapshot_cutoff='2026-11-17',identity_verification='pending Gate2; repository owner is not assumed to be the paper author')
   manifest={'resource_id':r['resource_id'],'created_at':now,'source_root':'../../.. (workstation root from this sources directory)','snapshot_cutoff':'2026-11-17','receipts':available[r['temporary_key']]['receipts'],'discovery_evidence':r['sources'],'adequacy':'Materials available for analysis; not yet read or qualified','archive_location':'workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts'}
+  manifest['path_conventions']={'receipts[].path': 'relative to workstation/collection', 'receipts[].archive': 'relative to workstation', 'discovery_evidence strings': 'relative to workstation/collection', 'discovery_evidence[].source': 'collection/ prefix relative to workstation; research/ prefix relative to repository root', 'discovery_evidence[].acquisition': 'relative to workstation/collection; path is remote repository path at revision'}
   for x in manifest['receipts']:
+   assert (C/x['path']).is_file(),x['path']
    f=B/x['archive'] if x.get('archive') else None
    if f and f.exists():assert hashlib.sha256(f.read_bytes()).hexdigest()==x['sha256']
   (d/'identity.json').write_text(json.dumps(identity,ensure_ascii=False,indent=2)+'\n');(d/'sources/manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
