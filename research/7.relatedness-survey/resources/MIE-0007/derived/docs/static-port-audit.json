@@ -1,0 +1,36 @@
+{
+  "resource_id": "MIE-0007",
+  "method": "Static text/metadata and ELF header only; no binary execution, compilation or MediaCodec calls",
+  "compared_to": "MIE-0006 pinned source",
+  "enhancement_block_normalized_identical": true,
+  "enhancement_normalized_sha256": "ca51549a421b42ac4f8257eb3cef548c0eec9c8efbc24db5297e29bd1e8fcbb2",
+  "normalization_scope": "Strip blank/comment text, trim lines, rename mul_widen to widening_mul only; no assertion compiled API semantic equivalence",
+  "init_block_normalized_identical": true,
+  "inherited_arithmetic": "MIE-0006 source expressions retained after specified normalization; its literal arithmetic remains applicable to selected expressions, not compiled SIMD behavior",
+  "actual_main_lines": 4887,
+  "lock": {
+    "path": "derived/docs/Cargo.lock",
+    "sha256": "eb16fb6b966bf0cdf5d8e8a0bb4bc878478d59ca8fa0ae67aeddec9e53406d19",
+    "package_markers": 365,
+    "git_source_markers": []
+  },
+  "test_mc_binary": {
+    "bytes": 570008,
+    "sha256": "0bfdf0c2195bc7e60ebdef68571a9095747a9667ccdcf3b5170c8d7a7cde38d2",
+    "ELF_magic": "7f454c46",
+    "ELF_class": 2,
+    "endianness": "little",
+    "e_machine": 183,
+    "execution": false,
+    "not_proved": [
+      "source correspondence",
+      "actual test success",
+      "generating device",
+      "quality/latency result"
+    ]
+  },
+  "models_new_json_bytes": 0,
+  "no_LICENSE_file_in_archive": true,
+  "documentation_license_conflict": "Cargo Apache-2.0; README/vnrit.md MIT with missing LICENSE target",
+  "source_predecessor_limit": "MIE-0007 July25 is earlier than MIE-0006 Aug4 fixed commit; comparison is same-owner variant, not proven chronological continuation"
+}
