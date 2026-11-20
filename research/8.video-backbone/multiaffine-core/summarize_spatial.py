@@ -37,7 +37,7 @@ def main():
         allowed_separate_video_registration=all(r['passed'] for r in comparisons),
         new_innovation_or_video_quality_established=False, held_out_draws_not_scenes=True))
     content = ['# M1-S：完整空间恢复必要检验', '',
-        '训练池内固定保留抽样，非独立DEV/最终；三输出预训/参数/训练形态不同，不能据此纯架构排名。', '',
+        '训练池内固定保留抽样，非独立DEV/最终；三输出预训/参数/训练形态不同，不能据此纯架构排名。逐帧PSNR按事前约定封顶120dB，所有触发标记保留。', '',
         '|域|seed|输出|PSNR|SSIM|edge|原始F0差MSE|越界比例|', '|---|---:|---|---:|---:|---:|---:|---:|']
     for r in means:
         content.append(f'|{r["domain"]}|{r["seed"]}|{r["arm"]}|{r["psnr_rgb"]:.6f}|{r["ssim_rgb"]:.6f}|{r["edge_mae"]:.6f}|{r["raw_fidelity_MSE_to_F0"]:.8f}|{r["outside_display_range_fraction"]:.6f}|')
