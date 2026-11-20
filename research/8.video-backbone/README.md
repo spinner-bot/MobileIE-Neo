@@ -2,7 +2,7 @@
 
 2026-11-20；Codex  (sqs_A100)。main主题8，research/7继续留给其他分支。
 
-当前[O1共享核心](operator-core/README.md)完成CPU资格并登记16K正式学习/完整32训练窗筛查：[0192](../../docs/进展报告/0192-T-26112107-共享核心资格与正式学习准备.md)、[协议](operator-core/training-protocol.md)。初始空间/传输/stream差0、共享梯度有限、8更新全丢弃；5049参数及状态/Conv只是预算。首CUDA环境失败0优化原样留存，隔离修订后chain002原3551565/start115612249在资源等待，未占GPU，正式更新0；实际进度查原state，勿重复启动。25/39原源和新增2执行源保持，尚无正式质量/方法结论。
+当前[O1共享核心](operator-core/README.md)已正式学习：[0193](../../docs/进展报告/0193-T-26112107-共享核心CUDA资格与正式训练启动.md)、[观察002](operator-core/process/observation002.json)。CUDA资格013正常通过/4丢弃更新，GPU4匹配/allocator峰约402MiB，原父3551565自动fresh启动seed0原3582586/start115719183、继承0；观察时各118步，原16K预算和完整32窗/36门继续，全部质量尚待。25/39＋2源保持，先前环境失败原样；用户1–2许可已记录、8卡空闲后沿原同链接续。不得以资格/部分loss宣布视频收益或重启旧pending链。
 
 此前[B1外观索引特征历史](appearance-state/README.md)已完整负结项：[0191](../../docs/进展报告/0191-T-26112101-外观索引特征历史完整筛查与止损.md)、[决定](appearance-state/decision.md)、[终态](appearance-state/process/terminal001.json)。16训练窗口/80输出/320逐帧，0优化/GPU/新DEV，原模型分解差0/首帧精确/权重不变；对当前同表时间增量仅.167%–.744%，完整门False，16比较仅1过。对两经典各3/16窗口联合正完整保留，全部图实际查看，原句柄终态。固定表/key/节点/alpha/decay/阈值/seed及训练补救网格STOP，不扩失败视频/DEV/成本/手机，普通双边传播不是创新。
 
