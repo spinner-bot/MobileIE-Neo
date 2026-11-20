@@ -86,6 +86,10 @@ def main():
             return latest
 
         for phase in PHASES:
+            if inherited is not None and PHASES.index(phase) < PHASES.index(inherited['phase']):
+                # Earlier controls are already final. In particular do not copy
+                # the warm weights over adapted controls on resource resume.
+                continue
             model = core if phase == 'warm' else models[phase]
             model.train()
             optimizer = torch.optim.Adam(model.parameters(), lr=1e-3 if phase == 'warm' else 1e-4,
