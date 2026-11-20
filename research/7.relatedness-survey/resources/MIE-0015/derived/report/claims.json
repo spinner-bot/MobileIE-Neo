@@ -1,0 +1,157 @@
+{
+  "resource_id": "MIE-0015",
+  "at": "2026-11-21T07:59:30.854809+08:00",
+  "source_aliases": {
+    "code": "derived/docs/upstream-code/{source path slash replaced by --}.txt at f1d25d2,1-based lines",
+    "other": "explicit resource-relative file"
+  },
+  "claims": [
+    {
+      "claim_id": "C01",
+      "evidence_class": "primary_identity_and_source_check",
+      "claim": "原文/README相互指向同一作者项目，固定f1d25d2/tree d914、21件152472B，提交Jun7不是首公开。",
+      "anchors": [
+        "identity.json",
+        "derived/docs/source-correspondence-audit.json",
+        "code:README.md:1-8"
+      ],
+      "limitation": "owner本身非作者证明；同研究载体不是独立数值确认。"
+    },
+    {
+      "claim_id": "C02",
+      "evidence_class": "verified_reading_reuse",
+      "claim": "21件逐SHA与已关闭14相同，逐Git blob与新确切tree相符，适用核心阅读透明复用并补核入口/工具。",
+      "anchors": [
+        "derived/docs/source-correspondence-audit.json",
+        "derived/docs/reading-notes.md",
+        "derived/docs/upstream-code-manifest.json"
+      ],
+      "limitation": "不是21个通用文件全部逐行审计或第二次数值复现；未用工具范围明确。"
+    },
+    {
+      "claim_id": "C03",
+      "evidence_class": "static_model_and_temporal_scope",
+      "claim": "单图/外部任务onehot，双bank固定先验融合，GELU/SW-SA/Haar保留，无时间state/未来。",
+      "anchors": [
+        "code:net/DRNet_arch.py:77-172",
+        "code:net/DRNet_arch.py:536-583",
+        "code:net/net_utils.py:1-120"
+      ],
+      "limitation": "代数和源码证据，不证明FP16/NPU兼容、视频闪烁或完整低成本。"
+    },
+    {
+      "claim_id": "C04",
+      "evidence_class": "static_one_way_deployment_check",
+      "claim": "首次switch删bank/TSM并detach，deploy后再次switch直接return；不能仅传新prompt换同一已融合对象。",
+      "anchors": [
+        "code:net/DRNet_arch.py:117-172"
+      ],
+      "limitation": "重载、另实例、多配置缓存代价尚未实测，不能把配置时成本也说免费。"
+    },
+    {
+      "claim_id": "C05",
+      "evidence_class": "static_semantic_mapping_gap",
+      "claim": "训练set转list而推理固定名单；未见独立generic blind任务。transfer去net.前缀存state_dict但没提供语义映射。",
+      "anchors": [
+        "code:utils/dataset_utils.py:36-51",
+        "code:inference_5tasks.py:243-250",
+        "code:inference_3tasks.py:245-252",
+        "code:transfer.py:1-21"
+      ],
+      "limitation": "未证明作者历史映射错；权重metadata未见任务字符串不等于所有可能编码均不存在。"
+    },
+    {
+      "claim_id": "C06",
+      "evidence_class": "static_training_protocol_check",
+      "claim": "默认3base而train5维；README150/b8/4卡但只暴露2；options1200/b2、scheduler15/100和不同任务重复倍数需对账。",
+      "anchors": [
+        "code:README.md:59-67",
+        "code:options.py:8-14",
+        "code:train.py:18-19",
+        "code:train.py:94-124",
+        "code:utils/dataset_utils.py:67-135"
+      ],
+      "limitation": "没有执行或定位默认首异常；实际历史配置和ID名单未取得，不能推结果伪造。"
+    },
+    {
+      "claim_id": "C07",
+      "evidence_class": "static_release_entry_check",
+      "claim": "README指向未发布inference.py和非CLI sigma；实际3/5入口sigma硬编码50/25，inference.sh全为注释例。",
+      "anchors": [
+        "code:README.md:69-92",
+        "code:inference.sh:1-8",
+        "code:inference_5tasks.py:224-264",
+        "code:inference_3tasks.py:259-266"
+      ],
+      "limitation": "可能有别的历史入口；修正后运行不等于原命令复现，当前未运行。"
+    },
+    {
+      "claim_id": "C08",
+      "evidence_class": "static_data_metric_check",
+      "claim": "RGB/255、AWGNclip/uint8，去噪先裁32再pad到下一64；4非去噪任务均input/target配对，指标为clamp RGBfloat/skimage。",
+      "anchors": [
+        "code:inference_5tasks.py:25-67",
+        "code:inference_5tasks.py:73-142",
+        "code:inference_5tasks.py:145-179",
+        "code:metrics/psnr_ssim.py:10-29",
+        "code:utils/data_util.py:35-46"
+      ],
+      "limitation": "不提供真实无GT FADE/NIMA或时间评价；split/样本许可/重叠未知，不能替换成其他metric协议。"
+    },
+    {
+      "claim_id": "C09",
+      "evidence_class": "static_output_artifact_check",
+      "claim": "默认save_imgFalse，调用未改且CLI无保存开关；setup_logger tofileFalse，默认仅控制台均值。",
+      "anchors": [
+        "code:inference_5tasks.py:145-220",
+        "code:inference_5tasks.py:224-279",
+        "code:utils/metric_util.py:1-19",
+        "code:utils/util.py:65-87"
+      ],
+      "limitation": "output_path存在不证明留有逐图输出/原始日志；save_image函数存在也不等于默认执行。"
+    },
+    {
+      "claim_id": "C10",
+      "evidence_class": "static_benchmark_scope_check",
+      "claim": "模型main只随机输入/提示forward并计未融合参数，无switch或部署成本计时；固定包无手机/视频流/时间指标基准。",
+      "anchors": [
+        "code:net/DRNet_arch.py:585-597",
+        "derived/docs/archive-inventory.json"
+      ],
+      "limitation": "清单范围缺失，不证明作者历史没有基准或模型不能部署；不作为论文成本复现。"
+    },
+    {
+      "claim_id": "C11",
+      "evidence_class": "primary_dependency_license_limit",
+      "claim": "README MIT badge但无LICENSE；源码导入scikit-image/termcolor而requirements未显式列出。",
+      "anchors": [
+        "code:README.md:7-8",
+        "code:requirements.txt:1-68",
+        "code:metrics/psnr_ssim.py:1-8",
+        "code:utils/util.py:1-14",
+        "derived/docs/archive-inventory.json"
+      ],
+      "limitation": "未安装/测试，外部或传递依赖可能补足；不声称依赖必失败、确定首错或作法律授权判断。"
+    },
+    {
+      "claim_id": "C12",
+      "evidence_class": "artifact_integrity_only",
+      "claim": "3/5任务权重完整66084673/66198640B、ZIP全CRC通过，metadata仅opcode，TSM/专家bank键名可见。",
+      "anchors": [
+        "sources/manifest.json",
+        "derived/docs/reading-notes.md"
+      ],
+      "limitation": "证据复用14的固定摘要与容器检查，无Torch/pickle反序列化或模型数值验证；未证明盲配置、映射或论文表重现。"
+    },
+    {
+      "claim_id": "C13",
+      "evidence_class": "research_controls_not_results",
+      "claim": "配置生命周期可参考，先核版本/语义/折叠/协议，之后在同信息/质量/因果性/完整成本下检验视频假设。",
+      "anchors": [
+        "derived/report/analysis.md",
+        "derived/docs/reading-notes.md"
+      ],
+      "limitation": "Gate3仅未来新实验分支；当前未解决视频稳定性，也不把代码项当第二份独立科研实证。"
+    }
+  ]
+}
