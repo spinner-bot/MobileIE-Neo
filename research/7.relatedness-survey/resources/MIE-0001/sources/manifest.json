@@ -1,0 +1,36 @@
+{
+  "resource_id": "MIE-0001",
+  "created_at": "2026-11-20T12:24:23+08:00",
+  "source_root": "../../.. (workstation root from this sources directory)",
+  "snapshot_cutoff": "2026-11-17",
+  "receipts": [
+    {
+      "path": "receipts/official-paper-pdf.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/official-paper-pdf.pdf",
+      "sha256": "05cbc3ab33a4c808f80838648709de00b8219a799a9d746bbc6314313584ea07"
+    },
+    {
+      "path": "receipts/official-supplement-large.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/official-supplement-large.pdf",
+      "sha256": "e77b55157936ee52e2bf215d2703412564e261775cdc83e77d27698af05ab617"
+    },
+    {
+      "path": "receipts/official-paper-arxiv-html.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/official-paper-arxiv-html.html",
+      "sha256": "26ccbf5b1fa502f0a801a10dcd09ada43e1d0b7ceec057d69b98ee1cf97cd954"
+    }
+  ],
+  "discovery_evidence": [
+    "receipts/official-paper-pdf.json",
+    "receipts/official-supplement-large.json",
+    "receipts/official-paper-arxiv-html.json"
+  ],
+  "adequacy": "Materials available for analysis; not yet read or qualified",
+  "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts"
+}
