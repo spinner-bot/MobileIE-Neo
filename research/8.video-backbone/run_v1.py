@@ -31,6 +31,40 @@ def identity(pid):
         return dict(pid=pid, already_exited=True)
 
 
+def resource_resume(attempts, previous):
+    """Retain the upstream checkpoint when a resumed child did no new work."""
+    assert previous['resource_pause'] and not previous['completed_normally']
+    marker = previous['latest_checkpoint']
+    forwarded = False
+    if marker is None and any(previous['counts']['updates'].values()):
+        config = read(attempts[-1] / 'config.json')
+        assert config['seed'] == previous['seed']
+        assert config['inherited_counts'] == previous['counts'], 'Uncheckpointed new work must not be discarded'
+        assert previous['GPU'] is None and previous['CUDA_max_allocated_bytes'] == 0
+        upstream = config['resume']
+        assert upstream is not None, 'Nonzero inherited state needs an actual upstream checkpoint'
+        upstream_path = Path(upstream['path']).resolve()
+        for older in reversed(attempts[:-1]):
+            candidate = read(older / 'runtime.json').get('latest_checkpoint')
+            if (candidate is not None and (ROOT / candidate['path']).resolve() == upstream_path
+                    and candidate['sha256'] == upstream['sha256']
+                    and candidate['counts'] == previous['counts']):
+                marker = candidate
+                forwarded = True
+                break
+        assert marker is not None, 'Upstream checkpoint needs an original matching saved-count record'
+    if marker is None:
+        assert not any(previous['counts']['updates'].values())
+        return None, None
+    assert marker['resource_pause'] and marker['seed'] == previous['seed']
+    assert marker['counts'] == previous['counts']
+    path = ROOT / marker['path']
+    assert path.resolve().is_relative_to('/data/Users/zrh/data/MobileIE-Neo')
+    assert digest(path) == marker['sha256']
+    return path, dict(checkpoint=marker, forwarded_without_new_update=forwarded,
+                      previous_attempt=str(attempts[-1].relative_to(ROOT)))
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--chain', type=int, required=True)
@@ -150,14 +184,9 @@ def main():
                         break
                     if not previous['resource_pause']:
                         raise RuntimeError(f'Original training failure is not resource-only: {terminal}')
-                    marker = previous['latest_checkpoint']
-                    if marker is not None:
-                        assert marker['resource_pause']
-                        resume = ROOT / marker['path']
-                        assert resume.resolve().is_relative_to('/data/Users/zrh/data/MobileIE-Neo')
-                        assert digest(resume) == marker['sha256']
-                    else:
-                        assert not any(previous['counts']['updates'].values())
+                    resume, resume_record = resource_resume(attempts, previous)
+                    if resume_record is not None:
+                        append(out / 'resource-continuations.jsonl', dict(at=stamp(), seed=seed, **resume_record))
                 number = 1 if not attempts else int(attempts[-1].name.split('attempt')[1]) + 1
                 command = [python, str(BASE / 'train_v1.py'), '--seed', str(seed), '--attempt', str(number)]
                 if resume is not None:
