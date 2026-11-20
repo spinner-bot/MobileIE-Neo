@@ -1,0 +1,108 @@
+{
+  "resource_id": "MIE-0013",
+  "at": "2026-11-20T20:48:58.608821+08:00",
+  "source_aliases": {
+    "code": "derived/docs/upstream-code/source_path with slash replaced by -- and .txt;1basedline",
+    "other": "explicitresource-relativepath"
+  },
+  "claims": [
+    {
+      "claim_id": "C01",
+      "evidence_class": "primary_identity_and_source_check",
+      "claim": "作者固定Apr24完整21件/13可读，与论文证据同摘要，README明确部分基于MobileIE。",
+      "anchors": [
+        "identity.json",
+        "derived/docs/source-correspondence-audit.json",
+        "code:README.md:153–161"
+      ],
+      "limitation": "同一研究载体非独立重复验证；提交日期非首公开。"
+    },
+    {
+      "claim_id": "C02",
+      "evidence_class": "static_model_check",
+      "claim": "当前帧FFT/空间maxmean/FST，无历史/未来/时间loss，As实际C通道。",
+      "anchors": [
+        "code:model/uie.py:17–46,96–151,208–286",
+        "code:loss.py:1–120"
+      ],
+      "limitation": "不证明真实视频时序稳定、任意分辨率不变或常数pipeline成本。"
+    },
+    {
+      "claim_id": "C03",
+      "evidence_class": "static_fold_check",
+      "claim": "MBR原始/BN等支concat后PW折叠，FST/PReLU/gates映射到slim；DCT只在MBR3加。",
+      "anchors": [
+        "code:model/utils.py:170–452,457–534",
+        "code:model/uie.py:159–200"
+      ],
+      "limitation": "冻结BN仿射关系的静态审查，未验证数值精度/完整部署；FFT非线性仍运行。"
+    },
+    {
+      "claim_id": "C04",
+      "evidence_class": "symbolic_conditional_inference",
+      "claim": "fresh默认路径DCT PW/gamma双零，两梯度零，不贡献该分支信号。",
+      "anchors": [
+        "code:model/utils.py:60–104,343–354",
+        "code:config/uie.yaml:32–37",
+        "derived/docs/prior-dct-initialization-review.md"
+      ],
+      "limitation": "不推历史实验造假/全模型不能训练；非零state/别的源不同条件，未作autograd实验。"
+    },
+    {
+      "claim_id": "C05",
+      "evidence_class": "static_entry_protocol_check",
+      "claim": "defaultoriginal/pretrainedFalse/need_slimFalse，README测试不会自动用发布slim。",
+      "anchors": [
+        "code:model/__init__.py:13–42",
+        "code:config/uie.yaml:32–37",
+        "code:README.md:29–64"
+      ],
+      "limitation": "strictFalse非正确加载证明，checkpoint未反序列化核键/数值。"
+    },
+    {
+      "claim_id": "C06",
+      "evidence_class": "static_data_and_training_check",
+      "claim": "90唯一名单未由loader自动应用，data仅crop无flip/rotate，best由每epochvalid选。",
+      "anchors": [
+        "code:data/__init__.py:25–151",
+        "code:data/uiedata.py:12–102",
+        "code:main.py:100–157",
+        "code:uieb_test.txt:1–90"
+      ],
+      "limitation": "不证明数据独立/无泄漏或作者训练史与当前代码一致。"
+    },
+    {
+      "claim_id": "C07",
+      "evidence_class": "archived_log_and_static_check",
+      "claim": "1000epoch作者log最佳657约23.969，lr.0009与当前硬编码.001不同；不是本次结果。",
+      "anchors": [
+        "code:main.py:106–108",
+        "derived/docs/author-log.txt",
+        "derived/docs/prior-paper-code-audit.json"
+      ],
+      "limitation": "日志源码/config/权重历史对应未知；不将末值当最优或重现成功。"
+    },
+    {
+      "claim_id": "C08",
+      "evidence_class": "static_interface_check",
+      "claim": "demo路径传gtNone且返回三元组，maindemo仅两项解包，存在默认collate/解包兼容风险。",
+      "anchors": [
+        "code:data/__init__.py:116–150",
+        "code:data/uiedata.py:77–92",
+        "code:main.py:187–200"
+      ],
+      "limitation": "未运行定位首个异常，不声称作者所有实际demo都失败。"
+    },
+    {
+      "claim_id": "C09",
+      "evidence_class": "resource_specific_inference_and_scope_check",
+      "claim": "可迁移模块/划分线索，完整复现须版本/初始化/加载/同信息与全成本先对账；暂无设备/时序复现。",
+      "anchors": [
+        "derived/docs/reading-notes.md",
+        "derived/report/analysis.md",
+        "derived/docs/prior-binary-metadata.json"
+      ],
+      "limitation": "Apache代码不自动覆盖数据/权重来源；0当前运行/GPU/Gate3，不作全124总体结论。"
+    }
+  ]
+}
