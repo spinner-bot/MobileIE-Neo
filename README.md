@@ -4,7 +4,9 @@
 
 ## 当前研究状态
 
-2026-11-20最新[0185：粗能量历史零更新筛查与止损](docs/进展报告/0185-T-26112022-粗能量历史零更新筛查与止损.md)：[P1](research/8.video-backbone/phase-envelope/README.md)已完成1280NN/0优化/200输出条件，冻结原模型的当前载波+能量历史在四噪声组对raw时间升.456%–.560%，未通过训练门槛。clean正例保留，停止固定能量/差分/alpha/尺度/clip/epsilon网格；全30均值图和固定联系图实际查看，无新DEV/GPU/最终。[完整决定](research/8.video-backbone/phase-envelope/decision.md)、[真实终态](research/8.video-backbone/phase-envelope/process/terminal001.json)，无活跃实验，不按旧state重启。
+2026-11-20最新[0186：单向传输筛查与止损](docs/进展报告/0186-T-26112022-单向传输贡献者离散度筛查与止损.md)：[S1](research/8.video-backbone/single-direction/README.md)已完成64NN/80输出条件、0更新/GPU/DEV/最终。三个完整门均False，对原双向DIS三个组质量低.51–.73dB，ND0和逐窗正例保留；固定目标贡献者矩/mass界/阈值/alpha/preset/field来源网格STOP。全20均值与16窗口联系图实际查看，[决定](research/8.video-backbone/single-direction/decision.md)和[真实终态](research/8.video-backbone/single-direction/process/terminal001.json)保持完整，无活跃实验，不按旧state重启。
+
+此前[0185：粗能量历史零更新筛查与止损](docs/进展报告/0185-T-26112022-粗能量历史零更新筛查与止损.md)：[P1](research/8.video-backbone/phase-envelope/README.md)已完成1280NN/0优化/200输出条件，冻结原模型的当前载波+能量历史在四噪声组对raw时间升.456%–.560%，未通过训练门槛。clean正例保留，停止固定能量/差分/alpha/尺度/clip/epsilon网格；全30均值图和固定联系图实际查看，无新DEV/GPU/最终。[完整决定](research/8.video-backbone/phase-envelope/decision.md)、[真实终态](research/8.video-backbone/phase-envelope/process/terminal001.json)，无活跃实验，不按旧state重启。
 
 此前[0184：部署递归监督完整评价与止损](docs/进展报告/0184-T-26112021-部署递归监督完整评价与止损.md)：[T2](research/8.video-backbone/recurrent-objective/README.md)已完成16000正式更新/四唯一最终、120质量与120官方JOD/360共同条件/72均值、四固定图和两全点PNG实际审阅。恢复0/4、A成对0/44、B10/44、额外学习0/8，完整资格False。对独立clip-GT DIS有SYN PSNR+.10–.11dB/14条件PSNR正例，但全部20条件时间更高（四组+1.50%–2.46%），固定配置局部网格STOP，不扩失败成本/外部/手机，不继续向T1/T2加loss或延长诊断。原协调/数值/评分任务全部终态、GPU释放，勿按旧静态PID重启。[完整决定](research/8.video-backbone/recurrent-objective/decision.md)、[主表](research/8.video-backbone/recurrent-objective/report/joint/tables.md)、[真实终态](research/8.video-backbone/recurrent-objective/process/terminal001.json)。
 
