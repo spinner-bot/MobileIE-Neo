@@ -79,6 +79,14 @@
         {
           "source": "resources/MIE-0002/derived/report/analysis.md",
           "locator": "official RGB implementation conventions"
+        },
+        {
+          "source": "resources/MIE-0002/derived/docs/upstream-code/test_TFLite_RGB.py.txt",
+          "locator": "24–31 RGB/255 input,47–53 invoke and clip0–1 output"
+        },
+        {
+          "source": "resources/MIE-0002/derived/docs/upstream-code/data--lledata.py.txt",
+          "locator": "15–20 official RGB training/test input /255"
         }
       ],
       "limitation": "Specific imported model may include own transforms; no blanket claim every BYOM is wrong or FP16 internal weights equal FP16 input tensors."
