@@ -1,0 +1,61 @@
+{
+  "resource_id": "MIE-0009",
+  "temporary_key": "code-tediyankov--reef-track",
+  "type": "code",
+  "title": "tediyankov/reef-track",
+  "repo": "tediyankov/reef-track",
+  "revision": "af76a927c568795e800f8d8e0c28c3b939fd6f1f",
+  "tree": null,
+  "dois": null,
+  "arxivs": null,
+  "relation": "Explicit MobileIE implementation/module reuse; module-port claim requires independent source review, no fidelity/performance assumed",
+  "created_at": "2026-11-20T12:24:23+08:00",
+  "authors": [],
+  "dates": {
+    "years": [],
+    "published_date": null,
+    "date_verification": "pending Gate2"
+  },
+  "repository_owner": "tediyankov",
+  "family": "013-reeftrack",
+  "analysis_order": 9,
+  "initial_preliminary": {
+    "R": 4,
+    "N": 2,
+    "U": 3,
+    "E": 2,
+    "score": 90,
+    "tier": "A",
+    "category": "video-application-integration",
+    "family": "013-reeftrack",
+    "role_order": 1,
+    "summary": "水下跟踪代码含MobileIE增强实现。核是否逐帧、是否有增强状态，以及跟踪效果能否说明闪烁。",
+    "reason_R": "任务联系：水下跟踪代码含MobileIE增强实现。核是否逐帧、是否有增强状态，以及跟踪效果能否说明闪烁。",
+    "reason_N": "重复/混淆风险为初级待证判断；依据当前明确关联与基础/接续/移植角色，非已确立创新结论",
+    "reason_U": "可操作性：按所列机制、对照或来源核查用途评分；未运行外部代码",
+    "reason_E": "已有可读HTML/文本/局部固定源码；内容充分性留待Gate2",
+    "evidence": [
+      {
+        "url": "https://github.com/tediyankov/reef-track/blob/af76a927c568795e800f8d8e0c28c3b939fd6f1f/src/reeftrack/enhance/__init__.py",
+        "path": "src/reeftrack/enhance/__init__.py",
+        "revision": "af76a927c568795e800f8d8e0c28c3b939fd6f1f",
+        "acquisition": "receipts/codehit-00e69f74166a7045.json"
+      },
+      {
+        "url": "https://github.com/tediyankov/reef-track/blob/af76a927c568795e800f8d8e0c28c3b939fd6f1f/README.md",
+        "path": "README.md",
+        "revision": "af76a927c568795e800f8d8e0c28c3b939fd6f1f",
+        "acquisition": "receipts/codehit-0c1888a427b7b1f4.json"
+      },
+      {
+        "url": "https://github.com/tediyankov/reef-track/blob/af76a927c568795e800f8d8e0c28c3b939fd6f1f/src/reeftrack/gui/app.py",
+        "path": "src/reeftrack/gui/app.py",
+        "revision": "af76a927c568795e800f8d8e0c28c3b939fd6f1f",
+        "acquisition": "receipts/codehit-c274d372c3af2098.json"
+      }
+    ],
+    "not_gate2": true
+  },
+  "source_snapshot_cutoff": "2026-11-17",
+  "identity_verification": "pending Gate2; repository owner is not assumed to be the paper author"
+}

@@ -1,0 +1,51 @@
+{
+  "resource_id": "MIE-0009",
+  "created_at": "2026-11-20T12:24:23+08:00",
+  "source_root": "../../.. (workstation root from this sources directory)",
+  "snapshot_cutoff": "2026-11-17",
+  "receipts": [
+    {
+      "path": "receipts/codehit-00e69f74166a7045.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/codehit-00e69f74166a7045.txt",
+      "sha256": "e207d4f212f44f6536c48e0f6fb93b6ffd156a7574e18aba97e68593c0e4695a"
+    },
+    {
+      "path": "receipts/codehit-0c1888a427b7b1f4.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/codehit-0c1888a427b7b1f4.txt",
+      "sha256": "976da60f43b694e3dbec6302c4fbe3c115dcc91ef91bfaa2449bdb0a36ade64b"
+    },
+    {
+      "path": "receipts/codehit-c274d372c3af2098.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/codehit-c274d372c3af2098.txt",
+      "sha256": "10803f964dac670bcbc5b2c8187807cd0bf2d1b865f0e3738e955b6f328bee0b"
+    }
+  ],
+  "discovery_evidence": [
+    {
+      "url": "https://github.com/tediyankov/reef-track/blob/af76a927c568795e800f8d8e0c28c3b939fd6f1f/src/reeftrack/enhance/__init__.py",
+      "path": "src/reeftrack/enhance/__init__.py",
+      "revision": "af76a927c568795e800f8d8e0c28c3b939fd6f1f",
+      "acquisition": "receipts/codehit-00e69f74166a7045.json"
+    },
+    {
+      "url": "https://github.com/tediyankov/reef-track/blob/af76a927c568795e800f8d8e0c28c3b939fd6f1f/README.md",
+      "path": "README.md",
+      "revision": "af76a927c568795e800f8d8e0c28c3b939fd6f1f",
+      "acquisition": "receipts/codehit-0c1888a427b7b1f4.json"
+    },
+    {
+      "url": "https://github.com/tediyankov/reef-track/blob/af76a927c568795e800f8d8e0c28c3b939fd6f1f/src/reeftrack/gui/app.py",
+      "path": "src/reeftrack/gui/app.py",
+      "revision": "af76a927c568795e800f8d8e0c28c3b939fd6f1f",
+      "acquisition": "receipts/codehit-c274d372c3af2098.json"
+    }
+  ],
+  "adequacy": "Materials available for analysis; not yet read or qualified",
+  "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts"
+}
