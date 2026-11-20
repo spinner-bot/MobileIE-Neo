@@ -6,7 +6,11 @@
 
 目录编号约束（2026-11-17T19:15:22.552814+08:00；用户明确通知）：`research/` 的7号已由其他分支占用，即使当前main工作区尚无该目录，也不得将其视为可用。新建独立研究主题目录应跳到 `research/8.*`，保留7号给原占用分支。
 
-当前最新0186/主题8-S1单向传输贡献者离散度筛查已完整负结项：[0186](docs/进展报告/0186-T-26112022-单向传输贡献者离散度筛查与止损.md)、[决定](research/8.video-backbone/single-direction/decision.md)、[原真实终态](research/8.video-backbone/single-direction/process/terminal001.json)、[过程](research/8.video-backbone/single-direction/process/journal.md)。双冻结4075参数F0/原两训练批、64NN/16窗/80输出/320逐帧、48双向DIS对/96calc及48共同GT-derived评分FB对，0优化/GPU/DEV/最终。原3364020/start112572637于22:39:38正常38.999856秒结束，session20567 exit0、真实/proc原句柄已无，当前没有任何S1/P1/T2/T1/V1活跃作业。三纯数组资格/16窗原pipeline缓存fields差0，26具名冻结保持。对原FB仅ND0一组通过；SYN0/1、ND1 PSNR低.51–.73dB，对单backward的5%时间门四组都失败，三个完整门False；对原FB仍9/16窗口联合正、对raw12/16联合正，不能抹掉局部收益。全20均值及全部16窗t3 PNG实际view_image，PDF只导出，非播放/MOS/手机/独立最终。停止固定目标贡献者方差/mass界/阈值/alpha/preset/field来源网格，不训练补救/扩失败DEV/成本/手机；直接splat/flow方差已有先例，未建立创新或加速。按旧同加载器速度sleep60秒后一次收齐，无墙钟截止，不按旧state重启。
+当前最新0187/主题8-N1三观测方差识别已完整结项：[0187](docs/进展报告/0187-T-26112023-三观测方差识别校准与骨干问题收敛.md)、[决定](research/8.video-backbone/triple-variance/decision.md)、[原终态](research/8.video-backbone/triple-variance/process/terminal001.json)、[过程](research/8.video-backbone/triple-variance/process/journal.md)。双冻结原F0/四既定训练纹理，2048独立参考+9216 probe共11264NN、16参考/48 probe/3072triplet，0优化/flow/GPU/DEV/最终。原3377962/start112695846于23:01:23正常111.089698秒结束，session2391 exit0、真实/proc原句柄已无，当前没有任何N1/S1/P1/T2/T1/V1活跃作业；16具名冻结保持。主24组完整门12/24，global14/local16/negative24；固定20/20/20为8/8正例，异photon4/16、80/20/20全部局部误差失败，实际运动资格False。均值项可达当前V0的1.076倍；相关误差既可估低亦可估高，不能把差分直接叫通用方差或唯一归因FSTS。停止固定三观测/16tile/截断/窗口/模式/相关构造局部网格，不加平滑或训练补救、不扩实际运动/DEV/手机。全48点和24主组两PNG实际view_image，PDF只导出，非视频质量/端侧/独立最终。3648图/33.8秒估余一分多钟后sleep90秒一次收齐，无墙钟截止、不重启旧state。
+
+下一先核[骨干级待核问题](research/8.video-backbone/triple-variance/next-core-question.md)：不重叠观测来源树的多线性信息路径；尚未实现/登记模型，不启动GPU或以基础代数称创新。必须先核ABM/多项式/去耦直接先例、必要空间恢复和完整状态/运动/clip假设；不能简单给T1/T2或失败后处理加loss。原跨帧乘法/去偏/经验矩STOP不解封，4075非用户硬上限但已冻协议不放宽。论文goal active，尚无确立创新/真实自然夜间/手机/独立最终证据。
+
+先前S1原64NN/80输出完整负结项：[0186](docs/进展报告/0186-T-26112022-单向传输贡献者离散度筛查与止损.md)、[S1决定](research/8.video-backbone/single-direction/decision.md)。26具名冻结/原pipeline差0保持，三个完整门False；停止固定目标贡献者方差/mass界/阈值/alpha/preset/field来源网格，不扩失败DEV/成本/训练；原全部句柄终态。
 
 先前P1原1280NN/0优化/200输出已完整负结项：[0185](docs/进展报告/0185-T-26112022-粗能量历史零更新筛查与止损.md)、[P1决定](research/8.video-backbone/phase-envelope/decision.md)。18具名冻结/80首帧差0保持，只有clean_mapping通过，固定粗能量/差分/alpha/尺度/clip/epsilon网格STOP；不据clean正例追加训练。新核OLiVES Genlock/25fps采集不能反改旧nominal30fps JOD或未经抽帧间隔核查声称缓存连续25fps。
 
@@ -35,4 +39,4 @@
 - 所有既有STOP继续有效，包括R28/R34/R37/R44–R46/R48/R50–R51/R61/R64–R65/R73–R75/R77/R79–R82/R84–R88等的局部网格；本主题也须按自身协议止损。旧决策原文在[研究决策目录](research/4.temporal-consistency/docs/)，完整历史在[原文快照](docs/交接历史/AGENTS-20261120-1524.md)。不因当前入口缩短而恢复任何已停止实验。
 - 原始MobileIE/F0实际4075参数；主题8-V1独立空间16180、学习融合16365，使用两遍骨干和DIS，不能写成4K或零额外推理开销。packing、KD、门控、递归等已知组件不是已确立创新。
 - OLiVES 43/71/83、DAVIS testdev、Kodak 13–24独立最终继续封存；未经预定开发/冻结门槛，不读取最终像素或将开发集结论改称独立测试。主论文原84质量值/snapshot003/PDF020保持，当前仍非投稿完成稿。
-- main只推进核心研究，survey/pre与demo/org各自worktree不修改、7号继续预留。先读[最新0186](docs/进展报告/0186-T-26112022-单向传输贡献者离散度筛查与止损.md)、[主题8入口](research/8.video-backbone/README.md)、[原完整过程](research/8.video-backbone/process/v1/journal.md)与[论文状态](paper/RESEARCH_STATUS.md)；需要早期细节再定向查历史，勿按旧活跃行重启。
+- main只推进核心研究，survey/pre与demo/org各自worktree不修改、7号继续预留。先读[最新0187](docs/进展报告/0187-T-26112023-三观测方差识别校准与骨干问题收敛.md)、[主题8入口](research/8.video-backbone/README.md)、[原完整过程](research/8.video-backbone/process/v1/journal.md)与[论文状态](paper/RESEARCH_STATUS.md)；需要早期细节再定向查历史，勿按旧活跃行重启。
