@@ -47,3 +47,13 @@ CUDA资源观测设备总占用最大15308MiB/空余最小25651MiB；work5.76439
 13:24:36第一次正式train-seed0-attempt001 prebind选物理3，但mean65.0909%/忙45.45%拒绝75，无child/正式目录/更新；协调器自动等候后新采样，13:26:45仍live并在guard00003新一轮正式准入。不能从“running”或旧returncode字段称训练已更新；实际首更新与checkpoint另核。代码/预算/门槛均保持，无科学重试。
 
 只读survey/pre@a0ca4c23已提交的MIE-0001/2/3（不改7号、其他worktree或其Gate），再直接读AnyMod-LLVE arXiv2606.11186v1 §3.1/附录B/Table3/设置，写独立先例边界。该文已有RGB缺模态推理/ConvLSTM并比较MobileIE，不拼其zero-shot空间数值到当前DEV，也不将KD/RGB推理当创新。本轮未运行外部代码、下载新权重或打开新/最终视频；不因新先例改动冻结V1。paper证据入口只追加状态/引用，原84数与PDF020不变。
+
+## 2026-11-20T13:38:46.621396+08:00：实际资源241保存与零新更新续接修复
+
+中断后先核三个原/proc身份，确认原协调器/guard/worker仍live，不由丢失的fetch工具句柄重启科学任务。正式物理2新内层准入mean57.9091%/忙18.18%、空余26686MiB，UUID匹配；progress003保存126步真实前缀。之后原worker2996011于13:29:46三次间隔post-yield≥90%资源保存退出75，完整241更新/3856教师和骨干图，allocator95027712B/reserved119537664B；所有已结束trace/windows/marker/资源原因/runtime逐文件提交。
+
+原attempt002 worker3000204从241载入后内部准入拒绝，CUDA0/新更新0/计数仍241/latest_checkpoint=None。原chain001在13:32:39元数据断言失败，原runtime=False及错误/launches/exits/全资源history保留；根agent核原PID2988618/2999613/3000204都缺失后才修改非科学协调器。没有杀进程或丢失更新。
+
+run_v1仅加入对无新更新继承状态的严格转发：比较config.inherited_counts、seed、GPU=None/allocator0，找到更早原保存marker的同路径/摘要/计数，保持原模型/Adam/步数；任何未保存新增更新或跨seed都拒绝。check_resume_forwarding_v1用真实241/零更新记录通过，故意242及错seed拒绝，0模型/SGD/新像素/torch导入。34训练/质量源与5辅助源保持，不修改原runtime/latest_checkpoint，也不重复CUDA资格。
+
+13:35:43实际独立session启动chain002 PID3003196/start109313161，stdout自有data；新config绑定修复后协调器源码，progress004核同身份live、真实forwarding日志，保留原241并等待attempt003，下一实际更新应242。新回归、launch、config、完整旧终态与此过程均分别提交。长期目标保持active，不以此资源修复宣称论文或候选有效。
