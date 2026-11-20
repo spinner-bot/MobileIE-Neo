@@ -2,7 +2,7 @@
 
 2026-11-20；Codex  (sqs_A100)。main主线新主题，从8起；research/7由其他分支占用。此页是研究入口，具体实验以单独协议为准，不是创新声明。
 
-当前V1完整候选已实现并持续训练：[协议](protocol-v1.md)、[原训练审计](original-model-and-training.md)、[先例](precedents-and-candidate.md)、[CPU执行修订](cpu-backend-amendment001.md)。CPU/CUDA资格各8丢弃通过，原GPU更新358全部保留。共享GPU反复退让后，仅在无活跃数值child时正常退出空闲watcher，显式两线程/nice5 CPU从359继续；原34训练质量源及5辅助源不改，新增CPU执行4源单独冻结，后端改变不称逐bit复现。CPU协调3024380/start109481893、worker3024402/start109481902仍以真实进程核验为准。唯一warm2000已完成并重载有限，fresh Adam开始三控制GT适配；[progress011](process/v1/progress011.json)核warm2000/spatial4000/fixed4000唯一最终均已完成、学习融合478步真实前缀，随后原learned1000备份已核摘要并提交；当前进度以原日志为准，未有DEV/JOD或方法结论。总28000预算和完整220新质量/强参照/JOD/280共表/四图及止损不变。读[0172](../../docs/进展报告/0172-T-26112014-CPU持续接续与教师暖启动完成.md)、[过程](process/v1/journal.md)。空间16180/学习16365参数，不称4K或零开销；以下研究问题与旧STOP边界保持。
+当前V1首seed已完整训练：[协议](protocol-v1.md)、[原训练审计](original-model-and-training.md)、[先例](precedents-and-candidate.md)、[CPU修订](cpu-backend-amendment001.md)。seed0于15:00:21正常完成warm2000＋独立空间/固定融合/学习融合各4000，共14000更新；teacher32000/bone320000/DIS96000双向对/gate48000，三唯一adapt final均重载有限。原GPU358与CPU13642连续更新历史保留，不称逐bit后端复现；原worker3024402已退出。原CPU协调3024380/start109481893已自动启动质量seed0=3057709/start109820957和独立训练seed1=3057710/start109820958，各2线程/nice5/空CUDA mask，实时状态必须再核原/proc与日志。[progress012](process/v1/progress012.json)保存当时真实前缀、无部分质量排名；34＋5＋4冻结源保持。总28000预算及全部220新质量/官方JOD/280共表/四图实阅与止损不变，尚无新完整DEV/JOD或方法结论。读[0173](../../docs/进展报告/0173-T-26112015-首seed完整训练与双路自动接续.md)、[过程](process/v1/journal.md)。空间16180/学习16365参数，不称4K或零开销；以下研究问题与旧STOP边界保持。
 
 R88已完成两seed8000更新、80质量/80官方JOD及完整共同条件，A/B组资格均0/4。冻结恢复骨干之后学习小描述分支，尚不足以获得有用的质量—时间联合收益。全部正控制和逐源例外见[完整决定](../4.temporal-consistency/docs/exploration-r88-decision.md)，不推广为所有共享表示不可能，也不把局部网格重新搬到本目录。
 
@@ -18,4 +18,4 @@ R51有限相位滤波、R64预算时域骨干、R74/R82/R88及全部旧STOP都�
 
 相关证据：[R85/R86与论文缺口](../../paper/RESEARCH_STATUS.md)、[R88全部共同条件](../4.temporal-consistency/report/exploration-r88-joint/tables.md)、[原训练规范与约定](../../AGENTS.md)。所有运行资产继续位于zrh自有data，主线main/指定作者/no-ff/小步分别提交与阶段推送保持；survey/pre和演示worktree不修改。
 
-完整共同表完成后可另运行 `CUDA_VISIBLE_DEVICES='' ./scripts/project-python research/8.video-backbone/plot_v1.py`。该附加分析只读取280条件/56均值，生成全部14输出的PSNR—Etemp、JOD—Etemp四域/seed分面PDF/PNG及全部点CSV；没有新模型前向或评分，不改变冻结协议和自动链，也不在中途发布排名。图像生成后须实际查看；图只表达重复DEV均值，不能替代质量门槛、完整成本、手机或独立最终证据。
+完整共同表完成后可另运行 `CUDA_VISIBLE_DEVICES='' ./scripts/project-python research/8.video-backbone/plot_v1.py`。该附加分析只读取280条件/56均值，生成全部14输出的PSNR—Etemp、JOD—Etemp四个域×seed面板PDF/PNG及全部点CSV；没有新模型前向或评分，不改变冻结协议和自动链，也不在中途发布排名。图像生成后须实际查看；图只表达重复DEV均值，不能替代质量门槛、完整成本、手机或独立最终证据。
