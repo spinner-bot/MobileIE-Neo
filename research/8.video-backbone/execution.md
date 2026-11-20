@@ -13,3 +13,11 @@ prebind在child前拒绝75只等待，不产生科学更新。正式worker资源
 协调器遇一阶段失败不会终止已经合法启动的其他CPU质量子进程；下一次接续必须逐一核它们，不能仅根据协调runtime失败重做全部链。chain完成只说明上述注册DEV链完成，四图仍需根agent实际查看与独立review记录，方法解释/成本资格/外部与实际手机/创新/独立最终仍待完成。
 
 run_v1自身代码/配置/launch身份单独版本管理；它不改变34个冻结训练/质量源和5个辅助源。活跃源码保持不变，实时state/log先留自有runtime，检查点才保存已核实际前缀，正常终态后分别提交完整结果/解释/过程/进展报告，并按main/no-ff/指定作者作阶段推送。所有旧STOP与其他worktree边界保持。
+
+## 已发生的资源接续修正
+
+2026-11-20T13:37:20.170968+08:00；Codex  (sqs_A100)。chain001已于13:32:39终止，旧PID/三个原句柄已核缺失，不再视为活跃。首正式worker在warm241按资源规则保存后返回75；attempt002继承241但内部准入拒绝、CUDA分配0/新更新0，因此runtime没有新checkpoint。原协调器误将非零继承计数视为必须有本轮新checkpoint，断言停止。旧失败与全部原runtime保持，没有科学失败或更新丢失。
+
+仅run_v1的元数据接续逻辑已修正：当实际counts等于config的inherited_counts、尚无GPU/CUDA分配，且能找到计数/seed/路径/摘要全部匹配的原保存marker时，可沿用上游完整状态；任何未保存的新更新或跨seed状态仍拒绝。实际241记录的回归检查正常，0模型执行/SGD/新像素；不修改34训练/质量源、5辅助源、算法或门槛。
+
+当前原chain002于13:35:43启动，PID3003196/start109313161，使用coordinator002-stdout.txt；新配置绑定修正后源码。progress004核同身份live及实际forwarding日志，沿用原241状态等待首次attempt003，不重跑资格或从0训练。下一以chain002及其原worker/guard/runtime为准；本页前述chain001启动段是保留历史。
