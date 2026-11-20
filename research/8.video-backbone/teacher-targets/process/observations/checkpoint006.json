@@ -1,0 +1,57 @@
+{
+  "at": "2026-11-20T19:14:06.064263+08:00",
+  "coordinator": {
+    "pid": 3163555,
+    "start_ticks": 110804390,
+    "state": "S"
+  },
+  "training_optimizer_updates": 24000,
+  "unique_finals": 6,
+  "quality_rows": 180,
+  "quality_frame_rows": 8064,
+  "student_backbone_images": 2688,
+  "post_DIS_pairs": 2628,
+  "post_FB_pairs": 2628,
+  "quality_workers": [
+    {
+      "pid": 3187367,
+      "already_exited": true
+    },
+    {
+      "pid": 3208431,
+      "already_exited": true
+    }
+  ],
+  "quality_seconds_by_seed": [
+    808.5629608258605,
+    865.9239161130972
+  ],
+  "stage": {
+    "at": "2026-11-20T19:14:05.862933+08:00",
+    "coordinator": {
+      "pid": 3163555,
+      "start_ticks": 110804390,
+      "state": "R"
+    },
+    "status": "running",
+    "stage": "perceptual-attempt001",
+    "resource_polls": 4,
+    "guard_attempts": 4,
+    "child": {
+      "pid": 3219202,
+      "start_ticks": 111340358,
+      "state": "S"
+    },
+    "stdout": ".cache/experiments/topic8-teacher-targets/chain001/perceptual-attempt001-guard00004.stdout.txt",
+    "returncode": 0,
+    "worker": {
+      "pid": 3219447,
+      "start_ticks": 111342729,
+      "state": "R"
+    }
+  },
+  "source_freeze_unchanged": true,
+  "official_JOD_complete": false,
+  "scientific_gate_decision_pending": true,
+  "scope": "All original full training and CPU quality complete; original official metric admission chain continues, no early conclusion or final pixels."
+}
