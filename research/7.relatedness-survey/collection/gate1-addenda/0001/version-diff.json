@@ -1,0 +1,47 @@
+{
+  "purpose": "Collection/version identity comparison; original Gate2 retained; substantive addendum review still required",
+  "pages_arxiv": 17,
+  "pages_pmlr": 17,
+  "different_pages": [
+    {
+      "page": 1,
+      "diff": "--- arxiv-v1-p1\n\n+++ pmlr-p1\n\n@@ -34,5 +34,4 @@\n\n Low-light video enhancement (LLVE) aims to restore vi-\n sually pleasing videos captured under insufficient illumi-\n-nation, and is crucial for real-world applications such as\n ∗ Hangfeng Liang and Yutao Hu contribute equally. 1School\n of Computer Science and Engineering, Southeast University 2Key\n@@ -43,5 +42,7 @@\n\n nology. Correspondence to: Yutao Hu is the corresponding author\n <huyutao@seu.edu.cn>.\n-Preprint. June 10, 2026.\n+Proceedings of the 43 rd International Conference on Machine\n+Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026\n+by the author(s).\n Low-Light RGB Auxiliary Modality Enhanced RGB\n (a) RGB-based LLVE\n@@ -59,4 +60,5 @@\n\n robust enhancement by exploiting auxiliary modalities when avail-\n able and maintaining stable performance when they are absent.\n+nation, and is crucial for real-world applications such as\n autonomous driving and intelligent surveillance. To this end,\n extensive efforts have been devoted to illumination model-\n@@ -76,5 +78,3 @@\n\n namics and structural priors, which have demonstrated great\n effectiveness in improving detail restoration for LLVE.\n-However, recent multimodal LLVE methods still face practi-\n 1\n-arXiv:2606.11186v1  [cs.CV]  9 Jun 2026"
+    },
+    {
+      "page": 2,
+      "diff": "--- arxiv-v1-p2\n\n+++ pmlr-p2\n\n@@ -1,3 +1,4 @@\n\n AnyMod-LLVE: Low-Light Video Enhancement with Modality-Agnostic Inference\n+However, recent multimodal LLVE methods still face practi-\n cal limitations. As illustrated in Fig. 1(b), these approaches\n typically assume that auxiliary modalities are always avail-\n@@ -100,4 +101,3 @@\n\n For low-light video enhancement, most existing methods\n are developed under the RGB-only setting. Many methods\n-design enhancement strategies based on illumination de-\n 2"
+    },
+    {
+      "page": 3,
+      "diff": "--- arxiv-v1-p3\n\n+++ pmlr-p3\n\n@@ -1,3 +1,4 @@\n\n AnyMod-LLVE: Low-Light Video Enhancement with Modality-Agnostic Inference\n+design enhancement strategies based on illumination de-\n composition or Retinex formulations (Wu et al., 2023; Cai\n et al., 2023). Other approaches focus on temporal optimiza-\n@@ -108,4 +109,3 @@\n\n tures serve as supplements to support robust enhancement.\n Therefore, AMNet supports flexible modality-agnostic infer-\n-ence under arbitrary combinations of available modalities.\n 3"
+    },
+    {
+      "page": 4,
+      "diff": "--- arxiv-v1-p4\n\n+++ pmlr-p4\n\n@@ -111,4 +111,5 @@\n\n 𝑭𝒇𝒓𝒆𝒒\n Figure 3.The details of the proposed S2DG Translator.\n+ence under arbitrary combinations of available modalities.\n The RGB features and the auxiliary modality features are\n then fused and fed into a temporal modeling module to cap-"
+    },
+    {
+      "page": 9,
+      "diff": "--- arxiv-v1-p9\n\n+++ pmlr-p9\n\n@@ -9,8 +9,10 @@\n\n Acknowledgements\n This work was supported in part by the National Natural\n-Science Foundation of China under Grant 82441021 and\n-62331006, in part by the Start-up Research Fund of South-\n-east University under Grant RF1028624156, and in part by\n-the Big Data Computing Center of Southeast University.\n+Science Foundation of China under Grant 62501140 and\n+62331006, in part by the Funded of Basic Rescarch Pro-\n+gram of Jiangsu under Grant (BK20251279), in part by the\n+Start-up Research Fund of Southeast University under Grant\n+RF1028624156, and in part by the Big Data Computing Cen-\n+ter of Southeast University.\n Impact Statement\n This work aims to advance the field of low-light video en-\n@@ -90,7 +92,3 @@\n\n IEEE/CVF International Conference on Computer Vision,\n pp. 8721–8731, 2023.\n-Hu, Y ., Liu, S.-C., and Delbruck, T. v2e: From video frames\n-to realistic dvs events. InProceedings of the IEEE/CVF\n-Conference on Computer Vision and Pattern Recognition\n-(CVPR) Workshops, pp. 1312–1321, June 2021.\n 9"
+    },
+    {
+      "page": 10,
+      "diff": "--- arxiv-v1-p10\n\n+++ pmlr-p10\n\n@@ -1,3 +1,7 @@\n\n AnyMod-LLVE: Low-Light Video Enhancement with Modality-Agnostic Inference\n+Hu, Y ., Liu, S.-C., and Delbruck, T. v2e: From video frames\n+to realistic dvs events. InProceedings of the IEEE/CVF\n+Conference on Computer Vision and Pattern Recognition\n+(CVPR) Workshops, pp. 1312–1321, June 2021.\n Jha, R., Lenka, A., Ramanagopal, M., Sankaranarayanan,\n A., and Mitra, K. Rt-x net: Rgb-thermal cross attention\n@@ -91,9 +95,3 @@\n\n IEEE/CVF conference on computer vision and pattern\n recognition, pp. 15878–15887, 2023a.\n-Wang, H., Ma, C., Zhang, J., Zhang, Y ., Avery, J., Hull, L.,\n-and Carneiro, G. Learnable cross-modal knowledge dis-\n-tillation for multi-modal learning with missing modality.\n-InInternational Conference on Medical Image Comput-\n-ing and Computer-Assisted Intervention, pp. 216–226.\n-Springer, 2023b.\n 10"
+    },
+    {
+      "page": 11,
+      "diff": "--- arxiv-v1-p11\n\n+++ pmlr-p11\n\n@@ -1,3 +1,9 @@\n\n AnyMod-LLVE: Low-Light Video Enhancement with Modality-Agnostic Inference\n+Wang, H., Ma, C., Zhang, J., Zhang, Y ., Avery, J., Hull, L.,\n+and Carneiro, G. Learnable cross-modal knowledge dis-\n+tillation for multi-modal learning with missing modality.\n+InInternational Conference on Medical Image Comput-\n+ing and Computer-Assisted Intervention, pp. 216–226.\n+Springer, 2023b.\n Wang, M., Kang, X., Lu, Y ., and Xu, J. Retinexmcnet:\n A memory controller dominated network for low-light"
+    }
+  ],
+  "identical_text_pages": [
+    5,
+    6,
+    7,
+    8,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ]
+}
