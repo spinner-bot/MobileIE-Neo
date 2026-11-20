@@ -1,0 +1,3641 @@
+{
+  "recorded_at": "2026-11-20T07:03:19.052Z",
+  "purpose": "Fresh round11; repeated same read-only query after first response could not be persisted due to OS argument size; retry is not an independent round",
+  "arguments": {
+    "query": "MobileIE stream",
+    "topn": 100
+  },
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "results": [
+        {
+          "url": "https://github.com/ytdl-org/youtube-dl/blob/bc069d2bb40bcbc5bdfdf352ca15bf586c7792cb/youtube_dl/extractor/extractors.py",
+          "path": "youtube_dl/extractor/extractors.py",
+          "display_url": "https://github.com/ytdl-org/youtube-dl/blob/bc069d2bb40bcbc5bdfdf352ca15bf586c7792cb/youtube_dl/extractor/extractors.py",
+          "display_title": "youtube_dl/extractor/extractors.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    22,
+                    30
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "from .xnxx import XNXXIE\nfrom .xstream import XstreamIE\nfrom .xtube import XTubeUserIE, XTubeIE",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    32,
+                    38
+                  ]
+                },
+                {
+                  "text": "stream",
+                  "indices": [
+                    47,
+                    53
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/blackjack4494/yt-dlc/blob/f9401f2a91987068139c5f757b12fc711d4c0cee/youtube_dlc/extractor/wdr.py",
+          "path": "youtube_dlc/extractor/wdr.py",
+          "display_url": "https://github.com/blackjack4494/yt-dlc/blob/f9401f2a91987068139c5f757b12fc711d4c0cee/youtube_dlc/extractor/wdr.py",
+          "display_title": "youtube_dlc/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                    formats.extend(self._extract_smil_formats(\n                        medium_url, 'stream', fatal=False))\n                else:",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    100,
+                    106
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/zhaoyang97/Paper-Notes/blob/de63c0e13b242cadcc5faa8cc2017fcc8c235026/docs/ICCV2025/TODO.md",
+          "path": "docs/ICCV2025/TODO.md",
+          "display_url": "https://github.com/zhaoyang97/Paper-Notes/blob/de63c0e13b242cadcc5faa8cc2017fcc8c235026/docs/ICCV2025/TODO.md",
+          "display_title": "docs/ICCV2025/TODO.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "- [x] [mmaif multi-task and multi-degradation all-in-one for image fusion with language](image_generation/mmaif_multi-task_and_multi-degradation_all-in-one_for_image_fusion_with_language.md) | arXiv: 2503.14944\n- [x] [mmone representing multiple modalities in one scene](multimodal_vlm/mmone_representing_multiple_modalities_in_one_scene.md) | arXiv: 2507.11129\n- [ ] mmreason an open-ended multi-modal multi-step reasoning benchmark for mllms towa\n- [x] [mobileie an extremely lightweight and effective convnet for real-time image enha](image_restoration/mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md) | arXiv: 2507.01838\n- [x] [mobileviclip an efficient video-text model for mobile devices](video_understanding/mobileviclip_an_efficient_video-text_model_for_mobile_devices.md) | arXiv: 2508.07312\n- [ ] modaltune fine-tuning slide-level foundation models with multi-modal information\n- [ ] moerl when mixture-of-experts meet reinforcement learning for adverse weather im",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    456,
+                    464
+                  ]
+                },
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    556,
+                    564
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/ytdl-patched/ytdl-patched/blob/7b475779cccec7f4ed9d64b7c5ce6c0d6213bfee/yt_dlp/extractor/weibo.py",
+          "path": "yt_dlp/extractor/weibo.py",
+          "display_url": "https://github.com/ytdl-patched/ytdl-patched/blob/7b475779cccec7f4ed9d64b7c5ce6c0d6213bfee/yt_dlp/extractor/weibo.py",
+          "display_title": "yt_dlp/extractor/weibo.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WeiboMobileIE(InfoExtractor):\n    _VALID_URL = r'https?://m\\.weibo\\.cn/status/(?P<id>[0-9]+)(\\?.+)?'",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    12,
+                    20
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            'uploader': uploader,\n            'url': page_info['media_info']['stream_url']\n        }",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/ytdl-patched/ytdl-patched/blob/7b475779cccec7f4ed9d64b7c5ce6c0d6213bfee/yt_dlp/extractor/wdr.py",
+          "path": "yt_dlp/extractor/wdr.py",
+          "display_url": "https://github.com/ytdl-patched/ytdl-patched/blob/7b475779cccec7f4ed9d64b7c5ce6c0d6213bfee/yt_dlp/extractor/wdr.py",
+          "display_title": "yt_dlp/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "        'url': 'http://www.wdrmaus.de/elefantenseite/#elefantenkino_wippe',\n        # adaptive stream: unstable file MD5\n        'info_dict': {",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    95,
+                    101
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/TTXS123OK/CVPapers/blob/b0b92b763621bd21a2bfb9873ccd3d95d0e8da3e/cs.CV/2025/07/20250702.md",
+          "path": "cs.CV/2025/07/20250702.md",
+          "display_url": "https://github.com/TTXS123OK/CVPapers/blob/b0b92b763621bd21a2bfb9873ccd3d95d0e8da3e/cs.CV/2025/07/20250702.md",
+          "display_title": "cs.CV/2025/07/20250702.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "- **Journal**: None\n- **Summary**: Pruning is widely used to reduce the complexity of deep learning models, but its effects on interpretability and representation learning remain poorly understood. This paper investigates how pruning influences vision models across three key dimensions: (i) interpretability, (ii) unsupervised object discovery, and (iii) alignment with human perception. We first analyze different vision network architectures to examine how varying sparsity levels affect feature attribution interpretability methods. Additionally, we explore whether pruning promotes more succinct and structured representations, potentially improving unsupervised object discovery by discarding redundant information while preserving essential features. Finally, we assess whether pruning enhances the alignment between model representations and human perception, investigating whether sparser models focus on more discriminative features similarly to humans. Our findings also reveal the presence of sweet spots, where sparse models exhibit higher interpretability, downstream generalization and human alignment. However, these spots highly depend on the network architectures and their size in terms of trainable parameters. Our results suggest a complex interplay between these three dimensions, highlighting the importance of investigating when and how pruning benefits vision representations.\n",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    1075,
+                    1081
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "- **Journal**: None\n- **Summary**: Recent advancements in deep neural networks have driven significant progress in image enhancement (IE). However, deploying deep learning models on resource-constrained platforms, such as mobile devices, remains challenging due to high computation and memory demands. To address these challenges and facilitate real-time IE on mobile, we introduce an extremely lightweight Convolutional Neural Network (CNN) framework with around 4K parameters. Our approach integrates reparameterization with an Incremental Weight Optimization strategy to ensure efficiency. Additionally, we enhance performance with a Feature Self-Transform module and a Hierarchical Dual-Path Attention mechanism, optimized with a Local Variance-Weighted loss. With this efficient framework, we are the first to achieve real-time IE inference at up to 1,100 frames per second (FPS) while delivering competitive image quality, achieving the best trade-off between speed and performance across multiple IE tasks. The code will be available at https://github.com/AVC2-UESTC/MobileIE.git.\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    1074,
+                    1082
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/JasmineAIGC/ArXiv_CV_Papers_Daily/blob/f1e92ff979bc3862ba52e4cd4cb700668c38f457/data/2025-07/2025-07-02.md",
+          "path": "data/2025-07/2025-07-02.md",
+          "display_url": "https://github.com/JasmineAIGC/ArXiv_CV_Papers_Daily/blob/f1e92ff979bc3862ba52e4cd4cb700668c38f457/data/2025-07/2025-07-02.md",
+          "display_title": "data/2025-07/2025-07-02.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "|🆕 发布|Coherent Online Road Topology Estimation and Reasoning with Standard-Definition Maps|标准清晰度地图下的连贯在线道路拓扑估计与推理|Khanh Son Pham, Christian Witte, Jens Behley, Johannes Betz, Cyrill Stachniss|<http://arxiv.org/pdf/2507.01397v1>|提出了一种利用标准定义地图预测车道段及其拓扑和道路边界的连贯在线方法，显著优于现有技术。|\n|📝 更新|Three-Stream Temporal-Shift Attention Network Based on Self-Knowledge Distillation for Micro-Expression Recognition|基于自我知识蒸馏的三流时间移位注意力网络用于微表情识别|Guanghao Zhu, Lin Liu, Yuhao Hu, Haixin Sun, Fang Liu, Xiaohui Du, Ruqian Hao, Juanxiu Liu .etc.|<http://arxiv.org/pdf/2406.17538v3>|[代码](https://github.com/GuanghaoZhu663/SKD-TSTSAN.); 提出三流时空注意网络结合自知识蒸馏，增强微表情识别准确性和效率。|\n",
+              "matches": [
+                {
+                  "text": "Stream",
+                  "indices": [
+                    432,
+                    438
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "|---|---|---|---|---|---|\n|🆕 发布|MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices|移动IE：一种极轻量级且高效的可用于移动设备实时图像增强的卷积神经网络|Hailong Yan, Ao Li, Xiangtao Zhang, Zhe Liu, Zenglin Shi, Ce Zhu, Le Zhang|<http://arxiv.org/pdf/2507.01838v1>|[代码](https://github.com/AVC2-UESTC/MobileIE.git.); 提出了一种极轻量级卷积神经网络框架MobileIE，实现了移动设备上实时图像增强的高效运行与性能优化...|\n|📝 更新|Graph-Based Deep Learning for Component Segmentation of Maize Plants|基于图的深度学习在玉米植株部件分割中的应用|J. I. Ruiz-Martinez, A. Mendez-Vazquez, E. Rodriguez-Tello|<http://arxiv.org/pdf/2507.00182v2>|提出了一种基于图神经网络的深度学习方法，用于精确农业中玉米植株部件的3D点云数据分割，显著提升了识别...|",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    39,
+                    47
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    398,
+                    406
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    465,
+                    473
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/blackjack4494/yt-dlc/blob/f9401f2a91987068139c5f757b12fc711d4c0cee/youtube_dlc/extractor/extractors.py",
+          "path": "youtube_dlc/extractor/extractors.py",
+          "display_url": "https://github.com/blackjack4494/yt-dlc/blob/f9401f2a91987068139c5f757b12fc711d4c0cee/youtube_dlc/extractor/extractors.py",
+          "display_title": "youtube_dlc/extractor/extractors.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    22,
+                    30
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "from .xnxx import XNXXIE\nfrom .xstream import XstreamIE\nfrom .xtube import XTubeUserIE, XTubeIE",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    32,
+                    38
+                  ]
+                },
+                {
+                  "text": "stream",
+                  "indices": [
+                    47,
+                    53
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/cirosantilli/expired-domain-names-by-day-2022/blob/36fb5eee7e0a11c9a1d227f86d4eb508fd7e7223/12/18/53",
+          "path": "12/18/53",
+          "display_url": "https://github.com/cirosantilli/expired-domain-names-by-day-2022/blob/36fb5eee7e0a11c9a1d227f86d4eb508fd7e7223/12/18/53",
+          "display_title": "12/18/53",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "boi-bankingsupport.com\nboi-mobileie.com\nboi365onlinesecurity.com",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    27,
+                    35
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "cat-selfies.com\ncat-stream.com\ncat62.com",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    20,
+                    26
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/gugugu531/Hispark_SocChina_2026/blob/c3bdfbb0f6b45a918598d7e23f332bf731620914/docs/TODO.md",
+          "path": "docs/TODO.md",
+          "display_url": "https://github.com/gugugu531/Hispark_SocChina_2026/blob/c3bdfbb0f6b45a918598d7e23f332bf731620914/docs/TODO.md",
+          "display_title": "docs/TODO.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "| **v9 (6ch)** | 从头训练, 标量系数 | **19.83** | 116 | **当前部署** |\n| v13 | MobileIE warmup + Dropout2d | **19.83** | 116 | 持平 v9，无早峰退化 |\n| v10 | v8 backbone warm-start | 18.80 | 13 | 证伪——backbone 跨尾不兼容 |",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    91,
+                    99
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "| Display (ISP Gamma) | 30fps | 无 |\n| Stream (ISP Gamma) | 30fps | 无 |\n| Estimator (NPU, v9 6ch) | 3.8ms, ~0.3Hz | 场景变化触发 |",
+              "matches": [
+                {
+                  "text": "Stream",
+                  "indices": [
+                    40,
+                    46
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/ruuk/script.module.youtube.dl/blob/592af985d755327efee7d02b769fde5725c6d5ce/lib/youtube_dl/extractor/weibo.py",
+          "path": "lib/youtube_dl/extractor/weibo.py",
+          "display_url": "https://github.com/ruuk/script.module.youtube.dl/blob/592af985d755327efee7d02b769fde5725c6d5ce/lib/youtube_dl/extractor/weibo.py",
+          "display_title": "lib/youtube_dl/extractor/weibo.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WeiboMobileIE(InfoExtractor):\n    _VALID_URL = r'https?://m\\.weibo\\.cn/status/(?P<id>[0-9]+)(\\?.+)?'",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    12,
+                    20
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            'uploader': uploader,\n            'url': page_info['media_info']['stream_url']\n        }",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/ruuk/script.module.youtube.dl/blob/592af985d755327efee7d02b769fde5725c6d5ce/lib/youtube_dl/extractor/wdr.py",
+          "path": "lib/youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/ruuk/script.module.youtube.dl/blob/592af985d755327efee7d02b769fde5725c6d5ce/lib/youtube_dl/extractor/wdr.py",
+          "display_title": "lib/youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                    formats.extend(self._extract_smil_formats(\n                        medium_url, 'stream', fatal=False))\n                else:",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    100,
+                    106
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/freezed-corpse-143/topaperlist/blob/647153919e1fb503bc04e860f8eff7b611d68075/PAPERS/A/ICCV/2025.txt",
+          "path": "PAPERS/A/ICCV/2025.txt",
+          "display_url": "https://github.com/freezed-corpse-143/topaperlist/blob/647153919e1fb503bc04e860f8eff7b611d68075/PAPERS/A/ICCV/2025.txt",
+          "display_title": "PAPERS/A/ICCV/2025.txt",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "VRBench: A Benchmark for Multi-Step Reasoning in Long Narrative Videos\nImproving SAM for Camouflaged Object Detection via Dual Stream Adapters\nFedMeNF: Privacy-Preserving Federated Meta-Learning for Neural Fields",
+              "matches": [
+                {
+                  "text": "Stream",
+                  "indices": [
+                    127,
+                    133
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "MCOP: Multi-UAV Collaborative Occupancy Prediction\nMobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices\nFixTalk: Taming Identity Leakage for High-Quality Talking Head Generation in Extreme Cases",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    51,
+                    59
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/rbrito/pkg-youtube-dl/blob/f657f6877db47c00c77b6b17042e9fb7039d635e/youtube_dl/extractor/wdr.py",
+          "path": "youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/rbrito/pkg-youtube-dl/blob/f657f6877db47c00c77b6b17042e9fb7039d635e/youtube_dl/extractor/wdr.py",
+          "display_title": "youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                    formats.extend(self._extract_smil_formats(\n                        medium_url, 'stream', fatal=False))\n                else:",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    100,
+                    106
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/OdyseeTeam/odysee-frontend/blob/b092a747eee79dacd23001716da0aaebdf96b0a6/ui/util/platform.ts",
+          "path": "ui/util/platform.ts",
+          "display_url": "https://github.com/OdyseeTeam/odysee-frontend/blob/b092a747eee79dacd23001716da0aaebdf96b0a6/ui/util/platform.ts",
+          "display_title": "ui/util/platform.ts",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "  },\n  isMobileIE: function () {\n    return this.isMobile() && this.isIE();",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    9,
+                    17
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "        (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) &&\n      !window.MSStream\n    );",
+              "matches": [
+                {
+                  "text": "Stream",
+                  "indices": [
+                    96,
+                    102
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/dhhruv/YouTua/blob/2a6148cbabb1724ab98f56589f136fb68db659ab/youtuatools/extractor/weibo.py",
+          "path": "youtuatools/extractor/weibo.py",
+          "display_url": "https://github.com/dhhruv/YouTua/blob/2a6148cbabb1724ab98f56589f136fb68db659ab/youtuatools/extractor/weibo.py",
+          "display_title": "youtuatools/extractor/weibo.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WeiboMobileIE(InfoExtractor):\n    _VALID_URL = r'https?://m\\.weibo\\.cn/status/(?P<id>[0-9]+)(\\?.+)?'",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    12,
+                    20
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            'uploader': uploader,\n            'url': page_info['media_info']['stream_url']\n        }",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/r0oth3x49/Yv-dl/blob/cf52e6f8600bd9cf70c5944a2caade51eadd6a77/youtube_dl/extractor/wdr.py",
+          "path": "youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/r0oth3x49/Yv-dl/blob/cf52e6f8600bd9cf70c5944a2caade51eadd6a77/youtube_dl/extractor/wdr.py",
+          "display_title": "youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                    formats.extend(self._extract_smil_formats(\n                        medium_url, 'stream', fatal=False))\n                else:",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    100,
+                    106
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/ifsvivek/VideoFetch/blob/b8d446ce15f0b34cf47a8c3e877fe271fdcb4ffa/plugin/yt-dlp/yt_dlp/extractor/wdr.py",
+          "path": "plugin/yt-dlp/yt_dlp/extractor/wdr.py",
+          "display_url": "https://github.com/ifsvivek/VideoFetch/blob/b8d446ce15f0b34cf47a8c3e877fe271fdcb4ffa/plugin/yt-dlp/yt_dlp/extractor/wdr.py",
+          "display_title": "plugin/yt-dlp/yt_dlp/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "        'url': 'http://www.wdrmaus.de/elefantenseite/#elefantenkino_wippe',\n        # adaptive stream: unstable file MD5\n        'info_dict': {",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    95,
+                    101
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/PatchyVideo/PatchyVideo/blob/3c6533d27d746d0eab3f4f6a0f8927261df5562d/scraper/video/yt_dlp/extractor/weibo.py",
+          "path": "scraper/video/yt_dlp/extractor/weibo.py",
+          "display_url": "https://github.com/PatchyVideo/PatchyVideo/blob/3c6533d27d746d0eab3f4f6a0f8927261df5562d/scraper/video/yt_dlp/extractor/weibo.py",
+          "display_title": "scraper/video/yt_dlp/extractor/weibo.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WeiboMobileIE(InfoExtractor):\n    _VALID_URL = r'https?://m\\.weibo\\.cn/status/(?P<id>[0-9]+)(\\?.+)?'",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    12,
+                    20
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            'uploader': uploader,\n            'url': page_info['media_info']['stream_url']\n        }",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/xuhangc/Plumbing/blob/ea6d788ba16cdd4f7c1e8e7685b735b13e9e9352/INDEX.md",
+          "path": "INDEX.md",
+          "display_url": "https://github.com/xuhangc/Plumbing/blob/ea6d788ba16cdd4f7c1e8e7685b735b13e9e9352/INDEX.md",
+          "display_title": "INDEX.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "| `LKLGLBlock` | ACM MM 2025 | [ACM MM 2025] Mobile U-ViT: Revisiting large kernel and U-shaped ViT for eff… | 2025最新代码 | 原仓 |\n| `mie` | — | MobileIE Enhancement Block — MobileIE 轻量增强块 | - | bug423 |\n| `MSPLCK_EPA` | — | MixDehazeNet : Mix Structure Block For Image Dehazing Network | 图像恢复，去模糊，去噪，去雾 | 原仓 |",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    157,
+                    165
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    188,
+                    196
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "| `CCT3D` | — | Escaping the Big Data Paradigm with Compact Transformers | 即插即用模块 | 原仓 |\n| `Deepfake` | ACM MM 2023 | Locate and Verify: A Two-Stream Network for Improved Deepfake Detection | - | dawang |\n| `efficientViT3D` | — | BN_Linear：与Conv3d_BN类似，但用于1D线性层。它将批量归一化与线性层融合。 | 即插即用模块 | 原仓 |",
+              "matches": [
+                {
+                  "text": "Stream",
+                  "indices": [
+                    161,
+                    167
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Tolriq/repository.yatse.kodi/blob/16a3145eaca482c4818cd11f178531e9d6dce5da/script.yatse.kodi/lib/youtube_dl/extractor/wdr.py",
+          "path": "script.yatse.kodi/lib/youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/Tolriq/repository.yatse.kodi/blob/16a3145eaca482c4818cd11f178531e9d6dce5da/script.yatse.kodi/lib/youtube_dl/extractor/wdr.py",
+          "display_title": "script.yatse.kodi/lib/youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "        'url': 'http://www.wdrmaus.de/elefantenseite/#elefantenkino_wippe',\n        # adaptive stream: unstable file MD5\n        'info_dict': {",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    95,
+                    101
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/PatchyVideo/PatchyVideo/blob/3c6533d27d746d0eab3f4f6a0f8927261df5562d/scraper/video/yt_dlp/extractor/wdr.py",
+          "path": "scraper/video/yt_dlp/extractor/wdr.py",
+          "display_url": "https://github.com/PatchyVideo/PatchyVideo/blob/3c6533d27d746d0eab3f4f6a0f8927261df5562d/scraper/video/yt_dlp/extractor/wdr.py",
+          "display_title": "scraper/video/yt_dlp/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "        'url': 'http://www.wdrmaus.de/elefantenseite/#elefantenkino_wippe',\n        # adaptive stream: unstable file MD5\n        'info_dict': {",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    95,
+                    101
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/cirosantilli/expired-domain-names-by-day-2010/blob/3adc7fbd3cc93bed17b0e0f8c20916710ac18217/10/11/20",
+          "path": "10/11/20",
+          "display_url": "https://github.com/cirosantilli/expired-domain-names-by-day-2010/blob/3adc7fbd3cc93bed17b0e0f8c20916710ac18217/10/11/20",
+          "display_title": "10/11/20",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "mobilehostvisitor.com\nmobileie.com\nmobileliveadvertising.com",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    22,
+                    30
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "music-photographer-live-photography-artwork.net\nmusic-stream-hosting.net\nmusic-transfer.info",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    54,
+                    60
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/ytdl-patched/ytdl-patched/blob/7b475779cccec7f4ed9d64b7c5ce6c0d6213bfee/yt_dlp/extractor/_extractors.py",
+          "path": "yt_dlp/extractor/_extractors.py",
+          "display_url": "https://github.com/ytdl-patched/ytdl-patched/blob/7b475779cccec7f4ed9d64b7c5ce6c0d6213bfee/yt_dlp/extractor/_extractors.py",
+          "display_title": "yt_dlp/extractor/_extractors.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    WDRElefantIE,\n    WDRMobileIE,\n)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    25,
+                    33
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "from .xnxx import XNXXIE\nfrom .xstream import XstreamIE\nfrom .xtube import XTubeUserIE, XTubeIE",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    32,
+                    38
+                  ]
+                },
+                {
+                  "text": "stream",
+                  "indices": [
+                    47,
+                    53
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/dhhruv/YouTua/blob/2a6148cbabb1724ab98f56589f136fb68db659ab/youtuatools/extractor/wdr.py",
+          "path": "youtuatools/extractor/wdr.py",
+          "display_url": "https://github.com/dhhruv/YouTua/blob/2a6148cbabb1724ab98f56589f136fb68db659ab/youtuatools/extractor/wdr.py",
+          "display_title": "youtuatools/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                    formats.extend(self._extract_smil_formats(\n                        medium_url, 'stream', fatal=False))\n                else:",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    100,
+                    106
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/tvalacarta/tvalacarta/blob/d3e2977e4b4faae516f3cf3ca077e6f33dec094d/python/main-classic/lib/youtube_dl/extractor/weibo.py",
+          "path": "python/main-classic/lib/youtube_dl/extractor/weibo.py",
+          "display_url": "https://github.com/tvalacarta/tvalacarta/blob/d3e2977e4b4faae516f3cf3ca077e6f33dec094d/python/main-classic/lib/youtube_dl/extractor/weibo.py",
+          "display_title": "python/main-classic/lib/youtube_dl/extractor/weibo.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WeiboMobileIE(InfoExtractor):\n    _VALID_URL = r'https?://m\\.weibo\\.cn/status/(?P<id>[0-9]+)(\\?.+)?'",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    12,
+                    20
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            'uploader': uploader,\n            'url': page_info['media_info']['stream_url']\n        }",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/advanced-cs/arXiv_daily/blob/c285c577bd09345121c7c15c07f9c54f39a4ebad/daily_papers/20250703_Thu/video.md",
+          "path": "daily_papers/20250703_Thu/video.md",
+          "display_url": "https://github.com/advanced-cs/arXiv_daily/blob/c285c577bd09345121c7c15c07f9c54f39a4ebad/daily_papers/20250703_Thu/video.md",
+          "display_title": "daily_papers/20250703_Thu/video.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": ">\n> **摘要:** Recent advancements in deep neural networks have driven significant progress in image enhancement (IE). However, deploying deep learning models on resource-constrained platforms, such as mobile devices, remains challenging due to high computation and memory demands. To address these challenges and facilitate real-time IE on mobile, we introduce an extremely lightweight Convolutional Neural Network (CNN) framework with around 4K parameters. Our approach integrates reparameterization with an Incremental Weight Optimization strategy to ensure efficiency. Additionally, we enhance performance with a Feature Self-Transform module and a Hierarchical Dual-Path Attention mechanism, optimized with a Local Variance-Weighted loss. With this efficient framework, we are the first to achieve real-time IE inference at up to 1,100 frames per second (FPS) while delivering competitive image quality, achieving the best trade-off between speed and performance across multiple IE tasks. The code will be available at https://github.com/AVC2-UESTC/MobileIE.git.\n>",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    1055,
+                    1063
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": ">\n> **摘要:** Achieving deep alignment between vision and language remains a central challenge for Multimodal Large Language Models (MLLMs). These models often fail to fully leverage visual input, defaulting to strong language priors. Our approach first provides insights into how MLLMs internally build visual understanding of image regions and then introduces techniques to amplify this capability. Specifically, we explore techniques designed both to deepen the model's understanding of visual content and to ensure that these visual insights actively guide language generation. We demonstrate the superior multimodal understanding of our resultant model through a detailed upstream analysis quantifying its ability to predict visually-dependent tokens as well as 10 pt boost on visually challenging tasks.\n>",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    681,
+                    687
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/JdeRobot/ThirdParty/blob/e4172b83bd56e498c5013c304e06194226f21c63/youtube-dl/youtube_dl/extractor/wdr.py",
+          "path": "youtube-dl/youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/JdeRobot/ThirdParty/blob/e4172b83bd56e498c5013c304e06194226f21c63/youtube-dl/youtube_dl/extractor/wdr.py",
+          "display_title": "youtube-dl/youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                    formats.extend(self._extract_smil_formats(\n                        medium_url, 'stream', fatal=False))\n                else:",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    100,
+                    106
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/keylase/yotube-dl/blob/608b8a4300fab7792e637fd9b7045adf1c0cb2aa/youtube_dl/extractor/weibo.py",
+          "path": "youtube_dl/extractor/weibo.py",
+          "display_url": "https://github.com/keylase/yotube-dl/blob/608b8a4300fab7792e637fd9b7045adf1c0cb2aa/youtube_dl/extractor/weibo.py",
+          "display_title": "youtube_dl/extractor/weibo.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WeiboMobileIE(InfoExtractor):\n    _VALID_URL = r'https?://m\\.weibo\\.cn/status/(?P<id>[0-9]+)(\\?.+)?'",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    12,
+                    20
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            'uploader': uploader,\n            'url': page_info['media_info']['stream_url']\n        }",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/cirosantilli/expired-domain-names-by-day-2023/blob/35b1756a9255a3dfccede8624f724af869d812a1/03/15/39",
+          "path": "03/15/39",
+          "display_url": "https://github.com/cirosantilli/expired-domain-names-by-day-2023/blob/35b1756a9255a3dfccede8624f724af869d812a1/03/15/39",
+          "display_title": "03/15/39",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "mobilefieldsoftware.net\nmobileie-online.com\nmobileonline-team.com",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    24,
+                    32
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "onedrive-fail.com\nonepiece-stream.com\nonestop-hemp.com",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    27,
+                    33
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/DarkSydeDetective/pigpiggo/blob/b64ab06252e3ad25e4e24e2fa795e7106c33dab1/api/tools/youtube_dl/extractor/weibo.py",
+          "path": "api/tools/youtube_dl/extractor/weibo.py",
+          "display_url": "https://github.com/DarkSydeDetective/pigpiggo/blob/b64ab06252e3ad25e4e24e2fa795e7106c33dab1/api/tools/youtube_dl/extractor/weibo.py",
+          "display_title": "api/tools/youtube_dl/extractor/weibo.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WeiboMobileIE(InfoExtractor):\n    _VALID_URL = r'https?://m\\.weibo\\.cn/status/(?P<id>[0-9]+)(\\?.+)?'",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    12,
+                    20
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            'uploader': uploader,\n            'url': page_info['media_info']['stream_url']\n        }",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/yasoob/youtube-dl-GUI/blob/2c5b1c2300050c86d1245bcc8823b81d9d97f346/youtube_dl/extractor/extractors.py",
+          "path": "youtube_dl/extractor/extractors.py",
+          "display_url": "https://github.com/yasoob/youtube-dl-GUI/blob/2c5b1c2300050c86d1245bcc8823b81d9d97f346/youtube_dl/extractor/extractors.py",
+          "display_title": "youtube_dl/extractor/extractors.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    22,
+                    30
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "from .xnxx import XNXXIE\nfrom .xstream import XstreamIE\nfrom .xtube import XTubeUserIE, XTubeIE",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    32,
+                    38
+                  ]
+                },
+                {
+                  "text": "stream",
+                  "indices": [
+                    47,
+                    53
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/tvalacarta/tvalacarta/blob/d3e2977e4b4faae516f3cf3ca077e6f33dec094d/python/main-classic/lib/youtube_dl/extractor/wdr.py",
+          "path": "python/main-classic/lib/youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/tvalacarta/tvalacarta/blob/d3e2977e4b4faae516f3cf3ca077e6f33dec094d/python/main-classic/lib/youtube_dl/extractor/wdr.py",
+          "display_title": "python/main-classic/lib/youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                    formats.extend(self._extract_smil_formats(\n                        medium_url, 'stream', fatal=False))\n                else:",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    100,
+                    106
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/README.md",
+          "path": "repro/README.md",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/README.md",
+          "display_title": "repro/README.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "  no determinism controls either). Set `optim.cudnn_benchmark: false` for bit-identical reruns.\n- A resumed run therefore continues the same *optimisation state*, not the same bit stream.\n",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    180,
+                    186
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "  `model/isp.py` both `from .utils import ...`, so the shipped training entry point cannot\n  actually run the IWO stage. The reproduction wires it up in `mobileie/model.py`.\n- The official `main.py` hard-codes `os.environ['CUDA_VISIBLE_DEVICES'] = '5'`, which hides the",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    154,
+                    162
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Foadsf/neural-enhance-bench/blob/04a08307a91dd0f17e2810d0766a559c1b5905d9/README.md",
+          "path": "README.md",
+          "display_url": "https://github.com/Foadsf/neural-enhance-bench/blob/04a08307a91dd0f17e2810d0766a559c1b5905d9/README.md",
+          "display_title": "README.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "  eliminating block-boundary discontinuity and tiling grid artifacts.\n- **Direct Pixel Streaming**: Operates directly on packed integer ARGB buffers without allocating intermediate `Bitmap` objects per tile, preventing garbage collection stutter and out-of-memory (OOM) aborts.\n",
+              "matches": [
+                {
+                  "text": "Stream",
+                  "indices": [
+                    87,
+                    93
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "- **RFDN (Residual Feature Distillation Network)**: 4x lightweight super-resolution with residual feature distillation.\n- **MobileIE**: Reparameterized low-light and underexposure restoration network.\n- **NAFNet (Nonlinear Activation Free Network)**: SimpleGate-based image restoration and denoising baseline.",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    124,
+                    132
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/OpenFacetracker/OpenFaceTracker-Lib3/blob/773cace4ea047b61df3e5c9500e796dd59dab2be/lib/youtube-dl/youtube_dl/extractor/wdr.py",
+          "path": "lib/youtube-dl/youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/OpenFacetracker/OpenFaceTracker-Lib3/blob/773cace4ea047b61df3e5c9500e796dd59dab2be/lib/youtube-dl/youtube_dl/extractor/wdr.py",
+          "display_title": "lib/youtube-dl/youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            for m in re.finditer(\n                    r\"stream:\\s*'dslSrc=(?P<stream>[^']+)',\\s*download:\\s*'(?P<dl>[^']+)'\\s*\\}\",\n                    jscode):",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    56,
+                    62
+                  ]
+                },
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/DarkSydeDetective/pigpiggo/blob/b64ab06252e3ad25e4e24e2fa795e7106c33dab1/api/tools/youtube_dl/extractor/wdr.py",
+          "path": "api/tools/youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/DarkSydeDetective/pigpiggo/blob/b64ab06252e3ad25e4e24e2fa795e7106c33dab1/api/tools/youtube_dl/extractor/wdr.py",
+          "display_title": "api/tools/youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                    formats.extend(self._extract_smil_formats(\n                        medium_url, 'stream', fatal=False))\n                else:",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    100,
+                    106
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/galgamerslee/youtobedl/blob/7b0d1c28597bd38567e5b4e853f669a5a601c6e8/youtube_dl/extractor/wdr.py",
+          "path": "youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/galgamerslee/youtobedl/blob/7b0d1c28597bd38567e5b4e853f669a5a601c6e8/youtube_dl/extractor/wdr.py",
+          "display_title": "youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            for m in re.finditer(\n                    r\"stream:\\s*'dslSrc=(?P<stream>[^']+)',\\s*download:\\s*'(?P<dl>[^']+)'\\s*\\}\",\n                    jscode):",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    56,
+                    62
+                  ]
+                },
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/haruhi-dl/haruhi-dl/blob/0526e2add4c263209cad55347efa9a2dfe6c3fa6/haruhi_dl/extractor/wdr.py",
+          "path": "haruhi_dl/extractor/wdr.py",
+          "display_url": "https://github.com/haruhi-dl/haruhi-dl/blob/0526e2add4c263209cad55347efa9a2dfe6c3fa6/haruhi_dl/extractor/wdr.py",
+          "display_title": "haruhi_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                    formats.extend(self._extract_smil_formats(\n                        medium_url, 'stream', fatal=False))\n                else:",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    100,
+                    106
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/gugugu531/Hispark_SocChina_2026/blob/c3bdfbb0f6b45a918598d7e23f332bf731620914/docs/isp-auto-tuning-prompt.md",
+          "path": "docs/isp-auto-tuning-prompt.md",
+          "display_url": "https://github.com/gugugu531/Hispark_SocChina_2026/blob/c3bdfbb0f6b45a918598d7e23f332bf731620914/docs/isp-auto-tuning-prompt.md",
+          "display_title": "docs/isp-auto-tuning-prompt.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n**本任务是全局回归而非密集预测**：输入一张低光照图像，输出一组 ISP 参数向量（~88 维连续值）。这与 CTBG 的逐像素系数预测（144×256 空间图）性质完全不同。MobileIE backbone 是为逐像素增强设计的（其 tail 输出 6ch×144×256），不适合本任务。\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    215,
+                    223
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "- ONNX 图使用 NCHW 格式；AIPP（NV21 硬件转换）暂不可用于纯 elementwise 图（缺 TransData 格式桥接），如需要 NV21 输入需自行解决\n- 板端测试前 `systemctl stop socchina-stream`（VB 池独占）\n- DRC `tone_mapping_value` 200 节点范围 [0,65535]，Gamma `table` 1025 节点范围 [0,4095]",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    207,
+                    213
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/AsmSafone/downloader/blob/aa1c79a60351b3921f81a7601058e5c0f5d25d54/yt_dlp/extractor/weibo.py",
+          "path": "yt_dlp/extractor/weibo.py",
+          "display_url": "https://github.com/AsmSafone/downloader/blob/aa1c79a60351b3921f81a7601058e5c0f5d25d54/yt_dlp/extractor/weibo.py",
+          "display_title": "yt_dlp/extractor/weibo.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WeiboMobileIE(InfoExtractor):\n    _VALID_URL = r'https?://m\\.weibo\\.cn/status/(?P<id>[0-9]+)(\\?.+)?'",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    12,
+                    20
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            'uploader': uploader,\n            'url': page_info['media_info']['stream_url']\n        }",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Luvata/arxive/blob/7b5bbfb797dc9b07950c7cc33a9ce431f5de4078/pages/2025-07-03-cs-cv.html",
+          "path": "pages/2025-07-03-cs-cv.html",
+          "display_url": "https://github.com/Luvata/arxive/blob/7b5bbfb797dc9b07950c7cc33a9ce431f5de4078/pages/2025-07-03-cs-cv.html",
+          "display_title": "pages/2025-07-03-cs-cv.html",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "<p>URLs: <a href=\"https://github.com/AVC2-UESTC/MobileIE.git.\">https://github.com/AVC2-UESTC/MobileIE.git.</a></p>\n<button class=\"copy-button\" onclick=\"copyToClipboard('https://arxiv.org/abs/2507.01838, https://github.com/AVC2-UESTC/MobileIE.git.', 74)\">Copy Link</button>\n<div id=\"copy-message-74\" class=\"copy-message\"></div>",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    48,
+                    56
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    93,
+                    101
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    233,
+                    241
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "<p><b>Authors:</b> Yundi Zhang, Paul Hager, Che Liu, Suprosanna Shit, Chen Chen, Daniel Rueckert, Jiazhen Pan</p>\n<p>Abstract: Cardiac magnetic resonance imaging is the gold standard for non-invasive cardiac assessment, offering rich spatio-temporal views of the cardiac anatomy and physiology. Patient-level health factors, such as demographics, metabolic, and lifestyle, are known to substantially influence cardiovascular health and disease risk, yet remain uncaptured by CMR alone. To holistically understand cardiac health and to enable the best possible interpretation of an individual's disease risk, CMR and patient-level factors must be jointly exploited within an integrated framework. Recent multi-modal approaches have begun to bridge this gap, yet they often rely on limited spatio-temporal data and focus on isolated clinical tasks, thereby hindering the development of a comprehensive representation for cardiac health evaluation. To overcome these limitations, we introduce ViTa, a step toward foundation models that delivers a comprehensive representation of the heart and a precise interpretation of individual disease risk. Leveraging data from 42,000 UK Biobank participants, ViTa integrates 3D+T cine stacks from short-axis and long-axis views, enabling a complete capture of the cardiac cycle. These imaging data are then fused with detailed tabular patient-level factors, enabling context-aware insights. This multi-modal paradigm supports a wide spectrum of downstream tasks, including cardiac phenotype and physiological feature prediction, segmentation, and classification of cardiac and metabolic diseases within a single unified framework. By learning a shared latent representation that bridges rich imaging features and patient context, ViTa moves beyond traditional, task-specific models toward a universal, patient-specific understanding of cardiac health, highlighting its potential to advance clinical utility and scalability in cardiac analysis.</p>\n<button class=\"copy-button\" onclick=\"copyToClipboard('https://arxiv.org/abs/2504.13037', 177)\">Copy Link</button>",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    1486,
+                    1492
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/paper/bilingual/body.txt",
+          "path": "paper/bilingual/body.txt",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/paper/bilingual/body.txt",
+          "display_title": "paper/bilingual/body.txt",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "@@17 para\nWe aim to design an efficient IE model that balances parameters, speed, and performance. Following the simplicity principle [88], we adopted a streamlined topology based on basic operations, illustrated in Figure 2. The proposed MobileIE, built on Re-parameterization, integrates four key components: shallow feature extraction, deep feature extraction, feature transform, and an attention mechanism. During training, the degraded image first passes through MBRConv5 × 5 and the PReLU activation function to extract shallow features. Two MBRConv3 × 3 and FST modules then process these to learn deeper features. The HDPA mechanism directs the model’s focus to important regions, and MBRConv3 × 3 refines the output. To address training performance bottlenecks, we introduce the IWO strategy and LVW loss function. In inference, all MBRConv layers are re-parameterized into standard convolutions, reducing parameters while maintaining performance. MobileIE’s streamlined structure ensures fast inference and easy deployment on mobile devices. Despite its simplicity, MobileIE surpasses SOTA lightweight IE models, as shown in Figure 1.\n",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    153,
+                    159
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    239,
+                    247
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    962,
+                    970
+                  ]
+                },
+                {
+                  "text": "stream",
+                  "indices": [
+                    975,
+                    981
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    1083,
+                    1091
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "@@75 para\nOccam’s Razor principle, HDPA adopts a streamlined design language, utilizing a dual-path structure and adaptive feature interaction to decompose and aggregate features hierarchically, thereby extracting critical information across different scales. This dual-path design also supports mutual optimization during backpropagation.\n",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    51,
+                    57
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/LukeInkster/PythonCorpus/blob/526c1f78cdf17f9151552bcbfef5582cf8655446/youtube-dl/youtube_dl/extractor/wdr.py",
+          "path": "youtube-dl/youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/LukeInkster/PythonCorpus/blob/526c1f78cdf17f9151552bcbfef5582cf8655446/youtube-dl/youtube_dl/extractor/wdr.py",
+          "display_title": "youtube-dl/youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                    formats.extend(self._extract_smil_formats(\n                        medium_url, 'stream', fatal=False))\n                else:",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    100,
+                    106
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/matejd/qt-youtube-dl/blob/e416351dbbec7bd945aa28b66e2fee9f368a1472/youtube_dl/extractor/wdr.py",
+          "path": "youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/matejd/qt-youtube-dl/blob/e416351dbbec7bd945aa28b66e2fee9f368a1472/youtube_dl/extractor/wdr.py",
+          "display_title": "youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            for m in re.finditer(\n                    r\"stream:\\s*'dslSrc=(?P<stream>[^']+)',\\s*download:\\s*'(?P<dl>[^']+)'\\s*\\}\",\n                    jscode):",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    56,
+                    62
+                  ]
+                },
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/haruhi-dl/haruhi-dl/blob/0526e2add4c263209cad55347efa9a2dfe6c3fa6/haruhi_dl/extractor/weibo.py",
+          "path": "haruhi_dl/extractor/weibo.py",
+          "display_url": "https://github.com/haruhi-dl/haruhi-dl/blob/0526e2add4c263209cad55347efa9a2dfe6c3fa6/haruhi_dl/extractor/weibo.py",
+          "display_title": "haruhi_dl/extractor/weibo.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WeiboMobileIE(InfoExtractor):\n    _VALID_URL = r'https?://m\\.weibo\\.cn/status/(?P<id>[0-9]+)(\\?.+)?'",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    12,
+                    20
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            'uploader': uploader,\n            'url': page_info['media_info']['stream_url']\n        }",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/endlessm/ka-lite-source/blob/e3ed80553bf914c295b1f7242b0b6682556e42e1/python-packages/youtube_dl/extractor/wdr.py",
+          "path": "python-packages/youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/endlessm/ka-lite-source/blob/e3ed80553bf914c295b1f7242b0b6682556e42e1/python-packages/youtube_dl/extractor/wdr.py",
+          "display_title": "python-packages/youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            for m in re.finditer(\n                    r\"stream:\\s*'dslSrc=(?P<stream>[^']+)',\\s*download:\\s*'(?P<dl>[^']+)'\\s*\\}\",\n                    jscode):",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    56,
+                    62
+                  ]
+                },
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/esc0rtd3w/firestick-loader-kodi-data/blob/e4d7931d8f62c94f586786cd8580108b68d3aa40/16/addons/plugin.program.ump/lib/third/youtube_dl/extractor/wdr.py",
+          "path": "16/addons/plugin.program.ump/lib/third/youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/esc0rtd3w/firestick-loader-kodi-data/blob/e4d7931d8f62c94f586786cd8580108b68d3aa40/16/addons/plugin.program.ump/lib/third/youtube_dl/extractor/wdr.py",
+          "display_title": "16/addons/plugin.program.ump/lib/third/youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                    formats.extend(self._extract_smil_formats(\n                        medium_url, 'stream', fatal=False))\n                else:",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    100,
+                    106
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/lodemo/CATANA/blob/a349f460772511ccbb16429b40bfb50f774d45d4/src/face_recognition/youtube_dl/extractor/wdr.py",
+          "path": "src/face_recognition/youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/lodemo/CATANA/blob/a349f460772511ccbb16429b40bfb50f774d45d4/src/face_recognition/youtube_dl/extractor/wdr.py",
+          "display_title": "src/face_recognition/youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                    formats.extend(self._extract_smil_formats(\n                        medium_url, 'stream', fatal=False))\n                else:",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    100,
+                    106
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/auto-code-etri/autocode_dataset/blob/a3d65fcbc22faba2db858ed8be8ea741fcb6f8ca/GithubCrawling/github_crawling/Codes/0010/0010_py/weibo.py",
+          "path": "GithubCrawling/github_crawling/Codes/0010/0010_py/weibo.py",
+          "display_url": "https://github.com/auto-code-etri/autocode_dataset/blob/a3d65fcbc22faba2db858ed8be8ea741fcb6f8ca/GithubCrawling/github_crawling/Codes/0010/0010_py/weibo.py",
+          "display_title": "GithubCrawling/github_crawling/Codes/0010/0010_py/weibo.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WeiboMobileIE(InfoExtractor):\n    _VALID_URL = r'https?://m\\.weibo\\.cn/status/(?P<id>[0-9]+)(\\?.+)?'",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    12,
+                    20
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            'uploader': uploader,\n            'url': page_info['media_info']['stream_url']\n        }",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/paper/bilingual/bilingual.html",
+          "path": "paper/bilingual/bilingual.html",
+          "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/paper/bilingual/bilingual.html",
+          "display_title": "paper/bilingual/bilingual.html",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "<h2 class=\"zh\">3. 本文方法</h2>\n<h3 class=\"en\">3.1. Overall Pipeline</h3>\n<h3 class=\"zh\">3.1. 整体流程</h3>\n<p class=\"para en\">We aim to design an efficient IE model that balances parameters, speed, and performance. Following the simplicity principle [88], we adopted a streamlined topology based on basic operations, illustrated in Figure 2. The proposed MobileIE, built on Re-parameterization, integrates four key components: shallow feature extraction, deep feature extraction, feature transform, and an attention mechanism. During training, the degraded image first passes through MBRConv5 × 5 and the PReLU activation function to extract shallow features. Two MBRConv3 × 3 and FST modules then process these to learn deeper features. The HDPA mechanism directs the model’s focus to important regions, and MBRConv3 × 3 refines the output. To address training performance bottlenecks, we introduce the IWO strategy and LVW loss function. In inference, all MBRConv layers are re-parameterized into standard convolutions, reducing parameters while maintaining performance. MobileIE’s streamlined structure ensures fast inference and easy deployment on mobile devices. Despite its simplicity, MobileIE surpasses SOTA lightweight IE models, as shown in Figure 1.</p>\n<p class=\"para zh\">我们的目标是设计一个在参数量、速度与性能之间取得平衡的高效图像增强模型。遵循简洁性原则 [88]，我们采用基于基础运算的精简拓扑，如图 2 所示。所提出的 MobileIE 以重参数化为基础，融合四个关键组件：浅层特征提取、深层特征提取、特征变换与注意力机制。训练时，退化图像先经 MBRConv5×5 与 PReLU 激活提取浅层特征；随后由两个 MBRConv3×3 与 FST 模块处理以学习更深层特征；HDPA 机制把模型的注意力导向重要区域，最后由 MBRConv3×3 细化输出。为解决训练性能瓶颈，我们引入 IWO 策略与 LVW 损失函数。推理时，所有 MBRConv 层都被重参数化为标准卷积，在保持性能的同时减少参数量。MobileIE 精简的结构保证了快速推理与便捷的移动端部署。尽管结构简单，如图 1 所示，MobileIE 仍超越了最先进的轻量图像增强模型。</p>\n<figure><img src=\"assets/p03_figure_17.png\" alt=\"Figure 2. Architecture of the proposed MobileIE includes Mul\"><figcaption><b>Figure 2（中文）</b>　所提 MobileIE 的架构，包含多分支重参数化卷积（MBRConv）、特征自变换（FST）与分层双路注意力（HDPA）。推理时 MBRConv 重参数化为标准卷积，在保持训练性能的同时把模型规模降到 4K 参数。详细架构设置见附录。</figcaption></figure>\n<h3 class=\"en\">3.2. Multi-Branch Re-param Convolution</h3>",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    278,
+                    284
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    364,
+                    372
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    1087,
+                    1095
+                  ]
+                },
+                {
+                  "text": "stream",
+                  "indices": [
+                    1100,
+                    1106
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    1208,
+                    1216
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    1516,
+                    1524
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    2083,
+                    2091
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    2197,
+                    2205
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    2350,
+                    2358
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    2422,
+                    2430
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/upintheairsheep/ytdl-sheep/blob/4e0539e21f1fd7fdae9f1db0370139d97c727026/yt_dlp/extractor/weibo.py",
+          "path": "yt_dlp/extractor/weibo.py",
+          "display_url": "https://github.com/upintheairsheep/ytdl-sheep/blob/4e0539e21f1fd7fdae9f1db0370139d97c727026/yt_dlp/extractor/weibo.py",
+          "display_title": "yt_dlp/extractor/weibo.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WeiboMobileIE(InfoExtractor):\n    _VALID_URL = r'https?://m\\.weibo\\.cn/status/(?P<id>[0-9]+)(\\?.+)?'",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    12,
+                    20
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            'uploader': uploader,\n            'url': page_info['media_info']['stream_url']\n        }",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/auto-code-etri/autocode_dataset/blob/a3d65fcbc22faba2db858ed8be8ea741fcb6f8ca/GithubCrawling/github_crawling/Codes/0010/0010_py/wdr.py",
+          "path": "GithubCrawling/github_crawling/Codes/0010/0010_py/wdr.py",
+          "display_url": "https://github.com/auto-code-etri/autocode_dataset/blob/a3d65fcbc22faba2db858ed8be8ea741fcb6f8ca/GithubCrawling/github_crawling/Codes/0010/0010_py/wdr.py",
+          "display_title": "GithubCrawling/github_crawling/Codes/0010/0010_py/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "        'url': 'http://www.wdrmaus.de/elefantenseite/#elefantenkino_wippe',\n        # adaptive stream: unstable file MD5\n        'info_dict': {",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    95,
+                    101
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/maximstewart/SolarFM/blob/977540464a74cf777eb56ab303700ad1048ecf6d/plugins/youtube_download/yt_dlp/extractor/wdr.py",
+          "path": "plugins/youtube_download/yt_dlp/extractor/wdr.py",
+          "display_url": "https://github.com/maximstewart/SolarFM/blob/977540464a74cf777eb56ab303700ad1048ecf6d/plugins/youtube_download/yt_dlp/extractor/wdr.py",
+          "display_title": "plugins/youtube_download/yt_dlp/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "        'url': 'http://www.wdrmaus.de/elefantenseite/#elefantenkino_wippe',\n        # adaptive stream: unstable file MD5\n        'info_dict': {",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    95,
+                    101
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Lyken17/arXiv-stats/blob/0da0faf582073c34f9b4c51ac02b1cd4b50fbbb4/info/2025-July/03/paper_info.json",
+          "path": "info/2025-July/03/paper_info.json",
+          "display_url": "https://github.com/Lyken17/arXiv-stats/blob/0da0faf582073c34f9b4c51ac02b1cd4b50fbbb4/info/2025-July/03/paper_info.json",
+          "display_title": "info/2025-July/03/paper_info.json",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    \"id\": \"2507.01838\",\n    \"title\": \"MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices\",\n    \"authors\": [",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    38,
+                    46
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "    \"id\": \"2507.01501\",\n    \"title\": \"Meteoroid stream identification with HDBSCAN unsupervised clustering algorithm\",\n    \"authors\": [",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    48,
+                    54
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/AsmSafone/downloader/blob/aa1c79a60351b3921f81a7601058e5c0f5d25d54/yt_dlp/extractor/wdr.py",
+          "path": "yt_dlp/extractor/wdr.py",
+          "display_url": "https://github.com/AsmSafone/downloader/blob/aa1c79a60351b3921f81a7601058e5c0f5d25d54/yt_dlp/extractor/wdr.py",
+          "display_title": "yt_dlp/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                    formats.extend(self._extract_smil_formats(\n                        medium_url, 'stream', fatal=False))\n                else:",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    100,
+                    106
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/upintheairsheep/ytdl-sheep/blob/4e0539e21f1fd7fdae9f1db0370139d97c727026/yt_dlp/extractor/wdr.py",
+          "path": "yt_dlp/extractor/wdr.py",
+          "display_url": "https://github.com/upintheairsheep/ytdl-sheep/blob/4e0539e21f1fd7fdae9f1db0370139d97c727026/yt_dlp/extractor/wdr.py",
+          "display_title": "yt_dlp/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "        'url': 'http://www.wdrmaus.de/elefantenseite/#elefantenkino_wippe',\n        # adaptive stream: unstable file MD5\n        'info_dict': {",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    95,
+                    101
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/mrquim/repository.mrquim/blob/d71d499724b90c8b748ccb95ee2da336e7c0df81/script.module.youtube.dl/lib/youtube_dl/extractor/wdr.py",
+          "path": "script.module.youtube.dl/lib/youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/mrquim/repository.mrquim/blob/d71d499724b90c8b748ccb95ee2da336e7c0df81/script.module.youtube.dl/lib/youtube_dl/extractor/wdr.py",
+          "display_title": "script.module.youtube.dl/lib/youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                    formats.extend(self._extract_smil_formats(\n                        medium_url, 'stream', fatal=False))\n                else:",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    100,
+                    106
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/sailfish009/paper/blob/f387ce7de3f262fc10a3092837ac53e43e155def/2025.07.03.txt",
+          "path": "2025.07.03.txt",
+          "display_url": "https://github.com/sailfish009/paper/blob/f387ce7de3f262fc10a3092837ac53e43e155def/2025.07.03.txt",
+          "display_title": "2025.07.03.txt",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "CATEGORY: cs.LG [cs.LG, cs.AI]\nHIGHLIGHT: Moreover, most existingframeworks are tightly coupled with LLM training or inference engines, makingit difficult to support custom-designed engines. To address these challenges,we propose AsyncFlow, an asynchronous streaming RL framework for efficientpost-training.\n",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    257,
+                    263
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\n83, TITLE: MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices\nAUTHORS: HAILONG YAN et. al.",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    12,
+                    20
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Booplicate/MAS-Submods-YouTubeMusic/blob/1cda3d95605f8dd9aedb0e0d2e0432feada0c899/YouTube Music/game/python-packages/youtube_dl/extractor/weibo.py",
+          "path": "YouTube Music/game/python-packages/youtube_dl/extractor/weibo.py",
+          "display_url": "https://github.com/Booplicate/MAS-Submods-YouTubeMusic/blob/1cda3d95605f8dd9aedb0e0d2e0432feada0c899/YouTube Music/game/python-packages/youtube_dl/extractor/weibo.py",
+          "display_title": "YouTube Music/game/python-packages/youtube_dl/extractor/weibo.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WeiboMobileIE(InfoExtractor):\n    _VALID_URL = r'https?://m\\.weibo\\.cn/status/(?P<id>[0-9]+)(\\?.+)?'",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    12,
+                    20
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            'uploader': uploader,\n            'url': page_info['media_info']['stream_url']\n        }",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/cmhull42/groovesharky/blob/935ad8bb803b5129ce50039791ff6d72253badc7/youtube_dl/extractor/wdr.py",
+          "path": "youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/cmhull42/groovesharky/blob/935ad8bb803b5129ce50039791ff6d72253badc7/youtube_dl/extractor/wdr.py",
+          "display_title": "youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            for m in re.finditer(\n                    r\"stream:\\s*'dslSrc=(?P<stream>[^']+)',\\s*download:\\s*'(?P<dl>[^']+)'\\s*\\}\",\n                    jscode):",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    56,
+                    62
+                  ]
+                },
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Booplicate/MAS-Submods-YouTubeMusic/blob/1cda3d95605f8dd9aedb0e0d2e0432feada0c899/YouTube Music/game/python-packages/youtube_dl/extractor/wdr.py",
+          "path": "YouTube Music/game/python-packages/youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/Booplicate/MAS-Submods-YouTubeMusic/blob/1cda3d95605f8dd9aedb0e0d2e0432feada0c899/YouTube Music/game/python-packages/youtube_dl/extractor/wdr.py",
+          "display_title": "YouTube Music/game/python-packages/youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "        'url': 'http://www.wdrmaus.de/elefantenseite/#elefantenkino_wippe',\n        # adaptive stream: unstable file MD5\n        'info_dict': {",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    95,
+                    101
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/nlsidf/vnrit/blob/59bd6746c6cccde4197ccfabb1d60fb509127436/src/main.rs",
+          "path": "src/main.rs",
+          "display_url": "https://github.com/nlsidf/vnrit/blob/59bd6746c6cccde4197ccfabb1d60fb509127436/src/main.rs",
+          "display_title": "src/main.rs",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "///\n/// Inspired by MobileIE's channel attention (avg pool → sigmoid → scale):\n///   avg Y < 32  (very dark):    boost 1.75×  — enhance shadow detail",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    20,
+                    28
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "        // SAFETY: set_option with ENCODER_OPTION_BITRATE is a well-defined\n        // operation in openh264's public C API — the encoder handles mid-stream\n        // bitrate changes safely without requiring re-initialization.",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    152,
+                    158
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Rumyra/My-Talks/blob/8ae313967b53d2261560d88892e7edaf902aa5a8/space-time-apis/index.html",
+          "path": "space-time-apis/index.html",
+          "display_url": "https://github.com/Rumyra/My-Talks/blob/8ae313967b53d2261560d88892e7edaf902aa5a8/space-time-apis/index.html",
+          "display_title": "space-time-apis/index.html",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\t\t\t\t\t\t\t\t<td><img src=\"/media/firefoxos.png\" title=\"FirefoxOS\" alt=\"\" /></td>\n\t\t\t\t\t\t\t\t<td><img src=\"/media/mobileie.png\" title=\"Mobile IE\" alt=\"\" /></td>\n\t\t\t\t\t\t\t\t<td><img src=\"/media/ios.png\" title=\"iOS\" alt=\"\" /></td>",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    106,
+                    114
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\t\t\t\t\t\t<p class=\"fragment roll-in\">Ambient Light</p>\n\t\t\t\t\t\t<p class=\"fragment roll-in\">Media Stream</p>\n\t\t\t\t\t\t<p class=\"fragment roll-in\">Device Orientation</p>",
+              "matches": [
+                {
+                  "text": "Stream",
+                  "indices": [
+                    92,
+                    98
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/jiaxianhua/skillshare/blob/c047fdc82c81b1a77d3412cb5a6d1b572f08eefb/youtube_dl/extractor/weibo.py",
+          "path": "youtube_dl/extractor/weibo.py",
+          "display_url": "https://github.com/jiaxianhua/skillshare/blob/c047fdc82c81b1a77d3412cb5a6d1b572f08eefb/youtube_dl/extractor/weibo.py",
+          "display_title": "youtube_dl/extractor/weibo.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WeiboMobileIE(InfoExtractor):\n    _VALID_URL = r'https?://m\\.weibo\\.cn/status/(?P<id>[0-9]+)(\\?.+)?'",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    12,
+                    20
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            'uploader': uploader,\n            'url': page_info['media_info']['stream_url']\n        }",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/mrquim/repository.mrquim/blob/d71d499724b90c8b748ccb95ee2da336e7c0df81/repo/script.module.youtube.dl/lib/youtube_dl/extractor/wdr.py",
+          "path": "repo/script.module.youtube.dl/lib/youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/mrquim/repository.mrquim/blob/d71d499724b90c8b748ccb95ee2da336e7c0df81/repo/script.module.youtube.dl/lib/youtube_dl/extractor/wdr.py",
+          "display_title": "repo/script.module.youtube.dl/lib/youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                    formats.extend(self._extract_smil_formats(\n                        medium_url, 'stream', fatal=False))\n                else:",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    100,
+                    106
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/esc0rtd3w/firestick-loader-kodi-data/blob/e4d7931d8f62c94f586786cd8580108b68d3aa40/18/addons/script.module.youtube.dl/lib/youtube_dl/extractor/weibo.py",
+          "path": "18/addons/script.module.youtube.dl/lib/youtube_dl/extractor/weibo.py",
+          "display_url": "https://github.com/esc0rtd3w/firestick-loader-kodi-data/blob/e4d7931d8f62c94f586786cd8580108b68d3aa40/18/addons/script.module.youtube.dl/lib/youtube_dl/extractor/weibo.py",
+          "display_title": "18/addons/script.module.youtube.dl/lib/youtube_dl/extractor/weibo.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WeiboMobileIE(InfoExtractor):\n    _VALID_URL = r'https?://m\\.weibo\\.cn/status/(?P<id>[0-9]+)(\\?.+)?'",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    12,
+                    20
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            'uploader': uploader,\n            'url': page_info['media_info']['stream_url']\n        }",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/esc0rtd3w/firestick-loader-kodi-data/blob/e4d7931d8f62c94f586786cd8580108b68d3aa40/16/addons/script.module.youtube.dl/lib/youtube_dl/extractor/weibo.py",
+          "path": "16/addons/script.module.youtube.dl/lib/youtube_dl/extractor/weibo.py",
+          "display_url": "https://github.com/esc0rtd3w/firestick-loader-kodi-data/blob/e4d7931d8f62c94f586786cd8580108b68d3aa40/16/addons/script.module.youtube.dl/lib/youtube_dl/extractor/weibo.py",
+          "display_title": "16/addons/script.module.youtube.dl/lib/youtube_dl/extractor/weibo.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WeiboMobileIE(InfoExtractor):\n    _VALID_URL = r'https?://m\\.weibo\\.cn/status/(?P<id>[0-9]+)(\\?.+)?'",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    12,
+                    20
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            'uploader': uploader,\n            'url': page_info['media_info']['stream_url']\n        }",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/esc0rtd3w/firestick-loader-kodi-data/blob/e4d7931d8f62c94f586786cd8580108b68d3aa40/17/addons/script.module.youtube.dl/lib/youtube_dl/extractor/weibo.py",
+          "path": "17/addons/script.module.youtube.dl/lib/youtube_dl/extractor/weibo.py",
+          "display_url": "https://github.com/esc0rtd3w/firestick-loader-kodi-data/blob/e4d7931d8f62c94f586786cd8580108b68d3aa40/17/addons/script.module.youtube.dl/lib/youtube_dl/extractor/weibo.py",
+          "display_title": "17/addons/script.module.youtube.dl/lib/youtube_dl/extractor/weibo.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WeiboMobileIE(InfoExtractor):\n    _VALID_URL = r'https?://m\\.weibo\\.cn/status/(?P<id>[0-9]+)(\\?.+)?'",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    12,
+                    20
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            'uploader': uploader,\n            'url': page_info['media_info']['stream_url']\n        }",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Sno-House/YourMom/blob/f9eb3f8dc228779f2f912dab6308296140dc4f47/lib/youtube_dl/extractor/wdr.py",
+          "path": "lib/youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/Sno-House/YourMom/blob/f9eb3f8dc228779f2f912dab6308296140dc4f47/lib/youtube_dl/extractor/wdr.py",
+          "display_title": "lib/youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                    formats.extend(self._extract_smil_formats(\n                        medium_url, 'stream', fatal=False))\n                else:",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    100,
+                    106
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/ruuk/script.module.youtube.dl/blob/592af985d755327efee7d02b769fde5725c6d5ce/lib/youtube_dl/extractor/extractors.py",
+          "path": "lib/youtube_dl/extractor/extractors.py",
+          "display_url": "https://github.com/ruuk/script.module.youtube.dl/blob/592af985d755327efee7d02b769fde5725c6d5ce/lib/youtube_dl/extractor/extractors.py",
+          "display_title": "lib/youtube_dl/extractor/extractors.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    22,
+                    30
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "from .xnxx import XNXXIE\nfrom .xstream import XstreamIE\nfrom .xtube import XTubeUserIE, XTubeIE",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    32,
+                    38
+                  ]
+                },
+                {
+                  "text": "stream",
+                  "indices": [
+                    47,
+                    53
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/jeffsvajlenko/CloneWorks/blob/4e9f55bad3dd2e6273813fd544b0d05024874a90/example/youtube-dl/youtube_dl/extractor/wdr.py",
+          "path": "example/youtube-dl/youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/jeffsvajlenko/CloneWorks/blob/4e9f55bad3dd2e6273813fd544b0d05024874a90/example/youtube-dl/youtube_dl/extractor/wdr.py",
+          "display_title": "example/youtube-dl/youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            for m in re.finditer(\n                    r\"stream:\\s*'dslSrc=(?P<stream>[^']+)',\\s*download:\\s*'(?P<dl>[^']+)'\\s*\\}\",\n                    jscode):",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    56,
+                    62
+                  ]
+                },
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/manishbisht/ngDownloaderAPI/blob/cd702fac6b50c1bda2f503392b75004db2d1ba39/src/package/youtube_dl/extractor/weibo.py",
+          "path": "src/package/youtube_dl/extractor/weibo.py",
+          "display_url": "https://github.com/manishbisht/ngDownloaderAPI/blob/cd702fac6b50c1bda2f503392b75004db2d1ba39/src/package/youtube_dl/extractor/weibo.py",
+          "display_title": "src/package/youtube_dl/extractor/weibo.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WeiboMobileIE(InfoExtractor):\n    _VALID_URL = r'https?://m\\.weibo\\.cn/status/(?P<id>[0-9]+)(\\?.+)?'",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    12,
+                    20
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            'uploader': uploader,\n            'url': page_info['media_info']['stream_url']\n        }",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Rumyra/My-Talks/blob/8ae313967b53d2261560d88892e7edaf902aa5a8/web-apis-space-time/index.html",
+          "path": "web-apis-space-time/index.html",
+          "display_url": "https://github.com/Rumyra/My-Talks/blob/8ae313967b53d2261560d88892e7edaf902aa5a8/web-apis-space-time/index.html",
+          "display_title": "web-apis-space-time/index.html",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\t\t\t\t\t\t\t\t<td><img src=\"/media/firefoxos.png\" title=\"FirefoxOS\" alt=\"\" /></td>\n\t\t\t\t\t\t\t\t<td><img src=\"/media/mobileie.png\" title=\"Mobile IE\" alt=\"\" /></td>\n\t\t\t\t\t\t\t\t<td><img src=\"/media/ios.png\" title=\"iOS\" alt=\"\" /></td>",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    106,
+                    114
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\t\t\t\t\t\t<p class=\"fragment roll-in\">Ambient Light</p>\n\t\t\t\t\t\t<p class=\"fragment roll-in\">Media Stream</p>\n\t\t\t\t\t\t<p class=\"fragment roll-in\">Device Orientation</p>",
+              "matches": [
+                {
+                  "text": "Stream",
+                  "indices": [
+                    92,
+                    98
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/rbrito/pkg-youtube-dl/blob/f657f6877db47c00c77b6b17042e9fb7039d635e/youtube_dl/extractor/extractors.py",
+          "path": "youtube_dl/extractor/extractors.py",
+          "display_url": "https://github.com/rbrito/pkg-youtube-dl/blob/f657f6877db47c00c77b6b17042e9fb7039d635e/youtube_dl/extractor/extractors.py",
+          "display_title": "youtube_dl/extractor/extractors.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    22,
+                    30
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "from .xnxx import XNXXIE\nfrom .xstream import XstreamIE\nfrom .xtube import XTubeUserIE, XTubeIE",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    32,
+                    38
+                  ]
+                },
+                {
+                  "text": "stream",
+                  "indices": [
+                    47,
+                    53
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/bolucat/Archive/blob/8f0f61ea9b72507321ca83795888420c2e0410dc/youtube-dl/youtube_dl/extractor/wdr.py",
+          "path": "youtube-dl/youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/bolucat/Archive/blob/8f0f61ea9b72507321ca83795888420c2e0410dc/youtube-dl/youtube_dl/extractor/wdr.py",
+          "display_title": "youtube-dl/youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "        'url': 'http://www.wdrmaus.de/elefantenseite/#elefantenkino_wippe',\n        # adaptive stream: unstable file MD5\n        'info_dict': {",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    95,
+                    101
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/artem-popov/atlant.js/blob/3f19d360f205d49872a387470a208a5bad2dbb84/src/utils/utils.js",
+          "path": "src/utils/utils.js",
+          "display_url": "https://github.com/artem-popov/atlant.js/blob/3f19d360f205d49872a387470a208a5bad2dbb84/src/utils/utils.js",
+          "display_title": "src/utils/utils.js",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "  var isMobileIE = navigator.userAgent.indexOf('IEMobile') > -1;\n  return isIE11 || isIELess11 || isMobileIE;\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    8,
+                    16
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    100,
+                    108
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": " * Redirect to the other path using $location\n * @param upstream\n * @returns {*}",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    58,
+                    64
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/JackyLiuAI/Findpaper/blob/5612e162d7a090d90cdae86cf42e3b8a2c051a9f/papers/ICCV2025.txt",
+          "path": "papers/ICCV2025.txt",
+          "display_url": "https://github.com/JackyLiuAI/Findpaper/blob/5612e162d7a090d90cdae86cf42e3b8a2c051a9f/papers/ICCV2025.txt",
+          "display_title": "papers/ICCV2025.txt",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "B-VLLM: A Vision Large Language Model with Balanced Spatio-Temporal Tokens.\nMobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices.\nVITAL: More Understandable Feature Visualization through Distribution Alignment and Relevant Information Flow.",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    76,
+                    84
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "Beyond Next-Token: Next-X Prediction for Autoregressive Visual Generation.\nSP2T: Sparse Proxy Attention for Dual-Stream Point Transformer.\nEnhancing Mamba Decoder with Bidirectional Interaction in Multi-Task Dense Prediction.",
+              "matches": [
+                {
+                  "text": "Stream",
+                  "indices": [
+                    113,
+                    119
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Rumyra/My-Talks/blob/8ae313967b53d2261560d88892e7edaf902aa5a8/space-time-apis-fowa/index.html",
+          "path": "space-time-apis-fowa/index.html",
+          "display_url": "https://github.com/Rumyra/My-Talks/blob/8ae313967b53d2261560d88892e7edaf902aa5a8/space-time-apis-fowa/index.html",
+          "display_title": "space-time-apis-fowa/index.html",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\t\t\t\t\t\t\t\t<td><img src=\"/media/firefoxos.png\" title=\"FirefoxOS\" alt=\"\" /></td>\n\t\t\t\t\t\t\t\t<td><img src=\"/media/mobileie.png\" title=\"Mobile IE\" alt=\"\" /></td>\n\t\t\t\t\t\t\t\t<td><img src=\"/media/ios.png\" title=\"iOS\" alt=\"\" /></td>",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    106,
+                    114
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\t\t\t\t\t\t<p class=\"fragment roll-in\">Ambient Light</p>\n\t\t\t\t\t\t<p class=\"fragment roll-in\">Media Stream</p>\n\t\t\t\t\t\t<p class=\"fragment roll-in\">Device Orientation</p>",
+              "matches": [
+                {
+                  "text": "Stream",
+                  "indices": [
+                    92,
+                    98
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/AntidoteLabs/Antidote-DM/blob/80662a996e77ecb9ab79c1d5c8ad8332e0dd4c9d/Antidotes DM/youtube_dl/extractor/wdr.py",
+          "path": "Antidotes DM/youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/AntidoteLabs/Antidote-DM/blob/80662a996e77ecb9ab79c1d5c8ad8332e0dd4c9d/Antidotes DM/youtube_dl/extractor/wdr.py",
+          "display_title": "Antidotes DM/youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            for m in re.finditer(\n                    r\"stream:\\s*'dslSrc=(?P<stream>[^']+)',\\s*download:\\s*'(?P<dl>[^']+)'\\s*\\}\",\n                    jscode):",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    56,
+                    62
+                  ]
+                },
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/TAENTED9/MEDIAGRAB/blob/acf92c34da44163171c6c0f2545c5d79a28ff557/yt-dlp-master/yt_dlp/extractor/wdr.py",
+          "path": "yt-dlp-master/yt_dlp/extractor/wdr.py",
+          "display_url": "https://github.com/TAENTED9/MEDIAGRAB/blob/acf92c34da44163171c6c0f2545c5d79a28ff557/yt-dlp-master/yt_dlp/extractor/wdr.py",
+          "display_title": "yt-dlp-master/yt_dlp/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "        'url': 'http://www.wdrmaus.de/elefantenseite/#elefantenkino_wippe',\n        # adaptive stream: unstable file MD5\n        'info_dict': {",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    95,
+                    101
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Rumyra/My-Talks/blob/8ae313967b53d2261560d88892e7edaf902aa5a8/space-time-apis-oxford/index.html",
+          "path": "space-time-apis-oxford/index.html",
+          "display_url": "https://github.com/Rumyra/My-Talks/blob/8ae313967b53d2261560d88892e7edaf902aa5a8/space-time-apis-oxford/index.html",
+          "display_title": "space-time-apis-oxford/index.html",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\t\t\t\t\t\t\t\t<td><img src=\"/media/firefoxos.png\" title=\"FirefoxOS\" alt=\"\" /></td>\n\t\t\t\t\t\t\t\t<td><img src=\"/media/mobileie.png\" title=\"Mobile IE\" alt=\"\" /></td>\n\t\t\t\t\t\t\t\t<td><img src=\"/media/ios.png\" title=\"iOS\" alt=\"\" /></td>",
+              "matches": [
+                {
+                  "text": "mobileie",
+                  "indices": [
+                    106,
+                    114
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\t\t\t\t\t\t<p class=\"fragment roll-in\">Ambient Light</p>\n\t\t\t\t\t\t<p class=\"fragment roll-in\">Media Stream</p>\n\t\t\t\t\t\t<p class=\"fragment roll-in\">Device Orientation</p>",
+              "matches": [
+                {
+                  "text": "Stream",
+                  "indices": [
+                    92,
+                    98
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/snorkel-marlin-repos/rg3_youtube-dl_pr_10969_4f74baae-b9c0-491a-9f42-1878a897af2b/blob/ea561aa38bc081b6a39d4ff7d8a286d2477547e9/youtube_dl/extractor/wdr.py",
+          "path": "youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/snorkel-marlin-repos/rg3_youtube-dl_pr_10969_4f74baae-b9c0-491a-9f42-1878a897af2b/blob/ea561aa38bc081b6a39d4ff7d8a286d2477547e9/youtube_dl/extractor/wdr.py",
+          "display_title": "youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                    formats.extend(self._extract_smil_formats(\n                        medium_url, 'stream', fatal=False))\n                else:",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    100,
+                    106
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/snorkel-marlin-repos/rg3_youtube-dl_pr_11873_01fbe652-cb50-48b6-b8f1-50060fd4ec03/blob/7ecaf2686a24d3ed5c022706b389a4cdb970eb0f/youtube_dl/extractor/wdr.py",
+          "path": "youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/snorkel-marlin-repos/rg3_youtube-dl_pr_11873_01fbe652-cb50-48b6-b8f1-50060fd4ec03/blob/7ecaf2686a24d3ed5c022706b389a4cdb970eb0f/youtube_dl/extractor/wdr.py",
+          "display_title": "youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                    formats.extend(self._extract_smil_formats(\n                        medium_url, 'stream', fatal=False))\n                else:",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    100,
+                    106
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/joegesualdo/get-youtube-subtitle-url-node/blob/e72ba9c58816be66962c248052808a5c905d295e/youtube-dl/youtube_dl/extractor/weibo.py",
+          "path": "youtube-dl/youtube_dl/extractor/weibo.py",
+          "display_url": "https://github.com/joegesualdo/get-youtube-subtitle-url-node/blob/e72ba9c58816be66962c248052808a5c905d295e/youtube-dl/youtube_dl/extractor/weibo.py",
+          "display_title": "youtube-dl/youtube_dl/extractor/weibo.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WeiboMobileIE(InfoExtractor):\n    _VALID_URL = r'https?://m\\.weibo\\.cn/status/(?P<id>[0-9]+)(\\?.+)?'",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    12,
+                    20
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            'uploader': uploader,\n            'url': page_info['media_info']['stream_url']\n        }",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/lzambella/Qyoutube-dl/blob/a6468255dbff51b1c6c3adf4b7a2d7ec594f94d6/youtube_dl/extractor/wdr.py",
+          "path": "youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/lzambella/Qyoutube-dl/blob/a6468255dbff51b1c6c3adf4b7a2d7ec594f94d6/youtube_dl/extractor/wdr.py",
+          "display_title": "youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            for m in re.finditer(\n                    r\"stream:\\s*'dslSrc=(?P<stream>[^']+)',\\s*download:\\s*'(?P<dl>[^']+)'\\s*\\}\",\n                    jscode):",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    56,
+                    62
+                  ]
+                },
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/esc0rtd3w/firestick-loader-kodi-data/blob/e4d7931d8f62c94f586786cd8580108b68d3aa40/17/addons/script.module.youtube.dl/lib/youtube_dl/extractor/wdr.py",
+          "path": "17/addons/script.module.youtube.dl/lib/youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/esc0rtd3w/firestick-loader-kodi-data/blob/e4d7931d8f62c94f586786cd8580108b68d3aa40/17/addons/script.module.youtube.dl/lib/youtube_dl/extractor/wdr.py",
+          "display_title": "17/addons/script.module.youtube.dl/lib/youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                    formats.extend(self._extract_smil_formats(\n                        medium_url, 'stream', fatal=False))\n                else:",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    100,
+                    106
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/esc0rtd3w/firestick-loader-kodi-data/blob/e4d7931d8f62c94f586786cd8580108b68d3aa40/18/addons/script.module.youtube.dl/lib/youtube_dl/extractor/wdr.py",
+          "path": "18/addons/script.module.youtube.dl/lib/youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/esc0rtd3w/firestick-loader-kodi-data/blob/e4d7931d8f62c94f586786cd8580108b68d3aa40/18/addons/script.module.youtube.dl/lib/youtube_dl/extractor/wdr.py",
+          "display_title": "18/addons/script.module.youtube.dl/lib/youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                    formats.extend(self._extract_smil_formats(\n                        medium_url, 'stream', fatal=False))\n                else:",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    100,
+                    106
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/esc0rtd3w/firestick-loader-kodi-data/blob/e4d7931d8f62c94f586786cd8580108b68d3aa40/16/addons/script.module.youtube.dl/lib/youtube_dl/extractor/wdr.py",
+          "path": "16/addons/script.module.youtube.dl/lib/youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/esc0rtd3w/firestick-loader-kodi-data/blob/e4d7931d8f62c94f586786cd8580108b68d3aa40/16/addons/script.module.youtube.dl/lib/youtube_dl/extractor/wdr.py",
+          "display_title": "16/addons/script.module.youtube.dl/lib/youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                    formats.extend(self._extract_smil_formats(\n                        medium_url, 'stream', fatal=False))\n                else:",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    100,
+                    106
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/listamilton/supermilton.repository/blob/293538c209504134de513c6909efb64fd801bb5e/script.module.youtube.dl/lib/youtube_dl/extractor/wdr.py",
+          "path": "script.module.youtube.dl/lib/youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/listamilton/supermilton.repository/blob/293538c209504134de513c6909efb64fd801bb5e/script.module.youtube.dl/lib/youtube_dl/extractor/wdr.py",
+          "display_title": "script.module.youtube.dl/lib/youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                    formats.extend(self._extract_smil_formats(\n                        medium_url, 'stream', fatal=False))\n                else:",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    100,
+                    106
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/x2x5/find/blob/51574e3ea7c54afb7b1a5a3445c8a7b164add175/papers/iccv/2025.txt",
+          "path": "papers/iccv/2025.txt",
+          "display_url": "https://github.com/x2x5/find/blob/51574e3ea7c54afb7b1a5a3445c8a7b164add175/papers/iccv/2025.txt",
+          "display_title": "papers/iccv/2025.txt",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "Mobile Video Diffusion\nMobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices\nMobileViCLIP: An Efficient Video-Text Model for Mobile Devices",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    23,
+                    31
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "Zero-AVSR: Zero-Shot Audio-Visual Speech Recognition with LLMs by Learning Language-Agnostic Speech Representations\nZero-Shot Composed Image Retrieval via Dual-Stream Instruction-Aware Distillation\nZero-Shot Compositional Video Learning with Coding Rate Reduction",
+              "matches": [
+                {
+                  "text": "Stream",
+                  "indices": [
+                    160,
+                    166
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/nlsidf/ndk-vnrit/blob/b169f207b3766a4ab037bfd5202860ea9f553d43/src/main.rs",
+          "path": "src/main.rs",
+          "display_url": "https://github.com/nlsidf/ndk-vnrit/blob/b169f207b3766a4ab037bfd5202860ea9f553d43/src/main.rs",
+          "display_title": "src/main.rs",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "///\n/// Inspired by MobileIE's channel attention (avg pool → sigmoid → scale):\n///   avg Y < 32  (very dark):    boost 1.75×  — enhance shadow detail",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    20,
+                    28
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "const MC_BUFFERS_CHANGED: i64 = -3;\nconst MC_FLAG_END_OF_STREAM: u32 = 4;\n",
+              "matches": [
+                {
+                  "text": "STREAM",
+                  "indices": [
+                    57,
+                    63
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/DalisonCPU/YoutubePlay/blob/50ba2f9df8bde3efb77aa3c5661f60b9736d9519/addon/globalPlugins/youtubeplay/youtube_dl/extractor/weibo.py",
+          "path": "addon/globalPlugins/youtubeplay/youtube_dl/extractor/weibo.py",
+          "display_url": "https://github.com/DalisonCPU/YoutubePlay/blob/50ba2f9df8bde3efb77aa3c5661f60b9736d9519/addon/globalPlugins/youtubeplay/youtube_dl/extractor/weibo.py",
+          "display_title": "addon/globalPlugins/youtubeplay/youtube_dl/extractor/weibo.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WeiboMobileIE(InfoExtractor):\n    _VALID_URL = r'https?://m\\.weibo\\.cn/status/(?P<id>[0-9]+)(\\?.+)?'",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    12,
+                    20
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            'uploader': uploader,\n            'url': page_info['media_info']['stream_url']\n        }",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/manishbisht/ngDownloaderAPI/blob/cd702fac6b50c1bda2f503392b75004db2d1ba39/src/package/youtube_dl/extractor/wdr.py",
+          "path": "src/package/youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/manishbisht/ngDownloaderAPI/blob/cd702fac6b50c1bda2f503392b75004db2d1ba39/src/package/youtube_dl/extractor/wdr.py",
+          "display_title": "src/package/youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "                    formats.extend(self._extract_smil_formats(\n                        medium_url, 'stream', fatal=False))\n                else:",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    100,
+                    106
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/quanganhquanganh/Anki-Youtube-Audio-Miner/blob/80e22810a80ec9d1730f0ee816a096dea6431f42/ytminer/yt_dlp/extractor/weibo.py",
+          "path": "ytminer/yt_dlp/extractor/weibo.py",
+          "display_url": "https://github.com/quanganhquanganh/Anki-Youtube-Audio-Miner/blob/80e22810a80ec9d1730f0ee816a096dea6431f42/ytminer/yt_dlp/extractor/weibo.py",
+          "display_title": "ytminer/yt_dlp/extractor/weibo.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WeiboMobileIE(InfoExtractor):\n    _VALID_URL = r'https?://m\\.weibo\\.cn/status/(?P<id>[0-9]+)(\\?.+)?'",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    12,
+                    20
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            'uploader': uploader,\n            'url': page_info['media_info']['stream_url']\n        }",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Kazuhito00/Multimodal-Node-Editor/blob/b4e82ad8c5b7c68ae263cb26989195af1d803d18/src/nodes/image/deep_learning/low_light_image_enhancement/node.toml",
+          "path": "src/nodes/image/deep_learning/low_light_image_enhancement/node.toml",
+          "display_url": "https://github.com/Kazuhito00/Multimodal-Node-Editor/blob/b4e82ad8c5b7c68ae263cb26989195af1d803d18/src/nodes/image/deep_learning/low_light_image_enhancement/node.toml",
+          "display_title": "src/nodes/image/deep_learning/low_light_image_enhancement/node.toml",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "widget = \"dropdown\"\ndisabled_while_streaming = true\noptions = [\n    { value = 0, label = \"MobileIE\" },\n    { value = 1, label = \"TBEFN\" },\n    { value = 2, label = \"CPGA-Net\" },\n]",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    35,
+                    41
+                  ]
+                },
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    90,
+                    98
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/vivekaxl/LexisNexis/blob/5fa3a818c3d41bd9c3eb25122e1d376c8910269c/ExtractFeatures/Data/rameshkopparapu/wdr.py",
+          "path": "ExtractFeatures/Data/rameshkopparapu/wdr.py",
+          "display_url": "https://github.com/vivekaxl/LexisNexis/blob/5fa3a818c3d41bd9c3eb25122e1d376c8910269c/ExtractFeatures/Data/rameshkopparapu/wdr.py",
+          "display_title": "ExtractFeatures/Data/rameshkopparapu/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            for m in re.finditer(\n                    r\"stream:\\s*'dslSrc=(?P<stream>[^']+)',\\s*download:\\s*'(?P<dl>[^']+)'\\s*\\}\",\n                    jscode):",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    56,
+                    62
+                  ]
+                },
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/atilaprieto/aTiLaRePo/blob/08671d0e6e215bd7f6d61661632abd6232c5c998/plugin.video.rtve/lib/youtube_dl/extractor/weibo.py",
+          "path": "plugin.video.rtve/lib/youtube_dl/extractor/weibo.py",
+          "display_url": "https://github.com/atilaprieto/aTiLaRePo/blob/08671d0e6e215bd7f6d61661632abd6232c5c998/plugin.video.rtve/lib/youtube_dl/extractor/weibo.py",
+          "display_title": "plugin.video.rtve/lib/youtube_dl/extractor/weibo.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WeiboMobileIE(InfoExtractor):\n    _VALID_URL = r'https?://m\\.weibo\\.cn/status/(?P<id>[0-9]+)(\\?.+)?'",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    12,
+                    20
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            'uploader': uploader,\n            'url': page_info['media_info']['stream_url']\n        }",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Artikash/VNR-Extras/blob/0ec62045cccbbd8cf83084ffdc33d1d40768328b/Frameworks/Python/Lib/site-packages/youtube_dl/extractor/wdr.py",
+          "path": "Frameworks/Python/Lib/site-packages/youtube_dl/extractor/wdr.py",
+          "display_url": "https://github.com/Artikash/VNR-Extras/blob/0ec62045cccbbd8cf83084ffdc33d1d40768328b/Frameworks/Python/Lib/site-packages/youtube_dl/extractor/wdr.py",
+          "display_title": "Frameworks/Python/Lib/site-packages/youtube_dl/extractor/wdr.py",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nclass WDRMobileIE(InfoExtractor):\n    _VALID_URL = r'''(?x)",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    10,
+                    18
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "            for m in re.finditer(\n                    r\"stream:\\s*'dslSrc=(?P<stream>[^']+)',\\s*download:\\s*'(?P<dl>[^']+)'\\s*\\}\",\n                    jscode):",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    56,
+                    62
+                  ]
+                },
+                {
+                  "text": "stream",
+                  "indices": [
+                    78,
+                    84
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/lhnows/alignai/blob/df4db6ca831821b01cea2756b527027c54c020a0/docs/Arxiv/2025-07-03.md",
+          "path": "docs/Arxiv/2025-07-03.md",
+          "display_url": "https://github.com/lhnows/alignai/blob/df4db6ca831821b01cea2756b527027c54c020a0/docs/Arxiv/2025-07-03.md",
+          "display_title": "docs/Arxiv/2025-07-03.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "trade-off between speed and performance across multiple IE tasks. The code will\nbe available at https://github.com/AVC2-UESTC/MobileIE.git.\n",
+              "matches": [
+                {
+                  "text": "MobileIE",
+                  "indices": [
+                    126,
+                    134
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "tasks. In the early days, Convolutional Neural Networks (CNNs) were the\nmainstream architecture. In recent years, Vision Transformers (ViTs) have\nbecome increasingly popular. In addition, exploring applications of multi-layer",
+              "matches": [
+                {
+                  "text": "stream",
+                  "indices": [
+                    76,
+                    82
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "isError": false
+  }
+}
