@@ -1,0 +1,53 @@
+{
+  "resource_id": "MIE-0101",
+  "created_at": "2026-11-20T12:24:23+08:00",
+  "source_root": "../../.. (workstation root from this sources directory)",
+  "snapshot_cutoff": "2026-11-17",
+  "receipts": [
+    {
+      "path": "receipts/paper-6e4bacda0b1c-index-link1.json",
+      "status": "success",
+      "http": 202,
+      "archive": null,
+      "sha256": null
+    },
+    {
+      "path": "receipts/paper-6e4bacda0b1c-publisher.json",
+      "status": "http_error",
+      "http": 403,
+      "archive": "archive/paper-6e4bacda0b1c-publisher.html",
+      "sha256": "e7467630e3213dbfd4094351d7959967f82fa49323857d6c396cb133bc114001"
+    },
+    {
+      "path": "receipts/pmc-primary-13165815.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/pmc-primary-13165815.html",
+      "sha256": "27460ad0c5dc9eaed92fe38768235d32927ba029542f0d407a90398f9910f773"
+    }
+  ],
+  "discovery_evidence": [
+    {
+      "source": "collection/raw/initial-openalex-citing.json",
+      "position": 17,
+      "source_record_id": "https://openalex.org/W7160036631"
+    },
+    {
+      "source": "collection/raw/initial-s2-citing.json",
+      "position": 22,
+      "source_record_id": "d45b3d608158b5f81a7f0ec08be7a65876c4efde"
+    },
+    {
+      "source": "research/5.prior-art-survey/data/citations_s2.json",
+      "position": 20,
+      "source_record_id": "d45b3d608158b5f81a7f0ec08be7a65876c4efde"
+    },
+    {
+      "source": "research/5.prior-art-survey/data/citations_openalex.json",
+      "position": 4,
+      "source_record_id": "https://openalex.org/W7160036631"
+    }
+  ],
+  "adequacy": "Materials available for analysis; not yet read or qualified",
+  "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts"
+}
