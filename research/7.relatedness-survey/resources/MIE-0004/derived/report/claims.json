@@ -113,12 +113,12 @@
     },
     {
       "id": "C06",
-      "claim": "Published configs/loss/metric/logging/counting paths must be distinguished from paper and helper comments",
+      "claim": "Five published training configs differ from each other and paper; metric/logging/counting paths must be distinguished from helper comments",
       "evidence_class": "static_source_verification",
       "anchors": [
         {
           "source": "resources/MIE-0004/derived/docs/static-config-audit.json",
-          "locator": "batch/lr/warmup/freeze values"
+          "locator": "DID train8/1e-4/5; SDSDindoor4/1e-4/5; SDEin/out and SDSDout4/1e-6/10; separate fixed test batch4"
         },
         {
           "source": "resources/MIE-0004/derived/docs/upstream-code/utils--metrics.py.txt",

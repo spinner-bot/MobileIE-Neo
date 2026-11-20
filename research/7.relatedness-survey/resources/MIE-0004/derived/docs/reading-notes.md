@@ -18,7 +18,7 @@ README称官方实现并链接arxiv、主页、海报、预训练及五组微调
 
 ## 配置、加载与评价
 
-五个YAML、五个shell入口、四个dataset类及全部split列表已检查。clip8/stride2、短边base256后crop128²、batch4及微调小学习率等见[配置审计](static-config-audit.json)；不沿用论文Table6的batch32/lr2e-4去描述这份发布配置。SDE室内外数量与论文文字的对应差别保留于MIE-0003，未核实际下载视频内容。
+五个YAML、五个shell入口、四个dataset类及全部split列表已检查。clip8/stride2、短边base256后crop128²一致；训练条件按配置区分：DID为batch8/lr1e-4/warmup5，SDSD室内为4/1e-4/5，SDE两组及SDSD室外为4/1e-6/10。测试batch4另由脚本统一硬编码。见[配置审计](static-config-audit.json)，不沿用论文Table6的batch32/lr2e-4去描述这份发布配置。SDE室内外数量与论文文字的对应差别保留于MIE-0003，未核实际下载视频内容。
 
 `scripts/train.py`141–159只冻结encoder/decoder/ln_img/proj_img，Trainer可另冻辅助编码器；ConvLSTM/translator等仍可能训练，配置注释“only head”不能代替真实参数选择。工具param_count.py只数requires_grad，主train脚本则同时打印trainable/total；未调用任何模型计数或构造模型。
 

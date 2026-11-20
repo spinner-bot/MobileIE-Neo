@@ -23,7 +23,7 @@ offline `inference_video`会eval、每次重置H/C、处理给定clip后返回�
 |freeze_backbone=true|冻结四个命名模块，辅助编码器另控|ConvLSTM/translator等不在该冻结列表，“only head”注释不精确。|
 |参数/日志工具|param_count只数trainable；Logger为空；主脚本打印trainable/total，Trainer另写JSONL|不能把工具输出当推理整网参数，也不能声称整个项目无日志。|
 
-上述[C04–C06]需与正式论文协议核对；训练YAML的batch4/lr1e-6/warmup10等、Charbonnier及缺失组合/蒸馏细节仍与论文统一叙述不同。PSNR为全RGB MSE，与原MobileIE默认逐通道口径不同；源码定义的temporal_loss未接入默认训练，但仍有递归时间机制。[C04–C06]
+上述[C04–C06]需与正式论文协议核对；训练YAML也各异：DID为batch8/lr1e-4/warmup5，SDSD室内为4/1e-4/5，SDE两组与SDSD室外为4/1e-6/10；这与统一硬编码的测试batch4分开。配置、Charbonnier及缺失组合/蒸馏细节仍与论文统一叙述不同。PSNR为全RGB MSE，与原MobileIE默认逐通道口径不同；源码定义的temporal_loss未接入默认训练，但仍有递归时间机制。[C04–C06]
 
 ## 可得材料与展示边界
 
