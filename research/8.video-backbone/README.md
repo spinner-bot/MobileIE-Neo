@@ -3,6 +3,8 @@
 2026-11-20；Codex  (sqs_A100)。main主题8，research/7继续留给其他分支。
 [T1同原骨干训练监督对照](teacher-targets/README.md)也已完整负结项：[完整决定](teacher-targets/decision.md)、[0180报告](../../docs/进展报告/0180-T-26112019-同原骨干时序KD完整评价与止损.md)、[原终态](teacher-targets/process/terminal001.json)。24000正式更新/六唯一最终/全180质量与180官方JOD/240共表及四图实际审阅，恢复保护3/4、A/B各0/40、成本资格False。对空间KD全部20条件时间更好，四组改善1.49%–2.38%，但距原强post仍高约29%–48%；固定同F0/T4DIS/等权KD局部网格STOP，不扩失败成本/外部/手机。普通KD是已完成已知参照，不主张创新。全部原任务终态、GPU释放，论文goal active。
 
+下一[T2部署递归监督问题](recurrent-objective/question.md)先保留原F0并区分clip-GT与真实递归输出监督，推理明确保留DIS/状态；[已读直接先例](../5.prior-art-survey/docs/72-deployed-recurrence-and-supervision-entry.md)表明普通递归训练不是新方法。当前只有问题/来源，0新训练/DEV/GPU；下一有限实现资格及完整预算另登记，不能重开T1/V1。4075不是用户硬参数上限，实际质量—时间—完整成本才决定价值。
+
 
 V1已完整结项为负结果：[决定与止损](decision-v1.md)、[0175报告](../../docs/进展报告/0175-T-26112017-完整视频骨干候选评价与止损.md)、[原终态](process/v1/terminal001.json)。两seed全28000正式训练/八唯一最终、220质量/220官方JOD各9856逐帧、280共同条件/56均值及四固定图均正常，四联系图和两全表图已实际查看。全部旧worker/coordinator均退出，无活跃V1任务，不重启旧链。
 
