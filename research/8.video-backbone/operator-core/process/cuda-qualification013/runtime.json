@@ -1,0 +1,149 @@
+{
+  "at": "2026-11-21T07:22:37.844639+08:00",
+  "process": {
+    "pid": 3579558,
+    "start_ticks": 115708973,
+    "state": "R"
+  },
+  "seed": 0,
+  "qualification": true,
+  "completed_normally": true,
+  "resource_pause": false,
+  "counts": {
+    "common_steps": 2,
+    "optimizer_updates": 4,
+    "student_images": 64,
+    "teacher_images": 32,
+    "teacher_FB_pairs": 24
+  },
+  "latest_checkpoint": null,
+  "seconds": 54.4337699690368,
+  "CUDA_initialized": true,
+  "GPU": {
+    "UUID": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+    "observations": 4,
+    "minimum_free_mib": 39313,
+    "maximum_used_mib": 1646,
+    "maximum_observed_utilization_percent": 15,
+    "synchronized_work_seconds": 1.1816733998712152,
+    "cooperative_pause_seconds": 2.894862159155309,
+    "current_consecutive_busy_decisions": 0,
+    "last16": [
+      {
+        "at": "2026-11-21T07:22:32.735088+08:00",
+        "uuid": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+        "total_mib": 40960,
+        "used_mib": 1022,
+        "free_mib": 39937,
+        "utilization_percent": 0
+      },
+      {
+        "at": "2026-11-21T07:22:33.705776+08:00",
+        "uuid": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+        "total_mib": 40960,
+        "used_mib": 1646,
+        "free_mib": 39313,
+        "utilization_percent": 15
+      },
+      {
+        "at": "2026-11-21T07:22:36.614119+08:00",
+        "uuid": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+        "total_mib": 40960,
+        "used_mib": 1646,
+        "free_mib": 39313,
+        "utilization_percent": 0
+      },
+      {
+        "at": "2026-11-21T07:22:37.044762+08:00",
+        "uuid": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+        "total_mib": 40960,
+        "used_mib": 1646,
+        "free_mib": 39313,
+        "utilization_percent": 0
+      }
+    ],
+    "scope": "Lifetime resource minima/maxima and bounded recent observations; no phone or incumbent throughput claim."
+  },
+  "final_actual_device": {
+    "expected_uuid": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+    "matched": true,
+    "actual_own_GPU_indices": [
+      4
+    ],
+    "sample": {
+      "at": "2026-11-21T07:22:37.844511+08:00",
+      "GPUs": [
+        {
+          "index": 0,
+          "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+          "total_mib": 40960,
+          "used_mib": 0,
+          "utilization_percent": 0,
+          "processes": []
+        },
+        {
+          "index": 1,
+          "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+          "total_mib": 40960,
+          "used_mib": 0,
+          "utilization_percent": 0,
+          "processes": []
+        },
+        {
+          "index": 2,
+          "uuid": "GPU-e7f8224e-43d7-f7d6-10ff-8412dc30aa9e",
+          "total_mib": 40960,
+          "used_mib": 0,
+          "utilization_percent": 0,
+          "processes": []
+        },
+        {
+          "index": 3,
+          "uuid": "GPU-3a66f673-05de-ba45-3f5c-308b333fea68",
+          "total_mib": 40960,
+          "used_mib": 0,
+          "utilization_percent": 0,
+          "processes": []
+        },
+        {
+          "index": 4,
+          "uuid": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+          "total_mib": 40960,
+          "used_mib": 1127,
+          "utilization_percent": 0,
+          "processes": [
+            "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e, 3579558, 1118"
+          ]
+        },
+        {
+          "index": 5,
+          "uuid": "GPU-83b3ac27-3e78-fb30-a5f6-d5daf4aac4fb",
+          "total_mib": 40960,
+          "used_mib": 0,
+          "utilization_percent": 0,
+          "processes": []
+        },
+        {
+          "index": 6,
+          "uuid": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+          "total_mib": 40960,
+          "used_mib": 0,
+          "utilization_percent": 0,
+          "processes": []
+        },
+        {
+          "index": 7,
+          "uuid": "GPU-7d263daa-6d13-02a6-b0ea-29c2c09a2c8b",
+          "total_mib": 40960,
+          "used_mib": 0,
+          "utilization_percent": 0,
+          "processes": []
+        }
+      ]
+    }
+  },
+  "own_final_NVML_mib": 1118,
+  "own_NVML_scope": "End sample, not lifetime own process peak",
+  "maximum_allocated_bytes": 421330944,
+  "maximum_reserved_bytes": 580911104
+}
