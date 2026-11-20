@@ -1,0 +1,109 @@
+{
+  "at": "2026-11-20T14:16:34.522411+08:00",
+  "live_processes": {
+    "coordinator": {
+      "pid": 3024380,
+      "start_ticks": 109481893,
+      "state": "S"
+    },
+    "worker": {
+      "pid": 3024402,
+      "start_ticks": 109481902,
+      "state": "R"
+    }
+  },
+  "CPU_state": {
+    "at": "2026-11-20T14:16:31.471701+08:00",
+    "coordinator": {
+      "pid": 3024380,
+      "start_ticks": 109481893,
+      "state": "R"
+    },
+    "status": "running",
+    "stage": "CPU-train-seed0-attempt006",
+    "child": {
+      "pid": 3024402,
+      "start_ticks": 109481902,
+      "state": "R"
+    },
+    "stdout": ".cache/experiments/topic8-v1/cpu-chain001/CPU-train-seed0-attempt006.stdout.txt"
+  },
+  "warm_unique_final": {
+    "at": "2026-11-20T14:11:04.765017+08:00",
+    "seed": 0,
+    "phase": "warm",
+    "path": ".cache/experiments/topic8-v1/train-seed0-attempt006/warm-final.pt",
+    "sha256": "1041d1424ad42245b5ef6192275d7fb589b0d3ac0e256eec55e83067ab490c75",
+    "parameters": 16180,
+    "updates": 2000,
+    "all_tensors_reloaded_finite": true,
+    "training_backend": "cpu",
+    "unique_final": true
+  },
+  "actual_trace": "research/8.video-backbone/process/v1/train-seed0-attempt006/training.jsonl",
+  "actual_complete_prefix_bytes": 741713,
+  "actual_complete_prefix_sha256": "b49fd001309ef0197baef9667ff19b0f7cdf94365baaf1949add907cc5d4a291",
+  "actual_phase_prefixes": {
+    "warm": {
+      "first": {
+        "phase": "warm",
+        "step": 359,
+        "data_step": 358,
+        "loss": 0.005120549350976944,
+        "gradient_norm": 0.03142300993204117,
+        "synchronized_work_seconds": 1.3201403699349612,
+        "backbone_images": 16,
+        "DIS_pairs": 0
+      },
+      "complete_rows": 1642,
+      "last": {
+        "phase": "warm",
+        "step": 2000,
+        "data_step": 1999,
+        "loss": 0.0047067091800272465,
+        "gradient_norm": 0.014682432636618614,
+        "synchronized_work_seconds": 0.13441389217041433,
+        "backbone_images": 16,
+        "DIS_pairs": 0
+      }
+    },
+    "spatial": {
+      "first": {
+        "phase": "spatial",
+        "step": 1,
+        "data_step": 2000,
+        "loss": 0.004624290857464075,
+        "gradient_norm": 0.04909379035234451,
+        "synchronized_work_seconds": 0.07470457698218524,
+        "backbone_images": 16,
+        "DIS_pairs": 0
+      },
+      "complete_rows": 1903,
+      "last": {
+        "phase": "spatial",
+        "step": 1903,
+        "data_step": 3902,
+        "loss": 0.004818419925868511,
+        "gradient_norm": 0.022234976291656494,
+        "synchronized_work_seconds": 0.06723632593639195,
+        "backbone_images": 16,
+        "DIS_pairs": 0
+      }
+    }
+  },
+  "cumulative_counts_observed": {
+    "updates": {
+      "warm": 2000,
+      "spatial": 1903,
+      "fixed": 0,
+      "learned": 0
+    },
+    "teacher_images": 32000,
+    "backbone_images": 62448,
+    "DIS_pairs": 0,
+    "gate_images": 0
+  },
+  "canonical_and_execution_sources_unchanged": true,
+  "DEV_rows": 0,
+  "scope": "Compact original log-prefix evidence and completed warm transfer; GT adaptation prefix only, not method or quality success."
+}
