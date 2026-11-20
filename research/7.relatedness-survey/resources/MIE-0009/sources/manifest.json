@@ -61,7 +61,7 @@
       "note": "current metadata only"
     }
   ],
-  "adequacy": "Materials available for analysis; not yet read or qualified",
+  "adequacy": "Complete87file source acquired and applicable enhancement/video/ROI/SAM-input/core config/static-test reading performed. Claimed converted NPZ not acquired; topology only, no numerical/device/scientific success.",
   "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts",
   "path_conventions": {
     "receipts[].path": "relative to workstation/collection",
@@ -69,5 +69,19 @@
     "discovery_evidence strings": "relative to workstation/collection",
     "discovery_evidence[].source": "collection/ prefix relative to workstation; research/ prefix relative to repository root",
     "discovery_evidence[].acquisition": "relative to workstation/collection; path is remote repository path at revision"
-  }
+  },
+  "supplemental_attempt_evidence": [
+    {
+      "source": "resources/MIE-0009/derived/docs/weight-entry-attempts.json",
+      "role": "fixed NPZ404 and current author releases[]; not historical availability proof"
+    },
+    {
+      "source": "resources/MIE-0009/derived/docs/extra-source-manifest.json",
+      "role": "archive .gitattributes/component license originals"
+    },
+    {
+      "source": "resources/MIE-0009/derived/docs/model-and-weight-audit.json",
+      "role": "original codehit hashes/operator correspondence and explicit gaps"
+    }
+  ]
 }

@@ -1,0 +1,263 @@
+{
+  "resource_id": "MIE-0009",
+  "created_at": "2026-11-20T19:17:30.440556+08:00",
+  "source_revision": "af76a927c568795e800f8d8e0c28c3b939fd6f1f",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Independent underwater tracking/reconstruction/annotation project explicitly integrates a MobileIE slim per-frame enhancement template",
+      "evidence_class": "identity_and_static_primary_source",
+      "anchors": [
+        {
+          "source": "collection/mie9commit-metadata.json",
+          "locator": "fixed Nov10 commit"
+        },
+        {
+          "source": "resources/MIE-0009/derived/docs/upstream-code/README.md.txt",
+          "locator": "overview and GUI enhancement row"
+        },
+        {
+          "source": "resources/MIE-0009/derived/docs/upstream-code/pyproject.toml.txt",
+          "locator": "Teddy Yankov/version0.1.0"
+        },
+        {
+          "source": "resources/MIE-0009/derived/docs/upstream-code/src--reeftrack--enhance--__init__.py.txt",
+          "locator": "MobileIE class"
+        }
+      ],
+      "limitation": "Not original paper authorship, new citing paper, exact first release or confirmed successful model deployment."
+    },
+    {
+      "id": "C02",
+      "claim": "Ported head/body/FST/channel-mean/max attention/tail topology matches original RGB slim construction and uses RGB/255 then clip/uint8",
+      "evidence_class": "static_operator_correspondence",
+      "anchors": [
+        {
+          "source": "resources/MIE-0009/derived/docs/upstream-code/src--reeftrack--enhance--__init__.py.txt",
+          "locator": "MobileIE._forward and __call__"
+        },
+        {
+          "source": "resources/MIE-0002/derived/docs/upstream-code/model--lle.py.txt",
+          "locator": "MobileIELLENetS"
+        },
+        {
+          "source": "resources/MIE-0002/derived/docs/upstream-code/model--utils.py.txt",
+          "locator": "FSTS329–342"
+        },
+        {
+          "source": "resources/MIE-0009/derived/docs/model-and-weight-audit.json",
+          "locator": "operator table"
+        }
+      ],
+      "limitation": "No converted key/shape/value or numeric/device parity verified; retaining nonlinear FST is not an empirical reproduction."
+    },
+    {
+      "id": "C03",
+      "claim": "Claimed mobileie_uieb.npz is absent in87file package; fixed contents path404 and current release list[]; no identified conversion script",
+      "evidence_class": "archive_and_actual_access_attempts",
+      "anchors": [
+        {
+          "source": "resources/MIE-0009/derived/docs/archive-inventory.json",
+          "locator": "all87files"
+        },
+        {
+          "source": "resources/MIE-0009/derived/docs/upstream-code/.gitignore.txt",
+          "locator": "*.npz excluded"
+        },
+        {
+          "source": "resources/MIE-0009/derived/docs/extra-.gitattributes.txt",
+          "locator": "line-ending rules, not model export exclusion"
+        },
+        {
+          "source": "resources/MIE-0009/derived/docs/weight-entry-attempts.json",
+          "locator": "404 and []"
+        }
+      ],
+      "limitation": "Current release listing is not historical proof; no unpublished/local-wheel artifact or actual UIEB conversion provenance established."
+    },
+    {
+      "id": "C04",
+      "claim": "4075 is an author test assertion here; availability requires bothTorch and NPZ, so a weights-free test run need not exercise MobileIE",
+      "evidence_class": "static_test_predicates_not_execution",
+      "anchors": [
+        {
+          "source": "resources/MIE-0009/derived/docs/upstream-code/tests--test_enhance.py.txt",
+          "locator": "available-filtered parameterization and dedicated skip/assert"
+        },
+        {
+          "source": "resources/MIE-0009/derived/docs/upstream-code/src--reeftrack--enhance--__init__.py.txt",
+          "locator": "available"
+        },
+        {
+          "source": "resources/MIE-0009/derived/docs/upstream-code/pyproject.toml.txt",
+          "locator": "package-data wildcard"
+        }
+      ],
+      "limitation": "No pytest/import/model run or count of absent converted weights; shape/determinism/change assertions not temporal quality or official parity tests."
+    },
+    {
+      "id": "C05",
+      "claim": "Enhancers have no content-history state; SAM memory/backfill and FishFollower centre smoothing are separate pipeline features",
+      "evidence_class": "static_state_and_information_flow",
+      "anchors": [
+        {
+          "source": "resources/MIE-0009/derived/docs/upstream-code/src--reeftrack--enhance--__init__.py.txt",
+          "locator": "stateless functions/MobileIE weights/device/get/make"
+        },
+        {
+          "source": "resources/MIE-0009/derived/docs/upstream-code/src--reeftrack--tracking--session.py.txt",
+          "locator": "forward/backfill/view"
+        },
+        {
+          "source": "resources/MIE-0009/derived/docs/upstream-code/src--reeftrack--tracking--roi.py.txt",
+          "locator": "FishFollower smoothing/template/cache"
+        },
+        {
+          "source": "resources/MIE-0009/derived/docs/upstream-code/configs--default.yaml.txt",
+          "locator": "backfillTrue"
+        }
+      ],
+      "limitation": "Whole annotation workflow is not proven online causal; offline masks/human future corrections may influence ROI, not new image restoration memory."
+    },
+    {
+      "id": "C06",
+      "claim": "GUI full-view enhancement caps width960 before model while zoom models native crop before display resizing; SAM uses independent native/full crop view",
+      "evidence_class": "static_resolution_and_call_path",
+      "anchors": [
+        {
+          "source": "resources/MIE-0009/derived/docs/upstream-code/src--reeftrack--gui--app.py.txt",
+          "locator": "87,617–636,834–835"
+        },
+        {
+          "source": "resources/MIE-0009/derived/docs/upstream-code/src--reeftrack--tracking--session.py.txt",
+          "locator": "112–136,270–274"
+        },
+        {
+          "source": "resources/MIE-0009/derived/docs/upstream-code/src--reeftrack--tracking--roi.py.txt",
+          "locator": "crop/rect_at"
+        }
+      ],
+      "limitation": "Display and SAM resolutions/ROI context differ; equal method name not equal full1080p/4K cost or operator outputs across crops."
+    },
+    {
+      "id": "C07",
+      "claim": "MobileIE global average attention and per-crop classical Retinex adapt to changing image context; moving ROI is a potential stability confound",
+      "evidence_class": "static_mechanism_and_survey_inference",
+      "anchors": [
+        {
+          "source": "resources/MIE-0009/derived/docs/upstream-code/src--reeftrack--enhance--__init__.py.txt",
+          "locator": "Retinex percentile and MobileIE spatial mean"
+        },
+        {
+          "source": "resources/MIE-0009/derived/docs/upstream-code/src--reeftrack--tracking--roi.py.txt",
+          "locator": "moving/smoothed ROI"
+        },
+        {
+          "source": "resources/MIE-0009/derived/docs/upstream-code/src--reeftrack--gui--app.py.txt",
+          "locator": "crop-before-enhancement paths"
+        }
+      ],
+      "limitation": "No measured flicker amplitude, motion/exposure robustness or crop ablation; potential mechanism not observed failure."
+    },
+    {
+      "id": "C08",
+      "claim": "Video frame mapping preserves decoded source frame identity with stride but proxy uses CFR regenerated timestamps;119.88/4 gives29.97",
+      "evidence_class": "static_io_protocol",
+      "anchors": [
+        {
+          "source": "resources/MIE-0009/derived/docs/upstream-code/src--reeftrack--io--video.py.txt",
+          "locator": "FrameMap/plan/build_proxy_command"
+        },
+        {
+          "source": "resources/MIE-0009/derived/docs/upstream-code/docs--methods.md.txt",
+          "locator": "preparation section"
+        },
+        {
+          "source": "resources/MIE-0009/derived/docs/upstream-code/README.md.txt",
+          "locator": "source/proxy provenance table"
+        }
+      ],
+      "limitation": "No source VFR/per-frame real capture PTS dataset verified; nominal frame-rate mapping not all timestamp fidelity."
+    },
+    {
+      "id": "C09",
+      "claim": "README2–25ms/30fps is an author display claim, GUI QTimer target not a measured benchmark; M3Pro SAM/Wat3R table is other modules",
+      "evidence_class": "author_report_and_static_cost_boundary",
+      "anchors": [
+        {
+          "source": "resources/MIE-0009/derived/docs/upstream-code/README.md.txt",
+          "locator": "84 and183–189"
+        },
+        {
+          "source": "resources/MIE-0009/derived/docs/upstream-code/src--reeftrack--gui--app.py.txt",
+          "locator": "592–601 requested interval"
+        },
+        {
+          "source": "resources/MIE-0009/derived/docs/upstream-code/src--reeftrack--io--video.py.txt",
+          "locator": "FrameReader default64RGBframe cache"
+        }
+      ],
+      "limitation": "No enhanced-video quality/complete MobileIE device timing/memory/energy; tiny parameter count excludes frame cache/SAM/decoder/render costs."
+    },
+    {
+      "id": "C10",
+      "claim": "Enhancement defaultsOff while SAM-sees-enhanced checkboxTrue applies only when selected; ordinary light annotator lacksTorch",
+      "evidence_class": "static_defaults_and_environment",
+      "anchors": [
+        {
+          "source": "resources/MIE-0009/derived/docs/upstream-code/src--reeftrack--gui--app.py.txt",
+          "locator": "303–323 available/Off/prefs/checkbox"
+        },
+        {
+          "source": "resources/MIE-0009/derived/docs/upstream-code/environment-annotate.yml.txt",
+          "locator": "noTorch"
+        },
+        {
+          "source": "resources/MIE-0009/derived/docs/upstream-code/environment.yml.txt",
+          "locator": "version ranges"
+        },
+        {
+          "source": "resources/MIE-0009/derived/docs/upstream-code/src--reeftrack--enhance--__init__.py.txt",
+          "locator": "deviceMPS→CUDA→CPU"
+        }
+      ],
+      "limitation": "Existing preferences and installed weights may differ; no actual default model/hardware behavior tested, broad dependency ranges not locked runtime."
+    },
+    {
+      "id": "C11",
+      "claim": "Component Apache2.0 file exists, actual example/GT/enhanced data and root general license absent from fixed package",
+      "evidence_class": "source_artifact_and_license_metadata",
+      "anchors": [
+        {
+          "source": "resources/MIE-0009/derived/docs/extra-src--reeftrack--enhance--LICENSE-MobileIE.txt",
+          "locator": "Apache2.0 declaration"
+        },
+        {
+          "source": "resources/MIE-0009/derived/docs/upstream-code/data--README.md.txt",
+          "locator": "local outputs not committed"
+        },
+        {
+          "source": "resources/MIE-0009/derived/docs/archive-inventory.json",
+          "locator": "87file paths"
+        }
+      ],
+      "limitation": "No legal interpretation, weight-source/whole-project/data authorization audit; no example-private-path access or scientific media result claim."
+    },
+    {
+      "id": "C12",
+      "claim": "Direct stateless video-application precedent, not a learned temporal MobileIE method; useful matched export/ROI/proxy/downstream control reference",
+      "evidence_class": "survey_inference_and_future_hypotheses",
+      "anchors": [
+        {
+          "source": "resources/MIE-0009/derived/report/analysis.md",
+          "locator": "value/repetition/falsifiable controls"
+        },
+        {
+          "source": "resources/MIE-0009/derived/docs/reading-notes.md",
+          "locator": "actual scope and all unknowns"
+        }
+      ],
+      "limitation": "Missing converted weights and no model/quality/device test preclude successful-reproduction or new algorithm claim; Gate3 proposals only."
+    }
+  ]
+}
