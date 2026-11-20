@@ -4,7 +4,9 @@
 
 ## 当前研究状态
 
-2026-11-20最新[0180：同原骨干时序KD完整评价与止损](docs/进展报告/0180-T-26112019-同原骨干时序KD完整评价与止损.md)：主题8-T1全部24000正式更新、六唯一最终、180质量/180官方JOD、240共同条件/48均值及四固定图实际审阅均完成。恢复保护3/4、主要A/B各0/40、成本扩展False；相对空间KD保留20/20时间改善、四组1.49%–2.38%的小幅正例，但未追平强post，固定同F0/T4DIS/等权KD局部网格STOP。普通KD已有直接先例，只作已完成已知训练参照。[完整决定](research/8.video-backbone/teacher-targets/decision.md)、[完整表](research/8.video-backbone/teacher-targets/report/joint/tables.md)、[真实终态](research/8.video-backbone/teacher-targets/process/terminal001.json)。
+2026-11-20最新[0181：部署递归监督资格与固定训练启动](docs/进展报告/0181-T-26112020-部署递归监督原生资格与固定完整训练启动.md)：[T2](research/8.video-backbone/recurrent-objective/README.md)的零更新原生实现/CPU4与CUDA4丢弃优化资格均通过，完整47源及固定协议已冻，原协调3246208推进16000更新及120质量/JOD、360共同条件。20:01:51前缀seed0两模型各63/126正式更新，完整训练/新DEV尚未完成；只有全量结果才能判定，不能据静态PID/步号重启。普通递归训练已有先例，只作已知优化参照，推理保留DIS/warp/历史成本。
+
+此前[0180：同原骨干时序KD完整评价与止损](docs/进展报告/0180-T-26112019-同原骨干时序KD完整评价与止损.md)：主题8-T1全部24000正式更新、六唯一最终、180质量/180官方JOD、240共同条件/48均值及四固定图实际审阅均完成。恢复保护3/4、主要A/B各0/40、成本扩展False；相对空间KD保留20/20时间改善、四组1.49%–2.38%的小幅正例，但未追平强post，固定同F0/T4DIS/等权KD局部网格STOP。普通KD已有直接先例，只作已完成已知训练参照。[完整决定](research/8.video-backbone/teacher-targets/decision.md)、[完整表](research/8.video-backbone/teacher-targets/report/joint/tables.md)、[真实终态](research/8.video-backbone/teacher-targets/process/terminal001.json)。
 
 前序[0175：V1主干完整评价](docs/进展报告/0175-T-26112017-完整视频骨干候选评价与止损.md)已完成28000正式训练与220质量/JOD、280共表，空间保护0/4、A/B各0/28，固定packed核/输入递归局部配置已STOP。全部V1/T1原数值/协调任务已终态、GPU释放；下面历史中的“下一”“当前”不作为重启依据。所有旧STOP、原84值/snapshot003/内部PDF020、独立最终封存、7号与其他worktree保持。
 
