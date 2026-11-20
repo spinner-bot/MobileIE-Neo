@@ -1,0 +1,206 @@
+{
+  "at": "2026-11-20T14:41:40.937301+08:00",
+  "live_processes": {
+    "coordinator": {
+      "pid": 3024380,
+      "start_ticks": 109481893,
+      "state": "S"
+    },
+    "worker": {
+      "pid": 3024402,
+      "start_ticks": 109481902,
+      "state": "R"
+    }
+  },
+  "CPU_state": {
+    "at": "2026-11-20T14:41:36.798933+08:00",
+    "coordinator": {
+      "pid": 3024380,
+      "start_ticks": 109481893,
+      "state": "R"
+    },
+    "status": "running",
+    "stage": "CPU-train-seed0-attempt006",
+    "child": {
+      "pid": 3024402,
+      "start_ticks": 109481902,
+      "state": "R"
+    },
+    "stdout": ".cache/experiments/topic8-v1/cpu-chain001/CPU-train-seed0-attempt006.stdout.txt"
+  },
+  "unique_completed_finals": {
+    "warm": {
+      "at": "2026-11-20T14:11:04.765017+08:00",
+      "seed": 0,
+      "phase": "warm",
+      "path": ".cache/experiments/topic8-v1/train-seed0-attempt006/warm-final.pt",
+      "sha256": "1041d1424ad42245b5ef6192275d7fb589b0d3ac0e256eec55e83067ab490c75",
+      "parameters": 16180,
+      "updates": 2000,
+      "all_tensors_reloaded_finite": true,
+      "training_backend": "cpu",
+      "unique_final": true
+    },
+    "spatial": {
+      "at": "2026-11-20T14:22:37.391027+08:00",
+      "seed": 0,
+      "phase": "spatial",
+      "path": ".cache/experiments/topic8-v1/train-seed0-attempt006/spatial-final.pt",
+      "sha256": "50f294accd66e44006691f0620ba77595f5f81e36c987b16725c314a47121a67",
+      "parameters": 16180,
+      "updates": 4000,
+      "all_tensors_reloaded_finite": true,
+      "training_backend": "cpu",
+      "unique_final": true
+    },
+    "fixed": {
+      "at": "2026-11-20T14:39:08.857480+08:00",
+      "seed": 0,
+      "phase": "fixed",
+      "path": ".cache/experiments/topic8-v1/train-seed0-attempt006/fixed-final.pt",
+      "sha256": "7f0324cae390e303a8cd16c92936a049cebd03187e5bf0d5072ab4708b705985",
+      "parameters": 16180,
+      "updates": 4000,
+      "all_tensors_reloaded_finite": true,
+      "training_backend": "cpu",
+      "unique_final": true
+    }
+  },
+  "actual_trace": "research/8.video-backbone/process/v1/train-seed0-attempt006/training.jsonl",
+  "actual_complete_prefix_bytes": 2125252,
+  "actual_complete_prefix_sha256": "34b04d415b6ec2c1e3c8567df410303374d8cba3f2c32a40d02ebc0a2f89640d",
+  "actual_phase_prefixes": {
+    "warm": {
+      "first": {
+        "phase": "warm",
+        "step": 359,
+        "data_step": 358,
+        "loss": 0.005120549350976944,
+        "gradient_norm": 0.03142300993204117,
+        "synchronized_work_seconds": 1.3201403699349612,
+        "backbone_images": 16,
+        "DIS_pairs": 0
+      },
+      "rows": 1642,
+      "last": {
+        "phase": "warm",
+        "step": 2000,
+        "data_step": 1999,
+        "loss": 0.0047067091800272465,
+        "gradient_norm": 0.014682432636618614,
+        "synchronized_work_seconds": 0.13441389217041433,
+        "backbone_images": 16,
+        "DIS_pairs": 0
+      }
+    },
+    "spatial": {
+      "first": {
+        "phase": "spatial",
+        "step": 1,
+        "data_step": 2000,
+        "loss": 0.004624290857464075,
+        "gradient_norm": 0.04909379035234451,
+        "synchronized_work_seconds": 0.07470457698218524,
+        "backbone_images": 16,
+        "DIS_pairs": 0
+      },
+      "rows": 4000,
+      "last": {
+        "phase": "spatial",
+        "step": 4000,
+        "data_step": 5999,
+        "loss": 0.003066732781007886,
+        "gradient_norm": 0.008980090729892254,
+        "synchronized_work_seconds": 0.06608651601709425,
+        "backbone_images": 16,
+        "DIS_pairs": 0
+      }
+    },
+    "fixed": {
+      "first": {
+        "phase": "fixed",
+        "step": 1,
+        "data_step": 2000,
+        "loss": 0.004582887049764395,
+        "gradient_norm": 0.049629684537649155,
+        "synchronized_work_seconds": 0.15074361604638398,
+        "backbone_images": 28,
+        "DIS_pairs": 12
+      },
+      "rows": 4000,
+      "last": {
+        "phase": "fixed",
+        "step": 4000,
+        "data_step": 5999,
+        "loss": 0.002880387706682086,
+        "gradient_norm": 0.009218428283929825,
+        "synchronized_work_seconds": 0.14133079396560788,
+        "backbone_images": 28,
+        "DIS_pairs": 12
+      }
+    },
+    "learned": {
+      "first": {
+        "phase": "learned",
+        "step": 1,
+        "data_step": 2000,
+        "loss": 0.004582887049764395,
+        "gradient_norm": 0.04962978884577751,
+        "synchronized_work_seconds": 0.27385587291792035,
+        "backbone_images": 28,
+        "DIS_pairs": 12
+      },
+      "rows": 478,
+      "last": {
+        "phase": "learned",
+        "step": 478,
+        "data_step": 2477,
+        "loss": 0.009621676057577133,
+        "gradient_norm": 0.052457716315984726,
+        "synchronized_work_seconds": 0.21100193704478443,
+        "backbone_images": 28,
+        "DIS_pairs": 12
+      }
+    }
+  },
+  "cumulative_counts_observed": {
+    "updates": {
+      "warm": 2000,
+      "spatial": 4000,
+      "fixed": 4000,
+      "learned": 478
+    },
+    "teacher_images": 32000,
+    "backbone_images": 221384,
+    "DIS_pairs": 53736,
+    "gate_images": 5736
+  },
+  "fixed_learned_first_registered_window": {
+    "fixed": {
+      "phase": "fixed",
+      "step": 1,
+      "data_step": 2000,
+      "loss": 0.004582887049764395,
+      "gradient_norm": 0.049629684537649155,
+      "synchronized_work_seconds": 0.15074361604638398,
+      "backbone_images": 28,
+      "DIS_pairs": 12
+    },
+    "learned": {
+      "phase": "learned",
+      "step": 1,
+      "data_step": 2000,
+      "loss": 0.004582887049764395,
+      "gradient_norm": 0.04962978884577751,
+      "synchronized_work_seconds": 0.27385587291792035,
+      "backbone_images": 28,
+      "DIS_pairs": 12
+    }
+  },
+  "fixed_learned_first_loss_abs_difference": 0.0,
+  "first_scalar_loss_not_global_output_equivalence": true,
+  "new_model_forwards_for_observation": 0,
+  "canonical_and_execution_sources_unchanged": true,
+  "DEV_rows": 0,
+  "scope": "Actual completed fixed4000 and learned training prefix; narrow first-window initialization evidence from original logs, not validation or method success."
+}
