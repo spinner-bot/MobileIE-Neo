@@ -5,6 +5,7 @@ import hashlib
 import json
 from pathlib import Path
 from zoneinfo import ZoneInfo
+from catalog_state import load_catalog, verify_closed_resource
 
 B = Path(__file__).resolve().parents[1]
 ROOT = B.parents[1]
@@ -18,8 +19,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('resource_id')
     args = ap.parse_args()
-    for status in (B / 'collection/gate1-addenda').glob('*/status.json'):
-        assert json.loads(status.read_text()).get('advance_allowed') is True, str(status)
+    active, _, order = load_catalog()
     r = B / 'resources' / args.resource_id
     decision = r / 'derived/report/gate2.json'
     g = json.loads(decision.read_text())
@@ -32,20 +32,11 @@ def main():
     if g['status'] == 'closed_limited':
         assert g.get('limited_closure') and g['limited_closure'].get('attempts')
         assert g['limited_closure'].get('missing') and g['limited_closure'].get('unlock_conditions')
-    assert json.loads((B / 'collection/gate1-review001.json').read_text())['gate1_passed']
-    for manifest, root in [('gates/freeze-v1.json', ROOT), ('catalog/freeze-v1.json', B),
-                           ('collection/gate1-freeze001.json', B)]:
-        frozen = json.loads((B / manifest).read_text())
-        for item in frozen['files']:
-            f = root / item['path']
-            assert f.is_file() and sha(f) == item['sha256'], str(f)
-    order = json.loads((B / 'catalog/order-v1.json').read_text())['order']
     index = order.index(args.resource_id)
-    for prior in order[:index]:
-        prior_gate = json.loads((B / 'resources' / prior / 'derived/report/gate2.json').read_text())
-        assert prior_gate['review_passed'] and prior_gate['status'] in ('pass_full', 'closed_limited')
     log = B / 'catalog/analysis-log.jsonl'
     events = [json.loads(line) for line in log.read_text().splitlines() if line]
+    for prior in order[:index]:
+        verify_closed_resource(prior, events)
     assert events[-1]['event'] == 'begin' and events[-1]['resource_id'] == args.resource_id
     required = ['identity.json', 'sources/manifest.json', 'derived/docs/reading-notes.md',
                 'derived/report/analysis.md', 'derived/report/claims.json', 'derived/docs/gate2-review.md']
@@ -82,6 +73,9 @@ def main():
                                 'meaning':'File/source integrity only; content decision remains manual self-review',
                                 'files':integrity}, ensure_ascii=False, indent=2) + '\n')
     event = {'event':'close', 'resource_id':args.resource_id, 'at':now, 'order':index+1,
+             'catalog_version':active['version'], 'catalog_path':active['index'],
+             'catalog_sha256':sha(B / active['index']), 'order_sha256':sha(B / active['order']),
+             'begin_catalog_sha256':events[-1]['catalog_sha256'],
              'status':g['status'], 'gate2_sha256':sha(decision), 'integrity_sha256':sha(check),
              'standard_sha256':g['standard_sha256']}
     with log.open('a') as f:
