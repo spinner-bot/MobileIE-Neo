@@ -1,0 +1,72 @@
+{
+  "resource_id": "MIE-0051",
+  "temporary_key": "paper-3efaea0cc22d",
+  "type": "paper",
+  "title": "StereoAdapter: Adapting Stereo Depth Estimation to Underwater Scenes",
+  "repo": null,
+  "revision": null,
+  "tree": null,
+  "dois": [
+    "10.1109/icra57385.2026.11696206"
+  ],
+  "arxivs": [
+    "2509.16415"
+  ],
+  "relation": "recorded as citing MobileIE by a current or historical citation index; exact citation context pending Gate2",
+  "created_at": "2026-11-20T12:24:23+08:00",
+  "authors": [
+    "Zhao-Meng Wu",
+    "Yiran Wang",
+    "Wen Yu",
+    "Zeyu Zhang",
+    "Biao Wu",
+    "Hao Tang"
+  ],
+  "dates": {
+    "years": [
+      2026,
+      2025
+    ],
+    "published_date": null,
+    "date_verification": "pending Gate2"
+  },
+  "repository_owner": null,
+  "family": "040-stereo",
+  "analysis_order": 51,
+  "initial_preliminary": {
+    "R": 2,
+    "N": 1,
+    "U": 2,
+    "E": 3,
+    "score": 50,
+    "tier": "B",
+    "category": "underwater-transfer",
+    "family": "040-stereo",
+    "role_order": 0,
+    "summary": "水下场景立体深度适配。与增强任务不同，可用于核查增强作为前处理的下游联系及信息条件。",
+    "reason_R": "任务联系：水下场景立体深度适配。与增强任务不同，可用于核查增强作为前处理的下游联系及信息条件。",
+    "reason_N": "重复/混淆风险为初级待证判断；依据当前明确关联与基础/接续/移植角色，非已确立创新结论",
+    "reason_U": "可操作性：按所列机制、对照或来源核查用途评分；未运行外部代码",
+    "reason_E": "已有PDF或完整固定提交包；不等于已读或实现有效",
+    "evidence": [
+      {
+        "source": "collection/raw/initial-openalex-citing.json",
+        "position": 1,
+        "source_record_id": "https://openalex.org/W4415251034"
+      },
+      {
+        "source": "collection/raw/initial-s2-citing.json",
+        "position": 31,
+        "source_record_id": "a913af6ecae4fc2c8c54972fee725c6c39a849c7"
+      },
+      {
+        "source": "research/5.prior-art-survey/data/citations_s2.json",
+        "position": 29,
+        "source_record_id": "a913af6ecae4fc2c8c54972fee725c6c39a849c7"
+      }
+    ],
+    "not_gate2": true
+  },
+  "source_snapshot_cutoff": "2026-11-17",
+  "identity_verification": "pending Gate2; repository owner is not assumed to be the paper author"
+}
