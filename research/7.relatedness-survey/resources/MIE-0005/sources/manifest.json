@@ -16,7 +16,7 @@
     "plugin-head-lhfgghc--LLVE-AMNet-NPU.json",
     "receipts/sourcezip-lhfgghc--LLVE-AMNet-NPU.json"
   ],
-  "adequacy": "Materials available for analysis; not yet read or qualified",
+  "adequacy": "Complete pinned source archive acquired and applicable core static analysis/author-media inspection performed; no weights, target runtime or numerical reproduction. See per-resource conclusions.",
   "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts",
   "path_conventions": {
     "receipts[].path": "relative to workstation/collection",
@@ -24,5 +24,15 @@
     "discovery_evidence strings": "relative to workstation/collection",
     "discovery_evidence[].source": "collection/ prefix relative to workstation; research/ prefix relative to repository root",
     "discovery_evidence[].acquisition": "relative to workstation/collection; path is remote repository path at revision"
-  }
+  },
+  "related_evidence_reused": [
+    {
+      "source": "resources/MIE-0004/derived/docs/reading-scope.json",
+      "reason": "byte-identical applicable core reading with new source SHA comparison"
+    },
+    {
+      "source": "resources/MIE-0004/derived/docs/weight-entry-review.json",
+      "reason": "same amnet_pretrained entry access limitations; not a new binary acquisition"
+    }
+  ]
 }

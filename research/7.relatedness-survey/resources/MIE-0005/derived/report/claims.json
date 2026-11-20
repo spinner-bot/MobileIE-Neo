@@ -1,0 +1,207 @@
+{
+  "resource_id": "MIE-0005",
+  "created_at": "2026-11-20T17:47:07.672089+08:00",
+  "source_revision": "4c535f6462f5be9669268e35bb7fd2d6010be3ee",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Author-linked Ascend NPU implementation of AMNet at pinned June14 commit; same method family, no independent method or experiment count",
+      "evidence_class": "identity_and_static_source_verification",
+      "anchors": [
+        {
+          "source": "resources/MIE-0005/derived/docs/upstream-code/README.md.txt",
+          "locator": "line1"
+        },
+        {
+          "source": "resources/MIE-0004/derived/docs/upstream-code/README.md.txt",
+          "locator": "Ascend NPU link"
+        },
+        {
+          "source": "collection/plugin-head-lhfgghc--LLVE-AMNet-NPU.json",
+          "locator": "pinned sha/date/tree"
+        }
+      ],
+      "limitation": "Commit date is not exact initial publication; repository owner is not all paper authors; two snapshot comparison does not prove ancestry."
+    },
+    {
+      "id": "C02",
+      "claim": "33 files are byte-identical to original project snapshot; six changed text files add device/AMP/seed/helper changes while model remains same",
+      "evidence_class": "static_sha256_and_diff",
+      "anchors": [
+        {
+          "source": "resources/MIE-0005/derived/docs/upstream-comparison.json",
+          "locator": "same/changed/added/absent lists"
+        },
+        {
+          "source": "resources/MIE-0005/derived/docs/source-diff.patch",
+          "locator": "complete changed text/new inference entry"
+        },
+        {
+          "source": "resources/MIE-0005/derived/docs/upstream-code/scripts--train.py.txt",
+          "locator": "137–145"
+        },
+        {
+          "source": "resources/MIE-0005/derived/docs/upstream-code/engine--trainer.py.txt",
+          "locator": "127–133,319,452 etc"
+        }
+      ],
+      "limitation": "No NPU execution/operator-coverage or numerical equivalence test; original project snapshot is later-dated and no migration chronology inferred."
+    },
+    {
+      "id": "C03",
+      "claim": "NPU AMP wiring is conditional; all five released configurations disable AMP and demo entry has no explicit autocast/half/quantization",
+      "evidence_class": "static_source_and_config_verification",
+      "anchors": [
+        {
+          "source": "resources/MIE-0005/derived/docs/static-config-audit.json",
+          "locator": "all five train.use_amp false"
+        },
+        {
+          "source": "resources/MIE-0005/derived/docs/upstream-code/engine--trainer.py.txt",
+          "locator": "127–133"
+        },
+        {
+          "source": "resources/MIE-0005/derived/docs/upstream-code/scripts--inference_full.py.txt",
+          "locator": "56–90"
+        }
+      ],
+      "limitation": "No actual tensor/backend precision or device result measured, explicit device preference also bypasses local autodetection import/check."
+    },
+    {
+      "id": "C04",
+      "claim": "RGB demo reads all lowercase JPG files into whole-clip tensor, invokes offline inference and saves reindexed uint8 PNG after return",
+      "evidence_class": "static_control_flow",
+      "anchors": [
+        {
+          "source": "resources/MIE-0005/derived/docs/upstream-code/scripts--inference_full.py.txt",
+          "locator": "73–129"
+        },
+        {
+          "source": "resources/MIE-0005/derived/docs/upstream-code/models--amnet.py.txt",
+          "locator": "149–283,383–393"
+        }
+      ],
+      "limitation": "RGB recurrence is chronological; buffering future files is not proof each output uses future image information. Not a camera/video codec or constant-memory online entry."
+    },
+    {
+      "id": "C05",
+      "claim": "Implicit event/IR branches and ConvLSTM/FFT remain; source also offers separate explicit persistent-state streaming API unused by demo",
+      "evidence_class": "static_source_verification",
+      "anchors": [
+        {
+          "source": "resources/MIE-0005/derived/docs/upstream-code/models--amnet.py.txt",
+          "locator": "20–43,76–108,186–257,395–479"
+        },
+        {
+          "source": "resources/MIE-0005/derived/docs/upstream-code/models--adapter.py.txt",
+          "locator": "133–139"
+        },
+        {
+          "source": "resources/MIE-0005/derived/docs/upstream-code/scripts--inference_full.py.txt",
+          "locator": "17–35,85"
+        }
+      ],
+      "limitation": "RGB-only input does not remove implicit branch compute; actual operator support, state reset behavior and event timestamp causality not verified in execution."
+    },
+    {
+      "id": "C06",
+      "claim": "Local shape arithmetic yields 166.11328125 MiB for 7 RGB FP32 1080p inputs and 63.28125 MiB for default one-layer FP32 H/C only",
+      "evidence_class": "static_arithmetic_not_measurement",
+      "anchors": [
+        {
+          "source": "resources/MIE-0005/derived/docs/static-config-audit.json",
+          "locator": "arithmetic_only"
+        },
+        {
+          "source": "resources/MIE-0005/derived/docs/upstream-code/models--convlstm.py.txt",
+          "locator": "51–58"
+        },
+        {
+          "source": "resources/MIE-0005/derived/docs/upstream-code/scripts--inference_full.py.txt",
+          "locator": "80–85"
+        }
+      ],
+      "limitation": "Neither quantity is complete peak memory; CPU frame list, output stack, auxiliaries/activations/model weights not included. No phone/Ascend timing or energy result."
+    },
+    {
+      "id": "C07",
+      "claim": "The public training/evaluator retains first-only batch4 evaluation and conditional missing-pretrain/frozen/strict=False limitations",
+      "evidence_class": "static_conditional_control_flow",
+      "anchors": [
+        {
+          "source": "resources/MIE-0005/derived/docs/upstream-code/scripts--train.py.txt",
+          "locator": "127–133,147–160"
+        },
+        {
+          "source": "resources/MIE-0005/derived/docs/upstream-code/engine--trainer.py.txt",
+          "locator": "162–167,222–238,448–456"
+        },
+        {
+          "source": "resources/MIE-0005/derived/docs/upstream-code/utils--metrics.py.txt",
+          "locator": "6–15,temporal_loss definition"
+        },
+        {
+          "source": "resources/MIE-0004/derived/report/analysis.md",
+          "locator": "inherited protocol/loss limits"
+        }
+      ],
+      "limitation": "No claim authors ran these defaults; actual conference protocol and numerical impact unknown. Temporal loss utility not default-connected does not imply no temporal learning."
+    },
+    {
+      "id": "C08",
+      "claim": "Two complete authored seven-frame input/output sets and one framework PDF inspected; no verifiable hardware/performance or temporal metric follows",
+      "evidence_class": "authored_demonstration_and_actual_visual_review",
+      "anchors": [
+        {
+          "source": "resources/MIE-0005/derived/docs/media-manifest.json",
+          "locator": "28 originals"
+        },
+        {
+          "source": "resources/MIE-0005/derived/docs/visual-review.json",
+          "locator": "actually viewed framework and all paired contact stills"
+        }
+      ],
+      "limitation": "Authored outputs are not newly reproduced; no GT, timestamps, frame rate, generating checkpoint/device log or continuous playback review."
+    },
+    {
+      "id": "C09",
+      "claim": "Pinned archive has no binary checkpoint, LICENSE or frozen dependency/device environment; demo default expects external checkpoint and nonstrict model load",
+      "evidence_class": "static_archive_and_entry_inspection",
+      "anchors": [
+        {
+          "source": "resources/MIE-0005/derived/docs/archive-inventory.json",
+          "locator": "69 files"
+        },
+        {
+          "source": "resources/MIE-0005/derived/docs/upstream-code/scripts--inference_full.py.txt",
+          "locator": "37,56–70"
+        },
+        {
+          "source": "resources/MIE-0005/derived/docs/upstream-code/README.md.txt",
+          "locator": "complete seven-line README"
+        },
+        {
+          "source": "resources/MIE-0004/derived/docs/weight-entry-review.json",
+          "locator": "same project pretrained entry retrieval limits"
+        }
+      ],
+      "limitation": "Original project weight links not binary acquisitions; no weight deserialization, runtime test, source-license inference or claim private implementation absent."
+    },
+    {
+      "id": "C10",
+      "claim": "Useful reference for state lifecycle and backend evidence requirements; not a demonstrated MobileIE-scale mobile cost solution",
+      "evidence_class": "survey_inference_and_future_hypothesis",
+      "anchors": [
+        {
+          "source": "resources/MIE-0005/derived/report/analysis.md",
+          "locator": "value and falsifiable controls"
+        },
+        {
+          "source": "resources/MIE-0005/derived/docs/reading-notes.md",
+          "locator": "causal/buffering/cost distinctions"
+        }
+      ],
+      "limitation": "Inference and proposed Gate3 comparisons only; no proven gain/new algorithm success or fair cross-hardware ranking."
+    }
+  ]
+}
