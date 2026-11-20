@@ -17,3 +17,5 @@ R88已完成两seed8000更新、80质量/80官方JOD及完整共同条件，A/B�
 R51有限相位滤波、R64预算时域骨干、R74/R82/R88及全部旧STOP都必须逐一核对。这里不解封其宽度/半径/投影/噪声/长度/seed网格。新训练的机制差别、数据/初始化、完整预算、质量—时间—成本门槛和止损已另立V1；正式训练已按上述完整预算推进，当前新DEV尚0，独立最终像素继续封存。
 
 相关证据：[R85/R86与论文缺口](../../paper/RESEARCH_STATUS.md)、[R88全部共同条件](../4.temporal-consistency/report/exploration-r88-joint/tables.md)、[原训练规范与约定](../../AGENTS.md)。所有运行资产继续位于zrh自有data，主线main/指定作者/no-ff/小步分别提交与阶段推送保持；survey/pre和演示worktree不修改。
+
+完整共同表完成后可另运行 `CUDA_VISIBLE_DEVICES='' ./scripts/project-python research/8.video-backbone/plot_v1.py`。该附加分析只读取280条件/56均值，生成全部14输出的PSNR—Etemp、JOD—Etemp四域/seed分面PDF/PNG及全部点CSV；没有新模型前向或评分，不改变冻结协议和自动链，也不在中途发布排名。图像生成后须实际查看；图只表达重复DEV均值，不能替代质量门槛、完整成本、手机或独立最终证据。
