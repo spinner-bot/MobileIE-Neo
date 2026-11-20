@@ -1,0 +1,205 @@
+{
+  "resource_id": "MIE-0006",
+  "method": "Literal source-expression arithmetic; never imports or runs the upstream Rust project.\n\nScope: src/main.rs@59bd6746c6cccde4197ccfabb1d60fb509127436.\nNo media, model, benchmarking, application run or Gate3 experiment.\nValues below are transcribed for inspection, not a certified Rust/SIMD emulator.\n",
+  "tone_curve_selection": [
+    {
+      "condition": "grad < 16",
+      "SIMD": "enhanced (no curve)",
+      "scalar_tail": "curve"
+    },
+    {
+      "condition": "grad >= 16",
+      "SIMD": "curve",
+      "scalar_tail": "enhanced (no curve)"
+    }
+  ],
+  "nonlinear_gain_mismatch_count": 23,
+  "nonlinear_gain_mismatches": [
+    {
+      "diff": 4,
+      "scalar_Q8": 170,
+      "SIMD_Q8": 171
+    },
+    {
+      "diff": 5,
+      "scalar_Q8": 213,
+      "SIMD_Q8": 214
+    },
+    {
+      "diff": 12,
+      "scalar_Q8": 501,
+      "SIMD_Q8": 500
+    },
+    {
+      "diff": 13,
+      "scalar_Q8": 489,
+      "SIMD_Q8": 488
+    },
+    {
+      "diff": 14,
+      "scalar_Q8": 478,
+      "SIMD_Q8": 476
+    },
+    {
+      "diff": 15,
+      "scalar_Q8": 466,
+      "SIMD_Q8": 464
+    },
+    {
+      "diff": 16,
+      "scalar_Q8": 454,
+      "SIMD_Q8": 452
+    },
+    {
+      "diff": 17,
+      "scalar_Q8": 443,
+      "SIMD_Q8": 440
+    },
+    {
+      "diff": 18,
+      "scalar_Q8": 431,
+      "SIMD_Q8": 428
+    },
+    {
+      "diff": 19,
+      "scalar_Q8": 419,
+      "SIMD_Q8": 416
+    },
+    {
+      "diff": 20,
+      "scalar_Q8": 408,
+      "SIMD_Q8": 404
+    },
+    {
+      "diff": 21,
+      "scalar_Q8": 396,
+      "SIMD_Q8": 392
+    },
+    {
+      "diff": 22,
+      "scalar_Q8": 384,
+      "SIMD_Q8": 380
+    },
+    {
+      "diff": 23,
+      "scalar_Q8": 373,
+      "SIMD_Q8": 368
+    },
+    {
+      "diff": 24,
+      "scalar_Q8": 361,
+      "SIMD_Q8": 356
+    },
+    {
+      "diff": 25,
+      "scalar_Q8": 350,
+      "SIMD_Q8": 344
+    },
+    {
+      "diff": 26,
+      "scalar_Q8": 338,
+      "SIMD_Q8": 332
+    },
+    {
+      "diff": 27,
+      "scalar_Q8": 326,
+      "SIMD_Q8": 320
+    },
+    {
+      "diff": 28,
+      "scalar_Q8": 315,
+      "SIMD_Q8": 308
+    },
+    {
+      "diff": 29,
+      "scalar_Q8": 303,
+      "SIMD_Q8": 296
+    },
+    {
+      "diff": 30,
+      "scalar_Q8": 291,
+      "SIMD_Q8": 284
+    },
+    {
+      "diff": 31,
+      "scalar_Q8": 280,
+      "SIMD_Q8": 272
+    },
+    {
+      "diff": 32,
+      "scalar_Q8": 268,
+      "SIMD_Q8": 260
+    }
+  ],
+  "luma_samples": [
+    {
+      "avg_Y": 0,
+      "Q8": 448
+    },
+    {
+      "avg_Y": 31,
+      "Q8": 262
+    },
+    {
+      "avg_Y": 32,
+      "Q8": 448
+    },
+    {
+      "avg_Y": 63,
+      "Q8": 262
+    },
+    {
+      "avg_Y": 64,
+      "Q8": 256
+    },
+    {
+      "avg_Y": 159,
+      "Q8": 256
+    },
+    {
+      "avg_Y": 160,
+      "Q8": 256
+    },
+    {
+      "avg_Y": 191,
+      "Q8": 132
+    },
+    {
+      "avg_Y": 192,
+      "Q8": 128
+    },
+    {
+      "avg_Y": 255,
+      "Q8": 128
+    }
+  ],
+  "motion_first_early_return_MAD": 14,
+  "motion_values_first_18": [
+    255,
+    208,
+    169,
+    137,
+    111,
+    90,
+    73,
+    59,
+    48,
+    39,
+    31,
+    25,
+    20,
+    16,
+    13,
+    10,
+    8,
+    6
+  ],
+  "denoise_identity_proof": "w=128 only if |y-b|=0, so y=b and rounded weighted blend=y; else w=0 and blend=y. Only this blend stage, not whole enhancement.",
+  "chroma_tick_schedule": "tick=0 recomputes activity, then increments modulo8; saturation applied only if resulting tick=0 and total_adj>0. No saturation boost on the other seven frames.",
+  "not_measured": [
+    "actual visual/flicker effect",
+    "compiled SIMD equivalence",
+    "runtime initialization behavior",
+    "latency/memory/energy"
+  ]
+}
