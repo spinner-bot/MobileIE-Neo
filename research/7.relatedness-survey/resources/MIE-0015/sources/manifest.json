@@ -10,13 +10,40 @@
       "http": 200,
       "archive": "archive/sourcezip-AVC2-UESTC--DRNet-AiO.txt",
       "sha256": "d8a8923fe0a04fe09ec515ee2e69e65fdf3d85a572226fff94e6a350f4cc0f07"
+    },
+    {
+      "path": "receipts/mie0014-author-weight-folder.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/mie0014-author-weight-folder.html",
+      "sha256": "ee84cd5ea78a561f19f834ee4be527d18607156febd13db8c5df22b2970fc78f",
+      "semantic_adequacy": "Public author README source, artifact reused from MIE-0014 with identical SHA. Folder HTML or full ZIP as specified, never model loaded."
+    },
+    {
+      "path": "receipts/mie0014-author-weights-3tasks-confirmed-strict-retry1.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/mie0014-author-weights-3tasks-confirmed-strict-retry1.zip",
+      "sha256": "29aa0f4ccaf4bc6e3fd1d0e1ddbf1f0624e05313f536b00fe22e423e7c417b88",
+      "semantic_adequacy": "Public author README source, artifact reused from MIE-0014 with identical SHA. Folder HTML or full ZIP as specified, never model loaded."
+    },
+    {
+      "path": "receipts/mie0014-author-weights-5tasks-confirmed-strict-retry1.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/mie0014-author-weights-5tasks-confirmed-strict-retry1.zip",
+      "sha256": "a9f381814561ea1642beab515f097c6d334d06e6b0216c0701e699239e1b7a7b",
+      "semantic_adequacy": "Public author README source, artifact reused from MIE-0014 with identical SHA. Folder HTML or full ZIP as specified, never model loaded."
     }
   ],
   "discovery_evidence": [
     "plugin-head-AVC2-UESTC--DRNet-AiO.json",
     "receipts/sourcezip-AVC2-UESTC--DRNet-AiO.json"
   ],
-  "adequacy": "Materials available for analysis; not yet read or qualified",
+  "adequacy": "21 files/152472B all linked as text; fixed source correspondence and paper-applicable reading transparently reused from closedMIE14, project-specific review ongoing. Both public weight artifacts complete and previously ZIP/CRC/opcode inspected, no numerical reproduction.",
   "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts",
   "path_conventions": {
     "receipts[].path": "relative to workstation/collection",
@@ -24,5 +51,6 @@
     "discovery_evidence strings": "relative to workstation/collection",
     "discovery_evidence[].source": "collection/ prefix relative to workstation; research/ prefix relative to repository root",
     "discovery_evidence[].acquisition": "relative to workstation/collection; path is remote repository path at revision"
-  }
+  },
+  "associated_prior_review": "resources/MIE-0014/derived/docs/reading-notes.md"
 }
