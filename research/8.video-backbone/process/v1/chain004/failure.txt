@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/8.video-backbone/run_post_group_v1.py", line 232, in main
+    code, _ = gpu(f'perceptual-attempt{number:03d}', command)
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/8.video-backbone/run_post_group_v1.py", line 142, in gpu
+    samples = sustained_samples()
+  File "/data/Users/zrh/repo/MobileIE-Neo/scripts/shared_gpu_admission.py", line 55, in sustained_samples
+    time.sleep(2)
+KeyboardInterrupt
