@@ -1,0 +1,450 @@
+--- MIE-0004/.gitignore
++++ MIE-0005/.gitignore
+@@ -1,7 +1,7 @@
+ # Training outputs
+-outputs/
++# outputs/
+ logs/
+ 
+ # Checkpoints (large .pth files)
+ checkpoints/
+ 
+--- MIE-0004/README.md
++++ MIE-0005/README.md
+@@ -1,164 +1,7 @@
+-<div align="center">
++Ascend NPU implementation of https://github.com/lhfgghc/LLVE-AMNet
+ 
+-<h1>AnyMod-LLVE: Low-Light Video Enhancement with Modality-Agnostic Inference</h1>
+-
+-<p>
+-  <a href="https://arxiv.org/abs/2606.11186">
+-    <img src="https://img.shields.io/badge/arXiv-Paper-b31b1b.svg" alt="arXiv"/>
+-  </a>
+-  <a href="https://lhfgghc.github.io/LLVE-AMNet/">
+-    <img src="https://img.shields.io/badge/Project-Page-blue" alt="Project Page"/>
+-  </a>
+-  <a href="./docs/assets/posters/AMNet%20Poster.jpg">
+-    <img src="https://img.shields.io/badge/Poster-PDF-orange.svg" alt="Poster"/>
+-  </a>
+-  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT License"/>
+-</p>
+-</div>
+-
+----
+-
+-Official implementation of **AMNet**, a unified multimodal framework for **low-light video enhancement (LLVE)** with modality-agnostic inference.
+-
+-> Unlike existing multimodal LLVE methods that require auxiliary modalities (e.g., events or infrared images) at test time, **AMNet** can leverage available modalities when present and remain robust when they are absent — via implicit modality generation.
+-
+-Ascend NPU implementation available at [LLVE-AMNet-NPU](https://github.com/lhfgghc/LLVE-AMNet-NPU).
+-
+----
+-
+-## 📋 Table of Contents
+-
+-- [Framework](#-framework)
+-- [Installation](#-installation)
+-- [Getting Started](#-getting-started)
+-  - [Pretrained Weights](#1-download-pretrained-weights)
+-  - [Fine-tuned Weights](#fine-tuned-weights)
+-  - [Prepare Datasets](#2-prepare-datasets)
+-  - [Training](#3-training)
+-- [Citation](#-citation)
+-- [License](#-license)
+-
+----
+-
+-## 🏗 Framework
+-
+-<p align="center">
+-  <img src="./docs/framework-AMNet.png" width="90%" alt="AMNet Framework"/>
+-</p>
+-
+----
+-
+-## 🔧 Installation
++## Inference
+ 
+ ```bash
+-conda create -n amnet python=3.10 -y
+-conda activate amnet
+-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+-pip install einops pytorch-msssim pyyaml timm Pillow numpy tqdm
++python scripts/inference_full.py --input demo_videos/inputs --output demo_videos/outputs
+ ```
+-
+----
+-
+-## 🚀 Getting Started
+-
+-### 1. Download Pretrained Weights
+-
+-Download the pretrained checkpoint and place it under `checkpoints/`:
+-
+-```
+-checkpoints/
+-└── amnet_pretrained.pth
+-```
+-
+-> 📥 **Download**
+->
+-> - **Google Drive:** [amnet_pretrained.pth](https://drive.google.com/file/d/1Jyo9xI5ymPHFdB56Gq83hbCSjswfi3PK/view?usp=drive_link)
+-> - **Baidu Cloud:** [amnet_pretrained.pth](https://pan.baidu.com/s/1VzNG1yPM9A5INUnGpmfI1g) (Access Code: `vuux`) 
+->
+-> All training configs share this same pretrained model for fine-tuning.
+-
+----
+-
+-### Fine-tuned Weights
+-
+-Download the fine-tuned checkpoints for each dataset and place them under `checkpoints/`:
+-
+-```
+-checkpoints/
+-├── amnet_pretrained.pth
+-├── did_rgb.pth
+-├── sdsd_in_rgb.pth
+-├── sdsd_out_rgb.pth
+-├── sde_in_rgb.pth
+-└── sde_out_rgb.pth
+-```
+-
+-| Dataset | Modality | PSNR | Download |
+-|---------|----------|------|----------|
+-| DID-1080 | RGB | **31.57** | [Baidu Cloud](https://pan.baidu.com/s/1pThkqOhzP9XasukiREa3jg) (Access Code: `cwep`) |
+-| SDSD Indoor | RGB | **29.03** | [Baidu Cloud](https://pan.baidu.com/s/1ZsNOP4tskXxMKRFgru9vMQ) (Access Code: `3a4v`) |
+-| SDSD Outdoor | RGB | **26.37** | [Baidu Cloud](https://pan.baidu.com/s/1nhtWTKTvNeqcOC2h1Q41xg) (Access Code: `1ng4`) |
+-| SDE Indoor | R | **23.04** | [Baidu Cloud](https://pan.baidu.com/s/1Yv0ooYNxW2Cm6X5aGd9vLA) (Access Code: `gccn`) |
+-| | R+E | **23.22** | |
+-| SDE Outdoor | R | **23.75** | [Baidu Cloud](https://pan.baidu.com/s/1JTZFPZ8Z_Qq8t5HVPuglnQ) (Access Code: `wccv`) |
+-| | R+E | **23.88** | |
+-
+-> 📥 All fine-tuned models share the same pretrained model for initialization.
+-
+----
+-
+-### 2. Prepare Datasets
+-
+-Edit the `root` field in the corresponding config under `configs/experiments/amnet/`:
+-
+-| Config | Dataset |
+-|--------|---------|
+-| `amnet/did/rgb_only_ft.yaml` | DID-1080 |
+-| `amnet/sdsd/sdsd_in_rgb.yaml` | SDSD Indoor |
+-| `amnet/sdsd/sdsd_out_rgb.yaml` | SDSD Outdoor |
+-| `amnet/sde/sde_in_mm.yaml` | SDE Indoor |
+-| `amnet/sde/sde_out_mm.yaml` | SDE Outdoor |
+-
+----
+-
+-### 3. Training
+-
+-Use the provided shell scripts:
+-
+-```bash
+-bash run_train_did.sh         # DID-1080 (RGB)
+-bash run_train_sdsd_in.sh     # SDSD Indoor (RGB)
+-bash run_train_sdsd_out.sh    # SDSD Outdoor (RGB)
+-bash run_train_sde_in_mm.sh   # SDE Indoor (RGB + Event)
+-bash run_train_sde_out_mm.sh  # SDE Outdoor (RGB + Event)
+-```
+-
+-Or run directly with a config:
+-
+-```bash
+-python scripts/train.py --cfg configs/experiments/amnet/<config>.yaml
+-```
+-
+----
+-
+-## 📖 Citation
+-
+-If you find this work useful, please cite:
+-
+-```bibtex
+-@misc{liang2026amnet,
+-  title={AnyMod-LLVE: Low-Light Video Enhancement with Modality-Agnostic Inference},
+-  author={Hangfeng Liang and Yutao Hu and Yanhan Hu and Xiaohan Wu and Wenqi Shao and Ying Fu},
+-  year={2026},
+-  eprint={2606.11186},
+-  archivePrefix={arXiv},
+-  primaryClass={cs.CV},
+-  url={https://arxiv.org/abs/2606.11186}
+-}
+-```
+-
+----
+-
+-## 📄 License
+-
+-This project is released under the **MIT License**. See [LICENSE](LICENSE) for details.
+--- MIE-0004/engine/trainer.py
++++ MIE-0005/engine/trainer.py
+@@ -122,13 +122,13 @@
+             if self.is_main:
+                 print(f"[Trainer] EMA enabled (decay={self.ema_decay})")
+         else:
+             self.ema = None
+ 
+-        self.use_amp = cfg["train"].get("use_amp", False) and (self.device.type == "cuda")
++        self.use_amp = cfg["train"].get("use_amp", False) and (self.device.type in ("cuda", "npu"))
+         if self.use_amp:
+-            self.scaler = torch.amp.GradScaler("cuda")
++            self.scaler = torch.amp.GradScaler(self.device.type)
+             if self.is_main:
+                 print("[Trainer] AMP enabled (Float16)")
+         else:
+             self.scaler = None
+ 
+@@ -314,11 +314,11 @@
+             has_event = (event is not None) and (event.dim() > 1) and (event.max() > -0.9) and (s_event.sum() > 0)
+             has_ir = (ir is not None) and (ir.dim() > 1) and (ir.max() > -0.9) and (s_ir.sum() > 0)
+             event = event.to(device, non_blocking=True) if has_event else None
+             ir = ir.to(device, non_blocking=True) if has_ir else None
+ 
+-            with torch.autocast(device_type="cuda", dtype=torch.float16, enabled=self.use_amp):
++            with torch.autocast(device_type=self.device.type, dtype=torch.float16, enabled=self.use_amp):
+                 loss_cfg = {
+                     "lambda_robust": self.lambda_robust,
+                     "lambda_real": self.lambda_real,
+                     "lambda_ssim": self.lambda_ssim,
+                     "lambda_distill_event": self.lambda_distill_event,
+@@ -447,11 +447,11 @@
+ 
+                 gt_vid = y[0]
+                 T = gt_vid.size(0)
+ 
+                 # RGB only (hallucinated Event + IR)
+-                with torch.autocast(device_type="cuda", dtype=torch.float16, enabled=self.use_amp):
++                with torch.autocast(device_type=self.device.type, dtype=torch.float16, enabled=self.use_amp):
+                     pred = eval_model.inference_video(
+                         x[0], event=event[0] if has_event else None,
+                         ir=ir[0] if has_ir else None,
+                         event_use_real=False, ir_use_real=False,
+                     )
+@@ -461,11 +461,11 @@
+                     local_metrics[1] += calculate_ssim(pred[t], gt_vid[t])
+ 
+                 # Real Event + hallucinated IR
+                 pred_re = None
+                 if has_event:
+-                    with torch.autocast(device_type="cuda", dtype=torch.float16, enabled=self.use_amp):
++                    with torch.autocast(device_type=self.device.type, dtype=torch.float16, enabled=self.use_amp):
+                         pred_re = eval_model.inference_video(
+                             x[0], event=event[0], ir=ir[0] if has_ir else None,
+                             event_use_real=True, ir_use_real=False,
+                         )
+                     pred_re = torch.clamp(pred_re, 0.0, 1.0)
+@@ -474,11 +474,11 @@
+                         local_metrics[3] += calculate_ssim(pred_re[t], gt_vid[t])
+ 
+                 # Hallucinated Event + real IR
+                 pred_ri = None
+                 if has_ir:
+-                    with torch.autocast(device_type="cuda", dtype=torch.float16, enabled=self.use_amp):
++                    with torch.autocast(device_type=self.device.type, dtype=torch.float16, enabled=self.use_amp):
+                         pred_ri = eval_model.inference_video(
+                             x[0], event=event[0] if has_event else None, ir=ir[0],
+                             event_use_real=False, ir_use_real=True,
+                         )
+                     pred_ri = torch.clamp(pred_ri, 0.0, 1.0)
+@@ -487,11 +487,11 @@
+                         local_metrics[5] += calculate_ssim(pred_ri[t], gt_vid[t])
+ 
+                 # Real Event + real IR
+                 pred_both = None
+                 if has_event or has_ir:
+-                    with torch.autocast(device_type="cuda", dtype=torch.float16, enabled=self.use_amp):
++                    with torch.autocast(device_type=self.device.type, dtype=torch.float16, enabled=self.use_amp):
+                         pred_both = eval_model.inference_video(
+                             x[0],
+                             event=event[0] if has_event else None,
+                             ir=ir[0] if has_ir else None,
+                             event_use_real=True if has_event else None,
+--- MIE-0004/scripts/train.py
++++ MIE-0005/scripts/train.py
+@@ -132,11 +132,18 @@
+         pin_memory=True,
+     )
+ 
+     print("Building model...")
+ 
+-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
++    try:
++        import torch_npu
++        if torch_npu.npu.is_available():
++            device = torch.device("npu")
++        else:
++            device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
++    except ImportError:
++        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+     model = AMNet(**cfg["model"]).to(device)
+ 
+     train_cfg = cfg.get("train", {})
+     if train_cfg.get("freeze_backbone", False):
+         frozen_modules = ["encoder", "decoder", "ln_img", "proj_img"]
+--- MIE-0004/utils/metrics.py
++++ MIE-0005/utils/metrics.py
+@@ -72,11 +72,11 @@
+         super().__init__()
+         self.eps = eps
+ 
+     def forward(self, dist_params, target):
+         if dist_params is None or target is None:
+-            return torch.tensor(0.0).to(target.device if target is not None else 'cuda')
++            return torch.tensor(0.0).to(target.device if target is not None else 'cpu')
+         mu, logvar = dist_params
+         target = target.detach()
+         mse = (mu - target) ** 2
+         inv_var = torch.exp(-logvar)
+         return (0.5 * (logvar + mse * inv_var)).mean()
+--- MIE-0004/utils/seed.py
++++ MIE-0005/utils/seed.py
+@@ -6,6 +6,13 @@
+ def set_seed(seed):
+     """Set random seed for reproducibility."""
+     random.seed(seed)
+     np.random.seed(seed)
+     torch.manual_seed(seed)
+-    torch.cuda.manual_seed_all(seed)
++    if torch.cuda.is_available():
++        torch.cuda.manual_seed_all(seed)
++    try:
++        import torch_npu
++        if torch_npu.npu.is_available():
++            torch.npu.manual_seed_all(seed)
++    except ImportError:
++        pass
+--- MIE-0004/scripts/inference_full.py
++++ MIE-0005/scripts/inference_full.py
+@@ -0,0 +1,129 @@
++import os
++import sys
++import glob
++import argparse
++
++import torch
++import numpy as np
++from PIL import Image
++from torchvision import transforms
++
++current_path = os.path.dirname(os.path.abspath(__file__))
++amnet_path = os.path.dirname(current_path)
++sys.path.insert(0, amnet_path)
++
++from models.amnet import AMNet
++
++MODEL_CONFIG = {
++    "in_ch": 3,
++    "encoder_channels": [64, 128, 256, 256],
++    "latent_dim": 256,
++    "convlstm_hidden_ch": 256,
++    "convlstm_layers": 1,
++    "encoder_num_blocks": [1, 1, 2, 2],
++    "decoder_num_blocks": [2, 2, 1, 2],
++    "use_multimodal_illumination": True,
++    "snr_factor": 1.0,
++    "snr_threshold": 0.5,
++    "snr_fusion_depth": 1,
++    "use_snr_guided_fusion": True,
++    "use_checkpoint": True,
++    "checkpoint_encoder": True,
++    "checkpoint_decoder": True,
++    "checkpoint_aux_encoder": True,
++    "checkpoint_fusion": True,
++}
++
++DEFAULT_CKPT = os.path.join(amnet_path, "checkpoints", "amnet_pretrained.pth")
++DEFAULT_INPUT = os.path.join(amnet_path, "demo_videos", "inputs")
++DEFAULT_OUTPUT = os.path.join(amnet_path, "demo_videos", "outputs")
++
++
++def get_device(pref=None):
++    if pref:
++        return torch.device(pref)
++    try:
++        import torch_npu
++        if torch_npu.npu.is_available():
++            return torch.device("npu")
++    except ImportError:
++        pass
++    if torch.cuda.is_available():
++        return torch.device("cuda")
++    return torch.device("cpu")
++
++
++def load_model(ckpt_path, device):
++    print(f"[Model] Loading checkpoint: {ckpt_path}")
++    model = AMNet(**MODEL_CONFIG)
++    checkpoint = torch.load(ckpt_path, map_location=device, weights_only=False)
++    state_dict = checkpoint.get("model", checkpoint)
++    if state_dict and list(state_dict.keys())[0].startswith("module."):
++        state_dict = {k.replace("module.", "", 1): v for k, v in state_dict.items()}
++    missing, unexpected = model.load_state_dict(state_dict, strict=False)
++    if missing:
++        print(f"[Model] Missing keys: {len(missing)}")
++    if unexpected:
++        print(f"[Model] Unexpected keys: {len(unexpected)}")
++    model = model.to(device).eval()
++    print(f"[Model] Loaded on {device}")
++    return model
++
++
++def infer_clip(model, clip_dir, output_dir, device):
++    frame_paths = sorted(glob.glob(os.path.join(clip_dir, "*.jpg")))
++    if not frame_paths:
++        print(f"  [Skip] No .jpg frames found in {clip_dir}")
++        return
++    os.makedirs(output_dir, exist_ok=True)
++
++    to_tensor = transforms.ToTensor()
++    frames = [to_tensor(Image.open(p).convert("RGB")) for p in frame_paths]
++    x = torch.stack(frames, dim=0).to(device)
++    print(f"  Input: {len(frames)} frames, shape {list(x.shape)}")
++
++    out = model.inference_video(x)
++
++    for i, t in enumerate(out):
++        arr = (t.cpu().clamp(0, 1).permute(1, 2, 0).numpy() * 255).astype(np.uint8)
++        Image.fromarray(arr).save(os.path.join(output_dir, f"{i+1:03d}.png"))
++    print(f"  Saved {len(out)} frames to {output_dir}")
++
++
++def main():
++    parser = argparse.ArgumentParser()
++    parser.add_argument("--input", default=DEFAULT_INPUT)
++    parser.add_argument("--output", default=DEFAULT_OUTPUT)
++    parser.add_argument("--checkpoint", default=DEFAULT_CKPT)
++    parser.add_argument("--device", default=None)
++    args = parser.parse_args()
++
++    device = get_device(args.device)
++    if device.type == "cuda":
++        torch.backends.cudnn.benchmark = True
++
++    model = load_model(args.checkpoint, device)
++
++    clip_names = sorted(
++        d for d in os.listdir(args.input)
++        if os.path.isdir(os.path.join(args.input, d))
++    )
++    if not clip_names:
++        print(f"[Error] No clip subdirectories found in {args.input}")
++        return
++
++    print(f"\n[Demo] Found {len(clip_names)} clip(s): {clip_names}")
++    for clip_name in clip_names:
++        print(f"\n--- {clip_name} ---")
++        infer_clip(
++            model,
++            os.path.join(args.input, clip_name),
++            os.path.join(args.output, clip_name),
++            device,
++        )
++
++    print("\nDone.")
++
++
++if __name__ == "__main__":
++    main()
