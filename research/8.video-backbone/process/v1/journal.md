@@ -73,3 +73,9 @@ train_cpu_v1逐行派生冻结原脚本，模型/data/loss/Adam/clip/阶段/计�
 14:03:51实际独立session启动CPU协调3024380/start109481893、worker3024402/start109481902（attempt006），从原358模型/Adam/计数继续359/data358。progress007核343新CPU更新/累计701、两线程/nice5及worker不在GPU计算PID列表；无重复前358或额外丢弃资格。14:06后实存warm1000/449427B，progress008核累计1528；14:11:04 warm2000唯一最终正常、实际重载全有限，共32000教师/骨干图（358GPU＋1642CPU）。共享暖权重已复制三控制，fresh Adam进入原GT适配，progress009核warm2000/spatial1903、fixed/learned0、bone62448/teacher32000真实前缀；只保留原日志长度/摘要和首末记录，完整动态日志仍在原处，不反复复制大日志。
 
 当前继续同一原CPU进程，不重启或由loss前缀挑选结构/权重。尚无三控制全最终/DEV/JOD/方法或推理速度结论。所有原已结束GPU trace/windows/marker/runtime、操作终态、CPU源码/执行冻结/launch/config/新检查点/解释/0172分别小步提交，随后阶段fetch/SSH推送；原84表值/snapshot003/PDF020、旧STOP与最终封存保持。
+
+## 2026-11-20T14:27:01.725089+08:00：独立空间最终完成与CPU阶段推送
+
+CPU原spatial4000唯一最终于14:22:37正常保存/实际重载全部有限；原1000/2000/3000/4000及final marker逐文件提交，均不是中途DEV选择。progress010核原同CPU PID/start live，warm2000/spatial4000/fixed655/learned0，teacher32000/bone114340/DIS7860双向对，进入同暖起点固定融合GT适配。学习组与seed1仍按原顺序，后续所有质量/感知/成本门槛保持，当前0新DEV。
+
+从55db7d8d起44个小提交已普通SSH推送到1dbeca52，fetch为44/0、push正常、ls-remote核同完整commit，push005留证。所有代码/解释/原始结果/过程/报告分开，原34＋5与CPU4冻结保持；原论文全部表行/PDF020、旧STOP、最终封存及完整论文goal active保持。
