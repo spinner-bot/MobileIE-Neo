@@ -1,0 +1,67 @@
+{
+  "resource_id": "MIE-0014",
+  "created_at": "2026-11-20T12:24:23+08:00",
+  "source_root": "../../.. (workstation root from this sources directory)",
+  "snapshot_cutoff": "2026-11-17",
+  "receipts": [
+    {
+      "path": "receipts/paper-e00a0e3ed4c6-arxiv-html.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/paper-e00a0e3ed4c6-arxiv-html.html",
+      "sha256": "9d102e48a469bd18f5f114dd5fc628f606c2acf482729ca44ffd2c2e65fbb216"
+    },
+    {
+      "path": "receipts/paper-e00a0e3ed4c6-index-link1.json",
+      "status": "success",
+      "http": 202,
+      "archive": null,
+      "sha256": null
+    },
+    {
+      "path": "receipts/paper-e00a0e3ed4c6-arxiv-abs.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/paper-e00a0e3ed4c6-arxiv-abs.html",
+      "sha256": "82682626bfd1c0f281d051ae4b2cda5b27b6666d5e384f156079775e8671d2ca"
+    },
+    {
+      "path": "receipts/paper-e00a0e3ed4c6-publisher.json",
+      "status": "success",
+      "http": 202,
+      "archive": null,
+      "sha256": null
+    },
+    {
+      "path": "receipts/paper-e00a0e3ed4c6-arxiv-pdf.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/paper-e00a0e3ed4c6-arxiv-pdf.pdf",
+      "sha256": "ad37837d88a6b322d8d6317e489e5dbfc3bb5a6ee3e42a8ad6a368d6ae6f03de"
+    }
+  ],
+  "discovery_evidence": [
+    {
+      "source": "collection/raw/initial-openalex-citing.json",
+      "position": 5,
+      "source_record_id": "https://openalex.org/W7167249952"
+    },
+    {
+      "source": "collection/raw/initial-s2-citing.json",
+      "position": 19,
+      "source_record_id": "846e1c367c8605f2306cac4ca061b3566dff49da"
+    },
+    {
+      "source": "research/5.prior-art-survey/data/citations_s2.json",
+      "position": 17,
+      "source_record_id": "846e1c367c8605f2306cac4ca061b3566dff49da"
+    },
+    {
+      "source": "research/5.prior-art-survey/data/citations_openalex.json",
+      "position": 8,
+      "source_record_id": "https://openalex.org/W7167249952"
+    }
+  ],
+  "adequacy": "Materials available for analysis; not yet read or qualified",
+  "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts"
+}
