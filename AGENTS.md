@@ -6,13 +6,13 @@
 
 目录编号约束（2026-11-17T19:15:22.552814+08:00；用户明确通知）：`research/` 的7号已由其他分支占用，即使当前main工作区尚无该目录，也不得将其视为可用。新建独立研究主题目录应跳到 `research/8.*`，保留7号给原占用分支。
 
-当前最新0192/主题8-O1共享增强与非局部状态传输核心：[0192](docs/进展报告/0192-T-26112107-共享核心资格与正式学习准备.md)、[入口](research/8.video-backbone/operator-core/README.md)、[正式协议](research/8.video-backbone/operator-core/training-protocol.md)。CPU原3524584于06:53:09正常29.325435秒，四模型初始当前函数/教师传输/stream差0、共享head/descriptor梯度非零有限；8资格更新全丢弃，未导出资格权重。实际5049参数/新增974，解析1080p Conv8.060601744G、持久状态29030400B不是手机/峰值RAM；共享主干之后可学，非全视频函数保持。
+当前最新0193/主题8-O1已正式学习：[0193](docs/进展报告/0193-T-26112107-共享核心CUDA资格与正式训练启动.md)、[入口](research/8.video-backbone/operator-core/README.md)、[协议](research/8.video-backbone/operator-core/training-protocol.md)、[观察002](research/8.video-backbone/operator-core/process/observation002.json)。原chain002父3551565/start115612249保持live，CUDA资格013原3579558正常54.433770秒/4丢弃更新/64学生/32教师，GPU4 UUID匹配、own末次NVML1118MiB、allocator peak421330944/reserved580911104B；资源选择002..012无数值child，不是13次重试。25 CPU/39数值/新增2环境执行源保持，原001确定性CuBLAS失败及部分前向/0优化不回写。
 
-原CUDA资格001/chain001因漏设确定性CuBLAS环境自然exit1，原coor3541808/prebind3543218/worker3544930均终态，0反传/优化；原runtime零只表示完整共同步，实际部分前向另记[终态](research/8.video-backbone/operator-core/process/cuda-attempt001-terminal.json)。新增执行wrapper只在自身Torch前设:4096:8，25 CPU/39数值全链源不改，新增2执行源另冻，原失败不覆盖，不改全局/他人环境。
+父链新连续准入/进程前UUID绑定、CPU准备后再准入/锁/实际设备核验后自动启动正式seed0原3582586/start115719183，GPU4 UUID GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e，继承计数0，从原F0/fresh matching和独立fresh Adam开始；CPU8/CUDA4资格均丢弃。观察002核父/worker同start且live、两目标各118步/共236正式优化/3776学生图；近期1.186346秒/共同步、估首seed余4605.4秒只作sleep，不是训练截止。不得按旧resource_wait、残留pending号或过时PID重启；查[实际stage/child](research/8.video-backbone/operator-core/process/chain002/state.json)、/proc身份和runtime，增长日志/guard不标最终。
 
-当前只使用修正chain002，原协调3551565/start115612249已经/proc同start核live/S。[观察001](research/8.video-backbone/operator-core/process/observation001.json)记录资源等待、无child：4–7组当时约88%利用率/最低余4627MiB，未达13312MiB保护，修正CUDA/正式更新仍0，未占卡。原链新准入/UUID/锁/实际设备与丢弃CUDA资格全过后才自动fresh正式；CPU准备后还要重新准入，不放宽既有余量。后续核[实际state](research/8.video-backbone/operator-core/process/chain002/state.json)/runtime和/proc，不因旧pending号、观察超时或静态提示另起重复链；原run.py的chain001已终态不要重启。
+两目标/双seed各4000、共16000正式更新/256000学生/128000教师，唯一最终不选best；之后完整32保留训练窗口/416输出/1664逐帧/52均值/36门自动接续，非独立DEV，完整质量尚待。共享主干联合学习coordinate/response，5049参数、解析1080p Conv8.060601744G/状态29030400B非手机/峰值RAM；基础相关/warp/KD/Sobolev已知，不以CPU梯度/CUDA资格当方法成功。原CPU初始空间函数/传输/stream差0只限定资格阶段，后续函数会变。
 
-两目标同初始化、双seed各4000共16000正式更新/256000学生图，唯一最终、fresh Adam，之后固定训练池32窗/416输出/1664逐帧/52均值/36门，均尚待。O1比较共享可学习核心的coordinate与response，不给旧R74/R88换teacher重训；note78已有先例边界，基础相关/warp/KD不是创新。资格和冻结不能代替空间/历史/强post/完整效率，当前无新正式质量/方法/手机结论。增长state/guard不标最终，完成文件/观察/过程/报告单独交，按实际速度长sleep。
+用户新授权1–2卡可用、其任务均属本人，后告知8卡空余，NVML核全0；许可已落规范。原链已进入资格013，保留同链/4–7正常接续，无数值中断或重复启动。以后可按该许可使用1–2，仍核实际余量；不把此瞬时空闲当永久可用，不改他人任务/全局环境。所有完成资格/正式准入/config/观察/过程/报告分别交，阶段推送，按实测长sleep。
 
 先前B1完整16窗/80输出/320逐帧、0优化/GPU，历史相对当前同表时间仅改善.167%–.744%，完整门失败，[0191](docs/进展报告/0191-T-26112101-外观索引特征历史完整筛查与止损.md)及其固定表/key/节点/alpha/decay/阈值/seed/训练补救STOP保持，原3450505已终态不重跑。
 
@@ -44,7 +44,7 @@ O1是当前已登记的独立核心，必须按原恢复/历史/强post和有限
 - pull/merge显式使用 `--no-ff`；不rebase、squash或强推。遵守[版本规范](specs/项目规范/版本管理规范.md)及[路径规范](specs/项目规范/路径与环境规范.md)。
 - 本仓库SSH身份使用zrh自有密钥与隔离core.sshCommand，GitHub账号spinner-bot；不使用共享服务器其他账号的默认SSH配置，不记录密钥内容。详[版本规范](specs/项目规范/版本管理规范.md)。
 - 共享GPU按[资源规范](specs/项目规范/GPU资源使用规范.md)及当前冻结协议确认余量，允许经评估后与他人同卡并行；不改变他人的进程、功率或任务设置。V1的CPU训练历史与GPU评分执行修订须保留，不能自行放宽原GPU门槛或重复启动已完成训练。
-- 2026-11-21T07:22:11.808873+08:00用户新增授权：物理1、2号卡任务均属本人，允许本项目使用；以后无需再为使用这两卡请求许可，仍按实际余量准入。用户随后告知8卡已空余，NVML已核全0；该瞬时空闲不替代未来采样。O1原链当前已进资格013，沿原4–7正常接续，不因新增卡许可重复启动。
+- 2026-11-21T07:22:11.808873+08:00用户新增授权：物理1、2号卡任务均属本人，允许本项目使用；以后无需再为使用这两卡请求许可，仍按实际余量准入。用户随后告知8卡已空余，NVML已核全0；该瞬时空闲不替代未来采样。该授权到达时O1原链已进资格013，本轮沿原4–7接续，不因新增卡许可重复启动。
 
 ## 研究和交接边界
 
@@ -52,4 +52,4 @@ O1是当前已登记的独立核心，必须按原恢复/历史/强post和有限
 - 所有既有STOP继续有效，包括R28/R34/R37/R44–R46/R48/R50–R51/R61/R64–R65/R73–R75/R77/R79–R82/R84–R88等的局部网格；本主题也须按自身协议止损。旧决策原文在[研究决策目录](research/4.temporal-consistency/docs/)，完整历史在[原文快照](docs/交接历史/AGENTS-20261120-1524.md)。不因当前入口缩短而恢复任何已停止实验。
 - 原始MobileIE/F0实际4075参数；主题8-V1独立空间16180、学习融合16365，使用两遍骨干和DIS，不能写成4K或零额外推理开销。packing、KD、门控、递归等已知组件不是已确立创新。
 - OLiVES 43/71/83、DAVIS testdev、Kodak 13–24独立最终继续封存；未经预定开发/冻结门槛，不读取最终像素或将开发集结论改称独立测试。主论文原84质量值/snapshot003/PDF020保持，当前仍非投稿完成稿。
-- main只推进核心研究，survey/pre与demo/org各自worktree不修改、7号继续预留。先读[最新0192](docs/进展报告/0192-T-26112107-共享核心资格与正式学习准备.md)、[主题8入口](research/8.video-backbone/README.md)、[原完整过程](research/8.video-backbone/process/v1/journal.md)与[论文状态](paper/RESEARCH_STATUS.md)；需要早期细节再定向查历史，勿按旧活跃行重启。
+- main只推进核心研究，survey/pre与demo/org各自worktree不修改、7号继续预留。先读[最新0193](docs/进展报告/0193-T-26112107-共享核心CUDA资格与正式训练启动.md)、[主题8入口](research/8.video-backbone/README.md)、[原完整过程](research/8.video-backbone/process/v1/journal.md)与[论文状态](paper/RESEARCH_STATUS.md)；需要早期细节再定向查历史，勿按旧活跃行重启。
