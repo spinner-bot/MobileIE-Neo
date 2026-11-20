@@ -1,0 +1,60 @@
+{
+  "resource_id": "MIE-0110",
+  "created_at": "2026-11-20T12:24:23+08:00",
+  "source_root": "../../.. (workstation root from this sources directory)",
+  "snapshot_cutoff": "2026-11-17",
+  "receipts": [
+    {
+      "path": "receipts/paper-bb2867f2c184-index-link1.json",
+      "status": "success",
+      "http": 202,
+      "archive": null,
+      "sha256": null
+    },
+    {
+      "path": "receipts/paper-bb2867f2c184-publisher.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/paper-bb2867f2c184-publisher.html",
+      "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea"
+    },
+    {
+      "path": "receipts/sup6-medical-pmc.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/sup6-medical-pmc.html",
+      "sha256": "bf9a8a0aee7c53fcb876822bdfb5757b18950736b13f0af5d5d0c4dd1091dacb"
+    },
+    {
+      "path": "receipts/sup6-medical-oscr.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/sup6-medical-oscr.html",
+      "sha256": "6440daa3d5d0732a2aee33494250aa624df72cfd58d3667080de038ecd03adc5"
+    }
+  ],
+  "discovery_evidence": [
+    {
+      "source": "collection/raw/initial-openalex-citing.json",
+      "position": 8,
+      "source_record_id": "https://openalex.org/W7159925734"
+    },
+    {
+      "source": "collection/raw/initial-s2-citing.json",
+      "position": 21,
+      "source_record_id": "2ee69671a45f61aaba30a0b5e1b2f0f28d5b3638"
+    },
+    {
+      "source": "research/5.prior-art-survey/data/citations_s2.json",
+      "position": 19,
+      "source_record_id": "2ee69671a45f61aaba30a0b5e1b2f0f28d5b3638"
+    },
+    {
+      "source": "research/5.prior-art-survey/data/citations_openalex.json",
+      "position": 1,
+      "source_record_id": "https://openalex.org/W7159925734"
+    }
+  ],
+  "adequacy": "Materials available for analysis; not yet read or qualified",
+  "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts"
+}
