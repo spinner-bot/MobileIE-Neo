@@ -1,0 +1,66 @@
+{
+  "at": "2026-11-20T17:46:33.578866+08:00",
+  "pid": 3163977,
+  "seed": 0,
+  "qualification": true,
+  "device": "cuda",
+  "completed_normally": true,
+  "resource_pause": false,
+  "counts": {
+    "common_steps": 2,
+    "optimizer_updates": 6,
+    "teacher_images": 32,
+    "student_images": 96,
+    "DIS_pairs": 24
+  },
+  "latest_checkpoint": null,
+  "seconds": 56.27174399793148,
+  "GPU": {
+    "UUID": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+    "observations": 4,
+    "minimum_free_mib": 39491,
+    "maximum_used_mib": 1468,
+    "maximum_observed_utilization_percent": 2,
+    "synchronized_work_seconds": 0.7734917539637536,
+    "cooperative_pause_seconds": 2.029319901019335,
+    "current_consecutive_busy_decisions": 0,
+    "last16": [
+      {
+        "at": "2026-11-20T17:46:30.609942+08:00",
+        "uuid": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+        "total_mib": 40960,
+        "used_mib": 1022,
+        "free_mib": 39937,
+        "utilization_percent": 0
+      },
+      {
+        "at": "2026-11-20T17:46:31.288935+08:00",
+        "uuid": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+        "total_mib": 40960,
+        "used_mib": 1468,
+        "free_mib": 39491,
+        "utilization_percent": 2
+      },
+      {
+        "at": "2026-11-20T17:46:33.326108+08:00",
+        "uuid": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+        "total_mib": 40960,
+        "used_mib": 1468,
+        "free_mib": 39491,
+        "utilization_percent": 0
+      },
+      {
+        "at": "2026-11-20T17:46:33.326466+08:00",
+        "uuid": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+        "total_mib": 40960,
+        "used_mib": 1468,
+        "free_mib": 39491,
+        "utilization_percent": 0
+      }
+    ],
+    "scope": "Lifetime resource minima/maxima and bounded recent observations; no phone or incumbent throughput claim."
+  },
+  "CUDA_initialized": true,
+  "max_allocated_bytes": 333710848,
+  "max_reserved_bytes": 461373440
+}
