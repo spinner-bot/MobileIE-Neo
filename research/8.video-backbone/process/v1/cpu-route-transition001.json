@@ -1,0 +1,93 @@
+{
+  "at": "2026-11-20T14:03:50.862162+08:00",
+  "old_coordinator": {
+    "at": "2026-11-20T13:35:43.896337+08:00",
+    "pid": 3003196,
+    "start_ticks": 109313161,
+    "command": [
+      "/data/Users/zrh/repo/MobileIE-Neo/scripts/project-python",
+      "/data/Users/zrh/repo/MobileIE-Neo/research/8.video-backbone/run_v1.py",
+      "--chain",
+      "2"
+    ],
+    "stdout": ".cache/experiments/topic8-v1/coordinator002-stdout.txt",
+    "detached_session": true,
+    "original_chain_runtime": "research/8.video-backbone/process/v1/chain001/runtime.json",
+    "original_chain_runtime_preserved": true,
+    "resource_forwarding_check_passed": true,
+    "frozen_science_sources_unchanged": true,
+    "inherited_formal_updates": 241,
+    "scope": "Resource orchestration continuation only, skip completed CUDA qualification, no new scientific configuration or budget."
+  },
+  "old_state": {
+    "at": "2026-11-20T14:03:32.355248+08:00",
+    "coordinator": {
+      "pid": 3003196,
+      "start_ticks": 109313161,
+      "state": "R"
+    },
+    "status": "waiting_for_headroom",
+    "stage": "train-seed0-attempt006",
+    "resource_polls": 13,
+    "guard_attempts": 9,
+    "child": null,
+    "worker": null,
+    "last_resource_poll": ".cache/experiments/topic8-v1/chain002/resource-poll00013.json",
+    "stdout": ".cache/experiments/topic8-v1/chain002/train-seed0-attempt005-guard00009.stdout.txt",
+    "returncode": 75,
+    "last_guard": ".cache/experiments/topic8-v1/chain002/guard00008.json"
+  },
+  "verified_no_children": true,
+  "all_prior_numeric_workers_terminal": true,
+  "saved_checkpoint": {
+    "path": ".cache/experiments/topic8-v1/train-seed0-attempt004/warm-step0358-resource.pt",
+    "sha256": "6ea4f48523eb1abcbf6fd1c450ee742b780b27fc4592f1da5a896785a80c2add",
+    "seed": 0,
+    "phase": "warm",
+    "counts": {
+      "updates": {
+        "warm": 358,
+        "spatial": 0,
+        "fixed": 0,
+        "learned": 0
+      },
+      "teacher_images": 5728,
+      "backbone_images": 5728,
+      "DIS_pairs": 0,
+      "gate_images": 0
+    },
+    "resource_pause": true
+  },
+  "action": "SIGINT to idle CPU watcher then SIGCONT, Python finally preserves terminal; no numeric worker signalled",
+  "reason": "Explicit CPU backend continuation after repeated shared-GPU refusals; same full algorithm budget, original CPU qualification passed.",
+  "original_runtime_retained": {
+    "at": "2026-11-20T14:03:50.863613+08:00",
+    "coordinator": {
+      "pid": 3003196,
+      "start_ticks": 109313161,
+      "state": "R"
+    },
+    "completed_normally": false,
+    "seconds": 1686.8863724889234,
+    "final_state": {
+      "at": "2026-11-20T14:03:50.862997+08:00",
+      "coordinator": {
+        "pid": 3003196,
+        "start_ticks": 109313161,
+        "state": "R"
+      },
+      "status": "stopped_for_original_terminal_review",
+      "stage": "train-seed0-attempt006",
+      "resource_polls": 13,
+      "guard_attempts": 9,
+      "child": null,
+      "worker": null,
+      "last_resource_poll": ".cache/experiments/topic8-v1/chain002/resource-poll00013.json",
+      "stdout": ".cache/experiments/topic8-v1/chain002/train-seed0-attempt005-guard00009.stdout.txt",
+      "returncode": 75,
+      "last_guard": ".cache/experiments/topic8-v1/chain002/guard00008.json"
+    },
+    "CPU_quality_children": [],
+    "paper_objective_achieved": false
+  }
+}
