@@ -1,0 +1,97 @@
+{
+  "resource_id": "MIE-0057",
+  "temporary_key": "code-miaory--test",
+  "type": "code",
+  "title": "miaory/test",
+  "repo": "miaory/test",
+  "revision": "fd7e97c645c6be6e1816ccba66e8f425f7c2b542",
+  "tree": null,
+  "dois": null,
+  "arxivs": null,
+  "relation": "Explicit MobileIE implementation/module reuse; module-port claim requires independent source review, no fidelity/performance assumed",
+  "created_at": "2026-11-20T12:24:23+08:00",
+  "authors": [],
+  "dates": {
+    "years": [],
+    "published_date": null,
+    "date_verification": "pending Gate2"
+  },
+  "repository_owner": "miaory",
+  "family": "072-export",
+  "analysis_order": 57,
+  "initial_preliminary": {
+    "R": 2,
+    "N": 1,
+    "U": 2,
+    "E": 2,
+    "score": 50,
+    "tier": "B",
+    "category": "conversion-implementation",
+    "family": "072-export",
+    "role_order": 1,
+    "summary": "ONNX导出文件中出现MobileIE类/路径。核有效代码与注释/样例的区别。",
+    "reason_R": "任务联系：ONNX导出文件中出现MobileIE类/路径。核有效代码与注释/样例的区别。",
+    "reason_N": "重复/混淆风险为初级待证判断；依据当前明确关联与基础/接续/移植角色，非已确立创新结论",
+    "reason_U": "可操作性：按所列机制、对照或来源核查用途评分；未运行外部代码",
+    "reason_E": "已有可读HTML/文本/局部固定源码；内容充分性留待Gate2",
+    "evidence": [
+      {
+        "url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/torch_to_onnx.py",
+        "path": "torch_to_onnx.py",
+        "revision": "fd7e97c645c6be6e1816ccba66e8f425f7c2b542",
+        "acquisition": "receipts/codehit-7bf8a2ace8b5d2ff.json"
+      },
+      {
+        "url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/model/__init__.py",
+        "path": "model/__init__.py",
+        "revision": "fd7e97c645c6be6e1816ccba66e8f425f7c2b542",
+        "acquisition": "receipts/codehit-f4ee9c02b5e7c690.json"
+      },
+      {
+        "url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/onnx2tflite/onnx2tflite.py",
+        "path": "onnx2tflite/onnx2tflite.py",
+        "revision": "fd7e97c645c6be6e1816ccba66e8f425f7c2b542",
+        "acquisition": "receipts/codehit-5dd44b90b9af6c5b.json"
+      },
+      {
+        "url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/model/lle-Copy1.py",
+        "path": "model/lle-Copy1.py",
+        "revision": "fd7e97c645c6be6e1816ccba66e8f425f7c2b542",
+        "acquisition": "receipts/codehit-bba07f41de22d3c6.json"
+      },
+      {
+        "url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/model/lle.py",
+        "path": "model/lle.py",
+        "revision": "fd7e97c645c6be6e1816ccba66e8f425f7c2b542",
+        "acquisition": "receipts/codehit-1f94b4eaccc051f1.json"
+      },
+      {
+        "url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/enable_iwo.py",
+        "path": "enable_iwo.py",
+        "revision": "fd7e97c645c6be6e1816ccba66e8f425f7c2b542",
+        "acquisition": "receipts/codehit-002f5dd9a37a6aa0.json"
+      },
+      {
+        "url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/config/lle_iwo.yaml",
+        "path": "config/lle_iwo.yaml",
+        "revision": "fd7e97c645c6be6e1816ccba66e8f425f7c2b542",
+        "acquisition": "receipts/codehit-320aa63f8da4e457.json"
+      },
+      {
+        "url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/model/isp.py",
+        "path": "model/isp.py",
+        "revision": "fd7e97c645c6be6e1816ccba66e8f425f7c2b542",
+        "acquisition": "receipts/codehit-7b893398d8e0c6fe.json"
+      },
+      {
+        "url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/complexity.py",
+        "path": "complexity.py",
+        "revision": "fd7e97c645c6be6e1816ccba66e8f425f7c2b542",
+        "acquisition": "receipts/codehit-6941b24e9dc778ee.json"
+      }
+    ],
+    "not_gate2": true
+  },
+  "source_snapshot_cutoff": "2026-11-17",
+  "identity_verification": "pending Gate2; repository owner is not assumed to be the paper author"
+}
