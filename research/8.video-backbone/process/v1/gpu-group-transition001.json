@@ -1,0 +1,110 @@
+{
+  "at": "2026-11-20T16:20:40.477672+08:00",
+  "intent": "Switch only an idle metadata watcher from group0-3 to isolated group4-7, retaining all completed science.",
+  "before_identity": {
+    "pid": 3106031,
+    "state": "S",
+    "start_ticks": 110263806
+  },
+  "before_state": {
+    "at": "2026-11-20T16:20:19.015850+08:00",
+    "coordinator": {
+      "pid": 3106031,
+      "start_ticks": 110263806,
+      "state": "R"
+    },
+    "status": "waiting_for_headroom",
+    "stage": "perceptual-attempt001",
+    "resource_polls": 5,
+    "guard_attempts": 0,
+    "child": null,
+    "worker": null,
+    "last_resource_poll": ".cache/experiments/topic8-v1/chain003/resource-poll00005.json"
+  },
+  "numeric_worker_signals": 0,
+  "deferred": false,
+  "stopped_identity": {
+    "pid": 3106031,
+    "state": "T",
+    "start_ticks": 110263806
+  },
+  "actual_children": [],
+  "existing_metric_attempts": [],
+  "watcher_SIGINT_sent": true,
+  "after_watcher": {
+    "pid": 3106031,
+    "missing": true
+  },
+  "after_CPU_coordinator": {
+    "pid": 3024380,
+    "missing": true
+  },
+  "original_chain_runtime": {
+    "at": "2026-11-20T16:20:40.580005+08:00",
+    "coordinator": {
+      "pid": 3106031,
+      "start_ticks": 110263806,
+      "state": "R"
+    },
+    "completed_normally": false,
+    "seconds": 390.1583649960812,
+    "final_state": {
+      "at": "2026-11-20T16:20:40.579448+08:00",
+      "coordinator": {
+        "pid": 3106031,
+        "start_ticks": 110263806,
+        "state": "R"
+      },
+      "status": "stopped_for_original_terminal_review",
+      "stage": "perceptual-attempt001",
+      "resource_polls": 5,
+      "guard_attempts": 0,
+      "child": null,
+      "worker": null,
+      "last_resource_poll": ".cache/experiments/topic8-v1/chain003/resource-poll00005.json"
+    },
+    "CPU_quality_children": [],
+    "paper_objective_achieved": false
+  },
+  "original_CPU_runtime": {
+    "at": "2026-11-20T16:20:40.599143+08:00",
+    "coordinator": {
+      "pid": 3024380,
+      "start_ticks": 109481893,
+      "state": "R"
+    },
+    "completed_normally": false,
+    "seconds": 8209.304354769876,
+    "final_state": {
+      "at": "2026-11-20T16:20:40.598653+08:00",
+      "coordinator": {
+        "pid": 3024380,
+        "start_ticks": 109481893,
+        "state": "R"
+      },
+      "status": "stopped_for_original_terminal_review",
+      "stage": "original-post-training-chain003",
+      "child": {
+        "pid": 3106031,
+        "already_exited": true
+      },
+      "stdout": ".cache/experiments/topic8-v1/cpu-chain001/original-post-training-chain003.stdout.txt",
+      "returncode": -2
+    },
+    "CPU_quality_children": [
+      {
+        "stage": "CPU-quality-seed0",
+        "pid": 3057709,
+        "already_exited": true,
+        "returncode": 0
+      },
+      {
+        "stage": "CPU-quality-seed1",
+        "pid": 3095929,
+        "already_exited": true,
+        "returncode": 0
+      }
+    ],
+    "paper_objective_achieved": false
+  }
+}
