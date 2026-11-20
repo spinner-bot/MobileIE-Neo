@@ -1,0 +1,73 @@
+{
+  "acquired_at": "2026-11-20T07:46:09.447Z",
+  "results": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "repo": "cmuhang/ULightIF",
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "content": "<h1 align=\"center\">IEEE Transactions on Multimedia 2026 | ULightIF</h1>\n\n<p align=\"center\">\n  <em>ULightIF: Unsupervised Low Light Infrared and Visible Image Fusion Method</em>\n</p>\n<p align=\"center\">\n  <a href=\"https://github.com/cmuhang/ULightIF\" style=\"text-decoration:none;\">\n    <img src=\"https://img.shields.io/badge/Code-GitHub-181717?style=flat-square&logo=github&logoColor=white\" alt=\"Code\" />\n  </a>\n  <a href=\"https://ieeexplore.ieee.org/document/11655203\" style=\"text-decoration:none; margin-left:8px;\">\n    <img src=\"https://img.shields.io/badge/Paper-IEEE%20Xplore-00629B?style=flat-square&logo=ieee&logoColor=white\" alt=\"Paper\" />\n  </a>\n</p>\n<p align=\"center\">\n  <img src=\"assets/framework.png\" alt=\"ULightIF Framework\" width=\"88%\">\n</p>\n\n## 🙌 1 Introduction\n* This is the official implementation of our paper titled \"ULightIF: Unsupervised Low Light Infrared and Visible Image Fusion Method\". This paper has been accepted by IEEE Transactions on Multimedia.\n* If you have any question about this code, feel free to reach me(cmuhang@163.com)\n\n## 🌐 2 Prepare Your Dataset\nPlease download the datasets from the following links: [MSRS](https://github.com/Linfeng-Tang/MSRS) | [LLVIP](https://bupt-ai-cz.github.io/LLVIP/) | [M3FD](https://github.com/dlut-dimt/TarDAL).\n\nDownload the corresponding datasets following their official instructions, and then modify the dataset paths in the `options.py` configuration file.\n\n## 🛠️ 3 Pretrained Weights\nThe weight files released in the `weights` directory are the original paper checkpoints used by `test_p.py`.\n\n## 🚀 4 Usage\n\nTo facilitate the open-source release, we refactored the codebase using PyTorch Lightning, improving readability and maintainability. Accordingly, this repository provides two testing scripts:\n- `test_p.py`: reproduces the results in the paper.\n- `test.py`: evaluates models trained with the refactored training pipeline.\n\nUsers may select either the intermediate fusion result or the final enhanced result for comparison, depending on whether the task targets standard or low-light image fusion.\n\n\n\n### 📖 4.1 Training\n\nBefore training, please download and prepare the dataset and configure the training settings in `options.py`. Then run:\n```bash\npython train.py\n```\n\n### 🧩 4.2 Testing\n\nTo reproduce the results reported in the paper, run:\n\n```bash\npython test_p.py\n```\n\nTo test your own trained model, run:\n```bash\npython test.py\n```\n\n## ❤️ Citation\nIf you find our work useful for your research, please cite our paper. \n\n```\n@ARTICLE{cheng2026ulight,\n  author={Cheng, Muhang and Huang, Haiyan and Mo, Hongwei},\n  journal={IEEE Transactions on Multimedia}, \n  title={ULightIF: Unsupervised Low Light Infrared and Visible Image Fusion Method}, \n  year={2026},\n  volume={},\n  number={},\n  pages={1-13},\n  doi={10.1109/TMM.2026.3723605}}\n```\n\n## Related Work\n```\n@ARTICLE{11673287,\n  author={Cheng, Muhang and Mo, Hongwei},\n  journal={IEEE Transactions on Multimedia}, \n  title={SpikeVFuse: Enhancing Infrared and Visible Image Fusion with Spiking Neural Networks}, \n  year={2026},\n  volume={},\n  number={},\n  pages={1-13},\n  doi={10.1109/TMM.2026.3729390}}\n\n@ARTICLE{cheng2025fdfuse,\n  author={Cheng, Muhang and Huang, Haiyan and Liu, Xiangyu and Mo, Hongwei and Wu, Songling and Zhao, Xiongbo},\n  journal={IEEE Transactions on Instrumentation and Measurement}, \n  title={FDFuse: Infrared and Visible Image Fusion Based on Feature Decomposition}, \n  year={2025},\n  volume={74},\n  number={},\n  pages={1-13},\n  doi={10.1109/TIM.2025.3551460}}\n\n@article{cheng2025lefuse,\n  title={LEFuse: Joint low-light enhancement and image fusion for nighttime infrared and visible images},\n  author={Cheng, Muhang and Huang, Haiyan and Liu, Xiangyu and Mo, Hongwei and Zhao, Xiongbo and Wu, Songling},\n  journal={Neurocomputing},\n  volume={626},\n  pages={129592},\n  year={2025},\n  publisher={Elsevier}\n}\n```\n\n## Acknowledgements\nThis repository is mainly built upon [MobileIE](MobileIE). We thank the authors for their well-organized codebases.",
+            "encoding": "utf-8",
+            "sha": "19255cca89cc809aa1a6041f759989f1ae19454a",
+            "display_url": "https://github.com/cmuhang/ULightIF/blob/bc952b6f1f18a6480628fc91f6ce96a93484817c/README.md",
+            "display_title": "README.md"
+          },
+          "isError": false
+        }
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "repo": "aiff22/MAI-2025-Workshop",
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "content": "# MAI-2025-Workshop\n\nMAI 2025 Workshop Scripts\n",
+            "encoding": "utf-8",
+            "sha": "6f5564aba3243415b55b342e485b87fa2e3819ea",
+            "display_url": "https://github.com/aiff22/MAI-2025-Workshop/blob/8d66b34ce8c5ad122d3b98100227fd6f0142c553/README.md",
+            "display_title": "README.md"
+          },
+          "isError": false
+        }
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "repo": "vinodyas/Edge_Aware_Diffusion_for_Mobile_Photo_Enhancement",
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-repository-content\",\"status\":\"404\"}"
+            }
+          ],
+          "structuredContent": {
+            "error": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-repository-content\",\"status\":\"404\"}",
+            "error_code": "NOT_FOUND",
+            "error_data": {
+              "message": "Not Found",
+              "documentation_url": "https://docs.github.com/rest/repos/contents#get-repository-content",
+              "status": "404"
+            }
+          },
+          "isError": true
+        }
+      }
+    }
+  ]
+}

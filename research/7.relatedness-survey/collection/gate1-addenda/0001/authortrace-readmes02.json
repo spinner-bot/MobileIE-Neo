@@ -1,0 +1,71 @@
+{
+  "recorded_at": "2026-11-20T07:50:54.932Z",
+  "data": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "repo": "cherrysherryplus/TSECN",
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "content": "# TSECN (Two-stage Exposure-controllable Network for Low-light Degradation, TIM 2025, Accepted)\r\n#### News\r\n- **Jun 17, 2025:**  Our work has been submitted and is under review.\r\n- **Jun 19, 2025:**  We have released the results of compared methods and testing code.\r\n- **Sep 3, 2025:** Our work has been accepted by TIM 2025.\r\n- **Sep 28, 2025:** Datasets, codes and pretrained weights are available.\r\n\r\n<hr />\r\n\r\n> **Simplified abstract:** *This paper has proposed a staged framework for low-light image enhancement (LLIE) featuring a low-cost offline control strategy with natural transition effects. Extensive comparisons and ablations are conducted to demonstrate the efficiency of its designs. Eight benchmarks are included for comparisons, including LOL-v1-real, LSRW-huawei, LSRW-nikon, LIME, DICM, MEF, NPE, and VV. For the first three paired datasets, PSNR, SSIM, and LPIPS scores are measured. For the last five unpaired datasets, we employ three reference-free metrics, i.e. NIQE, ILNIQE, and BRISQUE.* \r\n>\r\n\r\n<p align=\"center\">\r\n  <img width=\"800\" src=\"figs/simple-pipeline.png\">\r\n</p>\r\n\r\n---\r\n\r\n## Installation\r\n\r\nMore details can be found in the configuration files from the `envs` folder.\r\n\r\n    python==3.8.20\r\n    torch==1.11.0+cu113\r\n    torchvision==0.12.0+cu113\r\n    visdom==0.2.4\r\n    ...\r\n\r\n## Results of compared methods and datasets\r\n\r\nPretrained weights have been already included in the `checkpoints` folder. Other resouces are all shared in: [百度网盘](https://pan.baidu.com/s/1nV-cI2_-5oghIFqbKCUkdg?pwd=c5fk) or [Google Drive (not ready)](https://pan.baidu.com/s/1nV-cI2_-5oghIFqbKCUkdg?pwd=c5fk)\r\n\r\n## Evaluation\r\n\r\nMore details can be found in `readme.txt` from the `scripts` folder\r\n\r\n## Results\r\n\r\n<p align=\"center\">\r\n  <img width=\"800\" src=\"figs/table-paried.png\">\r\n</p>\r\n\r\n<p align=\"center\">\r\n  <img width=\"800\" src=\"figs/visualization.png\">\r\n</p>\r\n\r\n<p align=\"center\">\r\n  <img width=\"800\" src=\"figs/control-light.png\">\r\n</p>\r\n\r\n<p align=\"center\">\r\n  <img width=\"800\" src=\"figs/applications.png\">\r\n</p>\r\n\r\n## Citation\r\nOur work is built upon the codebase of [EnlightenGAN](https://github.com/VITA-Group/EnlightenGAN) and [PairLIE](https://github.com/zhenqifu/PairLIE), and we sincerely thank them for their contribution.",
+            "encoding": "utf-8",
+            "sha": "78351feb0d181ede7538ac01bdedd72481e6b2b7",
+            "display_url": "https://github.com/cherrysherryplus/TSECN/blob/main/README.md",
+            "display_title": "README.md"
+          },
+          "isError": false
+        }
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "repo": "Qlinlin/UDHE",
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "content": "# UDHE: Decoupling Color and Structure via Dual-Branch Learning for High-Fidelity Underwater Image Restoration\n\n**Haotian Sun, Linlin Qi, Tao Liu**\n\n\n---\n\nThe code and implementation details will be released upon paper acceptance.\n\n---\n\n**Contact**: lin.qi@hrbeu.edu.cn\n",
+            "encoding": "utf-8",
+            "sha": "e90b743f4f637524787cdc4612da35bda9796f5b",
+            "display_url": "https://github.com/Qlinlin/UDHE/blob/main/README.md",
+            "display_title": "README.md"
+          },
+          "isError": false
+        }
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "repo": "ivsou/CS--Diff",
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "content": "# CS³-Diff: Collaborative Spatio-Spectral-Scale Guided Diffusion for Low-Light Image Enhancement\n\n# 📌 Overview\n\nLow-light image enhancement aims to improve visual quality and support robust downstream vision tasks under challenging illumination conditions. Existing methods often suffer from inadequate structural preservation, texture degradation, and spatial inconsistency during patch-wise inference. To address these issues, we propose **CS³-Diff**, a collaborative spatio-spectral-scale guided diffusion framework for low-light image enhancement. Specifically, a Dual-stage Wavelet-based Structural Prior Guidance (DWSPG) module is designed to extract and enhance edge-aware structural priors in the wavelet domain. A Global-Scale Positional Embedding (GSPE) is introduced to jointly encode diffusion timesteps, spatial coordinates, and scale information for globally consistent restoration. In addition, a Residual Frequency-domain Phase Mixer (RFPM) is proposed to improve fine-grained texture reconstruction through explicit phase-aware frequency modeling. \n\n![Overall Framework](Figures/Figure2.jpg)\n\n---\n# 🔑 Core Contributions\n![ DWSPG ](Figures/Figure3.jpg)\n\n- (a) Enhancement stage of DWSPG\n\n- (b) Fusion stage of DWSPG\n\n- (c) Architecture of a single Fusion Branch.\n\n<table align=\"center\">\n<tr>\n<td align=\"center\" width=\"50%\">\n\n<img src=\"Figures/Figure4.jpg\" width=\"90%\">\n\n<br>\n\n<b>GSPE Module</b>\n\n</td>\n\n<td align=\"center\" width=\"50%\">\n\n<img src=\"Figures/Figure5(b).jpg\" width=\"90%\">\n\n<br>\n\n<b>RFPM Module</b>\n\n</td>\n</tr>\n</table>\n\n# 📂 Repository Structure\n```text\n├── models/        # Model implementations\n├── datasets/      # Dataset loaders\n├── utils/         # Utilities and metrics\n├── configs/       # Configuration files\n├── checkpoints/   # Pretrained models\n```\n\n\n# 📊 Dataset \n\nWe evaluate CS³-Diff on the following benchmark datasets:\n\n- LOL-v1\n- LOL-v2-Real\n- LOL-v2-Synthetic\n- LSRW\n\nDownload the datasets and organize them under:\n```bash\n./datasets/scratch/LLIE\n```\nDirectory structure:\n```text\nLLIE\n├── LOLv1\n│   ├── train\n│   │   ├── input\n│   │   └── gt\n│   └── test\n│       ├── input\n│       └── gt\n├── LOLv2-Real_captured\n├── LOLv2-Synthetic\n├── LSRW\n```\nPlease ensure the directory structure is strictly followed.\n\n# ⚙️ Environment Setup\n\n```bash\n- Platform: NVIDIA GPU with CUDA support (recommended)  \n- Python: 3.8  \n```\nInstall PyTorch and project dependencies:\n\n```bash\npip install torch torchvision torchaudio\npip install -r requirements.txt\n```\n\n---\n\n\n# 📦 Pre-trained Models\n\nPretrained checkpoints:\n\nBaidu Cloud: https://pan.baidu.com/s/1UuqeO4yuhZ2JhcgtHIfRMg\nExtraction code: 9912\n\nPlace the downloaded files under:\n```bash\n./checkpoints\n```\n---\n\n# 🚀 Train \nRun training with:\n\n```bash\npython train.py --config configs/lowlight.yml\n```\n\n# 🧪 Inference \n\nRun evaluation with:\n```bash\npython inference.py --config configs/lowlight.yml --checkpoint <checkpoint_path>\n```\nExample:\n```bash\npython inference.py --config configs/lowlight.yml --checkpoint checkpoints/lolv2-real.pth\npython inference.py --config configs/lowlight.yml --checkpoint checkpoints/lolv2-syn.pth\npython inference.py --config configs/lowlight.yml --checkpoint checkpoints/lolv1.pth\npython inference.py --config configs/lowlight.yml --checkpoint checkpoints/lsrw.pth\n```\n# 📝 Experimental Results\n<img width=\"1095\" height=\"500\" alt=\"image\" src=\"https://github.com/user-attachments/assets/c8955484-d819-44e7-b48c-88ad65407480\" />\n<img width=\"1095\" height=\"500\" alt=\"image\" src=\"https://github.com/user-attachments/assets/b6d15b2a-1b93-433b-b093-875e7ee7e432\" />\n<img width=\"1095\" height=\"500\" alt=\"image\" src=\"https://github.com/user-attachments/assets/cbb46c66-20c2-47f2-8d46-32f4a7c532e1\" />\n<img width=\"1095\" height=\"500\" alt=\"image\" src=\"https://github.com/user-attachments/assets/e9f701ac-c512-475d-a593-62824f6cde49\" />\n<img width=\"1095\" height=\"500\" alt=\"image\" src=\"https://github.com/user-attachments/assets/c8898eea-192c-4869-86b4-9a314dee9da2\" />\n<img width=\"1095\" height=\"500\" alt=\"image\" src=\"https://github.com/user-attachments/assets/7506cc12-0c76-4d85-bdd6-97ea149aa39d\" />\n\n#  📌 Notes\n- This repository provides the implementation of CS³-Diff.\n- Please refer to the paper for more architectural and theoretical details.\n",
+            "encoding": "utf-8",
+            "sha": "6f6cfde12ac8d37c4af1b9c0d0988e9f28c25c8a",
+            "display_url": "https://github.com/ivsou/CS--Diff/blob/main/README.md",
+            "display_title": "README.md"
+          },
+          "isError": false
+        }
+      }
+    }
+  ]
+}

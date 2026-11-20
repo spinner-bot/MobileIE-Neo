@@ -1,0 +1,69 @@
+{
+  "scope": "Verify only complete PDF selection for collection link scan; no full scientific reading",
+  "finding": "All three manifests already include complete *-large.pdf receipts. Earlier scan also attempted preserved incomplete prefixes. No missing-manifest correction required; preserve original failures and scan complete versions only.",
+  "rows": [
+    {
+      "resource_id": "MIE-0010",
+      "title": "Advancing Visual Reliability: Color-Accurate Underwater Image Enhancement for Real-Time Underwater Missions",
+      "checks": [
+        {
+          "receipt": "receipts/paper-dce553dc3465-arxiv-pdf-large.json",
+          "capture_status": "success",
+          "bytes": 31902578,
+          "already_in_manifest": true,
+          "pages": 13,
+          "parse": "ok"
+        },
+        {
+          "receipt": "receipts/paper-dce553dc3465-arxiv-pdf.json",
+          "capture_status": "size_limit_incomplete",
+          "bytes": 25165824,
+          "already_in_manifest": true,
+          "parse": "Stream has ended unexpectedly"
+        }
+      ]
+    },
+    {
+      "resource_id": "MIE-0038",
+      "title": "IGDNet: Zero-Shot Robust Underexposed Image Enhancement via Illumination-Guided and Denoising",
+      "checks": [
+        {
+          "receipt": "receipts/paper-22650a5cc376-arxiv-pdf-large.json",
+          "capture_status": "success",
+          "bytes": 31476142,
+          "already_in_manifest": true,
+          "pages": 11,
+          "parse": "ok"
+        },
+        {
+          "receipt": "receipts/paper-22650a5cc376-arxiv-pdf.json",
+          "capture_status": "size_limit_incomplete",
+          "bytes": 25165824,
+          "already_in_manifest": true,
+          "parse": "Stream has ended unexpectedly"
+        }
+      ]
+    },
+    {
+      "resource_id": "MIE-0051",
+      "title": "StereoAdapter: Adapting Stereo Depth Estimation to Underwater Scenes",
+      "checks": [
+        {
+          "receipt": "receipts/paper-3efaea0cc22d-arxiv-pdf-large.json",
+          "capture_status": "success",
+          "bytes": 56595481,
+          "already_in_manifest": true,
+          "pages": 15,
+          "parse": "ok"
+        },
+        {
+          "receipt": "receipts/paper-3efaea0cc22d-arxiv-pdf.json",
+          "capture_status": "size_limit_incomplete",
+          "bytes": 25165824,
+          "already_in_manifest": true,
+          "parse": "Stream has ended unexpectedly"
+        }
+      ]
+    }
+  ]
+}
