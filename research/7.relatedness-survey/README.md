@@ -9,7 +9,7 @@
 
 2026-11-20阶段进度：113项永久索引和初级排序已冻结；MIE-0001、0002、0003已顺序通过Gate2（公开文献／适用核心静态分析，非数值复现），正在分析MIE-0004。最新状态以[顺序日志](catalog/analysis-log.jsonl)和各项Gate2原记录为准。本段是阶段快照，不代表其后状态自动回写。
 
-当前增补状态：[G1-A0001](collection/gate1-addenda/0001/status.json)已通过补充Gate1（披露访问/日期/索引限制）；原113项索引和旧结项保留。11项等待追加编目，MIE-0004仍暂缓结项，须先完成MIE-0003正式版追加复审。实际状态以增补记录和顺序日志为准。
+当前增补状态：[G1-A0001](collection/gate1-addenda/0001/status.json)已通过补充Gate1（披露访问/日期/索引限制）；原113项索引和旧结项保留。新增MIE-0114…0124已编目，124项当前队列见[目录v2](catalog/README-v2.md)，MIE-0004仍暂缓结项，须先完成MIE-0003正式版追加复审。实际状态以增补记录和顺序日志为准。
 
 任务：为 MobileIE 照片→视频和 ICCV 2027 科研提供全面、可追溯的相关性证据。现有5号调研仅为历史线索，不继承其 Gate 通过状态或“没有相关工作”的结论。
 
@@ -17,7 +17,7 @@
 - [Gate1标准](gates/gate1-v1.md)：冻结后才启动本轮外部收集。
 - [Gate2标准](gates/gate2-v1.md)：冻结后逐项执行；当前项未结项不进入下一项。
 - [进展与决策](docs/0002-T-26111718-推进记录.md)
-- [永久资源索引与阅读优先级](catalog/README.md)
+- [永久资源索引与阅读优先级](catalog/README-v2.md)
 - 已结项：[MobileIE原论文](resources/MIE-0001/derived/report/analysis.md)、[官方实现](resources/MIE-0002/derived/report/analysis.md)、[AnyMod-LLVE论文](resources/MIE-0003/derived/report/analysis.md)。缺口保留在各项，不把Gate通过当论文／设备结果验证成功。
 - `collection/`：来源覆盖矩阵、检索原始回执、去重／排除／追踪台账与 Gate1 审查。
 - `resources/`：Gate1后分配静态ID；每项含原始资源入口、衍生过程、结论及独立Gate2记录。
