@@ -1,0 +1,118 @@
+{
+  "at": "2026-11-21T06:53:09.041208+08:00",
+  "passed": true,
+  "all_updates_discarded": true,
+  "no_qualification_weights_exported": true,
+  "current_path": [
+    {
+      "seed": 0,
+      "arm": "coordinate",
+      "max_difference": 0.0
+    },
+    {
+      "seed": 0,
+      "arm": "response",
+      "max_difference": 0.0
+    },
+    {
+      "seed": 1,
+      "arm": "coordinate",
+      "max_difference": 0.0
+    },
+    {
+      "seed": 1,
+      "arm": "response",
+      "max_difference": 0.0
+    }
+  ],
+  "operator": [
+    {
+      "seed": 0,
+      "passed": true,
+      "OpenCV_comparisons": 24,
+      "max_difference": 0.0,
+      "zero_states": 12,
+      "zero_response_exact": true,
+      "accepted_fraction": 0.8503977656364441
+    },
+    {
+      "seed": 1,
+      "passed": true,
+      "OpenCV_comparisons": 24,
+      "max_difference": 0.0,
+      "zero_states": 12,
+      "zero_response_exact": true,
+      "accepted_fraction": 0.8075816035270691
+    }
+  ],
+  "stream": [
+    {
+      "seed": 0,
+      "arm": "coordinate",
+      "passed": true,
+      "stream_max_difference": 0.0,
+      "first_frame_exact": true,
+      "history_substitution_max_difference": 0.16248711943626404,
+      "stored_bytes": 229376,
+      "compact_separate_buffers": true,
+      "extra_backbone_images": 8,
+      "field_pairs": 6
+    },
+    {
+      "seed": 0,
+      "arm": "response",
+      "passed": true,
+      "stream_max_difference": 0.0,
+      "first_frame_exact": true,
+      "history_substitution_max_difference": 0.1495928168296814,
+      "stored_bytes": 229376,
+      "compact_separate_buffers": true,
+      "extra_backbone_images": 8,
+      "field_pairs": 6
+    },
+    {
+      "seed": 1,
+      "arm": "coordinate",
+      "passed": true,
+      "stream_max_difference": 0.0,
+      "first_frame_exact": true,
+      "history_substitution_max_difference": 0.22388702630996704,
+      "stored_bytes": 229376,
+      "compact_separate_buffers": true,
+      "extra_backbone_images": 8,
+      "field_pairs": 6
+    },
+    {
+      "seed": 1,
+      "arm": "response",
+      "passed": true,
+      "stream_max_difference": 0.0,
+      "first_frame_exact": true,
+      "history_substitution_max_difference": 0.20099017024040222,
+      "stored_bytes": 229376,
+      "compact_separate_buffers": true,
+      "extra_backbone_images": 8,
+      "field_pairs": 6
+    }
+  ],
+  "counts": {
+    "teacher_images": 32,
+    "teacher_FB_pairs": 24,
+    "teacher_probe_states": 48,
+    "teacher_state_actions": 48,
+    "teacher_zero_state_actions": 24,
+    "OpenCV_probe_comparisons": 48,
+    "student_learning_images": 128,
+    "student_stream_images": 32,
+    "student_learning_field_pairs": 96,
+    "student_stream_field_pairs": 24,
+    "student_response_training_actions": 96,
+    "discarded_optimizer_updates": 8
+  },
+  "parameters": 5049,
+  "additional_parameters": 974,
+  "analytical_1080p_Conv_GMAC": 8.060601744,
+  "analytical_1080p_persistent_state_bytes": 29030400,
+  "allowed_formal_protocol_design": true,
+  "established_video_method": false
+}
