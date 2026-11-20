@@ -2,7 +2,9 @@
 
 2026-11-20；Codex  (sqs_A100)。main主题8，research/7继续留给其他分支。
 
-当前[B1外观索引特征历史](appearance-state/README.md)已完整负结项：[0191](../../docs/进展报告/0191-T-26112101-外观索引特征历史完整筛查与止损.md)、[决定](appearance-state/decision.md)、[终态](appearance-state/process/terminal001.json)。16训练窗口/80输出/320逐帧，0优化/GPU/新DEV，原模型分解差0/首帧精确/权重不变；对当前同表时间增量仅.167%–.744%，完整门False，16比较仅1过。对两经典各3/16窗口联合正完整保留，全部图实际查看，原句柄终态。固定表/key/节点/alpha/decay/阈值/seed及训练补救网格STOP，不扩失败视频/DEV/成本/手机，普通双边传播不是创新。
+当前[O1共享核心](operator-core/README.md)完成CPU资格并登记16K正式学习/完整32训练窗筛查：[0192](../../docs/进展报告/0192-T-26112107-共享核心资格与正式学习准备.md)、[协议](operator-core/training-protocol.md)。初始空间/传输/stream差0、共享梯度有限、8更新全丢弃；5049参数及状态/Conv只是预算。首CUDA环境失败0优化原样留存，隔离修订后chain002原3551565/start115612249在资源等待，未占GPU，正式更新0；实际进度查原state，勿重复启动。25/39原源和新增2执行源保持，尚无正式质量/方法结论。
+
+此前[B1外观索引特征历史](appearance-state/README.md)已完整负结项：[0191](../../docs/进展报告/0191-T-26112101-外观索引特征历史完整筛查与止损.md)、[决定](appearance-state/decision.md)、[终态](appearance-state/process/terminal001.json)。16训练窗口/80输出/320逐帧，0优化/GPU/新DEV，原模型分解差0/首帧精确/权重不变；对当前同表时间增量仅.167%–.744%，完整门False，16比较仅1过。对两经典各3/16窗口联合正完整保留，全部图实际查看，原句柄终态。固定表/key/节点/alpha/decay/阈值/seed及训练补救网格STOP，不扩失败视频/DEV/成本/手机，普通双边传播不是创新。
 
 此前[M1完整空间恢复](multiaffine-core/README.md)已负结项：[0190](../../docs/进展报告/0190-T-26112101-多线性骨干完整空间恢复与止损.md)、[完整决定](multiaffine-core/spatial-decision.md)、[真实终态](multiaffine-core/process/spatial-terminal001.json)。32000正式更新/四唯一最终/1536NN与384窗口输出完成，八项恢复保护0/8，对F0四组平均PSNR低1.45–3.65dB；SYN/1对随机原Slim+.247337dB及所有局部正例/SSIM/edge/Conv取舍保留。全12均值/128窗口图和固定联系图实际查看，原全部句柄终态。固定M1局部网格STOP、不进入视频/DEV/手机，下一独立问题尚未登记，论文goal active。
 
