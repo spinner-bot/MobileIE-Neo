@@ -1,0 +1,29 @@
+{
+  "resource_id": "MIE-0032",
+  "created_at": "2026-11-20T12:24:23+08:00",
+  "source_root": "../../.. (workstation root from this sources directory)",
+  "snapshot_cutoff": "2026-11-17",
+  "receipts": [
+    {
+      "path": "receipts/ntire2025-paper.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/ntire2025-paper.pdf",
+      "sha256": "ace37af9e91a234626fc91e2eeda9673a6a5be76e109874289ecc21ab7fe06c7"
+    },
+    {
+      "path": "receipts/ntire2025-html.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/ntire2025-html.html",
+      "sha256": "5461d92faa635084533ccd7251b1e488ace017542f93b7e2f9c79fe729cd11e0"
+    }
+  ],
+  "discovery_evidence": [
+    "web-initial-9.json",
+    "receipts/ntire2025-paper.json",
+    "receipts/ntire2025-html.json"
+  ],
+  "adequacy": "Materials available for analysis; not yet read or qualified",
+  "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts"
+}
