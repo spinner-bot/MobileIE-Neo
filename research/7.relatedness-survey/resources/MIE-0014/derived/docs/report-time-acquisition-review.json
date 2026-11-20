@@ -1,0 +1,66 @@
+{
+  "resource_id": "MIE-0014",
+  "reviewed_at": "2026-11-20T23:09:11.726026+08:00",
+  "purpose": "Report-time validation only; no Gate2 advancement or new research",
+  "five_task_download": {
+    "receipt": "collection/receipts/mie0014-author-weights-5tasks-confirmed.json",
+    "declared_bytes": 66198640,
+    "actual_bytes": 32761722,
+    "sha256": "20c4f560bb71cfc9e986d0e4de4fe366cd4804de94a388819b79dca93183ff75",
+    "zip_magic_prefix": true,
+    "zip_container_valid": false,
+    "EOCD_found": false,
+    "semantic_status": "incomplete_response_not_usable_checkpoint",
+    "original_capture_record_preserved": true
+  },
+  "three_task_download": {
+    "semantic_status": "interrupted_without_retained_complete_file_or_receipt",
+    "process_exit_observed": 143,
+    "observation": "After user paused and cleared survey goal; no active acquisition process now. Exact signal initiator not independently established; not an HTTPfailure claim."
+  },
+  "all_receipt_content_length_mismatches": [
+    {
+      "receipt": "collection/receipts/mie0014-author-weights-5tasks-confirmed.json",
+      "status": "success",
+      "complete": true,
+      "declared_bytes": 66198640,
+      "retained_bytes": 32761722,
+      "archive": "archive/mie0014-author-weights-5tasks-confirmed.zip"
+    },
+    {
+      "receipt": "collection/receipts/paper-3efaea0cc22d-arxiv-pdf.json",
+      "status": "size_limit_incomplete",
+      "complete": false,
+      "declared_bytes": 56595481,
+      "retained_bytes": 25165824,
+      "archive": "archive/paper-3efaea0cc22d-arxiv-pdf.pdf"
+    },
+    {
+      "receipt": "collection/receipts/official-supplement.json",
+      "status": "size_limit_incomplete",
+      "complete": false,
+      "declared_bytes": 54938280,
+      "retained_bytes": 25165824,
+      "archive": "archive/official-supplement.pdf"
+    },
+    {
+      "receipt": "collection/receipts/paper-22650a5cc376-arxiv-pdf.json",
+      "status": "size_limit_incomplete",
+      "complete": false,
+      "declared_bytes": 31476142,
+      "retained_bytes": 25165824,
+      "archive": "archive/paper-22650a5cc376-arxiv-pdf.pdf"
+    },
+    {
+      "receipt": "collection/receipts/paper-dce553dc3465-arxiv-pdf.json",
+      "status": "size_limit_incomplete",
+      "complete": false,
+      "declared_bytes": 31902578,
+      "retained_bytes": 25165824,
+      "archive": "archive/paper-dce553dc3465-arxiv-pdf.pdf"
+    }
+  ],
+  "publication": "Crossref formalmetadata available; direct publisher PDF endpoints empty202; Crossref publisher link returnsHTML, noformal PDF acquired",
+  "PASTA": "Abs/html and5612005B v2PDF acquired for pendingG1-A0002; no staticID/inclusiondecision/analysisclosure",
+  "model_or_pickle_execution": false
+}

@@ -38,6 +38,85 @@
       "http": 200,
       "archive": "archive/paper-e00a0e3ed4c6-arxiv-pdf.pdf",
       "sha256": "ad37837d88a6b322d8d6317e489e5dbfc3bb5a6ee3e42a8ad6a368d6ae6f03de"
+    },
+    {
+      "path": "receipts/mie0014-crossref-formal-metadata.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/mie0014-crossref-formal-metadata.json",
+      "sha256": "ac6af0b93f9172829a3c152827d892786659ecc6a7a01061e5a570781a9109c1",
+      "semantic_adequacy": "See derived/docs/report-time-acquisition-review.json; transport success alone is not valid fulltext/checkpoint"
+    },
+    {
+      "path": "receipts/mie0014-ieee-stamp.json",
+      "status": "success",
+      "http": 202,
+      "archive": null,
+      "sha256": null,
+      "semantic_adequacy": "See derived/docs/report-time-acquisition-review.json; transport success alone is not valid fulltext/checkpoint"
+    },
+    {
+      "path": "receipts/mie0014-ieee-pdf.json",
+      "status": "success",
+      "http": 202,
+      "archive": null,
+      "sha256": null,
+      "semantic_adequacy": "See derived/docs/report-time-acquisition-review.json; transport success alone is not valid fulltext/checkpoint"
+    },
+    {
+      "path": "receipts/mie0014-ieee-direct-pdf.json",
+      "status": "success",
+      "http": 202,
+      "archive": null,
+      "sha256": null,
+      "semantic_adequacy": "See derived/docs/report-time-acquisition-review.json; transport success alone is not valid fulltext/checkpoint"
+    },
+    {
+      "path": "receipts/mie0014-crossref-publisher-link.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/mie0014-crossref-publisher-link.html",
+      "sha256": "6413ec15181a37eb60140a1de1c49140c31b77c7fd89030923a2dd0a37000bce",
+      "semantic_adequacy": "See derived/docs/report-time-acquisition-review.json; transport success alone is not valid fulltext/checkpoint"
+    },
+    {
+      "path": "receipts/mie0014-author-weight-folder.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/mie0014-author-weight-folder.html",
+      "sha256": "ee84cd5ea78a561f19f834ee4be527d18607156febd13db8c5df22b2970fc78f",
+      "semantic_adequacy": "See derived/docs/report-time-acquisition-review.json; transport success alone is not valid fulltext/checkpoint"
+    },
+    {
+      "path": "receipts/mie0014-author-weights-3tasks.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/mie0014-author-weights-3tasks.html",
+      "sha256": "35e8e81408dc9652a3e31e53ff646baf255ddee6c28340206deeae488d8e9a1c",
+      "semantic_adequacy": "See derived/docs/report-time-acquisition-review.json; transport success alone is not valid fulltext/checkpoint"
+    },
+    {
+      "path": "receipts/mie0014-author-weights-5tasks.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/mie0014-author-weights-5tasks.html",
+      "sha256": "95219d5d065d7c33074bb15d1f53e7f71fb683d664a09f2ac0e9d6fab18d9bfa",
+      "semantic_adequacy": "See derived/docs/report-time-acquisition-review.json; transport success alone is not valid fulltext/checkpoint"
+    },
+    {
+      "path": "receipts/mie0014-author-weights-5tasks-confirmed.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/mie0014-author-weights-5tasks-confirmed.zip",
+      "sha256": "20c4f560bb71cfc9e986d0e4de4fe366cd4804de94a388819b79dca93183ff75",
+      "semantic_adequacy": "See derived/docs/report-time-acquisition-review.json; transport success alone is not valid fulltext/checkpoint"
+    },
+    {
+      "path": "receipts/sourcezip-AVC2-UESTC--DRNet-AiO.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/sourcezip-AVC2-UESTC--DRNet-AiO.txt",
+      "sha256": "d8a8923fe0a04fe09ec515ee2e69e65fdf3d85a572226fff94e6a350f4cc0f07"
     }
   ],
   "discovery_evidence": [
@@ -62,7 +141,7 @@
       "source_record_id": "https://openalex.org/W7167249952"
     }
   ],
-  "adequacy": "Materials available for analysis; not yet read or qualified",
+  "adequacy": "13page preprint and21file fixed author source acquired/read in bounded applicable scope. Formalmetadata only, fullformalPDF not obtained. Five-task download incomplete despite generic success flag; three-task interrupted with no completefile. Gate2 NOT closed; G1-A0002 unresolved; user survey goal paused/cleared, report-only preservation.",
   "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts",
   "path_conventions": {
     "receipts[].path": "relative to workstation/collection",
@@ -70,5 +149,6 @@
     "discovery_evidence strings": "relative to workstation/collection",
     "discovery_evidence[].source": "collection/ prefix relative to workstation; research/ prefix relative to repository root",
     "discovery_evidence[].acquisition": "relative to workstation/collection; path is remote repository path at revision"
-  }
+  },
+  "report_time_validation": "derived/docs/report-time-acquisition-review.json"
 }
