@@ -1,6 +1,9 @@
 # 主干信息流与时域化
 
 2026-11-20；Codex  (sqs_A100)。main主题8，research/7继续留给其他分支。
+
+最新[P1粗能量历史零更新筛查](phase-envelope/README.md)已负结项：[0185](../../docs/进展报告/0185-T-26112022-粗能量历史零更新筛查与止损.md)、[决定](phase-envelope/decision.md)、[真实终态](phase-envelope/process/terminal001.json)。训练纹理已知位移、四实际路由、双冻结F0，1280NN/0优化/200输出条件正常32.238270秒；对raw四噪声组时间升.456%–.560%，对同尺度feature EMA全部32 noisy条件时间更差，完整训练资格False。clean仍有两seed时间降18.8%–22.8%/质量正例；不抹掉局部收益。直接Riesz/幅度滤波已有先例，非确立创新；停止固定能量/差分/alpha/尺度/clip/epsilon网格，不训练补救/扩DEV。全30均值图与固定联系图已实际查看，原任务全退出、无活跃GPU，论文goal active。
+
 [T1同原骨干训练监督对照](teacher-targets/README.md)也已完整负结项：[完整决定](teacher-targets/decision.md)、[0180报告](../../docs/进展报告/0180-T-26112019-同原骨干时序KD完整评价与止损.md)、[原终态](teacher-targets/process/terminal001.json)。24000正式更新/六唯一最终/全180质量与180官方JOD/240共表及四图实际审阅，恢复保护3/4、A/B各0/40、成本资格False。对空间KD全部20条件时间更好，四组改善1.49%–2.38%，但距原强post仍高约29%–48%；固定同F0/T4DIS/等权KD局部网格STOP，不扩失败成本/外部/手机。普通KD是已完成已知参照，不主张创新。全部原任务终态、GPU释放，论文goal active。
 
 [T2部署递归监督](recurrent-objective/README.md)已完整负结项：[0184](../../docs/进展报告/0184-T-26112021-部署递归监督完整评价与止损.md)、[决定](recurrent-objective/decision.md)、[真实终态](recurrent-objective/process/terminal001.json)。全16000正式更新/四唯一最终/120质量与120官方JOD/360共表/72均值、四图与两全点PNG实际审阅完成；恢复0/4、A0/44、B10/44、额外5%学习0/8，完整资格False。对clip-GT DIS有SYN PSNR+.10–.11dB/14条件PSNR正例，但全部20条件时间更高（四组+1.50%–2.46%）；固定原F0/native DIS/.5/四帧递归监督局部网格STOP，不扩失败成本/外部/手机，不继续向T1/T2加loss或延长诊断。所有原任务终态、GPU释放，已知递归训练非创新。后续须选择实质不同信息/结构问题、先核先例再有限登记，不预先称另一模型有效。
