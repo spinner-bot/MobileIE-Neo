@@ -198,14 +198,17 @@
     {
       "claim_id": "C18",
       "evidence_class": "primary_availability_and_license_check",
-      "claim": "完整21件作者源码哈希已核；README称MIT但包无LICENSE。旧5任务权重success实为截断，原回执保留。",
+      "claim": "21件作者源码哈希已核；README称MIT但无LICENSE。原5任务success为截断；恢复后3/5任务66,084,673/66,198,640B完整，ZIP全CRC通过，仅metadata opcode扫描。",
       "anchors": [
         "derived/docs/author-source-manifest.json",
         "derived/docs/author-tree-receipt.json",
         "code:README.md:7-8",
-        "derived/docs/report-time-acquisition-review.json"
+        "derived/docs/report-time-acquisition-review.json",
+        "derived/docs/resumed-acquisition-review.json",
+        "derived/docs/weights-3tasks-container-review.json",
+        "derived/docs/weights-5tasks-container-review.json"
       ],
-      "limitation": "hash/容器不是许可证、权重语义或数值正确性认证；新权重获取审查独立追加，正式全文仍缺。"
+      "limitation": "完整容器与可见TSM/专家键名不证明许可证、任务语义映射、完整张量语义或论文数值重现；无反序列化/模型执行，正式全文仍缺。"
     },
     {
       "claim_id": "C19",

@@ -1,0 +1,118 @@
+{
+  "resource_id": "MIE-0014",
+  "reviewed_at": "2026-11-21T07:51:27.428871+08:00",
+  "reviewer": "Codex  (sqs_A100) <langxibielangle@qq.com>",
+  "review_mode": "Executor separate second-pass self-review, not external independent expert or second agent",
+  "standard": "gates/gate2-v1.md",
+  "standard_sha256": "b5371150d788916763c891e0298b862ad0d9302a1286d698172bfa03dd90f57f",
+  "status": "closed_limited",
+  "review_passed": true,
+  "checklist": {
+    "a": {
+      "passed": true,
+      "evidence": [
+        "identity.json",
+        "derived/docs/publication-acquisition-notes.json",
+        "derived/docs/author-source-manifest.json"
+      ],
+      "scope": "Frozen evidence-limited closure provisions apply to missing formal version/config; actual full preprint and applicable source analyzed"
+    },
+    "b": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/reading-notes.md",
+        "derived/docs/paper-assets.json",
+        "derived/docs/resumed-acquisition-review.json"
+      ],
+      "scope": "Frozen evidence-limited closure provisions apply to missing formal version/config; actual full preprint and applicable source analyzed"
+    },
+    "c": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/reading-notes.md",
+        "derived/docs/author-source-manifest.json",
+        "derived/docs/weights-3tasks-container-review.json",
+        "derived/docs/weights-5tasks-container-review.json"
+      ],
+      "scope": "Frozen evidence-limited closure provisions apply to missing formal version/config; actual full preprint and applicable source analyzed"
+    },
+    "d": {
+      "passed": true,
+      "evidence": [
+        "derived/report/analysis.md",
+        "derived/docs/code-initial-audit.json"
+      ],
+      "scope": "Frozen evidence-limited closure provisions apply to missing formal version/config; actual full preprint and applicable source analyzed"
+    },
+    "e": {
+      "passed": true,
+      "evidence": [
+        "derived/report/claims.json",
+        "derived/docs/conclusion-evidence-final-check.json"
+      ],
+      "scope": "Frozen evidence-limited closure provisions apply to missing formal version/config; actual full preprint and applicable source analyzed"
+    },
+    "f": {
+      "passed": true,
+      "evidence": [
+        "derived/report/analysis.md",
+        "derived/docs/resumed-acquisition-review.json"
+      ],
+      "scope": "Frozen evidence-limited closure provisions apply to missing formal version/config; actual full preprint and applicable source analyzed"
+    },
+    "g": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/gate2-review.md",
+        "derived/docs/conclusion-evidence-final-check.json"
+      ],
+      "scope": "Frozen evidence-limited closure provisions apply to missing formal version/config; actual full preprint and applicable source analyzed"
+    }
+  },
+  "actual_reading_scope": "13-page arxivv1 all text/11figures/8tables; actual rendered scientific pages1-12 viewed,13references text; applicable fixed21-file source scope in reading-notes; both public weights ZIP/CRC/opcode only",
+  "limited_closure": {
+    "attempts": [
+      "collection/receipts/paper-e00a0e3ed4c6-arxiv-pdf.json: complete author preprint PDF",
+      "collection/receipts/paper-e00a0e3ed4c6-publisher.json: official publisher202 empty",
+      "collection/receipts/mie0014-ieee-stamp.json: official202 empty",
+      "collection/receipts/mie0014-ieee-pdf.json: official202 empty",
+      "collection/receipts/mie0014-ieee-direct-pdf.json: official202 empty",
+      "collection/receipts/mie0014-crossref-publisher-link.json: registered formal link returned publisherHTML, notPDF",
+      "collection/receipts/mie0014-crossref-formal-metadata.json: formal metadata acquired",
+      "collection/receipts/sourcezip-AVC2-UESTC--DRNet-AiO.json: complete official fixed source, no separate blind config orLICENSE",
+      "collection/receipts/mie0014-author-weights-3tasks-confirmed-strict-retry1.json: full66084673B",
+      "collection/receipts/mie0014-author-weights-5tasks-confirmed-strict-retry1.json: full66198640B"
+    ],
+    "missing": [
+      "Formal TMM fulltext and any separate formal supplementary material; preprint-formal correspondence unknown",
+      "Published generic blind onehot configuration and corresponding model provenance, historical task-onehot semantic mapping not confirmed",
+      "Dataset exact split/license/pretrained overlap; formal license text; numerical reproduction/video/mobile full pipeline cost unavailable in this stage"
+    ],
+    "analyzed_available_materials": "Complete preprint, all applicable fixed core paths, public README/metadata/folder and both recovered binary archive structures. Not all generic unused utilities or tensor values audited; no model deserialization.",
+    "supportable_conclusions": [
+      "Preprint session-onehot/fixed-bank fusion mechanism and explicit remaining nonlinear/attention computation",
+      "Current fixed-source one-way deployment, missing distinct generic path, mapping/default/protocol discrepancies as bounded static findings",
+      "Author table/device/input conditions and internal numeric differences, not independent result confirmation"
+    ],
+    "unsupported_conclusions": [
+      "Formal publication exact scientific content or all changes verified",
+      "Blind-mode numbers or complete numerical/fold/model correctness reproduced",
+      "DRNet solves MobileIE video flicker or offers demonstrated mobile/whole-pipeline zero cost",
+      "Historical authors used wrong semantic mapping or fabricated results"
+    ],
+    "overall_impact": "First evidence-limited item; full preprint reading counted separately from formal-version gap. Carry missing formal/config/mapping and no-reproduction limitations into final survey. Does not invalidate prior13 closed records.",
+    "unlock_conditions": [
+      "Obtain legitimate formalPDF/supplement, compare all scientific content in appended review",
+      "Obtain primary generic-blind config/checkpoint provenance and historical onehot mapping/training commands",
+      "Future separately authorized experiment branch for numerical equivalence/data splits/dynamic GT and complete device costs"
+    ]
+  },
+  "execution": {
+    "upstream_source": false,
+    "model_load": false,
+    "training": false,
+    "GPU": false,
+    "Gate3": false
+  },
+  "claim_count": 19
+}
