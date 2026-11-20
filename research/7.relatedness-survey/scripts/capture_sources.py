@@ -3,6 +3,7 @@ Use --jobs JSON [{label,url,category}] and choose fresh labels for new captures.
 All archives are zrh-owned, and every response has a hash and actual timestamp.
 """
 import argparse, concurrent.futures, datetime, hashlib, json, os, re, urllib.request, urllib.error, urllib.parse
+import http.client, io, zipfile
 from pathlib import Path
 from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parents[3]
@@ -16,19 +17,37 @@ def capture(job):
     request_url=urllib.parse.urlunsplit(parts._replace(path=urllib.parse.quote(parts.path,safe='/%:@')))
     record['request_url']=request_url
     req=urllib.request.Request(request_url,headers={'User-Agent':'MobileIE-Neo-relatedness-survey/1.0 (public research; langxibielangle@qq.com)'})
-    data=b''
+    data=bytearray()
     try:
         with urllib.request.urlopen(req,timeout=25) as r:
             limit=job.get('max_bytes',24*1024*1024)
-            data=r.read(limit+1)
             record.update(http_status=r.status,final_url=r.url,content_type=r.headers.get('Content-Type'),headers={k:v for k,v in r.headers.items() if k.lower() in ('etag','last-modified','content-length','content-type')})
+            # A bounded HTTP read may return a short block without raising. Read
+            # until EOF/limit and independently compare Content-Length.
+            while len(data) <= limit:
+                block=r.read(min(64*1024,limit+1-len(data)))
+                if not block:break
+                data.extend(block)
+            declared=r.headers.get('Content-Length')
+            declared=int(declared) if declared and declared.isdigit() else None
+            record['declared_bytes']=declared
             if len(data)>limit:
                 record.update(status='size_limit_incomplete',complete=False); data=data[:limit]
+            elif declared is not None and len(data)!=declared:
+                record.update(status='length_mismatch_incomplete',complete=False)
+            elif not data:
+                record.update(status='empty_response',complete=False)
+            elif data.startswith(b'PK\x03\x04') and not zipfile.is_zipfile(io.BytesIO(data)):
+                record.update(status='invalid_zip_container',complete=False)
             else:record.update(status='success',complete=True)
+    except http.client.IncompleteRead as e:
+        data.extend(e.partial)
+        record.update(status='length_mismatch_incomplete',error=str(e),complete=False)
     except urllib.error.HTTPError as e:
         data=e.read(1024*1024)
         record.update(status='http_error',http_status=e.code,error=str(e),complete=False)
     except Exception as e:record.update(status='transport_error',error=repr(e),complete=False)
+    data=bytes(data)
     if data:
         suffix='.zip' if data.startswith(b'PK\x03\x04') else '.pdf' if data.startswith(b'%PDF') else '.json' if data.lstrip()[:1] in (b'{',b'[') else '.html' if b'<html' in data[:1000].lower() or b'<!doctype' in data[:1000].lower() else '.txt'
         archive=ARCHIVE/(key+suffix); archive.write_bytes(data)
