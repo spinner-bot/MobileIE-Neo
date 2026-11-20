@@ -1,0 +1,62 @@
+{
+  "at": "2026-11-20T21:48:18.783673+08:00",
+  "actual_viewed": true,
+  "tool": "view_image",
+  "images": [
+    {
+      "seed": 0,
+      "scene": "bear_photons20",
+      "indices": [
+        0,
+        32,
+        63
+      ],
+      "path": "research/8.video-backbone/recurrent-objective/report/contacts/seed0--bear_photons20.png",
+      "sha256": "e7f4405f9748ec29dfd1c10f532a80e6492ff88e3cbe35f00e559457eee8adc4"
+    },
+    {
+      "seed": 1,
+      "scene": "bear_photons20",
+      "indices": [
+        0,
+        32,
+        63
+      ],
+      "path": "research/8.video-backbone/recurrent-objective/report/contacts/seed1--bear_photons20.png",
+      "sha256": "a7228de732f2b7063349e619b3ace8668437b68b66f3a0effd24db05b72e19e5"
+    },
+    {
+      "seed": 0,
+      "scene": "video_47",
+      "indices": [
+        0,
+        8,
+        15
+      ],
+      "path": "research/8.video-backbone/recurrent-objective/report/contacts/seed0--video_47.png",
+      "sha256": "c39edf79faa5129a53c9b63b88c879149bee7fab28d5ccdf6d612616da23e790"
+    },
+    {
+      "seed": 1,
+      "scene": "video_47",
+      "indices": [
+        0,
+        8,
+        15
+      ],
+      "path": "research/8.video-backbone/recurrent-objective/report/contacts/seed1--video_47.png",
+      "sha256": "ddc7800150fd6bff45d30427de49547400d6f4e4f71b307110f0bed30cc1a906"
+    }
+  ],
+  "observations": [
+    "All four prescribed first/middle/last nine-column contact sheets actually opened via view_image.",
+    "Bear raw outputs remain visibly grainy, later DIS outputs smoother at sheet scale. Rec-GT and clipped-GT have relatively small visual differences; no playback-based flicker conclusion.",
+    "video47 retains seed-dependent brightness/color shifts relative to GT; both raw and DIS endpoints shown. Static appearance does not identify the cause of quality changes.",
+    "Only two sources and three stills per seed; not MOS or an independent-final assessment."
+  ],
+  "original_renderer_actual_viewed_false_preserved": true,
+  "new_NN_images": 0,
+  "new_metric_scores": 0,
+  "primary_thresholds_changed": false,
+  "independent_final_opened": false
+}
