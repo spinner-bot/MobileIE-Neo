@@ -1,0 +1,73 @@
+{
+  "at": "2026-11-21T07:26:36.646286+08:00",
+  "actual_original_handles": [
+    {
+      "pid": 3551565,
+      "start_ticks": 115612249,
+      "state": "S"
+    },
+    {
+      "pid": 3582586,
+      "start_ticks": 115719183,
+      "state": "S"
+    }
+  ],
+  "CUDA_qualification": {
+    "label": "cuda-qualification013",
+    "original_process": {
+      "pid": 3579558,
+      "start_ticks": 115708973,
+      "state": "R"
+    },
+    "passed": true,
+    "counts": {
+      "common_steps": 2,
+      "optimizer_updates": 4,
+      "student_images": 64,
+      "teacher_images": 32,
+      "teacher_FB_pairs": 24
+    },
+    "seconds": 54.4337699690368,
+    "actual_GPU": [
+      4
+    ],
+    "own_end_NVML_mib": 1118,
+    "allocator_peak_bytes": 421330944,
+    "all_updates_discarded": true
+  },
+  "formal_seed0_original_process": {
+    "pid": 3582586,
+    "start_ticks": 115719183,
+    "state": "R"
+  },
+  "formal_inherited_counts": {
+    "common_steps": 0,
+    "optimizer_updates": 0,
+    "student_images": 0,
+    "teacher_images": 0,
+    "teacher_FB_pairs": 0
+  },
+  "actual_GPU_indices": [
+    4
+  ],
+  "actual_UUID": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+  "training_prefix_lines": 118,
+  "training_prefix_sha256": "ba0e6b0faa9617cb2e2bf3f0d852bc2a6595a0ef5f0420bfa26398c65426bf65",
+  "completed_common_step": 118,
+  "formal_counts": {
+    "optimizer_updates": 236,
+    "student_images": 3776,
+    "teacher_images": 1888,
+    "teacher_FB_pairs": 1416
+  },
+  "recent_seconds_per_common_step": 1.1863455,
+  "estimated_seed0_remaining_seconds": 4605.393231,
+  "estimate_is_only_for_sleep_not_cutoff": true,
+  "frozen_source_counts_verified": [
+    25,
+    39,
+    2
+  ],
+  "latest_complete_recovery_verdict": null,
+  "new_inference_for_observation": 0
+}
