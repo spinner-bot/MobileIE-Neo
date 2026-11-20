@@ -13,6 +13,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('resource_id')
     ap.add_argument('receipt', help='Source ZIP receipt relative to workstation')
+    ap.add_argument('--text-prefix', action='append', default=[],
+                    help='Optional readable-copy path prefix; all archive files still inventoried/hashed')
     a = ap.parse_args()
     events = [json.loads(s) for s in (B / 'catalog/analysis-log.jsonl').read_text().splitlines()]
     assert events[-1]['event'] == 'begin' and events[-1]['resource_id'] == a.resource_id
@@ -34,6 +36,8 @@ def main():
             raw = z.read(info.filename)
             digest = hashlib.sha256(raw).hexdigest()
             inventory.append({'path':source, 'bytes':len(raw), 'sha256':digest})
+            if a.text_prefix and not any(source.startswith(prefix) for prefix in a.text_prefix):
+                continue
             if Path(source).suffix.lower() in (
                 '.py', '.yaml', '.yml', '.json', '.jsonl', '.md', '.txt', '.html', '.sh',
                 '.rs', '.toml', '.java', '.kt', '.kts', '.gradle', '.xml', '.properties',
@@ -52,6 +56,7 @@ def main():
     identity = json.loads((r / 'identity.json').read_text())
     manifest.write_text(json.dumps({'purpose':'Resource static inspection preparation; not a read/approval claim',
                                     'revision':identity['revision'], 'archive_receipt':a.receipt,
+                                    'text_selection_prefixes':a.text_prefix,
                                     'files':texts}, ensure_ascii=False, indent=2)+'\n')
     (r / 'derived/docs/archive-inventory.json').write_text(json.dumps(
         {'resource_id':a.resource_id, 'files':inventory, 'executed':False},
