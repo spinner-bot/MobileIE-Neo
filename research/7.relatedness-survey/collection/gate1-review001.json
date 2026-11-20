@@ -1,0 +1,131 @@
+{
+  "reviewed_at": "2026-11-20T12:17:37+08:00",
+  "reviewer": "Codex  (sqs_A100) <langxibielangle@qq.com>",
+  "review_mode": "执行者自查及单独审查文件，不是独立专家外审",
+  "standard": "gates/gate1-v1.md",
+  "snapshot_cutoff_date": "2026-11-17",
+  "collection_commit": "b6080fb5af0279f068e1faf53e4e52a65ddc4ee8",
+  "status": "pass_with_disclosed_limits",
+  "gate1_passed": true,
+  "candidate_counts": {
+    "paper": 47,
+    "code": 58,
+    "other": 8
+  },
+  "candidate_sha256": "7cabd9ae54afb112f70a9d597af158940608a07c20780eb03818fa514a68a772",
+  "checklist": [
+    {
+      "id": "G1.1",
+      "requirement": "身份与日期边界",
+      "status": "pass",
+      "evidence": [
+        "gates/freeze-v1.json",
+        "collection/raw/oa-arxiv-identity.json",
+        "collection/raw/s2-doi-identity.json"
+      ],
+      "reason": "正式DOI/arXiv身份已对齐；快照截止2026-11-17，审查在恢复后的2026-11-20进行，不宣称覆盖三天内新增资料。"
+    },
+    {
+      "id": "G1.2A",
+      "requirement": "学术多源与分页",
+      "status": "pass_with_disclosed_limits",
+      "evidence": [
+        "collection/raw/initial-s2-citing.json",
+        "collection/raw/initial-openalex-citing.json",
+        "collection/raw/initial-crossref.json",
+        "collection/coverage-matrix.json"
+      ],
+      "reason": "S2取得36、OA取得40，成功列表无下一页；Crossref16是计数。两个独立列表成功。OA元数据41与列表40的差异、Scholar403和S2部分端点429保留，不能凭计数捏造记录。"
+    },
+    {
+      "id": "G1.2B",
+      "requirement": "官方论文和代码",
+      "status": "pass",
+      "evidence": [
+        "collection/receipts/official-paper-pdf.json",
+        "collection/receipts/official-supplement-large.json",
+        "collection/plugin-official-branches.json",
+        "collection/plugin-official-releases.json",
+        "collection/plugin-official-pulls.json",
+        "collection/code-duplicate-ledger.json"
+      ],
+      "reason": "原文/补充和固定提交归档；官方仅main、无release/PR；fork按树核对，跨类型不合并。宽代码检索100上限披露，补充标题/类/算子/时序/部署查询。"
+    },
+    {
+      "id": "G1.2C",
+      "requirement": "作者、机构与工业线索",
+      "status": "pass_with_disclosed_limits",
+      "evidence": [
+        "collection/coverage-matrix.json",
+        "collection/receipts/teleai-primary-html.json"
+      ],
+      "reason": "作者/机构入口追踪，TeleAI署名在原始arXiv可核；不把机构关联认定视频方法或创新。个别主页失败保留。"
+    },
+    {
+      "id": "G1.2D",
+      "requirement": "中英文网页与中文入口",
+      "status": "pass_with_disclosed_limits",
+      "evidence": [
+        "collection/all-web-lead-review.json",
+        "collection/receipts/cnki-exact.json",
+        "collection/receipts/wanfang-exact.json",
+        "collection/web-host-coverage-check.json"
+      ],
+      "reason": "234个URL身份处理；知网失败、万方客户端页未核完整结果，站点检索不等于中文全文库全覆盖。HF连接器失败留存，公开模型/数据集/Space名搜索均为空，不推广为无未命名模型。"
+    },
+    {
+      "id": "G1.2E",
+      "requirement": "历史对账",
+      "status": "pass",
+      "evidence": [
+        "collection/historical-reconciliation.json",
+        "collection/paper-candidates.json"
+      ],
+      "reason": "旧S2 33/OA18全部映射当前43篇被引索引并集，不继承旧未发现结论。"
+    },
+    {
+      "id": "G1.3",
+      "requirement": "候选身份、材料与线索闭合",
+      "status": "pass_with_disclosed_limits",
+      "evidence": [
+        "collection/candidate-resources.json",
+        "collection/resource-acquisitions.json",
+        "collection/all-web-lead-review.json",
+        "collection/code-file-discovery-ledger.json",
+        "collection/code-hit-scope-decisions.json"
+      ],
+      "reason": "113候选含47论文/58代码/8其他；所有取得或失败有回执。身份排除基于检索片段，不伪称排除项全文精读。未处理身份0。全文充分性留待Gate2。"
+    },
+    {
+      "id": "G1.3S",
+      "requirement": "连续两轮独立补漏",
+      "status": "pass",
+      "evidence": [
+        "collection/saturation-round7-review.json",
+        "collection/saturation-round7-candidates.json",
+        "collection/saturation-round8-review.json",
+        "collection/saturation-round8-review001-pending.json",
+        "collection/round8-identity-resolutions.json"
+      ],
+      "reason": "第7轮完成审查后才执行第8轮；各含学术、代码和中英文网页，零新增、pending0，候选哈希相同。第8轮首审DBLP主机别名未决记录保留，按旧lead149核对后复审。前1–6轮未计入通过连续序列。"
+    },
+    {
+      "id": "G1.4",
+      "requirement": "归档完整性及冻结",
+      "status": "pass",
+      "evidence": [
+        "gates/freeze-v1.json",
+        "collection/acquisition-audit.json"
+      ],
+      "reason": "691份非空原始归档逐一核SHA256/字节数，版本化原始回执镜像与归档相同；两个Gate标准哈希未变；全部版本化变化只在本工作站。来源访问失败与截断原记录不覆盖。"
+    }
+  ],
+  "allowed_next_stage": "初分类、概括、初步价值评级与排序，分配永久ID；之后按冻结Gate2顺序分析",
+  "limitations": [
+    "截至11月17日的公开来源快照，不覆盖11月18–20新发表/更新资料，不证明全互联网无遗漏",
+    "检索引擎/代码索引上限、Scholar/CNKI等访问限制仍可能产生漏检",
+    "Gate1不证明全文已读、代码运行、方法有效或创新成立；各项实际材料可得性须在Gate2核验",
+    "分析中发现截止日前新增合格资源，按原标准追加收集与Gate1增补审查，旧ID不改",
+    "coverage-matrix.json的NOT_APPROVED是采集期状态快照；以本次正式审查为阶段决定"
+  ]
+}
