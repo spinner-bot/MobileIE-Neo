@@ -15,3 +15,15 @@
 ## 13:02:17：原唯一CPU资格实际启动
 
 命令：`CUDA_VISIBLE_DEVICES='' ./scripts/project-python research/8.video-backbone/qualify_v1.py --device cpu --attempt 1`。exec session74545；实际子PID2980317（系统ps起时13:02:17），解释器位于zrh自有data。13:02:25核原PID仍在，尚无config/更新或runtime，仅准备阶段；stdout当时为空，不称通过。预定仅seed0 step0真实训练窗，8更新全部丢弃，不继承。之后核同一session/原终态；CUDA资格/正式启动尚未进行，不依观察超时重启。
+
+## 13:02:46：CPU原唯一资格正常结束
+
+原session返回0，runtime正常27.587185秒、CUDA_initialized=False；8丢弃更新、377骨干图、32教师图、120双向DIS。奇数127×133初始identity差0，实钩Conv MAC12468224与解析相符；参数16180/16180/16365。固定/学习初始全窗差0，三组实际保存/重载输出差0；spatial过去帧梯度0、固定/学习过去帧梯度均非零，全部活动梯度存在/有限。所有8个结果文件逐文件提交，原空stdout因通用*.log忽略而首次git add拒绝，之后显式-f单独保留，不影响科学任务。无正式权重继承，也没有DEV或方法结论。
+
+## 13:04与13:07：两次连续GPU准入都在child前拒绝
+
+首次预绑定记录cuda-qualification001-prebind：11×2秒真实采样，GPU0 meanutil83.4545%、≥90%样本45.45%，显存最低空余27074MiB；虽然超过13312MiB保留要求，算力门槛失败。同期组0–3平均约73–83%，均不合格。parent返回75、没有child PID/没有CUDA资格目录/0GPU更新。
+
+第二次预绑定记录cuda-qualification001-prebind002：新11样本选择同组GPU2，13:07:42结束，meanutil62%、≥90%样本27.27%，空余26686MiB；仍未过≤60%/≤25%要求。parent返回75，无child，不把两次准入拒绝说成两次CUDA资格科学失败，也不改门槛。下一可新采样，不能根据单次低util启动；这不是长期目标阻塞，也不需要改变其他用户任务。
+
+间隙完成官方220输出JOD保存行级资源续接、完整280条件/56均值/28主要比较的汇总，以及四固定联系图代码；五辅助源另冻结，三模块编译正常，但均未运行评分/DEV/渲染。质量manifest的parameters字段保留整个训练checkpoint计数；联合表明确对learned preview及其post只部署16180骨干，另存原stored_checkpoint_parameters，避免给未使用门错误计数。主论文84数/PDF020及全部最终像素保持。
