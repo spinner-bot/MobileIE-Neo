@@ -1,0 +1,24 @@
+{
+  "resource_id": "MIE-0005",
+  "reviewed_at": "2026-11-20T17:43:44.809475+08:00",
+  "reviewer": "Codex  (sqs_A100)",
+  "actually_viewed": [
+    {
+      "path": "derived/figures/framework-p01.png",
+      "observation": "One-page model diagram: RGB plus optional event/IR, S2DG/FFT, Conv-fusion, H/C ConvLSTM and residual decoder; supervision includes L2 annotations. Not a hardware flow or timing chart."
+    },
+    {
+      "path": "derived/figures/video1-all-pairs.png",
+      "observation": "All seven paired authored stills: dark indoor wall/door and red wall-mounted device; output brighter, slight camera shift. 7 input and 7 output images viewed at contact scale."
+    },
+    {
+      "path": "derived/figures/video2-all-pairs.png",
+      "observation": "All seven paired authored stills: corridor wall exhibition posters, camera shifts; output brighter and text/pictures more visible at contact scale."
+    }
+  ],
+  "scope": "28 original authored stills each represented once in two contacts; no playback, no GT, no timestamp/frame-rate/elapsed-time or confirmed generating device. No flicker/PSNR/MOS claim.",
+  "preparation_notes": [
+    "Initial optional fitz import failed without environment mutation; no PDF processing occurred in that attempt. Existing project pypdf/pypdfium2 preparation then succeeded; one page text read and rendered figure actually viewed.",
+    "System pdftoppm/pdftotext command availability chain stopped at absent executable; no processing or mutation in that call."
+  ]
+}
