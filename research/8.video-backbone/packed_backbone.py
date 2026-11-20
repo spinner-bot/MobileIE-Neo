@@ -33,7 +33,8 @@ class PackedBackbone(nn.Module):
         if image.ndim != 4 or image.shape[1] != 3 or min(image.shape[-2:]) < 4:
             raise ValueError('Expected BCHW RGB, height and width >=4')
         height, width = image.shape[-2:]
-        value = F.pixel_unshuffle(F.pad(image, (0, (-width) % 4, 0, (-height) % 4), mode='replicate'), 4)
+        padded = F.pad(image, (0, (-width) % 4, 0, (-height) % 4), mode='replicate') if height % 4 or width % 4 else image
+        value = F.pixel_unshuffle(padded, 4)
         value = self.body(self.head(value))
         channel = self.channel(value)
         spatial = self.spatial((channel * value).max(dim=1, keepdim=True).values)
