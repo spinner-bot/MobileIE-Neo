@@ -1,0 +1,87 @@
+{
+  "at": "2026-11-20T15:37:41.919521+08:00",
+  "live_processes": {
+    "coordinator": {
+      "pid": 3024380,
+      "start_ticks": 109481893,
+      "state": "S"
+    },
+    "train_seed1": {
+      "pid": 3057710,
+      "start_ticks": 109820958,
+      "state": "R"
+    }
+  },
+  "completed_seed0_full_training": true,
+  "completed_seed0_full_quality": {
+    "at": "2026-11-20T15:15:28.419572+08:00",
+    "pid": 3057709,
+    "completed_normally": true,
+    "seconds": 905.2558953969274,
+    "quality_rows": 110,
+    "frame_rows": 4928,
+    "backbone_images": 2220,
+    "causal_DIS_pairs": 876,
+    "post_DIS_pairs": 1314,
+    "post_FB_pairs": 1314,
+    "CUDA_initialized": false
+  },
+  "both_fixed_unique_final_markers": {
+    "research/8.video-backbone/process/v1/train-seed0-attempt006/fixed-final.json": {
+      "at": "2026-11-20T14:39:08.857480+08:00",
+      "seed": 0,
+      "phase": "fixed",
+      "path": ".cache/experiments/topic8-v1/train-seed0-attempt006/fixed-final.pt",
+      "sha256": "7f0324cae390e303a8cd16c92936a049cebd03187e5bf0d5072ab4708b705985",
+      "parameters": 16180,
+      "updates": 4000,
+      "all_tensors_reloaded_finite": true,
+      "training_backend": "cpu",
+      "unique_final": true
+    },
+    "research/8.video-backbone/process/v1/train-seed1-attempt001/fixed-final.json": {
+      "at": "2026-11-20T15:37:03.474052+08:00",
+      "seed": 1,
+      "phase": "fixed",
+      "path": ".cache/experiments/topic8-v1/train-seed1-attempt001/fixed-final.pt",
+      "sha256": "9f4c341e215c3acbe85c1ee600eb572c48cb0c007b872e36fda0569fdedd7859",
+      "parameters": 16180,
+      "updates": 4000,
+      "all_tensors_reloaded_finite": true,
+      "training_backend": "cpu",
+      "unique_final": true
+    }
+  },
+  "seed1_training_complete_prefix": {
+    "path": "research/8.video-backbone/process/v1/train-seed1-attempt001/training.jsonl",
+    "bytes": 2123862,
+    "sha256": "7ebe6f8cb489f81e2ee794c62e524729bbe7dfea4c2ec5c97e5acd5e99509843",
+    "phase_update_rows": {
+      "warm": 2000,
+      "spatial": 4000,
+      "fixed": 4000,
+      "learned": 121
+    },
+    "last_update": {
+      "phase": "learned",
+      "step": 121,
+      "data_step": 2120
+    }
+  },
+  "source_checks": {
+    "source-freeze001.json": {
+      "files": 34,
+      "unchanged": true
+    },
+    "perceptual-source-freeze001.json": {
+      "files": 5,
+      "unchanged": true
+    },
+    "cpu-execution-freeze001.json": {
+      "files": 4,
+      "unchanged": true
+    }
+  },
+  "new_observation_model_forwards": 0,
+  "scope": "Both full fixed-fusion controls are complete; original seed1 starts last learned4000 budget. Full two-seed quality and all official JOD/gates remain pending; no interim-score selection."
+}
