@@ -1,0 +1,84 @@
+{
+  "resource_id": "MIE-0011",
+  "reviewed_at": "2026-11-20T19:56:39.048287+08:00",
+  "status": "pass_full",
+  "review_passed": true,
+  "completion_scope": "All public19file release inventoried; both full source/readme files statically read, same-hash17media review explicitly reused from closed paper. Not full learned model numerical/runtime reproduction.",
+  "reviewer": "Codex  (sqs_A100)",
+  "independent_external_reviewer": false,
+  "review_mode": "Separate second-pass self-audit after process and conclusion commits",
+  "standard_sha256": "b5371150d788916763c891e0298b862ad0d9302a1286d698172bfa03dd90f57f",
+  "checklist": {
+    "a": {
+      "passed": true,
+      "evidence": [
+        "identity.json",
+        "sources/manifest.json",
+        "derived/docs/reading-scope.json"
+      ],
+      "rationale": "Fixed identity/date/paper-linked role and complete released scope"
+    },
+    "b": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/source-and-media-audit.json",
+        "derived/docs/prior-author-assets-manifest.json",
+        "derived/docs/reading-notes.md"
+      ],
+      "rationale": "All17media same hashes, bounded prior actual view explicit not independent experiment"
+    },
+    "c": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/upstream-code-manifest.json",
+        "derived/docs/reading-notes.md"
+      ],
+      "rationale": "Complete MRDConv249/README163 and all applicable paths; absent whole-model/config/train/export/weight/license explicit"
+    },
+    "d": {
+      "passed": true,
+      "evidence": [
+        "derived/report/analysis.md",
+        "derived/docs/source-and-media-audit.json"
+      ],
+      "rationale": "Current-only mapping, frozenBN, literal block arithmetic, training/inference/full cost and author claims separated"
+    },
+    "e": {
+      "passed": true,
+      "evidence": [
+        "derived/report/claims.json",
+        "derived/docs/preclose-validation.json"
+      ],
+      "rationale": "8typed claims/15anchor groups/5links/2source hashes; all19byte reuse match documented"
+    },
+    "f": {
+      "passed": true,
+      "evidence": [
+        "derived/report/analysis.md",
+        "derived/docs/reading-notes.md"
+      ],
+      "rationale": "Transfer limits, novelty/repetition risk, concrete future controls; zero experiments"
+    },
+    "g": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/gate2-review.md",
+        "derived/docs/preclose-validation.json",
+        "sources/manifest.json"
+      ],
+      "rationale": "Frozen criteria and prior10closures verified; manual self-audit, close event still needed"
+    }
+  },
+  "known_gaps": [
+    "Full AWCC/backbone/SGCA code/train/config/data split/weights and TensorRT export unavailable in pinned release",
+    "Whole model parameter and Rep-scale cost accounting",
+    "Actual equivalence thresholds/precision/multishape/real weights outcomes",
+    "Original ROV continuous video/GT/temporal quality",
+    "Whole-device speed/peak memory/power/thermal/drop logs",
+    "Code/weights/data reuse license not established"
+  ],
+  "experiments_executed": 0,
+  "model_execution": false,
+  "upstream_application_execution": false,
+  "next_resource_allowed_only_after_close_event": true
+}
