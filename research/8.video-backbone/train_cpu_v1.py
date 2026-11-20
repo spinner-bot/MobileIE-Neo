@@ -30,6 +30,7 @@ def main():
     precision()
     os.nice(5)
     frozen = verify()
+    assert not torch.cuda.is_initialized()
     execution = __import__('json').loads((PROCESS / 'cpu-execution-freeze001.json').read_text())
     assert execution['source_sha256'] == {p: digest(ROOT / p) for p in execution['source_sha256']}
     def host_headroom():
@@ -163,6 +164,7 @@ def main():
         assert counts == dict(updates=BUDGET, teacher_images=32000, backbone_images=320000,
                               DIS_pairs=96000, gate_images=48000)
         verify()
+        assert not torch.cuda.is_initialized()
         assert execution['source_sha256'] == {p: digest(ROOT / p) for p in execution['source_sha256']}
         complete = True
     except ResourcePressure as error:
