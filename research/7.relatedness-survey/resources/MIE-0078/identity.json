@@ -1,0 +1,85 @@
+{
+  "resource_id": "MIE-0078",
+  "temporary_key": "code-FangruLinghu--PaperCode",
+  "type": "code",
+  "title": "FangruLinghu/PaperCode",
+  "repo": "FangruLinghu/PaperCode",
+  "revision": "e987af245f74ab47e50187acc95926a8f1a4b3d2",
+  "tree": null,
+  "dois": null,
+  "arxivs": null,
+  "relation": "Explicit MobileIE implementation/module reuse; module-port claim requires independent source review, no fidelity/performance assumed",
+  "created_at": "2026-11-20T12:24:23+08:00",
+  "authors": [],
+  "dates": {
+    "years": [],
+    "published_date": null,
+    "date_verification": "pending Gate2"
+  },
+  "repository_owner": "FangruLinghu",
+  "family": "082-ports",
+  "analysis_order": 78,
+  "initial_preliminary": {
+    "R": 1,
+    "N": 1,
+    "U": 1,
+    "E": 2,
+    "score": 30,
+    "tier": "C",
+    "category": "module-transfer-or-source-dump",
+    "family": "082-ports",
+    "role_order": 2,
+    "summary": "FangruLinghu/PaperCode 的公开命中涉及MobileIE的MBRConv/HDPA/模型定义或配置。逐项核查具体复用/抄录与实现条件，不将它当独立视频方法。",
+    "reason_R": "任务联系：FangruLinghu/PaperCode 的公开命中涉及MobileIE的MBRConv/HDPA/模型定义或配置。逐项核查具体复用/抄录与实现条件，不将它当独立视频方法。",
+    "reason_N": "重复/混淆风险为初级待证判断；依据当前明确关联与基础/接续/移植角色，非已确立创新结论",
+    "reason_U": "可操作性：按所列机制、对照或来源核查用途评分；未运行外部代码",
+    "reason_E": "已有可读HTML/文本/局部固定源码；内容充分性留待Gate2",
+    "evidence": [
+      {
+        "url": "https://github.com/FangruLinghu/PaperCode/blob/e987af245f74ab47e50187acc95926a8f1a4b3d2/arxiv_data_process/train_template_outputs/2507.01838_train.json",
+        "path": "arxiv_data_process/train_template_outputs/2507.01838_train.json",
+        "revision": "e987af245f74ab47e50187acc95926a8f1a4b3d2",
+        "acquisition": "receipts/codehit-033116b74ff2ec18.json"
+      },
+      {
+        "url": "https://github.com/FangruLinghu/PaperCode/blob/e987af245f74ab47e50187acc95926a8f1a4b3d2/arxiv_data_process/structured_papers/2507/2507.01838.json",
+        "path": "arxiv_data_process/structured_papers/2507/2507.01838.json",
+        "revision": "e987af245f74ab47e50187acc95926a8f1a4b3d2",
+        "acquisition": "receipts/codehit-36091238b34d5b0f.json"
+      },
+      {
+        "url": "https://github.com/FangruLinghu/PaperCode/blob/e987af245f74ab47e50187acc95926a8f1a4b3d2/arxiv_data_process/code_model_definition/pytorch_model_definitions/2507.01838.txt",
+        "path": "arxiv_data_process/code_model_definition/pytorch_model_definitions/2507.01838.txt",
+        "revision": "e987af245f74ab47e50187acc95926a8f1a4b3d2",
+        "acquisition": "receipts/codehit-bb29c8b69a6be579.json"
+      },
+      {
+        "url": "https://github.com/FangruLinghu/PaperCode/blob/e987af245f74ab47e50187acc95926a8f1a4b3d2/arxiv_data_process/papers_classification/classified_papers/2507.01838_classified.json",
+        "path": "arxiv_data_process/papers_classification/classified_papers/2507.01838_classified.json",
+        "revision": "e987af245f74ab47e50187acc95926a8f1a4b3d2",
+        "acquisition": "receipts/codehit-741efc241b2399ce.json"
+      },
+      {
+        "url": "https://github.com/FangruLinghu/PaperCode/blob/e987af245f74ab47e50187acc95926a8f1a4b3d2/arxiv_data_process/filter_new_model_papers/papers_w_new_model/2507.01838_classified.json",
+        "path": "arxiv_data_process/filter_new_model_papers/papers_w_new_model/2507.01838_classified.json",
+        "revision": "e987af245f74ab47e50187acc95926a8f1a4b3d2",
+        "acquisition": "receipts/codehit-e77f911e1eb98fcb.json"
+      },
+      {
+        "url": "https://github.com/FangruLinghu/PaperCode/blob/e987af245f74ab47e50187acc95926a8f1a4b3d2/arxiv_data_process/dataset/output.log",
+        "path": "arxiv_data_process/dataset/output.log",
+        "revision": "e987af245f74ab47e50187acc95926a8f1a4b3d2",
+        "acquisition": "receipts/codehit-effcd2163988a55c.json"
+      },
+      {
+        "url": "https://github.com/FangruLinghu/PaperCode/blob/e987af245f74ab47e50187acc95926a8f1a4b3d2/arxiv_data_process/papers_classification/classified_papers/processed_log.json",
+        "path": "arxiv_data_process/papers_classification/classified_papers/processed_log.json",
+        "revision": "e987af245f74ab47e50187acc95926a8f1a4b3d2",
+        "acquisition": "receipts/codehit-86270bbd9209da33.json"
+      }
+    ],
+    "not_gate2": true
+  },
+  "source_snapshot_cutoff": "2026-11-17",
+  "identity_verification": "pending Gate2; repository owner is not assumed to be the paper author"
+}
