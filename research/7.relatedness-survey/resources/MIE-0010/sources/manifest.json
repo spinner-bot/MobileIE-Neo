@@ -1,0 +1,76 @@
+{
+  "resource_id": "MIE-0010",
+  "created_at": "2026-11-20T12:24:23+08:00",
+  "source_root": "../../.. (workstation root from this sources directory)",
+  "snapshot_cutoff": "2026-11-17",
+  "receipts": [
+    {
+      "path": "receipts/paper-dce553dc3465-arxiv-abs.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/paper-dce553dc3465-arxiv-abs.html",
+      "sha256": "7220d1bc0c8439af22774ccabed533b20528b504de0aca9cc5da962b83a53b07"
+    },
+    {
+      "path": "receipts/paper-dce553dc3465-index-link2.json",
+      "status": "success",
+      "http": 202,
+      "archive": null,
+      "sha256": null
+    },
+    {
+      "path": "receipts/paper-dce553dc3465-arxiv-pdf-large.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/paper-dce553dc3465-arxiv-pdf-large.pdf",
+      "sha256": "be0eba18553b21f52fe9ec14389e40ffe60e9c1fc2e9dd4e263e126b532e03cb"
+    },
+    {
+      "path": "receipts/paper-dce553dc3465-arxiv-pdf.json",
+      "status": "size_limit_incomplete",
+      "http": 200,
+      "archive": "archive/paper-dce553dc3465-arxiv-pdf.pdf",
+      "sha256": "2c77c53360d5e1b79e01e9a92f5538719c37cce5592764c8ffb2b894c66f9551"
+    },
+    {
+      "path": "receipts/paper-dce553dc3465-arxiv-html.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/paper-dce553dc3465-arxiv-html.html",
+      "sha256": "14789c7aa5b6a18691592d7b0ca52e3bc6d3a589538a3fd3db3bbcf22668dfa9"
+    },
+    {
+      "path": "receipts/paper-dce553dc3465-publisher.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/paper-dce553dc3465-publisher.html",
+      "sha256": "7220d1bc0c8439af22774ccabed533b20528b504de0aca9cc5da962b83a53b07"
+    },
+    {
+      "path": "receipts/paper-dce553dc3465-index-link0.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/paper-dce553dc3465-index-link0.html",
+      "sha256": "7220d1bc0c8439af22774ccabed533b20528b504de0aca9cc5da962b83a53b07"
+    }
+  ],
+  "discovery_evidence": [
+    {
+      "source": "collection/raw/initial-openalex-citing.json",
+      "position": 10,
+      "source_record_id": "https://openalex.org/W7138945623"
+    },
+    {
+      "source": "collection/raw/initial-s2-citing.json",
+      "position": 26,
+      "source_record_id": "5ff3c4b9e14e01145ee9821f28f1a3e4f7624e88"
+    },
+    {
+      "source": "research/5.prior-art-survey/data/citations_s2.json",
+      "position": 24,
+      "source_record_id": "5ff3c4b9e14e01145ee9821f28f1a3e4f7624e88"
+    }
+  ],
+  "adequacy": "Materials available for analysis; not yet read or qualified",
+  "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts"
+}
