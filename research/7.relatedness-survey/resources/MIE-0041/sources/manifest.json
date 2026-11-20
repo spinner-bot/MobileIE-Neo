@@ -1,0 +1,30 @@
+{
+  "resource_id": "MIE-0041",
+  "created_at": "2026-11-20T12:24:23+08:00",
+  "source_root": "../../.. (workstation root from this sources directory)",
+  "snapshot_cutoff": "2026-11-17",
+  "receipts": [
+    {
+      "path": "receipts/newreview-primary-pdf.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/newreview-primary-pdf.pdf",
+      "sha256": "82d796722cdbfb6c65cadcea031efbf1dd39fc6e6333e43a806b7c4a7a58b7d9"
+    },
+    {
+      "path": "receipts/newreview-crossref.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/newreview-crossref.json",
+      "sha256": "70b68d5e6c78b61c61c24394d61d9078a98b3a9f85c7642e7ed5a7e8bf23e424"
+    }
+  ],
+  "discovery_evidence": [
+    "web-new-review-trace.json",
+    "receipts/newreview-primary-pdf.json",
+    "receipts/newreview-crossref.json",
+    "new-review-identity-check.json"
+  ],
+  "adequacy": "Materials available for analysis; not yet read or qualified",
+  "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts"
+}
