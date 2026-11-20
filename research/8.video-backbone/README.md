@@ -2,7 +2,7 @@
 
 2026-11-20；Codex  (sqs_A100)。main主线新主题，从8起；research/7由其他分支占用。此页是研究入口，具体实验以单独协议为准，不是创新声明。
 
-当前V1完整候选已实现：[原模型审计](original-model-and-training.md)、[先例/设计](precedents-and-candidate.md)、[协议](protocol-v1.md)、[执行与资源接续](execution.md)。空间16180/学习16365参数，三控制及完整质量/JOD/联合表/四固定图路径保持。CPU/CUDA资格001各8丢弃正常，合754骨干/64教师/240双向DIS，初始固定学习与三重载差0；34训练/质量源＋5辅助源未改。正式seed0已保存warm241更新，3856骨干/教师图；后续恢复child在CUDA前被资源拒绝、0新更新，原chain001的接续断言失败保留。只修协调器元数据转发，实测记录回归通过；当前chain002 PID3003196/start109313161自动等待合格资源，从原241状态继续，未重跑资格或从0训练。读[progress004](process/v1/progress004.json)、[0171](../../docs/进展报告/0171-T-26112013-CUDA资格通过与完整实验自动接续.md)、[完整过程](process/v1/journal.md)。28000正式预算不变，未有新DEV/JOD/质量—成本或创新结论；以下保留研究问题与边界。
+当前V1完整候选已实现并持续训练：[协议](protocol-v1.md)、[原训练审计](original-model-and-training.md)、[先例](precedents-and-candidate.md)、[CPU执行修订](cpu-backend-amendment001.md)。CPU/CUDA资格各8丢弃通过，原GPU更新358全部保留。共享GPU反复退让后，仅在无活跃数值child时正常退出空闲watcher，显式两线程/nice5 CPU从359继续；原34训练质量源及5辅助源不改，新增CPU执行4源单独冻结，后端改变不称逐bit复现。CPU协调3024380/start109481893、worker3024402/start109481902仍以真实进程核验为准。唯一warm2000已完成并重载有限，fresh Adam开始三控制GT适配；[progress009](process/v1/progress009.json)核warm2000/spatial1903前缀，固定/学习尚未正式更新，未有DEV/JOD或方法结论。总28000预算和完整220新质量/强参照/JOD/280共表/四图及止损不变。读[0172](../../docs/进展报告/0172-T-26112014-CPU持续接续与教师暖启动完成.md)、[过程](process/v1/journal.md)。空间16180/学习16365参数，不称4K或零开销；以下研究问题与旧STOP边界保持。
 
 R88已完成两seed8000更新、80质量/80官方JOD及完整共同条件，A/B组资格均0/4。冻结恢复骨干之后学习小描述分支，尚不足以获得有用的质量—时间联合收益。全部正控制和逐源例外见[完整决定](../4.temporal-consistency/docs/exploration-r88-decision.md)，不推广为所有共享表示不可能，也不把局部网格重新搬到本目录。
 
