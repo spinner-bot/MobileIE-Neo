@@ -1,0 +1,62 @@
+{
+  "resource_id": "MIE-0021",
+  "created_at": "2026-11-20T12:24:23+08:00",
+  "source_root": "../../.. (workstation root from this sources directory)",
+  "snapshot_cutoff": "2026-11-17",
+  "receipts": [
+    {
+      "path": "receipts/paper-1bcaf3288599-arxiv-pdf.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/paper-1bcaf3288599-arxiv-pdf.pdf",
+      "sha256": "8b865c8e0fe3ed0bb5029f51d2a13ab3815089ec2a1ab0d9094662551d19b8c7"
+    },
+    {
+      "path": "receipts/paper-1bcaf3288599-publisher.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/paper-1bcaf3288599-publisher.html",
+      "sha256": "3a122010dff7233780d4aedfc775f370b253a77de6daf7da05d4803055ca7a20"
+    },
+    {
+      "path": "receipts/paper-1bcaf3288599-arxiv-abs.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/paper-1bcaf3288599-arxiv-abs.html",
+      "sha256": "3a122010dff7233780d4aedfc775f370b253a77de6daf7da05d4803055ca7a20"
+    },
+    {
+      "path": "receipts/paper-1bcaf3288599-index-link2.json",
+      "status": "success",
+      "http": 202,
+      "archive": null,
+      "sha256": null
+    },
+    {
+      "path": "receipts/paper-1bcaf3288599-arxiv-html.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/paper-1bcaf3288599-arxiv-html.html",
+      "sha256": "8434220d78bbdd126abb85089f01832004f266dd8ecbe965b4ce7aed4610d733"
+    }
+  ],
+  "discovery_evidence": [
+    {
+      "source": "collection/raw/initial-openalex-citing.json",
+      "position": 15,
+      "source_record_id": "https://openalex.org/W7154378640"
+    },
+    {
+      "source": "collection/raw/initial-s2-citing.json",
+      "position": 25,
+      "source_record_id": "4943404f9396b08cfaad2f870e63bac654c006ff"
+    },
+    {
+      "source": "research/5.prior-art-survey/data/citations_s2.json",
+      "position": 23,
+      "source_record_id": "4943404f9396b08cfaad2f870e63bac654c006ff"
+    }
+  ],
+  "adequacy": "Materials available for analysis; not yet read or qualified",
+  "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts"
+}
