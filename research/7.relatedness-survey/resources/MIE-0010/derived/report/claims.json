@@ -1,0 +1,130 @@
+{
+  "resource_id": "MIE-0010",
+  "created_at": "2026-11-20T19:35:53.056306+08:00",
+  "source_aliases": {
+    "paper": "derived/docs/paper-text.txt and derived/figures/paper-pNN.png; physical PDF page numbers",
+    "code": "derived/docs; original pinned author code/README with1-based lines",
+    "manifest/audit/process/report": "explicit resource-relative file paths"
+  },
+  "claims": [
+    {
+      "claim_id": "C01",
+      "evidence_class": "primary_identity_and_citation_check",
+      "claim": "v1为六作者TeleAI等署名预印本；MobileIE是直接引文和比较对象。",
+      "anchors": [
+        "paper:p1 authors/footer,p3 §II-C,p13 ref43",
+        "paper:p6 TableI,p7 TablesII–III,p10 TableVIII,p12 §VI"
+      ],
+      "limitation": "待IEEE发表不当已录用；不是MobileIE作者官方后继证明。"
+    },
+    {
+      "claim_id": "C02",
+      "evidence_class": "author_report_and_static_check",
+      "claim": "AWCC空间统计/绿锚+MRDConv+SGCA构成单图增强；没有公开时间状态或时间目标。",
+      "anchors": [
+        "paper:p3 Figure2,p4 Eq1–7,p5 Eq8–11,p6 Eq12–18",
+        "code:official-mrdconv.txt:3–45"
+      ],
+      "limitation": "图像自适应不等于时间适应；全局映射造成漂移是候选假设非实测。"
+    },
+    {
+      "claim_id": "C03",
+      "evidence_class": "static_check_and_bounded_inference",
+      "claim": "五分支BN/末PW可折5×5；公开示例固定Cin/Cout折后形状与r无关，整网r8复杂度变化待解释。",
+      "anchors": [
+        "paper:p4 Figure4,p5 Algorithms1–2,p10 TableVII",
+        "code:official-mrdconv.txt:47–124"
+      ],
+      "limitation": "只对该块静态形状推断，不能说完整模型参数表已被推翻或已数值复现。"
+    },
+    {
+      "claim_id": "C04",
+      "evidence_class": "primary_tree_and_source_check",
+      "claim": "作者固定树19文件只含MRDConv示例/README/图，没有完整增强网络/训练/权重/部署引擎。",
+      "anchors": [
+        "manifest:derived/docs/author-assets-manifest.json",
+        "code:official-mrdconv.txt:1–281",
+        "code:official-readme.txt:1–163"
+      ],
+      "limitation": "固定Apr9树状态非作者永远不发布；示例main未运行。"
+    },
+    {
+      "claim_id": "C05",
+      "evidence_class": "author_report_and_protocol_check",
+      "claim": "图像8:2/256²、A100/400epoch/batch8，外测多数据集；视频序列独立划分和baseline完整预算未知。",
+      "anchors": [
+        "paper:p6 §IV-A1,p7 §IV-A1/TableII"
+      ],
+      "limitation": "不把现有随机图像划分作为本项目视频数据无泄漏证明。"
+    },
+    {
+      "claim_id": "C06",
+      "evidence_class": "author_report_and_arithmetic",
+      "claim": "UIEB约+1.215dB、4047对3880为4.13%减参；并非各数据/指标/相机全部优于MobileIE。",
+      "anchors": [
+        "paper:p6 TableI,p7 TablesII–III",
+        "audit:derived/docs/static-evidence-audit.json"
+      ],
+      "limitation": "无共同重评/seed不确定性；4047与原4075计数口径需区分。"
+    },
+    {
+      "claim_id": "C07",
+      "evidence_class": "author_report_and_cost_scope_check",
+      "claim": "409.09GPU FPS低于MobileIE678.5，FPS列640×480；FLOPs图1为256²；JetsonFP16/TensorRT30FPS是独立条件。",
+      "anchors": [
+        "paper:p2 Figure1,p6 TableI,p8 §IV-A2,p10 §V,p12 §VI"
+      ],
+      "limitation": "未知完整计时/功耗/峰值内存/掉帧；TopK仍有部署成本，不推手机实时。"
+    },
+    {
+      "claim_id": "C08",
+      "evidence_class": "author_report_and_visual_check",
+      "claim": "模块/统计/loss消融显示空间指标权衡，颜色loss为同图GT非帧间；整网r消融待口径说明。",
+      "anchors": [
+        "paper:p8 TableIV/Figure8,p9 TablesV–VI/Figures9–10,p10 TableVII",
+        "paper:p6 Eq17–18"
+      ],
+      "limitation": "无视频消融或重复seed统计显著性；UIQM并非full最高。"
+    },
+    {
+      "claim_id": "C09",
+      "evidence_class": "author_report_and_protocol_check",
+      "claim": "UIIS增强后下游训练mAP .237对MobileIE .231，静态mask图仅辅助。",
+      "anchors": [
+        "paper:p10 §IV-C/TableVIII/Figure11"
+      ],
+      "limitation": "缺冻结同一检测器/重复seed和未增强表内对照，不能隔离增强因果效应。"
+    },
+    {
+      "claim_id": "C10",
+      "evidence_class": "author_report_visual_and_arithmetic",
+      "claim": "水箱16条件UCIQE改善，29.7%可对应逐行增益均值，不能直接当印刷总均值比。",
+      "anchors": [
+        "paper:p10 §V-A,p11 TableIX/Figures12–13/Eq19",
+        "audit:derived/docs/static-evidence-audit.json"
+      ],
+      "limitation": "非GT色准/无噪/时间稳定指标；只核作者印刷数未重评像素。"
+    },
+    {
+      "claim_id": "C11",
+      "evidence_class": "author_report_and_visual_check",
+      "claim": "ROV连续视频边缘应用及三对SIFT增配是明确应用先例，不能概括完全无视频相关工作。",
+      "anchors": [
+        "paper:p11 §V-B,p12 Figure14",
+        "code:official-readme.txt:82–106"
+      ],
+      "limitation": "计数非几何匹配精度、恢复闪烁或轨迹评价；原连续视频不可得。"
+    },
+    {
+      "claim_id": "C12",
+      "evidence_class": "synthesis_inference_from_this_resource",
+      "claim": "需把颜色统计、真实环境/下游辅助与完整成本纳入后续控制；轻量视频应用/普通折叠不能单独作为二期创新。",
+      "anchors": [
+        "paper:p3 Figure2,p5 §III-D,p12 §VI",
+        "process:derived/docs/reading-notes.md",
+        "report:derived/report/analysis.md"
+      ],
+      "limitation": "仅本项启发和重复风险，尚未全部124项综合；候选Gate3未执行。"
+    }
+  ]
+}
