@@ -4,11 +4,11 @@
 
 ## 当前研究状态
 
-2026-11-20最新[0181：部署递归监督资格与固定训练启动](docs/进展报告/0181-T-26112020-部署递归监督原生资格与固定完整训练启动.md)：[T2](research/8.video-backbone/recurrent-objective/README.md)的零更新原生实现/CPU4与CUDA4丢弃优化资格均通过，完整47源及固定协议已冻，原协调3246208推进16000更新及120质量/JOD、360共同条件。20:01:51前缀seed0两模型各63/126正式更新，完整训练/新DEV尚未完成；只有全量结果才能判定，不能据静态PID/步号重启。普通递归训练已有先例，只作已知优化参照，推理保留DIS/warp/历史成本。
+2026-11-20最新[0184：部署递归监督完整评价与止损](docs/进展报告/0184-T-26112021-部署递归监督完整评价与止损.md)：[T2](research/8.video-backbone/recurrent-objective/README.md)已完成16000正式更新/四唯一最终、120质量与120官方JOD/360共同条件/72均值、四固定图和两全点PNG实际审阅。恢复0/4、A成对0/44、B10/44、额外学习0/8，完整资格False。对独立clip-GT DIS有SYN PSNR+.10–.11dB/14条件PSNR正例，但全部20条件时间更高（四组+1.50%–2.46%），固定配置局部网格STOP，不扩失败成本/外部/手机，不继续向T1/T2加loss或延长诊断。原协调/数值/评分任务全部终态、GPU释放，勿按旧静态PID重启。[完整决定](research/8.video-backbone/recurrent-objective/decision.md)、[主表](research/8.video-backbone/recurrent-objective/report/joint/tables.md)、[真实终态](research/8.video-backbone/recurrent-objective/process/terminal001.json)。
 
 此前[0180：同原骨干时序KD完整评价与止损](docs/进展报告/0180-T-26112019-同原骨干时序KD完整评价与止损.md)：主题8-T1全部24000正式更新、六唯一最终、180质量/180官方JOD、240共同条件/48均值及四固定图实际审阅均完成。恢复保护3/4、主要A/B各0/40、成本扩展False；相对空间KD保留20/20时间改善、四组1.49%–2.38%的小幅正例，但未追平强post，固定同F0/T4DIS/等权KD局部网格STOP。普通KD已有直接先例，只作已完成已知训练参照。[完整决定](research/8.video-backbone/teacher-targets/decision.md)、[完整表](research/8.video-backbone/teacher-targets/report/joint/tables.md)、[真实终态](research/8.video-backbone/teacher-targets/process/terminal001.json)。
 
-前序[0175：V1主干完整评价](docs/进展报告/0175-T-26112017-完整视频骨干候选评价与止损.md)已完成28000正式训练与220质量/JOD、280共表，空间保护0/4、A/B各0/28，固定packed核/输入递归局部配置已STOP。全部V1/T1原数值/协调任务已终态、GPU释放；下面历史中的“下一”“当前”不作为重启依据。所有旧STOP、原84值/snapshot003/内部PDF020、独立最终封存、7号与其他worktree保持。
+前序[0175：V1主干完整评价](docs/进展报告/0175-T-26112017-完整视频骨干候选评价与止损.md)已完成28000正式训练与220质量/JOD、280共表，空间保护0/4、A/B各0/28，固定packed核/输入递归局部配置已STOP。全部V1/T1/T2原数值/协调任务已终态、GPU释放；下面历史中的“下一”“当前”不作为重启依据。所有旧STOP、原84值/snapshot003/内部PDF020、独立最终封存、7号与其他worktree保持。
 
 论文goal仍active，尚无确立创新、手机或独立最终结论。手机轻量实时需要完整成本证据，原4075参数不是用户硬性参数上限，也没有用户要求所有候选必须零额外推理；每个已冻协议仍按自身预算/门槛判定。下一独立问题须说明相对失败路线的结构/信息入口差异，先核直接先例再登记少量可证伪原型，不延长本KD救分。接续读[服务器约定](AGENTS.md)、[主题8](research/8.video-backbone/README.md)、[论文证据入口](paper/RESEARCH_STATUS.md)。代码/结果/过程/报告分别密集提交和阶段SSH推送，长等待按实测速率sleep并核原句柄。
 
