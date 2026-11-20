@@ -1,0 +1,222 @@
+{
+  "resource_id": "MIE-0014",
+  "at": "2026-11-21T07:43:28.886036+08:00",
+  "source_aliases": {
+    "paper": "derived/docs/paper-text.txt physical PDF page header; rendered page in derived/figures/paper-pNN.png",
+    "code": "derived/docs/author-source/{path} at fixed f1d25d2, 1-based source line",
+    "other": "explicit resource-relative path"
+  },
+  "claims": [
+    {
+      "claim_id": "C01",
+      "evidence_class": "primary_identity_check",
+      "claim": "实际完整阅读arXiv2605.08627v1 13页；作者Ao Li等，与MobileIE共同Ao/Le/Ce；TMM正式仅元数据。",
+      "anchors": [
+        "identity.json",
+        "derived/docs/paper-assets.json",
+        "derived/docs/publication-acquisition-notes.json"
+      ],
+      "limitation": "模板页眉2021、默认Jan1和出版索引精确日不能取代主证；未取得正式全文，版本差异unknown。"
+    },
+    {
+      "claim_id": "C02",
+      "evidence_class": "primary_citation_context_check",
+      "claim": "MobileIE在p2结构重参数化段及ref40，作为并行卷积/BN先例，并非视频或手机质量对照。",
+      "anchors": [
+        "paper:p2",
+        "paper:p13",
+        "code:README.md:109-111"
+      ],
+      "limitation": "共同作者、同属重参数化不能证明直接复用MobileIE模型；README承认源自PromptIR。"
+    },
+    {
+      "claim_id": "C03",
+      "evidence_class": "author_method_and_static_check",
+      "claim": "输入任务为外部固定one-hot，TSM两Linear输出双Softmax，在会话初始化配置专家。",
+      "anchors": [
+        "paper:p3",
+        "paper:p4",
+        "code:net/DRNet_arch.py:77-96"
+      ],
+      "limitation": "不是语言模型或每图退化估计；用户任务信息需与盲方法分开比较。"
+    },
+    {
+      "claim_id": "C04",
+      "evidence_class": "symbolic_fold_inference",
+      "claim": "固定任务时每个bank可按矩阵/偏置加权和折叠，两bank之间GELU仍在。",
+      "anchors": [
+        "paper:p4",
+        "paper:p5",
+        "code:net/DRNet_arch.py:98-172"
+      ],
+      "limitation": "仅静态代数关系；未检验浮点、量化、后端或checkpoint数值等价，不能跨GELU合成单一线性层。"
+    },
+    {
+      "claim_id": "C05",
+      "evidence_class": "static_deployment_check",
+      "claim": "switch首次后删专家bank/TSM并detach，deploy后再次switch立即返回，执行forward忽略新prompt。",
+      "anchors": [
+        "code:net/DRNet_arch.py:117-172"
+      ],
+      "limitation": "同一已转换对象不支持仅改prompt切换；另建/重载/存多模型的实际延迟/内存尚未测量。"
+    },
+    {
+      "claim_id": "C06",
+      "evidence_class": "paper_code_gap",
+      "claim": "文字generic blind是独立one-hot任务，公开3/5名单和训练路径未见对应generic配置。",
+      "anchors": [
+        "paper:p4",
+        "code:inference_5tasks.py:243-250",
+        "code:inference_3tasks.py:245-252",
+        "code:utils/dataset_utils.py:36-51"
+      ],
+      "limitation": "不把全零/平均先验冒充作者盲结果；不证明作者历史私有实现不存在该模式。"
+    },
+    {
+      "claim_id": "C07",
+      "evidence_class": "static_frequency_check",
+      "claim": "CWTE虽名Continuous，方法/源码实际Haar离散分解；LL递归、高频跳接，SW-SA/LN/GELU保留。",
+      "anchors": [
+        "paper:p3",
+        "paper:p5",
+        "code:net/DRNet_arch.py:332-348",
+        "code:net/net_utils.py:1-129"
+      ],
+      "limitation": "不是时间变换；未数值检验custom backward或设备支持。"
+    },
+    {
+      "claim_id": "C08",
+      "evidence_class": "static_temporal_scope_check",
+      "claim": "公开模型只接当前图/任务，无时间state/历史/未来；混合退化顺序恢复作用于同一图。",
+      "anchors": [
+        "code:net/DRNet_arch.py:536-582",
+        "code:train.py:77-92",
+        "paper:p8"
+      ],
+      "limitation": "无前瞻但也无时间建模，不证明视频稳定或不稳定；空间多次迭代不能称视频递归。"
+    },
+    {
+      "claim_id": "C09",
+      "evidence_class": "author_report_with_fairness_limit",
+      "claim": "表I先验30.45/.914、盲29.62/.903；表II三任务32.69/.920与AdaIR均值同值。",
+      "anchors": [
+        "paper:p6",
+        "derived/figures/paper-p06.png"
+      ],
+      "limitation": "不同任务信息/预算及汇编对照未共同重训；LOL/GoPro非全部列最佳，无独立数值重现。"
+    },
+    {
+      "claim_id": "C10",
+      "evidence_class": "author_report_and_cost_inference",
+      "claim": "三重混合盲多次18.95、顺序专家19.61；Fig6例18.76对15.80是另一局部量。",
+      "anchors": [
+        "paper:p8",
+        "derived/figures/paper-p08.png"
+      ],
+      "limitation": "显式任务/顺序是额外信息，多次整网成本须单计；双重盲多次17.85低于单次19.07。"
+    },
+    {
+      "claim_id": "C11",
+      "evidence_class": "author_cost_report",
+      "claim": "表VII为128平方/单RTX5090：未融合16.49M34.59G47.78ms，融合7.39M16.48G28.92ms。",
+      "anchors": [
+        "paper:p10",
+        "derived/figures/paper-p10.png"
+      ],
+      "limitation": "作者报告非本次测量；完整I/O/切换/首帧/精度/手机/功耗未知；不能与MobileIE不同预算及设备拼胜出。"
+    },
+    {
+      "claim_id": "C12",
+      "evidence_class": "static_pipeline_check",
+      "claim": "公开forward每次构造四尺度mask再搬设备，仍有注意力/位置索引/非线性/小波成本。",
+      "anchors": [
+        "code:net/DRNet_arch.py:488-542",
+        "code:net/DRNet_arch.py:544-582"
+      ],
+      "limitation": "零开销仅限固定任务执行期的prior-related计算，缓存mask等优化不属于原报告已验证结果。"
+    },
+    {
+      "claim_id": "C13",
+      "evidence_class": "static_mapping_risk",
+      "claim": "训练任务set转list，推理固定顺序，语义映射未明示保存。",
+      "anchors": [
+        "code:utils/dataset_utils.py:36-51",
+        "code:inference_5tasks.py:243-250",
+        "code:transfer.py:1-22"
+      ],
+      "limitation": "条件风险，外部PYTHONHASHSEED/历史源可使一致；未证作者实际映射错。"
+    },
+    {
+      "claim_id": "C14",
+      "evidence_class": "static_training_protocol_check",
+      "claim": "论文150epoch/b32；README150/b8/4GPU却只暴露2；options1200/b2/3base而train5维，scheduler15/100。",
+      "anchors": [
+        "paper:p5",
+        "code:README.md:59-67",
+        "code:options.py:8-14",
+        "code:train.py:18-19",
+        "code:train.py:94-124",
+        "code:utils/schedulers.py:287-328"
+      ],
+      "limitation": "不运行默认错误定位；epoch非相同采样预算，dataset重复与外部名单需对账。"
+    },
+    {
+      "claim_id": "C15",
+      "evidence_class": "static_inference_protocol_check",
+      "claim": "像素域AWGNclip/uint8、denoise裁32、镜像pad下一个64、RGB浮点评价；5task sigma25/3task50，CLI无sigma。",
+      "anchors": [
+        "code:inference_5tasks.py:25-40",
+        "code:inference_5tasks.py:145-179",
+        "code:inference_5tasks.py:224-264",
+        "code:inference_3tasks.py:259-266",
+        "code:metrics/psnr_ssim.py:10-29"
+      ],
+      "limitation": "README不存在的inference.py和sigma参数不能当实际协议；数据/独立数值/隐藏历史配置未验证。"
+    },
+    {
+      "claim_id": "C16",
+      "evidence_class": "author_report_and_set_membership_check",
+      "claim": "空间非均匀噪声用四分块；unseen集合{0,20,40,60}与seen共享0。",
+      "anchors": [
+        "paper:p9",
+        "derived/figures/paper-p09.png"
+      ],
+      "limitation": "非时间非均匀、非全部强度均全未见；不由名单证明样本/预训练无重叠或许可充分。"
+    },
+    {
+      "claim_id": "C17",
+      "evidence_class": "source_consistency_limit",
+      "claim": "p10正文30.47、表I/VII30.45、表VIII30.24保持不同；去组件消融容量/训练结构不同。",
+      "anchors": [
+        "paper:p6",
+        "paper:p10",
+        "paper:p11",
+        "paper:p12"
+      ],
+      "limitation": "无法从不一致推历史造假；特征图和融合权重相似度不足以证明因果机制或排除优化混淆。"
+    },
+    {
+      "claim_id": "C18",
+      "evidence_class": "primary_availability_and_license_check",
+      "claim": "完整21件作者源码哈希已核；README称MIT但包无LICENSE。旧5任务权重success实为截断，原回执保留。",
+      "anchors": [
+        "derived/docs/author-source-manifest.json",
+        "derived/docs/author-tree-receipt.json",
+        "code:README.md:7-8",
+        "derived/docs/report-time-acquisition-review.json"
+      ],
+      "limitation": "hash/容器不是许可证、权重语义或数值正确性认证；新权重获取审查独立追加，正式全文仍缺。"
+    },
+    {
+      "claim_id": "C19",
+      "evidence_class": "research_hypothesis_not_experiment",
+      "claim": "会话/镜头固定条件可能减少逐帧条件抖动，应在同任务信息、质量、因果性及全成本下作控制。",
+      "anchors": [
+        "derived/report/analysis.md",
+        "paper:p10",
+        "code:net/DRNet_arch.py:138-172"
+      ],
+      "limitation": "尚非解决MobileIE闪烁的实证；模型/视频/设备实验留Gate3新分支，当前全部未执行。"
+    }
+  ]
+}
