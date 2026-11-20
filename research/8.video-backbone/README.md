@@ -2,7 +2,9 @@
 
 2026-11-20；Codex  (sqs_A100)。main主题8，research/7继续留给其他分支。
 
-最新[N1三观测方差资格](triple-variance/README.md)已完整结项：[0187](../../docs/进展报告/0187-T-26112023-三观测方差识别校准与骨干问题收敛.md)、[决定](triple-variance/decision.md)、[真实终态](triple-variance/process/terminal001.json)。双冻结F0/四训练纹理、11264NN正常111.089698秒、0更新/GPU/DEV/最终；24独立主组12个完整通过，固定photon8/8正例保留，跨photon4/16，完整实际运动资格False。停止固定三观测/16tile/截断/窗口/模式/相关构造网格，不直接接噪声图或训练补救。全48组和24主组两PNG实际查看，原进程已无；[后续骨干问题](triple-variance/next-core-question.md)仅待核跨层不重叠观测的多线性来源树，不是已实现/登记模型或已确立创新，论文goal active。
+当前[M1新骨干](multiaffine-core/README.md)已实现、CPU/CUDA资格通过并启动空间恢复必要检验：[0188](../../docs/进展报告/0188-T-26112023-多线性骨干实现资格与空间恢复正式启动.md)。5340参数、解析1080p2.712269GMAC、FP32缓存99532800B；raw独立角点/来源与stream检查通过，但clip反例存在，非最终RGB均值保证。新随机M1/原Slim各8K×两seed=32000正式更新/512000学生图，GT MSE/40冻结、物理6新准入/UUID匹配，首正式worker3394474和父3393743的原start已核；CPU4/CUDA4更新全丢弃。首观察各472更新，完整恢复结果未得；只有八个恢复保护过才另登记视频。所有旧STOP/最终/原论文值保持，论文goal active。
+
+此前[N1三观测方差资格](triple-variance/README.md)已完整结项：[0187](../../docs/进展报告/0187-T-26112023-三观测方差识别校准与骨干问题收敛.md)、[决定](triple-variance/decision.md)、[真实终态](triple-variance/process/terminal001.json)。双冻结F0/四训练纹理、11264NN正常111.089698秒、0更新/GPU/DEV/最终；24独立主组12个完整通过，固定photon8/8正例保留，跨photon4/16，完整实际运动资格False。停止固定三观测/16tile/截断/窗口/模式/相关构造网格，不直接接噪声图或训练补救。全48组和24主组两PNG实际查看，原进程已无；[后续骨干问题](triple-variance/next-core-question.md)仅待核跨层不重叠观测的多线性来源树，不是已实现/登记模型或已确立创新，论文goal active。
 
 此前[S1单向传输与贡献者离散度](single-direction/README.md)已完整负结项：[0186](../../docs/进展报告/0186-T-26112022-单向传输贡献者离散度筛查与止损.md)、[决定](single-direction/decision.md)、[原真实终态](single-direction/process/terminal001.json)。训练窗双冻结F0，64NN/16窗/80条件、0更新/GPU/DEV/最终，正常38.999856秒；对原FB三个组PSNR低.51–.73dB、ND0有小正例，三个完整门均False。对原FB仍9/16窗口联合正、对raw12/16联合正。停止固定目标贡献者矩/mass界/阈值/alpha/preset/field来源网格，不训练补救或扩失败DEV/成本。全20点及16窗口图实际查看，无活跃作业，论文goal active。
 
