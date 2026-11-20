@@ -1,0 +1,89 @@
+{
+  "at": "2026-11-20T15:09:59.142026+08:00",
+  "processes": {
+    "coordinator": {
+      "pid": 3024380,
+      "start_ticks": 109481893,
+      "state": "S"
+    },
+    "quality_seed0": {
+      "pid": 3057709,
+      "start_ticks": 109820957,
+      "state": "R"
+    },
+    "train_seed1": {
+      "pid": 3057710,
+      "start_ticks": 109820958,
+      "state": "R"
+    }
+  },
+  "completed_seed0_counts": {
+    "updates": {
+      "warm": 2000,
+      "spatial": 4000,
+      "fixed": 4000,
+      "learned": 4000
+    },
+    "teacher_images": 32000,
+    "backbone_images": 320000,
+    "DIS_pairs": 96000,
+    "gate_images": 48000
+  },
+  "unique_seed1_warm_final": {
+    "at": "2026-11-20T15:09:05.012521+08:00",
+    "seed": 1,
+    "phase": "warm",
+    "path": ".cache/experiments/topic8-v1/train-seed1-attempt001/warm-final.pt",
+    "sha256": "9252a08c9155468494c4b8af16ce15a429fdb915bf2880f30cd84ac6ef79b0ad",
+    "parameters": 16180,
+    "updates": 2000,
+    "all_tensors_reloaded_finite": true,
+    "training_backend": "cpu",
+    "unique_final": true
+  },
+  "seed1_trace": {
+    "path": "research/8.video-backbone/process/v1/train-seed1-attempt001/training.jsonl",
+    "complete_prefix_bytes": 480211,
+    "complete_prefix_sha256": "190b58ae1dcb7edaf3330e67c6a5e7b8205ccc69dda609f69ca9acfe1b9563f1",
+    "phase_update_rows": {
+      "warm": 2000,
+      "spatial": 314
+    },
+    "first_update": {
+      "phase": "warm",
+      "step": 1,
+      "data_step": 0
+    },
+    "last_update": {
+      "phase": "spatial",
+      "step": 314,
+      "data_step": 2313
+    }
+  },
+  "both_teacher_warm_final_complete": true,
+  "total_formal_teacher_images": 64000,
+  "seed0_quality_prefix": {
+    "path": "research/8.video-backbone/results/v1-quality-seed0/per_sequence.jsonl",
+    "complete_rows": 70,
+    "complete_prefix_bytes": 21981,
+    "complete_prefix_sha256": "e2102dd45b6001307e21d02b690a289a357e1d8d27286a855b1d4aed8b570de6",
+    "full_expected_rows": 110,
+    "terminal": null
+  },
+  "source_checks": {
+    "source-freeze001.json": {
+      "files": 34,
+      "unchanged": true
+    },
+    "perceptual-source-freeze001.json": {
+      "files": 5,
+      "unchanged": true
+    },
+    "cpu-execution-freeze001.json": {
+      "files": 4,
+      "unchanged": true
+    }
+  },
+  "new_observation_model_forwards": 0,
+  "scope": "Both unique teacher warms complete; independent seed1 has begun spatial GT adaptation. Original full quality job and seed1 remain live; no interim metric ranking or complete two-seed/JOD conclusion."
+}
