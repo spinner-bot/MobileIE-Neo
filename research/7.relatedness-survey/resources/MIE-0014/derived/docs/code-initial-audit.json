@@ -1,0 +1,50 @@
+{
+  "resource_id": "MIE-0014",
+  "at": "2026-11-20T21:57:30.645365+08:00",
+  "source_revision": "f1d25d2acc2db0f16e1b8fc0b687bb9eaf7a1e4d",
+  "source_commit_date": "2026-06-07T08:47:45Z",
+  "all21blobs_match_API_tree": true,
+  "paper_fulltext_read": "13physicalpages all sections/refs, 11figures/8tables; allscientific pages1–12 fullrender viewed",
+  "source_applicable_core_read": [
+    "README",
+    "net/DRNet_arch.py77–589 plus applicable imports/initialization",
+    "net/net_utils.py full",
+    "train.py full",
+    "utils/dataset_utils.py full",
+    "options.py",
+    "inference_5tasks.py full and complete3vs5diff",
+    "metrics/psnr_ssim.py compute_psnr_ssim",
+    "utils/degradation_utils.py full",
+    "utils/image_utils.py crop/augmentation",
+    "utils/schedulers.py warmupcos class",
+    "requirements.txt, inference.sh and transfer.py full"
+  ],
+  "not_full_audit": [
+    "truncnormal utility1–76",
+    "unused image/matlab/tensorops/scheduler variants/metric utilities",
+    "custom autograd numerical correctness",
+    "environment/build/thirdparty/legal/actual checkpoint values"
+  ],
+  "observations": {
+    "task_prior": "one-hot external task not perimage degradation estimator",
+    "switch_one_way": "deployTrue shortcircuits nextswitch; deletes banks/TSM; different task needs separate original/reload, forward prompt ignored by deployedMLP",
+    "generic_mode": "Released5/3 candidates contain only named atomic tasks, no distinct generic blind onehot path identified",
+    "mapping": "train candidates=list(set(base_types)) versus fixed inference order, mapping provenance must be preserved forcheckpoint",
+    "CWTE": "Actually discrete Haar DWT/IDWT, per-stage conv thenLLrecursion; fullSW-SA andGELU remain",
+    "shape_protocol": "Inference pads via mirror concatenation to next multiple64, even alreadydivisible gets+64",
+    "noise_protocol": "Inference clean iscropped to multiple32, adds clipped+uint8 AWGN beforeToTensor; hardcoded sigma5task25/3task50, README --sigma not parsed",
+    "training": "paper150epoch/b32; README150/b8perGPU/4GPU butCUDA_VISIBLE2; options1200/b2/de_types3 whiletrainhardcodesexpert_dim5; schedulerwarmup15 max100 independentofopt150",
+    "access": "4IEEE directfulltext attempts empty202 orpublisherHTML; formalmetadata obtained, noformalPDF; authorfolder has2publicweightfiles, downloads pending atthisrecord",
+    "license": "README MITbadge linksLICENSE butnoLICENSEamong21",
+    "execution": false
+  },
+  "author_table_arithmetic": {
+    "param_reduction_vs_AdaIR_pct": 74.3135210288495,
+    "fused_vs_unfused_FLOPs_reduction_pct": 52.35617230413414,
+    "latency_reduction_vs_AdaIR_pct": 38.04627249357326,
+    "millionparam_relative_to_mobileie4075": 1813.4969325153374,
+    "tableI_ours_vs_blind_PSNR_gap": 0.8299999999999983,
+    "tableIII_multistep_vs_blind3degradations_gap": 0.6600000000000001
+  },
+  "runtime_reproduction": false
+}
