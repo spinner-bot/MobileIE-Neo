@@ -1,0 +1,69 @@
+{
+  "resource_id": "MIE-0018",
+  "created_at": "2026-11-20T12:24:23+08:00",
+  "source_root": "../../.. (workstation root from this sources directory)",
+  "snapshot_cutoff": "2026-11-17",
+  "receipts": [
+    {
+      "path": "receipts/paper-f2b2063bbd33-arxiv-abs.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/paper-f2b2063bbd33-arxiv-abs.html",
+      "sha256": "a91512811cbc0d2006dba3c6f41714629ba131d0367faa93acc34ba9a9e8bd3e"
+    },
+    {
+      "path": "receipts/paper-f2b2063bbd33-index-link2.json",
+      "status": "success",
+      "http": 202,
+      "archive": null,
+      "sha256": null
+    },
+    {
+      "path": "receipts/paper-f2b2063bbd33-index-link3.json",
+      "status": "http_error",
+      "http": 403,
+      "archive": "archive/paper-f2b2063bbd33-index-link3.html",
+      "sha256": "5f64f0f66e8b828eec1f2063596baf885970bc7cf1313ec95605f9373b0d4f06"
+    },
+    {
+      "path": "receipts/paper-f2b2063bbd33-arxiv-html.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/paper-f2b2063bbd33-arxiv-html.html",
+      "sha256": "0c9ca91525ddab7075d2cc08fe48703994ae9c45b7cb03eb59e8ba3e426abeef"
+    },
+    {
+      "path": "receipts/paper-f2b2063bbd33-arxiv-pdf.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/paper-f2b2063bbd33-arxiv-pdf.pdf",
+      "sha256": "d84363a138a0096b71c6741ae397aa189cbc6ab500d22e06d771f9b0d404d7af"
+    },
+    {
+      "path": "receipts/paper-f2b2063bbd33-publisher.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/paper-f2b2063bbd33-publisher.html",
+      "sha256": "84a53bea22b28e93b7710acfcbaa61cbe86cae4e546ddc98ebabb3dfe40ab351"
+    }
+  ],
+  "discovery_evidence": [
+    {
+      "source": "collection/raw/initial-openalex-citing.json",
+      "position": 0,
+      "source_record_id": "https://openalex.org/W4412644344"
+    },
+    {
+      "source": "collection/raw/initial-s2-citing.json",
+      "position": 32,
+      "source_record_id": "78ea952bede3a3e9186a079dbb74fe2f1cdefc9a"
+    },
+    {
+      "source": "research/5.prior-art-survey/data/citations_s2.json",
+      "position": 30,
+      "source_record_id": "78ea952bede3a3e9186a079dbb74fe2f1cdefc9a"
+    }
+  ],
+  "adequacy": "Materials available for analysis; not yet read or qualified",
+  "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts"
+}
