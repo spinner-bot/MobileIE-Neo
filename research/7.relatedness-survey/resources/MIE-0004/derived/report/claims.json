@@ -1,0 +1,212 @@
+{
+  "resource_id": "MIE-0004",
+  "created_at": "2026-11-20T17:21:56.051074+08:00",
+  "source_revision": "9dcbe4db5e2a0710cc020936a80b32df8ca712a6",
+  "source_aliases": {
+    "code_root": "resources/MIE-0004/derived/docs/upstream-code/",
+    "paper": "MIE-0003 formal review0001"
+  },
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Pinned author-linked AMNet implementation corresponds to MIE-0003, commit metadata2026-08-08; not a MobileIE backbone implementation",
+      "evidence_class": "author_identity_and_static_verification",
+      "anchors": [
+        {
+          "source": "resources/MIE-0004/derived/docs/upstream-code/README.md.txt",
+          "locator": "title/official claim/citation"
+        },
+        {
+          "source": "collection/plugin-head-lhfgghc--LLVE-AMNet.json",
+          "locator": "commit sha/date"
+        },
+        {
+          "source": "resources/MIE-0004/derived/docs/archive-inventory.json",
+          "locator": "47-file fixed source inventory"
+        },
+        {
+          "source": "resources/MIE-0003/derived/reviews/0001/report/analysis.md",
+          "locator": "formal publication review"
+        }
+      ],
+      "limitation": "Repository owner/committer not equated with all paper authors; current source is not proved to be conference-time experiment code."
+    },
+    {
+      "id": "C02",
+      "claim": "RGB recurrent path is frame-ordered; offline resets while stream persists state and requires caller mode/reset handling",
+      "evidence_class": "static_source_verification",
+      "anchors": [
+        {
+          "source": "resources/MIE-0004/derived/docs/upstream-code/models--amnet.py.txt",
+          "locator": "149–284,383–479 frame loop/state/API and explicit modality flags"
+        },
+        {
+          "source": "resources/MIE-0004/derived/docs/upstream-code/models--convlstm.py.txt",
+          "locator": "state update/init"
+        }
+      ],
+      "limitation": "No numerical offline/stream equivalence test, end-to-end latency or event timestamp causality verification."
+    },
+    {
+      "id": "C03",
+      "claim": "State/FFT/attention scale and absence of a complete camera/mobile pipeline preclude claiming MobileIE-equivalent deployment cost",
+      "evidence_class": "prior_static_arithmetic_and_current_source_inventory",
+      "anchors": [
+        {
+          "source": "resources/MIE-0004/derived/docs/upstream-code/models--amnet.py.txt",
+          "locator": "default latent256, ConvLSTM, translators and SNR modules"
+        },
+        {
+          "source": "resources/MIE-0004/derived/docs/entry-inventory-review.json",
+          "locator": "visible deployment/inference entries"
+        },
+        {
+          "source": "resources/MIE-0003/derived/report/claims.json",
+          "locator": "C04 ConvLSTM construction and H/C shape arithmetic"
+        }
+      ],
+      "limitation": "4,719,616 is only default cell construction count;63.28MiB only FP32 H/C formula, not full model/device peak or measured cost. NPU project not yet analyzed."
+    },
+    {
+      "id": "C04",
+      "claim": "Default public evaluator takes first sample of test batch4 and uses cropped overlapping clips with per-call state reset",
+      "evidence_class": "static_source_verification",
+      "anchors": [
+        {
+          "source": "resources/MIE-0004/derived/docs/upstream-code/scripts--train.py.txt",
+          "locator": "127–134 test loader"
+        },
+        {
+          "source": "resources/MIE-0004/derived/docs/upstream-code/engine--trainer.py.txt",
+          "locator": "436–505 y[0]/x[0] metrics"
+        },
+        {
+          "source": "resources/MIE-0004/derived/docs/upstream-code/datasets--sde_video_dataset_rgb.py.txt",
+          "locator": "63–68 clip index,103–145 resize/center crop"
+        },
+        {
+          "source": "resources/MIE-0004/derived/docs/static-config-audit.json",
+          "locator": "five default configs"
+        }
+      ],
+      "limitation": "Actual paper evaluation scripts, full-resolution/unique-frame protocol and numerical impact not known; no rerun."
+    },
+    {
+      "id": "C05",
+      "claim": "Absent configured pretrain without resume only warns/returns while outer code prints loaded; frozen/strict=False paths need explicit load audit",
+      "evidence_class": "static_conditional_control_flow",
+      "anchors": [
+        {
+          "source": "resources/MIE-0004/derived/docs/upstream-code/engine--trainer.py.txt",
+          "locator": "136–167 and222–238 pretrain/resume"
+        },
+        {
+          "source": "resources/MIE-0004/derived/docs/upstream-code/scripts--train.py.txt",
+          "locator": "141–159 freezing/optimizer"
+        },
+        {
+          "source": "resources/MIE-0004/derived/docs/static-config-audit.json",
+          "locator": "trigger and exact source anchors"
+        }
+      ],
+      "limitation": "This conditional path is not evidence authors used missing/random weights; real cloud checkpoints/coverage not checked."
+    },
+    {
+      "id": "C06",
+      "claim": "Published configs/loss/metric/logging/counting paths must be distinguished from paper and helper comments",
+      "evidence_class": "static_source_verification",
+      "anchors": [
+        {
+          "source": "resources/MIE-0004/derived/docs/static-config-audit.json",
+          "locator": "batch/lr/warmup/freeze values"
+        },
+        {
+          "source": "resources/MIE-0004/derived/docs/upstream-code/utils--metrics.py.txt",
+          "locator": "global RGB PSNR,Charbonnier, temporal_loss definition44"
+        },
+        {
+          "source": "resources/MIE-0004/derived/docs/upstream-code/utils--logger.py.txt",
+          "locator": "no-op methods"
+        },
+        {
+          "source": "resources/MIE-0004/derived/docs/upstream-code/utils--param_count.py.txt",
+          "locator": "trainable-only helper"
+        },
+        {
+          "source": "resources/MIE-0004/derived/docs/upstream-code/scripts--train.py.txt",
+          "locator": "trainable and total separately printed"
+        },
+        {
+          "source": "resources/MIE-0004/derived/docs/upstream-code/engine--trainer.py.txt",
+          "locator": "240–254 JSONL logging, scheduler optimizer-step calls"
+        }
+      ],
+      "limitation": "No claim whole project has no logs or parameter reporting is wrong; temporal_loss not connected does not imply no temporal modeling, paper-code numeric effects remain unknown."
+    },
+    {
+      "id": "C07",
+      "claim": "MIT claimed but LICENSE absent; seven cloud pages checked without obtaining or validating binary checkpoints",
+      "evidence_class": "source_availability_verification",
+      "anchors": [
+        {
+          "source": "resources/MIE-0004/derived/docs/upstream-code/README.md.txt",
+          "locator": "15,51–58,64–104,162–164"
+        },
+        {
+          "source": "resources/MIE-0004/derived/docs/entry-inventory-review.json",
+          "locator": "license/environment inventory"
+        },
+        {
+          "source": "resources/MIE-0004/derived/docs/weight-entry-review.json",
+          "locator": "Google401, Baidu extraction-code pages and receipts"
+        }
+      ],
+      "limitation": "Public share extraction codes are in README; page200 is not binary acquisition. Model content/history and actual license terms not verified."
+    },
+    {
+      "id": "C08",
+      "claim": "Authored media are illustrative samples, not independent temporal-quality evidence",
+      "evidence_class": "this_survey_media_inventory_and_limited_visual_observation",
+      "anchors": [
+        {
+          "source": "resources/MIE-0004/derived/docs/media-manifest.json",
+          "locator": "five decoded media metadata and frame samples"
+        },
+        {
+          "source": "resources/MIE-0004/derived/docs/media-visual-review.json",
+          "locator": "actual contacts/poster/framework viewed"
+        }
+      ],
+      "limitation": "Four405-frame1080p30fps scene files plus2880-frame promo; only6frames/video manually viewed, no full playback/GT/MOS or flicker measurement."
+    },
+    {
+      "id": "C09",
+      "claim": "Project site adjusts paired-player speed/seek for presentation synchronization",
+      "evidence_class": "static_source_verification",
+      "anchors": [
+        {
+          "source": "resources/MIE-0004/derived/docs/upstream-code/docs--index.html.txt",
+          "locator": "1181–1200 rate/seek,1275–1343 sync/resume,1375–1409 drag"
+        }
+      ],
+      "limitation": "Website playback sync is not model temporal algorithm or evidence of perceptual stability; no browser behavior test."
+    },
+    {
+      "id": "C10",
+      "claim": "Use state/information and protocol controls before transferring claims to tiny MobileIE video extension",
+      "evidence_class": "survey_inference_untested_controls",
+      "anchors": [
+        {
+          "source": "resources/MIE-0004/derived/report/analysis.md",
+          "locator": "proposed controlled follow-ups"
+        },
+        {
+          "source": "resources/MIE-0003/derived/reviews/0001/report/analysis.md",
+          "locator": "preserved formal-paper limits"
+        }
+      ],
+      "limitation": "Proposed experiments only;0model execution/training/GPU and no Gate3 work."
+    }
+  ],
+  "experiments_executed": 0
+}
