@@ -38,3 +38,7 @@ Codex  (sqs_A100) <langxibielangle@qq.com>；2026-11-20全文/源码阅读，202
 - README称MIT但21件没有LICENSE；承认源自PromptIR，未见MobileIE模型代码直接复用的证明。不能从共同作者/同类重参数化推出同一实现。
 
 原文额外generic盲先验未在公开3/5任务入口里找到对应独立配置；训练/推理名单只有原子任务，不能据此复现w/o prompt列。作者权重已于本次恢复后按修复的获取器新label重取，获取状态及静态容器检查另记；旧截断文件和错误success回执保留。数值结果、数据重叠/许可/精确split、历史语义映射、正式版差异、手机/完整成本与视频闪烁均待证。
+
+## 恢复后权重获取记录（追加）
+
+三任务新回执strict-retry1已完整66084673B=Content-Length；721个ZIP成员，其中719个storage，全部CRC通过。pickle metadata136602B只经pickletools解析指令，GLOBAL引用只记录不执行；可见TSM/linear专家bank键名，未出现明确denoise/dehaze/derain/blind/base_prompts/candidates任务字符串。此扫描不证明映射完整性、张量形状/数值正确、训练来源或泛用盲模式。详见weights-3tasks-container-review.json。原中断/截断历史保留；五任务仍等待新回执，不称已获。

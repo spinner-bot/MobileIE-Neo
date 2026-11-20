@@ -117,6 +117,15 @@
       "http": 200,
       "archive": "archive/sourcezip-AVC2-UESTC--DRNet-AiO.txt",
       "sha256": "d8a8923fe0a04fe09ec515ee2e69e65fdf3d85a572226fff94e6a350f4cc0f07"
+    },
+    {
+      "path": "receipts/mie0014-author-weights-3tasks-confirmed-strict-retry1.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/mie0014-author-weights-3tasks-confirmed-strict-retry1.zip",
+      "sha256": "29aa0f4ccaf4bc6e3fd1d0e1ddbf1f0624e05313f536b00fe22e423e7c417b88",
+      "semantic_adequacy": "Complete ZIP/CRC and opcode-only inspection in derived/docs/weights-3tasks-container-review.json; no tensor/model deserialization or result reproduction"
     }
   ],
   "discovery_evidence": [
@@ -141,7 +150,7 @@
       "source_record_id": "https://openalex.org/W7167249952"
     }
   ],
-  "adequacy": "Resumed2026-11-21 after G1-A0002 passed/catalogv3 release. Full13page arxivv1 and bounded applicable21file author source analyzed; formalTMM fulltext unavailable. Old5taskdownload remains incomplete; strict fresh3/5task downloads in progress, not claimed obtained yet. Gate2 not closed.",
+  "adequacy": "13-page arxivv1 fully read; applicable21file fixed source inspected. Three-task weight complete66084673B and all ZIP CRCs verified, metadata opcode-only; five-task retry still running. Formal TMM PDF/generic blind configuration/task semantic mapping remain gaps; Gate2 not closed.",
   "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts",
   "path_conventions": {
     "receipts[].path": "relative to workstation/collection",
