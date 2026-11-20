@@ -1,0 +1,141 @@
+{
+  "addendum_id": "G1-A0002",
+  "reviewed_at": "2026-11-21T07:32:32.246633+08:00",
+  "reviewer": "Codex  (sqs_A100) <langxibielangle@qq.com>",
+  "review_mode": "执行者在收集提交后另轮逐条自查及独立审查文件；不是外部专家/第二代理审查",
+  "standard": "gates/gate1-v1.md",
+  "standard_sha256": "f057b90010c0a1ca471e917f9c65cb78701d518758e9fbd51fa3b40013f476f7",
+  "cutoff": "2026-11-17",
+  "actual_retrieval_dates": [
+    "2026-11-20",
+    "2026-11-21"
+  ],
+  "source_commit": "bc35f191ca11fbfc94a0839faada962d09783724",
+  "status": "pass_with_disclosed_limits",
+  "gate1_passed": true,
+  "original_candidate_count": 124,
+  "new_candidate_counts": {
+    "paper": 1,
+    "code": 0,
+    "other": 0
+  },
+  "total_candidate_count": 125,
+  "total_by_type": {
+    "paper": 51,
+    "code": 65,
+    "other": 9
+  },
+  "checklist": [
+    {
+      "id": "G1.1",
+      "requirement": "身份与截止",
+      "status": "pass_with_disclosed_limits",
+      "evidence": [
+        "collection/gate1-addenda/0002/scope-disposition.md",
+        "collection/gate1-addenda/0002/new-candidates.json",
+        "collection/gate1-addenda/0002/identity-integrity.json"
+      ],
+      "reason": "原DOI/arxiv锚不变；PASTA2024 v2明确在Nov17前。Nov20/21为实际补取日期。论文一项纳入，不误称被引或因果视频方法。"
+    },
+    {
+      "id": "G1.2A",
+      "requirement": "多独立学术入口与分页",
+      "status": "pass_with_disclosed_limits",
+      "evidence": [
+        "collection/gate1-addenda/0002/round1-academic-reconciliation.json",
+        "collection/gate1-addenda/0002/round2-review.json",
+        "collection/gate1-addenda/0002/round3-review.json"
+      ],
+      "reason": "OA41/41 next_cursor空、S238/38无next，全部身份映射124既有项。Crossref主锚搜索/元数据成功但不是完整被引列表；PASTA宽检10项均非同文。原历史并集/缺失项保留。"
+    },
+    {
+      "id": "G1.2B",
+      "requirement": "原文、补充与官方代码",
+      "status": "pass_with_disclosed_limits",
+      "evidence": [
+        "collection/gate1-addenda/0002/identity-integrity.json",
+        "collection/gate1-addenda/0002/pasta-code-identity-review.json",
+        "collection/gate1-addenda/0002/pasta-mislinked-project.json"
+      ],
+      "reason": "19页v2完整PDF及HTML、摘要、作者主页已取得。主入口未另公布supplement或code；错接VideoMamba按官方README排除。未把代码未公开等同全网不存在。"
+    },
+    {
+      "id": "G1.2C",
+      "requirement": "作者与机构线索",
+      "status": "pass_with_disclosed_limits",
+      "evidence": [
+        "collection/gate1-addenda/0002/scope-disposition.md",
+        "collection/gate1-addenda/0002/round2-review.json"
+      ],
+      "reason": "作者主页明确PASTA；主作者8仓库和官方组16仓库经公开API成功列出，无PASTA。不同任务同作者不无限扩展。既有TeleAI与作者机构调查继承且不虚构新确认。"
+    },
+    {
+      "id": "G1.2D",
+      "requirement": "中英文开放网页与中文学术尝试",
+      "status": "pass_with_disclosed_limits",
+      "evidence": [
+        "collection/gate1-addenda/0002/round1-web.json",
+        "collection/gate1-addenda/0002/round2-web.json",
+        "collection/gate1-addenda/0002/round3-web.json"
+      ],
+      "reason": "精确题名/DOI/arxiv、代码、视频/时序/闪烁/电信查询实际留存。CNKI限定查询未返回本域页面，不声称核过其全文；原受限Scholar/CNKI/Wanfang等披露继续有效。"
+    },
+    {
+      "id": "G1.2E",
+      "requirement": "历史逐项对账",
+      "status": "pass_with_disclosed_limits",
+      "evidence": [
+        "collection/gate1-addenda/0002/round1-academic-reconciliation.json",
+        "collection/gate1-addenda/0002/round2-review.json"
+      ],
+      "reason": "原历史对账/113项与A0001新增11项继承保留，未按当前引用索引删旧。新PASTA不与124题名/arxiv合并；永久ID尚未分配。"
+    },
+    {
+      "id": "G1.3",
+      "requirement": "取得、去重与线索处置",
+      "status": "pass_with_disclosed_limits",
+      "evidence": [
+        "collection/gate1-addenda/0002/new-candidates.json",
+        "collection/gate1-addenda/0002/scope-disposition.md",
+        "collection/gate1-addenda/0002/pasta-code-identity-review.json",
+        "collection/gate1-addenda/0002/round3-review.json"
+      ],
+      "reason": "29个PASTA文件搜索、50个MobileIE代码命中逐项留处置；公开库10/总10补足名称搜索。原项目MIE99和传播族不误记新增。PASTA正式版归属不采用无主证的CVPRW2025信息。无未处理身份线索；可得性缺口单列。"
+    },
+    {
+      "id": "G1.3S",
+      "requirement": "连续两轮独立零新增",
+      "status": "pass",
+      "evidence": [
+        "collection/gate1-addenda/0002/round2-review.json",
+        "collection/gate1-addenda/0002/round3-review.json"
+      ],
+      "reason": "R1新1归零，提交范围处置后R2；R2已提交794e4c835后才R3。两轮候选hash一致：S2+仓库/作者/组+不同中英文，与OA/Crossref+ConvNet代码+另一中英文查询。均new0/pending0，不把同API重复算两轮。"
+    },
+    {
+      "id": "G1.4",
+      "requirement": "原件摘要和冻结留痕",
+      "status": "pass_with_disclosed_limits",
+      "evidence": [
+        "collection/gate1-addenda/0002/source-integrity-review.json",
+        "collection/gate1-addenda/0002/identity-integrity.json"
+      ],
+      "reason": "13获取回执/7932701B逐件实际哈希和长度核；2个连接器transport错误单独保留，公开API替代成功。原Gate/activev2/13关闭与MIE3追加复审实际验证全未变。"
+    }
+  ],
+  "inherited_evidence": [
+    "collection/coverage-matrix.json",
+    "collection/historical-reconciliation.json",
+    "collection/gate1-review001.json",
+    "collection/gate1-addenda/0001/gate1-review001.json",
+    "collection/gate1-addenda/0001/freeze-v1.json"
+  ],
+  "limitations": [
+    "范围/日期/访问约束下闭合，不是全网无遗漏证明；全部旧索引上限及受限源继续披露。",
+    "代码默认分支50命中上限不是所有文件；以不同精确查询/完整仓库名称列表及作者原入口交叉补足。R2连接器失败由实际成功公开API替代，不把失败写零结果。",
+    "PASTA公开官方代码/独立补充及正式出版未获确认，仅作者preprint；全文/方法/数值评价等待其Gate2队列。",
+    "DRNet已有权重获取不完整误报是已披露可得性缺口，非未处置新身份；修复获取判断后以新回执重取，不改旧原件或冒充复现。",
+    "本次纠正旧主页线索未单项处置的真实遗漏；不将原Gate1追溯写成当时绝无遗漏。"
+  ],
+  "allowed_next": "冻结本次证据后按原评分规则给新论文追加ID，保留1..124；发布v3剩余队列、仅解除本次推进限制后恢复当前14，按Gate2逐项推进。无Gate3实验授权。"
+}
