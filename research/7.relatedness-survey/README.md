@@ -9,6 +9,8 @@
 
 当前分析进度：13/124项已顺序完成Gate2；MIE-0003另已完成[正式ICML/PMLR版本追加复审](resources/MIE-0003/derived/reviews/0001/report/analysis.md)。[G1-A0001](collection/gate1-addenda/0001/status.json)补充收集和必需复审均已关闭，MIE-0004…0009已完成核心静态审查，MIE-0010实时水下增强论文已完成全文/图表与作者示例分析，MIE-0011作者项目已完成公开发布模块审阅，MIE-0012频率引导双路径注意力论文已完成全文/图表/适用作者实现审查，MIE-0013作者实现已完成公开适用源码审查，MIE-0014 DRNet动态重参数化论文已按顺序启动。新增MIE-0114…0124已编目，原113个ID及旧审查不变，当前以[目录v2](catalog/README-v2.md)、[顺序日志](catalog/analysis-log.jsonl)及[追加复审日志](catalog/review-log.jsonl)为准。
 
+当前队列暂受[G1-A0002线索处置核查](collection/gate1-addenda/0002/status.json)约束：MIE-0014保持唯一活跃，先补核PASTA具体关系及必要Gate1增补审查，不进入下一资源。
+
 这些Gate2结项属于公开文献与适用核心静态分析，不是数值复现。总体报告与Gate3预实验尚未完成，本阶段不执行Gate3。
 
 任务：为 MobileIE 照片→视频和 ICCV 2027 科研提供全面、可追溯的相关性证据。现有5号调研仅为历史线索，不继承其 Gate 通过状态或“没有相关工作”的结论。
