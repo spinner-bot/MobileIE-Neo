@@ -34,7 +34,11 @@ def main():
             raw = z.read(info.filename)
             digest = hashlib.sha256(raw).hexdigest()
             inventory.append({'path':source, 'bytes':len(raw), 'sha256':digest})
-            if Path(source).suffix.lower() in ('.py', '.yaml', '.yml', '.json', '.md', '.txt', '.html', '.sh') or Path(source).name in ('LICENSE', '.gitignore'):
+            if Path(source).suffix.lower() in (
+                '.py', '.yaml', '.yml', '.json', '.jsonl', '.md', '.txt', '.html', '.sh',
+                '.rs', '.toml', '.java', '.kt', '.kts', '.gradle', '.xml', '.properties',
+                '.c', '.h', '.cpp', '.hpp', '.cc', '.cu', '.cmake', '.ps1', '.bat', '.css',
+            ) or Path(source).name.lower() in ('license', 'copying', 'readme', '.gitignore', 'cmakelists.txt'):
                 flat = source.replace('/', '--') + '.txt'
                 dest = cache / 'docs/upstream-code' / flat
                 link = r / 'derived/docs/upstream-code' / flat

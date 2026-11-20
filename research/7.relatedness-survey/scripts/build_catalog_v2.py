@@ -93,7 +93,20 @@ def main():
         identity = {k:copy.deepcopy(row.get(k)) for k in [
             'resource_id', 'temporary_key', 'type', 'title', 'authors', 'repo', 'revision',
             'tree', 'dois', 'arxivs', 'relation', 'publication_year', 'publication_month',
-            'publication_date', 'date_limit', 'metadata_limit', 'author_metadata_source']}
+            'publication_date', 'commit_date', 'date_limit', 'metadata_limit', 'author_metadata_source']}
+        identity['relation'] = row.get('relation') or row.get('relation_verification')
+        identity['discovery_evidence'] = copy.deepcopy(row['sources'])
+        identity['discovery_path_base'] = 'workstation root; referenced collection files retain their prefix'
+        if row.get('repo'):
+            canonical = 'https://github.com/' + row['repo']
+        elif row.get('dois'):
+            canonical = 'https://doi.org/' + row['dois'][0]
+        elif row.get('arxivs'):
+            canonical = 'https://arxiv.org/abs/' + row['arxivs'][0]
+        else:
+            first_receipt = acq[row['temporary_key']]['receipts'][0]['path']
+            canonical = read(B / first_receipt)['url']
+        identity['canonical_url'] = canonical
         identity.update(created_at=now, family=row['preliminary']['family'],
                         analysis_order=row['analysis_order'], catalog_version=2,
                         initial_preliminary=row['preliminary'], source_snapshot_cutoff='2026-11-17',
