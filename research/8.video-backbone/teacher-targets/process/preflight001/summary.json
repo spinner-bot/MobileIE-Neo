@@ -1,0 +1,54 @@
+{
+  "at": "2026-11-20T17:18:46.471766+08:00",
+  "groups": [
+    {
+      "domain": "davis_synthetic",
+      "seed": 0,
+      "windows": 32,
+      "tail_MSE_ratio": 0.9292127068572372,
+      "train_proxy_temporal_ratio": 0.8054129901046867,
+      "proxy_temporal_win_windows": 26,
+      "GT_proxy_valid_fraction": 0.6462688446044922,
+      "teacher_motion_accepted_fraction": 0.5820941925048829,
+      "necessary_signal_passed": true
+    },
+    {
+      "domain": "davis_synthetic",
+      "seed": 1,
+      "windows": 32,
+      "tail_MSE_ratio": 0.9808681664671448,
+      "train_proxy_temporal_ratio": 0.7937434158579749,
+      "proxy_temporal_win_windows": 27,
+      "GT_proxy_valid_fraction": 0.6676934560139973,
+      "teacher_motion_accepted_fraction": 0.6388549804687501,
+      "necessary_signal_passed": true
+    },
+    {
+      "domain": "olives_real",
+      "seed": 0,
+      "windows": 32,
+      "tail_MSE_ratio": 0.983110736600855,
+      "train_proxy_temporal_ratio": 0.8260427131195281,
+      "proxy_temporal_win_windows": 25,
+      "GT_proxy_valid_fraction": 0.6924724578857421,
+      "teacher_motion_accepted_fraction": 0.6755123138427733,
+      "necessary_signal_passed": true
+    },
+    {
+      "domain": "olives_real",
+      "seed": 1,
+      "windows": 32,
+      "tail_MSE_ratio": 0.9927007950504575,
+      "train_proxy_temporal_ratio": 0.8202037579003101,
+      "proxy_temporal_win_windows": 25,
+      "GT_proxy_valid_fraction": 0.6760737101236979,
+      "teacher_motion_accepted_fraction": 0.6127217610677083,
+      "necessary_signal_passed": true
+    }
+  ],
+  "proceed_to_separate_training_protocol": true,
+  "method_established": false,
+  "independent_videos": false,
+  "full_training_registered": false,
+  "scope": "Finite train-only target reliability. GT-derived temporal proxy is neither physical flow nor DEV performance."
+}
