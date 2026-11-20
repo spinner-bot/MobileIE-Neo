@@ -1,0 +1,4098 @@
+{
+  "recorded_at": "2026-11-20T08:07:36.198Z",
+  "arguments": {
+    "query": "MobileIE FST",
+    "topn": 100
+  },
+  "result": {
+    "status": "fulfilled",
+    "value": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Action completed."
+        }
+      ],
+      "structuredContent": {
+        "results": [
+          {
+            "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/tools/torch_to_onnx.py",
+            "path": "shared/mon/mon/vision/enhance/multitask/mobileie/tools/torch_to_onnx.py",
+            "display_url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/tools/torch_to_onnx.py",
+            "display_title": "shared/mon/mon/vision/enhance/multitask/mobileie/tools/torch_to_onnx.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "        return self.tail(x4)\n\n\nclass FST(nn.Module):\n    \n    def __init__(self, block1, channels):\n        super(FST, self).__init__()",
+                "matches": [
+                  {
+                    "text": "FST",
+                    "indices": [
+                      37,
+                      40
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      114,
+                      117
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/xuhangc/Plumbing/blob/ea6d788ba16cdd4f7c1e8e7685b735b13e9e9352/blocks/02_convolution/mie.py",
+            "path": "blocks/02_convolution/mie.py",
+            "display_url": "https://github.com/xuhangc/Plumbing/blob/ea6d788ba16cdd4f7c1e8e7685b735b13e9e9352/blocks/02_convolution/mie.py",
+            "display_title": "blocks/02_convolution/mie.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "        return self.conv_out(x)\n\n\nclass FST(nn.Module):\n    \"\"\"FST：二次乘性门控 (w1·x1)·(w2·x1) + bias（与原 model/utils.FST 逐式一致）。\"\"\"\n\n    def __init__(self, block1: nn.Module, channels: int):",
+                "matches": [
+                  {
+                    "text": "FST",
+                    "indices": [
+                      40,
+                      43
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      63,
+                      66
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      135,
+                      138
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/torch_to_onnx.py",
+            "path": "torch_to_onnx.py",
+            "display_url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/torch_to_onnx.py",
+            "display_title": "torch_to_onnx.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "        x4 = torch.mul(x3, x2) * x1\n        return self.tail(x4)\n\nclass FST(nn.Module):\n    def __init__(self, block1, channels):\n        super(FST, self).__init__()\n        self.block1 = block1",
+                "matches": [
+                  {
+                    "text": "FST",
+                    "indices": [
+                      72,
+                      75
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      144,
+                      147
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/viplab-fudan/FJNDF-Pytorch/blob/3b46739e4f524c205c9c277f9c4b1673b9d5aedc/pyjnd/models/iccv_yan_2025_model.py",
+            "path": "pyjnd/models/iccv_yan_2025_model.py",
+            "display_url": "https://github.com/viplab-fudan/FJNDF-Pytorch/blob/3b46739e4f524c205c9c277f9c4b1673b9d5aedc/pyjnd/models/iccv_yan_2025_model.py",
+            "display_title": "pyjnd/models/iccv_yan_2025_model.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "            bias = bias + self.conv_out.bias\n        return weight, bias\n\nclass FST(nn.Module):\n    def __init__(self, block1, channels):\n        super(FST, self).__init__()\n        self.block1 = block1",
+                "matches": [
+                  {
+                    "text": "FST",
+                    "indices": [
+                      80,
+                      83
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      152,
+                      155
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/viplab-fudan/FJNDF-Pytorch/blob/3b46739e4f524c205c9c277f9c4b1673b9d5aedc/pyjnd/models/iccv_yan_2025_lite_model.py",
+            "path": "pyjnd/models/iccv_yan_2025_lite_model.py",
+            "display_url": "https://github.com/viplab-fudan/FJNDF-Pytorch/blob/3b46739e4f524c205c9c277f9c4b1673b9d5aedc/pyjnd/models/iccv_yan_2025_lite_model.py",
+            "display_title": "pyjnd/models/iccv_yan_2025_lite_model.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "            bias = bias + self.conv_out.bias\n        return weight, bias\n\nclass FST(nn.Module):\n    def __init__(self, block1, channels):\n        super(FST, self).__init__()\n        self.block1 = block1",
+                "matches": [
+                  {
+                    "text": "FST",
+                    "indices": [
+                      80,
+                      83
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      152,
+                      155
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE-main/MobileIE-main/torch_to_onnx.py",
+            "path": "MobileIE-main/MobileIE-main/torch_to_onnx.py",
+            "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE-main/MobileIE-main/torch_to_onnx.py",
+            "display_title": "MobileIE-main/MobileIE-main/torch_to_onnx.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "        x4 = torch.mul(x3, x2) * x1\n        return self.tail(x4)\n\nclass FST(nn.Module):\n    def __init__(self, block1, channels):\n        super(FST, self).__init__()\n        self.block1 = block1",
+                "matches": [
+                  {
+                    "text": "FST",
+                    "indices": [
+                      72,
+                      75
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      144,
+                      147
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/khaihoang004/dewarp/blob/39eef66524919078836ec0f9122fda27d07a43e8/src/model/refinement/mobile_ie.py",
+            "path": "src/model/refinement/mobile_ie.py",
+            "display_url": "https://github.com/khaihoang004/dewarp/blob/39eef66524919078836ec0f9122fda27d07a43e8/src/model/refinement/mobile_ie.py",
+            "display_title": "src/model/refinement/mobile_ie.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "# Tăng tính phi tuyến bằng cách sử dụng tương tác bậc hai (quadratic interaction)\nclass FST(nn.Module):\n    def __init__(self, channels):",
+                "matches": [
+                  {
+                    "text": "FST",
+                    "indices": [
+                      104,
+                      107
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "\nclass MobileIE(nn.Module):\n    def __init__(self, in_channels=3, out_channels=3, mid_channels=16, num_blocks=2, deploy=False):",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      7,
+                      15
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/tediyankov/reef-track/blob/606915de6a23be92d43d7515aa402437d5bfb774/src/reeftrack/enhance/__init__.py",
+            "path": "src/reeftrack/enhance/__init__.py",
+            "display_url": "https://github.com/tediyankov/reef-track/blob/606915de6a23be92d43d7515aa402437d5bfb774/src/reeftrack/enhance/__init__.py",
+            "display_title": "src/reeftrack/enhance/__init__.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\nclass MobileIE:\n    \"\"\"Re-parameterised (\"slim\") MobileIE-LLE network, written out with plain conv ops.\"\"\"",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      7,
+                      15
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      50,
+                      58
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "\n        def fst(y, p):  # feature self-transform: (w1*y)*(w2*y) + b\n            return (w[f\"{p}.weight1\"] * y) * (w[f\"{p}.weight2\"] * y) + w[f\"{p}.bias\"]",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      13,
+                      16
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/zhaoyang97/Paper-Notes/blob/de63c0e13b242cadcc5faa8cc2017fcc8c235026/docs/ICCV2025/image_restoration/mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md",
+            "path": "docs/ICCV2025/image_restoration/mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md",
+            "display_url": "https://github.com/zhaoyang97/Paper-Notes/blob/de63c0e13b242cadcc5faa8cc2017fcc8c235026/docs/ICCV2025/image_restoration/mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md",
+            "display_title": "docs/ICCV2025/image_restoration/mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "## 相关工作与启发\n\n- **RepVGG / ACNet / DBB**：重参数化的先驱工作，MBRConv 在此基础上增加了并行 BN 和 IWO\n- **StarNet**：星形操作启发了 FST 的二次交互设计\n- **VanillaNet**：极简主义设计理念与 MobileIE 一脉相承\n- **SYELLE**（ICCV'23）：同一赛道的轻量 IE 方法，是 MobileIE 最直接的对比对象\n- **NTIRE 挑战赛**：高效 IE 赛道的多个方案使用了重参数化结构",
+                "matches": [
+                  {
+                    "text": "FST",
+                    "indices": [
+                      173,
+                      176
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      246,
+                      254
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      334,
+                      342
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/zhaoyang97/Paper-Notes-en/blob/ba5e18460ca5b431b2114af6fc364c5ecd1f60f1/docs/ICCV2025/image_restoration/mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md",
+            "path": "docs/ICCV2025/image_restoration/mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md",
+            "display_url": "https://github.com/zhaoyang97/Paper-Notes-en/blob/ba5e18460ca5b431b2114af6fc364c5ecd1f60f1/docs/ICCV2025/image_restoration/mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md",
+            "display_title": "docs/ICCV2025/image_restoration/mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "## Related Work & Insights\n\n- **RepVGG / ACNet / DBB**: Pioneering re-parameterization works; MBRConv builds upon these by adding parallel BN and IWO.\n- **StarNet**: The star operation inspired the quadratic interaction design in FST.\n- **VanillaNet**: Its minimalist design philosophy is closely aligned with MobileIE.\n- **SYELLE** (ICCV'23): A lightweight IE method in the same track and the most direct point of comparison for MobileIE.\n- **NTIRE Challenge**: Multiple efficient IE submissions have employed re-parameterization structures.",
+                "matches": [
+                  {
+                    "text": "FST",
+                    "indices": [
+                      230,
+                      233
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      310,
+                      318
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      430,
+                      438
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/model.py",
+            "path": "shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/model.py",
+            "display_url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/model.py",
+            "display_title": "shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/model.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "from mon.core import MLType, ModelMixin, nn, Path, Task\nfrom .network.utils import DropBlock, FST, FSTS, MBRConv1, MBRConv3, MBRConv5\n",
+                "matches": [
+                  {
+                    "text": "FST",
+                    "indices": [
+                      94,
+                      97
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      99,
+                      102
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "\n@MODELS.register(name=\"mobileie_lle\", arch=\"mobileie\")\nclass MobileIELLE(nn.Module, ModelMixin):",
+                "matches": [
+                  {
+                    "text": "mobileie",
+                    "indices": [
+                      24,
+                      32
+                    ]
+                  },
+                  {
+                    "text": "mobileie",
+                    "indices": [
+                      45,
+                      53
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      62,
+                      70
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE_论文对齐与偏差复核报告.md",
+            "path": "MobileIE_论文对齐与偏差复核报告.md",
+            "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE_论文对齐与偏差复核报告.md",
+            "display_title": "MobileIE_论文对齐与偏差复核报告.md",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\n| 论文 | 代码实现 | 判定 |\n|---|---|---|\n| Fig.2：head(MBRConv5+PReLU+MBRConv3) → body(MBRConv3+FST) → HDPA → MBRConv3 | `repro/src/mobileie/model.py:73-97` 与官方 `model/lle.py:16-39` **同构**（channels=12, rep_scale=4） | ✅ |\n| §3.2 MBRConv：多分支 + **每分支独立 BN** + Conv1×1 压缩 | 直接复用官方 `model/utils.py` 的 `MBRConv{1,3,5}`（折叠数学脆弱，未重写） | ✅ |\n| §3.1 推理期重参数化成单一卷积 | `model.py:128-156 slim()`；实测训练图 49,978 → 推理图 4,075 参数 | ✅ |\n| §3.3 FST：`Scale·(f⊙f)+bias` | 官方 `utils.py:315-327` 的 `FST`（`w1·x * w2·x + bias`，即 `w1w2·x²+b`） | ✅ 结构在位 |",
+                "matches": [
+                  {
+                    "text": "FST",
+                    "indices": [
+                      108,
+                      111
+                    ]
+                  },
+                  {
+                    "text": "mobileie",
+                    "indices": [
+                      148,
+                      156
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      568,
+                      571
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      629,
+                      632
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/zhaoyang97/Paper-Notes/blob/de63c0e13b242cadcc5faa8cc2017fcc8c235026/docs/ICCV2025/image_restoration/index.md",
+            "path": "docs/ICCV2025/image_restoration/index.md",
+            "display_url": "https://github.com/zhaoyang97/Paper-Notes/blob/de63c0e13b242cadcc5faa8cc2017fcc8c235026/docs/ICCV2025/image_restoration/index.md",
+            "display_title": "docs/ICCV2025/image_restoration/index.md",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\n**[MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices](mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md)**\n\n:   提出 MobileIE，一个仅有约 4K 参数的极致轻量 CNN 框架，通过多分支重参数化卷积（MBRConv）、特征自变换（FST）模块、分层双路径注意力（HDPA）以及增量权重优化（IWO）策略，首次在移动设备上实现超过 1100 FPS 的实时图像增强，同时在低光增强、水下增强和 ISP 三个任务上取得最优的速度-性能平衡。\n\n**[MP-HSIR: A Multi-Prompt Framework for Universal Hyperspectral Image Restoration](mp-hsir_a_multi-prompt_framework_for_universal_hyperspectral_image_restoration.md)**\n",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      4,
+                      12
+                    ]
+                  },
+                  {
+                    "text": "mobileie",
+                    "indices": [
+                      112,
+                      120
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      211,
+                      219
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      343,
+                      346
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/ytdl-org/youtube-dl/blob/bc069d2bb40bcbc5bdfdf352ca15bf586c7792cb/youtube_dl/extractor/extractors.py",
+            "path": "youtube_dl/extractor/extractors.py",
+            "display_url": "https://github.com/ytdl-org/youtube-dl/blob/bc069d2bb40bcbc5bdfdf352ca15bf586c7792cb/youtube_dl/extractor/extractors.py",
+            "display_title": "youtube_dl/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "from .webofstories import (\n    WebOfStoriesIE,\n    WebOfStoriesPlaylistIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      10,
+                      13
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      36,
+                      39
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      56,
+                      59
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      22,
+                      30
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/network/lle.py",
+            "path": "shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/network/lle.py",
+            "display_url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/network/lle.py",
+            "display_title": "shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/network/lle.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\nfrom .utils import DropBlock, FST, FSTS, MBRConv1, MBRConv3, MBRConv5\n",
+                "matches": [
+                  {
+                    "text": "FST",
+                    "indices": [
+                      31,
+                      34
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      36,
+                      39
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    def slim(self):\n        net_slim    = MobileIELLENetS(self.channels)\n        weight_slim = net_slim.state_dict()",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      42,
+                      50
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/network/isp.py",
+            "path": "shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/network/isp.py",
+            "display_url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/network/isp.py",
+            "display_title": "shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/network/isp.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\nfrom .utils import DropBlock, FST, FSTS, MBRConv1, MBRConv3, MBRConv5\n",
+                "matches": [
+                  {
+                    "text": "FST",
+                    "indices": [
+                      31,
+                      34
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      36,
+                      39
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    def slim(self):\n        net_slim    = MobileIEISPNetS(self.channels)\n        weight_slim = net_slim.state_dict()",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      42,
+                      50
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE_后续验证计划.md",
+            "path": "MobileIE_后续验证计划.md",
+            "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE_后续验证计划.md",
+            "display_title": "MobileIE_后续验证计划.md",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "```bat\nD:\\AIWorkSpace\\MobileIE\\.venv\\Scripts\\python.exe D:\\AIWorkSpace\\MobileIE\\repro\\scripts\\ctrl_supervisor.py\n```",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      22,
+                      30
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      71,
+                      79
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "\n**依据**：论文**自身**对同一模型在 LOLv1 上给出 **23.62（Table 1）与 23.26（Table 6）**，离散 0.36 dB；`FST` 用 `torch.randn` 初始化且官方未固定种子。\n",
+                "matches": [
+                  {
+                    "text": "FST",
+                    "indices": [
+                      130,
+                      133
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/src/mobileie/model.py",
+            "path": "repro/src/mobileie/model.py",
+            "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/src/mobileie/model.py",
+            "display_title": "repro/src/mobileie/model.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "class MobileIELLE(nn.Module):\n    \"\"\"Train-time MobileIE.\n",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      6,
+                      14
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      48,
+                      56
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    (4-ch RGGB half-res in, PixelShuffle -> 3-ch full-res out); every MBRConv /\n    FST / HDPA module is shared.\n    \"\"\"",
+                "matches": [
+                  {
+                    "text": "FST",
+                    "indices": [
+                      84,
+                      87
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/zhaoyang97/Paper-Notes-en/blob/ba5e18460ca5b431b2114af6fc364c5ecd1f60f1/docs/ICCV2025/image_restoration/index.md",
+            "path": "docs/ICCV2025/image_restoration/index.md",
+            "display_url": "https://github.com/zhaoyang97/Paper-Notes-en/blob/ba5e18460ca5b431b2114af6fc364c5ecd1f60f1/docs/ICCV2025/image_restoration/index.md",
+            "display_title": "docs/ICCV2025/image_restoration/index.md",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\n**[MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices](mobileie_an_extremely_lightweight_and_effective_convnet_for_real-time_image_enha.md)**\n\n:   This paper proposes MobileIE, an extremely lightweight CNN framework with approximately 4K parameters, which achieves real-time image enhancement at over 1100 FPS on mobile devices for the first time. This is accomplished through multi-branch re-parameterizable convolution (MBRConv), a feature self-transformation (FST) module, hierarchical dual-path attention (HDPA), and an incremental weight optimization (IWO) strategy. MobileIE achieves state-of-the-art speed–performance trade-offs across three tasks: low-light enhancement, underwater enhancement, and ISP.\n\n**[MP-HSIR: A Multi-Prompt Framework for Universal Hyperspectral Image Restoration](mp-hsir_a_multi-prompt_framework_for_universal_hyperspectral_image_restoration.md)**\n",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      4,
+                      12
+                    ]
+                  },
+                  {
+                    "text": "mobileie",
+                    "indices": [
+                      112,
+                      120
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      224,
+                      232
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      520,
+                      523
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      629,
+                      637
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/model/lle.py",
+            "path": "model/lle.py",
+            "display_url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/model/lle.py",
+            "display_title": "model/lle.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "        self.channels = channels\n        self.head = FST(\n            nn.Sequential(",
+                "matches": [
+                  {
+                    "text": "FST",
+                    "indices": [
+                      53,
+                      56
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    def slim(self):\n        net_slim = MobileIELLENetS(self.channels)\n        weight_slim = net_slim.state_dict()",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      39,
+                      47
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/model/isp.py",
+            "path": "model/isp.py",
+            "display_url": "https://github.com/AVC2-UESTC/MobileIE/blob/7030d125e28a0b9c30075f84f79f165acd13bdc5/model/isp.py",
+            "display_title": "model/isp.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "        self.channels = channels\n        self.head = FST(\n            nn.Sequential(",
+                "matches": [
+                  {
+                    "text": "FST",
+                    "indices": [
+                      53,
+                      56
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    def slim(self):\n        net_slim = MobileIEISPNetS(self.channels)\n        weight_slim = net_slim.state_dict()",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      39,
+                      47
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/torch_to_onnx.py",
+            "path": "torch_to_onnx.py",
+            "display_url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/torch_to_onnx.py",
+            "display_title": "torch_to_onnx.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "#         super(MobileIENetS, self).__init__()\n#         self.head = FST(\n#             nn.Sequential(",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      16,
+                      24
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      69,
+                      72
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "                           opset=17):\n    \"\"\"主导出函数：从 slim state_dict → MobileIELLENetS → ONNX\"\"\"\n    device = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      87,
+                      95
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/gugugu531/Hispark_SocChina_2026/blob/c3bdfbb0f6b45a918598d7e23f332bf731620914/models/ctbg/export_ctbg.py",
+            "path": "models/ctbg/export_ctbg.py",
+            "display_url": "https://github.com/gugugu531/Hispark_SocChina_2026/blob/c3bdfbb0f6b45a918598d7e23f332bf731620914/models/ctbg/export_ctbg.py",
+            "display_title": "models/ctbg/export_ctbg.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "HERE = Path(__file__).resolve().parent\nsys.path.insert(0, str(HERE))\nimport litmodule_coeff as M\nREPO = Path(__file__).resolve().parents[1] / \"repos/MobileIE\"\nsys.path.insert(0, str(REPO))\nfrom model.utils import MBRConv1, MBRConv3, MBRConv5, FST, FSTS  # noqa: E402\n",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      149,
+                      157
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      243,
+                      246
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      248,
+                      251
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE-main/MobileIE-main/model/isp.py",
+            "path": "MobileIE-main/MobileIE-main/model/isp.py",
+            "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE-main/MobileIE-main/model/isp.py",
+            "display_title": "MobileIE-main/MobileIE-main/model/isp.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "        self.channels = channels\n        self.head = FST(\n            nn.Sequential(",
+                "matches": [
+                  {
+                    "text": "FST",
+                    "indices": [
+                      53,
+                      56
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    def slim(self):\n        net_slim = MobileIEISPNetS(self.channels)\n        weight_slim = net_slim.state_dict()",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      39,
+                      47
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE-main/MobileIE-main/model/lle.py",
+            "path": "MobileIE-main/MobileIE-main/model/lle.py",
+            "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/MobileIE-main/MobileIE-main/model/lle.py",
+            "display_title": "MobileIE-main/MobileIE-main/model/lle.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "        self.channels = channels\n        self.head = FST(\n            nn.Sequential(",
+                "matches": [
+                  {
+                    "text": "FST",
+                    "indices": [
+                      53,
+                      56
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    def slim(self):\n        net_slim = MobileIELLENetS(self.channels)\n        weight_slim = net_slim.state_dict()",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      39,
+                      47
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/blackjack4494/yt-dlc/blob/f9401f2a91987068139c5f757b12fc711d4c0cee/youtube_dlc/extractor/extractors.py",
+            "path": "youtube_dlc/extractor/extractors.py",
+            "display_url": "https://github.com/blackjack4494/yt-dlc/blob/f9401f2a91987068139c5f757b12fc711d4c0cee/youtube_dlc/extractor/extractors.py",
+            "display_title": "youtube_dlc/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "from .webofstories import (\n    WebOfStoriesIE,\n    WebOfStoriesPlaylistIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      10,
+                      13
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      36,
+                      39
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      56,
+                      59
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      22,
+                      30
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/QA.md",
+            "path": "QA.md",
+            "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/QA.md",
+            "display_title": "QA.md",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "  - **从零训练层：未复现。** 最佳 22.42（论文口径）vs 论文 23.62，**差 1.20 dB**。\n  - **偏差根因**（按可能性）：① 训练未走完 2000 轮（余弦周期退火末端没走到）；② batch size 只能开 2（显存限制，官方是 4）；③ 单种子 + FST 随机初始化；④ IWO 的 `W_learn` 我们置零、论文是 Xavier。\n  - 另有三处**论文自身矛盾**：正文\"reset every 50 epochs\" vs 代码 `T_mult=2`；Fig.3 说 Xavier vs 我们置零；Table 1 的 23.62 vs Table 6 的 23.26。\n  - **论文 Table 7 参数量口径**：论文 4.047 K = 卷积 4035 + PReLU 12，**剔除了 FST 的 28 个参数**；训练图 47.211 K 还额外剔除了 warmup 辅助头 2739。\n- **依据**：`MobileIE_论文对齐与偏差复核报告.md`\n\n### A2. 「所以我现在复现了论文了吗？」",
+                "matches": [
+                  {
+                    "text": "FST",
+                    "indices": [
+                      294,
+                      297
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      639,
+                      642
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      743,
+                      751
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/khaihoang004/dewarp/blob/39eef66524919078836ec0f9122fda27d07a43e8/research.md",
+            "path": "research.md",
+            "display_url": "https://github.com/khaihoang004/dewarp/blob/39eef66524919078836ec0f9122fda27d07a43e8/research.md",
+            "display_title": "research.md",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "NUnet | | no read access yet | [Link](https://www.researchgate.net/publication/377100444_A_Lightweight_NUet_Model_for_Document_Image_Restoration)|\nMobileIE |  Low-Light Enhancement (LLE), Underwater Image Enhancement (UIE), and end-to-end Image Signal Processing (ISP).| 4K parameters ???| [Link](https://arxiv.org/pdf/2507.01838)|\nLiR | Image Restoration, denoise|  7.31 params| [Link](https://arxiv.org/pdf/2402.01368)|",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      147,
+                      155
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "## Methodology\n- hybrid attention + multi-task OCR-guided loss → hướng refine HDPA + FST\n- EDSR: -> rất mạnh trong việc reconstruct high-frequency information",
+                "matches": [
+                  {
+                    "text": "FST",
+                    "indices": [
+                      90,
+                      93
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/model/lle-Copy1.py",
+            "path": "model/lle-Copy1.py",
+            "display_url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/model/lle-Copy1.py",
+            "display_title": "model/lle-Copy1.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\n# class MobileIELLENetS(nn.Module):\n#     def __init__(self, channels):",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      9,
+                      17
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "\n        self.head = FST(\n            nn.Sequential(",
+                "matches": [
+                  {
+                    "text": "FST",
+                    "indices": [
+                      21,
+                      24
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/论文复现对照.md",
+            "path": "repro/论文复现对照.md",
+            "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/论文复现对照.md",
+            "display_title": "repro/论文复现对照.md",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\n| 论文怎么说 | 我们怎么做 | 结果 |\n|---|---|---|\n| 摘要/结论：约 **4K 参数**的极轻量 CNN | 装配 `src/mobileie/model.py:51-127`，模块本体复用官方 `model/utils.py` | ✅ 推理图 **4,075** 参数（论文 4.047 K，+0.7%） |\n| Fig.2：head(MBRConv5+PReLU+MBRConv3) → body(MBRConv3+FST) → HDPA → MBRConv3 | `model.py:73-97` 逐块装配；`channels=12`、`rep_scale=4` | ✅ 与官方 `model/lle.py:13-38` 同构；`channels=12` 由官方 `complexity.py:49` 与参数量反推双重确认 |\n| §3.1 MBRConv：1×1/3×3/5×5 多分支 + **每分支独立 BN** + Conv1×1 压缩 | 复用官方 `utils.py:5/146/272`；折叠与全覆盖断言我们自己写 `model.py:128-156` | ✅ 折叠前后逐像素最大偏差 **2.09e-07**（selfcheck） |\n| §3.1 推理时重参数化成标准卷积，\"reducing parameters while maintaining performance\" | 每轮存 best 时真的折叠并评测：`engine.py:263-264` | ✅ 训练图 49,978 → 推理图 4,075；产物 `ckpt/model_best_slim.pkl` |",
+                "matches": [
+                  {
+                    "text": "mobileie",
+                    "indices": [
+                      128,
+                      136
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      319,
+                      322
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/model/lle.py",
+            "path": "model/lle.py",
+            "display_url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/model/lle.py",
+            "display_title": "model/lle.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\n        # Head: MBRConv5 + PReLU + MBRConv3 (Wrapped in FST)\n        self.head = FST(",
+                "matches": [
+                  {
+                    "text": "FST",
+                    "indices": [
+                      57,
+                      60
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      82,
+                      85
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "\nclass MobileIELLENetS(nn.Module):\n    def __init__(self, channels):",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      7,
+                      15
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/paper/bilingual/zh.py",
+            "path": "paper/bilingual/zh.py",
+            "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/paper/bilingual/zh.py",
+            "display_title": "paper/bilingual/zh.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "# 图注/表注译文，键为 \"figure N\" / \"table N\"。英文图注已在裁剪图内，这里只补中文。\nCAPTIONS = {\n    \"figure 1\": \"效率对比。MobileIE 在速度、体积与精度之间取得了更好的平衡。\",\n    \"figure 2\": \"所提 MobileIE 的架构，包含多分支重参数化卷积（MBRConv）、特征自变换（FST）与分层双路注意力（HDPA）。推理时 MBRConv 重参数化为标准卷积，在保持训练性能的同时把模型规模降到 4K 参数。详细架构设置见附录。\",\n    \"figure 3\": \"MBRConv3×3 的结构。\",\n    \"figure 4\": \"(a) Batch Norm 对数据分布的影响；(b) 不同损失函数如何处理像素差异。\",\n    \"figure 5\": \"在 LOLv1 [75] 上低光增强的可视化对比。\",",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      156,
+                      164
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      252,
+                      260
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      340,
+                      343
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/算法复现说明.md",
+            "path": "repro/算法复现说明.md",
+            "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/算法复现说明.md",
+            "display_title": "repro/算法复现说明.md",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "| IAT | 86.9 | 23.38 | ✓ |\n| **MobileIE** | **4.05** | **23.62** | ✓ 5×5 大感受野 + 双路门控 |\n",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      33,
+                      41
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "- 从\"纯曲线 14.7 dB\"到\"4K 参数 23.6 dB\"，这 **8.9 dB 的门槛是\"能看空域邻域\"这件事本身**\n  （912 个 5×5 参数是它的载体，但收益要 FST/HDPA/tail 一起兑现 —— 这句是解读，不是论文原话）。\n- 反过来，比它大 21 倍的 IAT 只有 23.38，大 1300 倍的 DDNet 只有 21.82",
+                "matches": [
+                  {
+                    "text": "FST",
+                    "indices": [
+                      167,
+                      170
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/paper/bilingual/body.txt",
+            "path": "paper/bilingual/body.txt",
+            "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/paper/bilingual/body.txt",
+            "display_title": "paper/bilingual/body.txt",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "3.1. Overall Pipeline\n\n@@17 para\nWe aim to design an efficient IE model that balances parameters, speed, and performance. Following the simplicity principle [88], we adopted a streamlined topology based on basic operations, illustrated in Figure 2. The proposed MobileIE, built on Re-parameterization, integrates four key components: shallow feature extraction, deep feature extraction, feature transform, and an attention mechanism. During training, the degraded image first passes through MBRConv5 × 5 and the PReLU activation function to extract shallow features. Two MBRConv3 × 3 and FST modules then process these to learn deeper features. The HDPA mechanism directs the model’s focus to important regions, and MBRConv3 × 3 refines the output. To address training performance bottlenecks, we introduce the IWO strategy and LVW loss function. In inference, all MBRConv layers are re-parameterized into standard convolutions, reducing parameters while maintaining performance. MobileIE’s streamlined structure ensures fast inference and easy deployment on mobile devices. Despite its simplicity, MobileIE surpasses SOTA lightweight IE models, as shown in Figure 1.\n\n@@19 heading\n3.2. Multi-Branch Re-param Convolution",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      262,
+                      270
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      590,
+                      593
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      985,
+                      993
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      1106,
+                      1114
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/scripts/selfcheck.py",
+            "path": "repro/scripts/selfcheck.py",
+            "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/repro/scripts/selfcheck.py",
+            "display_title": "repro/scripts/selfcheck.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "sys.path.insert(0, str(Path(__file__).resolve().parents[1] / \"src\"))\nsys.path.insert(0, str(Path(__file__).resolve().parents[2] / \"MobileIE-main\" / \"MobileIE-main\"))\n",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      131,
+                      139
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      149,
+                      157
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    frozen = [n for n, p in iwo.named_parameters() if not p.requires_grad and n.endswith(\"conv_out.weight\")]\n    # FST also owns a scalar `weight1`, so filter on the 4-D conv_out-shaped delta.\n    trainable = [n for n, p in iwo.named_parameters()",
+                "matches": [
+                  {
+                    "text": "FST",
+                    "indices": [
+                      115,
+                      118
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/sailfish009/paper/blob/f387ce7de3f262fc10a3092837ac53e43e155def/2025.07.03.txt",
+            "path": "2025.07.03.txt",
+            "display_url": "https://github.com/sailfish009/paper/blob/f387ce7de3f262fc10a3092837ac53e43e155def/2025.07.03.txt",
+            "display_title": "2025.07.03.txt",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\n83, TITLE: MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices\nAUTHORS: HAILONG YAN et. al.",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      12,
+                      20
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "170, TITLE: Probing Evaluation Awareness of Language Models\nAUTHORS: Jord Nguyen ; Khiem Hoang ; Carlo Leonardo Attubato ; Felix Hofst�tter\nCATEGORY: cs.CL [cs.CL, cs.AI]",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      131,
+                      134
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/yasoob/youtube-dl-GUI/blob/2c5b1c2300050c86d1245bcc8823b81d9d97f346/youtube_dl/extractor/extractors.py",
+            "path": "youtube_dl/extractor/extractors.py",
+            "display_url": "https://github.com/yasoob/youtube-dl-GUI/blob/2c5b1c2300050c86d1245bcc8823b81d9d97f346/youtube_dl/extractor/extractors.py",
+            "display_title": "youtube_dl/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "from .webofstories import (\n    WebOfStoriesIE,\n    WebOfStoriesPlaylistIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      10,
+                      13
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      36,
+                      39
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      56,
+                      59
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      22,
+                      30
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/ytdl-patched/ytdl-patched/blob/7b475779cccec7f4ed9d64b7c5ce6c0d6213bfee/yt_dlp/extractor/_extractors.py",
+            "path": "yt_dlp/extractor/_extractors.py",
+            "display_url": "https://github.com/ytdl-patched/ytdl-patched/blob/7b475779cccec7f4ed9d64b7c5ce6c0d6213bfee/yt_dlp/extractor/_extractors.py",
+            "display_title": "yt_dlp/extractor/_extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "from .webofstories import (\n    WebOfStoriesIE,\n    WebOfStoriesPlaylistIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      10,
+                      13
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      36,
+                      39
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      56,
+                      59
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      22,
+                      30
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/nlsidf/vnrit/blob/59bd6746c6cccde4197ccfabb1d60fb509127436/src/main.rs",
+            "path": "src/main.rs",
+            "display_url": "https://github.com/nlsidf/vnrit/blob/59bd6746c6cccde4197ccfabb1d60fb509127436/src/main.rs",
+            "display_title": "src/main.rs",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "///\n/// Inspired by MobileIE's channel attention (avg pool → sigmoid → scale):\n///   avg Y < 32  (very dark):    boost 1.75×  — enhance shadow detail",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      20,
+                      28
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "///     during motion (eliminates temporal flicker).\n///   - **Non-linear gain curve** — FST-inspired quadratic mapping compresses\n///     large |diff| values for natural-looking sharpening without halos.",
+                "matches": [
+                  {
+                    "text": "FST",
+                    "indices": [
+                      91,
+                      94
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/enable_iwo.py",
+            "path": "enable_iwo.py",
+            "display_url": "https://github.com/miaory/test/blob/fd7e97c645c6be6e1816ccba66e8f425f7c2b542/enable_iwo.py",
+            "display_title": "enable_iwo.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "    Args:\n        model: 已训练好的 baseline 模型（MobileIELLENet）\n        config: IWO 配置字典，包含：",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      59,
+                      67
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    2. IWO 参数（IWOConv1x1.weight_learn）\n    3. gate 参数（FST 中 .u. / .v. 等，可选）\n",
+                "matches": [
+                  {
+                    "text": "FST",
+                    "indices": [
+                      68,
+                      71
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/paper/bilingual/bilingual.html",
+            "path": "paper/bilingual/bilingual.html",
+            "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/paper/bilingual/bilingual.html",
+            "display_title": "paper/bilingual/bilingual.html",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "<h3 class=\"zh\">3.1. 整体流程</h3>\n<p class=\"para en\">We aim to design an efficient IE model that balances parameters, speed, and performance. Following the simplicity principle [88], we adopted a streamlined topology based on basic operations, illustrated in Figure 2. The proposed MobileIE, built on Re-parameterization, integrates four key components: shallow feature extraction, deep feature extraction, feature transform, and an attention mechanism. During training, the degraded image first passes through MBRConv5 × 5 and the PReLU activation function to extract shallow features. Two MBRConv3 × 3 and FST modules then process these to learn deeper features. The HDPA mechanism directs the model’s focus to important regions, and MBRConv3 × 3 refines the output. To address training performance bottlenecks, we introduce the IWO strategy and LVW loss function. In inference, all MBRConv layers are re-parameterized into standard convolutions, reducing parameters while maintaining performance. MobileIE’s streamlined structure ensures fast inference and easy deployment on mobile devices. Despite its simplicity, MobileIE surpasses SOTA lightweight IE models, as shown in Figure 1.</p>\n<p class=\"para zh\">我们的目标是设计一个在参数量、速度与性能之间取得平衡的高效图像增强模型。遵循简洁性原则 [88]，我们采用基于基础运算的精简拓扑，如图 2 所示。所提出的 MobileIE 以重参数化为基础，融合四个关键组件：浅层特征提取、深层特征提取、特征变换与注意力机制。训练时，退化图像先经 MBRConv5×5 与 PReLU 激活提取浅层特征；随后由两个 MBRConv3×3 与 FST 模块处理以学习更深层特征；HDPA 机制把模型的注意力导向重要区域，最后由 MBRConv3×3 细化输出。为解决训练性能瓶颈，我们引入 IWO 策略与 LVW 损失函数。推理时，所有 MBRConv 层都被重参数化为标准卷积，在保持性能的同时减少参数量。MobileIE 精简的结构保证了快速推理与便捷的移动端部署。尽管结构简单，如图 1 所示，MobileIE 仍超越了最先进的轻量图像增强模型。</p>\n<figure><img src=\"assets/p03_figure_17.png\" alt=\"Figure 2. Architecture of the proposed MobileIE includes Mul\"><figcaption><b>Figure 2（中文）</b>　所提 MobileIE 的架构，包含多分支重参数化卷积（MBRConv）、特征自变换（FST）与分层双路注意力（HDPA）。推理时 MBRConv 重参数化为标准卷积，在保持训练性能的同时把模型规模降到 4K 参数。详细架构设置见附录。</figcaption></figure>\n<h3 class=\"en\">3.2. Multi-Branch Re-param Convolution</h3>\n<h3 class=\"zh\">3.2. 多分支重参数化卷积</h3>\n<p class=\"para en\">Re-parameterization has achieved success in high-level vision tasks [21–23], but yields unsatisfactory results when directly applied to image enhancement [27]. We introduce MBRConv, specifically designed for image enhancement. Figure 3(a) shows MBRConv with multiple convolutional branches of varying kernel sizes, capturing multi-scale features that are concatenated and integrated via a Conv 1 × 1 (convout). The branches are re-parameterized during inference into a single convolution, reducing computational cost while preserving training performance. Unlike previous Rep methods, MBRConv includes parallel Batch</p>",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      286,
+                      294
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      614,
+                      617
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      1009,
+                      1017
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      1130,
+                      1138
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      1438,
+                      1446
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      1688,
+                      1691
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      2005,
+                      2013
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      2119,
+                      2127
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      2272,
+                      2280
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      2344,
+                      2352
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      2432,
+                      2435
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/cirosantilli/expired-domain-names-by-day-2024/blob/7513ce8690e9c92eafb67a37ad07bf6023f4e420/09/25/22",
+            "path": "09/25/22",
+            "display_url": "https://github.com/cirosantilli/expired-domain-names-by-day-2024/blob/7513ce8690e9c92eafb67a37ad07bf6023f4e420/09/25/22",
+            "display_title": "09/25/22",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "MobileVenders.com\nMobileVetPet.com\nMobilebayHarleyOffers.com\nMobileieOn.com\nMobilephonePhotographyOfstAugustine.com\nMobilityProsPlus.com\nMobinkUw.com",
+                "matches": [
+                  {
+                    "text": "Mobileie",
+                    "indices": [
+                      61,
+                      69
+                    ]
+                  },
+                  {
+                    "text": "fst",
+                    "indices": [
+                      99,
+                      102
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/nlsidf/ndk-vnrit/blob/b169f207b3766a4ab037bfd5202860ea9f553d43/src/main.rs",
+            "path": "src/main.rs",
+            "display_url": "https://github.com/nlsidf/ndk-vnrit/blob/b169f207b3766a4ab037bfd5202860ea9f553d43/src/main.rs",
+            "display_title": "src/main.rs",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "///\n/// Inspired by MobileIE's channel attention (avg pool → sigmoid → scale):\n///   avg Y < 32  (very dark):    boost 1.75×  — enhance shadow detail",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      20,
+                      28
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "///     during motion (eliminates temporal flicker).\n///   - **Non-linear gain curve** — FST-inspired quadratic mapping compresses\n///     large |diff| values for natural-looking sharpening without halos.",
+                "matches": [
+                  {
+                    "text": "FST",
+                    "indices": [
+                      91,
+                      94
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/cirosantilli/expired-domain-names-by-day-2022/blob/36fb5eee7e0a11c9a1d227f86d4eb508fd7e7223/12/18/53",
+            "path": "12/18/53",
+            "display_url": "https://github.com/cirosantilli/expired-domain-names-by-day-2022/blob/36fb5eee7e0a11c9a1d227f86d4eb508fd7e7223/12/18/53",
+            "display_title": "12/18/53",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "billsecure.net\nbiltingfarmselfstorage.net\nbim-oglenhizmetleri.com",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      29,
+                      32
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "boi-bankingsupport.com\nboi-mobileie.com\nboi365onlinesecurity.com",
+                "matches": [
+                  {
+                    "text": "mobileie",
+                    "indices": [
+                      27,
+                      35
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/rbrito/pkg-youtube-dl/blob/f657f6877db47c00c77b6b17042e9fb7039d635e/youtube_dl/extractor/extractors.py",
+            "path": "youtube_dl/extractor/extractors.py",
+            "display_url": "https://github.com/rbrito/pkg-youtube-dl/blob/f657f6877db47c00c77b6b17042e9fb7039d635e/youtube_dl/extractor/extractors.py",
+            "display_title": "youtube_dl/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "from .webofstories import (\n    WebOfStoriesIE,\n    WebOfStoriesPlaylistIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      10,
+                      13
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      36,
+                      39
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      56,
+                      59
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      22,
+                      30
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/ruuk/script.module.youtube.dl/blob/592af985d755327efee7d02b769fde5725c6d5ce/lib/youtube_dl/extractor/extractors.py",
+            "path": "lib/youtube_dl/extractor/extractors.py",
+            "display_url": "https://github.com/ruuk/script.module.youtube.dl/blob/592af985d755327efee7d02b769fde5725c6d5ce/lib/youtube_dl/extractor/extractors.py",
+            "display_title": "lib/youtube_dl/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "from .webofstories import (\n    WebOfStoriesIE,\n    WebOfStoriesPlaylistIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      10,
+                      13
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      36,
+                      39
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      56,
+                      59
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      22,
+                      30
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/paper/bilingual/items.json",
+            "path": "paper/bilingual/items.json",
+            "display_url": "https://github.com/38260/MobileIE-repro/blob/268798352665edf84474327429c29b3e61ded806/paper/bilingual/items.json",
+            "display_title": "paper/bilingual/items.json",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "  \"kind\": \"figure\",\n  \"page\": 3,\n  \"y\": 71.4,\n  \"caption\": \"Figure 2. Architecture of the proposed MobileIE includes Multi-Branch Re-param Convolution (MBRConv), Feature Self-Transform (FST), and Hierarchical Dual-Path Attention (HDPA). During inference, MBRConv re-parameterizes into a standard convolution, reducing the model size to 4K parameters while maintaining training performance. The detailed architecture settings are provided in the Appendix.\",\n  \"rect\": [\n   58.5,\n   71.4,",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      99,
+                      107
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      186,
+                      189
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/Lyken17/arXiv-stats/blob/0da0faf582073c34f9b4c51ac02b1cd4b50fbbb4/info/2025-July/03/paper_info.json",
+            "path": "info/2025-July/03/paper_info.json",
+            "display_url": "https://github.com/Lyken17/arXiv-stats/blob/0da0faf582073c34f9b4c51ac02b1cd4b50fbbb4/info/2025-July/03/paper_info.json",
+            "display_title": "info/2025-July/03/paper_info.json",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "      \"Carlo Leonardo Attubato\",\n      \"Felix Hofst\\u00e4tter\"\n    ],",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      48,
+                      51
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    \"id\": \"2507.01838\",\n    \"title\": \"MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices\",\n    \"authors\": [",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      38,
+                      46
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/dhhruv/YouTua/blob/2a6148cbabb1724ab98f56589f136fb68db659ab/youtuatools/extractor/extractors.py",
+            "path": "youtuatools/extractor/extractors.py",
+            "display_url": "https://github.com/dhhruv/YouTua/blob/2a6148cbabb1724ab98f56589f136fb68db659ab/youtuatools/extractor/extractors.py",
+            "display_title": "youtuatools/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "from .webofstories import (\n    WebOfStoriesIE,\n    WebOfStoriesPlaylistIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      10,
+                      13
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      36,
+                      39
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      56,
+                      59
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      22,
+                      30
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/cirosantilli/expired-domain-names-by-day-2013/blob/9fc0ca2e88fe4828da058efb0a87b0138b366a28/03/16/26",
+            "path": "03/16/26",
+            "display_url": "https://github.com/cirosantilli/expired-domain-names-by-day-2013/blob/9fc0ca2e88fe4828da058efb0a87b0138b366a28/03/16/26",
+            "display_title": "03/16/26",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "mobilehomesiding.org\nmobileie.com\nmobileinlife.com",
+                "matches": [
+                  {
+                    "text": "mobileie",
+                    "indices": [
+                      21,
+                      29
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "morenovalleypersonalinjurylawyer.org\nmoreofstars.com\nmoreofyou.biz",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      42,
+                      45
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/FangruLinghu/PaperCode/blob/e987af245f74ab47e50187acc95926a8f1a4b3d2/arxiv_data_process/train_template_outputs/2507.01838_train.json",
+            "path": "arxiv_data_process/train_template_outputs/2507.01838_train.json",
+            "display_url": "https://github.com/FangruLinghu/PaperCode/blob/e987af245f74ab47e50187acc95926a8f1a4b3d2/arxiv_data_process/train_template_outputs/2507.01838_train.json",
+            "display_title": "arxiv_data_process/train_template_outputs/2507.01838_train.json",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "    ]\n  },\n  \"model_architecture\": {\n    \"overall_description\": \"MobileIE employs a streamlined topology with deployable operators, decoupling training and inference phases. It uses MBRConv for multi-scale feature capture, FST for nonlinear feature interactions, and HDPA for fusing global and local features, re-parameterizing into standard convolution during inference.\",\n    \"components\": [\n      {\n        \"name\": \"MBRConv\",",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      65,
+                      73
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      223,
+                      226
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/cirosantilli/expired-domain-names-by-day-2012/blob/013b32d907472f2ec4066ab42e601d6390fb73ff/09/11/16",
+            "path": "09/11/16",
+            "display_url": "https://github.com/cirosantilli/expired-domain-names-by-day-2012/blob/013b32d907472f2ec4066ab42e601d6390fb73ff/09/11/16",
+            "display_title": "09/11/16",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "globalsecuritiesltd.com\nglobalselfstorage.info\nglobalservicegroup.info",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      33,
+                      36
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "go-micro.co\ngo-mobileie.com\ngo-o.net",
+                "matches": [
+                  {
+                    "text": "mobileie",
+                    "indices": [
+                      15,
+                      23
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/cirosantilli/expired-domain-names-by-day-2010/blob/3adc7fbd3cc93bed17b0e0f8c20916710ac18217/10/11/20",
+            "path": "10/11/20",
+            "display_url": "https://github.com/cirosantilli/expired-domain-names-by-day-2010/blob/3adc7fbd3cc93bed17b0e0f8c20916710ac18217/10/11/20",
+            "display_title": "10/11/20",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "mobilehostvisitor.com\nmobileie.com\nmobileliveadvertising.com",
+                "matches": [
+                  {
+                    "text": "mobileie",
+                    "indices": [
+                      22,
+                      30
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "myannscloset.com\nmyanxietyreliefstory.com\nmyara.info",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      31,
+                      34
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/tvalacarta/tvalacarta/blob/d3e2977e4b4faae516f3cf3ca077e6f33dec094d/python/main-classic/lib/youtube_dl/extractor/extractors.py",
+            "path": "python/main-classic/lib/youtube_dl/extractor/extractors.py",
+            "display_url": "https://github.com/tvalacarta/tvalacarta/blob/d3e2977e4b4faae516f3cf3ca077e6f33dec094d/python/main-classic/lib/youtube_dl/extractor/extractors.py",
+            "display_title": "python/main-classic/lib/youtube_dl/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "from .webofstories import (\n    WebOfStoriesIE,\n    WebOfStoriesPlaylistIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      10,
+                      13
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      36,
+                      39
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      56,
+                      59
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      22,
+                      30
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/PatchyVideo/PatchyVideo/blob/3c6533d27d746d0eab3f4f6a0f8927261df5562d/scraper/video/yt_dlp/extractor/_extractors.py",
+            "path": "scraper/video/yt_dlp/extractor/_extractors.py",
+            "display_url": "https://github.com/PatchyVideo/PatchyVideo/blob/3c6533d27d746d0eab3f4f6a0f8927261df5562d/scraper/video/yt_dlp/extractor/_extractors.py",
+            "display_title": "scraper/video/yt_dlp/extractor/_extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "from .webofstories import (\n    WebOfStoriesIE,\n    WebOfStoriesPlaylistIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      10,
+                      13
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      36,
+                      39
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      56,
+                      59
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      22,
+                      30
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/wes1993/YouTubeForAlexa/blob/dd145923f03e563ec40445f02dde4f6a10cb9525/YouTubeForAlexa/youtube_dl/extractor/extractors.py",
+            "path": "YouTubeForAlexa/youtube_dl/extractor/extractors.py",
+            "display_url": "https://github.com/wes1993/YouTubeForAlexa/blob/dd145923f03e563ec40445f02dde4f6a10cb9525/YouTubeForAlexa/youtube_dl/extractor/extractors.py",
+            "display_title": "YouTubeForAlexa/youtube_dl/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "from .webofstories import (\n    WebOfStoriesIE,\n    WebOfStoriesPlaylistIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      10,
+                      13
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      36,
+                      39
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      56,
+                      59
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      22,
+                      30
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/DarkSydeDetective/pigpiggo/blob/b64ab06252e3ad25e4e24e2fa795e7106c33dab1/api/tools/youtube_dl/extractor/extractors.py",
+            "path": "api/tools/youtube_dl/extractor/extractors.py",
+            "display_url": "https://github.com/DarkSydeDetective/pigpiggo/blob/b64ab06252e3ad25e4e24e2fa795e7106c33dab1/api/tools/youtube_dl/extractor/extractors.py",
+            "display_title": "api/tools/youtube_dl/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "from .webofstories import (\n    WebOfStoriesIE,\n    WebOfStoriesPlaylistIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      10,
+                      13
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      36,
+                      39
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      56,
+                      59
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      22,
+                      30
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/keylase/yotube-dl/blob/608b8a4300fab7792e637fd9b7045adf1c0cb2aa/youtube_dl/extractor/extractors.py",
+            "path": "youtube_dl/extractor/extractors.py",
+            "display_url": "https://github.com/keylase/yotube-dl/blob/608b8a4300fab7792e637fd9b7045adf1c0cb2aa/youtube_dl/extractor/extractors.py",
+            "display_title": "youtube_dl/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "from .webofstories import (\n    WebOfStoriesIE,\n    WebOfStoriesPlaylistIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      10,
+                      13
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      36,
+                      39
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      56,
+                      59
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      22,
+                      30
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/OpenFacetracker/OpenFaceTracker-Lib3/blob/773cace4ea047b61df3e5c9500e796dd59dab2be/lib/youtube-dl/youtube_dl/extractor/__init__.py",
+            "path": "lib/youtube-dl/youtube_dl/extractor/__init__.py",
+            "display_url": "https://github.com/OpenFacetracker/OpenFaceTracker-Lib3/blob/773cace4ea047b61df3e5c9500e796dd59dab2be/lib/youtube-dl/youtube_dl/extractor/__init__.py",
+            "display_title": "lib/youtube-dl/youtube_dl/extractor/__init__.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "    WDRIE,\n    WDRMobileIE,\n    WDRMausIE,",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      18,
+                      26
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": ")\nfrom .webofstories import WebOfStoriesIE\nfrom .weibo import WeiboIE",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      12,
+                      15
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      32,
+                      35
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/cirosantilli/expired-domain-names-by-day-2024/blob/7513ce8690e9c92eafb67a37ad07bf6023f4e420/10/20/28",
+            "path": "10/20/28",
+            "display_url": "https://github.com/cirosantilli/expired-domain-names-by-day-2024/blob/7513ce8690e9c92eafb67a37ad07bf6023f4e420/10/20/28",
+            "display_title": "10/20/28",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "MindOfMoniquePearson.com\nMindOfStyle.com\nMindOfTea.com",
+                "matches": [
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      30,
+                      33
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "MobileConnectMedia.com\nMobileIEducator.com\nMobileInfoRate.com",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      23,
+                      31
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/cirosantilli/expired-domain-names-by-day-2024/blob/7513ce8690e9c92eafb67a37ad07bf6023f4e420/05/26/27",
+            "path": "05/26/27",
+            "display_url": "https://github.com/cirosantilli/expired-domain-names-by-day-2024/blob/7513ce8690e9c92eafb67a37ad07bf6023f4e420/05/26/27",
+            "display_title": "05/26/27",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "Mobilehomesandmoore.com\nMobileieGenDs.com\nMobilephoneLiveSex.com",
+                "matches": [
+                  {
+                    "text": "Mobileie",
+                    "indices": [
+                      24,
+                      32
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "MoustachesEtcOussiNets.com\nMouthFullOfStones.com\nMouthyRobot.com",
+                "matches": [
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      37,
+                      40
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/cirosantilli/expired-domain-names-by-day-2011/blob/d6e3788dd8eff2c5829ee152b9103070aac9a120/05/07/27",
+            "path": "05/07/27",
+            "display_url": "https://github.com/cirosantilli/expired-domain-names-by-day-2011/blob/d6e3788dd8eff2c5829ee152b9103070aac9a120/05/07/27",
+            "display_title": "05/07/27",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "mobilehomeparkmagic.com\nmobileie.net\nmobileinsightspanel.com",
+                "matches": [
+                  {
+                    "text": "mobileie",
+                    "indices": [
+                      24,
+                      32
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "momemomi.com\nmomentofstillness.com\nmomentswithbaxter.org",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      20,
+                      23
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/r0oth3x49/Yv-dl/blob/cf52e6f8600bd9cf70c5944a2caade51eadd6a77/youtube_dl/extractor/extractors.py",
+            "path": "youtube_dl/extractor/extractors.py",
+            "display_url": "https://github.com/r0oth3x49/Yv-dl/blob/cf52e6f8600bd9cf70c5944a2caade51eadd6a77/youtube_dl/extractor/extractors.py",
+            "display_title": "youtube_dl/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "    WDRIE,\n    WDRMobileIE,\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      18,
+                      26
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": ")\nfrom .webofstories import (\n    WebOfStoriesIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      12,
+                      15
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      38,
+                      41
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/haruhi-dl/haruhi-dl/blob/0526e2add4c263209cad55347efa9a2dfe6c3fa6/haruhi_dl/extractor/extractors.py",
+            "path": "haruhi_dl/extractor/extractors.py",
+            "display_url": "https://github.com/haruhi-dl/haruhi-dl/blob/0526e2add4c263209cad55347efa9a2dfe6c3fa6/haruhi_dl/extractor/extractors.py",
+            "display_title": "haruhi_dl/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "from .webofstories import (\n    WebOfStoriesIE,\n    WebOfStoriesPlaylistIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      10,
+                      13
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      36,
+                      39
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      56,
+                      59
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      22,
+                      30
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/FangruLinghu/PaperCode/blob/e987af245f74ab47e50187acc95926a8f1a4b3d2/arxiv_data_process/structured_papers/2507/2507.01838.json",
+            "path": "arxiv_data_process/structured_papers/2507/2507.01838.json",
+            "display_url": "https://github.com/FangruLinghu/PaperCode/blob/e987af245f74ab47e50187acc95926a8f1a4b3d2/arxiv_data_process/structured_papers/2507/2507.01838.json",
+            "display_title": "arxiv_data_process/structured_papers/2507/2507.01838.json",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "  \"keywords\": \"\",\n  \"sections\": {\n    \"Introduction\": {\n      \"content\": \"\\\\label{sec:intro} Image enhancement (IE) aims to restore images degraded by factors such as camera limitations \\\\cite{zamir2020learning}, poor lighting \\\\cite{liu2024ntire}, or challenging environments (e.g., underwater \\\\cite{peng2023u}). With the growing prevalence of smart devices and embedded systems, real-time image enhancement has become essential in applications like mobile devices. These scenarios require not only high-quality output but also real-time processing, demanding efficient image enhancement within the constraints of limited computational resources \\\\cite{chen2022simple,cui2023focal,cui2023image,cui2024revitalizing}. \\\\begin{figure}[h] \\\\centering \\\\includegraphics[width=0.9\\\\linewidth]{image/compare1.jpg} \\\\caption{Efficiency comparison. MobileIE achieves superior performance in balancing speed, compactness, and accuracy.} \\\\label{fig1} \\\\vspace{-14pt} \\\\end{figure} Recent advancements in Transformer-based \\\\cite{choi2024reciprocal,li2023feature,wang2024correlation} and Diffusion-based \\\\cite{xia2023diffir,zhao2024wavelet,yi2024diffraw} methods have demonstrated significant progress in image enhancement (IE) tasks. However, their reliance on computationally expensive self-attention mechanisms and iterative diffusion processes makes them unsuitable for mobile devices. While lightweight models have been developed to reduce computational complexity using parameter compression and low-FLOPs architecture designs \\\\cite{reddy2023quantized, shi2023memory, ye2023accelir, qiao2024semi, xu2024boosting}, these approaches often compromise enhancement quality, making it challenging to achieve high performance across a wide range of degradation scenarios \\\\cite{abrahamyan2021bias}. Furthermore, the increasing demand for high-resolution images \\\\cite{wang2024correlation} exacerbates the computational burdens on mobile platforms. Besides facing computational bottlenecks, current IE methods are typically optimized for specific degradation types, restricting their adaptability. Although advanced operators \\\\cite{chen2024gcam,chen2023mofa} have shown effectiveness in certain tasks, their complexity makes them unsuitable for mobile deployment. Consequently, designing a universal and efficient network capable of real-time IE on resource-constrained devices remains a significant research challenge. We believe that mobile-based IE should strike a balance between speed and performance, leveraging general architectures and hardware-friendly operators \\\\cite{zhang2023rethinking,vasu2023mobileone}. To address these challenges, we introduce MobileIE, an efficient method designed for real-time enhancement in resource-constrained environments, optimizing both performance and resource utilization. Although degradation types vary widely, IE tasks share common requirements: global information for structural integrity and local details for accurate recovery. This commonality enables the use of universal modules across different tasks. Building on this concept, MobileIE employs a streamlined topology and deployable operators to achieve efficient performance on resource-constrained devices. We decouple the training and inference phases, simplifying the feedforward structure for more efficient inference. At the core of our design is MBRConv, a Multi-Branch Re-parameterized Convolution, which captures multi-scale features using various convolution sizes. These features are then processed through concatenation, compression, and mapping to achieve the desired output dimensions. Additionally, we introduce a Feature Self-Transform (FST) module, which enhances the feature representation capability of linear convolutions by capturing nonlinear relationships through secondary feature interactions. To enhance focus on critical regions, we simplify the attention mechanism and develop a hardware-friendly Hierarchical Dual-Path Attention (HDPA) mechanism, which efficiently fuses global and local features. To overcome training bottlenecks, we introduce an Incremental Weight Optimization (IWO) Strategy and a Local Variance Weighted (LVW) Loss function. The IWO strategy freezes prior knowledge, integrates it into trainable convolutional kernels, and re-parameterizes these into new kernels to boost model performance. Meanwhile, the LVW Loss function enhances accuracy without increasing the number of parameters. Key contributions of this paper include: $\\\\bullet$ We introduce MobileIE, a framework designed for real-time image enhancement on mobile devices, featuring compact and efficient modules tailored for resource-constrained environments. $\\\\bullet$ We propose an Incremental Weight Optimization (IWO) Strategy and a Local Variance Weighted (LVW) Loss to address the challenges of training compact models, enhancing performance without adding complexity. $\\\\bullet$ We demonstrate that MobileIE achieves state-of-the-art speed and performance across three image enhancement tasks, sustaining over 100 FPS and enabling seamless deployment on mobile devices. \\\\begin{figure*}[htbp] \\\\includegraphics[width=\\\\linewidth]{image/chart.pdf} \\\\caption{\\\\label{fig2}Architecture of the proposed MobileIE includes Multi-Branch Re-param Convolution (MBRConv), Feature Self-Transform (FST), and Hierarchical Dual-Path Attention (HDPA). During inference, MBRConv re-parameterizes into a standard convolution, reducing the model size to 4K parameters while maintaining training performance. The detailed architecture settings are provided in the Appendix.} \\\\vspace{-6pt} \\\\end{figure*}\",\n      \"subsections\": {}\n    },\n    \"Related Works\": {",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      842,
+                      850
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      2653,
+                      2661
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      3075,
+                      3083
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      3650,
+                      3653
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      4499,
+                      4507
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      4916,
+                      4924
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      5216,
+                      5224
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      5303,
+                      5306
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/FangruLinghu/PaperCode/blob/e987af245f74ab47e50187acc95926a8f1a4b3d2/arxiv_data_process/code_model_definition/pytorch_model_definitions/2507.01838.txt",
+            "path": "arxiv_data_process/code_model_definition/pytorch_model_definitions/2507.01838.txt",
+            "display_url": "https://github.com/FangruLinghu/PaperCode/blob/e987af245f74ab47e50187acc95926a8f1a4b3d2/arxiv_data_process/code_model_definition/pytorch_model_definitions/2507.01838.txt",
+            "display_title": "arxiv_data_process/code_model_definition/pytorch_model_definitions/2507.01838.txt",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "        super(MobileIENetS, self).__init__()\n        self.head = FST(\n            nn.Sequential(",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      14,
+                      22
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      65,
+                      68
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    def slim(self):\n        net_slim = MobileIELLENetS(self.channels)\n        weight_slim = net_slim.state_dict()",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      39,
+                      47
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/galgamerslee/youtobedl/blob/7b0d1c28597bd38567e5b4e853f669a5a601c6e8/youtube_dl/extractor/extractors.py",
+            "path": "youtube_dl/extractor/extractors.py",
+            "display_url": "https://github.com/galgamerslee/youtobedl/blob/7b0d1c28597bd38567e5b4e853f669a5a601c6e8/youtube_dl/extractor/extractors.py",
+            "display_title": "youtube_dl/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "    WDRIE,\n    WDRMobileIE,\n    WDRMausIE,",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      18,
+                      26
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": ")\nfrom .webofstories import (\n    WebOfStoriesIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      12,
+                      15
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      38,
+                      41
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/privyack/youtube-dl-fuck-dmca/blob/4ff5778425f30a8360f4232d2adc0af416069c64/youtube_dl/extractor/extractors.py",
+            "path": "youtube_dl/extractor/extractors.py",
+            "display_url": "https://github.com/privyack/youtube-dl-fuck-dmca/blob/4ff5778425f30a8360f4232d2adc0af416069c64/youtube_dl/extractor/extractors.py",
+            "display_title": "youtube_dl/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "from .webofstories import (\n    WebOfStoriesIE,\n    WebOfStoriesPlaylistIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      10,
+                      13
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      36,
+                      39
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      56,
+                      59
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      22,
+                      30
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/ifsvivek/VideoFetch/blob/b8d446ce15f0b34cf47a8c3e877fe271fdcb4ffa/plugin/yt-dlp/yt_dlp/extractor/_extractors.py",
+            "path": "plugin/yt-dlp/yt_dlp/extractor/_extractors.py",
+            "display_url": "https://github.com/ifsvivek/VideoFetch/blob/b8d446ce15f0b34cf47a8c3e877fe271fdcb4ffa/plugin/yt-dlp/yt_dlp/extractor/_extractors.py",
+            "display_title": "plugin/yt-dlp/yt_dlp/extractor/_extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "    WDRElefantIE,\n    WDRMobileIE,\n    WDRPageIE,",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      25,
+                      33
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": ")\nfrom .webofstories import (\n    WebOfStoriesIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      12,
+                      15
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      38,
+                      41
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/ZejunCao/ZejunCao.github.io/blob/e400ef3a03b2facac9fac83dd6f2592c0c116b3a/2025/07/10/1000002571-2247631972-2-1752119409/index.html",
+            "path": "2025/07/10/1000002571-2247631972-2-1752119409/index.html",
+            "display_url": "https://github.com/ZejunCao/ZejunCao.github.io/blob/e400ef3a03b2facac9fac83dd6f2592c0c116b3a/2025/07/10/1000002571-2247631972-2-1752119409/index.html",
+            "display_title": "2025/07/10/1000002571-2247631972-2-1752119409/index.html",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "<p>仅用于站内搜索，没有排版格式，具体信息请跳转上方微信公众号内链接</p>\n</blockquote>\n<p>点击上方“小白学视觉”，选择加\\“星标\\“或“置顶”<br>重磅干货，第一时间送达</p>\n<p>图像增强（IE）旨在恢复因各种因素而退化的图像。随着智能设备和嵌入式系统的普及，实时图像增强在移动设备等应用中变得至关重要。然而，目前基于Transformer和扩散的方法虽在图像增强任务中取得显著进展，但因计算成本高昂，不适用于移动设备。轻量级模型虽降低了计算复杂度，但往往牺牲了增强质量，难以在各种退化场景中实现高性能。此外，当前的IE方法通常针对特定退化类型优化，适应性有限，设计一个能在资源受限设备上进行实时IE的通用且高效网络仍是重大挑战。<br>论文提出的MobileIE框架专为移动设备实时图像增强设计，集成了重参数化与增量权重优化策略。它包含浅层特征提取、深层特征提取、特征变换和注意力机制等组件，仅约4K参数，能在资源受限环境下兼顾速度与性能。<br>设计的MBRConv（多分支重参数化卷积）针对图像增强，以不同卷积核尺寸分支捕获多尺度特征。推理时可重参数化为单个卷积，降低计算成本。并行BatchNorm层提升了非线性与模型鲁棒性。结合增量权重优化（IWO）策略，融合先验知识与可学习权重，改善特征整合，提升模型性能与收敛性。<br>引入特征自变换（FST）模块，通过二次交互机制增强模型非线性表达，捕捉特征间更复杂关系，提升特征表示能力。提出分层双路径注意力（HDPA）机制，以双路径结构自适应提取全局与局部特征，融合空间与通道交互，提升特征精度与全面性，且结构简单，计算成本低。<br>针对紧凑型CNN优化难题，提出LVW损失。根据预测输出与真实值的局部均值和方差计算加权因子，动态调整每个像素对总损失的贡献，更关注异常像素优化，平衡损失函数的鲁棒性与细节保留能力。<br>作者在PyTorch中实现了MobileIE，使用Adam优化器和余弦退火学习率调度。对于不同任务，使用了相应的数据集进行训练和测试。<br>在低光图像增强（LLE）、水下图像增强（UIE）和图像信号处理（ISP）三个任务上，MobileIE与当前轻量级最先进方法进行比较。结果显示，MobileIE在各项指标上表现卓越或可比，且推理速度快。例如在LLE任务中，与轻量级最先进方法IAT相比，MobileIE在仅使用4. 7%参数的情况下实现了可比的PSNR提升，推理速度快6. 9倍。<br>通过一系列消融研究，验证了MobileIE各模块的有效性。MBRConv和LVW损失显著提高了模型性能；IWO增强内核骨架、减少通道冗余、促进训练收敛；FST增强非线性特征交互；HDPA实现精确特征捕获；LVW在异常值优化中表现出色。<br>MobileIE作为一种仅含4K参数的轻量级CNN，在移动设备实时图像增强方面展现出了巨大的优势。它将简洁性与高性能相结合，能够在保持约0. 9ms推理时间的同时取得优异结果，且可在任何商用移动设备上轻松部署。未来，研究团队将探索优化方法，将MobileIE的应用扩展到更多不同的任务中。相信随着技术的不断发展，MobileIE将为我们的移动视觉体验带来更多的惊喜！<br>下载1：OpenCV-Contrib扩展模块中文版教程<br>在「小白学视觉」公众号后台回复：扩展模块中文教程，即可下载全网第一份OpenCV扩展模块教程中文版，涵盖扩展模块安装、SFM算法、立体视觉、目标跟踪、生物视觉、超分辨率处理等二十多章内容。<br>下载2：Python视觉实战项目52讲<br>在「小白学视觉」公众号后台回复：Python视觉实战项目，即可下载包括图像分割、口罩检测、车道线检测、车辆计数、添加眼线、车牌识别、字符识别、情绪检测、文本内容提取、面部识别等31个视觉实战项目，助力快速学校计算机视觉。<br>下载3：人工智能0基础学习攻略手册<br>在「小白学视觉」公众号后台回复：攻略手册，即可获取《从0入门人工智能学习攻略手册》文档，包含视频课件、习题、电子书、代码、数据等人工智能学习相关资源，可以下载离线学习。<br>交流群<br>欢迎加入公众号读者群一起和同行交流，目前有SLAM、三维视觉、传感器、自动驾驶、计算摄影、检测、分割、识别、医学影像、GAN、算法竞赛等微信群（以后会逐渐细分），请扫描下面微信号加群，备注：”昵称+学校&#x2F;公司+研究方向“，例如：”张三+上海交大+视觉SLAM“。请按照格式备注，否则不予通过。添加成功后会根据研究方向邀请进入相关微信群。请勿在群内发送广告，否则会请出群，谢谢理解~</p>\n\n                \n            </div>",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      900,
+                      908
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      1582,
+                      1585
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      2210,
+                      2218
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      2457,
+                      2465
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      2528,
+                      2536
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      2662,
+                      2670
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      2804,
+                      2812
+                    ]
+                  },
+                  {
+                    "text": "FST",
+                    "indices": [
+                      2951,
+                      2954
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      3058,
+                      3066
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      3383,
+                      3391
+                    ]
+                  },
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      3472,
+                      3480
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/Tolriq/repository.yatse.kodi/blob/16a3145eaca482c4818cd11f178531e9d6dce5da/script.yatse.kodi/lib/youtube_dl/extractor/_extractors.py",
+            "path": "script.yatse.kodi/lib/youtube_dl/extractor/_extractors.py",
+            "display_url": "https://github.com/Tolriq/repository.yatse.kodi/blob/16a3145eaca482c4818cd11f178531e9d6dce5da/script.yatse.kodi/lib/youtube_dl/extractor/_extractors.py",
+            "display_title": "script.yatse.kodi/lib/youtube_dl/extractor/_extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "    WDRElefantIE,\n    WDRMobileIE,\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      25,
+                      33
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": ")\nfrom .webofstories import (\n    WebOfStoriesIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      12,
+                      15
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      38,
+                      41
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/cirosantilli/expired-domain-names-by-day-2015/blob/c76c12b5ef5d29bba61d9db33746e200e7de7704/10/29/28",
+            "path": "10/29/28",
+            "display_url": "https://github.com/cirosantilli/expired-domain-names-by-day-2015/blob/c76c12b5ef5d29bba61d9db33746e200e7de7704/10/29/28",
+            "display_title": "10/29/28",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "middlepiddlemath.org\nmiddletennesseeselfstorage.com\nmidericadesigns.com",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      39,
+                      42
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "mobilehealthweekly.com\nmobileiexpert.com\nmobileincolorado.org",
+                "matches": [
+                  {
+                    "text": "mobileie",
+                    "indices": [
+                      23,
+                      31
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/daineseh/kodi-plugin.video.ted-talks-chinese/blob/67e6a9eb92f8cf664245750caee369746e6ecbbe/youtube_dl/extractor/extractors.py",
+            "path": "youtube_dl/extractor/extractors.py",
+            "display_url": "https://github.com/daineseh/kodi-plugin.video.ted-talks-chinese/blob/67e6a9eb92f8cf664245750caee369746e6ecbbe/youtube_dl/extractor/extractors.py",
+            "display_title": "youtube_dl/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "    WDRIE,\n    WDRMobileIE,\n    WDRMausIE,",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      18,
+                      26
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": ")\nfrom .webofstories import (\n    WebOfStoriesIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      12,
+                      15
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      38,
+                      41
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/cirosantilli/expired-domain-names-by-day-2019/blob/42d73e12ffdf6077d80494ef3b87cc5592f75563/03/26/26",
+            "path": "03/26/26",
+            "display_url": "https://github.com/cirosantilli/expired-domain-names-by-day-2019/blob/42d73e12ffdf6077d80494ef3b87cc5592f75563/03/26/26",
+            "display_title": "03/26/26",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "micro-recorder.com\nmicro-selfstorage.com\nmicro1o.com",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      28,
+                      31
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "mobilehoserepair.net\nmobileiexchange.com\nmobileilabs.com",
+                "matches": [
+                  {
+                    "text": "mobileie",
+                    "indices": [
+                      21,
+                      29
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/AsmSafone/downloader/blob/aa1c79a60351b3921f81a7601058e5c0f5d25d54/yt_dlp/extractor/extractors.py",
+            "path": "yt_dlp/extractor/extractors.py",
+            "display_url": "https://github.com/AsmSafone/downloader/blob/aa1c79a60351b3921f81a7601058e5c0f5d25d54/yt_dlp/extractor/extractors.py",
+            "display_title": "yt_dlp/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "from .webofstories import (\n    WebOfStoriesIE,\n    WebOfStoriesPlaylistIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      10,
+                      13
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      36,
+                      39
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      56,
+                      59
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      22,
+                      30
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/nestorlasso/AlexaYoutubeES/blob/ea72423534d061be896b26dcb1f653287266fbe4/youtube_dl/extractor/extractors.py",
+            "path": "youtube_dl/extractor/extractors.py",
+            "display_url": "https://github.com/nestorlasso/AlexaYoutubeES/blob/ea72423534d061be896b26dcb1f653287266fbe4/youtube_dl/extractor/extractors.py",
+            "display_title": "youtube_dl/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "from .webofstories import (\n    WebOfStoriesIE,\n    WebOfStoriesPlaylistIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      10,
+                      13
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      36,
+                      39
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      56,
+                      59
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      22,
+                      30
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TheMrRandomDude/tiktok-scraper-yt-dlp-based-easy-to-use/blob/bad07dca698626c840ce37649b1d45feb5ab1002/yt_dlp/extractor/_extractors.py",
+            "path": "yt_dlp/extractor/_extractors.py",
+            "display_url": "https://github.com/TheMrRandomDude/tiktok-scraper-yt-dlp-based-easy-to-use/blob/bad07dca698626c840ce37649b1d45feb5ab1002/yt_dlp/extractor/_extractors.py",
+            "display_title": "yt_dlp/extractor/_extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "from .webofstories import (\n    WebOfStoriesIE,\n    WebOfStoriesPlaylistIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      10,
+                      13
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      36,
+                      39
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      56,
+                      59
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      22,
+                      30
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/JdeRobot/ThirdParty/blob/e4172b83bd56e498c5013c304e06194226f21c63/youtube-dl/youtube_dl/extractor/extractors.py",
+            "path": "youtube-dl/youtube_dl/extractor/extractors.py",
+            "display_url": "https://github.com/JdeRobot/ThirdParty/blob/e4172b83bd56e498c5013c304e06194226f21c63/youtube-dl/youtube_dl/extractor/extractors.py",
+            "display_title": "youtube-dl/youtube_dl/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "    WDRIE,\n    WDRMobileIE,\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      18,
+                      26
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": ")\nfrom .webofstories import (\n    WebOfStoriesIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      12,
+                      15
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      38,
+                      41
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/LukeInkster/PythonCorpus/blob/526c1f78cdf17f9151552bcbfef5582cf8655446/youtube-dl/youtube_dl/extractor/extractors.py",
+            "path": "youtube-dl/youtube_dl/extractor/extractors.py",
+            "display_url": "https://github.com/LukeInkster/PythonCorpus/blob/526c1f78cdf17f9151552bcbfef5582cf8655446/youtube-dl/youtube_dl/extractor/extractors.py",
+            "display_title": "youtube-dl/youtube_dl/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "from .watchindianporn import WatchIndianPornIE\nfrom .wdr import (\n    WDRIE,\n    WDRMobileIE,\n)\nfrom .webofstories import (\n    WebOfStoriesIE,",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      84,
+                      92
+                    ]
+                  },
+                  {
+                    "text": "fst",
+                    "indices": [
+                      106,
+                      109
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      132,
+                      135
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/esc0rtd3w/firestick-loader-kodi-data/blob/e4d7931d8f62c94f586786cd8580108b68d3aa40/16/addons/plugin.program.ump/lib/third/youtube_dl/extractor/extractors.py",
+            "path": "16/addons/plugin.program.ump/lib/third/youtube_dl/extractor/extractors.py",
+            "display_url": "https://github.com/esc0rtd3w/firestick-loader-kodi-data/blob/e4d7931d8f62c94f586786cd8580108b68d3aa40/16/addons/plugin.program.ump/lib/third/youtube_dl/extractor/extractors.py",
+            "display_title": "16/addons/plugin.program.ump/lib/third/youtube_dl/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "from .watchindianporn import WatchIndianPornIE\nfrom .wdr import (\n    WDRIE,\n    WDRMobileIE,\n)\nfrom .webofstories import (\n    WebOfStoriesIE,",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      84,
+                      92
+                    ]
+                  },
+                  {
+                    "text": "fst",
+                    "indices": [
+                      106,
+                      109
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      132,
+                      135
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/auto-code-etri/autocode_dataset/blob/a3d65fcbc22faba2db858ed8be8ea741fcb6f8ca/GithubCrawling/github_crawling/Codes/0010/0010_py/extractors.py",
+            "path": "GithubCrawling/github_crawling/Codes/0010/0010_py/extractors.py",
+            "display_url": "https://github.com/auto-code-etri/autocode_dataset/blob/a3d65fcbc22faba2db858ed8be8ea741fcb6f8ca/GithubCrawling/github_crawling/Codes/0010/0010_py/extractors.py",
+            "display_title": "GithubCrawling/github_crawling/Codes/0010/0010_py/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "from .webofstories import (\n    WebOfStoriesIE,\n    WebOfStoriesPlaylistIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      10,
+                      13
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      36,
+                      39
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      56,
+                      59
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      22,
+                      30
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/cirosantilli/expired-domain-names-by-day-2021/blob/521e797405c1ae7edd154046714c771b83107768/01/30/26",
+            "path": "01/30/26",
+            "display_url": "https://github.com/cirosantilli/expired-domain-names-by-day-2021/blob/521e797405c1ae7edd154046714c771b83107768/01/30/26",
+            "display_title": "01/30/26",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "MobileHydroDipping.com\nMobileIed.com\nMobileMarketingFirm.com",
+                "matches": [
+                  {
+                    "text": "MobileIe",
+                    "indices": [
+                      23,
+                      31
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "MonstersMarching.com\nMonstersOfStrength.com\nMontCoHouseDeals.com",
+                "matches": [
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      30,
+                      33
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/cirosantilli/expired-domain-names-by-day-2021/blob/521e797405c1ae7edd154046714c771b83107768/01/30/75",
+            "path": "01/30/75",
+            "display_url": "https://github.com/cirosantilli/expired-domain-names-by-day-2021/blob/521e797405c1ae7edd154046714c771b83107768/01/30/75",
+            "display_title": "01/30/75",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "mobilehydrodipping.net\nmobileied.com\nmobileish.com",
+                "matches": [
+                  {
+                    "text": "mobileie",
+                    "indices": [
+                      23,
+                      31
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "monstersmarching.com\nmonstersofstrength.com\nmonsterthenics.com",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      30,
+                      33
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/cirosantilli/expired-domain-names-by-day-2021/blob/521e797405c1ae7edd154046714c771b83107768/03/29/76",
+            "path": "03/29/76",
+            "display_url": "https://github.com/cirosantilli/expired-domain-names-by-day-2021/blob/521e797405c1ae7edd154046714c771b83107768/03/29/76",
+            "display_title": "03/29/76",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "mikesredshirt.com\nmikesstuffstore.com\nmikestreeservicetx.com",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      27,
+                      30
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "mobilefixes.com\nmobileies.info\nmobilelegendstool.com",
+                "matches": [
+                  {
+                    "text": "mobileie",
+                    "indices": [
+                      16,
+                      24
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/cirosantilli/expired-domain-names-by-day-2014/blob/e5e51dd126e86133d4ead87f1bffbda3f2a93314/07/23/30",
+            "path": "07/23/30",
+            "display_url": "https://github.com/cirosantilli/expired-domain-names-by-day-2014/blob/e5e51dd126e86133d4ead87f1bffbda3f2a93314/07/23/30",
+            "display_title": "07/23/30",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "mymobilefitness.com\nmymobileie.com\nmymobileloyalty.com",
+                "matches": [
+                  {
+                    "text": "mobileie",
+                    "indices": [
+                      22,
+                      30
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "myrtlemanor.tv\nmyruffstream.com\nmysafehavenhospice.org",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      20,
+                      23
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/pbpeter/youtube-dl/blob/00eb865b3c8002f47e73706b54f58feaee0b0ac2/youtube_dl/extractor/extractors.py",
+            "path": "youtube_dl/extractor/extractors.py",
+            "display_url": "https://github.com/pbpeter/youtube-dl/blob/00eb865b3c8002f47e73706b54f58feaee0b0ac2/youtube_dl/extractor/extractors.py",
+            "display_title": "youtube_dl/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "from .webofstories import (\n    WebOfStoriesIE,\n    WebOfStoriesPlaylistIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      10,
+                      13
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      36,
+                      39
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      56,
+                      59
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      22,
+                      30
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/jeffsvajlenko/CloneWorks/blob/4e9f55bad3dd2e6273813fd544b0d05024874a90/example/youtube-dl/youtube_dl/extractor/extractors.py",
+            "path": "example/youtube-dl/youtube_dl/extractor/extractors.py",
+            "display_url": "https://github.com/jeffsvajlenko/CloneWorks/blob/4e9f55bad3dd2e6273813fd544b0d05024874a90/example/youtube-dl/youtube_dl/extractor/extractors.py",
+            "display_title": "example/youtube-dl/youtube_dl/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "    WDRIE,\n    WDRMobileIE,\n    WDRMausIE,",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      18,
+                      26
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": ")\nfrom .webofstories import (\n    WebOfStoriesIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      12,
+                      15
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      38,
+                      41
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/coltking/GUIYoutube-descontinuado-/blob/63571494f0f785b8e4915bda7242c226d24c9897/youtube_dl/extractor/extractors.py",
+            "path": "youtube_dl/extractor/extractors.py",
+            "display_url": "https://github.com/coltking/GUIYoutube-descontinuado-/blob/63571494f0f785b8e4915bda7242c226d24c9897/youtube_dl/extractor/extractors.py",
+            "display_title": "youtube_dl/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "    WDRIE,\n    WDRMobileIE,\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      18,
+                      26
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": ")\nfrom .webofstories import (\n    WebOfStoriesIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      12,
+                      15
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      38,
+                      41
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/AntidoteLabs/Antidote-DM/blob/80662a996e77ecb9ab79c1d5c8ad8332e0dd4c9d/Antidotes DM/youtube_dl/extractor/__init__.py",
+            "path": "Antidotes DM/youtube_dl/extractor/__init__.py",
+            "display_url": "https://github.com/AntidoteLabs/Antidote-DM/blob/80662a996e77ecb9ab79c1d5c8ad8332e0dd4c9d/Antidotes DM/youtube_dl/extractor/__init__.py",
+            "display_title": "Antidotes DM/youtube_dl/extractor/__init__.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "    WDRIE,\n    WDRMobileIE,\n    WDRMausIE,",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      18,
+                      26
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": ")\nfrom .webofstories import (\n    WebOfStoriesIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      12,
+                      15
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      38,
+                      41
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/Booplicate/MAS-Submods-YouTubeMusic/blob/1cda3d95605f8dd9aedb0e0d2e0432feada0c899/YouTube Music/game/python-packages/youtube_dl/extractor/extractors.py",
+            "path": "YouTube Music/game/python-packages/youtube_dl/extractor/extractors.py",
+            "display_url": "https://github.com/Booplicate/MAS-Submods-YouTubeMusic/blob/1cda3d95605f8dd9aedb0e0d2e0432feada0c899/YouTube Music/game/python-packages/youtube_dl/extractor/extractors.py",
+            "display_title": "YouTube Music/game/python-packages/youtube_dl/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "from .webofstories import (\n    WebOfStoriesIE,\n    WebOfStoriesPlaylistIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      10,
+                      13
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      36,
+                      39
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      56,
+                      59
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      22,
+                      30
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/skyvers/skyve/blob/08e466ee09640225080a63c10a9c9026131ebbb4/skyve-web/src/main/resources/META-INF/resources/isomorphic130/system/modules-debug/ISC_History.js",
+            "path": "skyve-web/src/main/resources/META-INF/resources/isomorphic130/system/modules-debug/ISC_History.js",
+            "display_url": "https://github.com/skyvers/skyve/blob/08e466ee09640225080a63c10a9c9026131ebbb4/skyve-web/src/main/resources/META-INF/resources/isomorphic130/system/modules-debug/ISC_History.js",
+            "display_title": "skyve-web/src/main/resources/META-INF/resources/isomorphic130/system/modules-debug/ISC_History.js",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "        navigator.pointerEnabled != false && navigator.msPointerEnabled != false &&\n        (isc.Browser.isIE || isc.Browser.isEdge) && !isc.Browser.isMobileIE;\n",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      151,
+                      159
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "        // delete data associated with this id\n        delete this.historyState.data[topOfStack];\n    }",
+                "matches": [
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      89,
+                      92
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/noahbroyles/fast-youtube-dl/blob/a51e5ae360085f34cac6f9599d47946b26b72af5/youtube_dl/extractor/extractors.py",
+            "path": "youtube_dl/extractor/extractors.py",
+            "display_url": "https://github.com/noahbroyles/fast-youtube-dl/blob/a51e5ae360085f34cac6f9599d47946b26b72af5/youtube_dl/extractor/extractors.py",
+            "display_title": "youtube_dl/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "from .webofstories import (\n    WebOfStoriesIE,\n    WebOfStoriesPlaylistIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      10,
+                      13
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      36,
+                      39
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      56,
+                      59
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      22,
+                      30
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/lzambella/Qyoutube-dl/blob/a6468255dbff51b1c6c3adf4b7a2d7ec594f94d6/youtube_dl/extractor/__init__.py",
+            "path": "youtube_dl/extractor/__init__.py",
+            "display_url": "https://github.com/lzambella/Qyoutube-dl/blob/a6468255dbff51b1c6c3adf4b7a2d7ec594f94d6/youtube_dl/extractor/__init__.py",
+            "display_title": "youtube_dl/extractor/__init__.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "    WDRIE,\n    WDRMobileIE,\n    WDRMausIE,",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      18,
+                      26
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": ")\nfrom .webofstories import (\n    WebOfStoriesIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      12,
+                      15
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      38,
+                      41
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/upintheairsheep/ytdl-sheep/blob/4e0539e21f1fd7fdae9f1db0370139d97c727026/yt_dlp/extractor/_extractors.py",
+            "path": "yt_dlp/extractor/_extractors.py",
+            "display_url": "https://github.com/upintheairsheep/ytdl-sheep/blob/4e0539e21f1fd7fdae9f1db0370139d97c727026/yt_dlp/extractor/_extractors.py",
+            "display_title": "yt_dlp/extractor/_extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "from .webofstories import (\n    WebOfStoriesIE,\n    WebOfStoriesPlaylistIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      10,
+                      13
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      36,
+                      39
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      56,
+                      59
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      22,
+                      30
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/rt2yrru/youtube_dl_custom_old/blob/648d01c1cdc7b3e11b4f812520fa39474719cdfc/youtube_dl/extractor/extractors.py",
+            "path": "youtube_dl/extractor/extractors.py",
+            "display_url": "https://github.com/rt2yrru/youtube_dl_custom_old/blob/648d01c1cdc7b3e11b4f812520fa39474719cdfc/youtube_dl/extractor/extractors.py",
+            "display_title": "youtube_dl/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "    WDRIE,\n    WDRMobileIE,\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      18,
+                      26
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": ")\nfrom .webofstories import (\n    WebOfStoriesIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      12,
+                      15
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      38,
+                      41
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/chequeado/desgrabador/blob/03f9905e6cf1a456307dc7cb2029ec5d22bc3bce/youtube_dl/extractor/extractors.py",
+            "path": "youtube_dl/extractor/extractors.py",
+            "display_url": "https://github.com/chequeado/desgrabador/blob/03f9905e6cf1a456307dc7cb2029ec5d22bc3bce/youtube_dl/extractor/extractors.py",
+            "display_title": "youtube_dl/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "    WDRIE,\n    WDRMobileIE,\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      18,
+                      26
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": ")\nfrom .webofstories import (\n    WebOfStoriesIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      12,
+                      15
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      38,
+                      41
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/jiaxianhua/skillshare/blob/c047fdc82c81b1a77d3412cb5a6d1b572f08eefb/youtube_dl/extractor/extractors.py",
+            "path": "youtube_dl/extractor/extractors.py",
+            "display_url": "https://github.com/jiaxianhua/skillshare/blob/c047fdc82c81b1a77d3412cb5a6d1b572f08eefb/youtube_dl/extractor/extractors.py",
+            "display_title": "youtube_dl/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "from .webofstories import (\n    WebOfStoriesIE,\n    WebOfStoriesPlaylistIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      10,
+                      13
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      36,
+                      39
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      56,
+                      59
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    WeiboIE, \n    WeiboMobileIE\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      23,
+                      31
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/esc0rtd3w/firestick-loader-kodi-data/blob/e4d7931d8f62c94f586786cd8580108b68d3aa40/18/addons/script.module.youtube.dl/lib/youtube_dl/extractor/extractors.py",
+            "path": "18/addons/script.module.youtube.dl/lib/youtube_dl/extractor/extractors.py",
+            "display_url": "https://github.com/esc0rtd3w/firestick-loader-kodi-data/blob/e4d7931d8f62c94f586786cd8580108b68d3aa40/18/addons/script.module.youtube.dl/lib/youtube_dl/extractor/extractors.py",
+            "display_title": "18/addons/script.module.youtube.dl/lib/youtube_dl/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "from .webofstories import (\n    WebOfStoriesIE,\n    WebOfStoriesPlaylistIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      10,
+                      13
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      36,
+                      39
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      56,
+                      59
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      22,
+                      30
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/Artikash/VNR-Extras/blob/0ec62045cccbbd8cf83084ffdc33d1d40768328b/Frameworks/Python/Lib/site-packages/youtube_dl/extractor/__init__.py",
+            "path": "Frameworks/Python/Lib/site-packages/youtube_dl/extractor/__init__.py",
+            "display_url": "https://github.com/Artikash/VNR-Extras/blob/0ec62045cccbbd8cf83084ffdc33d1d40768328b/Frameworks/Python/Lib/site-packages/youtube_dl/extractor/__init__.py",
+            "display_title": "Frameworks/Python/Lib/site-packages/youtube_dl/extractor/__init__.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "    WDRIE,\n    WDRMobileIE,\n    WDRMausIE,",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      18,
+                      26
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": ")\nfrom .webofstories import (\n    WebOfStoriesIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      12,
+                      15
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      38,
+                      41
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/esc0rtd3w/firestick-loader-kodi-data/blob/e4d7931d8f62c94f586786cd8580108b68d3aa40/16/addons/script.module.youtube.dl/lib/youtube_dl/extractor/extractors.py",
+            "path": "16/addons/script.module.youtube.dl/lib/youtube_dl/extractor/extractors.py",
+            "display_url": "https://github.com/esc0rtd3w/firestick-loader-kodi-data/blob/e4d7931d8f62c94f586786cd8580108b68d3aa40/16/addons/script.module.youtube.dl/lib/youtube_dl/extractor/extractors.py",
+            "display_title": "16/addons/script.module.youtube.dl/lib/youtube_dl/extractor/extractors.py",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "from .webofstories import (\n    WebOfStoriesIE,\n    WebOfStoriesPlaylistIE,",
+                "matches": [
+                  {
+                    "text": "fst",
+                    "indices": [
+                      10,
+                      13
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      36,
+                      39
+                    ]
+                  },
+                  {
+                    "text": "fSt",
+                    "indices": [
+                      56,
+                      59
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    WeiboIE,\n    WeiboMobileIE\n)",
+                "matches": [
+                  {
+                    "text": "MobileIE",
+                    "indices": [
+                      22,
+                      30
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "isError": false
+    }
+  }
+}
