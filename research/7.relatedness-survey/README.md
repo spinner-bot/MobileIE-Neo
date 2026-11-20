@@ -9,7 +9,7 @@
 
 当前状态：原113项、G1-A0001新增11项及[G1-A0002新增PASTA论文](docs/0007-Gate1二次增补审查-26112107.md)均按冻结Gate1审查，共125个身份（51论文、65代码、9其他）。截止快照仍2026-11-17，实际补取含11月20/21日。原Gate、历史目录和结项记录保留，尚未完成全部Gate2和总体结论报告。
 
-当前分析进度：13/125项已顺序完成Gate2；MIE-0003另已完成[正式ICML/PMLR追加复审](resources/MIE-0003/derived/reviews/0001/report/analysis.md)。MIE-0014 DRNet为唯一已开始未结项资源，Gate1增补推进限制已解除，恢复其来源核查与Gate2。下一项仍MIE-0015；新MIE-0125的分析序为23，不提前深入分析。以[目录v3](catalog/README-v3.md)、[顺序日志](catalog/analysis-log.jsonl)及[追加复审日志](catalog/review-log.jsonl)为准。原1–124静态ID、v1/v2目录与旧审查不变。
+当前分析进度：14/125项已顺序结项（13项pass_full、1项closed_limited）；MIE-0003另已完成[正式ICML/PMLR追加复审](resources/MIE-0003/derived/reviews/0001/report/analysis.md)。MIE-0014 DRNet已完成[证据受限结项](resources/MIE-0014/derived/report/analysis.md)：完整预印本与适用实现已分析、两份权重完整恢复，正式版/盲配置/历史任务映射缺口保留。MIE-0015作者项目已在14关闭后顺序开始，是当前唯一活跃资源。新MIE-0125的分析序为23，不提前深入分析。以[目录v3](catalog/README-v3.md)、[顺序日志](catalog/analysis-log.jsonl)及[追加复审日志](catalog/review-log.jsonl)为准。原1–124静态ID、v1/v2目录与旧审查不变。
 
 这些Gate2结项属于公开文献与适用核心静态分析，不是数值复现。总体报告与Gate3预实验尚未完成，本阶段不执行Gate3。
 
