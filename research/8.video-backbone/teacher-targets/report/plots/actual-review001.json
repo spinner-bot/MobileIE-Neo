@@ -1,0 +1,26 @@
+{
+  "at": "2026-11-20T19:34:22.618825+08:00",
+  "actual_viewed": true,
+  "tool": "view_image",
+  "images": [
+    {
+      "path": "research/8.video-backbone/teacher-targets/report/plots/psnr_rgb-vs-temporal.png",
+      "sha256": "37605cb9168b1cf9bdeb86105cfcb4e39f6ac67b1091f24b3053f6a62ec0ef09"
+    },
+    {
+      "path": "research/8.video-backbone/teacher-targets/report/plots/JOD-vs-temporal.png",
+      "sha256": "c671365374c999a27168feb52358bead8c8f8a944a27daeb066cd658d84792f9"
+    }
+  ],
+  "observations": [
+    "Both full48-point PSNR/Etemp and JOD/Etemp PNGs actually opened via view_image; PDF exports not separately rendered.",
+    "Temporal raw means sit slightly left of spatial-KD raw, whereas all classical-post variants are much farther left.",
+    "ND PSNR adaptation differs strongly between seeds; both are retained. Plot axis limits differ across panels, and point distances are not statistical confidence.",
+    "All12 outputs per group are plotted. Lines join actual raw/post endpoints, not measured interpolation, mobile latency or a Pareto proof."
+  ],
+  "new_NN_images": 0,
+  "new_metric_scores": 0,
+  "scientific_thresholds_changed": false,
+  "original_renderer_actual_viewed_false_preserved": true,
+  "independent_final_opened": false
+}
