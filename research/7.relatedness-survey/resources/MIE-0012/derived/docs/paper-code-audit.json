@@ -1,0 +1,69 @@
+{
+  "resource_id": "MIE-0012",
+  "at": "2026-11-20T20:15:26.764616+08:00",
+  "all21archive_blobs_match_fixed_tree": true,
+  "pinned_commit": "530c692feb99ecf6205bb929118a9167e2809d4d",
+  "pinned_commit_date": "2026-04-24T11:55:01Z",
+  "source_readable_lines": {
+    "README.md": 161,
+    "config/uie.yaml": 37,
+    "data/__init__.py": 158,
+    "data/uiedata.py": 102,
+    "logger.py": 52,
+    "loss.py": 120,
+    "main.py": 219,
+    "model/__init__.py": 42,
+    "model/uie.py": 286,
+    "model/utils.py": 545,
+    "option.py": 95,
+    "uieb_test.txt": 90
+  },
+  "literal_slim_parameter_components": {
+    "head_conv5": 912,
+    "prelu": 12,
+    "head_conv3": 1308,
+    "head_fst": 14,
+    "body_conv3": 1308,
+    "body_fst": 14,
+    "fca": 300,
+    "fgsa": 36,
+    "gates": 3,
+    "tail": 327
+  },
+  "literal_slim_parameter_total": 4234,
+  "paper_PSNR_delta_against_mobileie": 1.1610000000000014,
+  "parameter_increase_pct": 3.901840490797537,
+  "FPS_decline_pct": 12.575491915059423,
+  "FLOPs_decline_pct": 0.3126848643623781,
+  "log_regex_summary": {
+    "epoch_entries": 1000,
+    "first": [
+      1,
+      17.66820373535156
+    ],
+    "last": [
+      1000,
+      22.979741213056776
+    ],
+    "best": [
+      657,
+      23.96909417046441
+    ],
+    "rate_line": [
+      "Fixed learning rate: 0.0009"
+    ],
+    "interpretation": "Author-supplied text, no provenance/weight/evaluation reproduction verification"
+  },
+  "test_list_count": 90,
+  "test_list_unique": 90,
+  "split_auto_applied_in_loader": false,
+  "DCT_double_zero_symbolic_review": {
+    "form": "y=tanh(gamma) * PW(DW_fixed(x))",
+    "initialization": "gamma=0 and PW.weight=0, no PW bias",
+    "derivatives_at_fresh_init": "dy/dPW=tanh(0)*DW=0; dy/dgamma=sech²(0)*PW(DW)=0",
+    "consequence": "Under fresh default initialization, standard finite-gradient Adam and no nonzero checkpoint/explicit perturbation, both trainable factors remain zero, so DCT signal stays inactive",
+    "limits": "No autograd/model run; does not prove historical author experiments used this exact initialization/code or invalidate all attention results"
+  },
+  "binary_handling": "Checkpoint and pyc SHA/header/ZIP metadata only; no deserialization/unpickle/import/execution",
+  "scientific_model_execution": false
+}
