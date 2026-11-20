@@ -1,0 +1,233 @@
+{
+  "at": "2026-11-21T01:11:30.530140+08:00",
+  "all_original_handles_gone": true,
+  "original_handles": [
+    {
+      "path": "process/cuda-spatial-qualification001/runtime.json",
+      "sha256": "6009738a93f39e3915e7189a6f5b94b15f22af31d99708e3c4a6c534504681e4",
+      "original": {
+        "pid": 3394024,
+        "start_ticks": 112977717,
+        "state": "R"
+      },
+      "observed": {
+        "pid": 3394024,
+        "already_exited": true
+      },
+      "seconds": 58.612520538968965,
+      "completed_normally": true
+    },
+    {
+      "path": "process/spatial-seed0-attempt001/runtime.json",
+      "sha256": "8c50ee6005678005058063db99aa5fbaadf94465c8f0192f32b9ac8121b4e906",
+      "original": {
+        "pid": 3394474,
+        "start_ticks": 112988524,
+        "state": "R"
+      },
+      "observed": {
+        "pid": 3394474,
+        "already_exited": true
+      },
+      "seconds": 2077.8823405038565,
+      "completed_normally": true
+    },
+    {
+      "path": "process/spatial-seed1-attempt001/runtime.json",
+      "sha256": "99ee46c3e5c086ba46ef8eccae397f5e9f1b49141f9565d7db151f03077151be",
+      "original": {
+        "pid": 3415953,
+        "start_ticks": 113206445,
+        "state": "R"
+      },
+      "observed": {
+        "pid": 3415953,
+        "already_exited": true
+      },
+      "seconds": 2080.6058937609196,
+      "completed_normally": true
+    },
+    {
+      "path": "results/spatial-held-seed0/runtime.json",
+      "sha256": "560086ead40c490087b209ffb4ca01ff2ae6320a61dceaacacd4237142db4309",
+      "original": {
+        "pid": 3414567,
+        "start_ticks": 113196540,
+        "state": "R"
+      },
+      "observed": {
+        "pid": 3414567,
+        "already_exited": true
+      },
+      "seconds": 49.8075269178953,
+      "completed_normally": true
+    },
+    {
+      "path": "results/spatial-held-seed1/runtime.json",
+      "sha256": "db2e01e8d48b4ac8c84e5987ae25dd7138d8ca0c4fddf3d6c133ea09a82ae0f0",
+      "original": {
+        "pid": 3433443,
+        "start_ticks": 113414734,
+        "state": "R"
+      },
+      "observed": {
+        "pid": 3433443,
+        "already_exited": true
+      },
+      "seconds": 49.24233616888523,
+      "completed_normally": true
+    },
+    {
+      "path": "process/spatial-chain001/runtime.json",
+      "sha256": "8f00452dc19ff6d461974de43017405c2abcceed61d5c5b5e1c965631b7837e5",
+      "original": {
+        "pid": 3393743,
+        "start_ticks": 112972989,
+        "state": "R"
+      },
+      "observed": {
+        "pid": 3393743,
+        "already_exited": true
+      },
+      "seconds": 4468.5056497328915,
+      "completed_normally": true
+    },
+    {
+      "label": "cuda-spatial-qualification001",
+      "original": {
+        "pid": 3393948,
+        "start_ticks": 112975358,
+        "state": "R"
+      },
+      "observed": {
+        "pid": 3393948,
+        "already_exited": true
+      }
+    },
+    {
+      "label": "spatial-seed0-attempt001",
+      "original": {
+        "pid": 3394209,
+        "start_ticks": 112986164,
+        "state": "R"
+      },
+      "observed": {
+        "pid": 3394209,
+        "already_exited": true
+      }
+    },
+    {
+      "label": "held-spatial-seed0",
+      "original": {
+        "pid": 3414567,
+        "start_ticks": 113196540,
+        "state": "R"
+      },
+      "observed": {
+        "pid": 3414567,
+        "already_exited": true
+      }
+    },
+    {
+      "label": "spatial-seed1-attempt001",
+      "original": {
+        "pid": 3415387,
+        "start_ticks": 113204074,
+        "state": "R"
+      },
+      "observed": {
+        "pid": 3415387,
+        "already_exited": true
+      }
+    },
+    {
+      "label": "held-spatial-seed1",
+      "original": {
+        "pid": 3433443,
+        "start_ticks": 113414734,
+        "state": "R"
+      },
+      "observed": {
+        "pid": 3433443,
+        "already_exited": true
+      }
+    },
+    {
+      "label": "summarize-spatial",
+      "original": {
+        "pid": 3433761,
+        "start_ticks": 113419840,
+        "state": "R"
+      },
+      "observed": {
+        "pid": 3433761,
+        "already_exited": true
+      }
+    }
+  ],
+  "original_child_exit_events": [
+    {
+      "at": "2026-11-20T23:47:30.149198+08:00",
+      "action": "exit",
+      "label": "cuda-spatial-qualification001",
+      "code": 0
+    },
+    {
+      "at": "2026-11-21T00:22:57.686703+08:00",
+      "action": "exit",
+      "label": "spatial-seed0-attempt001",
+      "code": 0
+    },
+    {
+      "at": "2026-11-21T00:23:49.325874+08:00",
+      "action": "exit",
+      "label": "held-spatial-seed0",
+      "code": 0
+    },
+    {
+      "at": "2026-11-21T00:59:19.623921+08:00",
+      "action": "exit",
+      "label": "spatial-seed1-attempt001",
+      "code": 0
+    },
+    {
+      "at": "2026-11-21T01:00:10.680218+08:00",
+      "action": "exit",
+      "label": "held-spatial-seed1",
+      "code": 0
+    },
+    {
+      "at": "2026-11-21T01:00:10.755725+08:00",
+      "action": "exit",
+      "label": "summarize-spatial",
+      "code": 0
+    }
+  ],
+  "formal_optimizer_updates": 32000,
+  "formal_student_images": 512000,
+  "evaluation_backbone_images": 1536,
+  "evaluation_window_output_rows": 384,
+  "evaluation_frame_output_rows": 1536,
+  "evaluation_unique_windows": 128,
+  "named_frozen_sources_verified": 40,
+  "unique_final_models": 4,
+  "qualification_optimizer_updates_discarded": {
+    "CPU": 4,
+    "CUDA": 4
+  },
+  "resource_pauses": 0,
+  "own_original_GPU_PIDs_present": [],
+  "own_original_GPU_work_released": true,
+  "new_model_or_metric_calls": 0,
+  "numerical_chain_completed_normally": true,
+  "coordinator_runtime_complete": true,
+  "outer_terminal": {
+    "tool_session": 47202,
+    "observed_exit_code": 143,
+    "cause": "unknown",
+    "coordinator_OS_exit_code_independently_observed": false,
+    "explanation": "Retain the outer tool status separately. Original workers, CPU evaluations, both GPU guards and all six recorded child exits completed normally; no restart or result rewrite."
+  },
+  "video_training_started": false,
+  "independent_final_opened": false
+}
