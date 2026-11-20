@@ -70,7 +70,9 @@ def main(seed):
                         details = []
                         for frame in range(4):
                             row = dict(key=key, domain=domain, seed=seed, arm=arm, frame=frame,
-                                psnr_rgb=psnr(display[frame], target[frame]), ssim_rgb=ssim(display[frame], target[frame]),
+                                psnr_rgb=min(psnr(display[frame], target[frame]), 120.),
+                                psnr_120dB_ceiling_applied=psnr(display[frame], target[frame]) >= 120.,
+                                ssim_rgb=ssim(display[frame], target[frame]),
                                 edge_mae=edge_error(display[frame], target[frame]))
                             append(out / 'per_frame.jsonl', row); details.append(row)
                         fidelity = float(np.mean((raw.astype(np.float64) - outputs['F0'][index]) ** 2))
