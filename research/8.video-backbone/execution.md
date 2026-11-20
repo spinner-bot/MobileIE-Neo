@@ -35,3 +35,9 @@ run_v1自身代码/配置/launch身份单独版本管理；它不改变34个冻�
 ## 2026-11-20T16:01:07.457759+08:00：两seed训练均已结束，当前只核最终评价句柄
 
 seed1于15:58:09正常完成原14000，与seed0合28000；旧训练3057710已退出，勿重启。当前原CPU协调3024380/start109481893和新质量seed1=3095929/start110167820，15:58:10实际启动；先核这两个/proc/start与原runtime。两CPU质量正常后由原协调器自动调用post chain003，当前仍勿手动启动重复链。完整官方JOD/共同表/四联系图后仍需根agent实际阅图和解释。用户要求按近期速度估算sleep，参考同完整seed0质量905.255895秒、扣除已过时间并覆盖大部分余量，醒后再核同句柄；不以估算到期重启或改变原预算。详报告0174/progress017。
+
+## 2026-11-20T16:36:44.711537+08:00：最新有效评分句柄为chain005/attempt004
+
+此前CPU coor3024380、chain003 coor3106031、chain004 coor3111112均在无数值child边界正常退出并保留False/KeyboardInterrupt，勿再视为live。前三评分attempt只因内层旧组限制资源75，JOD0/CUDA分配0，原全部记录保留。现[修订002](gpu-group-amendment002.md)和4执行源冻结支持匹配的内外4–7组，原34＋5＋4和001原2源保持。
+
+当前chain005协调3117047/start110362360、prebind3118635/start110367454、metric3118981/start110372429实际同身份live、物理6 PID UUID匹配；结果在results/v1-perceptual-attempt004，已见12/220官方JOD真实前缀。下一核这三个原/proc/start和chain005 state/原runtime；资源暂停由原循环保留分数续接，勿手工重复启动或改活跃源码。评分全正常后仍自动原summarize_v1/render_v1，根agent实际阅图和解释尚待，额外plot_v1随后手动全表展示。长等待按初段速度sleep，勿以估计到期重启。
