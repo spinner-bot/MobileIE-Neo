@@ -27,3 +27,7 @@ run_v1自身代码/配置/launch身份单独版本管理；它不改变34个冻�
 2026-11-20T14:20:00.852101+08:00；Codex  (sqs_A100)。共享GPU多次拒绝/资源保存后，新增[CPU后端修订](cpu-backend-amendment001.md)并独立冻结4个执行源。原chain002只在所有数值worker正常保存结束、coor无child时以Python SIGINT退出空闲watcher，原False/KeyboardInterrupt及全部GPU历史保持；未向任何数值worker发信号，不再监视旧PID作为活跃。
 
 当前原cpu-chain001协调3024380/start109481893、worker3024402/start109481902，两线程/nice5、空CUDA mask，真实从GPU358的完整状态继续359。warm2000已正常，三控制GT适配继续。新CPU控制器完成两seed原预算及CPU质量后才启动原post chain003评分/汇总/联系图，训练期间不要手工启动chain003或旧GPU链。当前以process/v1/cpu-chain001/state.json、原PID/start、attempt006真实trace/marker/runtime和progress009为准。原34＋5源及新增CPU4源活跃期间保持冻结；后续过程写本页外的journal/报告，避免修改已冻结执行修订。
+
+## 2026-11-20T15:03:42.532564+08:00：首seed已正常，当前改核新的原句柄
+
+原attempt006 worker3024402/start109481902于15:00:21正常完成warm2000＋三组各4000、14000总更新，已核/proc缺失，勿继续将其视为live或重做该seed。原CPU协调3024380/start109481893仍运行；实际自动启动质量seed0=3057709/start109820957和独立训练seed1=3057710/start109820958，两者各2线程/nice5/空CUDA mask。先核这三个/proc身份与各自原日志/runtime；progress012是当时核验记录，不是实时状态。两seed/质量完整后仍由同协调器调用原post chain003，当前不要手工启动；全部官方JOD、共同表、四图和根agent实际审阅尚待。报告0173记录本阶段，原34＋5＋4源与全部门槛保持。
