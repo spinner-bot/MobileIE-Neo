@@ -2,7 +2,7 @@
 
 2026-11-20；Codex  (sqs_A100)。main主线新主题，从8起；research/7由其他分支占用。此页是研究入口，具体实验以单独协议为准，不是创新声明。
 
-当前V1完整候选已实现并持续训练：[协议](protocol-v1.md)、[原训练审计](original-model-and-training.md)、[先例](precedents-and-candidate.md)、[CPU执行修订](cpu-backend-amendment001.md)。CPU/CUDA资格各8丢弃通过，原GPU更新358全部保留。共享GPU反复退让后，仅在无活跃数值child时正常退出空闲watcher，显式两线程/nice5 CPU从359继续；原34训练质量源及5辅助源不改，新增CPU执行4源单独冻结，后端改变不称逐bit复现。CPU协调3024380/start109481893、worker3024402/start109481902仍以真实进程核验为准。唯一warm2000已完成并重载有限，fresh Adam开始三控制GT适配；[progress010](process/v1/progress010.json)核warm2000/spatial4000唯一最终均已完成，固定融合655步真实前缀，学习融合后续按原顺序执行，未有DEV/JOD或方法结论。总28000预算和完整220新质量/强参照/JOD/280共表/四图及止损不变。读[0172](../../docs/进展报告/0172-T-26112014-CPU持续接续与教师暖启动完成.md)、[过程](process/v1/journal.md)。空间16180/学习16365参数，不称4K或零开销；以下研究问题与旧STOP边界保持。
+当前V1完整候选已实现并持续训练：[协议](protocol-v1.md)、[原训练审计](original-model-and-training.md)、[先例](precedents-and-candidate.md)、[CPU执行修订](cpu-backend-amendment001.md)。CPU/CUDA资格各8丢弃通过，原GPU更新358全部保留。共享GPU反复退让后，仅在无活跃数值child时正常退出空闲watcher，显式两线程/nice5 CPU从359继续；原34训练质量源及5辅助源不改，新增CPU执行4源单独冻结，后端改变不称逐bit复现。CPU协调3024380/start109481893、worker3024402/start109481902仍以真实进程核验为准。唯一warm2000已完成并重载有限，fresh Adam开始三控制GT适配；[progress011](process/v1/progress011.json)核warm2000/spatial4000/fixed4000唯一最终均已完成、学习融合478步真实前缀，随后原learned1000备份已核摘要并提交；当前进度以原日志为准，未有DEV/JOD或方法结论。总28000预算和完整220新质量/强参照/JOD/280共表/四图及止损不变。读[0172](../../docs/进展报告/0172-T-26112014-CPU持续接续与教师暖启动完成.md)、[过程](process/v1/journal.md)。空间16180/学习16365参数，不称4K或零开销；以下研究问题与旧STOP边界保持。
 
 R88已完成两seed8000更新、80质量/80官方JOD及完整共同条件，A/B组资格均0/4。冻结恢复骨干之后学习小描述分支，尚不足以获得有用的质量—时间联合收益。全部正控制和逐源例外见[完整决定](../4.temporal-consistency/docs/exploration-r88-decision.md)，不推广为所有共享表示不可能，也不把局部网格重新搬到本目录。
 
@@ -14,6 +14,6 @@ R88已完成两seed8000更新、80质量/80官方JOD及完整共同条件，A/B�
 
 已核直接先例、原训练轨迹和解析预算，V1具体三控制见上方协议。数值资格只检查实现健康；正式设计覆盖真实视频输出和唯一最终评价，避免只留下检索率、可训练梯度或bit对齐。空间画质须有相对原F0的保护，并与新空间模型自己的强post公平比较，不能以约1dB画质损失交换小幅闪烁变化。
 
-R51有限相位滤波、R64预算时域骨干、R74/R82/R88及全部旧STOP都必须逐一核对。这里不解封其宽度/半径/投影/噪声/长度/seed网格。新训练的机制差别、数据/初始化、完整预算、质量—时间—成本门槛和止损已另立V1；当前只有资格读取训练资料，正式训练/DEV尚0，独立最终像素继续封存。
+R51有限相位滤波、R64预算时域骨干、R74/R82/R88及全部旧STOP都必须逐一核对。这里不解封其宽度/半径/投影/噪声/长度/seed网格。新训练的机制差别、数据/初始化、完整预算、质量—时间—成本门槛和止损已另立V1；正式训练已按上述完整预算推进，当前新DEV尚0，独立最终像素继续封存。
 
 相关证据：[R85/R86与论文缺口](../../paper/RESEARCH_STATUS.md)、[R88全部共同条件](../4.temporal-consistency/report/exploration-r88-joint/tables.md)、[原训练规范与约定](../../AGENTS.md)。所有运行资产继续位于zrh自有data，主线main/指定作者/no-ff/小步分别提交与阶段推送保持；survey/pre和演示worktree不修改。
