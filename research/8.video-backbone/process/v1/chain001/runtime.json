@@ -1,0 +1,37 @@
+{
+  "at": "2026-11-20T13:32:39.892715+08:00",
+  "coordinator": {
+    "pid": 2988618,
+    "start_ticks": 109207006,
+    "state": "R"
+  },
+  "completed_normally": false,
+  "seconds": 877.465451244032,
+  "final_state": {
+    "at": "2026-11-20T13:32:39.892197+08:00",
+    "coordinator": {
+      "pid": 2988618,
+      "start_ticks": 109207006,
+      "state": "R"
+    },
+    "status": "stopped_for_original_terminal_review",
+    "stage": "train-seed0-attempt002",
+    "resource_polls": 5,
+    "guard_attempts": 4,
+    "child": {
+      "pid": 2999613,
+      "already_exited": true
+    },
+    "worker": {
+      "pid": 3000204,
+      "start_ticks": 109287294,
+      "state": "S"
+    },
+    "last_resource_poll": ".cache/experiments/topic8-v1/chain001/resource-poll00001.json",
+    "stdout": ".cache/experiments/topic8-v1/chain001/train-seed0-attempt002-guard00004.stdout.txt",
+    "returncode": 75,
+    "last_guard": ".cache/experiments/topic8-v1/chain001/guard00002.json"
+  },
+  "CPU_quality_children": [],
+  "paper_objective_achieved": false
+}
