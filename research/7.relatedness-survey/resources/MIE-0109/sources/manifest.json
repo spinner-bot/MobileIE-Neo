@@ -1,0 +1,41 @@
+{
+  "resource_id": "MIE-0109",
+  "created_at": "2026-11-20T12:24:23+08:00",
+  "source_root": "../../.. (workstation root from this sources directory)",
+  "snapshot_cutoff": "2026-11-17",
+  "receipts": [
+    {
+      "path": "receipts/paper-44b494323e15-publisher.json",
+      "status": "http_error",
+      "http": 403,
+      "archive": "archive/paper-44b494323e15-publisher.html",
+      "sha256": "59d67646d529772e011e6cb824bf0ea28b642c7257d186589d1dfe902cf42536"
+    },
+    {
+      "path": "receipts/paper-44b494323e15-index-link1.json",
+      "status": "success",
+      "http": 202,
+      "archive": null,
+      "sha256": null
+    }
+  ],
+  "discovery_evidence": [
+    {
+      "source": "collection/raw/initial-openalex-citing.json",
+      "position": 29,
+      "source_record_id": "https://openalex.org/W7207524941"
+    },
+    {
+      "source": "collection/raw/initial-s2-citing.json",
+      "position": 8,
+      "source_record_id": "f8c36a81922bedb2386c13052dfc854f3a15c502"
+    },
+    {
+      "source": "research/5.prior-art-survey/data/citations_s2.json",
+      "position": 7,
+      "source_record_id": "f8c36a81922bedb2386c13052dfc854f3a15c502"
+    }
+  ],
+  "adequacy": "Materials available for analysis; not yet read or qualified",
+  "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts"
+}
