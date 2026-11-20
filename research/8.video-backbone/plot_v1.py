@@ -79,7 +79,7 @@ def main():
     out.mkdir(parents=True, exist_ok=False)
     fieldnames = ('domain', 'seed', 'label', 'family', 'output_form', *METRICS)
     with (out / 'points.csv').open('x', newline='') as stream:
-        writer = csv.DictWriter(stream, fieldnames=fieldnames)
+        writer = csv.DictWriter(stream, fieldnames=fieldnames, lineterminator='\n')
         writer.writeheader()
         for row in means:
             family, form = LABELS[row['label']]
