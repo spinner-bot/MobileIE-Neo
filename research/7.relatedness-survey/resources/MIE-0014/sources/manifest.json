@@ -126,6 +126,15 @@
       "archive": "archive/mie0014-author-weights-3tasks-confirmed-strict-retry1.zip",
       "sha256": "29aa0f4ccaf4bc6e3fd1d0e1ddbf1f0624e05313f536b00fe22e423e7c417b88",
       "semantic_adequacy": "Complete ZIP/CRC and opcode-only inspection in derived/docs/weights-3tasks-container-review.json; no tensor/model deserialization or result reproduction"
+    },
+    {
+      "path": "receipts/mie0014-author-weights-5tasks-confirmed-strict-retry1.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/mie0014-author-weights-5tasks-confirmed-strict-retry1.zip",
+      "sha256": "a9f381814561ea1642beab515f097c6d334d06e6b0216c0701e699239e1b7a7b",
+      "semantic_adequacy": "Complete ZIP/CRC and opcode-only inspection in derived/docs/weights-5tasks-container-review.json; no tensor/model loading or reproduction"
     }
   ],
   "discovery_evidence": [
@@ -150,7 +159,7 @@
       "source_record_id": "https://openalex.org/W7167249952"
     }
   ],
-  "adequacy": "13-page arxivv1 fully read; applicable21file fixed source inspected. Three-task weight complete66084673B and all ZIP CRCs verified, metadata opcode-only; five-task retry still running. Formal TMM PDF/generic blind configuration/task semantic mapping remain gaps; Gate2 not closed.",
+  "adequacy": "Full13-page arxivv1 and applicable fixed21-file author source analyzed. Both public3/5-task weights recovered complete66084673/66198640B, allZIPmembersCRC and metadata opcodes inspected without deserialization. Formal TMM PDF/possible supplement and generic blind/historical task semantic mapping remain missing; evidence-limited Gate2 review, not numerical reproduction.",
   "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts",
   "path_conventions": {
     "receipts[].path": "relative to workstation/collection",
@@ -161,5 +170,6 @@
   },
   "report_time_validation": "derived/docs/report-time-acquisition-review.json",
   "resumed_at": "2026-11-21T07:45:27.115562+08:00",
-  "gate1_resume_evidence": "collection/gate1-addenda/0002/status.json"
+  "gate1_resume_evidence": "collection/gate1-addenda/0002/status.json",
+  "resumed_acquisition_review": "derived/docs/resumed-acquisition-review.json"
 }

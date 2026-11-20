@@ -1,0 +1,52 @@
+{
+  "resource_id": "MIE-0014",
+  "reviewed_at": "2026-11-21T07:50:18.165687+08:00",
+  "supersedes_semantic_status_not_raw_records": "report-time-acquisition-review.json",
+  "acquisition_code_fix": "scripts/capture_sources.py short-block loop/length/empty/ZIP checks, controlled7tests passed",
+  "new_weights": [
+    {
+      "task_count": 3,
+      "receipt": "collection/receipts/mie0014-author-weights-3tasks-confirmed-strict-retry1.json",
+      "bytes": 66084673,
+      "declared_bytes": 66084673,
+      "complete_transfer": true,
+      "sha256": "29aa0f4ccaf4bc6e3fd1d0e1ddbf1f0624e05313f536b00fe22e423e7c417b88",
+      "zip_members": 721,
+      "all_member_CRC_passed": true,
+      "pickle_scan_only": true,
+      "literal_task_mapping_strings": [],
+      "tensor_or_model_loading": false
+    },
+    {
+      "task_count": 5,
+      "receipt": "collection/receipts/mie0014-author-weights-5tasks-confirmed-strict-retry1.json",
+      "bytes": 66198640,
+      "declared_bytes": 66198640,
+      "complete_transfer": true,
+      "sha256": "a9f381814561ea1642beab515f097c6d334d06e6b0216c0701e699239e1b7a7b",
+      "zip_members": 721,
+      "all_member_CRC_passed": true,
+      "pickle_scan_only": true,
+      "literal_task_mapping_strings": [],
+      "tensor_or_model_loading": false
+    }
+  ],
+  "old_incomplete_five_task": {
+    "receipt": "collection/receipts/mie0014-author-weights-5tasks-confirmed.json",
+    "old_bytes": 32761722,
+    "declared_bytes": "66198640",
+    "old_record_preserved": true,
+    "new_prefix_sha256": "20c4f560bb71cfc9e986d0e4de4fe366cd4804de94a388819b79dca93183ff75",
+    "new_prefix_matches_old_retained_bytes": true
+  },
+  "formal_version": "Crossref formal DOI/year/volume/pages only; prior official PDF paths returned202 empty or HTML. Formal PDF and possible separate supplemental contents not obtained. arxiv13pagev1 fully available and read.",
+  "missing_reproduction_evidence": [
+    "formal-version content correspondence",
+    "generic blind prior configuration/checkpoint/task mapping",
+    "historical training task-onehot mapping",
+    "data license/exact splits and training overlaps",
+    "independent numerical/fold/motion/video/mobile full-cost measurements",
+    "explicit code license text at fixed source"
+  ],
+  "interpretation": "Both public weights now complete as transfer/container artifacts; neither torch.load nor pickle.load nor upstream model executed. Unfused TSM/bank key strings observed, no explicit literal task map; cannot infer complete tensor semantics or paper reproduction."
+}

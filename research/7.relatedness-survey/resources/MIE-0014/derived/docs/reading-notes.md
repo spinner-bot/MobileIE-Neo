@@ -42,3 +42,5 @@ Codex  (sqs_A100) <langxibielangle@qq.com>；2026-11-20全文/源码阅读，202
 ## 恢复后权重获取记录（追加）
 
 三任务新回执strict-retry1已完整66084673B=Content-Length；721个ZIP成员，其中719个storage，全部CRC通过。pickle metadata136602B只经pickletools解析指令，GLOBAL引用只记录不执行；可见TSM/linear专家bank键名，未出现明确denoise/dehaze/derain/blind/base_prompts/candidates任务字符串。此扫描不证明映射完整性、张量形状/数值正确、训练来源或泛用盲模式。详见weights-3tasks-container-review.json。原中断/截断历史保留；五任务仍等待新回执，不称已获。
+
+五任务随后正常完成66198640B=Content-Length；容器和metadata检查见weights-5tasks-container-review.json。两项均完整后才进入最终获取审查，详见resumed-acquisition-review.json；原5任务截断原件及3任务退出143历史不删除。完整归档不补足正式版/盲配置/历史映射或任何数值复现。
