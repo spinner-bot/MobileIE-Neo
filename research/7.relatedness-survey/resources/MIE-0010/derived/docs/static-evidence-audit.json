@@ -1,0 +1,39 @@
+{
+  "resource_id": "MIE-0010",
+  "at": "2026-11-20T19:31:06.388322+08:00",
+  "all_19_archive_blobs_match_pinned_API_tree": true,
+  "two_connector_texts_match_archive": true,
+  "paper_pages": 13,
+  "author_single_page_PDFs": 11,
+  "author_GIF_frames": 36,
+  "GIF_frames_actually_contact_viewed": [
+    0,
+    3,
+    6,
+    10,
+    13,
+    16,
+    19,
+    22,
+    25,
+    29,
+    32,
+    35
+  ],
+  "GIF_interpretation": "Sampled panels show sliding comparison of static scenes, not acquired ROV temporal input/output stream",
+  "arithmetic_only_no_model_execution": {
+    "parameter_reduction_pct_against_4047": 4.1265134667655055,
+    "against_4075_not_same_baseline_pct": 4.785276073619632,
+    "UIEB_reported_PSNR_delta": 1.2149999999999999,
+    "author_FPS_ratio_ours_over_mobileie": 0.6029329403095063,
+    "tank_ratio_of_printed_means_pct": 30.069930069930084,
+    "tank_mean_of_16_printed_row_percentages": 29.737500000000004,
+    "folded_single_MRDConv_example_parameters": 228,
+    "frame_buffer_rgb_fp32_640x480_bytes": 3686400
+  },
+  "cost_limit": "RGB tensor is one example input only, not peak/whole pipeline memory; FPS arithmetic not local timing",
+  "folding_limit": "Fixed Cin/Cout single MRDConv final shape independent of rep_scale; whole architecture absent so Table VII full-model size differences unexplained, not proven false",
+  "complete_model_training_weights_TensorRT_export_in_pinned_tree": false,
+  "license_file_in_pinned_tree": false,
+  "upstream_execution": false
+}

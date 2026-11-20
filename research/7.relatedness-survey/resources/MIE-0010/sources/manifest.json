@@ -52,6 +52,13 @@
       "http": 200,
       "archive": "archive/paper-dce553dc3465-index-link0.html",
       "sha256": "7220d1bc0c8439af22774ccabed533b20528b504de0aca9cc5da962b83a53b07"
+    },
+    {
+      "path": "receipts/sourcezip-Cloudyu1215--UIE.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/sourcezip-Cloudyu1215--UIE.txt",
+      "sha256": "18a4d8ab380d65edff16c6e6eef4d4908a516e6601eeeffa953e24d17c19c828"
     }
   ],
   "discovery_evidence": [
@@ -71,7 +78,7 @@
       "source_record_id": "5ff3c4b9e14e01145ee9821f28f1a3e4f7624e88"
     }
   ],
-  "adequacy": "Materials available for analysis; not yet read or qualified",
+  "adequacy": "Full v1 thirteen-page paper and all 19 tracked author files acquired. All sections and applicable author example statically read; complete learned pipeline/weights/train/export/private real videos unavailable in pinned tree, not reproduced.",
   "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts",
   "path_conventions": {
     "receipts[].path": "relative to workstation/collection",
@@ -79,5 +86,11 @@
     "discovery_evidence strings": "relative to workstation/collection",
     "discovery_evidence[].source": "collection/ prefix relative to workstation; research/ prefix relative to repository root",
     "discovery_evidence[].acquisition": "relative to workstation/collection; path is remote repository path at revision"
-  }
+  },
+  "author_evidence": [
+    "derived/docs/official-readme-receipt.json",
+    "derived/docs/official-mrdconv-receipt.json",
+    "derived/docs/official-tree-receipt.json",
+    "collection/plugin-head-Cloudyu1215--UIE.json"
+  ]
 }
