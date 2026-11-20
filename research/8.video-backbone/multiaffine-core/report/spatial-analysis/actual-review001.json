@@ -1,0 +1,27 @@
+{
+  "at": "2026-11-21T01:12:32.766611+08:00",
+  "reviewer": "Codex  (sqs_A100)",
+  "mechanism": "tools.view_image, actual root-agent inspection",
+  "images": [
+    {
+      "path": "/data/Users/zrh/repo/MobileIE-Neo/research/8.video-backbone/multiaffine-core/report/spatial-analysis/all-means.png",
+      "sha256": "a59d9c5735e56b0f8ccf6d2c69aeb6f3345006d91c67cba780c19bc6d4251dfb"
+    },
+    {
+      "path": "/data/Users/zrh/repo/MobileIE-Neo/research/8.video-backbone/multiaffine-core/report/spatial-analysis/all-window-deltas.png",
+      "sha256": "5cba450562ed80655679ef566e189525c799b09be6d016d82e7103be3ae8fa40"
+    },
+    {
+      "path": "/data/Users/zrh/repo/MobileIE-Neo/research/8.video-backbone/multiaffine-core/report/spatial-analysis/fixed-contacts.png",
+      "sha256": "1e5067bd512f75a20507e84ea835f6aeaad3a91ea4bfbed3414886cd5f57a12c"
+    }
+  ],
+  "findings": [
+    "All twelve means present in four labelled domain/seed panels; M1 lower PSNR than pretrained F0 in all four and above random Slim only SYN seed1. Analytical Conv GMAC axis is not device timing.",
+    "All 128 window deltas shown; both positive quadrants and large negative outliers retained, no visual clipping of point range.",
+    "Fixed contacts have four rows and GT/low/F0/M1/random Slim columns. M1 visibly smoother on these selected patches; this does not establish the cause of its numerical loss, video stability, or perceptual preference."
+  ],
+  "PDFs_separately_viewed": false,
+  "renderer_actual_viewed_field_preserved": false,
+  "new_model_or_metric_calls": 0
+}
