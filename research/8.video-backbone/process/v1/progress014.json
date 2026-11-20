@@ -1,0 +1,107 @@
+{
+  "at": "2026-11-20T15:17:12.946967+08:00",
+  "completed_seed0_quality_runtime": {
+    "at": "2026-11-20T15:15:28.419572+08:00",
+    "pid": 3057709,
+    "completed_normally": true,
+    "seconds": 905.2558953969274,
+    "quality_rows": 110,
+    "frame_rows": 4928,
+    "backbone_images": 2220,
+    "causal_DIS_pairs": 876,
+    "post_DIS_pairs": 1314,
+    "post_FB_pairs": 1314,
+    "CUDA_initialized": false
+  },
+  "completed_seed0_quality_sources": {
+    "research/8.video-backbone/results/v1-quality-seed0/runtime.json": {
+      "sha256": "c1c6b65a554fc1ceb0718bd2884780ed4b95e08441e66524834994af2fccf03c",
+      "bytes": 306
+    },
+    "research/8.video-backbone/results/v1-quality-seed0/per_sequence.jsonl": {
+      "sha256": "69657ecdb8cee225b34f72d21fdda56ce3daa4345f7ec4f2ce1ca701c25625a6",
+      "bytes": 34637
+    },
+    "research/8.video-backbone/results/v1-quality-seed0/per_frame.jsonl": {
+      "sha256": "2186f57c7fbdb859fa8e266a6e0c9bdbbceedadf953abfa0246f075889b75f77",
+      "bytes": 1952507
+    },
+    "research/8.video-backbone/results/v1-quality-seed0/prediction_manifest.jsonl": {
+      "sha256": "7f58bdbe25cfc48a7a9c5ff75134f113b244ad4c6ad87d5dabe946696cbbb18a",
+      "bytes": 50589
+    }
+  },
+  "complete_conditions": 110,
+  "complete_frames": 4928,
+  "condition_counts_by_domain": {
+    "davis_train_pilot": 66,
+    "paired_real_ND_DEV": 44
+  },
+  "condition_counts_by_label": {
+    "topic8_spatial_raw": 10,
+    "topic8_spatial_raw_FB05": 10,
+    "topic8_spatial_raw_DIS05": 10,
+    "topic8_fixed_preview": 10,
+    "topic8_fixed_causal": 10,
+    "topic8_fixed_preview_FB05": 10,
+    "topic8_fixed_preview_DIS05": 10,
+    "topic8_learned_preview": 10,
+    "topic8_learned_causal": 10,
+    "topic8_learned_preview_FB05": 10,
+    "topic8_learned_preview_DIS05": 10
+  },
+  "predictions_owned_and_present": 110,
+  "official_perceptual_rows": 0,
+  "processes": {
+    "coordinator": {
+      "pid": 3024380,
+      "start_ticks": 109481893,
+      "state": "S",
+      "numeric_worker_terminal": false
+    },
+    "completed_quality_seed0": {
+      "pid": 3057709,
+      "start_ticks": 109820957,
+      "state": "Z",
+      "numeric_worker_terminal": true
+    },
+    "train_seed1": {
+      "pid": 3057710,
+      "start_ticks": 109820958,
+      "state": "R",
+      "numeric_worker_terminal": false
+    }
+  },
+  "seed1_trace_prefix": {
+    "path": "research/8.video-backbone/process/v1/train-seed1-attempt001/training.jsonl",
+    "bytes": 1009901,
+    "sha256": "848627f069b01506e22aceb359ec0544b6751e45fe0a9c216bc085ed518bfe3b",
+    "phase_update_rows": {
+      "warm": 2000,
+      "spatial": 2823
+    },
+    "last_update": {
+      "phase": "spatial",
+      "step": 2823,
+      "data_step": 4822
+    }
+  },
+  "source_checks": {
+    "source-freeze001.json": {
+      "files": 34,
+      "unchanged": true
+    },
+    "perceptual-source-freeze001.json": {
+      "files": 5,
+      "unchanged": true
+    },
+    "cpu-execution-freeze001.json": {
+      "files": 4,
+      "unchanged": true
+    }
+  },
+  "new_observation_model_forwards": 0,
+  "full_two_seed_quality_complete": false,
+  "method_established": false,
+  "scope": "Complete all110 first-seed quality outputs with normal terminal; Z original quality child awaits parent reap while seed1 runs. No partial-score selection or two-seed/JOD/gate outcome."
+}
