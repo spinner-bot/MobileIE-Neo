@@ -1,0 +1,70 @@
+{
+  "at": "2026-11-20T13:37:19.819123+08:00",
+  "original_chain001_completed_normally": false,
+  "original_chain001_terminal_preserved": true,
+  "original_checkpoint_marker": {
+    "path": ".cache/experiments/topic8-v1/train-seed0-attempt001/warm-step0241-resource.pt",
+    "sha256": "9925b0e71a3fc890b07070b1935c8715537d1f7c0471b53d89721def9380a1c5",
+    "seed": 0,
+    "phase": "warm",
+    "counts": {
+      "updates": {
+        "warm": 241,
+        "spatial": 0,
+        "fixed": 0,
+        "learned": 0
+      },
+      "teacher_images": 3856,
+      "backbone_images": 3856,
+      "DIS_pairs": 0,
+      "gate_images": 0
+    },
+    "resource_pause": true
+  },
+  "second_attempt_no_new_updates": true,
+  "second_attempt_CUDA_allocated_bytes": 0,
+  "second_attempt_latest_checkpoint_original_value": null,
+  "coordinator_live": {
+    "pid": 3003196,
+    "start_ticks": 109313161,
+    "state": "S"
+  },
+  "current_state": {
+    "at": "2026-11-20T13:37:05.554183+08:00",
+    "coordinator": {
+      "pid": 3003196,
+      "start_ticks": 109313161,
+      "state": "R"
+    },
+    "status": "sampling_resources",
+    "stage": "train-seed0-attempt003",
+    "resource_polls": 1,
+    "guard_attempts": 0,
+    "child": null,
+    "worker": null,
+    "last_resource_poll": ".cache/experiments/topic8-v1/chain002/resource-poll00001.json"
+  },
+  "actual_forwarding_log_prefix": "{\"at\": \"2026-11-20T13:35:43.979643+08:00\", \"seed\": 0, \"checkpoint\": {\"path\": \".cache/experiments/topic8-v1/train-seed0-attempt001/warm-step0241-resource.pt\", \"sha256\": \"9925b0e71a3fc890b07070b1935c8715537d1f7c0471b53d89721def9380a1c5\", \"seed\": 0, \"phase\": \"warm\", \"counts\": {\"updates\": {\"warm\": 241, \"spatial\": 0, \"fixed\": 0, \"learned\": 0}, \"teacher_images\": 3856, \"backbone_images\": 3856, \"DIS_pairs\": 0, \"gate_images\": 0}, \"resource_pause\": true}, \"forwarded_without_new_update\": true, \"previous_attempt\": \"research/8.video-backbone/process/v1/train-seed0-attempt002\"}\n",
+  "forwarding_regression": {
+    "at": "2026-11-20T13:35:12.672309+08:00",
+    "passed": true,
+    "original_saved_step": 241,
+    "direct_checkpoint_retained": true,
+    "observed_zero_update_refusal_forwarded": true,
+    "uncheckpointed_extra_update_rejected": true,
+    "different_seed_rejected": true,
+    "checkpoint": ".cache/experiments/topic8-v1/train-seed0-attempt001/warm-step0241-resource.pt",
+    "checkpoint_sha256": "9925b0e71a3fc890b07070b1935c8715537d1f7c0471b53d89721def9380a1c5",
+    "optimizer_updates": 0,
+    "model_forwards": 0,
+    "new_video_pixels": 0,
+    "CUDA_imported": false,
+    "scope": "Metadata/actual file identity regression only; original runtime and weights untouched."
+  },
+  "frozen_science_and_auxiliary_sources_unchanged": true,
+  "orchestrator_source_matches_new_config": true,
+  "formal_updates_saved": 241,
+  "qualification_updates_all_discarded": 16,
+  "DEV_rows": 0,
+  "scope": "Actual 241 update resource state retained across zero-new-update refusal; new coordinator live, not new training or method success."
+}
