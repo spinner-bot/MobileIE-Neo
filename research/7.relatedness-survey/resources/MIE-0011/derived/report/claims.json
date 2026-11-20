@@ -1,0 +1,89 @@
+{
+  "resource_id": "MIE-0011",
+  "at": "2026-11-20T19:54:11.114757+08:00",
+  "source_aliases": {
+    "code": "derived/docs/upstream-code/<filename>.txt;1-based line ranges",
+    "other": "explicit resource-relative path"
+  },
+  "claims": [
+    {
+      "claim_id": "C01",
+      "evidence_class": "primary_identity_tree_check",
+      "claim": "固定Apr9作者发布项目关联论文MIE10，19文件/两文本，非MobileIE官方源码证明。",
+      "anchors": [
+        "identity.json",
+        "derived/docs/archive-inventory.json",
+        "code:README.md:5–12,147–160"
+      ],
+      "limitation": "提交日期不等于最初公开，owner不等于全部论文作者。"
+    },
+    {
+      "claim_id": "C02",
+      "evidence_class": "static_check",
+      "claim": "五路无bias卷积+BN、相加后有biasPW，当前图像输入前向无时间历史。",
+      "anchors": [
+        "code:MRDConv.py:3–45"
+      ],
+      "limitation": "BN运行统计非时间恢复状态；未运行任何图像/视频。"
+    },
+    {
+      "claim_id": "C03",
+      "evidence_class": "static_check",
+      "claim": "slim按对应偶奇位置嵌5×5，合成BN/PW/偏置，返回W/b。",
+      "anchors": [
+        "code:MRDConv.py:47–124"
+      ],
+      "limitation": "需要冻结eval统计，不保证训练batchBN等价或完整模型全部非线性折叠。"
+    },
+    {
+      "claim_id": "C04",
+      "evidence_class": "literal_arithmetic_and_bounded_inference",
+      "claim": "3→3块r4/r8训练1095/2187，折后均228，固定块推理形状不随r变。",
+      "anchors": [
+        "code:MRDConv.py:9–32,74–124",
+        "derived/docs/source-and-media-audit.json"
+      ],
+      "limitation": "非Torch计数或论文3880统计；整网r8复杂度差异需完整结构解释。"
+    },
+    {
+      "claim_id": "C05",
+      "evidence_class": "static_example_check",
+      "claim": "main在eval对随机64²示例打印平均差/shape并画图，out_train名不代表训练模式输出。",
+      "anchors": [
+        "code:MRDConv.py:133–200,204–249"
+      ],
+      "limitation": "无已运行日志/断言阈值/max相对差/真实权重/设备精度验证；本次未执行。"
+    },
+    {
+      "claim_id": "C06",
+      "evidence_class": "primary_publication_scope_check",
+      "claim": "完整网络/训练/权重/部署导出/环境锁/许可证不在固定19件中。",
+      "anchors": [
+        "derived/docs/archive-inventory.json",
+        "code:README.md:1–163"
+      ],
+      "limitation": "固定树可得性结论，不声称作者永远没有/不发布；许可未知不当自动授权。"
+    },
+    {
+      "claim_id": "C07",
+      "evidence_class": "author_report_and_same_hash_check",
+      "claim": "速度/ROV/29.7%与媒体是同一论文的发布证据，非独立重复验证；GIF为静态擦拭抽样。",
+      "anchors": [
+        "code:README.md:24–106",
+        "derived/docs/source-and-media-audit.json",
+        "derived/docs/prior-author-assets-manifest.json"
+      ],
+      "limitation": "没有实际计时/相机全链路/真实连续视频闪烁评价，不计作第二独立科学结果。"
+    },
+    {
+      "claim_id": "C08",
+      "evidence_class": "resource_specific_inference",
+      "claim": "可迁移局部核布局/折叠审查，未来完整对照须补权重/数值与时间/全成本控制。",
+      "anchors": [
+        "derived/docs/reading-notes.md",
+        "derived/report/analysis.md"
+      ],
+      "limitation": "非二期创新成立或后续实验已执行，全部124项总体综合未开始。"
+    }
+  ]
+}
