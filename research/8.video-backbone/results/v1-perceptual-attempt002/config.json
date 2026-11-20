@@ -1,0 +1,29 @@
+{
+  "at": "2026-11-20T16:25:44.304137+08:00",
+  "pid": 3114557,
+  "metric_freeze": {
+    "at": "2026-11-20T13:07:12.840945+08:00",
+    "source_sha256": {
+      "research/8.video-backbone/perceptual_v1.py": "ef065cd07c43cb2c5dc3144e01cb5c76bdf6b690b835dc59e37c052e13947b06",
+      "research/8.video-backbone/summarize_v1.py": "ab141616ded4657f6293d7cf7a19ce45a1eb2290b3cae7f4aa7483a8bd238a70",
+      "research/8.video-backbone/render_v1.py": "7b19534ce30dd176d04a5be2a6ca7be35670d5c7cd4a6ec85ca946d210c0a4da",
+      "research/4.temporal-consistency/scripts/cvvdp_adapter_r66.py": "b1d30768ccace5a0ceb388d6097b67e98bb4818d5885529c14bfa9605d3d344f",
+      "research/4.temporal-consistency/scripts/causal_reference_evaluation_r75.py": "4ce1c00e2220565fa930efc097e501b7a1847d86a961e18033658731d243e193"
+    },
+    "scope": "Auxiliary full perceptual, summary and prescribed render paths; source frozen before any v1 DEV inference, no actual scoring/rendering yet."
+  },
+  "prediction_manifests": {
+    "research/8.video-backbone/results/v1-quality-seed0/prediction_manifest.jsonl": "7f58bdbe25cfc48a7a9c5ff75134f113b244ad4c6ad87d5dabe946696cbbb18a",
+    "research/8.video-backbone/results/v1-quality-seed1/prediction_manifest.jsonl": "cc622602a9b4b63a035b25f98eb9c272bbfb859113864a69f59fff0c3e1dfd55"
+  },
+  "cache_indices": {
+    "research/4.temporal-consistency/results/exploration-r30-cache/index.json": "424fa278b2fe66d29de476e2b47328619438f97cf71926448433d1191bb722c1",
+    "research/4.temporal-consistency/results/exploration-r10-cache/index.json": "ec00801b04b873ead0025af91af441b783da3f08c87cf24e9c136a4268ffb43c"
+  },
+  "inherited_rows": 0,
+  "resume_from": null,
+  "expected_rows": 220,
+  "expected_frames": 9856,
+  "expected_process_increment_MiB": 4096,
+  "prior_same_shapes_allocated_bytes": 360763392
+}
