@@ -1,0 +1,49 @@
+{
+  "resource_id": "MIE-0008",
+  "source_revision": "e701008557c758876a3da75ed373d91dd959b1bf",
+  "archive_sha256": "3ea255eb4e4a555ddde853000e5272e5b3b1494cab976cf9a78509156be1f131",
+  "scope": "Byte keyword scan over all9494 tracked originals, including text/docs/generated context/binaries. Not a full read or analysis claim.",
+  "matching_files": [
+    {
+      "path": "examples/llama.android/app/src/main/java/com/example/llama/SettingsManager.kt",
+      "bytes": 160394,
+      "sha256": "abfa4a0da38a1559c4e8d4eee1fc6604c418a2968a03d6811d48ae0559f576b3",
+      "occurrences": 1,
+      "first_five_snippets": [
+        "HT_MODE_ENABLED, v) }\n\n    /** ID aktivního Night Mode pluginu (např. night_retinex, night_tflite_mobileie). */\n    var activeNightModePluginId: String\n        get() = prefs.getString(KEY_NIGHT_MODE_PLUGIN, DEFAULT_NIGHT_MODE_PLUGIN) ?: DEFAULT_NIGHT_MODE_PLUGIN\n        set(v) "
+      ]
+    },
+    {
+      "path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/ObjectDetectorStudioActivity.kt",
+      "bytes": 174101,
+      "sha256": "5b7a5de8c7b7e7305a2453a0a7cb734f42e555fc123aeb940e4f78ae24c39227",
+      "occurrences": 3,
+      "first_five_snippets": [
+        "air(\"night_retinex\", \"Fast Retinex (CPU Math)\"),\n                                Pair(\"night_tflite_mobileie\", \"TFLite Edge (Zero-DCE/MobileIE)\")\n                            )\n\n                            nightPlugins.forEach { (id, name) ->\n                                val is",
+        " (CPU Math)\"),\n                                Pair(\"night_tflite_mobileie\", \"TFLite Edge (Zero-DCE/MobileIE)\")\n                            )\n\n                            nightPlugins.forEach { (id, name) ->\n                                val isActive = selectedNightPluginId == ",
+        "                          }\n\n                            if (selectedNightPluginId == \"night_tflite_mobileie\") {\n                                Spacer(modifier = Modifier.height(4.dp))\n                                Text(\"Importované Modely:\", color = Color.Gray, fontSize = 12"
+      ]
+    },
+    {
+      "path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/nightmode/plugins/LiteIETflitePlugin.kt",
+      "bytes": 16140,
+      "sha256": "f78eb972e2b93197324766543d7ecf31b1fe1d041e95c35074c31b9521247291",
+      "occurrences": 4,
+      "first_five_snippets": [
+        "s\nimport kotlinx.coroutines.launch\n/**\n * TFLite Loader pro pokročilé Low-Light modely (Zero-DCE, MobileIE, LiteIE).\n * Bude dynamicky nahrávat custom .tflite modely, které studenti stáhnou.\n */\nclass LiteIETflitePlugin(\n    private val context: Context,\n    private val sett",
+        " com.example.llama.SettingsManager\n) : NightModePlugin {\n\n    override val pluginId = \"night_tflite_mobileie\"\n    override val displayName = \"TFLite Edge (Zero-DCE/MobileIE)\"\n\n    private var interpreter: Interpreter? = null\n    private var gpuDelegate: GpuDelegate? = null\n    \n ",
+        "erride val pluginId = \"night_tflite_mobileie\"\n    override val displayName = \"TFLite Edge (Zero-DCE/MobileIE)\"\n\n    private var interpreter: Interpreter? = null\n    private var gpuDelegate: GpuDelegate? = null\n    \n    // TFLite input/output specs (typicky 400x400, 600x400 atd. z",
+        "} else {\n            val path = currentLoadedPath?.lowercase() ?: \"\"\n            if (path.contains(\"mobileie\")) {\n                actualInputScale = 127.5f\n                actualInputOffset = 1.0f // Většinou MobileNet backbones vyžadují [-1, 1]\n            } else {\n         "
+      ]
+    },
+    {
+      "path": "examples/llama.android/app/src/main/java/com/example/llama/ui/thanks/ThanksActivity.kt",
+      "bytes": 57398,
+      "sha256": "9f0ddde92d494019b1c780c3fcdf3caabaddc34fec18440ceae591f301ec5e6c",
+      "occurrences": 1,
+      "first_five_snippets": [
+        "Research\",\n        \"Vývoj našeho AcademicYuvEngine vděčí za mnohé autorům výzkumů LiteIE a MobileIE. Aplikace obsahuje nezávislé implementace algoritmů (MIT).\",\n        \"Copyright (c) Research Authors\",\n        \"Academic Open Source / MIT\",\n        LicenseCategory.PER"
+      ]
+    }
+  ]
+}
