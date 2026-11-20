@@ -10,6 +10,62 @@
       "http": 200,
       "archive": "archive/sourcezip-lhfgghc--LLVE-AMNet.txt",
       "sha256": "862e5c5c6c8d20855abdc7de2e568457c06dd7628ebf87e8c297567ea9f98c44"
+    },
+    {
+      "path": "receipts/mie0004-weight-entry-sdeout-baidu.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/mie0004-weight-entry-sdeout-baidu.html",
+      "sha256": "3776d465a586407cc9acca0c10384c65d029e4fc665a071f4610f2afd280aa35"
+    },
+    {
+      "path": "receipts/mie0004-weight-entry-sdsdin-baidu.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/mie0004-weight-entry-sdsdin-baidu.html",
+      "sha256": "e02821489e05dc665a84d0147824115cb93688f14e58b2d906a0ca5cffc9ceb5"
+    },
+    {
+      "path": "receipts/mie0004-weight-entry-sdsdout-baidu.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/mie0004-weight-entry-sdsdout-baidu.html",
+      "sha256": "768b1ecf33e8e5558ba87f21ee1ba9f0cb2c51f2fcb511c0a5c7ce016e6400a9"
+    },
+    {
+      "path": "receipts/mie0004-weight-entry-did-baidu.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/mie0004-weight-entry-did-baidu.html",
+      "sha256": "9048f8aa1592848d3f9510e2712492dda9468f7faea0efc49bfbd92ca1bfadcd"
+    },
+    {
+      "path": "receipts/mie0004-weight-entry-pretrain-baidu.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/mie0004-weight-entry-pretrain-baidu.html",
+      "sha256": "a2ef143447405255d70802ccc71bd61820bb2282093ef1d2f4db9a6ae8e0d560"
+    },
+    {
+      "path": "receipts/mie0004-weight-entry-sdein-baidu.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/mie0004-weight-entry-sdein-baidu.html",
+      "sha256": "4e9c152cb6109b854e7ea872d19783b561a494bee69376f04b258f8471c31afe"
+    },
+    {
+      "path": "receipts/mie0004-weight-entry-pretrain-gdrive.json",
+      "status": "http_error",
+      "http": 401,
+      "complete": false,
+      "archive": "archive/mie0004-weight-entry-pretrain-gdrive.html",
+      "sha256": "f6e468d88a554bdf819f410edbffde8f5aa9af25a834e116869bf5e2f228b97b"
     }
   ],
   "discovery_evidence": [
@@ -24,5 +80,11 @@
     "discovery_evidence strings": "relative to workstation/collection",
     "discovery_evidence[].source": "collection/ prefix relative to workstation; research/ prefix relative to repository root",
     "discovery_evidence[].acquisition": "relative to workstation/collection; path is remote repository path at revision"
-  }
+  },
+  "source_additions": [
+    {
+      "reason": "During current code-resource analysis, check already-declared weight-entry links of same pinned project; no new identity or model execution",
+      "evidence": "derived/docs/weight-entry-review.json"
+    }
+  ]
 }
