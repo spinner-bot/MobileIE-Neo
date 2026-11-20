@@ -1,0 +1,29 @@
+{
+  "at": "2026-11-21T01:30:50.004521+08:00",
+  "reviewer": "Codex  (sqs_A100)",
+  "mechanism": "tools.view_image root actual inspection",
+  "images": [
+    {
+      "path": "research/8.video-backbone/appearance-state/report/quality-vs-time.png",
+      "sha256": "3cfc10622f1f96cc64c04f3554ebde48593a01a28aaadb81c9c9fec11a6a32cc"
+    },
+    {
+      "path": "research/8.video-backbone/appearance-state/report/all-window-history-deltas.png",
+      "sha256": "741bdddb749462de3772b07676b79b55db146a31ad135df0a4b9c8154b6ddc27"
+    },
+    {
+      "path": "research/8.video-backbone/appearance-state/report/all-windows-t3.png",
+      "sha256": "70b3f49387e5b90d5ca8dbfdb55d6fdfae6bf23a66f82cc591cd8f0653b59cc1"
+    }
+  ],
+  "findings": [
+    "All 20 means in four panels; history/current-only points close; SYN0 gains relative to raw and other groups lose quality.",
+    "All 16 paired windows visible; initial draft legend could obscure points and was moved below axes. Only presentation changed; data CSVs, means plot and all-window contact PNGs are identical to the draft.",
+    "All 16 last-frame windows and all seven columns viewed: grass/wall/soil patches and textured examples retained; history/current-only differences mostly small here. Static patches cannot establish flicker, perceptual preference or a unique failure cause."
+  ],
+  "draft_path": ".cache/experiments/topic8-appearance-state/render-draft001",
+  "PDFs_separately_viewed": false,
+  "renderer_actual_viewed_value_retained": false,
+  "renderer_manifest_unchanged": true,
+  "new_model_or_metric_calls": 0
+}
