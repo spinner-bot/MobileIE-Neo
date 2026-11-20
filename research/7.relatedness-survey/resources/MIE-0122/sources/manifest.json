@@ -1,0 +1,77 @@
+{
+  "resource_id": "MIE-0122",
+  "created_at": "2026-11-20T16:16:34.345079+08:00",
+  "snapshot_cutoff": "2026-11-17",
+  "actual_collection_date": "2026-11-20",
+  "receipts": [
+    {
+      "path": "receipts/g1a0001-cs3diff-head.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-cs3diff-head.json",
+      "sha256": "0114e59413dc826d86fdbb3daeb53a6d8d7e43c9852a3b73f3d10980f2292987"
+    },
+    {
+      "path": "receipts/g1a0001-cs3diff-meta.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-cs3diff-meta.json",
+      "sha256": "6f4979e6ff2bb42f85963e9d0e8ca6070f7595488cc42e4efc08941e26914ec9"
+    },
+    {
+      "path": "receipts/g1a0001-cs3diff-sourcezip.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-cs3diff-sourcezip.zip",
+      "sha256": "b8d63462c6ca925836a963f15db82728b28a0cf275f74ef60b3ee48cbcd5ba08"
+    },
+    {
+      "path": "receipts/g1a0001-cs3diff-tree.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-cs3diff-tree.json",
+      "sha256": "a2274cb0d046c1a211e7b47e485bf7920ca1edc67bd4e70e29b9b0a576955083"
+    },
+    {
+      "path": "receipts/g1a0001-project-links-ivsou--CS--Diff-branches.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-project-links-ivsou--CS--Diff-branches.json",
+      "sha256": "61db69d460ad6322dccdbb84a0a3e11666363747d6cd29fcbf18ee6745377b91"
+    },
+    {
+      "path": "receipts/g1a0001-project-links-ivsou--CS--Diff-issues.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-project-links-ivsou--CS--Diff-issues.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "receipts/g1a0001-project-links-ivsou--CS--Diff-releases.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-project-links-ivsou--CS--Diff-releases.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    }
+  ],
+  "discovery_evidence": [
+    "raw/g1a0001-cs3diff-meta.json",
+    "raw/g1a0001-cs3diff-head.json",
+    "gate1-addenda/0001/authortrace-readmes02.json"
+  ],
+  "adequacy": "primary PDF and/or pinned archive obtained; not yet deep scientific reading or Gate2 qualification",
+  "path_conventions": {
+    "receipts[].path": "relative to workstation/collection",
+    "receipts[].archive": "relative to workstation",
+    "discovery_evidence strings": "relative to workstation/collection",
+    "discovery_evidence objects.source": "relative to workstation or repository as explicitly prefixed"
+  },
+  "not_yet_analyzed": true
+}

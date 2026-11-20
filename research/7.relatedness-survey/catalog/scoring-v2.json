@@ -1,0 +1,264 @@
+{
+  "created_at": "2026-11-20T16:15:28.153452+08:00",
+  "policy": "docs/0004-初级排序与静态索引规则-26112012.md",
+  "extension_decision": "docs/0006-增补索引与队列决策-26112016.md",
+  "gate1": "collection/gate1-addenda/0001/gate1-review001.json",
+  "new_resource_scores": [
+    {
+      "temporary_key": "addendum-code-cmuhang--ULightIF",
+      "R": 3,
+      "N": 3,
+      "U": 3,
+      "E": 3,
+      "score": 90,
+      "tier": "A",
+      "family": "043-fusion",
+      "role_order": 1,
+      "category": "同源多模态融合实现",
+      "reason_R": "官方README明确基于MobileIE；直接约束扩展时多输入/训练信息的公平比较。",
+      "reason_N": "同源实现的复用关系明确，须优先排除把基础组件当新方法的风险。",
+      "reason_U": "有固定网络/训练/测试源码与原论文权重入口，能具体核查信息条件和复现路径。",
+      "reason_E": "完整固定主要原件已取得；不等于有效或已深入阅读",
+      "evidence": [
+        "collection/gate1-addenda/0001/supplement-resource-acquisitions.json",
+        "collection/gate1-addenda/0001/new-candidates.json"
+      ],
+      "not_gate2": true
+    },
+    {
+      "temporary_key": "addendum-paper-lcisp",
+      "R": 3,
+      "N": 2,
+      "U": 3,
+      "E": 3,
+      "score": 80,
+      "tier": "A",
+      "family": "039a-lcisp",
+      "role_order": 0,
+      "category": "ISP采集与评价基准",
+      "reason_R": "同一MobileIE在新RAW/拍摄流ISP基准被明确比较；streams不直接等于时域模型。",
+      "reason_N": "新的采集/目标与ISP效率比较可能改变应用边界，仍非已确认新颖性。",
+      "reason_U": "主文、公开项目与数据入口可核查流定义、划分、损失和评价约束。",
+      "reason_E": "完整固定主要原件已取得；不等于有效或已深入阅读",
+      "evidence": [
+        "collection/gate1-addenda/0001/supplement-resource-acquisitions.json",
+        "collection/gate1-addenda/0001/new-candidates.json"
+      ],
+      "not_gate2": true
+    },
+    {
+      "temporary_key": "addendum-code-CVL-UESTC--LC-ISP",
+      "R": 3,
+      "N": 2,
+      "U": 3,
+      "E": 3,
+      "score": 80,
+      "tier": "A",
+      "family": "039a-lcisp",
+      "role_order": 1,
+      "category": "ISP官方实现与数据工程",
+      "reason_R": "直接被引基准官方项目，涉及MobileIE的ISP对照条件。",
+      "reason_N": "同论文的多流数据/模型配置可能与视频扩展发生概念混淆，需源码厘清。",
+      "reason_U": "完整固定源码及配置/数据入口可具体核查预处理、划分和评估。",
+      "reason_E": "完整固定主要原件已取得；不等于有效或已深入阅读",
+      "evidence": [
+        "collection/gate1-addenda/0001/supplement-resource-acquisitions.json",
+        "collection/gate1-addenda/0001/new-candidates.json"
+      ],
+      "not_gate2": true
+    },
+    {
+      "temporary_key": "addendum-code-aiff22--MAI-2025-Workshop",
+      "R": 3,
+      "N": 2,
+      "U": 3,
+      "E": 3,
+      "score": 80,
+      "tier": "A",
+      "family": "038a-mobile-conversion",
+      "role_order": 1,
+      "category": "官方移动转换脚本",
+      "reason_R": "MobileIE相关MAI报告直接链接的端侧转换入口。",
+      "reason_N": "转换路径与运行设置可能影响效率主张的可比性，不是算法新颖性结论。",
+      "reason_U": "三个固定转换脚本可核查实际格式、输入及转换依赖，不等于已在手机成功运行。",
+      "reason_E": "完整固定主要原件已取得；不等于有效或已深入阅读",
+      "evidence": [
+        "collection/gate1-addenda/0001/supplement-resource-acquisitions.json",
+        "collection/gate1-addenda/0001/new-candidates.json"
+      ],
+      "not_gate2": true
+    },
+    {
+      "temporary_key": "addendum-paper-mai2025isp",
+      "R": 3,
+      "N": 2,
+      "U": 3,
+      "E": 3,
+      "score": 80,
+      "tier": "A",
+      "family": "061a-isp2025",
+      "role_order": 0,
+      "category": "MobileIE早期ISP竞赛报告",
+      "reason_R": "正式报告明确介绍MobileIE及同作者团队，直接补充ISP场景基础。",
+      "reason_N": "早期竞赛版本与ICCV模型/训练/运行结果可能混淆，需版本对照。",
+      "reason_U": "完整报告可核对任务数据、移动评价、方法和比赛条件。",
+      "reason_E": "完整固定主要原件已取得；不等于有效或已深入阅读",
+      "evidence": [
+        "collection/gate1-addenda/0001/supplement-resource-acquisitions.json",
+        "collection/gate1-addenda/0001/new-candidates.json"
+      ],
+      "not_gate2": true
+    },
+    {
+      "temporary_key": "addendum-code-vinodyas--Edge_Aware_Diffusion_for_Mobile_Photo_Enhancement",
+      "R": 3,
+      "N": 2,
+      "U": 2,
+      "E": 3,
+      "score": 70,
+      "tier": "A",
+      "family": "062-review",
+      "role_order": 1,
+      "category": "综述的静态实验与Android代码",
+      "reason_R": "与已收录MobileIE比较综述直接作者代码关联。",
+      "reason_N": "公开时延分析与端侧叙述可能影响效率比较口径，尚未验证其实现或公平性。",
+      "reason_U": "有Android与Python材料可作有限成本/方法一致性核对，未见MobileIE模型复现充分证据。",
+      "reason_E": "完整固定主要原件已取得；不等于有效或已深入阅读",
+      "evidence": [
+        "collection/gate1-addenda/0001/supplement-resource-acquisitions.json",
+        "collection/gate1-addenda/0001/new-candidates.json"
+      ],
+      "not_gate2": true
+    },
+    {
+      "temporary_key": "addendum-code-cherrysherryplus--TSECN",
+      "R": 2,
+      "N": 2,
+      "U": 2,
+      "E": 3,
+      "score": 60,
+      "tier": "B",
+      "family": "041-exposure",
+      "role_order": 1,
+      "category": "曝光可控增强实现",
+      "reason_R": "已收录被引论文官方实现，提供曝光/噪声控制的相邻图像问题线索。",
+      "reason_N": "平滑曝光控制的机制可能被误写为视频时间一致性，需区分。",
+      "reason_U": "固定训练/测试和权重资料可用于有限设计/评估边界核查。",
+      "reason_E": "完整固定主要原件已取得；不等于有效或已深入阅读",
+      "evidence": [
+        "collection/gate1-addenda/0001/supplement-resource-acquisitions.json",
+        "collection/gate1-addenda/0001/new-candidates.json"
+      ],
+      "not_gate2": true
+    },
+    {
+      "temporary_key": "addendum-code-Qlinlin--UDHE",
+      "R": 2,
+      "N": 2,
+      "U": 2,
+      "E": 2,
+      "score": 60,
+      "tier": "B",
+      "family": "049-dual-branch",
+      "role_order": 1,
+      "category": "双分支图像恢复项目入口",
+      "reason_R": "已收录水下恢复论文的官方项目与作者匹配，属于相邻增强问题。",
+      "reason_N": "色彩/结构解耦与动态融合存在机制边界比较需求，未作创新判断。",
+      "reason_U": "可定位作者、发布承诺和未来复现条件；当前只有README占位，技术内容须依论文，E单独标记。",
+      "reason_E": "只有README占位可读；源码实现未发布",
+      "evidence": [
+        "collection/gate1-addenda/0001/supplement-resource-acquisitions.json",
+        "collection/gate1-addenda/0001/new-candidates.json"
+      ],
+      "not_gate2": true
+    },
+    {
+      "temporary_key": "addendum-code-ivsou--CS--Diff",
+      "R": 2,
+      "N": 1,
+      "U": 1,
+      "E": 3,
+      "score": 40,
+      "tier": "B",
+      "family": "045-diffusion",
+      "role_order": 1,
+      "category": "扩散增强实现",
+      "reason_R": "已收录被引扩散图像增强论文官方代码，和轻量视频有间接联系。",
+      "reason_N": "当前明确的是论文/代码关联，未有同源轻量时域复用证据。",
+      "reason_U": "主要核引用/实现关系、空间与扩散步术语及计算边界，暂未见直接轻量视频迁移用途。",
+      "reason_E": "完整固定主要原件已取得；不等于有效或已深入阅读",
+      "evidence": [
+        "collection/gate1-addenda/0001/supplement-resource-acquisitions.json",
+        "collection/gate1-addenda/0001/new-candidates.json"
+      ],
+      "not_gate2": true
+    },
+    {
+      "temporary_key": "addendum-other-Chris23333--mobile-ai-image-denoising-papers",
+      "R": 2,
+      "N": 1,
+      "U": 1,
+      "E": 3,
+      "score": 40,
+      "tier": "B",
+      "family": "079a-denoise-digest",
+      "role_order": 0,
+      "category": "第三方调研与传播",
+      "reason_R": "独立去噪调研第12节概括MobileIE，含用途建议，属于间接参考。",
+      "reason_N": "启发式评分与移动FPS叙述有口径混淆风险，不能当独立验证。",
+      "reason_U": "主要用于来源校正与候选线索，非实际模型/设备证据。",
+      "reason_E": "完整固定主要原件已取得；不等于有效或已深入阅读",
+      "evidence": [
+        "collection/gate1-addenda/0001/supplement-resource-acquisitions.json",
+        "collection/gate1-addenda/0001/new-candidates.json"
+      ],
+      "not_gate2": true
+    },
+    {
+      "temporary_key": "addendum-paper-tfeqa",
+      "R": 1,
+      "N": 1,
+      "U": 1,
+      "E": 1,
+      "score": 30,
+      "tier": "C",
+      "family": "080-embodied",
+      "role_order": 0,
+      "category": "异任务被引语境",
+      "reason_R": "具身问答论文的出版社参考文献确认MobileIE直接被引，具体增强用途尚未知。",
+      "reason_N": "保留引用/组件复用语境的待证风险，不把不可访问当零风险。",
+      "reason_U": "主要用于引用语境与下游联系核查，完整方法尚无可得原文支持。",
+      "reason_E": "出版社元数据与参考文献可得，主文/补充未取得",
+      "evidence": [
+        "collection/gate1-addenda/0001/supplement-resource-acquisitions.json",
+        "collection/gate1-addenda/0001/new-candidates.json"
+      ],
+      "not_gate2": true
+    }
+  ],
+  "existing_resource_reassessment": [
+    {
+      "resource_id": "MIE-0059",
+      "previous_score": 40,
+      "R": 3,
+      "N": 3,
+      "U": 3,
+      "E": 1,
+      "score": 90,
+      "tier": "A",
+      "family": "043-fusion",
+      "role_order": 0,
+      "category": "同源多模态融合论文",
+      "reason_R": "新增官方代码README明确基于MobileIE，比原索引仅有题名/摘要提供更强同源依据。",
+      "reason_N": "同源扩展与多输入条件须优先排除重复/信息优势混淆。",
+      "reason_U": "可关联固定官方实现具体核查模型、监督和评价；不可访问主文保持独立证据限制。",
+      "reason_E": "原论文主文仍不可得；新增官方代码可作支持性证据但不冒称论文全文已取得。",
+      "evidence": [
+        "collection/gate1-addenda/0001/author-project-readmes.json",
+        "collection/receipts/g1a0001-ulightif-sourcezip.json"
+      ],
+      "not_gate2": true
+    }
+  ],
+  "no_scientific_analysis_claim": true
+}

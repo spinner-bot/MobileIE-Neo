@@ -1,0 +1,102 @@
+{
+  "resource_id": "MIE-0124",
+  "created_at": "2026-11-20T16:16:34.345079+08:00",
+  "snapshot_cutoff": "2026-11-17",
+  "actual_collection_date": "2026-11-20",
+  "receipts": [
+    {
+      "path": "receipts/g1a0001-tfeqa-arxiv-query.json",
+      "status": "http_error",
+      "http": 429,
+      "complete": false,
+      "archive": "archive/g1a0001-tfeqa-arxiv-query.txt",
+      "sha256": "467622e2f17f01d302d6c790b13078569f17d71cd83910558535019a594e07c1"
+    },
+    {
+      "path": "receipts/g1a0001-tfeqa-crossref.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-tfeqa-crossref.json",
+      "sha256": "bda4a1897608ff993b9c13918e47dba97a98a593422b994d51a55899f084cf66"
+    },
+    {
+      "path": "receipts/g1a0001-tfeqa-openalex.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-tfeqa-openalex.json",
+      "sha256": "5d2ba8a234001bd8984568d8f2e47f9b24e1cff50f5b232f50ff5667ea7b8d04"
+    },
+    {
+      "path": "receipts/g1a0001-tfeqa-part-crossref.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-tfeqa-part-crossref.json",
+      "sha256": "5ca02e828df9516aa6488457bc50683e85a1c5921005352b67b0c429e1f3677c"
+    },
+    {
+      "path": "receipts/g1a0001-tfeqa-publisher.json",
+      "status": "success",
+      "http": 202,
+      "complete": true,
+      "archive": null,
+      "sha256": null
+    },
+    {
+      "path": "receipts/g1a0001-tfeqa-publisher-document.json",
+      "status": "success",
+      "http": 202,
+      "complete": true,
+      "archive": null,
+      "sha256": null
+    },
+    {
+      "path": "receipts/g1a0001-tfeqa-publisher-pdf.json",
+      "status": "success",
+      "http": 202,
+      "complete": true,
+      "archive": null,
+      "sha256": null
+    },
+    {
+      "path": "receipts/g1a0001-tfeqa-supplement-doi.json",
+      "status": "success",
+      "http": 202,
+      "complete": true,
+      "archive": null,
+      "sha256": null
+    },
+    {
+      "path": "receipts/g1a0001-tfeqa-supplement-primary.json",
+      "status": "success",
+      "http": 202,
+      "complete": true,
+      "archive": null,
+      "sha256": null
+    },
+    {
+      "path": "receipts/g1a0001-tfeqa-title-arxiv.json",
+      "status": "http_error",
+      "http": 429,
+      "complete": false,
+      "archive": "archive/g1a0001-tfeqa-title-arxiv.txt",
+      "sha256": "467622e2f17f01d302d6c790b13078569f17d71cd83910558535019a594e07c1"
+    }
+  ],
+  "discovery_evidence": [
+    {
+      "source": "collection/raw/g1a0001-r10-s2-citing.json",
+      "source_record_id": "8e52fcf2260131cc6e69c79fb51c7a1f66dfd28a"
+    }
+  ],
+  "adequacy": "publisher metadata and indexed citation only; no public fulltext obtained, explicit future Gate2 limitation",
+  "path_conventions": {
+    "receipts[].path": "relative to workstation/collection",
+    "receipts[].archive": "relative to workstation",
+    "discovery_evidence strings": "relative to workstation/collection",
+    "discovery_evidence objects.source": "relative to workstation or repository as explicitly prefixed"
+  },
+  "not_yet_analyzed": true
+}

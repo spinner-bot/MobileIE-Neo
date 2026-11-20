@@ -1,0 +1,77 @@
+{
+  "resource_id": "MIE-0123",
+  "created_at": "2026-11-20T16:16:34.345079+08:00",
+  "snapshot_cutoff": "2026-11-17",
+  "actual_collection_date": "2026-11-20",
+  "receipts": [
+    {
+      "path": "receipts/g1a0001-chris-denoise-branches.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-chris-denoise-branches.json",
+      "sha256": "4bb215753fbf721f908efcce8500c1fd8d31646f9871daa359929a239a594b16"
+    },
+    {
+      "path": "receipts/g1a0001-chris-denoise-head.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-chris-denoise-head.json",
+      "sha256": "a9d414e4db43e21506d4c829bff9a0725c180a2899301cfb4dc30c576a8d0294"
+    },
+    {
+      "path": "receipts/g1a0001-chris-denoise-issues.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-chris-denoise-issues.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "receipts/g1a0001-chris-denoise-meta.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-chris-denoise-meta.json",
+      "sha256": "02cf546ce09f0d7516c3fff7a3215904896a8a62698a9e1d9f72dffa17b17890"
+    },
+    {
+      "path": "receipts/g1a0001-chris-denoise-releases.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-chris-denoise-releases.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "receipts/g1a0001-chris-denoise-sourcezip.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-chris-denoise-sourcezip.zip",
+      "sha256": "5e8d9cbdc59c10a95ce20d4c8eea649aa747817cd59927777007fe34894ccfb8"
+    },
+    {
+      "path": "receipts/g1a0001-chris-denoise-tree.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-chris-denoise-tree.json",
+      "sha256": "44109f4d7566c02ea934591fc2c5f603b24d6b7033763e5f5a729c8ea91fcbcb"
+    }
+  ],
+  "discovery_evidence": [
+    "gate1-addenda/0001/competition-list-readme.json",
+    "raw/g1a0001-chris-denoise-meta.json",
+    "raw/g1a0001-chris-denoise-head.json"
+  ],
+  "adequacy": "primary PDF and/or pinned archive obtained; not yet deep scientific reading or Gate2 qualification",
+  "path_conventions": {
+    "receipts[].path": "relative to workstation/collection",
+    "receipts[].archive": "relative to workstation",
+    "discovery_evidence strings": "relative to workstation/collection",
+    "discovery_evidence objects.source": "relative to workstation or repository as explicitly prefixed"
+  },
+  "not_yet_analyzed": true
+}

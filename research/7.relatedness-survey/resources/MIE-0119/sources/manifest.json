@@ -1,0 +1,77 @@
+{
+  "resource_id": "MIE-0119",
+  "created_at": "2026-11-20T16:16:34.345079+08:00",
+  "snapshot_cutoff": "2026-11-17",
+  "actual_collection_date": "2026-11-20",
+  "receipts": [
+    {
+      "path": "receipts/g1a0001-edge-review-code-head.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-edge-review-code-head.json",
+      "sha256": "f469674521fdbc77fe7df4727d9ce9fd9f828a96bfe7711887fe59c68975d7a4"
+    },
+    {
+      "path": "receipts/g1a0001-edge-review-code-meta.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-edge-review-code-meta.json",
+      "sha256": "e80637b0d9466646fa50b53f8fc093dcfd25bf8c6615e0e2fedf7c857054fc5a"
+    },
+    {
+      "path": "receipts/g1a0001-edge-review-code-sourcezip.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-edge-review-code-sourcezip.zip",
+      "sha256": "fbdf8fe59da2e90136d2c1d95b7d6b08210b2f44c62007a773afc924f727fe15"
+    },
+    {
+      "path": "receipts/g1a0001-edge-review-code-tree.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-edge-review-code-tree.json",
+      "sha256": "9caee73f8319945b473fddae8a585fb05b7db923b95edc67e3a8fcc67b8f81dc"
+    },
+    {
+      "path": "receipts/g1a0001-project-links-vinodyas--Edge_Aware_Diffusion_for_Mobile_Photo_Enhancement-branches.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-project-links-vinodyas--Edge_Aware_Diffusion_for_Mobile_Photo_Enhancement-branches.json",
+      "sha256": "33f8cceb978bdd04de974089e1c9acd75c5dfb8728095b5ad4a5b08a6a3429e4"
+    },
+    {
+      "path": "receipts/g1a0001-project-links-vinodyas--Edge_Aware_Diffusion_for_Mobile_Photo_Enhancement-issues.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-project-links-vinodyas--Edge_Aware_Diffusion_for_Mobile_Photo_Enhancement-issues.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "receipts/g1a0001-project-links-vinodyas--Edge_Aware_Diffusion_for_Mobile_Photo_Enhancement-releases.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-project-links-vinodyas--Edge_Aware_Diffusion_for_Mobile_Photo_Enhancement-releases.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    }
+  ],
+  "discovery_evidence": [
+    "raw/g1a0001-edge-review-code-meta.json",
+    "raw/g1a0001-edge-review-code-head.json",
+    "receipts/g1a0001-edge-review-code-sourcezip.json"
+  ],
+  "adequacy": "primary PDF and/or pinned archive obtained; not yet deep scientific reading or Gate2 qualification",
+  "path_conventions": {
+    "receipts[].path": "relative to workstation/collection",
+    "receipts[].archive": "relative to workstation",
+    "discovery_evidence strings": "relative to workstation/collection",
+    "discovery_evidence objects.source": "relative to workstation or repository as explicitly prefixed"
+  },
+  "not_yet_analyzed": true
+}

@@ -1,0 +1,36 @@
+{
+  "resource_id": "MIE-0118",
+  "created_at": "2026-11-20T16:16:34.345079+08:00",
+  "snapshot_cutoff": "2026-11-17",
+  "actual_collection_date": "2026-11-20",
+  "receipts": [
+    {
+      "path": "receipts/g1a0001-r14-mai2025isp-page.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-r14-mai2025isp-page.html",
+      "sha256": "9dbbdbdd9aa734b6f82afd556767db610017885261108b48275066806ceff5c1"
+    },
+    {
+      "path": "receipts/g1a0001-r14-mai2025isp-pdf.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-r14-mai2025isp-pdf.pdf",
+      "sha256": "e3920d4e49b03c7c1d0f43ce157f0f5e8d0a80902c8ae6dd5b8594e78c14038b"
+    }
+  ],
+  "discovery_evidence": [
+    "receipts/g1a0001-r14-mai2025isp-pdf.json",
+    "receipts/g1a0001-r14-mai2025isp-page.json"
+  ],
+  "adequacy": "primary PDF and/or pinned archive obtained; not yet deep scientific reading or Gate2 qualification",
+  "path_conventions": {
+    "receipts[].path": "relative to workstation/collection",
+    "receipts[].archive": "relative to workstation",
+    "discovery_evidence strings": "relative to workstation/collection",
+    "discovery_evidence objects.source": "relative to workstation or repository as explicitly prefixed"
+  },
+  "not_yet_analyzed": true
+}

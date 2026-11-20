@@ -1,0 +1,77 @@
+{
+  "resource_id": "MIE-0114",
+  "created_at": "2026-11-20T16:16:34.345079+08:00",
+  "snapshot_cutoff": "2026-11-17",
+  "actual_collection_date": "2026-11-20",
+  "receipts": [
+    {
+      "path": "receipts/g1a0001-project-links-cmuhang--ULightIF-branches.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-project-links-cmuhang--ULightIF-branches.json",
+      "sha256": "0b1257260f5509fcaeb3e6d444dc30237434e3eb7d9a7843395a377914e71eb7"
+    },
+    {
+      "path": "receipts/g1a0001-project-links-cmuhang--ULightIF-issues.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-project-links-cmuhang--ULightIF-issues.json",
+      "sha256": "6dd456761aca32b401343a3f149e6cf4c4509f93d0dd8adaeb072f13991460b4"
+    },
+    {
+      "path": "receipts/g1a0001-project-links-cmuhang--ULightIF-releases.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-project-links-cmuhang--ULightIF-releases.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "receipts/g1a0001-ulightif-head.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-ulightif-head.json",
+      "sha256": "19006ee1fb0743cdcbd13473349ea328cc70c302d4ca9471723ee40809910370"
+    },
+    {
+      "path": "receipts/g1a0001-ulightif-meta.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-ulightif-meta.json",
+      "sha256": "f96cd08093dda8b588f359cd5c4c8192e9391d6a417499cdb7bea9f36f145048"
+    },
+    {
+      "path": "receipts/g1a0001-ulightif-sourcezip.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-ulightif-sourcezip.zip",
+      "sha256": "dca7306e8141bd7c738bd212c1e0233f13f9a54317997a3596dee04b090ef67a"
+    },
+    {
+      "path": "receipts/g1a0001-ulightif-tree.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-ulightif-tree.json",
+      "sha256": "f67452de6a1d44805c77a6aecaa65f849377bbf7dccf559289140a2f65b57b46"
+    }
+  ],
+  "discovery_evidence": [
+    "raw/g1a0001-ulightif-meta.json",
+    "raw/g1a0001-ulightif-head.json",
+    "receipts/g1a0001-ulightif-sourcezip.json"
+  ],
+  "adequacy": "primary PDF and/or pinned archive obtained; not yet deep scientific reading or Gate2 qualification",
+  "path_conventions": {
+    "receipts[].path": "relative to workstation/collection",
+    "receipts[].archive": "relative to workstation",
+    "discovery_evidence strings": "relative to workstation/collection",
+    "discovery_evidence objects.source": "relative to workstation or repository as explicitly prefixed"
+  },
+  "not_yet_analyzed": true
+}

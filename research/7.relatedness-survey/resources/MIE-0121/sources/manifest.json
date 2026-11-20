@@ -1,0 +1,77 @@
+{
+  "resource_id": "MIE-0121",
+  "created_at": "2026-11-20T16:16:34.345079+08:00",
+  "snapshot_cutoff": "2026-11-17",
+  "actual_collection_date": "2026-11-20",
+  "receipts": [
+    {
+      "path": "receipts/g1a0001-project-links-Qlinlin--UDHE-branches.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-project-links-Qlinlin--UDHE-branches.json",
+      "sha256": "717996202365a2df6133bf42950ae19ba0812e39827c5d5bfd43cb7ebd163b38"
+    },
+    {
+      "path": "receipts/g1a0001-project-links-Qlinlin--UDHE-issues.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-project-links-Qlinlin--UDHE-issues.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "receipts/g1a0001-project-links-Qlinlin--UDHE-releases.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-project-links-Qlinlin--UDHE-releases.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "receipts/g1a0001-udhe-head.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-udhe-head.json",
+      "sha256": "d6bfa1bbeea03a952a7673b0ab6d004b32682ec11301e119abc72eba2777bc83"
+    },
+    {
+      "path": "receipts/g1a0001-udhe-meta.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-udhe-meta.json",
+      "sha256": "211e0094aecb5d7183dbf9f066e0d9c7755b9bd6b00d78e82e5a1ae64582321b"
+    },
+    {
+      "path": "receipts/g1a0001-udhe-sourcezip.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-udhe-sourcezip.zip",
+      "sha256": "d341c5de352d3611f20453798f81f4db554a0fdd4d15acc9d2b19b6cfd7bd611"
+    },
+    {
+      "path": "receipts/g1a0001-udhe-tree.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-udhe-tree.json",
+      "sha256": "042dff7b09ab787b10c6d31b307be2c1211546a638c5095734c8cb2e06bbc467"
+    }
+  ],
+  "discovery_evidence": [
+    "raw/g1a0001-udhe-meta.json",
+    "raw/g1a0001-udhe-head.json",
+    "gate1-addenda/0001/authortrace-readmes02.json"
+  ],
+  "adequacy": "primary PDF and/or pinned archive obtained; not yet deep scientific reading or Gate2 qualification",
+  "path_conventions": {
+    "receipts[].path": "relative to workstation/collection",
+    "receipts[].archive": "relative to workstation",
+    "discovery_evidence strings": "relative to workstation/collection",
+    "discovery_evidence objects.source": "relative to workstation or repository as explicitly prefixed"
+  },
+  "not_yet_analyzed": true
+}

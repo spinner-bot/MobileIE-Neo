@@ -1,0 +1,117 @@
+{
+  "resource_id": "MIE-0117",
+  "created_at": "2026-11-20T16:16:34.345079+08:00",
+  "snapshot_cutoff": "2026-11-17",
+  "actual_collection_date": "2026-11-20",
+  "receipts": [
+    {
+      "path": "receipts/g1a0001-lcisp-abs.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-lcisp-abs.html",
+      "sha256": "7a2f125be0db487752fc496bc74809e5d4db5d1cf1638cc96ed6b93cec4c5817"
+    },
+    {
+      "path": "receipts/g1a0001-lcisp-dataset-landing.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-lcisp-dataset-landing.html",
+      "sha256": "a4846753de981e4f02f8b8bea670ce8fa38abde4ecb20668149b444100d7b354"
+    },
+    {
+      "path": "receipts/g1a0001-lcisp-head.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-lcisp-head.json",
+      "sha256": "a54894bd1d7cabb68ca6215c02f6cf18894845882efbfffb2b6ebe4b73d36486"
+    },
+    {
+      "path": "receipts/g1a0001-lcisp-html.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-lcisp-html.html",
+      "sha256": "87b6c7558c55dc9ebbad36924cdc6b96219142416d0aed2a8bc83b0d99b999ba"
+    },
+    {
+      "path": "receipts/g1a0001-lcisp-pdf.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-lcisp-pdf.pdf",
+      "sha256": "ab12872f70f8f606905bee7f99b4f906068cc695676e081e063e13e4a7b0b8fe"
+    },
+    {
+      "path": "receipts/g1a0001-lcisp-project-site.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-lcisp-project-site.html",
+      "sha256": "402f5db90de342be13af7ec90bccb4b0fe666dbd8d258abcd2d37166083bd184"
+    },
+    {
+      "path": "receipts/g1a0001-lcisp-repo-meta.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-lcisp-repo-meta.json",
+      "sha256": "a0dfde57d63bb03b89ea256736fc28f4dc8903df6b0fb5edad8b5c759038e7c8"
+    },
+    {
+      "path": "receipts/g1a0001-lcisp-sourcezip.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-lcisp-sourcezip.zip",
+      "sha256": "725b47fd6be0ecbfe0b4560507509f9a5924c5d95f3725e425162f6a8854d1c2"
+    },
+    {
+      "path": "receipts/g1a0001-lcisp-tree.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-lcisp-tree.json",
+      "sha256": "6982b921e21f6359d7b36414290330a58db47e8960d2ba6b40cbdbbb79b48dee"
+    },
+    {
+      "path": "receipts/g1a0001-project-links-CVL-UESTC--LC-ISP-branches.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-project-links-CVL-UESTC--LC-ISP-branches.json",
+      "sha256": "9c25187f8e66a66f5846c30d7dc08b8accaee03af52c353031545b6ed4e893bf"
+    },
+    {
+      "path": "receipts/g1a0001-project-links-CVL-UESTC--LC-ISP-issues.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-project-links-CVL-UESTC--LC-ISP-issues.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "receipts/g1a0001-project-links-CVL-UESTC--LC-ISP-releases.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-project-links-CVL-UESTC--LC-ISP-releases.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    }
+  ],
+  "discovery_evidence": [
+    "raw/g1a0001-lcisp-head.json",
+    "raw/g1a0001-lcisp-repo-meta.json",
+    "receipts/g1a0001-lcisp-abs.json"
+  ],
+  "adequacy": "primary PDF and/or pinned archive obtained; not yet deep scientific reading or Gate2 qualification",
+  "path_conventions": {
+    "receipts[].path": "relative to workstation/collection",
+    "receipts[].archive": "relative to workstation",
+    "discovery_evidence strings": "relative to workstation/collection",
+    "discovery_evidence objects.source": "relative to workstation or repository as explicitly prefixed"
+  },
+  "not_yet_analyzed": true
+}

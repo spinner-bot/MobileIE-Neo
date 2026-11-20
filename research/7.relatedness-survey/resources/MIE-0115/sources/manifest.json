@@ -1,0 +1,77 @@
+{
+  "resource_id": "MIE-0115",
+  "created_at": "2026-11-20T16:16:34.345079+08:00",
+  "snapshot_cutoff": "2026-11-17",
+  "actual_collection_date": "2026-11-20",
+  "receipts": [
+    {
+      "path": "receipts/g1a0001-mai-workshop-head.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-mai-workshop-head.json",
+      "sha256": "9d65b3b416e18515c878984fe21ede822aea4f0b79c4e3aa2a83901def3977fe"
+    },
+    {
+      "path": "receipts/g1a0001-mai-workshop-meta.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-mai-workshop-meta.json",
+      "sha256": "09b157d99956f3c2268a4412cbf106b163994045f8ee9cd1b3a8cc7ada9f2924"
+    },
+    {
+      "path": "receipts/g1a0001-mai-workshop-sourcezip.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-mai-workshop-sourcezip.zip",
+      "sha256": "8eff104a59fd21a55879c8a715025e0904d44c9b8caa049f9199e4ccc22c8c24"
+    },
+    {
+      "path": "receipts/g1a0001-mai-workshop-tree.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-mai-workshop-tree.json",
+      "sha256": "472ee26a96c662ed15c5fef289cebfe7b88b2bab46df0feb6ab22715fef57519"
+    },
+    {
+      "path": "receipts/g1a0001-project-links-aiff22--MAI-2025-Workshop-branches.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-project-links-aiff22--MAI-2025-Workshop-branches.json",
+      "sha256": "498fefd8b255e0e464cf2c76f4b30c366a32d309502e92dc5b33b7564206d404"
+    },
+    {
+      "path": "receipts/g1a0001-project-links-aiff22--MAI-2025-Workshop-issues.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-project-links-aiff22--MAI-2025-Workshop-issues.json",
+      "sha256": "784ccca3ad0d017b1cc898985d6dc283ac7f136b30ed8f85b542536930b634c4"
+    },
+    {
+      "path": "receipts/g1a0001-project-links-aiff22--MAI-2025-Workshop-releases.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-project-links-aiff22--MAI-2025-Workshop-releases.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    }
+  ],
+  "discovery_evidence": [
+    "raw/g1a0001-mai-workshop-meta.json",
+    "raw/g1a0001-mai-workshop-head.json",
+    "receipts/g1a0001-mai-workshop-sourcezip.json"
+  ],
+  "adequacy": "primary PDF and/or pinned archive obtained; not yet deep scientific reading or Gate2 qualification",
+  "path_conventions": {
+    "receipts[].path": "relative to workstation/collection",
+    "receipts[].archive": "relative to workstation",
+    "discovery_evidence strings": "relative to workstation/collection",
+    "discovery_evidence objects.source": "relative to workstation or repository as explicitly prefixed"
+  },
+  "not_yet_analyzed": true
+}

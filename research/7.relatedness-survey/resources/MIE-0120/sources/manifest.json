@@ -1,0 +1,77 @@
+{
+  "resource_id": "MIE-0120",
+  "created_at": "2026-11-20T16:16:34.345079+08:00",
+  "snapshot_cutoff": "2026-11-17",
+  "actual_collection_date": "2026-11-20",
+  "receipts": [
+    {
+      "path": "receipts/g1a0001-project-links-cherrysherryplus--TSECN-branches.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-project-links-cherrysherryplus--TSECN-branches.json",
+      "sha256": "d256f2f89aa5aac8353243f4e090e461b8590d91f3c0d0dc5479ac4a98ccf9c2"
+    },
+    {
+      "path": "receipts/g1a0001-project-links-cherrysherryplus--TSECN-issues.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-project-links-cherrysherryplus--TSECN-issues.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "receipts/g1a0001-project-links-cherrysherryplus--TSECN-releases.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-project-links-cherrysherryplus--TSECN-releases.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "receipts/g1a0001-tsecn-head.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-tsecn-head.json",
+      "sha256": "725e240da5ca4784b13dfbee186217ff73bc8ab95061afc5f3aa9783ed425cc2"
+    },
+    {
+      "path": "receipts/g1a0001-tsecn-meta.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-tsecn-meta.json",
+      "sha256": "6a49ae26972b8e1a515121f10214b8889c6d1ab2a1b494a44022d66a468b0c2e"
+    },
+    {
+      "path": "receipts/g1a0001-tsecn-sourcezip.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-tsecn-sourcezip.zip",
+      "sha256": "a99e75b42da85af8024c5691f56ccb91de79b738a534f76fd14cee4b98469f21"
+    },
+    {
+      "path": "receipts/g1a0001-tsecn-tree.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-tsecn-tree.json",
+      "sha256": "ba248620d87469100eddea612eedd9c20c11303fafa839237099443df8a56832"
+    }
+  ],
+  "discovery_evidence": [
+    "raw/g1a0001-tsecn-meta.json",
+    "raw/g1a0001-tsecn-head.json",
+    "gate1-addenda/0001/authortrace-readmes02.json"
+  ],
+  "adequacy": "primary PDF and/or pinned archive obtained; not yet deep scientific reading or Gate2 qualification",
+  "path_conventions": {
+    "receipts[].path": "relative to workstation/collection",
+    "receipts[].archive": "relative to workstation",
+    "discovery_evidence strings": "relative to workstation/collection",
+    "discovery_evidence objects.source": "relative to workstation or repository as explicitly prefixed"
+  },
+  "not_yet_analyzed": true
+}
