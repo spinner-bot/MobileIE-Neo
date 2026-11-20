@@ -1,0 +1,54 @@
+{
+  "resource_id": "MIE-0009",
+  "review_at": "2026-11-20T19:12:27.568992+08:00",
+  "original_three_codehits_match": true,
+  "archive_files": 87,
+  "converted_npz_in_archive": false,
+  "authors_npz_statement": "weights converted from official UIEB checkpoint into src/reeftrack/enhance/mobileie_uieb.npz",
+  "actual_weight_checks": "fixed NPZ GitHub contents404; public author releases[]; no conversion script identified in87file inventory; global .gitignore excludes *.npz",
+  "test_guard": "available(mobileie)=torch spec present AND NPZ exists; default fixed checkout lacks NPZ, so MobileIE tests parameterization excludes it / dedicated test skip predicate true for missing file",
+  "not_test_execution": "Read test definitions only, no pytest/import/upstream run",
+  "architecture_correspondence": [
+    {
+      "operator": "head",
+      "official": "MobileIELLENetS.head FSTS[Conv5,padding2→PReLU→Conv3,padding1]",
+      "port": "same literal conv/prelu/fst ordering"
+    },
+    {
+      "operator": "body",
+      "official": "FSTS Conv3,padding1",
+      "port": "same conv3/fst ordering"
+    },
+    {
+      "operator": "channel attention",
+      "official": "spatial avg→Conv1→sigmoid",
+      "port": "mean((2,3))→conv→sigmoid"
+    },
+    {
+      "operator": "spatial/channel mix",
+      "official": "channel max(x2*x1)→Conv1→sigmoid",
+      "port": "amax(1)→conv→sigmoid"
+    },
+    {
+      "operator": "tail",
+      "official": "Conv3(x3*x2*x1), no image skip",
+      "port": "same conv3 ordering"
+    },
+    {
+      "operator": "FST",
+      "official": "(weight1*y)*(weight2*y)+bias",
+      "port": "same explicit expression, not folded away"
+    }
+  ],
+  "sources": [
+    "resources/MIE-0002/derived/docs/upstream-code/model--lle.py.txt",
+    "resources/MIE-0002/derived/docs/upstream-code/model--utils.py.txt",
+    "resources/MIE-0009/derived/docs/upstream-code/src--reeftrack--enhance--__init__.py.txt"
+  ],
+  "limits": [
+    "operation topology correspondence only, no converted key/shape/value or numerical/device parity verified",
+    "4075 is author-test assertion and official known model size, not inspected reef-track NPZ",
+    "GUI full enhanced view width cap960; zoom enhanced before output resize; SAM optional sees native crop/full input",
+    "SAM memory/backfill/ROI-centre smoothing are separate from stateless enhancement; no image temporal stability proof"
+  ]
+}

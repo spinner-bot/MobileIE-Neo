@@ -1,0 +1,59 @@
+{
+  "resource_id": "MIE-0009",
+  "at": "2026-11-20T11:06:54.635Z",
+  "attempts": [
+    {
+      "kind": "pinned converted NPZ path",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-repository-content\",\"status\":\"404\"}"
+            }
+          ],
+          "structuredContent": {
+            "error": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-repository-content\",\"status\":\"404\"}",
+            "error_code": "NOT_FOUND",
+            "error_data": {
+              "message": "Not Found",
+              "documentation_url": "https://docs.github.com/rest/repos/contents#get-repository-content",
+              "status": "404"
+            }
+          },
+          "isError": true
+        }
+      }
+    },
+    {
+      "kind": "public release listing",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "content": "[]",
+            "title": "releases",
+            "modified_date": null,
+            "url": "https://api.github.com/repos/tediyankov/reef-track/releases?per_page=100",
+            "display_url": "https://api.github.com/repos/tediyankov/reef-track/releases?per_page=100",
+            "display_title": "releases",
+            "structuredContent": {
+              "title": "releases",
+              "content": "[]",
+              "display_url": "https://api.github.com/repos/tediyankov/reef-track/releases?per_page=100"
+            }
+          },
+          "isError": false
+        }
+      }
+    }
+  ],
+  "scope": "Pinned NPZ returns404, current author releases[]; not an acquired weight or numerical validation"
+}
