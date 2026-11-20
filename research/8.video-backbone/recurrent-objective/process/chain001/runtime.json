@@ -1,0 +1,50 @@
+{
+  "at": "2026-11-20T21:38:33.108435+08:00",
+  "coordinator": {
+    "pid": 3246208,
+    "start_ticks": 111602758,
+    "state": "R"
+  },
+  "completed_normally": true,
+  "seconds": 6073.158408783842,
+  "final_state": {
+    "at": "2026-11-20T21:38:33.107891+08:00",
+    "coordinator": {
+      "pid": 3246208,
+      "start_ticks": 111602758,
+      "state": "R"
+    },
+    "status": "complete",
+    "stage": "registered_development_chain",
+    "resource_polls": 4,
+    "guard_attempts": 4,
+    "child": {
+      "pid": 3318009,
+      "already_exited": true
+    },
+    "stdout": ".cache/experiments/topic8-recurrent-objective/chain001/contacts.stdout.txt",
+    "returncode": 0,
+    "worker": {
+      "pid": 3310841,
+      "start_ticks": 112138183,
+      "state": "S"
+    },
+    "actual_contact_review_pending": true,
+    "paper_objective_achieved": false
+  },
+  "CPU_quality_children": [
+    {
+      "seed": 0,
+      "pid": 3283489,
+      "already_exited": true,
+      "observed_returncode": 0
+    },
+    {
+      "seed": 1,
+      "pid": 3302368,
+      "already_exited": true,
+      "observed_returncode": 0
+    }
+  ],
+  "paper_objective_achieved": false
+}
