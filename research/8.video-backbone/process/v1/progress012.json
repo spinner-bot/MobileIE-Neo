@@ -1,0 +1,177 @@
+{
+  "at": "2026-11-20T15:01:55.836994+08:00",
+  "seed0_original_worker": {
+    "pid": 3024402,
+    "expected_start_ticks": 109481902,
+    "missing": true
+  },
+  "seed0_completed_normally": true,
+  "seed0_runtime": "research/8.video-backbone/process/v1/train-seed0-attempt006/runtime.json",
+  "seed0_runtime_sha256": "969e2bff4fe807ae7cc9ef5aab0dbb56093ae90f44bccd31ac2ddc30df5bee04",
+  "seed0_total_counts": {
+    "updates": {
+      "warm": 2000,
+      "spatial": 4000,
+      "fixed": 4000,
+      "learned": 4000
+    },
+    "teacher_images": 32000,
+    "backbone_images": 320000,
+    "DIS_pairs": 96000,
+    "gate_images": 48000
+  },
+  "seed0_backend_history": {
+    "GPU_updates": 358,
+    "CPU_updates": 13642,
+    "GPU_checkpoints_retained": true,
+    "CPU_GPU_bit_equivalence_claim": false
+  },
+  "CPU_complete_phase_rows": {
+    "warm": 1642,
+    "spatial": 4000,
+    "fixed": 4000,
+    "learned": 4000
+  },
+  "seed0_final_markers": {
+    "fixed-final.json": {
+      "at": "2026-11-20T14:39:08.857480+08:00",
+      "seed": 0,
+      "phase": "fixed",
+      "path": ".cache/experiments/topic8-v1/train-seed0-attempt006/fixed-final.pt",
+      "sha256": "7f0324cae390e303a8cd16c92936a049cebd03187e5bf0d5072ab4708b705985",
+      "parameters": 16180,
+      "updates": 4000,
+      "all_tensors_reloaded_finite": true,
+      "training_backend": "cpu",
+      "unique_final": true
+    },
+    "learned-final.json": {
+      "at": "2026-11-20T15:00:21.286655+08:00",
+      "seed": 0,
+      "phase": "learned",
+      "path": ".cache/experiments/topic8-v1/train-seed0-attempt006/learned-final.pt",
+      "sha256": "c4092b1ec6018680e5e3f0576101ba0a2a495b0a6fb6bdf47446b593cf9daa22",
+      "parameters": 16365,
+      "updates": 4000,
+      "all_tensors_reloaded_finite": true,
+      "training_backend": "cpu",
+      "unique_final": true
+    },
+    "spatial-final.json": {
+      "at": "2026-11-20T14:22:37.391027+08:00",
+      "seed": 0,
+      "phase": "spatial",
+      "path": ".cache/experiments/topic8-v1/train-seed0-attempt006/spatial-final.pt",
+      "sha256": "50f294accd66e44006691f0620ba77595f5f81e36c987b16725c314a47121a67",
+      "parameters": 16180,
+      "updates": 4000,
+      "all_tensors_reloaded_finite": true,
+      "training_backend": "cpu",
+      "unique_final": true
+    },
+    "warm-final.json": {
+      "at": "2026-11-20T14:11:04.765017+08:00",
+      "seed": 0,
+      "phase": "warm",
+      "path": ".cache/experiments/topic8-v1/train-seed0-attempt006/warm-final.pt",
+      "sha256": "1041d1424ad42245b5ef6192275d7fb589b0d3ac0e256eec55e83067ab490c75",
+      "parameters": 16180,
+      "updates": 2000,
+      "all_tensors_reloaded_finite": true,
+      "training_backend": "cpu",
+      "unique_final": true
+    }
+  },
+  "actual_coordinator_state": {
+    "at": "2026-11-20T15:01:51.883238+08:00",
+    "coordinator": {
+      "pid": 3024380,
+      "start_ticks": 109481893,
+      "state": "R"
+    },
+    "status": "running",
+    "stage": "CPU-train-seed1-attempt001",
+    "child": {
+      "pid": 3057710,
+      "start_ticks": 109820958,
+      "state": "R"
+    },
+    "stdout": ".cache/experiments/topic8-v1/cpu-chain001/CPU-train-seed1-attempt001.stdout.txt",
+    "returncode": 0
+  },
+  "currently_live_processes": {
+    "coordinator": {
+      "pid": 3024380,
+      "start_ticks": 109481893,
+      "state": "S",
+      "CUDA_VISIBLE_DEVICES": ""
+    },
+    "quality_seed0": {
+      "pid": 3057709,
+      "start_ticks": 109820957,
+      "state": "R",
+      "CUDA_VISIBLE_DEVICES": ""
+    },
+    "train_seed1": {
+      "pid": 3057710,
+      "start_ticks": 109820958,
+      "state": "R",
+      "CUDA_VISIBLE_DEVICES": ""
+    }
+  },
+  "source_checks": {
+    "source-freeze001.json": {
+      "files": 34,
+      "unchanged": true
+    },
+    "perceptual-source-freeze001.json": {
+      "files": 5,
+      "unchanged": true
+    },
+    "cpu-execution-freeze001.json": {
+      "files": 4,
+      "unchanged": true
+    }
+  },
+  "live_prefixes": [
+    {
+      "path": "research/8.video-backbone/process/v1/cpu-chain001/launches.jsonl",
+      "complete_prefix_bytes": 1399,
+      "complete_prefix_sha256": "f368ce05c2db362ef84ba59e017689ed339e523cdc6d44502b373ff11ec17ba3",
+      "complete_rows": 3
+    },
+    {
+      "path": "research/8.video-backbone/process/v1/cpu-chain001/exits.jsonl",
+      "complete_prefix_bytes": 115,
+      "complete_prefix_sha256": "0e5fb4b19038955d8396bad1a77423fc602b130e3764dcee9697898277935610",
+      "complete_rows": 1
+    },
+    {
+      "path": "research/8.video-backbone/process/v1/train-seed1-attempt001/training.jsonl",
+      "complete_prefix_bytes": 54014,
+      "complete_prefix_sha256": "e685b7e2e8f0ba743b6f9656c00a9d8fa06f18214abd4a2ed2d2c2a19e588acc",
+      "complete_rows": 264,
+      "last_update": {
+        "phase": "warm",
+        "step": 264,
+        "data_step": 263
+      }
+    },
+    {
+      "path": "research/8.video-backbone/results/v1-quality-seed0/per_sequence.jsonl",
+      "complete_prefix_bytes": 1867,
+      "complete_prefix_sha256": "ce070835e4eb0cae6f347474a0f7d45373ee3744c0fd93bf15a217ddee926bef",
+      "complete_rows": 6
+    },
+    {
+      "path": "research/8.video-backbone/results/v1-quality-seed0/prediction_manifest.jsonl",
+      "complete_prefix_bytes": 2744,
+      "complete_prefix_sha256": "46c5094be2e4acd55e97e27b520f6b8dae8ea3634d6b73eb841400e7c9bb667d",
+      "complete_rows": 6
+    }
+  ],
+  "quality_seed0_completed_normally": null,
+  "new_observation_model_forwards": 0,
+  "method_established": false,
+  "scope": "Complete actual seed0 budget and original coordinator auto-launching full seed0 quality plus seed1. Partial quality row counts are not selected rankings or complete two-seed/JOD results."
+}
