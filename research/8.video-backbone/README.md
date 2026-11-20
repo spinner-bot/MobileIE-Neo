@@ -3,7 +3,7 @@
 2026-11-20；Codex  (sqs_A100)。main主题8，research/7继续留给其他分支。
 [T1同原骨干训练监督对照](teacher-targets/README.md)也已完整负结项：[完整决定](teacher-targets/decision.md)、[0180报告](../../docs/进展报告/0180-T-26112019-同原骨干时序KD完整评价与止损.md)、[原终态](teacher-targets/process/terminal001.json)。24000正式更新/六唯一最终/全180质量与180官方JOD/240共表及四图实际审阅，恢复保护3/4、A/B各0/40、成本资格False。对空间KD全部20条件时间更好，四组改善1.49%–2.38%，但距原强post仍高约29%–48%；固定同F0/T4DIS/等权KD局部网格STOP，不扩失败成本/外部/手机。普通KD是已完成已知参照，不主张创新。全部原任务终态、GPU释放，论文goal active。
 
-当前[T2部署递归监督](recurrent-objective/README.md)已过零更新原生资格、CPU4/CUDA4丢弃优化资格，完整47源及协议冻结，原协调3246208/start_ticks111602758推进正式两模型×两seed×4000。20:01:51启动前缀为seed0各63/126正式更新；完整16000训练/120新质量与JOD/360共表/44主要+8学习比较仍待，不能作效果结论。[0181](../../docs/进展报告/0181-T-26112020-部署递归监督原生资格与固定完整训练启动.md)与[先例](../5.prior-art-survey/docs/72-deployed-recurrence-and-supervision-entry.md)明确：这是同原F0的clip-GT与实际DIS递归最终监督已知控制，推理保留DIS/状态，普通递归训练不是创新，不重开T1/V1。
+[T2部署递归监督](recurrent-objective/README.md)已完整负结项：[0184](../../docs/进展报告/0184-T-26112021-部署递归监督完整评价与止损.md)、[决定](recurrent-objective/decision.md)、[真实终态](recurrent-objective/process/terminal001.json)。全16000正式更新/四唯一最终/120质量与120官方JOD/360共表/72均值、四图与两全点PNG实际审阅完成；恢复0/4、A0/44、B10/44、额外5%学习0/8，完整资格False。对clip-GT DIS有SYN PSNR+.10–.11dB/14条件PSNR正例，但全部20条件时间更高（四组+1.50%–2.46%）；固定原F0/native DIS/.5/四帧递归监督局部网格STOP，不扩失败成本/外部/手机，不继续向T1/T2加loss或延长诊断。所有原任务终态、GPU释放，已知递归训练非创新。后续须选择实质不同信息/结构问题、先核先例再有限登记，不预先称另一模型有效。
 
 
 V1已完整结项为负结果：[决定与止损](decision-v1.md)、[0175报告](../../docs/进展报告/0175-T-26112017-完整视频骨干候选评价与止损.md)、[原终态](process/v1/terminal001.json)。两seed全28000正式训练/八唯一最终、220质量/220官方JOD各9856逐帧、280共同条件/56均值及四固定图均正常，四联系图和两全表图已实际查看。全部旧worker/coordinator均退出，无活跃V1任务，不重启旧链。
