@@ -34,7 +34,7 @@ def main(args):
     precision()
     os.nice(5)
     frozen = verify()
-    assert available_kib() >= 8 * 1024 * 1024 and not torch.cuda.is_initialized()
+    assert not torch.cuda.is_initialized()
     assert read(PROCESS / 'cpu-preflight002/qualification.json')['passed']
     if not args.qualify:
         qualified = sorted(PROCESS.glob('cuda-spatial-qualification*/runtime.json'))
@@ -53,6 +53,8 @@ def main(args):
     lock = schedule = latest = optimizers = None
     inherited = None
     try:
+        if available_kib() < 8 * 1024 * 1024:
+            raise ResourcePressure('Host available memory below8GiB preparation reserve')
         pool, students = MixedPool(), models(args.seed)
         if args.resume:
             assert args.resume.resolve().is_relative_to('/data/Users/zrh/data/MobileIE-Neo')
@@ -162,10 +164,23 @@ def main(args):
         (out / 'failure.txt').write_text(traceback.format_exc())
         raise
     finally:
+        final_device, own_final_used_mib = None, None
+        if torch.cuda.is_initialized():
+            try:
+                from prebind_shared_gpu import actual_device
+                final_device = actual_device(BOUND)
+                own = [p for g in final_device['sample']['GPUs'] for p in g['processes']
+                       if int(p.split(',')[1].strip()) == os.getpid()]
+                if len(own) == 1 and own[0].split(',')[2].strip().isdigit():
+                    own_final_used_mib = int(own[0].split(',')[2].strip())
+            except Exception as error:
+                final_device = dict(observation_error=str(error))
         write(out / 'runtime.json', dict(at=stamp(), process=identity(os.getpid()), seed=args.seed,
             qualification=args.qualify, completed_normally=complete, resource_pause=paused, counts=counts,
             latest_checkpoint=latest, seconds=time.perf_counter()-started,
             GPU=None if schedule is None else schedule.summary(), CUDA_initialized=torch.cuda.is_initialized(),
+            final_actual_device=final_device, own_final_used_mib=own_final_used_mib,
+            own_NVML_scope='End-of-run process memory, not lifetime peak; allocator lifetime peaks recorded separately',
             max_allocated_bytes=torch.cuda.max_memory_allocated() if torch.cuda.is_initialized() else 0,
             max_reserved_bytes=torch.cuda.max_memory_reserved() if torch.cuda.is_initialized() else 0))
         if lock:
