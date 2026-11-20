@@ -1,0 +1,61 @@
+{
+  "resource_id": "MIE-0035",
+  "temporary_key": "code-Foadsf--neural-enhance-bench",
+  "type": "code",
+  "title": "Foadsf/neural-enhance-bench",
+  "repo": "Foadsf/neural-enhance-bench",
+  "revision": "04a08307a91dd0f17e2810d0766a559c1b5905d9",
+  "tree": null,
+  "dois": null,
+  "arxivs": null,
+  "relation": "Explicit MobileIE implementation/module reuse; module-port claim requires independent source review, no fidelity/performance assumed",
+  "created_at": "2026-11-20T12:24:23+08:00",
+  "authors": [],
+  "dates": {
+    "years": [],
+    "published_date": null,
+    "date_verification": "pending Gate2"
+  },
+  "repository_owner": "Foadsf",
+  "family": "064-bench",
+  "analysis_order": 35,
+  "initial_preliminary": {
+    "R": 3,
+    "N": 2,
+    "U": 3,
+    "E": 2,
+    "score": 80,
+    "tier": "A",
+    "category": "mobile-benchmark-implementation",
+    "family": "064-bench",
+    "role_order": 1,
+    "summary": "移动增强工具含MobileIE命名的处理类。优先核是否真实加载官方模型及其比较是否公平。",
+    "reason_R": "任务联系：移动增强工具含MobileIE命名的处理类。优先核是否真实加载官方模型及其比较是否公平。",
+    "reason_N": "重复/混淆风险为初级待证判断；依据当前明确关联与基础/接续/移植角色，非已确立创新结论",
+    "reason_U": "可操作性：按所列机制、对照或来源核查用途评分；未运行外部代码",
+    "reason_E": "已有可读HTML/文本/局部固定源码；内容充分性留待Gate2",
+    "evidence": [
+      {
+        "url": "https://github.com/Foadsf/neural-enhance-bench/blob/04a08307a91dd0f17e2810d0766a559c1b5905d9/app/src/main/java/org/floss/enhancetool/model/MobileIeDenoiser.java",
+        "path": "app/src/main/java/org/floss/enhancetool/model/MobileIeDenoiser.java",
+        "revision": "04a08307a91dd0f17e2810d0766a559c1b5905d9",
+        "acquisition": "receipts/codehit-74e2e18fe413de7e.json"
+      },
+      {
+        "url": "https://github.com/Foadsf/neural-enhance-bench/blob/04a08307a91dd0f17e2810d0766a559c1b5905d9/README.md",
+        "path": "README.md",
+        "revision": "04a08307a91dd0f17e2810d0766a559c1b5905d9",
+        "acquisition": "receipts/codehit-e7306989da60dec6.json"
+      },
+      {
+        "url": "https://github.com/Foadsf/neural-enhance-bench/blob/04a08307a91dd0f17e2810d0766a559c1b5905d9/FLOSS Tool for CNN and VLM Image Enhancement Testing.md",
+        "path": "FLOSS Tool for CNN and VLM Image Enhancement Testing.md",
+        "revision": "04a08307a91dd0f17e2810d0766a559c1b5905d9",
+        "acquisition": "receipts/codehit-301c6659a9e46e50.json"
+      }
+    ],
+    "not_gate2": true
+  },
+  "source_snapshot_cutoff": "2026-11-17",
+  "identity_verification": "pending Gate2; repository owner is not assumed to be the paper author"
+}
