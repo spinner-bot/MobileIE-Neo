@@ -1,0 +1,129 @@
+{
+  "resource_id": "MIE-0003",
+  "review_id": "0001",
+  "created_at": "2026-11-20T16:34:43.439544+08:00",
+  "source_aliases": {
+    "PMLR": "archive/g1a0001-anymod-pmlr-pdf.pdf",
+    "version_comparison": "resources/MIE-0003/derived/reviews/0001/docs/version-compare.json",
+    "prior_claims_preserved": "resources/MIE-0003/derived/report/claims.json"
+  },
+  "claims": [
+    {
+      "id": "R01",
+      "claim": "Current citation identity includes ICML2026 PMLR306:73241–73257; same paper/authors as arxiv v1",
+      "evidence_class": "publisher_metadata_and_static_verification",
+      "anchors": [
+        {
+          "source": "archive/g1a0001-anymod-pmlr-html.html",
+          "locator": "title, authors, proceedings, BibTeX"
+        },
+        {
+          "source": "archive/g1a0001-anymod-pmlr-pdf.pdf",
+          "locator": "physical p1 official publication footer"
+        }
+      ],
+      "limitation": "Primary BibTeX July6–11 is conference interval; precise first online publication day not asserted."
+    },
+    {
+      "id": "R02",
+      "claim": "Ten pages are text/PNG identical; changed pages contain publication/footer, pagination and funding changes, no detected method/result-table update",
+      "evidence_class": "this_review_document_comparison",
+      "anchors": [
+        {
+          "source": "resources/MIE-0003/derived/reviews/0001/docs/version-compare.json",
+          "locator": "all17 page text diff and rendered hashes"
+        },
+        {
+          "source": "resources/MIE-0003/derived/reviews/0001/docs/reading-notes.md",
+          "locator": "actual full17 page rereading and changed-page interpretation"
+        }
+      ],
+      "limitation": "Identity of documents/images does not validate experiments, numerical results, or release-time code."
+    },
+    {
+      "id": "R03",
+      "claim": "Formal acknowledgement changes NSFC82441021 to62501140 and adds JiangsuBK20251279",
+      "evidence_class": "author_text_and_this_review",
+      "anchors": [
+        {
+          "source": "archive/g1a0001-anymod-pmlr-pdf.pdf",
+          "locator": "physical p9 Acknowledgements"
+        },
+        {
+          "source": "resources/MIE-0003/derived/reviews/0001/docs/version-compare.json",
+          "locator": "p9 diff against original arxiv"
+        }
+      ],
+      "limitation": "Funding statement is reported author text; no scientific consequence or external funding verification inferred."
+    },
+    {
+      "id": "R04",
+      "claim": "Formal MobileIE zero-shot comparison and citation remain identical to v1: DID16.03/.74, indoor16.42/.71, outdoor16.10/.48",
+      "evidence_class": "author_report_not_reproduction",
+      "anchors": [
+        {
+          "source": "archive/g1a0001-anymod-pmlr-pdf.pdf",
+          "locator": "p7 Table3; p8 Zero-shot Performance; p11 MobileIE reference; p16 Fig10"
+        }
+      ],
+      "limitation": "Specific MobileIE checkpoint and unified preprocessing/evaluation not provided; not an adapted-training upper bound or isolated temporal-module gain."
+    },
+    {
+      "id": "R05",
+      "claim": "Formal version retains multimodal pretraining/RGB-only inference, S2DG/FFT and latent ConvLSTM; not MobileIE-scale deployment evidence",
+      "evidence_class": "author_report_plus_prior_static_verification",
+      "anchors": [
+        {
+          "source": "archive/g1a0001-anymod-pmlr-pdf.pdf",
+          "locator": "pp4–6 methods/training, pp12–13 architecture/data"
+        },
+        {
+          "source": "resources/MIE-0003/derived/docs/upstream-code-manifest.json",
+          "locator": "fixed9dcbe4db, prior21 actually inspected supporting files"
+        },
+        {
+          "source": "resources/MIE-0003/derived/report/claims.json",
+          "locator": "C02–C05 static mechanism/state/cost and training limits"
+        }
+      ],
+      "limitation": "Event timestamp causality, full parameter count, device latency/peak RAM/energy and actual temporal quality not verified; inherited static arithmetic is not measurement."
+    },
+    {
+      "id": "R06",
+      "claim": "Formal publication does not resolve table-condition discrepancies or known public-code protocol differences",
+      "evidence_class": "this_review_static_consistency",
+      "anchors": [
+        {
+          "source": "archive/g1a0001-anymod-pmlr-pdf.pdf",
+          "locator": "p6 Table1 versus p17 Table8; p8 Tables4/5 and p17 outdoor modality rows; p5 objectives and p12 settings"
+        },
+        {
+          "source": "resources/MIE-0003/derived/report/claims.json",
+          "locator": "C06–C09 prior code/loss/metrics/split audit at unchanged pinned source"
+        },
+        {
+          "source": "resources/MIE-0003/derived/reviews/0001/docs/version-compare.json",
+          "locator": "all relevant method/result/appendix pages text and PNG unchanged"
+        }
+      ],
+      "limitation": "Reasons for table differences and actual author evaluation scripts unknown; no accusation of invalid method or false results, no numerical rerun."
+    },
+    {
+      "id": "R07",
+      "claim": "Follow-up should isolate training information, capacity/history, stream evaluation and full mobile cost before claiming video extension benefit",
+      "evidence_class": "survey_inference_and_untested_controls",
+      "anchors": [
+        {
+          "source": "resources/MIE-0003/derived/reviews/0001/report/analysis.md",
+          "locator": "research implications and proposed controls"
+        },
+        {
+          "source": "resources/MIE-0003/derived/report/claims.json",
+          "locator": "C10 original falsifiable controls retained"
+        }
+      ],
+      "limitation": "Recommendations only; no Gate3 experiment/model execution/training performed."
+    }
+  ],
+  "experiments_executed": 0
+}
