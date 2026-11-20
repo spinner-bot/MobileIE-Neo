@@ -1,0 +1,4596 @@
+{
+  "at": "2026-11-20T16:59:05.396183+08:00",
+  "sources": {
+    "research/8.video-backbone/report/v1-joint/audit.json": "bb7365add2daf35756b0a9f6d2dffee89bd9883b3255c87506c6205689044c40",
+    "research/8.video-backbone/report/v1-joint/domain_seed_means.json": "2f7bd844ec1608fe1ea354199067b3f072ea818ee96065e281db26e6f6d8a8f0",
+    "research/8.video-backbone/report/v1-joint/all_conditions.jsonl": "e467fcf209052528965c7ce12a408fbf3b27c6a5131ce6c0f718c7cf8417b6ba",
+    "research/8.video-backbone/analyze_v1.py": "de8961d9a873549bb5a9937e36910e4307fdad5d6a8e9581a5ec26c3faee19f8"
+  },
+  "descriptive_posthoc": true,
+  "registered_gates_changed": false,
+  "independent_videos": false,
+  "new_model_forwards": 0,
+  "new_metric_calls": 0,
+  "summaries": [
+    {
+      "pair": "spatial/F0",
+      "candidate": "topic8_spatial_raw",
+      "reference": "MobileIE_raw",
+      "domain_seed_ranges": {
+        "PSNR_difference": [
+          -3.9773074566018174,
+          -2.294540608741805
+        ],
+        "JOD_difference": [
+          -1.2291040420532227,
+          -0.6063779195149737
+        ],
+        "temporal_error_change_percent": [
+          4.916616158064846,
+          25.90424215214613
+        ]
+      },
+      "condition_counts": {
+        "total": 20,
+        "PSNR_positive": 3,
+        "JOD_positive": 1,
+        "temporal_error_lower": 3,
+        "strict_joint_nonworse": 0
+      }
+    },
+    {
+      "pair": "learned/F0-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "MobileIE_recursive_self05",
+      "domain_seed_ranges": {
+        "PSNR_difference": [
+          -3.7012400839045867,
+          -2.2627718155998124
+        ],
+        "JOD_difference": [
+          -1.207389235496521,
+          -0.9010061422983808
+        ],
+        "temporal_error_change_percent": [
+          35.83824078128808,
+          42.949606648962366
+        ]
+      },
+      "condition_counts": {
+        "total": 20,
+        "PSNR_positive": 3,
+        "JOD_positive": 0,
+        "temporal_error_lower": 0,
+        "strict_joint_nonworse": 0
+      }
+    },
+    {
+      "pair": "learned/F0-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "DIS_recursive_self05",
+      "domain_seed_ranges": {
+        "PSNR_difference": [
+          -3.952017628787228,
+          -2.341047440025939
+        ],
+        "JOD_difference": [
+          -1.234704613685608,
+          -0.9248984654744472
+        ],
+        "temporal_error_change_percent": [
+          25.451125003149812,
+          39.60255967241131
+        ]
+      },
+      "condition_counts": {
+        "total": 20,
+        "PSNR_positive": 3,
+        "JOD_positive": 0,
+        "temporal_error_lower": 1,
+        "strict_joint_nonworse": 0
+      }
+    },
+    {
+      "pair": "learned/own-preview",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview",
+      "domain_seed_ranges": {
+        "PSNR_difference": [
+          -0.07396834522186779,
+          0.6778410156803218
+        ],
+        "JOD_difference": [
+          -0.039565086364746094,
+          0.11782232920328806
+        ],
+        "temporal_error_change_percent": [
+          -27.784980703839512,
+          -10.17995868811219
+        ]
+      },
+      "condition_counts": {
+        "total": 20,
+        "PSNR_positive": 17,
+        "JOD_positive": 10,
+        "temporal_error_lower": 19,
+        "strict_joint_nonworse": 10
+      }
+    },
+    {
+      "pair": "learned/own-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_FB05",
+      "domain_seed_ranges": {
+        "PSNR_difference": [
+          -0.2185704672757609,
+          0.01612850064476845
+        ],
+        "JOD_difference": [
+          -0.05799659093221088,
+          -0.003686189651489258
+        ],
+        "temporal_error_change_percent": [
+          14.366963818327005,
+          31.215261294420337
+        ]
+      },
+      "condition_counts": {
+        "total": 20,
+        "PSNR_positive": 6,
+        "JOD_positive": 5,
+        "temporal_error_lower": 0,
+        "strict_joint_nonworse": 0
+      }
+    },
+    {
+      "pair": "learned/own-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_DIS05",
+      "domain_seed_ranges": {
+        "PSNR_difference": [
+          -0.30896761732479305,
+          -0.08960190604053864
+        ],
+        "JOD_difference": [
+          -0.10797421137491892,
+          -0.0365368127822876
+        ],
+        "temporal_error_change_percent": [
+          12.81286417551919,
+          22.98769642341214
+        ]
+      },
+      "condition_counts": {
+        "total": 20,
+        "PSNR_positive": 0,
+        "JOD_positive": 0,
+        "temporal_error_lower": 0,
+        "strict_joint_nonworse": 0
+      }
+    },
+    {
+      "pair": "learned/fixed",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_fixed_causal",
+      "domain_seed_ranges": {
+        "PSNR_difference": [
+          -0.005143998209160117,
+          0.01371991588009891
+        ],
+        "JOD_difference": [
+          0.004282116889953613,
+          0.008244355519612334
+        ],
+        "temporal_error_change_percent": [
+          0.1957929461175123,
+          1.469606138659696
+        ]
+      },
+      "condition_counts": {
+        "total": 20,
+        "PSNR_positive": 12,
+        "JOD_positive": 17,
+        "temporal_error_lower": 3,
+        "strict_joint_nonworse": 3
+      }
+    },
+    {
+      "pair": "fixed/own-preview",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview",
+      "domain_seed_ranges": {
+        "PSNR_difference": [
+          -0.08819616163925659,
+          0.6828946006980416
+        ],
+        "JOD_difference": [
+          -0.04642009735107422,
+          0.1096051534016933
+        ],
+        "temporal_error_change_percent": [
+          -28.780612281898133,
+          -10.38848257573094
+        ]
+      },
+      "condition_counts": {
+        "total": 20,
+        "PSNR_positive": 17,
+        "JOD_positive": 10,
+        "temporal_error_lower": 18,
+        "strict_joint_nonworse": 10
+      }
+    },
+    {
+      "pair": "fixed/own-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_FB05",
+      "domain_seed_ranges": {
+        "PSNR_difference": [
+          -0.22769745471093117,
+          0.0019150090742918735
+        ],
+        "JOD_difference": [
+          -0.06599632898966501,
+          -0.01052403450012207
+        ],
+        "temporal_error_change_percent": [
+          12.736263454722963,
+          30.954260355420438
+        ]
+      },
+      "condition_counts": {
+        "total": 20,
+        "PSNR_positive": 5,
+        "JOD_positive": 4,
+        "temporal_error_lower": 0,
+        "strict_joint_nonworse": 0
+      }
+    },
+    {
+      "pair": "fixed/own-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_DIS05",
+      "domain_seed_ranges": {
+        "PSNR_difference": [
+          -0.31764107923927654,
+          -0.10390180133636662
+        ],
+        "JOD_difference": [
+          -0.11601503690083881,
+          -0.04279351234436035
+        ],
+        "temporal_error_change_percent": [
+          11.26513384570622,
+          22.69460915868422
+        ]
+      },
+      "condition_counts": {
+        "total": 20,
+        "PSNR_positive": 0,
+        "JOD_positive": 0,
+        "temporal_error_lower": 0,
+        "strict_joint_nonworse": 0
+      }
+    },
+    {
+      "pair": "fixed/F0-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "MobileIE_recursive_self05",
+      "domain_seed_ranges": {
+        "PSNR_difference": [
+          -3.709751468548067,
+          -2.272069701681467
+        ],
+        "JOD_difference": [
+          -1.2142086029052734,
+          -0.9089061419169111
+        ],
+        "temporal_error_change_percent": [
+          34.64944141095467,
+          42.67026832737042
+        ]
+      },
+      "condition_counts": {
+        "total": 20,
+        "PSNR_positive": 3,
+        "JOD_positive": 0,
+        "temporal_error_lower": 0,
+        "strict_joint_nonworse": 0
+      }
+    },
+    {
+      "pair": "fixed/F0-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "DIS_recursive_self05",
+      "domain_seed_ranges": {
+        "PSNR_difference": [
+          -3.9605290134307083,
+          -2.3503453261075933
+        ],
+        "JOD_difference": [
+          -1.2415239810943604,
+          -0.9327984650929775
+        ],
+        "temporal_error_change_percent": [
+          25.155970904449987,
+          37.680168608743415
+        ]
+      },
+      "condition_counts": {
+        "total": 20,
+        "PSNR_positive": 3,
+        "JOD_positive": 0,
+        "temporal_error_lower": 1,
+        "strict_joint_nonworse": 0
+      }
+    },
+    {
+      "pair": "spatial-FB/F0-FB",
+      "candidate": "topic8_spatial_raw_FB05",
+      "reference": "MobileIE_recursive_self05",
+      "domain_seed_ranges": {
+        "PSNR_difference": [
+          -3.49884452994813,
+          -2.2803415555574382
+        ],
+        "JOD_difference": [
+          -1.226059079170227,
+          -0.8564697106679278
+        ],
+        "temporal_error_change_percent": [
+          4.387843993041862,
+          20.83614542235621
+        ]
+      },
+      "condition_counts": {
+        "total": 20,
+        "PSNR_positive": 3,
+        "JOD_positive": 0,
+        "temporal_error_lower": 1,
+        "strict_joint_nonworse": 0
+      }
+    },
+    {
+      "pair": "spatial-DIS/F0-DIS",
+      "candidate": "topic8_spatial_raw_DIS05",
+      "reference": "DIS_recursive_self05",
+      "domain_seed_ranges": {
+        "PSNR_difference": [
+          -3.6588192471242493,
+          -2.24535394743053
+        ],
+        "JOD_difference": [
+          -1.220657229423523,
+          -0.8295793533325195
+        ],
+        "temporal_error_change_percent": [
+          3.1606273951926056,
+          23.334522568234718
+        ]
+      },
+      "condition_counts": {
+        "total": 20,
+        "PSNR_positive": 3,
+        "JOD_positive": 0,
+        "temporal_error_lower": 3,
+        "strict_joint_nonworse": 0
+      }
+    },
+    {
+      "pair": "learned/spatial-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_FB05",
+      "domain_seed_ranges": {
+        "PSNR_difference": [
+          -0.2023955539564568,
+          0.020606581029078086
+        ],
+        "JOD_difference": [
+          -0.044536431630453066,
+          0.018669843673706055
+        ],
+        "temporal_error_change_percent": [
+          14.733454127689761,
+          31.73619373064891
+        ]
+      },
+      "condition_counts": {
+        "total": 20,
+        "PSNR_positive": 6,
+        "JOD_positive": 6,
+        "temporal_error_lower": 0,
+        "strict_joint_nonworse": 0
+      }
+    },
+    {
+      "pair": "learned/spatial-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_DIS05",
+      "domain_seed_ranges": {
+        "PSNR_difference": [
+          -0.29319838166297885,
+          -0.0847840421693995
+        ],
+        "JOD_difference": [
+          -0.09531911214192768,
+          -0.014047384262084961
+        ],
+        "temporal_error_change_percent": [
+          13.190173169216536,
+          23.60171521888177
+        ]
+      },
+      "condition_counts": {
+        "total": 20,
+        "PSNR_positive": 1,
+        "JOD_positive": 1,
+        "temporal_error_lower": 0,
+        "strict_joint_nonworse": 0
+      }
+    }
+  ],
+  "all_domain_seed_differences": [
+    {
+      "pair": "spatial/F0",
+      "candidate": "topic8_spatial_raw",
+      "reference": "MobileIE_raw",
+      "domain": "davis_train_pilot",
+      "seed": 0,
+      "PSNR_difference": -3.9773074566018174,
+      "JOD_difference": -0.6063779195149737,
+      "temporal_error_change_percent": 21.4061865850951
+    },
+    {
+      "pair": "spatial/F0",
+      "candidate": "topic8_spatial_raw",
+      "reference": "MobileIE_raw",
+      "domain": "davis_train_pilot",
+      "seed": 1,
+      "PSNR_difference": -3.815362899984571,
+      "JOD_difference": -0.7247345447540283,
+      "temporal_error_change_percent": 25.90424215214613
+    },
+    {
+      "pair": "spatial/F0",
+      "candidate": "topic8_spatial_raw",
+      "reference": "MobileIE_raw",
+      "domain": "paired_real_ND_DEV",
+      "seed": 0,
+      "PSNR_difference": -2.973581397560338,
+      "JOD_difference": -1.2291040420532227,
+      "temporal_error_change_percent": 4.916616158064846
+    },
+    {
+      "pair": "spatial/F0",
+      "candidate": "topic8_spatial_raw",
+      "reference": "MobileIE_raw",
+      "domain": "paired_real_ND_DEV",
+      "seed": 1,
+      "PSNR_difference": -2.294540608741805,
+      "JOD_difference": -1.1487969160079956,
+      "temporal_error_change_percent": 12.181105844961948
+    },
+    {
+      "pair": "learned/F0-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "MobileIE_recursive_self05",
+      "domain": "davis_train_pilot",
+      "seed": 0,
+      "PSNR_difference": -3.7012400839045867,
+      "JOD_difference": -0.9010061422983808,
+      "temporal_error_change_percent": 36.628257867601064
+    },
+    {
+      "pair": "learned/F0-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "MobileIE_recursive_self05",
+      "domain": "davis_train_pilot",
+      "seed": 1,
+      "PSNR_difference": -3.299554944982269,
+      "JOD_difference": -0.9079298973083496,
+      "temporal_error_change_percent": 38.639483477827554
+    },
+    {
+      "pair": "learned/F0-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "MobileIE_recursive_self05",
+      "domain": "paired_real_ND_DEV",
+      "seed": 0,
+      "PSNR_difference": -3.0858794925719266,
+      "JOD_difference": -1.207389235496521,
+      "temporal_error_change_percent": 35.83824078128808
+    },
+    {
+      "pair": "learned/F0-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "MobileIE_recursive_self05",
+      "domain": "paired_real_ND_DEV",
+      "seed": 1,
+      "PSNR_difference": -2.2627718155998124,
+      "JOD_difference": -1.1324766874313354,
+      "temporal_error_change_percent": 42.949606648962366
+    },
+    {
+      "pair": "learned/F0-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "DIS_recursive_self05",
+      "domain": "davis_train_pilot",
+      "seed": 0,
+      "PSNR_difference": -3.952017628787228,
+      "JOD_difference": -0.9248984654744472,
+      "temporal_error_change_percent": 37.16592616461523
+    },
+    {
+      "pair": "learned/F0-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "DIS_recursive_self05",
+      "domain": "davis_train_pilot",
+      "seed": 1,
+      "PSNR_difference": -3.5691403533016803,
+      "JOD_difference": -0.9396154085795088,
+      "temporal_error_change_percent": 39.60255967241131
+    },
+    {
+      "pair": "learned/F0-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "DIS_recursive_self05",
+      "domain": "paired_real_ND_DEV",
+      "seed": 0,
+      "PSNR_difference": -3.1303991965480726,
+      "JOD_difference": -1.234704613685608,
+      "temporal_error_change_percent": 25.451125003149812
+    },
+    {
+      "pair": "learned/F0-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "DIS_recursive_self05",
+      "domain": "paired_real_ND_DEV",
+      "seed": 1,
+      "PSNR_difference": -2.341047440025939,
+      "JOD_difference": -1.156448245048523,
+      "temporal_error_change_percent": 33.22831820527645
+    },
+    {
+      "pair": "learned/own-preview",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview",
+      "domain": "davis_train_pilot",
+      "seed": 0,
+      "PSNR_difference": 0.5993168926315882,
+      "JOD_difference": 0.08872230847676565,
+      "temporal_error_change_percent": -27.47804144459286
+    },
+    {
+      "pair": "learned/own-preview",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview",
+      "domain": "davis_train_pilot",
+      "seed": 1,
+      "PSNR_difference": 0.6778410156803218,
+      "JOD_difference": 0.11782232920328806,
+      "temporal_error_change_percent": -27.784980703839512
+    },
+    {
+      "pair": "learned/own-preview",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview",
+      "domain": "paired_real_ND_DEV",
+      "seed": 0,
+      "PSNR_difference": -0.07396834522186779,
+      "JOD_difference": -0.039565086364746094,
+      "temporal_error_change_percent": -10.17995868811219
+    },
+    {
+      "pair": "learned/own-preview",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview",
+      "domain": "paired_real_ND_DEV",
+      "seed": 1,
+      "PSNR_difference": -0.05000800933985872,
+      "JOD_difference": -0.03378403186798096,
+      "temporal_error_change_percent": -10.380240519768025
+    },
+    {
+      "pair": "learned/own-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_FB05",
+      "domain": "davis_train_pilot",
+      "seed": 0,
+      "PSNR_difference": -0.2185704672757609,
+      "JOD_difference": -0.05799659093221088,
+      "temporal_error_change_percent": 14.391203222263504
+    },
+    {
+      "pair": "learned/own-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_FB05",
+      "domain": "davis_train_pilot",
+      "seed": 1,
+      "PSNR_difference": -0.16508211587619925,
+      "JOD_difference": -0.05475044250488281,
+      "temporal_error_change_percent": 14.366963818327005
+    },
+    {
+      "pair": "learned/own-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_FB05",
+      "domain": "paired_real_ND_DEV",
+      "seed": 0,
+      "PSNR_difference": 0.01612850064476845,
+      "JOD_difference": -0.003686189651489258,
+      "temporal_error_change_percent": 29.669983723103588
+    },
+    {
+      "pair": "learned/own-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_FB05",
+      "domain": "paired_real_ND_DEV",
+      "seed": 1,
+      "PSNR_difference": 0.010543616444969928,
+      "JOD_difference": -0.021866440773010254,
+      "temporal_error_change_percent": 31.215261294420337
+    },
+    {
+      "pair": "learned/own-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_DIS05",
+      "domain": "davis_train_pilot",
+      "seed": 0,
+      "PSNR_difference": -0.30896761732479305,
+      "JOD_difference": -0.10797421137491892,
+      "temporal_error_change_percent": 13.476176755822422
+    },
+    {
+      "pair": "learned/own-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_DIS05",
+      "domain": "davis_train_pilot",
+      "seed": 1,
+      "PSNR_difference": -0.25151543088677286,
+      "JOD_difference": -0.10134450594584177,
+      "temporal_error_change_percent": 12.81286417551919
+    },
+    {
+      "pair": "learned/own-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_DIS05",
+      "domain": "paired_real_ND_DEV",
+      "seed": 0,
+      "PSNR_difference": -0.08960190604053864,
+      "JOD_difference": -0.0365368127822876,
+      "temporal_error_change_percent": 21.087665856108906
+    },
+    {
+      "pair": "learned/own-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_DIS05",
+      "domain": "paired_real_ND_DEV",
+      "seed": 1,
+      "PSNR_difference": -0.10262678416108173,
+      "JOD_difference": -0.053103089332580566,
+      "temporal_error_change_percent": 22.98769642341214
+    },
+    {
+      "pair": "learned/fixed",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_fixed_causal",
+      "domain": "davis_train_pilot",
+      "seed": 0,
+      "PSNR_difference": 0.008511384643480113,
+      "JOD_difference": 0.007899999618530273,
+      "temporal_error_change_percent": 1.469606138659696
+    },
+    {
+      "pair": "learned/fixed",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_fixed_causal",
+      "domain": "davis_train_pilot",
+      "seed": 1,
+      "PSNR_difference": -0.005143998209160117,
+      "JOD_difference": 0.008244355519612334,
+      "temporal_error_change_percent": 1.39627303125327
+    },
+    {
+      "pair": "learned/fixed",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_fixed_causal",
+      "domain": "paired_real_ND_DEV",
+      "seed": 0,
+      "PSNR_difference": 0.01371991588009891,
+      "JOD_difference": 0.006819367408752441,
+      "temporal_error_change_percent": 0.23582901923644428
+    },
+    {
+      "pair": "learned/fixed",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_fixed_causal",
+      "domain": "paired_real_ND_DEV",
+      "seed": 1,
+      "PSNR_difference": 0.009297886081654383,
+      "JOD_difference": 0.004282116889953613,
+      "temporal_error_change_percent": 0.1957929461175123
+    },
+    {
+      "pair": "fixed/own-preview",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview",
+      "domain": "davis_train_pilot",
+      "seed": 0,
+      "PSNR_difference": 0.5903147342012609,
+      "JOD_difference": 0.0807798703511553,
+      "temporal_error_change_percent": -28.527973330987454
+    },
+    {
+      "pair": "fixed/own-preview",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview",
+      "domain": "davis_train_pilot",
+      "seed": 1,
+      "PSNR_difference": 0.6828946006980416,
+      "JOD_difference": 0.1096051534016933,
+      "temporal_error_change_percent": -28.780612281898133
+    },
+    {
+      "pair": "fixed/own-preview",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview",
+      "domain": "paired_real_ND_DEV",
+      "seed": 0,
+      "PSNR_difference": -0.08819616163925659,
+      "JOD_difference": -0.04642009735107422,
+      "temporal_error_change_percent": -10.38848257573094
+    },
+    {
+      "pair": "fixed/own-preview",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview",
+      "domain": "paired_real_ND_DEV",
+      "seed": 1,
+      "PSNR_difference": -0.059500793543858066,
+      "JOD_difference": -0.038147568702697754,
+      "temporal_error_change_percent": -10.560877499104349
+    },
+    {
+      "pair": "fixed/own-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_FB05",
+      "domain": "davis_train_pilot",
+      "seed": 0,
+      "PSNR_difference": -0.22769745471093117,
+      "JOD_difference": -0.06599632898966501,
+      "temporal_error_change_percent": 12.736263454722963
+    },
+    {
+      "pair": "fixed/own-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_FB05",
+      "domain": "davis_train_pilot",
+      "seed": 1,
+      "PSNR_difference": -0.16011503153199058,
+      "JOD_difference": -0.06303795178731253,
+      "temporal_error_change_percent": 12.791454923231328
+    },
+    {
+      "pair": "fixed/own-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_FB05",
+      "domain": "paired_real_ND_DEV",
+      "seed": 0,
+      "PSNR_difference": 0.0019150090742918735,
+      "JOD_difference": -0.01052403450012207,
+      "temporal_error_change_percent": 29.366837043036863
+    },
+    {
+      "pair": "fixed/own-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_FB05",
+      "domain": "paired_real_ND_DEV",
+      "seed": 1,
+      "PSNR_difference": 0.000967876995694894,
+      "JOD_difference": -0.026207447052001953,
+      "temporal_error_change_percent": 30.954260355420438
+    },
+    {
+      "pair": "fixed/own-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_DIS05",
+      "domain": "davis_train_pilot",
+      "seed": 0,
+      "PSNR_difference": -0.31764107923927654,
+      "JOD_difference": -0.11601503690083881,
+      "temporal_error_change_percent": 11.784566751494573
+    },
+    {
+      "pair": "fixed/own-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_DIS05",
+      "domain": "davis_train_pilot",
+      "seed": 1,
+      "PSNR_difference": -0.24649123639978043,
+      "JOD_difference": -0.10968446731567383,
+      "temporal_error_change_percent": 11.26513384570622
+    },
+    {
+      "pair": "fixed/own-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_DIS05",
+      "domain": "paired_real_ND_DEV",
+      "seed": 0,
+      "PSNR_difference": -0.10390180133636662,
+      "JOD_difference": -0.04279351234436035,
+      "temporal_error_change_percent": 20.8107206488646
+    },
+    {
+      "pair": "fixed/own-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_DIS05",
+      "domain": "paired_real_ND_DEV",
+      "seed": 1,
+      "PSNR_difference": -0.11201297257181508,
+      "JOD_difference": -0.05755424499511719,
+      "temporal_error_change_percent": 22.69460915868422
+    },
+    {
+      "pair": "fixed/F0-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "MobileIE_recursive_self05",
+      "domain": "davis_train_pilot",
+      "seed": 0,
+      "PSNR_difference": -3.709751468548067,
+      "JOD_difference": -0.9089061419169111,
+      "temporal_error_change_percent": 34.64944141095467
+    },
+    {
+      "pair": "fixed/F0-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "MobileIE_recursive_self05",
+      "domain": "davis_train_pilot",
+      "seed": 1,
+      "PSNR_difference": -3.294410946773109,
+      "JOD_difference": -0.9161742528279619,
+      "temporal_error_change_percent": 36.73035441361328
+    },
+    {
+      "pair": "fixed/F0-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "MobileIE_recursive_self05",
+      "domain": "paired_real_ND_DEV",
+      "seed": 0,
+      "PSNR_difference": -3.0995994084520255,
+      "JOD_difference": -1.2142086029052734,
+      "temporal_error_change_percent": 35.518648481691216
+    },
+    {
+      "pair": "fixed/F0-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "MobileIE_recursive_self05",
+      "domain": "paired_real_ND_DEV",
+      "seed": 1,
+      "PSNR_difference": -2.272069701681467,
+      "JOD_difference": -1.136758804321289,
+      "temporal_error_change_percent": 42.67026832737042
+    },
+    {
+      "pair": "fixed/F0-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "DIS_recursive_self05",
+      "domain": "davis_train_pilot",
+      "seed": 0,
+      "PSNR_difference": -3.9605290134307083,
+      "JOD_difference": -0.9327984650929775,
+      "temporal_error_change_percent": 35.17932254233447
+    },
+    {
+      "pair": "fixed/F0-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "DIS_recursive_self05",
+      "domain": "davis_train_pilot",
+      "seed": 1,
+      "PSNR_difference": -3.56399635509252,
+      "JOD_difference": -0.9478597640991211,
+      "temporal_error_change_percent": 37.680168608743415
+    },
+    {
+      "pair": "fixed/F0-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "DIS_recursive_self05",
+      "domain": "paired_real_ND_DEV",
+      "seed": 0,
+      "PSNR_difference": -3.1441191124281715,
+      "JOD_difference": -1.2415239810943604,
+      "temporal_error_change_percent": 25.155970904449987
+    },
+    {
+      "pair": "fixed/F0-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "DIS_recursive_self05",
+      "domain": "paired_real_ND_DEV",
+      "seed": 1,
+      "PSNR_difference": -2.3503453261075933,
+      "JOD_difference": -1.1607303619384766,
+      "temporal_error_change_percent": 32.96797628711108
+    },
+    {
+      "pair": "spatial-FB/F0-FB",
+      "candidate": "topic8_spatial_raw_FB05",
+      "reference": "MobileIE_recursive_self05",
+      "domain": "davis_train_pilot",
+      "seed": 0,
+      "PSNR_difference": -3.49884452994813,
+      "JOD_difference": -0.8564697106679278,
+      "temporal_error_change_percent": 19.0009198122276
+    },
+    {
+      "pair": "spatial-FB/F0-FB",
+      "candidate": "topic8_spatial_raw_FB05",
+      "reference": "MobileIE_recursive_self05",
+      "domain": "davis_train_pilot",
+      "seed": 1,
+      "PSNR_difference": -3.1411389733496264,
+      "JOD_difference": -0.8640171686808271,
+      "temporal_error_change_percent": 20.83614542235621
+    },
+    {
+      "pair": "spatial-FB/F0-FB",
+      "candidate": "topic8_spatial_raw_FB05",
+      "reference": "MobileIE_recursive_self05",
+      "domain": "paired_real_ND_DEV",
+      "seed": 0,
+      "PSNR_difference": -3.1064860736010047,
+      "JOD_difference": -1.226059079170227,
+      "temporal_error_change_percent": 4.387843993041862
+    },
+    {
+      "pair": "spatial-FB/F0-FB",
+      "candidate": "topic8_spatial_raw_FB05",
+      "reference": "MobileIE_recursive_self05",
+      "domain": "paired_real_ND_DEV",
+      "seed": 1,
+      "PSNR_difference": -2.2803415555574382,
+      "JOD_difference": -1.1229753494262695,
+      "temporal_error_change_percent": 8.512021336551356
+    },
+    {
+      "pair": "spatial-DIS/F0-DIS",
+      "candidate": "topic8_spatial_raw_DIS05",
+      "reference": "DIS_recursive_self05",
+      "domain": "davis_train_pilot",
+      "seed": 0,
+      "PSNR_difference": -3.6588192471242493,
+      "JOD_difference": -0.8295793533325195,
+      "temporal_error_change_percent": 20.415536456401085
+    },
+    {
+      "pair": "spatial-DIS/F0-DIS",
+      "candidate": "topic8_spatial_raw_DIS05",
+      "reference": "DIS_recursive_self05",
+      "domain": "davis_train_pilot",
+      "seed": 1,
+      "PSNR_difference": -3.3241086391326142,
+      "JOD_difference": -0.84861159324646,
+      "temporal_error_change_percent": 23.334522568234718
+    },
+    {
+      "pair": "spatial-DIS/F0-DIS",
+      "candidate": "topic8_spatial_raw_DIS05",
+      "reference": "DIS_recursive_self05",
+      "domain": "paired_real_ND_DEV",
+      "seed": 0,
+      "PSNR_difference": -3.045615154378673,
+      "JOD_difference": -1.220657229423523,
+      "temporal_error_change_percent": 3.1606273951926056
+    },
+    {
+      "pair": "spatial-DIS/F0-DIS",
+      "candidate": "topic8_spatial_raw_DIS05",
+      "reference": "DIS_recursive_self05",
+      "domain": "paired_real_ND_DEV",
+      "seed": 1,
+      "PSNR_difference": -2.24535394743053,
+      "JOD_difference": -1.1156237125396729,
+      "temporal_error_change_percent": 7.788405661966191
+    },
+    {
+      "pair": "learned/spatial-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_FB05",
+      "domain": "davis_train_pilot",
+      "seed": 0,
+      "PSNR_difference": -0.2023955539564568,
+      "JOD_difference": -0.044536431630453066,
+      "temporal_error_change_percent": 14.812774626606062
+    },
+    {
+      "pair": "learned/spatial-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_FB05",
+      "domain": "davis_train_pilot",
+      "seed": 1,
+      "PSNR_difference": -0.15841597163264254,
+      "JOD_difference": -0.04391272862752249,
+      "temporal_error_change_percent": 14.733454127689761
+    },
+    {
+      "pair": "learned/spatial-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_FB05",
+      "domain": "paired_real_ND_DEV",
+      "seed": 0,
+      "PSNR_difference": 0.020606581029078086,
+      "JOD_difference": 0.018669843673706055,
+      "temporal_error_change_percent": 30.128409195176587
+    },
+    {
+      "pair": "learned/spatial-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_FB05",
+      "domain": "paired_real_ND_DEV",
+      "seed": 1,
+      "PSNR_difference": 0.017569739957625785,
+      "JOD_difference": -0.009501338005065918,
+      "temporal_error_change_percent": 31.73619373064891
+    },
+    {
+      "pair": "learned/spatial-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_DIS05",
+      "domain": "davis_train_pilot",
+      "seed": 0,
+      "PSNR_difference": -0.29319838166297885,
+      "JOD_difference": -0.09531911214192768,
+      "temporal_error_change_percent": 13.910488796666986
+    },
+    {
+      "pair": "learned/spatial-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_DIS05",
+      "domain": "davis_train_pilot",
+      "seed": 1,
+      "PSNR_difference": -0.2450317141690661,
+      "JOD_difference": -0.0910038153330488,
+      "temporal_error_change_percent": 13.190173169216536
+    },
+    {
+      "pair": "learned/spatial-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_DIS05",
+      "domain": "paired_real_ND_DEV",
+      "seed": 0,
+      "PSNR_difference": -0.0847840421693995,
+      "JOD_difference": -0.014047384262084961,
+      "temporal_error_change_percent": 21.60756305074194
+    },
+    {
+      "pair": "learned/spatial-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_DIS05",
+      "domain": "paired_real_ND_DEV",
+      "seed": 1,
+      "PSNR_difference": -0.09569349259540871,
+      "JOD_difference": -0.0408245325088501,
+      "temporal_error_change_percent": 23.60171521888177
+    }
+  ],
+  "all_condition_differences": [
+    {
+      "pair": "spatial/F0",
+      "candidate": "topic8_spatial_raw",
+      "reference": "MobileIE_raw",
+      "seed": 0,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -2.428380230419865,
+      "JOD_difference": -0.22154664993286133,
+      "temporal_error_change_percent": 2.1591808608124374
+    },
+    {
+      "pair": "spatial/F0",
+      "candidate": "topic8_spatial_raw",
+      "reference": "MobileIE_raw",
+      "seed": 0,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.1153687675850534,
+      "JOD_difference": -1.0198864936828613,
+      "temporal_error_change_percent": 6.45082699699735
+    },
+    {
+      "pair": "spatial/F0",
+      "candidate": "topic8_spatial_raw",
+      "reference": "MobileIE_raw",
+      "seed": 0,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.9473782716388257,
+      "JOD_difference": -0.6111369132995605,
+      "temporal_error_change_percent": 14.432079668514607
+    },
+    {
+      "pair": "spatial/F0",
+      "candidate": "topic8_spatial_raw",
+      "reference": "MobileIE_raw",
+      "seed": 0,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -5.169692278614864,
+      "JOD_difference": -1.3206405639648438,
+      "temporal_error_change_percent": 22.550530814555803
+    },
+    {
+      "pair": "spatial/F0",
+      "candidate": "topic8_spatial_raw",
+      "reference": "MobileIE_raw",
+      "seed": 0,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -10.117658122595145,
+      "JOD_difference": -1.398749828338623,
+      "temporal_error_change_percent": 25.542336300731684
+    },
+    {
+      "pair": "spatial/F0",
+      "candidate": "topic8_spatial_raw",
+      "reference": "MobileIE_raw",
+      "seed": 0,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.7798322010544467,
+      "JOD_difference": -1.353377342224121,
+      "temporal_error_change_percent": 11.86714048459503
+    },
+    {
+      "pair": "spatial/F0",
+      "candidate": "topic8_spatial_raw",
+      "reference": "MobileIE_raw",
+      "seed": 0,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -1.5753668745783784,
+      "JOD_difference": -0.60260009765625,
+      "temporal_error_change_percent": -11.202239218585607
+    },
+    {
+      "pair": "spatial/F0",
+      "candidate": "topic8_spatial_raw",
+      "reference": "MobileIE_raw",
+      "seed": 0,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.5785316079866156,
+      "JOD_difference": -1.5616888999938965,
+      "temporal_error_change_percent": -1.586423000628101
+    },
+    {
+      "pair": "spatial/F0",
+      "candidate": "topic8_spatial_raw",
+      "reference": "MobileIE_raw",
+      "seed": 0,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -4.360309250042448,
+      "JOD_difference": 0.00676727294921875,
+      "temporal_error_change_percent": 39.6389455154589
+    },
+    {
+      "pair": "spatial/F0",
+      "candidate": "topic8_spatial_raw",
+      "reference": "MobileIE_raw",
+      "seed": 0,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -4.842715941309862,
+      "JOD_difference": -0.47182416915893555,
+      "temporal_error_change_percent": 52.3672993665756
+    },
+    {
+      "pair": "spatial/F0",
+      "candidate": "topic8_spatial_raw",
+      "reference": "MobileIE_raw",
+      "seed": 1,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -2.3277434676493627,
+      "JOD_difference": -0.36963415145874023,
+      "temporal_error_change_percent": 6.214052468377651
+    },
+    {
+      "pair": "spatial/F0",
+      "candidate": "topic8_spatial_raw",
+      "reference": "MobileIE_raw",
+      "seed": 1,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -2.8190942601891287,
+      "JOD_difference": -1.110208511352539,
+      "temporal_error_change_percent": 9.884625692749305
+    },
+    {
+      "pair": "spatial/F0",
+      "candidate": "topic8_spatial_raw",
+      "reference": "MobileIE_raw",
+      "seed": 1,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.7382843527361445,
+      "JOD_difference": -0.6339516639709473,
+      "temporal_error_change_percent": 18.86568705697471
+    },
+    {
+      "pair": "spatial/F0",
+      "candidate": "topic8_spatial_raw",
+      "reference": "MobileIE_raw",
+      "seed": 1,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -4.437542089340045,
+      "JOD_difference": -1.2391629219055176,
+      "temporal_error_change_percent": 26.177482283327503
+    },
+    {
+      "pair": "spatial/F0",
+      "candidate": "topic8_spatial_raw",
+      "reference": "MobileIE_raw",
+      "seed": 1,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -10.951034792891889,
+      "JOD_difference": -1.5649585723876953,
+      "temporal_error_change_percent": 21.787758691810645
+    },
+    {
+      "pair": "spatial/F0",
+      "candidate": "topic8_spatial_raw",
+      "reference": "MobileIE_raw",
+      "seed": 1,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -2.398362080729573,
+      "JOD_difference": -1.3231010437011719,
+      "temporal_error_change_percent": 19.814929232108124
+    },
+    {
+      "pair": "spatial/F0",
+      "candidate": "topic8_spatial_raw",
+      "reference": "MobileIE_raw",
+      "seed": 1,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 1.394534213415458,
+      "JOD_difference": -0.6974844932556152,
+      "temporal_error_change_percent": -4.54562708524715
+    },
+    {
+      "pair": "spatial/F0",
+      "candidate": "topic8_spatial_raw",
+      "reference": "MobileIE_raw",
+      "seed": 1,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 2.776700225238784,
+      "JOD_difference": -1.0096435546875,
+      "temporal_error_change_percent": 11.53596737999074
+    },
+    {
+      "pair": "spatial/F0",
+      "candidate": "topic8_spatial_raw",
+      "reference": "MobileIE_raw",
+      "seed": 1,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -4.6275438998247225,
+      "JOD_difference": -0.27753734588623047,
+      "temporal_error_change_percent": 45.87264376278526
+    },
+    {
+      "pair": "spatial/F0",
+      "candidate": "topic8_spatial_raw",
+      "reference": "MobileIE_raw",
+      "seed": 1,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -4.941969330168018,
+      "JOD_difference": -0.7179126739501953,
+      "temporal_error_change_percent": 57.34992161173367
+    },
+    {
+      "pair": "learned/F0-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -2.9098198829431254,
+      "JOD_difference": -0.854217529296875,
+      "temporal_error_change_percent": 23.870917443540975
+    },
+    {
+      "pair": "learned/F0-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.1822796427117126,
+      "JOD_difference": -1.3561668395996094,
+      "temporal_error_change_percent": 28.505391924499925
+    },
+    {
+      "pair": "learned/F0-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -4.452656902815072,
+      "JOD_difference": -1.0051145553588867,
+      "temporal_error_change_percent": 37.30583475391591
+    },
+    {
+      "pair": "learned/F0-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -5.092686213408562,
+      "JOD_difference": -1.4004249572753906,
+      "temporal_error_change_percent": 44.793594502007885
+    },
+    {
+      "pair": "learned/F0-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -10.755542255367917,
+      "JOD_difference": -1.3906025886535645,
+      "temporal_error_change_percent": 96.78676040342286
+    },
+    {
+      "pair": "learned/F0-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.6574402701058375,
+      "JOD_difference": -1.2200374603271484,
+      "temporal_error_change_percent": 20.753292343239217
+    },
+    {
+      "pair": "learned/F0-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -1.474255397912362,
+      "JOD_difference": -0.6031026840209961,
+      "temporal_error_change_percent": 18.143141740535572
+    },
+    {
+      "pair": "learned/F0-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.5437199530984174,
+      "JOD_difference": -1.615814208984375,
+      "temporal_error_change_percent": 39.46939048659765
+    },
+    {
+      "pair": "learned/F0-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.4844495315110002,
+      "JOD_difference": -0.2842273712158203,
+      "temporal_error_change_percent": 43.48959940332191
+    },
+    {
+      "pair": "learned/F0-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.085548330038044,
+      "JOD_difference": -0.5058856010437012,
+      "temporal_error_change_percent": 39.272368232648994
+    },
+    {
+      "pair": "learned/F0-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -2.4875668782529345,
+      "JOD_difference": -0.8741817474365234,
+      "temporal_error_change_percent": 25.791939776732995
+    },
+    {
+      "pair": "learned/F0-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -2.763129238076125,
+      "JOD_difference": -1.3565378189086914,
+      "temporal_error_change_percent": 28.87768588484432
+    },
+    {
+      "pair": "learned/F0-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.871314018496406,
+      "JOD_difference": -0.9215564727783203,
+      "temporal_error_change_percent": 39.457913942140955
+    },
+    {
+      "pair": "learned/F0-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -4.197032439153578,
+      "JOD_difference": -1.2549242973327637,
+      "temporal_error_change_percent": 44.32000438520003
+    },
+    {
+      "pair": "learned/F0-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -11.388654992461067,
+      "JOD_difference": -1.5978178977966309,
+      "temporal_error_change_percent": 94.8881977756405
+    },
+    {
+      "pair": "learned/F0-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -1.984719343422885,
+      "JOD_difference": -1.1800661087036133,
+      "temporal_error_change_percent": 23.483731983515142
+    },
+    {
+      "pair": "learned/F0-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 1.5704386355768136,
+      "JOD_difference": -0.7089333534240723,
+      "temporal_error_change_percent": 25.73186668600671
+    },
+    {
+      "pair": "learned/F0-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 2.7518484379078814,
+      "JOD_difference": -1.0430893898010254,
+      "temporal_error_change_percent": 56.24869894906608
+    },
+    {
+      "pair": "learned/F0-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.49684652876115,
+      "JOD_difference": -0.443178653717041,
+      "temporal_error_change_percent": 48.171464315667855
+    },
+    {
+      "pair": "learned/F0-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -2.981440567153406,
+      "JOD_difference": -0.5972003936767578,
+      "temporal_error_change_percent": 40.62693466212619
+    },
+    {
+      "pair": "learned/F0-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -2.79957847606768,
+      "JOD_difference": -0.7166814804077148,
+      "temporal_error_change_percent": 19.922889130607956
+    },
+    {
+      "pair": "learned/F0-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.159086348986701,
+      "JOD_difference": -1.3266544342041016,
+      "temporal_error_change_percent": 27.215408997225765
+    },
+    {
+      "pair": "learned/F0-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -4.498273599771192,
+      "JOD_difference": -1.0209641456604004,
+      "temporal_error_change_percent": 36.69174782262126
+    },
+    {
+      "pair": "learned/F0-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -5.236141108310559,
+      "JOD_difference": -1.4579038619995117,
+      "temporal_error_change_percent": 46.69469177299295
+    },
+    {
+      "pair": "learned/F0-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -10.635852491228032,
+      "JOD_difference": -1.4078545570373535,
+      "temporal_error_change_percent": 55.18774125859323
+    },
+    {
+      "pair": "learned/F0-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.7695557903853931,
+      "JOD_difference": -1.2840499877929688,
+      "temporal_error_change_percent": 24.38764207618358
+    },
+    {
+      "pair": "learned/F0-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -1.6567235313069197,
+      "JOD_difference": -0.6362934112548828,
+      "temporal_error_change_percent": -4.949813193321129
+    },
+    {
+      "pair": "learned/F0-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.5405350267280546,
+      "JOD_difference": -1.6106204986572266,
+      "temporal_error_change_percent": 38.640458539455544
+    },
+    {
+      "pair": "learned/F0-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -4.024855130539336,
+      "JOD_difference": -0.3112654685974121,
+      "temporal_error_change_percent": 43.66000745590255
+    },
+    {
+      "pair": "learned/F0-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.994171109047908,
+      "JOD_difference": -0.7159214019775391,
+      "temporal_error_change_percent": 47.55617725339978
+    },
+    {
+      "pair": "learned/F0-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -2.386485104116314,
+      "JOD_difference": -0.7420182228088379,
+      "temporal_error_change_percent": 21.65335084359381
+    },
+    {
+      "pair": "learned/F0-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -2.7473500148047023,
+      "JOD_difference": -1.3304848670959473,
+      "temporal_error_change_percent": 27.5140066851155
+    },
+    {
+      "pair": "learned/F0-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.9210503326601014,
+      "JOD_difference": -0.9405384063720703,
+      "temporal_error_change_percent": 39.1296491418976
+    },
+    {
+      "pair": "learned/F0-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -4.324667662327528,
+      "JOD_difference": -1.3082079887390137,
+      "temporal_error_change_percent": 46.39354829213176
+    },
+    {
+      "pair": "learned/F0-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -11.276169761796226,
+      "JOD_difference": -1.5963797569274902,
+      "temporal_error_change_percent": 49.548948070658014
+    },
+    {
+      "pair": "learned/F0-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -2.175127134598174,
+      "JOD_difference": -1.249831199645996,
+      "temporal_error_change_percent": 28.499402976457077
+    },
+    {
+      "pair": "learned/F0-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 1.3392326757892938,
+      "JOD_difference": -0.741152286529541,
+      "temporal_error_change_percent": 5.316162771628075
+    },
+    {
+      "pair": "learned/F0-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 2.747874460501354,
+      "JOD_difference": -1.0384297370910645,
+      "temporal_error_change_percent": 55.21866200439614
+    },
+    {
+      "pair": "learned/F0-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -4.0983310424396215,
+      "JOD_difference": -0.4922642707824707,
+      "temporal_error_change_percent": 49.240530708536845
+    },
+    {
+      "pair": "learned/F0-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.9369579634618113,
+      "JOD_difference": -0.8241786956787109,
+      "temporal_error_change_percent": 50.07690171039096
+    },
+    {
+      "pair": "learned/own-preview",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview",
+      "seed": 0,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 0.9389627334312678,
+      "JOD_difference": 0.19230365753173828,
+      "temporal_error_change_percent": -36.364142802602075
+    },
+    {
+      "pair": "learned/own-preview",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview",
+      "seed": 0,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 0.13011937830824039,
+      "JOD_difference": -0.0035796165466308594,
+      "temporal_error_change_percent": -26.89143545557776
+    },
+    {
+      "pair": "learned/own-preview",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview",
+      "seed": 0,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 0.9145849576537195,
+      "JOD_difference": 0.2706761360168457,
+      "temporal_error_change_percent": -36.25562191210785
+    },
+    {
+      "pair": "learned/own-preview",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview",
+      "seed": 0,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 0.19584800046493456,
+      "JOD_difference": -0.027527332305908203,
+      "temporal_error_change_percent": -26.37872643223026
+    },
+    {
+      "pair": "learned/own-preview",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview",
+      "seed": 0,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.0536911557838593,
+      "JOD_difference": -0.0004620552062988281,
+      "temporal_error_change_percent": -15.013653336726252
+    },
+    {
+      "pair": "learned/own-preview",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview",
+      "seed": 0,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.33152616125138934,
+      "JOD_difference": -0.13700151443481445,
+      "temporal_error_change_percent": 0.573114464320934
+    },
+    {
+      "pair": "learned/own-preview",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview",
+      "seed": 0,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.005627984630894645,
+      "JOD_difference": 0.009322166442871094,
+      "temporal_error_change_percent": -12.970338599923782
+    },
+    {
+      "pair": "learned/own-preview",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview",
+      "seed": 0,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.023666360050832225,
+      "JOD_difference": -0.030118942260742188,
+      "temporal_error_change_percent": -16.004944342631433
+    },
+    {
+      "pair": "learned/own-preview",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview",
+      "seed": 0,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 1.2093730329350407,
+      "JOD_difference": 0.2341632843017578,
+      "temporal_error_change_percent": -22.880488554648316
+    },
+    {
+      "pair": "learned/own-preview",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview",
+      "seed": 0,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 0.2070132529963189,
+      "JOD_difference": -0.13370227813720703,
+      "temporal_error_change_percent": -13.47304105576489
+    },
+    {
+      "pair": "learned/own-preview",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview",
+      "seed": 1,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 1.0902721377634421,
+      "JOD_difference": 0.24299192428588867,
+      "temporal_error_change_percent": -37.224073699029056
+    },
+    {
+      "pair": "learned/own-preview",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview",
+      "seed": 1,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 0.1761841728873108,
+      "JOD_difference": 0.018759727478027344,
+      "temporal_error_change_percent": -27.667956733740763
+    },
+    {
+      "pair": "learned/own-preview",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview",
+      "seed": 1,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 1.0478893344830063,
+      "JOD_difference": 0.27450132369995117,
+      "temporal_error_change_percent": -36.880474157174184
+    },
+    {
+      "pair": "learned/own-preview",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview",
+      "seed": 1,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 0.24889003466336845,
+      "JOD_difference": -0.0341792106628418,
+      "temporal_error_change_percent": -27.049528691888934
+    },
+    {
+      "pair": "learned/own-preview",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview",
+      "seed": 1,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.04231032102983434,
+      "JOD_difference": 0.0025925636291503906,
+      "temporal_error_change_percent": -13.939048333540926
+    },
+    {
+      "pair": "learned/own-preview",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview",
+      "seed": 1,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.27188041021921094,
+      "JOD_difference": -0.130035400390625,
+      "temporal_error_change_percent": -0.31914058752401386
+    },
+    {
+      "pair": "learned/own-preview",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview",
+      "seed": 1,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.022166645054646494,
+      "JOD_difference": 0.010173320770263672,
+      "temporal_error_change_percent": -14.093416682397164
+    },
+    {
+      "pair": "learned/own-preview",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview",
+      "seed": 1,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.007371406775291689,
+      "JOD_difference": -0.01786661148071289,
+      "temporal_error_change_percent": -15.605799665527964
+    },
+    {
+      "pair": "learned/own-preview",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview",
+      "seed": 1,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 1.2443403997189897,
+      "JOD_difference": 0.2861480712890625,
+      "temporal_error_change_percent": -22.414527149414642
+    },
+    {
+      "pair": "learned/own-preview",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview",
+      "seed": 1,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 0.25947001456583507,
+      "JOD_difference": -0.08128786087036133,
+      "temporal_error_change_percent": -13.106734725493908
+    },
+    {
+      "pair": "learned/own-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_FB05",
+      "seed": 0,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.43473772898508756,
+      "JOD_difference": -0.12769126892089844,
+      "temporal_error_change_percent": 17.468479144906524
+    },
+    {
+      "pair": "learned/own-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_FB05",
+      "seed": 0,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.29535494719596755,
+      "JOD_difference": -0.08797407150268555,
+      "temporal_error_change_percent": 21.157611810355093
+    },
+    {
+      "pair": "learned/own-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_FB05",
+      "seed": 0,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.3668644278505191,
+      "JOD_difference": -0.09167289733886719,
+      "temporal_error_change_percent": 16.610547518890996
+    },
+    {
+      "pair": "learned/own-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_FB05",
+      "seed": 0,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.22745907917641262,
+      "JOD_difference": -0.09131622314453125,
+      "temporal_error_change_percent": 22.25844033020652
+    },
+    {
+      "pair": "learned/own-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_FB05",
+      "seed": 0,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.047518487161685385,
+      "JOD_difference": -0.01703786849975586,
+      "temporal_error_change_percent": 63.8257772476986
+    },
+    {
+      "pair": "learned/own-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_FB05",
+      "seed": 0,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.0225907950527251,
+      "JOD_difference": 0.01969146728515625,
+      "temporal_error_change_percent": 12.310404663251152
+    },
+    {
+      "pair": "learned/own-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_FB05",
+      "seed": 0,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.21057495796055647,
+      "JOD_difference": 0.03306150436401367,
+      "temporal_error_change_percent": 24.61657928916592
+    },
+    {
+      "pair": "learned/own-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_FB05",
+      "seed": 0,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.12113326327252949,
+      "JOD_difference": -0.050459861755371094,
+      "temporal_error_change_percent": 38.552987037447735
+    },
+    {
+      "pair": "learned/own-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_FB05",
+      "seed": 0,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.0639692758721182,
+      "JOD_difference": -0.019906044006347656,
+      "temporal_error_change_percent": 9.33778539635468
+    },
+    {
+      "pair": "learned/own-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_FB05",
+      "seed": 0,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 0.07696265542554315,
+      "JOD_difference": 0.07058095932006836,
+      "temporal_error_change_percent": 7.848070299633214
+    },
+    {
+      "pair": "learned/own-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_FB05",
+      "seed": 1,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.34620311404988513,
+      "JOD_difference": -0.13053464889526367,
+      "temporal_error_change_percent": 15.855458138186606
+    },
+    {
+      "pair": "learned/own-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_FB05",
+      "seed": 1,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.2529138348918245,
+      "JOD_difference": -0.09193181991577148,
+      "temporal_error_change_percent": 19.71886425490197
+    },
+    {
+      "pair": "learned/own-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_FB05",
+      "seed": 1,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.2768777143081742,
+      "JOD_difference": -0.0860738754272461,
+      "temporal_error_change_percent": 15.328849569178193
+    },
+    {
+      "pair": "learned/own-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_FB05",
+      "seed": 1,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.18369772540738794,
+      "JOD_difference": -0.08820009231567383,
+      "temporal_error_change_percent": 20.661194742857305
+    },
+    {
+      "pair": "learned/own-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_FB05",
+      "seed": 1,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.038611576136229786,
+      "JOD_difference": -0.030056476593017578,
+      "temporal_error_change_percent": 65.27669565438165
+    },
+    {
+      "pair": "learned/own-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_FB05",
+      "seed": 1,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.06266340549248284,
+      "JOD_difference": -0.0045948028564453125,
+      "temporal_error_change_percent": 13.571456535404568
+    },
+    {
+      "pair": "learned/own-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_FB05",
+      "seed": 1,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.23607119609273397,
+      "JOD_difference": 0.029178142547607422,
+      "temporal_error_change_percent": 22.57239116911116
+    },
+    {
+      "pair": "learned/own-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_FB05",
+      "seed": 1,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.21794855966911086,
+      "JOD_difference": -0.08199262619018555,
+      "temporal_error_change_percent": 42.98425754244255
+    },
+    {
+      "pair": "learned/own-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_FB05",
+      "seed": 1,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.040741769427889096,
+      "JOD_difference": -0.008811473846435547,
+      "temporal_error_change_percent": 10.35322768776421
+    },
+    {
+      "pair": "learned/own-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_FB05",
+      "seed": 1,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 0.10994146282797601,
+      "JOD_difference": 0.07704925537109375,
+      "temporal_error_change_percent": 10.554663005152044
+    },
+    {
+      "pair": "learned/own-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_DIS05",
+      "seed": 0,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.4026200666340891,
+      "JOD_difference": -0.0879831314086914,
+      "temporal_error_change_percent": 14.56125659595977
+    },
+    {
+      "pair": "learned/own-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_DIS05",
+      "seed": 0,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.29906235834833694,
+      "JOD_difference": -0.09612083435058594,
+      "temporal_error_change_percent": 20.53696987407374
+    },
+    {
+      "pair": "learned/own-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_DIS05",
+      "seed": 0,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.3686619507659046,
+      "JOD_difference": -0.12124300003051758,
+      "temporal_error_change_percent": 15.482617862075521
+    },
+    {
+      "pair": "learned/own-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_DIS05",
+      "seed": 0,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.2661792044838549,
+      "JOD_difference": -0.13129234313964844,
+      "temporal_error_change_percent": 22.583494531524483
+    },
+    {
+      "pair": "learned/own-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_DIS05",
+      "seed": 0,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.041388896869424485,
+      "JOD_difference": -0.034238338470458984,
+      "temporal_error_change_percent": 25.473517385230117
+    },
+    {
+      "pair": "learned/own-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_DIS05",
+      "seed": 0,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.15344802708478156,
+      "JOD_difference": -0.02860736846923828,
+      "temporal_error_change_percent": 16.47144558656133
+    },
+    {
+      "pair": "learned/own-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_DIS05",
+      "seed": 0,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.036075454129044005,
+      "JOD_difference": -0.02861499786376953,
+      "temporal_error_change_percent": 6.5285494717366
+    },
+    {
+      "pair": "learned/own-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_DIS05",
+      "seed": 0,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.12749524607890805,
+      "JOD_difference": -0.054686546325683594,
+      "temporal_error_change_percent": 38.30416205038183
+    },
+    {
+      "pair": "learned/own-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_DIS05",
+      "seed": 0,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.2030587124952028,
+      "JOD_difference": -0.09431648254394531,
+      "temporal_error_change_percent": 6.888374534474173
+    },
+    {
+      "pair": "learned/own-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_DIS05",
+      "seed": 0,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.31422341122137354,
+      "JOD_difference": -0.11688947677612305,
+      "temporal_error_change_percent": 9.97570596648365
+    },
+    {
+      "pair": "learned/own-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_DIS05",
+      "seed": 1,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.3123604442183918,
+      "JOD_difference": -0.08243703842163086,
+      "temporal_error_change_percent": 13.296039008159276
+    },
+    {
+      "pair": "learned/own-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_DIS05",
+      "seed": 1,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.25335250189916536,
+      "JOD_difference": -0.09551382064819336,
+      "temporal_error_change_percent": 19.14505385438101
+    },
+    {
+      "pair": "learned/own-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_DIS05",
+      "seed": 1,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.27230718413798627,
+      "JOD_difference": -0.11080646514892578,
+      "temporal_error_change_percent": 14.043014384169151
+    },
+    {
+      "pair": "learned/own-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_DIS05",
+      "seed": 1,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.2222211047890461,
+      "JOD_difference": -0.12624216079711914,
+      "temporal_error_change_percent": 20.94291570587967
+    },
+    {
+      "pair": "learned/own-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_DIS05",
+      "seed": 1,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.02963333101115495,
+      "JOD_difference": -0.052297115325927734,
+      "temporal_error_change_percent": 28.308996226551653
+    },
+    {
+      "pair": "learned/own-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_DIS05",
+      "seed": 1,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.11386886967927623,
+      "JOD_difference": -0.04056739807128906,
+      "temporal_error_change_percent": 17.008377398161546
+    },
+    {
+      "pair": "learned/own-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_DIS05",
+      "seed": 1,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.03650538128416869,
+      "JOD_difference": -0.03347444534301758,
+      "temporal_error_change_percent": 5.7234100221510875
+    },
+    {
+      "pair": "learned/own-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_DIS05",
+      "seed": 1,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.2304995546697377,
+      "JOD_difference": -0.08607339859008789,
+      "temporal_error_change_percent": 43.08568665266379
+    },
+    {
+      "pair": "learned/own-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_DIS05",
+      "seed": 1,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.18433815326443437,
+      "JOD_difference": -0.08188915252685547,
+      "temporal_error_change_percent": 7.383281007557074
+    },
+    {
+      "pair": "learned/own-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_learned_preview_DIS05",
+      "seed": 1,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.2645131970116026,
+      "JOD_difference": -0.11117839813232422,
+      "temporal_error_change_percent": 9.983160159034888
+    },
+    {
+      "pair": "learned/fixed",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_fixed_causal",
+      "seed": 0,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.01603104828457802,
+      "JOD_difference": 0.0019459724426269531,
+      "temporal_error_change_percent": 3.223657912510136
+    },
+    {
+      "pair": "learned/fixed",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_fixed_causal",
+      "seed": 0,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 0.020042915781345982,
+      "JOD_difference": 0.01157236099243164,
+      "temporal_error_change_percent": 1.9053696922518126
+    },
+    {
+      "pair": "learned/fixed",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_fixed_causal",
+      "seed": 0,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.01914601225100654,
+      "JOD_difference": 0.0064487457275390625,
+      "temporal_error_change_percent": 2.890494565894852
+    },
+    {
+      "pair": "learned/fixed",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_fixed_causal",
+      "seed": 0,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 0.009690151362047317,
+      "JOD_difference": 0.02053356170654297,
+      "temporal_error_change_percent": 1.6272371915460493
+    },
+    {
+      "pair": "learned/fixed",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_fixed_causal",
+      "seed": 0,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.00258226227744629,
+      "JOD_difference": 0.0005660057067871094,
+      "temporal_error_change_percent": 0.49882585973248794
+    },
+    {
+      "pair": "learned/fixed",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_fixed_causal",
+      "seed": 0,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.0545054600428152,
+      "JOD_difference": 0.020546913146972656,
+      "temporal_error_change_percent": -0.5145789206188467
+    },
+    {
+      "pair": "learned/fixed",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_fixed_causal",
+      "seed": 0,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.00017072028982667575,
+      "JOD_difference": 0.0009789466857910156,
+      "temporal_error_change_percent": 0.37653646964446175
+    },
+    {
+      "pair": "learned/fixed",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_fixed_causal",
+      "seed": 0,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.00312718604484985,
+      "JOD_difference": 0.005185604095458984,
+      "temporal_error_change_percent": 0.9056119678040098
+    },
+    {
+      "pair": "learned/fixed",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_fixed_causal",
+      "seed": 0,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 0.02265894516069622,
+      "JOD_difference": -0.0037975311279296875,
+      "temporal_error_change_percent": 0.2923658361693615
+    },
+    {
+      "pair": "learned/fixed",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_fixed_causal",
+      "seed": 0,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 0.03385335609237572,
+      "JOD_difference": 0.010696887969970703,
+      "temporal_error_change_percent": -0.16263242730871763
+    },
+    {
+      "pair": "learned/fixed",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_fixed_causal",
+      "seed": 1,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.024510089083904063,
+      "JOD_difference": -0.00020933151245117188,
+      "temporal_error_change_percent": 2.441337761502882
+    },
+    {
+      "pair": "learned/fixed",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_fixed_causal",
+      "seed": 1,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 0.012809416751569103,
+      "JOD_difference": 0.007417201995849609,
+      "temporal_error_change_percent": 1.389944028515977
+    },
+    {
+      "pair": "learned/fixed",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_fixed_causal",
+      "seed": 1,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.028335776583084282,
+      "JOD_difference": 0.00390625,
+      "temporal_error_change_percent": 2.3793863496812007
+    },
+    {
+      "pair": "learned/fixed",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_fixed_causal",
+      "seed": 1,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 0.0036577996992690487,
+      "JOD_difference": 0.014249324798583984,
+      "temporal_error_change_percent": 1.323008095794287
+    },
+    {
+      "pair": "learned/fixed",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_fixed_causal",
+      "seed": 1,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.0001978934357893536,
+      "JOD_difference": -9.298324584960938e-05,
+      "temporal_error_change_percent": 0.4221217965318713
+    },
+    {
+      "pair": "learned/fixed",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_fixed_causal",
+      "seed": 1,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.037623438140347076,
+      "JOD_difference": 0.013998031616210938,
+      "temporal_error_change_percent": -0.405812849319076
+    },
+    {
+      "pair": "learned/fixed",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_fixed_causal",
+      "seed": 1,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.0017482198392499981,
+      "JOD_difference": 0.00015687942504882812,
+      "temporal_error_change_percent": 0.4140267254019614
+    },
+    {
+      "pair": "learned/fixed",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_fixed_causal",
+      "seed": 1,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.0011184325897275471,
+      "JOD_difference": 0.003066539764404297,
+      "temporal_error_change_percent": 0.6129239493373184
+    },
+    {
+      "pair": "learned/fixed",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_fixed_causal",
+      "seed": 1,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.020493054940168065,
+      "JOD_difference": 0.004292011260986328,
+      "temporal_error_change_percent": 0.954780555890733
+    },
+    {
+      "pair": "learned/fixed",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_fixed_causal",
+      "seed": 1,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 0.026007714901375323,
+      "JOD_difference": 0.01981067657470703,
+      "temporal_error_change_percent": 0.2194914913006052
+    },
+    {
+      "pair": "fixed/own-preview",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview",
+      "seed": 0,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 0.9545620074598631,
+      "JOD_difference": 0.19038915634155273,
+      "temporal_error_change_percent": -38.352068509779436
+    },
+    {
+      "pair": "fixed/own-preview",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview",
+      "seed": 0,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 0.10955853836078688,
+      "JOD_difference": -0.01518106460571289,
+      "temporal_error_change_percent": -28.259002446707804
+    },
+    {
+      "pair": "fixed/own-preview",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview",
+      "seed": 0,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 0.9334236521520438,
+      "JOD_difference": 0.26421546936035156,
+      "temporal_error_change_percent": -38.0469739658271
+    },
+    {
+      "pair": "fixed/own-preview",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview",
+      "seed": 0,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 0.18575550826036036,
+      "JOD_difference": -0.04811382293701172,
+      "temporal_error_change_percent": -27.55827569873508
+    },
+    {
+      "pair": "fixed/own-preview",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview",
+      "seed": 0,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.05748832058134212,
+      "JOD_difference": -0.0007119178771972656,
+      "temporal_error_change_percent": -15.425985800096576
+    },
+    {
+      "pair": "fixed/own-preview",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview",
+      "seed": 0,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.386146455545628,
+      "JOD_difference": -0.1576552391052246,
+      "temporal_error_change_percent": 1.0946015803637632
+    },
+    {
+      "pair": "fixed/own-preview",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview",
+      "seed": 0,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.004769864738829455,
+      "JOD_difference": 0.00804758071899414,
+      "temporal_error_change_percent": -13.296753340582356
+    },
+    {
+      "pair": "fixed/own-preview",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview",
+      "seed": 0,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.02889637633155928,
+      "JOD_difference": -0.03536081314086914,
+      "temporal_error_change_percent": -16.75800133037042
+    },
+    {
+      "pair": "fixed/own-preview",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview",
+      "seed": 0,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 1.1861838027021498,
+      "JOD_difference": 0.23790740966796875,
+      "temporal_error_change_percent": -23.10333656372
+    },
+    {
+      "pair": "fixed/own-preview",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview",
+      "seed": 0,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 0.17240489627235078,
+      "JOD_difference": -0.14453792572021484,
+      "temporal_error_change_percent": -13.328689046377251
+    },
+    {
+      "pair": "fixed/own-preview",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview",
+      "seed": 1,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 1.1147666240345444,
+      "JOD_difference": 0.24325942993164062,
+      "temporal_error_change_percent": -38.72152096421176
+    },
+    {
+      "pair": "fixed/own-preview",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview",
+      "seed": 1,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 0.16339544813493134,
+      "JOD_difference": 0.011335372924804688,
+      "temporal_error_change_percent": -28.661583478171693
+    },
+    {
+      "pair": "fixed/own-preview",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview",
+      "seed": 1,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 1.0761053601756174,
+      "JOD_difference": 0.27062225341796875,
+      "temporal_error_change_percent": -38.34879191471574
+    },
+    {
+      "pair": "fixed/own-preview",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview",
+      "seed": 1,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 0.24506063754989782,
+      "JOD_difference": -0.04846477508544922,
+      "temporal_error_change_percent": -28.004166974063892
+    },
+    {
+      "pair": "fixed/own-preview",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview",
+      "seed": 1,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.043192660314137044,
+      "JOD_difference": 0.0028553009033203125,
+      "temporal_error_change_percent": -14.312220299668876
+    },
+    {
+      "pair": "fixed/own-preview",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview",
+      "seed": 1,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.3084902705427126,
+      "JOD_difference": -0.14418935775756836,
+      "temporal_error_change_percent": 0.08188326749742902
+    },
+    {
+      "pair": "fixed/own-preview",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview",
+      "seed": 1,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.02294508274095719,
+      "JOD_difference": 0.009801864624023438,
+      "temporal_error_change_percent": -14.449009653673118
+    },
+    {
+      "pair": "fixed/own-preview",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview",
+      "seed": 1,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.0043493533121861105,
+      "JOD_difference": -0.021058082580566406,
+      "temporal_error_change_percent": -16.12413482753533
+    },
+    {
+      "pair": "fixed/own-preview",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview",
+      "seed": 1,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 1.264716210995644,
+      "JOD_difference": 0.2819509506225586,
+      "temporal_error_change_percent": -23.1485517641252
+    },
+    {
+      "pair": "fixed/own-preview",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview",
+      "seed": 1,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 0.2333233232976113,
+      "JOD_difference": -0.10107231140136719,
+      "temporal_error_change_percent": -13.297374602673306
+    },
+    {
+      "pair": "fixed/own-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_FB05",
+      "seed": 0,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.41933012047887175,
+      "JOD_difference": -0.12968730926513672,
+      "temporal_error_change_percent": 13.798878087875789
+    },
+    {
+      "pair": "fixed/own-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_FB05",
+      "seed": 0,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.31599938226231217,
+      "JOD_difference": -0.09964513778686523,
+      "temporal_error_change_percent": 18.89124728117706
+    },
+    {
+      "pair": "fixed/own-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_FB05",
+      "seed": 0,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.34815351284052554,
+      "JOD_difference": -0.0981602668762207,
+      "temporal_error_change_percent": 13.333426409099737
+    },
+    {
+      "pair": "fixed/own-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_FB05",
+      "seed": 0,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.2376124167938336,
+      "JOD_difference": -0.11195945739746094,
+      "temporal_error_change_percent": 20.299680719351443
+    },
+    {
+      "pair": "fixed/own-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_FB05",
+      "seed": 0,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.04371955644162284,
+      "JOD_difference": -0.017313480377197266,
+      "temporal_error_change_percent": 63.02275112829461
+    },
+    {
+      "pair": "fixed/own-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_FB05",
+      "seed": 0,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.031983496947706413,
+      "JOD_difference": -0.0008955001831054688,
+      "temporal_error_change_percent": 12.892076721332968
+    },
+    {
+      "pair": "fixed/own-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_FB05",
+      "seed": 0,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.20975475164648927,
+      "JOD_difference": 0.031821250915527344,
+      "temporal_error_change_percent": 24.15062416639746
+    },
+    {
+      "pair": "fixed/own-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_FB05",
+      "seed": 0,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.12639166195999607,
+      "JOD_difference": -0.05570840835571289,
+      "temporal_error_change_percent": 37.30931186525357
+    },
+    {
+      "pair": "fixed/own-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_FB05",
+      "seed": 0,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.08727396331720527,
+      "JOD_difference": -0.016221046447753906,
+      "temporal_error_change_percent": 9.021046634219099
+    },
+    {
+      "pair": "fixed/own-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_FB05",
+      "seed": 0,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 0.042184667427161315,
+      "JOD_difference": 0.05969524383544922,
+      "temporal_error_change_percent": 8.03337665464323
+    },
+    {
+      "pair": "fixed/own-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_FB05",
+      "seed": 1,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.32182607239248284,
+      "JOD_difference": -0.13036060333251953,
+      "temporal_error_change_percent": 13.092991304997813
+    },
+    {
+      "pair": "fixed/own-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_FB05",
+      "seed": 1,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.26577676585278454,
+      "JOD_difference": -0.09941768646240234,
+      "temporal_error_change_percent": 18.07552820208407
+    },
+    {
+      "pair": "fixed/own-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_FB05",
+      "seed": 1,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.2487977409445783,
+      "JOD_difference": -0.09006786346435547,
+      "temporal_error_change_percent": 12.646520177316777
+    },
+    {
+      "pair": "fixed/own-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_FB05",
+      "seed": 1,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.18759966769625436,
+      "JOD_difference": -0.1025552749633789,
+      "temporal_error_change_percent": 19.083137813466667
+    },
+    {
+      "pair": "fixed/own-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_FB05",
+      "seed": 1,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.03773752211303716,
+      "JOD_difference": -0.029781818389892578,
+      "temporal_error_change_percent": 64.56360951692707
+    },
+    {
+      "pair": "fixed/own-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_FB05",
+      "seed": 1,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.02592905493122899,
+      "JOD_difference": -0.01866006851196289,
+      "temporal_error_change_percent": 14.03092407696871
+    },
+    {
+      "pair": "fixed/own-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_FB05",
+      "seed": 1,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.23677883195987803,
+      "JOD_difference": 0.02880716323852539,
+      "temporal_error_change_percent": 22.066426727113164
+    },
+    {
+      "pair": "fixed/own-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_FB05",
+      "seed": 1,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.22109885679528674,
+      "JOD_difference": -0.08519506454467773,
+      "temporal_error_change_percent": 42.11045017252681
+    },
+    {
+      "pair": "fixed/own-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_FB05",
+      "seed": 1,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.020506543740722805,
+      "JOD_difference": -0.012990474700927734,
+      "temporal_error_change_percent": 9.311124208690513
+    },
+    {
+      "pair": "fixed/own-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_FB05",
+      "seed": 1,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 0.08381660143487224,
+      "JOD_difference": 0.05716419219970703,
+      "temporal_error_change_percent": 10.312755940867069
+    },
+    {
+      "pair": "fixed/own-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_DIS05",
+      "seed": 0,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.3879930832293397,
+      "JOD_difference": -0.0901188850402832,
+      "temporal_error_change_percent": 11.028608205995805
+    },
+    {
+      "pair": "fixed/own-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_DIS05",
+      "seed": 0,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.31971499415019977,
+      "JOD_difference": -0.10782575607299805,
+      "temporal_error_change_percent": 18.29823870510612
+    },
+    {
+      "pair": "fixed/own-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_DIS05",
+      "seed": 0,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.34998497427563535,
+      "JOD_difference": -0.12780094146728516,
+      "temporal_error_change_percent": 12.23535683006185
+    },
+    {
+      "pair": "fixed/own-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_DIS05",
+      "seed": 0,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.27638059585003205,
+      "JOD_difference": -0.15186738967895508,
+      "temporal_error_change_percent": 20.620555978321132
+    },
+    {
+      "pair": "fixed/own-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_DIS05",
+      "seed": 0,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.037640551523615784,
+      "JOD_difference": -0.03266477584838867,
+      "temporal_error_change_percent": 25.11595258409587
+    },
+    {
+      "pair": "fixed/own-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_DIS05",
+      "seed": 0,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.20822006167081497,
+      "JOD_difference": -0.04934978485107422,
+      "temporal_error_change_percent": 17.123643901396424
+    },
+    {
+      "pair": "fixed/own-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_DIS05",
+      "seed": 0,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.03710049189919573,
+      "JOD_difference": -0.029318809509277344,
+      "temporal_error_change_percent": 5.8864687931273085
+    },
+    {
+      "pair": "fixed/own-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_DIS05",
+      "seed": 0,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.13264610025183643,
+      "JOD_difference": -0.05984067916870117,
+      "temporal_error_change_percent": 37.05946075409558
+    },
+    {
+      "pair": "fixed/own-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_DIS05",
+      "seed": 0,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.2268868046927004,
+      "JOD_difference": -0.09116840362548828,
+      "temporal_error_change_percent": 6.51488881123754
+    },
+    {
+      "pair": "fixed/own-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_DIS05",
+      "seed": 0,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.34488602323774487,
+      "JOD_difference": -0.12730884552001953,
+      "temporal_error_change_percent": 9.9443535592332
+    },
+    {
+      "pair": "fixed/own-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_DIS05",
+      "seed": 1,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.2877361562862717,
+      "JOD_difference": -0.0822286605834961,
+      "temporal_error_change_percent": 10.591850871450914
+    },
+    {
+      "pair": "fixed/own-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_DIS05",
+      "seed": 1,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.26609458427503085,
+      "JOD_difference": -0.10303831100463867,
+      "temporal_error_change_percent": 17.542727249744374
+    },
+    {
+      "pair": "fixed/own-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_DIS05",
+      "seed": 1,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.24404696705037665,
+      "JOD_difference": -0.11485004425048828,
+      "temporal_error_change_percent": 11.378074492190592
+    },
+    {
+      "pair": "fixed/own-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_DIS05",
+      "seed": 1,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.22622459256640326,
+      "JOD_difference": -0.14075231552124023,
+      "temporal_error_change_percent": 19.372642776179983
+    },
+    {
+      "pair": "fixed/own-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_DIS05",
+      "seed": 1,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.028206563472700452,
+      "JOD_difference": -0.051131248474121094,
+      "temporal_error_change_percent": 27.674487978511173
+    },
+    {
+      "pair": "fixed/own-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_DIS05",
+      "seed": 1,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.14957798243581522,
+      "JOD_difference": -0.054963111877441406,
+      "temporal_error_change_percent": 17.4612219479781
+    },
+    {
+      "pair": "fixed/own-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_DIS05",
+      "seed": 1,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.03673204938733576,
+      "JOD_difference": -0.03481101989746094,
+      "temporal_error_change_percent": 5.178192467440179
+    },
+    {
+      "pair": "fixed/own-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_DIS05",
+      "seed": 1,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.2335352949914089,
+      "JOD_difference": -0.08931159973144531,
+      "temporal_error_change_percent": 42.22106248123518
+    },
+    {
+      "pair": "fixed/own-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_DIS05",
+      "seed": 1,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.1644316470440259,
+      "JOD_difference": -0.08572769165039062,
+      "temporal_error_change_percent": 6.4185535276423344
+    },
+    {
+      "pair": "fixed/own-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "topic8_fixed_preview_DIS05",
+      "seed": 1,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.2904134711765849,
+      "JOD_difference": -0.13150978088378906,
+      "temporal_error_change_percent": 9.693193277151035
+    },
+    {
+      "pair": "fixed/F0-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -2.8937888346585474,
+      "JOD_difference": -0.856163501739502,
+      "temporal_error_change_percent": 20.0024490011107
+    },
+    {
+      "pair": "fixed/F0-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.2023225584930586,
+      "JOD_difference": -1.367739200592041,
+      "temporal_error_change_percent": 26.10266987164527
+    },
+    {
+      "pair": "fixed/F0-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -4.433510890564065,
+      "JOD_difference": -1.0115633010864258,
+      "temporal_error_change_percent": 33.44851274476108
+    },
+    {
+      "pair": "fixed/F0-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -5.10237636477061,
+      "JOD_difference": -1.4209585189819336,
+      "temporal_error_change_percent": 42.47518529811285
+    },
+    {
+      "pair": "fixed/F0-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -10.752959993090471,
+      "JOD_difference": -1.3911685943603516,
+      "temporal_error_change_percent": 95.81000944038958
+    },
+    {
+      "pair": "fixed/F0-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.7119457301486527,
+      "JOD_difference": -1.240584373474121,
+      "temporal_error_change_percent": 21.377877314192652
+    },
+    {
+      "pair": "fixed/F0-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -1.4740846776225354,
+      "JOD_difference": -0.6040816307067871,
+      "temporal_error_change_percent": 17.699958472131616
+    },
+    {
+      "pair": "fixed/F0-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.5405927670535675,
+      "JOD_difference": -1.620999813079834,
+      "temporal_error_change_percent": 38.217674683047576
+    },
+    {
+      "pair": "fixed/F0-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.5071084766716965,
+      "JOD_difference": -0.2804298400878906,
+      "temporal_error_change_percent": 43.071307778018245
+    },
+    {
+      "pair": "fixed/F0-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.11940168613042,
+      "JOD_difference": -0.5165824890136719,
+      "temporal_error_change_percent": 39.499239231488346
+    },
+    {
+      "pair": "fixed/F0-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -2.4630567891690305,
+      "JOD_difference": -0.8739724159240723,
+      "temporal_error_change_percent": 22.794120543011086
+    },
+    {
+      "pair": "fixed/F0-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -2.7759386548276943,
+      "JOD_difference": -1.363955020904541,
+      "temporal_error_change_percent": 27.11091530792973
+    },
+    {
+      "pair": "fixed/F0-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.842978241913322,
+      "JOD_difference": -0.9254627227783203,
+      "temporal_error_change_percent": 36.2167902294476
+    },
+    {
+      "pair": "fixed/F0-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -4.200690238852847,
+      "JOD_difference": -1.2691736221313477,
+      "temporal_error_change_percent": 42.43557025937772
+    },
+    {
+      "pair": "fixed/F0-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -11.388852885896856,
+      "JOD_difference": -1.5977249145507812,
+      "temporal_error_change_percent": 94.06899026741245
+    },
+    {
+      "pair": "fixed/F0-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -2.022342781563232,
+      "JOD_difference": -1.1940641403198242,
+      "temporal_error_change_percent": 23.98688670121938
+    },
+    {
+      "pair": "fixed/F0-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 1.5721868554160636,
+      "JOD_difference": -0.7090902328491211,
+      "temporal_error_change_percent": 25.213449541108822
+    },
+    {
+      "pair": "fixed/F0-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 2.750730005318154,
+      "JOD_difference": -1.0461559295654297,
+      "temporal_error_change_percent": 55.29684737891487
+    },
+    {
+      "pair": "fixed/F0-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.476353473820982,
+      "JOD_difference": -0.44747066497802734,
+      "temporal_error_change_percent": 46.77013163694308
+    },
+    {
+      "pair": "fixed/F0-FB",
+      "candidate": "topic8_fixed_causal",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.0074482820547814,
+      "JOD_difference": -0.6170110702514648,
+      "temporal_error_change_percent": 40.31894651384567
+    },
+    {
+      "pair": "fixed/F0-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -2.783547427783102,
+      "JOD_difference": -0.7186274528503418,
+      "temporal_error_change_percent": 16.177716965089207
+    },
+    {
+      "pair": "fixed/F0-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.179129264768047,
+      "JOD_difference": -1.3382267951965332,
+      "temporal_error_change_percent": 24.8368063247391
+    },
+    {
+      "pair": "fixed/F0-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -4.4791275875201855,
+      "JOD_difference": -1.0274128913879395,
+      "temporal_error_change_percent": 32.85167730929588
+    },
+    {
+      "pair": "fixed/F0-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -5.245831259672606,
+      "JOD_difference": -1.4784374237060547,
+      "temporal_error_change_percent": 44.34584253875189
+    },
+    {
+      "pair": "fixed/F0-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -10.633270228950586,
+      "JOD_difference": -1.4084205627441406,
+      "temporal_error_change_percent": 54.41746700124712
+    },
+    {
+      "pair": "fixed/F0-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.8240612504282083,
+      "JOD_difference": -1.3045969009399414,
+      "temporal_error_change_percent": 25.031025377007253
+    },
+    {
+      "pair": "fixed/F0-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -1.656552811017093,
+      "JOD_difference": -0.6372723579406738,
+      "temporal_error_change_percent": -5.306369247534626
+    },
+    {
+      "pair": "fixed/F0-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.5374078406832048,
+      "JOD_difference": -1.6158061027526855,
+      "temporal_error_change_percent": 37.396182269517
+    },
+    {
+      "pair": "fixed/F0-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -4.0475140757000325,
+      "JOD_difference": -0.3074679374694824,
+      "temporal_error_change_percent": 43.241219068035086
+    },
+    {
+      "pair": "fixed/F0-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -4.028024465140284,
+      "JOD_difference": -0.7266182899475098,
+      "temporal_error_change_percent": 47.796542357714486
+    },
+    {
+      "pair": "fixed/F0-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -2.36197501503241,
+      "JOD_difference": -0.7418088912963867,
+      "temporal_error_change_percent": 18.754160675663044
+    },
+    {
+      "pair": "fixed/F0-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -2.7601594315562714,
+      "JOD_difference": -1.3379020690917969,
+      "temporal_error_change_percent": 25.765930642246037
+    },
+    {
+      "pair": "fixed/F0-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.892714556077017,
+      "JOD_difference": -0.9444446563720703,
+      "temporal_error_change_percent": 35.89615458984514
+    },
+    {
+      "pair": "fixed/F0-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -4.328325462026797,
+      "JOD_difference": -1.3224573135375977,
+      "temporal_error_change_percent": 44.482039216331025
+    },
+    {
+      "pair": "fixed/F0-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -11.276367655232015,
+      "JOD_difference": -1.5962867736816406,
+      "temporal_error_change_percent": 48.92032292811281
+    },
+    {
+      "pair": "fixed/F0-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -2.2127505727385213,
+      "JOD_difference": -1.263829231262207,
+      "temporal_error_change_percent": 29.022994868208542
+    },
+    {
+      "pair": "fixed/F0-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 1.3409808956285438,
+      "JOD_difference": -0.7413091659545898,
+      "temporal_error_change_percent": 4.881923577899916
+    },
+    {
+      "pair": "fixed/F0-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 2.7467560279116263,
+      "JOD_difference": -1.0414962768554688,
+      "temporal_error_change_percent": 54.273085317105995
+    },
+    {
+      "pair": "fixed/F0-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -4.0778379874994535,
+      "JOD_difference": -0.49655628204345703,
+      "temporal_error_change_percent": 47.82908732678992
+    },
+    {
+      "pair": "fixed/F0-DIS",
+      "candidate": "topic8_fixed_causal",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.9629656783631866,
+      "JOD_difference": -0.843989372253418,
+      "temporal_error_change_percent": 49.74821711544821
+    },
+    {
+      "pair": "spatial-FB/F0-FB",
+      "candidate": "topic8_spatial_raw_FB05",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -2.49743954108094,
+      "JOD_difference": -0.7412834167480469,
+      "temporal_error_change_percent": 4.985349800980621
+    },
+    {
+      "pair": "spatial-FB/F0-FB",
+      "candidate": "topic8_spatial_raw_FB05",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -2.912733300347085,
+      "JOD_difference": -1.2902755737304688,
+      "temporal_error_change_percent": 5.613096206811008
+    },
+    {
+      "pair": "spatial-FB/F0-FB",
+      "candidate": "topic8_spatial_raw_FB05",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -4.104458316012828,
+      "JOD_difference": -0.9283170700073242,
+      "temporal_error_change_percent": 17.253725452551727
+    },
+    {
+      "pair": "spatial-FB/F0-FB",
+      "candidate": "topic8_spatial_raw_FB05",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -4.889144182817741,
+      "JOD_difference": -1.332287311553955,
+      "temporal_error_change_percent": 17.89564886564463
+    },
+    {
+      "pair": "spatial-FB/F0-FB",
+      "candidate": "topic8_spatial_raw_FB05",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -10.584937605239883,
+      "JOD_difference": -1.3861303329467773,
+      "temporal_error_change_percent": 19.312629860538124
+    },
+    {
+      "pair": "spatial-FB/F0-FB",
+      "candidate": "topic8_spatial_raw_FB05",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.7069966848087184,
+      "JOD_difference": -1.2740583419799805,
+      "temporal_error_change_percent": 7.2082927566055055
+    },
+    {
+      "pair": "spatial-FB/F0-FB",
+      "candidate": "topic8_spatial_raw_FB05",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -1.7250960339231654,
+      "JOD_difference": -0.6491055488586426,
+      "temporal_error_change_percent": -5.207785644215646
+    },
+    {
+      "pair": "spatial-FB/F0-FB",
+      "candidate": "topic8_spatial_raw_FB05",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.5910860295677622,
+      "JOD_difference": -1.5949420928955078,
+      "temporal_error_change_percent": 0.13904610420505392
+    },
+    {
+      "pair": "spatial-FB/F0-FB",
+      "candidate": "topic8_spatial_raw_FB05",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.4184800251735403,
+      "JOD_difference": -0.2620420455932617,
+      "temporal_error_change_percent": 30.87522106075127
+    },
+    {
+      "pair": "spatial-FB/F0-FB",
+      "candidate": "topic8_spatial_raw_FB05",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 0,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.1708118142566377,
+      "JOD_difference": -0.5846128463745117,
+      "temporal_error_change_percent": 28.75276750921514
+    },
+    {
+      "pair": "spatial-FB/F0-FB",
+      "candidate": "topic8_spatial_raw_FB05",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -2.1476325420606877,
+      "JOD_difference": -0.7524857521057129,
+      "temporal_error_change_percent": 8.087191871389976
+    },
+    {
+      "pair": "spatial-FB/F0-FB",
+      "candidate": "topic8_spatial_raw_FB05",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -2.5180013657220535,
+      "JOD_difference": -1.2804489135742188,
+      "temporal_error_change_percent": 7.184887046425281
+    },
+    {
+      "pair": "spatial-FB/F0-FB",
+      "candidate": "topic8_spatial_raw_FB05",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.602490485905001,
+      "JOD_difference": -0.8490610122680664,
+      "temporal_error_change_percent": 20.438735062390467
+    },
+    {
+      "pair": "spatial-FB/F0-FB",
+      "candidate": "topic8_spatial_raw_FB05",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -4.02586724075368,
+      "JOD_difference": -1.187828540802002,
+      "temporal_error_change_percent": 19.101883687440413
+    },
+    {
+      "pair": "spatial-FB/F0-FB",
+      "candidate": "topic8_spatial_raw_FB05",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -11.300848644967417,
+      "JOD_difference": -1.561368465423584,
+      "temporal_error_change_percent": 17.175260268664736
+    },
+    {
+      "pair": "spatial-FB/F0-FB",
+      "candidate": "topic8_spatial_raw_FB05",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -2.0480881547177674,
+      "JOD_difference": -1.201009750366211,
+      "temporal_error_change_percent": 8.390623723100287
+    },
+    {
+      "pair": "spatial-FB/F0-FB",
+      "candidate": "topic8_spatial_raw_FB05",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 1.3109011604025333,
+      "JOD_difference": -0.7464690208435059,
+      "temporal_error_change_percent": 2.511284937183267
+    },
+    {
+      "pair": "spatial-FB/F0-FB",
+      "candidate": "topic8_spatial_raw_FB05",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 2.9166694170528977,
+      "JOD_difference": -0.9830541610717773,
+      "temporal_error_change_percent": 8.582966150683324
+    },
+    {
+      "pair": "spatial-FB/F0-FB",
+      "candidate": "topic8_spatial_raw_FB05",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.4566330368423017,
+      "JOD_difference": -0.4316520690917969,
+      "temporal_error_change_percent": 34.004726337487035
+    },
+    {
+      "pair": "spatial-FB/F0-FB",
+      "candidate": "topic8_spatial_raw_FB05",
+      "reference": "MobileIE_recursive_self05",
+      "seed": 1,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.096209168814031,
+      "JOD_difference": -0.6826267242431641,
+      "temporal_error_change_percent": 26.98516130456823
+    },
+    {
+      "pair": "spatial-DIS/F0-DIS",
+      "candidate": "topic8_spatial_raw_DIS05",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -2.4186833264125127,
+      "JOD_difference": -0.6420297622680664,
+      "temporal_error_change_percent": 4.214848000245208
+    },
+    {
+      "pair": "spatial-DIS/F0-DIS",
+      "candidate": "topic8_spatial_raw_DIS05",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -2.886210126096337,
+      "JOD_difference": -1.2527036666870117,
+      "temporal_error_change_percent": 5.120561612394781
+    },
+    {
+      "pair": "spatial-DIS/F0-DIS",
+      "candidate": "topic8_spatial_raw_DIS05",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -4.148604891501247,
+      "JOD_difference": -0.9153165817260742,
+      "temporal_error_change_percent": 17.879787990004136
+    },
+    {
+      "pair": "spatial-DIS/F0-DIS",
+      "candidate": "topic8_spatial_raw_DIS05",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -4.9938799499707685,
+      "JOD_difference": -1.3496856689453125,
+      "temporal_error_change_percent": 19.107273454684016
+    },
+    {
+      "pair": "spatial-DIS/F0-DIS",
+      "candidate": "topic8_spatial_raw_DIS05",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -10.47106560200887,
+      "JOD_difference": -1.3866100311279297,
+      "temporal_error_change_percent": 22.807652172057313
+    },
+    {
+      "pair": "spatial-DIS/F0-DIS",
+      "candidate": "topic8_spatial_raw_DIS05",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.646668439789849,
+      "JOD_difference": -1.2895803451538086,
+      "temporal_error_change_percent": 6.43434720960423
+    },
+    {
+      "pair": "spatial-DIS/F0-DIS",
+      "candidate": "topic8_spatial_raw_DIS05",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -1.6586378843278133,
+      "JOD_difference": -0.6209702491760254,
+      "temporal_error_change_percent": -10.975988823910177
+    },
+    {
+      "pair": "spatial-DIS/F0-DIS",
+      "candidate": "topic8_spatial_raw_DIS05",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.5939113086118368,
+      "JOD_difference": -1.5854682922363281,
+      "temporal_error_change_percent": -0.27050846633644987
+    },
+    {
+      "pair": "spatial-DIS/F0-DIS",
+      "candidate": "topic8_spatial_raw_DIS05",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.816076109901836,
+      "JOD_difference": -0.2131485939025879,
+      "temporal_error_change_percent": 33.9063899750659
+    },
+    {
+      "pair": "spatial-DIS/F0-DIS",
+      "candidate": "topic8_spatial_raw_DIS05",
+      "reference": "DIS_recursive_self05",
+      "seed": 0,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.6894610788628057,
+      "JOD_difference": -0.6045918464660645,
+      "temporal_error_change_percent": 33.835541210264175
+    },
+    {
+      "pair": "spatial-DIS/F0-DIS",
+      "candidate": "topic8_spatial_raw_DIS05",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -2.0814816283115256,
+      "JOD_difference": -0.6674423217773438,
+      "temporal_error_change_percent": 6.967408847512591
+    },
+    {
+      "pair": "spatial-DIS/F0-DIS",
+      "candidate": "topic8_spatial_raw_DIS05",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -2.5021528590117583,
+      "JOD_difference": -1.2501044273376465,
+      "temporal_error_change_percent": 6.540065982493659
+    },
+    {
+      "pair": "spatial-DIS/F0-DIS",
+      "candidate": "topic8_spatial_raw_DIS05",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.6565244397161436,
+      "JOD_difference": -0.843113899230957,
+      "temporal_error_change_percent": 21.51321370589976
+    },
+    {
+      "pair": "spatial-DIS/F0-DIS",
+      "candidate": "topic8_spatial_raw_DIS05",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -4.114549067074744,
+      "JOD_difference": -1.2030372619628906,
+      "temporal_error_change_percent": 20.511764947737277
+    },
+    {
+      "pair": "spatial-DIS/F0-DIS",
+      "candidate": "topic8_spatial_raw_DIS05",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -11.197011879328329,
+      "JOD_difference": -1.5383720397949219,
+      "temporal_error_change_percent": 15.847670219773402
+    },
+    {
+      "pair": "spatial-DIS/F0-DIS",
+      "candidate": "topic8_spatial_raw_DIS05",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -2.0658366973003055,
+      "JOD_difference": -1.2337818145751953,
+      "temporal_error_change_percent": 9.538199104579137
+    },
+    {
+      "pair": "spatial-DIS/F0-DIS",
+      "candidate": "topic8_spatial_raw_DIS05",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 1.356379421122103,
+      "JOD_difference": -0.7159557342529297,
+      "temporal_error_change_percent": -1.032535300201265
+    },
+    {
+      "pair": "spatial-DIS/F0-DIS",
+      "candidate": "topic8_spatial_raw_DIS05",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 2.925053365784411,
+      "JOD_difference": -0.9743852615356445,
+      "temporal_error_change_percent": 7.806405751590795
+    },
+    {
+      "pair": "spatial-DIS/F0-DIS",
+      "candidate": "topic8_spatial_raw_DIS05",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.911773755360972,
+      "JOD_difference": -0.4064359664916992,
+      "temporal_error_change_percent": 38.55792602401811
+    },
+    {
+      "pair": "spatial-DIS/F0-DIS",
+      "candidate": "topic8_spatial_raw_DIS05",
+      "reference": "DIS_recursive_self05",
+      "seed": 1,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -3.6781700853205557,
+      "JOD_difference": -0.7215356826782227,
+      "temporal_error_change_percent": 36.26796889489277
+    },
+    {
+      "pair": "learned/spatial-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_FB05",
+      "seed": 0,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.4123803418621854,
+      "JOD_difference": -0.11293411254882812,
+      "temporal_error_change_percent": 17.988764792765345
+    },
+    {
+      "pair": "learned/spatial-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_FB05",
+      "seed": 0,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.2695463423646274,
+      "JOD_difference": -0.06589126586914062,
+      "temporal_error_change_percent": 21.67562219070005
+    },
+    {
+      "pair": "learned/spatial-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_FB05",
+      "seed": 0,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.34819858680224414,
+      "JOD_difference": -0.0767974853515625,
+      "temporal_error_change_percent": 17.101468822394494
+    },
+    {
+      "pair": "learned/spatial-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_FB05",
+      "seed": 0,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.2035420305908211,
+      "JOD_difference": -0.06813764572143555,
+      "temporal_error_change_percent": 22.81504524990272
+    },
+    {
+      "pair": "learned/spatial-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_FB05",
+      "seed": 0,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.17060465012803405,
+      "JOD_difference": -0.004472255706787109,
+      "temporal_error_change_percent": 64.93372129458763
+    },
+    {
+      "pair": "learned/spatial-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_FB05",
+      "seed": 0,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.04955641470288086,
+      "JOD_difference": 0.05402088165283203,
+      "temporal_error_change_percent": 12.634283448002348
+    },
+    {
+      "pair": "learned/spatial-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_FB05",
+      "seed": 0,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.2508406360108033,
+      "JOD_difference": 0.046002864837646484,
+      "temporal_error_change_percent": 24.633803043262613
+    },
+    {
+      "pair": "learned/spatial-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_FB05",
+      "seed": 0,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.047366076469344875,
+      "JOD_difference": -0.020872116088867188,
+      "temporal_error_change_percent": 39.27573300575011
+    },
+    {
+      "pair": "learned/spatial-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_FB05",
+      "seed": 0,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.0659695063374599,
+      "JOD_difference": -0.022185325622558594,
+      "temporal_error_change_percent": 9.63847720013793
+    },
+    {
+      "pair": "learned/spatial-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_FB05",
+      "seed": 0,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 0.08526348421859353,
+      "JOD_difference": 0.07872724533081055,
+      "temporal_error_change_percent": 8.170388044420829
+    },
+    {
+      "pair": "learned/spatial-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_FB05",
+      "seed": 1,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.3399343361922469,
+      "JOD_difference": -0.12169599533081055,
+      "temporal_error_change_percent": 16.380060947840548
+    },
+    {
+      "pair": "learned/spatial-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_FB05",
+      "seed": 1,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.24512787235407174,
+      "JOD_difference": -0.07608890533447266,
+      "temporal_error_change_percent": 20.238673040746114
+    },
+    {
+      "pair": "learned/spatial-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_FB05",
+      "seed": 1,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.268823532591405,
+      "JOD_difference": -0.0724954605102539,
+      "temporal_error_change_percent": 15.791579735454754
+    },
+    {
+      "pair": "learned/spatial-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_FB05",
+      "seed": 1,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.17116519839989763,
+      "JOD_difference": -0.06709575653076172,
+      "temporal_error_change_percent": 21.173569986466067
+    },
+    {
+      "pair": "learned/spatial-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_FB05",
+      "seed": 1,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.08780634749365035,
+      "JOD_difference": -0.036449432373046875,
+      "temporal_error_change_percent": 66.32196705071705
+    },
+    {
+      "pair": "learned/spatial-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_FB05",
+      "seed": 1,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.06336881129488248,
+      "JOD_difference": 0.020943641662597656,
+      "temporal_error_change_percent": 13.924736053712916
+    },
+    {
+      "pair": "learned/spatial-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_FB05",
+      "seed": 1,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.2595374751742803,
+      "JOD_difference": 0.037535667419433594,
+      "temporal_error_change_percent": 22.651732209826967
+    },
+    {
+      "pair": "learned/spatial-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_FB05",
+      "seed": 1,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.16482097914501637,
+      "JOD_difference": -0.06003522872924805,
+      "temporal_error_change_percent": 43.897983715268765
+    },
+    {
+      "pair": "learned/spatial-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_FB05",
+      "seed": 1,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.040213491918848376,
+      "JOD_difference": -0.01152658462524414,
+      "temporal_error_change_percent": 10.571819640526915
+    },
+    {
+      "pair": "learned/spatial-FB",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_FB05",
+      "seed": 1,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": 0.11476860166062508,
+      "JOD_difference": 0.08542633056640625,
+      "temporal_error_change_percent": 10.742809015959565
+    },
+    {
+      "pair": "learned/spatial-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_DIS05",
+      "seed": 0,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.38089514965516713,
+      "JOD_difference": -0.07465171813964844,
+      "temporal_error_change_percent": 15.072747724322166
+    },
+    {
+      "pair": "learned/spatial-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_DIS05",
+      "seed": 0,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.27287622289036406,
+      "JOD_difference": -0.07395076751708984,
+      "temporal_error_change_percent": 21.018578141068247
+    },
+    {
+      "pair": "learned/spatial-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_DIS05",
+      "seed": 0,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.3496687082699452,
+      "JOD_difference": -0.10564756393432617,
+      "temporal_error_change_percent": 15.958596595213015
+    },
+    {
+      "pair": "learned/spatial-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_DIS05",
+      "seed": 0,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.24226115833979023,
+      "JOD_difference": -0.10821819305419922,
+      "temporal_error_change_percent": 23.161825065876386
+    },
+    {
+      "pair": "learned/spatial-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_DIS05",
+      "seed": 0,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.16478688921916174,
+      "JOD_difference": -0.021244525909423828,
+      "temporal_error_change_percent": 26.366507716612308
+    },
+    {
+      "pair": "learned/spatial-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_DIS05",
+      "seed": 0,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.12288735059554412,
+      "JOD_difference": 0.005530357360839844,
+      "temporal_error_change_percent": 16.8679522515635
+    },
+    {
+      "pair": "learned/spatial-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_DIS05",
+      "seed": 0,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": 0.0019143530208936,
+      "JOD_difference": -0.015323162078857422,
+      "temporal_error_change_percent": 6.769157613746746
+    },
+    {
+      "pair": "learned/spatial-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_DIS05",
+      "seed": 0,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.053376281883782184,
+      "JOD_difference": -0.025152206420898438,
+      "temporal_error_change_percent": 39.01650996852586
+    },
+    {
+      "pair": "learned/spatial-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_DIS05",
+      "seed": 0,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.20877902063750042,
+      "JOD_difference": -0.09811687469482422,
+      "temporal_error_change_percent": 7.283907424173575
+    },
+    {
+      "pair": "learned/spatial-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_DIS05",
+      "seed": 0,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.30471003018510245,
+      "JOD_difference": -0.11132955551147461,
+      "temporal_error_change_percent": 10.251862785520949
+    },
+    {
+      "pair": "learned/spatial-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_DIS05",
+      "seed": 1,
+      "scene": "bear_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.3050034758047886,
+      "JOD_difference": -0.07457590103149414,
+      "temporal_error_change_percent": 13.729361264622897
+    },
+    {
+      "pair": "learned/spatial-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_DIS05",
+      "seed": 1,
+      "scene": "bear_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.245197155792944,
+      "JOD_difference": -0.08038043975830078,
+      "temporal_error_change_percent": 19.68643487236832
+    },
+    {
+      "pair": "learned/spatial-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_DIS05",
+      "seed": 1,
+      "scene": "lucia_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.2645258929439578,
+      "JOD_difference": -0.09742450714111328,
+      "temporal_error_change_percent": 14.497547138071054
+    },
+    {
+      "pair": "learned/spatial-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_DIS05",
+      "seed": 1,
+      "scene": "lucia_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.21011859525278354,
+      "JOD_difference": -0.10517072677612305,
+      "temporal_error_change_percent": 21.47656152544004
+    },
+    {
+      "pair": "learned/spatial-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_DIS05",
+      "seed": 1,
+      "scene": "video_121",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.07915788246789646,
+      "JOD_difference": -0.05800771713256836,
+      "temporal_error_change_percent": 29.09102771505916
+    },
+    {
+      "pair": "learned/spatial-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_DIS05",
+      "seed": 1,
+      "scene": "video_15",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.10929043729786869,
+      "JOD_difference": -0.01604938507080078,
+      "temporal_error_change_percent": 17.310129276249242
+    },
+    {
+      "pair": "learned/spatial-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_DIS05",
+      "seed": 1,
+      "scene": "video_47",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.017146745332809132,
+      "JOD_difference": -0.025196552276611328,
+      "temporal_error_change_percent": 6.414934535392058
+    },
+    {
+      "pair": "learned/spatial-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_DIS05",
+      "seed": 1,
+      "scene": "video_91",
+      "domain": "paired_real_ND_DEV",
+      "PSNR_difference": -0.17717890528305702,
+      "JOD_difference": -0.06404447555541992,
+      "temporal_error_change_percent": 43.97907148676621
+    },
+    {
+      "pair": "learned/spatial-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_DIS05",
+      "seed": 1,
+      "scene": "walking_photons20",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.18655728707864938,
+      "JOD_difference": -0.08582830429077148,
+      "temporal_error_change_percent": 7.709847419819904
+    },
+    {
+      "pair": "learned/spatial-DIS",
+      "candidate": "topic8_learned_causal",
+      "reference": "topic8_spatial_raw_DIS05",
+      "seed": 1,
+      "scene": "walking_photons80",
+      "domain": "davis_train_pilot",
+      "PSNR_difference": -0.2587878781412556,
+      "JOD_difference": -0.10264301300048828,
+      "temporal_error_change_percent": 10.133660116523346
+    }
+  ]
+}
