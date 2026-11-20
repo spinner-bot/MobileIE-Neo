@@ -1,0 +1,41 @@
+{
+  "at": "2026-11-20T16:20:40.599143+08:00",
+  "coordinator": {
+    "pid": 3024380,
+    "start_ticks": 109481893,
+    "state": "R"
+  },
+  "completed_normally": false,
+  "seconds": 8209.304354769876,
+  "final_state": {
+    "at": "2026-11-20T16:20:40.598653+08:00",
+    "coordinator": {
+      "pid": 3024380,
+      "start_ticks": 109481893,
+      "state": "R"
+    },
+    "status": "stopped_for_original_terminal_review",
+    "stage": "original-post-training-chain003",
+    "child": {
+      "pid": 3106031,
+      "already_exited": true
+    },
+    "stdout": ".cache/experiments/topic8-v1/cpu-chain001/original-post-training-chain003.stdout.txt",
+    "returncode": -2
+  },
+  "CPU_quality_children": [
+    {
+      "stage": "CPU-quality-seed0",
+      "pid": 3057709,
+      "already_exited": true,
+      "returncode": 0
+    },
+    {
+      "stage": "CPU-quality-seed1",
+      "pid": 3095929,
+      "already_exited": true,
+      "returncode": 0
+    }
+  ],
+  "paper_objective_achieved": false
+}
