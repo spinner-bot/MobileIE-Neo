@@ -1,0 +1,28 @@
+{
+  "at": "2026-11-20T16:21:27.964925+08:00",
+  "catalog_version": 2,
+  "resource_count": 124,
+  "old_permanent_ids_unchanged": true,
+  "original_three_closed_audits_verified": true,
+  "begun_prefix_preserved": [
+    "MIE-0001",
+    "MIE-0002",
+    "MIE-0003",
+    "MIE-0004"
+  ],
+  "active_hold_checks": [
+    {
+      "script": "begin_resource.py",
+      "actual_exit_code": 1,
+      "hold_rejected": true
+    },
+    {
+      "script": "close_resource.py",
+      "actual_exit_code": 1,
+      "hold_rejected": true
+    }
+  ],
+  "analysis_log_unchanged": true,
+  "own_script_syntax_valid": true,
+  "scope": "Catalog/source integrity and queue guard checks only; no research model execution"
+}
