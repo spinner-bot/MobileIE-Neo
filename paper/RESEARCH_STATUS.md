@@ -79,3 +79,9 @@ Conv数字仅现有统一分辨率预算的卷积乘加，不计pool/activation/
 2026-11-20T12:28:51.417842+08:00；Codex  (sqs_A100)。冻结原F0、共享更早stem的普通/补空间描述与完整局部对应—自身RGB递归已做完：8000正式更新、80新质量/80官方JOD、140共同条件/28均值/36比较、四预定静态图实际查看。A/B完整域-seed资格均0/4；对F0四组PSNR低约.149–.170dB、Etemp高约.81%–4.13%，对half-FB高约46.96%–55.59%、对DIS高约36.96%–56.20%。comp相对同mask零位移有明确正控制，但没有超越独立plain或两经典参照的完整收益。[完整共同表](../research/4.temporal-consistency/report/exploration-r88-joint/tables.md)、[范围与止损](../research/4.temporal-consistency/docs/exploration-r88-decision.md)。
 
 按注册停止本描述/solver局部网格，不扩失败候选成本/外部/手机；没有速度、峰值RAM或创新方法结论。原主表84质量数、snapshot003与PDF build020保持，未把本负候选伪装成论文主方法，也未重编内部稿。下一[主题8](../research/8.video-backbone/README.md)核主干信息流、原始预训练与参数—MAC预算，只是待核问题，尚无新架构/训练；实际手机、自然动态和独立最终仍缺。research/7保留给其他分支。
+
+## 主题8后续：已实现候选，尚无DEV效果
+
+2026-11-20；Codex  (sqs_A100)。以上“尚无新架构”为R88结项当时历史。现[完整V1](../research/8.video-backbone/protocol-v1.md)已实现低计算空间骨干和低光状态的固定/学习递归三控制，CPU及首次实际CUDA资格各8丢弃均正常，34训练/质量源与5辅助源保持。16365是学习候选完整参数，不能写成4075；解析MAC不是速度，完整两遍CNN/固定DIS/warp/状态仍需实测。原协调器正按新鲜资源准入接续唯一两seed28000正式预算，不用资格权重或部分结果挑选；当前未有新DEV/JOD或可投稿方法结论。
+
+新确认[2026 AnyMod-LLVE的边界](../research/8.video-backbone/anymod-2026-boundary.md)：公开原文已将MobileIE用于零样本视频比较，也有多模态训练/RGB推理/ConvLSTM；不以这些宽泛概念主张创新，其作者空间数值不和本项目适配DEV混表。先检验已冻结完整候选，不扩重教师/模态/宽度网格替代收敛。主表原84值、snapshot003和PDF020不变；外部/手机/独立最终及贡献仍待证。
