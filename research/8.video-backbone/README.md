@@ -2,6 +2,8 @@
 
 2026-11-20；Codex  (sqs_A100)。main主题8，research/7继续留给其他分支。
 
+最新[S1单向传输与贡献者离散度](single-direction/README.md)已完整负结项：[0186](../../docs/进展报告/0186-T-26112022-单向传输贡献者离散度筛查与止损.md)、[决定](single-direction/decision.md)、[原真实终态](single-direction/process/terminal001.json)。训练窗双冻结F0，64NN/16窗/80条件、0更新/GPU/DEV/最终，正常38.999856秒；对原FB三个组PSNR低.51–.73dB、ND0有小正例，三个完整门均False。对原FB仍9/16窗口联合正、对raw12/16联合正。停止固定目标贡献者矩/mass界/阈值/alpha/preset/field来源网格，不训练补救或扩失败DEV/成本。全20点及16窗口图实际查看，无活跃作业，论文goal active。
+
 最新[P1粗能量历史零更新筛查](phase-envelope/README.md)已负结项：[0185](../../docs/进展报告/0185-T-26112022-粗能量历史零更新筛查与止损.md)、[决定](phase-envelope/decision.md)、[真实终态](phase-envelope/process/terminal001.json)。训练纹理已知位移、四实际路由、双冻结F0，1280NN/0优化/200输出条件正常32.238270秒；对raw四噪声组时间升.456%–.560%，对同尺度feature EMA全部32 noisy条件时间更差，完整训练资格False。clean仍有两seed时间降18.8%–22.8%/质量正例；不抹掉局部收益。直接Riesz/幅度滤波已有先例，非确立创新；停止固定能量/差分/alpha/尺度/clip/epsilon网格，不训练补救/扩DEV。全30均值图与固定联系图已实际查看，原任务全退出、无活跃GPU，论文goal active。
 
 [T1同原骨干训练监督对照](teacher-targets/README.md)也已完整负结项：[完整决定](teacher-targets/decision.md)、[0180报告](../../docs/进展报告/0180-T-26112019-同原骨干时序KD完整评价与止损.md)、[原终态](teacher-targets/process/terminal001.json)。24000正式更新/六唯一最终/全180质量与180官方JOD/240共表及四图实际审阅，恢复保护3/4、A/B各0/40、成本资格False。对空间KD全部20条件时间更好，四组改善1.49%–2.38%，但距原强post仍高约29%–48%；固定同F0/T4DIS/等权KD局部网格STOP，不扩失败成本/外部/手机。普通KD是已完成已知参照，不主张创新。全部原任务终态、GPU释放，论文goal active。
