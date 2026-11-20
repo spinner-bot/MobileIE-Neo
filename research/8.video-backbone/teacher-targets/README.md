@@ -1,11 +1,13 @@
-# T1：同F0起点的训练目标信息对照
+# T1：同F0起点的完整已知蒸馏对照
 
-2026-11-20T17:29:37.496007+08:00；Codex  (sqs_A100)。V1已完整止损不重开。本支仅研究不同监督来源，普通KD/训练期时间教师不是创新声明。
+2026-11-20；Codex  (sqs_A100)。**已完整负结项，无活跃T1任务，不重启原链。** [决定与止损](decision.md)、[0180](../../../docs/进展报告/0180-T-26112019-同原骨干时序KD完整评价与止损.md)、[真实终态](process/terminal001.json)、[过程](process/journal.md)。论文goal仍active，普通KD不主张创新，V1及所有旧STOP保持。
 
-[去重/直接先例](prior-art.md)、[训练目标预检协议](preflight-protocol.md)、[完整预检结果](preflight-decision.md)：固定32个B4T4/128批次/128窗、512冻结F0图，0 SGD/学生前向/新DEV/最终/GPU，21源冻结，36.961052秒正常完成。四组MSE未恶化、GT参考时间代理低约17%–21%，必要前提4/4；不是方法或学生效果，GT代理不是物理true flow。
+先[核直接先例](prior-art.md)，再完成[训练目标预检](preflight-decision.md)四组必要前提，随后[另立完整协议](training-protocol.md)、[资格前冻42源](process/training-source-freeze001.json)。CPU6/CUDA6资格全丢弃，两个seed三学生gt/spatial/temporal均直接继承自身原4075参数F0完整权重，再各4000，共24000正式更新；六唯一最终有限重载，全训练/窗口/备份/终态保留，没有科学重试、追加预算或DEV选备份。
 
-已登记[完整T1协议](training-protocol.md)：三组原4075参数F0学生同权重起点，GT-only/GT＋空间教师/GT＋时序教师，各4000×两seed，总24000；全180新质量/JOD/240共同条件及全部自身post/强参照。完整训练/评价/协调八模块已实现并冻42源；CPU/CUDA各6次丢弃资格通过，正式从原F0重新起步。17:50:03检查点为seed0各204次/612正式更新、seed1未开始；完整训练及新DEV仍未完成，原协调链将自动继续固定预算和全量评价。不把预检当完整实验，不重开旧packed骨干或追加同一目标网格。
+[全部240共同条件/48均值](report/joint/tables.md)：180新质量与180官方JOD各8064帧、复用原60参照。恢复保护3/4，主要A/B各0/40，完整A/B与成本扩展均False。时序教师相对空间KD在全部20条件降低时间误差，四组改善1.49%–2.38%，JOD均值小幅提高，但距F0两强post时间仍高约29%–48%，真实seed0恢复亦未保住。不用小幅正例覆盖主门槛，也不因负判定抹掉正例。
 
-[0176](../../../docs/进展报告/0176-T-26112017-训练目标预检与已知时序KD对照登记.md)与[过程](process/journal.md)记录实际阶段。长等待按实测速率sleep，醒后核同句柄，估算不作算法截止；main/自有data/指定作者/no-ff/密集分别提交和阶段推送、最终封存及其他worktree边界保持。
+[19对/380条件/76均值完整差分](report/analysis/differences.md)、[四固定联系图与实际审阅](report/contacts/actual-review001.json)、[48点PNG/PDF/CSV与实际PNG审阅](report/plots/actual-review001.json)。图非播放/MOS，重复DEV不是独立最终，参数/解析MAC不当手机速度。
 
-[0177实现与固定启动](../../../docs/进展报告/0177-T-26112017-完整时序蒸馏对照实现与固定训练启动.md)、[完整源冻结](process/training-source-freeze001.json)、[不可变启动检查点](process/observations/checkpoint001/status.json)。历史预检0更新状态保持原样；当前进程核实际PID/start_ticks，不按旧静态行重启。
+固定同F0/T4-DIS/等权KD的teacher、alpha、T、混合比例、loss、LR、长度/seed局部网格STOP，不扩失败成本/外部/手机。保留已知训练参照；新独立问题须先查重并说明结构/信息入口差异，再登记可证伪原型。所有原PID已实际退出、GPU释放，静态旧state不作重启依据。
+
+实现、资格、首seed、全训练质量、全评分/止损各阶段分别密集提交和SSH推送。长等待确实按实测速率sleep，醒后核原PID/start/runtime，不设墙钟截止。全部资产位于zrh自有data，main/指定作者/no-ff、原84值/snapshot003/PDF020/独立最终封存、7号和其他worktree边界保持。
