@@ -1,0 +1,76 @@
+{
+  "at": "2026-11-20T16:30:35.957150+08:00",
+  "coordinator": {
+    "pid": 3117047,
+    "start_ticks": 110362360,
+    "state": "R"
+  },
+  "orchestrator_sha256": "1805011bc5b8c0071f15c19baf058c521e4fb21fff2de6b7ce90f214efcea8cf",
+  "science_freezes": {
+    "source-freeze001.json": {
+      "at": "2026-11-20T13:02:17.147303+08:00",
+      "revision": "6efbed579db49790c542e4d50c245d89c6f5e633",
+      "source_sha256": {
+        "MobileIE/model/lle.py": "c569c48f4fb4d25d227db85d078ce763e68dd89d304a623d8125dcd6808e8bff",
+        "MobileIE/model/utils.py": "76b5c97b99add030af5d42b8a424aeaa672b159925d92139d0d12d804cf8d992",
+        "MobileIE/pretrain/lolv1_best_slim.pkl": "d40a930fbc0435f47ce08dda17b1c630b86a501be9423b8f48dab14722fb5548",
+        "research/4.temporal-consistency/scripts/aggregation_controls_r20.py": "7b4541be8512ca1edb755b5a73f889351e376f9a8fc1fdec7ed633a4438c116c",
+        "research/4.temporal-consistency/scripts/aligned_raw_history_r11.py": "e367727401f82ccf0bccaf8d88f904e4aebf8b78186f0539eedeed222b2d2227",
+        "research/4.temporal-consistency/scripts/budget_causal_r33.py": "7cfe138a286fdb488973ffe7c5bc93b69ad505af981e22cba824402c491b2e3b",
+        "research/4.temporal-consistency/scripts/causal_reference_evaluation_r75.py": "4ce1c00e2220565fa930efc097e501b7a1847d86a961e18033658731d243e193",
+        "research/4.temporal-consistency/scripts/causal_reference_io_r75.py": "181906fa8ccce29eb2e2bfcd79bf78035abd15a1f3ed12adf8ba8312ab367d93",
+        "research/4.temporal-consistency/scripts/dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498",
+        "research/4.temporal-consistency/scripts/exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+        "research/4.temporal-consistency/scripts/explore_temporal_controls.py": "04a72a82943f1e43aa03cf2e8997a26c76e467b306ceb8fc42094dfdc5398d54",
+        "research/4.temporal-consistency/scripts/fixed_dis_r86.py": "5111aeb7ff5dec95e9d0ab7156299381565505d80d45dd54c1de1ef80cf7e209",
+        "research/4.temporal-consistency/scripts/half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+        "research/4.temporal-consistency/scripts/mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5",
+        "research/4.temporal-consistency/scripts/motion_transport_r74.py": "da48fe1b67113aba60a7bc3f61458c56ce52785728094413b734ee6d892529c8",
+        "research/4.temporal-consistency/scripts/native_training_r14.py": "588b505ede11ac9f0d747ad1c16b1c118a7bbbbba7405ce918a6163d133d69a1",
+        "research/4.temporal-consistency/scripts/noise_role_io_r79.py": "35baed1c48738c9a0365d72985187727bb287388234b6fbd894734f4d917506b",
+        "research/4.temporal-consistency/scripts/prepare_cache_r4.py": "e6725c2f13ce673b8af9c48882cd124839210fce21c0322436e350da483ef230",
+        "research/4.temporal-consistency/scripts/prepare_cache_r5.py": "675860fc6ef1d97d28750815e99f5c923ecfd94e94254f1f7a7685f08d84f2c8",
+        "research/4.temporal-consistency/scripts/train_exploration_r2.py": "30ba78b2439ffb6fdf10aafe384975326082129b03ebe562aa118f29ba5d8c7b",
+        "research/4.temporal-consistency/scripts/train_mixture_r4b.py": "152e8f59e1b2f45bd5898a5480cabc84c37bfec89f63dbefaa4c2579c2de33b7",
+        "research/4.temporal-consistency/scripts/video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0",
+        "research/8.video-backbone/causal_pipeline.py": "dfbc71c3a88d8ab2b99b34a003ce76357359327251ac2f8fb18f62a10777a363",
+        "research/8.video-backbone/evaluate_v1.py": "334f319526f2ebe627e1fbe0da8fb2132f07aac6634a656897a74408e2d24b7a",
+        "research/8.video-backbone/packed_backbone.py": "df9a23321c47423df48012cbeecba70908a4d15ba9a9e165b25ff29dcf0b137d",
+        "research/8.video-backbone/qualify_v1.py": "227d39aaeb91827092cdf556bffa92ce808711f62bed0e4d4a26857172068e4f",
+        "research/8.video-backbone/runtime_io.py": "cf1893333f9d8c7d1fe6e1d40fbcbf9d85e822245aa856c4c082150a0a3ec9e3",
+        "research/8.video-backbone/train_v1.py": "a46a8156a5a77245ba43e5b441272a181f69db077c49e78affd06f603cdd559c",
+        "scripts/bound_gpu_observer.py": "6770cf2cfb2cbbc8b14bf7593fc986579bdda60d73bf79693d84d14763a2d8ce",
+        "scripts/prebind_shared_gpu.py": "0c8f65ff5b13be286de70ba71758e9ce6a43eea674d8eb1a7e599b3b83da0475",
+        "scripts/project-python": "db9f3a0398d76c67fdc86255dd6277adba078b2871abb8a8618fe1601ea5e4b2",
+        "scripts/project_assets.py": "65979a86cd009d82c5620191a9d3eb727b4bf6589815c3ccd9fc065cad91ae07",
+        "scripts/shared_gpu_admission.py": "c62befebbc5b6d7eaabf69ef393dc703a00c78aff9a3a8e67b40a47b606f7e27",
+        "scripts/shared_training_schedule.py": "343d7fecbff8cc59ce3255f5302831e0e8d167ab9374dfead1cab3f6cf7f70ab"
+      },
+      "protocol_sha256": "e68c07bb83db8af38b9255241c205288ca57c23142fbfa670637061127ab8b75",
+      "scope": "Actual training/quality source lock, before any qualification or new pixel read; later perceptual/render/summary source separate."
+    },
+    "perceptual-source-freeze001.json": {
+      "at": "2026-11-20T13:07:12.840945+08:00",
+      "source_sha256": {
+        "research/8.video-backbone/perceptual_v1.py": "ef065cd07c43cb2c5dc3144e01cb5c76bdf6b690b835dc59e37c052e13947b06",
+        "research/8.video-backbone/summarize_v1.py": "ab141616ded4657f6293d7cf7a19ce45a1eb2290b3cae7f4aa7483a8bd238a70",
+        "research/8.video-backbone/render_v1.py": "7b19534ce30dd176d04a5be2a6ca7be35670d5c7cd4a6ec85ca946d210c0a4da",
+        "research/4.temporal-consistency/scripts/cvvdp_adapter_r66.py": "b1d30768ccace5a0ceb388d6097b67e98bb4818d5885529c14bfa9605d3d344f",
+        "research/4.temporal-consistency/scripts/causal_reference_evaluation_r75.py": "4ce1c00e2220565fa930efc097e501b7a1847d86a961e18033658731d243e193"
+      },
+      "scope": "Auxiliary full perceptual, summary and prescribed render paths; source frozen before any v1 DEV inference, no actual scoring/rendering yet."
+    }
+  },
+  "revision": "881e895b7b51fee7231141fff8b745c2e92a4c2d",
+  "wall_clock_deadline": false,
+  "allowed_GPU_group": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "maximum_own_GPU_workers": 1,
+  "science_failure_automatic_retry": false,
+  "resource_wait_seconds": 30,
+  "asset_directory": ".cache/experiments/topic8-v1/chain005"
+}
