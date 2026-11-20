@@ -1,0 +1,55 @@
+{
+  "resource_id": "MIE-0044",
+  "temporary_key": "code-khaihoang004--dewarp",
+  "type": "code",
+  "title": "khaihoang004/dewarp",
+  "repo": "khaihoang004/dewarp",
+  "revision": "39eef66524919078836ec0f9122fda27d07a43e8",
+  "tree": null,
+  "dois": null,
+  "arxivs": null,
+  "relation": "Explicit MobileIE implementation/module reuse; module-port claim requires independent source review, no fidelity/performance assumed",
+  "created_at": "2026-11-20T12:24:23+08:00",
+  "authors": [],
+  "dates": {
+    "years": [],
+    "published_date": null,
+    "date_verification": "pending Gate2"
+  },
+  "repository_owner": "khaihoang004",
+  "family": "067-dewarp",
+  "analysis_order": 44,
+  "initial_preliminary": {
+    "R": 3,
+    "N": 2,
+    "U": 2,
+    "E": 2,
+    "score": 70,
+    "tier": "A",
+    "category": "restoration-implementation-variant",
+    "family": "067-dewarp",
+    "role_order": 1,
+    "summary": "去畸变项目中的MobileIE命名精炼模块。核原模型忠实度与具体应用路径。",
+    "reason_R": "任务联系：去畸变项目中的MobileIE命名精炼模块。核原模型忠实度与具体应用路径。",
+    "reason_N": "重复/混淆风险为初级待证判断；依据当前明确关联与基础/接续/移植角色，非已确立创新结论",
+    "reason_U": "可操作性：按所列机制、对照或来源核查用途评分；未运行外部代码",
+    "reason_E": "已有可读HTML/文本/局部固定源码；内容充分性留待Gate2",
+    "evidence": [
+      {
+        "url": "https://github.com/khaihoang004/dewarp/blob/39eef66524919078836ec0f9122fda27d07a43e8/src/model/refinement/mobile_ie.py",
+        "path": "src/model/refinement/mobile_ie.py",
+        "revision": "39eef66524919078836ec0f9122fda27d07a43e8",
+        "acquisition": "receipts/codehit-63f0c32a99a659f6.json"
+      },
+      {
+        "url": "https://github.com/khaihoang004/dewarp/blob/39eef66524919078836ec0f9122fda27d07a43e8/research.md",
+        "path": "research.md",
+        "revision": "39eef66524919078836ec0f9122fda27d07a43e8",
+        "acquisition": "receipts/codehit-bd672dd3afc5f6ec.json"
+      }
+    ],
+    "not_gate2": true
+  },
+  "source_snapshot_cutoff": "2026-11-17",
+  "identity_verification": "pending Gate2; repository owner is not assumed to be the paper author"
+}

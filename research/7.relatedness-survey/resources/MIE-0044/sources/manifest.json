@@ -1,0 +1,38 @@
+{
+  "resource_id": "MIE-0044",
+  "created_at": "2026-11-20T12:24:23+08:00",
+  "source_root": "../../.. (workstation root from this sources directory)",
+  "snapshot_cutoff": "2026-11-17",
+  "receipts": [
+    {
+      "path": "receipts/codehit-63f0c32a99a659f6.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/codehit-63f0c32a99a659f6.txt",
+      "sha256": "179c1a5993327dd06dc47c0560e144da16701205cb661a6c48b08e7d02c60425"
+    },
+    {
+      "path": "receipts/codehit-bd672dd3afc5f6ec.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/codehit-bd672dd3afc5f6ec.txt",
+      "sha256": "2fd8aa5f7c56deef256abd7d4fab3294c5f8ea75eb30aaff3333a0b220ecaac2"
+    }
+  ],
+  "discovery_evidence": [
+    {
+      "url": "https://github.com/khaihoang004/dewarp/blob/39eef66524919078836ec0f9122fda27d07a43e8/src/model/refinement/mobile_ie.py",
+      "path": "src/model/refinement/mobile_ie.py",
+      "revision": "39eef66524919078836ec0f9122fda27d07a43e8",
+      "acquisition": "receipts/codehit-63f0c32a99a659f6.json"
+    },
+    {
+      "url": "https://github.com/khaihoang004/dewarp/blob/39eef66524919078836ec0f9122fda27d07a43e8/research.md",
+      "path": "research.md",
+      "revision": "39eef66524919078836ec0f9122fda27d07a43e8",
+      "acquisition": "receipts/codehit-bd672dd3afc5f6ec.json"
+    }
+  ],
+  "adequacy": "Materials available for analysis; not yet read or qualified",
+  "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts"
+}
