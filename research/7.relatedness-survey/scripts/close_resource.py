@@ -18,6 +18,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('resource_id')
     args = ap.parse_args()
+    for status in (B / 'collection/gate1-addenda').glob('*/status.json'):
+        assert json.loads(status.read_text()).get('advance_allowed') is True, str(status)
     r = B / 'resources' / args.resource_id
     decision = r / 'derived/report/gate2.json'
     g = json.loads(decision.read_text())

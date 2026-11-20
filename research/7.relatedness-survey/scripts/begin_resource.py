@@ -5,6 +5,8 @@ from zoneinfo import ZoneInfo
 B=Path(__file__).resolve().parents[1];ROOT=B.parents[1]
 def main():
  ap=argparse.ArgumentParser();ap.add_argument('resource_id');a=ap.parse_args()
+ for status in (B/'collection/gate1-addenda').glob('*/status.json'):
+  assert json.loads(status.read_text()).get('advance_allowed') is True, 'Unresolved Gate1 addendum: '+str(status)
  assert json.loads((B/'collection/gate1-review001.json').read_text())['gate1_passed']
  for name in ['gates/freeze-v1.json','catalog/freeze-v1.json']:
   for r in json.loads((B/name).read_text())['files']:
