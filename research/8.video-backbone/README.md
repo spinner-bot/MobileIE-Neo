@@ -2,7 +2,7 @@
 
 2026-11-20；Codex  (sqs_A100)。main主线新主题，从8起；research/7由其他分支占用。此页是研究入口，具体实验以单独协议为准，不是创新声明。
 
-当前V1完整候选已实现并持续训练：[协议](protocol-v1.md)、[原训练审计](original-model-and-training.md)、[先例](precedents-and-candidate.md)、[CPU执行修订](cpu-backend-amendment001.md)。CPU/CUDA资格各8丢弃通过，原GPU更新358全部保留。共享GPU反复退让后，仅在无活跃数值child时正常退出空闲watcher，显式两线程/nice5 CPU从359继续；原34训练质量源及5辅助源不改，新增CPU执行4源单独冻结，后端改变不称逐bit复现。CPU协调3024380/start109481893、worker3024402/start109481902仍以真实进程核验为准。唯一warm2000已完成并重载有限，fresh Adam开始三控制GT适配；[progress009](process/v1/progress009.json)核warm2000/spatial1903前缀，固定/学习尚未正式更新，未有DEV/JOD或方法结论。总28000预算和完整220新质量/强参照/JOD/280共表/四图及止损不变。读[0172](../../docs/进展报告/0172-T-26112014-CPU持续接续与教师暖启动完成.md)、[过程](process/v1/journal.md)。空间16180/学习16365参数，不称4K或零开销；以下研究问题与旧STOP边界保持。
+当前V1完整候选已实现并持续训练：[协议](protocol-v1.md)、[原训练审计](original-model-and-training.md)、[先例](precedents-and-candidate.md)、[CPU执行修订](cpu-backend-amendment001.md)。CPU/CUDA资格各8丢弃通过，原GPU更新358全部保留。共享GPU反复退让后，仅在无活跃数值child时正常退出空闲watcher，显式两线程/nice5 CPU从359继续；原34训练质量源及5辅助源不改，新增CPU执行4源单独冻结，后端改变不称逐bit复现。CPU协调3024380/start109481893、worker3024402/start109481902仍以真实进程核验为准。唯一warm2000已完成并重载有限，fresh Adam开始三控制GT适配；[progress010](process/v1/progress010.json)核warm2000/spatial4000唯一最终均已完成，固定融合655步真实前缀，学习融合后续按原顺序执行，未有DEV/JOD或方法结论。总28000预算和完整220新质量/强参照/JOD/280共表/四图及止损不变。读[0172](../../docs/进展报告/0172-T-26112014-CPU持续接续与教师暖启动完成.md)、[过程](process/v1/journal.md)。空间16180/学习16365参数，不称4K或零开销；以下研究问题与旧STOP边界保持。
 
 R88已完成两seed8000更新、80质量/80官方JOD及完整共同条件，A/B组资格均0/4。冻结恢复骨干之后学习小描述分支，尚不足以获得有用的质量—时间联合收益。全部正控制和逐源例外见[完整决定](../4.temporal-consistency/docs/exploration-r88-decision.md)，不推广为所有共享表示不可能，也不把局部网格重新搬到本目录。
 
