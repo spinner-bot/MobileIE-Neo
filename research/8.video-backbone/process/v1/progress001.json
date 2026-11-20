@@ -1,0 +1,31 @@
+{
+  "at": "2026-11-20T13:19:41.473546+08:00",
+  "coordinator_live": true,
+  "observed_process": {
+    "pid": 2988618,
+    "start_ticks": 109207006,
+    "state": "S"
+  },
+  "current_state": {
+    "at": "2026-11-20T13:19:19.938242+08:00",
+    "coordinator": {
+      "pid": 2988618,
+      "start_ticks": 109207006,
+      "state": "R"
+    },
+    "status": "sampling_resources",
+    "stage": "cuda-qualification001",
+    "resource_polls": 1,
+    "guard_attempts": 0,
+    "child": null,
+    "worker": null,
+    "last_resource_poll": ".cache/experiments/topic8-v1/chain001/resource-poll00001.json"
+  },
+  "resource_history_complete_prefix": "{\"at\": \"2026-11-20T13:18:49.904213+08:00\", \"stage\": \"cuda-qualification001\", \"poll\": 1, \"raw_samples\": \".cache/experiments/topic8-v1/chain001/resource-poll00001.json\", \"group\": [{\"index\": 0, \"uuid\": \"GPU-81550800-367d-1855-0f35-c61c274edfdf\", \"allowed\": false, \"mean_utilization_percent\": 65.45454545454545, \"busy_sample_fraction\": 0.36363636363636365, \"max_used_mib\": 13886, \"minimum_free_mib\": 27074, \"total_mib\": 40960, \"incumbent_growth_reserve_mib\": 8192, \"expected_own_increment_mib\": 4096, \"required_free_mib\": 13312}, {\"index\": 1, \"uuid\": \"GPU-86a346f2-2b01-66d9-9efa-23eff30f4150\", \"allowed\": false, \"mean_utilization_percent\": 57.90909090909091, \"busy_sample_fraction\": 0.2727272727272727, \"max_used_mib\": 13972, \"minimum_free_mib\": 26988, \"total_mib\": 40960, \"incumbent_growth_reserve_mib\": 8192, \"expected_own_increment_mib\": 4096, \"required_free_mib\": 13312}, {\"index\": 2, \"uuid\": \"GPU-e7f8224e-43d7-f7d6-10ff-8412dc30aa9e\", \"allowed\": false, \"mean_utilization_percent\": 63.45454545454545, \"busy_sample_fraction\": 0.2727272727272727, \"max_used_mib\": 14274, \"minimum_free_mib\": 26686, \"total_mib\": 40960, \"incumbent_growth_reserve_mib\": 8192, \"expected_own_increment_mib\": 4096, \"required_free_mib\": 13312}, {\"index\": 3, \"uuid\": \"GPU-3a66f673-05de-ba45-3f5c-308b333fea68\", \"allowed\": false, \"mean_utilization_percent\": 59.72727272727273, \"busy_sample_fraction\": 0.2727272727272727, \"max_used_mib\": 14466, \"minimum_free_mib\": 26494, \"total_mib\": 40960, \"incumbent_growth_reserve_mib\": 8192, \"expected_own_increment_mib\": 4096, \"required_free_mib\": 13312}]}\n",
+  "resource_history_prefix_sha256": "7c1154ed11eeb81f614c987c19d6759633a03b23ac587007399bec7545bced27",
+  "science_sources_unchanged": true,
+  "formal_updates": 0,
+  "DEV_rows": 0,
+  "qualification_runtime_present": false,
+  "scope": "Verified live original coordinator and actual prefix only; not GPU qualification or training success."
+}
