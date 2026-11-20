@@ -1,0 +1,106 @@
+{
+  "at": "2026-11-20T16:27:44.302981+08:00",
+  "intent": "Wait for original zero-score resource attempts to finish and stop only childless metadata watcher; switch matching inner and outer group4-7 route.",
+  "numeric_worker_signals": 0,
+  "deferred": false,
+  "observations": [
+    {
+      "at": "2026-11-20T16:29:19.480820+08:00",
+      "state": {
+        "at": "2026-11-20T16:29:19.043902+08:00",
+        "coordinator": {
+          "pid": 3111112,
+          "start_ticks": 110305734,
+          "state": "R"
+        },
+        "status": "sampling_resources",
+        "stage": "perceptual-attempt004",
+        "resource_polls": 3,
+        "guard_attempts": 3,
+        "child": null,
+        "worker": null,
+        "stdout": ".cache/experiments/topic8-v1/chain004/perceptual-attempt003-guard00003.stdout.txt",
+        "returncode": 75
+      },
+      "children": [],
+      "all_old_attempts_resource_zero": true
+    }
+  ],
+  "watcher_SIGINT_sent": true,
+  "original_attempt_terminals": [
+    {
+      "at": "2026-11-20T16:23:52.544259+08:00",
+      "pid": 3112886,
+      "completed_normally": false,
+      "resource_pause": true,
+      "quality_rows": 0,
+      "comparison_frames": 0,
+      "inherited_rows": 0,
+      "newly_scored_rows": 0,
+      "seconds": 63.151496233884245,
+      "GPU": null,
+      "max_allocated_bytes": 0,
+      "max_reserved_bytes": 0
+    },
+    {
+      "at": "2026-11-20T16:26:36.165483+08:00",
+      "pid": 3114557,
+      "completed_normally": false,
+      "resource_pause": true,
+      "quality_rows": 0,
+      "comparison_frames": 0,
+      "inherited_rows": 0,
+      "newly_scored_rows": 0,
+      "seconds": 63.28787915594876,
+      "GPU": null,
+      "max_allocated_bytes": 0,
+      "max_reserved_bytes": 0
+    },
+    {
+      "at": "2026-11-20T16:29:18.421201+08:00",
+      "pid": 3116246,
+      "completed_normally": false,
+      "resource_pause": true,
+      "quality_rows": 0,
+      "comparison_frames": 0,
+      "inherited_rows": 0,
+      "newly_scored_rows": 0,
+      "seconds": 61.31683550099842,
+      "GPU": null,
+      "max_allocated_bytes": 0,
+      "max_reserved_bytes": 0
+    }
+  ],
+  "after_identity": {
+    "pid": 3111112,
+    "missing": true
+  },
+  "original_chain_runtime": {
+    "at": "2026-11-20T16:29:19.482400+08:00",
+    "coordinator": {
+      "pid": 3111112,
+      "start_ticks": 110305734,
+      "state": "R"
+    },
+    "completed_normally": false,
+    "seconds": 489.781654747203,
+    "final_state": {
+      "at": "2026-11-20T16:29:19.481794+08:00",
+      "coordinator": {
+        "pid": 3111112,
+        "start_ticks": 110305734,
+        "state": "R"
+      },
+      "status": "stopped_for_original_terminal_review",
+      "stage": "perceptual-attempt004",
+      "resource_polls": 3,
+      "guard_attempts": 3,
+      "child": null,
+      "worker": null,
+      "stdout": ".cache/experiments/topic8-v1/chain004/perceptual-attempt003-guard00003.stdout.txt",
+      "returncode": 75
+    },
+    "CPU_quality_children": [],
+    "paper_objective_achieved": false
+  }
+}
