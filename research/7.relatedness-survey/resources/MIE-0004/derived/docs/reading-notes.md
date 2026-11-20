@@ -26,6 +26,8 @@ README称官方实现并链接arxiv、主页、海报、预训练及五组微调
 
 `scripts/train.py`127–134设置测试batch4，而Trainer445–455只取y[0]/x[0]；当前公开路径遗漏同batch其余样本。重叠clip和每clip清状态亦不同于唯一帧计权的连续stream评估。PSNR用全RGB MSE（utils/metrics.py6–15），不同于原MobileIE默认逐通道口径；SSIM/Charbonnier/归一化蒸馏和论文差别仍参照MIE-0003，不改写为作者实际会议脚本。
 
+README明确五配置均从同一预训练模型微调；固定47文件包未给六数据源合成辅助预训练的完整生成/配置路径。Trainer69附近只识别已初始化进程组，给定train.py/launcher没有初始化、DDP包装或分布式sampler调用；这不证明作者未进行四卡预训练，只说明不能据此发布入口声称已经具备其完整复现接线。
+
 调度器以optimizer更新步计warmup/cosine；checkpoint记录model/optimizer/epoch/global_step及可选scheduler/EMA，未把它当完整数据/RNG/设备复现保证。Logger方法为空，但Trainer240–254另有metrics_log.jsonl写入，不能说整个项目没有日志。
 
 ## 展示与权重入口

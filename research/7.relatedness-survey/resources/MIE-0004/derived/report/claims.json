@@ -145,7 +145,7 @@
     },
     {
       "id": "C07",
-      "claim": "MIT claimed but LICENSE absent; seven cloud pages checked without obtaining or validating binary checkpoints",
+      "claim": "MIT claimed but LICENSE absent; seven cloud pages not binary checkpoints; published entry does not supply complete six-source multimodal pretraining recipe",
       "evidence_class": "source_availability_verification",
       "anchors": [
         {
@@ -159,9 +159,17 @@
         {
           "source": "resources/MIE-0004/derived/docs/weight-entry-review.json",
           "locator": "Google401, Baidu extraction-code pages and receipts"
+        },
+        {
+          "source": "resources/MIE-0004/derived/docs/upstream-code/scripts--train.py.txt",
+          "locator": "provided entry and dataset map; no initialization/DDP/sampler call"
+        },
+        {
+          "source": "resources/MIE-0004/derived/docs/upstream-code/engine--trainer.py.txt",
+          "locator": "69–71 detects preinitialized group; conditional distributed branches"
         }
       ],
-      "limitation": "Public share extraction codes are in README; page200 is not binary acquisition. Model content/history and actual license terms not verified."
+      "limitation": "Public share extraction codes are in README; page200 is not binary acquisition. Model content/history and actual license terms not verified. Trainer includes distributed hooks; missing published entry is not evidence authors did not run four-GPU training."
     },
     {
       "id": "C08",

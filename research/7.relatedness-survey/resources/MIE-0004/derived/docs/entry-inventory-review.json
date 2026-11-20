@@ -18,5 +18,7 @@
   "no_explicit_temporal_loss_use_in_default_path": true,
   "temporal_loss_helper_defined": "utils/metrics.py:44",
   "inference_and_deployment_limit": "No dedicated external camera/codec streaming runner or mobile export script in this pinned project archive; the linked NPU repository is separate MIE-0005 and not analyzed before its turn",
-  "source_integrity": "derived/docs/upstream-code-manifest.json"
+  "source_integrity": "derived/docs/upstream-code-manifest.json",
+  "pretraining_recipe_limit": "README describes all five configs as fine-tuning from shared pretrained model; no six-source synthetic multimodal corpus generator or dedicated pretraining config in pinned47-file inventory",
+  "distributed_entry_limit": "Trainer detects an already initialized process group and has distributed hooks; provided train.py/launchers do not initialize a group, wrap DDP or use DistributedSampler. No actual four-GPU pretraining invocation verified."
 }
