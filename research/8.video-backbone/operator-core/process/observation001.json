@@ -1,0 +1,57 @@
+{
+  "at": "2026-11-21T07:08:00.109489+08:00",
+  "actual_coordinator": {
+    "pid": 3551565,
+    "start_ticks": 115612249,
+    "state": "S"
+  },
+  "state": "resource_wait",
+  "pending": "cuda-qualification003",
+  "selection_path": "research/8.video-backbone/operator-core/process/chain002/cuda-qualification003-selection.json",
+  "selection_sha256": "82e11963487170e3a9c69022e8eac0dd8089dc67e3da0824f93ac846211446c1",
+  "group_candidates": [
+    {
+      "index": 4,
+      "uuid": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+      "allowed": false,
+      "mean_utilization_percent": 91,
+      "minimum_free_mib": 4531,
+      "required_free_mib": 13312
+    },
+    {
+      "index": 5,
+      "uuid": "GPU-83b3ac27-3e78-fb30-a5f6-d5daf4aac4fb",
+      "allowed": false,
+      "mean_utilization_percent": 91.27272727272727,
+      "minimum_free_mib": 4531,
+      "required_free_mib": 13312
+    },
+    {
+      "index": 6,
+      "uuid": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+      "allowed": false,
+      "mean_utilization_percent": 91.0909090909091,
+      "minimum_free_mib": 4531,
+      "required_free_mib": 13312
+    },
+    {
+      "index": 7,
+      "uuid": "GPU-7d263daa-6d13-02a6-b0ea-29c2c09a2c8b",
+      "allowed": false,
+      "mean_utilization_percent": 91.18181818181819,
+      "minimum_free_mib": 4531,
+      "required_free_mib": 13312
+    }
+  ],
+  "source_counts_verified": [
+    25,
+    39,
+    2
+  ],
+  "formal_updates": 0,
+  "corrected_CUDA_qualification_updates": 0,
+  "original_cuda_environment_failure_updates": 0,
+  "CPU_qualification_discarded_updates": 8,
+  "no_GPU_claimed_by_waiter": true,
+  "waiting_not_deadline": true
+}
