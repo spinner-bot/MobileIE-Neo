@@ -6,11 +6,13 @@
 
 目录编号约束（2026-11-17T19:15:22.552814+08:00；用户明确通知）：`research/` 的7号已由其他分支占用，即使当前main工作区尚无该目录，也不得将其视为可用。新建独立研究主题目录应跳到 `research/8.*`，保留7号给原占用分支。
 
-当前进入主题8-M1多线性来源树骨干的空间恢复必要检验：[M1原型](research/8.video-backbone/multiaffine-core/core.py)、[CPU资格决定](research/8.video-backbone/multiaffine-core/preflight-decision.md)、[正式空间协议](research/8.video-backbone/multiaffine-core/spatial-protocol.md)。ABM/Π-Nets正文已核note76，不把乘法/多项式/基础期望代数当创新。原型5340参数、解析1308HW MAC/1080p2.712269G、B1 FP32稳态99532800B；无PReLU/HDPA/flow，未继承F0，不能称质量或手机有效。CPU第一次3387850在元数据重复frame键失败、0学习更新；修复独立副本/原记录保持，第二原3388991于23:29:34正常31.446917秒通过，session56350 exit0，两原句柄已无。stream差6.94e−17、raw独立角点期望差1.67e−16，重叠反例.000538/最终clip反例.009691，不能称最终显示RGB精确均值不变；16教师/64学生图及4更新全丢弃。
+当前最新0188/主题8-M1新骨干已实现、CPU/CUDA资格通过、固定空间恢复链正在运行：[0188](docs/进展报告/0188-T-26112023-多线性骨干实现资格与空间恢复正式启动.md)、[M1入口](research/8.video-backbone/multiaffine-core/README.md)、[空间协议](research/8.video-backbone/multiaffine-core/spatial-protocol.md)、[链状态](research/8.video-backbone/multiaffine-core/process/spatial-chain001/state.json)。原协调3393743/start112972989，首正式seed0 3394474/start112988524，checkpoint001于23:51:16核两原句柄非Z/live、各472/共944正式更新/15104学生图；后续以真实/proc匹配及runtime/原guard链为准，静态PID不作为重启依据。近期.252396秒/共同步，估seed0剩1900秒仅作sleep安排，无墙钟截止。实际GPU6/UUID GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249，父子各11×2秒准入/CPU后锁/actual PID确认；CUDA原3394024于23:47:29正常58.612521秒，allocator峰326295552/reserved465567744B，自身结束NVML944MiB/总卡观测峰1472MiB，资格4更新全丢弃。
 
-M1-S新协议与全部训练/评价/资源执行已实现、40具名源/输入在首次CUDA前冻结；下一允许原组4..7连续准入/进程前UUID绑定、CPU准备后重准入锁/实际PID UUID确认，以及4丢弃CUDA GT更新。只有实际峰值资格通过后才从独立随机M1/原Slim正式各8000×两seed=32000更新/512000学生图，GT MSE/cosine1e−3至1e−5，唯一8000最终、不可选备份/最好seed。F0仅held-training抽样参考、有官方预训+项目8K优势；新学生不继承CPU/CUDA资格权重/Adam。评价固定16保留训练批/seed、1536NN/384窗口，非新DEV/独立场景；八个恢复保护全部通过才另登记视频，不按两步loss称效果。此刻尚未启动CUDA/正式作业；后续查process/spatial-chain001真实句柄/运行态，不用旧已完成worker重启。资源暂停保存完整同预算后接续，无墙钟截止。
+M1固定5340参数/两双线性层不交来源树，解析卷积1308HW、1080p2.712269G/FP32状态99532800B；无PReLU/HDPA/flow、未继承F0函数/预训，不称手机或视频有效。CPU首次元数据重复键失败/0学习更新原样保留，修正版3388991于23:29:34正常31.446917秒；原19/20源和CPU4丢弃更新保持。stream差6.94e−17/raw独立角点1.67e−16，重叠.000538/clip.009691反例，不能称最终显示RGB精确均值不变。ABM/Π-Nets正文已读note76，基础乘法/代数不是创新。
 
-先前N1完整11264NN校准已结项：[0187](docs/进展报告/0187-T-26112023-三观测方差识别校准与骨干问题收敛.md)、[决定](research/8.video-backbone/triple-variance/decision.md)。16具名冻结，主24组12过、固定20/20/20为8/8/异photon4/16，实际运动资格False；固定三观测/16tile/截断/窗口/模式/相关构造STOP。均值/协方差污染不忽略，不将解释项当部署输入或唯一归因FSTS。所有N1/S1/P1/T2/T1/V1旧句柄均终态，不重启。M1只是新骨干的恢复能力实验，论文goal active，尚无确立创新/视频质量/手机/独立最终证据；所有旧STOP及最终封存保持。
+40具名全链源/输入与空间协议已冻结，运行期间不得改；原随机M1/原Slim各8000×两seed=32000正式更新/512000学生图，GT MSE/cosine1e−3至1e−5、唯一8000终点，不能选备份/最好seed或按部分loss改变预算。CPU/CUDA资格不继承权重/Adam；F0仅固定保留训练抽样参考、有官方预训+项目8K/expanded历史。两seed16保留训练批合1536NN/384窗口/12均值，非独立场景/DEV，按八比较平均−.20dB/最差−.75dB恢复保护全部过才另登记视频。父链自动接续seed1和CPU评分，资源暂停保存同预算后再准入，不操作别人任务；当前没有完整恢复结果，论文goal active，尚无确立创新/视频质量/手机/独立最终。运行中日志不标最终，检查点另留核验前缀/元数据，按实测sleep。
+
+先前N1完整11264NN统计校准结项：[0187](docs/进展报告/0187-T-26112023-三观测方差识别校准与骨干问题收敛.md)、[决定](research/8.video-backbone/triple-variance/decision.md)，16冻结保持、固定20/20/20为8/8/异photon4/16，固定三观测/16tile/截断/窗口/模式/相关构造STOP。N1/S1/P1/T2/T1/V1原句柄均终态，不重启；它们失败不改变M1新空间协议，也不构成M1成功。所有旧STOP及独立最终/原84值/PDF020/7号/其他worktree保持。
 
 先前S1原64NN/80输出完整负结项：[0186](docs/进展报告/0186-T-26112022-单向传输贡献者离散度筛查与止损.md)、[S1决定](research/8.video-backbone/single-direction/decision.md)。26具名冻结/原pipeline差0保持，三个完整门False；停止固定目标贡献者方差/mass界/阈值/alpha/preset/field来源网格，不扩失败DEV/成本/训练；原全部句柄终态。
 
@@ -41,4 +43,4 @@ M1-S新协议与全部训练/评价/资源执行已实现、40具名源/输入�
 - 所有既有STOP继续有效，包括R28/R34/R37/R44–R46/R48/R50–R51/R61/R64–R65/R73–R75/R77/R79–R82/R84–R88等的局部网格；本主题也须按自身协议止损。旧决策原文在[研究决策目录](research/4.temporal-consistency/docs/)，完整历史在[原文快照](docs/交接历史/AGENTS-20261120-1524.md)。不因当前入口缩短而恢复任何已停止实验。
 - 原始MobileIE/F0实际4075参数；主题8-V1独立空间16180、学习融合16365，使用两遍骨干和DIS，不能写成4K或零额外推理开销。packing、KD、门控、递归等已知组件不是已确立创新。
 - OLiVES 43/71/83、DAVIS testdev、Kodak 13–24独立最终继续封存；未经预定开发/冻结门槛，不读取最终像素或将开发集结论改称独立测试。主论文原84质量值/snapshot003/PDF020保持，当前仍非投稿完成稿。
-- main只推进核心研究，survey/pre与demo/org各自worktree不修改、7号继续预留。先读[最新0187](docs/进展报告/0187-T-26112023-三观测方差识别校准与骨干问题收敛.md)、[主题8入口](research/8.video-backbone/README.md)、[原完整过程](research/8.video-backbone/process/v1/journal.md)与[论文状态](paper/RESEARCH_STATUS.md)；需要早期细节再定向查历史，勿按旧活跃行重启。
+- main只推进核心研究，survey/pre与demo/org各自worktree不修改、7号继续预留。先读[最新0188](docs/进展报告/0188-T-26112023-多线性骨干实现资格与空间恢复正式启动.md)、[主题8入口](research/8.video-backbone/README.md)、[原完整过程](research/8.video-backbone/process/v1/journal.md)与[论文状态](paper/RESEARCH_STATUS.md)；需要早期细节再定向查历史，勿按旧活跃行重启。
