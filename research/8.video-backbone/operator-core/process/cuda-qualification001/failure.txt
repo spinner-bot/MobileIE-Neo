@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/8.video-backbone/operator-core/train.py", line 123, in main
+    raw, descriptor, fields = model.batch(low)
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/8.video-backbone/operator-core/core.py", line 78, in batch
+    fields = self.fields(desc[:, :-1].flatten(0, 1), desc[:, 1:].flatten(0, 1), (height, width))
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/8.video-backbone/operator-core/core.py", line 63, in fields
+    coarse, coarse_score = correlation(cc, pc, 4, temperature)
+  File "/data/Users/zrh/repo/MobileIE-Neo/research/8.video-backbone/operator-core/core.py", line 28, in correlation
+    expected = torch.einsum('bkhw,kc->bchw', probability, offsets)
+  File "/data/Users/zrh/data/MobileIE-Neo/.venv/lib/python3.10/site-packages/torch/functional.py", line 373, in einsum
+    return _VF.einsum(equation, operands)  # type: ignore[attr-defined]
+RuntimeError: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility
