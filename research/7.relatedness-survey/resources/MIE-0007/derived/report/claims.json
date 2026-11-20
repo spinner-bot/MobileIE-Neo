@@ -1,0 +1,187 @@
+{
+  "resource_id": "MIE-0007",
+  "created_at": "2026-11-20T18:10:32.697498+08:00",
+  "source_revision": "b169f207b3766a4ab037bfd5202860ea9f553d43",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Same-owner Android MediaCodec X11/WebRTC variant, pinned July25 version0.1.28; earlier than compared vnrit August4 snapshot",
+      "evidence_class": "identity_and_metadata_verification",
+      "anchors": [
+        {
+          "source": "resources/MIE-0007/derived/docs/upstream-code/Cargo.toml.txt",
+          "locator": "package"
+        },
+        {
+          "source": "collection/mie0007-pinned-commit.json",
+          "locator": "commit date/revision and version-only diff"
+        },
+        {
+          "source": "resources/MIE-0007/derived/docs/upstream-code/src--main.rs.txt",
+          "locator": "1266/1306 exact MobileIE inspiration comments"
+        }
+      ],
+      "limitation": "No official MobileIE/paper-author/faithful neural model identity, exact first-publication date or Git ancestry proof."
+    },
+    {
+      "id": "C02",
+      "claim": "Handcrafted enhancement and initial-prev text match preceding resource after explicitly declared normalization and SIMD method renaming",
+      "evidence_class": "static_text_comparison_not_runtime_equivalence",
+      "anchors": [
+        {
+          "source": "resources/MIE-0007/derived/docs/static-port-audit.json",
+          "locator": "core/init normalized equivalence and procedure"
+        },
+        {
+          "source": "resources/MIE-0007/derived/docs/src--main.rs.patch",
+          "locator": "complete changes"
+        },
+        {
+          "source": "resources/MIE-0006/derived/docs/static-arithmetic-audit.json",
+          "locator": "prior literal source expression conclusions"
+        }
+      ],
+      "limitation": "Not whole-file byte equivalence or compiled wide-method semantic proof; shared temporal/filter limitations retained, no second independent scientific validation."
+    },
+    {
+      "id": "C03",
+      "claim": "Source replaces OpenH264 with dynamically loaded NDK AMediaCodec, NV12 conversion and codec buffer copy while enhancement remains CPU integer filter",
+      "evidence_class": "static_backend_dataflow",
+      "anchors": [
+        {
+          "source": "resources/MIE-0007/derived/docs/upstream-code/Cargo.toml.txt",
+          "locator": "removed OpenH264 dependency"
+        },
+        {
+          "source": "resources/MIE-0007/derived/docs/upstream-code/src--main.rs.txt",
+          "locator": "1914–2005,2084–2138,2189–2235,3702–3809"
+        }
+      ],
+      "limitation": "Android encoding API is not neural NPU execution; no device compatibility, successful hardware selection or zero-copy end-to-end proof."
+    },
+    {
+      "id": "C04",
+      "claim": "By-MIME encoder creation lacks recorded codec identity/hardware status; official API context supports distinguishing creation from hardware verification",
+      "evidence_class": "static_source_and_primary_dependency_reference",
+      "anchors": [
+        {
+          "source": "resources/MIE-0007/derived/docs/upstream-code/src--main.rs.txt",
+          "locator": "2089 create byvideo/avc and constructor logs2121–2124"
+        },
+        {
+          "source": "resources/MIE-0007/derived/docs/official-media-reference.json",
+          "locator": "official MediaCodec createEncoderByType and MediaCodecInfo hardware/software attributes"
+        }
+      ],
+      "limitation": "Current documentation acquired Nov20 is context, not July25 device history; actual platform codec selection unknown."
+    },
+    {
+      "id": "C05",
+      "claim": "Wall-clock inputPTS exists, but output bufferPTS is not propagated for sample grouping and sender uses fixed duration",
+      "evidence_class": "static_timestamp_control_flow",
+      "anchors": [
+        {
+          "source": "resources/MIE-0007/derived/docs/upstream-code/src--main.rs.txt",
+          "locator": "2214–2311,3794–3809"
+        },
+        {
+          "source": "resources/MIE-0007/derived/docs/upstream-code/api.md.txt",
+          "locator": "Sample note, bundled rc.1 only"
+        }
+      ],
+      "limitation": "Drain may aggregate available buffers, not proof any run aggregates multiple pictures; actual frame timing/codec protocol behavior untested."
+    },
+    {
+      "id": "C06",
+      "claim": "README still describes OpenH264/no system codec/four stages despite actual MediaCodec and capacity2 path",
+      "evidence_class": "document_source_comparison",
+      "anchors": [
+        {
+          "source": "resources/MIE-0007/derived/docs/upstream-code/README.md.txt",
+          "locator": "features/video architecture/build instructions"
+        },
+        {
+          "source": "resources/MIE-0007/derived/docs/upstream-code/src--main.rs.txt",
+          "locator": "1958–2005,3534–3535,3702–3809"
+        },
+        {
+          "source": "resources/MIE-0007/derived/docs/archive-inventory.json",
+          "locator": "no build.sh"
+        }
+      ],
+      "limitation": "Stale documentation does not by itself prove all program behavior incorrect; no complete build/protocol audit or upstream mutation."
+    },
+    {
+      "id": "C07",
+      "claim": "README author reports Snapdragon835720p500kbps target24fps RSS50–80MB and video2–3CPU cores~1.5GHz; independent method/device reproduction absent",
+      "evidence_class": "author_report_with_unverified_scope",
+      "anchors": [
+        {
+          "source": "resources/MIE-0007/derived/docs/upstream-code/README.md.txt",
+          "locator": "Resource Usage table"
+        },
+        {
+          "source": "resources/MIE-0007/derived/docs/upstream-code/vnrit.md.txt",
+          "locator": "retained OpenH264 narrative and6.6MB claim"
+        }
+      ],
+      "limitation": "No timestamp/pinned encoder/strength/warmup/raw logs or fair MobileIE protocol; binary6.6MB not model size or whole pipeline memory."
+    },
+    {
+      "id": "C08",
+      "claim": "test_mc is a dummy encoding probe and ELF file, not proof of test success or enhancement quality; models_new.json is empty",
+      "evidence_class": "static_source_archive_and_binary_header",
+      "anchors": [
+        {
+          "source": "resources/MIE-0007/derived/docs/upstream-code/test_mc.rs.txt",
+          "locator": "whole probe: dummy640x480 NV12 and success print branches"
+        },
+        {
+          "source": "resources/MIE-0007/derived/docs/static-port-audit.json",
+          "locator": "570008B ELF metadata and empty model entry"
+        }
+      ],
+      "limitation": "Binary never executed; source correspondence/device/output and temporal/spatial/latency benchmark not established."
+    },
+    {
+      "id": "C09",
+      "claim": "Package has Cargo.lock but lacks LICENSE while Cargo saysApache2.0 and README/vnrit.md sayMIT",
+      "evidence_class": "archive_and_conflicting_metadata",
+      "anchors": [
+        {
+          "source": "resources/MIE-0007/derived/docs/upstream-code/Cargo.toml.txt",
+          "locator": "license"
+        },
+        {
+          "source": "resources/MIE-0007/derived/docs/upstream-code/README.md.txt",
+          "locator": "MIT badge/license"
+        },
+        {
+          "source": "resources/MIE-0007/derived/docs/archive-inventory.json",
+          "locator": "13files noLICENSE"
+        },
+        {
+          "source": "resources/MIE-0007/derived/docs/static-port-audit.json",
+          "locator": "365lock package markers"
+        }
+      ],
+      "limitation": "No legal interpretation or transfer of MIE-0006license to this package; no full third-party/ABI/runtime verification."
+    },
+    {
+      "id": "C10",
+      "claim": "Value is matched Android codec/pipeline control and traditional filter evidence, not a demonstrated solved learned MobileIE-video or NPU method",
+      "evidence_class": "survey_inference_and_future_questions",
+      "anchors": [
+        {
+          "source": "resources/MIE-0007/derived/report/analysis.md",
+          "locator": "value/controls and unknowns"
+        },
+        {
+          "source": "resources/MIE-0007/derived/docs/reading-notes.md",
+          "locator": "complete actual scope and source review"
+        }
+      ],
+      "limitation": "Proposed common input/codec/state/timestamps/quality/latency/energy comparisons are later Gate3 candidates only, zero execution."
+    }
+  ]
+}
