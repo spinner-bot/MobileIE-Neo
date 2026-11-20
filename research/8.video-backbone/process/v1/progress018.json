@@ -1,0 +1,170 @@
+{
+  "at": "2026-11-20T16:16:10.344116+08:00",
+  "all_final_quality_completed": true,
+  "quality_totals": {
+    "quality_rows": 220,
+    "frame_rows": 9856,
+    "backbone_images": 4440,
+    "causal_DIS_pairs": 1752,
+    "post_DIS_pairs": 2628,
+    "post_FB_pairs": 2628
+  },
+  "completed_quality": {
+    "0": {
+      "runtime": {
+        "at": "2026-11-20T15:15:28.419572+08:00",
+        "pid": 3057709,
+        "completed_normally": true,
+        "seconds": 905.2558953969274,
+        "quality_rows": 110,
+        "frame_rows": 4928,
+        "backbone_images": 2220,
+        "causal_DIS_pairs": 876,
+        "post_DIS_pairs": 1314,
+        "post_FB_pairs": 1314,
+        "CUDA_initialized": false
+      },
+      "source_files": {
+        "research/8.video-backbone/results/v1-quality-seed0/runtime.json": "c1c6b65a554fc1ceb0718bd2884780ed4b95e08441e66524834994af2fccf03c",
+        "research/8.video-backbone/results/v1-quality-seed0/per_sequence.jsonl": "69657ecdb8cee225b34f72d21fdda56ce3daa4345f7ec4f2ce1ca701c25625a6",
+        "research/8.video-backbone/results/v1-quality-seed0/per_frame.jsonl": "2186f57c7fbdb859fa8e266a6e0c9bdbbceedadf953abfa0246f075889b75f77",
+        "research/8.video-backbone/results/v1-quality-seed0/prediction_manifest.jsonl": "7f58bdbe25cfc48a7a9c5ff75134f113b244ad4c6ad87d5dabe946696cbbb18a"
+      }
+    },
+    "1": {
+      "runtime": {
+        "at": "2026-11-20T16:14:09.961001+08:00",
+        "pid": 3095929,
+        "completed_normally": true,
+        "seconds": 958.0716960080899,
+        "quality_rows": 110,
+        "frame_rows": 4928,
+        "backbone_images": 2220,
+        "causal_DIS_pairs": 876,
+        "post_DIS_pairs": 1314,
+        "post_FB_pairs": 1314,
+        "CUDA_initialized": false
+      },
+      "source_files": {
+        "research/8.video-backbone/results/v1-quality-seed1/runtime.json": "04b174e8506581ca06063c8bcbd1d2908554c9efad6b19660deac1e0475a1800",
+        "research/8.video-backbone/results/v1-quality-seed1/per_sequence.jsonl": "9530970a0938c63b302b0f95f15ea0c54aeed1c7acea5e0b5b418ee595a66f54",
+        "research/8.video-backbone/results/v1-quality-seed1/per_frame.jsonl": "2ab31ef18247b164f09692e540bdf9866bad822e6bc056663bd3c2750de3b72e",
+        "research/8.video-backbone/results/v1-quality-seed1/prediction_manifest.jsonl": "cc622602a9b4b63a035b25f98eb9c272bbfb859113864a69f59fff0c3e1dfd55"
+      }
+    }
+  },
+  "live_processes": {
+    "CPU_coordinator": {
+      "pid": 3024380,
+      "start_ticks": 109481893,
+      "state": "S"
+    },
+    "original_post_coordinator": {
+      "pid": 3106031,
+      "start_ticks": 110263806,
+      "state": "S"
+    }
+  },
+  "actual_post_state": {
+    "at": "2026-11-20T16:15:30.118198+08:00",
+    "coordinator": {
+      "pid": 3106031,
+      "start_ticks": 110263806,
+      "state": "R"
+    },
+    "status": "sampling_resources",
+    "stage": "perceptual-attempt001",
+    "resource_polls": 1,
+    "guard_attempts": 0,
+    "child": null,
+    "worker": null,
+    "last_resource_poll": ".cache/experiments/topic8-v1/chain003/resource-poll00001.json"
+  },
+  "resource_history_prefix": {
+    "path": "research/8.video-backbone/process/v1/chain003/resource-history.jsonl",
+    "bytes": 1535,
+    "sha256": "9de93084347a27734a83ccfaa4d187d0cace88acb110eb2be38fa2e8aab26185",
+    "complete_rows": 1,
+    "last": {
+      "at": "2026-11-20T16:15:00.086327+08:00",
+      "stage": "perceptual-attempt001",
+      "poll": 1,
+      "raw_samples": ".cache/experiments/topic8-v1/chain003/resource-poll00001.json",
+      "group": [
+        {
+          "index": 0,
+          "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+          "allowed": false,
+          "mean_utilization_percent": 28.09090909090909,
+          "busy_sample_fraction": 0.0,
+          "max_used_mib": 32537,
+          "minimum_free_mib": 8423,
+          "total_mib": 40960,
+          "incumbent_growth_reserve_mib": 8192,
+          "expected_own_increment_mib": 4096,
+          "required_free_mib": 13312
+        },
+        {
+          "index": 1,
+          "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+          "allowed": false,
+          "mean_utilization_percent": 36.90909090909091,
+          "busy_sample_fraction": 0.09090909090909091,
+          "max_used_mib": 33005,
+          "minimum_free_mib": 7955,
+          "total_mib": 40960,
+          "incumbent_growth_reserve_mib": 8192,
+          "expected_own_increment_mib": 4096,
+          "required_free_mib": 13312
+        },
+        {
+          "index": 2,
+          "uuid": "GPU-e7f8224e-43d7-f7d6-10ff-8412dc30aa9e",
+          "allowed": false,
+          "mean_utilization_percent": 73.54545454545455,
+          "busy_sample_fraction": 0.2727272727272727,
+          "max_used_mib": 32537,
+          "minimum_free_mib": 8423,
+          "total_mib": 40960,
+          "incumbent_growth_reserve_mib": 8192,
+          "expected_own_increment_mib": 4096,
+          "required_free_mib": 13312
+        },
+        {
+          "index": 3,
+          "uuid": "GPU-3a66f673-05de-ba45-3f5c-308b333fea68",
+          "allowed": false,
+          "mean_utilization_percent": 30.636363636363637,
+          "busy_sample_fraction": 0.0,
+          "max_used_mib": 33005,
+          "minimum_free_mib": 7955,
+          "total_mib": 40960,
+          "incumbent_growth_reserve_mib": 8192,
+          "expected_own_increment_mib": 4096,
+          "required_free_mib": 13312
+        }
+      ]
+    }
+  },
+  "source_checks": {
+    "source-freeze001.json": {
+      "files": 34,
+      "unchanged": true
+    },
+    "perceptual-source-freeze001.json": {
+      "files": 5,
+      "unchanged": true
+    },
+    "cpu-execution-freeze001.json": {
+      "files": 4,
+      "unchanged": true
+    }
+  },
+  "actual_waits_seconds": [
+    492.0043,
+    180.0039
+  ],
+  "quality1_actual_seconds": 958.0716960080899,
+  "new_observation_model_forwards": 0,
+  "scope": "Both full quality jobs normal, original automatic post chain003 waiting for registered shared GPU headroom; official JOD and joint gates not complete. Two estimated sleeps replaced repeated minute-level model polling."
+}
