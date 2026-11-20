@@ -1,0 +1,44 @@
+{
+  "at": "2026-11-20T20:25:56.135548+08:00",
+  "original_coordinator": {
+    "pid": 3246208,
+    "start_ticks": 111602758,
+    "state": "S"
+  },
+  "original_worker": {
+    "pid": 3247554,
+    "start_ticks": 111620942,
+    "state": "R"
+  },
+  "seed0_common_steps": 2689,
+  "formal_updates_observed": 5378,
+  "seed1_updates": 0,
+  "full_training_completed": false,
+  "new_DEV_completed": false,
+  "actual_last_training_row": {
+    "at": "2026-11-20T20:25:55.771087+08:00",
+    "common_step": 2689,
+    "data_step": 10688,
+    "controls": {
+      "clip_gt": {
+        "loss": 0.002504684729501605,
+        "gradient_norm": 0.11004213988780975,
+        "native_max_abs_difference": null
+      },
+      "rec_gt": {
+        "loss": 0.0023340522311627865,
+        "gradient_norm": 0.09542635083198547,
+        "native_max_abs_difference": null
+      }
+    },
+    "synchronized_pipeline_work_seconds": 0.11390385101549327,
+    "optimizer_updates": 5378,
+    "student_images": 86048,
+    "DIS_pairs": 32268
+  },
+  "recent_common_step_wall_seconds": 0.5484452020202021,
+  "estimated_seed0_remaining_seconds": 719.0116598484849,
+  "estimate_is_deadline": false,
+  "all_full_sources_unchanged": true,
+  "scope": "One20-minute sleep, original handles unchanged and two full-state backups retained; no restart or partial DEV decision."
+}
