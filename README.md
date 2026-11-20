@@ -4,7 +4,9 @@
 
 ## 当前研究状态
 
-2026-11-20最新[0186：单向传输筛查与止损](docs/进展报告/0186-T-26112022-单向传输贡献者离散度筛查与止损.md)：[S1](research/8.video-backbone/single-direction/README.md)已完成64NN/80输出条件、0更新/GPU/DEV/最终。三个完整门均False，对原双向DIS三个组质量低.51–.73dB，ND0和逐窗正例保留；固定目标贡献者矩/mass界/阈值/alpha/preset/field来源网格STOP。全20均值与16窗口联系图实际查看，[决定](research/8.video-backbone/single-direction/decision.md)和[真实终态](research/8.video-backbone/single-direction/process/terminal001.json)保持完整，无活跃实验，不按旧state重启。
+2026-11-20最新[0187：三观测方差校准与骨干问题](docs/进展报告/0187-T-26112023-三观测方差识别校准与骨干问题收敛.md)：[N1](research/8.video-backbone/triple-variance/README.md)全11264NN/48组正常完成，固定photon8/8正例保留、跨photon4/16，完整实际运动资格False。增强后均值变化/相关误差不能忽略，固定估计网格STOP；无新视频质量或方法成功。两全点PNG已实际查看，[完整决定](research/8.video-backbone/triple-variance/decision.md)、[真实终态](research/8.video-backbone/triple-variance/process/terminal001.json)与[待核骨干问题](research/8.video-backbone/triple-variance/next-core-question.md)分别留存，无活跃作业。
+
+此前[0186：单向传输筛查与止损](docs/进展报告/0186-T-26112022-单向传输贡献者离散度筛查与止损.md)：[S1](research/8.video-backbone/single-direction/README.md)已完成64NN/80输出条件、0更新/GPU/DEV/最终。三个完整门均False，对原双向DIS三个组质量低.51–.73dB，ND0和逐窗正例保留；固定目标贡献者矩/mass界/阈值/alpha/preset/field来源网格STOP。全20均值与16窗口联系图实际查看，[决定](research/8.video-backbone/single-direction/decision.md)和[真实终态](research/8.video-backbone/single-direction/process/terminal001.json)保持完整，无活跃实验，不按旧state重启。
 
 此前[0185：粗能量历史零更新筛查与止损](docs/进展报告/0185-T-26112022-粗能量历史零更新筛查与止损.md)：[P1](research/8.video-backbone/phase-envelope/README.md)已完成1280NN/0优化/200输出条件，冻结原模型的当前载波+能量历史在四噪声组对raw时间升.456%–.560%，未通过训练门槛。clean正例保留，停止固定能量/差分/alpha/尺度/clip/epsilon网格；全30均值图和固定联系图实际查看，无新DEV/GPU/最终。[完整决定](research/8.video-backbone/phase-envelope/decision.md)、[真实终态](research/8.video-backbone/phase-envelope/process/terminal001.json)，无活跃实验，不按旧state重启。
 
