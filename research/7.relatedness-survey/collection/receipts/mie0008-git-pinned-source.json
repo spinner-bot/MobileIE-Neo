@@ -1,0 +1,28 @@
+{
+  "label": "mie0008-git-pinned-source",
+  "status": "success",
+  "complete": true,
+  "acquisition_method": "Owned bare git fetch --depth=1 exact SHA then git archive ZIP; no checkout/LFS smudge/upstream code execution. Archive every blob independently matched to fixed API tree via Git SHA1 blob calculation.",
+  "repo": "KrakeCZ/AIchat-Android-Local-AI-Agent-",
+  "url": "https://github.com/KrakeCZ/AIchat-Android-Local-AI-Agent-.git",
+  "revision": "e701008557c758876a3da75ed373d91dd959b1bf",
+  "verified_git_tree": "ea53c880879249eb718eb0116cbfd7eb4eda87ad",
+  "archive_path": "archive/mie0008-git-pinned-source.zip",
+  "bytes": 84570834,
+  "sha256": "3ea255eb4e4a555ddde853000e5272e5b3b1494cab976cf9a78509156be1f131",
+  "requested_at": "2026-11-20T18:32:18.936877+08:00",
+  "finished_at": "2026-11-20T18:32:32.871805+08:00",
+  "files": 9494,
+  "tracked_uncompressed_bytes": 385357828,
+  "api_tree_comparison": {
+    "expected_blobs": 9494,
+    "all_paths_and_git_blob_hashes_match": true,
+    "API_response_sha_is_requested_commit": "e701008557c758876a3da75ed373d91dd959b1bf",
+    "actual_git_tree_sha_separately_verified": "ea53c880879249eb718eb0116cbfd7eb4eda87ad"
+  },
+  "limits": "Contains exact Git-tracked source/LFS pointers; pointer contents not fetched large model weights. Does not claim all submodule/runtime/model artifacts or full code reading.",
+  "previous_attempts": [
+    "mie0008-pinned-sourcezip:128MiB incomplete prefix",
+    "mie0008-pinned-sourcezip-large:transport read timeout, no body preserved"
+  ]
+}
