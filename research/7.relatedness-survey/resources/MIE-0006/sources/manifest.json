@@ -10,6 +10,13 @@
       "http": 200,
       "archive": "archive/codehit-43961afcfc602bf0.txt",
       "sha256": "42daff084382519a33f01d0935cff31a8418d51d070e1d148549767a35cf6b53"
+    },
+    {
+      "path": "receipts/mie0006-pinned-sourcezip.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/mie0006-pinned-sourcezip.zip",
+      "sha256": "7362a330ad567ced5ee42ebb1b640ea95f5787ad5efeffde8b9e97b7983daf09"
     }
   ],
   "discovery_evidence": [
@@ -18,6 +25,10 @@
       "path": "src/main.rs",
       "revision": "59bd6746c6cccde4197ccfabb1d60fb509127436",
       "acquisition": "receipts/codehit-43961afcfc602bf0.json"
+    },
+    {
+      "source": "collection/mie0006-pinned-commit.json",
+      "note": "Pinned commit metadata from GitHub connector; initial wrong selector rejected then corrected, no mutation"
     }
   ],
   "adequacy": "Materials available for analysis; not yet read or qualified",
