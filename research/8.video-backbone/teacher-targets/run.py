@@ -1,5 +1,6 @@
 """One registered T1 chain, resource-only continuation, no scientific retries."""
 import argparse
+import fcntl
 import os
 from pathlib import Path
 import subprocess
@@ -30,6 +31,8 @@ def main():
     args = parser.parse_args()
     assert os.environ.get('CUDA_VISIBLE_DEVICES') == ''
     assert os.environ.get('CUBLAS_WORKSPACE_CONFIG') == ':4096:8'
+    chain_lock = owned_cache('coordinator.lock').open('a')
+    fcntl.flock(chain_lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
     frozen = verify()
     out = PROCESS / f'chain{args.chain:03d}'
     out.mkdir(parents=True, exist_ok=False)
@@ -192,6 +195,7 @@ def main():
               completed_normally=complete, seconds=time.perf_counter()-started, final_state=state,
               CPU_quality_children=[dict(seed=seed, **identity(child.pid), observed_returncode=child.poll())
                                     for seed, child in cpu_workers], paper_objective_achieved=False))
+        chain_lock.close()
 
 
 if __name__ == '__main__':
