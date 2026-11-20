@@ -1,0 +1,69 @@
+{
+  "temporary_key": "addendum2-paper-pasta",
+  "type": "paper",
+  "title": "PASTA: Towards Flexible and Efficient HDR Imaging Via Progressively Aggregated Spatio-Temporal Alignment",
+  "authors": [
+    "Xiaoning Liu",
+    "Ao Li",
+    "Zongwei Wu",
+    "Yapeng Du",
+    "Le Zhang",
+    "Yulun Zhang",
+    "Radu Timofte",
+    "Ce Zhu"
+  ],
+  "arxivs": [
+    "2403.10376"
+  ],
+  "publication_date": "2024-03-15",
+  "cutoff": "2026-11-17",
+  "sources": [
+    {
+      "source": "collection/receipts/g1a0002-pasta-arxiv-abs.json",
+      "source_record_id": "2403.10376"
+    },
+    {
+      "source": "collection/receipts/g1a0002-pasta-arxiv-pdf-v2.json",
+      "version": "v2 2024-04-09"
+    },
+    {
+      "source": "collection/receipts/g1a0002-pasta-author-home.json",
+      "url": "https://lumos-leo.github.io/"
+    }
+  ],
+  "relation": "same-author multi-frame restoration precedent relevant to MobileIE photo-to-video expansion",
+  "relation_verification": "Identity/abstract/author homepage: overlaps Ao Li, Le Zhang, Ce Zhu; differently exposed LDR frames with motion/shake/occlusion to HDR. DRNet reference24 links same arxiv. Not a MobileIE direct citing paper or proven causal low-light video enhancement. No value grading/Gate2 before release.",
+  "resource_id": "MIE-0125",
+  "preliminary": {
+    "R": 3,
+    "N": 2,
+    "U": 3,
+    "E": 3,
+    "score": 80,
+    "tier": "A",
+    "category": "same-author-multi-exposure-restoration",
+    "family": "007a-pasta",
+    "role_order": 0,
+    "summary": "共同作者的多曝光运动帧HDR对齐与聚合先例；核多帧与连续视频、效率和可移植性的边界。",
+    "reason_R": "Ao Li/Le Zhang/Ce Zhu共同作者且摘要明确多曝光帧运动对齐；不能由时空题名直接认定连续因果视频。",
+    "reason_N": "相邻对齐/融合与效率设计可能限制二期方法主张，尚无同一结构或可用实现的证据。",
+    "reason_U": "完整原文可用于具体核查输入帧/参考、对齐、融合、评价和成本协议；不承诺直接移植。",
+    "reason_E": "完整19页v2 PDF、HTML、摘要及作者主页已取；代码/独立补充/正式出版未确认。",
+    "evidence": [
+      "collection/gate1-addenda/0002/scope-disposition.md",
+      "collection/gate1-addenda/0002/identity-integrity.json",
+      "collection/receipts/g1a0002-pasta-arxiv-pdf-v2.json"
+    ],
+    "not_gate2": true
+  },
+  "analysis_status": "pending",
+  "status_is_initial_snapshot": true,
+  "indexed_at": "2026-11-21T07:34:00.109525+08:00",
+  "analysis_order": 23,
+  "canonical_url": "https://arxiv.org/abs/2403.10376",
+  "created_at": "2026-11-21T07:34:00.109525+08:00",
+  "family": "007a-pasta",
+  "catalog_version": 3,
+  "source_snapshot_cutoff": "2026-11-17",
+  "identity_verification": "Collection identity/scope verified; scientific analysis pending Gate2"
+}

@@ -88,8 +88,8 @@ def main():
             'discovery_evidence[].source':'relative to workstation'}))
     protected = [B / x for x in ['catalog/index-v3.json','catalog/order-v3.json',
         'catalog/id-additions-v3.json','catalog/scoring-v3.json',
-        'docs/0008-二次增补索引与队列决策-26112107.md',
-        'resources/MIE-0125/identity.json','resources/MIE-0125/sources/manifest.json']]
+        'docs/0008-二次增补索引与队列决策-26112107.md']]
+    # Resource manifests remain appendable until their own Gate2 closure.
     save(B / 'catalog/freeze-v3.json', dict(created_at=now, version=3,
         files=[dict(path=str(f.relative_to(B)), sha256=sha(f)) for f in protected]))
     print('Appended MIE-0125 at order', row['analysis_order'], '; next', order[14],

@@ -1,0 +1,64 @@
+{
+  "resource_id": "MIE-0125",
+  "created_at": "2026-11-21T07:34:00.109525+08:00",
+  "snapshot_cutoff": "2026-11-17",
+  "actual_collection_dates": [
+    "2026-11-20",
+    "2026-11-21"
+  ],
+  "receipts": [
+    {
+      "path": "receipts/g1a0002-pasta-arxiv-abs.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0002-pasta-arxiv-abs.html",
+      "sha256": "b822c03098b2580011988f99c58b5199bde1b6c7daa774a8ea431096bdb93fa7"
+    },
+    {
+      "path": "receipts/g1a0002-pasta-arxiv-pdf-v2.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0002-pasta-arxiv-pdf-v2.pdf",
+      "sha256": "2eba1ebb6acf2861c267bdbb040322760bee6398e72f4ee0e0653c9c7128158c"
+    },
+    {
+      "path": "receipts/g1a0002-pasta-arxiv-html-v2.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0002-pasta-arxiv-html-v2.html",
+      "sha256": "8d1d9d45b360dab6933d7bf4fb913ab11e9a4b489aff8c3477b7a8b1850db532"
+    },
+    {
+      "path": "receipts/g1a0002-pasta-author-home.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0002-pasta-author-home.html",
+      "sha256": "f3565b69a377a5f3642abb4dcdd7891a2afa9e4569e850ef9905a1ffbba784e4"
+    }
+  ],
+  "discovery_evidence": [
+    {
+      "source": "collection/receipts/g1a0002-pasta-arxiv-abs.json",
+      "source_record_id": "2403.10376"
+    },
+    {
+      "source": "collection/receipts/g1a0002-pasta-arxiv-pdf-v2.json",
+      "version": "v2 2024-04-09"
+    },
+    {
+      "source": "collection/receipts/g1a0002-pasta-author-home.json",
+      "url": "https://lumos-leo.github.io/"
+    }
+  ],
+  "not_yet_analyzed": true,
+  "adequacy": "19-page v2 acquired; official code/separate supplement/formal publication unconfirmed",
+  "path_conventions": {
+    "receipts[].path": "relative to workstation/collection",
+    "receipts[].archive": "relative to workstation",
+    "discovery_evidence[].source": "relative to workstation"
+  }
+}
