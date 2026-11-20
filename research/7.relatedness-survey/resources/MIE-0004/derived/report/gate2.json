@@ -1,0 +1,81 @@
+{
+  "resource_id": "MIE-0004",
+  "reviewed_at": "2026-11-20T17:29:57.091946+08:00",
+  "status": "pass_full",
+  "review_passed": true,
+  "completion_scope": "Pinned official project applicable core/config/data/train/infer/deploy-entry static analysis and limited authored-media/document inspection; no model/numerical/device replication",
+  "reviewer": "Codex  (sqs_A100)",
+  "independent_external_reviewer": false,
+  "review_mode": "Separate second-pass self-audit",
+  "standard_sha256": "b5371150d788916763c891e0298b862ad0d9302a1286d698172bfa03dd90f57f",
+  "checklist": {
+    "a": {
+      "passed": true,
+      "evidence": [
+        "identity.json",
+        "sources/manifest.json",
+        "derived/docs/reading-scope.json"
+      ],
+      "rationale": "Second-pass item a recorded in gate2-review.md; scope and gaps explicit"
+    },
+    "b": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/media-manifest.json",
+        "derived/docs/media-visual-review.json",
+        "derived/docs/reading-notes.md"
+      ],
+      "rationale": "Second-pass item b recorded in gate2-review.md; scope and gaps explicit"
+    },
+    "c": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/upstream-code-manifest.json",
+        "derived/docs/reading-scope.json",
+        "derived/docs/static-config-audit.json",
+        "derived/docs/weight-entry-review.json"
+      ],
+      "rationale": "Second-pass item c recorded in gate2-review.md; scope and gaps explicit"
+    },
+    "d": {
+      "passed": true,
+      "evidence": [
+        "derived/report/analysis.md",
+        "derived/docs/reading-notes.md"
+      ],
+      "rationale": "Second-pass item d recorded in gate2-review.md; scope and gaps explicit"
+    },
+    "e": {
+      "passed": true,
+      "evidence": [
+        "derived/report/claims.json"
+      ],
+      "rationale": "Second-pass item e recorded in gate2-review.md; scope and gaps explicit"
+    },
+    "f": {
+      "passed": true,
+      "evidence": [
+        "derived/report/analysis.md"
+      ],
+      "rationale": "Second-pass item f recorded in gate2-review.md; scope and gaps explicit"
+    },
+    "g": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/gate2-review.md",
+        "sources/manifest.json"
+      ],
+      "rationale": "Second-pass item g recorded in gate2-review.md; scope and gaps explicit"
+    }
+  },
+  "known_gaps": [
+    "binary pretrained/fine-tuned weights/version/key coverage not obtained or run",
+    "full synthetic multimodal pretraining generation/configuration and exact conference evaluation scripts",
+    "source LICENSE terms, actual data rights and content overlaps",
+    "real event timestamp cutoff and complete stream/mode/reset behavior in execution",
+    "full mobile backend/latency/peak memory/energy/thermal and continuous temporal perceptual quality"
+  ],
+  "experiments_executed": 0,
+  "model_execution": false,
+  "next_resource_allowed_only_after_close_event": true
+}
