@@ -1,0 +1,44 @@
+--- vnrit/Cargo.toml
++++ ndk-vnrit/Cargo.toml
+@@ -1,11 +1,11 @@
+ [package]
+-name = "vnrit"
+-version = "1.0.0"
++name = "ndk-vnrit"
++version = "0.1.28"
+ edition = "2024"
+ description = "Lightweight X11 desktop WebRTC streaming server (pure Rust, no GStreamer)"
+ license = "Apache-2.0"  
+-repository = "https://github.com/nlsidf/vnrit.git"
++repository = "https://github.com/nlsidf/ndk-vnrit.git"
+ 
+ [profile.release]
+ opt-level = 3
+ lto = "thin"
+@@ -28,20 +28,19 @@
+ x11rb = { version = "0.14", features = ["xtest", "allow-unsafe-code", "shm", "xinput"] }
+ x11rb-protocol = "0.14"
+ 
+ # WebRTC pure Rust stack
+-webrtc = "0.20"
+-rtc = "0.20"
+-rtc-media = "0.20"
++webrtc = "0.20.0-rc.4"
++rtc = "0.20.0-rc.4"
++rtc-media = "0.20.0-rc.4"
+ # ICE network types for TCP-only mode
+-ice = { package = "rtc-ice", version = "0.20" }
++ice = { package = "rtc-ice", version = "0.20.0-rc.4" }
+ 
+ # async-trait for PeerConnectionEventHandler
+ async-trait = "0.1"
+ 
+-# Video encoding
+-openh264 = { version = "0.9", features = ["source"] }
+-openh264-sys2 = "0.9"
++# Video encoding: Android NDK MediaCodec hardware encoder
++# libmediandk.so is loaded at runtime via dlopen (no compile-time link needed)
+ 
+ # shiguredo_libyuv — Rust bindings for Google's libyuv (SIMD-accelerated conversion + scaling)
+ # Fork: vnrit-libyuv (Android build fixes, Gitee mirrors for git clone)
+ vnrit-libyuv = { version = "0.1.4", features = ["source-build"] }

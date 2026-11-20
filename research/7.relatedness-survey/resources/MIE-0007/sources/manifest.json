@@ -10,6 +10,13 @@
       "http": 200,
       "archive": "archive/codehit-eefc6c98cbbd2a4d.txt",
       "sha256": "80d425d9088015a9182047a90a845a794017f6ab6e71e51ae5e829167df57cff"
+    },
+    {
+      "path": "receipts/mie0007-pinned-sourcezip.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/mie0007-pinned-sourcezip.zip",
+      "sha256": "33fcf8439d59d1da19af1bb8387d9ac9b2309be2fb157f960d038081d71e1070"
     }
   ],
   "discovery_evidence": [
@@ -18,6 +25,10 @@
       "path": "src/main.rs",
       "revision": "b169f207b3766a4ab037bfd5202860ea9f553d43",
       "acquisition": "receipts/codehit-eefc6c98cbbd2a4d.json"
+    },
+    {
+      "source": "collection/mie0007-pinned-commit.json",
+      "note": "GitHub connector fixed commit metadata"
     }
   ],
   "adequacy": "Materials available for analysis; not yet read or qualified",
