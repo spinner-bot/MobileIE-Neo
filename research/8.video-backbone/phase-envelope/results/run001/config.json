@@ -1,0 +1,51 @@
+{
+  "at": "2026-11-20T22:13:50.076338+08:00",
+  "process": {
+    "pid": 3346456,
+    "start_ticks": 112421639,
+    "state": "R"
+  },
+  "named_source_freeze": {
+    "at": "2026-11-20T22:13:39.634783+08:00",
+    "before_first_execution": true,
+    "scope": "named numerical sources and frozen input references; not a claim of complete transitive import closure",
+    "source_sha256": {
+      "research/8.video-backbone/phase-envelope/probe.py": "2a199d7d6067df98e25277172e686496efab0733bc1119733f7a767aaed8336d",
+      "research/8.video-backbone/phase-envelope/state.py": "cd28c783cefc68dbded4730a25d6a03bb28ffca2db494df6ad24e25cb8c10706",
+      "research/8.video-backbone/phase-envelope/protocol.md": "ecadbb34022df0b90bb58c30bea5e031f7951009765333e2061fb84753ee5c80",
+      "research/4.temporal-consistency/scripts/causal_reference_io_r75.py": "181906fa8ccce29eb2e2bfcd79bf78035abd15a1f3ed12adf8ba8312ab367d93",
+      "research/4.temporal-consistency/scripts/dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498",
+      "research/4.temporal-consistency/scripts/motion_transport_r74.py": "da48fe1b67113aba60a7bc3f61458c56ce52785728094413b734ee6d892529c8",
+      "research/4.temporal-consistency/scripts/exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+      "research/4.temporal-consistency/scripts/train_exploration_r2.py": "30ba78b2439ffb6fdf10aafe384975326082129b03ebe562aa118f29ba5d8c7b",
+      "research/4.temporal-consistency/scripts/explore_temporal_controls.py": "04a72a82943f1e43aa03cf2e8997a26c76e467b306ceb8fc42094dfdc5398d54",
+      "MobileIE/model/lle.py": "c569c48f4fb4d25d227db85d078ce763e68dd89d304a623d8125dcd6808e8bff",
+      "MobileIE/model/utils.py": "76b5c97b99add030af5d42b8a424aeaa672b159925d92139d0d12d804cf8d992",
+      "scripts/project-python": "db9f3a0398d76c67fdc86255dd6277adba078b2871abb8a8618fe1601ea5e4b2",
+      "scripts/project_assets.py": "65979a86cd009d82c5620191a9d3eb727b4bf6589815c3ccd9fc065cad91ae07",
+      "research/4.temporal-consistency/data/exploration-r32-training/manifest.json": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+      "research/4.temporal-consistency/data/exploration-r32-training/selection.json": "a21fca047b8b571828d29d1ea80bc477993d655d90bbb1b83837ca0715445ffa",
+      "research/4.temporal-consistency/results/exploration-r32-decode/audit.json": "f51954c1605a11f48f59771ec4373b972a10379c424882e525d1277e84990874",
+      "research/4.temporal-consistency/results/exploration-r44-stage001-seed0/square_mse-step4000.json": "056754b481828cb070310de6f792dbd9e9a10fe0829dc5aeb86d2e19b8edb840",
+      "research/4.temporal-consistency/results/exploration-r44-stage001-seed1/square_mse-step4000.json": "6b0d4970e3cf0fe22dc23d9a07e2b6d9f90a6fb0f5197a757b6561c8ec6ebd8c"
+    }
+  },
+  "device": "cpu",
+  "CPU_threads": 2,
+  "OpenCV_threads": 1,
+  "seeds": [
+    0,
+    1
+  ],
+  "arms": [
+    "raw",
+    "feature_ema",
+    "envelope_spatial",
+    "envelope_temporal",
+    "known_motion_post"
+  ],
+  "new_DEV": false,
+  "independent_final_opened": false,
+  "wall_clock_cutoff": false,
+  "approximate_energy_not_exact_Riesz": true
+}
