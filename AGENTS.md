@@ -6,13 +6,13 @@
 
 目录编号约束（2026-11-17T19:15:22.552814+08:00；用户明确通知）：`research/` 的7号已由其他分支占用，即使当前main工作区尚无该目录，也不得将其视为可用。新建独立研究主题目录应跳到 `research/8.*`，保留7号给原占用分支。
 
-当前最新0190/主题8-M1完整空间恢复负结项：[0190](docs/进展报告/0190-T-26112101-多线性骨干完整空间恢复与止损.md)、[M1完整决定](research/8.video-backbone/multiaffine-core/spatial-decision.md)、[真实终态](research/8.video-backbone/multiaffine-core/process/spatial-terminal001.json)。两随机架构各8000×两seed，共32000正式更新/512000学生图、四唯一最终全部完成；固定训练池保留抽样1536NN/384窗口输出/1536逐帧/128窗口/12均值，非独立DEV。八项平均−.20且最差−.75dB恢复保护0/8；M1对F0四组平均低1.45–3.65dB，对随机原Slim仅SYN/1平均+.247337dB但最差−1.784255失败。保留对F014/128、对随机原Slim46/128窗口PSNR正及SSIM/edge/解析Conv取舍，不作普遍不可能结论。
+当前最新0191/主题8-B1外观索引历史完整负结项：[0191](docs/进展报告/0191-T-26112101-外观索引特征历史完整筛查与止损.md)、[决定](research/8.video-backbone/appearance-state/decision.md)、[终态](research/8.video-backbone/appearance-state/process/terminal001.json)。冻结两seed F0原4075参数/全部预训，17³低光颜色键保存head平方前12通道历史、固定.5融合/衰减，实际255476B持久表非手机/RAM证据。完整16训练窗口/80输出/320逐帧/20均值/16比较，0优化/GPU/新DEV/最终；23具名冻结保持。历史对当前同表四组平均时间增量仅.167%–.744%，全部未达5%；完整门False，仅SYN/0对raw一项过。对raw/current各7/16窗口联合正、对两经典各3/16正保留，不称全类无效。
 
-原seed0/1分别00:22:56/00:59:18正常完成，无资源暂停；原协调3393743于01:00:10记正常runtime，两个正式guard返回0、六子任务exit事件0。全部12具名原句柄现已无/原项目GPU工作释放，不按旧state/PID重启。外层session47202退出143、原因未明，与数值正常完成分别保留，不能声称直接观测协调OS exit0或据此外层状态重跑。所有结果/全部点图与固定联系图/实际审阅/过程/报告已分别提交。
+原3450505/start113578088于01:27:13正常38.848754秒、工具session45774退出0、实际PID已无，无活跃B1任务，不按旧state重启。直接原net64+共享head64、三续接各64，分解原函数差0/首帧精确/权重不变；所有结果/全点与16窗图/实际审阅/过程/报告分别提交。VPN/曲线/LUT已有直接先例note77，不把小状态/flow-free/双边传播当创新。停止固定17³/5×5开方RGB键/head平方前节点/八角插值/.5融合与decay/mass阈值的grid/guide/节点/alpha/decay/阈值/seed及训练补救网格，不扩失败视频/DEV/成本/手机。
 
-M1固定5340参数/两双线性层不交来源树，解析卷积1308HW、1080p2.712269G/FP32状态99532800B；无PReLU/HDPA/flow、未继承F0函数/预训，不称手机或视频有效。CPU首次元数据失败及修正/4丢弃更新、CUDA4丢弃更新、原19/20及40具名源冻结均保持；stream/raw角点资格通过但clip已有反例。ABM/Π-Nets正文note76，基础乘法/代数不是创新。F0有不同预训/expanded历史，随机原Slim也低于F0，本实验未单独定位结构/初始化/预算因果。
+先前M1全32000正式更新/512000学生图/四唯一最终、1536NN/384窗口输出/12均值完成，八项恢复保护0/8，[0190](docs/进展报告/0190-T-26112101-多线性骨干完整空间恢复与止损.md)与[决定](research/8.video-backbone/multiaffine-core/spatial-decision.md)保持。固定width16/stride2/dilation2/init/目标/LR/长度/seed网格STOP，CPU19/20与全链40冻结不改；外层143与原数值正常完成分开留证，全部原句柄终态不重跑。F0有不同预训/expanded历史，M1负结果不作纯架构因果或普遍不可能结论。
 
-按原协议停止固定M1 width16/stride2/dilation2/初始化/GT目标/LR/长度/seed局部网格，不换loss/teacher或延长补救，不启动失败候选视频/DEV/成本/手机/最终。下一独立研究尚未登记，必须有实质不同信息或表示、保留恢复与预训的安排、直接先例差异和有限门槛；不能继续无边界诊断。论文goal active，尚无确立创新/视频质量/手机/独立最终，原84值/snapshot003/PDF020保持。
+下一独立核心尚未登记，必须有实质不同的信息/表示、恢复能力与直接先例差异和有限门槛；不能仅换历史存放位置、把空间平滑当时间贡献或继续无界参数筛查。论文goal active，尚无确立方法/创新/手机/独立最终，原84值/snapshot003/PDF020保持。
 
 先前N1完整11264NN统计校准结项：[0187](docs/进展报告/0187-T-26112023-三观测方差识别校准与骨干问题收敛.md)、[决定](research/8.video-backbone/triple-variance/decision.md)，16冻结保持、固定20/20/20为8/8/异photon4/16，固定三观测/16tile/截断/窗口/模式/相关构造STOP。N1/S1/P1/T2/T1/V1原句柄均终态，不重启；它们失败不改变M1新空间协议，也不构成M1成功。所有旧STOP及独立最终/原84值/PDF020/7号/其他worktree保持。
 
@@ -45,4 +45,4 @@ M1固定5340参数/两双线性层不交来源树，解析卷积1308HW、1080p2.
 - 所有既有STOP继续有效，包括R28/R34/R37/R44–R46/R48/R50–R51/R61/R64–R65/R73–R75/R77/R79–R82/R84–R88等的局部网格；本主题也须按自身协议止损。旧决策原文在[研究决策目录](research/4.temporal-consistency/docs/)，完整历史在[原文快照](docs/交接历史/AGENTS-20261120-1524.md)。不因当前入口缩短而恢复任何已停止实验。
 - 原始MobileIE/F0实际4075参数；主题8-V1独立空间16180、学习融合16365，使用两遍骨干和DIS，不能写成4K或零额外推理开销。packing、KD、门控、递归等已知组件不是已确立创新。
 - OLiVES 43/71/83、DAVIS testdev、Kodak 13–24独立最终继续封存；未经预定开发/冻结门槛，不读取最终像素或将开发集结论改称独立测试。主论文原84质量值/snapshot003/PDF020保持，当前仍非投稿完成稿。
-- main只推进核心研究，survey/pre与demo/org各自worktree不修改、7号继续预留。先读[最新0190](docs/进展报告/0190-T-26112101-多线性骨干完整空间恢复与止损.md)、[主题8入口](research/8.video-backbone/README.md)、[原完整过程](research/8.video-backbone/process/v1/journal.md)与[论文状态](paper/RESEARCH_STATUS.md)；需要早期细节再定向查历史，勿按旧活跃行重启。
+- main只推进核心研究，survey/pre与demo/org各自worktree不修改、7号继续预留。先读[最新0191](docs/进展报告/0191-T-26112101-外观索引特征历史完整筛查与止损.md)、[主题8入口](research/8.video-backbone/README.md)、[原完整过程](research/8.video-backbone/process/v1/journal.md)与[论文状态](paper/RESEARCH_STATUS.md)；需要早期细节再定向查历史，勿按旧活跃行重启。
