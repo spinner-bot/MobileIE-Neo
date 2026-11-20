@@ -6,9 +6,10 @@ import sys
 BASE = Path(__file__).resolve().parent
 ROOT = BASE.parents[2]
 PROCESS = BASE / 'process'
-for path in (ROOT / 'scripts', ROOT / 'research/4.temporal-consistency/scripts', BASE.parent):
-    if str(path) not in sys.path:
-        sys.path.append(str(path))
+for path in (ROOT / 'scripts', ROOT / 'research/4.temporal-consistency/scripts', BASE.parent, BASE):
+    if str(path) in sys.path:
+        sys.path.remove(str(path))
+    sys.path.insert(0, str(path))
 from causal_reference_io_r75 import write, append, stamp, digest
 
 ARMS = ('gt', 'spatial', 'temporal')
