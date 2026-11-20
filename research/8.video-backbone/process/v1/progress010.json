@@ -1,0 +1,146 @@
+{
+  "at": "2026-11-20T14:25:19.263913+08:00",
+  "live_processes": {
+    "coordinator": {
+      "pid": 3024380,
+      "start_ticks": 109481893,
+      "state": "S"
+    },
+    "worker": {
+      "pid": 3024402,
+      "start_ticks": 109481902,
+      "state": "R"
+    }
+  },
+  "CPU_state": {
+    "at": "2026-11-20T14:25:16.581728+08:00",
+    "coordinator": {
+      "pid": 3024380,
+      "start_ticks": 109481893,
+      "state": "R"
+    },
+    "status": "running",
+    "stage": "CPU-train-seed0-attempt006",
+    "child": {
+      "pid": 3024402,
+      "start_ticks": 109481902,
+      "state": "R"
+    },
+    "stdout": ".cache/experiments/topic8-v1/cpu-chain001/CPU-train-seed0-attempt006.stdout.txt"
+  },
+  "unique_completed_finals": {
+    "warm": {
+      "at": "2026-11-20T14:11:04.765017+08:00",
+      "seed": 0,
+      "phase": "warm",
+      "path": ".cache/experiments/topic8-v1/train-seed0-attempt006/warm-final.pt",
+      "sha256": "1041d1424ad42245b5ef6192275d7fb589b0d3ac0e256eec55e83067ab490c75",
+      "parameters": 16180,
+      "updates": 2000,
+      "all_tensors_reloaded_finite": true,
+      "training_backend": "cpu",
+      "unique_final": true
+    },
+    "spatial": {
+      "at": "2026-11-20T14:22:37.391027+08:00",
+      "seed": 0,
+      "phase": "spatial",
+      "path": ".cache/experiments/topic8-v1/train-seed0-attempt006/spatial-final.pt",
+      "sha256": "50f294accd66e44006691f0620ba77595f5f81e36c987b16725c314a47121a67",
+      "parameters": 16180,
+      "updates": 4000,
+      "all_tensors_reloaded_finite": true,
+      "training_backend": "cpu",
+      "unique_final": true
+    }
+  },
+  "actual_trace": "research/8.video-backbone/process/v1/train-seed0-attempt006/training.jsonl",
+  "actual_complete_prefix_bytes": 1321775,
+  "actual_complete_prefix_sha256": "c3a1c3145e98609d4ce1d0c2223b7af43ad6ef8c568dd1cd7d6e6a70eb258475",
+  "phase_prefixes": {
+    "warm": {
+      "first": {
+        "phase": "warm",
+        "step": 359,
+        "data_step": 358,
+        "loss": 0.005120549350976944,
+        "gradient_norm": 0.03142300993204117,
+        "synchronized_work_seconds": 1.3201403699349612,
+        "backbone_images": 16,
+        "DIS_pairs": 0
+      },
+      "rows": 1642,
+      "last": {
+        "phase": "warm",
+        "step": 2000,
+        "data_step": 1999,
+        "loss": 0.0047067091800272465,
+        "gradient_norm": 0.014682432636618614,
+        "synchronized_work_seconds": 0.13441389217041433,
+        "backbone_images": 16,
+        "DIS_pairs": 0
+      }
+    },
+    "spatial": {
+      "first": {
+        "phase": "spatial",
+        "step": 1,
+        "data_step": 2000,
+        "loss": 0.004624290857464075,
+        "gradient_norm": 0.04909379035234451,
+        "synchronized_work_seconds": 0.07470457698218524,
+        "backbone_images": 16,
+        "DIS_pairs": 0
+      },
+      "rows": 4000,
+      "last": {
+        "phase": "spatial",
+        "step": 4000,
+        "data_step": 5999,
+        "loss": 0.003066732781007886,
+        "gradient_norm": 0.008980090729892254,
+        "synchronized_work_seconds": 0.06608651601709425,
+        "backbone_images": 16,
+        "DIS_pairs": 0
+      }
+    },
+    "fixed": {
+      "first": {
+        "phase": "fixed",
+        "step": 1,
+        "data_step": 2000,
+        "loss": 0.004582887049764395,
+        "gradient_norm": 0.049629684537649155,
+        "synchronized_work_seconds": 0.15074361604638398,
+        "backbone_images": 28,
+        "DIS_pairs": 12
+      },
+      "rows": 655,
+      "last": {
+        "phase": "fixed",
+        "step": 655,
+        "data_step": 2654,
+        "loss": 0.005913388449698687,
+        "gradient_norm": 0.03331160917878151,
+        "synchronized_work_seconds": 0.14159108302555978,
+        "backbone_images": 28,
+        "DIS_pairs": 12
+      }
+    }
+  },
+  "cumulative_counts_observed": {
+    "updates": {
+      "warm": 2000,
+      "spatial": 4000,
+      "fixed": 655,
+      "learned": 0
+    },
+    "teacher_images": 32000,
+    "backbone_images": 114340,
+    "DIS_pairs": 7860,
+    "gate_images": 0
+  },
+  "canonical_and_execution_sources_unchanged": true,
+  "DEV_rows": 0,
+  "scope": "Full warm and independent spatial optimization complete; actual fixed fusion prefix only, no validation ranking or new quality claim."
+}
