@@ -1,5 +1,7 @@
 # V1执行入口与接续边界
 
+最新：2026-11-20T17:05:51.309032+08:00，V1已完整结项，所有旧coordinator/worker均终态，无活跃V1任务。以下启动/资源/live提示均为对应时点历史，不是重启许可；先读[决定](decision-v1.md)、[terminal001](process/v1/terminal001.json)和[0175](../../docs/进展报告/0175-T-26112017-完整视频骨干候选评价与止损.md)。
+
 2026-11-20；Codex  (sqs_A100)。完整算法预算以protocol-v1为准；此页解释自动接续，不扩实验。
 
 原唯一协调器通过project-python、CPU空CUDA mask及CuBLAS确定性环境启动 `run_v1.py --chain 1`，独立session，stdout位于自有data的 `.cache/experiments/topic8-v1/coordinator001-stdout.txt`。原PID2988618/start_ticks109207006，启动来源见process/v1/chain001-launch.json。**不要再次执行该命令来“确保运行”**；先查原PID/start、chain001/state.json、guard原记录、各阶段runtime及真实子进程。状态文件只是索引，不是存活证明；观察超时不表示进程退出。
