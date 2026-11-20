@@ -1,0 +1,134 @@
+{
+  "resource_id": "MIE-0001",
+  "created_at": "2026-11-20T12:37:17.912451+08:00",
+  "source_aliases": {
+    "main": "archive/official-paper-pdf.pdf; physical PDF pages",
+    "supplement": "archive/official-supplement-large.pdf; physical PDF pages",
+    "code": "derived/docs/upstream-code-manifest.json; pinned source_path and 1-based lines"
+  },
+  "claims": [
+    {
+      "claim_id": "C01",
+      "evidence_class": "author_report_and_static_check",
+      "claim": "MobileIE为训练多分支、推理单帧图像网络；FST及HDPA是原论文组成，重参数化/平方交互有文中先例。",
+      "anchors": [
+        "main:p2 §2.2,p3 Figure2–3,p4 Eq1–6",
+        "supplement:p1 Table1",
+        "code:model/lle.py:12–109;model/utils.py:313–342"
+      ],
+      "limitation": "仅原研究事实，不建立二期新颖性。"
+    },
+    {
+      "claim_id": "C02",
+      "evidence_class": "static_check",
+      "claim": "公开RGB/ISP前向仅有当前输入，无历史/未来帧/显式状态；通道max不是时间聚合。",
+      "anchors": [
+        "main:p3 Figure2",
+        "code:model/lle.py:40–49,99–109;model/isp.py:99–109"
+      ],
+      "limitation": "状态为空不等于已经验证流式视频质量。"
+    },
+    {
+      "claim_id": "C03",
+      "evidence_class": "author_report_and_visual_check",
+      "claim": "Tables1–3单列GPU与SoC；补充手机截图标GPU/FP16，6.72ms平均、0.75ms标准差、576ms初始化。",
+      "anchors": [
+        "main:p5 Table1,p6 Tables2–3",
+        "supplement:p4 Figure3,Table2,p5 Tables3–4,p6 Table5"
+      ],
+      "limitation": "不能宣称手机1100FPS、UHD实时、完整流水线时延或持续功耗。"
+    },
+    {
+      "claim_id": "C04",
+      "evidence_class": "author_report_and_static_check",
+      "claim": "实验为LOL v1/v2、UIEB、ZRR空间任务，缺视频划分、运动/曝光和未来信息评价。",
+      "anchors": [
+        "main:p5 §4.1–4.2,p6–8 Figures5–14/Tables4–7",
+        "supplement:p5–8 Figures4–7",
+        "code:data/lledata.py;data/ispdata.py"
+      ],
+      "limitation": "未下载数据逐样本检查，数据泄漏与许可仍未知。"
+    },
+    {
+      "claim_id": "C05",
+      "evidence_class": "static_check",
+      "claim": "论文绝对残差统计与源码有符号残差、std/sqrt2、detach及复合损失存在差异。",
+      "anchors": [
+        "main:p5 Eq7–10",
+        "code:loss.py:13–23,39–59,71–98"
+      ],
+      "limitation": "差异对数值和视频稳定性的影响尚未实验确定。"
+    },
+    {
+      "claim_id": "C06",
+      "evidence_class": "static_check",
+      "claim": "IWO专门原语实现旧权重冻结加Xavier增量；默认公开模型导入普通utils，完整第二阶段训练接线未呈现。",
+      "anchors": [
+        "main:p4 Eq1–2,p7 Figure10",
+        "code:model/utils_IWO.py:31–51,134–136,176–194,295–322;model/lle.py:3–9;model/isp.py:3–9;model/__init__.py;main.py"
+      ],
+      "limitation": "只核已公开入口，不推断作者没有实施IWO。"
+    },
+    {
+      "claim_id": "C07",
+      "evidence_class": "author_report_and_static_check",
+      "claim": "正文2000轮/warmup与公开ISP配置1000轮且warmup false有差异。",
+      "anchors": [
+        "main:p5 §4.1",
+        "code:config/lle.yaml;config/isp.yaml;main.py:17–98"
+      ],
+      "limitation": "不能假定公开默认参数就是全部表格训练配置。"
+    },
+    {
+      "claim_id": "C08",
+      "evidence_class": "static_arithmetic",
+      "claim": "公开12通道slim构造静态计数RGB4075、ISP4132；两处FST共28。论文Table6/7计数也不同。",
+      "anchors": [
+        "main:p5–6 Tables1–3,p8 Tables6–7",
+        "code:model/lle.py:74–109;model/isp.py:74–109;model/utils.py:329–342",
+        "derived/docs/reading-notes.md:静态算术"
+      ],
+      "limitation": "排除FST后吻合4047/4104只是对账线索，未确认作者统计遗漏原因。"
+    },
+    {
+      "claim_id": "C09",
+      "evidence_class": "author_report",
+      "claim": "原文[51]为平方交互先例，[98]为2022轻量图像/视频SGZ。",
+      "anchors": [
+        "main:p4 §3.3,p10 reference51,p12 reference98,p5 Table1"
+      ],
+      "limitation": "后向背景不等于本调查已全文审查该文；不能说不存在轻量视频先例。"
+    },
+    {
+      "claim_id": "C10",
+      "evidence_class": "static_check",
+      "claim": "slim后FST平方仍在；导出固定尺寸，TFLite脚本缺完整手机delegate设置；complexity.py类名与该版本不匹配。",
+      "anchors": [
+        "code:model/utils.py:329–342;model/lle.py:56–72;torch_to_onnx.py:57–82;test_TFLite_RGB.py;test_TFLite_ISP.py;complexity.py:49,62",
+        "supplement:p2 Eq7"
+      ],
+      "limitation": "不声称整个非线性网络融合成线性卷积；未运行核对转换等价。"
+    },
+    {
+      "claim_id": "C11",
+      "evidence_class": "analytical_inference",
+      "claim": "1080p RGB FP32一帧纯张量24,883,200B约23.73MiB，视频状态内存应独立预算。",
+      "anchors": [
+        "derived/docs/reading-notes.md:静态算术"
+      ],
+      "limitation": "纯形状乘法，不是实际端侧峰值RAM或模型实验。"
+    },
+    {
+      "claim_id": "C12",
+      "evidence_class": "hypothesis_not_verified",
+      "claim": "平方局部扰动与全局注意力可能形成输入敏感性路径，但不是已证实闪烁原因；平滑亦可能造成拖影。",
+      "anchors": [
+        "main:p4 Eq3–6",
+        "code:model/utils.py:329–342;model/lle.py:99–109",
+        "derived/docs/reading-notes.md:扰动代数"
+      ],
+      "limitation": "需要噪声/运动/曝光隔离、历史控制和完整视频质量/成本检验。"
+    }
+  ],
+  "experiments_executed": 0
+}

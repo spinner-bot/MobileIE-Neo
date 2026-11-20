@@ -1,0 +1,81 @@
+{
+  "resource_id": "MIE-0001",
+  "reviewed_at": "2026-11-20T12:39:57.680911+08:00",
+  "status": "pass_full",
+  "review_passed": true,
+  "completion_scope": "Full available main/supplement literature and paper-relevant static implementation crosscheck; no numerical replication",
+  "reviewer": "Codex  (sqs_A100)",
+  "independent_external_reviewer": false,
+  "review_mode": "Separate second-pass self-audit; not expert or multi-agent independent review",
+  "standard_sha256": "b5371150d788916763c891e0298b862ad0d9302a1286d698172bfa03dd90f57f",
+  "checklist": {
+    "a": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/reading-notes.md",
+        "identity.json",
+        "derived/docs/upstream-code-manifest.json"
+      ],
+      "rationale": "See second-pass review item a; evidence limitations constrain claims rather than being silently filled"
+    },
+    "b": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/reading-notes.md",
+        "derived/figures/main-contact.png",
+        "derived/figures/supplement-contact.png"
+      ],
+      "rationale": "See second-pass review item b; evidence limitations constrain claims rather than being silently filled"
+    },
+    "c": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/reading-notes.md",
+        "derived/docs/upstream-code-manifest.json",
+        "derived/report/claims.json"
+      ],
+      "rationale": "See second-pass review item c; evidence limitations constrain claims rather than being silently filled"
+    },
+    "d": {
+      "passed": true,
+      "evidence": [
+        "derived/report/analysis.md",
+        "derived/docs/reading-notes.md"
+      ],
+      "rationale": "See second-pass review item d; evidence limitations constrain claims rather than being silently filled"
+    },
+    "e": {
+      "passed": true,
+      "evidence": [
+        "derived/report/claims.json",
+        "derived/report/analysis.md"
+      ],
+      "rationale": "See second-pass review item e; evidence limitations constrain claims rather than being silently filled"
+    },
+    "f": {
+      "passed": true,
+      "evidence": [
+        "derived/report/analysis.md"
+      ],
+      "rationale": "See second-pass review item f; evidence limitations constrain claims rather than being silently filled"
+    },
+    "g": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/gate2-review.md",
+        "sources/manifest.json"
+      ],
+      "rationale": "See second-pass review item g; evidence limitations constrain claims rather than being silently filled"
+    }
+  },
+  "known_gaps": [
+    "private training logs and complete IWO stage switching/loading procedure",
+    "per-example data overlap and original dataset licensing not verified",
+    "paper parameter-count discrepancies and profiling convention unresolved",
+    "complete device backend/version/runtime settings and sustained end-to-end video costs",
+    "no video/motion/exposure experiments in original paper or this survey"
+  ],
+  "experiments_executed": 0,
+  "model_execution": false,
+  "next_resource_allowed_only_after_close_event": true
+}
