@@ -1,0 +1,207 @@
+{
+  "resource_id": "MIE-0006",
+  "created_at": "2026-11-20T17:59:07.934705+08:00",
+  "source_revision": "59bd6746c6cccde4197ccfabb1d60fb509127436",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Independent X11/WebRTC tool explicitly cites MobileIE inspiration in two comments; pinned Aug4 commit packages version1.0.0",
+      "evidence_class": "identity_and_source_verification",
+      "anchors": [
+        {
+          "source": "resources/MIE-0006/derived/docs/upstream-code/src--main.rs.txt",
+          "locator": "1275,1315"
+        },
+        {
+          "source": "resources/MIE-0006/derived/docs/upstream-code/Cargo.toml.txt",
+          "locator": "package metadata"
+        },
+        {
+          "source": "collection/mie0006-pinned-commit.json",
+          "locator": "date and fixed revision"
+        }
+      ],
+      "limitation": "Not official MobileIE implementation, paper authorship, new citing paper or exact first publication date."
+    },
+    {
+      "id": "C02",
+      "claim": "Actual core is handwritten YUV/USM with piecewise gain and global-statistic adaptation, without MobileIE learned network/weights/training",
+      "evidence_class": "static_applicable_core_verification",
+      "anchors": [
+        {
+          "source": "resources/MIE-0006/derived/docs/upstream-code/src--main.rs.txt",
+          "locator": "1144–1898 LUTs and enhancement"
+        },
+        {
+          "source": "resources/MIE-0006/derived/docs/upstream-code/Cargo.toml.txt",
+          "locator": "dependencies"
+        },
+        {
+          "source": "resources/MIE-0006/derived/docs/archive-inventory.json",
+          "locator": "nine fixed files"
+        }
+      ],
+      "limitation": "Inspiration comments do not establish FST/HDPA fidelity; cannot equate binary size with model size or runtime memory."
+    },
+    {
+      "id": "C03",
+      "claim": "Global MAD compares current input Y with previous final enhanced Y (or skipped raw Y); no motion alignment/history-pixel fusion/future frame read in core",
+      "evidence_class": "static_dataflow",
+      "anchors": [
+        {
+          "source": "resources/MIE-0006/derived/docs/upstream-code/src--main.rs.txt",
+          "locator": "502–566,609–700,1032–1045,1604–1606,1825,1875"
+        }
+      ],
+      "limitation": "MAD confounds motion, exposure, noise and self-enhancement; perceptual impact unknown, not proof temporal flicker eliminated."
+    },
+    {
+      "id": "C04",
+      "claim": "Motion recurrence reaches early-return factor<16 at integer MAD14; current frame enhancement is then bypassed",
+      "evidence_class": "literal_source_arithmetic",
+      "anchors": [
+        {
+          "source": "resources/MIE-0006/derived/docs/upstream-code/src--main.rs.txt",
+          "locator": "1144–1162,1597–1606"
+        },
+        {
+          "source": "resources/MIE-0006/derived/docs/static-arithmetic-audit.json",
+          "locator": "motion_first_early_return_MAD"
+        }
+      ],
+      "limitation": "Source-expression calculation only; no running application or validated visual quality/efficiency gain."
+    },
+    {
+      "id": "C05",
+      "claim": "SIMD and scalar tail tone-curve masks select opposite conditions; nonlinear selected-segment expressions differ for23of256 values",
+      "evidence_class": "static_logic_and_transcribed_arithmetic",
+      "anchors": [
+        {
+          "source": "resources/MIE-0006/derived/docs/upstream-code/src--main.rs.txt",
+          "locator": "1283–1310,1451–1480,1814–1818,1870–1872"
+        },
+        {
+          "source": "resources/MIE-0006/derived/docs/static-arithmetic-audit.json",
+          "locator": "mask truth table and mismatch list"
+        }
+      ],
+      "limitation": "Not compiled wide-crate equivalence emulation or end-to-end pixel/visual measurement; spatial/temporal severity unmeasured."
+    },
+    {
+      "id": "C06",
+      "claim": "The named denoise blend is an identity for its u8 inputs because nonzero weight occurs only when Y equals blur",
+      "evidence_class": "algebraic_source_inspection",
+      "anchors": [
+        {
+          "source": "resources/MIE-0006/derived/docs/upstream-code/src--main.rs.txt",
+          "locator": "1262–1271,1728–1734,1838–1840"
+        },
+        {
+          "source": "resources/MIE-0006/derived/docs/static-arithmetic-audit.json",
+          "locator": "denoise_identity_proof"
+        }
+      ],
+      "limitation": "Only this blend stage is covered; blur/other gains still can change noise, no denoising benchmark performed."
+    },
+    {
+      "id": "C07",
+      "claim": "Global luminance table jumps262to448 Q8 at avgY31to32, and saturation boost is applied only on specific modulo8 frames under conditions",
+      "evidence_class": "static_threshold_and_control_flow",
+      "anchors": [
+        {
+          "source": "resources/MIE-0006/derived/docs/upstream-code/src--main.rs.txt",
+          "locator": "1321–1349,1572–1589,1885–1895"
+        },
+        {
+          "source": "resources/MIE-0006/derived/docs/static-arithmetic-audit.json",
+          "locator": "luma samples and tick schedule"
+        }
+      ],
+      "limitation": "No claim visible exposure/color flicker was observed; integer average adjustment may be zero."
+    },
+    {
+      "id": "C08",
+      "claim": "Initial prev seed reads pool-backed I420 before successful current capture populates it; set_len is used before that read",
+      "evidence_class": "static_conditional_initialization_risk",
+      "anchors": [
+        {
+          "source": "resources/MIE-0006/derived/docs/upstream-code/src--main.rs.txt",
+          "locator": "3285–3291,3309–3341,1558–1570"
+        }
+      ],
+      "limitation": "No crash test, execution, exploit or full Rust memory-safety audit; not evidence current server/task is affected."
+    },
+    {
+      "id": "C09",
+      "claim": "Actual defaults depend on needs_scaling; three video tasks and two capacity2 queues differ from README four-stage/capacity4 description",
+      "evidence_class": "static_document_code_comparison",
+      "anchors": [
+        {
+          "source": "resources/MIE-0006/derived/docs/upstream-code/README.md.txt",
+          "locator": "architecture and enhance defaults"
+        },
+        {
+          "source": "resources/MIE-0006/derived/docs/upstream-code/src--main.rs.txt",
+          "locator": "2995–3004,3240–3259,3294–3405,3419–3553"
+        }
+      ],
+      "limitation": "Default24fps and request pacing not measured throughput; drop/repeat and internal state evolution complicate displayed temporal metrics."
+    },
+    {
+      "id": "C10",
+      "claim": "README hardware-level encoding/7.9MB/performance claims lack scientific benchmark support; source uses OpenH264 from_source and one encoder thread",
+      "evidence_class": "author_claim_and_static_boundary",
+      "anchors": [
+        {
+          "source": "resources/MIE-0006/derived/docs/upstream-code/README.md.txt",
+          "locator": "features/performance"
+        },
+        {
+          "source": "resources/MIE-0006/derived/docs/upstream-code/src--main.rs.txt",
+          "locator": "1934–1963,2003–2023,frame pacing/send"
+        }
+      ],
+      "limitation": "No hardware encoder proof, phone runtime, overall CPU threading, peak memory/latency/energy or quality comparison validated."
+    },
+    {
+      "id": "C11",
+      "claim": "Pinned package includes Apache2.0 license and Cargo.lock, but no scientific data/models/results; workflow updates lock before publish",
+      "evidence_class": "archive_and_metadata_verification",
+      "anchors": [
+        {
+          "source": "resources/MIE-0006/derived/docs/upstream-code/LICENSE.txt",
+          "locator": "header and copyright tail"
+        },
+        {
+          "source": "resources/MIE-0006/derived/docs/upstream-code/.github--workflows--actions.yml.txt",
+          "locator": "cargo update and publish"
+        },
+        {
+          "source": "resources/MIE-0006/derived/docs/extra-source-text.json",
+          "locator": "378 package markers,0 git sources"
+        },
+        {
+          "source": "resources/MIE-0006/derived/docs/archive-inventory.json",
+          "locator": "all nine files"
+        }
+      ],
+      "limitation": "No legal interpretation, third-party license/build/dependency audit or pass claim; absent scientific artifacts are not a download failure."
+    },
+    {
+      "id": "C12",
+      "claim": "Useful traditional engineering comparator and evidence checklist; does not establish a solved learned MobileIE-video method or scientific novelty",
+      "evidence_class": "survey_inference_and_future_controls",
+      "anchors": [
+        {
+          "source": "resources/MIE-0006/derived/report/analysis.md",
+          "locator": "transfer/repetition and controlled questions"
+        },
+        {
+          "source": "resources/MIE-0006/derived/docs/reading-notes.md",
+          "locator": "actual scope and source counterchecks"
+        }
+      ],
+      "limitation": "Proposed matched codec/input/strength/state/SIMD controls remain future Gate3 work; no proven gain or temporal/phone measurement."
+    }
+  ]
+}
