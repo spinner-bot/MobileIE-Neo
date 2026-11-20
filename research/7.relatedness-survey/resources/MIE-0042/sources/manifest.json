@@ -1,0 +1,64 @@
+{
+  "resource_id": "MIE-0042",
+  "created_at": "2026-11-20T12:24:23+08:00",
+  "source_root": "../../.. (workstation root from this sources directory)",
+  "snapshot_cutoff": "2026-11-17",
+  "receipts": [
+    {
+      "path": "receipts/codehit-0ba177ce33f6d609.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/codehit-0ba177ce33f6d609.txt",
+      "sha256": "73266327439b6c2642db674abe6f3a0c38bab1bbb37faf3be55744ae429b33c3"
+    },
+    {
+      "path": "receipts/codehit-2c2cd0393c3f6049.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/codehit-2c2cd0393c3f6049.txt",
+      "sha256": "29857af1261e81c36cc46b93f8c752a0da127de737d4260323cb2c7c639a0ae3"
+    },
+    {
+      "path": "receipts/codehit-7698f06d1a488db1.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/codehit-7698f06d1a488db1.txt",
+      "sha256": "1b5f0403266178bab9817e860c28da991a7087fc74d6b9f9bfaa37ff9dd70d65"
+    },
+    {
+      "path": "receipts/codehit-643158d53a510c5e.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/codehit-643158d53a510c5e.txt",
+      "sha256": "aefcb3fa99c8ed862be99ff54c1f362cc0b1ac9b8f5f7937d96a19761a02d39a"
+    }
+  ],
+  "discovery_evidence": [
+    {
+      "url": "https://github.com/Kazuhito00/Multimodal-Node-Editor/blob/b4e82ad8c5b7c68ae263cb26989195af1d803d18/download_weights.py",
+      "path": "download_weights.py",
+      "revision": "b4e82ad8c5b7c68ae263cb26989195af1d803d18",
+      "acquisition": "receipts/codehit-0ba177ce33f6d609.json"
+    },
+    {
+      "url": "https://github.com/Kazuhito00/Multimodal-Node-Editor/blob/b4e82ad8c5b7c68ae263cb26989195af1d803d18/src/nodes/image/deep_learning/low_light_image_enhancement/README.md",
+      "path": "src/nodes/image/deep_learning/low_light_image_enhancement/README.md",
+      "revision": "b4e82ad8c5b7c68ae263cb26989195af1d803d18",
+      "acquisition": "receipts/codehit-2c2cd0393c3f6049.json"
+    },
+    {
+      "url": "https://github.com/Kazuhito00/Multimodal-Node-Editor/blob/b4e82ad8c5b7c68ae263cb26989195af1d803d18/src/nodes/image/deep_learning/low_light_image_enhancement/impl.py",
+      "path": "src/nodes/image/deep_learning/low_light_image_enhancement/impl.py",
+      "revision": "b4e82ad8c5b7c68ae263cb26989195af1d803d18",
+      "acquisition": "receipts/codehit-7698f06d1a488db1.json"
+    },
+    {
+      "url": "https://github.com/Kazuhito00/Multimodal-Node-Editor/blob/b4e82ad8c5b7c68ae263cb26989195af1d803d18/src/nodes/image/deep_learning/low_light_image_enhancement/node.toml",
+      "path": "src/nodes/image/deep_learning/low_light_image_enhancement/node.toml",
+      "revision": "b4e82ad8c5b7c68ae263cb26989195af1d803d18",
+      "acquisition": "receipts/codehit-643158d53a510c5e.json"
+    }
+  ],
+  "adequacy": "Materials available for analysis; not yet read or qualified",
+  "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts"
+}

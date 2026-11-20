@@ -1,0 +1,67 @@
+{
+  "resource_id": "MIE-0042",
+  "temporary_key": "code-Kazuhito00--Multimodal-Node-Editor",
+  "type": "code",
+  "title": "Kazuhito00/Multimodal-Node-Editor",
+  "repo": "Kazuhito00/Multimodal-Node-Editor",
+  "revision": "b4e82ad8c5b7c68ae263cb26989195af1d803d18",
+  "tree": null,
+  "dois": null,
+  "arxivs": null,
+  "relation": "Explicit MobileIE implementation/module reuse; module-port claim requires independent source review, no fidelity/performance assumed",
+  "created_at": "2026-11-20T12:24:23+08:00",
+  "authors": [],
+  "dates": {
+    "years": [],
+    "published_date": null,
+    "date_verification": "pending Gate2"
+  },
+  "repository_owner": "Kazuhito00",
+  "family": "065-node",
+  "analysis_order": 42,
+  "initial_preliminary": {
+    "R": 3,
+    "N": 1,
+    "U": 3,
+    "E": 2,
+    "score": 70,
+    "tier": "A",
+    "category": "deployment-integration",
+    "family": "065-node",
+    "role_order": 1,
+    "summary": "节点编辑器有MobileIE ONNX入口。核尺寸、前后处理及图像/视频调用条件。",
+    "reason_R": "任务联系：节点编辑器有MobileIE ONNX入口。核尺寸、前后处理及图像/视频调用条件。",
+    "reason_N": "重复/混淆风险为初级待证判断；依据当前明确关联与基础/接续/移植角色，非已确立创新结论",
+    "reason_U": "可操作性：按所列机制、对照或来源核查用途评分；未运行外部代码",
+    "reason_E": "已有可读HTML/文本/局部固定源码；内容充分性留待Gate2",
+    "evidence": [
+      {
+        "url": "https://github.com/Kazuhito00/Multimodal-Node-Editor/blob/b4e82ad8c5b7c68ae263cb26989195af1d803d18/download_weights.py",
+        "path": "download_weights.py",
+        "revision": "b4e82ad8c5b7c68ae263cb26989195af1d803d18",
+        "acquisition": "receipts/codehit-0ba177ce33f6d609.json"
+      },
+      {
+        "url": "https://github.com/Kazuhito00/Multimodal-Node-Editor/blob/b4e82ad8c5b7c68ae263cb26989195af1d803d18/src/nodes/image/deep_learning/low_light_image_enhancement/README.md",
+        "path": "src/nodes/image/deep_learning/low_light_image_enhancement/README.md",
+        "revision": "b4e82ad8c5b7c68ae263cb26989195af1d803d18",
+        "acquisition": "receipts/codehit-2c2cd0393c3f6049.json"
+      },
+      {
+        "url": "https://github.com/Kazuhito00/Multimodal-Node-Editor/blob/b4e82ad8c5b7c68ae263cb26989195af1d803d18/src/nodes/image/deep_learning/low_light_image_enhancement/impl.py",
+        "path": "src/nodes/image/deep_learning/low_light_image_enhancement/impl.py",
+        "revision": "b4e82ad8c5b7c68ae263cb26989195af1d803d18",
+        "acquisition": "receipts/codehit-7698f06d1a488db1.json"
+      },
+      {
+        "url": "https://github.com/Kazuhito00/Multimodal-Node-Editor/blob/b4e82ad8c5b7c68ae263cb26989195af1d803d18/src/nodes/image/deep_learning/low_light_image_enhancement/node.toml",
+        "path": "src/nodes/image/deep_learning/low_light_image_enhancement/node.toml",
+        "revision": "b4e82ad8c5b7c68ae263cb26989195af1d803d18",
+        "acquisition": "receipts/codehit-643158d53a510c5e.json"
+      }
+    ],
+    "not_gate2": true
+  },
+  "source_snapshot_cutoff": "2026-11-17",
+  "identity_verification": "pending Gate2; repository owner is not assumed to be the paper author"
+}
