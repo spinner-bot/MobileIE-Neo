@@ -57,3 +57,9 @@ CUDA资源观测设备总占用最大15308MiB/空余最小25651MiB；work5.76439
 run_v1仅加入对无新更新继承状态的严格转发：比较config.inherited_counts、seed、GPU=None/allocator0，找到更早原保存marker的同路径/摘要/计数，保持原模型/Adam/步数；任何未保存新增更新或跨seed都拒绝。check_resume_forwarding_v1用真实241/零更新记录通过，故意242及错seed拒绝，0模型/SGD/新像素/torch导入。34训练/质量源与5辅助源保持，不修改原runtime/latest_checkpoint，也不重复CUDA资格。
 
 13:35:43实际独立session启动chain002 PID3003196/start109313161，stdout自有data；新config绑定修复后协调器源码，progress004核同身份live、真实forwarding日志，保留原241并等待attempt003，下一实际更新应242。新回归、launch、config、完整旧终态与此过程均分别提交。长期目标保持active，不以此资源修复宣称论文或候选有效。
+
+## 2026-11-20T13:44:16.132674+08:00：实际续接反例通过与阶段推送
+
+原attempt003 worker3007780/start109344585已从同一原241状态载入，内部新采样物理2 mean61.5455%/忙27.27%拒绝，CUDA0/新更新0/latest_checkpoint原None均保持。修复后的原chain002实际自动找到更早241原marker并转发，未再次断言，progress005核第二条forwarding完整前缀和同身份live，当前attempt004新准入。没有假造“已重新更新242”、更改门槛或修改原runtime。已结束的原attempt003 admission/resource/runtime分别提交。
+
+完整55小提交（从525353a3起）已普通SSH推到872f95c4，fetch确认55/0、push正常、ls-remote完整同一commit，push003单独提交。原主论文全部表行与525353a3逐行相同；34科学/质量源及5辅助源均保持。source/结果/过程/报告分开，指定作者/no-ff/自有data与独立7号边界继续；整篇论文目标仍active。
