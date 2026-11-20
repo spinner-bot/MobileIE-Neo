@@ -6,9 +6,9 @@
 
 目录编号约束（2026-11-17T19:15:22.552814+08:00；用户明确通知）：`research/` 的7号已由其他分支占用，即使当前main工作区尚无该目录，也不得将其视为可用。新建独立研究主题目录应跳到 `research/8.*`，保留7号给原占用分支。
 
-当前最新0173/主题8-V1 progress016：seed0已正常完成全部14000训练及110普通质量/4928逐帧（CUDA=False），完整原结果已分别提交。seed1 warm2000、spatial4000、fixed4000唯一最终均已完成/重载有限；fixed于15:37:03结束，原worker继续最后learned4000，progress016核当时learned121真实前缀，不按loss或先seed质量选模型。原CPU协调3024380/start109481893及独立seed1训练3057710/start109820958仍同身份live，各2线程/nice5/空CUDA mask；下一先核这两个/proc/start与原日志/runtime，勿由旧记录或观察超时重启。原quality3057709已正常结束、Z等待父回收，不再当live或重跑。原34科学质量＋5辅助＋CPU4执行源保持、活跃时勿改；两seed28000、全220质量/官方JOD/280共同表/四图实阅与七强参照/空间保护/成本止损不变。原监督器两seed及CPU质量完成后才调用post chain003，当前勿手工启动或恢复旧GPU链。plot_v1只在完整共同表后作全14输出图，当前未执行。尚无完整两seed/JOD、创新、手机或独立最终结论，长期goal active。读[0173](docs/进展报告/0173-T-26112015-首seed完整训练与双路自动接续.md)、[CPU修订](research/8.video-backbone/cpu-backend-amendment001.md)、[完整过程](research/8.video-backbone/process/v1/journal.md)。
+当前最新0174/主题8-V1 progress017：两seed于15:00:21/15:58:09各正常完成warm2000＋spatial/fixed/learned各4000，合28000正式更新；教师64000/骨干640000/DIS192000双向对/门96000图，八个唯一最终均原保存/重载有限。旧训练3024402/3057710均退出，勿当live或重做；前358 GPU与其余27642 CPU历史明确，不称逐bit后端等价。seed0全110质量/4928逐帧已正常；原CPU协调3024380/start109481893于15:58:10实际自动启动seed1完整质量3095929/start110167820，当前只核这两个原/proc/start和原日志/runtime。progress017保留当时全预算及质量前缀，未按loss/先seed质量选模型。原34科学质量＋5辅助＋CPU4执行源及协议保持，活跃时勿改。两质量完整后由原监督器调用post chain003全220官方JOD/280共同表/四图；根agent实际阅图、七强参照/空间保护/质量—成本止损仍待，勿提前启动重复链。plot_v1只在完整共同表后作全14输出图，当前未执行。按用户新要求依据同质量905.255895秒扣已过时间估算并sleep覆盖大部分余量，减少重复激活；到期不等于失败或重启许可。尚无完整两seed/JOD、创新、手机或独立最终结论，长期goal active。读[0174](docs/进展报告/0174-T-26112016-双seed完整训练与最终评价接续.md)、[CPU修订](research/8.video-backbone/cpu-backend-amendment001.md)、[完整过程](research/8.video-backbone/process/v1/journal.md)。
 
-核进程须匹配/proc的PID和start_ticks，再看状态及原runtime。Z表示数值子进程已结束但尚未被父进程回收，不能视为仍在训练。静态记录、旧日志、观察超时或一次观察断言都不能作为重启依据。后续只更新本段当前摘要，阶段历史写入研究journal与进展报告。
+核进程须匹配/proc的PID和start_ticks，再看状态及原runtime。Z表示数值子进程已结束但尚未被父进程回收，不能视为仍在训练。静态记录、旧日志、观察超时或一次观察断言都不能作为重启依据。后续只更新本段当前摘要，阶段历史写入研究journal与进展报告。 长等待按近期实际速度估算sleep，合理覆盖大部分预计余量，避免高频轮询和无效思考；用户消息可打断等待，醒后继续自主工作，不以时间到达截断算法预算。
 
 ## 路径、环境和版本管理
 
@@ -31,4 +31,4 @@
 - 所有既有STOP继续有效，包括R28/R34/R37/R44–R46/R48/R50–R51/R61/R64–R65/R73–R75/R77/R79–R82/R84–R88等的局部网格；本主题也须按自身协议止损。旧决策原文在[研究决策目录](research/4.temporal-consistency/docs/)，完整历史在[原文快照](docs/交接历史/AGENTS-20261120-1524.md)。不因当前入口缩短而恢复任何已停止实验。
 - 原始MobileIE/F0实际4075参数；主题8独立空间16180、学习融合16365，使用两遍骨干和DIS，不能写成4K或零额外推理开销。packing、KD、门控、递归等已知组件不是已确立创新。
 - OLiVES 43/71/83、DAVIS testdev、Kodak 13–24独立最终继续封存；未经预定开发/冻结门槛，不读取最终像素或将开发集结论改称独立测试。主论文原84质量值/snapshot003/PDF020保持，当前仍非投稿完成稿。
-- main只推进核心研究，survey/pre与demo/org各自worktree不修改、7号继续预留。先读[最新0173](docs/进展报告/0173-T-26112015-首seed完整训练与双路自动接续.md)、[主题8入口](research/8.video-backbone/README.md)、[原完整过程](research/8.video-backbone/process/v1/journal.md)与[论文状态](paper/RESEARCH_STATUS.md)；需要早期细节再定向查历史，勿按旧活跃行重启。
+- main只推进核心研究，survey/pre与demo/org各自worktree不修改、7号继续预留。先读[最新0174](docs/进展报告/0174-T-26112016-双seed完整训练与最终评价接续.md)、[主题8入口](research/8.video-backbone/README.md)、[原完整过程](research/8.video-backbone/process/v1/journal.md)与[论文状态](paper/RESEARCH_STATUS.md)；需要早期细节再定向查历史，勿按旧活跃行重启。
