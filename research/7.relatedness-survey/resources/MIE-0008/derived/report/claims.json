@@ -1,0 +1,303 @@
+{
+  "resource_id": "MIE-0008",
+  "created_at": "2026-11-20T18:53:44.148218+08:00",
+  "source_revision": "e701008557c758876a3da75ed373d91dd959b1bf",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Independent Android experimental app explicitly associates MobileIE with a generic BYOM plugin; not official implementation or paper citation",
+      "evidence_class": "identity_and_full_archive_keyword_evidence",
+      "anchors": [
+        {
+          "source": "collection/mie8commit-metadata.json",
+          "locator": "fixed Nov12 revision"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/README.md.txt",
+          "locator": "independent experimental app attribution"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/full-archive-mobileie-scan.json",
+          "locator": "four original source files,nine occurrences"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--ui--thanks--ThanksActivity.kt.txt",
+          "locator": "1112–1120 BYOM attribution"
+        }
+      ],
+      "limitation": "Repository account is not paper authorship; no specific MobileIE model/faithful implementation established."
+    },
+    {
+      "id": "C02",
+      "claim": "Complete Git-tracked9494 blobs independently match fixed API inventory while425 texts are only prepared subset",
+      "evidence_class": "source_integrity_verification",
+      "anchors": [
+        {
+          "source": "collection/receipts/mie0008-git-pinned-source.json",
+          "locator": "archive/tree/all Git blob hashes"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/preparation-validation.json",
+          "locator": "prefix/text hashes and codehit identities"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/primary-source-text-match.json",
+          "locator": "two connector texts exactly match Git originals"
+        }
+      ],
+      "limitation": "Not9494/425 full reading; LFS pointers not model/runtime contents; prior truncated/timeout HTTP attempts not successful complete downloads."
+    },
+    {
+      "id": "C03",
+      "claim": "Night/Academic disabled by default; Night default is fixed-color FastRetinex and external custom model path isnull",
+      "evidence_class": "static_defaults_and_implementation",
+      "anchors": [
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--SettingsManager.kt.txt",
+          "locator": "209–213,1389–1458,526/1497"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--nightmode--plugins--FastRetinexPlugin.kt.txt",
+          "locator": "whole fixed ColorMatrix path"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--PerceptionEngine.kt.txt",
+          "locator": "281–309,575–588"
+        }
+      ],
+      "limitation": "Retinex name does not prove spatial illumination algorithm or learned MobileIE; user settings and runtime paths may differ."
+    },
+    {
+      "id": "C04",
+      "claim": "Generic plugin guesses preprocessing from mobileie filename, accepts simplified layouts and treats nonFLOAT32 tensors asbytes without quantization metadata adaptation",
+      "evidence_class": "static_wrapper_protocol",
+      "anchors": [
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--nightmode--plugins--LiteIETflitePlugin.kt.txt",
+          "locator": "init shape/dtype; process inputScale127.5/offset1 and manual branch; byte packing"
+        },
+        {
+          "source": "resources/MIE-0002/derived/report/analysis.md",
+          "locator": "official RGB implementation conventions"
+        }
+      ],
+      "limitation": "Specific imported model may include own transforms; no blanket claim every BYOM is wrong or FP16 internal weights equal FP16 input tensors."
+    },
+    {
+      "id": "C05",
+      "claim": "Output range heuristic samples first1000 floats; optional contrast stretching is off by default and there is no temporal smoothing in this mapping",
+      "evidence_class": "static_postprocessing_and_defaults",
+      "anchors": [
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--nightmode--plugins--LiteIETflitePlugin.kt.txt",
+          "locator": "sampleCount/range thresholds/denormScale-output reconstruction"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--SettingsManager.kt.txt",
+          "locator": "1407–1409 default autoContrast false"
+        }
+      ],
+      "limitation": "Per-frame mapping changes are possible mechanism, not observed flicker or benchmarked effect; unknown imported model contents."
+    },
+    {
+      "id": "C06",
+      "claim": "Reload/init/exception branches can pass raw frames; same-path release retains loadedPath while clearing interpreter",
+      "evidence_class": "static_conditional_state_flow",
+      "anchors": [
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--nightmode--plugins--LiteIETflitePlugin.kt.txt",
+          "locator": "process path-based async reload,isInitializing and releaseInternal"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--nightmode--NightModePluginManager.kt.txt",
+          "locator": "50–112 activation/reload/busy/exception"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--PerceptionEngine.kt.txt",
+          "locator": "545–583 upstream busy drop"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--ObjectDetectorStudioActivity.kt.txt",
+          "locator": "1827–1830 selected-path reload event"
+        }
+      ],
+      "limitation": "No actual failure/500ms flicker observation; main caller guard may drop frames before manager busy path, so busy raw branch is not guaranteed in actual operation."
+    },
+    {
+      "id": "C07",
+      "claim": "GPU creation/run threading lacks an explicit same-thread/EGL guarantee, while QNN dependencies are actually declared but runtime coverage is unverified",
+      "evidence_class": "static_threading_and_primary_API_context",
+      "anchors": [
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--nightmode--plugins--LiteIETflitePlugin.kt.txt",
+          "locator": "Dispatchers.IO initialization versus interpreter run"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--nightmode--NightModePluginManager.kt.txt",
+          "locator": "singleThreadExecutor/withContext"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--nightmode--AcademicYuvEngine.kt.txt",
+          "locator": "GPU/QNN selection and synchronized wrappers"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--ObjectDetectorStudioActivity.kt.txt",
+          "locator": "122,2660–2707 Default consumer/Main transition"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/official-gpu-reference.json",
+          "locator": "primary GPU thread/EGL semantic note"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--build.gradle.kts.txt",
+          "locator": "214–234 actual LiteRT/QNN dependency"
+        }
+      ],
+      "limitation": "Conditional compatibility risk only; no device error/actual graph offload/whole NPU/automatic complete fallback proof; defaults CPU/disabled."
+    },
+    {
+      "id": "C08",
+      "claim": "Academic JNI exists and is compiled-in; takes onlyY plane replicated tothree channels, nearest resize and simplified output input-dtype/shape assumptions",
+      "evidence_class": "static_signal_and_native_build_verification",
+      "anchors": [
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--nightmode--AcademicYuvEngine.kt.txt",
+          "locator": "Y plane and JNI/native output call"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--cpp--academic_yuv_jni.cpp.txt",
+          "locator": "whole two native functions"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--cpp--CMakeLists.txt.txt",
+          "locator": "19–24 add_library"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--SettingsManager.kt.txt",
+          "locator": "default resolution1024 and160–4000 limits"
+        }
+      ],
+      "limitation": "Not equivalent to original RGB information/protocol; actual BYOM adaptation, shapes/dtypes/quantization and runtime consequences untested, no missing-JNI claim."
+    },
+    {
+      "id": "C09",
+      "claim": "CameraX latest/conflated processing and double-bitmap reuse govern scheduling/display; TimeLapse rewrites synthetic PTS and asynchronously consumes reused bitmap",
+      "evidence_class": "static_camera_encoder_lifecycle",
+      "anchors": [
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--ObjectDetectorStudioActivity.kt.txt",
+          "locator": "118–122,2420–2441,2511–2533,2660–2707"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--nightmode--AcademicYuvEngine.kt.txt",
+          "locator": "ping-pong,async addFrame,finally imageProxy close"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--media--TimeLapseEncoder.kt.txt",
+          "locator": "Canvas surface,syntheticPtsUs and fixed frameDuration"
+        },
+        {
+          "source": "resources/MIE-0007/derived/docs/official-media-reference.json",
+          "locator": "MediaCodec Surface CPU lockCanvas semantic condition"
+        }
+      ],
+      "limitation": "No measured tearing/flicker or guaranteed codec failure; double buffering/recording not learned temporal restoration or proof true capture timing preserved."
+    },
+    {
+      "id": "C10",
+      "claim": "Separate optional Lupa temporal plugin does unaligned RGB mean overactual historical batches; cache/timeout and routing control effectiveN, not always5frames",
+      "evidence_class": "static_optional_temporal_path",
+      "anchors": [
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--lupa--impl--TemporalDenoisingPlugin.kt.txt",
+          "locator": "83line actual mean/minFrames5/fpsHint15"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--lupa--LupaPlugin.kt.txt",
+          "locator": "requiresMultipleFrames defaultFalse"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--lupa--LupaPluginManager.kt.txt",
+          "locator": "43cacheTrue,112–123 and148–173 routing"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--lupa--LupaFrameAccumulator.kt.txt",
+          "locator": "CONFLATED,minFrames/250ms triggers,drain/clear"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--SettingsManager.kt.txt",
+          "locator": "1957–1959 debug routingFalse"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--ObjectDetectorStudioActivity.kt.txt",
+          "locator": "2625–2634 latest Lupa result input"
+        }
+      ],
+      "limitation": "Not default MobileIE learned video method, guaranteed5frame average or15fps measurement; noise assumptions/motion blur and asynchronous correspondence require tests."
+    },
+    {
+      "id": "C11",
+      "claim": "Only local invoke timing code and author NPU8–25ms target exist for this lowlight path; no identified model/GT/quality/device result establishes efficacy",
+      "evidence_class": "static_artifact_and_author_target_boundary",
+      "anchors": [
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--nightmode--plugins--LiteIETflitePlugin.kt.txt",
+          "locator": "tf.run stopwatch scope"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--build.gradle.kts.txt",
+          "locator": "221–230 target comments"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/archive-inventory.json",
+          "locator": "noTFLite identified; tracked audio model pointers"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/reading-notes.md",
+          "locator": "actual scope and missing model/protocol"
+        }
+      ],
+      "limitation": "No actual invoke log/numerical/device result acquired; model parameters/FLOPs/training priors and complete pipeline cost unknown."
+    },
+    {
+      "id": "C12",
+      "claim": "Root and Android MIT files exist, README contains licensing placeholder and BYOM thanks separates weight rights",
+      "evidence_class": "source_metadata_not_legal_advice",
+      "anchors": [
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/LICENSE.txt",
+          "locator": "root ggml notice"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--LICENSE.txt",
+          "locator": "Android contributor notice"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/README.md.txt",
+          "locator": "116–117 MIT/GPL placeholder"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--ui--thanks--ThanksActivity.kt.txt",
+          "locator": "BYOM/weights licensing note"
+        }
+      ],
+      "limitation": "No comprehensive third-party/software/weight licensing audit or legal conclusion; does not establish external weight availability."
+    },
+    {
+      "id": "C13",
+      "claim": "Useful wrapper/camera/codec confound evidence and traditional temporal control, not proof a solved learned videoMobileIE or independent novelty",
+      "evidence_class": "survey_inference_and_future_controls",
+      "anchors": [
+        {
+          "source": "resources/MIE-0008/derived/report/analysis.md",
+          "locator": "value,nontransfer and matched test questions"
+        },
+        {
+          "source": "resources/MIE-0008/derived/docs/reading-notes.md",
+          "locator": "protocol/runtime unknowns and actual reading"
+        }
+      ],
+      "limitation": "Future export/fixedvideo/state/backend/quality/latency/energy controls only; zero current experiment or fair speed/quality victory."
+    }
+  ]
+}
