@@ -38,6 +38,22 @@
       "http": 200,
       "archive": "archive/paper-1bcaf3288599-arxiv-html.html",
       "sha256": "8434220d78bbdd126abb85089f01832004f266dd8ecbe965b4ce7aed4610d733"
+    },
+    {
+      "path": "receipts/g1a0001-fastshade-cvf-page.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-fastshade-cvf-page.html",
+      "sha256": "f3c43f58749fcbb0813e76abff922a8facb8e77f88c1607303c43b613022ccad"
+    },
+    {
+      "path": "receipts/g1a0001-fastshade-cvf-pdf.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-fastshade-cvf-pdf.pdf",
+      "sha256": "64c7b33a90a9ede23bdb2330aca7af0360ab704c4e206b5c7e4b26a5f7f3a46f"
     }
   ],
   "discovery_evidence": [
@@ -65,5 +81,16 @@
     "discovery_evidence strings": "relative to workstation/collection",
     "discovery_evidence[].source": "collection/ prefix relative to workstation; research/ prefix relative to repository root",
     "discovery_evidence[].acquisition": "relative to workstation/collection; path is remote repository path at revision"
-  }
+  },
+  "source_additions": [
+    {
+      "catalog_version": 2,
+      "gate1": "collection/gate1-addenda/0001/gate1-review001.json",
+      "reason": "Official CVPR2026W MAI formal version discovered in author-code title tracing; no supplement link on official landing. Preserve preprint and formal PDF for subsequent Gate2 version comparison.",
+      "added": [
+        "receipts/g1a0001-fastshade-cvf-page.json",
+        "receipts/g1a0001-fastshade-cvf-pdf.json"
+      ]
+    }
+  ]
 }

@@ -17,6 +17,30 @@
       "http": 200,
       "archive": "archive/ntire2025-html.html",
       "sha256": "5461d92faa635084533ccd7251b1e488ace017542f93b7e2f9c79fe729cd11e0"
+    },
+    {
+      "path": "receipts/g1a0001-ntire2025-official-page.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-ntire2025-official-page.html",
+      "sha256": "4217b5d0a3d20ad3b3d2fdc6d4b8400638172b03a729de8fc09e86d75eebf6ca"
+    },
+    {
+      "path": "receipts/g1a0001-ntire2025-supplement.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-ntire2025-supplement.pdf",
+      "sha256": "e51f664e6e933de21f32e3277783d378121a9f7677b4532ff33c4ce527efb93c"
+    },
+    {
+      "path": "receipts/g1a0001-ntire2025-arxiv-pdf.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-ntire2025-arxiv-pdf.pdf",
+      "sha256": "db143c7ab299f32bb90316aa78f2fba50657e23c6508a7ab28995e9145a9e5fd"
     }
   ],
   "discovery_evidence": [
@@ -32,5 +56,17 @@
     "discovery_evidence strings": "relative to workstation/collection",
     "discovery_evidence[].source": "collection/ prefix relative to workstation; research/ prefix relative to repository root",
     "discovery_evidence[].acquisition": "relative to workstation/collection; path is remote repository path at revision"
-  }
+  },
+  "source_additions": [
+    {
+      "catalog_version": 2,
+      "gate1": "collection/gate1-addenda/0001/gate1-review001.json",
+      "reason": "Official landing-page source audit found uncollected supplement and preprint PDF version; original published PDF already available. Preserve all sources for later Gate2.",
+      "added": [
+        "receipts/g1a0001-ntire2025-official-page.json",
+        "receipts/g1a0001-ntire2025-supplement.json",
+        "receipts/g1a0001-ntire2025-arxiv-pdf.json"
+      ]
+    }
+  ]
 }

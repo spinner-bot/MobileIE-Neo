@@ -1,0 +1,125 @@
+{
+  "at": "2026-11-20T16:18:00.788992+08:00",
+  "actions": [
+    {
+      "resource_id": "MIE-0003",
+      "reason": "Published PMLR version and OpenReview limitation; old v1 analysis preserved and separate re-review required",
+      "receipt_labels": [
+        "g1a0001-anymod-pmlr-html",
+        "g1a0001-anymod-pmlr-pdf",
+        "g1a0001-openreview-forum",
+        "g1a0001-openreview-note",
+        "g1a0001-openreview-replies",
+        "g1a0001-anymod-baai-pdf"
+      ],
+      "disposition": "Deferred to separate formal-version re-review; old manifest untouched"
+    },
+    {
+      "resource_id": "MIE-0069",
+      "reason": "Known Chinese PaperNotes technical note and same-author English language version; separate source originals retained within existing explanation family",
+      "receipt_labels": [
+        "codehit-10525e95c2e3f9a1",
+        "g1a0001-papernotes-en-identity",
+        "g1a0001-papernotes-en-mobileie",
+        "g1a0001-r10-codehit-02",
+        "g1a0001-r14-sota2-original",
+        "g1a0001-r14-hf-paperwithme"
+      ],
+      "disposition": "Applied to unclosed resource manifest",
+      "manifest": "resources/MIE-0069/sources/manifest.json",
+      "before_sha256": "ec148ff4b1fa6f12dd9f26d960831869563398f0f85fcfc22b7f8a3dec1620be",
+      "after_sha256": "cf161f0fd4de0cddd206d517eaf018d33440ca11eeb097d888eb4f7c868d8104",
+      "added": [
+        "receipts/codehit-10525e95c2e3f9a1.json",
+        "receipts/g1a0001-papernotes-en-identity.json",
+        "receipts/g1a0001-papernotes-en-mobileie.json",
+        "receipts/g1a0001-r10-codehit-02.json",
+        "receipts/g1a0001-r14-sota2-original.json",
+        "receipts/g1a0001-r14-hf-paperwithme.json"
+      ]
+    },
+    {
+      "resource_id": "MIE-0032",
+      "reason": "Official landing-page source audit found uncollected supplement and preprint PDF version; original published PDF already available. Preserve all sources for later Gate2.",
+      "receipt_labels": [
+        "g1a0001-ntire2025-official-page",
+        "g1a0001-ntire2025-supplement",
+        "g1a0001-ntire2025-arxiv-pdf"
+      ],
+      "disposition": "Applied to unclosed resource manifest",
+      "manifest": "resources/MIE-0032/sources/manifest.json",
+      "before_sha256": "a20cf4446a700774c659576d6e960014934538ef2550e2688c28cec5cf094932",
+      "after_sha256": "1ee107eea6dcfac30cd675944656303b7d581ce8644725971c3b8df30cbd775f",
+      "added": [
+        "receipts/g1a0001-ntire2025-official-page.json",
+        "receipts/g1a0001-ntire2025-supplement.json",
+        "receipts/g1a0001-ntire2025-arxiv-pdf.json"
+      ]
+    },
+    {
+      "resource_id": "MIE-0033",
+      "reason": "Companion official landing materials check for already acquired CVF paper; no new identity",
+      "receipt_labels": [
+        "g1a0001-mai2025rgb-official-page"
+      ],
+      "disposition": "Applied to unclosed resource manifest",
+      "manifest": "resources/MIE-0033/sources/manifest.json",
+      "before_sha256": "85e106612aadb88d9d4cb74f7b2996a15bfd2ed676d0af42c1931ac571e311b4",
+      "after_sha256": "1f5979f62bd13c14aa040709c0fb041cef27ab55f4504b9f22f4337871fdf02d",
+      "added": [
+        "receipts/g1a0001-mai2025rgb-official-page.json"
+      ]
+    },
+    {
+      "resource_id": "MIE-0021",
+      "reason": "Official CVPR2026W MAI formal version discovered in author-code title tracing; no supplement link on official landing. Preserve preprint and formal PDF for subsequent Gate2 version comparison.",
+      "receipt_labels": [
+        "g1a0001-fastshade-cvf-page",
+        "g1a0001-fastshade-cvf-pdf"
+      ],
+      "disposition": "Applied to unclosed resource manifest",
+      "manifest": "resources/MIE-0021/sources/manifest.json",
+      "before_sha256": "d4c1fadde529ce537c92792a2935a4df6b15037ad9f97dd1a5842028bee808c7",
+      "after_sha256": "8740a29bea502fb327e05b399aeb780f3a2fe752c8314905801313938e50372f",
+      "added": [
+        "receipts/g1a0001-fastshade-cvf-page.json",
+        "receipts/g1a0001-fastshade-cvf-pdf.json"
+      ]
+    },
+    {
+      "resource_id": "MIE-0035",
+      "reason": "Same original pinned revision; complete project source and new matching MainActivity source captured, no new identity",
+      "receipt_labels": [
+        "g1a0001-r15-foadsf-sourcezip",
+        "g1a0001-r15-foadsf-mainactivity"
+      ],
+      "disposition": "Applied to unclosed resource manifest",
+      "manifest": "resources/MIE-0035/sources/manifest.json",
+      "before_sha256": "3b5106df61ec030b510ba22aaf31c04c906be6b19020a7c42d8224993a28b6b0",
+      "after_sha256": "46cb10e8fd91dcf65b0671dea6193eeaac8cfacad38c3dd89d69782195795ae0",
+      "added": [
+        "receipts/g1a0001-r15-foadsf-sourcezip.json",
+        "receipts/g1a0001-r15-foadsf-mainactivity.json"
+      ]
+    },
+    {
+      "resource_id": "MIE-0059",
+      "reason": "New official author project explicitly acknowledges MobileIE; companion source for paper identity/priority, not substitute for unavailable fulltext",
+      "receipt_labels": [
+        "g1a0001-ulightif-meta",
+        "g1a0001-ulightif-head",
+        "g1a0001-ulightif-sourcezip"
+      ],
+      "disposition": "Applied to unclosed resource manifest",
+      "manifest": "resources/MIE-0059/sources/manifest.json",
+      "before_sha256": "d57eaab059389fde34cbeba5c79666f7f6fa65f7c493f3c3346c7b28184e31fe",
+      "after_sha256": "89fc75c9c10048dd555d2891909dfea358c79a60712afda8e772e36937888daf",
+      "added": [
+        "receipts/g1a0001-ulightif-meta.json",
+        "receipts/g1a0001-ulightif-head.json",
+        "receipts/g1a0001-ulightif-sourcezip.json"
+      ]
+    }
+  ],
+  "closed_original_files_changed": false
+}

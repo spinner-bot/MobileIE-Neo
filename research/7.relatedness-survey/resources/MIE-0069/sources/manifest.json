@@ -31,6 +31,54 @@
       "http": 200,
       "archive": "archive/chinese-eggtargaryen.html",
       "sha256": "131734f55b8023701e9e786b78bc66f9509e58c76ccf1fa90659c2a80fcd0dd5"
+    },
+    {
+      "path": "receipts/codehit-10525e95c2e3f9a1.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/codehit-10525e95c2e3f9a1.txt",
+      "sha256": "7ebac4685c564bac6367a46961f19ba6d05e9b02647784d7e12cc39c84a0a776"
+    },
+    {
+      "path": "receipts/g1a0001-papernotes-en-identity.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-papernotes-en-identity.txt",
+      "sha256": "69204d2c5b2639fedbf16491c67a26b32f5a593b91d33b30d0c3a708d6ad32e1"
+    },
+    {
+      "path": "receipts/g1a0001-papernotes-en-mobileie.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-papernotes-en-mobileie.txt",
+      "sha256": "4fc5db3c5c8f1f0da974e7ab5645b071ae21f54b6db99ac51ab659e9ac5f141f"
+    },
+    {
+      "path": "receipts/g1a0001-r10-codehit-02.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-r10-codehit-02.txt",
+      "sha256": "0bced8cab165ae5608918d72f00b7e9ba5ce9bac982d862e853eef4279ff1206"
+    },
+    {
+      "path": "receipts/g1a0001-r14-sota2-original.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-r14-sota2-original.html",
+      "sha256": "687a065c27e54e0b03b8af6c226a98682828962558042aa7afd8992a892e5c53"
+    },
+    {
+      "path": "receipts/g1a0001-r14-hf-paperwithme.json",
+      "status": "transport_error",
+      "http": null,
+      "complete": false,
+      "archive": null,
+      "sha256": null
     }
   ],
   "discovery_evidence": [
@@ -47,5 +95,20 @@
     "discovery_evidence strings": "relative to workstation/collection",
     "discovery_evidence[].source": "collection/ prefix relative to workstation; research/ prefix relative to repository root",
     "discovery_evidence[].acquisition": "relative to workstation/collection; path is remote repository path at revision"
-  }
+  },
+  "source_additions": [
+    {
+      "catalog_version": 2,
+      "gate1": "collection/gate1-addenda/0001/gate1-review001.json",
+      "reason": "Known Chinese PaperNotes technical note and same-author English language version; separate source originals retained within existing explanation family",
+      "added": [
+        "receipts/codehit-10525e95c2e3f9a1.json",
+        "receipts/g1a0001-papernotes-en-identity.json",
+        "receipts/g1a0001-papernotes-en-mobileie.json",
+        "receipts/g1a0001-r10-codehit-02.json",
+        "receipts/g1a0001-r14-sota2-original.json",
+        "receipts/g1a0001-r14-hf-paperwithme.json"
+      ]
+    }
+  ]
 }

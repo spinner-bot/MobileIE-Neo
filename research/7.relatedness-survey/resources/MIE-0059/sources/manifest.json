@@ -17,6 +17,30 @@
       "http": 202,
       "archive": null,
       "sha256": null
+    },
+    {
+      "path": "receipts/g1a0001-ulightif-meta.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-ulightif-meta.json",
+      "sha256": "f96cd08093dda8b588f359cd5c4c8192e9391d6a417499cdb7bea9f36f145048"
+    },
+    {
+      "path": "receipts/g1a0001-ulightif-head.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-ulightif-head.json",
+      "sha256": "19006ee1fb0743cdcbd13473349ea328cc70c302d4ca9471723ee40809910370"
+    },
+    {
+      "path": "receipts/g1a0001-ulightif-sourcezip.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-ulightif-sourcezip.zip",
+      "sha256": "dca7306e8141bd7c738bd212c1e0233f13f9a54317997a3596dee04b090ef67a"
     }
   ],
   "discovery_evidence": [
@@ -44,5 +68,17 @@
     "discovery_evidence strings": "relative to workstation/collection",
     "discovery_evidence[].source": "collection/ prefix relative to workstation; research/ prefix relative to repository root",
     "discovery_evidence[].acquisition": "relative to workstation/collection; path is remote repository path at revision"
-  }
+  },
+  "source_additions": [
+    {
+      "catalog_version": 2,
+      "gate1": "collection/gate1-addenda/0001/gate1-review001.json",
+      "reason": "New official author project explicitly acknowledges MobileIE; companion source for paper identity/priority, not substitute for unavailable fulltext",
+      "added": [
+        "receipts/g1a0001-ulightif-meta.json",
+        "receipts/g1a0001-ulightif-head.json",
+        "receipts/g1a0001-ulightif-sourcezip.json"
+      ]
+    }
+  ]
 }

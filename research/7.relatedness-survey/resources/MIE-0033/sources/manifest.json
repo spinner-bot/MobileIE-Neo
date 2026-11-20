@@ -10,6 +10,14 @@
       "http": 200,
       "archive": "archive/related-rgb2025-paper.pdf",
       "sha256": "7d929d14b4e33df8bdd2085974b1cfc86a0bc4c9be455d6271dc98656384842b"
+    },
+    {
+      "path": "receipts/g1a0001-mai2025rgb-official-page.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-mai2025rgb-official-page.html",
+      "sha256": "3fc7053952c3aef0f841929e06d42b2d131248e8c3c40b8c1b8abe7c141e59d6"
     }
   ],
   "discovery_evidence": [
@@ -24,5 +32,15 @@
     "discovery_evidence strings": "relative to workstation/collection",
     "discovery_evidence[].source": "collection/ prefix relative to workstation; research/ prefix relative to repository root",
     "discovery_evidence[].acquisition": "relative to workstation/collection; path is remote repository path at revision"
-  }
+  },
+  "source_additions": [
+    {
+      "catalog_version": 2,
+      "gate1": "collection/gate1-addenda/0001/gate1-review001.json",
+      "reason": "Companion official landing materials check for already acquired CVF paper; no new identity",
+      "added": [
+        "receipts/g1a0001-mai2025rgb-official-page.json"
+      ]
+    }
+  ]
 }

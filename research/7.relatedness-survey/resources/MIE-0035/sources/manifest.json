@@ -24,6 +24,22 @@
       "http": 200,
       "archive": "archive/codehit-301c6659a9e46e50.txt",
       "sha256": "2f7cc705febf661e597fc61f46ae9e057ba8a4cbf673138b1c85ebc2cd62c500"
+    },
+    {
+      "path": "receipts/g1a0001-r15-foadsf-sourcezip.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-r15-foadsf-sourcezip.zip",
+      "sha256": "bbd50bb590a85b957351f79df0834e0c64ffdfaaecfa5a514d4c8ece5fc46e97"
+    },
+    {
+      "path": "receipts/g1a0001-r15-foadsf-mainactivity.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/g1a0001-r15-foadsf-mainactivity.txt",
+      "sha256": "c9f5ca2fbd459bd3d500a535b02525950f45b05b8eb614cb06a4c90648489231"
     }
   ],
   "discovery_evidence": [
@@ -54,5 +70,16 @@
     "discovery_evidence strings": "relative to workstation/collection",
     "discovery_evidence[].source": "collection/ prefix relative to workstation; research/ prefix relative to repository root",
     "discovery_evidence[].acquisition": "relative to workstation/collection; path is remote repository path at revision"
-  }
+  },
+  "source_additions": [
+    {
+      "catalog_version": 2,
+      "gate1": "collection/gate1-addenda/0001/gate1-review001.json",
+      "reason": "Same original pinned revision; complete project source and new matching MainActivity source captured, no new identity",
+      "added": [
+        "receipts/g1a0001-r15-foadsf-sourcezip.json",
+        "receipts/g1a0001-r15-foadsf-mainactivity.json"
+      ]
+    }
+  ]
 }
