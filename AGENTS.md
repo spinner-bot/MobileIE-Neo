@@ -6,11 +6,13 @@
 
 目录编号约束（2026-11-17T19:15:22.552814+08:00；用户明确通知）：`research/` 的7号已由其他分支占用，即使当前main工作区尚无该目录，也不得将其视为可用。新建独立研究主题目录应跳到 `research/8.*`，保留7号给原占用分支。
 
-当前最新0189/主题8-M1空间恢复首seed完整结束、第二seed运行中：[0189](docs/进展报告/0189-T-26112100-多线性骨干首种子完整训练与第二种子接续.md)、[M1入口](research/8.video-backbone/multiaffine-core/README.md)、[空间协议](research/8.video-backbone/multiaffine-core/spatial-protocol.md)、[链状态](research/8.video-backbone/multiaffine-core/process/spatial-chain001/state.json)。原父3393743/start112972989保持live，seed0原3394474于00:22:56正常2077.882341秒完成各8000/共16000更新/256000学生图、无资源暂停，两唯一最终和全部trace已交；原CPU3414567于00:23:48正常49.807527秒完成768NN/192窗口输出/64窗口，原二PID实际已无。原链自动重新准入/UUID绑定后启动seed1原3415953/start113206445，初始继承计数0、实际GPU6 UUID GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249。[观察003](research/8.video-backbone/multiaffine-core/process/observations/checkpoint003.json)于00:30核父/新worker原start/live，seed1各1047、全局18094更新/289504学生图，近期.253319秒/共同步、估余1761秒只作sleep，无墙钟截止。不要按旧seed0 PID或静态state重启，后续查真实runtime/guard链。未用首seed保留分数选设计，完整双seed恢复判定仍待。
+当前最新0190/主题8-M1完整空间恢复负结项：[0190](docs/进展报告/0190-T-26112101-多线性骨干完整空间恢复与止损.md)、[M1完整决定](research/8.video-backbone/multiaffine-core/spatial-decision.md)、[真实终态](research/8.video-backbone/multiaffine-core/process/spatial-terminal001.json)。两随机架构各8000×两seed，共32000正式更新/512000学生图、四唯一最终全部完成；固定训练池保留抽样1536NN/384窗口输出/1536逐帧/128窗口/12均值，非独立DEV。八项平均−.20且最差−.75dB恢复保护0/8；M1对F0四组平均低1.45–3.65dB，对随机原Slim仅SYN/1平均+.247337dB但最差−1.784255失败。保留对F014/128、对随机原Slim46/128窗口PSNR正及SSIM/edge/解析Conv取舍，不作普遍不可能结论。
 
-M1固定5340参数/两双线性层不交来源树，解析卷积1308HW、1080p2.712269G/FP32状态99532800B；无PReLU/HDPA/flow、未继承F0函数/预训，不称手机或视频有效。CPU首次元数据重复键失败/0学习更新原样保留，修正版3388991于23:29:34正常31.446917秒；原19/20源和CPU4丢弃更新保持。stream差6.94e−17/raw独立角点1.67e−16，重叠.000538/clip.009691反例，不能称最终显示RGB精确均值不变。ABM/Π-Nets正文已读note76，基础乘法/代数不是创新。
+原seed0/1分别00:22:56/00:59:18正常完成，无资源暂停；原协调3393743于01:00:10记正常runtime，两个正式guard返回0、六子任务exit事件0。全部12具名原句柄现已无/原项目GPU工作释放，不按旧state/PID重启。外层session47202退出143、原因未明，与数值正常完成分别保留，不能声称直接观测协调OS exit0或据此外层状态重跑。所有结果/全部点图与固定联系图/实际审阅/过程/报告已分别提交。
 
-40具名全链源/输入与空间协议已冻结，运行期间不得改；原随机M1/原Slim各8000×两seed=32000正式更新/512000学生图，GT MSE/cosine1e−3至1e−5、唯一8000终点，不能选备份/最好seed或按部分loss改变预算。CPU/CUDA资格不继承权重/Adam；F0仅固定保留训练抽样参考、有官方预训+项目8K/expanded历史。两seed16保留训练批合1536NN/384窗口/12均值，非独立场景/DEV，按八比较平均−.20dB/最差−.75dB恢复保护全部过才另登记视频。父链自动接续seed1和CPU评分，资源暂停保存同预算后再准入，不操作别人任务；当前没有完整恢复结果，论文goal active，尚无确立创新/视频质量/手机/独立最终。运行中日志不标最终，检查点另留核验前缀/元数据，按实测sleep。
+M1固定5340参数/两双线性层不交来源树，解析卷积1308HW、1080p2.712269G/FP32状态99532800B；无PReLU/HDPA/flow、未继承F0函数/预训，不称手机或视频有效。CPU首次元数据失败及修正/4丢弃更新、CUDA4丢弃更新、原19/20及40具名源冻结均保持；stream/raw角点资格通过但clip已有反例。ABM/Π-Nets正文note76，基础乘法/代数不是创新。F0有不同预训/expanded历史，随机原Slim也低于F0，本实验未单独定位结构/初始化/预算因果。
+
+按原协议停止固定M1 width16/stride2/dilation2/初始化/GT目标/LR/长度/seed局部网格，不换loss/teacher或延长补救，不启动失败候选视频/DEV/成本/手机/最终。下一独立研究尚未登记，必须有实质不同信息或表示、保留恢复与预训的安排、直接先例差异和有限门槛；不能继续无边界诊断。论文goal active，尚无确立创新/视频质量/手机/独立最终，原84值/snapshot003/PDF020保持。
 
 先前N1完整11264NN统计校准结项：[0187](docs/进展报告/0187-T-26112023-三观测方差识别校准与骨干问题收敛.md)、[决定](research/8.video-backbone/triple-variance/decision.md)，16冻结保持、固定20/20/20为8/8/异photon4/16，固定三观测/16tile/截断/窗口/模式/相关构造STOP。N1/S1/P1/T2/T1/V1原句柄均终态，不重启；它们失败不改变M1新空间协议，也不构成M1成功。所有旧STOP及独立最终/原84值/PDF020/7号/其他worktree保持。
 
@@ -43,4 +45,4 @@ M1固定5340参数/两双线性层不交来源树，解析卷积1308HW、1080p2.
 - 所有既有STOP继续有效，包括R28/R34/R37/R44–R46/R48/R50–R51/R61/R64–R65/R73–R75/R77/R79–R82/R84–R88等的局部网格；本主题也须按自身协议止损。旧决策原文在[研究决策目录](research/4.temporal-consistency/docs/)，完整历史在[原文快照](docs/交接历史/AGENTS-20261120-1524.md)。不因当前入口缩短而恢复任何已停止实验。
 - 原始MobileIE/F0实际4075参数；主题8-V1独立空间16180、学习融合16365，使用两遍骨干和DIS，不能写成4K或零额外推理开销。packing、KD、门控、递归等已知组件不是已确立创新。
 - OLiVES 43/71/83、DAVIS testdev、Kodak 13–24独立最终继续封存；未经预定开发/冻结门槛，不读取最终像素或将开发集结论改称独立测试。主论文原84质量值/snapshot003/PDF020保持，当前仍非投稿完成稿。
-- main只推进核心研究，survey/pre与demo/org各自worktree不修改、7号继续预留。先读[最新0189](docs/进展报告/0189-T-26112100-多线性骨干首种子完整训练与第二种子接续.md)、[主题8入口](research/8.video-backbone/README.md)、[原完整过程](research/8.video-backbone/process/v1/journal.md)与[论文状态](paper/RESEARCH_STATUS.md)；需要早期细节再定向查历史，勿按旧活跃行重启。
+- main只推进核心研究，survey/pre与demo/org各自worktree不修改、7号继续预留。先读[最新0190](docs/进展报告/0190-T-26112101-多线性骨干完整空间恢复与止损.md)、[主题8入口](research/8.video-backbone/README.md)、[原完整过程](research/8.video-backbone/process/v1/journal.md)与[论文状态](paper/RESEARCH_STATUS.md)；需要早期细节再定向查历史，勿按旧活跃行重启。
