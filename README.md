@@ -4,7 +4,9 @@
 
 ## 当前研究状态
 
-2026-11-20最新[0188：新骨干资格与空间恢复启动](docs/进展报告/0188-T-26112023-多线性骨干实现资格与空间恢复正式启动.md)：[M1](research/8.video-backbone/multiaffine-core/README.md)已实现并通过CPU/CUDA小资格，正式从随机M1/原Slim开始双seed各8K，共32000更新；GPU6按余量新准入/实际UUID核验，资格更新全丢弃。当前只检验空间恢复、尚无最终质量/方法结论；raw多线性性质不等于clip后RGB保证。40具名源/输入与[空间协议](research/8.video-backbone/multiaffine-core/spatial-protocol.md)冻结，实际进度查[链](research/8.video-backbone/multiaffine-core/process/spatial-chain001/state.json)，勿按历史PID重启。
+2026-11-21最新[0189：首种子完整训练与第二种子接续](docs/进展报告/0189-T-26112100-多线性骨干首种子完整训练与第二种子接续.md)：M1空间恢复首seed两架构各8K/共16000更新及768NN/192输出固定评价已结束，原链已自动新准入接续第二seed、零继承。完整双seed恢复门仍待，当前未启动视频训练/DEV/最终；实际进度查[M1链](research/8.video-backbone/multiaffine-core/process/spatial-chain001/state.json)，勿按旧PID重启。
+
+此前[0188：新骨干资格与空间恢复启动](docs/进展报告/0188-T-26112023-多线性骨干实现资格与空间恢复正式启动.md)：[M1](research/8.video-backbone/multiaffine-core/README.md)已实现并通过CPU/CUDA小资格，正式从随机M1/原Slim开始双seed各8K，共32000更新；GPU6按余量新准入/实际UUID核验，资格更新全丢弃。当前只检验空间恢复、尚无最终质量/方法结论；raw多线性性质不等于clip后RGB保证。40具名源/输入与[空间协议](research/8.video-backbone/multiaffine-core/spatial-protocol.md)冻结，实际进度查[链](research/8.video-backbone/multiaffine-core/process/spatial-chain001/state.json)，勿按历史PID重启。
 
 此前[0187：三观测方差校准与骨干问题](docs/进展报告/0187-T-26112023-三观测方差识别校准与骨干问题收敛.md)：[N1](research/8.video-backbone/triple-variance/README.md)全11264NN/48组正常完成，固定photon8/8正例保留、跨photon4/16，完整实际运动资格False。增强后均值变化/相关误差不能忽略，固定估计网格STOP；无新视频质量或方法成功。两全点PNG已实际查看，[完整决定](research/8.video-backbone/triple-variance/decision.md)、[真实终态](research/8.video-backbone/triple-variance/process/terminal001.json)与[待核骨干问题](research/8.video-backbone/triple-variance/next-core-question.md)分别留存，无活跃作业。
 
