@@ -1,0 +1,80 @@
+{
+  "resource_id": "MIE-0003",
+  "reviewed_at": "2026-11-20T12:53:50.206688+08:00",
+  "status": "pass_full",
+  "review_passed": true,
+  "completion_scope": "Complete public preprint including appendix, visual key tables/figures and paper-relevant static code; no numerical or deployment replication",
+  "reviewer": "Codex  (sqs_A100)",
+  "independent_external_reviewer": false,
+  "review_mode": "Separate second-pass self-audit",
+  "standard_sha256": "b5371150d788916763c891e0298b862ad0d9302a1286d698172bfa03dd90f57f",
+  "checklist": {
+    "a": {
+      "passed": true,
+      "evidence": [
+        "identity.json",
+        "derived/docs/reading-notes.md"
+      ],
+      "rationale": "See second-pass item a; no inference beyond available evidence"
+    },
+    "b": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/reading-notes.md",
+        "derived/docs/paper-assets.json",
+        "derived/figures/paper-contact.png"
+      ],
+      "rationale": "See second-pass item b; no inference beyond available evidence"
+    },
+    "c": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/reading-notes.md",
+        "derived/docs/upstream-code-manifest.json"
+      ],
+      "rationale": "See second-pass item c; no inference beyond available evidence"
+    },
+    "d": {
+      "passed": true,
+      "evidence": [
+        "derived/report/analysis.md",
+        "derived/docs/reading-notes.md"
+      ],
+      "rationale": "See second-pass item d; no inference beyond available evidence"
+    },
+    "e": {
+      "passed": true,
+      "evidence": [
+        "derived/report/claims.json",
+        "derived/report/analysis.md"
+      ],
+      "rationale": "See second-pass item e; no inference beyond available evidence"
+    },
+    "f": {
+      "passed": true,
+      "evidence": [
+        "derived/report/analysis.md"
+      ],
+      "rationale": "See second-pass item f; no inference beyond available evidence"
+    },
+    "g": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/gate2-review.md",
+        "sources/manifest.json"
+      ],
+      "rationale": "See second-pass item g; no inference beyond available evidence"
+    }
+  },
+  "known_gaps": [
+    "MobileIE baseline exact checkpoint and complete zero-shot assessment protocol",
+    "paper table conflicts/conditions not explained",
+    "pretraining construction/configs/data licensing and content overlaps",
+    "checkpoint runtime, stream quality, motion/exposure/cut behavior and true event time cutoff",
+    "device backend support/latency/peak memory/energy and full pipeline budgets",
+    "README MIT claim but no license file in pinned source ZIP"
+  ],
+  "experiments_executed": 0,
+  "model_execution": false,
+  "next_resource_allowed_only_after_close_event": true
+}

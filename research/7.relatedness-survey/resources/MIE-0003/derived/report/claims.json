@@ -1,0 +1,115 @@
+{
+  "resource_id": "MIE-0003",
+  "created_at": "2026-11-20T12:53:50.206688+08:00",
+  "source_aliases": {
+    "paper": "archive/paper-57ace90aa47c-arxiv-pdf.pdf; physical pages; original hash in paper-assets.json",
+    "code": "derived/docs/upstream-code-manifest.json; pinned revision and original source paths",
+    "MIE-0002": "closed preceding official MobileIE project resource",
+    "MIE-0004": "archive supporting current paper; independent analysis has not begun"
+  },
+  "claims": [
+    {
+      "claim_id": "C01",
+      "evidence_class": "author_report_and_primary_identity",
+      "claim": "直接引用MobileIE并作零样本LLVE基线，Table3和Fig10含明确名字/结果。",
+      "anchors": [
+        "paper:p7 Table3,p8 §4.2,p11 reference Yan2025,p16 Figure10"
+      ],
+      "limitation": "MobileIE权重/统一基线评估未说明；不是独立复现，foundation分组不改变原研究规模。"
+    },
+    {
+      "claim_id": "C02",
+      "evidence_class": "author_report_and_static_check",
+      "claim": "RetinexFormer骨干+S2DG空间/频域隐式辅助+SNR融合+ConvLSTM，训练/推理模态可分。",
+      "anchors": [
+        "paper:p3–5 §3 Eq1–12/Fig2–3,p12 AppendixB",
+        "code:models/{amnet,adapter,retinex,encoder_decoder}.py"
+      ],
+      "limitation": "原研究引既有骨干/融合/频域先例，不是MobileIE同成本派生。"
+    },
+    {
+      "claim_id": "C03",
+      "evidence_class": "static_check_with_unknowns",
+      "claim": "RGB逐t单向状态；离线clip清零，stream接口跨调用保持；真实event时间截止未由loader核验。",
+      "anchors": [
+        "code:models/amnet.py:149–283,382–492;models/convlstm.py",
+        "code:datasets/sde_video_dataset_mm.py:events_to_voxel_grid_sde,_find_event_for_frame"
+      ],
+      "limitation": "RGB路径因果不证明全部event条件在线；切镜头/尺寸/评估模式需调用者控制。"
+    },
+    {
+      "claim_id": "C04",
+      "evidence_class": "analytical_arithmetic_not_benchmark",
+      "claim": "仅默认ConvLSTMCell静态4719616参数；1080p FP32 H/C两状态约63.28125MiB。",
+      "anchors": [
+        "paper:p12 Table6",
+        "code:models/convlstm.py:7–19,47–55;models/amnet.py:98–101",
+        "derived/docs/reading-notes.md:参数与内存算术"
+      ],
+      "limitation": "不是全模型参数/实测RAM或手机时延；FFT/attention/pipeline成本额外。"
+    },
+    {
+      "claim_id": "C05",
+      "evidence_class": "author_report",
+      "claim": "约169万帧合成多模态预训练，RGB-only下游和SDE对照主要报告空间PSNR/SSIM。",
+      "anchors": [
+        "paper:p6–8 Tables1–4,§4.1–4.3,p12 Table6,p13 Table7"
+      ],
+      "limitation": "训练特权/预算不同，未提供足够时间质量/完整端侧成本，不能由空间排名推出稳定视频优越。"
+    },
+    {
+      "claim_id": "C06",
+      "evidence_class": "visual_and_text_crosscheck",
+      "claim": "表内不一致/非单调：Table8 DID30.35 vs Table1/4 31.57；FBS-only indoor29.20>组合29.03；部分L2非单调、outdoor full26.29<event26.35。",
+      "anchors": [
+        "paper:p8 Tables4–5,p15 AppendixF,p17 Table8",
+        "derived/figures/paper-p08.png;paper-p17.png"
+      ],
+      "limitation": "条件差异尚未解释，不推断结果造假或整项方法无效。"
+    },
+    {
+      "claim_id": "C07",
+      "evidence_class": "static_paper_code_crosscheck",
+      "claim": "代码Charbonnier、normalized cosine及组合平均，与论文简式不同；下游配置batch/lr/warmup有差异，temporal_loss定义不被当前目标调用。",
+      "anchors": [
+        "paper:p5 Eq9–12,p6 implementation,p12 Table6",
+        "code:models/amnet.py:111,285–378;utils/metrics.py;configs/experiments/amnet/did/rgb_only_ft.yaml;configs/experiments/amnet/sde/sde_in_mm.yaml"
+      ],
+      "limitation": "normalized L2与cosine可只差常数，不能无条件说方向不同；代码8月revision未必是6月实验版本。"
+    },
+    {
+      "claim_id": "C08",
+      "evidence_class": "static_check",
+      "claim": "默认test batch4但evaluate仅首样本；test缩放/中心crop128²、重叠clip及每clip状态清零，RGB聚合PSNR与MobileIE公开默认不同。",
+      "anchors": [
+        "code:scripts/train.py:92–133;engine/trainer.py:441–505",
+        "code:datasets/did_video_dataset_rgb.py;datasets/sdsd_video_dataset_rgb.py;utils/metrics.py",
+        "MIE-0002:main.py evaluation"
+      ],
+      "limitation": "不能直接当全帧/全分辨率stream协议；作者是否另有评测脚本未知。"
+    },
+    {
+      "claim_id": "C09",
+      "evidence_class": "static_data_identity_check_with_gaps",
+      "claim": "split字面ID无交集，SDE室内外总数与原文标签顺序不符；READMEmit声明但ZIP无LICENSE。",
+      "anchors": [
+        "derived/docs/split-static-check.json",
+        "paper:p6 SDE dataset statement",
+        "code:README.md;datasets/sde_video_dataset_mm.py",
+        "MIE-0004:sources archive fixed9dcbe4db ZIP directory"
+      ],
+      "limitation": "未核原数据内容/预训练重叠/全部许可；floor event bin与正文双voxel插值不同，真实事件在线条件未知。"
+    },
+    {
+      "claim_id": "C10",
+      "evidence_class": "research_hypothesis_not_verified",
+      "claim": "训练期丰富先验向小学生迁移/状态压缩值得检验，但组合先例已存在，需历史干预、同预算及真stream完整成本控制。",
+      "anchors": [
+        "derived/report/analysis.md:二期可证伪方向",
+        "C01–C09"
+      ],
+      "limitation": "当前0模型执行/训练/GPU，未判收益/新颖性，未进入Gate3。"
+    }
+  ],
+  "experiments_executed": 0
+}
