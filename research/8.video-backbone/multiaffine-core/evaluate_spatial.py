@@ -37,6 +37,7 @@ def main(seed):
     counts = dict(backbone_images=0, quality_rows=0, frame_rows=0, windows=0)
     write(out / 'config.json', dict(at=stamp(), process=identity(os.getpid()), seed=seed,
         source_freeze=frozen, unique_finals=finals, sampling_seed=8940+seed, data_steps=list(range(12000, 12016)),
+        RGB_PSNR_ceiling_dB=120,
         held_out_draws_not_scenes=True, new_DEV=False, independent_final_opened=False, wall_clock_cutoff=False))
     try:
         students = models(seed)
