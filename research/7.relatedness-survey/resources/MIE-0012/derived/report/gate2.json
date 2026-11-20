@@ -1,0 +1,88 @@
+{
+  "resource_id": "MIE-0012",
+  "reviewed_at": "2026-11-20T20:36:27.575152+08:00",
+  "status": "pass_full",
+  "review_passed": true,
+  "completion_scope": "Full6page v1 and21file pinned author materials, complete applicable static model/train/data/config/loss paths; all keyfigures viewed. No pickle/code/model/training or temporal/device reproduction.",
+  "reviewer": "Codex  (sqs_A100)",
+  "independent_external_reviewer": false,
+  "review_mode": "Separate second-pass self-audit after process/claims commits",
+  "standard_sha256": "b5371150d788916763c891e0298b862ad0d9302a1286d698172bfa03dd90f57f",
+  "checklist": {
+    "a": {
+      "passed": true,
+      "evidence": [
+        "identity.json",
+        "sources/manifest.json",
+        "derived/docs/reading-scope.json"
+      ],
+      "rationale": "Ao identity/citation/direct inherited FST, v1/date/fixed source; acceptance self-report separated"
+    },
+    "b": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/paper-assets.json",
+        "derived/docs/author-source-manifest.json",
+        "derived/docs/reading-notes.md"
+      ],
+      "rationale": "All fulltext/keyfigures and author still viewed, no temporal media claim"
+    },
+    "c": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/paper-code-audit.json",
+        "derived/docs/dct-initialization-review.md",
+        "derived/docs/binary-metadata.json",
+        "derived/docs/reading-notes.md"
+      ],
+      "rationale": "Applicable core actual static reading; doublezero, shapes/augment/LR/defaults differences and precise binary/log/license limits"
+    },
+    "d": {
+      "passed": true,
+      "evidence": [
+        "derived/report/analysis.md",
+        "derived/docs/paper-code-audit.json"
+      ],
+      "rationale": "Spatial FFT versus temporal information, fixedBN fold, training fairness and whole cost scope distinguished"
+    },
+    "e": {
+      "passed": true,
+      "evidence": [
+        "derived/report/claims.json",
+        "derived/docs/preclose-validation.json"
+      ],
+      "rationale": "14claims/39anchor groups/5local links/29asset hashes; source log retained without execution"
+    },
+    "f": {
+      "passed": true,
+      "evidence": [
+        "derived/report/analysis.md",
+        "derived/docs/dct-initialization-review.md"
+      ],
+      "rationale": "Explicit novelty/repetition and nontransfer limits, future falsifiable version/statistics/cost controls; no current Gate3"
+    },
+    "g": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/gate2-review.md",
+        "derived/docs/preclose-validation.json",
+        "sources/manifest.json"
+      ],
+      "rationale": "Prior11closures/frozen criteria verified; separate self-audit, final close still required"
+    }
+  },
+  "known_gaps": [
+    "Historical training source/config/initialization and DCT branch state corresponding to published ablations",
+    "Checkpoint/log/source provenance chain and exact original training environment",
+    "Numerical fold equivalence, actual full weight quality and test split/application verification",
+    "Independent official proceedings version/acceptance verification",
+    "Video/temporal GT, motion/exposure/noise/scene changes and night generalization",
+    "RTX3090/Jetson AGX backend precision/FFT placement and full latency/memory/power/thermal/drop logs",
+    "Repeated seeds/uncertainty and independent held-out final evaluation",
+    "Third-party dataset and checkpoint provenance/license scope"
+  ],
+  "experiments_executed": 0,
+  "model_execution": false,
+  "upstream_application_execution": false,
+  "next_resource_allowed_only_after_close_event": true
+}
