@@ -1,0 +1,2573 @@
+{
+  "purpose": "Resource static inspection preparation; not a read/approval claim",
+  "revision": "e701008557c758876a3da75ed373d91dd959b1bf",
+  "archive_receipt": "collection/receipts/mie0008-git-pinned-source.json",
+  "text_selection_prefixes": [
+    "README",
+    "LICENSE",
+    "examples/llama.android/LICENSE",
+    "examples/llama.android/gradle/",
+    "examples/llama.android/build.gradle",
+    "examples/llama.android/settings.gradle",
+    "examples/llama.android/app/build.gradle",
+    "examples/llama.android/app/src/main/java/",
+    "examples/llama.android/app/src/main/cpp/academic_yuv_jni.cpp",
+    "examples/llama.android/app/src/main/cpp/media_engine_jni.cpp",
+    "examples/llama.android/app/src/main/cpp/CMakeLists.txt",
+    "examples/llama.android/app/src/main/AndroidManifest.xml",
+    "examples/llama.android/app/src/main/assets/licenses/",
+    "examples/llama.android/scripts/download_models."
+  ],
+  "files": [
+    {
+      "source_path": "LICENSE",
+      "readable_path": "derived/docs/upstream-code/LICENSE.txt",
+      "sha256": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d",
+      "bytes": 1078
+    },
+    {
+      "source_path": "README.md",
+      "readable_path": "derived/docs/upstream-code/README.md.txt",
+      "sha256": "6f4c32a770fe8f6f1c0efef3e49a26fe8c083858f18996161f151cf091a0fec6",
+      "bytes": 12530
+    },
+    {
+      "source_path": "examples/llama.android/LICENSE",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--LICENSE.txt",
+      "sha256": "93cfc4d0bddec2c0faf51f7a695f5da8c5d29b3564c2f7e1b5ddab4145f6e442",
+      "bytes": 1084
+    },
+    {
+      "source_path": "examples/llama.android/app/build.gradle.kts",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--build.gradle.kts.txt",
+      "sha256": "53bbd308b400920f23bbdb498b3f317c5d899a27dd2159d73fcd03a7871df529",
+      "bytes": 14093
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/AndroidManifest.xml",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--AndroidManifest.xml.txt",
+      "sha256": "182648dc4504f9fc09b71ded8b9955f21a7598a06cfa2d8f6735ed81be1b7a5f",
+      "bytes": 23106
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/assets/licenses/AGPL_3_0.txt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--assets--licenses--AGPL_3_0.txt.txt",
+      "sha256": "d8a6cc31abc16b6748c7a21f21611f5a1ec33f67d22ca23d7da1c19b95496bee",
+      "bytes": 34020
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/assets/licenses/APACHE_2_0.txt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--assets--licenses--APACHE_2_0.txt.txt",
+      "sha256": "074e6e32c86a4c0ef8b3ed25b721ca23aca83df277cd88106ef7177c354615ff",
+      "bytes": 10280
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/assets/licenses/BSD_2_CLAUSE.txt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--assets--licenses--BSD_2_CLAUSE.txt.txt",
+      "sha256": "f32fb3b417a194167cfad068223fc975ba96c5960513a10f66a3c28720aec1df",
+      "bytes": 1267
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/assets/licenses/BSD_3_CLAUSE.txt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--assets--licenses--BSD_3_CLAUSE.txt.txt",
+      "sha256": "5a93d5831e1297ab10fe643e1a631e83be392896da14ee2951285a79012df69d",
+      "bytes": 1460
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/assets/licenses/GPL_2_0.txt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--assets--licenses--GPL_2_0.txt.txt",
+      "sha256": "aaf135472f81c5b4a0dca9367e5bb5e9750032b5bebe5442b36e4c0a47430df3",
+      "bytes": 17337
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/assets/licenses/GPL_3_0.txt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--assets--licenses--GPL_3_0.txt.txt",
+      "sha256": "fb981668c18a279e285fc4d83fba1e836cc84dd4daa73c9697d3cfd2d8aca6e0",
+      "bytes": 34674
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/assets/licenses/LGPL_2_1.txt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--assets--licenses--LGPL_2_1.txt.txt",
+      "sha256": "5749785c8bdefafcb5d798270ed0a967036fe2ca63dcedade1627565dfef81d2",
+      "bytes": 26001
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/assets/licenses/MIT.txt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--assets--licenses--MIT.txt.txt",
+      "sha256": "b05785f9f18e6716bab63424b11454513b9943a222595b70411009202fc592b5",
+      "bytes": 1078
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/cpp/CMakeLists.txt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--cpp--CMakeLists.txt.txt",
+      "sha256": "8383a28231f756278fa8bdbd6065a1ef0ece5de820f94db78e5e5bcaefa63092",
+      "bytes": 3021
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/cpp/academic_yuv_jni.cpp",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--cpp--academic_yuv_jni.cpp.txt",
+      "sha256": "6dc29ce2209f33aaa011943c92167bef0bae7025c6d9ac4de6a20e04dd53f4cd",
+      "bytes": 6301
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/cpp/media_engine_jni.cpp",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--cpp--media_engine_jni.cpp.txt",
+      "sha256": "1a26c50a98b0c3b3738550248813c4a14102e3f2c38696b9efe672a3722f3dc6",
+      "bytes": 118167
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/AudioRecordingsAdapter.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--AudioRecordingsAdapter.kt.txt",
+      "sha256": "fed9563964fb715243d22525bfdff450af3995fe85c09675e8ada5cb848471c9",
+      "bytes": 6345
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/AudioStudioActivity.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--AudioStudioActivity.kt.txt",
+      "sha256": "12f90ca4322b7c0b2f81fa684a84c53349e8bf337c86caba6b46af2770b2d779",
+      "bytes": 138093
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/AudioStudioEngineGate.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--AudioStudioEngineGate.kt.txt",
+      "sha256": "54525deed549cedf1ea9ab07515fdccdeac3206276787d222e908a64bf575ce2",
+      "bytes": 6568
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/ChatHistoryManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--ChatHistoryManager.kt.txt",
+      "sha256": "081e000ac22fb0e2a440d9259e3ea0dfaeb0a0950d0f1c9a6520626077a40964",
+      "bytes": 12415
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/MainActivity.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--MainActivity.kt.txt",
+      "sha256": "ebec5e37e89ebec93757092c1025a6c454c4a25a62734a966848a562abcac25a",
+      "bytes": 206601
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/MainViewModel.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--MainViewModel.kt.txt",
+      "sha256": "039f59830314b78b930d1651205da4829c30cb40bdd8cb91f7fd9ba6b27f499b",
+      "bytes": 8585
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/MessageAdapter.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--MessageAdapter.kt.txt",
+      "sha256": "4ec979e2ec8a10bec8ef3e2a44670b2422a6d4d64fcac5b2fe79e6c75e15cbbf",
+      "bytes": 58672
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/SamplingData.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--SamplingData.kt.txt",
+      "sha256": "c0a246b85e6f61805215fbfd3d982026442c8d035ace622c2440c484af12b8e0",
+      "bytes": 3524
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/SettingsActivity.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--SettingsActivity.kt.txt",
+      "sha256": "db24082e6aa364fc05f6606e79001f7abdb1f80dedc154b79ad021ffe91940c6",
+      "bytes": 550969
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/SettingsManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--SettingsManager.kt.txt",
+      "sha256": "abfa4a0da38a1559c4e8d4eee1fc6604c418a2968a03d6811d48ae0559f576b3",
+      "bytes": 160394
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/SrtBlockAdapter.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--SrtBlockAdapter.kt.txt",
+      "sha256": "49644c970e5212dde83652d5782a7189739e9cfdd9dec4924500c655cc86d4a0",
+      "bytes": 3446
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/SrtEditorActivity.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--SrtEditorActivity.kt.txt",
+      "sha256": "c8d41a1a87ecc61e7f6c4699679a5947bc9524246d8b37115df2a141247bff87",
+      "bytes": 79000
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/adapter/BaseModelAdapter.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--adapter--BaseModelAdapter.kt.txt",
+      "sha256": "7f2fdd3933cff389f12be18f7bb53bf27fb16a46cf5892545cf572350097404a",
+      "bytes": 1484
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/adapter/DeepSeekModelAdapter.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--adapter--DeepSeekModelAdapter.kt.txt",
+      "sha256": "d483471dffc7cf7b97920b9bd484309991a58861ab2444955de4ad9522648d58",
+      "bytes": 1282
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/adapter/GemmaModelAdapter.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--adapter--GemmaModelAdapter.kt.txt",
+      "sha256": "176031a359b8ea2a0100a6fe80e4db4680c81bb46e03137e5f664794146715f8",
+      "bytes": 1676
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/adapter/GenericModelAdapter.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--adapter--GenericModelAdapter.kt.txt",
+      "sha256": "4054f8abaf6cac67a2a967da5ce56b8c724c54722a6c83d21e4b0da5f7cfefe4",
+      "bytes": 1216
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/adapter/LlamaModelAdapter.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--adapter--LlamaModelAdapter.kt.txt",
+      "sha256": "2d2e27e4d7c3567b9707d3f1ceed53ff4d993aaf020fc0d0cb1aa69ad4f6af66",
+      "bytes": 1082
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/adapter/MistralModelAdapter.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--adapter--MistralModelAdapter.kt.txt",
+      "sha256": "f71406a8ce750a5d7d173a8c20a1e81d7f3a30b5013f9a1566af65c59c0013db",
+      "bytes": 1108
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/adapter/ModelAdapterFactory.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--adapter--ModelAdapterFactory.kt.txt",
+      "sha256": "b176ae2377d3f23c6ea6893339e8d1ed65ca36410acabd65b6fa8d5a7ef33504",
+      "bytes": 4923
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/adapter/ModelAgentController.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--adapter--ModelAgentController.kt.txt",
+      "sha256": "552a905782b5046d6aac732a72fcfeaf8c109fec6db97684428a061b1775c733",
+      "bytes": 3516
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/adapter/ModelFamilyAdapter.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--adapter--ModelFamilyAdapter.kt.txt",
+      "sha256": "2f67fe55a5267d1c94fe04354b5c063df3a9bc02fc5e46e78ba75798c6fbb5f7",
+      "bytes": 2166
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/adapter/PhiModelAdapter.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--adapter--PhiModelAdapter.kt.txt",
+      "sha256": "eeb9c88a51fd3a49b1d28f3b886a209fc95390c390338bead2ef7f1eb132a341",
+      "bytes": 1080
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/adapter/QwenModelAdapter.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--adapter--QwenModelAdapter.kt.txt",
+      "sha256": "70bd91065f09b94d1f87091384738a77285e5435e77c00df5509879f3fed1bd2",
+      "bytes": 1174
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/adapter/policy/DeepSeekReasoningPolicy.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--adapter--policy--DeepSeekReasoningPolicy.kt.txt",
+      "sha256": "c626aa43585e4bf4deb75f10fcc9e9dd5955cf98e3e5ea2ca3e97d290a8c492d",
+      "bytes": 661
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/adapter/policy/FamilySemanticPolicy.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--adapter--policy--FamilySemanticPolicy.kt.txt",
+      "sha256": "d91c0179cf1101e1a98b0acdc7b85d5e4b7b6850430be866f7eb120f137e8664",
+      "bytes": 850
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/adapter/policy/GemmaFamilyPolicy.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--adapter--policy--GemmaFamilyPolicy.kt.txt",
+      "sha256": "84103642ed5dd0245c457f680262ab71f84d2b85dce9503b162c712338aa743d",
+      "bytes": 652
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/adapter/policy/GenericFamilyPolicy.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--adapter--policy--GenericFamilyPolicy.kt.txt",
+      "sha256": "89d57e7b2969db05c62ab5219fa5676c0905d95f0959689462114f41809b5f39",
+      "bytes": 656
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/adapter/policy/GlmFamilyPolicy.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--adapter--policy--GlmFamilyPolicy.kt.txt",
+      "sha256": "1af75534cc6a073ce0a92e3dd0367aac708633e1b45f37abab384ffdd03b9107",
+      "bytes": 648
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/adapter/policy/LlamaFamilyPolicy.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--adapter--policy--LlamaFamilyPolicy.kt.txt",
+      "sha256": "a823787e23823a44ffcaec0eb220d52390bd8a5ee8c75fff726a7d91e9046670",
+      "bytes": 652
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/adapter/policy/MiniCpmFamilyPolicy.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--adapter--policy--MiniCpmFamilyPolicy.kt.txt",
+      "sha256": "6ea2c3f43cfe16e268267c4f3237bf06bbd6f5d197def537dfe3ed55824048d8",
+      "bytes": 656
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/adapter/policy/MistralFamilyPolicy.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--adapter--policy--MistralFamilyPolicy.kt.txt",
+      "sha256": "1c1ca8929e906f8b88ccefa4bfdb34434984d4b79c7301bbb137c265b84299e5",
+      "bytes": 656
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/adapter/policy/PhiFamilyPolicy.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--adapter--policy--PhiFamilyPolicy.kt.txt",
+      "sha256": "b2272237acc6acca0879a5b444a2fc2c6b4756daa865447ea2e3902fe5f827ed",
+      "bytes": 648
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/adapter/policy/QwenFamilyPolicy.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--adapter--policy--QwenFamilyPolicy.kt.txt",
+      "sha256": "3930bc1d71f83388c2ede2ff57506a59f8d378e9db55fbf0cfe1aa1adb8e5a00",
+      "bytes": 648
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/adapter/template/ChatMlTemplateModule.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--adapter--template--ChatMlTemplateModule.kt.txt",
+      "sha256": "6d7c3789ce82e95c14eef917bf1b81c7ff9d00c9c8a1a3322086e549c673b634",
+      "bytes": 2182
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/adapter/template/Jinja2NativeToolsModule.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--adapter--template--Jinja2NativeToolsModule.kt.txt",
+      "sha256": "811522c05ef9c3dda8d3f1f03099d084f2a55af906e60368382721ed4cbcb06b",
+      "bytes": 2997
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/adapter/template/JinjaPromptInjectedModule.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--adapter--template--JinjaPromptInjectedModule.kt.txt",
+      "sha256": "f7ac6ba7d4793f83f05b5141c6934a4359b9d5b97b4852eee2221b0f5367bb80",
+      "bytes": 2285
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/adapter/template/NonJinjaLegacyModule.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--adapter--template--NonJinjaLegacyModule.kt.txt",
+      "sha256": "593829e1364567c398f610ca568b074363e7756b90e8088d81f15ad1d8184f8e",
+      "bytes": 1744
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/adapter/template/TemplateProtocolModule.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--adapter--template--TemplateProtocolModule.kt.txt",
+      "sha256": "e2efe0eb4b5903da2f9630e1522a5f3c1f97376861ea9acc578fabcda61f54d3",
+      "bytes": 1765
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/adapter/template/UserInjectedTemplateModule.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--adapter--template--UserInjectedTemplateModule.kt.txt",
+      "sha256": "799a196460af659378b69e4c683c735fbad2e4d19b96a5292ac719a75ac35acc",
+      "bytes": 2762
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/core/ActionExecutor.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--core--ActionExecutor.kt.txt",
+      "sha256": "7850f2cdd217844163d78d5091f49c7ca5fb4c5410fd3327e57e9fc59274a00b",
+      "bytes": 85602
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/core/ActionResultBus.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--core--ActionResultBus.kt.txt",
+      "sha256": "816804b59f56d2b08d2b0cff4e978d08267453e7d2ef0befbf255a879ff13e78",
+      "bytes": 3103
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/core/AgentCoordinator.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--core--AgentCoordinator.kt.txt",
+      "sha256": "ad7ec2908cc4bf7a764d8858208558c8c39ab6668c4b148aafbd07266a4f21bc",
+      "bytes": 84355
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/core/AgentHelper.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--core--AgentHelper.kt.txt",
+      "sha256": "fcd775be534fbfe61ed1583f2b982721092f705f9a091838e2c53e0c990e8cae",
+      "bytes": 1956
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/core/AppLayoutCache.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--core--AppLayoutCache.kt.txt",
+      "sha256": "0f62508e1a9241e3f2c4229148dd2597b2482f33ceadf7b89ce91f7904cff8de",
+      "bytes": 18541
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/core/AppResolutionEngine.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--core--AppResolutionEngine.kt.txt",
+      "sha256": "796ba6a0a50c1cfea9392268407b851b00ade33a75cb234d64aea2e598d4c10b",
+      "bytes": 5613
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/core/CloudInferenceEngine.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--core--CloudInferenceEngine.kt.txt",
+      "sha256": "213e0c182b9c510e7c4b9acbfd6df6dec94c6907d8448e2f453976901ee9e3a2",
+      "bytes": 56582
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/core/CommandContextTracker.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--core--CommandContextTracker.kt.txt",
+      "sha256": "f6e21614bf4f26d946657a1c2f9c4cde7775da2c1a5200f9fcc3c13da0dde134",
+      "bytes": 5304
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/core/DirectCommandMatcher.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--core--DirectCommandMatcher.kt.txt",
+      "sha256": "a17840121d87e30be4898f0dab487ba9a9b858f263f6a114ff9d52adce0f2b4e",
+      "bytes": 240388
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/core/EngineOrchestrator.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--core--EngineOrchestrator.kt.txt",
+      "sha256": "95d6ab3e11bf0f533f4fa878af7d07a12dd2b4c8a22e9cd27cc61c7b814cde0d",
+      "bytes": 7325
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/core/EngineProvider.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--core--EngineProvider.kt.txt",
+      "sha256": "014e3d9ad8f5e7d8684f7aaf43853bae17d291df55f5223e15255bfb6115153c",
+      "bytes": 1460
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/core/GenStudioTool.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--core--GenStudioTool.kt.txt",
+      "sha256": "3e2999e2e112599153b1d9c1a81c8960e328472c435b8bbf23b268db467b1df9",
+      "bytes": 4852
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/core/HybridInferenceEngine.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--core--HybridInferenceEngine.kt.txt",
+      "sha256": "9a18003908dc0f48e8bf4ba52c0650f277679091c7e8c1e1eff226e195d82758",
+      "bytes": 11842
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/core/InstalledAppsRegistry.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--core--InstalledAppsRegistry.kt.txt",
+      "sha256": "d9bf27ade003b9a55a1cf0ba84726ffa9671513658f7bfbf949f327410312bc1",
+      "bytes": 48702
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/core/NlpActionHandler.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--core--NlpActionHandler.kt.txt",
+      "sha256": "f67125b8c7f91dbf6609f214601ef22828721b6501247959ee6cc3e83f7510da",
+      "bytes": 23236
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/core/SafetyGuard.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--core--SafetyGuard.kt.txt",
+      "sha256": "e5e137acf0219592f47bb57ae009b3ad029456bd16d4206631168966a591622e",
+      "bytes": 6377
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/core/ScreenContextMemory.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--core--ScreenContextMemory.kt.txt",
+      "sha256": "b560b5d7018602be64a9215bbbbc96056393c8b5195cd8612844c34cf91efcb9",
+      "bytes": 28484
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/core/ScreenParser.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--core--ScreenParser.kt.txt",
+      "sha256": "91e4adb07c5826477879222fe2b1857d1969a027c4d892220527bd387780a1eb",
+      "bytes": 41977
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/core/SystemController.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--core--SystemController.kt.txt",
+      "sha256": "198cf5fd2fc9780b5602fe92de51d3671153559bb7ba6da6f067d84245651518",
+      "bytes": 37048
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/core/SystemToggleController.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--core--SystemToggleController.kt.txt",
+      "sha256": "0af46b749ed883cbbf45a4bf5982508b93029e5c9a9dea2f9b87c355047e270d",
+      "bytes": 5851
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/core/VoipCallController.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--core--VoipCallController.kt.txt",
+      "sha256": "d4b828d1767665d8c46adeb206a67c2852dd909792d086d0220e28bde97b54d0",
+      "bytes": 15709
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/core/audio/AgentAudioOrchestrator.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--core--audio--AgentAudioOrchestrator.kt.txt",
+      "sha256": "f7da95c6be53a1bc1ad45f2a553f230ac353d26897b5463054694f20ca0f30e3",
+      "bytes": 9652
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/AlphaBetaFilter.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--AlphaBetaFilter.kt.txt",
+      "sha256": "b9429617b2ae4bb5385f9fa4346479e6023fa342ec871b67a919ec063a950db5",
+      "bytes": 5310
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/CalibrationActivity.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--CalibrationActivity.kt.txt",
+      "sha256": "dc84dbc51a36b163f9bd51aeeef76a89e15c031cc045030fec4baa542c3158d8",
+      "bytes": 71307
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/CalibrationMapper.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--CalibrationMapper.kt.txt",
+      "sha256": "338c458d7ed1077b2e96cdffbc49b1a35658589e898959f0606e0709459d268d",
+      "bytes": 9226
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/CalibrationRepository.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--CalibrationRepository.kt.txt",
+      "sha256": "5db4d68519159432600ea6d9e7b99bde7afe202d363745a15fe8894f3956544e",
+      "bytes": 11140
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/CursorOverlayManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--CursorOverlayManager.kt.txt",
+      "sha256": "bbd3940abca9b3fb4ffc88d2c4302948a870706a0e5a4fb89665dc198acf6f4b",
+      "bytes": 10512
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/DofProcessors.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--DofProcessors.kt.txt",
+      "sha256": "7cf75b532447c3cb8c6063ab8bfc3badfd4ace45765fda8381f9f8b197842c83",
+      "bytes": 7177
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/DwellClickEngine.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--DwellClickEngine.kt.txt",
+      "sha256": "e5d52123ec9995138b43c1c837cce3c2a776724a33b97f532fad7d3216af2e4b",
+      "bytes": 10847
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/FaceLandmarkerEngine.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--FaceLandmarkerEngine.kt.txt",
+      "sha256": "eeb0d0044191fc0b7ae3aa2c0b339390690176bbfee5eeb0226393cb1210c7ff",
+      "bytes": 50825
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/GazeFilter.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--GazeFilter.kt.txt",
+      "sha256": "83fbcf86f2fde17493d3c38a15c8c74ba625010786a13db5e5e9c51ddae1151e",
+      "bytes": 1310
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/GazeFilterPipeline.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--GazeFilterPipeline.kt.txt",
+      "sha256": "07def49cf900c942a89932c5cecf513861236e86841a68346ce86b9cb4aefca5",
+      "bytes": 2546
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/GazeStabilizer.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--GazeStabilizer.kt.txt",
+      "sha256": "64b0752bf769a2b75fdc6dc99d88bab7a6a7e28c1edcf13920552fbdc947da4b",
+      "bytes": 6776
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/IrisMotionController.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--IrisMotionController.kt.txt",
+      "sha256": "c3fc9734f9fcbf2f425b23920a3e93abb94f8cbc136b4adf2ea4637d61dc8ca7",
+      "bytes": 80129
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/KalmanFilter2D.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--KalmanFilter2D.kt.txt",
+      "sha256": "7f569b27b20050f3d1f9acab197f73e31315dcd23090d78ffc761593c5ff5e7d",
+      "bytes": 8673
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/MedianGazeFilter.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--MedianGazeFilter.kt.txt",
+      "sha256": "296134f479625c24358941c750e8a785418888e9e7a12963562504a06133b5a9",
+      "bytes": 3474
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/OneEuroFilterWrapper.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--OneEuroFilterWrapper.kt.txt",
+      "sha256": "3bc8c332bfe74fae0aaf03eb5661f1ac2ca65bd3bc7a493691164becbe5c9183",
+      "bytes": 693
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/PhysicalGesture.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--PhysicalGesture.kt.txt",
+      "sha256": "ddef565fc3605c235fb96b0332685431800378f88c0273544688133d73099b07",
+      "bytes": 563
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/blink/BlinkPhaseDetector.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--blink--BlinkPhaseDetector.kt.txt",
+      "sha256": "db6aadaf840cddbef89aa30f4343eba3836faa78511b4ae003e45e178ef1b689",
+      "bytes": 6027
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/blink/BlinkQualityValidator.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--blink--BlinkQualityValidator.kt.txt",
+      "sha256": "90db4d01b75749bd8834d058eeb6bab06ea2da4ba5ff9e1078b00619094a1bee",
+      "bytes": 2718
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/blink/ReEngagementRamp.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--blink--ReEngagementRamp.kt.txt",
+      "sha256": "9a4bc9bd22f22c09c2254f8f1bc5c30afbb4c995790d8f0b28455cceb9e02cc9",
+      "bytes": 2941
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/bluetooth/BluetoothHidForegroundService.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--bluetooth--BluetoothHidForegroundService.kt.txt",
+      "sha256": "43c9df1ed24912a0fdc7510a83f9c63b7e9293d6f500f6d2fbbebe4d3171a668",
+      "bytes": 4442
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/bluetooth/BluetoothHidTransmitter.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--bluetooth--BluetoothHidTransmitter.kt.txt",
+      "sha256": "0e920b25a7410f243ec54bdc29dd147231cdd447694f90c6edb4cb508ae37147",
+      "bytes": 15650
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/bluetooth/HidBridge.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--bluetooth--HidBridge.kt.txt",
+      "sha256": "ef2e532b9663732742995e7c59576b9bbb975260456b405915a663b8719498dd",
+      "bytes": 128
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/bluetooth/MouseDeltaTranslator.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--bluetooth--MouseDeltaTranslator.kt.txt",
+      "sha256": "1f0c025be7be98f81fa3f045d27cf2780c54d903dc90da712745fc528b04b568",
+      "bytes": 3578
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/bluetooth/RemoteGestureOrchestrator.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--bluetooth--RemoteGestureOrchestrator.kt.txt",
+      "sha256": "019a9052bddd7ac776bd3e70947076e553b946d3704361fd4f15750b57311e46",
+      "bytes": 4847
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/bluetooth/profiles/DigitizerProfile.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--bluetooth--profiles--DigitizerProfile.kt.txt",
+      "sha256": "4135f7df560c2003ff3413541c6b5dfa45e6426a13a8c12bde979dd4333f73da",
+      "bytes": 6044
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/bluetooth/profiles/MouseProfile.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--bluetooth--profiles--MouseProfile.kt.txt",
+      "sha256": "c7b538943471ce13b2d449d22de8b17bd5c528966d6a559cbc9232bde964d880",
+      "bytes": 3912
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/bluetooth/profiles/RemoteProfile.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--bluetooth--profiles--RemoteProfile.kt.txt",
+      "sha256": "7ee16c4e3074f28c9b6462fc2cf0d6fa11f37bf95d16d03c2a25b9d9171118da",
+      "bytes": 1125
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/database/IrisDatabase.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--database--IrisDatabase.kt.txt",
+      "sha256": "12707f403d8f4c9c8dce175157d70825fd824aee6a7050d06c87781d9f3376b2",
+      "bytes": 948
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/database/MapTypeConverter.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--database--MapTypeConverter.kt.txt",
+      "sha256": "a07551794317bf63b10ca7ec4d19ed18d1f3b568287acacadc2779c5274695bf",
+      "bytes": 700
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/database/RemoteProfileDao.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--database--RemoteProfileDao.kt.txt",
+      "sha256": "975eb46758b336d84a84adeebcbdf3742ee1073b5c955f928de5c759dba05f0b",
+      "bytes": 658
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/database/RemoteProfileEntity.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--database--RemoteProfileEntity.kt.txt",
+      "sha256": "ca51d558ae175eb5523de89eb052513374e0e3a0dedfcac2ca71a30377b198a6",
+      "bytes": 513
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/database/RemoteProfileRepository.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--database--RemoteProfileRepository.kt.txt",
+      "sha256": "f1241be2887c0d1c5124e64d4314bb22cc2d4bcad829b4016d08cba8359794b6",
+      "bytes": 3363
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/expressions/AdaptiveBaselineTracker.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--expressions--AdaptiveBaselineTracker.kt.txt",
+      "sha256": "32008f22db654c36996a911c46420c64d8bb0d9d596d206202e7f327f594f512",
+      "bytes": 1429
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/expressions/ExpressionCrosstalkSuppressor.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--expressions--ExpressionCrosstalkSuppressor.kt.txt",
+      "sha256": "5b4f2e0ed481419e32e0fd6e9dd436e89a9a4149f26f3c9f67254944225c42b0",
+      "bytes": 1922
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/expressions/ScalarOneEuroFilter.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--expressions--ScalarOneEuroFilter.kt.txt",
+      "sha256": "a490f0c612be4c72a298d3f83f8e6b2858108a680530451b7d1277028e974289",
+      "bytes": 1519
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/expressions/SchmittTrigger.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--expressions--SchmittTrigger.kt.txt",
+      "sha256": "5f8f1fa8b6828edf0c1db2b6095117a1f1a6b1ee074587a811fa3c24de8deea6",
+      "bytes": 2564
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/gaze/CursorHistoryBuffer.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--gaze--CursorHistoryBuffer.kt.txt",
+      "sha256": "f98f3d34783640ccca28cff5cefaa9e37aed1e63f3bbc03bcea2ca0c37c2ff38",
+      "bytes": 2765
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/gaze/HeadMotionIntentFilter.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--gaze--HeadMotionIntentFilter.kt.txt",
+      "sha256": "e2617b1b6135fe8d339f20d63ab643de4e7aaa8f53cf25c0816038e6de1e56de",
+      "bytes": 3662
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/gaze/PupilPositionPredictor.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--gaze--PupilPositionPredictor.kt.txt",
+      "sha256": "402865a8bcdf1c8238ebd94741e2d13f4076ecf5d88a5698b1b591f34cfdbb4d",
+      "bytes": 2922
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/gaze/SaccadeClassifier.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--gaze--SaccadeClassifier.kt.txt",
+      "sha256": "def6e0aa100603f748b0a47d6e4b9a46eef09a0db7facce836247d4eaf7c6e79",
+      "bytes": 1580
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/gaze/TrajectoryStabilizer.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--gaze--TrajectoryStabilizer.kt.txt",
+      "sha256": "ea69c2b2557b338be2506d04ce05c70972ebfda13055fe48afda309346360b6a",
+      "bytes": 1133
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/kinematics/HybridGazeEstimator.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--kinematics--HybridGazeEstimator.kt.txt",
+      "sha256": "52a6726f16716973aca4152d4e039588698577c41f12f792265979bdd2fe2d1c",
+      "bytes": 19430
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/ui/RemoteProfilesActivity.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--ui--RemoteProfilesActivity.kt.txt",
+      "sha256": "8f983d22d8c79ec557c172ed485d6b4fab16d0faf0e0bc934690b9ab6c50325c",
+      "bytes": 10663
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/irismotion/ui/RemoteProfilesViewModel.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--irismotion--ui--RemoteProfilesViewModel.kt.txt",
+      "sha256": "0accb9e10e7a7541ee86a50376042d92af27b9cbfe3f139fcadba4aa49a5215e",
+      "bytes": 2923
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/macro/MacroEngine.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--macro--MacroEngine.kt.txt",
+      "sha256": "745d02bac0d389c29c5b22ffad5518d929915bf5f00828c56b365628afe8c366",
+      "bytes": 48061
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/macro/MacroModels.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--macro--MacroModels.kt.txt",
+      "sha256": "4b92ae29f56abbc9a1a94b32f79acadd9266d488ab7323bc65f8b7067fbff1c0",
+      "bytes": 2783
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/macro/MacroParser.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--macro--MacroParser.kt.txt",
+      "sha256": "369e8bae1155269c1d67006931953ef4a0b87403c100d5a5fd3dcad65693dfdd",
+      "bytes": 2876
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/models/ActionType.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--models--ActionType.kt.txt",
+      "sha256": "fdeadb1cc4532e24f47e976544e2089813ca17ce2158cd4bbb0041163ec6601f",
+      "bytes": 6171
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/models/AgentAction.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--models--AgentAction.kt.txt",
+      "sha256": "71173d74ae9855204f5422ebe6851f8a91d8987047e50b746bc0854d30c69afc",
+      "bytes": 5949
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/models/AgentMode.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--models--AgentMode.kt.txt",
+      "sha256": "de997a4977986f32cc67647349fe78d489f62bec2fcb9112624c5560ed8360e1",
+      "bytes": 823
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/models/ScreenState.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--models--ScreenState.kt.txt",
+      "sha256": "fcaeebb45ce7f1ba8a6f9ba147940a60eabb66f0eab44195c93865f1df3cb273",
+      "bytes": 9532
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/AiCoreContracts.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--AiCoreContracts.kt.txt",
+      "sha256": "ac767e94b9bc9084c9882f07ba0541e33dd3aabab34a037a4e7921c3b48f75b9",
+      "bytes": 4451
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/AiCoreMasterEngine.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--AiCoreMasterEngine.kt.txt",
+      "sha256": "23c3a46f5d4e4f88a96144f8ee5fe1e04d0fd7777a007d0ffa8eb9e19ac04902",
+      "bytes": 71934
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/AudioPerceptionEngine.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--AudioPerceptionEngine.kt.txt",
+      "sha256": "8452af3ac009de68efa2c63fc59d2849373b703ec4aed2aa1ead67760d0d53c8",
+      "bytes": 24717
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/BasePerceptionWorker.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--BasePerceptionWorker.kt.txt",
+      "sha256": "1552f7c431108e40432dda616b8c2f8f20c38b9a6f0a31ed915621e6b02c7384",
+      "bytes": 1108
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/BertModelManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--BertModelManager.kt.txt",
+      "sha256": "df096ad25323eae85d0b6634196dec7e675630ae15d7e55f32f64462c7896d1a",
+      "bytes": 7862
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/BertSentimentWorker.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--BertSentimentWorker.kt.txt",
+      "sha256": "1397a9e04eab566af320d488f865c15ca7e9a181ebcf8cea42c7642815ccc3af",
+      "bytes": 11381
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/BertTokenizer.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--BertTokenizer.kt.txt",
+      "sha256": "488f50fef8c84573ac047e577a165669dee090f379806b1aa7b9401925ab397f",
+      "bytes": 17569
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/DspFilterChain.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--DspFilterChain.kt.txt",
+      "sha256": "514fa5b1733e414db41922f68f7070fd2fd6de12d93c348fe944dff4f6cf7613",
+      "bytes": 10668
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/MediaPipeLlmWorker.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--MediaPipeLlmWorker.kt.txt",
+      "sha256": "6aed22f3a048301ca370abab7656623d036050b74ca27c24f164285c19f61956",
+      "bytes": 6974
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/MediaProjectionPermissionActivity.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--MediaProjectionPermissionActivity.kt.txt",
+      "sha256": "680e1b7a3d82fae52e770513f7300c3ec62a8469c6dec731fc186ae441a330d4",
+      "bytes": 4634
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/NlpSummaryWorker.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--NlpSummaryWorker.kt.txt",
+      "sha256": "d8c9191bad32efc9366aa5710902dadd3b94a6afd477f502d254ebb5025747c2",
+      "bytes": 28075
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/NlpTextProcessor.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--NlpTextProcessor.kt.txt",
+      "sha256": "2b29c5157b62929c860386ba0f4616578ee8f59b8e5cafa3cce5839116211f18",
+      "bytes": 39493
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/OdModelManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--OdModelManager.kt.txt",
+      "sha256": "09567186aca2c64d03dbdc4f1437beacd9ae4059e6cda7eb48ef5358dca00894",
+      "bytes": 27194
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/PerceptionEngine.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--PerceptionEngine.kt.txt",
+      "sha256": "61af8c6931f14f6a8a1dca99853373d3fbeef4d13cd38385d6bcba9ea8c4743a",
+      "bytes": 83493
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/PerceptionEventBus.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--PerceptionEventBus.kt.txt",
+      "sha256": "f587ad87594e90bf10f5ea6c4e03a931f988df77c2464d7a02401f5d576f4b4c",
+      "bytes": 18406
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/PerceptionState.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--PerceptionState.kt.txt",
+      "sha256": "affd18530151b6de547ef4d9e69ce2187b677a0a21fe22f97421d8ba172ed053",
+      "bytes": 17424
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/PoseLandmarkerEngine.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--PoseLandmarkerEngine.kt.txt",
+      "sha256": "e2ba96eeffda124188f316d4dfcbbafed9d8727ce8323f5cd3f734d32187a8ba",
+      "bytes": 10398
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/SecureStorageEngine.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--SecureStorageEngine.kt.txt",
+      "sha256": "f6fb172f19ea8caeead567bf1881e0d33c2b9c7046d6df21bb308c418d258213",
+      "bytes": 15229
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/SherpaModelManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--SherpaModelManager.kt.txt",
+      "sha256": "fe30ec4c763d7f24f657102671ace951c15c120e05ee73e99eb81047567dc208",
+      "bytes": 59090
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/SystemAudioInterceptor.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--SystemAudioInterceptor.kt.txt",
+      "sha256": "3f38494944723b38e23432b2dce19ff265f2f320d97d7a03edf99315cd490ad5",
+      "bytes": 15294
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/TfliteVocabDetector.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--TfliteVocabDetector.kt.txt",
+      "sha256": "aa089a8a52dad90489ffc37b30bf4a031d1bc47b508d2724d09e6893970aba6b",
+      "bytes": 7490
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/ToolbarBertWorker.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--ToolbarBertWorker.kt.txt",
+      "sha256": "e9003ed0962ea563a032cded713f659725938e742d25931abd3bc17348c761b9",
+      "bytes": 16507
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/TranscriptAgent.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--TranscriptAgent.kt.txt",
+      "sha256": "2301a25aa69e7c2b4f56b2a826f905ccfb4cf58dd7b47ca920628ef4f044c9d9",
+      "bytes": 83537
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/TranscriptForegroundService.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--TranscriptForegroundService.kt.txt",
+      "sha256": "5803c618c41969d07d103befef46b508b1d4d81d52205fb6fa348bc7b5de3d22",
+      "bytes": 23517
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/WhisperModelManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--WhisperModelManager.kt.txt",
+      "sha256": "296c136dcc63e65dcc692058b6249e90b0d1ada84f3a78ca0431bb6ba4155112",
+      "bytes": 3518
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/audio/AsyncWavMuxer.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--audio--AsyncWavMuxer.kt.txt",
+      "sha256": "8fc320d32d1007091e99300c1903eaa4059ed6b2211156bd1f57c0197691d1d1",
+      "bytes": 6094
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/audio/CircularShortBuffer.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--audio--CircularShortBuffer.kt.txt",
+      "sha256": "6cbf854f89c1282c31d86a3a9b831bc732b5e3544830327c42bfaf81a92ad7b5",
+      "bytes": 3608
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/export/MediaExportFactory.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--export--MediaExportFactory.kt.txt",
+      "sha256": "4be59a73a10c10fccdf59c96b746d96abb054bca0f880ec97b9a64c28ee41960",
+      "bytes": 4556
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/nlp/DictaphoneTemplateManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--nlp--DictaphoneTemplateManager.kt.txt",
+      "sha256": "0efcbbf36fe50bb8d3682bc9ef69fc352dbd07d0c346bd586a2f41ea58f98e0d",
+      "bytes": 22770
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/nlp/MeetingIntelligenceRefiner.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--nlp--MeetingIntelligenceRefiner.kt.txt",
+      "sha256": "7ff7823258b2873ce0cbf45f1a70f98b40e17eb17d0dd58588b2b0835710929a",
+      "bytes": 28318
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/nlp/router/EngineRouter.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--nlp--router--EngineRouter.kt.txt",
+      "sha256": "294bf02c3175c79bcfe6263bf41332689aeb488ef3e4f1b6a00a512624fb1391",
+      "bytes": 4772
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/nlp/workers/AiCoreWorker.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--nlp--workers--AiCoreWorker.kt.txt",
+      "sha256": "eb33b952af2b8ee578863c51ded1f5c4b2e93f8c75984181d0676b5cddafdef2",
+      "bytes": 2910
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/nlp/workers/BaseMapReduceWorker.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--nlp--workers--BaseMapReduceWorker.kt.txt",
+      "sha256": "fbbcfb1048fa693adea1c100877bc865d744a06bab278017df1f7ecb9fed9f9b",
+      "bytes": 9750
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/nlp/workers/HeuristicWorker.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--nlp--workers--HeuristicWorker.kt.txt",
+      "sha256": "c6125640242b4d896f9deef01e9f89b63399c893631285ca358458608679a2b3",
+      "bytes": 556
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/nlp/workers/LlamaWorker.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--nlp--workers--LlamaWorker.kt.txt",
+      "sha256": "2f25b12d952c9e4524d778257ab2722d4bf4df646e2f12a67530e1b3e63adc05",
+      "bytes": 3272
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/perception/nlp/workers/MediaPipeWorker.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--perception--nlp--workers--MediaPipeWorker.kt.txt",
+      "sha256": "8110eb3a091cf3050ec347cea600c96cfb89582aa7c1e5d459e7444220f6604a",
+      "bytes": 1671
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/service/AiAgentAccessibilityService.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--service--AiAgentAccessibilityService.kt.txt",
+      "sha256": "751432e567d4b01eef9e30a63b7515d6734446aa318b31dde113d76266359d50",
+      "bytes": 136779
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/service/AiAgentSession.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--service--AiAgentSession.kt.txt",
+      "sha256": "6b03a2ac187b3b649bae969e6f66b5239ab3aa229476fce8c9373e719d4c1202",
+      "bytes": 4421
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/service/AiAgentSessionService.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--service--AiAgentSessionService.kt.txt",
+      "sha256": "a0343e8141f7e0c9924e45e70c18b92ed26e8f8f66994d2896d1143a67f4aca1",
+      "bytes": 747
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/service/AiAgentVoiceInteractionService.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--service--AiAgentVoiceInteractionService.kt.txt",
+      "sha256": "1b6eb5b316f59fe0a679a63879411dc6e9f700fb83c60f2e190da9efeae42092",
+      "bytes": 1856
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/service/HyperKeyboardService.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--service--HyperKeyboardService.kt.txt",
+      "sha256": "397bd9caaf099969c463076205e5fe7d01b690719e3c561b68da92179c792f40",
+      "bytes": 8824
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/skills/Skill.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--skills--Skill.kt.txt",
+      "sha256": "0bfcb6af05c382d6156686ecc93cf4c926c9788b7e388f1031b2601f54428747",
+      "bytes": 442
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/skills/SkillRegistry.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--skills--SkillRegistry.kt.txt",
+      "sha256": "85a152b967f57569169d9f0fa2a32a6cf0296c2d156d3d41c09f3e45e8282a83",
+      "bytes": 16793
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/skills/SkillsUiManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--skills--SkillsUiManager.kt.txt",
+      "sha256": "4b1f4d10a8f78430e7b7ee5bcb6e4f6a6d0df04bbcf188d0c1f4c47fa4259978",
+      "bytes": 11987
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/tools/EdgeAgentGrammarAndToolsProvider.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--tools--EdgeAgentGrammarAndToolsProvider.kt.txt",
+      "sha256": "07981106a8d5fdb2310797dd3d1c54ffcc539e211697c5f02a12688399e40c1b",
+      "bytes": 15250
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/tools/parser/LenientToolCallParser.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--tools--parser--LenientToolCallParser.kt.txt",
+      "sha256": "6336d5de9d7cb2fc552ef094cc0f63bbbda9ad87a92b49f73df9482d3fda3166",
+      "bytes": 19420
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/tools/plan.md",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--tools--plan.md.txt",
+      "sha256": "be6f671b1fc623bba84c643e0b4deea58e53b121463c569b8d36fdde57313d1f",
+      "bytes": 180918
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/tools/web/AgentGroundingEngine.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--tools--web--AgentGroundingEngine.kt.txt",
+      "sha256": "83e7045bd2369ea5efb9c095697cc23fa8a829d18dfd9721b4b901b88bccdf38",
+      "bytes": 7487
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/tools/web/AutonomousBrowserSubagent.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--tools--web--AutonomousBrowserSubagent.kt.txt",
+      "sha256": "fbe1b58c25d84224f7fea000d53bc98a2a9f245c809f9bf3c27818b6f2681be1",
+      "bytes": 18040
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/tools/web/UrlContentReader.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--tools--web--UrlContentReader.kt.txt",
+      "sha256": "74966cec116b300c5e0b36857693c82fc816002a96ce63399b08fb22b8bd3f5a",
+      "bytes": 4830
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/tools/web/WebAccessRuleManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--tools--web--WebAccessRuleManager.kt.txt",
+      "sha256": "1ec4e8c25f50ed707f5bc95d0e6bd2a19e95ea574fdeb163394c0a598fd9738a",
+      "bytes": 11002
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/tools/web/WebSearchEngine.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--tools--web--WebSearchEngine.kt.txt",
+      "sha256": "0a23d0e12c9b280af44873d8ada7a2d4ce0d0822b2270f0774091731c4691bcb",
+      "bytes": 112094
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/tools/web/WebToolsDispatcher.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--tools--web--WebToolsDispatcher.kt.txt",
+      "sha256": "3c19d40aba2ac1436032b378f51b277b1d46817b16f2be7c8de563b637cedb2d",
+      "bytes": 77922
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/tools/workspace/AgentExtendedTools.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--tools--workspace--AgentExtendedTools.kt.txt",
+      "sha256": "90572a741d5cae466b625b364108c12663ee694e4153ecb92baac5d64987d5f2",
+      "bytes": 57002
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/tools/workspace/SafDocumentRagManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--tools--workspace--SafDocumentRagManager.kt.txt",
+      "sha256": "f81aacfa5143d3f816b8320e5d9c4b74697ca14203de7a7e76d03d3c72747149",
+      "bytes": 12385
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/AgentNotifier.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--AgentNotifier.kt.txt",
+      "sha256": "d14778cc0b357b8519339b0e4c8817ee3a091e54cdc8333fbf02935466c0719d",
+      "bytes": 7282
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/ContextMenuToolbar.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--ContextMenuToolbar.kt.txt",
+      "sha256": "191024122331bd027f3a105187cb2f8543ca5cf270e2b177a929538a474484cf",
+      "bytes": 9297
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/FloatingAgentButton.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--FloatingAgentButton.kt.txt",
+      "sha256": "bdf669211b8f2526d8687422a47e5ae37efdcaafb193dd861f63712f4c376647",
+      "bytes": 44893
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/FloatingResultPopup.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--FloatingResultPopup.kt.txt",
+      "sha256": "d5ddaac0e3a72d116be8bcc2fa3038ae76b5d5ad39a39bf2f2601ffac15bac5a",
+      "bytes": 15389
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/GainSliderPopup.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--GainSliderPopup.kt.txt",
+      "sha256": "453ebb4af80e88125b7df16a2f67373e6f8c943b0f7ae0a894fb69a9a1c81fa9",
+      "bytes": 5937
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/MixerOverlayPopup.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--MixerOverlayPopup.kt.txt",
+      "sha256": "e4b0d1115dfdd66bbb9aafebb2f1a928fa0ef86fcd5b1ab5631e48a92ff4636a",
+      "bytes": 8899
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/OmniControlNotificationHelper.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--OmniControlNotificationHelper.kt.txt",
+      "sha256": "1a3abeabe0d0bab03a6cb4e8e311592b70b580de0836f3271f0cbdeb545ed2c7",
+      "bytes": 7413
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/SmartCaptionOverlayManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--SmartCaptionOverlayManager.kt.txt",
+      "sha256": "9a3c3aa832c5fca71598f586d04f35c162de03c1e04d711ed0b4834aba52069b",
+      "bytes": 14363
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/SmartSelectOverlay.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--SmartSelectOverlay.kt.txt",
+      "sha256": "69fdefd2cc1090ef0b479f4ce91c570d913858ae86e232cb952eb8f0b9d10b1a",
+      "bytes": 13605
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/TranscriptTileService.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--TranscriptTileService.kt.txt",
+      "sha256": "1e6d8329b8208ba8c1a152b84989379fae83748fe124c11737a3f9a43434d487",
+      "bytes": 1532
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/WorkerSubMenuPopup.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--WorkerSubMenuPopup.kt.txt",
+      "sha256": "b3e7014f8dc06ddb8bd45cc8335c426553aa055646b342d77ce325b099c9b3d6",
+      "bytes": 7826
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/ObjectDetectorStudioActivity.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--ObjectDetectorStudioActivity.kt.txt",
+      "sha256": "5b7a5de8c7b7e7305a2453a0a7cb734f42e555fc123aeb940e4f78ae24c39227",
+      "bytes": 174101
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/genstudio/GenStudioActivity.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--genstudio--GenStudioActivity.kt.txt",
+      "sha256": "20f1393bd9519c6fc1c4dd13972781d0c4cb6a81b1603a7e40109f30160201bf",
+      "bytes": 165484
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/genstudio/engine/GenArchitectureRegistry.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--genstudio--engine--GenArchitectureRegistry.kt.txt",
+      "sha256": "afe2dda30143de26fe195e546d7bd149c21c6b05aa11498fd512f10d6f15137e",
+      "bytes": 9242
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/genstudio/engine/GenFrameSynthesizer.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--genstudio--engine--GenFrameSynthesizer.kt.txt",
+      "sha256": "840ecd223314d36bd4c87b15881603d70a7c70ffded3d591d3923829c460942a",
+      "bytes": 4284
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/genstudio/engine/GenModelWeightSampler.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--genstudio--engine--GenModelWeightSampler.kt.txt",
+      "sha256": "2d2de7da02215d5ea0377519ffe52926a9f892283bc46cc54c7ef381134a8a75",
+      "bytes": 7434
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/genstudio/engine/GenMotionInterpolator.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--genstudio--engine--GenMotionInterpolator.kt.txt",
+      "sha256": "0434864b37a81a3bfb1861d6df0547267f6e5aeff1a84270c7a625eb15308ddb",
+      "bytes": 2285
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/genstudio/engine/GenStudioEngineRouter.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--genstudio--engine--GenStudioEngineRouter.kt.txt",
+      "sha256": "8075b0a68a7a1723e8a69045e4f0496d649fd499568c2a094e7cb039b0488c2e",
+      "bytes": 5225
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/genstudio/engine/GenTextConditioningEngine.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--genstudio--engine--GenTextConditioningEngine.kt.txt",
+      "sha256": "1ce5da71096da6acd7a0e1010cd579f63fdc4b3a39afcf5cb7b645bc89ee8a09",
+      "bytes": 4439
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/genstudio/engine/GenVideoMuxer.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--genstudio--engine--GenVideoMuxer.kt.txt",
+      "sha256": "3dc38dfc7ad42a7a44f989b5001a3d6f3a52db1af39e97e12a5d2b98d4604bd7",
+      "bytes": 16862
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/genstudio/engine/GgufTensorParser.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--genstudio--engine--GgufTensorParser.kt.txt",
+      "sha256": "a3faf5205f756cf10447d681cafe30474c2b5c149527d98acd4d42b5b45fc290",
+      "bytes": 12023
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/genstudio/engine/HardwareCapabilityDetector.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--genstudio--engine--HardwareCapabilityDetector.kt.txt",
+      "sha256": "3c50127f6de32382d6ed725670ecd4ffe761e63913c888108688fb34b3d8ce6e",
+      "bytes": 3855
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/genstudio/engine/IGenModule.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--genstudio--engine--IGenModule.kt.txt",
+      "sha256": "62cd88b7487a486e4fe227c8ef8b870b6f92a7acee3d87df7ec11231db9211e5",
+      "bytes": 2532
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/genstudio/engine/PhotorealisticNeuralLatentEngine.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--genstudio--engine--PhotorealisticNeuralLatentEngine.kt.txt",
+      "sha256": "7ba342164be3464c9443f9cf5d9827d24bc46d064e7cc06ba61c0672fae30fd7",
+      "bytes": 10481
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/genstudio/engine/UriPathResolver.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--genstudio--engine--UriPathResolver.kt.txt",
+      "sha256": "52a77d8e912ea54d0c7e917bec32b607a40958fd4be980f212f5380b20b5c53d",
+      "bytes": 10416
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/genstudio/engine/VideoGenEngine.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--genstudio--engine--VideoGenEngine.kt.txt",
+      "sha256": "da5dec93fe8dce6fdd9d16fa33bfd9dcd3a9b596ee5cac25baa030997e9d56f7",
+      "bytes": 19881
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/genstudio/importer/GenModelImporter.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--genstudio--importer--GenModelImporter.kt.txt",
+      "sha256": "712848a4cc555df1536f198a6cd4d92cfc29aa638402869305eb14cde5d29a51",
+      "bytes": 12452
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/genstudio/importer/GenModelPairingManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--genstudio--importer--GenModelPairingManager.kt.txt",
+      "sha256": "e298d8ad6814e46db9154059bfe007a0d5d2c1b8c15e2e5d6b17a834bb37576e",
+      "bytes": 7672
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/genstudio/memory/PhaseLockedMemoryStateMachine.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--genstudio--memory--PhaseLockedMemoryStateMachine.kt.txt",
+      "sha256": "9517f3f8985719b2bde7a4d076de08d484851a29f77b521f050ca4eb3cb82f1d",
+      "bytes": 2897
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/genstudio/modules/AutoregressiveGenModule.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--genstudio--modules--AutoregressiveGenModule.kt.txt",
+      "sha256": "75e598010534c073a562e82e17f4db2aaa08c4586b5c43c0af5dec4ed8ee8b1c",
+      "bytes": 5191
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/genstudio/modules/GgufFlowMatchingModule.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--genstudio--modules--GgufFlowMatchingModule.kt.txt",
+      "sha256": "5cb44f85382a0bf3b0b785353d3d73a5e4fa3cfaac31152e8f6fa13849322d97",
+      "bytes": 8970
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/genstudio/modules/MediaPipeGenModule.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--genstudio--modules--MediaPipeGenModule.kt.txt",
+      "sha256": "801dc1e441f6ccff480036d51c2cc7bc2861902cdc578c25b2321ae272e01202",
+      "bytes": 5390
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/genstudio/modules/OnnxGenModule.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--genstudio--modules--OnnxGenModule.kt.txt",
+      "sha256": "03e4bf47ece78a2912ac6ca9bc444dfdf1a8421278cb79136197d23bf732b20e",
+      "bytes": 5081
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/genstudio/modules/SafetensorsGenModule.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--genstudio--modules--SafetensorsGenModule.kt.txt",
+      "sha256": "d327a966f7cdaf85318b4acb1369efb679c160d2f715b1ee268f6e8625ce2f81",
+      "bytes": 5980
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/genstudio/preferences/GenStudioPreferences.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--genstudio--preferences--GenStudioPreferences.kt.txt",
+      "sha256": "6026dc63ce915c67c5bf5cd75166acfe06cb6fae2e281a25735070a27f85718d",
+      "bytes": 10076
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/genstudio/profiling/HardwareProfiler.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--genstudio--profiling--HardwareProfiler.kt.txt",
+      "sha256": "6a326a569da42618ad4bd97f7b3f25dcf238c406d97b79b2a7b0848383959382",
+      "bytes": 3229
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/genstudio/profiling/ThermalDutyCycleGovernor.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--genstudio--profiling--ThermalDutyCycleGovernor.kt.txt",
+      "sha256": "6665168048d11a8feee79ff001e3d0dc9ba7ef15b7ded2370e76f99db6c027fe",
+      "bytes": 1268
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/genstudio/service/GenStudioForegroundService.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--genstudio--service--GenStudioForegroundService.kt.txt",
+      "sha256": "b49689d02a5bb6a959c13ac408508ba00c64c9554a631a8897418a15f4187ac5",
+      "bytes": 12373
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/hud/HudTheme.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--hud--HudTheme.kt.txt",
+      "sha256": "9049529f4eff10cb16bc3d8ba5b0729a9abd73e4080c270ceedeed5a17bd91ac",
+      "bytes": 1629
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/hud/TacticalHistoryBuffer.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--hud--TacticalHistoryBuffer.kt.txt",
+      "sha256": "098d97b88ecf48fb075c37b377bd883186d2b14d3dd1e7a8a0b1649dd4e45ede",
+      "bytes": 1563
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/hud/TacticalLockOverlay.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--hud--TacticalLockOverlay.kt.txt",
+      "sha256": "bdd12fc0a32ad4122044024f58f844d5ebf46e3302dcd848497d7cdefcb143aa",
+      "bytes": 6301
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/studio/skywatcher/SkyWatcherScreenUi.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--studio--skywatcher--SkyWatcherScreenUi.kt.txt",
+      "sha256": "974c6e4a94890210e7eb02b91aea2cf6ba43fbcf9a0d78a3a5305d0240861c72",
+      "bytes": 14661
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/tiles/AudioTileService.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--tiles--AudioTileService.kt.txt",
+      "sha256": "e5bcc63f8d7e951aa9248dffc2f67102132b6be8be52dcb84ed257d32923c9c2",
+      "bytes": 1068
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/tiles/GenStudioTileService.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--tiles--GenStudioTileService.kt.txt",
+      "sha256": "77ef4712b9541b3334d4f953e2b513679d193225fbaf8565c3cf2672afe73bf6",
+      "bytes": 1520
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/tiles/OcrTileService.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--tiles--OcrTileService.kt.txt",
+      "sha256": "ae71e593ad805f3d612b643318137d4f2cda20f20ab418a7506a650810ee5bbd",
+      "bytes": 1026
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/tiles/RemoteMouseTileService.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--tiles--RemoteMouseTileService.kt.txt",
+      "sha256": "34031690c3958ebb1fef86a73eaa9fa0c41ba8b889dfefd4fd5130c0bcaaa8c0",
+      "bytes": 1215
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/tiles/SummarizationTileService.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--tiles--SummarizationTileService.kt.txt",
+      "sha256": "dc2fc59d0327d74b1d631217a7a4304c6fc80f9aa607c51c0a61044368ad2f36",
+      "bytes": 1066
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/ui/tiles/VisionTileService.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--ui--tiles--VisionTileService.kt.txt",
+      "sha256": "23af981e2021d57ae5b99d706f399d8cd042fa5991c13737d5431f856247e2ad",
+      "bytes": 1056
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/utils/AgentStringUtils.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--utils--AgentStringUtils.kt.txt",
+      "sha256": "61b56a424102ef963a040d59028d33441f5f13419c7f6464018f787b8256c573",
+      "bytes": 1590
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/utils/CompatibilityUtils.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--utils--CompatibilityUtils.kt.txt",
+      "sha256": "080d450ea7e959b6e95d0336fbe86918c3c5d70fc71071b20122af8974ed24b7",
+      "bytes": 2095
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/utils/JsonParser.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--utils--JsonParser.kt.txt",
+      "sha256": "e252081395c7282bd5130dad210067c8e661643a0e582268da67adf7806b8a17",
+      "bytes": 22103
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/BoundingBoxView.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--BoundingBoxView.kt.txt",
+      "sha256": "a3dce268c6c448e29bec5ab37e43d79bb9893fb081a09290bdcf71415e85a1dd",
+      "bytes": 17612
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/PoseSkeletonView.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--PoseSkeletonView.kt.txt",
+      "sha256": "b4e15b72875936fb8a485d32e5c7550c1107ae8cf8ec0f74172b742545027c07",
+      "bytes": 4991
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/SemanticMaskView.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--SemanticMaskView.kt.txt",
+      "sha256": "f0ede78b547a2333654fe7a3e7a765f2703c59a3da964ab5355a09a890c533f8",
+      "bytes": 10999
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/SmartVisionOverlayManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--SmartVisionOverlayManager.kt.txt",
+      "sha256": "be6a9a7fa18fffe82fc9f931b007b08eab5070c170804820a7dbf435a1cf1110",
+      "bytes": 7594
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/VisionSourceManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--VisionSourceManager.kt.txt",
+      "sha256": "de7b685583365503676c771f48a6d92702a77ca8d32709311df174bfe7cf8d39",
+      "bytes": 14045
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/camera/core/CameraCoordinator.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--camera--core--CameraCoordinator.kt.txt",
+      "sha256": "77065243599b67327fe93e4cd3680c6ed5a533706ea3d2ff5b4b2454c1b35eb7",
+      "bytes": 2122
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/camera/core/LockOnTargetController.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--camera--core--LockOnTargetController.kt.txt",
+      "sha256": "2a766d73f8da790cbc967f9c85337e5b06f4f8de6591267559adc6e279d7158a",
+      "bytes": 1806
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/camera/core/ZoomController.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--camera--core--ZoomController.kt.txt",
+      "sha256": "67172d966e22375a5d0a102f9a0b73cbf3efa1fd34f8df14182a46794f853f19",
+      "bytes": 1248
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/camera/math/CameraCoordinateTransformer.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--camera--math--CameraCoordinateTransformer.kt.txt",
+      "sha256": "95cc65bd18d723072350ce8de8efc50cef79b18cdb2e845bddacce3accb491e4",
+      "bytes": 2153
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/camera/math/FastCLAHE.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--camera--math--FastCLAHE.kt.txt",
+      "sha256": "157d1fff14e1bacbc74c32769a976aff5610dc30e7e18f603fbf06ab9fce8191",
+      "bytes": 3509
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/camera/math/FastDoG.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--camera--math--FastDoG.kt.txt",
+      "sha256": "0e0d364b5a658b060bf87a6ca8d3b0d64791e212c111003e14d96af33185145c",
+      "bytes": 5120
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/camera/math/FastLogStretch.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--camera--math--FastLogStretch.kt.txt",
+      "sha256": "a5b94ca69fe45ed6c57d26c8b6f9ae49660071a73bf8546f674307daec0016f5",
+      "bytes": 1890
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/camera/math/FastTemporalMedian.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--camera--math--FastTemporalMedian.kt.txt",
+      "sha256": "8d92039be25dadd81e577f306574ad57d5f66f17802e75db53fc42bdfc5ee8ea",
+      "bytes": 4356
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/camera/math/FastUnsharpMask.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--camera--math--FastUnsharpMask.kt.txt",
+      "sha256": "d07902af658db4a9e2d30d66ecc5d122d83e6cf3f426c79941a64c972af3cba3",
+      "bytes": 2800
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/camera/math/FrameDifferencePreProcessor.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--camera--math--FrameDifferencePreProcessor.kt.txt",
+      "sha256": "9252a1f96285267f9f042f3d4623aed0e5d5296a946f1aa99c841bf25695662f",
+      "bytes": 4540
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/camera/math/ViewportCoordinateTransformer.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--camera--math--ViewportCoordinateTransformer.kt.txt",
+      "sha256": "9c3a74307e421c36c5efc74a384f8d38d52993792ef1cc90a9bde70ed5acbd30",
+      "bytes": 2548
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/camera/strategy/CameraEngineFactory.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--camera--strategy--CameraEngineFactory.kt.txt",
+      "sha256": "ba70c851b1fe52bc8dd00b047881ba151969871111564fb194ed71d553af2b4b",
+      "bytes": 519
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/camera/strategy/CameraHardwareStrategy.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--camera--strategy--CameraHardwareStrategy.kt.txt",
+      "sha256": "0ace4b9cfb555f2a716bf3ffae4c59faae2d78f3ee3faa5d706b3495e45eb6c0",
+      "bytes": 1504
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/camera/strategy/DefaultGoogleCameraStrategy.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--camera--strategy--DefaultGoogleCameraStrategy.kt.txt",
+      "sha256": "dcf042c60e8b581a9dd4b471af318cc66c682b0006a3eb3c804f03884c935485",
+      "bytes": 17308
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/camera/strategy/SamsungCameraStrategy.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--camera--strategy--SamsungCameraStrategy.kt.txt",
+      "sha256": "2daf262aa9e5cb7963672f375383001f76de7eafdc72b20cb4e09990effb5047",
+      "bytes": 11829
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/camera/strategy/XiaomiCameraStrategy.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--camera--strategy--XiaomiCameraStrategy.kt.txt",
+      "sha256": "dcb399f3f2381a3b0612f3333db9a488aa5ffc10b7735c91150d7be02e6a5aae",
+      "bytes": 213
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/lupa/LupaBitmapPool.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--lupa--LupaBitmapPool.kt.txt",
+      "sha256": "740d1f6c16781ffa6087ba580991485a45df83aebecb3bec9980a48ed1950ed1",
+      "bytes": 2280
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/lupa/LupaFrameAccumulator.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--lupa--LupaFrameAccumulator.kt.txt",
+      "sha256": "e7ec40289e8a7e1ef48fdf380b4591074408a920f781f0c92fa39bb3e5ebb807",
+      "bytes": 6908
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/lupa/LupaPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--lupa--LupaPlugin.kt.txt",
+      "sha256": "b631c3410ff32899104c44040e1f175b65533b3c9ebaebb35a7bacbcec56561f",
+      "bytes": 1464
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/lupa/LupaPluginManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--lupa--LupaPluginManager.kt.txt",
+      "sha256": "b5c5f133e7a394ae3a92952b9845a340930d4ce6c193057e409d83a50e72a4bd",
+      "bytes": 9618
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/lupa/impl/BlindDeconvIterativePlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--lupa--impl--BlindDeconvIterativePlugin.kt.txt",
+      "sha256": "a32dc43e9f1506dc69453d418102901d945df9b23a66286b161c0b1fedb00954",
+      "bytes": 6313
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/lupa/impl/BlindDeconvShockPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--lupa--impl--BlindDeconvShockPlugin.kt.txt",
+      "sha256": "6452a844902f1e8948571b52d4b92a2ec8539d671e274d0021728277d8fb3dbf",
+      "bytes": 4445
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/lupa/impl/DctSrPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--lupa--impl--DctSrPlugin.kt.txt",
+      "sha256": "c0e3db87602932ddbdc60bf0f92d66add3adefdf69f4a69ac063c83d2f1d58c1",
+      "bytes": 5754
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/lupa/impl/DrizzlePlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--lupa--impl--DrizzlePlugin.kt.txt",
+      "sha256": "d1b67802f293823a57f679d339a3ede40d5d46eaedda367e869d38e4e4cf383e",
+      "bytes": 4932
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/lupa/impl/FastMitchellNetravali.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--lupa--impl--FastMitchellNetravali.kt.txt",
+      "sha256": "a12e8d5fa1198b66de097ac9b70a8d365e4f1f98ea15b85268e28f9b581bf573",
+      "bytes": 4922
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/lupa/impl/FastNEDI.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--lupa--impl--FastNEDI.kt.txt",
+      "sha256": "b663435013cdd8c2886ffddb36c9af371afcbe7fba9d94db0f76f514ced3ad00",
+      "bytes": 3463
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/lupa/impl/FastTotalVariation.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--lupa--impl--FastTotalVariation.kt.txt",
+      "sha256": "e995bed1cc2eab3212b275e3275604cc28e84141374a91f8fd58b032706a8d77",
+      "bytes": 4324
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/lupa/impl/IbpZoomPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--lupa--impl--IbpZoomPlugin.kt.txt",
+      "sha256": "db7247da12cf25624d528c3353612a7c9f7dd7fc4091af2519ea4a79b76eb0cf",
+      "bytes": 5311
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/lupa/impl/LanczosZoomPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--lupa--impl--LanczosZoomPlugin.kt.txt",
+      "sha256": "851f9352a42edc6132eeee97e3f0d309f924c536a83478f95368cc4364dd1e0c",
+      "bytes": 3080
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/lupa/impl/LuckyImagingPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--lupa--impl--LuckyImagingPlugin.kt.txt",
+      "sha256": "909047c5177a04dba33478a4277bfd14af349f66850eb9d7453b112dbc272570",
+      "bytes": 4213
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/lupa/impl/MitchellNetravaluPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--lupa--impl--MitchellNetravaluPlugin.kt.txt",
+      "sha256": "409038594ee2aedfe30bb9e9a4077ce2fc9c014c31bb829cb2e5f0a4058c6b68",
+      "bytes": 3159
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/lupa/impl/NediPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--lupa--impl--NediPlugin.kt.txt",
+      "sha256": "803c9fb822a6a3117ce633a06f1005666996b269e93441db85af096eddbf0692",
+      "bytes": 6503
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/lupa/impl/OpticalFlowSrPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--lupa--impl--OpticalFlowSrPlugin.kt.txt",
+      "sha256": "203612d4e39bc3eda57040378425fedba963b48ba4e1e241b2bde1da0a80fd3c",
+      "bytes": 9767
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/lupa/impl/PhaseCorrelationPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--lupa--impl--PhaseCorrelationPlugin.kt.txt",
+      "sha256": "505d026a96047bf3d0a82c3a18b3b3fb1465b94e5b5cb5bcd11d8983c2886956",
+      "bytes": 6012
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/lupa/impl/RichardsonLucyPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--lupa--impl--RichardsonLucyPlugin.kt.txt",
+      "sha256": "05fee0609b692b00efce17bc4e4fcfb32472eb38ce42345c7dd3716a635505a7",
+      "bytes": 4720
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/lupa/impl/TemporalDenoisingPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--lupa--impl--TemporalDenoisingPlugin.kt.txt",
+      "sha256": "d4af85182fee9205936df8baebd122d6df2597a13d0112bdefef19487482ede6",
+      "bytes": 3092
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/lupa/impl/TvRegularizationPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--lupa--impl--TvRegularizationPlugin.kt.txt",
+      "sha256": "59646389a79c558f5248287dcf9d8908700ab3ca7c88445a8a1509655cda7bae",
+      "bytes": 1524
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/lupa/impl/WaveletSrPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--lupa--impl--WaveletSrPlugin.kt.txt",
+      "sha256": "b4e21ab82f8bce39b039db75f2822d8c7453fdbf502720c5961089b780c39c62",
+      "bytes": 5349
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/lupa/impl/WienerDeconvolutionPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--lupa--impl--WienerDeconvolutionPlugin.kt.txt",
+      "sha256": "7787e3e9656ab3a44e2c58e2a5d7a6732b84aa9f60617ad62f9d6c5cf54cc530",
+      "bytes": 4476
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/lupa/math/FftUtils.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--lupa--math--FftUtils.kt.txt",
+      "sha256": "57df34e17a6affa4dfbad1a19950a869a1b8af2e223d4255620f558a62992f50",
+      "bytes": 2692
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/models/AiDomainProfile.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--models--AiDomainProfile.kt.txt",
+      "sha256": "ae5e60a534bf6adb3a3809e1e4dd722b720c617071d46f4e767270e184a37f1a",
+      "bytes": 439
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/models/OdLabelRegistry.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--models--OdLabelRegistry.kt.txt",
+      "sha256": "cb620d31b103c64bb617fb0757063530356630e9f2c73fa67006c4bdc92eda91",
+      "bytes": 3982
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/models/OdLabelStrategy.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--models--OdLabelStrategy.kt.txt",
+      "sha256": "ec6beb5d059337ce8fbb5221d03d8096bfe384658fcbd79cb46b73c0843dd8e0",
+      "bytes": 1130
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/models/TfliteVisionAnalyzer.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--models--TfliteVisionAnalyzer.kt.txt",
+      "sha256": "47ae2f328c3ba8a58ffe7b9dd1b0473e027f37b41321760aee933e57fa678308",
+      "bytes": 12404
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/models/VisionTaskType.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--models--VisionTaskType.kt.txt",
+      "sha256": "450747fc0db92d213cdffcf61b45a16a6d6eaa5074823731e857dbe7a0bc9529",
+      "bytes": 1018
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/nightmode/AcademicYuvEngine.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--nightmode--AcademicYuvEngine.kt.txt",
+      "sha256": "38bfe98af6f7b589455eb803fcc32f13a46f349ca9c4c1ed28aebe6137838815",
+      "bytes": 16142
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/nightmode/NightModePlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--nightmode--NightModePlugin.kt.txt",
+      "sha256": "ce2063e0d680c41e6d834c5ab701e2c1109a9961cc23b8383246d32bd4c9f135",
+      "bytes": 692
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/nightmode/NightModePluginManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--nightmode--NightModePluginManager.kt.txt",
+      "sha256": "1e3b9209e61b70c7861529a786f1bec5930528f54dd39283cfcc57c081b1af8c",
+      "bytes": 4440
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/nightmode/plugins/FastRetinexPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--nightmode--plugins--FastRetinexPlugin.kt.txt",
+      "sha256": "621655969693329618f0b9a969e8cfe647279ac7f9a48c72a10357e75eb5d590",
+      "bytes": 2329
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/nightmode/plugins/LiteIETflitePlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--nightmode--plugins--LiteIETflitePlugin.kt.txt",
+      "sha256": "f78eb972e2b93197324766543d7ecf31b1fe1d041e95c35074c31b9521247291",
+      "bytes": 16140
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/plugins/VisionFilterPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--plugins--VisionFilterPlugin.kt.txt",
+      "sha256": "9739bb623c13dd5001fca2b80c9ec375430a53b32f914c59b3c2e0636fb1eb37",
+      "bytes": 895
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/plugins/VisionPluginManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--plugins--VisionPluginManager.kt.txt",
+      "sha256": "fc0ad71ccdedd263989b6ebdc6317275ff50954275654799eedf7d72c17afd2e",
+      "bytes": 5454
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/plugins/impl/BallisticPredictorPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--plugins--impl--BallisticPredictorPlugin.kt.txt",
+      "sha256": "02adf39a85d73e813087eb65516fe7a25584b780a30ef2be1be2fdee4357f10c",
+      "bytes": 2874
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/plugins/impl/BlobShapeAnalyzerPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--plugins--impl--BlobShapeAnalyzerPlugin.kt.txt",
+      "sha256": "9e3a2c7f8111347fc702ef29e56beebf228584cfef74e8b62518bd680be82f06",
+      "bytes": 4258
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/plugins/impl/DkfEdgeTrackerPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--plugins--impl--DkfEdgeTrackerPlugin.kt.txt",
+      "sha256": "8fc113afd9f5aeb8d01e6635f5a26e2bf2302de365f7df7f8f5e30b7bce58081",
+      "bytes": 5671
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/plugins/impl/EdgeTrackerPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--plugins--impl--EdgeTrackerPlugin.kt.txt",
+      "sha256": "0c5774062ff881b107a4e50d175dd201bf90069886510cc40bf91f5dc8737304",
+      "bytes": 1852
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/plugins/impl/FovTrackerPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--plugins--impl--FovTrackerPlugin.kt.txt",
+      "sha256": "231fa64c24f72fd8c00604385e947ed3c89e0fa975ae379cee4c84cf12c4e126",
+      "bytes": 2666
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/plugins/impl/MotionSaliencyPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--plugins--impl--MotionSaliencyPlugin.kt.txt",
+      "sha256": "07ee46147a13ac77826205a85ea12f75acf9cf34458afe7cdbc32b835d208be3",
+      "bytes": 1705
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/plugins/impl/NewObjectAlerterPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--plugins--impl--NewObjectAlerterPlugin.kt.txt",
+      "sha256": "870f15b6eda32ae26109d0d17d4cc0a38c650128393c6bc3c91f51a8bf7c150e",
+      "bytes": 3006
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/plugins/impl/OcSortTrackerPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--plugins--impl--OcSortTrackerPlugin.kt.txt",
+      "sha256": "ede86d56ca3f2c77feefb2b2750525650d2c606e632163f80ff7cf6782471736",
+      "bytes": 7302
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/plugins/impl/PhysicsViolationPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--plugins--impl--PhysicsViolationPlugin.kt.txt",
+      "sha256": "9416365e8d600e2d5664eef82ebae4e4b5d7e7e83cc0a760362306373bc86bf7",
+      "bytes": 7342
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/plugins/impl/SpatialHeatmapPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--plugins--impl--SpatialHeatmapPlugin.kt.txt",
+      "sha256": "e225172a0afec482cc9de06bdc73a139cc6528ddf55036b230d8b83f386828ef",
+      "bytes": 2645
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/plugins/impl/SwarmAnalyzerPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--plugins--impl--SwarmAnalyzerPlugin.kt.txt",
+      "sha256": "5cd9faa1be5a2a42d52c12c536f83e107e05709b2231d9abba023db0d469f90a",
+      "bytes": 3173
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/plugins/impl/TelemetryProPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--plugins--impl--TelemetryProPlugin.kt.txt",
+      "sha256": "758a5419b73bb44226073be0648bfbc5f95c2fc4ed77646fe9b6048d1ebedaa7",
+      "bytes": 8436
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/plugins/impl/TelescopeKalmanTrackerPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--plugins--impl--TelescopeKalmanTrackerPlugin.kt.txt",
+      "sha256": "fad1b4db9404f420804a60872d93c722c4610ddd232bb7f42e00aa63e5be888e",
+      "bytes": 5794
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/plugins/impl/ThreatAnomalyPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--plugins--impl--ThreatAnomalyPlugin.kt.txt",
+      "sha256": "354e667e1517bd53e59c1b825eace1cedb2a922ce3a319fddc1acf9872a828ca",
+      "bytes": 2953
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/plugins/impl/TrajectoryClassifierPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--plugins--impl--TrajectoryClassifierPlugin.kt.txt",
+      "sha256": "b57c9d37f45b96a3142adadb2c4929e4a5cd5b37cd98af0c317a54b10fe9fa72",
+      "bytes": 4768
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/plugins/impl/TtcEvaluatorPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--plugins--impl--TtcEvaluatorPlugin.kt.txt",
+      "sha256": "31eb9199d83d0316e480e5df3586b0c2e0f2514762fcad721413f1192b2c54c0",
+      "bytes": 2729
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/tensor/ClassificationProfile.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--tensor--ClassificationProfile.kt.txt",
+      "sha256": "51f8f7ec50724b578e4c4b802d5fc11785efc5bf96b264ce9793b08c52909865",
+      "bytes": 2803
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/tensor/EmbeddingProfile.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--tensor--EmbeddingProfile.kt.txt",
+      "sha256": "7fd5ebe8486248b84fb1c5b6f392d8c2bc44b40180a4e5a82f2be1f7ef4f1bea",
+      "bytes": 786
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/tensor/EndToEndProfile.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--tensor--EndToEndProfile.kt.txt",
+      "sha256": "f8c925cecae55aa22ac954421fe0f282ac2ea0a6a50f27dafb782a69aa09e4ec",
+      "bytes": 5042
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/tensor/PoseEstimationProfile.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--tensor--PoseEstimationProfile.kt.txt",
+      "sha256": "dc79c06fc91916158efa1cf93ddf6d4b6fc365b5a5f36becd2deb61a43713ff9",
+      "bytes": 832
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/tensor/SegmentationProfile.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--tensor--SegmentationProfile.kt.txt",
+      "sha256": "b9371e290281c47b99d97317d98c9cb71bcf8e20cdecde65390ad6d50d4e59e4",
+      "bytes": 793
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/tensor/SsdProfile.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--tensor--SsdProfile.kt.txt",
+      "sha256": "d62745037d21b65532acdba44595e8e3fd6b5bc359ca21b053e215ef0a603782",
+      "bytes": 4133
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/tensor/TensorOrchestrator.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--tensor--TensorOrchestrator.kt.txt",
+      "sha256": "0b99bd00cd6fa7eeb757355211147b4a34c3cc7a569f17bc1b8181a209a22f17",
+      "bytes": 5023
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/tensor/TensorProfile.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--tensor--TensorProfile.kt.txt",
+      "sha256": "bdb488ee4b35b6e8b50655024d127d93e3753317b0ccf5b04423d0ba635a3b66",
+      "bytes": 962
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/tensor/YoloV5Profile.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--tensor--YoloV5Profile.kt.txt",
+      "sha256": "646b863004a137352079c5a1cd38d6f23f819ebf7483488f651c7f81811fb9fc",
+      "bytes": 11000
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/tensor/YoloV8Profile.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--tensor--YoloV8Profile.kt.txt",
+      "sha256": "0d9125986a081dcd8ab6590aceea3b7e3890d10e30ba345257446061d4f25ce1",
+      "bytes": 10287
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/tracking/EdgeTracker.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--tracking--EdgeTracker.kt.txt",
+      "sha256": "2913a67b972602868ea6d17e593de2fb16e9800354989dd6fabd7f9bd2622cdc",
+      "bytes": 4510
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/tracking/OD_KalmanFilter2D.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--tracking--OD_KalmanFilter2D.kt.txt",
+      "sha256": "1170f4dd32a2b5298955514e21f633b97c8dadf9d0a8bd488fcf0386ea581df6",
+      "bytes": 6532
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/tracking/OpticalTemplateTracker.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--tracking--OpticalTemplateTracker.kt.txt",
+      "sha256": "a8a22fb5ef11fb68878917360882f4dd9163f95d055f50e030b82e462c69e424",
+      "bytes": 6802
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/tracking/TrackedObject.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--tracking--TrackedObject.kt.txt",
+      "sha256": "f722ee130aab9efc0429af83f9a7fc94b698e7792eebb31a725208cf53f29a9c",
+      "bytes": 1612
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/tracking/math/DefaultEstimatorProfiles.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--tracking--math--DefaultEstimatorProfiles.kt.txt",
+      "sha256": "3a1f25f2cb448ab42b6f305b7a48758337cd03583f70f7f5aa9cab1714117cb6",
+      "bytes": 1066
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/tracking/math/DynamicKalmanFilter2D.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--tracking--math--DynamicKalmanFilter2D.kt.txt",
+      "sha256": "5958e81c929aabcf302dcec9725788d06630c17f156c4c4cde13c56133422daf",
+      "bytes": 7399
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/tracking/math/EstimatorParameters.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--tracking--math--EstimatorParameters.kt.txt",
+      "sha256": "270bcb17652fb2673dae625e932f2f9fc6f7e2061c340e192ca6df67828bb429",
+      "bytes": 660
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/vision/tracking/math/MotionEstimator.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--vision--tracking--math--MotionEstimator.kt.txt",
+      "sha256": "a6b7472717ee1eac899b8c83477bf03da92efb28fce83751ca6800712460080f",
+      "bytes": 1430
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/voice/AgentVoiceSTT.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--voice--AgentVoiceSTT.kt.txt",
+      "sha256": "0936d546fe40e519a99409facf0bfbef1b651b9f05a6e7cf820b10b01d92000d",
+      "bytes": 34898
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/voice/AgentVoiceTTS.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--voice--AgentVoiceTTS.kt.txt",
+      "sha256": "06c916f702ff8c4b98c11b620cf53c8ae83eb81c2b5db3b4b39ed7c1e1495620",
+      "bytes": 12956
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/voice/sherpa/SherpaSttEngine.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--voice--sherpa--SherpaSttEngine.kt.txt",
+      "sha256": "bb2b492da3a1cbf2746415a3b53a3a66b6783150251d486a00e73b9442c3f7cb",
+      "bytes": 31548
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/agent/voice/sherpa/SherpaTtsEngine.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--agent--voice--sherpa--SherpaTtsEngine.kt.txt",
+      "sha256": "8e2ee1234a12b8e7da90847deaac6ebb321f12c9240cb0d98ede1ba058c7bd25",
+      "bytes": 33908
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/data/AiModel.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--data--AiModel.kt.txt",
+      "sha256": "45be101edac468f234dd1c9c777a1eaa8294e4e51b080263102692e85e853707",
+      "bytes": 544
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/data/AiModelDao.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--data--AiModelDao.kt.txt",
+      "sha256": "645713a8c64ee6e9410d6e58e4526239806c735bbf2a8cedb645681c5160260d",
+      "bytes": 825
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/data/BertDatabase.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--data--BertDatabase.kt.txt",
+      "sha256": "62043eeaffce5189821b6e46fe0a4a1256e76e4eb515bc37ad49e1f77b5c1097",
+      "bytes": 2801
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/data/BertModel.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--data--BertModel.kt.txt",
+      "sha256": "ccf4bc60af0b695b5f6a44ef3052fb0d51053624e13c6750e47ed4f7b7819c3e",
+      "bytes": 2735
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/data/BertModelDao.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--data--BertModelDao.kt.txt",
+      "sha256": "28756c11d1ff1b405889717524e7a79364a1d078a99380b1369cf0bfd8822419",
+      "bytes": 1650
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/data/BertModelRepository.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--data--BertModelRepository.kt.txt",
+      "sha256": "df5d1827e145ece426599805aa2603fb1751c1c5890f1f8c7042a63940d050af",
+      "bytes": 1257
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/data/LlamaDatabase.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--data--LlamaDatabase.kt.txt",
+      "sha256": "7cd61c314451f78d2729312657e20d959af4b835e4b039ba921b74243c3a3f5a",
+      "bytes": 992
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/data/ModelDetailState.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--data--ModelDetailState.kt.txt",
+      "sha256": "62afc4d54e77d6004c760fa86aa4ba3427b422920e1f2a6110e155cb4db210e7",
+      "bytes": 472
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/data/ModelRepository.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--data--ModelRepository.kt.txt",
+      "sha256": "b19134d27b66d27a0d96ded5f4ec178d1c787c943acb52b0150f2aaa2cb64b58",
+      "bytes": 2259
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/data/NlpDatabase.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--data--NlpDatabase.kt.txt",
+      "sha256": "41e34d73d930e3454ccb60418a3b91dfaf4ee27435c9774230747c09352a10aa",
+      "bytes": 1326
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/data/NlpModel.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--data--NlpModel.kt.txt",
+      "sha256": "e62c422a9cef96627acc3edbc0e7aff91edd8cd5337680def4aab5cbc766476c",
+      "bytes": 1208
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/data/NlpModelDao.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--data--NlpModelDao.kt.txt",
+      "sha256": "fe50f3e0ccde5d9f4d127de28514837157f6847f6a8660baad91927d7a58366a",
+      "bytes": 1159
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/data/NlpModelRepository.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--data--NlpModelRepository.kt.txt",
+      "sha256": "06cdd79a36149c548fc09cf6781adb1b4ded9b948641dc3ef04baef839c4909e",
+      "bytes": 6420
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/data/WhisperDatabase.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--data--WhisperDatabase.kt.txt",
+      "sha256": "a82e123d2c9167d36b2ead420bb092e506001c16ecbe5cd848e202c0e30ba66e",
+      "bytes": 1156
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/data/WhisperModel.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--data--WhisperModel.kt.txt",
+      "sha256": "6e7a1d6488374ccee83c4329b2800b1f58d44088dd4c9b201d0a9f9b1318c3b9",
+      "bytes": 574
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/data/WhisperModelDao.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--data--WhisperModelDao.kt.txt",
+      "sha256": "a9154f81eb5f5d594210b055bd0ec092c6ecb3e709662027bb929df506f53024",
+      "bytes": 845
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/data/WhisperModelRepository.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--data--WhisperModelRepository.kt.txt",
+      "sha256": "c0f9f98fee8a5fd98067b70cbeb4d7850ad4d09f02e720601f6048c35962df57",
+      "bytes": 3197
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/data/gen/GenDatabase.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--data--gen--GenDatabase.kt.txt",
+      "sha256": "0f32ff4f9c1d8e0ea95a6c2edc9e69e3b615fab3bdbb0a9a25e03a3f965969af",
+      "bytes": 899
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/data/gen/GenModel.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--data--gen--GenModel.kt.txt",
+      "sha256": "04a8cbc63667fd7551f0f3710061edb5d598b03a9dd911a628dd913870e2cdcc",
+      "bytes": 1458
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/data/gen/GenModelDao.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--data--gen--GenModelDao.kt.txt",
+      "sha256": "678ad95fd74c3672af773ef6ca40c42029f7484ef273d00ec0c5a861e5e2b081",
+      "bytes": 2908
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/domain/voice/VoiceAssistant.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--domain--voice--VoiceAssistant.kt.txt",
+      "sha256": "0ee9dac68fa238d82824399b58378adf3d14e6f3621f45df790aee3c1dd1fc6d",
+      "bytes": 576
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/infrastructure/voice/AndroidVoiceManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--infrastructure--voice--AndroidVoiceManager.kt.txt",
+      "sha256": "83ff8cdceaf28f7b4c81612cb74b81de4a2e36dfd473c864298a457699a12b61",
+      "bytes": 6077
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/managers/BertFileSystemManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--managers--BertFileSystemManager.kt.txt",
+      "sha256": "8653210f4c474ef76ced45a61ef7ce47f257cdfe2db29b057f48bb833e53ab03",
+      "bytes": 3336
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/managers/ChatSessionManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--managers--ChatSessionManager.kt.txt",
+      "sha256": "e1f7b33cfedbbd8a38bde3df3349740993637c555b68b3a44d4f0e8e3a7c645e",
+      "bytes": 8167
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/managers/FileSystemManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--managers--FileSystemManager.kt.txt",
+      "sha256": "03d6098ea4fb71bf5b2141ff67b29802dee07788254f5634599556f1bfbcbd28",
+      "bytes": 7701
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/managers/LlamaFileSystemManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--managers--LlamaFileSystemManager.kt.txt",
+      "sha256": "c4ba29381ac7fbd52d0e60b1269f402db1f40610af36d72a219dbae0b3f79875",
+      "bytes": 3277
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/managers/LlamaServiceManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--managers--LlamaServiceManager.kt.txt",
+      "sha256": "c733d7450121ccb47877b56be2486236af9920c9a630e9699f2b987ab10486cb",
+      "bytes": 7169
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/managers/MarkdownFactory.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--managers--MarkdownFactory.kt.txt",
+      "sha256": "0b0a947ed2499df8343b55489dc795025649dcde53f0996372483e8eda1d9cc5",
+      "bytes": 4048
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/managers/ModelMetadataManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--managers--ModelMetadataManager.kt.txt",
+      "sha256": "986bddcb84e5a89d2a4a58131653a14be27688379c36a6b462e85b2d14dc491b",
+      "bytes": 4137
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/managers/NlpFileSystemManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--managers--NlpFileSystemManager.kt.txt",
+      "sha256": "758852578f2532c89942cdfadfe7a674085ca19a6b24ecb49f9962a48b8a69f0",
+      "bytes": 3974
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/managers/PermissionManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--managers--PermissionManager.kt.txt",
+      "sha256": "0792166e2f86b788c87e1b5f8030a2e6137163df6153a8ad4bb629ed2ad4ec9b",
+      "bytes": 13106
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/managers/TextFileModule.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--managers--TextFileModule.kt.txt",
+      "sha256": "b2646ca70b00563f7fad6accd0002a02cf5a130da8880e873b294b7237d40626",
+      "bytes": 4345
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/managers/ThemeManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--managers--ThemeManager.kt.txt",
+      "sha256": "fa67ccf4a3a1093db0d797b4f6f32b9ba6fcbe256ff4b3ed6dde9f950a6b0381",
+      "bytes": 7649
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/managers/WhisperFileSystemManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--managers--WhisperFileSystemManager.kt.txt",
+      "sha256": "7b006f650b33dc0ff46bae15e24ed85cabf3e85a7855cbced73ad6710d20c3ca",
+      "bytes": 3249
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/managers/plugins/BasePluginProvider.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--managers--plugins--BasePluginProvider.kt.txt",
+      "sha256": "75199ecd39416e036217a1744bd95ff3f47f308704131d1bf838228c37d2fec9",
+      "bytes": 1299
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/managers/plugins/HtmlPluginProvider.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--managers--plugins--HtmlPluginProvider.kt.txt",
+      "sha256": "7f8fa958d7c60b13328e1ccd3f777d0e0f892f62def76eab7bc016a381059d74",
+      "bytes": 593
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/managers/plugins/LaTeXPluginProvider.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--managers--plugins--LaTeXPluginProvider.kt.txt",
+      "sha256": "6b4d350ec3532647bde33b019ccd413f03ce5a25dfaad20f7c0b30a95e69314d",
+      "bytes": 703
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/managers/plugins/PrismLanguage.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--managers--plugins--PrismLanguage.kt.txt",
+      "sha256": "7e614dfc720f2c44689d2d27151e765aeb2a2f883d17e8ace1b1db4afd8607b9",
+      "bytes": 2056
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/managers/plugins/PrismThemes.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--managers--plugins--PrismThemes.kt.txt",
+      "sha256": "4efaa0b9b42a74f29325c09fa1f058e03660287bde2a1b38c60d91480d9d12bd",
+      "bytes": 36726
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/managers/plugins/StrikethroughPluginProvider.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--managers--plugins--StrikethroughPluginProvider.kt.txt",
+      "sha256": "e84161d292bd43dbfdb0526fd6b36ee7d4d54577bdf55c99ea265a953f277ecb",
+      "bytes": 637
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/managers/plugins/SyntaxHighlightPluginProvider.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--managers--plugins--SyntaxHighlightPluginProvider.kt.txt",
+      "sha256": "709b70331f97e210bc720604215b8e9f01cb1978960e895ad4f1d98872be869e",
+      "bytes": 1237
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/managers/plugins/TablePluginProvider.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--managers--plugins--TablePluginProvider.kt.txt",
+      "sha256": "ad76363c073d9c53d808d0cf2b12749f055e1c3d0a185ed0aeaebd583f921509",
+      "bytes": 2611
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/managers/plugins/TaskListPluginProvider.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--managers--plugins--TaskListPluginProvider.kt.txt",
+      "sha256": "e5a8ac4c03c64d08be64065236220cc20f3e83770801aef3396f844fad0850f2",
+      "bytes": 621
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/managers/plugins/lexers/NativeLexer.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--managers--plugins--lexers--NativeLexer.kt.txt",
+      "sha256": "30baa249943efe7f3b8470dee3840126fe9e8f7c88bd45c46fd43e633bc877cc",
+      "bytes": 42204
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/managers/plugins/lexers/NativeLexersExtension.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--managers--plugins--lexers--NativeLexersExtension.kt.txt",
+      "sha256": "dd5c76aacfc0b4d7928072d2a540bf08605ab4e044285779496c2acf9ebdfcc6",
+      "bytes": 32038
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/managers/plugins/lexers/NativeSyntaxHighlightPlugin.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--managers--plugins--lexers--NativeSyntaxHighlightPlugin.kt.txt",
+      "sha256": "8f9ce34e5c8810051107b616914a6601bc9ef7c2edfdbe0efacd76b76ae29a8a",
+      "bytes": 14741
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/media/DeviceProfiler.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--media--DeviceProfiler.kt.txt",
+      "sha256": "8034e7296e9137e060dff60f63952ca0fc829f0d1bf066b3c80045da1ea388cf",
+      "bytes": 3363
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/media/EglCore.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--media--EglCore.kt.txt",
+      "sha256": "45126836f2d3e7417f47c3411afad6ff0daf6fbeb7c75cc247acf0c2a41725f5",
+      "bytes": 3903
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/media/ExportFormatRegistry.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--media--ExportFormatRegistry.kt.txt",
+      "sha256": "0be27f1a7c7d99758535ec3957607339215e032503745db8bb68f749fa83523d",
+      "bytes": 9806
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/media/MediaFormatAnalyzer.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--media--MediaFormatAnalyzer.kt.txt",
+      "sha256": "98c9a99a863657c21e711aa6c575c77aea8b86deac91ddc142c65fc33599a7b2",
+      "bytes": 5276
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/media/MediaNegotiator.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--media--MediaNegotiator.kt.txt",
+      "sha256": "054fe9c914dbbab0c7f154ee262af76c3a68756fbc76d87fb2fa6c32f4b7a378",
+      "bytes": 5296
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/media/NativeVideoEngine.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--media--NativeVideoEngine.kt.txt",
+      "sha256": "cb0e71ec9815b342ceccea0e0f149a8b6149622ba65ee16d8032ad2391db65f0",
+      "bytes": 18076
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/media/TimeLapseEncoder.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--media--TimeLapseEncoder.kt.txt",
+      "sha256": "3682e0f5b22a6b3e29f80bc28c3b75bf79529e118baf9c4ecb6aa28f35b6241d",
+      "bytes": 7310
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/media/VideoRenderPipeline.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--media--VideoRenderPipeline.kt.txt",
+      "sha256": "c4105374361ad3959a920832949fd46a95c2410f18f26ba92cb5371b63bb183f",
+      "bytes": 26858
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/service/LlamaGenerationService.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--service--LlamaGenerationService.kt.txt",
+      "sha256": "3a71821cc574a5d09045badbc5c0c6ead4b4c00824cd9e7f232b9173b417315f",
+      "bytes": 15018
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/service/LlamaNotificationHelper.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--service--LlamaNotificationHelper.kt.txt",
+      "sha256": "c50824dc749d2f44eaa011f690e8ed0bc86b1afd7b05295c1572f61bf0d01716",
+      "bytes": 7977
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/srt/FontProvisioner.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--srt--FontProvisioner.kt.txt",
+      "sha256": "d7e9265f55aec77765b4c28b0c2e0cf73429adb8921ccd17f2e314bfb71c246e",
+      "bytes": 2901
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/srt/SegmentationEngine.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--srt--SegmentationEngine.kt.txt",
+      "sha256": "c5adf6ce32ffc9c06773969b6d3696e25f432e785c455bdb1bb39f188f1801d9",
+      "bytes": 7993
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/srt/SrtBlock.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--srt--SrtBlock.kt.txt",
+      "sha256": "ed90042784a0f7a4823b406e8e8011a14fb6fb1917a488b4092af4df0d4960ec",
+      "bytes": 741
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/srt/SrtParser.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--srt--SrtParser.kt.txt",
+      "sha256": "5eb5228033b41563c74c3962d4b3668266b2a083c91c5415b843088bc7d6bfe1",
+      "bytes": 4555
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/srt/SrtTranscriptionService.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--srt--SrtTranscriptionService.kt.txt",
+      "sha256": "f63ebf7c807ea439c86579a66ed1bbb93b3aaca791abcea0a755943d1febdeed",
+      "bytes": 30887
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/srt/SubtitleAssMapper.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--srt--SubtitleAssMapper.kt.txt",
+      "sha256": "40cd94e2ceb7df7b9f66b60bc61f81bb56e6cc635a37f2798909fd0410840424",
+      "bytes": 21563
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/srt/TranscriptProfileOrchestrator.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--srt--TranscriptProfileOrchestrator.kt.txt",
+      "sha256": "f099d9ed4caf4418b8a45f30b52645a38c732cda5dde07d1c49799543c7356ba",
+      "bytes": 13238
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/srt/export/GpuSubtitleProvider.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--srt--export--GpuSubtitleProvider.kt.txt",
+      "sha256": "b899e543b6b876969d3e641153adc2218dc30c4acd8b3b7edb4ed81a3818b4fb",
+      "bytes": 993
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/srt/export/SubtitleExportOrchestrator.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--srt--export--SubtitleExportOrchestrator.kt.txt",
+      "sha256": "6efb154ef1551898db96605d41f9ef22696247cab9fa35d556c5a96dfaefcc3f",
+      "bytes": 42212
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/srt/export/SubtitleExportService.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--srt--export--SubtitleExportService.kt.txt",
+      "sha256": "e1744c9491f741a65d7f71d0251da4888c5ddfc163b39b92ecc3a0df47891b6c",
+      "bytes": 21732
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/srt/proxy/ProxyWorker.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--srt--proxy--ProxyWorker.kt.txt",
+      "sha256": "943f996c7a1eeaf9feb20e8d77425226e860cc4c70a5e7cf3b4a33ce3634aab4",
+      "bytes": 3278
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/srt/ui/editor/AudioChunkLoader.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--srt--ui--editor--AudioChunkLoader.kt.txt",
+      "sha256": "597d71659a40c8693189491c4a140861942af6c8461a90a74b747bab1132bd87",
+      "bytes": 7330
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/srt/ui/editor/SrtEditorUiState.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--srt--ui--editor--SrtEditorUiState.kt.txt",
+      "sha256": "d8827e160193b9f709e190af1941c25b44f73bc2206937c5af85314e1056fc29",
+      "bytes": 6298
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/srt/ui/editor/SrtEditorViewModel.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--srt--ui--editor--SrtEditorViewModel.kt.txt",
+      "sha256": "e647d5b567c7c179f3b37072b9ddbd6ab7f2b03a9d811770d226941b273fd8ed",
+      "bytes": 23662
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/srt/ui/editor/SrtVisualEditorActivity.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--srt--ui--editor--SrtVisualEditorActivity.kt.txt",
+      "sha256": "d491ac85d11b3f24531b5add5573d886d05dfa5b3a2047e6c5e7baa390ed7cb7",
+      "bytes": 125678
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/srt/ui/editor/SubtitleStyleCarouselAdapter.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--srt--ui--editor--SubtitleStyleCarouselAdapter.kt.txt",
+      "sha256": "3dbdbfb329bd393b14141c2ba422eb6b9cf4d40268c0a5cf2a2e50522a6dd423",
+      "bytes": 2779
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/srt/ui/editor/SubtitleTimelineAdapter.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--srt--ui--editor--SubtitleTimelineAdapter.kt.txt",
+      "sha256": "30f062c439c21d523845ae5f6e002c612f3c2c209747f45473b8701ca03b3e4b",
+      "bytes": 7493
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/srt/ui/editor/VideoFrameLoader.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--srt--ui--editor--VideoFrameLoader.kt.txt",
+      "sha256": "3b06f6be3e864c6454f3f83c479caaf7278037886d6fd60fe1183442f93779b4",
+      "bytes": 6364
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/srt/ui/graphics/FontRegistry.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--srt--ui--graphics--FontRegistry.kt.txt",
+      "sha256": "a14f94ecef73de889e955e926bd1e987c2be6d27f41a81f0b4e35c9e9512a12a",
+      "bytes": 2591
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/srt/ui/models/SubtitlePresets.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--srt--ui--models--SubtitlePresets.kt.txt",
+      "sha256": "c5d9a4fbceeae6f2bd7a4febab05aa84327a800b8c8829a81bd3bf1ba7984f79",
+      "bytes": 680
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/srt/ui/models/SubtitleStyleConfig.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--srt--ui--models--SubtitleStyleConfig.kt.txt",
+      "sha256": "7a5820040eaeb6bde5828fae6b940d57f04f48dccf51597f6b4dcb1fb95bf626",
+      "bytes": 6416
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/srt/ui/models/SubtitleStyleRegistry.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--srt--ui--models--SubtitleStyleRegistry.kt.txt",
+      "sha256": "a0eae81f68c272536c5f5921489e000fc956094e91a7ee78a55a018ec314a2a8",
+      "bytes": 21127
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/srt/ui/sheets/StylePickerBottomSheet.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--srt--ui--sheets--StylePickerBottomSheet.kt.txt",
+      "sha256": "7baa62cc980046af80009a1ae7beff7495d672e38c8c98548a968be958bcd24e",
+      "bytes": 9938
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/srt/ui/views/SubtitleOverlayRenderer.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--srt--ui--views--SubtitleOverlayRenderer.kt.txt",
+      "sha256": "1a21ce60b481c50f5bd74b75d34da10441681e4fe519bbdf693b2f3a7c55043f",
+      "bytes": 40200
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/srt/ui/views/SubtitleOverlayView.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--srt--ui--views--SubtitleOverlayView.kt.txt",
+      "sha256": "f6499bfe4a7050dbecc63a55f17ab256e7e55588d6bf7bcf4b1ff2d619f7c2be",
+      "bytes": 7765
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/srt/ui/views/SubtitleTimelineView.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--srt--ui--views--SubtitleTimelineView.kt.txt",
+      "sha256": "e5d9774c0b48b71915cfcd50bf9a0e6c91486e2a4c34816f3d52f61c41608741",
+      "bytes": 23858
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/srt/utils/TimeUtils.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--srt--utils--TimeUtils.kt.txt",
+      "sha256": "396cafa7a567022da1b5e40dbed6f416b754ec5b231029362dbbc8fb63982bff",
+      "bytes": 1245
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/ui/ModelInfoDialogFragment.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--ui--ModelInfoDialogFragment.kt.txt",
+      "sha256": "7be8ccbbdf24b196660566c82cc7927b7dcdd1467c52b257484662996d9b99f4",
+      "bytes": 5709
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/ui/dialogs/DialogManager.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--ui--dialogs--DialogManager.kt.txt",
+      "sha256": "8695512fbd7f1427976b458f68c38c7e31155b5caaffc2c1b93215b4ca97beb1",
+      "bytes": 6529
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/ui/onboarding/RestrictedSettingsGuideActivity.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--ui--onboarding--RestrictedSettingsGuideActivity.kt.txt",
+      "sha256": "932e68bf3cb908c339b557c7d0221c2d57e3827f10895c712c2f9959c4eab11a",
+      "bytes": 3103
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/ui/thanks/ThanksActivity.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--ui--thanks--ThanksActivity.kt.txt",
+      "sha256": "9f0ddde92d494019b1c780c3fcdf3caabaddc34fec18440ceae591f301ec5e6c",
+      "bytes": 57398
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/ui/theme/AppTheme.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--ui--theme--AppTheme.kt.txt",
+      "sha256": "03d47be4047c7a2bb97ee171a1cb99a5b4f42908316889757892e1e994321c51",
+      "bytes": 1552
+    },
+    {
+      "source_path": "examples/llama.android/app/src/main/java/com/example/llama/ui/views/ProfessionalVuMeterView.kt",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--app--src--main--java--com--example--llama--ui--views--ProfessionalVuMeterView.kt.txt",
+      "sha256": "4c87c0696ca7c1e1a8ffb077d0f471b97f7069c6f65a2f686884a5fd66df80d7",
+      "bytes": 6486
+    },
+    {
+      "source_path": "examples/llama.android/build.gradle.kts",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--build.gradle.kts.txt",
+      "sha256": "d6f8f89d28a8ce73c6b7cc73a31b51694753e048d1d12a2b8b8a320e26c85a33",
+      "bytes": 281
+    },
+    {
+      "source_path": "examples/llama.android/gradle/gradle-daemon-jvm.properties",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--gradle--gradle-daemon-jvm.properties.txt",
+      "sha256": "2ff7ee0b0ee1d1bbba70ef51df3a4a6591da619963d0f3d9825f4aeef51ac41e",
+      "bytes": 89
+    },
+    {
+      "source_path": "examples/llama.android/gradle/libs.versions.toml",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--gradle--libs.versions.toml.txt",
+      "sha256": "bb4218bdb6a304aa978a5bc43eec887b72a2e31759bb9db58b198f957b2cd34b",
+      "bytes": 9774
+    },
+    {
+      "source_path": "examples/llama.android/gradle/wrapper/gradle-wrapper.properties",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--gradle--wrapper--gradle-wrapper.properties.txt",
+      "sha256": "9abf2fcd228baa35793a6c323d95712dbb09b9c57ed3056ca78f31fe5fd39541",
+      "bytes": 234
+    },
+    {
+      "source_path": "examples/llama.android/scripts/download_models.ps1",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--scripts--download_models.ps1.txt",
+      "sha256": "52de191f041ecb9f3c7bc0da704c7b63e813aa5e3a6806b176e239f0ec944e7c",
+      "bytes": 2129
+    },
+    {
+      "source_path": "examples/llama.android/scripts/download_models.sh",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--scripts--download_models.sh.txt",
+      "sha256": "df1d7ab392bab7b4ec3fc0e00e9334be4aaf961ea6f46642ca9d5c7fbdf06a97",
+      "bytes": 1687
+    },
+    {
+      "source_path": "examples/llama.android/settings.gradle.kts",
+      "readable_path": "derived/docs/upstream-code/examples--llama.android--settings.gradle.kts.txt",
+      "sha256": "3803e8f09fc4209eea045d1fefd08db6df9be669f8f7485d8ed58e13d9bfae48",
+      "bytes": 448
+    }
+  ]
+}
