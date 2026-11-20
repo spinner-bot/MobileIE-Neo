@@ -1,0 +1,127 @@
+{
+  "resource_id": "MIE-0043",
+  "temporary_key": "code-SKKUAutoLab--ETSS-07-ImageEnhance",
+  "type": "code",
+  "title": "SKKUAutoLab/ETSS-07-ImageEnhance",
+  "repo": "SKKUAutoLab/ETSS-07-ImageEnhance",
+  "revision": "44122d61f193b2de04a9465f17a0948965ef09a4",
+  "tree": null,
+  "dois": null,
+  "arxivs": null,
+  "relation": "Explicit MobileIE implementation/module reuse; module-port claim requires independent source review, no fidelity/performance assumed",
+  "created_at": "2026-11-20T12:24:23+08:00",
+  "authors": [],
+  "dates": {
+    "years": [],
+    "published_date": null,
+    "date_verification": "pending Gate2"
+  },
+  "repository_owner": "SKKUAutoLab",
+  "family": "066-framework",
+  "analysis_order": 43,
+  "initial_preliminary": {
+    "R": 3,
+    "N": 1,
+    "U": 3,
+    "E": 2,
+    "score": 70,
+    "tier": "A",
+    "category": "framework-integration",
+    "family": "066-framework",
+    "role_order": 1,
+    "summary": "综合增强框架收录MobileIE代码和配置。核上游版本、封装差异与评价条件。",
+    "reason_R": "任务联系：综合增强框架收录MobileIE代码和配置。核上游版本、封装差异与评价条件。",
+    "reason_N": "重复/混淆风险为初级待证判断；依据当前明确关联与基础/接续/移植角色，非已确立创新结论",
+    "reason_U": "可操作性：按所列机制、对照或来源核查用途评分；未运行外部代码",
+    "reason_E": "已有可读HTML/文本/局部固定源码；内容充分性留待Gate2",
+    "evidence": [
+      {
+        "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/README.md",
+        "path": "shared/mon/mon/vision/enhance/multitask/mobileie/README.md",
+        "revision": "44122d61f193b2de04a9465f17a0948965ef09a4",
+        "acquisition": "receipts/codehit-b2e56cec10a86037.json"
+      },
+      {
+        "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/train.py",
+        "path": "shared/mon/mon/vision/enhance/multitask/mobileie/train.py",
+        "revision": "44122d61f193b2de04a9465f17a0948965ef09a4",
+        "acquisition": "receipts/codehit-89c0083d370dfd85.json"
+      },
+      {
+        "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/predict.py",
+        "path": "shared/mon/mon/vision/enhance/multitask/mobileie/predict.py",
+        "revision": "44122d61f193b2de04a9465f17a0948965ef09a4",
+        "acquisition": "receipts/codehit-8fa19c0558bcf834.json"
+      },
+      {
+        "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/__init__.py",
+        "path": "shared/mon/mon/vision/enhance/multitask/mobileie/__init__.py",
+        "revision": "44122d61f193b2de04a9465f17a0948965ef09a4",
+        "acquisition": "receipts/codehit-f7cd92eb4af7a431.json"
+      },
+      {
+        "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/__init__.py",
+        "path": "shared/mon/mon/vision/enhance/multitask/__init__.py",
+        "revision": "44122d61f193b2de04a9465f17a0948965ef09a4",
+        "acquisition": "receipts/codehit-bd1b1e8fe47ce8aa.json"
+      },
+      {
+        "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/__init__.py",
+        "path": "shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/__init__.py",
+        "revision": "44122d61f193b2de04a9465f17a0948965ef09a4",
+        "acquisition": "receipts/codehit-19343fe3ed309572.json"
+      },
+      {
+        "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/model.py",
+        "path": "shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/model.py",
+        "revision": "44122d61f193b2de04a9465f17a0948965ef09a4",
+        "acquisition": "receipts/codehit-cf6c4e1cf491d4bb.json"
+      },
+      {
+        "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/network/lle.py",
+        "path": "shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/network/lle.py",
+        "revision": "44122d61f193b2de04a9465f17a0948965ef09a4",
+        "acquisition": "receipts/codehit-6e826df00d733302.json"
+      },
+      {
+        "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/network/isp.py",
+        "path": "shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/network/isp.py",
+        "revision": "44122d61f193b2de04a9465f17a0948965ef09a4",
+        "acquisition": "receipts/codehit-e5c44052f7362d55.json"
+      },
+      {
+        "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/tools/onnx2tflite/onnx2tflite.py",
+        "path": "shared/mon/mon/vision/enhance/multitask/mobileie/tools/onnx2tflite/onnx2tflite.py",
+        "revision": "44122d61f193b2de04a9465f17a0948965ef09a4",
+        "acquisition": "receipts/codehit-a59287607edd6059.json"
+      },
+      {
+        "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/config/mobileie_lle_lolv1.yaml",
+        "path": "shared/mon/mon/vision/enhance/multitask/mobileie/config/mobileie_lle_lolv1.yaml",
+        "revision": "44122d61f193b2de04a9465f17a0948965ef09a4",
+        "acquisition": "receipts/codehit-6d6b1917f595a0ee.json"
+      },
+      {
+        "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/network/__init__.py",
+        "path": "shared/mon/mon/vision/enhance/multitask/mobileie/mobileie/network/__init__.py",
+        "revision": "44122d61f193b2de04a9465f17a0948965ef09a4",
+        "acquisition": "receipts/codehit-3f003b46afd80bed.json"
+      },
+      {
+        "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/config/mobileie_lle_lolv2real.yaml",
+        "path": "shared/mon/mon/vision/enhance/multitask/mobileie/config/mobileie_lle_lolv2real.yaml",
+        "revision": "44122d61f193b2de04a9465f17a0948965ef09a4",
+        "acquisition": "receipts/codehit-205b3f48e4fabfcd.json"
+      },
+      {
+        "url": "https://github.com/SKKUAutoLab/ETSS-07-ImageEnhance/blob/44122d61f193b2de04a9465f17a0948965ef09a4/shared/mon/mon/vision/enhance/multitask/mobileie/tools/torch_to_onnx.py",
+        "path": "shared/mon/mon/vision/enhance/multitask/mobileie/tools/torch_to_onnx.py",
+        "revision": "44122d61f193b2de04a9465f17a0948965ef09a4",
+        "acquisition": "receipts/codehit-6cfc5ede591e3f0e.json"
+      }
+    ],
+    "not_gate2": true
+  },
+  "source_snapshot_cutoff": "2026-11-17",
+  "identity_verification": "pending Gate2; repository owner is not assumed to be the paper author"
+}
