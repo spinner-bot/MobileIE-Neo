@@ -1,0 +1,67 @@
+{
+  "resource_id": "MIE-0096",
+  "temporary_key": "code-wbzuo--dl-modules-toolkit",
+  "type": "code",
+  "title": "wbzuo/dl-modules-toolkit",
+  "repo": "wbzuo/dl-modules-toolkit",
+  "revision": "4eada47a67a3663bedea1ef793123d966b4a87b8",
+  "tree": null,
+  "dois": null,
+  "arxivs": null,
+  "relation": "Explicit MobileIE implementation/module reuse; module-port claim requires independent source review, no fidelity/performance assumed",
+  "created_at": "2026-11-20T12:24:23+08:00",
+  "authors": [],
+  "dates": {
+    "years": [],
+    "published_date": null,
+    "date_verification": "pending Gate2"
+  },
+  "repository_owner": "wbzuo",
+  "family": "082-ports",
+  "analysis_order": 96,
+  "initial_preliminary": {
+    "R": 1,
+    "N": 1,
+    "U": 1,
+    "E": 2,
+    "score": 30,
+    "tier": "C",
+    "category": "module-transfer-or-source-dump",
+    "family": "082-ports",
+    "role_order": 2,
+    "summary": "wbzuo/dl-modules-toolkit 的公开命中涉及MobileIE的MBRConv/HDPA/模型定义或配置。逐项核查具体复用/抄录与实现条件，不将它当独立视频方法。",
+    "reason_R": "任务联系：wbzuo/dl-modules-toolkit 的公开命中涉及MobileIE的MBRConv/HDPA/模型定义或配置。逐项核查具体复用/抄录与实现条件，不将它当独立视频方法。",
+    "reason_N": "重复/混淆风险为初级待证判断；依据当前明确关联与基础/接续/移植角色，非已确立创新结论",
+    "reason_U": "可操作性：按所列机制、对照或来源核查用途评分；未运行外部代码",
+    "reason_E": "已有可读HTML/文本/局部固定源码；内容充分性留待Gate2",
+    "evidence": [
+      {
+        "url": "https://github.com/wbzuo/dl-modules-toolkit/blob/4eada47a67a3663bedea1ef793123d966b4a87b8/Modules/conv.md",
+        "path": "Modules/conv.md",
+        "revision": "4eada47a67a3663bedea1ef793123d966b4a87b8",
+        "acquisition": "receipts/codehit-2568127bc4f15f42.json"
+      },
+      {
+        "url": "https://github.com/wbzuo/dl-modules-toolkit/blob/4eada47a67a3663bedea1ef793123d966b4a87b8/Modules/code/conv/MBRConv(CV，ICCV2025).py",
+        "path": "Modules/code/conv/MBRConv(CV，ICCV2025).py",
+        "revision": "4eada47a67a3663bedea1ef793123d966b4a87b8",
+        "acquisition": "receipts/codehit-72f91dace3adbab6.json"
+      },
+      {
+        "url": "https://github.com/wbzuo/dl-modules-toolkit/blob/4eada47a67a3663bedea1ef793123d966b4a87b8/Modules/布尔大学士/即插即用2025/182 Hierarchical Dual-Path Attention (ICCV 2025).py",
+        "path": "Modules/布尔大学士/即插即用2025/182 Hierarchical Dual-Path Attention (ICCV 2025).py",
+        "revision": "4eada47a67a3663bedea1ef793123d966b4a87b8",
+        "acquisition": "receipts/codehit-7629b9548948ffb6.json"
+      },
+      {
+        "url": "https://github.com/wbzuo/dl-modules-toolkit/blob/4eada47a67a3663bedea1ef793123d966b4a87b8/Modules/布尔大学士/即插即用2025.md",
+        "path": "Modules/布尔大学士/即插即用2025.md",
+        "revision": "4eada47a67a3663bedea1ef793123d966b4a87b8",
+        "acquisition": "receipts/codehit-556c60999691f730.json"
+      }
+    ],
+    "not_gate2": true
+  },
+  "source_snapshot_cutoff": "2026-11-17",
+  "identity_verification": "pending Gate2; repository owner is not assumed to be the paper author"
+}
