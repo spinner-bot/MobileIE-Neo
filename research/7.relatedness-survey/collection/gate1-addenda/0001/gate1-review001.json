@@ -1,0 +1,145 @@
+{
+  "addendum_id": "G1-A0001",
+  "reviewed_at": "2026-11-20T16:10:41.552875+08:00",
+  "reviewer": "Codex  (sqs_A100) <langxibielangle@qq.com>",
+  "review_mode": "执行者另轮自查及独立审查文件；不是外部专家或第二代理审查",
+  "standard": "gates/gate1-v1.md",
+  "standard_sha256": "f057b90010c0a1ca471e917f9c65cb78701d518758e9fbd51fa3b40013f476f7",
+  "cutoff": "2026-11-17",
+  "actual_retrieval_date": "2026-11-20",
+  "source_commit": "ce2d5a70eb5c7a15e293e6a2c729d5ca3013c499",
+  "status": "pass_with_disclosed_limits",
+  "gate1_passed": true,
+  "new_candidate_counts": {
+    "paper": 3,
+    "code": 7,
+    "other": 1
+  },
+  "original_candidate_count": 113,
+  "total_candidate_count": 124,
+  "total_by_type": {
+    "paper": 50,
+    "code": 65,
+    "other": 9
+  },
+  "checklist": [
+    {
+      "id": "G1.1",
+      "requirement": "身份/截止",
+      "status": "pass_with_disclosed_limits",
+      "evidence": [
+        "collection/gate1-addenda/0001/new-candidates.json",
+        "collection/gate1-addenda/0001/identity-corrections.json",
+        "collection/gate1-addenda/0001/round14-mai2025isp-identity-scan.json"
+      ],
+      "reason": "MobileIE DOI/arxiv anchor unchanged; 11新增均明确关联。新项目固定commit均截止日前；TF-EQA精确发表日/历史参考版本受限，保守纳入并披露，不把OA Jan1默认日期当真实日期。"
+    },
+    {
+      "id": "G1.2A",
+      "requirement": "学术入口/分页",
+      "status": "pass_with_disclosed_limits",
+      "evidence": [
+        "collection/gate1-addenda/0001/round10-review.json",
+        "collection/gate1-addenda/0001/round15-review.json",
+        "collection/gate1-addenda/0001/round16-review.json"
+      ],
+      "reason": "原S2/OA/Crossref矩阵继承，补S2全38与OA全40列表及Crossref元数据；两成功列表当前无下一页。Crossref只有计数/搜索，不伪称完整被引表；初始历史并集43加2新被引，旧全部候选保留。"
+    },
+    {
+      "id": "G1.2B",
+      "requirement": "主文/补充/代码",
+      "status": "pass_with_disclosed_limits",
+      "evidence": [
+        "collection/gate1-addenda/0001/known-publication-source-audit.json",
+        "collection/gate1-addenda/0001/existing-resource-source-additions.json",
+        "collection/gate1-addenda/0001/supplement-resource-acquisitions.json",
+        "collection/gate1-addenda/0001/supplement-code-archive-review.json",
+        "collection/gate1-addenda/0001/project-public-link-review.json"
+      ],
+      "reason": "AnyMod正式PMLR、FastSHADE正式CVF、NTIRE2025补充及preprint补齐；8新增托管项目含7代码+1其他均固定源码归档。TF-EQA主文/补充多通道202空体/arxiv429保留，未来按证据受限审查。"
+    },
+    {
+      "id": "G1.2C",
+      "requirement": "作者/机构/接续",
+      "status": "pass_with_disclosed_limits",
+      "evidence": [
+        "collection/gate1-addenda/0001/author-code-link-review.json",
+        "collection/gate1-addenda/0001/authortrace-review.json",
+        "collection/gate1-addenda/0001/animeagent-relation-check.json",
+        "collection/gate1-addenda/0001/round15-review.json"
+      ],
+      "reason": "25可用PDF版本链接与33未按family配对论文逐题追踪，作者首页/院系官方入口核查；AnimeAgent仅同作者且无MobileIE锚、生成叙事任务，按范围排除。TeleAI依原来源，不推断原MobileIE属于该机构。"
+    },
+    {
+      "id": "G1.2D",
+      "requirement": "中英文网页/中文源",
+      "status": "pass_with_disclosed_limits",
+      "evidence": [
+        "collection/gate1-addenda/0001/round9-review.json",
+        "collection/gate1-addenda/0001/round10-review.json",
+        "collection/gate1-addenda/0001/round11-review.json",
+        "collection/gate1-addenda/0001/round12-review.json",
+        "collection/gate1-addenda/0001/round13-review.json",
+        "collection/gate1-addenda/0001/round14-review.json",
+        "collection/gate1-addenda/0001/round15-review.json",
+        "collection/gate1-addenda/0001/round16-review.json"
+      ],
+      "reason": "每轮含中英文与部署/视频/电信等查询；原Scholar/CNKI/Wanfang/HF限制继承。新增HF paper-with-me公开镜像transport失败披露；索引页面不等于完整全文/模型库覆盖。"
+    },
+    {
+      "id": "G1.2E",
+      "requirement": "历史对账",
+      "status": "pass",
+      "evidence": [
+        "collection/gate1-addenda/0001/new-candidates.json",
+        "collection/gate1-addenda/0001/round10-review.json",
+        "collection/gate1-addenda/0001/round14-review.json"
+      ],
+      "reason": "原113/47+58+8身份全部保持，包括历史旧列表已映射记录，不用新S2缺失删旧论文。新增3论文并与旧题名/DOI/arxiv判重；MAI2025ISP与RGB2025及ISP2026分别保留。"
+    },
+    {
+      "id": "G1.3",
+      "requirement": "取得/去重/线索处理",
+      "status": "pass_with_disclosed_limits",
+      "evidence": [
+        "collection/gate1-addenda/0001/supplement-resource-acquisitions.json",
+        "collection/gate1-addenda/0001/author-code-link-review.json",
+        "collection/gate1-addenda/0001/authortrace-review.json",
+        "collection/gate1-addenda/0001/project-public-link-review.json",
+        "collection/gate1-addenda/0001/round14-review.json",
+        "collection/gate1-addenda/0001/round15-additional-file-check.json"
+      ],
+      "reason": "11新增无永久ID/价值分级；旧源版本/同作者语言版归已有身份但原件分别留。LCISP Nov18 fork且same tree排除；新版同名/浏览器/商标等逐项排除。获取缺口为已尝试且披露状态，不是未处理身份线索。"
+    },
+    {
+      "id": "G1.3S",
+      "requirement": "连续两轮独立零新增",
+      "status": "pass",
+      "evidence": [
+        "collection/gate1-addenda/0001/round15-review.json",
+        "collection/gate1-addenda/0001/round16-review.json"
+      ],
+      "reason": "R15在fc4703f2提交审查后才启动R16；OA未过滤引用+Crossref与S2独立索引、loss与FST代码及不同中英文网页查询。均new0/pending0、候选hash相同；R10/R12/R14新增均已归零，不拿旧零新增跨新增拼接。"
+    },
+    {
+      "id": "G1.4",
+      "requirement": "字节摘要/冻结/留痕",
+      "status": "pass",
+      "evidence": [
+        "collection/gate1-addenda/0001/source-integrity-review.json",
+        "collection/gate1-addenda/0001/pdf-availability-audit.json",
+        "collection/gate1-addenda/0001/round15-additional-file-check.json"
+      ],
+      "reason": "119增补回执、592464057归档字节逐一核摘要；HTTP202空体5/403二/429二/transport一等完整保留。三份大PDF完整版本原已在清单；ZIP误用.txt扩展按内容验证，不覆盖原回执。旧Gate/收集/catalog各冻结hash均未变。"
+    }
+  ],
+  "limitations": [
+    "Bounded public-source snapshot, not proof entire Internet complete. Original index caps/blocked Scholar/CNKI/Wanfang/HF connector and code default-branch/100 caps still apply.",
+    "Current OA40 and S238 disagree and omit known historical works; all historically identified canonical resources retained.",
+    "TF-EQA primary registered2026-08-24/supplement2026-09-03, precise publication day and pre-Nov17 reference-list version cannot be proved from current metadata; conservatively included with temporal provenance limit. Fulltext unavailable.",
+    "Not all archived material is deep-read or executable; byte integrity, preliminary availability and future Gate2 conclusions distinct. No external model/training/GPU/Gate3 experiment.",
+    "Closed MIE-0003 originally analyzed arxiv v1 without required formal-version acquisition; this is a real Gate2 source/version gap. Old records preserved; separate formal-version re-review mandatory before advancement.",
+    "Original formal Gate1 passed with gaps later found; current supplement corrects, does not retroactively erase prior records or claim earlier collection exhaustive."
+  ],
+  "allowed_next": "Append IDs/rank new11 and publish remaining queue using frozen preliminary policy; apply source additions without overwriting closed review; append MIE-0003 formal version review. Resource advancement remains held until required re-review is closed."
+}
