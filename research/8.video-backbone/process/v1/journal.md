@@ -63,3 +63,13 @@ run_v1仅加入对无新更新继承状态的严格转发：比较config.inherit
 原attempt003 worker3007780/start109344585已从同一原241状态载入，内部新采样物理2 mean61.5455%/忙27.27%拒绝，CUDA0/新更新0/latest_checkpoint原None均保持。修复后的原chain002实际自动找到更早241原marker并转发，未再次断言，progress005核第二条forwarding完整前缀和同身份live，当前attempt004新准入。没有假造“已重新更新242”、更改门槛或修改原runtime。已结束的原attempt003 admission/resource/runtime分别提交。
 
 完整55小提交（从525353a3起）已普通SSH推到872f95c4，fetch确认55/0、push正常、ls-remote完整同一commit，push003单独提交。原主论文全部表行与525353a3逐行相同；34科学/质量源及5辅助源均保持。source/结果/过程/报告分开，指定作者/no-ff/自有data与独立7号边界继续；整篇论文目标仍active。
+
+## 2026-11-20T14:21:11.039235+08:00：CPU执行修订、原边界切换与完整warm2000
+
+后续GPU准入持续拒绝；原attempt004确实从242连续训练至358后资源保存，progress006核完整前缀；attempt005在CUDA前拒绝/0新增，原所有字段不改。考虑原CPU资格已通过、主机约617GiB可用/data约4.5TiB，新增CPU执行而不降低GPU门槛。首次切换检测到prebind child活跃，原watcher仅短暂STOP核查后CONT恢复、未发SIGINT/未触及数值进程，延期等正常边界。14:03再次核全部原数值worker资源终态/原watcher无child后，SIGINT让Python正常finally保留False/KeyboardInterrupt及全部历史，0数值worker信号，cpu-route-transition001完整留证。
+
+train_cpu_v1逐行派生冻结原脚本，模型/data/loss/Adam/clip/阶段/计数/唯一最终相同，仅CPU设备、同步/资源等待、CPU内存与元数据不同；OMP/OpenBLAS/Torch2/OpenCV1/nice5，空CUDA mask，host8GiB准备/4GiB保留，无墙钟截止。run_cpu_v1接续两seed同28000预算，CPU质量后调用原post chain003全JOD/汇总/四图；34科学质量与5辅助源不改，CPU两执行脚本/原run_v1辅助/修订共4项另冻，代码编译正常。CPU/GPU数值路径不同，显式披露而非逐bit复现。
+
+14:03:51实际独立session启动CPU协调3024380/start109481893、worker3024402/start109481902（attempt006），从原358模型/Adam/计数继续359/data358。progress007核343新CPU更新/累计701、两线程/nice5及worker不在GPU计算PID列表；无重复前358或额外丢弃资格。14:06后实存warm1000/449427B，progress008核累计1528；14:11:04 warm2000唯一最终正常、实际重载全有限，共32000教师/骨干图（358GPU＋1642CPU）。共享暖权重已复制三控制，fresh Adam进入原GT适配，progress009核warm2000/spatial1903、fixed/learned0、bone62448/teacher32000真实前缀；只保留原日志长度/摘要和首末记录，完整动态日志仍在原处，不反复复制大日志。
+
+当前继续同一原CPU进程，不重启或由loss前缀挑选结构/权重。尚无三控制全最终/DEV/JOD/方法或推理速度结论。所有原已结束GPU trace/windows/marker/runtime、操作终态、CPU源码/执行冻结/launch/config/新检查点/解释/0172分别小步提交，随后阶段fetch/SSH推送；原84表值/snapshot003/PDF020、旧STOP与最终封存保持。
