@@ -1,0 +1,23 @@
+{
+  "at": "2026-11-20T16:39:27.109485+08:00",
+  "gate1_addendum_complete": true,
+  "catalog_version": 2,
+  "required_publication_review_verified": true,
+  "sequential_checks": [
+    {
+      "requested": "MIE-0004",
+      "result": "Existing active resource MIE-0004 no duplicate begin",
+      "exit_code": 0
+    },
+    {
+      "requested": "MIE-0005",
+      "result": "Rejected because current MIE-0004 has not passed/closed Gate2",
+      "exit_code": 1
+    }
+  ],
+  "analysis_log_unchanged": true,
+  "current_resource": "MIE-0004",
+  "resource_closure_count": 3,
+  "separate_appended_review_count": 1,
+  "experiment_count": 0
+}

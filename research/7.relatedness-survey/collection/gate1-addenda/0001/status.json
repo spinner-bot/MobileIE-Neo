@@ -1,7 +1,7 @@
 {
   "addendum_id": "G1-A0001",
-  "status": "gate1_passed_review_pending",
-  "advance_allowed": false,
+  "status": "complete",
+  "advance_allowed": true,
   "detected_at": "2026-11-20T12:57:27.106913+08:00",
   "trigger": "MIE-0004 archived project page ICML2026 claim; primary PMLR official version of existing MIE-0003 found",
   "affected_resources": [
@@ -11,7 +11,7 @@
   "current_analysis_on_hold": "MIE-0004",
   "new_identity_count_so_far": 11,
   "frozen_gate_standard_unchanged": true,
-  "requires": "Publish appended catalog/remaining queue and close separate MIE-0003 formal-version re-review; preserve all original audits before releasing resource advancement",
+  "requires": "All required formal-version reviews closed and integrity verified; continue current MIE-0004 under frozen queue v2",
   "zero_new_streak_after_round10": 0,
   "additional_trigger": "Round10 S2 list adds LC-ISP and TF-EQA; author-linked LC-ISP code; exact temporal limit for TF-EQA disclosed",
   "trigger_correction": "Frozen all-web-lead-review already includes PMLR AnyMod URL from web-initial-8; actual gap was uncompleted formal-version acquisition/check in MIE-0003 Gate2. Old initial explanation preserved; this correction takes precedence.",
@@ -33,5 +33,8 @@
       "scope": "formal PMLR version and relation to original arxiv-v1 audit",
       "reason": "Gate1 publication-source gap; old closed audit preserved"
     }
-  ]
+  ],
+  "completed_at": "2026-11-20T16:39:27.109485+08:00",
+  "catalog": "catalog/active.json",
+  "review_close_log": "catalog/review-log.jsonl"
 }
