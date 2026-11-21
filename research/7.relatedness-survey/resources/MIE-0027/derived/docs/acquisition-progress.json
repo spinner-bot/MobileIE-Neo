@@ -127,7 +127,7 @@
   "initial_source": "HTTP2002683BRedirectingpage: completepayload, notarticle/abstract/fulltext",
   "semantic_classification": {
     "elsevier-xml001": "HTTP2001966Bcoredataonly,nooriginalText/body",
-    "sciencedirect001/sciencedirect-pdf001": "HTTP403832982Bsameerrorpayload, notPDF",
+    "sciencedirect001/sciencedirect-pdf001": "HTTP403each832982BsameCPEerrorclass, distinctSHA/requestdiagnostics; noPDF/CBGAN/abstract; seehttp-payload-semantic-review.json",
     "crossref-xml001/crossref-plain001/elsevier-full001": "429RATE_LIMIT_EXCEEDED onconcurrentAPIrequests, notpaperabsence. Stopconcurrency; 191.6s lateroneFULLrequest only",
     "elsevier-full002": "401AUTHENTICATION_ERROR InvalidAPIKey, no credentials used/no furtherretry",
     "elsevier-pdf001": "406PDFformatrestricted, notPDF",
@@ -137,5 +137,6 @@
   "source_flags": "OA/CCBY4confirmedbyofficialcoredataandCrossref; actualfulltextstillnotobtained",
   "missing": "Fullbody/PDF/figures/code notyetobtained",
   "no_active_capture_or_browser": true,
-  "execution": "NormalpublicwebsiteJS onlyinbrowser, neverresearchsource/models/metrics/train/GPU/Gate3"
+  "execution": "NormalpublicwebsiteJS onlyinbrowser, neverresearchsource/models/metrics/train/GPU/Gate3",
+  "correction_before_gate2": "Sameerrorclass doesnotmeanbyteidenticalpayload; initialshorthand correctedbyactualSHA/visibletext audit"
 }
