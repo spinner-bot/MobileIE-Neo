@@ -2,7 +2,9 @@
 
 2026-11-21T10:36:18.033361+08:00；Codex  (sqs_A100)。主题8；当前分支research/O1，论文目标active；research/7留给其他分支。
 
-当前最新为[同输入证据归并/0202](../../docs/进展报告/0202-T-261121-同输入证据归并与时间信息预算问题.md)，2026-11-21T13:45:14.512113+08:00；Codex  (sqs_A100)。[完整结论](evidence-reconciliation/findings.md)：896配对/56统计、616场景与616留一项；13SYN/9ND训练场景，不当64独立输入。L1历史收益不足1%对逐一留出仍成立，但部分ND平均质量/支配依赖权重，原门/所有STOP不改。本轮0新像素/CNN/flow/优化/GPU。[下一一帧等待信息问题](evidence-reconciliation/next-question.md)仅原长缓存元数据已核、科学协议/实现/指标尚未开始；新增future/延迟须明示，不当原创方法或解除旧STOP，论文目标active。
+当前[D1一帧等待筛查](delay-budget/README.md)正式进行，2026-11-21T13:53:52.456272+08:00；20源/人工资格已过，原CPU3914373/start118043794，计划120序列/5016逐帧/24均值/16门，0新CNN/训练/GPU。完整门尚未读取，不按partial排名选条件；center3一未来/等待明确另列，不当创新/零延迟。接[过程](delay-budget/process/journal.md)，勿重启原live任务，所有旧STOP保持。
+
+此前最新报告为[同输入证据归并/0202](../../docs/进展报告/0202-T-261121-同输入证据归并与时间信息预算问题.md)，2026-11-21T13:45:14.512113+08:00；Codex  (sqs_A100)。[完整结论](evidence-reconciliation/findings.md)：896配对/56统计、616场景与616留一项；13SYN/9ND训练场景，不当64独立输入。L1历史收益不足1%对逐一留出仍成立，但部分ND平均质量/支配依赖权重，原门/所有STOP不改。本轮0新像素/CNN/flow/优化/GPU。[下一一帧等待信息问题](evidence-reconciliation/next-question.md)仅原长缓存元数据已核、科学协议/实现/指标尚未开始；新增future/延迟须明示，不当原创方法或解除旧STOP，论文目标active。
 
 最近实验[A1局部仿射算子缓存](affine-cache/README.md)已完整负结项；2026-11-21T13:29:13.971968+08:00，Codex  (sqs_A100)。[0201](../../docs/进展报告/0201-T-261121-局部仿射算子缓存筛查与止损.md)、[决定](affine-cache/decision.md)：32唯一训练场景抽样窗×两原F0 seed，768输出/48均值/20门，0新CNN/优化/GPU；表示0/4、强组合0/16。即使每帧重拟合SYN已低2.73–2.81dB，cached继续退化；ND时间与hold参照正例仍保留。固定局部仿射/K2/拟合及补救网格STOP，不扩失败成本/训练/DEV/手机；四图实际审阅，原进程终态/21源保持。一般keyframe/仿射/GF非创新，论文目标active未完成。
 
