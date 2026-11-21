@@ -1,0 +1,166 @@
+{
+  "resource_id": "MIE-0028",
+  "at": "2026-11-21T15:29:55.650653+08:00",
+  "source_aliases": {
+    "prior": "prior:path→workstationrelative primarysource"
+  },
+  "claims": [
+    {
+      "claim_id": "C01",
+      "evidence_class": "primary_identity_date",
+      "claim": "IEEE作者JiachengGuo/SCUT，AIoTC2026会议7月17–19，943–947；加入IEEE9月21，与会议日期分开。",
+      "anchors": [
+        "identity.json",
+        "derived/docs/ieee-public-metadata.json",
+        "prior:collection/raw/mie0028-crossref001.json"
+      ],
+      "limitation": "正文预期5页而实际0页取得，不将会议日当已核在线日。"
+    },
+    {
+      "claim_id": "C02",
+      "evidence_class": "publisher_registered_direct_citation",
+      "claim": "ref7书目标题/Yan/ICCV2025/首页21949准确对应MobileIE。",
+      "anchors": [
+        "derived/docs/citation-provenance.json",
+        "prior:collection/raw/mie0028-crossref001.json"
+      ],
+      "limitation": "该记录无DOI，不称登记了MobileIEDOI；原语境/印刷号/模型继承未知。"
+    },
+    {
+      "claim_id": "C03",
+      "evidence_class": "actual_limited_reading_scope",
+      "claim": "官方50895B摘要HTML公共字段和20登记参考已核，0PDF页/科学图/确切代码。",
+      "anchors": [
+        "derived/docs/reading-notes.md",
+        "sources/manifest.json",
+        "derived/docs/availability-review.json"
+      ],
+      "limitation": "元数据或空响应不当全文；方法/结果没有独立复现。"
+    },
+    {
+      "claim_id": "C04",
+      "evidence_class": "author_abstract_model_claim",
+      "claim": "摘要报告UIEB训练depthwiseUNet9k–59k、4.3k曲线及主模型28.9k。",
+      "anchors": [
+        "derived/docs/ieee-public-metadata.json"
+      ],
+      "limitation": "未核精确结构/参数/算量，4.3k数值不证明MobileIE骨干。"
+    },
+    {
+      "claim_id": "C05",
+      "evidence_class": "author_abstract_data_quality_claim",
+      "claim": "摘要报告90张held-outUIEB及较rawinputPSNR+3.2dB。",
+      "anchors": [
+        "derived/docs/ieee-public-metadata.json",
+        "derived/docs/reading-notes.md"
+      ],
+      "limitation": "ID/许可/参考图/划分重叠/均值定义未得；rawinput不据此认作RAW传感器pipeline。"
+    },
+    {
+      "claim_id": "C06",
+      "evidence_class": "author_abstract_quantization_negative_result",
+      "claim": "FP16-compute栈36配置中，仅权重INT8/INT4PTQ未见一致时延/能耗收益。",
+      "anchors": [
+        "derived/docs/ieee-public-metadata.json"
+      ],
+      "limitation": "存储bit与计算精度分开；非所有量化/硬件都无效，也不知每配置原数值。"
+    },
+    {
+      "claim_id": "C07",
+      "evidence_class": "author_abstract_hardware_scope",
+      "claim": "摘要为AppleM3Pro上CoreML选择CPU/GPU/ANE的部署测量。",
+      "anchors": [
+        "derived/docs/ieee-public-metadata.json"
+      ],
+      "limitation": "不作手机/水下相机实机宣称；computeunit选择不证全部算子在ANE、无CPUfallback。"
+    },
+    {
+      "claim_id": "C08",
+      "evidence_class": "author_abstract_main_measurement",
+      "claim": "主模型256×256、INT8/ANE报告945FPS与4.7mJ/图。",
+      "anchors": [
+        "derived/docs/ieee-public-metadata.json"
+      ],
+      "limitation": "未得计时/采样/温度/IO协议，不是本次实测、持续相机FPS或完整pipeline能量。"
+    },
+    {
+      "claim_id": "C09",
+      "evidence_class": "author_energy_boundary_and_literal_units",
+      "claim": "作者称idle-subtractedSoC计数器；945倒数1.0582ms，4.7mJ×945/s条件功率4.4415W。",
+      "anchors": [
+        "derived/docs/ieee-public-metadata.json",
+        "derived/docs/static-unit-review.json"
+      ],
+      "limitation": "算术非新功率实测；counter域/idle/DVFS/窗口/整机边界未知，像素比不作性能线性外推。"
+    },
+    {
+      "claim_id": "C10",
+      "evidence_class": "author_quality_reporting_precision",
+      "claim": "作者称相对FP16在两位小数报告精度下无质量下降。",
+      "anchors": [
+        "derived/docs/ieee-public-metadata.json"
+      ],
+      "limitation": "不是逐像素/原始浮点同值、统计等效或所有图像均无损。"
+    },
+    {
+      "claim_id": "C11",
+      "evidence_class": "author_abstract_compute_unit_ratio",
+      "claim": "作者将能耗主要归于单元/宽度，列ANE对GPU3.6倍、对CPU5.5–5.6倍口径。",
+      "anchors": [
+        "derived/docs/ieee-public-metadata.json"
+      ],
+      "limitation": "未见分项/参照表，不将4.7mJ硬乘比值生成原文没有的精确CPU/GPU数据。"
+    },
+    {
+      "claim_id": "C12",
+      "evidence_class": "author_abstract_W8A8_counterexample",
+      "claim": "作者称W8A8进入整数datapath并报告时延−18%、能耗−28%、PSNR−.37dB。",
+      "anchors": [
+        "derived/docs/ieee-public-metadata.json"
+      ],
+      "limitation": "具体参照/校准/graph/partition/硬件trace缺失，整数执行未独立验证，质量损失保留。"
+    },
+    {
+      "claim_id": "C13",
+      "evidence_class": "author_bounded_saturation_claim",
+      "claim": "sub30k饱和当前质量—成本取舍是作者所测模型/数据/协议内结论。",
+      "anchors": [
+        "derived/docs/ieee-public-metadata.json",
+        "derived/report/analysis.md"
+      ],
+      "limitation": "不能推广成增强/视频模型参数上限或证明MobileIE已有同结论。"
+    },
+    {
+      "claim_id": "C14",
+      "evidence_class": "explicit_temporal_information_unknown",
+      "claim": "静态90图与单图成本不确定历史/未来/state/时间loss/视频评价。",
+      "anchors": [
+        "derived/docs/reading-notes.md",
+        "derived/report/analysis.md"
+      ],
+      "limitation": "不从frame或IoT/underwater称谓补写连续视频或无闪烁。"
+    },
+    {
+      "claim_id": "C15",
+      "evidence_class": "bounded_acquisition_and_false_lead",
+      "claim": "12回执全终态，无实际全文/实现；AquaVisionCoreML命中为人员角色，截止前be282...README字节/Gitblob已核。",
+      "anchors": [
+        "derived/docs/availability-review.json",
+        "derived/docs/lead-dispositions.json",
+        "derived/docs/aquavision-cutoff-readme.json",
+        "sources/manifest.json"
+      ],
+      "limitation": "当前head11月18日晚于快照，未用作历史科学证据；未确认实现不证明私下或异题不存在，无新合格资源。"
+    },
+    {
+      "claim_id": "C16",
+      "evidence_class": "research_value_explicit_gaps_handoff",
+      "claim": "需固定权重/编译/partition/实际精度、同数据预算、稳态idle/全链能量与真实动态时空感知控制。",
+      "anchors": [
+        "derived/report/analysis.md",
+        "derived/docs/reading-notes.md"
+      ],
+      "limitation": "五页正文/原配置数据/统计与时序信息待合法补证追加复审；Gate3未运行，单位算术不称实验。"
+    }
+  ]
+}
