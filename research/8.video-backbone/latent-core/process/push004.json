@@ -1,0 +1,38 @@
+{
+  "at": "2026-11-21T13:01:57.674843+08:00",
+  "author": "Codex  (sqs_A100)",
+  "branch": "research/O1",
+  "phase": "Complete original L1 formal learning, matched-held results, actual image review and preregistered fixed-configuration stop",
+  "phase_commits_since_previous_checkpoint_push": 75,
+  "verified_remote_head": "5e9a877c5e20f45d978ba0364ef42bfdd0faa51c",
+  "formal_optimizer_updates": 32000,
+  "formal_student_images": 512000,
+  "held_output_rows": 704,
+  "gate_counts": {
+    "space": "2/8",
+    "history": "0/12",
+    "strong": "0/24",
+    "complete_A": false,
+    "complete_B": false
+  },
+  "source_freeze_counts_unchanged": [
+    26,
+    44,
+    1
+  ],
+  "old_O1_sources_checked_unchanged": [
+    39,
+    2
+  ],
+  "checks": [
+    "actual complete numerical runtimes and exact image/update accounting",
+    "same32 input and GT draws across model seeds",
+    "all recorded original controller/driver/wrapper/worker/held/summary handles terminal",
+    "actual viewed PNG digests and complete source-score digests match",
+    "registered train windows and ND sealed-source exclusions checked",
+    "local changed Markdown links and whitespace pass",
+    "clean research/O1; no remote divergence or force push"
+  ],
+  "goal": "active; no established method/novelty, mobile or independent-final conclusion",
+  "future_merge_policy": "--no-ff; no rebase/squash/force"
+}
