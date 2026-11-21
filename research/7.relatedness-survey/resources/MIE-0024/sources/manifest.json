@@ -13,10 +13,13 @@
     },
     {
       "path": "receipts/paper-eb15389276ff-index-link2.json",
-      "status": "success",
+      "status": "empty_response",
       "http": 202,
       "archive": null,
-      "sha256": null
+      "sha256": null,
+      "complete": false,
+      "bytes": 0,
+      "correction": "Historicalreceipt successlabel preserved unchanged; empty202 is not acquiredsource"
     },
     {
       "path": "receipts/paper-eb15389276ff-publisher.json",
@@ -38,6 +41,33 @@
       "http": 200,
       "archive": "archive/paper-eb15389276ff-arxiv-pdf.pdf",
       "sha256": "0001efd1569c941d26c2b1796775ed92df986160d8dd2f40c225d8e1524688d2"
+    },
+    {
+      "path": "receipts/mie0024-cvf-formal-page.json",
+      "status": "success",
+      "complete": true,
+      "http": 200,
+      "archive": "archive/mie0024-cvf-formal-page.html",
+      "sha256": "6a96727bf5ad265d56ddd2b2df20cdf593b9ddf5f13f947ab2824e22e09797ba",
+      "bytes": 6333
+    },
+    {
+      "path": "receipts/mie0024-cvf-formal-pdf.json",
+      "status": "success",
+      "complete": true,
+      "http": 200,
+      "archive": "archive/mie0024-cvf-formal-pdf.pdf",
+      "sha256": "2f85fe780ea09fa58a01ce4d2ae6b51353851f9b3c21a9533f8e2f8aaf2a7629",
+      "bytes": 23724214
+    },
+    {
+      "path": "receipts/sourcezip-GenAI4E--QATIE.json",
+      "status": "success",
+      "complete": true,
+      "http": 200,
+      "archive": "archive/sourcezip-GenAI4E--QATIE.txt",
+      "sha256": "f60abd3ac5f1e7a8ed862823964fd667fede0d3784c336488d1bb4da3dce0ff0",
+      "bytes": 27530692
     }
   ],
   "discovery_evidence": [
@@ -57,7 +87,7 @@
       "source_record_id": "fd915332783b20e1d4354ff98aed3e5b91c10145"
     }
   ],
-  "adequacy": "Materials available for analysis; not yet read or qualified",
+  "adequacy": "Completecurrentpublishedformal/arxivpaper, allapplicableauthorcode andpublished37artifacts staticallyanalyzed; no explicitmissingpublicsupplementidentified. Fullpublicliteratureanalysis, not numericreproduction.",
   "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts",
   "path_conventions": {
     "receipts[].path": "relative to workstation/collection",
@@ -65,5 +95,15 @@
     "discovery_evidence strings": "relative to workstation/collection",
     "discovery_evidence[].source": "collection/ prefix relative to workstation; research/ prefix relative to repository root",
     "discovery_evidence[].acquisition": "relative to workstation/collection; path is remote repository path at revision"
-  }
+  },
+  "version_review": "derived/docs/version-and-availability-review.json",
+  "retained_author_artifacts": "derived/docs/author-source-manifest.json",
+  "applicable_reading": "derived/docs/reading-progress.json",
+  "visual_review": "derived/docs/visual-review.json",
+  "source_deduplication": "Initialpublisher and arxivabs sameSHA, oneevidencechain nottwo independentpublications",
+  "static_binary_scope": "3weights ZIP/FlatBuffer metadata only;4PYC opaque inventory, no execution",
+  "unknowns": [
+    "Historical exactrunconfig/datasetfileIDs/licenseprovenance/checkpoint-to-table-to-phoneartifactmapping",
+    "Independentmetrics/actualdelegation/mobilefullpipeline/thermalpower orvideoflicker notverified"
+  ]
 }
