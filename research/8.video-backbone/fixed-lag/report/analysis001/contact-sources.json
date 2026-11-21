@@ -1,0 +1,277 @@
+{
+  "selection": "Registered first source per domain/model seed, fixed source-frame32/8 and center128 detail",
+  "sources": [
+    {
+      "seed": 0,
+      "scene": "bear_photons20",
+      "source_frame": 32,
+      "source": {
+        "scene": "bear_photons20",
+        "domain": "davis_train_pilot",
+        "source_video": "bear",
+        "path": ".cache/experiments/exploration-r30/bear_photons20.npz",
+        "sha256": "e3412adaa3d6b5802874069c45a00500840ca9a4a24442aa493e3ca4324c063f"
+      },
+      "D1_center3": {
+        "seed": 0,
+        "domain": "SYN",
+        "scene": "bear_photons20",
+        "arm": "center3",
+        "path": ".cache/experiments/topic8-delay-budget/eval001/seed0--bear_photons20--center3.npy",
+        "sha256": "c0012126916af9357c74e0ac208cbd6fed381b0df83d1a7526e88ee49ca9d002",
+        "shape": [
+          61,
+          480,
+          854,
+          3
+        ],
+        "first_source_frame": 2,
+        "last_source_frame": 62,
+        "future_frames": 1,
+        "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7"
+      },
+      "new_predictions": [
+        {
+          "seed": 0,
+          "domain": "SYN",
+          "scene": "bear_photons20",
+          "arm": "naive_future",
+          "path": ".cache/experiments/topic8-fixed-lag/eval001/seed0--bear_photons20--naive_future.npy",
+          "sha256": "456229a0e6d818672657213c7012093ab9b25739cc591c13bad64f5bcc1c29ec",
+          "shape": [
+            61,
+            480,
+            854,
+            3
+          ],
+          "first_source_frame": 2,
+          "last_source_frame": 62,
+          "future_frames": 1,
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7"
+        },
+        {
+          "seed": 0,
+          "domain": "SYN",
+          "scene": "bear_photons20",
+          "arm": "innovation_lag1",
+          "path": ".cache/experiments/topic8-fixed-lag/eval001/seed0--bear_photons20--innovation_lag1.npy",
+          "sha256": "b12ea1d5edb8631a502d653a47addd0efc74926a4a22263ea7cc58d54d5db119",
+          "shape": [
+            61,
+            480,
+            854,
+            3
+          ],
+          "first_source_frame": 2,
+          "last_source_frame": 62,
+          "future_frames": 1,
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7"
+        }
+      ]
+    },
+    {
+      "seed": 0,
+      "scene": "video_15",
+      "source_frame": 8,
+      "source": {
+        "scene": "video_15",
+        "domain": "paired_real_ND_DEV",
+        "source_video": "video_15",
+        "path": ".cache/experiments/exploration-r10/video_15_native_crop.npz",
+        "sha256": "08708be23625b82ff4da2c1679e2def9e4092e7018aa03dcd8072593dce2cc93"
+      },
+      "D1_center3": {
+        "seed": 0,
+        "domain": "ND",
+        "scene": "video_15",
+        "arm": "center3",
+        "path": ".cache/experiments/topic8-delay-budget/eval001/seed0--video_15--center3.npy",
+        "sha256": "dadc78235e63dfe5e06ea677fdbdbd237f43cb60a5b59cf63297116483ec198e",
+        "shape": [
+          13,
+          288,
+          512,
+          3
+        ],
+        "first_source_frame": 2,
+        "last_source_frame": 14,
+        "future_frames": 1,
+        "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7"
+      },
+      "new_predictions": [
+        {
+          "seed": 0,
+          "domain": "ND",
+          "scene": "video_15",
+          "arm": "naive_future",
+          "path": ".cache/experiments/topic8-fixed-lag/eval001/seed0--video_15--naive_future.npy",
+          "sha256": "23e5c591c2c99ef0e5e9869f6aef3337f56e4ac61b537ac1f09719944db19154",
+          "shape": [
+            13,
+            288,
+            512,
+            3
+          ],
+          "first_source_frame": 2,
+          "last_source_frame": 14,
+          "future_frames": 1,
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7"
+        },
+        {
+          "seed": 0,
+          "domain": "ND",
+          "scene": "video_15",
+          "arm": "innovation_lag1",
+          "path": ".cache/experiments/topic8-fixed-lag/eval001/seed0--video_15--innovation_lag1.npy",
+          "sha256": "ec4c6cea5b88ceccd5604a13764603e8f25a0b8360cb2cedc70515a575d503f5",
+          "shape": [
+            13,
+            288,
+            512,
+            3
+          ],
+          "first_source_frame": 2,
+          "last_source_frame": 14,
+          "future_frames": 1,
+          "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7"
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "scene": "bear_photons20",
+      "source_frame": 32,
+      "source": {
+        "scene": "bear_photons20",
+        "domain": "davis_train_pilot",
+        "source_video": "bear",
+        "path": ".cache/experiments/exploration-r30/bear_photons20.npz",
+        "sha256": "e3412adaa3d6b5802874069c45a00500840ca9a4a24442aa493e3ca4324c063f"
+      },
+      "D1_center3": {
+        "seed": 1,
+        "domain": "SYN",
+        "scene": "bear_photons20",
+        "arm": "center3",
+        "path": ".cache/experiments/topic8-delay-budget/eval001/seed1--bear_photons20--center3.npy",
+        "sha256": "88d6362dec2792cea2deb10bdf24020188ad9c923719390a2d68a1b36bf2707e",
+        "shape": [
+          61,
+          480,
+          854,
+          3
+        ],
+        "first_source_frame": 2,
+        "last_source_frame": 62,
+        "future_frames": 1,
+        "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e"
+      },
+      "new_predictions": [
+        {
+          "seed": 1,
+          "domain": "SYN",
+          "scene": "bear_photons20",
+          "arm": "naive_future",
+          "path": ".cache/experiments/topic8-fixed-lag/eval001/seed1--bear_photons20--naive_future.npy",
+          "sha256": "794ff82655562975cba12185febcf94e69b09f385f7db510892aff930abc19b1",
+          "shape": [
+            61,
+            480,
+            854,
+            3
+          ],
+          "first_source_frame": 2,
+          "last_source_frame": 62,
+          "future_frames": 1,
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e"
+        },
+        {
+          "seed": 1,
+          "domain": "SYN",
+          "scene": "bear_photons20",
+          "arm": "innovation_lag1",
+          "path": ".cache/experiments/topic8-fixed-lag/eval001/seed1--bear_photons20--innovation_lag1.npy",
+          "sha256": "2ec56f1bc19b9e9fe033638da474db2522cb39276860ec9dc46d4c63d30e28eb",
+          "shape": [
+            61,
+            480,
+            854,
+            3
+          ],
+          "first_source_frame": 2,
+          "last_source_frame": 62,
+          "future_frames": 1,
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e"
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "scene": "video_15",
+      "source_frame": 8,
+      "source": {
+        "scene": "video_15",
+        "domain": "paired_real_ND_DEV",
+        "source_video": "video_15",
+        "path": ".cache/experiments/exploration-r10/video_15_native_crop.npz",
+        "sha256": "08708be23625b82ff4da2c1679e2def9e4092e7018aa03dcd8072593dce2cc93"
+      },
+      "D1_center3": {
+        "seed": 1,
+        "domain": "ND",
+        "scene": "video_15",
+        "arm": "center3",
+        "path": ".cache/experiments/topic8-delay-budget/eval001/seed1--video_15--center3.npy",
+        "sha256": "d4704ffed6cb281b5006ea8a62747f2416930bcdce22e4071b93f81711281c16",
+        "shape": [
+          13,
+          288,
+          512,
+          3
+        ],
+        "first_source_frame": 2,
+        "last_source_frame": 14,
+        "future_frames": 1,
+        "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e"
+      },
+      "new_predictions": [
+        {
+          "seed": 1,
+          "domain": "ND",
+          "scene": "video_15",
+          "arm": "naive_future",
+          "path": ".cache/experiments/topic8-fixed-lag/eval001/seed1--video_15--naive_future.npy",
+          "sha256": "753e2ecd08b4c9bb60e395ab0fe1dfc54a5922894f0e0e1cbdad7c2cc24c1ccc",
+          "shape": [
+            13,
+            288,
+            512,
+            3
+          ],
+          "first_source_frame": 2,
+          "last_source_frame": 14,
+          "future_frames": 1,
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e"
+        },
+        {
+          "seed": 1,
+          "domain": "ND",
+          "scene": "video_15",
+          "arm": "innovation_lag1",
+          "path": ".cache/experiments/topic8-fixed-lag/eval001/seed1--video_15--innovation_lag1.npy",
+          "sha256": "a30917eb6fe518efb1f1492121841b6d96b068a80efd4a81b82b265da20d084e",
+          "shape": [
+            13,
+            288,
+            512,
+            3
+          ],
+          "first_source_frame": 2,
+          "last_source_frame": 14,
+          "future_frames": 1,
+          "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e"
+        }
+      ]
+    }
+  ]
+}
