@@ -10,4 +10,6 @@ CPU实际资格通过：初始当前路径/教师传输/stream差0，两个监�
 
 当前正式seed0已运行：[0193](../../../docs/进展报告/0193-T-26112107-共享核心CUDA资格与正式训练启动.md)、[观察002](process/observation002.json)。原chain002协调3551565/start115612249自动通过资格013（4丢弃更新，GPU4匹配、own末次1118MiB、allocator峰421330944B），新准入启动原worker3582586/start115719183，GPU4 UUID尾bed58ed3e、继承计数0。观察时各118步、共236正式更新，近期1.186秒/共同步仅用于sleep。原两目标/双seed各4K及完整32窗/416输出/36门继续，完整质量尚待；核实际链/proc，勿按旧resource_wait/pending或PID重复启动。用户1–2卡许可已记录，本次8卡空闲后保留原同链/4–7路由。
 
+最近[观察003](process/observation003.json)于2026-11-21T08:16:09.747841+08:00核同原父/worker live，seed0各2618、共5236正式更新，1000/2000完整备份已核对分别交；无资源暂停，原4K预算/完整双seed判定保持，按实测速率长sleep。
+
 [过程](process/journal.md)记录中断恢复、全部实现/资格与环境修订。GPU仍须新连续余量/UUID/锁/设备核验、让步与资源边界恢复，无墙钟截止；所有资产在zrh自有data。main/作者/no-ff/密集提交阶段推送、原论文84值/PDF020/独立最终/7号与其他worktree保持，论文goal active。
