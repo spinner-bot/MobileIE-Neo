@@ -1,0 +1,94 @@
+{
+  "title": "Energy-Aware Deployment of Quantized Shallow-Water Image Enhancement on an Edge NPU for Underwater IoT Imaging",
+  "doi": "10.1109/AIoTC71250.2026.11689226",
+  "authors": [
+    {
+      "name": "Jiacheng Guo",
+      "affiliation": [
+        "South China University of Technology, Guangzhou, China"
+      ],
+      "firstName": "Jiacheng",
+      "lastName": "Guo",
+      "id": "37085868027"
+    }
+  ],
+  "abstract": "Underwater image enhancement (UIE) research is trending toward heavy models, while lightweight alternatives are judged by parameters and FLOPs: proxies that say little about latency and energy on the edge accelerators underwater IoT platforms deploy. We report an on-device measurement study of shallow-water enhancement, whose per-channel attenuation physics favors compact quantized networks. Depthwise-separable U-Nets (9k-59k parameters) and a 4.3k-parameter curve model are trained on UIEB, quantized to FP16, INT8, and INT4 (palettized) with weight-only post-training quantization, and deployed via Core ML on the CPU, GPU, and Apple Neural Engine (ANE) of an Apple M3 Pro, with per-frame energy from idle-subtracted SoC power counters. The main 28.9k-parameter model at INT8 on the ANE enhances 256 × 256 frames at 945 FPS and 4.7 mJ/frame with no degradation at the reported two-decimal precision relative to FP16, and +3.2 dB PSNR over raw input on a 90-image held-out UIEB split. Across all 36 configurations on this FP16-compute stack, weight-only quantization provides no consistent latency or energy gain; energy is governed by compute-unit choice (3.6× vs. the GPU, 5.5-5.6× vs. the CPU) and network width. A W8A8 variant engages the ANE integer datapath (-18% latency, -28% energy at -0.37 dB), localizing the neutrality to weight-only PTQ rather than to the model or the NPU. A sub-30k-parameter network already saturates the measured quality-cost trade-off.",
+  "publicationTitle": "2026 5th International Conference on Artificial Intelligence, Internet of Things and Cloud Computing Technology (AIoTC)",
+  "publicationDate": "17 July 2026",
+  "displayPublicationDate": "17-19 July 2026",
+  "dateOfInsertion": "21 September 2026",
+  "startPage": "943",
+  "endPage": "947",
+  "pdfUrl": "/stamp/stamp.jsp?tp=&arnumber=11689226",
+  "pdfPath": "/iel8/11688154/11688159/11689226.pdf",
+  "isOpenAccess": false,
+  "isFreeDocument": false,
+  "referenceCount": 20,
+  "sections": {
+    "abstract": "true",
+    "authors": "true",
+    "disclaimer": "false",
+    "figures": "true",
+    "multimedia": "false",
+    "references": "true",
+    "citedby": "false",
+    "keywords": "true",
+    "definitions": "false",
+    "algorithm": "false",
+    "dataset": "false",
+    "cadmore": "false",
+    "footnotes": "false",
+    "relatedContent": "false",
+    "metrics": "true"
+  },
+  "keywords": [
+    {
+      "type": "IEEE Keywords",
+      "kwd": [
+        "Modeling",
+        "Quantization (signal)",
+        "Energy",
+        "Measurement units",
+        "Printing",
+        "Internet of Things",
+        "Image enhancement",
+        "Central Processing Unit",
+        "Timing",
+        "Graphics processing units"
+      ]
+    },
+    {
+      "type": "Index Terms",
+      "kwd": [
+        "Energy Gain",
+        "Raw Input",
+        "Datapath",
+        "Network Width",
+        "Underwater Image",
+        "Null Model",
+        "PyTorch",
+        "Color Difference",
+        "Null Results",
+        "Pareto Front",
+        "Relative Standard Error",
+        "Depthwise Separable Convolution"
+      ]
+    },
+    {
+      "type": "Author Keywords",
+      "kwd": [
+        "Underwater Image Enhancement",
+        "Edge NPU",
+        "Edge Intelligence",
+        "Internet of Things",
+        "Quantization",
+        "Energy Measurement",
+        "Core ML",
+        "Apple Neural Engine"
+      ]
+    }
+  ],
+  "source": "archive/mie0028-ieee-abstract001.html",
+  "source_sha256": "a312e4a9aed20ecf2f11cdc86169c0de9c8e8ce0268dffe8dcb850e83419178b",
+  "method": "PublicJSONliteral parsing, no pageJS execution, nofullbodyclaim"
+}
