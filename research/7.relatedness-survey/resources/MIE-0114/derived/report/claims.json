@@ -1,0 +1,119 @@
+{
+  "resource_id": "MIE-0114",
+  "at": "2026-11-21T11:08:28.367861+08:00",
+  "source_aliases": {
+    "code": "code:relative/path:first-last resolves derived/docs/upstream-code/relative--path.txt,1based fixedbc952b6",
+    "other": "explicitresourcerelativepath; reusedevidenceBpaths+SHAinaudit"
+  },
+  "claims": [
+    {
+      "claim_id": "C01",
+      "evidence_class": "primary_fixed_source_reuse",
+      "claim": "固定bc952b6/tree14355b2，18件1025443B与59/原ZIP/官方blob全部一致，3CRC重核，同SHA阅读透明复用。",
+      "anchors": [
+        "identity.json",
+        "derived/docs/source-correspondence-audit.json",
+        "derived/docs/archive-inventory.json"
+      ],
+      "limitation": "不算新独立科学实证；13适用全文读，unusedscheduler仅清单/导入核。"
+    },
+    {
+      "claim_id": "C02",
+      "evidence_class": "static_spatial_information_params",
+      "claim": "IE/IF/ID当前同pairIR/VIS流程，无历史未来/time-state；源码/存储6145+14305+39204=59654。",
+      "anchors": [
+        "code:models/build_slim.py:1-100",
+        "derived/docs/source-correspondence-audit.json",
+        "derived/docs/reading-notes.md"
+      ],
+      "limitation": "IR为部署额外信息，原S2书目/论文全段限制保持；参数是字面结构不是运行性能。"
+    },
+    {
+      "claim_id": "C03",
+      "evidence_class": "static_original_refactored_carriers",
+      "claim": "test_p加载随包3原pth，test.py加载重构三stage ckpt再slim，后者last.ckpt不随包。",
+      "anchors": [
+        "code:README.md:28-60",
+        "code:test_p.py:264-283",
+        "code:test.py:23-50"
+      ],
+      "limitation": "没有重构/历史训练或原论文数值复现，不能互换路径/权重后声称对应全部结果。"
+    },
+    {
+      "claim_id": "C04",
+      "evidence_class": "conditional_fold_check_interpretation",
+      "claim": "check_fold仅合成输入打印差值无阈值assert，IF对照混入RGBclamp和Yroundtrip，非纯卷积折叠比较。",
+      "anchors": [
+        "code:test.py:53-85",
+        "code:utils/image_utils.py:11-33"
+      ],
+      "limitation": "只是函数组成条件分析，没跑差值，不能说折叠已成功或失败。"
+    },
+    {
+      "claim_id": "C05",
+      "evidence_class": "static_flags_and_unused_helper",
+      "claim": "options布尔项无转换，main固定enabletimingTrue；PLIF.forward若RGB落1channel原IF，trainingstep转Y而ID用slim。",
+      "anchors": [
+        "code:options.py:35-41",
+        "code:test.py:185-198",
+        "code:models/base_model.py:57-74"
+      ],
+      "limitation": "字符串False/未用helper是条件入口行为，不说真实训练必失败或观察异常。"
+    },
+    {
+      "claim_id": "C06",
+      "evidence_class": "static_cost_output_dependency",
+      "claim": "脚本三网/辅助分支/五输出，而注释fuR统计IF+ID53509，timer在minmax保存及I/O之外。",
+      "anchors": [
+        "code:test_p.py:212-260",
+        "code:test.py:137-164",
+        "derived/docs/reading-notes.md"
+      ],
+      "limitation": "选定图依赖可裁辅助路径为静态推断，未修改/验证加速；MAC/FLOP/完整手机成本未知。"
+    },
+    {
+      "claim_id": "C07",
+      "evidence_class": "conditional_output_normalization_risk",
+      "claim": "逐图全局minmax无epsilon，不是简单clamp；极值映射变化和恒值零分母是条件风险。",
+      "anchors": [
+        "code:utils/image_utils.py:58-68",
+        "derived/docs/reading-notes.md"
+      ],
+      "limitation": "无实际视频闪烁/NaN或独立质量输出，不能从代码存在预判问题强度。"
+    },
+    {
+      "claim_id": "C08",
+      "evidence_class": "static_training_and_external_prior",
+      "claim": "三stage只trainloader/save_last，默认10epoch；损失空间/teacher/VGG外部先验/合成噪声，无时间监督。",
+      "anchors": [
+        "code:train.py:19-100",
+        "code:utils/losses.py:296-320",
+        "code:models/base_model.py:136-174",
+        "code:options.py:13-26"
+      ],
+      "limitation": "原正式训练/选模未知，不是无外部数据从零学习，未下载/执行VGG或训练。"
+    },
+    {
+      "claim_id": "C09",
+      "evidence_class": "static_data_license_availability",
+      "claim": "同名pairedcrop/增强、数据/last.ckpt/历史log/环境锁和LICENSE正文不在固定包。",
+      "anchors": [
+        "code:data/paired_data.py:14-77",
+        "code:README.md:22-26",
+        "derived/docs/archive-inventory.json"
+      ],
+      "limitation": "目录名不证配准/序列独立，数据许可/划分/重叠未知，不推法律或安装结论。"
+    },
+    {
+      "claim_id": "C10",
+      "evidence_class": "bounded_static_completion_future_controls",
+      "claim": "完整当前载体适用静态分析完成，59正式全文/历史结果/手机视频缺口不解除；未来仅交接等信息/等质/预算因果控制。",
+      "anchors": [
+        "derived/report/analysis.md",
+        "derived/docs/reading-notes.md",
+        "sources/manifest.json"
+      ],
+      "limitation": "0外部执行/加载/训练/GPU/Gate3，不重复计59/114独立实证或预断创新有效。"
+    }
+  ]
+}
