@@ -1,0 +1,75 @@
+{
+  "at": "2026-11-21T11:26:16.892607+08:00",
+  "author": "Codex  (sqs_A100)",
+  "actual_sleep_seconds_since_recovery_launch": 120.005,
+  "original_chain001_outer_exit143_preserved": true,
+  "qualification007_reused_not_repeated": true,
+  "new_parent": {
+    "pid": 3852634,
+    "start_ticks": 117153546,
+    "state": "R"
+  },
+  "new_parent_same_start_and_live": true,
+  "new_parent_session": 3852634,
+  "worker_observations": [
+    {
+      "seed": 0,
+      "original_worker": {
+        "pid": 3852927,
+        "start_ticks": 117158126,
+        "state": "R"
+      },
+      "actual_state": "S",
+      "same_start_and_live": true,
+      "inherited_counts": {
+        "common_steps": 0,
+        "optimizer_updates": 0,
+        "student_images": 0,
+        "F0_CPU_anchor_images": 0
+      },
+      "last_completed_common_step": 209,
+      "last_completed_updates": 418,
+      "student_images": 6688,
+      "recent_median_common_step_seconds": 0.5967333316802979,
+      "estimated_remaining_seconds_for_sleep_only": 4649.149387121201,
+      "actual_UUID": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+      "actual_GPU_index": 1,
+      "runtime_not_yet_terminal": true,
+      "growing_trace_prefix_sha256": "3bca902d3c9f466048200b0b6164a50a97bdf1b80a6f6b22ef80418ba9c6c226",
+      "trace_scope": "Completed two-arm-step prefix only, not final model or intermediate quality selection"
+    },
+    {
+      "seed": 1,
+      "original_worker": {
+        "pid": 3852924,
+        "start_ticks": 117158111,
+        "state": "R"
+      },
+      "actual_state": "R",
+      "same_start_and_live": true,
+      "inherited_counts": {
+        "common_steps": 0,
+        "optimizer_updates": 0,
+        "student_images": 0,
+        "F0_CPU_anchor_images": 0
+      },
+      "last_completed_common_step": 205,
+      "last_completed_updates": 410,
+      "student_images": 6560,
+      "recent_median_common_step_seconds": 0.6024024486541748,
+      "estimated_remaining_seconds_for_sleep_only": 4695.727087259293,
+      "actual_UUID": "GPU-e7f8224e-43d7-f7d6-10ff-8412dc30aa9e",
+      "actual_GPU_index": 2,
+      "runtime_not_yet_terminal": true,
+      "growing_trace_prefix_sha256": "2b1cdb7f9437ba91b6213c22fc178d94982efc5703d8da47628433b952779ef2",
+      "trace_scope": "Completed two-arm-step prefix only, not final model or intermediate quality selection"
+    }
+  ],
+  "new_quality_or_DEV_readouts": false,
+  "source_freeze_counts": [
+    26,
+    44,
+    1
+  ],
+  "scope": "Actual fresh formal workers; recent speed estimates schedule sleep only, not algorithmic deadlines"
+}
