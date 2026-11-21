@@ -6,7 +6,7 @@
 
 目录编号约束（2026-11-17T19:15:22.552814+08:00；用户明确通知）：`research/` 的7号已由其他分支占用，即使当前main工作区尚无该目录，也不得将其视为可用。新建独立研究主题目录应跳到 `research/8.*`，保留7号给原占用分支。
 
-当前工作分支为 **research/O1**，由用户明确指定；目录仍为 `/data/Users/zrh/repo/MobileIE-Neo`。从main的bcc4198a55b91785a4a2473d4532c7017fe2160e原地新建分支，main指针/已有历史保持，未搬源码/环境/数据，其他worktree不改。[0195迁移报告](docs/进展报告/0195-T-261121-切换research-O1分支与结果归档.md)、[迁移记录](research/8.video-backbone/operator-core/process/branch-transition001.json)。旧目标或冻结文档里的main为迁移前位置约定，以本条及用户最新指令为准，不因此自动切回main；未来合回仍 `--no-ff`。
+当前工作分支为 **research/O1**，由用户明确指定；目录仍为 `/data/Users/zrh/repo/MobileIE-Neo`。从main的bcc4198a55b91785a4a2473d4532c7017fe2160e原地新建分支，迁移当时未改main指针/已有历史，未搬源码/环境/数据，其他worktree不改。[0195迁移报告](docs/进展报告/0195-T-261121-切换research-O1分支与结果归档.md)、[迁移记录](research/8.video-backbone/operator-core/process/branch-transition001.json)。旧目标或冻结文档里的main为迁移前位置约定，以本条及用户最新指令为准，不因此自动切回main；未来合回仍 `--no-ff`。 推送前核实（2026-11-21T10:37:33.774251+08:00）main已由独立main-integration worktree推进至09f446e51；本分支不修改或回退它，历史迁移起点不是main永久冻结约束，见[并行记录](research/8.video-backbone/operator-core/process/concurrent-main001.json)。
 
 长期研究目标已恢复 **active**，目标位置research/O1。更新：2026-11-21T10:36:18.033361+08:00；Codex  (sqs_A100)。原chain002已10:04:59自然完成且全部原句柄无，完整复核见[0196](docs/进展报告/0196-T-261121-共享核心完整学习评价与止损.md)、[决定](research/8.video-backbone/operator-core/decision.md)、[终态](research/8.video-backbone/operator-core/process/terminal001.json)。16K正式更新/四唯一最终/32训练抽样窗/416输出/52均值，全部四图实际审阅；空间8/8、历史0/8、目标2/4、强post4/16，完整14/36失败。局部正例保留，固定共享8通道/两级soft相关/温度-confidence/probe/目标/LR/长度/seed网格STOP，不换teacher/GT loss/延长补救，不开失败DEV/JOD/成本/手机。没有新模型推理；下一须归并证据后登记不同信息/结构，不重跑或按旧状态接续。0195的paused是迁移时状态。
 
@@ -38,7 +38,7 @@ O1固定配置已按原恢复/历史/强post门槛完整止损；不能仅换历
 - 代码、版本化报告/实验记录和源码自带的小型资源随仓库管理；大体量运行资产不提交Git，路径、来源和迁移核验记录入库。
 - 资产与独立环境迁移于2026-11-12 03:06完成核验，仓库两个相对链接已入Git；后续统一使用 `./scripts/project-python`，禁止回退到旧环境。
 - 写入前确认/data挂载；共享GPU启动前连续检查显存、利用率、计算进程并估算本任务峰值和既有任务增长余量，允许与他人任务同卡并行，同组最多四张卡，不以墙钟截断算法预算。
-- 当前O1核心研究在research/O1推进；main保留迁移起点，阶段集成显式--no-ff；移动演示支线不修改。Git作者使用 `Codex  (sqs_A100)`，保持文件/模块级小步提交，过程/结果/报告分别提交，阶段完成推送。
+- 当前O1核心研究在research/O1推进；main由独立worktree接续，阶段集成显式--no-ff；移动演示支线不修改。Git作者使用 `Codex  (sqs_A100)`，保持文件/模块级小步提交，过程/结果/报告分别提交，阶段完成推送。
 - pull/merge显式使用 `--no-ff`；不rebase、squash或强推。遵守[版本规范](specs/项目规范/版本管理规范.md)及[路径规范](specs/项目规范/路径与环境规范.md)。
 - 本仓库SSH身份使用zrh自有密钥与隔离core.sshCommand，GitHub账号spinner-bot；不使用共享服务器其他账号的默认SSH配置，不记录密钥内容。详[版本规范](specs/项目规范/版本管理规范.md)。
 - 共享GPU按[资源规范](specs/项目规范/GPU资源使用规范.md)及当前冻结协议确认余量，允许经评估后与他人同卡并行；不改变他人的进程、功率或任务设置。V1的CPU训练历史与GPU评分执行修订须保留，不能自行放宽原GPU门槛或重复启动已完成训练。
