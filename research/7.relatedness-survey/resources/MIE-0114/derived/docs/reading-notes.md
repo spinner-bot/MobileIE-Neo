@@ -8,7 +8,7 @@ README原文明确这是ULightIF官方实现、主要基于MobileIE，标题/三
 
 ## 完整当前源的行为与边界
 
-build.py用MBR3/PReLU构建IE24、IF16、ID32，net.py包含reflect边界、多卷积/BN拼接和running统计折叠；build_slim.py对应当前标准Conv/PReLU版本。无FST/双注意力/时间记忆的原作完全保留承诺。IE输出illum用于VIS除法；IF共用encoder处理VIS/增强VIS/IR三个亮度，双decoder得到fu/fuEn；ID(fu)输出R/L。两模态当前图像，没有历史/未来/时间对齐或状态。6145/14305/39204与三权重FloatStorage对应，合59654；形状算术/操作码不当运行计数。
+build.py用MBR3/PReLU构建IE24、IF16、ID32，net.py包含reflect边界、多卷积/BN拼接和running统计折叠；build_slim.py对应当前标准Conv/PReLU版本。当前网络未保留原作FST/双注意力，也没有时间记忆。IE输出illum用于VIS除法；IF共用encoder处理VIS/增强VIS/IR三个亮度，双decoder得到fu/fuEn；ID(fu)输出R/L。两模态当前图像，没有历史/未来/时间对齐或状态。6145/14305/39204与三权重FloatStorage对应，合59654；形状算术/操作码不当运行计数。
 
 test_p.py定义原论文slim类、加载weights内3个原pth，10次warmup后执行三网并存五输出。末注常规fu只统计IF、低光fuR统计IF+ID；实际默认计数/计时仍三网+辅助增强分支。固定无状态网络下fuR所需依赖为原VIS/IR→fu→ID，teacher IE/fuEn路径可单独研究裁剪，但未改/跑或测等价。参数口径、实际执行次数与完整预处理/保存成本必须分开。文件数不等于序列FPS。
 

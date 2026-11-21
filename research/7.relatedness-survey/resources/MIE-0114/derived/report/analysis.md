@@ -1,6 +1,6 @@
 # MIE-0114｜ULightIF公开载体：双入口与辅助分支的实际成本
 
-**当前结论：当前完整公开项目的适用静态分析完成，待Gate2另轮复查。** 同SHA复用59的实际阅读/框图/结构证据，并重新核18件1025443B及3权重CRC；没有执行源或模型、训练、GPU或Gate3，不计独立复现。
+**结论：当前完整公开项目的适用静态分析完成（pass_full）。** [另轮Gate2复查](gate2.json)限定当前发布载体。同SHA复用59的实际阅读/框图/结构证据，并重新核18件1025443B及3权重CRC；没有执行源或模型、训练、GPU或Gate3，不计独立复现。
 
 [阅读记录](../docs/reading-notes.md)、[18件与阅读复用](../docs/source-correspondence-audit.json)、[全清单](../docs/archive-inventory.json)、[主张索引](claims.json)说明当前固定bc952b6发布的完整范围。项目明确承接MobileIE，但为成对IR/VIS单图增强/融合/分解，不是视频时间机制。59正式全文和历史结果对应的限制继续保留。
 
