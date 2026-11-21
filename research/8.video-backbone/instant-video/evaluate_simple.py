@@ -109,7 +109,7 @@ def main():
                     for level, model in models.items():
                         model.reset()
                         for t in range(tmax):
-                            frame = torch.from_numpy(np.ascontiguousarray(low[t].transpose(2,0,1)))[None] / 255
+                            frame = torch.from_numpy(np.ascontiguousarray(low[t].transpose(2,0,1), dtype=np.float32))[None] / 255
                             raw = model(frame)[0].permute(1,2,0).numpy()
                             counts['student_images'] += 1
                             assert np.isfinite(raw).all()
@@ -137,7 +137,8 @@ def main():
                         prediction.flush()
                         append(out/'prediction_manifest.jsonl', dict(seed=seed, domain=domain, scene=scene, arm=arm,
                                path=str(paths[arm].relative_to(ROOT)), sha256=digest(paths[arm]), shape=shape,
-                               future_frames=0, training_updates=80000, model_marker=markers[seed][arm.split('_')[0]]))
+                               future_frames=0, first_source_frame=0, last_source_frame=tmax-1,
+                               training_updates=80000, model_marker=markers[seed][arm.split('_')[0]]))
                     values.update(predictions)
                     for arm in ARMS:
                         summary, frames = evaluate(values[arm], gt, fields, masks)
