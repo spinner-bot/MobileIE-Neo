@@ -1,0 +1,87 @@
+{
+  "resource_id": "MIE-0020",
+  "reviewed_at": "2026-11-21T10:39:05.338595+08:00",
+  "reviewer": "Codex  (sqs_A100) <langxibielangle@qq.com>",
+  "review_mode": "Executor separate self-review, notexternalexpert/secondagent",
+  "standard": "gates/gate2-v1.md",
+  "standard_sha256": "b5371150d788916763c891e0298b862ad0d9302a1286d698172bfa03dd90f57f",
+  "status": "pass_full",
+  "review_passed": true,
+  "claim_count": 20,
+  "scope": "Fullapplicablestaticanalysisofentirecurrent35artifactrelease; source/report/historydiscrepancies explicitlybounded. Not historicalnumeric/training/fold/mobile/video reproduction.",
+  "checklist": {
+    "a": {
+      "passed": true,
+      "evidence": [
+        "identity.json",
+        "derived/docs/pinned-artifact-manifest.json"
+      ],
+      "scope": "Currentpublicrelease fullstaticreview, historicmappingandallruntimeverificationunknown"
+    },
+    "b": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/associated-challenge-assets.json",
+        "derived/docs/reading-notes.md"
+      ],
+      "scope": "Currentpublicrelease fullstaticreview, historicmappingandallruntimeverificationunknown"
+    },
+    "c": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/upstream-code-manifest.json",
+        "derived/docs/reading-notes.md",
+        "derived/docs/checkpoint-container-review.json",
+        "sources/manifest.json"
+      ],
+      "scope": "Currentpublicrelease fullstaticreview, historicmappingandallruntimeverificationunknown"
+    },
+    "d": {
+      "passed": true,
+      "evidence": [
+        "derived/report/analysis.md",
+        "derived/docs/parameter-shape-audit.json",
+        "derived/docs/official-LLE-six-output-diff.txt"
+      ],
+      "scope": "Currentpublicrelease fullstaticreview, historicmappingandallruntimeverificationunknown"
+    },
+    "e": {
+      "passed": true,
+      "evidence": [
+        "derived/report/claims.json",
+        "derived/docs/conclusion-evidence-check.json"
+      ],
+      "scope": "Currentpublicrelease fullstaticreview, historicmappingandallruntimeverificationunknown"
+    },
+    "f": {
+      "passed": true,
+      "evidence": [
+        "derived/report/analysis.md"
+      ],
+      "scope": "Currentpublicrelease fullstaticreview, historicmappingandallruntimeverificationunknown"
+    },
+    "g": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/gate2-review.md",
+        "derived/docs/conclusion-evidence-check.json"
+      ],
+      "scope": "Currentpublicrelease fullstaticreview, historicmappingandallruntimeverificationunknown"
+    }
+  },
+  "limitations_retained": [
+    "PublishedREADME/report101922 vs currentPTfile101922B andsource/literalshapes23882 unresolvedhistoricalmapping",
+    "Defaultslim/randomaugmentedrank0subsetvalidation/selectedcheckpoint config-to-challenge provenance absent",
+    "Officialdatasetidentity/license/overlap/splits/seed/allfolds/logs/rawoutputs and independentmetrics not obtained",
+    "OriginalMBRfoldnumericalequivalence/warmupDDPcommunication not executed; conditionalrisksnotobservedfailures",
+    "Fullmobile/export/precision/thermal/memory/power/timing andvideoGT/perception/causalevidenceunknown",
+    "AssociatedpaperMIE0031onlysupportingcurrentteam/protocol/tablesread, no earlybeginorfullresourceclosure"
+  ],
+  "execution": {
+    "upstream_source": false,
+    "model_load": false,
+    "training": false,
+    "GPU": false,
+    "Gate3": false
+  }
+}

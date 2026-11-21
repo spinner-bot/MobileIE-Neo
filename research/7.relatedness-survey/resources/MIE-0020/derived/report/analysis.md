@@ -1,6 +1,6 @@
 # MIE-0020｜MobileIE-6Ch：RGB照明与残差的直接派生先例
 
-**当前结论：完整当前发布载体已静态分析，待Gate2另轮复查。** 六通道是单图RGB照明+RGB残差的输出头，不是六输入/多帧。明确继承MobileIE骨架，增加Retinex重建；没有时间机制或视频稳定性证据。
+**结论：完整当前发布载体的适用静态分析完成（pass_full）。** [Gate2另轮复查](gate2.json)限定当前源码与工件。六通道是单图RGB照明+RGB残差的输出头，不是六输入/多帧。明确继承MobileIE骨架，增加Retinex重建；没有时间机制或视频稳定性证据。
 
 [逐模块阅读](../docs/reading-notes.md)、[固定35工件](../docs/pinned-artifact-manifest.json)、[原作差异](../docs/official-LLE-six-output-diff.txt)、[参数形状审查](../docs/parameter-shape-audit.json)、[主张索引](claims.json)记录证据和限制。全程0外部源执行/反序列化/模型加载/训练/GPU/Gate3。
 
