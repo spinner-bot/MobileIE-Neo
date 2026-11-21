@@ -1,0 +1,183 @@
+{
+  "at": "2026-11-21T15:22:40.521249+08:00",
+  "passed": true,
+  "source_freeze": {
+    "at": "2026-11-21T15:22:37.893580+08:00",
+    "source_sha256": {
+      "research/8.video-backbone/instant-video/simple-protocol.md": "59be2585fcf341593693ec7a59e05d320d276a373584aabc5610d668c3a1a019",
+      "research/8.video-backbone/instant-video/simple_core.py": "df02ac249ff916da81e50b3221720ce319cbe5581a83e0f14ddf5e553a09c1e0",
+      "research/8.video-backbone/instant-video/simple_io.py": "30930e42b3a563c24d9d63bbae53db9f8a19288a13766001e6ddda7b1ba686f4",
+      "research/8.video-backbone/instant-video/qualify_simple.py": "5380e03046bcef228de7b372b9a3daeecf2f6776d014ded7ff120318f4714451",
+      "research/8.video-backbone/instant-video/pool8.py": "e6db7a5545f4aade496d739858c4b27bcad8557b52ccc95c94badb44fcd75939",
+      "research/8.video-backbone/instant-video/core.py": "a6b6ea7e718c240610e053bbf59f67ff0a90fb19aaea5d003e500951359d247f",
+      "third_party/instant-video-models/SOURCE.json": "843c6d8009655fa57832db0be9a7b4e48ef28d4048aba9b53b4a7dda8c42b506",
+      "third_party/instant-video-models/SOURCE-SIMPLE001.json": "69b898c8b9c86ed44839fd0e40ba2d3fdb5f9d3bcd9219ea154650d0eae77b71",
+      "research/4.temporal-consistency/scripts/motion_transport_r74.py": "da48fe1b67113aba60a7bc3f61458c56ce52785728094413b734ee6d892529c8"
+    },
+    "scope": "Named I1-S protocol/core/CPU/T8 sampler and original loader, upstream manifests verify23 selected author files",
+    "before_first_simple_forward_update_or_T8_training_pixels": true
+  },
+  "original_F0_provenance": {
+    "marker": "research/4.temporal-consistency/results/exploration-r44-stage001-seed0/square_mse-step4000.json",
+    "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+    "frozen": true,
+    "project_updates": 8000,
+    "parameters": 4075
+  },
+  "variants": {
+    "all": {
+      "passed": true,
+      "first_frame_max_difference": 0.0,
+      "disabled_max_difference": 0.0,
+      "reset_max_difference": 0.0,
+      "future_change_prefix_max_difference": 0.0,
+      "repeated_current_max_difference": 3.5762786865234375e-07,
+      "original_parameters_unchanged": true,
+      "original_gradients_none": true,
+      "updated_parameter_tensors": 7,
+      "discarded_losses": [
+        0.8155744075775146,
+        0.8155088424682617
+      ],
+      "budget": {
+        "tensors": [
+          {
+            "name": "head.block1.0-stabilizer-SimpleLearnedStabilizer",
+            "fixture_shape": [
+              1,
+              12,
+              24,
+              32
+            ],
+            "fixture_bytes": 36864,
+            "analytic_1080p_bytes": 99532800,
+            "analytic_nonfirst_EMA_scalar_ops": 74649600
+          },
+          {
+            "name": "head.block1.2-stabilizer-SimpleLearnedStabilizer",
+            "fixture_shape": [
+              1,
+              12,
+              24,
+              32
+            ],
+            "fixture_bytes": 36864,
+            "analytic_1080p_bytes": 99532800,
+            "analytic_nonfirst_EMA_scalar_ops": 74649600
+          },
+          {
+            "name": "body.block1-stabilizer-SimpleLearnedStabilizer",
+            "fixture_shape": [
+              1,
+              12,
+              24,
+              32
+            ],
+            "fixture_bytes": 36864,
+            "analytic_1080p_bytes": 99532800,
+            "analytic_nonfirst_EMA_scalar_ops": 74649600
+          },
+          {
+            "name": "att.1-stabilizer-SimpleLearnedStabilizer",
+            "fixture_shape": [
+              1,
+              12,
+              1,
+              1
+            ],
+            "fixture_bytes": 48,
+            "analytic_1080p_bytes": 48,
+            "analytic_nonfirst_EMA_scalar_ops": 36
+          },
+          {
+            "name": "att1.0-stabilizer-SimpleLearnedStabilizer",
+            "fixture_shape": [
+              1,
+              12,
+              24,
+              32
+            ],
+            "fixture_bytes": 36864,
+            "analytic_1080p_bytes": 99532800,
+            "analytic_nonfirst_EMA_scalar_ops": 74649600
+          },
+          {
+            "name": "tail-stabilizer-SimpleLearnedStabilizer",
+            "fixture_shape": [
+              1,
+              3,
+              24,
+              32
+            ],
+            "fixture_bytes": 9216,
+            "analytic_1080p_bytes": 24883200,
+            "analytic_nonfirst_EMA_scalar_ops": 18662400
+          },
+          {
+            "name": "stabilizer-SimpleLearnedStabilizer",
+            "fixture_shape": [
+              1,
+              3,
+              24,
+              32
+            ],
+            "fixture_bytes": 9216,
+            "analytic_1080p_bytes": 24883200,
+            "analytic_nonfirst_EMA_scalar_ops": 18662400
+          }
+        ],
+        "analytic_1080p_persistent_bytes": 447897648,
+        "analytic_nonfirst_EMA_scalar_ops": 335923236,
+        "registered_parameters": 4141,
+        "original_frozen_parameters": 4075,
+        "added_trainable_parameters": 66,
+        "analytic_original_and_total_conv_MAC": 7937740944,
+        "scope": "Retained state and scalar arithmetic only; sigmoid, copies and temporary tensors excluded; not speed/peak RAM"
+      },
+      "actual_adapted_frame_calls": 65
+    },
+    "output": {
+      "passed": true,
+      "first_frame_max_difference": 0.0,
+      "disabled_max_difference": 0.0,
+      "reset_max_difference": 0.0,
+      "future_change_prefix_max_difference": 0.0,
+      "repeated_current_max_difference": 1.1920928955078125e-07,
+      "original_parameters_unchanged": true,
+      "original_gradients_none": true,
+      "updated_parameter_tensors": 1,
+      "discarded_losses": [
+        0.854112982749939,
+        0.8541069030761719
+      ],
+      "budget": {
+        "tensors": [
+          {
+            "name": "stabilizer-SimpleLearnedStabilizer",
+            "fixture_shape": [
+              1,
+              3,
+              24,
+              32
+            ],
+            "fixture_bytes": 9216,
+            "analytic_1080p_bytes": 24883200,
+            "analytic_nonfirst_EMA_scalar_ops": 18662400
+          }
+        ],
+        "analytic_1080p_persistent_bytes": 24883200,
+        "analytic_nonfirst_EMA_scalar_ops": 18662400,
+        "registered_parameters": 4078,
+        "original_frozen_parameters": 4075,
+        "added_trainable_parameters": 3,
+        "analytic_original_and_total_conv_MAC": 7937740944,
+        "scope": "Retained state and scalar arithmetic only; sigmoid, copies and temporary tensors excluded; not speed/peak RAM"
+      },
+      "actual_adapted_frame_calls": 65
+    }
+  },
+  "temporal_length": 8,
+  "all_weights_and_Adam_discarded": true,
+  "formal_training_started": false,
+  "real_video_quality_and_phone_speed_claimed": false
+}
