@@ -1,0 +1,39 @@
+{
+  "label": "mie0022-author-resultshare-public-code-verification",
+  "at": "2026-11-21T12:21:51.774872+08:00",
+  "purpose": "Ordinary published public extraction-code submission; no account login/captcha solving/access bypass",
+  "entry": "https://pan.baidu.com/s/1itaDTTeSkgUtnzcZWefCNA?pwd=1224",
+  "steps": [
+    {
+      "step": "landing",
+      "url": "https://pan.baidu.com/s/1itaDTTeSkgUtnzcZWefCNA?pwd=1224",
+      "method": "GET",
+      "http": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 15239,
+      "sha256": "730da7116f5692df1346f91fad5f3594cfac594359d28ab2849db7b35dd42f2b",
+      "archive_path": "archive/mie0022-resultshare-landing-session001.txt"
+    },
+    {
+      "step": "verify",
+      "url": "https://pan.baidu.com/share/verify?surl=itaDTTeSkgUtnzcZWefCNA",
+      "method": "POST",
+      "http": 200,
+      "content_type": "application/json; charset=UTF-8",
+      "bytes": 123,
+      "sha256": "fafe101adc7129b2fc93913c3118ac731fdb09aabc1162e59d27e399cb6aa91e",
+      "archive_path": "archive/mie0022-resultshare-verify-session001.txt",
+      "response_keys": [
+        "errno",
+        "err_msg",
+        "request_id",
+        "randsk"
+      ],
+      "errno": 0,
+      "message": null,
+      "requires_captcha": false
+    }
+  ],
+  "files_downloaded": false,
+  "next": "Inspect verification result; do not solve or bypass any captcha/authentication requirement"
+}

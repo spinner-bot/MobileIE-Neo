@@ -1,0 +1,53 @@
+{
+  "at": "2026-11-21T12:23:24.335408+08:00",
+  "purpose": "Ordinary published extraction-code access; no login/captcha bypass",
+  "steps": [
+    {
+      "step": "landing",
+      "url": "https://pan.baidu.com/s/1itaDTTeSkgUtnzcZWefCNA?pwd=1224",
+      "http": 200,
+      "bytes": 15239,
+      "sha256": "414c444b616064ba9a39067a7471adb81187e547912528c35796501e92d52ee5",
+      "archive_path": "archive/mie0022-resultshare-landing-session002.txt",
+      "final_url": "https://pan.baidu.com/share/init?surl=itaDTTeSkgUtnzcZWefCNA&pwd=1224"
+    },
+    {
+      "step": "verify",
+      "url": "https://pan.baidu.com/share/verify?surl=itaDTTeSkgUtnzcZWefCNA",
+      "http": 200,
+      "bytes": 123,
+      "sha256": "bfba50ccae0be5d76ed49ffeff8338bb20be116a137fee934a8345eb54242552",
+      "archive_path": "archive/mie0022-resultshare-verify-session002.txt",
+      "final_url": "https://pan.baidu.com/share/verify?surl=itaDTTeSkgUtnzcZWefCNA",
+      "errno": 0
+    },
+    {
+      "step": "share",
+      "url": "https://pan.baidu.com/s/1itaDTTeSkgUtnzcZWefCNA?pwd=1224",
+      "http": 200,
+      "bytes": 71743,
+      "sha256": "8fe96a14910db87d1abdb8e2d50b02a159dd0be0f91f8ffbe6ebf13a031aa742",
+      "archive_path": "archive/mie0022-resultshare-share-session002.txt",
+      "final_url": "https://pan.baidu.com/s/1itaDTTeSkgUtnzcZWefCNA?pwd=1224",
+      "title": [
+        "results.tar.gz_免费高速下载|百度网盘-分享无限制"
+      ],
+      "data_fields_present": {
+        "file_list": true,
+        "fileList": false,
+        "fs_id": true,
+        "server_filename": true,
+        "登录": false,
+        "请输入提取码": false
+      },
+      "file_names": [
+        "results.tar.gz"
+      ],
+      "fs_ids": [
+        "703857007251392"
+      ]
+    }
+  ],
+  "files_downloaded": false,
+  "cookie_material": "Memory only, not recorded in versioned files"
+}

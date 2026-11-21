@@ -1,0 +1,34 @@
+--- baseline-config
+
++++ lite-config
+
+@@ -1,10 +1,10 @@
+
+ # general settings
+-name: train_MobileIENet_DIVKON2K
++name: train_MobileIENet_Lite_DIVKON2K
+ arch_type: GeneralLRJNDModel
+ num_gpu: 1  # set num_gpu: 0 for cpu mode
+ manual_seed: 123
+ split_num: 1
+-save_final_results_path: './experiments/MobileIENet_DIVKON2K_5splits_results.txt'
++save_final_results_path: './experiments/MobileIENet_Lite_DIVKON2K_5splits_results.txt'
+ 
+ # dataset and data loader settings
+ datasets:
+@@ -44,10 +44,12 @@
+
+ 
+ # network structures
+ network:
+-  type: MobileIENet
++  type: MobileIENet_Lite
+   in_channels: 3
+   out_channels: 3
+-  base_channels: 12
++  head_channels: 8
++  body_channels: 8
++  tail_channels: 12
+   rep_scale: 4
+   only_train_y: true
+ 
