@@ -1,0 +1,154 @@
+{
+  "at": "2026-11-21T15:32:01.293644+08:00",
+  "process": {
+    "pid": 3966961,
+    "start_ticks": 118647563,
+    "state": "R"
+  },
+  "source_freeze": {
+    "at": "2026-11-21T15:29:42.447459+08:00",
+    "source_sha256": {
+      "research/8.video-backbone/instant-video/train_simple.py": "8eb776f0c06b11ff7b3d52f5c17136d6ec5f43d8342b1b9e6ce408fad2663a81",
+      "research/8.video-backbone/instant-video/run_simple.py": "e2df1a032b3c8d6b7baa80db778ea92a80322569e31c83ab7b7e8b33619fa717",
+      "research/8.video-backbone/instant-video/simple_gpu.py": "7608678a10ccc02d4f4fee9c7e2ee2dc8da0ccc3a09580e1f514052a8a52b26c",
+      "research/8.video-backbone/instant-video/simple-gpu-execution002.md": "8feb989117093e898a8b4d5aaaf436b84d883c6307ee484a2f8627e5e2586054",
+      "research/8.video-backbone/instant-video/process/simple-source-freeze001.json": "160a385b6fcd3bb00191405f4f87d52ef64f37369ac231b2e00e628654c36f55",
+      "research/8.video-backbone/instant-video/process/simple-preflight001/qualification.json": "7ceb3669948a7b406d35e844b4f4d866c5697f9b9c12e32659da6944e5318067",
+      "scripts/prebind_shared_gpu.py": "0c8f65ff5b13be286de70ba71758e9ce6a43eea674d8eb1a7e599b3b83da0475",
+      "scripts/shared_gpu_admission.py": "c62befebbc5b6d7eaabf69ef393dc703a00c78aff9a3a8e67b40a47b606f7e27",
+      "scripts/bound_gpu_observer.py": "6770cf2cfb2cbbc8b14bf7593fc986579bdda60d73bf79693d84d14763a2d8ce",
+      "scripts/shared_training_schedule.py": "343d7fecbff8cc59ce3255f5302831e0e8d167ab9374dfead1cab3f6cf7f70ab",
+      "research/4.temporal-consistency/scripts/mixed_anchor_r40.py": "7d91228de081980ffef50ba3da9986e760761ce791f2a96a2d501e1647d8edf5",
+      "research/4.temporal-consistency/scripts/dynamic_training_r34.py": "a87822b516f98878af57a69c1d9e92db3d152a447d34b25171ac635918a44498",
+      "research/4.temporal-consistency/scripts/native_training_r14.py": "588b505ede11ac9f0d747ad1c16b1c118a7bbbbba7405ce918a6163d133d69a1",
+      "research/4.temporal-consistency/scripts/exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+      "research/4.temporal-consistency/data/exploration-r32-training/manifest.json": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+      "research/4.temporal-consistency/data/exploration-r32-training/selection.json": "a21fca047b8b571828d29d1ea80bc477993d655d90bbb1b83837ca0715445ffa",
+      "research/4.temporal-consistency/results/exploration-r32-decode/audit.json": "f51954c1605a11f48f59771ec4373b972a10379c424882e525d1277e84990874",
+      "research/4.temporal-consistency/data/exploration-r4b/manifest.json": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762"
+    },
+    "scope": "Formal code/routing/resource helpers and established source manifests; CPU9 sources and upstream23 files referenced via preflight",
+    "before_first_T8_training_pixels_GPU_qualification_or_formal_update": true,
+    "whole_environment_or_bit_replay_claimed": false
+  },
+  "seed": 1,
+  "qualification": false,
+  "common_step_budget": 80000,
+  "inherited_counts": {
+    "common_steps": 0,
+    "optimizer_updates": 0,
+    "student_images": 0
+  },
+  "data": {
+    "manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "verified_files": 384,
+    "scenes": [
+      "video_11",
+      "video_35",
+      "video_92",
+      "video_131",
+      "video_12",
+      "video_20",
+      "video_29",
+      "video_52",
+      "video_59",
+      "video_95",
+      "video_104",
+      "video_122"
+    ],
+    "native_bytes": 2388787200,
+    "real_training_ids": [
+      "video_104",
+      "video_11",
+      "video_12",
+      "video_122",
+      "video_131",
+      "video_20",
+      "video_29",
+      "video_35",
+      "video_52",
+      "video_59",
+      "video_92",
+      "video_95"
+    ],
+    "excluded_native_DEV": [
+      "video_121",
+      "video_15",
+      "video_47",
+      "video_91"
+    ],
+    "all_real_assets_owned": true,
+    "source_manifest_sha256": "f8c9694c52b601637368a41647b3ca70af43edf15e99b58e733af6586f7d8762",
+    "synthetic_manifest_sha256": "f9cf52ff003b72775f231c338f4a3e250428cc2e395eb7bf2859abe79e68a585",
+    "synthetic_training_videos": 57,
+    "real_tensor_dtype": "uint8 native inputs/GT; float32 /255 after crops",
+    "timing_scope": "Consecutive registered frame indices, not independently verified sensor timing.",
+    "temporal_length": 8,
+    "batch_size": 1,
+    "crop": 128,
+    "sampling": "SeedSequence([194,seed,step]); even SYN / odd ND",
+    "MixedPool_fixed_T4_batch_called": false,
+    "new_source_split": false
+  },
+  "F0_source": {
+    "marker": "research/4.temporal-consistency/results/exploration-r44-stage001-seed1/square_mse-step4000.json",
+    "checkpoint_sha256": "e8dad6c8778d660744ca91787eb49c0007014524e0584e4e88db8763f1a9140e",
+    "frozen": true,
+    "project_updates": 8000,
+    "parameters": 4075
+  },
+  "temporal_length": 8,
+  "batch_size": 1,
+  "formal_steps_per_level": 80000,
+  "parameters": {
+    "all": 4141,
+    "output": 4078
+  },
+  "first_window": {
+    "source": "davis_synthetic",
+    "video": "rallye",
+    "photons": 20,
+    "members": [
+      "DAVIS/JPEGImages/480p/rallye/00038.jpg",
+      "DAVIS/JPEGImages/480p/rallye/00039.jpg",
+      "DAVIS/JPEGImages/480p/rallye/00040.jpg",
+      "DAVIS/JPEGImages/480p/rallye/00041.jpg",
+      "DAVIS/JPEGImages/480p/rallye/00042.jpg",
+      "DAVIS/JPEGImages/480p/rallye/00043.jpg",
+      "DAVIS/JPEGImages/480p/rallye/00044.jpg",
+      "DAVIS/JPEGImages/480p/rallye/00045.jpg"
+    ],
+    "input_GT_source_paths": [
+      ".cache/datasets/DAVIS2017-train-rest/JPEGImages/480p/rallye/00038.jpg",
+      ".cache/datasets/DAVIS2017-train-rest/JPEGImages/480p/rallye/00039.jpg",
+      ".cache/datasets/DAVIS2017-train-rest/JPEGImages/480p/rallye/00040.jpg",
+      ".cache/datasets/DAVIS2017-train-rest/JPEGImages/480p/rallye/00041.jpg",
+      ".cache/datasets/DAVIS2017-train-rest/JPEGImages/480p/rallye/00042.jpg",
+      ".cache/datasets/DAVIS2017-train-rest/JPEGImages/480p/rallye/00043.jpg",
+      ".cache/datasets/DAVIS2017-train-rest/JPEGImages/480p/rallye/00044.jpg",
+      ".cache/datasets/DAVIS2017-train-rest/JPEGImages/480p/rallye/00045.jpg"
+    ],
+    "indices": [
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "xy": [
+      620,
+      21
+    ],
+    "flip_horizontal": true,
+    "flip_vertical": true,
+    "source_frame_indices_not_sensor_timestamps": true
+  },
+  "CPU_synthetic_materialization_F0_images": 2,
+  "qualified_weight_or_Adam_inheritance": false,
+  "wall_clock_cutoff": false,
+  "scientific_retry": false,
+  "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+}
