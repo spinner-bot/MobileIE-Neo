@@ -8,7 +8,7 @@ CPU实际资格通过：初始当前路径/教师传输/stream差0，两个监�
 
 [25 CPU冻结](process/preflight-source-freeze001.json)和[39全链冻结](process/training-source-freeze001.json)保持。首CUDA资格001遗漏CuBLAS环境后自然exit1/0优化，[原终态](process/cuda-attempt001-terminal.json)保留实际部分前向；[独立执行修订](cuda-execution-amendment001.md)在Torch前设变量，新2执行源另冻，不改数值代码。原chain001全部终态，不重启。
 
-当前分支为 **research/O1**；长期目标已恢复active。更新：2026-11-21T10:36:18.033361+08:00；Codex  (sqs_A100)。[0195分支迁移](../../../docs/进展报告/0195-T-261121-切换research-O1分支与结果归档.md)保留当时paused历史，不再代表当前状态。main保留迁移起点，目录/资产不搬，未来集成--no-ff。
+当前分支为 **research/O1**；长期目标已恢复active。更新：2026-11-21T10:36:18.033361+08:00；Codex  (sqs_A100)。[0195分支迁移](../../../docs/进展报告/0195-T-261121-切换research-O1分支与结果归档.md)保留当时paused历史，不再代表当前状态。迁移起点仍为bcc4198a5，目录/资产不搬；main已由独立worktree推进至09f446e51，本分支不回退/改动它，未来集成--no-ff。
 
 原chain002已自然完整完成：16000正式更新/256000学生图/四唯一最终；固定32窗/416输出/1664逐帧/52均值。[终态](process/terminal001.json)、[完整表](report/joint/tables.md)、[0196](../../../docs/进展报告/0196-T-261121-共享核心完整学习评价与止损.md)。空间8/8、历史0/8、目标2/4、强post4/16，完整14/36失败；SYN1对direct+.130621dB/时间降3.6981%等局部正例保留。按[决定](decision.md)停止固定8通道/两级soft相关/温度-confidence/probe/目标/LR/长度/seed网格，不扩失败DEV/JOD/成本/手机，不重启原句柄。
 
