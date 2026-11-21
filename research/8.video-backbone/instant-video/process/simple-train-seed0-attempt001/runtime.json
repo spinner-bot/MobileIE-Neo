@@ -1,0 +1,138 @@
+{
+  "at": "2026-11-21T18:28:36.704906+08:00",
+  "process": {
+    "pid": 3966953,
+    "start_ticks": 118647548,
+    "state": "R"
+  },
+  "seed": 0,
+  "qualification": false,
+  "completed_normally": true,
+  "resource_pause": false,
+  "counts": {
+    "common_steps": 80000,
+    "optimizer_updates": 160000,
+    "student_images": 1280000
+  },
+  "latest_checkpoint": {
+    "path": ".cache/experiments/topic8-instant-video/simple/simple-train-seed0-attempt001/step70000.pt",
+    "sha256": "73da1d245461e6f4b43e475995d7dbd2fc4872d6666c5af4bc6f7cc85baf8585",
+    "counts": {
+      "common_steps": 70000,
+      "optimizer_updates": 140000,
+      "student_images": 1120000
+    },
+    "resource_pause": false,
+    "seed": 0,
+    "qualification": false
+  },
+  "CPU_synthetic_materialization_F0_images": 2,
+  "seconds": 10627.44779292494,
+  "final_actual_device": {
+    "expected_uuid": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+    "matched": true,
+    "actual_own_GPU_indices": [
+      6
+    ],
+    "sample": {
+      "at": "2026-11-21T18:28:36.704763+08:00",
+      "GPUs": [
+        {
+          "index": 0,
+          "uuid": "GPU-81550800-367d-1855-0f35-c61c274edfdf",
+          "total_mib": 40960,
+          "used_mib": 33831,
+          "utilization_percent": 55,
+          "processes": [
+            "GPU-81550800-367d-1855-0f35-c61c274edfdf, 3929702, 33822"
+          ]
+        },
+        {
+          "index": 1,
+          "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+          "total_mib": 40960,
+          "used_mib": 33909,
+          "utilization_percent": 64,
+          "processes": [
+            "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150, 3929702, 33900"
+          ]
+        },
+        {
+          "index": 2,
+          "uuid": "GPU-e7f8224e-43d7-f7d6-10ff-8412dc30aa9e",
+          "total_mib": 40960,
+          "used_mib": 33513,
+          "utilization_percent": 39,
+          "processes": [
+            "GPU-e7f8224e-43d7-f7d6-10ff-8412dc30aa9e, 3929703, 33504"
+          ]
+        },
+        {
+          "index": 3,
+          "uuid": "GPU-3a66f673-05de-ba45-3f5c-308b333fea68",
+          "total_mib": 40960,
+          "used_mib": 33821,
+          "utilization_percent": 0,
+          "processes": [
+            "GPU-3a66f673-05de-ba45-3f5c-308b333fea68, 3929703, 33812"
+          ]
+        },
+        {
+          "index": 4,
+          "uuid": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+          "total_mib": 40960,
+          "used_mib": 33629,
+          "utilization_percent": 0,
+          "processes": [
+            "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e, 3929704, 33620"
+          ]
+        },
+        {
+          "index": 5,
+          "uuid": "GPU-83b3ac27-3e78-fb30-a5f6-d5daf4aac4fb",
+          "total_mib": 40960,
+          "used_mib": 33705,
+          "utilization_percent": 44,
+          "processes": [
+            "GPU-83b3ac27-3e78-fb30-a5f6-d5daf4aac4fb, 3929704, 33696"
+          ]
+        },
+        {
+          "index": 6,
+          "uuid": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+          "total_mib": 40960,
+          "used_mib": 669,
+          "utilization_percent": 0,
+          "processes": [
+            "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249, 3966953, 660"
+          ]
+        },
+        {
+          "index": 7,
+          "uuid": "GPU-7d263daa-6d13-02a6-b0ea-29c2c09a2c8b",
+          "total_mib": 40960,
+          "used_mib": 0,
+          "utilization_percent": 0,
+          "processes": []
+        }
+      ]
+    }
+  },
+  "CUDA_initialized": true,
+  "GPU": {
+    "uuid": "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249",
+    "observations": 166942,
+    "minimum_free_mib": 30377,
+    "maximum_used_mib": 10582,
+    "maximum_utilization_percent": 92,
+    "synchronized_student_seconds": 5389.302033408545,
+    "cooperative_pause_seconds": 1640.4895925943274,
+    "other_compute_processes_seen_in_latest_scan": false,
+    "latest_process_rows": [
+      "GPU-b39d6e79-86fb-92d6-ae69-6e93f55fd249, 3966953, 660"
+    ],
+    "scope": "Aggregate observations and retained latest scan, not incumbent throughput or peak own-process memory"
+  },
+  "maximum_allocated_bytes": 125764096,
+  "maximum_reserved_bytes": 167772160
+}
