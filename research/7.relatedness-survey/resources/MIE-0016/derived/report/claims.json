@@ -1,0 +1,197 @@
+{
+  "resource_id": "MIE-0016",
+  "at": "2026-11-21T08:19:49.192054+08:00",
+  "source_aliases": {
+    "paper": "derived/docs/paper-text.txt physical PDF page and figure counterpart",
+    "code": "derived/docs/author-source/{filename},1-based lines at eaf269b2",
+    "ts": "derived/docs/compiled-code/__torch__/{path}.txt,1-based static TorchScript text; not loaded",
+    "other": "explicit resource-relative file"
+  },
+  "claims": [
+    {
+      "claim_id": "C01",
+      "evidence_class": "primary_identity_version_check",
+      "claim": "完整读arxiv2601.17349v1 9页/9图9表12式，7作者含FengxiangYang；Techreport/InSubmission不由AAAI模板判接收。",
+      "anchors": [
+        "identity.json",
+        "derived/docs/source-version-review.json",
+        "derived/docs/reading-scope-and-arithmetic.json"
+      ],
+      "limitation": "README/主页4名展示不覆盖7名v1；未确认正式出版不是证明全网不存在正式版本。"
+    },
+    {
+      "claim_id": "C02",
+      "evidence_class": "primary_mobileie_context_and_scope",
+      "claim": "MobileIE在p2RGB相关工作和p9书目，被引用却未列数值表；30K不能概括小于已知约4K原作。",
+      "anchors": [
+        "paper:p2",
+        "paper:p5",
+        "paper:p9",
+        "derived/docs/reading-scope-and-arithmetic.json"
+      ],
+      "limitation": "参数比值非相同质量/预算比较；当前表内轻量对照范围不等于全领域最小。"
+    },
+    {
+      "claim_id": "C03",
+      "evidence_class": "author_mechanism_with_prior_limit",
+      "claim": "DSGLA分Y全局/局部，LAFA频域与Y引导UV，GI跨通道融合；LYTNet/Ghost/频率颜色背景已有。",
+      "anchors": [
+        "paper:p3",
+        "paper:p4",
+        "paper:p5"
+      ],
+      "limitation": "不把模块名字当时间创新或全新先例；完整可训练源尚未发布。"
+    },
+    {
+      "claim_id": "C04",
+      "evidence_class": "method_evidence_boundary",
+      "claim": "图1/3频谱和GT幅相交换是静态选择例，支持表示线索，不证明所有相机/噪声/曝光普遍解耦。",
+      "anchors": [
+        "paper:p2",
+        "paper:p4",
+        "derived/figures/paper-p02.png",
+        "derived/figures/paper-p04.png"
+      ],
+      "limitation": "GT只用于分析性交换，不据此称部署模型偷读GT；maxpool噪声效果和线性变换优势需控制验证。"
+    },
+    {
+      "claim_id": "C05",
+      "evidence_class": "static_temporal_scope_check",
+      "claim": "发布顶层只取当前RGB，无历史/未来/跨帧state；空间条带/通道一致不是时间机制。",
+      "anchors": [
+        "ts:model/___torch_mangle_128.py:1-65",
+        "paper:p3",
+        "paper:p7"
+      ],
+      "limitation": "无时间输入不证明必闪或绝不闪；没有动态GT/连续视频评价。"
+    },
+    {
+      "claim_id": "C06",
+      "evidence_class": "author_quality_report",
+      "claim": "表1三LOL PSNR27.160/31.181/29.081，表2LSRW17.99/21.52；参数30K算量1.45G。",
+      "anchors": [
+        "paper:p5",
+        "paper:p6",
+        "derived/figures/paper-p05.png",
+        "derived/figures/paper-p06.png"
+      ],
+      "limitation": "作者报告非独立复现；训练/选择/split/metric及所有checkpoint对应未知，不能跨论文拼公平胜出。"
+    },
+    {
+      "claim_id": "C07",
+      "evidence_class": "primary_table_text_contradiction",
+      "claim": "表3DICM ours3.623，正文3.535来自ZeroDCE；RetinexMac3.064更低。均值3.550算术成立。",
+      "anchors": [
+        "paper:p6",
+        "derived/figures/paper-p06.png",
+        "derived/docs/reading-scope-and-arithmetic.json"
+      ],
+      "limitation": "只纠正明确表文冲突，不推历史数据造假；NIQE均值差.019非统计显著或时间稳定证明。"
+    },
+    {
+      "claim_id": "C08",
+      "evidence_class": "author_ablation_with_fairness_limit",
+      "claim": "表4颜色拆分/表5下采样8/表6–8模块消融显示给定设置下的差异。",
+      "anchors": [
+        "paper:p7",
+        "derived/figures/paper-p07.png"
+      ],
+      "limitation": "无等参数/等预算/多seed误差，不能证明所有颜色空间全局最优或由可视化推出因果归因。"
+    },
+    {
+      "claim_id": "C09",
+      "evidence_class": "author_cost_report_and_arithmetic",
+      "claim": "表9GPU6.5/CPU124.1ms，CPU倒数约8.06FPS，不是30FPS手机视频实证。",
+      "anchors": [
+        "paper:p8",
+        "derived/figures/paper-p08.png",
+        "derived/docs/reading-scope-and-arithmetic.json"
+      ],
+      "limitation": "CPU型号/表内输入/精度/线程和全pipeline不充分；训练3090不自动指定计时设备，倒数不是本次观测FPS。"
+    },
+    {
+      "claim_id": "C10",
+      "evidence_class": "artifact_availability_limit",
+      "claim": "固定4件共297479B，lsrw.pt283成员CRC全过，97嵌入文本可读但训练source/config/split/多基准权重映射缺失。",
+      "anchors": [
+        "derived/docs/author-source-manifest.json",
+        "derived/docs/compiled-code-manifest.json",
+        "derived/docs/source-version-review.json"
+      ],
+      "limitation": "有真实可得推理工件，不能称模型完全不可得；ZIP/指令与编译文本不是模型执行或完整训练源码恢复。"
+    },
+    {
+      "claim_id": "C11",
+      "evidence_class": "static_input_prior_check",
+      "claim": "编译顶层RGB max/mean拼5通道prior再构造YUV，并非原生420相机平面直接输入。",
+      "anchors": [
+        "ts:model/___torch_mangle_128.py:1-65",
+        "code:inference.py:1-15"
+      ],
+      "limitation": "与纸面主要示意的额外路径需原source说明；格式/转换控制未实测，不能据此断言原生部署不可能。"
+    },
+    {
+      "claim_id": "C12",
+      "evidence_class": "static_attention_shape_check",
+      "claim": "GCSA为4头通道相关；SCA前adaptive1x1，变形[B,1,HW,C]后1x3 im2col跨通道轴，不是原图水平W条带。",
+      "anchors": [
+        "ts:GCSA/___torch_mangle_67.py:1-100",
+        "ts:RFFNet/___torch_mangle_114.py:1-139",
+        "ts:RFFNet/___torch_mangle_103.py:1-45",
+        "ts:torch/nn/modules/pooling/___torch_mangle_99.py:1-9"
+      ],
+      "limitation": "限当前编译图；不能推所有历史训练/消融同此实现或无效，须原source/导出版本对账。"
+    },
+    {
+      "claim_id": "C13",
+      "evidence_class": "static_frequency_path_check",
+      "claim": "FCA完整FFT幅相均值生成通道权重，另float32 rFFT乘fft参数/iRFFT，LN/DW和多残差保留。",
+      "anchors": [
+        "ts:FCA/___torch_mangle_80.py:1-28",
+        "ts:FCA/___torch_mangle_81.py:1-16",
+        "paper:p4"
+      ],
+      "limitation": "非已确认与纸面每项表达等价；普通相位均值的wrap连续性只是待验时间风险，未观察真实视频失败。"
+    },
+    {
+      "claim_id": "C14",
+      "evidence_class": "static_evaluation_protocol_check",
+      "claim": "文件夹同名GT缺失跳过，RGB/255、输出clamp，必要时按GT尺寸resize，0–255浮点RGB PSNR/11高斯有效SSIM；不保存输出图。",
+      "anchors": [
+        "code:inference.py:9-68",
+        "code:inference.py:70-169"
+      ],
+      "limitation": "GT像素不进模型；resize/有效对数/默认模型名差异和autocast分支需要明确协议，未安装/运行验证。"
+    },
+    {
+      "claim_id": "C15",
+      "evidence_class": "static_timing_boundary_check",
+      "claim": "latency脚本256平方b1/10warmup100计时、GPU同步、I/O载入和metric在外，forward内RGB-YUV仍在；峰值无reset。",
+      "anchors": [
+        "code:latency.py:1-52"
+      ],
+      "limitation": "脚本未执行/未用GPU4；不认证表9实测、全pipeline、稳态净内存或手机性能。"
+    },
+    {
+      "claim_id": "C16",
+      "evidence_class": "conditional_memory_and_format_inference",
+      "claim": "权重小不等于所有激活低内存；假设单32通道1080pFP32图即253.125MiB，FFT/统计/转换/420插值需全成本。",
+      "anchors": [
+        "derived/docs/reading-scope-and-arithmetic.json",
+        "ts:RFFNet/___torch_mangle_114.py:1-139",
+        "derived/report/analysis.md"
+      ],
+      "limitation": "字面容量例非峰值实测或最低必要内存；优化/分块/精度可能不同，不声称手机不可能部署。"
+    },
+    {
+      "claim_id": "C17",
+      "evidence_class": "research_controls_not_experiment",
+      "claim": "先核原source/版本/协议，再作同质量/预算RGB-YUV/额外prior、噪声运动曝光与因果历史控制，完整记录设备成本。",
+      "anchors": [
+        "derived/report/analysis.md",
+        "derived/docs/reading-notes.md"
+      ],
+      "limitation": "当前证据受限，不认定已解决MobileIE闪烁或具备独立时间创新；Gate3留下一阶段。"
+    }
+  ]
+}
