@@ -1,0 +1,72 @@
+{
+  "at": "2026-11-21T08:53:18.253688+08:00",
+  "actual_original_handles": [
+    {
+      "pid": 3551565,
+      "start_ticks": 115612249,
+      "state": "S"
+    },
+    {
+      "pid": 3708363,
+      "start_ticks": 116206660,
+      "state": "S"
+    }
+  ],
+  "seed0_completed_counts": {
+    "common_steps": 4000,
+    "optimizer_updates": 8000,
+    "student_images": 128000,
+    "teacher_images": 64000,
+    "teacher_FB_pairs": 48000
+  },
+  "seed0_training_seconds": 4784.696325369878,
+  "seed0_quality": {
+    "at": "2026-11-21T08:43:52.642628+08:00",
+    "completed_normally": true,
+    "seconds": 40.189992123050615,
+    "CUDA_initialized": false,
+    "F0_images": 64,
+    "student_images": 128,
+    "student_field_pairs": 96,
+    "windows": 16,
+    "output_rows": 208,
+    "frame_rows": 832,
+    "classical_deployment_bidirectional_pairs": 288,
+    "GT_metric_FB_pairs": 48
+  },
+  "original_seed0_handles_gone": [
+    3582586,
+    3705779
+  ],
+  "seed1_original_process": {
+    "pid": 3708363,
+    "start_ticks": 116206660,
+    "state": "R"
+  },
+  "seed1_inherited_counts": {
+    "common_steps": 0,
+    "optimizer_updates": 0,
+    "student_images": 0,
+    "teacher_images": 0,
+    "teacher_FB_pairs": 0
+  },
+  "seed1_actual_GPU": [
+    4
+  ],
+  "seed1_actual_UUID": "GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e",
+  "seed1_common_steps": 393,
+  "formal_global_optimizer_updates": 8786,
+  "formal_global_student_images": 140576,
+  "seed1_prefix_lines": 393,
+  "seed1_prefix_sha256": "29dc0a3849d174de174b54c41822f1424fa0636dcfe8fc547ddecb5041806a39",
+  "recent_seed1_seconds_per_step": 1.183904,
+  "estimated_seed1_remaining_seconds": 4270.341728,
+  "estimate_only_for_sleep": true,
+  "complete_dual_seed_verdict": null,
+  "frozen_source_counts_verified": [
+    25,
+    39,
+    2
+  ],
+  "new_model_or_metric_calls_for_observation": 0
+}
