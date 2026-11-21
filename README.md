@@ -4,7 +4,9 @@
 
 ## 当前研究状态
 
-更新：2026-11-21T13:29:13.971968+08:00；Codex  (sqs_A100)。最新[0201：局部仿射算子缓存筛查与止损](docs/进展报告/0201-T-261121-局部仿射算子缓存筛查与止损.md)：research/O1上的[A1](research/8.video-backbone/affine-cache/README.md)全部64缓存窗/768输出/48均值完整，0新CNN/训练/GPU，必要门0/20；每帧投影已损失SYN质量，隔帧复用进一步退化。[固定配置停止](research/8.video-backbone/affine-cache/decision.md)，局部正例/全部图审保留，不扩失败训练/成本/DEV/手机。原任务终态，论文目标active未完成。
+更新：2026-11-21T13:45:14.512113+08:00；Codex  (sqs_A100)。最新[0202：同输入证据归并](docs/进展报告/0202-T-261121-同输入证据归并与时间信息预算问题.md)完成896配对/56统计及全场景权重敏感性；历史收益不足1%对逐一留出仍成立，部分平均画质有场景权重限制。本轮无新训练/像素/GPU，原失败配置保持STOP；下一为明确一帧等待的信息预算问题，尚未登记科学协议或运行。论文目标active未完成。
+
+更新：2026-11-21T13:29:13.971968+08:00；Codex  (sqs_A100)。最近实验[0201：局部仿射算子缓存筛查与止损](docs/进展报告/0201-T-261121-局部仿射算子缓存筛查与止损.md)：research/O1上的[A1](research/8.video-backbone/affine-cache/README.md)全部64缓存窗/768输出/48均值完整，0新CNN/训练/GPU，必要门0/20；每帧投影已损失SYN质量，隔帧复用进一步退化。[固定配置停止](research/8.video-backbone/affine-cache/decision.md)，局部正例/全部图审保留，不扩失败训练/成本/DEV/手机。原任务终态，论文目标active未完成。
 
 更新：2026-11-21T12:58:24.776394+08:00；Codex  (sqs_A100)。此前[0200：潜在状态完整学习评价与止损](docs/进展报告/0200-T-261121-潜在状态完整学习评价与止损.md)：research/O1上的[L1](research/8.video-backbone/latent-core/README.md)全32K正式更新/512K学生、四唯一最终及同32窗/704输出/44均值与实际全图审阅完成；空间2/8、历史0/12、强post0/24，完整A/B失败，[固定配置STOP](research/8.video-backbone/latent-core/decision.md)。平均空间提升及局部正例完整保留，不当独立时间收益。原全部作业终态，不重启；26/44＋1源、O1/所有旧STOP/主论文/封存最终/并行worktree保持，论文目标active未完成。
 
