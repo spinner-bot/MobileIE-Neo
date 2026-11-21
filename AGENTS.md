@@ -6,11 +6,11 @@
 
 目录编号约束（2026-11-17T19:15:22.552814+08:00；用户明确通知）：`research/` 的7号已由其他分支占用，即使当前main工作区尚无该目录，也不得将其视为可用。新建独立研究主题目录应跳到 `research/8.*`，保留7号给原占用分支。
 
-当前最新0193/主题8-O1已正式学习：[0193](docs/进展报告/0193-T-26112107-共享核心CUDA资格与正式训练启动.md)、[入口](research/8.video-backbone/operator-core/README.md)、[协议](research/8.video-backbone/operator-core/training-protocol.md)、[观察002](research/8.video-backbone/operator-core/process/observation002.json)。原chain002父3551565/start115612249保持live，CUDA资格013原3579558正常54.433770秒/4丢弃更新/64学生/32教师，GPU4 UUID匹配、own末次NVML1118MiB、allocator peak421330944/reserved580911104B；资源选择002..012无数值child，不是13次重试。25 CPU/39数值/新增2环境执行源保持，原001确定性CuBLAS失败及部分前向/0优化不回写。
+当前最新0194/主题8-O1首seed完整训练/评价正常、第二seed运行：[0194](docs/进展报告/0194-T-26112108-共享核心首种子完成与双种子接续.md)、[观察004](research/8.video-backbone/operator-core/process/observation004.json)、[协议](research/8.video-backbone/operator-core/training-protocol.md)。seed0原3582586于08:43正常4784.696325秒完成两目标各4000/8000正式更新/128000学生/64000教师，无资源暂停；两唯一最终5049参数/3000备份和全trace已交，原PID已无。原CPU3705779正常40.189992秒完成16训练窗/208输出/832逐帧/64F0＋128学生图，完整结果已交、原PID已无；不从单seed排名选设计。
 
-父链新连续准入/进程前UUID绑定、CPU准备后再准入/锁/实际设备核验后自动启动正式seed0原3582586/start115719183，GPU4 UUID GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e，继承计数0，从原F0/fresh matching和独立fresh Adam开始；CPU8/CUDA4资格均丢弃。观察002核父/worker同start且live、两目标各118步/共236正式优化/3776学生图；近期1.186346秒/共同步、估首seed余4605.4秒只作sleep，不是训练截止。不得按旧resource_wait、残留pending号或过时PID重启；查[实际stage/child](research/8.video-backbone/operator-core/process/chain002/state.json)、/proc身份和runtime，增长日志/guard不标最终。
+原父3551565/start115612249同原链自动新准入启动seed1原3708363/start116206660，GPU4 UUID GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e，初始继承计数全0，不继承seed0或CPU/CUDA资格。观察004核父/worker同start/live、seed1各393、正式全局8786更新/140576学生图；近期1.183904秒/共同步，估余4270.3秒只安排60分钟sleep，无墙钟截止。核[真实stage/child](research/8.video-backbone/operator-core/process/chain002/state.json)/runtime与/proc，不按旧seed0 PID/残留pending或观察超时重启，增长trace/guard不标最终。
 
-最近运行观察003（2026-11-21T08:16:09.747841+08:00）：[同原句柄/备份](research/8.video-backbone/operator-core/process/observation003.json)核父3551565/worker3582586同start/live，seed0两目标各2618、共5236正式更新；1000/2000完整恢复备份已核自有路径/摘要分别交，无资源暂停，完整质量仍待。近期1.201449秒/共同步和约1660.4秒首seed余量仅用来安排35分钟sleep，不读部分质量或改预算。
+25 CPU/39数值＋新增2环境执行源保持，原CUDA001环境失败及部分前向/0优化保留；013正常4丢弃更新/GPU4匹配、own末次NVML1118MiB、allocator peak421330944B。CPU8/CUDA4资格不继承，原chain001终态不重启。基础共享/相关/warp/KD/Sobolev非已证创新，5049参数、解析Conv8.060601744G与状态29030400B非手机/峰值RAM；主干可学，只有初始当前函数保持。用户1–2卡许可已落规范，8卡空闲后原链按4–7接续，无数值中断。
 
 两目标/双seed各4000、共16000正式更新/256000学生/128000教师，唯一最终不选best；之后完整32保留训练窗口/416输出/1664逐帧/52均值/36门自动接续，非独立DEV，完整质量尚待。共享主干联合学习coordinate/response，5049参数、解析1080p Conv8.060601744G/状态29030400B非手机/峰值RAM；基础相关/warp/KD/Sobolev已知，不以CPU梯度/CUDA资格当方法成功。原CPU初始空间函数/传输/stream差0只限定资格阶段，后续函数会变。
 
@@ -54,4 +54,4 @@ O1是当前已登记的独立核心，必须按原恢复/历史/强post和有限
 - 所有既有STOP继续有效，包括R28/R34/R37/R44–R46/R48/R50–R51/R61/R64–R65/R73–R75/R77/R79–R82/R84–R88等的局部网格；本主题也须按自身协议止损。旧决策原文在[研究决策目录](research/4.temporal-consistency/docs/)，完整历史在[原文快照](docs/交接历史/AGENTS-20261120-1524.md)。不因当前入口缩短而恢复任何已停止实验。
 - 原始MobileIE/F0实际4075参数；主题8-V1独立空间16180、学习融合16365，使用两遍骨干和DIS，不能写成4K或零额外推理开销。packing、KD、门控、递归等已知组件不是已确立创新。
 - OLiVES 43/71/83、DAVIS testdev、Kodak 13–24独立最终继续封存；未经预定开发/冻结门槛，不读取最终像素或将开发集结论改称独立测试。主论文原84质量值/snapshot003/PDF020保持，当前仍非投稿完成稿。
-- main只推进核心研究，survey/pre与demo/org各自worktree不修改、7号继续预留。先读[最新0193](docs/进展报告/0193-T-26112107-共享核心CUDA资格与正式训练启动.md)、[主题8入口](research/8.video-backbone/README.md)、[原完整过程](research/8.video-backbone/process/v1/journal.md)与[论文状态](paper/RESEARCH_STATUS.md)；需要早期细节再定向查历史，勿按旧活跃行重启。
+- main只推进核心研究，survey/pre与demo/org各自worktree不修改、7号继续预留。先读[最新0194](docs/进展报告/0194-T-26112108-共享核心首种子完成与双种子接续.md)、[主题8入口](research/8.video-backbone/README.md)、[原完整过程](research/8.video-backbone/process/v1/journal.md)与[论文状态](paper/RESEARCH_STATUS.md)；需要早期细节再定向查历史，勿按旧活跃行重启。
