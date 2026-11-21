@@ -1,0 +1,189 @@
+{
+  "resource_id": "MIE-0059",
+  "at": "2026-11-21T11:01:52.836069+08:00",
+  "source_aliases": {
+    "code": "code:relative/path:first-last resolves derived/docs/author-source/relative/path, 1based pinnedbc952b6",
+    "other": "explicitresourcerelativepath"
+  },
+  "claims": [
+    {
+      "claim_id": "C01",
+      "evidence_class": "primary_identity_metadata",
+      "claim": "当前TMM28pp13430–13441/2026-08-13、三作者DOI及文号核实，旧1–13EarlyAccess单列。",
+      "anchors": [
+        "identity.json",
+        "derived/docs/publisher-metadata-parsed.json",
+        "derived/docs/acquisition-review.json"
+      ],
+      "limitation": "没有正式全文版本对照；metadata页数不代表已读这些页。"
+    },
+    {
+      "claim_id": "C02",
+      "evidence_class": "bounded_direct_relation",
+      "claim": "S2当前参考列表包含精确MobileIE正式DOI/arxiv，官方README明确主要基于MobileIE。",
+      "anchors": [
+        "derived/docs/acquisition-review.json",
+        "code:README.md:110-115"
+      ],
+      "limitation": "只核书目/代码ack，文内引用语境和编号未知；Crossref/IEEE参考数量不同不擅补齐。"
+    },
+    {
+      "claim_id": "C03",
+      "evidence_class": "author_abstract_report",
+      "claim": "摘要称先增强再融合指导先融合再增强、三网重参数化、约.0597M及无需正常照明GT。",
+      "anchors": [
+        "derived/docs/publisher-metadata-parsed.json",
+        "derived/docs/reading-notes.md"
+      ],
+      "limitation": "作者摘要级，完整公式、消融、质量/下游表和协议未获，不拼成全文结论。"
+    },
+    {
+      "claim_id": "C04",
+      "evidence_class": "pinned_author_source_full_carrier",
+      "claim": "固定bc952b6/tree14355b2，18件1025443B全Gitblob，14文本/PNG/3weights完整留档。",
+      "anchors": [
+        "derived/docs/author-source-manifest.json",
+        "derived/docs/author-tree-receipt.json"
+      ],
+      "limitation": "13适用文本全文读，unused430行scheduler仅清单/导入核，不称逐行读；114未begin。"
+    },
+    {
+      "claim_id": "C05",
+      "evidence_class": "static_spatial_information_boundary",
+      "claim": "IE/IF/ID为同对IR/VIS单图流程，IR是部署额外输入；无历史未来/time-state或对齐估计。",
+      "anchors": [
+        "code:models/build_slim.py:1-100",
+        "code:test_p.py:212-237",
+        "code:data/paired_data.py:35-54"
+      ],
+      "limitation": "同名pair非物理配准证明，不能作同RGB信息预算视频质量胜出。"
+    },
+    {
+      "claim_id": "C06",
+      "evidence_class": "static_version_distinction",
+      "claim": "README区分原weights+test_p与Lightning重构ckpt+test.py，默认重构三stage各10epoch不能当历史训练。",
+      "anchors": [
+        "code:README.md:28-58",
+        "code:train.py:29-100",
+        "code:options.py:13-34"
+      ],
+      "limitation": "缺历史日志/原训练配置/三last.ckpt，当前源可读不等于原文复现。"
+    },
+    {
+      "claim_id": "C07",
+      "evidence_class": "parameter_literal_structural_correspondence",
+      "claim": "源码IE6145/IF14305/ID39204合59654≈.0597M，3PT FloatStorage24580/57220/156816B对应。",
+      "anchors": [
+        "derived/docs/static-pipeline-arithmetic.json",
+        "derived/docs/author-checkpoint-container-review.json",
+        "code:models/build_slim.py:1-100"
+      ],
+      "limitation": "只结构/字面算术，无反序列化/参数运行/权重质量认证。"
+    },
+    {
+      "claim_id": "C08",
+      "evidence_class": "static_pipeline_cost_boundary",
+      "claim": "test_p实际执行三网/3encoder+2decoderIF与五输出，timer不含随后保存minmax和读图；注释低光建议只统计IF+ID。",
+      "anchors": [
+        "code:test_p.py:110-155",
+        "code:test_p.py:195-260"
+      ],
+      "limitation": "总三网时延不与53509的IF+ID选定图混报，MAC/G标GFLOPs口径和非Conv覆盖未验证。"
+    },
+    {
+      "claim_id": "C09",
+      "evidence_class": "conditional_dependency_pruning_inference",
+      "claim": "固定无状态slim下fuR=ID(fu)，fu只依赖VIS/IR，IE/增强VIS只服务fuEn；可裁剪辅助路径是依赖推断。",
+      "anchors": [
+        "code:test_p.py:62-103",
+        "derived/docs/static-pipeline-arithmetic.json"
+      ],
+      "limitation": "没改/跑裁剪网络或验证数值/速度，不当已测零开销部署。"
+    },
+    {
+      "claim_id": "C10",
+      "evidence_class": "static_unsupervised_loss_scope",
+      "claim": "IE曝光/空间/平滑、IF强度梯度SSIM、ID重建+teacher亮度/感知+棋盘空间一致性；合成sigma15/255非时间监督。",
+      "anchors": [
+        "code:utils/losses.py:164-185",
+        "code:utils/losses.py:280-320",
+        "code:models/base_model.py:136-169"
+      ],
+      "limitation": "无正常GT仍有成对模态、合成噪声和外部VGG先验；未验证实际泛化。"
+    },
+    {
+      "claim_id": "C11",
+      "evidence_class": "static_external_prior",
+      "claim": "ID感知项为冻结ImageNetVGG19，灰度三通道输入且无显式mean/std归一化；不在原slim推理权重预算。",
+      "anchors": [
+        "code:utils/losses.py:10-71",
+        "code:utils/losses.py:296-320"
+      ],
+      "limitation": "不说预处理一定错误，无下载/执行VGG，不能称从零无外部先验。"
+    },
+    {
+      "claim_id": "C12",
+      "evidence_class": "conditional_save_mapping_temporal_risk",
+      "claim": "RGB/gray保存逐图全局minmax无epsilon，极值改变全图映射；恒值有零分母算术条件。",
+      "anchors": [
+        "code:utils/image_utils.py:59-74",
+        "derived/docs/static-pipeline-arithmetic.json"
+      ],
+      "limitation": "没有观察到视频闪烁/NaN或量化成绩；网络/转换/保存须分别控制。"
+    },
+    {
+      "claim_id": "C13",
+      "evidence_class": "static_training_data_selection",
+      "claim": "PairDataset联合crop/翻转/旋转，三stage只trainloader/save_last，公开官方数据链接但无数据/许可/逐名划分。",
+      "anchors": [
+        "code:data/paired_data.py:14-77",
+        "code:train.py:19-100",
+        "code:README.md:22-26"
+      ],
+      "limitation": "目录同名不证配准，crop尺寸/未滤扩展为条件入口问题，训练域和数据重叠未知。"
+    },
+    {
+      "claim_id": "C14",
+      "evidence_class": "static_entry_check_scope",
+      "claim": "test_p原pth+10warmup，test.py加载Lightning并仅打印合成fold差，无阈值assert且IF混色彩转换/clamp。",
+      "anchors": [
+        "code:test_p.py:195-208",
+        "code:test_p.py:264-283",
+        "code:test.py:53-85",
+        "code:options.py:35-41"
+      ],
+      "limitation": "未跑fold/时延，CPU回退不是手机证据；bool字串开关/未用PLIFhelper不写成训练必败。"
+    },
+    {
+      "claim_id": "C15",
+      "evidence_class": "primary_visual_scope",
+      "claim": "唯一框架图实际查看，展示同pair双处理顺序和约束；正文其余科学图表未得。",
+      "anchors": [
+        "derived/docs/visual-review.json",
+        "derived/docs/author-source/assets/framework.png"
+      ],
+      "limitation": "选取静态图示不是视频/GT/独立quality及全paper视觉审查。"
+    },
+    {
+      "claim_id": "C16",
+      "evidence_class": "scope_and_related_leads",
+      "claim": "SpikeVFuse/FDFuse/LEFuse旧书目线索定向查仅见共列，未得到新的具体MobileIE技术关系，未扩展泛融合域。",
+      "anchors": [
+        "derived/docs/related-lead-disposition.json",
+        "derived/docs/related-bibliography-web-trace.json"
+      ],
+      "limitation": "不声称那些论文不引用MobileIE；新合格证据将触发Gate1增补，标准不变。"
+    },
+    {
+      "claim_id": "C17",
+      "evidence_class": "evidence_limited_research_proposal",
+      "claim": "当前足以支持代码继承/同图三网/信息与成本边界及保存风险假说，正式全文/历史协议/手机视频缺口保留。",
+      "anchors": [
+        "derived/report/analysis.md",
+        "derived/docs/reading-notes.md",
+        "sources/manifest.json"
+      ],
+      "limitation": "仅未来等信息/等质/预算/因果/运动曝光噪声和完整pipeline问题；0实验，不宣称新方法有效或新颖。"
+    }
+  ]
+}
