@@ -1,8 +1,8 @@
 # 主干信息流与时域化
 
-2026-11-20；Codex  (sqs_A100)。main主题8，research/7继续留给其他分支。
+2026-11-21；Codex  (sqs_A100)。主题8；当前O1位于research/O1，研究目标暂停，research/7继续留给其他分支。
 
-当前[O1共享核心](operator-core/README.md)首seed完整训练/固定评价结束、第二seed运行：[0194](../../docs/进展报告/0194-T-26112108-共享核心首种子完成与双种子接续.md)、[观察004](operator-core/process/observation004.json)。原seed0两目标各4K/8000更新、208输出/832逐帧正常，原数值PID已无；原父3551565自动新准入接续seed1原3708363/start116206660、GPU4/零继承，观察时各393步。25/39＋2冻结不变，完整双seed质量/36门尚待，不读单seed排名选设计或按旧PID重启。
+当前[O1共享核心](operator-core/README.md)已按用户指定转入research/O1：[0195](../../docs/进展报告/0195-T-261121-切换research-O1分支与结果归档.md)。原双seed训练/固定评价链已自然完成，原数值句柄全退出，已有输出逐文件归档；完整结果分析/图审和决定待用户恢复研究。main保留迁移起点，源码/资产目录不搬，25/39＋2冻结不变。以下是先前阶段记录，其中active或旧运行提示是当时状态，当前以本段的paused为准。
 
 此前[B1外观索引特征历史](appearance-state/README.md)已完整负结项：[0191](../../docs/进展报告/0191-T-26112101-外观索引特征历史完整筛查与止损.md)、[决定](appearance-state/decision.md)、[终态](appearance-state/process/terminal001.json)。16训练窗口/80输出/320逐帧，0优化/GPU/新DEV，原模型分解差0/首帧精确/权重不变；对当前同表时间增量仅.167%–.744%，完整门False，16比较仅1过。对两经典各3/16窗口联合正完整保留，全部图实际查看，原句柄终态。固定表/key/节点/alpha/decay/阈值/seed及训练补救网格STOP，不扩失败视频/DEV/成本/手机，普通双边传播不是创新。
 
@@ -31,4 +31,4 @@ V1已完整结项为负结果：[决定与止损](decision-v1.md)、[0175报告]
 
 复核来源：[原模型与训练审计](original-model-and-training.md)、[先例与原候选](precedents-and-candidate.md)、[原协议](protocol-v1.md)、[CPU执行修订](cpu-backend-amendment001.md)、[GPU组执行修订002](gpu-group-amendment002.md)、[完整过程](process/v1/journal.md)。空间16180/学习16365参数，较低解析MAC不是速度，不能叫4K或零推理开销。全部原34＋5＋CPU4/执行001的2源/002的4源保持，不改写历史失败。
 
-按用户要求，长等待依据实际初段速度估算sleep，覆盖大部分预计余量，醒后核同PID/start/runtime与自动接续；到期不作重启或算法截止。main/自有data/指定作者/no-ff/小步提交和阶段推送，所有旧STOP/独立最终封存及survey/pre/demo/org边界保持。
+按用户要求，长等待依据实际初段速度估算sleep，覆盖大部分预计余量，醒后核同PID/start/runtime与自动接续；到期不作重启或算法截止。research/O1/自有data/指定作者/no-ff/小步提交和阶段推送，所有旧STOP/独立最终封存及survey/pre/demo/org边界保持。
