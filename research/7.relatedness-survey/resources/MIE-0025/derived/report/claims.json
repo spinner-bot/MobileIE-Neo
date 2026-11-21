@@ -1,0 +1,205 @@
+{
+  "resource_id": "MIE-0025",
+  "at": "2026-11-21T14:10:35.163498+08:00",
+  "source_aliases": {
+    "code": "code:path:A-B→ownupstream-code fixed6703a6d literal1basedlines",
+    "prior": "prior:path→workstationrelativeimmutableclosedreview/source, SHA pinned insource-correspondence-audit.json"
+  },
+  "claims": [
+    {
+      "claim_id": "C01",
+      "evidence_class": "primary_project_identity",
+      "claim": "论文精确链接官方GenAI4E/QATIE，固定6703a6d/treeac4bf，head2026-06-04；README作者/正式引用吻合。",
+      "anchors": [
+        "identity.json",
+        "code:README.md:1-40",
+        "code:README.md:194-214"
+      ],
+      "limitation": "组织owner与论文作者/提交者身份分开，head日期不是首次发布。"
+    },
+    {
+      "claim_id": "C02",
+      "evidence_class": "SHA_pinned_reading_provenance",
+      "claim": "全37工件29145635B与ZIP/Gitblob/24摘要一致，26适用全文及两图/三容器审计透明复用，另完整重读两README/入口。",
+      "anchors": [
+        "derived/docs/author-source-manifest.json",
+        "derived/docs/source-correspondence-audit.json",
+        "derived/docs/reading-notes.md"
+      ],
+      "limitation": "生成26平文本不等阅读；4PYC只库存、二进制未执行，不计第二次独立实验。"
+    },
+    {
+      "claim_id": "C03",
+      "evidence_class": "source_license_environment",
+      "claim": "MIT2026GenAI4E全文已读；requirements UTF16解码逐codepoint一致，README Python<3.12并披露onnx2tf兼容风险。",
+      "anchors": [
+        "code:LICENSE:1-21",
+        "code:README.md:86-102",
+        "code:README.md:125-131",
+        "derived/docs/requirements-encoding-review.json"
+      ],
+      "limitation": "没有安装/验证依赖兼容；MIT不自动覆盖DPED/外部预训练数据；作者警告不是本次运行失败。"
+    },
+    {
+      "claim_id": "C04",
+      "evidence_class": "static_entry_path_and_channel_scope",
+      "claim": "train默认data../data/dped、ckpt../../ckpts与READMEdped/不同；to_tflite默认channels0自动推断，README显式24须匹配实际权重。",
+      "anchors": [
+        "code:src/train/train_qat.py:204-215",
+        "code:src/export/to_tflite.py:237-295",
+        "code:README.md:86-145"
+      ],
+      "limitation": "相对cwd不能认定本机路径存在；不能把24示例无条件套提供c32权重，未执行。"
+    },
+    {
+      "claim_id": "C05",
+      "evidence_class": "static_model_cost_causality",
+      "claim": "单RGB三空间尺度门控UNet/35Conv/5IN，全局残差clamp；c32=915331、1080p卷积144.156672G MAC。",
+      "anchors": [
+        "code:src/models/model_builder.py:57-223",
+        "prior:resources/MIE-0024/derived/docs/static-numeric-review.json"
+      ],
+      "limitation": "无历史未来state，非MBR骨干；字面参数/MAC非运行/完整成本/视频稳定。"
+    },
+    {
+      "claim_id": "C06",
+      "evidence_class": "static_loss_mapping",
+      "claim": "loss2的YPSNR/globalRGBcos/outlier直接承接MobileIE；MSSSIM类实际单SSIM，VGG只loss3。",
+      "anchors": [
+        "code:src/train/loss.py:9-144",
+        "code:src/train/loss.py:192-297",
+        "prior:resources/MIE-0024/derived/docs/reading-notes.md"
+      ],
+      "limitation": "当前实现不是全部历史表配置证明；普通损失组合非二期创新或视频收益。"
+    },
+    {
+      "claim_id": "C07",
+      "evidence_class": "static_data_budget_and_precision",
+      "claim": "READMEc32/loss2/limit.01、默认c24/loss1/limit.1，QAT强制32；独立glob配对未核basename，test作val。",
+      "anchors": [
+        "code:src/train/train_qat.py:204-351",
+        "code:src/data/dped_dataset.py:1-137",
+        "code:README.md:104-125"
+      ],
+      "limitation": "未取数据/运行，不称实际错配/预算错误；floatToTensor再/255并非重复归一化。"
+    },
+    {
+      "claim_id": "C08",
+      "evidence_class": "static_checkpoint_loading_scope",
+      "claim": "trustedloader可fallbackweights_onlyFalse；多个strictFalse，按键/文件名选ablation不能识别同键residual语义。",
+      "anchors": [
+        "code:src/models/model_builder.py:313-450",
+        "code:src/eval/checkpoint_loading.py:1-126",
+        "code:src/checkpoint_tflite_utils.py:1-145"
+      ],
+      "limitation": "名称safe不等纯静态；本次不调用包装或反序列化，不能称已观察加载失败。"
+    },
+    {
+      "claim_id": "C09",
+      "evidence_class": "static_FX_QAT_graph_scope",
+      "claim": "FXqnnpack图head/defaultConcatFP32留浮点，shell默认legacy1，而当前train默认新concat图。",
+      "anchors": [
+        "code:src/models/model_builder.py:34-50",
+        "code:scripts/quantize_and_eval_qat_ckpt.sh:1-29",
+        "code:src/export/quantize.py:1-107"
+      ],
+      "limitation": "须固定checkpoint实际graph/observer；INT8模型命名不等全整数I/O或已验证数值等价。"
+    },
+    {
+      "claim_id": "C10",
+      "evidence_class": "static_TF_calibration_scope",
+      "claim": "TF路径裸权重ONNX/SavedModel后PTQ，默认128测试输入代表集；FX的FP32observer warmup也用iPhone测试输入。",
+      "anchors": [
+        "code:src/ckpts_to_int8_tflite_eval.py:155-244",
+        "code:src/export/quantize.py:194-209",
+        "code:src/export/to_tflite.py:137-161"
+      ],
+      "limitation": "校准接触测试输入不等测试标签训练；需隔离最终评价，原手机生成链未知。"
+    },
+    {
+      "claim_id": "C11",
+      "evidence_class": "reused_inert_binary_metadata",
+      "claim": "100TFLite浮点NHWC入/NCHW出139op；大版INT8[1,1920,1080,3]入出128op，无floattypedop；CKPTCRC/observer键留档。",
+      "anchors": [
+        "derived/docs/source-correspondence-audit.json",
+        "prior:resources/MIE-0024/derived/docs/tflite-container-review001.json",
+        "prior:resources/MIE-0024/derived/docs/checkpoint-container-review.json"
+      ],
+      "limitation": "同SHA审计复用非新模型运行；H/W/signedaffine不由文件名默改，不证QNN委派/性能。"
+    },
+    {
+      "claim_id": "C12",
+      "evidence_class": "conditional_conversion_and_tiling_risk",
+      "claim": "dynamicreshape不等通用转置；正overlap线性mask外端0有边界零权重风险，InstanceNorm令块/全图统计可能不同。",
+      "anchors": [
+        "code:src/export/to_tflite.py:1-136",
+        "code:src/infer/infer_tflite.py:1-353",
+        "code:src/models/model_builder.py:108-137"
+      ],
+      "limitation": "条件推断未运行，不否定native直接匹配或断言公开文件/论文输出已坏。"
+    },
+    {
+      "claim_id": "C13",
+      "evidence_class": "static_metric_and_pairing_scope",
+      "claim": "PyTorch/TFLite/train度量阈值与SSIM入口不同；patchsorted计数、fullHD按basename、原DPED独立glob。",
+      "anchors": [
+        "code:src/eval/eval_tflite.py:104-302",
+        "code:src/eval/eval_pytorch.py:29-78",
+        "code:src/data/dped_dataset.py:1-137"
+      ],
+      "limitation": "需实际文件IDs和统一指标，不假设同名metric等价，也不宣称改变22dB结果。"
+    },
+    {
+      "claim_id": "C14",
+      "evidence_class": "static_CPU_device_labels",
+      "claim": "两个batch导出cpu/cuda CSV行均调用CPU TFLite，FP32每模型一次、INT8按行重复CPU；src文档披露hostCPU。",
+      "anchors": [
+        "code:src/ckpts_to_tflite_eval.py:1-228",
+        "code:src/ckpts_to_int8_tflite_eval.py:1-386",
+        "code:src/README.md:117-136"
+      ],
+      "limitation": "标签不是CUDA/QNN速度，不造作者隐瞒；未执行入口。"
+    },
+    {
+      "claim_id": "C15",
+      "evidence_class": "static_cost_measurement_scope",
+      "claim": "Torch默认1088×1920/20warmup/100runs/5trials；file_mb以1024²除实际MiB，param_mib只sumparameters。",
+      "anchors": [
+        "code:src/eval/benchmark_ckpts.py:55-156",
+        "code:src/eval/benchmark_quantized.py:445-570"
+      ],
+      "limitation": "不含buffers/optimizer/完整packed权重/峰值内存或手机端到端；无实测时延。"
+    },
+    {
+      "claim_id": "C16",
+      "evidence_class": "static_resolution_option_scope",
+      "claim": "INT8Torchbenchmark分支未传full_hd而TFLite分支传；BlackBerry/Sony当前2560×1440而注释native不同。",
+      "anchors": [
+        "code:src/eval/benchmark_quantized.py:445-540",
+        "code:src/eval/eval_original_images.py:1-81"
+      ],
+      "limitation": "仅具体入口差异，不推出实际作者表数据用错；固定分辨率/resize/GT协议后才能比。"
+    },
+    {
+      "claim_id": "C17",
+      "evidence_class": "same_family_scientific_bounds",
+      "claim": "24原论文QAT剩余−1.144dB/.071、c24score最高、loss对照SSIM较高及FP32/FP16歧义继续保留。",
+      "anchors": [
+        "prior:resources/MIE-0024/derived/report/analysis.md",
+        "derived/docs/reading-notes.md"
+      ],
+      "limitation": "项目载体结项不解除原历史训练/表/数据/手机/视频未知，同源不能算独立验证。"
+    },
+    {
+      "claim_id": "C18",
+      "evidence_class": "falsifiable_research_handoff",
+      "claim": "优先固定跨carrier范围布局边界、独立校准同预算、真实运动/曝光/噪声下空间时间感知和手机全链成本控制。",
+      "anchors": [
+        "derived/docs/reading-notes.md",
+        "derived/report/analysis.md",
+        "sources/manifest.json"
+      ],
+      "limitation": "普通QAT/门控/损失已有先例；原seed/ID许可/文件SHA/原始结果/峰值热功耗/视频缺口保留，Gate3尚未开始。"
+    }
+  ]
+}
