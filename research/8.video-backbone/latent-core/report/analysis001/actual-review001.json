@@ -1,0 +1,22 @@
+{
+  "at": "2026-11-21T12:56:14.177713+08:00",
+  "author": "Codex  (sqs_A100)",
+  "actual_viewed": true,
+  "tool": "view_image",
+  "images": {
+    "quality-temporal.png": "d542dc36c5095b631488c1101275cde52ec8472bae5632a68d75058fd9298321",
+    "gates.png": "6d6d7225ec58e8bf295259c00fffbeead244172f399edc9bf3220a4d0342ee5d",
+    "paired-history.png": "0e6b29edf8d2c2f1e1bb72f4ecad3889f432786fd37963f3d786cd919a8fa361",
+    "contact.png": "4a714708bf58ebc008e4fb7d8f06ccd63e411092335fa62d33ffcc415091f471"
+  },
+  "PDF_scope": "Standalone exports, not separately rendered/reviewed",
+  "notes": [
+    "All44 mean points retained without jitter; latent causal/current/self4 cluster near each other while classic FB/DIS substantially reduce temporal residual. Mean PSNR versus baseline and temporal benefit must remain separate.",
+    "All64 window-seed pairs shown for each of three history controls; same32 inputs reused across seeds, not64 independent scenes.",
+    "Gate matrix retains all44 comparisons and fixed A/B outcomes; only SYN/seed1 two space comparisons pass, no history/strong gate passes.",
+    "Preregistered contact shows first SYN/ND input at frame3 for both model seeds; four rows but only two distinct input windows. No best/worst crop selection.",
+    "In fixed synthetic helmet crop, noisy speckle remains visible in learned outputs and classic post images are smoother; latent current/causal/self4 are visually similar. This static example cannot establish flicker or a failure cause.",
+    "No intermediate ranking, new model/flow inference, independent final pixels, phone performance or MOS evidence was produced by rendering."
+  ],
+  "scope": "Actual static complete-score and fixed-contact review; no causal mechanism or general-family impossibility claim"
+}
