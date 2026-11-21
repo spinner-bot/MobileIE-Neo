@@ -1,0 +1,57 @@
+{
+  "at": "2026-11-21T13:50:50.371075+08:00",
+  "process": {
+    "pid": 3914373,
+    "start_ticks": 118043794,
+    "state": "R"
+  },
+  "source_freeze": {
+    "at": "2026-11-21T13:50:50.091677+08:00",
+    "source_sha256": {
+      "research/8.video-backbone/delay-budget/protocol.md": "0d1114e6b9c2a02f07a4cad3c5400faf1545f913a859940de84c6df4d64e9c3e",
+      "research/8.video-backbone/delay-budget/d1_io.py": "4858060bf1ec77fb33c1db9da2bfd13dcf4614259ef615a52c7415524a6e91a6",
+      "research/8.video-backbone/delay-budget/core.py": "e85e3583f9ee3bc4518753f76b394ac5331a940a7b88a97640cd8674f552f6b7",
+      "research/8.video-backbone/delay-budget/evaluate.py": "81475ab58b00fbf48cfdc121cad8fed90740b1ee6c54657585a3cf9eb0e440b7",
+      "research/8.video-backbone/delay-budget/summarize.py": "ac10c24689cd5e6d0a1bd3b72143aee316242f1e6802f5ae84ef6c05ac91bec3",
+      "research/8.video-backbone/delay-budget/launch.py": "93316bcc3e989a0eea15420c321a6b7df5b418797aea74e849a0dc4a9c74be63",
+      "research/4.temporal-consistency/scripts/causal_reference_io_r75.py": "181906fa8ccce29eb2e2bfcd79bf78035abd15a1f3ed12adf8ba8312ab367d93",
+      "research/4.temporal-consistency/scripts/half_motion_r4.py": "aa20b7d10fd1ee15f47a856eda650021b1473e87a2591b01b0dc953a2bcb4f1e",
+      "research/4.temporal-consistency/scripts/aligned_raw_history_r11.py": "e367727401f82ccf0bccaf8d88f904e4aebf8b78186f0539eedeed222b2d2227",
+      "research/4.temporal-consistency/scripts/exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+      "research/4.temporal-consistency/scripts/video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0",
+      "research/8.video-backbone/evidence-reconciliation/process/delay-source-audit001.json": "88c73ff30f471b6fea3743776fcddd56c29842a6bec9fea57b8fb87e4a93ab37",
+      "scripts/project-python": "db9f3a0398d76c67fdc86255dd6277adba078b2871abb8a8618fe1601ea5e4b2",
+      "scripts/project_assets.py": "65979a86cd009d82c5620191a9d3eb727b4bf6589815c3ccd9fc065cad91ae07",
+      "research/4.temporal-consistency/process/exploration-r73/references001/prediction_manifest.jsonl": "f13efe382a4401f1dbcbcdf638e0e3516163ff5b0ce119402656f3ef879563f9",
+      "research/4.temporal-consistency/process/exploration-r73/references001/runtime.json": "b26d9dae228cf66b2f48afb300486f174749d6c5954a85d004afcd7238fab441",
+      "research/4.temporal-consistency/results/exploration-r86-eval001/prediction_manifest.jsonl": "36a3107a3fc1e8ef7dbee56e95dae007164fbf10d2564ab4592882f76c5eea21",
+      "research/4.temporal-consistency/results/exploration-r86-eval001/runtime.json": "e45c6b29e33313b151680c3fb28c9ed6829070b46f2b77279100a6b971d356e7",
+      "research/4.temporal-consistency/results/exploration-r30-cache/index.json": "424fa278b2fe66d29de476e2b47328619438f97cf71926448433d1191bb722c1",
+      "research/4.temporal-consistency/results/exploration-r10-cache/index.json": "ec00801b04b873ead0025af91af441b783da3f08c87cf24e9c136a4268ffb43c"
+    },
+    "scope": "Named D1 code/protocol, helper metrics/motion, launch and existing source manifests; not whole transitive environment",
+    "before_first_D1_cache_array_or_flow": true,
+    "payload_SHA_checked_on_first_load": true
+  },
+  "source_audit": "research/8.video-backbone/evidence-reconciliation/process/delay-source-audit001.json",
+  "arms": [
+    "F0",
+    "F0_FB",
+    "F0_DIS",
+    "past3",
+    "center3",
+    "center_self"
+  ],
+  "common_indices": "range(2,T-1)",
+  "threads": {
+    "BLAS": 2,
+    "OpenCV": 1
+  },
+  "GPU_used": false,
+  "candidate_future_frames": 1,
+  "candidate_added_wait": "one registered source frame; physical interval not reverified",
+  "actual_new_CNN_calls": 0,
+  "cache_timing_is_not_deployment_speed": true,
+  "GT_metric": "Original cached reference field/mask; adjacent internal centers, border8",
+  "PSNR_ceiling_dB": 120
+}
