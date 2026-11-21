@@ -1,0 +1,44 @@
+{
+  "at": "2026-11-21T16:04:25.917033+08:00",
+  "classification": "Verified 600-second wait on previously live original numerical handles",
+  "workers": [
+    {
+      "seed": 0,
+      "original_live_process": {
+        "pid": 3966953,
+        "start_ticks": 118647548,
+        "state": "S"
+      },
+      "latest_complete_progress": {
+        "at": "2026-11-21T16:01:12.996051+08:00",
+        "elapsed_seconds": 1783.738702913979,
+        "common_steps": 13000,
+        "optimizer_updates": 26000,
+        "student_images": 208000
+      },
+      "verified_checkpoint_common_step": 10000,
+      "normal_runtime_not_yet_present": true
+    },
+    {
+      "seed": 1,
+      "original_live_process": {
+        "pid": 3966961,
+        "start_ticks": 118647563,
+        "state": "S"
+      },
+      "latest_complete_progress": {
+        "at": "2026-11-21T16:02:49.379754+08:00",
+        "elapsed_seconds": 1879.9556961250491,
+        "common_steps": 13000,
+        "optimizer_updates": 26000,
+        "student_images": 208000
+      },
+      "verified_checkpoint_common_step": 10000,
+      "normal_runtime_not_yet_present": true
+    }
+  ],
+  "waiting_did_not_change_algorithm_budget": true,
+  "scientific_restart": false,
+  "DEV_evaluation_not_started": true,
+  "goal_complete": false
+}
