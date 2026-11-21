@@ -1,0 +1,32 @@
+{
+  "at": "2026-11-21T10:47:42.154772+08:00",
+  "author": "Codex  (sqs_A100)",
+  "purpose": "Direct precedent check before independent L1 latent-state baseline; no external implementation, weights or new video downloaded/executed",
+  "readings": [
+    {
+      "url": "https://arxiv.org/html/1909.08080v1",
+      "title": "Efficient Video Super-Resolution through Recurrent Latent Space Propagation",
+      "actual_scope": "Section3 opening and 3.1; recurrent hidden features and RGB feedback; x[t-1:t+1] includes future frame, output Y with separately resized chroma. Not read all experiments or viewed figures."
+    },
+    {
+      "url": "https://arxiv.org/html/2210.09135v1",
+      "title": "Gated Recurrent Unit for Video Denoising",
+      "actual_scope": "III-A/B/C, equations1-5; known noise parameters; reset/candidate/update, output state and explicit noise input. Not full experimental reproduction."
+    },
+    {
+      "url": "https://arxiv.org/html/2204.04676v1",
+      "title": "Simple Baselines for Image Restoration",
+      "actual_scope": "Section4, equations1-7; SimpleGate and SCA. Did not execute NAFNet code or inspect figure pixels; no NAFNet performance numbers imported."
+    },
+    {
+      "url": "https://arxiv.org/html/2410.03936v1",
+      "title": "Learning Truncated Causal History Model for Video Restoration",
+      "actual_scope": "Sections3 and3.1 opening; causal encoder/decoder history and queue. Did not inspect full State Align/Router formulas or implementation; no efficiency numbers imported."
+    }
+  ],
+  "search_only_not_method_evidence": [
+    "BSVD search snippet",
+    "RVDD supplementary search excerpt"
+  ],
+  "scientific_scope": "Learned recurrent latent state, multiplicative gates and causal feature history already have direct precedents; differences from local stopped implementations do not establish novelty."
+}
