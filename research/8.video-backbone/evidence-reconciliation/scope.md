@@ -7,3 +7,7 @@
 全部14项配对（每项64窗-seed/4域seed组）：L1 F0_FB/F0、F0_DIS/F0、spatial_current/F0、spatial_FB/F0_FB、spatial_DIS/F0_DIS、causal/causal_current、causal/causal_self4、causal/spatial_FB、causal/spatial_DIS；A1 current/F0、cached/current、cached/hold、cached_FB/F0_FB、cached_DIS/F0_DIS。报告平均PSNR差、最差/最好窗、均值Etemp比、SSIM/edge差和严格PSNR/时间同时正窗数；不是新增方法通过标准。全部896配对/56统计及训练场景组成保留，不选正例，不按结果改变旧STOP。
 
 归并回答：①空间继续训练收益是否已独立列出；②历史增量与强post差距有多大；③局部投影是否先损失空间功能；④哪些解释仍未被隔离；⑤下一研究投资还缺何种实质信息。新近文献只补先例和可获取信息边界，不把普通循环、频带、残差/关键帧或多滤波混合作为新颖性。论文84值/snapshot003/PDF020不改。
+
+## 来源权重敏感性补充（完整归并后、计算前登记）
+
+元数据显示32个输入窗实际来自13个SYN训练场景及9个ND训练场景，ND的video_95占5/16窗口。为避免把裁块权重当场景泛化，另对全部14配对、四域seed组计算场景等权的PSNR差和Etemp均值之比，以及逐一移除每个场景后、保留其余原窗口权重的均值差/时间比。全部616场景项/616留一场景项保留，不只排除不利场景；56项场景等权结果不代替原注册门、不产生p值/置信区间，也不称新独立测试。该补充只读既有表和来源元数据，不开像素或新前向。
