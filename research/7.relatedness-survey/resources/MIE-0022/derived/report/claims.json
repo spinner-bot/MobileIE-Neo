@@ -1,0 +1,259 @@
+{
+  "resource_id": "MIE-0022",
+  "at": "2026-11-21T12:46:34.008695+08:00",
+  "source_aliases": {
+    "paper": "paper:pN v3 physical pageN resolves figures/paper-pNN.png andpaper-text.txt",
+    "code": "code:source_path:lineStart-lineEnd resolves fixed upstream-code-manifest.json"
+  },
+  "claims": [
+    {
+      "claim_id": "C01",
+      "evidence_class": "primary_identity_version",
+      "claim": "当前v3四作者/复旦、2026-11-08；v1七作者/v2五作者原件与差异保留，正式录用未确认。",
+      "anchors": [
+        "identity.json",
+        "derived/docs/version-review.json",
+        "paper:p1"
+      ],
+      "limitation": "不解释名单变更，ISCAS2027submitted与旧repoISCAS2026submission分开。"
+    },
+    {
+      "claim_id": "C02",
+      "evidence_class": "actual_fulltext_and_visual_scope",
+      "claim": "v3五页含33参考全读，4图6表科学页1–4实际看；旧版本全文差异和选页查看。",
+      "anchors": [
+        "derived/docs/visual-review.json",
+        "derived/docs/version-review.json"
+      ],
+      "limitation": "不称所有旧版页视觉查看或独立三次实证。"
+    },
+    {
+      "claim_id": "C03",
+      "evidence_class": "primary_direct_citation",
+      "claim": "v3p3以MobileIE[33]为骨干，改kernel/channel；v1已有同原作引用，MobileNetIE只是当版名称。",
+      "anchors": [
+        "paper:p3",
+        "paper:p5",
+        "derived/docs/version-v1-v3.diff"
+      ],
+      "limitation": "不是v3才开始关联；小骨干加频域/感知训练已有直接先例。"
+    },
+    {
+      "claim_id": "C04",
+      "evidence_class": "author_task_and_temporal_boundary",
+      "claim": "JND平台当前只图像编码/亮度预滤波，默认1帧；TM返回ones占位，不是视频稳定机制。",
+      "anchors": [
+        "paper:p4",
+        "code:results/results.md:35-50",
+        "code:pyjnd/models/tcsvt_wei_2009_model.py:267-284",
+        "code:codecs/script/regr_encode.sh:50-62"
+      ],
+      "limitation": "视频数据集/方法名称不等连续时间评价，不保证去闪烁。"
+    },
+    {
+      "claim_id": "C05",
+      "evidence_class": "author_teacher_and_information",
+      "claim": "传统[13]+[6]teacher生2008对伪GT，不是干净LLIE/时间标签，TableII最好组合随条件变。",
+      "anchors": [
+        "paper:p2",
+        "paper:p3"
+      ],
+      "limitation": "所选teacher不是所有数据/指标唯一最优，不当无监督或人眼GT。"
+    },
+    {
+      "claim_id": "C06",
+      "evidence_class": "static_source_architecture",
+      "claim": "Lite1Y→1Y加性残差，UV原样回拼，8/8/12通道、FST平方/当前全局通道及局部最大attention。",
+      "anchors": [
+        "code:pyjnd/models/iccv_yan_2025_lite_model.py:335-454",
+        "code:pyjnd/models/iccv_yan_2025_lite_model.py:474-576"
+      ],
+      "limitation": "无跨帧state；不同于照搬原RGB Retinex除法，全局动态影响不是已测闪烁。"
+    },
+    {
+      "claim_id": "C07",
+      "evidence_class": "literal_parameter_arithmetic",
+      "claim": "当前Lite训练24949/折叠1861字面参数与论文24.95K/1.86K相符。",
+      "anchors": [
+        "derived/docs/static-arithmetic-and-loss-review.json",
+        "paper:p4"
+      ],
+      "limitation": "源算术/容器核不是模型独立加载计数/数值复现。"
+    },
+    {
+      "claim_id": "C08",
+      "evidence_class": "source_and_paper_version_discrepancy",
+      "claim": "当前baseline5x5首层41413/3257不符表38.92K/3.06K，权重首conv字面也5x5。",
+      "anchors": [
+        "derived/docs/static-arithmetic-and-loss-review.json",
+        "derived/docs/first-convolution-opcode-trace.json",
+        "paper:p4"
+      ],
+      "limitation": "假想uniform12全3x3吻合舍入只是线索，未知历史版本不作作者错误原因断言。"
+    },
+    {
+      "claim_id": "C09",
+      "evidence_class": "static_parameter_count_scope",
+      "claim": "eval保留训练网另注册slim，model_stats全参数和约26810且直接标K；孤立slim仍1861。",
+      "anchors": [
+        "code:scripts/model_stats.py:20-41",
+        "code:pyjnd/models/iccv_yan_2025_lite_model.py:510-534",
+        "derived/docs/static-arithmetic-and-loss-review.json"
+      ],
+      "limitation": "折叠不消除FST/attention/残差，未实跑脚本/部署等价。"
+    },
+    {
+      "claim_id": "C10",
+      "evidence_class": "author_loss_and_bounded_inference",
+      "claim": "Lc+.16Lm+.02Lf，LF抑幅度损失/HF抑幅度增加，是单边软幅度约束。",
+      "anchors": [
+        "paper:p3"
+      ],
+      "limitation": "不约束符号/相位/相邻帧，physical命名不认证能量守恒或闪烁阈值。"
+    },
+    {
+      "claim_id": "C11",
+      "evidence_class": "mathematical_loss_scope",
+      "claim": "源码N8正交归一DCT全系数残差能量按Parseval等价覆盖像素平方误差。",
+      "anchors": [
+        "code:pyjnd/losses/freq_domain_loss.py:11-95",
+        "derived/docs/static-arithmetic-and-loss-review.json"
+      ],
+      "limitation": "仅全等权residual项，不说含constraint的整体loss冗余；非整除边缘loss覆盖与推理分开。"
+    },
+    {
+      "claim_id": "C12",
+      "evidence_class": "primary_loss_implementation_difference",
+      "claim": "论文Eq6平方，源码conservation为线性正部和；非交替扫描但K10默认低频集合一致。",
+      "anchors": [
+        "paper:p3",
+        "code:pyjnd/losses/freq_domain_loss.py:53-62",
+        "code:pyjnd/losses/freq_domain_loss.py:99-173"
+      ],
+      "limitation": "其它半对角线cutoff可不同；掩码多前导singleton默认mean不改，不冒称运行错误。"
+    },
+    {
+      "claim_id": "C13",
+      "evidence_class": "static_training_transform_scope",
+      "claim": "训练仅pred进入MS-SSIM前softclip(k2)，0/1映.119/.881，target未同变换。",
+      "anchors": [
+        "code:pyjnd/archs/general_learned_jnd_arch.py:166-221"
+      ],
+      "limitation": "不是只截超界，论文未明示；与raw fidelity/constraint及uint8验证分开，效果未知。"
+    },
+    {
+      "claim_id": "C14",
+      "evidence_class": "author_and_source_training_protocol",
+      "claim": "100K/b16/224/Adam3e-4，当前seed123/cosine97000/warmup3K/center224、split_num1。",
+      "anchors": [
+        "paper:p4",
+        "code:options/train/train_iccv_yan_lite_2025.yml:1-127"
+      ],
+      "limitation": "配置存在非实际五折/独立seed结果；未运行训练。"
+    },
+    {
+      "claim_id": "C15",
+      "evidence_class": "dataset_metadata_and_unknowns",
+      "claim": "六CSV2008train及5/15/30/50外测，8bit420；文档KonIQ/KonJND歧义和行随机split来源分开。",
+      "anchors": [
+        "derived/docs/dataset-metadata-review.json",
+        "code:datasets/prepare_datasets.md:155-214",
+        "code:scripts/csv_to_random_split_pkl.py:62-108"
+      ],
+      "limitation": "未加载splitPKL/下载全部图像，名字不证明语义不重叠或许可齐备。"
+    },
+    {
+      "claim_id": "C16",
+      "evidence_class": "static_validation_target_scope",
+      "claim": "验证对teacher、uint8 clip后PSNR/SSIM及loss选best，不是编码BD或人眼/时间GT。",
+      "anchors": [
+        "code:pyjnd/archs/general_learned_jnd_arch.py:237-384"
+      ],
+      "limitation": "不同metric best可不同迭代；eval逐图重建slim/留device列表成本不等网络forward。"
+    },
+    {
+      "claim_id": "C17",
+      "evidence_class": "author_main_rate_perception_counterevidence",
+      "claim": "VVenC六指标ALL为-2.80/-4.12/-2.83/-4.72，但HEVCPSNR+.87/MCLJCI+2.74仍率增加。",
+      "anchors": [
+        "paper:p4",
+        "derived/docs/published-result-table-rows.json"
+      ],
+      "limitation": "平均不同指标BD不是统一感知/时序分，x264[5]PSNR-2优于ours-1.51。"
+    },
+    {
+      "claim_id": "C18",
+      "evidence_class": "literal_summary_metric_sets",
+      "claim": "TableIII六指标ALL与IV/V四指标不同，HEVC-2.80与-2.47由列集解释；公开baseline行对应BaseLine+Lf。",
+      "anchors": [
+        "paper:p4",
+        "derived/docs/static-arithmetic-and-loss-review.json",
+        "derived/docs/published-result-table-rows.json"
+      ],
+      "limitation": "不把不同集合/训练条件混成同口径矛盾或胜出。"
+    },
+    {
+      "claim_id": "C19",
+      "evidence_class": "author_ablation_counterevidence",
+      "claim": "Lf修正baseline PSNR码率3.52→.69且VMAFNEG-2.85→-4.18，但MSSSIM-3.50→-3.34更差。",
+      "anchors": [
+        "paper:p4"
+      ],
+      "limitation": "不称全部指标提升；Lite取舍、无CI/主观/连续时间验证。"
+    },
+    {
+      "claim_id": "C20",
+      "evidence_class": "author_cost_scope",
+      "claim": "7.15GFLOPs/14.1%分母IQNet50.70；.428sCPU Xeon6230/10.88ms RTX2080Ti非手机。",
+      "anchors": [
+        "paper:p4",
+        "derived/docs/static-arithmetic-and-loss-review.json"
+      ],
+      "limitation": "条件倒数2.34/91.91非测得视频FPS，完整IO/codec/热电内存未知，41%baseline版本待对账。"
+    },
+    {
+      "claim_id": "C21",
+      "evidence_class": "static_inference_pipeline_scope",
+      "claim": "单文件每帧重载，批处理每video复用；pad32/crop、YUV归一化UV复用、保存round及8bit420codec明确。",
+      "anchors": [
+        "code:filt_one_video.py:43-99",
+        "code:filt_one_dataset.py:87-172",
+        "code:pyjnd/utils/img_util.py:240-324",
+        "code:pyjnd/utils/img_util.py:464-540"
+      ],
+      "limitation": "不是整个库都每帧重载；扩多帧不自动All-Intra，未实跑/认证手机部署。"
+    },
+    {
+      "claim_id": "C22",
+      "evidence_class": "static_codec_aggregation_scope",
+      "claim": "REC对比ori，指标裁边/模型各异，Akima整体先均值RD再BD；两侧独立剔缺测需公共样本控制。",
+      "anchors": [
+        "code:codecs/script/encode.py:260-510",
+        "code:codecs/script/calbdrate.py:43-146"
+      ],
+      "limitation": "不是每序列BD均值，未知raw记录是否实际缺测；无编码器/指标执行。"
+    },
+    {
+      "claim_id": "C23",
+      "evidence_class": "retained_material_and_limited_supplement",
+      "claim": "150固定工件全blob、46适用全文及明确部分源码阅读，三PTHCRC/操作码；作者逐视频CSV分享列表可得内容未取。",
+      "anchors": [
+        "derived/docs/author-source-manifest.json",
+        "derived/docs/source-reading-scope.json",
+        "derived/docs/checkpoint-container-review.json",
+        "derived/docs/supplement-acquisition-review.json"
+      ],
+      "limitation": "不称所有128文本逐行精读/补充不存在或已读；公开码/普通下载无文件不等成功下载。"
+    },
+    {
+      "claim_id": "C24",
+      "evidence_class": "bounded_future_research_controls",
+      "claim": "先核版本，再固定teacher/数据/信息/预算，分离MSE/平方线性约束并查相位运动曝光噪声及时空/整机编码成本。",
+      "anchors": [
+        "derived/report/analysis.md",
+        "derived/docs/reading-notes.md"
+      ],
+      "limitation": "0研究源/模型/训练/GPU/Gate3，不提前全体综合或确认组合新颖有效。"
+    }
+  ]
+}
