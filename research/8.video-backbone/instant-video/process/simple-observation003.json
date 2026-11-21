@@ -1,0 +1,50 @@
+{
+  "at": "2026-11-21T16:34:41.188912+08:00",
+  "workers": [
+    {
+      "seed": 0,
+      "original_process": {
+        "pid": 3966953,
+        "start_ticks": 118647548,
+        "state": "R"
+      },
+      "complete_log_progress": {
+        "at": "2026-11-21T16:34:00.982939+08:00",
+        "elapsed_seconds": 3751.7255840268917,
+        "common_steps": 30000,
+        "optimizer_updates": 60000,
+        "student_images": 480000
+      },
+      "verified_recovery_common_step": 20000,
+      "numerical_runtime_present": false
+    },
+    {
+      "seed": 1,
+      "original_process": {
+        "pid": 3966961,
+        "start_ticks": 118647563,
+        "state": "R"
+      },
+      "complete_log_progress": {
+        "at": "2026-11-21T16:34:28.101528+08:00",
+        "elapsed_seconds": 3778.6774688789155,
+        "common_steps": 28000,
+        "optimizer_updates": 56000,
+        "student_images": 448000
+      },
+      "verified_recovery_common_step": 20000,
+      "numerical_runtime_present": false
+    }
+  ],
+  "CPU_continuation": {
+    "pid": 3991883,
+    "start_ticks": 118916373,
+    "state": "S"
+  },
+  "continuation_stage": "waiting_original_training",
+  "plots_prepared_not_generated": true,
+  "DEV_metrics_not_computed": true,
+  "protocol_and_budgets_unchanged": true,
+  "interpretation": "Full stack includes two RGB terminal EMAs versus one in output; original increment key is not pure feature attribution",
+  "goal_complete": false
+}
