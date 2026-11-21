@@ -94,7 +94,7 @@
       "claim": "loss2用Y域PSNR、全局RGBcos、相对离差tanh.detach加权L1；后者上权相对大离差，统一常偏差可权重0。",
       "anchors": [
         "paper:p5",
-        "code:src/train/loss.py:9-48",
+        "code:src/train/loss.py:9-81",
         "code:src/train/loss.py:192-275"
       ],
       "limitation": "不是跨帧对齐或简单压低outlier；单项退化不代表整个目标无梯度，未测训练效果。"
@@ -106,7 +106,7 @@
       "anchors": [
         "paper:p7",
         "paper:p8",
-        "code:src/train/loss.py:82-135"
+        "code:src/train/loss.py:82-144"
       ],
       "limitation": "公开当前源与历史表版本对应未知，不能认定原实验一定使用此实现。"
     },
@@ -115,7 +115,7 @@
       "evidence_class": "static_external_prior_scope",
       "claim": "VGG19仅loss3，推荐loss2不含VGG；LPSNR线性式在PSNR>50时可负。",
       "anchors": [
-        "code:src/train/loss.py:9-48",
+        "code:src/train/loss.py:9-81",
         "code:src/train/loss.py:251-297",
         "paper:p5"
       ],
