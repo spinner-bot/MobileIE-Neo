@@ -41,6 +41,102 @@
       "complete": true,
       "archive": "archive/g1a0001-ulightif-sourcezip.zip",
       "sha256": "dca7306e8141bd7c738bd212c1e0233f13f9a54317997a3596dee04b090ef67a"
+    },
+    {
+      "path": "receipts/mie0059-crossref.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/mie0059-crossref.json",
+      "sha256": "1a22cba7c6d34c7b1c5e268060ee8e82cf68fa9122cfc8e0f5115a2a7816ed28"
+    },
+    {
+      "path": "receipts/mie0059-ieee-abstract.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/mie0059-ieee-abstract.html",
+      "sha256": "c31586d469cbe7ec90a0c97f7b47cb4bb765ddd4bab415237615d2b1ef925c5e"
+    },
+    {
+      "path": "receipts/mie0059-ieee-canonical-pdfpath.json",
+      "status": "empty_response",
+      "http": 202,
+      "complete": false,
+      "archive": null,
+      "sha256": null
+    },
+    {
+      "path": "receipts/mie0059-ieee-ielx.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/mie0059-ieee-ielx.html",
+      "sha256": "d915cc0938059bca4ecd1889e4754749af6cd33198e56f147caff1ee208f1bbe"
+    },
+    {
+      "path": "receipts/mie0059-ieee-issuepdf.json",
+      "status": "empty_response",
+      "http": 202,
+      "complete": false,
+      "archive": null,
+      "sha256": null
+    },
+    {
+      "path": "receipts/mie0059-ieee-references.json",
+      "status": "empty_response",
+      "http": 200,
+      "complete": false,
+      "archive": null,
+      "sha256": null
+    },
+    {
+      "path": "receipts/mie0059-ieee-registered-vor.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/mie0059-ieee-registered-vor.html",
+      "sha256": "be5c580b37ce1d0923d0357233c19179859a02238eed7c27485b66a3af1c4184"
+    },
+    {
+      "path": "receipts/mie0059-ieee-stamp-view.json",
+      "status": "empty_response",
+      "http": 202,
+      "complete": false,
+      "archive": null,
+      "sha256": null
+    },
+    {
+      "path": "receipts/mie0059-ieee-stamppdf.json",
+      "status": "empty_response",
+      "http": 202,
+      "complete": false,
+      "archive": null,
+      "sha256": null
+    },
+    {
+      "path": "receipts/mie0059-openalex.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/mie0059-openalex.json",
+      "sha256": "634a43b92059f2b1451192420a91f174df759b6c79e79518910838377702d626"
+    },
+    {
+      "path": "receipts/mie0059-s2-references.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/mie0059-s2-references.json",
+      "sha256": "0da3ed1d97030a57529138b2029e8d642d9bcc6b22f95f840b5cb07cbd7f7529"
+    },
+    {
+      "path": "receipts/mie0059-s2.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/mie0059-s2.json",
+      "sha256": "3dc9e94b5964a9db090285cdea1ff65f7ca0cd813d5b5b99ab97ec1699a55191"
     }
   ],
   "discovery_evidence": [
@@ -60,7 +156,7 @@
       "source_record_id": "https://openalex.org/W7202343222"
     }
   ],
-  "adequacy": "Materials available for analysis; not yet read or qualified",
+  "adequacy": "Noformalfulltext obtained. Currentpublishermetadata+abstract/indexreference/directauthorack andall18fixedauthorartifacts available; actualanalysis inprogress, notGateapproved.",
   "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts",
   "path_conventions": {
     "receipts[].path": "relative to workstation/collection",
@@ -80,5 +176,14 @@
         "receipts/g1a0001-ulightif-sourcezip.json"
       ]
     }
-  ]
+  ],
+  "retrieval_review": {
+    "legacy202_empty": "Preservedhistoricalsuccesslabelsbutnotfulltext",
+    "IEEE_registered_VOR_and_ielx": "200HTMLlogin/abstractonly, notPDF",
+    "IEEE_canonical_pdfPath_and_stamp": "202empty, no bytes",
+    "IEEE_reference_REST": "200empty, noactualreftext",
+    "S2_openAccessPdf": "DOIlandingURL/CCBYlabeldoesnotprovefullPDF/license, publisherisOpenAccessFalse/OAclosed",
+    "current_metadata": "TMM28pp13430–13441/12pages, publication/insertion13Aug2026, notearlyaccess; oldREADME/websnippet1–13retainedasoldmetadata",
+    "code": "bc952b6/tree14355b2 all18blobs1025443B;114notbegun"
+  }
 }
