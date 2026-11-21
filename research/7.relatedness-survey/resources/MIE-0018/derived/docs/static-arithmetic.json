@@ -1,0 +1,55 @@
+{
+  "at": "2026-11-21T09:12:08.270321+08:00",
+  "method": "stdlib literal arithmetic from printed numbers/source constants only; no tensor/model/data metrics recomputed",
+  "params": {
+    "conv1": 28,
+    "conv2": 30,
+    "total": 58
+  },
+  "control": {
+    "coefficients": [
+      10.6301,
+      -49.3563,
+      193.9553,
+      -507.2211,
+      582.7439
+    ],
+    "P_at_0_1": 7.185076290000001,
+    "N_below_0_1": 8,
+    "N_at_0_1": 7,
+    "condition": "xnearby withnonzero curves/notendpointpixel couldhave extra-update jump; notobservedvideoresult"
+  },
+  "author_table6": {
+    "values_PI_NIQE_BRI": [
+      2.65,
+      4.01,
+      16.08,
+      2.66,
+      4.08,
+      13.5,
+      2.65,
+      2.84,
+      17.14,
+      2.47,
+      3.02,
+      17.18
+    ],
+    "arithmetic_mean": 7.3566666666666665,
+    "CIQA_excluded": true,
+    "interpretation": "inferred correspondence, not specified normalized metric"
+  },
+  "author_table7": {
+    "Snap_4K_runtime_assuming_ms": 37.4,
+    "reciprocal_FPS": 26.737967914438503,
+    "separate_body_FPS": 27.1,
+    "separate_abstract_FPS": 30
+  },
+  "current_convolution_only": {
+    "dense_kernel_MAC_per_pixel": 162,
+    "4K_3840_2160_GMAC": 1.3436928,
+    "bias_pixel_iterations_IO_not_included": true
+  },
+  "one_current_RGB_FP32_4K_tensor_bytes": 99532800,
+  "one_current_RGB_FP32_4K_tensor_MiB": 94.921875,
+  "warning": "Arithmetic not model reproduction/benchmark/peak memory, author tables across protocols not matched."
+}

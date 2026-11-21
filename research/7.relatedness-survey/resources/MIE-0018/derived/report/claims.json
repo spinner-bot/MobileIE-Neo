@@ -1,0 +1,230 @@
+{
+  "resource_id": "MIE-0018",
+  "at": "2026-11-21T09:12:08.270321+08:00",
+  "source_aliases": {
+    "paper": "paper:pN = v3physicalpageN, renderedPNG +fulltext; v1correspondence separately audited",
+    "code": "code:filename:first-last = fixed67addb2 1based lines in derived/docs/author-source/",
+    "other": "explicit resource-relative file"
+  },
+  "claims": [
+    {
+      "claim_id": "C01",
+      "evidence_class": "primary_identity_version",
+      "claim": "直接被引及作者关联已在2025初始预印本核实；正式封面2026-01-15，与DOI2025登记和v3May2026更新分别记录。",
+      "anchors": [
+        "identity.json",
+        "paper:p1",
+        "paper:p12",
+        "derived/docs/v1-v3-correspondence.json"
+      ],
+      "limitation": "正式出版者全文未取得，不由DOI字符串推发布日期或由预印本推正式全部参考。"
+    },
+    {
+      "claim_id": "C02",
+      "evidence_class": "primary_version_comparison",
+      "claim": "v1/v3十二页中十页渲染像素完全一致，全文差异仅水印、代码链接和表5SCI参数10.671→.258；不同页1/8已实际查看。",
+      "anchors": [
+        "derived/docs/paper-v1-v3-diff.txt",
+        "derived/docs/v1-v3-correspondence.json",
+        "derived/figures/paper-v1-p08.png"
+      ],
+      "limitation": "只核这两个版本；不能以此替代中间版或正式版对应审查。"
+    },
+    {
+      "claim_id": "C03",
+      "evidence_class": "author_method_and_literal_count",
+      "claim": "共享3→1→3两个3×3卷积的权重/偏置为28+30=58，整体三次提取，Eq2反复调同图曲线。",
+      "anchors": [
+        "paper:p3",
+        "paper:p4",
+        "code:model.py:6-29"
+      ],
+      "limitation": "BN/训练原图未得，当前LeakyReLU与论文ReLU不同；58不等于总算术或峰值内存。"
+    },
+    {
+      "claim_id": "C04",
+      "evidence_class": "author_method_temporal_boundary",
+      "claim": "IRM复用当前图phi1/2/3及I_init残差，不是历史帧；零新增可学习参数不代表零计算。",
+      "anchors": [
+        "paper:p3",
+        "paper:p4",
+        "paper:p5"
+      ],
+      "limitation": "alpha_i设置及原IRM实现未公开核实，无时序状态/运动/未来帧实验。"
+    },
+    {
+      "claim_id": "C05",
+      "evidence_class": "author_loss_and_training_limit",
+      "claim": "曝光、edgeweightedTV和local/global颜色约束及alpha.8/beta.4消融是可迁移空间训练控制。",
+      "anchors": [
+        "paper:p5",
+        "paper:p6",
+        "paper:p8"
+      ],
+      "limitation": "缺原训练源/划分/优化配置；局部归一化与reference构造/lambda不足，无配对不等于无数据依赖。"
+    },
+    {
+      "claim_id": "C06",
+      "evidence_class": "author_ablation_and_ambiguity",
+      "claim": "表1跨DICM/LIME/NPE却列PSNR/SSIM，MAE1507.57与表4MSE同数，不能当清楚同协议归一化误差。",
+      "anchors": [
+        "paper:p4",
+        "paper:p7"
+      ],
+      "limitation": "记录协议/命名歧义，不凭此推断全部结果错误或不诚信。"
+    },
+    {
+      "claim_id": "C07",
+      "evidence_class": "author_ablation_scope",
+      "claim": "九网络配置消融和ZeroDCE新loss/IRM实验支持作者在指定数据的设计选择，不证明所有骨干等价。",
+      "anchors": [
+        "paper:p6",
+        "paper:p7",
+        "paper:p8"
+      ],
+      "limitation": "训练预算与独立重复不充分；消融不能由不同体系跨表拼接因果量。"
+    },
+    {
+      "claim_id": "C08",
+      "evidence_class": "author_quality_report",
+      "claim": "表3/5报MIT17.73/.81、LSRWHuawei18.54/.49/Nikon16.08/.44及LOL19.04/.607；MobileIE不是表5数值对照。",
+      "anchors": [
+        "paper:p7",
+        "paper:p8",
+        "paper:p1"
+      ],
+      "limitation": "HuaweiNoiSERSSIM.52及LOLNoiSER.682更高；非全指标胜出或MobileIE公平优势。"
+    },
+    {
+      "claim_id": "C09",
+      "evidence_class": "arithmetic_inference_on_author_numbers",
+      "claim": "表6的Avg7.36近似十二项PI/NIQE/BRI原值均值7.3567，并未合入CIQA。",
+      "anchors": [
+        "paper:p9",
+        "derived/docs/static-arithmetic.json"
+      ],
+      "limitation": "混合量纲/BRI尺度影响，作者未充分说明，不能作标准统一质量/显著性判断。"
+    },
+    {
+      "claim_id": "C10",
+      "evidence_class": "author_cost_report",
+      "claim": "表5报58参数/2.69KB/GPU.97ms/CPU6.69ms/SoC3.55ms/GPU1030FPS。",
+      "anchors": [
+        "paper:p8",
+        "paper:p10",
+        "paper:p11"
+      ],
+      "limitation": "不同设备、精度分辨率/完整pipeline对应不充分，不能转作本项目手机实测；表4FPS1250另保留。"
+    },
+    {
+      "claim_id": "C11",
+      "evidence_class": "author_mobile_report_and_internal_tension",
+      "claim": "Snap4K表7为37.4，按正文ms语境倒数26.74FPS；正文27.1与摘要30并存，表题NPU与正文TFLiteGPUdelegate冲突。",
+      "anchors": [
+        "paper:p1",
+        "paper:p10",
+        "paper:p11",
+        "derived/docs/static-arithmetic.json"
+      ],
+      "limitation": "公开导出/委托/热稳态计时缺失，不认证稳定4K30FPS或NPU收益。"
+    },
+    {
+      "claim_id": "C12",
+      "evidence_class": "primary_visual_scope",
+      "claim": "科学页1–11/全部图表已查看，15组作者保存图全部查看，有提亮也有噪声/色偏/细节软化；DarkFace图是检测框示例。",
+      "anchors": [
+        "derived/docs/visual-review.json",
+        "derived/docs/author-media-manifest.json",
+        "paper:p7",
+        "paper:p11"
+      ],
+      "limitation": "静态缩略样例，不是时间质量/真实视频/检测AP量化；图14注与正文噪声描述张力保留。"
+    },
+    {
+      "claim_id": "C13",
+      "evidence_class": "fixed_source_complete_carrier",
+      "claim": "固定67addb2/tree1855a3，51文件18361389B全部Gitblob匹配；4公开文本全文读，45PNG/log/PTH全部登记。",
+      "anchors": [
+        "derived/docs/author-source-manifest.json",
+        "derived/docs/author-tree-receipt.json",
+        "derived/docs/reading-notes.md"
+      ],
+      "limitation": "当前发布载体完整≠原训练/部署源完整；README声明Apache但包无LICENSE文本，不作法律结论。"
+    },
+    {
+      "claim_id": "C14",
+      "evidence_class": "static_paper_code_version_difference",
+      "claim": "README承认当前58参数版较论文更新；代码LeakyReLU/无BN/只有Eq2型循环，无Eq3直接phi1/2/3恢复项。",
+      "anchors": [
+        "code:README.md:130-142",
+        "code:model.py:6-29",
+        "paper:p4"
+      ],
+      "limitation": "不能拿新版缺IRM否定旧版报告；原版/当前版表列与权重映射未知。"
+    },
+    {
+      "claim_id": "C15",
+      "evidence_class": "conditional_control_arithmetic_inference",
+      "claim": "当前全图均值<.1取8次，边界P(.1)=7.18507629取7，存在离散迭代次数8→7切换。",
+      "anchors": [
+        "code:model.py:6-29",
+        "derived/docs/static-arithmetic.json"
+      ],
+      "limitation": "仅源码常数算术及条件分析，非实际闪烁观测；需非零curve/非端点输出等条件。"
+    },
+    {
+      "claim_id": "C16",
+      "evidence_class": "static_information_and_cost_scope",
+      "claim": "当前batch1入口无过去/未来；全NCHWmean若多帧batch会耦合，item转Python/NumPy控制属于执行链成本。",
+      "anchors": [
+        "code:model.py:19-29",
+        "code:test.py:38-62",
+        "code:eval_en.py:100-117"
+      ],
+      "limitation": "不称当前代码用了未来帧，不宣称导出必然失败或具体同步耗时。"
+    },
+    {
+      "claim_id": "C17",
+      "evidence_class": "literal_operation_memory_inference",
+      "claim": "当前共享两Conv调用三次，密集卷积口径162HW/4K约1.344GMAC，单4KRGBFP32张量约94.92MiB。",
+      "anchors": [
+        "code:model.py:11-23",
+        "derived/docs/static-arithmetic.json"
+      ],
+      "limitation": "不含迭代/bias/拷贝等，非实际峰值/实测速率；不与论文未对齐输入FLOPs直接比较。"
+    },
+    {
+      "claim_id": "C18",
+      "evidence_class": "static_entry_metric_scope",
+      "claim": "入口RGB/255、先缩到16倍再输出插值；先保存8bit再评RGBPSNR/高斯validSSIM/AlexLPIPS，缺GT跳过。",
+      "anchors": [
+        "code:test.py:38-70",
+        "code:eval_en.py:19-62",
+        "code:eval_en.py:81-128",
+        "code:eval_en.py:174-207"
+      ],
+      "limitation": "内部不保持原采样；eval小于16缺test保护；无全部无参考指标/训练/手机/视频链；未执行。"
+    },
+    {
+      "claim_id": "C19",
+      "evidence_class": "checkpoint_and_log_structural_evidence",
+      "claim": "PTH四FloatStorage232B/符号形状对应27+1+27+3；作者log55条仅15图、重复且后段不同。",
+      "anchors": [
+        "derived/docs/checkpoint-container-review.json",
+        "derived/docs/author-log-review.json"
+      ],
+      "limitation": "未加载模型；日志无run/checkpoint/device头，零NIQE/PI不可作质量值，epoch_11/epoth199文件名不证训练轮次。"
+    },
+    {
+      "claim_id": "C20",
+      "evidence_class": "availability_limit_and_research_proposal",
+      "claim": "公开两端预印本与当前作者工件足以给出有版本限制的先例/控制假说；正式全文/原训练IRM/移动链缺口保留。",
+      "anchors": [
+        "derived/docs/reading-notes.md",
+        "derived/report/analysis.md",
+        "sources/manifest.json"
+      ],
+      "limitation": "只能交接未来同权重/同预算/等质/因果视频与手机完整成本预实验，不宣称已复现/新方法有效或新颖。"
+    }
+  ]
+}
