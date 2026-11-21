@@ -37,7 +37,9 @@
       "status": "success",
       "http": 202,
       "archive": null,
-      "sha256": null
+      "sha256": null,
+      "effective_complete": false,
+      "semantic_adequacy": "Empty202 index response is not fulltext despite old generic success flag; raw receipt preserved"
     },
     {
       "path": "receipts/sourcezip-LukasYan30--L3IE-YUV.json",
@@ -70,7 +72,7 @@
       "source_record_id": "38ac6f35aca614a2c850f96eba627c6ee4f2b5ab"
     }
   ],
-  "adequacy": "Full9page arxivv1 and allscientific p1-8 renders read; four fixed author artifacts read/inventoried, TorchScript283ZIPmembersCRC/97embeddedtext prepared, applicable core text inspected without model loading. Training/authoring code, configs/loss weights/splits/all benchmark checkpoints unavailable in fixed package; not yet Gate2 closed.",
+  "adequacy": "Complete9page arxivv1,9figures9tables12equations and4fixed author artifacts analyzed. Actual scientific pages1-8 viewed,23custom compiled modules plus applicable standard wrappers inspected;97text/283members inventoried/hashed, no model loading. Authoring/training source/configs/splits/allbenchmark checkpoint correspondence unavailable; evidence-limited manual review, not numerical reproduction.",
   "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts",
   "path_conventions": {
     "receipts[].path": "relative to workstation/collection",
@@ -79,5 +81,7 @@
     "discovery_evidence[].source": "collection/ prefix relative to workstation; research/ prefix relative to repository root",
     "discovery_evidence[].acquisition": "relative to workstation/collection; path is remote repository path at revision"
   },
-  "semantic_source_review": "derived/docs/source-version-review.json"
+  "semantic_source_review": "derived/docs/source-version-review.json",
+  "adequacy_recorded_at": "2026-11-21T08:21:03.907868+08:00",
+  "status_interpretation": "Availability/read-scope snapshot at final source review; authoritative terminal state is separate Gate2 and immutable close event"
 }

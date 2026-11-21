@@ -1,0 +1,114 @@
+{
+  "resource_id": "MIE-0016",
+  "reviewed_at": "2026-11-21T08:23:03.319268+08:00",
+  "reviewer": "Codex  (sqs_A100) <langxibielangle@qq.com>",
+  "review_mode": "executor second-pass self-review, not external expert/second agent",
+  "standard": "gates/gate2-v1.md",
+  "standard_sha256": "b5371150d788916763c891e0298b862ad0d9302a1286d698172bfa03dd90f57f",
+  "status": "closed_limited",
+  "review_passed": true,
+  "checklist": {
+    "a": {
+      "passed": true,
+      "evidence": [
+        "identity.json",
+        "derived/docs/source-version-review.json"
+      ],
+      "scope": "Evidence-limited closure provisions for missing trainable author source/config; full9page preprint and all applicable available artifacts analyzed"
+    },
+    "b": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/reading-notes.md",
+        "derived/docs/reading-scope-and-arithmetic.json",
+        "derived/docs/paper-assets.json"
+      ],
+      "scope": "Evidence-limited closure provisions for missing trainable author source/config; full9page preprint and all applicable available artifacts analyzed"
+    },
+    "c": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/author-source-manifest.json",
+        "derived/docs/compiled-code-manifest.json",
+        "derived/docs/source-version-review.json"
+      ],
+      "scope": "Evidence-limited closure provisions for missing trainable author source/config; full9page preprint and all applicable available artifacts analyzed"
+    },
+    "d": {
+      "passed": true,
+      "evidence": [
+        "derived/report/analysis.md",
+        "derived/docs/reading-notes.md"
+      ],
+      "scope": "Evidence-limited closure provisions for missing trainable author source/config; full9page preprint and all applicable available artifacts analyzed"
+    },
+    "e": {
+      "passed": true,
+      "evidence": [
+        "derived/report/claims.json",
+        "derived/docs/conclusion-evidence-check.json"
+      ],
+      "scope": "Evidence-limited closure provisions for missing trainable author source/config; full9page preprint and all applicable available artifacts analyzed"
+    },
+    "f": {
+      "passed": true,
+      "evidence": [
+        "derived/report/analysis.md",
+        "derived/docs/source-version-review.json"
+      ],
+      "scope": "Evidence-limited closure provisions for missing trainable author source/config; full9page preprint and all applicable available artifacts analyzed"
+    },
+    "g": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/gate2-review.md",
+        "derived/docs/conclusion-evidence-check.json"
+      ],
+      "scope": "Evidence-limited closure provisions for missing trainable author source/config; full9page preprint and all applicable available artifacts analyzed"
+    }
+  },
+  "claim_count": 17,
+  "actual_reading_scope": "All9page preprint text/9figures9tables12equations; scientific pages1-8 fullrender actually viewed. All3published texts read; TorchScript4th artifact ZIP/CRC/metadata and23custom compiled core texts plus applicable standard wrappers statically read,97prepared texts not all individually audited.",
+  "limited_closure": {
+    "attempts": [
+      "collection/receipts/paper-e18f0ed64604-arxiv-abs.json: primary metadata/history/Techreport",
+      "collection/receipts/paper-e18f0ed64604-arxiv-pdf.json: full9page author preprint",
+      "collection/receipts/paper-e18f0ed64604-arxiv-html.json: primary alternative fulltext",
+      "collection/receipts/sourcezip-LukasYan30--L3IE-YUV.json: complete fixed official4artifact package; README says source release once accepted, no trainable source",
+      "derived/docs/author-tree-receipt.json: exact fixedtree primaryAPI21Nov,4blobs all matched",
+      "derived/docs/publication-web-trace.json: authorhomepage InSubmission and primary/arxiv/officialrepo identity; no accepted venue inferred",
+      "collection/receipts/mie0016-crossref-title-search.json:10different works,noexacttitle/formalDOIinferred"
+    ],
+    "missing": [
+      "Trainable authoring source/constructor/initialization and complete training scripts/configs/loss coefficients/schedule",
+      "Dataset exact split/license/model selection and all-table/ablation checkpoint correspondence, raw outputs and logs",
+      "Original source/export-version explanation for compiled RGBprior/FCA residual details/SCA channel-axis behavior versus paper description",
+      "Explicit code license text, independent numerical/gradient/model/temporalGT/mobile/fullpipeline evidence"
+    ],
+    "available_analyzed": "Complete preprint and published README/inference/latency/TorchScript carrier; not falsely reported unavailable. Compiled text is a bounded inference artifact, not full training-source recovery.",
+    "supportable_conclusions": [
+      "Preprint Y/UV space-frequency-guidance design as a direct MobileIE same-author citing precedent",
+      "Author table scope and specific DICM text/value mismatch; literal latency/memory arithmetic under stated conditions",
+      "Fixed published inference/timing/compiled-graph behavior and its exact source/version limits"
+    ],
+    "unsupported_conclusions": [
+      "All author training/ablations/paper-source correspondence fully verified",
+      "30K is smaller than every prior lightweight model, or a fair numeric win overMobileIE",
+      "All table numbers independently reproduced or CPU/mobile30FPS/fullcost certified",
+      "Space-frequency consistency is demonstrated temporal stability; compiled differences invalidate all historical work"
+    ],
+    "overall_impact": "Second limited item; count full preprint reading separately from missing implementation/training evidence. Retain gaps and bounded compiled observations in overall report; no all-resources synthesis yet.",
+    "unlock_conditions": [
+      "Legitimate release of original trainable source/fullconfigs and version/export history, then appended paper-code review",
+      "Primary dataset splits/model selection/checkpoint-to-table mapping and license text",
+      "New experiment-branch task for numerical equivalence/shape/precision/metrics and motion/AE/AWB/phase/complete-device controls"
+    ]
+  },
+  "execution": {
+    "upstream_code": false,
+    "model_load": false,
+    "training": false,
+    "GPU": false,
+    "Gate3": false
+  }
+}
