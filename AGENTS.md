@@ -10,6 +10,8 @@
 
 父链新连续准入/进程前UUID绑定、CPU准备后再准入/锁/实际设备核验后自动启动正式seed0原3582586/start115719183，GPU4 UUID GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e，继承计数0，从原F0/fresh matching和独立fresh Adam开始；CPU8/CUDA4资格均丢弃。观察002核父/worker同start且live、两目标各118步/共236正式优化/3776学生图；近期1.186346秒/共同步、估首seed余4605.4秒只作sleep，不是训练截止。不得按旧resource_wait、残留pending号或过时PID重启；查[实际stage/child](research/8.video-backbone/operator-core/process/chain002/state.json)、/proc身份和runtime，增长日志/guard不标最终。
 
+最近运行观察003（2026-11-21T08:16:09.747841+08:00）：[同原句柄/备份](research/8.video-backbone/operator-core/process/observation003.json)核父3551565/worker3582586同start/live，seed0两目标各2618、共5236正式更新；1000/2000完整恢复备份已核自有路径/摘要分别交，无资源暂停，完整质量仍待。近期1.201449秒/共同步和约1660.4秒首seed余量仅用来安排35分钟sleep，不读部分质量或改预算。
+
 两目标/双seed各4000、共16000正式更新/256000学生/128000教师，唯一最终不选best；之后完整32保留训练窗口/416输出/1664逐帧/52均值/36门自动接续，非独立DEV，完整质量尚待。共享主干联合学习coordinate/response，5049参数、解析1080p Conv8.060601744G/状态29030400B非手机/峰值RAM；基础相关/warp/KD/Sobolev已知，不以CPU梯度/CUDA资格当方法成功。原CPU初始空间函数/传输/stream差0只限定资格阶段，后续函数会变。
 
 用户新授权1–2卡可用、其任务均属本人，后告知8卡空余，NVML核全0；许可已落规范。原链已进入资格013，保留同链/4–7正常接续，无数值中断或重复启动。以后可按该许可使用1–2，仍核实际余量；不把此瞬时空闲当永久可用，不改他人任务/全局环境。所有完成资格/正式准入/config/观察/过程/报告分别交，阶段推送，按实测长sleep。
