@@ -6,17 +6,113 @@
   "receipts": [
     {
       "path": "receipts/paper-0a9226026550-publisher.json",
-      "status": "success",
+      "status": "empty_response",
       "http": 202,
+      "archive": null,
+      "sha256": null,
+      "complete": false,
+      "bytes": 0,
+      "correction": "Historicalsuccessreceipt preserved; empty202notacquiredmaterial"
+    },
+    {
+      "path": "receipts/paper-0a9226026550-index-link1.json",
+      "status": "empty_response",
+      "http": 202,
+      "archive": null,
+      "sha256": null,
+      "complete": false,
+      "bytes": 0,
+      "correction": "Historicalsuccessreceipt preserved; empty202notacquiredmaterial"
+    },
+    {
+      "path": "receipts/mie0028-arxiv-title001.json",
+      "status": "success",
+      "complete": true,
+      "http": 200,
+      "bytes": 757,
+      "archive": "archive/mie0028-arxiv-title001.txt",
+      "sha256": "987736d37c0f75651f2b98a798836603f9834254c1d80a6630f84b02c5375e08"
+    },
+    {
+      "path": "receipts/mie0028-crossref001.json",
+      "status": "success",
+      "complete": true,
+      "http": 200,
+      "bytes": 4623,
+      "archive": "archive/mie0028-crossref001.json",
+      "sha256": "86a97b0e470781c08d860adc5373af5a9f984bc72bf530a958e7ed97229aaf2a"
+    },
+    {
+      "path": "receipts/mie0028-ieee-abstract001.json",
+      "status": "success",
+      "complete": true,
+      "http": 200,
+      "bytes": 50895,
+      "archive": "archive/mie0028-ieee-abstract001.html",
+      "sha256": "a312e4a9aed20ecf2f11cdc86169c0de9c8e8ce0268dffe8dcb850e83419178b"
+    },
+    {
+      "path": "receipts/mie0028-ieee-declared-pdf001.json",
+      "status": "empty_response",
+      "complete": false,
+      "http": 202,
+      "bytes": 0,
       "archive": null,
       "sha256": null
     },
     {
-      "path": "receipts/paper-0a9226026550-index-link1.json",
-      "status": "success",
-      "http": 202,
+      "path": "receipts/mie0028-ieee-figures001.json",
+      "status": "empty_response",
+      "complete": false,
+      "http": 200,
+      "bytes": 0,
       "archive": null,
       "sha256": null
+    },
+    {
+      "path": "receipts/mie0028-ieee-getpdf001.json",
+      "status": "empty_response",
+      "complete": false,
+      "http": 202,
+      "bytes": 0,
+      "archive": null,
+      "sha256": null
+    },
+    {
+      "path": "receipts/mie0028-ieee-references001.json",
+      "status": "empty_response",
+      "complete": false,
+      "http": 200,
+      "bytes": 0,
+      "archive": null,
+      "sha256": null
+    },
+    {
+      "path": "receipts/mie0028-ieee-stamp001.json",
+      "status": "empty_response",
+      "complete": false,
+      "http": 202,
+      "bytes": 0,
+      "archive": null,
+      "sha256": null
+    },
+    {
+      "path": "receipts/mie0028-openalex001.json",
+      "status": "success",
+      "complete": true,
+      "http": 200,
+      "bytes": 14396,
+      "archive": "archive/mie0028-openalex001.json",
+      "sha256": "14af0b708226a0fb63ea39ec7b229f4cdb248064a28841d96391db5de28391f7"
+    },
+    {
+      "path": "receipts/mie0028-unpaywall001.json",
+      "status": "success",
+      "complete": true,
+      "http": 200,
+      "bytes": 949,
+      "archive": "archive/mie0028-unpaywall001.json",
+      "sha256": "8d1bc928a98dc80bfc61aeee9fd5d05223fdd1b8f89ceb4c7536f38d98459f63"
     }
   ],
   "discovery_evidence": [
@@ -36,7 +132,7 @@
       "source_record_id": "14ebf582ad201667a4e2b74ab1dcaaaa6be08480"
     }
   ],
-  "adequacy": "Materials available for analysis; not yet read or qualified",
+  "adequacy": "Evidence-limited: officialabstract/publicmetadata/20registeredreferencefields analyzed; nofullbody/PDF/figures/implementation",
   "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts",
   "path_conventions": {
     "receipts[].path": "relative to workstation/collection",
@@ -44,5 +140,10 @@
     "discovery_evidence strings": "relative to workstation/collection",
     "discovery_evidence[].source": "collection/ prefix relative to workstation; research/ prefix relative to repository root",
     "discovery_evidence[].acquisition": "relative to workstation/collection; path is remote repository path at revision"
-  }
+  },
+  "availability": "derived/docs/availability-review.json",
+  "citation": "derived/docs/citation-provenance.json",
+  "scope_dispositions": "derived/docs/lead-dispositions.json",
+  "scope": "0model/source/inference/metrics/train/GPU/Gate3; unit arithmeticonly, actualpapermeasurementnotrerun",
+  "no_active_capture": true
 }
