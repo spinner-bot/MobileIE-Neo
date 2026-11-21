@@ -1,0 +1,27 @@
+test_all_models_against_independent_references (__main__.CoreTests) ... ok
+test_fixed_traditional_baselines (__main__.CoreTests) ... ok
+test_gamma_all_values (__main__.CoreTests) ... ok
+test_lossless_raw_and_invalid_formats (__main__.CoreTests) ... ok
+test_registry_and_native_input_contracts (__main__.CoreTests) ... ok
+test_rgb_input_and_errors (__main__.CoreTests) ... ok
+test_save_roundtrip_task_identity_and_rollback (__main__.CoreTests) ... /data/Users/zrh/repo/MobileIE-Neo-demo-org/demo/org/desktop/test_desktop.py:62: ResourceWarning: unclosed file <_io.BufferedReader name='/data/Users/zrh/.envs/android/tmp/tmp0oo6307m/MobileIE-4b8d97f4bb/comparison.png'>
+  self.assertEqual((3*value.image.width,value.image.height+110),Image.open(target/'comparison.png').size);self.assertEqual(record,json.loads((target/'record.json').read_text()))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/data/Users/zrh/repo/MobileIE-Neo-demo-org/demo/org/desktop/test_desktop.py:62: ResourceWarning: unclosed file <_io.BufferedReader name='/data/Users/zrh/.envs/android/tmp/tmpcn89mmtm/MobileIE-d652930bae/comparison.png'>
+  self.assertEqual((3*value.image.width,value.image.height+110),Image.open(target/'comparison.png').size);self.assertEqual(record,json.loads((target/'record.json').read_text()))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/data/Users/zrh/repo/MobileIE-Neo-demo-org/demo/org/desktop/test_desktop.py:62: ResourceWarning: unclosed file <_io.BufferedReader name='/data/Users/zrh/.envs/android/tmp/tmpzq93_ba7/MobileIE-03dffbd429/comparison.png'>
+  self.assertEqual((3*value.image.width,value.image.height+110),Image.open(target/'comparison.png').size);self.assertEqual(record,json.loads((target/'record.json').read_text()))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_three_tasks_two_displays_and_failure (__main__.GuiTests) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 12.692s
+
+OK
+提示：TensorFlow 不可用（ModuleNotFoundError），尝试使用 ai-edge-litert。
+已启用 ai-edge-litert 兼容层（tf.lite.Interpreter）。
+(1, 400, 600, 3)
+(1, 400, 600, 3)
+(1, 400, 600, 3)

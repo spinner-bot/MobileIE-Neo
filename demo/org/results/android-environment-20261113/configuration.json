@@ -1,0 +1,110 @@
+{
+  "date": "2026-11-13",
+  "timezone": "Asia/Shanghai",
+  "station": "/data/Users/zrh/.envs/android",
+  "entry": "/root/android-dev",
+  "entry_realpath": "/data/Users/zrh/.envs/android",
+  "host": "Ubuntu 22.04.5 LTS x86_64, Linux 5.15.0-140-generic",
+  "versions": {
+    "jdk": "Temurin 17.0.21+9",
+    "gradle": "8.13",
+    "agp": "8.11.1",
+    "kotlin_android_plugin": "2.2.10",
+    "gradle_embedded_kotlin": "2.0.21",
+    "command_line_tools": "19.0",
+    "platforms": [
+      34,
+      35,
+      36
+    ],
+    "build_tools": [
+      "35.0.0",
+      "36.0.0"
+    ],
+    "ndk": "27.3.13750724",
+    "cmake": "3.22.1",
+    "ninja": "1.10.2",
+    "platform_tools": "37.0.1-15733141",
+    "emulator": "37.2.13.0",
+    "system_image": "android-35;google_apis;x86_64 revision 9"
+  },
+  "private_adb": "tcp:localhost:5038",
+  "avd": "zrh-api35",
+  "serial": "emulator-5580",
+  "gates": {
+    "E0_tools_paths": true,
+    "E1_java_compile_run": true,
+    "E1_kotlin_apk": true,
+    "E1_native_arm64_x86_64": true,
+    "E1_debug_release": true,
+    "E1_sign_verify_alignment": true,
+    "E2_kvm_boot": true,
+    "E2_signed_probe_install_query": true
+  },
+  "probe_build": {
+    "result": "BUILD SUCCESSFUL",
+    "duration": "2m20s",
+    "tasks_executed": 91,
+    "signing": "Disposable validation key, v3 signature verified; not an application release key"
+  },
+  "limitations": [
+    "No real OnePlus connected or tested",
+    "No MobileIE app implementation at environment-report stage",
+    "Initial sdkmanager installation returned 1 with No AVD specified after package install; installation attempt 002 returned 0 and full downstream checks passed",
+    "Gradle 8 deprecation notices are not a claim of Gradle 9 compatibility"
+  ],
+  "evidence": [
+    {
+      "name": "install-001.txt",
+      "sha256": "1645369e94ac3ccc65df5645e5b44403e4b51f67dcd00b064389da410aacebaa"
+    },
+    {
+      "name": "install-002.txt",
+      "sha256": "e236a1158c5c71c63cd732fed6510d3cba426caf5c5fa510b878d5fd61b9be76"
+    },
+    {
+      "name": "validation-001.txt",
+      "sha256": "4c08d9d5e221f00d55d3fbd9fe014a20d5163e24dae9d89e916065d1f1c30ccd"
+    },
+    {
+      "name": "emulator-start-001.txt",
+      "sha256": "92e832260d7f353b452b6e7d362600dddd9518dbcf38201f00c0a6cc9510ba65"
+    },
+    {
+      "name": "sdk-packages.txt",
+      "sha256": "5b82153a31070f80397ab9fa6d0f95cc2d70948af7ecb2b384654a9b64204881"
+    },
+    {
+      "name": "download-sha256.txt",
+      "sha256": "fcf76278737b99c79b72c4b2be7bbb46ad709d9434254822e2e27f873a3d15c3"
+    },
+    {
+      "name": "host-libs-sha256.txt",
+      "sha256": "81bcf720acc46b36fb8f70e61c272c01eaa385bdd6a3f4dcde53e46d5b5d8614"
+    },
+    {
+      "name": "host-libs-versions.txt",
+      "sha256": "d99bbbf2096338cb3d7f4f50f4e48ae3c88a0c2e03a01fae1ce78028573e45c9"
+    },
+    {
+      "name": "java-probe.txt",
+      "sha256": "307ae5cae882b93f9d84ee9fdeda95e71bcd0928267c8a00275fac9744d8efea"
+    },
+    {
+      "name": "probe-apk-sha256.txt",
+      "sha256": "a5e6999d6c99906b186fd5dbe089f93c5b8fedd11bc656ae15b0a271a0551383"
+    },
+    {
+      "name": "probe-emulator-install.txt",
+      "sha256": "940deb161a3118aa6f39366eab424f2eb66f309ce9c1c913da082a53f5eeb78f"
+    },
+    {
+      "name": "probe-apk-badging.txt",
+      "sha256": "07c41818ea9b5947fdcb99ab0c27b2b3c39c23928a4a787d3b7a7a7cf89997af"
+    },
+    {
+      "name": "reference-python-packages.txt",
+      "sha256": "36fd7e0d1c1fb980dff65f5385f49b892f62a74bf01cb42782dff0e4cf0d179b"
+    }
+  ]
+}

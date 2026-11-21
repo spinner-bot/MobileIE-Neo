@@ -1,0 +1,64 @@
+[
+  {
+    "task_id": "underwater",
+    "source": "MobileIE/pretrain/uieb_best_slim.pkl",
+    "sha256": "0d9855a192504375aca5954f9ca839c49787f97714ee2b43f704f2d16c78d007",
+    "class": "MobileIELLENetS",
+    "forward_signature": "(x)",
+    "native_control_inputs": [],
+    "input_shape": [
+      1,
+      400,
+      600,
+      3
+    ],
+    "output_shape": [
+      1,
+      400,
+      600,
+      3
+    ],
+    "reference_cases": [
+      "black",
+      "white",
+      "random",
+      "ramp",
+      "sample1",
+      "sample2",
+      "sample3"
+    ],
+    "parameters": 4075,
+    "fixture_domain": "RGB 0..1 plus three UIEB samples"
+  },
+  {
+    "task_id": "isp",
+    "source": "MobileIE/pretrain/zrr_best_slim.pkl",
+    "sha256": "e107c31243e363f18003060309c18b11b1062affa3f27521c04efac0a4faca60",
+    "class": "MobileIEISPNetS",
+    "forward_signature": "(x)",
+    "native_control_inputs": [],
+    "input_shape": [
+      1,
+      224,
+      224,
+      4
+    ],
+    "output_shape": [
+      1,
+      448,
+      448,
+      3
+    ],
+    "reference_cases": [
+      "black",
+      "white",
+      "random",
+      "ramp",
+      "sample1",
+      "sample2",
+      "sample3"
+    ],
+    "parameters": 4132,
+    "fixture_domain": "Huawei P20 10-bit sensor values 64..1023 divided by official 4095; plus three unchanged author RAW patches"
+  }
+]

@@ -1,0 +1,83 @@
+{
+  "model_sha256": "2ea09b840634469eceab5263bf7b549c33fcd5df2a25701ce5fefc585402ad44",
+  "official_script_sha256": "0b39023a3ed3304e3928f1167158bd8d90f45e753bddf50f52009d2ef6616f68",
+  "android_runtime": "LiteRT 1.4.2, CPU builtin kernels, four threads, x86_64 emulator",
+  "reference_runtime": "ai-edge-litert 2.3.0, BUILTIN_WITHOUT_DEFAULT_DELEGATES",
+  "reference_inferences": 12,
+  "android_inferences": 6,
+  "registered_gates": {
+    "raw_max_abs": 0.0001,
+    "uint8_max_abs": 1,
+    "all_finite": true
+  },
+  "cases": [
+    {
+      "case": "case1",
+      "input_file_sha256": "c4e2e59b2f7d243859d2e916a9297308545d5c0ced8d3c4427f4ab61837c2db3",
+      "input_rgb_sha256": "6bd64eff7c3b92730a7b5d2f09d5f751b2312d37134af5a0163db8ba03a37056",
+      "finite": true,
+      "raw_max_abs": 2.384185791015625e-07,
+      "raw_mean_abs": 3.09579074382782e-08,
+      "uint8_max_abs": 1,
+      "uint8_differing_channels": 8,
+      "pass": true
+    },
+    {
+      "case": "case2",
+      "input_file_sha256": "af9cc9a2d4b4d4b31231b4336e5b150d091781afa20dd32c91b8296b022faf69",
+      "input_rgb_sha256": "a137ccb68d40585a90d3558bb652ff684eea9af9ec7c7801e106d26c72f20cf5",
+      "finite": true,
+      "raw_max_abs": 2.384185791015625e-07,
+      "raw_mean_abs": 1.1672162347369724e-08,
+      "uint8_max_abs": 1,
+      "uint8_differing_channels": 1,
+      "pass": true
+    },
+    {
+      "case": "case3",
+      "input_file_sha256": "d2c480bcded42540a62aa798b85fc021cf15a8f2b51778b62e730c45be357e1d",
+      "input_rgb_sha256": "f20b89898cd394bea4a64db4d4f0bb68109921470f0d251aeca3ba896213dce9",
+      "finite": true,
+      "raw_max_abs": 1.7881393432617188e-07,
+      "raw_mean_abs": 1.7275806102487777e-08,
+      "uint8_max_abs": 1,
+      "uint8_differing_channels": 2,
+      "pass": true
+    },
+    {
+      "case": "case4",
+      "input_file_sha256": "843f9c0e30722c97fb4a3fbc4cc24e1d1f9baea303b7fb890cf4a39b0ed74ba2",
+      "input_rgb_sha256": "943696a366338cdf1765680dd633ef600abb4a015c7c6bd3d41cd7d585bc98c8",
+      "finite": true,
+      "raw_max_abs": 1.1920928955078125e-07,
+      "raw_mean_abs": 9.120752414067586e-11,
+      "uint8_max_abs": 0,
+      "uint8_differing_channels": 0,
+      "pass": true
+    },
+    {
+      "case": "case5",
+      "input_file_sha256": "b86700b52a3402002e0bbcb690460147b2bfa222d976f017d2bf522d6104f442",
+      "input_rgb_sha256": "112adb85e186f340a4d75de4253fb7ba68973179a9fbd038e97b5ab2705e7dcf",
+      "finite": true,
+      "raw_max_abs": 2.384185791015625e-07,
+      "raw_mean_abs": 8.370313379499647e-10,
+      "uint8_max_abs": 0,
+      "uint8_differing_channels": 0,
+      "pass": true
+    },
+    {
+      "case": "case6",
+      "input_file_sha256": "92281bd7fba346a6e06735454ad2cce3b7bd42d3042a80998a770535d700331f",
+      "input_rgb_sha256": "34b9cd655b407f8a6e370096ea3cc96b25554c1dac0f1dedf4ffb946146d1f5f",
+      "finite": true,
+      "raw_max_abs": 0.0,
+      "raw_mean_abs": 0.0,
+      "uint8_max_abs": 0,
+      "uint8_differing_channels": 0,
+      "pass": true
+    }
+  ],
+  "all_pass": true,
+  "scope": "Runtime conformance on fixed inputs, not image-quality superiority or real-device performance"
+}

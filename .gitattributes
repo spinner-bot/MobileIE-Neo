@@ -16,6 +16,10 @@
 *.bin binary
 *.safetensors binary
 
+# Windows 批处理：cmd.exe 需要 CRLF，且文件按本地代码页(GBK)保存中文提示，
+# 因此按二进制原样存取，不做换行或编码转换
+*.bat binary
+
 # 文档
 *.md text eol=lf
 *.txt text eol=lf

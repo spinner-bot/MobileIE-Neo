@@ -1,0 +1,63 @@
+{
+  "device": {
+    "serial": "b62e7c1",
+    "model": "LE2100",
+    "marketing_name": "OnePlus 9R",
+    "android_release": "14",
+    "display": "1080x2400"
+  },
+  "app": {
+    "package": "dev.zrh.mobileie",
+    "versionName": "0.2.0",
+    "versionCode": 4,
+    "firstInstallTime": "2026-11-13 09:22:42",
+    "lastUpdateTime": "2026-11-14 22:04:40",
+    "install_mode": "adb install -r (覆盖升级，数据保留)"
+  },
+  "session": {
+    "date_local": "2026-11-14",
+    "window_local": "22:04-22:24",
+    "operator": "adb 自动化点击 + 系统相机/相册/文件选择器",
+    "taps_only": true,
+    "screenshots": 20
+  },
+  "checks": {
+    "install_overwrite_keeps_data": true,
+    "restores_previous_session": true,
+    "camera_intent_opens": true,
+    "camera_cancel_keeps_result": true,
+    "camera_capture_returns_to_task": true,
+    "camera_photo_full_pipeline": true,
+    "gallery_picker_opens": true,
+    "gallery_cancel_keeps_result": true,
+    "gallery_pick_returns_to_task": true,
+    "gallery_photo_full_pipeline": true,
+    "raw_picker_opens": true,
+    "raw_cancel_keeps_result": true,
+    "raw_import_accepts_rggb": true,
+    "raw_import_full_pipeline": true,
+    "builtin_samples_01_02_03": true,
+    "isp_camera_button_disabled": true,
+    "ai_benchmark_cross_app_roundtrip": true,
+    "state_survives_external_app_return": true,
+    "save_writes_gallery_and_record": true
+  },
+  "timings_ms": {
+    "note": "单次样本，CPU 4 线程，含首次初始化；不与桌面/GPU 数字混用",
+    "isp_sample1": {
+      "inference_ms": 48.589791,
+      "baseline_ms": 90.002344,
+      "initialization_ms": 2.734427,
+      "preparation_ms": 13.311197,
+      "packing_ms": 19.128125,
+      "rendering_ms": 41.790677,
+      "processing_total_ms": 204.935781
+    }
+  },
+  "not_tested": [
+    "真机 AI Benchmark 跑分（只验证了跳转与返回，未触发评测）",
+    "水下/ISP 任务在 AI Benchmark 中的模型速度对照",
+    "弱光真实场景拍照（本次相机预览为遮挡/室内，非目标场景）",
+    "长时间连续使用与热降频"
+  ]
+}

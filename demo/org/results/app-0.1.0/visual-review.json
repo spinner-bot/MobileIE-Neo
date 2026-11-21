@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-13",
+  "reviewed_by": "Codex  (sqs_A100)",
+  "android": {
+    "actual_screenshots_reviewed": [
+      "initial home",
+      "MobileIE split comparison",
+      "three-method overview",
+      "camera synthetic scene result",
+      "model failure explicitly marked",
+      "AI Benchmark absent state",
+      "process-restored result",
+      "font scale 1.3"
+    ],
+    "revisions": [
+      "Stage-specific hint text",
+      "Disabled unavailable model option",
+      "Explicit missing-result tile",
+      "Shared draw objects to avoid drag allocation",
+      "Keyboard and accessibility slider actions"
+    ],
+    "native_oneplus_reviewed": false
+  },
+  "desktop": {
+    "actual_screenshots_reviewed": [
+      "home",
+      "result split",
+      "three-method overview",
+      "model failure",
+      "900x650 initial and scrolled sidebar"
+    ],
+    "revisions": [
+      "Scrollable sidebar to preserve access at small size",
+      "Method labels rendered at UI font size",
+      "Fresh input clears old timing",
+      "Clean worker shutdown"
+    ],
+    "platform": "Linux/Xvfb Tk 8.6.12",
+    "native_windows_reviewed": false
+  },
+  "method": "Actual tool view_image inspection; no image generation or retouching of screenshots",
+  "scope": "UI readability and state feedback; not MOS or exhaustive device certification"
+}

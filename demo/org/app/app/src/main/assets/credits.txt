@@ -1,0 +1,22 @@
+MobileIE Light Lab 0.2.0 — academic demonstration
+
+MobileIE models and lowlight samples: MobileIE official repository
+Vendored source and exact weight hashes are recorded in the repository.
+Upstream Apache-2.0 license is included as MobileIE-LICENSE.txt.
+Original lowlight TFLite bytes are retained. UIE/ISP use official frozen
+PyTorch weights converted to FP32 TFLite; no training or weight tuning.
+
+UIEB underwater samples: Chongyi Li et al., An Underwater Image Enhancement
+Benchmark Dataset and Beyond, IEEE TIP 2020.
+Dataset authors: https://li-chongyi.github.io/proj_benchmark.html
+Distribution used: https://huggingface.co/datasets/Hikari0608/UIEB
+The first three validation images are used for academic demonstration only.
+
+Zurich RAW-to-RGB dataset: Andrey Ignatov et al., Replacing Mobile Camera
+ISP with a Single Deep Learning Model, CVPR Workshops 2020 (PyNET).
+Author source and dataset terms: https://aiff22.github.io/pynet.html
+Three original Huawei P20 RAW test patches (0, 1, 10) are losslessly wrapped
+as .rggb, without generated sensor data or value edits.
+
+Exact source/asset hashes and transformations: task-asset-sources.json.
+Data rights and terms remain with the respective dataset authors.

@@ -1,0 +1,51 @@
+test_gamma_all_values (__main__.CoreTests) ... ok
+test_input_contract_and_errors (__main__.CoreTests) ... ok
+test_official_model_reference (__main__.CoreTests) ... FAIL
+test_save_roundtrip_and_rollback (__main__.CoreTests) ... /data/Users/zrh/repo/MobileIE-Neo-demo-org/demo/org/desktop/test_desktop.py:65: ResourceWarning: unclosed file <_io.BufferedReader name='/tmp/tmpjbhdbuy3/MobileIE-5b76d1c48f/comparison.png'>
+  self.assertEqual((1800,478),Image.open(destination/"comparison.png").size)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_complete_gui_flow_and_failure (__main__.GuiTests) ... ERROR
+
+======================================================================
+ERROR: test_complete_gui_flow_and_failure (__main__.GuiTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/data/Users/zrh/repo/MobileIE-Neo-demo-org/demo/org/desktop/test_desktop.py", line 76, in test_complete_gui_flow_and_failure
+    root=tk.Tk();app=lab.Desktop(root)
+  File "/data/Users/zrh/.envs/android/validation/reference-env/lib/python3.10/site-packages/tkinter/__init__.py", line 2299, in __init__
+    self.tk = _tkinter.create(screenName, baseName, className, interactive, wantobjects, useTk, sync, use)
+_tkinter.TclError: couldn't connect to display ":92"
+
+======================================================================
+FAIL: test_official_model_reference (__main__.CoreTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/data/Users/zrh/repo/MobileIE-Neo-demo-org/demo/org/desktop/test_desktop.py", line 54, in test_official_model_reference
+    np.testing.assert_array_equal(np.asarray(result),(np.clip(expected[0],0,1)*255).astype(np.uint8))
+  File "/data/Users/zrh/.envs/android/validation/reference-env/lib/python3.10/site-packages/numpy/_utils/__init__.py", line 86, in wrapper
+    return fun(*args, **kwargs)
+  File "/data/Users/zrh/.envs/android/validation/reference-env/lib/python3.10/site-packages/numpy/testing/_private/utils.py", line 1057, in assert_array_equal
+    assert_array_compare(operator.__eq__, actual, desired, err_msg=err_msg,
+  File "/data/Users/zrh/.envs/android/validation/reference-env/lib/python3.10/site-packages/numpy/testing/_private/utils.py", line 921, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Arrays are not equal
+
+Mismatched elements: 8 / 720000 (0.00111%)
+Max absolute difference among violations: 1
+Max relative difference among violations: 0.01428571
+ ACTUAL: array([[[149, 168, 171],
+        [169, 194, 204],
+        [170, 192, 205],...
+ DESIRED: array([[[149, 168, 171],
+        [169, 194, 204],
+        [170, 192, 205],...
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.015s
+
+FAILED (failures=1, errors=1)
+提示：TensorFlow 不可用（ModuleNotFoundError），尝试使用 ai-edge-litert。
+已启用 ai-edge-litert 兼容层（tf.lite.Interpreter）。
+(1, 400, 600, 3)
