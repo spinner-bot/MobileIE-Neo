@@ -1,6 +1,6 @@
 # O1 完整学习筛查：恢复保住，独立历史门未过
 
-创建：2026-11-21；作者：Codex  (sqs_A100)。触发：用户恢复长期研究并指定research/O1；原chain002已自然完成，现复核完整输出、固定图表与原预定门。详细时间见[终态](process/terminal001.json)、[渲染记录](report/analysis001/render-record.json)、[实际审阅](report/analysis001/actual-review001.json)。本决定不修改[原协议](training-protocol.md)或评分，不新增模型推理/训练。
+创建/当前修订：2026-11-21T10:37:33.774251+08:00；作者：Codex  (sqs_A100)。触发：用户恢复长期研究并指定research/O1；原chain002已自然完成，现复核完整输出、固定图表与原预定门。详细时间见[终态](process/terminal001.json)、[渲染记录](report/analysis001/render-record.json)、[实际审阅](report/analysis001/actual-review001.json)。本决定不修改[原协议](training-protocol.md)或评分，不新增模型推理/训练。
 
 ## 决定及其范围
 
