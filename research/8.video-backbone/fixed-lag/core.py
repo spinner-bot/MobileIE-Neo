@@ -50,9 +50,9 @@ def smooth(filtered,future_raw,future_filtered,forward,mask_forward,mask_back):
 
 def qualification():
     R,Q,P=Fraction(1),Fraction(1,2),Fraction(1,2)
-    predicted=P+Q;K=predicted/(predicted+R);G=P/predicted
-    smoothed=P+G*G*(P-predicted)
-    assert predicted==1 and K==G==Fraction(1,2) and (1-K)*predicted==P and smoothed==Fraction(3,8)
+    Ppred=P+Q;K=Ppred/(Ppred+R);G=P/Ppred
+    smoothed=P+G*G*(P-Ppred)
+    assert Ppred==1 and K==G==Fraction(1,2) and (1-K)*Ppred==P and smoothed==Fraction(3,8)
     rng=np.random.default_rng(86001)
     gray=cv2.GaussianBlur(rng.uniform(0,255,(128,160)).astype(np.float32),(0,0),.7)
     previous=np.repeat(gray[...,None],3,-1)
@@ -75,15 +75,15 @@ def qualification():
     cycles=[]
     for dx in (-1.25,1.25):
         b=np.broadcast_to(np.array([dx,-.5],np.float32),(64,80,2)).copy();f=-b
-        predicted,valid=align_history(filtered,raw,b,yes)
-        future=blend(raw,predicted,.5)
+        predicted_image,valid=align_history(filtered,raw,b,yes)
+        future=blend(raw,predicted_image,.5)
         result,naive,mask=smooth(filtered,raw,future,f,yes,valid)
         first,_=warp_previous(filtered,b);cycle,_=warp_previous(first,f)
         expected=.25*(filtered-cycle)
         error=float(np.max(np.abs((result-naive-expected)[mask])))
         assert mask.any() and error<=1e-6
         cycles.append(dict(dx=dx,dy=-.5,raw_cycle_identity_max_difference=error))
-    return dict(passed=True,scalar_stationary={k:str(v) for k,v in dict(R=R,Q=Q,P=P,Ppred=predicted if isinstance(predicted,Fraction) else Fraction(1),K=K,G=G,Psmooth=smoothed).items()},
+    return dict(passed=True,scalar_stationary={k:str(v) for k,v in dict(R=R,Q=Q,P=P,Ppred=Ppred,K=K,G=G,Psmooth=smoothed).items()},
         scalar_model_not_real_noise_calibration=True,legacy_back_max_difference=0.,legacy_mask_exact=True,
         normalized_zero_motion_identity_max_difference=identity_error,rejected_and_zero_innovation_exact=True,
         signed_known_field_checks=cycles,qualification_DIS_bidirectional_pairs=2,qualification_DIS_calc_calls=4,
