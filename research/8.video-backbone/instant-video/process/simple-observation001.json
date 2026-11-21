@@ -1,0 +1,63 @@
+{
+  "at": "2026-11-21T15:41:30.001724+08:00",
+  "author": "Codex  (sqs_A100)",
+  "parent_current": {
+    "pid": 3965864,
+    "start_ticks": 118637026,
+    "state": "S"
+  },
+  "workers": [
+    {
+      "seed": 0,
+      "actual_original_process": {
+        "pid": 3966953,
+        "start_ticks": 118647548,
+        "state": "R"
+      },
+      "actual_physical_GPUs": [
+        6
+      ],
+      "latest_complete_training_progress": {
+        "at": "2026-11-21T15:40:10.377920+08:00",
+        "elapsed_seconds": 521.1205675050151,
+        "common_steps": 4000,
+        "optimizer_updates": 8000,
+        "student_images": 64000
+      },
+      "recent_seconds_per_common_step": 0.11531889462005347,
+      "estimated_remaining_seconds": 8764.235991124064,
+      "estimate_not_algorithm_cutoff": true,
+      "numerical_runtime_exists": false
+    },
+    {
+      "seed": 1,
+      "actual_original_process": {
+        "pid": 3966961,
+        "start_ticks": 118647563,
+        "state": "R"
+      },
+      "actual_physical_GPUs": [
+        7
+      ],
+      "latest_complete_training_progress": {
+        "at": "2026-11-21T15:40:30.257671+08:00",
+        "elapsed_seconds": 540.8336171170231,
+        "common_steps": 4000,
+        "optimizer_updates": 8000,
+        "student_images": 64000
+      },
+      "recent_seconds_per_common_step": 0.1149324846980162,
+      "estimated_remaining_seconds": 8734.868837049231,
+      "estimate_not_algorithm_cutoff": true,
+      "numerical_runtime_exists": false
+    }
+  ],
+  "CUDA_qualification_passed": true,
+  "qualification_weights_discarded": true,
+  "real_quality_evaluation_not_started": true,
+  "formal_budget_per_seed_common_steps": 80000,
+  "all_completed_source_and_static_metadata_committed": true,
+  "running_raw_logs_not_claimed_complete": true,
+  "scientific_restart": false,
+  "goal_complete": false
+}
