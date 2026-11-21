@@ -83,7 +83,7 @@ def main(args):
                 model.load_state_dict(inherited["models"][arm], strict=True)
             latest = dict(path=str(args.resume.relative_to(ROOT)), sha256=digest(args.resume), inherited=True,
                           counts=copy.deepcopy(counts))
-        prepared = min(counts["common_steps"], limit - 1)
+        prepared = 0 if args.qualify else min(counts["common_steps"], limit - 1)
         first = pool.batch(args.seed, 8000 + prepared)
         anchor = None
         if args.qualify and counts["common_steps"] == 0:
@@ -129,7 +129,7 @@ def main(args):
         for step in range(counts["common_steps"], limit):
             if available_kib() < 4 * 1024**2:
                 raise ResourcePressure("Host running reserve below4GiB")
-            low, target, metadata = first if step == prepared else pool.batch(args.seed, 8000 + step)
+            low, target, metadata = first if args.qualify or step == prepared else pool.batch(args.seed, 8000 + step)
             schedule.check_memory()
             low, target = low.to("cuda"), target.to("cuda")
             multiplier = .01 + .495 * (1 + math.cos(math.pi * step / 7999))
@@ -168,9 +168,10 @@ def main(args):
             torch.cuda.synchronize()
             work = time.perf_counter() - work_began
             counts["common_steps"] = step + 1
-            append(out / "training.jsonl", dict(at=stamp(), data_step=8000 + step, lr_multiplier=multiplier,
+            data_step = 8000 + (prepared if args.qualify else step)
+            append(out / "training.jsonl", dict(at=stamp(), data_step=data_step, lr_multiplier=multiplier,
                    controls=details, synchronized_student_seconds=work, **counts))
-            append(out / "windows.jsonl", dict(common_step=step + 1, data_step=8000 + step, windows=metadata))
+            append(out / "windows.jsonl", dict(common_step=step + 1, data_step=data_step, windows=metadata))
             if not args.qualify and (step + 1) % 1000 == 0 and step + 1 < limit:
                 checkpoint()
             if (step + 1) % 100 == 0 or args.qualify:
