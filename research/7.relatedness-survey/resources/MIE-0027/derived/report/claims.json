@@ -1,0 +1,153 @@
+{
+  "resource_id": "MIE-0027",
+  "at": "2026-11-21T14:49:51.962136+08:00",
+  "source_aliases": {
+    "prior": "prior:path→workstationrelative originalsource"
+  },
+  "claims": [
+    {
+      "claim_id": "C01",
+      "evidence_class": "primary_identity_license",
+      "claim": "官方API在线2026-08-31/CCBY4，BiomimeticIntelligenceandRobotics100369、五作者/DOI核；索引标JournalPre-proof。",
+      "anchors": [
+        "identity.json",
+        "derived/docs/publisher-core-metadata.json",
+        "derived/docs/web-acquisition-search001.json"
+      ],
+      "limitation": "Crossref月份/许可起点不当首次日；实际PDF版式页数未核。"
+    },
+    {
+      "claim_id": "C02",
+      "evidence_class": "publisher_registered_direct_citation",
+      "claim": "51登记参考b17含MobileIE完整作者/标题/ICCV页码与精确DOI。",
+      "anchors": [
+        "derived/docs/citation-provenance.json",
+        "prior:collection/raw/mie0027-crossref001.json"
+      ],
+      "limitation": "确认引用，原正文语境/印刷号/骨干或loss继承未知。"
+    },
+    {
+      "claim_id": "C03",
+      "evidence_class": "explicit_limited_material_scope",
+      "claim": "当前0PDF页/0科学图表/0确切实现取得，只核官方摘要/coredata与可得元数据/登记参考。",
+      "anchors": [
+        "derived/docs/reading-notes.md",
+        "sources/manifest.json"
+      ],
+      "limitation": "HTTP200XML或redirect不是全文，访问诊断截图不是科学图。"
+    },
+    {
+      "claim_id": "C04",
+      "evidence_class": "author_abstract_grid_claim",
+      "claim": "作者摘要称低分辨率双边空间预测局部/全局仿射，再用于全分辨率。",
+      "anchors": [
+        "derived/docs/web-acquisition-search001.json",
+        "derived/docs/reading-notes.md"
+      ],
+      "limitation": "grid/guide/系数/采样/clip/结构未知，不补写HDRNet具体配置或时序行为。"
+    },
+    {
+      "claim_id": "C05",
+      "evidence_class": "author_abstract_training_claim",
+      "claim": "摘要称无监督循环GAN、对抗训练/逆映射/cycleconsistency。",
+      "anchors": [
+        "derived/docs/web-acquisition-search001.json"
+      ],
+      "limitation": "无配对不等无目标域/零训练；逆映射不是时间倒放，实际loss/训练数据未知。"
+    },
+    {
+      "claim_id": "C06",
+      "evidence_class": "author_relative_parameter_claim",
+      "claim": "摘要报告相对ResNet生成器CycleGAN参数约少95.8%。",
+      "anchors": [
+        "derived/docs/web-acquisition-search001.json"
+      ],
+      "limitation": "无绝对参数/生成器判别器统计范围，不可当MobileIE四千参数或独立计数。"
+    },
+    {
+      "claim_id": "C07",
+      "evidence_class": "author_relative_latency_claim",
+      "claim": "摘要报告4K几十毫秒及相对常规CycleGAN超过170倍速度。",
+      "anchors": [
+        "derived/docs/web-acquisition-search001.json",
+        "derived/docs/reading-notes.md"
+      ],
+      "limitation": "非单一精确时间，设备/precision/backend/shape/计时边界未知，不是手机/持续视频或相对MobileIE速度。"
+    },
+    {
+      "claim_id": "C08",
+      "evidence_class": "author_quality_claim_and_motivation_bound",
+      "claim": "作者主张无监督质量优势；检测/分割/SLAM是摘要动机，未给对应实验证据。",
+      "anchors": [
+        "derived/docs/web-acquisition-search001.json",
+        "derived/report/analysis.md"
+      ],
+      "limitation": "无原表/划分/消融不能验证SOTA，也不补写下游结果。"
+    },
+    {
+      "claim_id": "C09",
+      "evidence_class": "explicit_training_data_unknown",
+      "claim": "原数据ID/许可/目标域/预算/seed/prior与完整loss未取得。",
+      "anchors": [
+        "derived/docs/reading-notes.md",
+        "sources/manifest.json"
+      ],
+      "limitation": "不能据unsupervised推不存在高质量目标域数据或完全不训练。"
+    },
+    {
+      "claim_id": "C10",
+      "evidence_class": "explicit_temporal_information_unknown",
+      "claim": "历史/未来/state/时间loss/指标/视频评价未知，b43FlowNet2书目不证明实际flow或时间实现。",
+      "anchors": [
+        "derived/docs/reading-notes.md",
+        "prior:collection/raw/mie0027-crossref001.json"
+      ],
+      "limitation": "摘要未提时间同样不证明不存在，不作因果性/无闪烁判断。"
+    },
+    {
+      "claim_id": "C11",
+      "evidence_class": "bounded_retrieval_and_semantic_classification",
+      "claim": "13普通回执/浏览器全终态；redirect与coredata非正文；403两payload等字节不同SHA、429后191.6s单次FULL401/格式406。",
+      "anchors": [
+        "derived/docs/acquisition-progress.json",
+        "derived/docs/http-payload-semantic-review.json",
+        "derived/docs/publisher-browser-attempt001.json",
+        "sources/manifest.json"
+      ],
+      "limitation": "OA许可已核不能说未开放；没有重试绕验证/借凭据，不能由失败推全文不存在。"
+    },
+    {
+      "claim_id": "C12",
+      "evidence_class": "bounded_code_and_author_availability",
+      "claim": "精确题名/模型/作者GitHub查询与coauthor主页未定位可核正文或CBGAN官方实现。",
+      "anchors": [
+        "derived/docs/github-search001.json",
+        "derived/docs/github-search002.json",
+        "derived/docs/github-author-search001.json",
+        "derived/docs/github-author-search002.json",
+        "derived/docs/acquisition-progress.json"
+      ],
+      "limitation": "近名repo不当作者代码；主页literal关键词0不是全网/私人/异题代码不存在证明。"
+    },
+    {
+      "claim_id": "C13",
+      "evidence_class": "frozen_scope_lead_disposition",
+      "claim": "2007双边grid/HDRNet/FlowNet2等普通书目按冻结范围处置，未出现新合格MobileIE特定接续/实现或时间一致性联系。",
+      "anchors": [
+        "derived/docs/lead-dispositions.json",
+        "derived/docs/citation-provenance.json"
+      ],
+      "limitation": "不因video关键词无限扩展；新具体合格证据须Gate1增补，不忽略。"
+    },
+    {
+      "claim_id": "C14",
+      "evidence_class": "limited_research_value_handoff",
+      "claim": "表示/guide/grid/fullres成本和运动曝光噪声敏感性有补证价值，需同数据预算/时空感知/实际端侧控制。",
+      "anchors": [
+        "derived/report/analysis.md",
+        "derived/docs/reading-notes.md"
+      ],
+      "limitation": "基础grid/affine/cycleGAN已有先例不当创新；合法正文/实现后追加复审，Gate3未执行。"
+    }
+  ]
+}
