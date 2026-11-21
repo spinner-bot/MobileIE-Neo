@@ -1,0 +1,203 @@
+{
+  "resource_id": "MIE-0023",
+  "at": "2026-11-21T13:05:42.572109+08:00",
+  "source_aliases": {
+    "code": "fixed upstream-code-manifest source_path:L-R",
+    "prior": "workstation-relative closed22 resource file, SHA pinned in source-correspondence-audit",
+    "other": "resource-relative"
+  },
+  "claims": [
+    {
+      "claim_id": "C01",
+      "evidence_class": "primary_fixed_identity",
+      "claim": "作者论文链接repo，固定3b46739/tree8164518；README引用作者与committer用户名分开。",
+      "anchors": [
+        "identity.json",
+        "derived/docs/source-correspondence-audit.json"
+      ],
+      "limitation": "不推owner=作者或NanUshio真实身份，不推commitdate为首次发表。"
+    },
+    {
+      "claim_id": "C02",
+      "evidence_class": "source_bytes_integrity",
+      "claim": "150件2121784B与已关闭22及原ZIP/官方blob同SHA，3PTH重新CRC。",
+      "anchors": [
+        "derived/docs/author-source-manifest.json",
+        "derived/docs/source-correspondence-audit.json"
+      ],
+      "limitation": "原件完整非模型可执行/历史结果正确证书。"
+    },
+    {
+      "claim_id": "C03",
+      "evidence_class": "actual_bounded_reading_reuse",
+      "claim": "同SHA复用46适用全文/部分函数及12核查，新增入口/makefile/sampler/datasethelper静态读。",
+      "anchors": [
+        "derived/docs/reading-notes.md",
+        "derived/docs/project-entry-audit.json",
+        "derived/docs/source-correspondence-audit.json"
+      ],
+      "limitation": "128准备文本不等全部逐行读，同家族不计独立实证。"
+    },
+    {
+      "claim_id": "C04",
+      "evidence_class": "actual_project_media_view",
+      "claim": "三SVG框图与单kodim01原输入Yplane实际看，TM图示不能替代代码实现。",
+      "anchors": [
+        "derived/docs/visual-review.json",
+        "derived/docs/media-assets.json"
+      ],
+      "limitation": "字体替代重叠是衍生限制；无模型预测/GT/视频效果结论。"
+    },
+    {
+      "claim_id": "C05",
+      "evidence_class": "static_model_input_and_time",
+      "claim": "默认1Y残差/UV回拼，FST平方与当前帧全局/局部attention，无跨输出状态。",
+      "anchors": [
+        "code:pyjnd/models/iccv_yan_2025_lite_model.py:335-454",
+        "code:pyjnd/models/iccv_yan_2025_lite_model.py:474-576"
+      ],
+      "limitation": "不等照搬RGB Retinex或视频一致性，具体空间先例不直接证明创新。"
+    },
+    {
+      "claim_id": "C06",
+      "evidence_class": "literal_parameter_and_version_scope",
+      "claim": "Lite24949train/1861slim，wrapper统计两套；当前baseline41413/3257与论文表版本待对账。",
+      "anchors": [
+        "prior:resources/MIE-0022/derived/docs/static-arithmetic-and-loss-review.json",
+        "prior:resources/MIE-0022/derived/docs/first-convolution-opcode-trace.json",
+        "code:scripts/model_stats.py:20-41"
+      ],
+      "limitation": "源算术/首conv字面非数值加载或历史映射，假想3x3不作事实修正。"
+    },
+    {
+      "claim_id": "C07",
+      "evidence_class": "static_loss_scope",
+      "claim": "源码conservation线性非paper平方、pred单边softclip；K10默认频带集合相同，无时间/相位约束。",
+      "anchors": [
+        "code:pyjnd/losses/freq_domain_loss.py:99-173",
+        "code:pyjnd/archs/general_learned_jnd_arch.py:166-221",
+        "prior:resources/MIE-0022/derived/docs/static-arithmetic-and-loss-review.json"
+      ],
+      "limitation": "不把默认zigzag判错，也不把全loss等同冗余MSE或时间阈值。"
+    },
+    {
+      "claim_id": "C08",
+      "evidence_class": "static_config_and_precision",
+      "claim": "get_model只显式cfgname/precision/path，固定effectyaml再读结构；path存在即load，half新slim精度需核。",
+      "anchors": [
+        "code:pyjnd/api_helpers.py:10-23",
+        "code:pyjnd/default_model_configs.py:35-54",
+        "code:pyjnd/models/iccv_yan_2025_lite_model.py:474-534"
+      ],
+      "limitation": "默认fp32配置可对上；未实跑，不把自定义/half条件称默认故障。"
+    },
+    {
+      "claim_id": "C09",
+      "evidence_class": "static_inference_workflows",
+      "claim": "单文件每帧重载，批每video复用；pad/crop/归一化/UV/保存均在网络之外。",
+      "anchors": [
+        "code:filt_one_video.py:43-99",
+        "code:filt_one_dataset.py:87-172",
+        "derived/docs/project-entry-audit.json"
+      ],
+      "limitation": "不是全部入口都每帧重载，无全pipeline时延或视频稳定认证。"
+    },
+    {
+      "claim_id": "C10",
+      "evidence_class": "static_cli_and_defaults",
+      "claim": "批Y4M/image参数分支continue，单文件仍有Y4M；CLI target有效值由cfg控制，回归默认onlyori。",
+      "anchors": [
+        "code:filt_one_dataset.py:48-82",
+        "code:regr_filt.sh:1-37",
+        "code:codecs/script/regr_calbdrate.sh:22-60",
+        "derived/docs/project-entry-audit.json"
+      ],
+      "limitation": "不把库整体判无Y4M，也不把原样ori自比当完整表复现。"
+    },
+    {
+      "claim_id": "C11",
+      "evidence_class": "static_training_and_data_scope",
+      "claim": "100K默认训练与row-randomsplit/teacher目标，datasethelper提取本地包未实现真正下载。",
+      "anchors": [
+        "code:pyjnd/data/dataset_api.py:85-142",
+        "code:pyjnd/data/data_sampler.py:22-52",
+        "prior:resources/MIE-0022/derived/docs/dataset-metadata-review.json"
+      ],
+      "limitation": "实际成员/语义重叠/原许可/历史运行未知，未反序列化split或执行训练。"
+    },
+    {
+      "claim_id": "C12",
+      "evidence_class": "static_validation_protocol",
+      "claim": "对teacher的uint8clip指标与多best/编码ori目标分开，eval逐图重建slim。",
+      "anchors": [
+        "code:pyjnd/archs/general_learned_jnd_arch.py:227-384"
+      ],
+      "limitation": "不能拼不同checkpoint best或将teacher指标当人眼/时间表现。"
+    },
+    {
+      "claim_id": "C13",
+      "evidence_class": "static_codec_information_scope",
+      "claim": "默认首帧intra与周期200可共存，8bit420/指标裁边模型是当前边界。",
+      "anchors": [
+        "code:codecs/script/encode.py:260-510",
+        "code:codecs/script/encode.py:555-584",
+        "code:codecs/script/regr_encode.sh:50-62"
+      ],
+      "limitation": "扩帧不自动AllIntra，桌面网耗时不含IO/编码/热/内存/手机预算。"
+    },
+    {
+      "claim_id": "C14",
+      "evidence_class": "static_BD_aggregation_scope",
+      "claim": "整体先均值RD再Akima，不是每序列BD平均；ALL不同指标集合与baseline+Lf行对应留档。",
+      "anchors": [
+        "code:codecs/script/calbdrate.py:43-146",
+        "code:results/parse_csv_to_md.py:65-103",
+        "prior:resources/MIE-0022/derived/docs/published-result-table-rows.json"
+      ],
+      "limitation": "独立去缺失可能样本不同，未知raw是否发生；未执行BD或证明时间质量。"
+    },
+    {
+      "claim_id": "C15",
+      "evidence_class": "source_environment_license_scope",
+      "claim": "README环境与FDU非商业/CC声明、codec未固定revision和requirements未全锁分开。",
+      "anchors": [
+        "code:README.md:20-35",
+        "code:README.md:282-286",
+        "derived/docs/project-entry-audit.json",
+        "code:LICENSE-FDU-Vip-Lab.txt:1-12"
+      ],
+      "limitation": "未安装/编译/运行，不认证原数据/第三方许可或重建完整二进制。"
+    },
+    {
+      "claim_id": "C16",
+      "evidence_class": "inert_weight_and_split_evidence",
+      "claim": "三PTHCRC/操作码及splitPKL字面结构复用，原件有权重不等实现缺失。",
+      "anchors": [
+        "derived/docs/source-correspondence-audit.json",
+        "prior:resources/MIE-0022/derived/docs/checkpoint-container-review.json",
+        "prior:resources/MIE-0022/derived/docs/split-pickle-opcode-inventory.json"
+      ],
+      "limitation": "无torch.load/pickle.load/对象重构，不认证预测、phase成员或权重对应表。"
+    },
+    {
+      "claim_id": "C17",
+      "evidence_class": "evidence_limited_external_results",
+      "claim": "项目宣称逐视频结果分享可列文件/公开码通过，但普通下载未产出实际CSV内容。",
+      "anchors": [
+        "prior:resources/MIE-0022/derived/docs/supplement-acquisition-review.json",
+        "sources/manifest.json"
+      ],
+      "limitation": "不重复网页尝试，不说文件不存在/特定认证拦截/已读；Git150件不能代平台外补充。"
+    },
+    {
+      "claim_id": "C18",
+      "evidence_class": "bounded_future_controls",
+      "claim": "交接teacher/亮度/时序信息、公共RD样本/版本、空间时间与全手机成本控制，建议受限结项。",
+      "anchors": [
+        "derived/report/analysis.md",
+        "derived/docs/reading-notes.md"
+      ],
+      "limitation": "0研究源码/模型/训练/编码/指标/GPU/Gate3，不提前综合或确认方案有效新颖。"
+    }
+  ]
+}
