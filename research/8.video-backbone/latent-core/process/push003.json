@@ -1,0 +1,44 @@
+{
+  "at": "2026-11-21T11:29:22.055978+08:00",
+  "author": "Codex  (sqs_A100)",
+  "branch": "research/O1",
+  "phase": "Passed original CUDA007, preserved outer143 and recovered execution only, fresh two-seed formal start",
+  "phase_commits": 41,
+  "verified_remote_head": "28af19fa1ab131880e0f6964594716088bf11eab",
+  "source_freeze_counts_unchanged": [
+    26,
+    44,
+    1
+  ],
+  "CUDA_qualification_discarded_updates": 4,
+  "qualification_repeated": false,
+  "old_outer_tool_exit_code": 143,
+  "new_independent_session_parent": {
+    "pid": 3852634,
+    "start_ticks": 117153546
+  },
+  "fresh_workers": [
+    {
+      "seed": 0,
+      "pid": 3852927,
+      "start_ticks": 117158126,
+      "GPU": 1
+    },
+    {
+      "seed": 1,
+      "pid": 3852924,
+      "start_ticks": 117158111,
+      "GPU": 2
+    }
+  ],
+  "checks": [
+    "actual fresh worker handles live and UUID matched",
+    "unchanged named sources and original budgets",
+    "changed local Markdown links resolve",
+    "git diff --check passed",
+    "tracked clean; live states/traces not declared final",
+    "origin fetched and no O1 divergence"
+  ],
+  "goal": "active; no formal quality or method conclusion yet",
+  "future_merge_policy": "--no-ff; no rebase/squash/force"
+}
