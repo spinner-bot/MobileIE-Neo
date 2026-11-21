@@ -1,0 +1,96 @@
+--- MIE0002officialmodel/lle.py
++++ MIE0020lle6
+@@ -1,6 +1,6 @@
+ import torch.nn as nn
+ import torch
+-from .utils import (
++from .utils_IWO import (
+     MBRConv5,
+     MBRConv3,
+     MBRConv1,
+@@ -34,24 +34,42 @@
+             MBRConv1(1, channels, rep_scale=rep_scale),
+             nn.Sigmoid()
+         )
+-        self.tail = MBRConv3(channels, 3, rep_scale=rep_scale)
+-        self.tail_warm = MBRConv3(channels, 3, rep_scale=rep_scale)
++        self.tail = MBRConv3(channels, 6, rep_scale=rep_scale)  # 6通道: 3光照 + 3去噪残差
++        self.tail_warm = MBRConv3(channels, 6, rep_scale=rep_scale)
+         self.drop = DropBlock(3)
+         
+     def forward(self, x):
++        x_in = x  # 保存原始输入
+         x0 = self.head(x)
+         x1 = self.body(x0)      
+         x2 = self.att(x1)
+         max_out, _ = torch.max(x2 * x1 , dim=1, keepdim=True)   
+         x3 = self.att1(max_out)
+         x4 = torch.mul(x2, x3) * x1
+-        return self.tail(x4)
++        # 带残差去噪的 Retinex
++        out = self.tail(x4)
++        illu_map = torch.sigmoid(out[:, 0:3, :, :]) * 0.99 + 0.01  # 前3通道: RGB光照图
++        noise_res = out[:, 3:6, :, :]  # 后3通道: 去噪残差
++        # 除法恢复亮度 + 残差抵消放大的噪声
++        enhanced = (x_in / illu_map) + noise_res
++        return enhanced
+ 
+     def forward_warm(self, x):
++        x_in = x  # 保存原始输入
+         x = self.drop(x)
+         x = self.head(x)
+         x = self.body(x)
+-        return self.tail(x), self.tail_warm(x)
++        # 带残差去噪的 Retinex
++        out1 = self.tail(x)
++        illu1 = torch.sigmoid(out1[:, 0:3, :, :]) * 0.99 + 0.01  # 前3通道: RGB光照图
++        res1 = out1[:, 3:6, :, :]  # 后3通道: 去噪残差
++        enhanced1 = (x_in / illu1) + res1
++        
++        out2 = self.tail_warm(x)
++        illu2 = torch.sigmoid(out2[:, 0:3, :, :]) * 0.99 + 0.01  # 前3通道: RGB光照图
++        res2 = out2[:, 3:6, :, :]  # 后3通道: 去噪残差
++        enhanced2 = (x_in / illu2) + res2
++        return enhanced1, enhanced2
+ 
+     def slim(self):
+         net_slim = MobileIELLENetS(self.channels)
+@@ -95,15 +113,34 @@
+             nn.Conv2d(1, channels, 1, 1),
+             nn.Sigmoid()
+         )
+-        self.tail = nn.Conv2d(channels, 3, 3, 1, 1)
++        self.tail = nn.Conv2d(channels, 6, 3, 1, 1)  # 6通道: 3光照 + 3去噪残差
+         
+     def forward(self, x):
++        x_in = x  # 保存原始输入
+         x0 = self.head(x)
+         x1 = self.body(x0)
+         x2 = self.att(x1)
+         max_out, _ = torch.max(x2 * x1, dim=1, keepdim=True)   
+         x3 = self.att1(max_out)
+         x4 = torch.mul(x3, x2) * x1
+-        return self.tail(x4)
+-    
+-    
++        # 带残差去噪的 Retinex
++        out = self.tail(x4)
++        illu_map = torch.sigmoid(out[:, 0:3, :, :]) * 0.99 + 0.01  # 前3通道: RGB光照图
++        noise_res = out[:, 3:6, :, :]  # 后3通道: 去噪残差
++        enhanced = (x_in / illu_map) + noise_res
++        return enhanced
++
++    def forward_warm(self, x):
++        x_in = x  # 保存原始输入
++        x = self.head(x)
++        x = self.body(x)
++        # 带残差去噪的 Retinex
++        out = self.tail(x)
++        illu_map = torch.sigmoid(out[:, 0:3, :, :]) * 0.99 + 0.01  # 前3通道: RGB光照图
++        noise_res = out[:, 3:6, :, :]  # 后3通道: 去噪残差
++        enhanced = (x_in / illu_map) + noise_res
++        return enhanced, enhanced
++
++    def slim(self):
++        """Slim version already, return self"""
++        return self

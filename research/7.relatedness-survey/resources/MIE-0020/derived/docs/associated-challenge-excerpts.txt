@@ -1,0 +1,436 @@
+===PHYSICALPAGE3===
+Table 1. Evaluation and Rankings in the NTIRE 2026 Efficient Low Light Image Enhancement Challenge.
+Team SSIM (Rank) LPIPS (Rank) DISTS (Rank) LIQE (Rank) MUSIQ (Rank) Q-Align (Rank) Params Final Rank
+MiVideo 0.5654 (8) 0.3632 (1) 0.1376 (1) 3.2561 (1) 68.8805 (1) 3.7699 (1) 927,049 1
+CVPR TCD 0.5500 (14) 0.4801 (2) 0.2005 (3) 2.8661 (2) 63.9676 (5) 3.3778 (2) 557,618 2
+S3 0.5183 (16) 0.4157 (6) 0.2222 (2) 2.3865 (3) 64.9443 (2) 3.3718 (3) 741,600 3
+sun 0.5688 (7) 0.4446 (9) 0.2231 (4) 2.2382 (7) 62.4497 (4) 3.2333 (4) 907,414 4
+NCHU-CVLab 0.5557 (10) 0.5045 (5) 0.2542 (7) 2.3933 (4) 62.0570 (8) 3.3015 (10) 957,239 5
+NUDT DeepIter 0.5211 (15) 0.5031 (4) 0.2317 (8) 2.4856 (6) 61.7693 (7) 3.2415 (5) 897,160 6
+HIT-LLIE-team 0.5766 (4) 0.5176 (8) 0.2319 (11) 2.2977 (9) 60.3387 (12) 3.2007 (6) 101,922 7
+V ARCHASVISVNIT 0.5575 (9) 0.4408 (17) 0.2414 (5) 1.5017 (12) 62.2430 (3) 3.0040 (8) 890,915 8
+Xie Liu 0.5551 (11) 0.5171 (7) 0.2791 (6) 2.3798 (8) 62.0840 (10) 3.2130 (12) 913,388 9
+JialuXu(IVC) 0.5122 (17) 0.5171 (3) 0.2430 (10) 2.6049 (5) 60.6554 (11) 3.2501 (9) 919,594 10
+Bustaaa 0.5509 (12) 0.5143 (10) 0.2397 (9) 2.1875 (16) 61.2102 (9) 2.9807 (7) 205,361 11
+sysu 701 0.5748 (5) 0.4828 (12) 0.2924 (14) 2.1568 (15) 56.7397 (6) 2.9837 (16) 965,254 12
+SYSU-FVL ELLIE 0.5819 (1) 0.5561 (13) 0.2804 (15) 2.1494 (11) 55.9899 (15) 3.0264 (13) 994,871 13
+KLETech-CEVI 0.5791 (2) 0.5894 (11) 0.3019 (13) 2.1737 (14) 57.5888 (17) 2.9884 (17) 525,429 14
+ShinNam! 0.5789 (3) 0.5711 (15) 0.2677 (17) 2.0345 (13) 53.9563 (16) 2.9956 (11) 726,498 15
+IIMAS-UNAM 0.5504 (13) 0.5536 (14) 0.2805 (12) 2.0970 (10) 57.9082 (14) 3.1247 (14) 890,915 16
+Cidaut AI 0.5731 (6) 0.5282 (16) 0.2882 (16) 1.9627 (17) 54.5327 (13) 2.7156 (15) 797,222 17
+3.1. MiVideo
+Figure 1. The architecture of RetinexFormerRefine proposed by
+MiVideo.
+Description:We adopt RetinexFormerRefine, a
+lightweight variant of RetinexFormer [6], as our base
+model, as shown in Fig. 1. The architecture follows
+the RetinexFormer design with a reduced channel size
+and a convolutional downsampling strategy. To enhance
+representation capability, we incorporate Channel Atten-
+tion (CA) and OCAB modules into the original IGAB
+blocks, forming an improved IGAB V2. In addition,
+we employ structural reparameterization, which utilizes
+multi-branch structures during training and converts them
+into a single-branch structure during inference for higher
+efficiency.
+Implementation:The model is implemented based on the
+BasicSR framework [74] and trained on 8 NVIDIA A100
+GPUs. We use the AdamW optimizer, cosine annealing
+learning rate scheduler, EMA, and learning rate warm-up.
+Training is conducted in three progressive stages with in-
+creasing input resolutions, and structural reparameterization
+is introduced in the final stage. The loss functions include
+L1, LPIPS, DISTS, SSIM, and Weighted TV . The training
+data is aligned using SuperPoint [16] and LightGlue [42],
+and a subset is reserved for validation. Training is iteration-
+based with early stopping, and the best-performing model
+on validation/test sets is selected.
+3.2. CVPR TCD
+Figure 2. Architecture of Team CVPR TCD
+Description:We propose a lightweight grayscale-guided
+cross-attention transformer network for efficient low-light
+image enhancement, as illustrated in Fig. 2. The model fol-
+lows a dual-branch encoder–decoder architecture, where the
+RGB branch employs transformer blocks to capture global
+contextual information, while a parallel grayscale branch
+
+===PHYSICALPAGE5===
+3.5. NCHU-CVLab
+Intensity Map
+HVT HV Color MapC
+HVI Color Transform Enhancement
+Network
+Predicted
+Intensity Map
+Predicted
+HV Color Map
+PHVIT
+input output
+Figure 5. Architecture of NCHU-CVLab.
+Description:We proposeEfficient-HVI, a lightweight low-
+light image enhancement network built upon the HVI color
+space [84, 85], as shown in Fig. 5. The method first trans-
+forms the input image into decoupled intensity and chro-
+matic components, where the polarized hue-saturation rep-
+resentation alleviates red discontinuity while a learnable in-
+tensity collapse function suppresses noise in extremely dark
+regions. The network adopts a dual-branch architecture to
+separately model illumination adjustment and color restora-
+tion, and introduces cross-branch interaction to enhance
+feature fusion. This design enables efficient restoration with
+improved brightness consistency and color fidelity.
+Implementation:The model is implemented in PyTorch
+and trained on four NVIDIA RTX 3090 GPUs. Training is
+conducted for 500 epochs using a batch size of 8 on448×
+448image patches. The initial learning rate is set to1×
+10−4 and scheduled with cosine restart, combined with a
+three-epoch warm-up strategy. The dataloader employs 16
+worker threads with data shuffling, and gradient clipping is
+applied to stabilize training.
+3.6. NUDT DeepIter
+Description:We proposeFinalEfficientEnhancerV2, an
+efficient U-Net based architecture for low-light image en-
+hancement following the encoder–decoder paradigm [12,
+82], as shown in Fig. 6. The network consists of three main
+components: an encoder with Partial Convolution (PConv)
+blocks for efficient feature extraction, a bottleneck with
+Dark Enhancement Blocks for adaptive low-light process-
+ing, and a decoder with skip connections to preserve high-
+frequency details. The PConv module, inspired by partial
+convolution [43], processes only a subset of channels to
+significantly reduce computational cost. Additionally, Uni-
+fied Inverted Bottleneck (UIB) blocks derived from Mo-
+bileNetV3 [29] are used for lightweight design, while Dark
+Enhancement Blocks incorporate adaptive gating mecha-
+nisms similar to NAFNet [11] to selectively enhance dark
+regions while maintaining well-lit areas.
+Implementation:The model is implemented in PyTorch
+(Python 3.8) and trained for 600 epochs on the LOL
+dataset [80]. We adopt the AdamW optimizer with an ini-
+tial learning rate of5×10 −5 and apply cosine annealing
+Input Encoder1
+Down1Encoder2
+Down2Bottleneck
+Up1 Decoder1
+Up2 Decoder2 Output
+Figure 6. Architecture of Team NUDT DeepIter.
+scheduling. The training objective is a weighted combi-
+nation of multiple loss functions, including MS-SSIM, L1,
+perceptual, dark region, color, frequency, and SNR losses.
+The model is designed to be lightweight and efficient, con-
+taining approximately 450K parameters, enabling fast infer-
+ence while maintaining high enhancement quality.
+3.7. HIT-LLIE-team
+Description:We propose an ultra-lightweight fully convo-
+lutional network, termed MobileIE-6Ch, for efficient low-
+light image enhancement, built upon the MobileIE base-
+line [83]. The architecture introduces three key compo-
+nents: (1) a unified 6-channel output head that jointly mod-
+els RGB illumination and noise residual, (2) a Multi-Branch
+Reparameterization (MBR) backbone for enhanced feature
+extraction, and (3) a dual-attention modulation module for
+adaptive feature refinement. During training, multi-branch
+convolutions (e.g.,5×5,3×3,1×1, and asymmetric ker-
+nels) are employed and later structurally reparameterized
+into single convolutions for inference, following [18], en-
+abling a highly compact model with negligible inference
+overhead. The network follows a Retinex-based formula-
+tion [37], where the enhanced image is reconstructed via
+predicted illumination and residual components, allowing
+simultaneous brightness enhancement and noise suppres-
+sion.
+Implementation:The model is trained using the Adam op-
+timizer [35] with a batch size of 16 for 800 epochs under a
+Distributed Data Parallel (DDP) setting. Training is divided
+into a 20-epoch warm-up stage (learning rate1×10 −6) and
+a main training stage (initial learning rate1.5×10 −4) with
+cosine annealing scheduling [49]. A hybrid loss function is
+adopted, combining Charbonnier loss [9], SSIM loss [77],
+color consistency, and frequency-domain constraints. High-
+resolution images are processed using random cropping
+(768×768patches), and a 5-fold cross-validation strategy
+is applied. Additional stabilization techniques include gra-
+dient clipping (threshold 0.5) and careful illumination reg-
+ularization during warm-up.
+3.8. V ARCHASVISVNIT
+Description:We proposeSCALENet, an illumination-
+aware deep network for low-light image enhancement that
+
+===PHYSICALPAGE14===
+A. Teams and Affiliations
+NTIRE 2026 team
+Title:NTIRE 2026 Efficient Low Light Image Enhance-
+ment Challenge
+Members:
+Jiebin Yan1 (yanjiebin@jxufe.edu.cn),
+Chenyu Tu1 (2202420256@stu.jxufe.edu.cn),
+Weixia Zhang2 (zwx8981@sjtu.edu.cn),
+Zhihua Wang3 (zhihua.wang@my.cityu.edu.hk),
+Peibei Cao4 (cpb@nuist.edu.cn),
+Qinghua Lin5 (dear.muhua@gmail.com),
+Yuming Fang1 (fa0001ng@e.ntu.edu.sg),
+Xiaoning Liu6 (liuxiaoning2016@sina.com),
+Zongwei Wu7 (zongwei.wu@uni-wuerzburg.de),
+Zhuyun Zhou7 (zhuyun.zhou@uni-wuerzburg.de),
+Radu Timofte7 (radu.timofte@uni-wuerzburg.de)
+Affiliations:
+1 Jiangxi University of Finance and Economics, China
+2 Shanghai Jiao Tong University, China
+3 Sun Yat-sen University, China
+4 Nanjing University of Information Science and Technol-
+ogy, China
+5 Guangdong University of Technology, China
+6 University of Electronic Science and Technology of
+China, China
+7 Computer Vision Lab, University of W¨urzburg, Germany
+MiVideo
+Title:RetinexFormerRefine: Lightweight RetinexFormer
+with Spatial and Channel Attention
+Members:
+Cheng Li1 (licheng8@xiaomi.com),
+Ziyi Wang1,
+Peishuai Zha1,
+Yuqiang Yang1,
+Jinao Song1,
+Guangsheng Tang1,
+Yan Chen1,
+Long Bao1,
+Heng Sun1
+Affiliations:
+1 Xiaomi Inc., Beijing, China
+CVPR TCD
+Title:Grey-guided Cross-Attention Network with FFT
+Phase Transfer for Efficient Low-Light Image Enhancement
+Members:
+MD Raqib Khan1 (khanmd@tcd.ie),
+Santosh Kumar Vipparthi2 (skvipparthi@iitrpr.ac.in),
+Subrahmanyam Murala1 (muralas@tcd.ie)
+Affiliations:
+1 Trinity College Dublin, The University of Dublin
+2 Indian Institute of Technology Ropar
+S3
+Title:Norm U-Net: A Lightweight U-Net with
+Distribution-Normalizing Preprocessing for Efficient Low-
+Light Image Enhancement
+Members:
+Shimon Murai1 (shimonmurai@gmail.com),
+Teppei Kurita1 (Teppei.Kurita@sony.com),
+Ryuta Satoh1 (Ryuta.Satoh@sony.com),
+Yusuke Moriuchi1 (Yusuke.Moriuchi@sony.com)
+Affiliations:
+1 Sony Semiconductor Solutions Corporation
+sun
+Title:Team sun: A Compact Retinex-Restormer with Six-
+Metric Checkpoint Selection
+Members:
+Shang-Quan Sun1 (shangquan.sun@ntu.edu.sg),
+Chenghao Qian2 (tscq@leeds.ac.uk),
+Ruoyu Chen3 (cryexplorer@gmail.com),
+Zhirui Liu4 (liuzhr28@mail2.sysu.edu.cn),
+Wenqi Ren4 (renwq3@mail.sysu.edu.cn)
+Affiliations:
+1 Nanyang Technological University, Singapore
+2 University of Leeds, UK
+3 University of Chinese Academy of Sciences, China
+4 Sun Yat-sen University (Shenzhen Campus), China
+NCHU-CVLab
+Title:Efficient-HVI: Efficient Low-light Image Enhance-
+ment via HVI color space
+Members:
+Zhidong Zhu1 (zhidong96@foxmail.com),
+Bangshu Xiong2 (xiongbs@126.com),
+Qiaofeng Ou2 (ou.qiaofeng@nchu.edu.cn),
+Zhibo Rao2 (raoxi36@foxmail.com),
+Wei Li2 (2250432002@email.szu.edu.cn)
+Affiliations:
+1 Beihang University, China
+2 Nanchang Hangkong University, China
+NUDT DeepIter
+Title:FinalEfficientEnhancerV2 for Low-Light Enhance-
+ment
+Members:
+Haocheng Wu1 (3678535280@qq.com),
+Changjian Wang1 (wangcj@nudt.edu.cn),
+Xuyao Deng1 (dengxuyao@nudt.edu.cn),
+Kele Xu1 (xukelele@nudt.edu.cn),
+Hui Geng1 (gengh666666@163.com),
+Qisheng Xu1 (qishengxu@nudt.edu.cn)
+Affiliations:
+1 National University of Defense Technology, China
+HIT-LLIE-team
+
+===PHYSICALPAGE15===
+Title:MobileIE-6Ch: Efficient Low-Light Image Enhance-
+ment for NTIRE 2026
+Members:
+Xinbai Wang1 (2024112824@stu.hit.edu.cn),
+Duo Liu1 (duoliu@stu.hit.edu.cn)
+Affiliations:
+1 Harbin Institute of Technology, Harbin, China
+V ARCHASVISVNIT
+Title:SCALENet: Scene-Conditioned Adaptive Lumi-
+nance Enhancement Network
+Members:
+Arya Shah1 (aryashah616@gmail.com),
+Hriday Kamlesh Samdani 1 (hridaysam-
+dani2330@gmail.com),
+Kishor Upla1,
+Kiran Raja2
+Affiliations:
+1 Sardar Vallabhbhai National Institute of Technology
+(SVNIT), Surat, India
+2 Norwegian University of Science and Technology
+(NTNU), Norway
+Xie Liu
+Title:HE-Net: An Efficient Network for Low-Light Image
+Enhancement via Histogram Equalization Refinement
+Members:
+Chen Xie1 (2048872092@qq.com),
+Jie Liu1 (blessingbest@163.com)
+Affiliations:
+1 Harbin Institute of Technology, China
+JialuXu(IVC)
+Title:JialuXu(IVC)
+Members:
+Jialu Xu1 (j565xu@uwaterloo.ca)
+Affiliations:
+1 IVC Lab, University of Waterloo, Canada
+Bustaaa
+Title:Lightweight Dual-Branch Network for Efficient Low-
+Light Image Enhancement
+Members:
+Haodian Wang1,2 (wanghaodian@mail.ustc.edu.cn)
+Affiliations:
+1 University of Science and Technology of China, China
+2 CHN Energy Digital Intelligence Technology Develop-
+ment (Beijing) Co., Ltd., China
+sysu701
+Title:Team sysu701’s Technical Report for NTIRE-2026
+LLIE
+Members:
+Hao Zhang1 (zhangh758@mail2.sysu.edu.cn),
+Hongxi Huang1 (huanghx93@mail2.sysu.edu.cn),
+Jinyi Xu1 (xujy297@mail2.sysu.edu.cn),
+Pengfei Wei1 (weipf@mail2.sysu.edu.cn),
+Yanhui Li1 (liyh665@mail2.sysu.edu.cn)
+Affiliations:
+1 School of Cyber Science and Technology, Sun Yat-sen
+University, China
+SYSU-FVL-ELLIE
+Title:Lightweight Low-light Ultra-High-Definition Image
+Enhancement with Hybrid CNN-Attention Network
+Members:
+Zhi Jin1,2,3 (jinzh26@mail.sysu.edu.cn),
+Le Su1 (sule@mail2.sysu.edu.cn),
+Luwei Tu1 (tulw@mail2.sysu.edu.cn),
+Fei Tan1 (tanf29@mail2.sysu.edu.cn),
+Jiawei Wu1 (wujw97@mail2.sysu.edu.cn)
+Affiliations:
+1 School of Intelligent Systems Engineering, Shenzhen
+Campus of Sun Yat-sen University, Shenzhen, China
+2 Guangdong Provincial Key Laboratory of Fire Science
+and Intelligent Emergency Technology, Shenzhen, China
+3 Guangdong Provincial Key Laboratory of Robotics and
+Digital Intelligent Manufacturing Technology, Guangzhou,
+China
+KLETech-CEVI
+Title:ResLNet: Lightweight Residual Network for Low-
+Light Image Enhancement
+Members:
+Nikhil Akalwadi1,4 (nikhil.akalwadi@kletech.ac.in),
+Harshitha M Banakar1,4 (01fe23bcs193@kletech.ac.in),
+Sneha S Channappagoudar 1,4
+(01fe23bcs501@kletech.ac.in),
+Spurti S M K1,4 (01fe23bcs286@kletech.ac.in),
+Tejas Kumar M2,4 (01fe23bci052@kletech.ac.in),
+Ramesh Ashok Tabib3,4 (ramesh t@kletech.ac.in),
+Uma Mudenagudi3,4 (uma@kletech.ac.in)
+Affiliations:
+1 School of Computer Science and Engineering, KLE
+Technological University, India
+2 School of Computer Science and Engineering (AI), KLE
+Technological University, India
+3 Department of Electronics and Communication Engineer-
+ing, KLE Technological University, India
+4 Center for Visual Intelligence (CEVI), KLE Technological
+University, Hubballi, Karnataka, India
+ShinNam!
+Title:BlindLLIENet: A Lightweight Context-Adaptive
+Network for Real-World Image Restoration
+Members:
+Ju-Hyeon Nam1 (jhnam0514@inha.edu),
+Hyemin Shin2 (shm9921@keti.re.kr),
+
+===PHYSICALPAGE17===
+Table 2. Evaluation and Rankings in the NTIRE 2026 Efficient Low Light Image Enhancement Challenge. Gray indicates groups that
+participated in the final testing but did not submit a technical report; these groups are therefore omitted from the main text.
+Team SSIM (Rank) LPIPS (Rank) DISTS (Rank) LIQE (Rank) MUSIQ (Rank) Q-Align (Rank) Params Final Rank
+MiVideo 0.5654 (16) 0.3632 (1) 0.1376 (1) 3.2561 (1) 68.8805 (1) 3.7699 (1) 927,049 1
+XJRes 0.5807 (2) 0.4126 (2) 0.2307 (6) 2.1762 (12) 63.5260 (5) 3.3665 (4) 993,014 2
+CVPR TCD 0.5500 (23) 0.4801 (9) 0.2005 (2) 2.8661 (3) 63.9676 (4) 3.3778 (2) 557,618 3
+S3 0.5183 (25) 0.4157 (3) 0.2222 (4) 2.3865 (6) 64.9443 (3) 3.3718 (3) 741,600 4
+sun 0.5688 (14) 0.4446 (6) 0.2231 (5) 2.2382 (10) 62.4497 (6) 3.2333 (8) 907,414 5
+NTR 0.5570 (18) 0.4732 (8) 0.2095 (3) 2.3064 (8) 67.7654 (2) 3.1919 (11) 1,034,247 6
+NUDT DeepIter 0.5211 (24) 0.5031 (12) 0.2317 (7) 2.4856 (4) 61.7693 (10) 3.2415 (7) 897,160 7
+NCHU-CVLab 0.5557 (19) 0.5045 (13) 0.2542 (13) 2.3933 (5) 62.0570 (9) 3.3015 (5) 957,239 8
+HIT-LLIE-team 0.5766 (9) 0.5176 (17) 0.2319 (8) 2.2977 (9) 60.3387 (14) 3.2007 (10) 101,922 9
+Xie Liu 0.5551 (20) 0.5171 (15) 0.2791 (16) 2.3798 (7) 62.0840 (8) 3.2130 (9) 913,388 10
+JialuXu(IVC) 0.5122 (26) 0.5171 (16) 0.2430 (12) 2.6049 (3) 60.6554 (12) 3.2501 (6) 919,594 11
+UPT-eLLIE 0.5757 (10) 0.4254 (4) 0.2396 (9) 1.9806 (19) 60.4973 (13) 2.9532 (22) 1,043,743 12
+V ARCHASVISVNIT 0.5575 (17) 0.4408 (5) 0.2414 (11) 1.5017 (26) 62.2430 (7) 3.0040 (16) 890,915 13
+Bustaaa 0.5509 (21) 0.5143 (14) 0.2397 (10) 2.1875 (11) 61.2102 (11) 2.9807 (20) 205,361 14
+SYSU-FVL ELLIE 0.5819 (1) 0.5561 (21) 0.2804 (17) 2.1494 (15) 55.9899 (19) 3.0264 (15) 994,871 15
+UNet YYDS 0.5774 (8) 0.5224 (18) 0.2671 (14) 1.8383 (23) 58.6977 (15) 3.0798 (13) 670,544 16
+sysu 701 0.5748 (11) 0.4828 (10) 0.2924 (21) 2.1568 (14) 56.7397 (18) 2.9837 (19) 965,254 17
+KLETech-CEVI 0.5791 (5) 0.5894 (24) 0.3019 (25) 2.1737 (13) 57.5888 (17) 2.9884 (18) 525,429 18
+ShinNam! 0.5789 (6) 0.5711 (23) 0.2677 (15) 2.0345 (18) 53.9563 (23) 2.9956 (17) 726,498 19
+IIMAS-UNAM 0.5504 (22) 0.5536 (20) 0.2805 (18) 2.0970 (16) 57.9082 (16) 3.1247 (12) 890,915 20
+CVIR Lab 0.5805 (3) 0.5968 (25) 0.2946 (24) 2.0349 (17) 51.5142 (25) 3.0589 (14) 970,566 21
+SDUMVP-LLIE 0.5721 (13) 0.4583 (7) 0.2870 (19) 1.6798 (25) 54.5276 (22) 2.9285 (23) 994,871 22
+PAI Lab 0.5673 (15) 0.4876 (11) 0.2941 (22) 1.8466 (22) 54.5546 (20) 2.8489 (24) 880,583 23
+Conqueror 0.5802 (4) 0.5687 (22) 0.2944 (23) 1.8691 (21) 52.1682 (24) 2.9595 (21) 867,224 24
+Cidaut AI 0.5731 (12) 0.5282 (19) 0.2882 (20) 1.9627 (20) 54.5327 (21) 2.7156 (25) 797,222 25
+cvLab 0.5779 (7) 0.6223 (26) 0.3430 (26) 1.8335 (24) 43.9618 (26) 2.6764 (26) 812,663 26
+Amrita LLIR – – – – – – 813,420 –
+Figure 12. Architecture of Team KLETech-CEVI.
+Figure 13. Architecture of Team ShinNam!.
+HGM-Net overview
+Input
+RGB image
+Encoder
+3 scales
+30 / 60 / 90 channels
+skip connections
+Bottleneck
+depthwise residual
+blocks
+SE + GC modules
+Decoder
+upsampling +
+skip fusion
+full-resolution features
+Fusion
+final feature
+combination
+Post-processing
+deterministic presets
+tone / color adjustment
+Output
+enhanced
+RGB
+Global router
+scene-level + dark-level
+routing
+Adaptive controls
+illumination / detail / structure
+chroma / affine strengths
+Local masking
+five soft
+luminance masks
+Enhancement
+branches
+detail branch
+color branch
+expert residuals
+Final submitted model: HGM-Net | 471,640 parameters | 871 KB checkpoint | no ensemble
+Figure 14. Architecture of Team IIMAS-UNAM.

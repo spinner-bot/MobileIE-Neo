@@ -1,0 +1,94 @@
+--- utils.py
++++ utils_IWO.py
+@@ -28,6 +28,9 @@
+             nn.BatchNorm2d(out_channels * rep_scale)
+         ) 
+         self.conv_out = nn.Conv2d(out_channels * rep_scale * 10, out_channels, 1)
++        self.conv_out.weight.requires_grad = False
++        self.weight1 = nn.Parameter(torch.zeros_like(self.conv_out.weight))
++        nn.init.xavier_normal_(self.weight1)
+         
+     def forward(self, inp):   
+         x1 = self.conv(inp)
+@@ -44,7 +47,8 @@
+              self.conv_crossv_bn(x5)],
+             1
+         )
+-        out = self.conv_out(x)
++        final_weight = self.conv_out.weight + self.weight1
++        out = F.conv2d(x, final_weight, self.conv_out.bias)
+         return out 
+ 
+     def slim(self):
+@@ -127,7 +131,8 @@
+              conv_crossh_bn_weight, conv_crossv_bn_weight],
+             0
+         )
+-        weight_compress = self.conv_out.weight.squeeze()
++        #weight_compress = self.conv_out.weight.squeeze()
++        weight_compress = (self.conv_out.weight + self.weight1).squeeze()
+         weight = torch.matmul(weight_compress, weight.permute([2, 3, 0, 1])).permute([2, 3, 0, 1])
+         bias_ = torch.cat(
+             [conv_bias, conv1_bias, conv2_bias,
+@@ -168,6 +173,9 @@
+             nn.BatchNorm2d(out_channels * rep_scale)
+         )
+         self.conv_out = nn.Conv2d(out_channels * rep_scale * 8, out_channels, 1)
++        self.conv_out.weight.requires_grad = False
++        self.weight1 = nn.Parameter(torch.zeros_like(self.conv_out.weight))
++        nn.init.xavier_normal_(self.weight1)
+ 
+     def forward(self, inp):    
+         x0 = self.conv(inp)
+@@ -182,7 +190,8 @@
+              self.conv_crossv_bn(x3)],
+             1
+         )    
+-        out = self.conv_out(x)
++        final_weight = self.conv_out.weight + self.weight1
++        out = F.conv2d(x, final_weight, self.conv_out.bias)
+         return out
+ 
+     def slim(self):
+@@ -258,7 +267,8 @@
+             conv_crossv_bn_bias
+         ], dim=0)
+ 
+-        weight_compress = self.conv_out.weight.squeeze()
++        #weight_compress = self.conv_out.weight.squeeze()
++        weight_compress = (self.conv_out.weight + self.weight1).squeeze()
+         weight = torch.matmul(weight_compress, weight.view(weight.size(0), -1))
+         weight = weight.view(self.conv_out.out_channels, self.in_channels, 3, 3)
+ 
+@@ -282,11 +292,16 @@
+             nn.BatchNorm2d(out_channels * rep_scale)
+         )
+         self.conv_out = nn.Conv2d(out_channels * rep_scale * 2, out_channels, 1)
+-
+-    def forward(self, inp): 
+-        x0 = self.conv(inp)  
+-        x = torch.cat([x0, self.conv_bn(x0)], 1)
+-        out = self.conv_out(x)
++        self.conv_out.weight.requires_grad = False
++
++        self.weight1 = nn.Parameter(torch.zeros_like(self.conv_out.weight))
++        nn.init.xavier_normal_(self.weight1)
++
++    def forward(self, inp):   
++        x1 = self.conv(inp)
++        x = torch.cat([x1, self.conv_bn(x1)], 1)
++        final_weight = self.conv_out.weight + self.weight1
++        out = F.conv2d(x, final_weight, self.conv_out.bias)
+         return out 
+ 
+     def slim(self):
+@@ -302,7 +317,8 @@
+         conv_bn_bias = conv_bn_bias * bn.weight + bn.bias
+ 
+         weight = torch.cat([conv_weight, conv_bn_weight], 0)
+-        weight_compress = self.conv_out.weight.squeeze()
++        #weight_compress = self.conv_out.weight.squeeze()
++        weight_compress = (self.conv_out.weight + self.weight1).squeeze()
+         weight = torch.matmul(weight_compress, weight.permute([2, 3, 0, 1])).permute([2, 3, 0, 1])
+ 
+         bias = torch.cat([conv_bias, conv_bn_bias], 0)
