@@ -1,0 +1,172 @@
+--- arxivv1
+
++++ formalCVF
+
+@@ -2,13 +2,14 @@
+
+ === PHYSICAL PDF PAGE 1 ===
+ Bridging the Training-Deployment Gap: Gated Encoding and Multi-Scale
+ Refinement for Efficient Quantization-Aware Image Enhancement
+-Dat To-Thanh1,5 Nghia Nguyen-Trong2,5 Hoang V o1,5 Hieu Bui-Minh3 Tinh-Anh Nguyen-Nhu4,5†
++Dat To-Thanh1,5 Nghia Nguyen-Trong2,5 Hoang Vo1,5 Hieu Bui-Minh3 Tinh-Anh Nguyen-Nhu4,5†
+ 1 University of Science, VNU-HCM, Vietnam
+ 2 University of Information Technology, VNU-HCM, Vietnam
+ 3 Da Nang University of Economics, Vietnam
+ 4 Ho Chi Minh University of Technology, VNU-HCM, Vietnam
+ 5 Vietnam National University, Ho Chi Minh City, Vietnam
+ † Corresponding author
++anh.nguyennhu2306@hcmut.edu.vn
+ Abstract
+ Image enhancement models for mobile devices often strug-
+ gle to balance high output quality with the fast process-
+@@ -34,7 +35,8 @@
+
+ 1. Introduction
+ Recent advances in deep learning and computer vision have
+ led to remarkable performance across a wide range of tasks
+-[24, 33], including image retrieval [26, 27], visual ques-
++[
++24, 33], including image retrieval [26, 27], visual ques-
+ tion answering [25, 28]. Besides, smartphone photogra-
+ phy has become the dominant imaging modality for billions
+ of users, yet a substantial perceptual gap remains between
+@@ -44,36 +46,44 @@
+
+ sors and compact optics, which collectively degrade signal-
+ to-noise ratio, dynamic range, color fidelity, and sharpness.
+ To address these limitations, recent advances in deep learn-
+-ing have introducedDeep Image Signal Processing (Deep
+-ISP)models that learn end-to-end mappings from low-
++ing have introduced Deep Image Signal Processing (Deep
++ISP) models that learn end-to-end mappings from low-
+ quality mobile images to high-quality DSLR outputs, ef-
+ fectively replacing or augmenting traditional ISP pipelines
+-through data-driven optimization [11, 30].
++through data-driven optimization [11, 30
++].
+ In this work, we consider the image enhancement set-
+ ting, where paired images are synchronously captured us-
+ ing an iPhone 3GS and a Canon 70D DSLR, enabling su-
+ pervised learning of a direct smartphone-to-DSLR transfor-
+ mation [11]. This task requires the joint correction of noise,
+ blur, color distortions, and tone inconsistencies in a single
+-forward pass. Prior works [4, 11, 18, 30] have demon-
++forward pass. Prior works [4, 11
++, 18, 30] have demon-
+ strated that combining pixel-wise, perceptual, and adver-
+ sarial losses is critical for achieving visually plausible re-
+ sults in this setting. However, these approaches are typically
+ developed and evaluated under full-precision assumptions,
+ and existing quantization techniques do not adequately ac-
+ count for the distributional characteristics of Deep ISP fea-
+-tures under real-world mobile deployment [17, 19].
+-Some challenge reports [14, 16] explicitly emphasize the
++tures under real-world mobile deployment [
++17, 19].
++Some challenge reports [14,16] explicitly emphasize the
+ strict runtime constraints on mobile hardware. In partic-
+ ular, models are required to process FullHD images on-
+ device using mobile inference frameworks such as Tensor-
+ Flow Lite [17], while maintaining high perceptual quality
+ and avoiding visible artifacts. This introduces a fundamen-
+-taltraining–deployment mismatch: models are optimized
++tal training–deployment mismatch
++: models are optimized
+ in continuous full/half-precision domains (FP32/FP16), but
+ executed under 8-bit quantized settings (i.e., INT8), where
+ numerical precision and dynamic range are severely con-
+-arXiv:2604.21743v1  [cs.AI]  23 Apr 2026
++This CVPR Workshop paper is the Open Access version, provided by the Computer Vision
++Foundation. Except for this watermark, it is identical to the accepted version;
++the final published version of the proceedings is available on IEEE Xplore.
++3847
++
+ 
+ 
+ === PHYSICAL PDF PAGE 2 ===
+@@ -176,6 +186,8 @@
+
+ Quantizing image restoration models is highly challeng-
+ ing because their activation distributions are non-Gaussian,
+ long-tailed, asymmetric, and strongly input-dependent [21,
++3848
++
+ 
+ 
+ === PHYSICAL PDF PAGE 3 ===
+@@ -274,6 +286,8 @@
+
+ upsampled decoder feature, the refined encoder feature at
+ the corresponding scale, and the preserved skip feature are
+ concatenated and first compressed by a1×1convolution.
++3849
++
+ 
+ 
+ === PHYSICAL PDF PAGE 4 ===
+@@ -333,6 +347,8 @@
+
+ To supervise the network across multiple dimensions, in-
+ cluding pixel fidelity, structural consistency, and robustness,
+ we employ Peak Signal-to-Noise Ratio (PSNR) loss, the
++3850
++
+ 
+ 
+ === PHYSICAL PDF PAGE 5 ===
+@@ -450,6 +466,8 @@
+
+ As detailed inTable 1, our model achieved second place
+ overall in the Mobile AI 2026 RGB Image Enhancement
+ Challenge. With a PSNR of 21.82 dB and an SSIM of
++3851
++
+ 
+ 
+ === PHYSICAL PDF PAGE 6 ===
+@@ -517,6 +535,8 @@
+
+ yields the most significant throughput gain, reducing the in-
+ ference time by 49.47% (to 237 ms), while removing the
+ Fusion Refiner reduces the latency to 396 ms. However,
++3852
++
+ 
+ 
+ === PHYSICAL PDF PAGE 7 ===
+@@ -597,6 +617,8 @@
+
+ demonstrate that our proposed loss achieves an optimal bal-
+ ance between pixel-wise accuracy and training efficiency.
+ It reaches a higher PSNR of 22.194 dB with a significantly
++3853
++
+ 
+ 
+ === PHYSICAL PDF PAGE 8 ===
+@@ -698,6 +720,8 @@
+
+ Learning to see in the dark. InCVPR, 2018. 1, 2
+ [5] Jungwook Choi, Zhuo Wang, Swagath Venkataramani,
+ Pierce I-Jen Chuang, Vijayalakshmi Srinivasan, and K.
++3854
++
+ 
+ 
+ === PHYSICAL PDF PAGE 9 ===
+@@ -814,6 +838,8 @@
+
+ Deepisp: Toward learning an end-to-end image processing
+ pipeline.IEEE Transactions on Image Processing, 28(2):
+ 912–923, 2019. 1, 2
++3855
++
+ 
+ 
+ === PHYSICAL PDF PAGE 10 ===
+@@ -840,3 +866,4 @@
+
+ Hayat, Fahad Shahbaz Khan, Ming-Hsuan Yang, and Ling
+ Shao. Learning enriched features for real image restoration
+ and enhancement. InECCV, 2020. 2
++3856

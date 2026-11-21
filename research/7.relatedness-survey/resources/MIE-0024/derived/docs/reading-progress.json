@@ -1,0 +1,57 @@
+{
+  "at": "2026-11-21T13:33:23.411197+08:00",
+  "resource_id": "MIE-0024",
+  "status": "active, not Gate2 reviewed/closed",
+  "effective_order": 27,
+  "fulltext_read": [
+    "arxivv1 all10physicalpages including36references",
+    "Complete172line arxiv→formalCVF diff, all scientific text/tables same within comparedtext; formal fullpaper correspondence, not independent numericvalidation",
+    "README214lines",
+    "src/README183lines",
+    "requirements100UTF16decodedlines",
+    "src/models/model_builder.py450lines",
+    "src/train/loss.py297lines (initialtruncatedmiddle later165–225read)",
+    "src/train/train_utils_builder.py78lines"
+  ],
+  "actual_viewed_pdf_pages": {
+    "arxiv": [
+      4,
+      6
+    ],
+    "formal": [
+      7,
+      8
+    ]
+  },
+  "unread_pending": [
+    "Actual formal keypages4/6 or exactcorrespondingfigureconfirmation; sourcefigures2actualvisualdetail",
+    "Remaining training/data/export/checkpoint/evaluation/inference/benchmark shell/core paths, notyetfullread",
+    "OriginalCKPT CRC/opcodeaudit, no loading",
+    "Version/identity/source manifests finalupdate andmechanical/independentGate2 review"
+  ],
+  "formal_acquisition": "NormalCVF fullPDF23724214B success/EOF/SHA, tenpagesrendered, 6333Bofficiallanding. Slowcapture completed, no active acquisition. Samepaper identity/version addition, no newresourceID/queue.",
+  "code_acquisition": "All37blobs29145635B fixed6703a6d/treeac4bf... matched, incl2TFLite,1CKPT,2PNGs,4opaquePYC; neverimport/execute upstreammodel",
+  "new_static_tflite_findings": {
+    "schema": "OfficialTFv2.20.0 retained; ownstdlibFlatBuffer metadataparser, no runtimeimport ormodelinvoke",
+    "100x100": "InputFLOAT32[1,100,100,3], outputFLOAT32[1,3,100,100];185INT8/42INT32/2FLOAT32tensors,139ops, inputQUANTIZE/outputDEQUANTIZE are2floatboundaryops",
+    "FullHD": "INT8input/output[1,1920,1080,3],176INT8/40INT32tensors,128ops,nofloattypedops. staticdeclaredI/Oandlayout, not backenddelegation/numericalsuccess. SignedINT8scales≈1/255 zero−128.",
+    "limitations": "Layout/range/artifactversions differ; do notinferphonebenchartifactidentity or claim runtimefailed; requireactualsourceconversion/evaluation path review"
+  },
+  "provisional_observations": [
+    "ExactMobileIE[35] citation isoutlieraware/combinedloss p5/p7; architecturegateddown/decoder citesMAI2025report[16], notMobileIEbackbone",
+    "PaperprecisiontextFP16 vsTable5FP32label andexplicitdifferentdevicepaths retained, do not silentlyrepair",
+    "INT8QAT21.050/.725 vsPTQ20.576/.6139 gains.474/.1111 butbelowFP32QAT22.194/.796; no allqualityrestored claim",
+    "Table1competition1024x1024PSNR21.82 distinctfromDPED100patchval22.194, FullHDlatency469. Keepdatasets/threshold/metrics separate",
+    "CurrentFXQATexplicithead/ConcatFP32qconfigNone, butreleaseTFLiteFullHDdeclaresinteger tensors; differentconversioncarriers needtrace, notsimplecontradiction",
+    "Outlierlossweightsbounded/detached andrelativeoutlierupweight; noframehistory. LPSNRtoY, globalflattenRGBcosine, MSSSIMclassactuallysingleSSIM stage inpublishedcode; historicaltablemappingunverified",
+    "Default/specifiedlossversions andparametersnotyetchecked in train_qat, do notassumeVGGprioractive (ContentLossonlyversion3)"
+  ],
+  "execution": {
+    "research_source": false,
+    "model_load": false,
+    "training": false,
+    "GPU": false,
+    "Gate3": false,
+    "static_container_metadata_only": true
+  }
+}
