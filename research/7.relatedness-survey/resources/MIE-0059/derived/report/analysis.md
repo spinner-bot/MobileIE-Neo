@@ -1,6 +1,6 @@
 # MIE-0059｜ULightIF：顺序教师、双模态边界与保存后处理
 
-**当前结论：建议证据受限结项，待Gate2另轮审查。** 正式全文未取得。已分析出版者身份/摘要、引用索引、作者完整固定公开载体；不能称论文全文/数值/视频复现。0源执行/反序列化/模型加载/训练/GPU/Gate3。
+**结论：证据受限结项（closed_limited）。** [Gate2另轮审查](gate2.json)明确正式全文未取得。已分析出版者身份/摘要、引用索引、作者完整固定公开载体；不能称论文全文/数值/视频复现。0源执行/反序列化/模型加载/训练/GPU/Gate3。
 
 [获取边界](../docs/acquisition-review.json)、[阅读与反证](../docs/reading-notes.md)、[18作者工件](../docs/author-source-manifest.json)、[参数与实际管线](../docs/static-pipeline-arithmetic.json)、[主要主张](claims.json)保留可审查证据。ULightIF书目直接引用MobileIE，官方项目明确基于MobileIE；正式文内引用语境因正文缺失未知。当前TMM28页13430–13441及2026-08-13与旧EarlyAccess1–13分开。
 
