@@ -1,0 +1,39 @@
+{
+  "at": "2026-11-21T20:21:41.280110+08:00",
+  "author": "Codex  (sqs_A100)",
+  "trigger": "Requested phase report; actual visual reading of already generated complete results",
+  "images": {
+    "quality-temporal": {
+      "path": "research/8.video-backbone/instant-video/report/simple-analysis001/quality-temporal.png",
+      "sha256": "d603b8ef40c55f288252b87dda88a85dc01cbe4f3a8ea94aecad0018e20a4814",
+      "actually_viewed": true
+    },
+    "paired-levels": {
+      "path": "research/8.video-backbone/instant-video/report/simple-analysis001/paired-levels.png",
+      "sha256": "b0774be1ca7aecbd7ecdd5c48d98fc4dd5e26fed5f1f16dda3628da506a85869",
+      "actually_viewed": true
+    },
+    "gates": {
+      "path": "research/8.video-backbone/instant-video/report/simple-analysis001/gates.png",
+      "sha256": "d1f01e62a354c7efee6025c3e8de952bf078f27e801b70128aba63c480ec3814",
+      "actually_viewed": true
+    },
+    "contact": {
+      "path": "research/8.video-backbone/instant-video/report/simple-analysis001/contact.png",
+      "sha256": "0dc2a120089b9dfb619583e7e9b58b067430515c149c6e7b8eae96f1f9c1721b",
+      "actually_viewed": true
+    }
+  },
+  "findings": [
+    "All36 means shown with two domains and seeds separated. Learned raw arms have lower temporal errors than F0 but visibly shift to lower PSNR; classical post references retain better quality.",
+    "All220 paired points in11 registered contrasts retained. Positive exceptions do not establish any complete registered route.",
+    "All44 gate cells are FAIL, consistent with gates.json; zero gate passes do not mean zero positive individual measurements.",
+    "Fixed bear t32 and video15 t8 contacts show residual noise and texture attenuation in learned smoothing. These are four preselected static rows, not temporal playback or representative perceptual proof."
+  ],
+  "PDF_exported_but_not_independently_reviewed": true,
+  "new_pixel_generation_or_inference": false,
+  "new_training": false,
+  "does_not_establish_unique_mechanism": true,
+  "video_perceptual_or_phone_claim": false,
+  "independent_final": false
+}
