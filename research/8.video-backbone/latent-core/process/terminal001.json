@@ -1,0 +1,220 @@
+{
+  "at": "2026-11-21T12:53:18.884830+08:00",
+  "author": "Codex  (sqs_A100)",
+  "original_recovered_chain_completed_normally": true,
+  "chain_seconds": 5296.044328313088,
+  "recorded_child_exits": [
+    {
+      "controller": "chain002",
+      "at": "2026-11-21T12:49:45.328807+08:00",
+      "action": "exit",
+      "label": "seed0-chain",
+      "code": 0
+    },
+    {
+      "controller": "chain002",
+      "at": "2026-11-21T12:50:42.216588+08:00",
+      "action": "exit",
+      "label": "seed1-chain",
+      "code": 0
+    },
+    {
+      "controller": "chain002",
+      "at": "2026-11-21T12:50:43.843344+08:00",
+      "action": "exit",
+      "label": "summarize",
+      "code": 0
+    },
+    {
+      "controller": "seed0-chain001",
+      "at": "2026-11-21T12:48:48.684068+08:00",
+      "action": "exit",
+      "label": "train-seed0-attempt001",
+      "code": 0
+    },
+    {
+      "controller": "seed0-chain001",
+      "at": "2026-11-21T12:49:45.290436+08:00",
+      "action": "exit",
+      "label": "held-seed0",
+      "code": 0
+    },
+    {
+      "controller": "seed1-chain001",
+      "at": "2026-11-21T12:49:45.975142+08:00",
+      "action": "exit",
+      "label": "train-seed1-attempt001",
+      "code": 0
+    },
+    {
+      "controller": "seed1-chain001",
+      "at": "2026-11-21T12:50:42.180459+08:00",
+      "action": "exit",
+      "label": "held-seed1",
+      "code": 0
+    }
+  ],
+  "original_handles": [
+    {
+      "source": "process/chain002/config.json",
+      "original": {
+        "pid": 3852634,
+        "start_ticks": 117153546,
+        "state": "R"
+      },
+      "current_proc": null,
+      "original_handle_terminal": true
+    },
+    {
+      "source": "process/seed0-chain001/config.json",
+      "original": {
+        "pid": 3852693,
+        "start_ticks": 117153555,
+        "state": "R"
+      },
+      "current_proc": null,
+      "original_handle_terminal": true
+    },
+    {
+      "source": "process/seed1-chain001/config.json",
+      "original": {
+        "pid": 3852694,
+        "start_ticks": 117153555,
+        "state": "R"
+      },
+      "current_proc": null,
+      "original_handle_terminal": true
+    },
+    {
+      "source": "process/train-seed0-attempt001/runtime.json",
+      "original": {
+        "pid": 3852927,
+        "start_ticks": 117158126,
+        "state": "R"
+      },
+      "current_proc": null,
+      "original_handle_terminal": true
+    },
+    {
+      "source": "process/train-seed1-attempt001/runtime.json",
+      "original": {
+        "pid": 3852924,
+        "start_ticks": 117158111,
+        "state": "R"
+      },
+      "current_proc": null,
+      "original_handle_terminal": true
+    },
+    {
+      "source": "results/held-seed0/runtime.json",
+      "original": {
+        "pid": 3882599,
+        "start_ticks": 117671640,
+        "state": "R"
+      },
+      "current_proc": null,
+      "original_handle_terminal": true
+    },
+    {
+      "source": "results/held-seed1/runtime.json",
+      "original": {
+        "pid": 3882905,
+        "start_ticks": 117677369,
+        "state": "R"
+      },
+      "current_proc": null,
+      "original_handle_terminal": true
+    }
+  ],
+  "formal_totals": {
+    "optimizer_updates": 32000,
+    "student_images": 512000,
+    "F0_CPU_anchor_images": 0
+  },
+  "formal_teacher_images": 0,
+  "formal_seconds": [
+    5132.958581093,
+    5190.345523425145
+  ],
+  "resource_pauses": [
+    false,
+    false
+  ],
+  "held_totals": {
+    "F0_images": 256,
+    "student_images": 1792,
+    "windows": 64,
+    "output_rows": 704,
+    "frame_rows": 2816,
+    "classical_deployment_bidirectional_pairs": 1152,
+    "GT_metric_FB_pairs": 192
+  },
+  "held_unique_input_draws": 32,
+  "held_seconds": [
+    54.904192131944,
+    54.50949245411903
+  ],
+  "same_draws_verified": true,
+  "unique_finals": [
+    {
+      "at": "2026-11-21T12:48:47.620019+08:00",
+      "seed": 0,
+      "arm": "spatial",
+      "qualification": false,
+      "unique_final": true,
+      "updates": 8000,
+      "parameters": 12431,
+      "all_reloaded_finite": true,
+      "path": ".cache/experiments/topic8-latent-core/train-seed0-attempt001/spatial-final.pt",
+      "sha256": "e18bf4b3e31d5d2c621e561c7f683ebaea8a3718dcbf0d673758727b861078e9"
+    },
+    {
+      "at": "2026-11-21T12:48:47.628249+08:00",
+      "seed": 0,
+      "arm": "causal",
+      "qualification": false,
+      "unique_final": true,
+      "updates": 8000,
+      "parameters": 12431,
+      "all_reloaded_finite": true,
+      "path": ".cache/experiments/topic8-latent-core/train-seed0-attempt001/causal-final.pt",
+      "sha256": "97059717b5945c2fd66cd73c99183cb00c6fd09cd9034ce767744c7fbdad1837"
+    },
+    {
+      "at": "2026-11-21T12:49:44.927398+08:00",
+      "seed": 1,
+      "arm": "spatial",
+      "qualification": false,
+      "unique_final": true,
+      "updates": 8000,
+      "parameters": 12431,
+      "all_reloaded_finite": true,
+      "path": ".cache/experiments/topic8-latent-core/train-seed1-attempt001/spatial-final.pt",
+      "sha256": "00c41ec854a1ecabc835e5fb72959f4e92650738eb0b1491c54d0a52692288f2"
+    },
+    {
+      "at": "2026-11-21T12:49:44.936571+08:00",
+      "seed": 1,
+      "arm": "causal",
+      "qualification": false,
+      "unique_final": true,
+      "updates": 8000,
+      "parameters": 12431,
+      "all_reloaded_finite": true,
+      "path": ".cache/experiments/topic8-latent-core/train-seed1-attempt001/causal-final.pt",
+      "sha256": "08006a894cc1cf02e58d4b0a127288653769ba8de58ad3408bb77cb3f96834f4"
+    }
+  ],
+  "source_freeze_counts_unchanged": [
+    26,
+    44,
+    1
+  ],
+  "qualification_updates_discarded": {
+    "CPU": 8,
+    "CUDA": 4
+  },
+  "original_outer143_preserved_separately": "process/chain001-terminal.json",
+  "new_model_or_flow_inference_for_review": false,
+  "newly_archived_completed_files": 42
+}
