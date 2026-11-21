@@ -1,0 +1,40 @@
+{
+  "at": "2026-11-21T14:58:48.651036+08:00",
+  "author": "Codex  (sqs_A100)",
+  "reason": "Missing direct published causal stability-adapter baseline after complete F1 stop",
+  "primary_sources": [
+    {
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/a12779b5e802668df1cbc73fa00da62f-Abstract-Conference.html",
+      "read": "Official NeurIPS2025 metadata/abstract only"
+    },
+    {
+      "url": "https://arxiv.org/html/2512.03014v1",
+      "read": "Sections3-5 equations1-8 and method paragraphs; AppendixD1-D3/E1-E2 excerpts; not whole paper, proofs, visual figures or original experiment replication"
+    },
+    {
+      "url": "https://wisionlab.com/project/instant-video-models/",
+      "read": "Author project/search entry identifies official repository"
+    },
+    {
+      "url": "https://github.com/wision-lab/instant-video-models",
+      "commit": "e685f56316ae1476fa8831c8c60b33bc5e179af7",
+      "read": "Exact controlled_conv_stabilizer, ConvBackbone, base classes, hooks, RMSE and UnifiedLoss logic; pinned spatial/nonspatial HDRNet config and training lambda/LR; config.py imports, train.py setup and train_pass selected text; author README warning; LICENSE and environment dependencies"
+    }
+  ],
+  "upstream_snapshot": "third_party/instant-video-models/SOURCE.json",
+  "upstream_code_changes": false,
+  "attempted_missing_paths": [
+    "configs/stabilizers/hdrnet/_defaults.yml",
+    "instant_video_models/monitors/unified_loss.py"
+  ],
+  "missing_paths_action": "GitHub404 preserved as lookup errors; actual loss path found from author config, no access bypass",
+  "scope": "No external training/download scripts or weights/data executed; no new pixels/CNN/flow/optimization/GPU yet",
+  "comparison_boundary": "Task adaptation of published method to original F0 and local tasks, not original HDRNet/NFS performance reproduction or an innovation claim",
+  "project_inference_not_author_claim": [
+    "Spatial controlled fusion stores a distribution over local past pixels plus current, unlike collapsing correspondence to a point before warp; local search range still limited.",
+    "Published lambda norm theorem is not a guarantee for an optimized network, squared MSE, epsilon RMSE or real enhancement noise.",
+    "Official spatial code uses nine learned past logits and a fixed-zero current logit for3x3, final learned bias-4; aggregate initial current weight is not automatically.98.",
+    "Full layer hooks on original MobileIE may carry high cost and state; no phone speed claim."
+  ],
+  "goal_complete": false
+}
