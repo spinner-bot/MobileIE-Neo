@@ -1,0 +1,67 @@
+{
+  "status": "collection_identity_only_pending_saturation_and_formal_review",
+  "created_at": "2026-11-21T16:30:24.358761+08:00",
+  "rows": [
+    {
+      "temporary_key": "addendum3-paper-litedenoisenet",
+      "type": "paper",
+      "title": "Real Image Denoising with Knowledge Distillation for High-Performance Mobile NPUs",
+      "authors": [
+        "Faraz Kayani",
+        "Sarmad Kayani",
+        "Asad Ahmed",
+        "Radu Timofte",
+        "Dmitry Ignatov"
+      ],
+      "dois": [],
+      "arxivs": [
+        "2605.03680"
+      ],
+      "publication_date": "2026-05-05",
+      "cutoff": "2026-11-17",
+      "sources": [
+        {
+          "source": "collection/receipts/g1a3-kayani-formal-page.json",
+          "url": "https://openaccess.thecvf.com/content/CVPR2026W/MAI/html/Kayani_Real_Image_Denoising_with_Knowledge_Distillation_for_High-Performance_Mobile_NPUs_CVPRW_2026_paper.html"
+        },
+        {
+          "source": "collection/receipts/g1a3-kayani-formal-pdf.json"
+        },
+        {
+          "source": "collection/receipts/g1a3-kayani-arxiv-abs.json"
+        },
+        {
+          "source": "collection/receipts/g1a3-kayani-arxiv-pdf.json"
+        }
+      ],
+      "relation": "Dedicated TeamPAK method companion explicitly cited as ref63 by included Mobile AI2026 denoising report MIE0029; not a directly citing MobileIE paper",
+      "relation_verification": "MIE0029 p6/ref63 title-author identity; official CVF/arxiv public versions, exact model name and public repository; normalized MobileIE identity scan no hit. No claim of reuse of MobileIE modules or temporal capability."
+    },
+    {
+      "temporary_key": "addendum3-code-litedenoisenet",
+      "type": "code",
+      "title": "ABrain-One/NN-Dataset : LiteDenoiseNet official mobile denoising implementation and training statistics",
+      "dois": [],
+      "arxivs": [],
+      "publication_date": "2026-05-18",
+      "cutoff": "2026-11-17",
+      "sources": [
+        {
+          "source": "collection/gate1-addenda/0003/g1a3_release_pr233.json",
+          "url": "https://github.com/ABrain-One/nn-dataset/pull/233"
+        },
+        {
+          "source": "collection/gate1-addenda/0003/nn-dataset-git-tree-inventory001.json"
+        },
+        {
+          "source": "collection/gate1-addenda/0003/nn-dataset-acquisition-integrity001.json"
+        },
+        {
+          "source": "collection/receipts/g1a3-kayani-formal-page.json"
+        }
+      ],
+      "relation": "Explicit official released model/teacher/training-statistics carrier for the TeamPAK method in included MIE0029, linked by its dedicated paper and author release PR",
+      "relation_verification": "Initial model commit May18/merge May19; cutoff fb51d6c9ca7da6b1bd0947cbfe27f9d449fde01a. Scope 614 directly related model/teacher/denoise support/context and epoch stats, not all589146 entries or broader AutoML frameworks. All retrieved files Git-blob verified; acquisition not source/model execution or Gate2."
+    }
+  ]
+}
