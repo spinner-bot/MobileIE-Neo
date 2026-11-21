@@ -1,0 +1,776 @@
+{
+  "purpose": "Resource static inspection preparation; not a read/approval claim",
+  "revision": "3b46739e4f524c205c9c277f9c4b1673b9d5aedc",
+  "archive_receipt": "collection/receipts/sourcezip-viplab-fudan--FJNDF-Pytorch.json",
+  "text_selection_prefixes": [],
+  "files": [
+    {
+      "source_path": ".gitignore",
+      "readable_path": "derived/docs/upstream-code/.gitignore.txt",
+      "sha256": "9ae38edd990a28966f0adc2b9b88a1beabf2b78233a53b50616b917f6da67f64",
+      "bytes": 2283
+    },
+    {
+      "source_path": "LICENSE-FDU-Vip-Lab.txt",
+      "readable_path": "derived/docs/upstream-code/LICENSE-FDU-Vip-Lab.txt.txt",
+      "sha256": "01114e7166844cbb5b1699bf60ffcaff922a38af06e6e7bea2793ec86d04313f",
+      "bytes": 1667
+    },
+    {
+      "source_path": "LICENSE.txt",
+      "readable_path": "derived/docs/upstream-code/LICENSE.txt.txt",
+      "sha256": "1f2cc24bdaabd4385cb8cba8143c231879ae27371d8d33ef86191a22797994bf",
+      "bytes": 21146
+    },
+    {
+      "source_path": "README.md",
+      "readable_path": "derived/docs/upstream-code/README.md.txt",
+      "sha256": "89bdbae27c9bfa320ea30c16bddf4e70aa64ae5c9e292c09ecc2f8c968328442",
+      "bytes": 14238
+    },
+    {
+      "source_path": "codecs/cfg/aomenc.yml",
+      "readable_path": "derived/docs/upstream-code/codecs--cfg--aomenc.yml.txt",
+      "sha256": "b94855b63c0bf929228c1875acd4bf3b7dfe5c8ef4e2f2d5a59d588d2f1001da",
+      "bytes": 597
+    },
+    {
+      "source_path": "codecs/cfg/vvenc.yml",
+      "readable_path": "derived/docs/upstream-code/codecs--cfg--vvenc.yml.txt",
+      "sha256": "7dcc32ec52cbfd94c652184a569c874b91940334b1e88b19cd308d10f36cd570",
+      "bytes": 812
+    },
+    {
+      "source_path": "codecs/cfg/x264.yml",
+      "readable_path": "derived/docs/upstream-code/codecs--cfg--x264.yml.txt",
+      "sha256": "9ae3dbe1fa81dff48192327560d9f4a21602b10e6bbc71707f08f8433da2cf43",
+      "bytes": 683
+    },
+    {
+      "source_path": "codecs/cfg/x265.yml",
+      "readable_path": "derived/docs/upstream-code/codecs--cfg--x265.yml.txt",
+      "sha256": "9d423c4aaaa638079093134070430637c919090395c814c125920eeb2b6fa883",
+      "bytes": 785
+    },
+    {
+      "source_path": "codecs/prepare_codecs.md",
+      "readable_path": "derived/docs/upstream-code/codecs--prepare_codecs.md.txt",
+      "sha256": "b0ad33abc024f26613b62badfcf72dac836a876ec0bf63b2a27547074137a818",
+      "bytes": 6003
+    },
+    {
+      "source_path": "codecs/script/calbdrate.py",
+      "readable_path": "derived/docs/upstream-code/codecs--script--calbdrate.py.txt",
+      "sha256": "7923b74535b1c1edda6fefddd0657c4765889bae775b00194aa9ad41269e16a9",
+      "bytes": 7112
+    },
+    {
+      "source_path": "codecs/script/encode.py",
+      "readable_path": "derived/docs/upstream-code/codecs--script--encode.py.txt",
+      "sha256": "48534198d5926071491f6a23adca42878971ffca04a40644076b54643c22368a",
+      "bytes": 27732
+    },
+    {
+      "source_path": "codecs/script/regr_calbdrate.sh",
+      "readable_path": "derived/docs/upstream-code/codecs--script--regr_calbdrate.sh.txt",
+      "sha256": "ef2c48610e32f49cc5c9de486c14843e5e0f537436c031ce386df380346a175b",
+      "bytes": 1472
+    },
+    {
+      "source_path": "codecs/script/regr_encode.sh",
+      "readable_path": "derived/docs/upstream-code/codecs--script--regr_encode.sh.txt",
+      "sha256": "200a636419949d5013e1fbca15881de150fb15d9a30f1ebf30ba4b5c75b6e137",
+      "bytes": 3087
+    },
+    {
+      "source_path": "codecs/script/single_encode.sh",
+      "readable_path": "derived/docs/upstream-code/codecs--script--single_encode.sh.txt",
+      "sha256": "39053d089f2d87e826d1dc390757c55854b8ca30d9be752fd27e95b8ed31012c",
+      "bytes": 381
+    },
+    {
+      "source_path": "codecs/script/tool/bjontegaard_metric.py",
+      "readable_path": "derived/docs/upstream-code/codecs--script--tool--bjontegaard_metric.py.txt",
+      "sha256": "d79588b2a5d6c8f99014bec7d0cd2e2fc0b1bf5879747efb164b2907b2b858d2",
+      "bytes": 2458
+    },
+    {
+      "source_path": "codecs/script/tool/readDb.py",
+      "readable_path": "derived/docs/upstream-code/codecs--script--tool--readDb.py.txt",
+      "sha256": "a34760e1e5a2acb56f7826e2862b08861ebe1e80c6626390ee2acfc52ef4f284",
+      "bytes": 1000
+    },
+    {
+      "source_path": "datasets/prepare_datasets.md",
+      "readable_path": "derived/docs/upstream-code/datasets--prepare_datasets.md.txt",
+      "sha256": "0c484e0e921654b7b088e262ae6627e410cabebf8d8f69c70c5bd9e5c097a84d",
+      "bytes": 6814
+    },
+    {
+      "source_path": "filt_one_dataset.py",
+      "readable_path": "derived/docs/upstream-code/filt_one_dataset.py.txt",
+      "sha256": "9c743fe1531e1ebe261c0d18d91587123bcb08c1d8f8b0bd6c5f36726d23414c",
+      "bytes": 8185
+    },
+    {
+      "source_path": "filt_one_video.py",
+      "readable_path": "derived/docs/upstream-code/filt_one_video.py.txt",
+      "sha256": "3b57dd79e505180c53c681c8d6d8b87103a0bd14ce9b07e17743201f3c11901b",
+      "bytes": 6905
+    },
+    {
+      "source_path": "options/inference/infer_general_frequency_jnd.yml",
+      "readable_path": "derived/docs/upstream-code/options--inference--infer_general_frequency_jnd.yml.txt",
+      "sha256": "85073f6b45e5ff037b55fbd6c820a95e6bb161c0eb315da365ed1e33d300fe8a",
+      "bytes": 505
+    },
+    {
+      "source_path": "options/inference/infer_iccv_yan_2025.yml",
+      "readable_path": "derived/docs/upstream-code/options--inference--infer_iccv_yan_2025.yml.txt",
+      "sha256": "2775e4b2423145655e0e12d05dbe361dd2699422eb41059726a279bf4c61d027",
+      "bytes": 259
+    },
+    {
+      "source_path": "options/inference/infer_iccv_yan_lite_2025.yml",
+      "readable_path": "derived/docs/upstream-code/options--inference--infer_iccv_yan_lite_2025.yml.txt",
+      "sha256": "9f8318dd3141823e54b050f49523ecea5050f9a84553712ecc95eaa9ebc8c441",
+      "bytes": 308
+    },
+    {
+      "source_path": "options/inference/infer_ojcas_sun_2024.yml",
+      "readable_path": "derived/docs/upstream-code/options--inference--infer_ojcas_sun_2024.yml.txt",
+      "sha256": "c93c2c5b8257129c96bca374466ce7b1e37a1738f534bcc3c9e9586890f9bce9",
+      "bytes": 207
+    },
+    {
+      "source_path": "options/inference/infer_spl_bae_2013.yml",
+      "readable_path": "derived/docs/upstream-code/options--inference--infer_spl_bae_2013.yml.txt",
+      "sha256": "7c656330cc909f095483143e21c17522235b067596d2a71b4258b55c493c8080",
+      "bytes": 462
+    },
+    {
+      "source_path": "options/inference/infer_tcsvt_wei_2009.yml",
+      "readable_path": "derived/docs/upstream-code/options--inference--infer_tcsvt_wei_2009.yml.txt",
+      "sha256": "a792805764a2028397205debfdcdf1fdf1c8328acd73f07357a222c2edb8310b",
+      "bytes": 758
+    },
+    {
+      "source_path": "options/inference/infer_tip_bae_2016.yml",
+      "readable_path": "derived/docs/upstream-code/options--inference--infer_tip_bae_2016.yml.txt",
+      "sha256": "deb77871240a1a6e484bc3320dc9ac49b0185440c829a4df58a0995c61c02e5e",
+      "bytes": 609
+    },
+    {
+      "source_path": "options/inference/infer_tob_kang_2023.yml",
+      "readable_path": "derived/docs/upstream-code/options--inference--infer_tob_kang_2023.yml.txt",
+      "sha256": "b43091d028d191ade21754e437c13b56b614c377ed50b957ee6bb7b0f0e0add2",
+      "bytes": 788
+    },
+    {
+      "source_path": "options/train/train_iccv_yan_2025.yml",
+      "readable_path": "derived/docs/upstream-code/options--train--train_iccv_yan_2025.yml.txt",
+      "sha256": "fae5fff1866704102ecc423d5262679be51e66d2c4302a98b6ae54e27ba53098",
+      "bytes": 2642
+    },
+    {
+      "source_path": "options/train/train_iccv_yan_lite_2025.yml",
+      "readable_path": "derived/docs/upstream-code/options--train--train_iccv_yan_lite_2025.yml.txt",
+      "sha256": "e70d7d437ec308d30e48a1bed0b2a84a3af43560865f3eaa6fa505574cda53ab",
+      "bytes": 2695
+    },
+    {
+      "source_path": "options/train/train_ojcas_sun_2024.yml",
+      "readable_path": "derived/docs/upstream-code/options--train--train_ojcas_sun_2024.yml.txt",
+      "sha256": "225e379e9e01090e36b601c1fdc0271aaaf9a79a79d60390ea50c39b31681b10",
+      "bytes": 2571
+    },
+    {
+      "source_path": "pyjnd/__init__.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--__init__.py.txt",
+      "sha256": "5cf27823ee3457f8d6d9dbd252d48c67201b00660a168c5beac6b74ed7de9ffe",
+      "bytes": 99
+    },
+    {
+      "source_path": "pyjnd/api_helpers.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--api_helpers.py.txt",
+      "sha256": "d0bad08f753a3f81e20afa01a1bd72a048c06fbd3658a4526192a639923aee0d",
+      "bytes": 1307
+    },
+    {
+      "source_path": "pyjnd/archs/__init__.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--archs--__init__.py.txt",
+      "sha256": "d3957ce332c52aaa28334861a316759c443f1283d8a3dccf72e1d3de0debf7b4",
+      "bytes": 3157
+    },
+    {
+      "source_path": "pyjnd/archs/arch_util.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--archs--arch_util.py.txt",
+      "sha256": "44166de70ac1c2eb471f4af77121d88475f002ca87dfd9bb187a3a16b2a628e0",
+      "bytes": 9334
+    },
+    {
+      "source_path": "pyjnd/archs/base_learned_jnd_arch.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--archs--base_learned_jnd_arch.py.txt",
+      "sha256": "ff36baf18bbfeaf9c156a6d6bea1970fef37ed0a83660c6f9235607e52c95c73",
+      "bytes": 16280
+    },
+    {
+      "source_path": "pyjnd/archs/constants.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--archs--constants.py.txt",
+      "sha256": "ff24208d22578529e506f8323085dbd58b25bca4db164d3b1eb7d78ff57e0473",
+      "bytes": 387
+    },
+    {
+      "source_path": "pyjnd/archs/default_dataset_configs.yml",
+      "readable_path": "derived/docs/upstream-code/pyjnd--archs--default_dataset_configs.yml.txt",
+      "sha256": "9420086a0d4d5ef15e53a9f4d47b8124e990ba850899a7da3a1818bc3f925b97",
+      "bytes": 259
+    },
+    {
+      "source_path": "pyjnd/archs/general_learned_jnd_arch.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--archs--general_learned_jnd_arch.py.txt",
+      "sha256": "778994f7ebe3708ca5621ab1dac4af37f9c6e1f06123d6d8fb411292ab631824",
+      "bytes": 16941
+    },
+    {
+      "source_path": "pyjnd/archs/inference_arch.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--archs--inference_arch.py.txt",
+      "sha256": "b1aa387ed0902aced5afcfdd3c8fe22e6985d135a95ada388c01d2225bf6c7cf",
+      "bytes": 4899
+    },
+    {
+      "source_path": "pyjnd/archs/jnd_util.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--archs--jnd_util.py.txt",
+      "sha256": "cf146668c8cc6df9e1412f260e18561d40ec1db837b42072944b637b5943e447",
+      "bytes": 1991
+    },
+    {
+      "source_path": "pyjnd/archs/lr_scheduler.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--archs--lr_scheduler.py.txt",
+      "sha256": "44b5639fa1ee8a15628134e653a31931d961c4f9650088bb5ec26cb6ae404c34",
+      "bytes": 3956
+    },
+    {
+      "source_path": "pyjnd/data/__init__.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--data--__init__.py.txt",
+      "sha256": "46da522854150dfae586553e97ef99dc94c729aaf1e303c6a63dd60c4503286b",
+      "bytes": 4472
+    },
+    {
+      "source_path": "pyjnd/data/base_jnd_dataset.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--data--base_jnd_dataset.py.txt",
+      "sha256": "38cb633a97a35e7b6067fbbc5118ddba962b65de65dc167925341656a7d7b847",
+      "bytes": 3294
+    },
+    {
+      "source_path": "pyjnd/data/data_sampler.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--data--data_sampler.py.txt",
+      "sha256": "421e5ad448e86a16939c661f46853f97a90921d00f77a70f3d7ed8e0ec133082",
+      "bytes": 1812
+    },
+    {
+      "source_path": "pyjnd/data/data_util.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--data--data_util.py.txt",
+      "sha256": "41eb794ae972b45a8f0edc7d97b094b9b09b4bdc7fb23646b325daa6a5cfa22b",
+      "bytes": 11817
+    },
+    {
+      "source_path": "pyjnd/data/dataset_api.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--data--dataset_api.py.txt",
+      "sha256": "ef9afd322c7ece18a142cea3e5db60c009ace3b48d2d2f64b6076ff88a621d2d",
+      "bytes": 4984
+    },
+    {
+      "source_path": "pyjnd/data/dist_util.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--data--dist_util.py.txt",
+      "sha256": "e6a6d7fced5146ff2e1f16cb0ce1c922171fe7e8b28c011178695ebed4f477b8",
+      "bytes": 2608
+    },
+    {
+      "source_path": "pyjnd/data/general_fr_dataset.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--data--general_fr_dataset.py.txt",
+      "sha256": "ec8882b1406a9178bbd333b8b47c4d15d82c0c21bff75fd94ecf2d93f1824c4d",
+      "bytes": 3497
+    },
+    {
+      "source_path": "pyjnd/data/multiscale_trans_util.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--data--multiscale_trans_util.py.txt",
+      "sha256": "abd25967d917c2d0ea0beff57214a8b10271deb25cb7ed19a89b207d36f3f2c9",
+      "bytes": 7728
+    },
+    {
+      "source_path": "pyjnd/data/prefetch_dataloader.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--data--prefetch_dataloader.py.txt",
+      "sha256": "b219e2b2f5db65ad3f1dee54ff4140001453d6f9c59ee1ddd7522438ca4a49b6",
+      "bytes": 3132
+    },
+    {
+      "source_path": "pyjnd/data/transforms.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--data--transforms.py.txt",
+      "sha256": "8362907938bd6c6937263c5083e717cd4fa70c05d5eb0f1f13c791a90f976592",
+      "bytes": 13087
+    },
+    {
+      "source_path": "pyjnd/default_model_configs.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--default_model_configs.py.txt",
+      "sha256": "fb3f26d2ad557b0be2533a246e23690666c7680824b7a147b281ae979d4f1e27",
+      "bytes": 1897
+    },
+    {
+      "source_path": "pyjnd/losses/__init__.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--losses--__init__.py.txt",
+      "sha256": "cffa001c338715c7e1c03b7c848eb074338d2ba09537127a4cab2a855d809fcc",
+      "bytes": 1013
+    },
+    {
+      "source_path": "pyjnd/losses/charbonnier_loss.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--losses--charbonnier_loss.py.txt",
+      "sha256": "fca1550a692ec61174d35e068392a049cc14b5260db33cdd14b80c75b79a4f00",
+      "bytes": 1757
+    },
+    {
+      "source_path": "pyjnd/losses/freq_domain_loss.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--losses--freq_domain_loss.py.txt",
+      "sha256": "066e2f3dbd74936e6681ebb4b9d21f2510040dab69f9256530049b4c15ad6443",
+      "bytes": 5782
+    },
+    {
+      "source_path": "pyjnd/losses/l1_loss.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--losses--l1_loss.py.txt",
+      "sha256": "8af13400d4fea1dd8af3818735383aadddb6e7998587112a59b3c003c0d1f58c",
+      "bytes": 1389
+    },
+    {
+      "source_path": "pyjnd/losses/loss_util.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--losses--loss_util.py.txt",
+      "sha256": "fa0f66f13184144d4de4b0af924f97dc238d053e096bc54325133e5cb308eb5b",
+      "bytes": 4801
+    },
+    {
+      "source_path": "pyjnd/losses/mse_loss.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--losses--mse_loss.py.txt",
+      "sha256": "bc7473e5cde6f193366ed546e4a93b640539a30af03b6172423513e6fbdd3013",
+      "bytes": 1413
+    },
+    {
+      "source_path": "pyjnd/losses/msssim_loss.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--losses--msssim_loss.py.txt",
+      "sha256": "aba6570e9660666d428b184e7ef4a45058b156637392700cd6906f3f243b6de8",
+      "bytes": 2299
+    },
+    {
+      "source_path": "pyjnd/matlab_utils/__init__.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--matlab_utils--__init__.py.txt",
+      "sha256": "dcc03a5e43d321ddb688bbd3209648d4c2dd5bb1405974ccb9994532d7ff6318",
+      "bytes": 656
+    },
+    {
+      "source_path": "pyjnd/matlab_utils/functions.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--matlab_utils--functions.py.txt",
+      "sha256": "bf4f0ad6239fdfc9b321ca513e090ad961d4b5e4c8c42a6df484e923b83472c0",
+      "bytes": 10188
+    },
+    {
+      "source_path": "pyjnd/matlab_utils/math_util.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--matlab_utils--math_util.py.txt",
+      "sha256": "f18bf92404013ed87d8339ab781dc2e70fcc06724bb12d1ebae2374f8a33e349",
+      "bytes": 2581
+    },
+    {
+      "source_path": "pyjnd/matlab_utils/nss_feature.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--matlab_utils--nss_feature.py.txt",
+      "sha256": "fc21fa8da839cf1b8e3ea37f4c64d6b51085e647be949345a7f6eaa33a90ff98",
+      "bytes": 2427
+    },
+    {
+      "source_path": "pyjnd/matlab_utils/padding.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--matlab_utils--padding.py.txt",
+      "sha256": "445cbda33a4012dbbdf95719a1dfa7e3319f18e0497c0ffaee458ef5d8a3ac80",
+      "bytes": 3163
+    },
+    {
+      "source_path": "pyjnd/matlab_utils/resize.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--matlab_utils--resize.py.txt",
+      "sha256": "4760eedccf2ba9ccd60ea898cc0b58248157b997660f526ee6d5c080cfea0f84",
+      "bytes": 12829
+    },
+    {
+      "source_path": "pyjnd/matlab_utils/scfpyr_util.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--matlab_utils--scfpyr_util.py.txt",
+      "sha256": "78b2e85894dc3114afa561406c7b33f9c0afa920f31474bda7c014e4cf72fedf",
+      "bytes": 8058
+    },
+    {
+      "source_path": "pyjnd/metrics/__init__.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--metrics--__init__.py.txt",
+      "sha256": "3a94ee41d29c966bc4bc4ca4f233f12305b0d3f12330a766507654233e359add",
+      "bytes": 958
+    },
+    {
+      "source_path": "pyjnd/metrics/metric_util.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--metrics--metric_util.py.txt",
+      "sha256": "3a51afa3fa5cef0fdc4905bde1a39623d68e0388ab36e585e7ddd11b2808edf5",
+      "bytes": 9657
+    },
+    {
+      "source_path": "pyjnd/metrics/niqe_metric.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--metrics--niqe_metric.py.txt",
+      "sha256": "5dcd77782df674452e49c3bca3b2cee53ddb0a5c40e615b48076d9ba678bf3f2",
+      "bytes": 8347
+    },
+    {
+      "source_path": "pyjnd/metrics/psnr_ssim_metric.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--metrics--psnr_ssim_metric.py.txt",
+      "sha256": "78afd8cf5dcb9110b33bc622c6b6257131ada932f1887afff12958318288f62e",
+      "bytes": 8925
+    },
+    {
+      "source_path": "pyjnd/models.md",
+      "readable_path": "derived/docs/upstream-code/pyjnd--models.md.txt",
+      "sha256": "b7908a119db6adec530d2cefa4e47d71137361487eb7e6451571d4c6c4c7c14a",
+      "bytes": 7122
+    },
+    {
+      "source_path": "pyjnd/models/__init__.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--models--__init__.py.txt",
+      "sha256": "9659bbd961a1b5a702b7fc68a0f821adcbbb8b7b1c95a00608cd9a05af7094db",
+      "bytes": 5350
+    },
+    {
+      "source_path": "pyjnd/models/base_model.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--models--base_model.py.txt",
+      "sha256": "362ebb00acce12c0d01b8a8286d88fa064d8c3c27dc9c999b46f95556fe0019c",
+      "bytes": 1303
+    },
+    {
+      "source_path": "pyjnd/models/class_mapping.json",
+      "readable_path": "derived/docs/upstream-code/pyjnd--models--class_mapping.json.txt",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "bytes": 2
+    },
+    {
+      "source_path": "pyjnd/models/frequency_jnd_model.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--models--frequency_jnd_model.py.txt",
+      "sha256": "f7cb3ec1c35ff5845a2e429092286d9b28bfdc4c899f81cf594ff260d55b8d7c",
+      "bytes": 13957
+    },
+    {
+      "source_path": "pyjnd/models/iccv_yan_2025_lite_model.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--models--iccv_yan_2025_lite_model.py.txt",
+      "sha256": "0ee3e782cf03badde16f7bd394a252430e044cf3ef396fc5de95065f4d66452d",
+      "bytes": 24021
+    },
+    {
+      "source_path": "pyjnd/models/iccv_yan_2025_model.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--models--iccv_yan_2025_model.py.txt",
+      "sha256": "1e0d2b8e51fabc8a4f2a4c7737a3979e72edeb58d04d24d98536feeb41982827",
+      "bytes": 24128
+    },
+    {
+      "source_path": "pyjnd/models/ojcas_sun_2024_model.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--models--ojcas_sun_2024_model.py.txt",
+      "sha256": "ff536199191a7c9459168d5ad1fae285a5f2f96916157c6f7cb61d352338438e",
+      "bytes": 5115
+    },
+    {
+      "source_path": "pyjnd/models/spl_bae_2013_model.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--models--spl_bae_2013_model.py.txt",
+      "sha256": "4bfa6d80df052f887a7d3f0738f6c26e976ecf3a6edcc4d749f90227d276dfc4",
+      "bytes": 5807
+    },
+    {
+      "source_path": "pyjnd/models/tcsvt_wei_2009_model.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--models--tcsvt_wei_2009_model.py.txt",
+      "sha256": "173d22bce097f9a0ef6e807271208257f68b76c4990462b908d82f6ce0ca2c38",
+      "bytes": 10938
+    },
+    {
+      "source_path": "pyjnd/models/tip_bae_2016_model.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--models--tip_bae_2016_model.py.txt",
+      "sha256": "5451a3177a906ad25949fd32b3a1aecec12a6c843109fd41ff1118c668ff035c",
+      "bytes": 8978
+    },
+    {
+      "source_path": "pyjnd/models/tob_kang_2023_model.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--models--tob_kang_2023_model.py.txt",
+      "sha256": "c19c04a51fd58935d4209fdbf58beb0786454dbab55ff4eee443d83def809fab",
+      "bytes": 14586
+    },
+    {
+      "source_path": "pyjnd/utils/__init__.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--utils--__init__.py.txt",
+      "sha256": "8a0cb23a3e84fb31ba26788ba253f59a1daeb0aaf795c81ca22f9978230bb0b8",
+      "bytes": 1706
+    },
+    {
+      "source_path": "pyjnd/utils/color_util.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--utils--color_util.py.txt",
+      "sha256": "485f34a21d579553ccc025f4183dda4ed519ed58243fe86b6b430569baa26319",
+      "bytes": 7981
+    },
+    {
+      "source_path": "pyjnd/utils/diffjpeg.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--utils--diffjpeg.py.txt",
+      "sha256": "0eb084bed0075176b69cd7f4ee86742eeb56c460a0dafb3da34bff13c0d8c4db",
+      "bytes": 16110
+    },
+    {
+      "source_path": "pyjnd/utils/dist_util.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--utils--dist_util.py.txt",
+      "sha256": "e6a6d7fced5146ff2e1f16cb0ce1c922171fe7e8b28c011178695ebed4f477b8",
+      "bytes": 2608
+    },
+    {
+      "source_path": "pyjnd/utils/download_util.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--utils--download_util.py.txt",
+      "sha256": "659a3679c7a0fcbb1cbe035e1326571335f16dc5bdfae4e2b61efbf75cbf8fb4",
+      "bytes": 3341
+    },
+    {
+      "source_path": "pyjnd/utils/img_process_util.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--utils--img_process_util.py.txt",
+      "sha256": "ce75da4b0f44eb744ebab195940cc247fd6336069ac096573a891edda5791650",
+      "bytes": 3223
+    },
+    {
+      "source_path": "pyjnd/utils/img_util.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--utils--img_util.py.txt",
+      "sha256": "d7eac1a443f695b9a26f5bdee9fe5b976ae66cd1bfa237dc7ae33b7f761cc9bf",
+      "bytes": 29780
+    },
+    {
+      "source_path": "pyjnd/utils/logger.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--utils--logger.py.txt",
+      "sha256": "09f412221fcf3478eeb4944931f88ded228165a4a00b5f9af3f113458509792d",
+      "bytes": 6869
+    },
+    {
+      "source_path": "pyjnd/utils/matlab_functions.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--utils--matlab_functions.py.txt",
+      "sha256": "29a3a3d209ce15724202bfb01415e5d4e574e7b853090551a7938c7b78ec4975",
+      "bytes": 6962
+    },
+    {
+      "source_path": "pyjnd/utils/misc.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--utils--misc.py.txt",
+      "sha256": "6ec1919367ff0812218b74018671d445cb4ec5aacc5bf583cc2ad7abe3c6ad01",
+      "bytes": 4655
+    },
+    {
+      "source_path": "pyjnd/utils/options.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--utils--options.py.txt",
+      "sha256": "ebb82a2c9308f5a49a4ef23f75cf6bb28da27ed94ffdebd472a37b7644d68191",
+      "bytes": 6830
+    },
+    {
+      "source_path": "pyjnd/utils/registry.py",
+      "readable_path": "derived/docs/upstream-code/pyjnd--utils--registry.py.txt",
+      "sha256": "6b05509e7620bd5652960d4f7fc01fc2f6e8e13c3b32e16f7224936d33e2faad",
+      "bytes": 2474
+    },
+    {
+      "source_path": "regr_filt.sh",
+      "readable_path": "derived/docs/upstream-code/regr_filt.sh.txt",
+      "sha256": "a68b9ecfe3361c43b89b4503e6c6091d29e93ee239d0e1d0fb94ff8da86ed5df",
+      "bytes": 907
+    },
+    {
+      "source_path": "requirements.txt",
+      "readable_path": "derived/docs/upstream-code/requirements.txt.txt",
+      "sha256": "03a4e33b03d2c0654ce9afdc746a4e7ae880a46b532fa0a10a8ba234ae1712f8",
+      "bytes": 109
+    },
+    {
+      "source_path": "results/hevc_sdr_ctc/result.md",
+      "readable_path": "derived/docs/upstream-code/results--hevc_sdr_ctc--result.md.txt",
+      "sha256": "2860313b78447db301c03d89692eed44cd7dca092aadf59f4890b795c1e585da",
+      "bytes": 8615
+    },
+    {
+      "source_path": "results/hevc_sdr_ctc/test_condition/aomenc.yml",
+      "readable_path": "derived/docs/upstream-code/results--hevc_sdr_ctc--test_condition--aomenc.yml.txt",
+      "sha256": "b94855b63c0bf929228c1875acd4bf3b7dfe5c8ef4e2f2d5a59d588d2f1001da",
+      "bytes": 597
+    },
+    {
+      "source_path": "results/hevc_sdr_ctc/test_condition/regr_encode.sh",
+      "readable_path": "derived/docs/upstream-code/results--hevc_sdr_ctc--test_condition--regr_encode.sh.txt",
+      "sha256": "8521eb353aad3ac37ceafd8747a7a0e9a1919c73990929bb30c091da1138072e",
+      "bytes": 2980
+    },
+    {
+      "source_path": "results/hevc_sdr_ctc/test_condition/vvenc.yml",
+      "readable_path": "derived/docs/upstream-code/results--hevc_sdr_ctc--test_condition--vvenc.yml.txt",
+      "sha256": "7dcc32ec52cbfd94c652184a569c874b91940334b1e88b19cd308d10f36cd570",
+      "bytes": 812
+    },
+    {
+      "source_path": "results/hevc_sdr_ctc/test_condition/x264.yml",
+      "readable_path": "derived/docs/upstream-code/results--hevc_sdr_ctc--test_condition--x264.yml.txt",
+      "sha256": "9ae3dbe1fa81dff48192327560d9f4a21602b10e6bbc71707f08f8433da2cf43",
+      "bytes": 683
+    },
+    {
+      "source_path": "results/hevc_sdr_ctc/test_condition/x265.yml",
+      "readable_path": "derived/docs/upstream-code/results--hevc_sdr_ctc--test_condition--x265.yml.txt",
+      "sha256": "9d423c4aaaa638079093134070430637c919090395c814c125920eeb2b6fa883",
+      "bytes": 785
+    },
+    {
+      "source_path": "results/mcl_jci_dataset_1080p/result.md",
+      "readable_path": "derived/docs/upstream-code/results--mcl_jci_dataset_1080p--result.md.txt",
+      "sha256": "a958adbef934d7c758783219f1a8497da688b0e9e019c80ffd9f091ea0bc0f03",
+      "bytes": 8207
+    },
+    {
+      "source_path": "results/mcl_jci_dataset_1080p/test_condition/aomenc.yml",
+      "readable_path": "derived/docs/upstream-code/results--mcl_jci_dataset_1080p--test_condition--aomenc.yml.txt",
+      "sha256": "b94855b63c0bf929228c1875acd4bf3b7dfe5c8ef4e2f2d5a59d588d2f1001da",
+      "bytes": 597
+    },
+    {
+      "source_path": "results/mcl_jci_dataset_1080p/test_condition/regr_encode.sh",
+      "readable_path": "derived/docs/upstream-code/results--mcl_jci_dataset_1080p--test_condition--regr_encode.sh.txt",
+      "sha256": "246b348caca35d2bad0fc5b7e343f5d5a8e1baba49a0c13088ff1b4a5b347212",
+      "bytes": 2989
+    },
+    {
+      "source_path": "results/mcl_jci_dataset_1080p/test_condition/vvenc.yml",
+      "readable_path": "derived/docs/upstream-code/results--mcl_jci_dataset_1080p--test_condition--vvenc.yml.txt",
+      "sha256": "7dcc32ec52cbfd94c652184a569c874b91940334b1e88b19cd308d10f36cd570",
+      "bytes": 812
+    },
+    {
+      "source_path": "results/mcl_jci_dataset_1080p/test_condition/x264.yml",
+      "readable_path": "derived/docs/upstream-code/results--mcl_jci_dataset_1080p--test_condition--x264.yml.txt",
+      "sha256": "9ae3dbe1fa81dff48192327560d9f4a21602b10e6bbc71707f08f8433da2cf43",
+      "bytes": 683
+    },
+    {
+      "source_path": "results/mcl_jci_dataset_1080p/test_condition/x265.yml",
+      "readable_path": "derived/docs/upstream-code/results--mcl_jci_dataset_1080p--test_condition--x265.yml.txt",
+      "sha256": "9d423c4aaaa638079093134070430637c919090395c814c125920eeb2b6fa883",
+      "bytes": 785
+    },
+    {
+      "source_path": "results/mcl_jcv_dataset_1080p/result.md",
+      "readable_path": "derived/docs/upstream-code/results--mcl_jcv_dataset_1080p--result.md.txt",
+      "sha256": "799d3896d29630c3b09825319f8c7c14ee5256c6aa804004d886f2477cd77659",
+      "bytes": 8615
+    },
+    {
+      "source_path": "results/mcl_jcv_dataset_1080p/test_condition/aomenc.yml",
+      "readable_path": "derived/docs/upstream-code/results--mcl_jcv_dataset_1080p--test_condition--aomenc.yml.txt",
+      "sha256": "b94855b63c0bf929228c1875acd4bf3b7dfe5c8ef4e2f2d5a59d588d2f1001da",
+      "bytes": 597
+    },
+    {
+      "source_path": "results/mcl_jcv_dataset_1080p/test_condition/regr_encode.sh",
+      "readable_path": "derived/docs/upstream-code/results--mcl_jcv_dataset_1080p--test_condition--regr_encode.sh.txt",
+      "sha256": "d4fbc290890eb01e6ab96136f025f976b566c3bcd8f56704b60e7c65294edafa",
+      "bytes": 2989
+    },
+    {
+      "source_path": "results/mcl_jcv_dataset_1080p/test_condition/vvenc.yml",
+      "readable_path": "derived/docs/upstream-code/results--mcl_jcv_dataset_1080p--test_condition--vvenc.yml.txt",
+      "sha256": "7dcc32ec52cbfd94c652184a569c874b91940334b1e88b19cd308d10f36cd570",
+      "bytes": 812
+    },
+    {
+      "source_path": "results/mcl_jcv_dataset_1080p/test_condition/x264.yml",
+      "readable_path": "derived/docs/upstream-code/results--mcl_jcv_dataset_1080p--test_condition--x264.yml.txt",
+      "sha256": "9ae3dbe1fa81dff48192327560d9f4a21602b10e6bbc71707f08f8433da2cf43",
+      "bytes": 683
+    },
+    {
+      "source_path": "results/mcl_jcv_dataset_1080p/test_condition/x265.yml",
+      "readable_path": "derived/docs/upstream-code/results--mcl_jcv_dataset_1080p--test_condition--x265.yml.txt",
+      "sha256": "9d423c4aaaa638079093134070430637c919090395c814c125920eeb2b6fa883",
+      "bytes": 785
+    },
+    {
+      "source_path": "results/parse_csv_to_md.py",
+      "readable_path": "derived/docs/upstream-code/results--parse_csv_to_md.py.txt",
+      "sha256": "ef809d81205633e98e7222829bdaa053b7b4ba63bd717d1d8bf5ff7881cc39d5",
+      "bytes": 4312
+    },
+    {
+      "source_path": "results/results.md",
+      "readable_path": "derived/docs/upstream-code/results--results.md.txt",
+      "sha256": "1722fd5e80aa6a42bd862b8419ed5780178d4884488232c889793d4b2d62df01",
+      "bytes": 5969
+    },
+    {
+      "source_path": "results/xiph_dataset_1080p/result.md",
+      "readable_path": "derived/docs/upstream-code/results--xiph_dataset_1080p--result.md.txt",
+      "sha256": "25f5c7c6bfb4ca5503ade553a06f980af131421e272d414b6845bd99454569f1",
+      "bytes": 8615
+    },
+    {
+      "source_path": "results/xiph_dataset_1080p/test_condition/aomenc.yml",
+      "readable_path": "derived/docs/upstream-code/results--xiph_dataset_1080p--test_condition--aomenc.yml.txt",
+      "sha256": "b94855b63c0bf929228c1875acd4bf3b7dfe5c8ef4e2f2d5a59d588d2f1001da",
+      "bytes": 597
+    },
+    {
+      "source_path": "results/xiph_dataset_1080p/test_condition/regr_encode.sh",
+      "readable_path": "derived/docs/upstream-code/results--xiph_dataset_1080p--test_condition--regr_encode.sh.txt",
+      "sha256": "39137a2c85faf990f6969f265daae5ae62f6bbabcfc32c47c53a0386e1ae4555",
+      "bytes": 2986
+    },
+    {
+      "source_path": "results/xiph_dataset_1080p/test_condition/vvenc.yml",
+      "readable_path": "derived/docs/upstream-code/results--xiph_dataset_1080p--test_condition--vvenc.yml.txt",
+      "sha256": "7dcc32ec52cbfd94c652184a569c874b91940334b1e88b19cd308d10f36cd570",
+      "bytes": 812
+    },
+    {
+      "source_path": "results/xiph_dataset_1080p/test_condition/x264.yml",
+      "readable_path": "derived/docs/upstream-code/results--xiph_dataset_1080p--test_condition--x264.yml.txt",
+      "sha256": "9ae3dbe1fa81dff48192327560d9f4a21602b10e6bbc71707f08f8433da2cf43",
+      "bytes": 683
+    },
+    {
+      "source_path": "results/xiph_dataset_1080p/test_condition/x265.yml",
+      "readable_path": "derived/docs/upstream-code/results--xiph_dataset_1080p--test_condition--x265.yml.txt",
+      "sha256": "9d423c4aaaa638079093134070430637c919090395c814c125920eeb2b6fa883",
+      "bytes": 785
+    },
+    {
+      "source_path": "run.sh",
+      "readable_path": "derived/docs/upstream-code/run.sh.txt",
+      "sha256": "709217012911f9845f8f12fec9684cdd00e9f1220ae83f6774d87b4171020f1f",
+      "bytes": 254
+    },
+    {
+      "source_path": "scripts/csv_converter.py",
+      "readable_path": "derived/docs/upstream-code/scripts--csv_converter.py.txt",
+      "sha256": "ab3ee8f4416bebc77279c468693755e58d0fafdbe26e91aa28ba421659f5d3e5",
+      "bytes": 1954
+    },
+    {
+      "source_path": "scripts/csv_to_random_split_pkl.py",
+      "readable_path": "derived/docs/upstream-code/scripts--csv_to_random_split_pkl.py.txt",
+      "sha256": "ef94f8bdbd157730792fc6144a6574ff28e5e9630cd803790da41979989f8373",
+      "bytes": 3416
+    },
+    {
+      "source_path": "scripts/model_stats.py",
+      "readable_path": "derived/docs/upstream-code/scripts--model_stats.py.txt",
+      "sha256": "d474f700960c727fc4f898978cc3d1d869ea5dd6bd1c983eadf9948f614f8767",
+      "bytes": 1676
+    },
+    {
+      "source_path": "train.py",
+      "readable_path": "derived/docs/upstream-code/train.py.txt",
+      "sha256": "a401669290d98d7bc3bde126141fa1489eb4bf5949ded4af8f5d94c7f3715e75",
+      "bytes": 11203
+    },
+    {
+      "source_path": "train_nsplits.py",
+      "readable_path": "derived/docs/upstream-code/train_nsplits.py.txt",
+      "sha256": "a96dd14cb08bcce3e091f08681c40fad2930c9a2a58685d9f5e4e9379e7584d0",
+      "bytes": 2371
+    }
+  ]
+}
