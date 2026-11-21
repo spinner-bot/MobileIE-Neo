@@ -1,10 +1,10 @@
 # MIE-0018｜LiteIE：极小曲线增强的直接先例与视频控制问题
 
-**当前结论：待Gate2独立自审；建议证据受限结项。** 已精读公开全文预印本并核查完整当前作者载体，正式出版者全文及原训练/手机部署对应资料未取得。0模型复现、0训练、0GPU、0Gate3。
+**结论：证据受限结项。** 已精读公开全文预印本并核查三个版本差异及完整当前作者载体，正式出版者全文及原训练/手机部署对应资料未取得。0模型复现、0训练、0GPU、0Gate3。审查范围和缺口见[Gate2记录](gate2.json)。
 
 LiteIE与MobileIE共享作者Hailong Yan，在2025-07-06初始预印本已经引用MobileIE。它用共享的3→1→3卷积算子及重复曲线调整，将作者报告的可学习参数压到58，并提出同图feature恢复与颜色训练约束。它是二期轻量设计必须讨论的先例；它并未建立视频时间机制，也没有把MobileIE作为同协议的数值基线。
 
-[分版本逐页记录](../docs/reading-notes.md)、[主张与证据](claims.json)、[版本对照](../docs/v1-v3-correspondence.json)、[作者工件清单](../docs/author-source-manifest.json)、[全部样例](../docs/author-media-manifest.json)、[实际视觉审阅](../docs/visual-review.json)构成可审查证据链。v1与v3的主要方法/数值不变，表5 SCI参数修订单独留档；出版者预览46参考与预印本50参考不混称同一正式全文。DOI登记2025-07、卷期封面2026-01-15、v3更新2026-05均有独立含义。
+[分版本逐页记录](../docs/reading-notes.md)、[主张与证据](claims.json)、[初版对照](../docs/v1-v3-correspondence.json)、[中间版对照](../docs/v2-v3-correspondence.json)、[作者工件清单](../docs/author-source-manifest.json)、[全部样例](../docs/author-media-manifest.json)、[实际视觉审阅](../docs/visual-review.json)构成可审查证据链。v1/v2与v3的主要方法/数值不变，表5 SCI参数修订单独留档；出版者预览46参考与预印本50参考不混称同一正式全文。DOI登记2025-07、卷期封面2026-01-15、v3更新2026-05均有独立含义。
 
 论文19.04dB/.607、58参数、.97ms GPU与手机表的37.4ms 4K均为**作者报告**，不能换设备、数据或监督预算后直接拿来证明本项目胜负。37.4ms约26.74FPS，与正文27.1及摘要30不完全一致；表题NPU与正文GPUdelegate矛盾，未有公开导出链可核。静态图像质量与极少权重也不证明低时序扰动或低峰值内存。
 
