@@ -1,0 +1,191 @@
+{
+  "resource_id": "MIE-0024",
+  "files": [
+    {
+      "path": ".env.example",
+      "bytes": 24,
+      "sha256": "df9e152bfa2783a96da1ebe42afc04c2bcb5d2824d58ce9202fa5d03f19e67aa"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1063,
+      "sha256": "45f7cb7877109c689908dd54657a0beb6b109828ed778b2b4bd43326649c8340"
+    },
+    {
+      "path": "README.md",
+      "bytes": 9155,
+      "sha256": "985599643b39255a3b4458524ab5712b1afe9f48f28debc0cdd373dd4cddb333"
+    },
+    {
+      "path": "ckpts/model_with_qat_c32.ckpt",
+      "bytes": 11342475,
+      "sha256": "8e163f54d7fd0ebc68770a1d38c26ac0e3587ccdcdbf39f5a06532fb64882b81"
+    },
+    {
+      "path": "ckpts/model_with_qat_c32_int8_100x100.tflite",
+      "bytes": 1005112,
+      "sha256": "e5b5e47e3516cff74e8e93bed21beeb8d74aa557cdf4a113930084285848903a"
+    },
+    {
+      "path": "ckpts/model_with_qat_c32_int8_1920x1080.tflite",
+      "bytes": 1002624,
+      "sha256": "0d06e5a2a281baa628c0f83bd9d8d3bd3502bb79ca5bb1b46d44d48267fb75f5"
+    },
+    {
+      "path": "dped/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "figs/model.png",
+      "bytes": 172885,
+      "sha256": "5e660e8e7f521dda81cbfe56921a71a7a7838f799b83f220234dd38740fd6b08"
+    },
+    {
+      "path": "figs/qualitative_result.png",
+      "bytes": 15362121,
+      "sha256": "03d2a12921c31a3f12273fab5d69bf7d70563129932c0d8df305884f80537cc6"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 3668,
+      "sha256": "c41ac2403ca426ac34461e22dab83e6289faa48a1984b15bab2a70e8bf3e499d"
+    },
+    {
+      "path": "scripts/quantize_and_eval_qat_ckpt.sh",
+      "bytes": 5282,
+      "sha256": "82d202ad9e6a698b195d137bd4a62adc05b63e2c5369c06ef0748f2e10b8f4d5"
+    },
+    {
+      "path": "scripts/run_benchmark_ckpts.sh",
+      "bytes": 1294,
+      "sha256": "98e5d0613ea3a16b4efe2dea9d457931f5e4bc2577c64d73d2931ee5eb1c4adc"
+    },
+    {
+      "path": "scripts/run_ckpts_to_int8_tflite_eval.sh",
+      "bytes": 1415,
+      "sha256": "e1a1c2c6a5062b58ca081ec2cfca88d980b7f4bb148e415b541704efa03c91b9"
+    },
+    {
+      "path": "scripts/run_ckpts_to_tflite_eval.sh",
+      "bytes": 1273,
+      "sha256": "4394a48e350da06fe86453d3fbd1cc42f2f61a74456de3ffe70ca019d2668845"
+    },
+    {
+      "path": "src/README.md",
+      "bytes": 6492,
+      "sha256": "691c50a51afd8451d9ebf68c632d2acee3cda57b5e3163cb4388a299faa27e67"
+    },
+    {
+      "path": "src/checkpoint_tflite_utils.py",
+      "bytes": 4527,
+      "sha256": "6009258dd8ec94dac637b025ccb993e92c633e536a1bd645e805a8c389ee6252"
+    },
+    {
+      "path": "src/ckpts_to_int8_tflite_eval.py",
+      "bytes": 14541,
+      "sha256": "1fbfdfed7f7d79c640cae42f8778c788ddb77dee7e0e55c16cb258dffea4a1a9"
+    },
+    {
+      "path": "src/ckpts_to_tflite_eval.py",
+      "bytes": 7917,
+      "sha256": "f10d7a34ef120a09719f217b20b4cd405230fdfe8d407b51aaaa30a07e64b8af"
+    },
+    {
+      "path": "src/data/__pycache__/data_aug.cpython-312.pyc",
+      "bytes": 1939,
+      "sha256": "10e490833d3cbd1bd2d98d88c55929f5a83df9ad787b499b1b1b08cbbf46815f"
+    },
+    {
+      "path": "src/data/__pycache__/dped_dataset.cpython-312.pyc",
+      "bytes": 8104,
+      "sha256": "8e1a5bcf6d677db02a0ae6ff82f43b6e20bfe5b6541bd1a28bc93a2d39677ce1"
+    },
+    {
+      "path": "src/data/data_aug.py",
+      "bytes": 907,
+      "sha256": "808a17e2e1ebd8a2892867eb5bffc9063eaa2b7149ad22247fbeb49a73a48309"
+    },
+    {
+      "path": "src/data/dped_dataset.py",
+      "bytes": 5907,
+      "sha256": "2f379c72b39001d7a4e837b09e29adc4ad4c2ea199d10945c99573bf639c55f2"
+    },
+    {
+      "path": "src/eval/benchmark_ckpts.py",
+      "bytes": 11367,
+      "sha256": "f1ede6656cc92e62cefbd5f729fa01ced756d18a32acf560f0f1caf4393b1ed9"
+    },
+    {
+      "path": "src/eval/benchmark_quantized.py",
+      "bytes": 21099,
+      "sha256": "62c7761fcdfd9959eaa51b54abfdacc1b84b8c7af006cdd22d741c362433039a"
+    },
+    {
+      "path": "src/eval/checkpoint_loading.py",
+      "bytes": 4114,
+      "sha256": "bec286a3cabb1af1af17baf88bcd36f7b191a4fbb8b2b819470566c555806849"
+    },
+    {
+      "path": "src/eval/eval_original_images.py",
+      "bytes": 9800,
+      "sha256": "ae4a3ac1255899a15799139d27a9d7f9aadc4a9a4f654f58cc800365425c21eb"
+    },
+    {
+      "path": "src/eval/eval_pytorch.py",
+      "bytes": 4427,
+      "sha256": "cc6acb18d92268109548c5abeb8cac732b077c9f4e9c553d40650369c01dd346"
+    },
+    {
+      "path": "src/eval/eval_tflite.py",
+      "bytes": 16178,
+      "sha256": "c11bc98fa141d6c8aaa8f0adab6f035c4684fcd74c94b1d285dedd3ac162d725"
+    },
+    {
+      "path": "src/export/__pycache__/to_tflite.cpython-312.pyc",
+      "bytes": 13893,
+      "sha256": "78a2b6a06a9c605fb6ec58dd9882082336384794135f8d4b6f52887af9fff787"
+    },
+    {
+      "path": "src/export/quantize.py",
+      "bytes": 12621,
+      "sha256": "df5c79172615af4c9dd603226f651e9a98ab17de6c5289ed9e94a4dbe8ff9c12"
+    },
+    {
+      "path": "src/export/to_tflite.py",
+      "bytes": 10793,
+      "sha256": "5e0b31e874c9d350f479eace5f3e1f3f307cc9459295591231c177fd6b577a1d"
+    },
+    {
+      "path": "src/infer/infer_tflite.py",
+      "bytes": 11453,
+      "sha256": "59dda215239258b55c85b83ad0fcddf8a3aabcff43330668075e2667cbfba2e3"
+    },
+    {
+      "path": "src/models/__pycache__/model_builder.cpython-312.pyc",
+      "bytes": 22873,
+      "sha256": "df469424b06d82e57c8a3a97c74b00e753f8cbcf88842a7ae269317e5c674387"
+    },
+    {
+      "path": "src/models/model_builder.py",
+      "bytes": 17899,
+      "sha256": "203bc6aa31150e0ccd0b4c97c4d4df4cef9d19b7b2fe44457d87b1053ece3b63"
+    },
+    {
+      "path": "src/train/loss.py",
+      "bytes": 12324,
+      "sha256": "fecd83d949bb7e4cfef3e28eeec7213e81b2a7a3925d1d949a5f5f80337d6392"
+    },
+    {
+      "path": "src/train/train_qat.py",
+      "bytes": 15013,
+      "sha256": "1db48d6f509d65dfecc0d9aa981c44feff8440a539789aa47cddf2779ee26f35"
+    },
+    {
+      "path": "src/train/train_utils_builder.py",
+      "bytes": 3056,
+      "sha256": "977148ae9c3aaa365e2193455bc0da02832720c46bfc4f65c0f79694f0109b70"
+    }
+  ],
+  "executed": false
+}
