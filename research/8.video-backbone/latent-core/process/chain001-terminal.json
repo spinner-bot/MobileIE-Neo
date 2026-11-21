@@ -1,0 +1,32 @@
+{
+  "at": "2026-11-21T11:21:01.793711+08:00",
+  "author": "Codex  (sqs_A100)",
+  "outer_tool_session": 33516,
+  "outer_tool_exit_code": 143,
+  "original_coordinator": {
+    "pid": 3843495,
+    "start_ticks": 117051681
+  },
+  "original_coordinator_PID_gone": true,
+  "original_coordinator_terminal_runtime_available": false,
+  "cause": "Not established; do not infer ordinary numerical completion or a specific signal source",
+  "last_recorded_stage": "cuda-qualification007",
+  "qualification_guard_exit_code": 0,
+  "qualification_worker": {
+    "pid": 3848429,
+    "start_ticks": 117106343,
+    "state": "R"
+  },
+  "qualification_worker_PID_gone": true,
+  "qualification_completed_normally": true,
+  "qualification_counts": {
+    "common_steps": 2,
+    "optimizer_updates": 4,
+    "student_images": 64,
+    "F0_CPU_anchor_images": 16
+  },
+  "no_qualification_weights_exported": true,
+  "formal_seed_drivers_or_workers_started": false,
+  "formal_optimizer_updates": 0,
+  "new_execution_action": "Retain all old evidence; resume scheduling from passed qualification using original run.py --seed drivers in a new isolated controller process session. Do not re-run qualification or modify 26/44 numerical sources."
+}
