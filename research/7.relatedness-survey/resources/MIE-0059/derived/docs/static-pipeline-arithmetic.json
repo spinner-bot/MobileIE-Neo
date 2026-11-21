@@ -1,0 +1,21 @@
+{
+  "at": "2026-11-21T10:58:38.671434+08:00",
+  "method": "Literalarchitecturearithmetic/currentcode+checkpointFloatStoragebytecorrespondence only, no torch/model/benchmark",
+  "source_params": {
+    "IE": 6145,
+    "IF": 14305,
+    "ID": 39204,
+    "total": 59654,
+    "all_three_M": 0.059654,
+    "IF_plus_ID": 53509
+  },
+  "checkpoint_storage_bytes": {
+    "IE": 24580,
+    "IF": 57220,
+    "ID": 156816
+  },
+  "source_dependency": "Atfixedstatelessslimevalweights, fuR=ID(fu), fu usesVIS/IRfeatures only; IE+enhancedVISbranch onlyfuEn helper. Staticpossiblepruning notperformed orruntimevalidated.",
+  "executed_scriptpath": "test_p unprunedIE +3encoder/2decoderIF +ID and5saveoutputs; timingbeforeminmaxsave",
+  "save_normalizer": "(o-min(o))/(max(o)-min(o)), batch1current; frameglobalextrema dependency, constantframe denominator0 arithmeticconditional, no observedvideo/exception",
+  "MAC_vs_FLOP": "Scriptlabels thop MACs/G asGFLOPs without explicit2factor, no independent libraryruntime/cost verification"
+}
