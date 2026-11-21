@@ -1,4 +1,4 @@
-"""Qualify I1-S, then run two independent exact-budget seeds on physical GPUs1/2."""
+"""Qualify I1-S, then run two independent exact-budget seeds on physical GPUs6/7."""
 import argparse
 import itertools
 import os
@@ -43,7 +43,7 @@ def main(seed):
 
     def training(model_seed, qualification):
         prefix = 'simple-cuda-qualification' if qualification else f'simple-train-seed{model_seed}-attempt'
-        gpu = 1 if qualification or model_seed == 0 else 2
+        gpu = 6 if qualification or model_seed == 0 else 7
         resume = None
         for attempt in itertools.count(1):
             name = f'{prefix}{attempt:03d}'
@@ -83,7 +83,7 @@ def main(seed):
             return
 
     write(out / 'config.json', dict(at=stamp(), process=identity(), source_freeze=frozen,
-          model_seed=seed, GPU_group=[0, 1, 2, 3], preferred_physical_GPU=dict(seed0=1, seed1=2),
+          model_seed=seed, GPU_group=[4, 5, 6, 7], preferred_physical_GPU=dict(seed0=6, seed1=7),
           maximum_parallel_numeric_workers=2, formal_updates=320000 if seed is None else 160000,
           formal_student_images=2560000 if seed is None else 1280000,
           unique_final_only=True, wall_clock_cutoff=False, automatic_scientific_retry=False,
