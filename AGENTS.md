@@ -8,6 +8,10 @@
 
 当前工作分支为 **research/O1**，由用户明确指定；目录仍为 `/data/Users/zrh/repo/MobileIE-Neo`。从main的bcc4198a55b91785a4a2473d4532c7017fe2160e原地新建分支，迁移当时未改main指针/已有历史，未搬源码/环境/数据，其他worktree不改。[0195迁移报告](docs/进展报告/0195-T-261121-切换research-O1分支与结果归档.md)、[迁移记录](research/8.video-backbone/operator-core/process/branch-transition001.json)。旧目标或冻结文档里的main为迁移前位置约定，以本条及用户最新指令为准，不因此自动切回main；未来合回仍 `--no-ff`。 推送前核实（2026-11-21T10:37:33.774251+08:00）main已由独立main-integration worktree推进至09f446e51；本分支不修改或回退它，历史迁移起点不是main永久冻结约束，见[并行记录](research/8.video-backbone/operator-core/process/concurrent-main001.json)。
 
+当前接续为独立 **L1潜在状态基线**，见[0197](docs/进展报告/0197-T-261121-潜在状态基线资格与固定学习方案.md)、[入口](research/8.video-backbone/latent-core/README.md)。更新：2026-11-21T10:55:50.388409+08:00；Codex  (sqs_A100)。旧状态源码归并与先例79后，仅登记一个自由latent state问题；不是O1宽度/teacher/probe救分。CPU一次已正常29.622781秒/exit0/原3836298已无，四初始F0差0、历史梯度/stream/状态检查过；26源冻结、32F0/196学生/8丢弃，0正式/GPU/DEV，无权重继承。12431参数/解析8.982835344G/持久state16588800B非完整成本或手机证据，普通GRU/隐状态非创新。
+
+[正式协议](research/8.video-backbone/latent-core/training-protocol.md)已先登记两目标×双seed各8K共32K/512K学生、两seed同32训练窗抽样、同权重current及四次完整同帧self4、44唯一比较和固定A/B门；**尚未实现/冻结正式链、取得CUDA资格或启动正式训练**。下一完成这一个完整实验而非扩诊断，所有CPU资格更新丢弃。新GPU仍按连续余量/UUID/锁/自身边界，新seed不继承别的状态；本固定cell/宽度/dilation/初始化/目标/LR/长度/seed若失败按协议停止，独立最终不开放。
+
 长期研究目标已恢复 **active**，目标位置research/O1。更新：2026-11-21T10:36:18.033361+08:00；Codex  (sqs_A100)。原chain002已10:04:59自然完成且全部原句柄无，完整复核见[0196](docs/进展报告/0196-T-261121-共享核心完整学习评价与止损.md)、[决定](research/8.video-backbone/operator-core/decision.md)、[终态](research/8.video-backbone/operator-core/process/terminal001.json)。16K正式更新/四唯一最终/32训练抽样窗/416输出/52均值，全部四图实际审阅；空间8/8、历史0/8、目标2/4、强post4/16，完整14/36失败。局部正例保留，固定共享8通道/两级soft相关/温度-confidence/probe/目标/LR/长度/seed网格STOP，不换teacher/GT loss/延长补救，不开失败DEV/JOD/成本/手机。没有新模型推理；下一须归并证据后登记不同信息/结构，不重跑或按旧状态接续。0195的paused是迁移时状态。
 
 25 CPU/39数值全链＋2执行源不变；CPU8/成功CUDA4资格更新全丢弃，原CUDA001环境失败及部分前向/0优化保持。5049参数、解析Conv8.060601744G、状态29030400B非手机/峰值RAM证据，基础共享/相关/KD/Sobolev不当创新。原84值/snapshot003/PDF020、独立最终/所有旧STOP/7号和其他worktree保持。后续O1代码/结果/过程/报告均在research/O1密集提交、阶段推送。
@@ -50,4 +54,4 @@ O1固定配置已按原恢复/历史/强post门槛完整止损；不能仅换历
 - 所有既有STOP继续有效，包括R28/R34/R37/R44–R46/R48/R50–R51/R61/R64–R65/R73–R75/R77/R79–R82/R84–R88等的局部网格；本主题也须按自身协议止损。旧决策原文在[研究决策目录](research/4.temporal-consistency/docs/)，完整历史在[原文快照](docs/交接历史/AGENTS-20261120-1524.md)。不因当前入口缩短而恢复任何已停止实验。
 - 原始MobileIE/F0实际4075参数；主题8-V1独立空间16180、学习融合16365，使用两遍骨干和DIS，不能写成4K或零额外推理开销。packing、KD、门控、递归等已知组件不是已确立创新。
 - OLiVES 43/71/83、DAVIS testdev、Kodak 13–24独立最终继续封存；未经预定开发/冻结门槛，不读取最终像素或将开发集结论改称独立测试。主论文原84质量值/snapshot003/PDF020保持，当前仍非投稿完成稿。
-- 当前O1只在research/O1工作，survey/pre与demo/org各自worktree不修改、7号继续预留。先读[最新0196](docs/进展报告/0196-T-261121-共享核心完整学习评价与止损.md)、[主题8入口](research/8.video-backbone/README.md)、[原完整过程](research/8.video-backbone/process/v1/journal.md)与[论文状态](paper/RESEARCH_STATUS.md)；需要早期细节再定向查历史，勿按旧活跃行重启。
+- 当前O1只在research/O1工作，survey/pre与demo/org各自worktree不修改、7号继续预留。先读[最新0197](docs/进展报告/0197-T-261121-潜在状态基线资格与固定学习方案.md)、[主题8入口](research/8.video-backbone/README.md)、[原完整过程](research/8.video-backbone/process/v1/journal.md)与[论文状态](paper/RESEARCH_STATUS.md)；需要早期细节再定向查历史，勿按旧活跃行重启。
