@@ -10,13 +10,20 @@
       "http": 200,
       "archive": "archive/sourcezip-w-xb--MobileIE-6Ch.txt",
       "sha256": "e2322942ef73246f1d9ddf196407e3e142cd52f34007b9137835e47d60c4f713"
+    },
+    {
+      "path": "receipts/paper-84fce6e0de61-arxiv-pdf.json",
+      "status": "success",
+      "archive": "archive/paper-84fce6e0de61-arxiv-pdf.pdf",
+      "sha256": "039f8d5413ea26aa3db4426bfb9dfc66bf8e1e5ebddec45eeddb0ff3868dbd10",
+      "scope": "OnlyHIT/protocol/tablecrosscheckassociatedwithcurrentcode20; notbegun31"
     }
   ],
   "discovery_evidence": [
     "raw/repo-w-xb--MobileIE-6Ch-head.json",
     "receipts/sourcezip-w-xb--MobileIE-6Ch.json"
   ],
-  "adequacy": "Materials available for analysis; not yet read or qualified",
+  "adequacy": "Current35artifacts available/readapplicablecore, no model/trainingexecution; source/report/checkpointcorrespondence discrepanciesmarked",
   "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts",
   "path_conventions": {
     "receipts[].path": "relative to workstation/collection",
@@ -24,5 +31,10 @@
     "discovery_evidence strings": "relative to workstation/collection",
     "discovery_evidence[].source": "collection/ prefix relative to workstation; research/ prefix relative to repository root",
     "discovery_evidence[].acquisition": "relative to workstation/collection; path is remote repository path at revision"
-  }
+  },
+  "primary_additional_records": [
+    "collection/raw/repo-w-xb--MobileIE-6Ch-head.json",
+    "resources/MIE-0020/derived/docs/pinned-tree-receipt.json",
+    "resources/MIE-0020/derived/docs/pytorch251-sampler-source.json"
+  ]
 }
