@@ -1,0 +1,65 @@
+{
+  "at": "2026-11-21T12:16:00.363700+08:00",
+  "author": "Codex  (sqs_A100)",
+  "actual_clock_sleep_seconds": 2700.0049,
+  "original_independent_session_parent": {
+    "pid": 3852634,
+    "start_ticks": 117153546,
+    "state": "R"
+  },
+  "parent_same_start_and_live": true,
+  "workers": [
+    {
+      "seed": 0,
+      "original_worker": {
+        "pid": 3852927,
+        "start_ticks": 117158126,
+        "state": "R"
+      },
+      "actual_state": "S",
+      "same_start_and_live": true,
+      "completed_common_steps": 4960,
+      "completed_optimizer_updates": 9920,
+      "student_images": 158720,
+      "recent_median_common_step_seconds": 0.6393353939056396,
+      "estimated_remaining_seconds_for_sleep_only": 1943.5795974731445,
+      "completed_backup_steps": [
+        1000,
+        2000,
+        3000,
+        4000
+      ],
+      "runtime_not_yet_terminal": true,
+      "growing_trace_prefix_rows": 4960,
+      "trace_prefix_sha256": "b58757dff089c1be42fc9b98fff3b5f209d3fcf7e2635a6339700688a3b522d5"
+    },
+    {
+      "seed": 1,
+      "original_worker": {
+        "pid": 3852924,
+        "start_ticks": 117158111,
+        "state": "R"
+      },
+      "actual_state": "S",
+      "same_start_and_live": true,
+      "completed_common_steps": 4880,
+      "completed_optimizer_updates": 9760,
+      "student_images": 156160,
+      "recent_median_common_step_seconds": 0.6347728967666626,
+      "estimated_remaining_seconds_for_sleep_only": 1980.4914379119873,
+      "completed_backup_steps": [
+        1000,
+        2000,
+        3000,
+        4000
+      ],
+      "runtime_not_yet_terminal": true,
+      "growing_trace_prefix_rows": 4880,
+      "trace_prefix_sha256": "57f42c69253cca472a335cb57cff3faf3f369c99877bce0722c22cc2be026e0d"
+    }
+  ],
+  "no_intermediate_held_quality_selection": true,
+  "planned_next_interruptible_sleep_seconds": 1500,
+  "wall_clock_cutoff": false,
+  "scope": "Completed-step and backup progress, not final weights or quality claims"
+}
