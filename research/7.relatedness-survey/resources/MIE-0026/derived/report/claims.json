@@ -1,0 +1,128 @@
+{
+  "resource_id": "MIE-0026",
+  "at": "2026-11-21T14:27:37.263090+08:00",
+  "source_aliases": {
+    "prior": "prior:path→workstationrelative source, notpreviousresourceclaim"
+  },
+  "claims": [
+    {
+      "claim_id": "C01",
+      "evidence_class": "primary_public_identity",
+      "claim": "IEEEIoTJ13(17)pp39626–39640，在线2026-06-29/期次9月1，八作者已核。",
+      "anchors": [
+        "identity.json",
+        "derived/docs/ieee-public-metadata.json"
+      ],
+      "limitation": "页码预期15页不是15页已读；Crossref期次月份不当日期矛盾。"
+    },
+    {
+      "claim_id": "C02",
+      "evidence_class": "publisher_deposited_direct_citation",
+      "claim": "Crossref出版方67ref中的keyref60 DOI精确匹配MobileIE10.1109/ICCV51701.2025.02038。",
+      "anchors": [
+        "derived/docs/citation-provenance.json",
+        "prior:collection/raw/mie0026-crossref001.json"
+      ],
+      "limitation": "未见正文，不知引用语境/实际方法继承/印刷[60]；普通参考不无限扩资源。"
+    },
+    {
+      "claim_id": "C03",
+      "evidence_class": "explicit_limited_material_scope",
+      "claim": "官方58150BHTML摘要及相关元数据实际核读，0页PDF/0图表取得；并非全文分析。",
+      "anchors": [
+        "derived/docs/reading-notes.md",
+        "derived/docs/availability-review.json",
+        "sources/manifest.json"
+      ],
+      "limitation": "导航figures=true不是图已看；三索引metadata非独立实证。"
+    },
+    {
+      "claim_id": "C04",
+      "evidence_class": "author_abstract_method_claim",
+      "claim": "作者摘要描述Retinex与noise-to-noise联合照明/去噪。",
+      "anchors": [
+        "derived/docs/ieee-public-metadata.json"
+      ],
+      "limitation": "噪声配对/独立性/均值假设、损失公式与实际数据条件未知，不代写方法。"
+    },
+    {
+      "claim_id": "C05",
+      "evidence_class": "author_abstract_training_claim",
+      "claim": "摘要称zero-shot、无配对监督及全局/局部照明约束。",
+      "anchors": [
+        "derived/docs/ieee-public-metadata.json"
+      ],
+      "limitation": "未知训练/测试适配和外部prior，不能将zero-shot等同零训练/逐图训练或无测试费用。"
+    },
+    {
+      "claim_id": "C06",
+      "evidence_class": "author_abstract_reparameterization_claim",
+      "claim": "摘要称结构重参数化加速，具体分支/折叠与MobileIE关系待正文。",
+      "anchors": [
+        "derived/docs/ieee-public-metadata.json",
+        "derived/docs/citation-provenance.json"
+      ],
+      "limitation": "未知参数/MAC/内存/量化误差，不因名词就判同骨干/创新或零开销。"
+    },
+    {
+      "claim_id": "C07",
+      "evidence_class": "author_abstract_quality_claim",
+      "claim": "摘要列LOLv1/LOLv2-Real并主张SOTA。",
+      "anchors": [
+        "derived/docs/ieee-public-metadata.json"
+      ],
+      "limitation": "无原表/指标/划分/许可/seed/消融，不能验证质量领先或公平比较。"
+    },
+    {
+      "claim_id": "C08",
+      "evidence_class": "author_latency_and_conditional_arithmetic",
+      "claim": "摘要报告Snap8Gen3的6.25ms，字面倒数160/s。",
+      "anchors": [
+        "derived/docs/ieee-public-metadata.json",
+        "derived/docs/reading-notes.md"
+      ],
+      "limitation": "未知输入/precision/delegate/计时/适配/热功耗/手机SHA，不等持续160FPS或与MobileIE公平排序。"
+    },
+    {
+      "claim_id": "C09",
+      "evidence_class": "author_abstract_downstream_claim",
+      "claim": "摘要报告检测、实例分割和姿态泛化。",
+      "anchors": [
+        "derived/docs/ieee-public-metadata.json"
+      ],
+      "limitation": "数据/GT/控制/预算/具体结果未知，不代表我们验证或连续视频证据。"
+    },
+    {
+      "claim_id": "C10",
+      "evidence_class": "explicit_temporal_information_unknown",
+      "claim": "现有摘要不能确定历史/未来/state/因果性/视频训练与评价。",
+      "anchors": [
+        "derived/docs/reading-notes.md",
+        "derived/report/analysis.md"
+      ],
+      "limitation": "不从机器人/驾驶应用推断时序方法，亦不据摘要未提就断言不存在。"
+    },
+    {
+      "claim_id": "C11",
+      "evidence_class": "bounded_acquisition_and_code_availability",
+      "claim": "12回执含十次新增正常GET均终态；官方公开入口与替代学术/作者托管线索未获正文/图表/确切REZS实现。",
+      "anchors": [
+        "derived/docs/availability-review.json",
+        "derived/docs/github-search002.json",
+        "derived/docs/github-author-repos001.json",
+        "sources/manifest.json"
+      ],
+      "limitation": "保留空202/200与旧错误状态，不证明全网/私人代码不存在；不绕控制、不将另篇EMOD当本代码。"
+    },
+    {
+      "claim_id": "C12",
+      "evidence_class": "limited_research_value_and_unlock",
+      "claim": "直接引用及摘要组合构成需优先补证的相关先例风险，后续控制优化费用/噪声/折叠/完整手机与时间感知。",
+      "anchors": [
+        "derived/report/analysis.md",
+        "derived/docs/availability-review.json"
+      ],
+      "limitation": "unknown不成为确切重复/创新或实验证据；合法正文/实现后追加复审，Gate3未执行。"
+    }
+  ]
+}
