@@ -1,0 +1,63 @@
+{
+  "checked_at": "2026-11-21T13:40:44.554506+08:00",
+  "method": "stdlib zipfile/hashlib/pickletools, no deserialization or upstream execution",
+  "rows": [
+    {
+      "receipt": "resources/MIE-0024/derived/docs/checkpoint-blob-receipt.json",
+      "archive": "resources/MIE-0024/derived/docs/artifacts/ckpts/model_with_qat_c32.ckpt",
+      "sha256": "8e163f54d7fd0ebc68770a1d38c26ac0e3587ccdcdbf39f5a06532fb64882b81",
+      "bytes": 11342475,
+      "declared_bytes": null,
+      "zip_members": 992,
+      "all_member_CRC_passed": true,
+      "total_uncompressed_bytes": 11157840,
+      "storage_members": 986,
+      "storage_bytes": 10987688,
+      "metadata_member": "archive/data.pkl",
+      "metadata_bytes": 170101,
+      "opcode_counts": {
+        "PROTO": 1,
+        "EMPTY_DICT": 440,
+        "BINPUT": 256,
+        "MARK": 2529,
+        "BINUNICODE": 3283,
+        "BININT1": 4734,
+        "BININT2": 175,
+        "GLOBAL": 6,
+        "EMPTY_TUPLE": 1722,
+        "REDUCE": 2190,
+        "TUPLE": 2400,
+        "BINPERSID": 1094,
+        "NEWFALSE": 1105,
+        "BINGET": 4368,
+        "TUPLE1": 1350,
+        "LONG_BINPUT": 9424,
+        "LONG_BINGET": 879,
+        "BININT": 19,
+        "SETITEMS": 127,
+        "SETITEM": 308,
+        "BUILD": 1,
+        "NEWTRUE": 2,
+        "EMPTY_LIST": 10,
+        "BINFLOAT": 12,
+        "TUPLE2": 1,
+        "NONE": 2,
+        "APPENDS": 2,
+        "APPEND": 8,
+        "STOP": 1
+      },
+      "global_references": [
+        "collections OrderedDict",
+        "torch ByteStorage",
+        "torch FloatStorage",
+        "torch IntStorage",
+        "torch LongStorage",
+        "torch._utils _rebuild_tensor_v2"
+      ],
+      "model_key_strings_count": 0,
+      "model_key_examples": [],
+      "literal_task_mapping_strings": [],
+      "interpretation": "Structural ZIP/CRC and symbolic pickle opcode inspection only. GLOBAL/REDUCE opcodes recorded but never executed; no pickle.load/torch.load, imports from checkpoint, tensor allocation, or model run. Key strings do not establish full shapes, correctness, mapping semantics, or paper result reproduction."
+    }
+  ]
+}
