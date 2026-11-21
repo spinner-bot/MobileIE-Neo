@@ -141,6 +141,9 @@ def main():
         (OUT / 'failure.txt').write_text(traceback.format_exc())
         raise
     finally:
+        active = locals().get('model')
+        if active is not None:
+            counts['adapted_backbone_images'] += active.frame_calls
         write(OUT / 'runtime.json', dict(completed_normally=complete,
               seconds=time.perf_counter() - began, process_pid=os.getpid(), **counts))
 
