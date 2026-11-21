@@ -1,0 +1,72 @@
+{
+  "at": "2026-11-21T14:35:05.480016+08:00",
+  "process": {
+    "pid": 3938217,
+    "start_ticks": 118309304,
+    "state": "R"
+  },
+  "source_freeze": {
+    "at": "2026-11-21T14:33:24.648421+08:00",
+    "source_sha256": {
+      "research/8.video-backbone/fixed-lag/protocol.md": "83ea99359f2aa86bc7c4fcc548f94afce1403040addc614dbd4460b86455d6a3",
+      "research/8.video-backbone/fixed-lag/core.py": "ed7c47749cf307f9c419ceb48e47ef7b26be8e4c615fb996abd186015617ceb3",
+      "research/8.video-backbone/fixed-lag/f1_io.py": "06729fd818ca453d57ac5c3787cfa0f5ad5f06bd8f0eb384970819217440259b",
+      "research/8.video-backbone/fixed-lag/evaluate.py": "622d599eebcfd9602a43efc8a92e39b229dcf133706457080ff53c3df2a2e3f4",
+      "research/8.video-backbone/fixed-lag/summarize.py": "92998a1130d712885d7d8338ad66e9c41a08835a0133f3afded6c23446837ac2",
+      "research/8.video-backbone/fixed-lag/launch.py": "31b91663ca51d3d0a8019acc1ed13e9890ced4e670c2829ff48549b7570254f0",
+      "research/4.temporal-consistency/scripts/causal_reference_io_r75.py": "181906fa8ccce29eb2e2bfcd79bf78035abd15a1f3ed12adf8ba8312ab367d93",
+      "research/4.temporal-consistency/scripts/fixed_dis_r86.py": "5111aeb7ff5dec95e9d0ab7156299381565505d80d45dd54c1de1ef80cf7e209",
+      "research/4.temporal-consistency/scripts/video_metrics.py": "ea3dec0fbc59dbdf1c4153e398c761d0282463a12d729ed6d49774016dab46a0",
+      "research/4.temporal-consistency/scripts/aligned_raw_history_r11.py": "e367727401f82ccf0bccaf8d88f904e4aebf8b78186f0539eedeed222b2d2227",
+      "research/4.temporal-consistency/scripts/aggregation_controls_r20.py": "7b4541be8512ca1edb755b5a73f889351e376f9a8fc1fdec7ed633a4438c116c",
+      "research/4.temporal-consistency/scripts/exploration_r2_data.py": "886e6f887e490cc34d97c2f7f6435e5089f08afbd343875cc27ebd60b73c9faa",
+      "research/8.video-backbone/evidence-reconciliation/process/delay-source-audit001.json": "88c73ff30f471b6fea3743776fcddd56c29842a6bec9fea57b8fb87e4a93ab37",
+      "research/8.video-backbone/delay-budget/results/eval001/runtime.json": "338b4069ee90ccc11163ef899d06ab127c9d2d4f686712b82f2ad9194a8295e7",
+      "research/8.video-backbone/delay-budget/results/eval001/prediction_manifest.jsonl": "0e9f626528214b075160bdd56a1fefe27bdc6fb5cf60d34607d801ce9bcf9c18",
+      "research/8.video-backbone/cadence-audit/results/audit001/time-contract.json": "1210f3de07bff68df64260b243bd645047c651176f41fc99e5860fccf8389b5e",
+      "research/5.prior-art-survey/docs/83-fixed-lag-smoothing-and-motion-state-boundaries.md": "aff0b4c4b449aeb5a0fe40e0b2c0527f47cfba6ac3ba0d9156f699930a111f22",
+      "scripts/project-python": "db9f3a0398d76c67fdc86255dd6277adba078b2871abb8a8618fe1601ea5e4b2",
+      "scripts/project_assets.py": "65979a86cd009d82c5620191a9d3eb727b4bf6589815c3ccd9fc065cad91ae07"
+    },
+    "scope": "Named F1 functions/protocol/launch, original classical helpers/metrics, source and time metadata; not whole environment",
+    "before_first_F1_qualification_or_pixels": true,
+    "actual_payload_checked_on_first_load": true
+  },
+  "execution_freeze": {
+    "at": "2026-11-21T14:35:05.199853+08:00",
+    "source_sha256": {
+      "research/8.video-backbone/fixed-lag/syntax-execution001.md": "4ac303ade5bcca3e202b858e24e3e34d74b0f5a11055bc8f67b9894700a09e74",
+      "research/8.video-backbone/fixed-lag/evaluate_syntax001.py": "978a373176236faed9005d7c60da5de75a6d347079a778f38945ac83494e69d4",
+      "research/8.video-backbone/fixed-lag/launch_syntax001.py": "68abe9dc369b53b74cecf512b3a7236a5aa732b139a485a61c653d76d4653dfc"
+    },
+    "original19_sources_unchanged": true,
+    "scope": "Missing config boolean value plus execution verification/routing only; unchanged all numerical functions and protocol",
+    "before_corrected_worker_first_execution": true
+  },
+  "arms": [
+    "F0",
+    "F0_FB",
+    "F0_DIS",
+    "D1_center3",
+    "naive_future",
+    "innovation_lag1"
+  ],
+  "source_audit": "research/8.video-backbone/evidence-reconciliation/process/delay-source-audit001.json",
+  "D1_original_completed_manifest": "research/8.video-backbone/delay-budget/results/eval001/prediction_manifest.jsonl",
+  "common_centers": "range(2,T-1)",
+  "CPU_threads": 2,
+  "OpenCV_threads": 1,
+  "GPU_used": false,
+  "future_frames": {
+    "naive_future": 1,
+    "innovation_lag1": 1,
+    "D1_center3": 1,
+    "F0": 0,
+    "F0_FB": 0,
+    "F0_DIS": 0
+  },
+  "time_unit": "registered source frame; no measured milliseconds",
+  "RGB_PSNR_ceiling_dB": 120,
+  "forward_state_closure_normalized_tolerance": 1e-06,
+  "extra_closure_warp_is_evaluation_diagnostic_not_deployment": true
+}
