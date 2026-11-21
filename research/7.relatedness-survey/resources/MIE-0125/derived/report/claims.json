@@ -1,0 +1,219 @@
+{
+  "resource_id": "MIE-0125",
+  "at": "2026-11-21T11:41:14.704028+08:00",
+  "source_aliases": {
+    "paper": "paper:pN resolves v2physicalpageN in derived/figures/paper-pNN.png andfulltext",
+    "other": "explicitresourcerelativepath"
+  },
+  "claims": [
+    {
+      "claim_id": "C01",
+      "evidence_class": "primary_identity_preprint_lineage",
+      "claim": "arxivv2Apr9,2024八作者核，AoLi/LeZhang/CeZhu与MobileIE精确重合，69参考无MobileIE，为前期同作者先例。",
+      "anchors": [
+        "identity.json",
+        "paper:p1",
+        "paper:p15",
+        "paper:p19"
+      ],
+      "limitation": "不是MobileIE被引论文；正式发表未确认，ECCV模板不作接收证据。"
+    },
+    {
+      "claim_id": "C02",
+      "evidence_class": "actual_reading_and_visual_scope",
+      "claim": "19页全文含参考全读，6图6表所在9关键页实际查看；完整47普通排版源文件留存。",
+      "anchors": [
+        "derived/docs/visual-review.json",
+        "derived/docs/paper-assets.json",
+        "derived/docs/source-tar-manifest.json"
+      ],
+      "limitation": "未声明全部纯文页原尺寸看或通用模板/草稿逐项审稿；独立补充未得。"
+    },
+    {
+      "claim_id": "C03",
+      "evidence_class": "author_input_exposure_reference",
+      "claim": "每X为RGB和gamma2.2/曝光时长校正HDR拼6通道，固定三输入/独立stem，以中曝光X2为运动参考。",
+      "anchors": [
+        "paper:p4",
+        "paper:p5"
+      ],
+      "limitation": "曝光时长非采集时间戳，非任意帧数/单RGB同信息；未核RAW完整校准。"
+    },
+    {
+      "claim_id": "C04",
+      "evidence_class": "conditional_causality_and_video_boundary",
+      "claim": "无跨输出时间state/loss/闪烁评价；若输入晚于目标参考则需未来，当前流式因果采集未定义。",
+      "anchors": [
+        "paper:p5",
+        "paper:p8",
+        "derived/docs/reading-notes.md"
+      ],
+      "limitation": "中曝光不必时间中央，不断言所有输入序列都非因果；无实际视频实验。"
+    },
+    {
+      "claim_id": "C05",
+      "evidence_class": "author_IFTA_mechanism_provenance",
+      "claim": "IFTA同(x,y)嵌入通道内积/sigmoid门控含refself，再cat；参考EDVR[55]，无显式flow/warp。",
+      "anchors": [
+        "paper:p5",
+        "paper:p6",
+        "paper:p18"
+      ],
+      "limitation": "不是空间位移搜索，sigmoid有界不单独证明全网络梯度/收敛或时序稳定。"
+    },
+    {
+      "claim_id": "C06",
+      "evidence_class": "author_hierarchy_and_bounded_inference",
+      "claim": "三层DWT/IDWT与RCAB子带建模/RSTB空间聚合，最后原尺度细化；可逆DWT不等于学习网络无损/时间等变。",
+      "anchors": [
+        "paper:p7",
+        "paper:p8"
+      ],
+      "limitation": "基底/边界/非整除尺寸等实现未知，不能声称任意形状无成本稳定。"
+    },
+    {
+      "claim_id": "C07",
+      "evidence_class": "author_variant_scope",
+      "claim": "U去IFTA且长skip改Conv(F2)，仍有Swin隐式对齐，不能当仅删一个模块的单因素比较。",
+      "anchors": [
+        "paper:p8",
+        "paper:p12"
+      ],
+      "limitation": "alignmentfree命名不证明完全无对齐机制或没有信息代价。"
+    },
+    {
+      "claim_id": "C08",
+      "evidence_class": "author_model_budget_report",
+      "claim": "I/U8.163M/8.165M、Tiny2.636M/2.637M，C16→12/STL6→2/heads4→3。",
+      "anchors": [
+        "paper:p9"
+      ],
+      "limitation": "作者报告非本次计数；Tiny约2.6M仍非MobileIE约4K同预算。"
+    },
+    {
+      "claim_id": "C09",
+      "evidence_class": "author_supervised_objective",
+      "claim": "HDRGT监督mu5000 tone-map，L1+.01perceptual+edge，epsilon1e-3。",
+      "anchors": [
+        "paper:p8",
+        "paper:p9"
+      ],
+      "limitation": "无代码核Lp层/预训练/梯度算子，不补VGG版本，不称无监督或时间损失。"
+    },
+    {
+      "claim_id": "C10",
+      "evidence_class": "author_training_and_dataset_scope",
+      "claim": "Kalantari74/15、Tel108/36，128patch/stride64、300K迭代/batch16、作者8TITANXp训练。",
+      "anchors": [
+        "paper:p9"
+      ],
+      "limitation": "本次0GPU；独立划分/选模/权重跨数据/种子/许可及预训练重叠未核，非未见泛化认证。"
+    },
+    {
+      "claim_id": "C11",
+      "evidence_class": "author_quality_counterevidence",
+      "claim": "KalantariI42.50/44.53线性/mu，SCTSSIMmu.9924高于I.9918；TelU mu43.62高于I43.53，部分基线借文献。",
+      "anchors": [
+        "paper:p10",
+        "paper:p13"
+      ],
+      "limitation": "不称所有列最优或全部共同重训；HDR域与普通RGB指标不可拼公平胜出。"
+    },
+    {
+      "claim_id": "C12",
+      "evidence_class": "primary_selected_visual_scope",
+      "claim": "图1/4/5静态鬼影/人物头发/窗格/强度线已查看，提供所选案例而非视频/MOS。",
+      "anchors": [
+        "paper:p2",
+        "paper:p11",
+        "derived/docs/visual-review.json"
+      ],
+      "limitation": "独立补充/全样例/原始预测未得，不替代跨输出时间稳定。"
+    },
+    {
+      "claim_id": "C13",
+      "evidence_class": "author_statistical_motivation_limit",
+      "claim": "图3为48channelPCC与子带依赖例，RCAB/RSTB统计动机不等于已排除容量/训练替代解释。",
+      "anchors": [
+        "paper:p6",
+        "paper:p7",
+        "paper:p12"
+      ],
+      "limitation": "样本聚合/置信度未给全，无独立因果机制证明或全域首次确认。"
+    },
+    {
+      "claim_id": "C14",
+      "evidence_class": "author_ablation_counterevidence",
+      "claim": "无IFTA42.33/去RCAB42.19对完整42.50，但无Lp42.61及SSIMmu.9919高于全模型。",
+      "anchors": [
+        "paper:p12"
+      ],
+      "limitation": "edge/perceptual取舍不能被全模型总优概括，没有独立主观或置信区间。"
+    },
+    {
+      "claim_id": "C15",
+      "evidence_class": "author_sampling_capacity_confounds",
+      "claim": "表5Tiny相对Conv+.18dB/约3×同时改变规模；全DWT2.543s/7.850G并不低于Conv2.516s/7.725G，K3非最小成本。",
+      "anchors": [
+        "paper:p9",
+        "paper:p12",
+        "derived/docs/static-numeric-review.json"
+      ],
+      "limitation": "PUS大幅降质不证明所有实现本质更差，替换适配源码未知，不把全部收益归DWT。"
+    },
+    {
+      "claim_id": "C16",
+      "evidence_class": "author_cost_and_literal_ratios",
+      "claim": "表6RTX309024G，I2.418s/TinyU.773s@1000x1500，约2.74x/8.57x对SCT，2K I5.969s。",
+      "anchors": [
+        "paper:p13",
+        "derived/docs/static-numeric-review.json"
+      ],
+      "limitation": "作者单次三图/100次平均，非手机视频FPS；Tiny质量代价、FHDR更低成本反例保留。"
+    },
+    {
+      "claim_id": "C17",
+      "evidence_class": "author_benchmark_reporting_limit",
+      "claim": "2K I18.743G、TinyI14.399G；表5时延与表6不同，不同run值不择优拼接，1080p12GB概括不扩成2K12GB实测。",
+      "anchors": [
+        "paper:p3",
+        "paper:p12",
+        "paper:p13",
+        "derived/docs/static-numeric-review.json"
+      ],
+      "limitation": "峰值重置/batch/精度/warmup/预后处理/曝光等待/全设备成本未知，0本次测试。"
+    },
+    {
+      "claim_id": "C18",
+      "evidence_class": "author_occlusion_reference_and_inference",
+      "claim": "图6不可补偿遮挡/饱和、改短曝光熵参考及GT细微运动局限；换参考改变目标运动/时间锚。",
+      "anchors": [
+        "paper:p13",
+        "paper:p14"
+      ],
+      "limitation": "重排/重训/同GT时刻对账未知，不把质感改善当固定目标数值增益或预判视频稳定。"
+    },
+    {
+      "claim_id": "C19",
+      "evidence_class": "evidence_limited_materials",
+      "claim": "全v2及排版源取得，独立补充/算法/权重未定位，源包的模板/草稿不是实现或正式发表。",
+      "anchors": [
+        "derived/docs/source-supplement-audit.json",
+        "derived/docs/source-pdf-classification.json",
+        "derived/docs/supplement-code-web-trace.json",
+        "sources/manifest.json"
+      ],
+      "limitation": "保留未获范围，不说材料不存在/全文没读；以后合法新材料追加复审。"
+    },
+    {
+      "claim_id": "C20",
+      "evidence_class": "bounded_future_research_controls",
+      "claim": "有价值的是参考/曝光预算、层级与对齐及真实GT限制；未来等信息/等质/预算因果与相位边界运动噪声成本控制。",
+      "anchors": [
+        "derived/report/analysis.md",
+        "derived/docs/reading-notes.md"
+      ],
+      "limitation": "0模型/训练/GPU/Gate3，不称独立复现或组件组合已新颖有效，不提前全资源综合。"
+    }
+  ]
+}
