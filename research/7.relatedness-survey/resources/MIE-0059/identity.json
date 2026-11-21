@@ -10,7 +10,7 @@
     "10.1109/tmm.2026.3723605"
   ],
   "arxivs": [],
-  "relation": "recorded as citing MobileIE by a current or historical citation index; exact citation context pending Gate2",
+  "relation": "S2bookreference includes exactMobileIEdoi/arxiv; inbodycontextunavailable. OfficialrepoexplicitlyackMobileIE andpinnedMBRsource available.",
   "created_at": "2026-11-20T12:24:23+08:00",
   "authors": [
     "Muhang Cheng",
@@ -21,8 +21,8 @@
     "years": [
       2026
     ],
-    "published_date": null,
-    "date_verification": "pending Gate2"
+    "published_date": "2026-08-13",
+    "date_verification": "PublisherdisplayPublicationDate/dateOfInsertion, currentvolume28pages13430–13441; oldEarlyAccess1–13versionmetadata separate"
   },
   "repository_owner": null,
   "family": "043-fusion",
@@ -62,5 +62,48 @@
     "not_gate2": true
   },
   "source_snapshot_cutoff": "2026-11-17",
-  "identity_verification": "pending Gate2; repository owner is not assumed to be the paper author"
+  "identity_verification": "Currentpublisherstaticmetadata/Crossref/officialauthorREADME/S2reference exactMobileIE plusallpinned18Gitblobs, formalbodyunavailable",
+  "publication": {
+    "journal": "IEEE Transactions on Multimedia",
+    "volume": "28",
+    "pages": "13430-13441",
+    "publisher_document": "11655203",
+    "isEarlyAccess_current": false,
+    "isOpenAccess_current": false,
+    "fulltext_read": false
+  },
+  "active_order_review": {
+    "catalog_version": 3,
+    "effective_analysis_order": 21,
+    "effective_preliminary": {
+      "R": 3,
+      "N": 3,
+      "U": 3,
+      "E": 1,
+      "score": 90,
+      "tier": "A",
+      "family": "043-fusion",
+      "role_order": 0,
+      "category": "同源多模态融合论文",
+      "reason_R": "新增官方代码README明确基于MobileIE，比原索引仅有题名/摘要提供更强同源依据。",
+      "reason_N": "同源扩展与多输入条件须优先排除重复/信息优势混淆。",
+      "reason_U": "可关联固定官方实现具体核查模型、监督和评价；不可访问主文保持独立证据限制。",
+      "reason_E": "原论文主文仍不可得；新增官方代码可作支持性证据但不冒称论文全文已取得。",
+      "evidence": [
+        "collection/gate1-addenda/0001/author-project-readmes.json",
+        "collection/receipts/g1a0001-ulightif-sourcezip.json"
+      ],
+      "not_gate2": true
+    },
+    "meaning": "identityinitialorder59/score40is historicalinitialsnapshot, not currentsequence; no frozen catalog changed"
+  },
+  "associated_project": {
+    "repo": "cmuhang/ULightIF",
+    "revision": "bc952b6f1f18a6480628fc91f6ce96a93484817c",
+    "tree": "14355b201e2309299f61a175211b9b0c8f4d2648",
+    "commit_date": "2026-09-02T01:54:45Z",
+    "files": 18,
+    "bytes": 1025443,
+    "scope": "Authorassociatedsourceforpaper59, resource114notbegun"
+  }
 }
