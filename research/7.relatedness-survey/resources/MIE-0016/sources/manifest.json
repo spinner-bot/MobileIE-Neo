@@ -38,6 +38,24 @@
       "http": 202,
       "archive": null,
       "sha256": null
+    },
+    {
+      "path": "receipts/sourcezip-LukasYan30--L3IE-YUV.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/sourcezip-LukasYan30--L3IE-YUV.txt",
+      "sha256": "04de5b567c21b4491fcfe95abd34c10acbe2d363c1fcdb2c16117284567dff03",
+      "semantic_adequacy": "Fixed4artifact author package or bibliographic search; not full training source/formalPDF/numerical reproduction"
+    },
+    {
+      "path": "receipts/mie0016-crossref-title-search.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/mie0016-crossref-title-search.json",
+      "sha256": "e9746431dcb15ff99552235b79d8abf7550bbba06a15bed1f6835b032b51321f",
+      "semantic_adequacy": "Fixed4artifact author package or bibliographic search; not full training source/formalPDF/numerical reproduction"
     }
   ],
   "discovery_evidence": [
@@ -52,7 +70,7 @@
       "source_record_id": "38ac6f35aca614a2c850f96eba627c6ee4f2b5ab"
     }
   ],
-  "adequacy": "Materials available for analysis; not yet read or qualified",
+  "adequacy": "Full9page arxivv1 and allscientific p1-8 renders read; four fixed author artifacts read/inventoried, TorchScript283ZIPmembersCRC/97embeddedtext prepared, applicable core text inspected without model loading. Training/authoring code, configs/loss weights/splits/all benchmark checkpoints unavailable in fixed package; not yet Gate2 closed.",
   "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts",
   "path_conventions": {
     "receipts[].path": "relative to workstation/collection",
@@ -60,5 +78,6 @@
     "discovery_evidence strings": "relative to workstation/collection",
     "discovery_evidence[].source": "collection/ prefix relative to workstation; research/ prefix relative to repository root",
     "discovery_evidence[].acquisition": "relative to workstation/collection; path is remote repository path at revision"
-  }
+  },
+  "semantic_source_review": "derived/docs/source-version-review.json"
 }
