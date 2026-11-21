@@ -1,0 +1,213 @@
+{
+  "resource_id": "MIE-0021",
+  "at": "2026-11-21T11:57:13.211106+08:00",
+  "source_aliases": {
+    "paper": "paper:pN resolves formal physical pageN in derived/figures/paper-pNN.png and paper-text.txt"
+  },
+  "claims": [
+    {
+      "claim_id": "C01",
+      "evidence_class": "primary_identity_version",
+      "claim": "CVF正式CVPR2026 Workshops/MAI十页pp3772–3781，arxivv2为2026-04-23，版本差异留档。",
+      "anchors": [
+        "identity.json",
+        "derived/docs/version-review.json",
+        "paper:p1",
+        "paper:p10"
+      ],
+      "limitation": "不是CVPR主会；v1未取，不称全历史版本阅读。"
+    },
+    {
+      "claim_id": "C02",
+      "evidence_class": "actual_fulltext_visual_scope",
+      "claim": "正式十页全文含22参考全读，4图5表与关键公式所在七页实际查看。",
+      "anchors": [
+        "derived/docs/reading-notes.md",
+        "derived/docs/visual-review.json"
+      ],
+      "limitation": "纯文/参考页读文本，不声称每页原尺寸查看；无数值复现。"
+    },
+    {
+      "claim_id": "C03",
+      "evidence_class": "primary_direct_citation",
+      "claim": "p2/p4明确继承MobileIE MBRConv并改FP64融合，p9[19]为原作准确书目。",
+      "anchors": [
+        "paper:p2",
+        "paper:p4",
+        "paper:p9"
+      ],
+      "limitation": "直接方法先例，不把FP64离线融合本身当二期创新。"
+    },
+    {
+      "claim_id": "C04",
+      "evidence_class": "author_task_and_conditional_causality",
+      "claim": "单RGB[0,255]输入/残差输出，无历史未来/跨输出state/视频损失或闪烁评价。",
+      "anchors": [
+        "paper:p2",
+        "paper:p3",
+        "paper:p5"
+      ],
+      "limitation": "单图前馈不保证时间稳定；selfaugmentation不等自监督。"
+    },
+    {
+      "claim_id": "C05",
+      "evidence_class": "author_architecture_budget",
+      "claim": "两尺度2x2stride层、AFDB/SGU/PixelShuffle，M16/64/2/3、L24/96/2/3、XL32/128/3/5。",
+      "anchors": [
+        "paper:p3",
+        "paper:p5"
+      ],
+      "limitation": "原文无总参数/MAC/峰值内存表，不冒称MobileIE4K同预算。"
+    },
+    {
+      "claim_id": "C06",
+      "evidence_class": "author_AFDB_and_bounded_inference",
+      "claim": "通道1/4大核5x5、3/4小核3x3，LReLU/.2初始scale残差；谱功能是学习解释非硬分频。",
+      "anchors": [
+        "paper:p3",
+        "paper:p5",
+        "paper:p6"
+      ],
+      "limitation": "无频域约束/FFT推理主张；内部谱不证明噪声完全隔离或视频稳定。"
+    },
+    {
+      "claim_id": "C07",
+      "evidence_class": "literal_capacity_arithmetic",
+      "claim": "相同分支输入输出宽度假设下核系数1:3为6.625C²、1:1为8.5C²、全5x5为25C²，另公共混合。",
+      "anchors": [
+        "derived/docs/static-numeric-review.json",
+        "paper:p3"
+      ],
+      "limitation": "忽略bias/MBR训练扩张，非整网参数计数；改变容量混杂机制解释。"
+    },
+    {
+      "claim_id": "C08",
+      "evidence_class": "primary_SGU_mechanism_and_visual_ambiguity",
+      "claim": "SGU空间mask加PixelShuffle内容与skip避免cat；图2 C/C÷4标签不能直接对齐。",
+      "anchors": [
+        "paper:p3",
+        "paper:p4",
+        "derived/docs/visual-review.json"
+      ],
+      "limitation": "公式未给足投影宽度，无实现不能替作者改图或称运行失败。"
+    },
+    {
+      "claim_id": "C09",
+      "evidence_class": "author_deployment_precision_scope",
+      "claim": "MBR训练gamma4/离线FP64折叠，FP32文件+GPU FP16，吸收归一化/残差尺度、STE输出round。",
+      "anchors": [
+        "paper:p4"
+      ],
+      "limitation": "不等INT8/QAT或全模型单Conv；无导出图/误差界/本次融合验证。"
+    },
+    {
+      "claim_id": "C10",
+      "evidence_class": "author_supervised_noise_shift",
+      "claim": "配对N=noisy−GT、非零小空间平移/reflect再clip，依赖局部平稳。",
+      "anchors": [
+        "paper:p4"
+      ],
+      "limitation": "GT有限burst残差/运动、边缘条件方差与clip/边界影响，不能推处处严格同分布。"
+    },
+    {
+      "claim_id": "C11",
+      "evidence_class": "author_training_protocol",
+      "claim": "AdamW/cosine80+20epochs/256→512patch、Charbonnier→负PSNR、EMA.999；实际Gaussian.2与shift.25。",
+      "anchors": [
+        "paper:p4",
+        "paper:p5"
+      ],
+      "limitation": "seed/选模/weightdecay及第二阶段细节未知；EMA不是视频状态，不能写无合成噪声。"
+    },
+    {
+      "claim_id": "C12",
+      "evidence_class": "author_data_information_budget",
+      "claim": "MAI658train/50val与20burst平均GT，加SIDD/MIDD训练；32batch为10/20/2。",
+      "anchors": [
+        "paper:p5"
+      ],
+      "limitation": "主表非公开test与val分开；额外数据、scene-ID/许可/重叠未核，不当同数据预算对比。"
+    },
+    {
+      "claim_id": "C13",
+      "evidence_class": "author_main_quality_cost_counterevidence",
+      "claim": "Adreno840主表M37.52/.9136/48.1ms、XL37.94/.9179/163，TLG28ms/score13.72更优于M速度/score。",
+      "anchors": [
+        "paper:p1",
+        "paper:p6"
+      ],
+      "limitation": "XL只在所列方法中质量最高，M不支配SplitterNet37.62质量，不认证全域SOTA。"
+    },
+    {
+      "claim_id": "C14",
+      "evidence_class": "literal_reciprocal_not_video_benchmark",
+      "claim": "48.1ms倒数约20.79，L12.21/XL6.13，是1088x1920单图运行条件倒数。",
+      "anchors": [
+        "paper:p5",
+        "paper:p6",
+        "derived/docs/static-numeric-review.json"
+      ],
+      "limitation": "不是测得持续/完整ISP视频FPS或30fps；内存/热/电/I/O/展示成本缺失。"
+    },
+    {
+      "claim_id": "C15",
+      "evidence_class": "author_ablation_protocol_and_downsample",
+      "claim": "消融MaliG78MP20/25%MAI patches/40epochs，2x2learned37.580/136vsHaar37.475/151。",
+      "anchors": [
+        "paper:p7"
+      ],
+      "limitation": "主表另一GPU/完整数据训练；Haar+projection与singleconv结构/容量不同，不推所有小波无效。"
+    },
+    {
+      "claim_id": "C16",
+      "evidence_class": "primary_ablation_internal_inconsistency",
+      "claim": "表3同PSNR37.58的1:1/1:3为142/136ms；无split36.56/144/3.773按Eq8不合，字面应约.943。",
+      "anchors": [
+        "paper:p5",
+        "paper:p7",
+        "derived/docs/static-numeric-review.json"
+      ],
+      "limitation": "不采用猜测37.56修正文值；无raw/seed/CI，保留原值与未知。"
+    },
+    {
+      "claim_id": "C17",
+      "evidence_class": "author_SGU_and_augmentation_ablation",
+      "claim": "SGU37.58/136，concat37.40/257；noise shift37.63比basic37.58高.05，比swap37.51高.12。",
+      "anchors": [
+        "paper:p8"
+      ],
+      "limitation": "DW同整数ms非严格零成本；小增益无CI/运动分层，不证明统计同分布或视频改善。"
+    },
+    {
+      "claim_id": "C18",
+      "evidence_class": "actual_selected_visuals_and_limitations",
+      "claim": "图4两组静态石块/植物及屏幕墙面案例已看；作者未做INT8/NPU低层优化。",
+      "anchors": [
+        "paper:p6",
+        "paper:p8",
+        "derived/docs/visual-review.json"
+      ],
+      "limitation": "没有视频/MOS/功耗测量，定性节能/隐私陈述非本次验证。"
+    },
+    {
+      "claim_id": "C19",
+      "evidence_class": "available_materials_release_boundary",
+      "claim": "正式全文/作者履历与GitHubprofile读，未定位官方算法/权重或独立补充；搜索已记录。",
+      "anchors": [
+        "derived/docs/availability-review.json",
+        "sources/manifest.json"
+      ],
+      "limitation": "论文未宣称已公开这些，未检出不证明不存在；MIE0029旧报告线索不新增/不提前分析。"
+    },
+    {
+      "claim_id": "C20",
+      "evidence_class": "bounded_future_research_controls",
+      "claim": "交接等数据/容量/真实延迟、导出精度、边缘曝光运动噪声及时空联合/整条手机成本控制。",
+      "anchors": [
+        "derived/report/analysis.md",
+        "derived/docs/reading-notes.md"
+      ],
+      "limitation": "0外部源码/模型/训练/GPU/Gate3，不称已新颖/有效或全资源综合完成。"
+    }
+  ]
+}
