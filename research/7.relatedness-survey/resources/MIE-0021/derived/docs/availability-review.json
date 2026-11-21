@@ -1,0 +1,49 @@
+{
+  "at": "2026-11-21T11:53:07.143215+08:00",
+  "official_sources": [
+    "CVF formal HTML and complete PDF; no code/supplement link in landing",
+    "Arxiv full v2 PDF/abs/HTML; no author code link located",
+    "Author official resume HTTP200, FastSHADE entries link only arxiv",
+    "Author GitHub profile connected fetch master README succeeded after raw main branch404; FastSHADE link only arxiv"
+  ],
+  "github_search": {
+    "query": "FastSHADE",
+    "tool": "mcp__codex_apps__github_search_repositories",
+    "response": "github-repository-search.json",
+    "returned": [
+      "XDwasTaken/MegaFastshaders9-1",
+      "Temmielol/FastShaderCompile",
+      "Alvis1/FastShaders",
+      "McZonk/FastShadersFastTalk"
+    ],
+    "disposition": "All shader tools/name substring matches, not author denoising implementation. Not assertion universal absence."
+  },
+  "failed_tool_calls": [
+    "github_fetch api.github.com/search returned400 unsupported endpoint",
+    "github_fetch github.com/search returned400 repository required; proper search_repositories then succeeded"
+  ],
+  "web_searches": [
+    {
+      "query": "\"FastSHADE\" code github Falaleev",
+      "results": [
+        "https://arxiv.org/abs/2604.10275",
+        "https://nikolasent.github.io/resume/",
+        "https://github.com/NikolasEnt/nikolasent",
+        "https://www.catalyzex.com/paper/fastshade-fast-self-augmented-hierarchical"
+      ],
+      "disposition": "Primary manuscript/profile checked; tertiary request-code entries only navigation, no scientific conclusions derived"
+    },
+    {
+      "query": "\"FastSHADE\" supplementary materials",
+      "results": [
+        "https://openaccess.thecvf.com/content/CVPR2026W/MAI/papers/Falaleev_FastSHADE_Fast_Self-augmented_Hierarchical_Asymmetric_Denoising_for_Efficient_Inference_on_CVPRW_2026_paper.pdf",
+        "https://arxiv.cnoctave.top/pdf/2611.00974"
+      ],
+      "disposition": "Formal already retained; challenge report identity already MIE-0029, not started or newly added. No independent supplement located."
+    }
+  ],
+  "code_or_weights_located": false,
+  "paper_claims_public_code_or_supplement_exists": false,
+  "standalone_new_qualified_resource": false,
+  "scope": "Absence of found release is a documented unknown, not acquisition failure of a promised code release. No emails/messages or authentication bypass. No upstream execution."
+}

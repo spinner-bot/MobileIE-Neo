@@ -1,0 +1,241 @@
+{
+  "at": "2026-11-21T11:53:07.143215+08:00",
+  "meaning": "Pure literal arithmetic from reported table values, no model/metric/device run",
+  "score_equation": "2**(2*(PSNR-38))/t_seconds; tables label runtime milliseconds, seconds reproduce ordinary rows",
+  "score_rows": [
+    {
+      "table": "Table1",
+      "name": "TLG",
+      "reported_psnr": 37.31,
+      "reported_ms": 28,
+      "reported_score": 13.72,
+      "literal_score_with_seconds": 13.722099832928725,
+      "relative_difference": 0.00015304904728312755,
+      "interpretation": "Compatible with displayed rounding; not independent benchmark verification"
+    },
+    {
+      "table": "Table1",
+      "name": "SplitterNet",
+      "reported_psnr": 37.62,
+      "reported_ms": 66.1,
+      "reported_score": 8.93,
+      "literal_score_with_seconds": 8.933378679497174,
+      "relative_difference": 0.00037835156743276936,
+      "interpretation": "Compatible with displayed rounding; not independent benchmark verification"
+    },
+    {
+      "table": "Table1",
+      "name": "TeamPAK",
+      "reported_psnr": 37.58,
+      "reported_ms": 127,
+      "reported_score": 4.4,
+      "literal_score_with_seconds": 4.39876826012684,
+      "relative_difference": 0.00027994088026379995,
+      "interpretation": "Compatible with displayed rounding; not independent benchmark verification"
+    },
+    {
+      "table": "Table1",
+      "name": "Z6",
+      "reported_psnr": 36.96,
+      "reported_ms": 69.3,
+      "reported_score": 3.41,
+      "literal_score_with_seconds": 3.4129063734689646,
+      "relative_difference": 0.0008523089351802041,
+      "interpretation": "Compatible with displayed rounding; not independent benchmark verification"
+    },
+    {
+      "table": "Table1",
+      "name": "IVCL",
+      "reported_psnr": 37.28,
+      "reported_ms": 1961,
+      "reported_score": 0.19,
+      "literal_score_with_seconds": 0.18794865085302187,
+      "relative_difference": 0.010796574457779642,
+      "interpretation": "Compatible with displayed rounding; not independent benchmark verification"
+    },
+    {
+      "table": "Table1",
+      "name": "M",
+      "reported_psnr": 37.52,
+      "reported_ms": 48.1,
+      "reported_score": 10.68,
+      "literal_score_with_seconds": 10.687253915343772,
+      "relative_difference": 0.0006792055565330273,
+      "interpretation": "Compatible with displayed rounding; not independent benchmark verification"
+    },
+    {
+      "table": "Table1",
+      "name": "L",
+      "reported_psnr": 37.66,
+      "reported_ms": 81.9,
+      "reported_score": 7.61,
+      "literal_score_with_seconds": 7.621065622109928,
+      "relative_difference": 0.0014540896333676023,
+      "interpretation": "Compatible with displayed rounding; not independent benchmark verification"
+    },
+    {
+      "table": "Table1",
+      "name": "XL",
+      "reported_psnr": 37.94,
+      "reported_ms": 163,
+      "reported_score": 5.64,
+      "literal_score_with_seconds": 5.645323009968541,
+      "relative_difference": 0.0009437960937129952,
+      "interpretation": "Compatible with displayed rounding; not independent benchmark verification"
+    },
+    {
+      "table": "Table2",
+      "name": "Haar frozen",
+      "reported_psnr": 37.475,
+      "reported_ms": 151,
+      "reported_score": 3.198,
+      "literal_score_with_seconds": 3.1984646653140647,
+      "relative_difference": 0.00014529872234670088,
+      "interpretation": "Compatible with displayed rounding; not independent benchmark verification"
+    },
+    {
+      "table": "Table2",
+      "name": "Haar learnable",
+      "reported_psnr": 37.492,
+      "reported_ms": 151,
+      "reported_score": 3.275,
+      "literal_score_with_seconds": 3.2747381337116814,
+      "relative_difference": 7.995917200564265e-05,
+      "interpretation": "Compatible with displayed rounding; not independent benchmark verification"
+    },
+    {
+      "table": "Table2",
+      "name": "3x3",
+      "reported_psnr": 37.581,
+      "reported_ms": 141,
+      "reported_score": 3.967,
+      "literal_score_with_seconds": 3.9675074504812633,
+      "relative_difference": 0.00012791794334842863,
+      "interpretation": "Compatible with displayed rounding; not independent benchmark verification"
+    },
+    {
+      "table": "Table2",
+      "name": "2x2",
+      "reported_psnr": 37.58,
+      "reported_ms": 136,
+      "reported_score": 4.108,
+      "literal_score_with_seconds": 4.107673301736093,
+      "relative_difference": 7.952732811745909e-05,
+      "interpretation": "Compatible with displayed rounding; not independent benchmark verification"
+    },
+    {
+      "table": "Table3",
+      "name": "No split",
+      "reported_psnr": 36.56,
+      "reported_ms": 144,
+      "reported_score": 3.773,
+      "literal_score_with_seconds": 0.9433462348316507,
+      "relative_difference": 0.7499744938161541,
+      "interpretation": "Major mismatch beyond displayed rounding"
+    },
+    {
+      "table": "Table3",
+      "name": "1:1",
+      "reported_psnr": 37.58,
+      "reported_ms": 142,
+      "reported_score": 3.934,
+      "literal_score_with_seconds": 3.9341096410993575,
+      "relative_difference": 2.7870132017614088e-05,
+      "interpretation": "Compatible with displayed rounding; not independent benchmark verification"
+    },
+    {
+      "table": "Table3",
+      "name": "1:3",
+      "reported_psnr": 37.58,
+      "reported_ms": 136,
+      "reported_score": 4.108,
+      "literal_score_with_seconds": 4.107673301736093,
+      "relative_difference": 7.952732811745909e-05,
+      "interpretation": "Compatible with displayed rounding; not independent benchmark verification"
+    },
+    {
+      "table": "Table4",
+      "name": "Concat",
+      "reported_psnr": 37.4,
+      "reported_ms": 257,
+      "reported_score": 1.69,
+      "literal_score_with_seconds": 1.6936781387084094,
+      "relative_difference": 0.0021764134369286954,
+      "interpretation": "Compatible with displayed rounding; not independent benchmark verification"
+    },
+    {
+      "table": "Table4",
+      "name": "SE",
+      "reported_psnr": 37.37,
+      "reported_ms": 145,
+      "reported_score": 2.863,
+      "literal_score_with_seconds": 2.879613515270229,
+      "relative_difference": 0.005802834533785938,
+      "interpretation": "Compatible with displayed rounding; not independent benchmark verification"
+    },
+    {
+      "table": "Table4",
+      "name": "CBAM",
+      "reported_psnr": 37.43,
+      "reported_ms": 141,
+      "reported_score": 3.205,
+      "literal_score_with_seconds": 3.218153033039577,
+      "relative_difference": 0.004103910464766559,
+      "interpretation": "Compatible with displayed rounding; not independent benchmark verification"
+    },
+    {
+      "table": "Table4",
+      "name": "Tconv",
+      "reported_psnr": 37.54,
+      "reported_ms": 142,
+      "reported_score": 3.7,
+      "literal_score_with_seconds": 3.721894509018941,
+      "relative_difference": 0.005917434869984015,
+      "interpretation": "Compatible with displayed rounding; not independent benchmark verification"
+    },
+    {
+      "table": "Table4",
+      "name": "SGU noDW",
+      "reported_psnr": 37.55,
+      "reported_ms": 136,
+      "reported_score": 3.919,
+      "literal_score_with_seconds": 3.940343612265768,
+      "relative_difference": 0.005446188381160437,
+      "interpretation": "Compatible with displayed rounding; not independent benchmark verification"
+    },
+    {
+      "table": "Table4",
+      "name": "SGU",
+      "reported_psnr": 37.58,
+      "reported_ms": 136,
+      "reported_score": 4.108,
+      "literal_score_with_seconds": 4.107673301736093,
+      "relative_difference": 7.952732811745909e-05,
+      "interpretation": "Compatible with displayed rounding; not independent benchmark verification"
+    }
+  ],
+  "no_split_discrepancy": "Table3 actual visual36.56dB/144ms produces0.94335, not reported3.773. A hypothetical37.56 would be near3.773 but NOT adopted as correction. Underlying unrounded/raw results unknown.",
+  "conditional_network_only_fps": {
+    "M": 20.79002079002079,
+    "L": 12.21001221001221,
+    "XL": 6.134969325153374
+  },
+  "fps_scope": "Reciprocal single image reported runtime at1088x1920. Not measured sustained/end-to-end video throughput. M≈20.79 does not establish30fps.",
+  "cost_scope": "Main Table1 Adreno840; ablation Tables2–5 MaliG78 MP20/40epochs/25%MAI patches, not same benchmark conditions. No device-memory/power/thermal/whole-ISP measurements.",
+  "ablation_deltas": {
+    "haar_frozen_to_2x2_psnr": 0.10499999999999687,
+    "symmetric_to_asymmetric_ms": 6,
+    "SGU_over_concat_psnr": 0.17999999999999972,
+    "noise_shift_over_basic_psnr": 0.05000000000000426,
+    "noise_shift_over_swap_psnr": 0.12000000000000455
+  },
+  "conditional_dense_branch_kernel_coefficients": {
+    "quarter5x5": 1.5625,
+    "threequarter3x3": 5.0625,
+    "split_branch_total": 6.625,
+    "half_half_total": 8.5,
+    "unsplit5x5": 25,
+    "common_1x1_mix": 1,
+    "scope": "Coefficient times C^2 if dense equal input/output branch widths; ignores bias/training MBR expansion. Not total model params/count; capacity differs between splits."
+  }
+}

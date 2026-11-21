@@ -9,35 +9,41 @@
       "status": "success",
       "http": 200,
       "archive": "archive/paper-1bcaf3288599-arxiv-pdf.pdf",
-      "sha256": "8b865c8e0fe3ed0bb5029f51d2a13ab3815089ec2a1ab0d9094662551d19b8c7"
+      "sha256": "8b865c8e0fe3ed0bb5029f51d2a13ab3815089ec2a1ab0d9094662551d19b8c7",
+      "complete": true
     },
     {
       "path": "receipts/paper-1bcaf3288599-publisher.json",
       "status": "success",
       "http": 200,
       "archive": "archive/paper-1bcaf3288599-publisher.html",
-      "sha256": "3a122010dff7233780d4aedfc775f370b253a77de6daf7da05d4803055ca7a20"
+      "sha256": "3a122010dff7233780d4aedfc775f370b253a77de6daf7da05d4803055ca7a20",
+      "complete": true
     },
     {
       "path": "receipts/paper-1bcaf3288599-arxiv-abs.json",
       "status": "success",
       "http": 200,
       "archive": "archive/paper-1bcaf3288599-arxiv-abs.html",
-      "sha256": "3a122010dff7233780d4aedfc775f370b253a77de6daf7da05d4803055ca7a20"
+      "sha256": "3a122010dff7233780d4aedfc775f370b253a77de6daf7da05d4803055ca7a20",
+      "complete": true
     },
     {
       "path": "receipts/paper-1bcaf3288599-index-link2.json",
-      "status": "success",
+      "status": "empty_response",
       "http": 202,
       "archive": null,
-      "sha256": null
+      "sha256": null,
+      "complete": false,
+      "classification": "Historical receipt said success for empty HTTP202; audit correction only, old receipt preserved"
     },
     {
       "path": "receipts/paper-1bcaf3288599-arxiv-html.json",
       "status": "success",
       "http": 200,
       "archive": "archive/paper-1bcaf3288599-arxiv-html.html",
-      "sha256": "8434220d78bbdd126abb85089f01832004f266dd8ecbe965b4ce7aed4610d733"
+      "sha256": "8434220d78bbdd126abb85089f01832004f266dd8ecbe965b4ce7aed4610d733",
+      "complete": true
     },
     {
       "path": "receipts/g1a0001-fastshade-cvf-page.json",
@@ -54,6 +60,22 @@
       "complete": true,
       "archive": "archive/g1a0001-fastshade-cvf-pdf.pdf",
       "sha256": "64c7b33a90a9ede23bdb2330aca7af0360ab704c4e206b5c7e4b26a5f7f3a46f"
+    },
+    {
+      "path": "receipts/mie0021-author-resume.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/mie0021-author-resume.html",
+      "sha256": "118206ab15773be1ed71d1eb279707d3551db0c627926f209d47045cae57e4ab",
+      "complete": true
+    },
+    {
+      "path": "receipts/mie0021-author-github-readme.json",
+      "status": "http_error",
+      "http": 404,
+      "archive": "archive/mie0021-author-github-readme.txt",
+      "sha256": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed",
+      "complete": false
     }
   ],
   "discovery_evidence": [
@@ -73,7 +95,7 @@
       "source_record_id": "4943404f9396b08cfaad2f870e63bac654c006ff"
     }
   ],
-  "adequacy": "Materials available for analysis; not yet read or qualified",
+  "adequacy": "Full formal ten-page manuscript read and all four figures/five tables actually viewed; arxiv v2 full text comparison read. Official implementation/weights not located and not asserted publicly provided.",
   "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts",
   "path_conventions": {
     "receipts[].path": "relative to workstation/collection",
@@ -92,5 +114,10 @@
         "receipts/g1a0001-fastshade-cvf-pdf.json"
       ]
     }
+  ],
+  "not_yet_analyzed": false,
+  "additional_connected_evidence": [
+    "derived/docs/github-repository-search.json",
+    "derived/docs/author-profile-github-fetch.json"
   ]
 }
