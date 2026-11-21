@@ -15,3 +15,9 @@ question登记唯一L1基线，core实现12431参数、32ch quarter状态、分�
 随后训练协议在首次CUDA/正式/held前登记：空间/循环双seed各8K、共32K/512K学生，无额外teacher训练；相同抽样9150/step20000..20007给两seed，32唯一窗，全11输出、self4逐帧完整四次同帧循环、704窗口/44均值。8空间/12历史/24强post各原质量保护，A .90/B1.02时间及后续成本分别固定，失败局部STOP。尚无完整train/eval代码、GPU资格或正式进程；不把资格作为方法结果，不看中途评分/改预算。
 
 0197与当前入口分别更新后阶段推送。下一实现完整原协议正式链并新鲜资源准入，不继续增加一般组件诊断或重开O1/旧STOP。长目标active未完成，指定作者/no-ff/自有data/原84/PDF020/独立最终/7号/并行main/其他worktree保持。
+
+## 2026-11-21T11:06:51.566631+08:00：完整学习/评价链冻结，原协调进入资源等待
+
+上阶段CPU资格/先例/固定正式协议已推送，属于progress。此次先核挂载和干净research/O1，保持原26源；新增formal metadata、0–3组资源入口、训练/资源恢复、完整held/self4、44均值/门、单次资格后双seed独立driver并行链，各文件单独提交。资格固定同step8000两次，CuBLAS在Torch前设置；正式不额外跑F0教师，资格无权重导出；同帧self4完整四次backbone。AST/预算静态检查后44具名全链源冻结，尚无新的模型评分。
+
+瞬时NVML八卡均100%，父持续11×2采样GPU1 mean约55.82%但90% busy比例.4545>.25，显存24284MiB虽够13312仍拒绝。启动原coordinator 3843495/start117051681、工具33516，仅CPU/std采样，actual /proc为S且同start/live，observation001记录stage=resource_wait。当时无child/无CUDA或正式更新，不放宽利用率/增长余量、不开别人任务控制。完整config/已完成selection分别提交，不把增长state写成最终。后续仅原协调按新采样资格通过后fresh双seed1/2卡，不因等待/旧PID再启动一链。
