@@ -1,0 +1,26 @@
+{
+  "at": "2026-11-21T13:01:19.143018+08:00",
+  "additional_read_full": [
+    "regr_filt.sh",
+    "run.sh",
+    "codecs/makefile",
+    "codecs/script/regr_calbdrate.sh",
+    "pyjnd/data/data_sampler.py",
+    "pyjnd/data/dataset_api.py"
+  ],
+  "reuse": "All12priorreviewSHA in source-correspondence-audit.json, same150artifacts; no independent scientificexperiment",
+  "entry_scope": {
+    "single_file": "Loadsmodelperframe, pad/crop, YUV/Y4M branch exists",
+    "batch": "Loadsmodelpervideo andloopframes, Y4M/image entries skipped bycontinue inparameter loader; no temporalstate",
+    "target": "CLI--target notpropagated, effectiveFrequencyJNDModel usescfg self.target",
+    "configs": "get_model passescfgname/precision/weightpath, per-modeldefault effect_yml_path readsfixed defaultfile; arbitraryalternatecfg fields notallforwarded. Defaultprovidedconfigs align, customchanges needauditing",
+    "pretrained_flag": "pretrained_model_path presence triggersload inapi_helpers regardlesspretrained boolean, currentdefaultsTrue",
+    "regression": "Currentregr_encode/regr_calbdrate DATASET_LIST onlyori active; selfvsanchordefault notfullpublishedneuraltable replay",
+    "data_helper": "load_dataset onlyprints download metadata/path andextracts expectedlocalarchive; notobserved fetchingdata. Datasetroot defaultstring withPathjoining andstubneedsreview; mainREADMEmanualdataprep separate",
+    "toolchain": "codecs/makefile cloneURLs notfixed revisions; requirementsunlocked beyondREADME torch2.4.1 context. No source install/build/versioncommands run",
+    "stats": "Current wrapperretains train+slim; rawsum labeledK differsisolatedslim; primitivecount andfirstconv literals reused, not modelrun",
+    "precision": "Defaultfp32 onlyreviewed; half option createsnewdefaultdtype slim andto(device) without explicitdtype, needauthorizeverification before claiminguniformFP16 export"
+  },
+  "scope_limits": "Unusedclassmapper/listmodels/helpers and allclassicaleffectmath notallindependentlyvalidated; no training/inference/codec/metrics/GPU/Gate3executed",
+  "supplement": "Externalresultarchive missingcontent remains materialprojectbenchgap, notsourceZIPincomplete. Recommendclosed_limited, keepmainpaper22frozen."
+}
