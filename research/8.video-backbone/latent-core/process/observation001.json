@@ -1,0 +1,29 @@
+{
+  "at": "2026-11-21T11:06:51.566631+08:00",
+  "author": "Codex  (sqs_A100)",
+  "process": {
+    "pid": 3843495,
+    "start_ticks": 117051681,
+    "state": "R"
+  },
+  "actual_proc_state": "S",
+  "same_start_ticks_and_live": true,
+  "coordinator_stage": "resource_wait",
+  "children_at_observation": {},
+  "latest_completed_selection": "research/8.video-backbone/latent-core/process/chain001/cuda-qualification001-selection.json",
+  "selected_GPU1_assessment": {
+    "index": 1,
+    "uuid": "GPU-86a346f2-2b01-66d9-9efa-23eff30f4150",
+    "allowed": false,
+    "mean_utilization_percent": 55.81818181818182,
+    "busy_sample_fraction": 0.45454545454545453,
+    "max_used_mib": 16676,
+    "minimum_free_mib": 24284,
+    "total_mib": 40960,
+    "incumbent_growth_reserve_mib": 8192,
+    "expected_own_increment_mib": 4096,
+    "required_free_mib": 13312
+  },
+  "first_snapshot_scope": "Initial one-shot showed all8 at100%; sustained admission is separate and can reflect pulsed workload",
+  "scope": "Observation of original live coordinator, not timeout or permission to restart; no final runtime yet"
+}
