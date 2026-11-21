@@ -4,7 +4,7 @@
 
 ## 当前研究状态
 
-2026-11-21最新[0193：共享核心CUDA资格与正式训练启动](docs/进展报告/0193-T-26112107-共享核心CUDA资格与正式训练启动.md)：O1 CUDA资格013正常通过，4更新全丢弃；原链fresh启动GPU4上的seed0正式训练，双目标/双seed16K预算与完整筛查继续，质量判定尚待。[实际接续入口](research/8.video-backbone/operator-core/README.md)核原PID/start与当前stage，不按旧等待/pending重复启动。
+2026-11-21最新[0194：共享核心首种子完成与双种子接续](docs/进展报告/0194-T-26112108-共享核心首种子完成与双种子接续.md)：O1首seed两目标各4K/8000更新与208输出固定评价已正常完成，原链新准入自动启动第二seed、零继承；完整双seed质量判定尚待。[实际接续入口](research/8.video-backbone/operator-core/README.md)核当前PID/start，不按旧首seed记录重启。
 
 此前[0191：外观索引特征历史完整筛查与止损](docs/进展报告/0191-T-26112101-外观索引特征历史完整筛查与止损.md)：冻结原模型的B1完成16训练窗口/80输出/320逐帧、0优化/GPU。历史对当前空间控制仅.167%–.744%时间改善，完整门失败，[固定配置停止](research/8.video-backbone/appearance-state/decision.md)；所有局部收益/完整结果和图已保留，原进程正常终态。
 
