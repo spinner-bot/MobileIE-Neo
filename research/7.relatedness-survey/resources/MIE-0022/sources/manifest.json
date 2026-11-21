@@ -6,38 +6,76 @@
   "receipts": [
     {
       "path": "receipts/paper-887bbc2f51f6-index-link2.json",
-      "status": "success",
+      "status": "empty_response",
       "http": 202,
       "archive": null,
-      "sha256": null
+      "sha256": null,
+      "complete": false,
+      "audit": "Historical success label corrected in current manifest only; old receipt immutable"
     },
     {
       "path": "receipts/paper-887bbc2f51f6-arxiv-pdf.json",
       "status": "success",
       "http": 200,
       "archive": "archive/paper-887bbc2f51f6-arxiv-pdf.pdf",
-      "sha256": "4a9770c2a37b66ec343d2b62e86d880b8a8d87f11f5be5054fc0c9e73062933f"
+      "sha256": "4a9770c2a37b66ec343d2b62e86d880b8a8d87f11f5be5054fc0c9e73062933f",
+      "complete": true
     },
     {
       "path": "receipts/paper-887bbc2f51f6-publisher.json",
       "status": "success",
       "http": 200,
       "archive": "archive/paper-887bbc2f51f6-publisher.html",
-      "sha256": "824d22df39ed797dbf9e4e7bf3fbb5db7532b214fd993365e887a6dc8da622db"
+      "sha256": "824d22df39ed797dbf9e4e7bf3fbb5db7532b214fd993365e887a6dc8da622db",
+      "complete": true
     },
     {
       "path": "receipts/paper-887bbc2f51f6-arxiv-html.json",
       "status": "success",
       "http": 200,
       "archive": "archive/paper-887bbc2f51f6-arxiv-html.html",
-      "sha256": "1bce45bfee46b9ddd074f0d9e210f5b907efbeb1a977fbd926c0140581336b0a"
+      "sha256": "1bce45bfee46b9ddd074f0d9e210f5b907efbeb1a977fbd926c0140581336b0a",
+      "complete": true
     },
     {
       "path": "receipts/paper-887bbc2f51f6-arxiv-abs.json",
       "status": "success",
       "http": 200,
       "archive": "archive/paper-887bbc2f51f6-arxiv-abs.html",
-      "sha256": "824d22df39ed797dbf9e4e7bf3fbb5db7532b214fd993365e887a6dc8da622db"
+      "sha256": "824d22df39ed797dbf9e4e7bf3fbb5db7532b214fd993365e887a6dc8da622db",
+      "complete": true
+    },
+    {
+      "path": "receipts/mie0022-arxiv-v1-pdf.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/mie0022-arxiv-v1-pdf.pdf",
+      "sha256": "a2da47b3d2d8d1e032898a1595286f55fb7ccbc76bd0ce961e64d5409dc2da02",
+      "complete": true
+    },
+    {
+      "path": "receipts/mie0022-arxiv-v2-pdf.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/mie0022-arxiv-v2-pdf.pdf",
+      "sha256": "9ea87463f59962f89c2c056420d8ccdc41c5b558135801c30a0d145dcc99343f",
+      "complete": true
+    },
+    {
+      "path": "receipts/sourcezip-viplab-fudan--FJNDF-Pytorch.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/sourcezip-viplab-fudan--FJNDF-Pytorch.txt",
+      "sha256": "c10c73fafa8619442c40813216d091324f5adbeeaca3c5c7f624c189fdaff385",
+      "complete": true
+    },
+    {
+      "path": "receipts/mie0022-author-per-video-results-share.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/mie0022-author-per-video-results-share.html",
+      "sha256": "7076c9ebd1adeb828daa869b527ff3a7d00a7ee072496ca0be233abc813b175f",
+      "complete": true
     }
   ],
   "discovery_evidence": [
@@ -57,7 +95,7 @@
       "source_record_id": "9b33857c7f6b273194c93bd1c17edd392ab64840"
     }
   ],
-  "adequacy": "Materials available for analysis; not yet read or qualified",
+  "adequacy": "Complete v3 main paper and available fixed applicable source analysed; historical version diff retained. Per-video author result archive retrieval ongoing; Gate2 not yet decided.",
   "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts",
   "path_conventions": {
     "receipts[].path": "relative to workstation/collection",
@@ -65,5 +103,21 @@
     "discovery_evidence strings": "relative to workstation/collection",
     "discovery_evidence[].source": "collection/ prefix relative to workstation; research/ prefix relative to repository root",
     "discovery_evidence[].acquisition": "relative to workstation/collection; path is remote repository path at revision"
+  },
+  "not_yet_analyzed": false,
+  "associated_implementation": {
+    "repo": "viplab-fudan/FJNDF-Pytorch",
+    "revision": "3b46739e4f524c205c9c277f9c4b1673b9d5aedc",
+    "tree": "8164518198b68bb06ddd25c0cacc8c67c57f34a9",
+    "files": 150,
+    "bytes": 2121784,
+    "all_git_blob_matched": true,
+    "manifest": "derived/docs/author-source-manifest.json"
+  },
+  "supplementary_results": {
+    "official_location": "Public results README Baidu share, published extraction code supplied by authors",
+    "normal_code_verification": "Succeeded errno0; actual results.tar.gz listing1070637B confirmed",
+    "archive_downloaded": false,
+    "status": "Normal browser download availability being checked; no authenticated login/captcha bypass or Gate2 closure yet"
   }
 }
