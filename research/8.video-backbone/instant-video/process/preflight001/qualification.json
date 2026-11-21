@@ -1,0 +1,545 @@
+{
+  "passed": true,
+  "source_freeze": {
+    "at": "2026-11-21T15:03:43.175757+08:00",
+    "source_sha256": {
+      "research/8.video-backbone/instant-video/scope.md": "f3fb2976b64c1569d7a5a3edabb7b36da225902963b4dcb97928c8d882a8de9d",
+      "research/8.video-backbone/instant-video/preflight-protocol.md": "07e80465adaa2b1784af3664f6194cd0a0fe5f0cda443511cf5937eacc82addf",
+      "research/8.video-backbone/instant-video/core.py": "a6b6ea7e718c240610e053bbf59f67ff0a90fb19aaea5d003e500951359d247f",
+      "research/8.video-backbone/instant-video/qualify.py": "538b68a01af391d0cafd7c0237c5d9814fe05475b8d7b0e7ed6f6a2db97e45a8",
+      "third_party/instant-video-models/SOURCE.json": "843c6d8009655fa57832db0be9a7b4e48ef28d4048aba9b53b4a7dda8c42b506",
+      "research/4.temporal-consistency/scripts/motion_transport_r74.py": "da48fe1b67113aba60a7bc3f61458c56ce52785728094413b734ee6d892529c8"
+    },
+    "scope": "Six small qualification/protocol/loader/source-manifest references; upstream21 files verified through original manifest",
+    "before_first_I1_F0_forward_or_updates": true,
+    "whole_environment_or_bit_replay_claimed": false
+  },
+  "original_F0_provenance": {
+    "marker": "research/4.temporal-consistency/results/exploration-r44-stage001-seed0/square_mse-step4000.json",
+    "checkpoint_sha256": "5e7fe5d9f1196e8be0c8ac7796da5926c3ba47914ff2e5ff387a794ce22084a7",
+    "frozen": true,
+    "project_updates": 8000,
+    "parameters": 4075
+  },
+  "fusion_fixture": [
+    {
+      "kernel": 1,
+      "interior_max_difference": 0.0,
+      "corner_max_difference": 0.0,
+      "fixed_zero_head_current_weight": 0.9820137619972229,
+      "actual_random_initialized_controller_weight_not_claimed": true
+    },
+    {
+      "kernel": 3,
+      "interior_max_difference": 0.0,
+      "corner_max_difference": 2.384185791015625e-07,
+      "fixed_zero_head_current_weight": 0.8584864735603333,
+      "actual_random_initialized_controller_weight_not_claimed": true
+    }
+  ],
+  "variants": {
+    "controlled": {
+      "passed": true,
+      "first_frame_max_difference": 0.0,
+      "reset_replay_max_difference": 0.0,
+      "future_change_prefix_max_difference": 0.0,
+      "disabled_max_difference": 0.0,
+      "original_frozen_parameters_unchanged": true,
+      "changed_trainable_parameter_tensors": 62,
+      "updates": [
+        {
+          "loss": 0.7646873593330383,
+          "nonzero_gradient_parameter_tensors": 62
+        },
+        {
+          "loss": 0.7581398487091064,
+          "nonzero_gradient_parameter_tensors": 62
+        }
+      ],
+      "counts": {
+        "adapted_backbone_images": 30,
+        "discarded_optimizer_updates": 2
+      },
+      "costs": {
+        "parameters": 859917,
+        "original_frozen": 4075,
+        "trainable": 855842,
+        "resolution": [
+          1080,
+          1920
+        ],
+        "original_conv_MAC": 7937740944,
+        "controller_backbone_conv_MAC": 118244966400,
+        "controller_heads_conv_MAC": {
+          "head.block1.0-stabilizer-ControlledConvStabilizer": 248433868800,
+          "head.block1.2-stabilizer-ControlledConvStabilizer": 248433868800,
+          "body.block1-stabilizer-ControlledConvStabilizer": 248433868800,
+          "att.1-stabilizer-ControlledConvStabilizer": 119808,
+          "att1.0-stabilizer-ControlledConvStabilizer": 248433868800,
+          "tail-stabilizer-ControlledConvStabilizer": 205435699200,
+          "stabilizer-ControlledConvStabilizer": 205435699200
+        },
+        "total_conv_MAC": 1530789700752,
+        "conv_MAC_ratio_to_original": 192.84954139365018,
+        "scope": "Analytic convolution only; excludes nonlinear/memory/state costs, not measured speed"
+      },
+      "state": {
+        "tensors": [
+          {
+            "module": "controller_backbone-ConvBackbone-inputs_0",
+            "field": "memory",
+            "shape": [
+              1,
+              3,
+              24,
+              32
+            ],
+            "bytes": 9216,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "controller_backbone-ConvBackbone-inputs_0",
+            "field": "output",
+            "shape": [
+              1,
+              32,
+              24,
+              32
+            ],
+            "bytes": 98304,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "head.block1.0-stabilizer-ControlledConvStabilizer",
+            "field": "memory_stabilized",
+            "shape": [
+              1,
+              12,
+              24,
+              32
+            ],
+            "bytes": 36864,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "head.block1.0-stabilizer-ControlledConvStabilizer",
+            "field": "memory_unstabilized",
+            "shape": [
+              1,
+              12,
+              24,
+              32
+            ],
+            "bytes": 36864,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "head.block1.2-stabilizer-ControlledConvStabilizer",
+            "field": "memory_stabilized",
+            "shape": [
+              1,
+              12,
+              24,
+              32
+            ],
+            "bytes": 36864,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "head.block1.2-stabilizer-ControlledConvStabilizer",
+            "field": "memory_unstabilized",
+            "shape": [
+              1,
+              12,
+              24,
+              32
+            ],
+            "bytes": 36864,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "body.block1-stabilizer-ControlledConvStabilizer",
+            "field": "memory_stabilized",
+            "shape": [
+              1,
+              12,
+              24,
+              32
+            ],
+            "bytes": 36864,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "body.block1-stabilizer-ControlledConvStabilizer",
+            "field": "memory_unstabilized",
+            "shape": [
+              1,
+              12,
+              24,
+              32
+            ],
+            "bytes": 36864,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "att.1-stabilizer-ControlledConvStabilizer",
+            "field": "memory_stabilized",
+            "shape": [
+              1,
+              12,
+              1,
+              1
+            ],
+            "bytes": 48,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "att.1-stabilizer-ControlledConvStabilizer",
+            "field": "memory_unstabilized",
+            "shape": [
+              1,
+              12,
+              1,
+              1
+            ],
+            "bytes": 48,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "att1.0-stabilizer-ControlledConvStabilizer",
+            "field": "memory_stabilized",
+            "shape": [
+              1,
+              12,
+              24,
+              32
+            ],
+            "bytes": 36864,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "att1.0-stabilizer-ControlledConvStabilizer",
+            "field": "memory_unstabilized",
+            "shape": [
+              1,
+              12,
+              24,
+              32
+            ],
+            "bytes": 36864,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "tail-stabilizer-ControlledConvStabilizer",
+            "field": "memory_stabilized",
+            "shape": [
+              1,
+              3,
+              24,
+              32
+            ],
+            "bytes": 9216,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "tail-stabilizer-ControlledConvStabilizer",
+            "field": "memory_unstabilized",
+            "shape": [
+              1,
+              3,
+              24,
+              32
+            ],
+            "bytes": 9216,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "stabilizer-ControlledConvStabilizer",
+            "field": "memory_stabilized",
+            "shape": [
+              1,
+              3,
+              24,
+              32
+            ],
+            "bytes": 9216,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "stabilizer-ControlledConvStabilizer",
+            "field": "memory_unstabilized",
+            "shape": [
+              1,
+              3,
+              24,
+              32
+            ],
+            "bytes": 9216,
+            "newly_counted_storage": true
+          }
+        ],
+        "persistent_tensor_bytes": 439392,
+        "scope": "Retained state tensors only, not peak memory or temporary unfold/activations",
+        "analytic_1080p_retained_bytes": 1186099296,
+        "analytic_bytes_per_image_pixel": 572
+      }
+    },
+    "spatial": {
+      "passed": true,
+      "first_frame_max_difference": 0.0,
+      "reset_replay_max_difference": 0.0,
+      "future_change_prefix_max_difference": 0.0,
+      "disabled_max_difference": 0.0,
+      "original_frozen_parameters_unchanged": true,
+      "changed_trainable_parameter_tensors": 70,
+      "updates": [
+        {
+          "loss": 1.588775396347046,
+          "nonzero_gradient_parameter_tensors": 70
+        },
+        {
+          "loss": 1.5203591585159302,
+          "nonzero_gradient_parameter_tensors": 70
+        }
+      ],
+      "counts": {
+        "adapted_backbone_images": 30,
+        "discarded_optimizer_updates": 2
+      },
+      "costs": {
+        "parameters": 1164573,
+        "original_frozen": 4075,
+        "trainable": 1160498,
+        "resolution": [
+          1080,
+          1920
+        ],
+        "original_conv_MAC": 7937740944,
+        "controller_backbone_conv_MAC": 118244966400,
+        "controller_heads_conv_MAC": {
+          "head.block1.0-stabilizer-ControlledConvStabilizer": 363095654400,
+          "head.block1.2-stabilizer-ControlledConvStabilizer": 363095654400,
+          "body.block1-stabilizer-ControlledConvStabilizer": 363095654400,
+          "att.1-stabilizer-ControlledConvStabilizer": 175104,
+          "att1.0-stabilizer-ControlledConvStabilizer": 363095654400,
+          "tail-stabilizer-ControlledConvStabilizer": 234101145600,
+          "stabilizer-ControlledConvStabilizer": 234101145600
+        },
+        "total_conv_MAC": 2046767791248,
+        "conv_MAC_ratio_to_original": 257.8526819768685,
+        "scope": "Analytic convolution only; excludes nonlinear/memory/state costs, not measured speed"
+      },
+      "state": {
+        "tensors": [
+          {
+            "module": "controller_backbone-ConvBackbone-inputs_0",
+            "field": "memory",
+            "shape": [
+              1,
+              3,
+              24,
+              32
+            ],
+            "bytes": 9216,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "controller_backbone-ConvBackbone-inputs_0",
+            "field": "output",
+            "shape": [
+              1,
+              32,
+              24,
+              32
+            ],
+            "bytes": 98304,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "head.block1.0-stabilizer-ControlledConvStabilizer",
+            "field": "memory_stabilized",
+            "shape": [
+              1,
+              12,
+              24,
+              32
+            ],
+            "bytes": 36864,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "head.block1.0-stabilizer-ControlledConvStabilizer",
+            "field": "memory_unstabilized",
+            "shape": [
+              1,
+              12,
+              24,
+              32
+            ],
+            "bytes": 36864,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "head.block1.2-stabilizer-ControlledConvStabilizer",
+            "field": "memory_stabilized",
+            "shape": [
+              1,
+              12,
+              24,
+              32
+            ],
+            "bytes": 36864,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "head.block1.2-stabilizer-ControlledConvStabilizer",
+            "field": "memory_unstabilized",
+            "shape": [
+              1,
+              12,
+              24,
+              32
+            ],
+            "bytes": 36864,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "body.block1-stabilizer-ControlledConvStabilizer",
+            "field": "memory_stabilized",
+            "shape": [
+              1,
+              12,
+              24,
+              32
+            ],
+            "bytes": 36864,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "body.block1-stabilizer-ControlledConvStabilizer",
+            "field": "memory_unstabilized",
+            "shape": [
+              1,
+              12,
+              24,
+              32
+            ],
+            "bytes": 36864,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "att.1-stabilizer-ControlledConvStabilizer",
+            "field": "memory_stabilized",
+            "shape": [
+              1,
+              12,
+              1,
+              1
+            ],
+            "bytes": 48,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "att.1-stabilizer-ControlledConvStabilizer",
+            "field": "memory_unstabilized",
+            "shape": [
+              1,
+              12,
+              1,
+              1
+            ],
+            "bytes": 48,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "att1.0-stabilizer-ControlledConvStabilizer",
+            "field": "memory_stabilized",
+            "shape": [
+              1,
+              12,
+              24,
+              32
+            ],
+            "bytes": 36864,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "att1.0-stabilizer-ControlledConvStabilizer",
+            "field": "memory_unstabilized",
+            "shape": [
+              1,
+              12,
+              24,
+              32
+            ],
+            "bytes": 36864,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "tail-stabilizer-ControlledConvStabilizer",
+            "field": "memory_stabilized",
+            "shape": [
+              1,
+              3,
+              24,
+              32
+            ],
+            "bytes": 9216,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "tail-stabilizer-ControlledConvStabilizer",
+            "field": "memory_unstabilized",
+            "shape": [
+              1,
+              3,
+              24,
+              32
+            ],
+            "bytes": 9216,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "stabilizer-ControlledConvStabilizer",
+            "field": "memory_stabilized",
+            "shape": [
+              1,
+              3,
+              24,
+              32
+            ],
+            "bytes": 9216,
+            "newly_counted_storage": true
+          },
+          {
+            "module": "stabilizer-ControlledConvStabilizer",
+            "field": "memory_unstabilized",
+            "shape": [
+              1,
+              3,
+              24,
+              32
+            ],
+            "bytes": 9216,
+            "newly_counted_storage": true
+          }
+        ],
+        "persistent_tensor_bytes": 439392,
+        "scope": "Retained state tensors only, not peak memory or temporary unfold/activations",
+        "analytic_1080p_retained_bytes": 1186099296,
+        "analytic_bytes_per_image_pixel": 572
+      }
+    }
+  },
+  "all_qualification_weights_discarded": true,
+  "counts": {
+    "original_F0_images": 4,
+    "adapted_backbone_images": 60,
+    "discarded_optimizer_updates": 4,
+    "new_real_video_frames": 0,
+    "new_flow_calls": 0,
+    "GPU_used": false
+  },
+  "actual_video_quality_or_phone_speed_claimed": false,
+  "formal_training_started": false
+}
