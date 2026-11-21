@@ -1,0 +1,31 @@
+{
+  "at": "2026-11-21T13:15:29.377443+08:00",
+  "author": "Codex  (sqs_A100)",
+  "purpose": "Direct prior check for computation reuse, not a method novelty claim",
+  "actual_readings": [
+    {
+      "url": "https://arxiv.org/html/1611.07715v1",
+      "scope": "Section3 inference, fixed keyframe scheduling, equations1-3 and5-7, Algorithm1; feature propagation and its flow cost. Not full experiments or author implementation."
+    },
+    {
+      "url": "https://arxiv.org/html/1707.02880v1",
+      "scope": "Sections3.2-3.4, equations4-8: bilateral grid with 12 coefficients, guidance slicing and full-resolution RGB rendering; no video implementation or author performance reproduced."
+    },
+    {
+      "url": "https://arxiv.org/html/1505.00996v1",
+      "scope": "Section2 equations1-4 and Algorithm2: local ridge linear fit, low-resolution coefficient computation, upsampling and full-resolution guide. Not image figures/pixels or original code execution."
+    }
+  ],
+  "local_evidence": [
+    "R85 raw/strong-rec full resident CPU cost table, not phone",
+    "note44 FastLLVE and mapping factor boundaries",
+    "note70 DeltaCNN incremental execution prior; not implemented",
+    "L1 complete negative history and strong-post gates"
+  ],
+  "search_only_not_new_method_evidence": [
+    "IJCAI2025 consistency decomposition already read in note44",
+    "other 2026 feature-propagation search snippets"
+  ],
+  "new_external_code_weights_or_video_acquired": false,
+  "scientific_boundary": "Keyframes, affine operator fields, guided filtering and video mapping reuse are known. A1 only tests one fixed representation/caching feasibility with existing original F0 arrays; no novelty, speed or zero-overhead conclusion."
+}
