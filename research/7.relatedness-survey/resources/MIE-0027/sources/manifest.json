@@ -6,10 +6,133 @@
   "receipts": [
     {
       "path": "receipts/paper-8c2b6dd7c01c-publisher.json",
-      "status": "success",
+      "status": "redirect_interstitial",
       "http": 200,
       "archive": "archive/paper-8c2b6dd7c01c-publisher.html",
-      "sha256": "9542267a856c63288f0482fc4d7416626c0a32b7b15a5fb8ce8df7d2dfa25535"
+      "sha256": "9542267a856c63288f0482fc4d7416626c0a32b7b15a5fb8ce8df7d2dfa25535",
+      "complete": true,
+      "usable_as_fulltext": false,
+      "classification": "2683BRedirectingHTMLonly, historicalHTTPpayloadsuccess preservedoriginalreceipt; notpaper/abstract"
+    },
+    {
+      "path": "receipts/mie0027-author-home001.json",
+      "status": "success",
+      "complete": true,
+      "http": 200,
+      "bytes": 70030,
+      "archive": "archive/mie0027-author-home001.html",
+      "sha256": "5e8a8199ca01d08ffcaeb63d041c0063b52b21dd9d9e17959da180679038df63",
+      "usable_as_fulltext": false
+    },
+    {
+      "path": "receipts/mie0027-crossref-plain001.json",
+      "status": "http_error",
+      "complete": false,
+      "http": 429,
+      "bytes": 269,
+      "archive": "archive/mie0027-crossref-plain001.txt",
+      "sha256": "014f5627185fdf2f35989a519f597faf243a4c79ca0520e44ce092f9e6dcfdd7",
+      "usable_as_fulltext": false
+    },
+    {
+      "path": "receipts/mie0027-crossref-xml001.json",
+      "status": "http_error",
+      "complete": false,
+      "http": 429,
+      "bytes": 269,
+      "archive": "archive/mie0027-crossref-xml001.txt",
+      "sha256": "014f5627185fdf2f35989a519f597faf243a4c79ca0520e44ce092f9e6dcfdd7",
+      "usable_as_fulltext": false
+    },
+    {
+      "path": "receipts/mie0027-crossref001.json",
+      "status": "success",
+      "complete": true,
+      "http": 200,
+      "bytes": 19947,
+      "archive": "archive/mie0027-crossref001.json",
+      "sha256": "921e7038efb5ae737aacc784fbf7decddea21b89093ab84b3de8b14c39a61729",
+      "usable_as_fulltext": false
+    },
+    {
+      "path": "receipts/mie0027-elsevier-full001.json",
+      "status": "http_error",
+      "complete": false,
+      "http": 429,
+      "bytes": 269,
+      "archive": "archive/mie0027-elsevier-full001.txt",
+      "sha256": "014f5627185fdf2f35989a519f597faf243a4c79ca0520e44ce092f9e6dcfdd7",
+      "usable_as_fulltext": false
+    },
+    {
+      "path": "receipts/mie0027-elsevier-full002.json",
+      "status": "http_error",
+      "complete": false,
+      "http": 401,
+      "bytes": 133,
+      "archive": "archive/mie0027-elsevier-full002.txt",
+      "sha256": "a199c5505f5d84ca6206475b3a116d509aa4528f154f0d3cdbc57669ec400bb5",
+      "usable_as_fulltext": false
+    },
+    {
+      "path": "receipts/mie0027-elsevier-pdf001.json",
+      "status": "http_error",
+      "complete": false,
+      "http": 406,
+      "bytes": 162,
+      "archive": "archive/mie0027-elsevier-pdf001.txt",
+      "sha256": "8896659c8776e3601cba7215e75d52d13a0aa4cde5150bbf00660945a33f39b7",
+      "usable_as_fulltext": false
+    },
+    {
+      "path": "receipts/mie0027-elsevier-xml001.json",
+      "status": "success",
+      "complete": true,
+      "http": 200,
+      "bytes": 1966,
+      "archive": "archive/mie0027-elsevier-xml001.txt",
+      "sha256": "3627ca4040e1d558fbf36cf8e53c9b58699d453bac8771fe89bf62c3e5107a04",
+      "usable_as_fulltext": false
+    },
+    {
+      "path": "receipts/mie0027-openalex001.json",
+      "status": "success",
+      "complete": true,
+      "http": 200,
+      "bytes": 24585,
+      "archive": "archive/mie0027-openalex001.json",
+      "sha256": "9f1278067d6f2c5b40ae623ed8c9cf0ac479a4419d17f5dfe4b66fac4d14fad4",
+      "usable_as_fulltext": false
+    },
+    {
+      "path": "receipts/mie0027-sciencedirect-pdf001.json",
+      "status": "http_error",
+      "complete": false,
+      "http": 403,
+      "bytes": 832982,
+      "archive": "archive/mie0027-sciencedirect-pdf001.html",
+      "sha256": "82642ce7c10af3ac0defb4bc1181e267912afc3b115e17774d16c5e26290a8d2",
+      "usable_as_fulltext": false
+    },
+    {
+      "path": "receipts/mie0027-sciencedirect001.json",
+      "status": "http_error",
+      "complete": false,
+      "http": 403,
+      "bytes": 832982,
+      "archive": "archive/mie0027-sciencedirect001.html",
+      "sha256": "a4a7441381392d04cff03035afe35b61cf4be8065c1a656f669de61aa83889e4",
+      "usable_as_fulltext": false
+    },
+    {
+      "path": "receipts/mie0027-unpaywall001.json",
+      "status": "success",
+      "complete": true,
+      "http": 200,
+      "bytes": 2750,
+      "archive": "archive/mie0027-unpaywall001.json",
+      "sha256": "c0265146ee97240cdd0bbf869bb0d0a4745ffc3c2758605967ad8b785e1a13c5",
+      "usable_as_fulltext": false
     }
   ],
   "discovery_evidence": [
@@ -24,7 +147,7 @@
       "source_record_id": "https://openalex.org/W7204837465"
     }
   ],
-  "adequacy": "Materials available for analysis; not yet read or qualified",
+  "adequacy": "Evidence-limited: officialindexedabstract/coremetadata/51registrationrefs andacquisitiondiagnostics, nofullbody/PDF/figures/code",
   "archive_location": "workstation/archive -> owned cache namespace; original URL, date and hash in referenced receipts",
   "path_conventions": {
     "receipts[].path": "relative to workstation/collection",
@@ -32,5 +155,12 @@
     "discovery_evidence strings": "relative to workstation/collection",
     "discovery_evidence[].source": "collection/ prefix relative to workstation; research/ prefix relative to repository root",
     "discovery_evidence[].acquisition": "relative to workstation/collection; path is remote repository path at revision"
-  }
+  },
+  "primary_abstract": "derived/docs/web-acquisition-search001.json officialScienceDirect result; later003sameprimarychain, notindependentexperiment",
+  "semantic_acquisition": "derived/docs/acquisition-progress.json",
+  "citation_verification": "derived/docs/citation-provenance.json",
+  "lead_dispositions": "derived/docs/lead-dispositions.json",
+  "browser": "derived/docs/publisher-browser-attempt001.json; normalwebsiteJS only, no researchsource/GPU",
+  "archive_extra": "BrowserHTML/PNG inownarchive, SHAinbrowserattempt; screenshotaccessdiagnostic actuallyviewed, notpaperfigure",
+  "attempts_terminal": true
 }
