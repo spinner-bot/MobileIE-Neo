@@ -1,0 +1,256 @@
+{
+  "title": "Zero-Shot Illumination and Noise Estimation for Edge-Deployable Low-Light Image Enhancement in IoT Systems",
+  "doi": "10.1109/JIOT.2026.3707835",
+  "abstract": "In Internet of Things (IoT) systems, such as autonomous vehicles and robots, visual perception under low-light conditions is often severely degraded due to insufficient illumination and intensive sensor noise. While numerous methods have been developed for low-light enhancement, their reliance on paired annotation and computationally heavy architectures limits their applicability for downstream perception tasks, especially on resource-constrained platforms. To address these issues, this article proposes REZS-Edge, a novel zero-shot enhancement framework that eliminates the need for paired supervision and is specifically designed for efficient edge execution. First, by integrating Retinex theory with the noise-to-noise paradigm, the method jointly estimates illumination conditions and suppresses noise through a unified pipeline. Then, a zero-shot training strategy with global and local illumination constraints facilitates fully unsupervised optimization and enhances generalization. Furthermore, the framework incorporates structural re-parameterization to enable model acceleration at the inference phase while maintaining performance. Extensive experiments demonstrate that REZS-Edge achieves state-of-the-art results on low-light image enhancement (LLIE) datasets, including LOLv1 and LOLv2-Real, with a notably fast inference speed of 6.25 ms on a commercial SoC platform Snapdragon 8 Gen 3. More importantly, the method exhibits strong generalization on critical downstream tasks such as low-light object detection, instance segmentation, and pose estimation. These advantages make REZS-Edge particularly valuable for autonomous driving and robotic systems that require reliable, efficient, and all-weather visual perception, offering a practical and deployable solution for real-time enhancement under challenging lighting conditions.",
+  "publicationTitle": "IEEE Internet of Things Journal",
+  "publicationDate": "01 September 2026",
+  "publicationYear": "2026",
+  "volume": "13",
+  "issue": "17",
+  "startPage": "39626",
+  "endPage": "39640",
+  "isOpenAccess": false,
+  "isEarlyAccess": false,
+  "pdfUrl": "/stamp/stamp.jsp?tp=&arnumber=11585811",
+  "authors": [
+    {
+      "name": "Zhongxia Xiong",
+      "affiliation": [
+        "School of Transportation Science and Engineering, Beihang University, Beijing, China"
+      ],
+      "bio": {
+        "graphic": "/mediastore/IEEE/content/freeimages/6488907/11666821/11585811/xiong-3707835-small.gif",
+        "p": [
+          "Zhongxia Xiong received the Ph.D. degree in transportation engineering from Beihang University, Beijing, China, in 2023.",
+          "He is currently a Post-Doctoral Research Fellow with Beihang University. His research interests include intelligent imaging, visual perception, and their applications in transportation control and autonomous driving.",
+          "Dr. Xiong received the Best Paper Award from the 2025 25th COTA International Conference of Transportation Professionals. He also led his team to win the Championship in the 2023 Dubai Autonomous Transportation World Challenge and the Second Prize in the 2023 Intel Indoor Robot Learning Grand Challenge. His work was published in IEEE Transactions on Intelligent Transportation Systems (IEEE-T-ITS), Information Fusion, Transportation Research Part C, IEEE ICRA, and IEEE IROS."
+        ]
+      },
+      "firstName": "Zhongxia",
+      "lastName": "Xiong",
+      "orcid": "0000-0002-1694-6218",
+      "id": "37087099942"
+    },
+    {
+      "name": "Jie Mei",
+      "affiliation": [
+        "School of Transportation Science and Engineering, Beihang University, Beijing, China",
+        "Robint cXossing Laboratory, Robint Technology Company Ltd., Beijing, China"
+      ],
+      "bio": {
+        "graphic": "/mediastore/IEEE/content/freeimages/6488907/11666821/11585811/mei-3707835-small.gif",
+        "p": [
+          "Jie Mei (Student Member, IEEE) received the M.S. degree from North China University of Technology, Beijing, China, in 2024. He is currently pursuing the Ph.D. degree with the School of Transportation Science and Engineering, Beihang University, Beijing.",
+          "His research interests include intelligent transportation and embodied intelligence."
+        ]
+      },
+      "firstName": "Jie",
+      "lastName": "Mei",
+      "orcid": "0009-0008-2179-4424",
+      "id": "37087997656"
+    },
+    {
+      "name": "Ziying Yao",
+      "affiliation": [
+        "School of Transportation Science and Engineering, Beihang University, Beijing, China"
+      ],
+      "bio": {
+        "graphic": "/mediastore/IEEE/content/freeimages/6488907/11666821/11585811/yao-3707835-small.gif",
+        "p": [
+          "Ziying Yao received the B.S. degree in traffic engineering from Beijing University of Technology, Beijing, China, in 2018. She is currently pursuing the Ph.D. degree with the School of Transportation Science and Engineering, Beihang University, Beijing.",
+          "Her research focuses on autonomous driving and ITS."
+        ]
+      },
+      "firstName": "Ziying",
+      "lastName": "Yao",
+      "orcid": "0000-0001-5697-4275",
+      "id": "37087099901"
+    },
+    {
+      "name": "Xuan Liu",
+      "affiliation": [
+        "School of Transportation Science and Engineering, Beihang University, Beijing, China"
+      ],
+      "bio": {
+        "graphic": "/mediastore/IEEE/content/freeimages/6488907/11666821/11585811/liu-3707835-small.gif",
+        "p": [
+          "Xuan Liu received the bachelor’s degree in software engineering from Beijing Jiaotong University, Beijing, China, in 2022. He is currently pursuing the master’s degree with the School of Transportation Engineering, Beihang University, Beijing.",
+          "His research is centered on visual perception for autonomous driving."
+        ]
+      },
+      "firstName": "Xuan",
+      "lastName": "Liu",
+      "orcid": "0009-0006-2635-911X",
+      "id": "603176905704271"
+    },
+    {
+      "name": "Baizhi Zhang",
+      "affiliation": [
+        "School of Transportation Science and Engineering, Beihang University, Beijing, China",
+        "Robint cXossing Laboratory, Robint Technology Company Ltd., Beijing, China"
+      ],
+      "bio": {
+        "graphic": "/mediastore/IEEE/content/freeimages/6488907/11666821/11585811/zhang-3707835-small.gif",
+        "p": [
+          "Baizhi Zhang (Graduate Student Member, IEEE) received the M.S. degree from the Civil Aviation University of China, Tianjin, China, in 2024. He is currently pursuing the Ph.D. degree in traffic science and engineering with Beihang University, Beijing, China.",
+          "His research interests include environmental perception and data generation for autonomous driving."
+        ]
+      },
+      "firstName": "Baizhi",
+      "lastName": "Zhang",
+      "id": "701995539162824"
+    },
+    {
+      "name": "Yongzhi Jiang",
+      "affiliation": [
+        "School of Transportation Science and Engineering, Beihang University, Beijing, China"
+      ],
+      "bio": {
+        "graphic": "/mediastore/IEEE/content/freeimages/6488907/11666821/11585811/jiang-3707835-small.gif",
+        "p": [
+          "Yongzhi Jiang received the B.S. degree in intelligent transportation engineering from Beijing Jiaotong University, Beijing, China, in 2023. He is currently pursuing the M.S. degree in traffic information engineering and control with Beihang University, Beijing.",
+          "His research interests include machine learning and motion planning for autonomous driving."
+        ]
+      },
+      "firstName": "Yongzhi",
+      "lastName": "Jiang",
+      "orcid": "0009-0009-5174-8311",
+      "id": "328967510951688"
+    },
+    {
+      "name": "Pengcheng Wang",
+      "affiliation": [
+        "School of Cyber Science and Technology, Beihang University, Beijing, China"
+      ],
+      "bio": {
+        "graphic": "/mediastore/IEEE/content/freeimages/6488907/11666821/11585811/wang-3707835-small.gif",
+        "p": [
+          "Pengcheng Wang received the Ph.D. degree in transportation from the School of Transportation Science and Engineering, Beihang University, Beijing, China, in 2020.",
+          "He is currently an Associate Professor with the School of Cyber Science and Technology, Beihang University. His research interests include intelligent transportation systems and cybersecurity on connected vehicles."
+        ]
+      },
+      "firstName": "Pengcheng",
+      "lastName": "Wang",
+      "orcid": "0000-0002-2103-0554",
+      "id": "37086454733"
+    },
+    {
+      "name": "Xinkai Wu",
+      "affiliation": [
+        "School of Transportation Science and Engineering, Beihang University, Beijing, China"
+      ],
+      "bio": {
+        "graphic": "/mediastore/IEEE/content/freeimages/6488907/11666821/11585811/wu-3707835-small.gif",
+        "p": [
+          "Xinkai Wu received the Ph.D. degree from the University of Minnesota, Twin Cities, Minneapolis, MN, USA, in 2010.",
+          "He is currently a Professor with the School of Transportation Science and Engineering, Beihang University, Beijing, China. His research interests include urban traffic operations, electric vehicles, and ITS."
+        ]
+      },
+      "firstName": "Xinkai",
+      "lastName": "Wu",
+      "orcid": "0000-0003-4238-0243",
+      "id": "37657386500"
+    }
+  ],
+  "sections": {
+    "abstract": "true",
+    "authors": "true",
+    "disclaimer": "false",
+    "figures": "true",
+    "multimedia": "false",
+    "references": "true",
+    "citedby": "false",
+    "keywords": "true",
+    "definitions": "false",
+    "algorithm": "false",
+    "dataset": "false",
+    "cadmore": "false",
+    "footnotes": "false",
+    "relatedContent": "false",
+    "metrics": "true"
+  },
+  "metrics": {
+    "wosCitationCount": 0,
+    "citationCountPaper": 0,
+    "citationCountPatent": 0,
+    "totalDownloads": 134
+  },
+  "keywords": [
+    {
+      "type": "IEEE Keywords",
+      "kwd": [
+        "Lighting",
+        "Modeling",
+        "Internet of Things",
+        "Noise reduction",
+        "Noise",
+        "Poles and zeros",
+        "Computer vision",
+        "Computers",
+        "Conferences",
+        "Image enhancement"
+      ]
+    },
+    {
+      "type": "Index Terms",
+      "kwd": [
+        "Internet Of Things",
+        "Image Enhancement",
+        "Noise Estimation",
+        "Internet Of Things Systems",
+        "Low-light Image",
+        "Low-light Image Enhancement",
+        "Light Conditions",
+        "Object Detection",
+        "Visual Perception",
+        "Autonomous Vehicles",
+        "Perceptual Task",
+        "Pose Estimation",
+        "Low Light Conditions",
+        "Severe Degradation",
+        "Instance Segmentation",
+        "Sensor Noise",
+        "Inference Speed",
+        "Antirrhinum",
+        "Strong Generalization",
+        "Human Pose Estimation",
+        "Paired Data",
+        "Peak Signal-to-noise Ratio",
+        "Denoising",
+        "Reflection Component",
+        "Noise Structure",
+        "Noisy Images",
+        "Edge Devices",
+        "Training Images",
+        "Convolutional Layers",
+        "Image Quality"
+      ]
+    },
+    {
+      "type": "Author Keywords",
+      "kwd": [
+        "Autonomous driving",
+        "edge computing",
+        "low-light image enhancement (LLIE)",
+        "robotic vision",
+        "zero-shot learning"
+      ]
+    }
+  ],
+  "articleNumber": "11585811",
+  "source": "archive/mie0026-ieee-abstract001.html",
+  "source_sha256": "c41e20ea7eb03cd024a56431337a49e41ce01a66baccb135f2a432c3cb393939",
+  "method": "JSONliteral parsing only, no pageJS execution; notfulltext",
+  "dateOfInsertion": "29 June 2026",
+  "displayPublicationDate": "29 June 2026",
+  "isFreeDocument": false,
+  "referenceCount": 67,
+  "openAccessFlag": "F",
+  "publisher": "IEEE",
+  "htmlLink": "/document/11585811/",
+  "htmlAbstractLink": "/document/11585811/",
+  "sourcePdf": "jiot-wang-3707835-x.pdf",
+  "pdfPath": "/iel8/6488907/11666821/11585811.pdf",
+  "mediaPath": "/mediastore/IEEE/content/media/6488907/11666821/11585811",
+  "guest_access_literal": "HTML xplGlobal.fullTextAccess:false andisAccessFromInstitution:false, no credentials used"
+}
