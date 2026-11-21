@@ -45,6 +45,53 @@
       "http": 200,
       "archive": "archive/paper-f2b2063bbd33-publisher.html",
       "sha256": "84a53bea22b28e93b7710acfcbaa61cbe86cae4e546ddc98ebabb3dfe40ab351"
+    },
+    {
+      "path": "receipts/mie0018-arxiv-pdf-v1.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/mie0018-arxiv-pdf-v1.pdf",
+      "sha256": "8656edc1cd59cfa8713d155ec06f2c5fcf51d90cfa11c9c7b16c04c0cfdb4fa0",
+      "complete": true
+    },
+    {
+      "path": "receipts/mie0018-crossref-formal.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/mie0018-crossref-formal.json",
+      "sha256": "391272db78f18e5da045a609316fddbb07a3e8b63e030268dbeaa6b7f76aa6ba",
+      "complete": true
+    },
+    {
+      "path": "receipts/mie0018-elsevier-textplain.json",
+      "status": "http_error",
+      "http": 400,
+      "archive": "archive/mie0018-elsevier-textplain.txt",
+      "sha256": "20332b7f504e84c1bbbc7570f8728d79b2c2db445b3365e667a37eac42f06bdc",
+      "complete": false
+    },
+    {
+      "path": "receipts/mie0018-elsevier-textxml.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/mie0018-elsevier-textxml.txt",
+      "sha256": "ef95fcf2814a2e739f868fb4d97748d72847423d285ee49e4430e7ece0c157d1",
+      "complete": true
+    },
+    {
+      "path": "receipts/mie0018-sciencedirect-formal-pdf.json",
+      "status": "http_error",
+      "http": 403,
+      "archive": "archive/mie0018-sciencedirect-formal-pdf.html",
+      "sha256": "1a543fd6608bf41c26cad2c54b1e4d8ec042383700046f1f313755747d14226d",
+      "complete": false
+    },
+    {
+      "path": "receipts/sourcezip-mubaisam--LiteIE.json",
+      "status": "success",
+      "http": 200,
+      "archive": "archive/sourcezip-mubaisam--LiteIE.txt",
+      "sha256": "7289c2fb0e1c5dcdb1c03a61ca3faa50789edf44efe79770a39e9f1b92e2b325"
     }
   ],
   "discovery_evidence": [
@@ -72,5 +119,13 @@
     "discovery_evidence strings": "relative to workstation/collection",
     "discovery_evidence[].source": "collection/ prefix relative to workstation; research/ prefix relative to repository root",
     "discovery_evidence[].acquisition": "relative to workstation/collection; path is remote repository path at revision"
+  },
+  "availability_review": {
+    "formal_pdf": "Not obtained: publisher403, former202empty/HTMLredirect not fulltext",
+    "registered_XML": "200/1835B coredata only; no body or author text",
+    "registered_plain": "400INVALID_INPUT, not textbody",
+    "preprints": "Complete v1+v3, middlev2 pending tracked detached acquisition",
+    "author_project": "All51pinnedblobs present/current release admits differspaper; no originaltrain/IRM/TFLitechain",
+    "ongoing": "NotfinalGate2; finalupdateafteractiveacquisitionterminal"
   }
 }
