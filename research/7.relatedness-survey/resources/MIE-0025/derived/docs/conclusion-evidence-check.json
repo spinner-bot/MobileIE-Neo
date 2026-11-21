@@ -1,0 +1,640 @@
+{
+  "at": "2026-11-21T14:13:46.364177+08:00",
+  "meaning": "Mechanical hash/path/order only; manualsemanticreview separate",
+  "claim_count": 18,
+  "anchors": [
+    {
+      "claim": "C01",
+      "anchor": "identity.json",
+      "passed": true
+    },
+    {
+      "claim": "C01",
+      "anchor": "code:README.md:1-40",
+      "passed": true
+    },
+    {
+      "claim": "C01",
+      "anchor": "code:README.md:194-214",
+      "passed": true
+    },
+    {
+      "claim": "C02",
+      "anchor": "derived/docs/author-source-manifest.json",
+      "passed": true
+    },
+    {
+      "claim": "C02",
+      "anchor": "derived/docs/source-correspondence-audit.json",
+      "passed": true
+    },
+    {
+      "claim": "C02",
+      "anchor": "derived/docs/reading-notes.md",
+      "passed": true
+    },
+    {
+      "claim": "C03",
+      "anchor": "code:LICENSE:1-21",
+      "passed": true
+    },
+    {
+      "claim": "C03",
+      "anchor": "code:README.md:86-102",
+      "passed": true
+    },
+    {
+      "claim": "C03",
+      "anchor": "code:README.md:125-131",
+      "passed": true
+    },
+    {
+      "claim": "C03",
+      "anchor": "derived/docs/requirements-encoding-review.json",
+      "passed": true
+    },
+    {
+      "claim": "C04",
+      "anchor": "code:src/train/train_qat.py:204-215",
+      "passed": true
+    },
+    {
+      "claim": "C04",
+      "anchor": "code:src/export/to_tflite.py:237-295",
+      "passed": true
+    },
+    {
+      "claim": "C04",
+      "anchor": "code:README.md:86-145",
+      "passed": true
+    },
+    {
+      "claim": "C05",
+      "anchor": "code:src/models/model_builder.py:57-223",
+      "passed": true
+    },
+    {
+      "claim": "C05",
+      "anchor": "prior:resources/MIE-0024/derived/docs/static-numeric-review.json",
+      "passed": true
+    },
+    {
+      "claim": "C06",
+      "anchor": "code:src/train/loss.py:9-144",
+      "passed": true
+    },
+    {
+      "claim": "C06",
+      "anchor": "code:src/train/loss.py:192-297",
+      "passed": true
+    },
+    {
+      "claim": "C06",
+      "anchor": "prior:resources/MIE-0024/derived/docs/reading-notes.md",
+      "passed": true
+    },
+    {
+      "claim": "C07",
+      "anchor": "code:src/train/train_qat.py:204-351",
+      "passed": true
+    },
+    {
+      "claim": "C07",
+      "anchor": "code:src/data/dped_dataset.py:1-137",
+      "passed": true
+    },
+    {
+      "claim": "C07",
+      "anchor": "code:README.md:104-125",
+      "passed": true
+    },
+    {
+      "claim": "C08",
+      "anchor": "code:src/models/model_builder.py:313-450",
+      "passed": true
+    },
+    {
+      "claim": "C08",
+      "anchor": "code:src/eval/checkpoint_loading.py:1-126",
+      "passed": true
+    },
+    {
+      "claim": "C08",
+      "anchor": "code:src/checkpoint_tflite_utils.py:1-145",
+      "passed": true
+    },
+    {
+      "claim": "C09",
+      "anchor": "code:src/models/model_builder.py:34-50",
+      "passed": true
+    },
+    {
+      "claim": "C09",
+      "anchor": "code:scripts/quantize_and_eval_qat_ckpt.sh:1-29",
+      "passed": true
+    },
+    {
+      "claim": "C09",
+      "anchor": "code:src/export/quantize.py:1-107",
+      "passed": true
+    },
+    {
+      "claim": "C10",
+      "anchor": "code:src/ckpts_to_int8_tflite_eval.py:155-244",
+      "passed": true
+    },
+    {
+      "claim": "C10",
+      "anchor": "code:src/export/quantize.py:194-209",
+      "passed": true
+    },
+    {
+      "claim": "C10",
+      "anchor": "code:src/export/to_tflite.py:137-161",
+      "passed": true
+    },
+    {
+      "claim": "C11",
+      "anchor": "derived/docs/source-correspondence-audit.json",
+      "passed": true
+    },
+    {
+      "claim": "C11",
+      "anchor": "prior:resources/MIE-0024/derived/docs/tflite-container-review001.json",
+      "passed": true
+    },
+    {
+      "claim": "C11",
+      "anchor": "prior:resources/MIE-0024/derived/docs/checkpoint-container-review.json",
+      "passed": true
+    },
+    {
+      "claim": "C12",
+      "anchor": "code:src/export/to_tflite.py:1-136",
+      "passed": true
+    },
+    {
+      "claim": "C12",
+      "anchor": "code:src/infer/infer_tflite.py:1-353",
+      "passed": true
+    },
+    {
+      "claim": "C12",
+      "anchor": "code:src/models/model_builder.py:108-137",
+      "passed": true
+    },
+    {
+      "claim": "C13",
+      "anchor": "code:src/eval/eval_tflite.py:104-302",
+      "passed": true
+    },
+    {
+      "claim": "C13",
+      "anchor": "code:src/eval/eval_pytorch.py:29-78",
+      "passed": true
+    },
+    {
+      "claim": "C13",
+      "anchor": "code:src/data/dped_dataset.py:1-137",
+      "passed": true
+    },
+    {
+      "claim": "C14",
+      "anchor": "code:src/ckpts_to_tflite_eval.py:1-228",
+      "passed": true
+    },
+    {
+      "claim": "C14",
+      "anchor": "code:src/ckpts_to_int8_tflite_eval.py:1-386",
+      "passed": true
+    },
+    {
+      "claim": "C14",
+      "anchor": "code:src/README.md:117-136",
+      "passed": true
+    },
+    {
+      "claim": "C15",
+      "anchor": "code:src/eval/benchmark_ckpts.py:55-156",
+      "passed": true
+    },
+    {
+      "claim": "C15",
+      "anchor": "code:src/eval/benchmark_quantized.py:445-570",
+      "passed": true
+    },
+    {
+      "claim": "C16",
+      "anchor": "code:src/eval/benchmark_quantized.py:445-540",
+      "passed": true
+    },
+    {
+      "claim": "C16",
+      "anchor": "code:src/eval/eval_original_images.py:1-81",
+      "passed": true
+    },
+    {
+      "claim": "C17",
+      "anchor": "prior:resources/MIE-0024/derived/report/analysis.md",
+      "passed": true
+    },
+    {
+      "claim": "C17",
+      "anchor": "derived/docs/reading-notes.md",
+      "passed": true
+    },
+    {
+      "claim": "C18",
+      "anchor": "derived/docs/reading-notes.md",
+      "passed": true
+    },
+    {
+      "claim": "C18",
+      "anchor": "derived/report/analysis.md",
+      "passed": true
+    },
+    {
+      "claim": "C18",
+      "anchor": "sources/manifest.json",
+      "passed": true
+    }
+  ],
+  "assets": [
+    {
+      "path": "derived/docs/upstream-code/LICENSE.txt",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/upstream-code/README.md.txt",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/upstream-code/requirements.txt.txt",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/upstream-code/scripts--quantize_and_eval_qat_ckpt.sh.txt",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/upstream-code/scripts--run_benchmark_ckpts.sh.txt",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/upstream-code/scripts--run_ckpts_to_int8_tflite_eval.sh.txt",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/upstream-code/scripts--run_ckpts_to_tflite_eval.sh.txt",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/upstream-code/src--README.md.txt",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/upstream-code/src--checkpoint_tflite_utils.py.txt",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/upstream-code/src--ckpts_to_int8_tflite_eval.py.txt",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/upstream-code/src--ckpts_to_tflite_eval.py.txt",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/upstream-code/src--data--data_aug.py.txt",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/upstream-code/src--data--dped_dataset.py.txt",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/upstream-code/src--eval--benchmark_ckpts.py.txt",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/upstream-code/src--eval--benchmark_quantized.py.txt",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/upstream-code/src--eval--checkpoint_loading.py.txt",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/upstream-code/src--eval--eval_original_images.py.txt",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/upstream-code/src--eval--eval_pytorch.py.txt",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/upstream-code/src--eval--eval_tflite.py.txt",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/upstream-code/src--export--quantize.py.txt",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/upstream-code/src--export--to_tflite.py.txt",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/upstream-code/src--infer--infer_tflite.py.txt",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/upstream-code/src--models--model_builder.py.txt",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/upstream-code/src--train--loss.py.txt",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/upstream-code/src--train--train_qat.py.txt",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/upstream-code/src--train--train_utils_builder.py.txt",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/.env.example",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/LICENSE",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/README.md",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/ckpts/model_with_qat_c32.ckpt",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/ckpts/model_with_qat_c32_int8_100x100.tflite",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/ckpts/model_with_qat_c32_int8_1920x1080.tflite",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/dped/.gitkeep",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/figs/model.png",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/figs/qualitative_result.png",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/requirements.txt",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/scripts/quantize_and_eval_qat_ckpt.sh",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/scripts/run_benchmark_ckpts.sh",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/scripts/run_ckpts_to_int8_tflite_eval.sh",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/scripts/run_ckpts_to_tflite_eval.sh",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/src/README.md",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/src/checkpoint_tflite_utils.py",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/src/ckpts_to_int8_tflite_eval.py",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/src/ckpts_to_tflite_eval.py",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/src/data/__pycache__/data_aug.cpython-312.pyc",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/src/data/__pycache__/dped_dataset.cpython-312.pyc",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/src/data/data_aug.py",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/src/data/dped_dataset.py",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/src/eval/benchmark_ckpts.py",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/src/eval/benchmark_quantized.py",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/src/eval/checkpoint_loading.py",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/src/eval/eval_original_images.py",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/src/eval/eval_pytorch.py",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/src/eval/eval_tflite.py",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/src/export/__pycache__/to_tflite.cpython-312.pyc",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/src/export/quantize.py",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/src/export/to_tflite.py",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/src/infer/infer_tflite.py",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/src/models/__pycache__/model_builder.cpython-312.pyc",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/src/models/model_builder.py",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/src/train/loss.py",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/src/train/train_qat.py",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/artifacts/src/train/train_utils_builder.py",
+      "passed": true
+    },
+    {
+      "path": "derived/figures/author-model-white.png",
+      "passed": true
+    },
+    {
+      "path": "derived/figures/author-qualitative_result-white.png",
+      "passed": true
+    },
+    {
+      "path": "derived/docs/requirements-utf8.txt",
+      "passed": true
+    }
+  ],
+  "prior_reviews": [
+    {
+      "path": "resources/MIE-0024/derived/docs/reading-notes.md",
+      "passed": true
+    },
+    {
+      "path": "resources/MIE-0024/derived/docs/reading-progress.json",
+      "passed": true
+    },
+    {
+      "path": "resources/MIE-0024/derived/docs/visual-review.json",
+      "passed": true
+    },
+    {
+      "path": "resources/MIE-0024/derived/docs/version-and-availability-review.json",
+      "passed": true
+    },
+    {
+      "path": "resources/MIE-0024/derived/docs/static-numeric-review.json",
+      "passed": true
+    },
+    {
+      "path": "resources/MIE-0024/derived/docs/checkpoint-container-review.json",
+      "passed": true
+    },
+    {
+      "path": "resources/MIE-0024/derived/docs/checkpoint-key-literal-review.json",
+      "passed": true
+    },
+    {
+      "path": "resources/MIE-0024/derived/docs/checkpoint-blob-receipt.json",
+      "passed": true
+    },
+    {
+      "path": "resources/MIE-0024/derived/docs/tflite-container-review001.json",
+      "passed": true
+    },
+    {
+      "path": "resources/MIE-0024/derived/docs/tflite-schema220.fbs",
+      "passed": true
+    },
+    {
+      "path": "resources/MIE-0024/derived/docs/tflite-schema220-receipt.json",
+      "passed": true
+    },
+    {
+      "path": "resources/MIE-0024/derived/docs/conclusion-evidence-check.json",
+      "passed": true
+    },
+    {
+      "path": "resources/MIE-0024/derived/report/gate2.json",
+      "passed": true
+    },
+    {
+      "path": "resources/MIE-0024/derived/report/integrity.json",
+      "passed": true
+    }
+  ],
+  "receipts": [
+    {
+      "path": "receipts/sourcezip-GenAI4E--QATIE.json",
+      "passed": true
+    }
+  ],
+  "links": [
+    {
+      "target": "../../sources/manifest.json",
+      "passed": true,
+      "selfreference": false
+    },
+    {
+      "target": "../docs/author-source-manifest.json",
+      "passed": true,
+      "selfreference": false
+    },
+    {
+      "target": "../docs/source-correspondence-audit.json",
+      "passed": true,
+      "selfreference": false
+    },
+    {
+      "target": "../docs/reading-notes.md",
+      "passed": true,
+      "selfreference": false
+    },
+    {
+      "target": "claims.json",
+      "passed": true,
+      "selfreference": false
+    },
+    {
+      "target": "../docs/gate2-review.md",
+      "passed": true,
+      "selfreference": false
+    },
+    {
+      "target": "gate2.json",
+      "passed": true,
+      "selfreference": false
+    },
+    {
+      "target": "../docs/conclusion-evidence-check.json",
+      "passed": true,
+      "selfreference": true
+    }
+  ],
+  "prior_closed": 27,
+  "catalog_version": 3,
+  "gate1_sha256": "f057b90010c0a1ca471e917f9c65cb78701d518758e9fbd51fa3b40013f476f7",
+  "gate2_sha256": "b5371150d788916763c891e0298b862ad0d9302a1286d698172bfa03dd90f57f",
+  "self_reference_checked_after_creation": true,
+  "errors": []
+}
