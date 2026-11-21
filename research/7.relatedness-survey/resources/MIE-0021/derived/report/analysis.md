@@ -1,6 +1,6 @@
 # MIE-0021｜FastSHADE：直接继承MBRConv，单帧真实去噪与手机成本先例
 
-**分析完成，待另轮Gate2审查。** 已阅读全文正式CVPR2026 Workshops / MAI十页及预印本v2差异，4图5表已实际查看。无本次源码执行/模型加载/训练/GPU/Gate3。
+**Gate2：pass_full，适用公开正式论文分析完成。** 已阅读全文正式CVPR2026 Workshops / MAI十页及预印本v2差异，4图5表已实际查看。无本次源码执行/模型加载/训练/GPU/Gate3。
 
 [完整阅读记录](../docs/reading-notes.md)、[视觉范围](../docs/visual-review.json)、[版本对照](../docs/version-review.json)、[公开材料核查](../docs/availability-review.json)、[数值口径](../docs/static-numeric-review.json)、[主要主张](claims.json)。
 
@@ -13,3 +13,5 @@ Noise Shifting来自配对GT差分后的近邻空间移位，需要局部统计�
 需保留两处内部问题：图2SGU的C与C/4通道标注不能直接对齐；表3无split行36.56dB/144ms与3.773score按原式不相符。未用猜测替换原值，也未将图示歧义称实际运行错误。本文未定位官方代码/权重或宣称存在的独立补充，完整正式科学材料已分析，缺少实现不等于正文未读。
 
 未来控制围绕同数据/容量/真实延迟的分路、折叠精度与导出误差、强边缘曝光运动下的噪声增强、空间时间联合评价及整条手机成本。全部仅作为未来实验分支候选，本阶段0数值复现；新资料出现保留旧审查另附复审，不提前全资源综合。
+
+[Gate2决定](gate2.json)、[另轮审查](../docs/gate2-review.md)、[证据核查](../docs/conclusion-evidence-check.json)。
