@@ -1,0 +1,334 @@
+{
+  "resource_id": "MIE-0024",
+  "at": "2026-11-21T14:00:06.840834+08:00",
+  "source_aliases": {
+    "paper": "paper:pN→formal physical pageN, derived/docs/formal-text.txt andderived/figures/formal-pNN.png",
+    "code": "code:path:A-B→fixed6703a6d fileinupstream-code-manifest withliteral1basedlines, notexecuted"
+  },
+  "claims": [
+    {
+      "claim_id": "C01",
+      "evidence_class": "primary_identity_version",
+      "claim": "正式CVPR2026W/MAI十页pp3847–3856，与2026-04-23arxivv1科学文本/表值一致。",
+      "anchors": [
+        "identity.json",
+        "derived/docs/version-and-availability-review.json",
+        "derived/docs/version-arxiv-formal.diff",
+        "paper:p1",
+        "paper:p10"
+      ],
+      "limitation": "不是主会或两次独立实证；仅公开版本比较，不证明原训练历史。"
+    },
+    {
+      "claim_id": "C02",
+      "evidence_class": "actual_fulltext_visual_source_scope",
+      "claim": "十页预印本文本/36refs与完整正式diff已读，全部3图5表关键页实际看；固定37工件/26适用文本全静态读。",
+      "anchors": [
+        "derived/docs/reading-progress.json",
+        "derived/docs/visual-review.json",
+        "derived/docs/author-source-manifest.json"
+      ],
+      "limitation": "纯文本页并非均原尺寸看；PYC只库存，二进制只静态容器，不称全部可执行体阅读/运行。"
+    },
+    {
+      "claim_id": "C03",
+      "evidence_class": "verified_direct_citation",
+      "claim": "MobileIE[35]在p5/p7为outlier/总loss先例；DaHua-IIG[16]才是骨干先例，已映射MIE33。",
+      "anchors": [
+        "paper:p3",
+        "paper:p5",
+        "paper:p7",
+        "paper:p9",
+        "paper:p10",
+        "derived/docs/version-and-availability-review.json"
+      ],
+      "limitation": "不把QATIE称MobileIE骨干派生，不将普通书目无限扩成新增纳入资源。"
+    },
+    {
+      "claim_id": "C04",
+      "evidence_class": "author_task_and_static_causality",
+      "claim": "单RGB手机照片到Canon配对监督，无跨输出state/未来帧/视频loss或闪烁指标。",
+      "anchors": [
+        "paper:p1",
+        "paper:p3",
+        "paper:p5",
+        "code:src/models/model_builder.py:141-223"
+      ],
+      "limitation": "0未来不证明时间稳定、低光专用或RAW/video方法。"
+    },
+    {
+      "claim_id": "C05",
+      "evidence_class": "author_and_source_architecture",
+      "claim": "门控stride2/tanh乘法、rawskip、三空间尺度UNet精炼、三流融合及clamp(x+delta)。",
+      "anchors": [
+        "paper:p3",
+        "paper:p4",
+        "code:src/models/model_builder.py:57-223"
+      ],
+      "limitation": "非MobileIE MBR折叠网络；门控、UNet、concat本身不作为二期创新证明。"
+    },
+    {
+      "claim_id": "C06",
+      "evidence_class": "literal_static_capacity",
+      "claim": "35Conv/5InstanceNorm字面P=889c²+156c+3，c32=915331；1080×1920卷积MAC144.156672G，各宽度参数匹配论文rounding。",
+      "anchors": [
+        "derived/docs/static-numeric-review.json",
+        "code:src/models/model_builder.py:57-223",
+        "paper:p7"
+      ],
+      "limitation": "未import模型/载入参数；MAC不含norm/激活/搬运/量化，不是完整FLOPs或手机时间。"
+    },
+    {
+      "claim_id": "C07",
+      "evidence_class": "literal_activation_size",
+      "claim": "c32的S/2、4c逻辑cat有66355200元素，INT8约66.36MB/FP32约265.42MB。",
+      "anchors": [
+        "derived/docs/static-numeric-review.json",
+        "code:src/models/model_builder.py:207-214"
+      ],
+      "limitation": "单逻辑张量不是实测峰值/同时活跃内存或TF部署分配器结果。"
+    },
+    {
+      "claim_id": "C08",
+      "evidence_class": "static_loss_semantics",
+      "claim": "loss2用Y域PSNR、全局RGBcos、相对离差tanh.detach加权L1；后者上权相对大离差，统一常偏差可权重0。",
+      "anchors": [
+        "paper:p5",
+        "code:src/train/loss.py:9-48",
+        "code:src/train/loss.py:192-275"
+      ],
+      "limitation": "不是跨帧对齐或简单压低outlier；单项退化不代表整个目标无梯度，未测训练效果。"
+    },
+    {
+      "claim_id": "C09",
+      "evidence_class": "paper_source_loss_mapping_gap",
+      "claim": "论文MS-SSIM对照，而当前MSSSIM类只有单层SSIM，未见多尺度下采样。",
+      "anchors": [
+        "paper:p7",
+        "paper:p8",
+        "code:src/train/loss.py:82-135"
+      ],
+      "limitation": "公开当前源与历史表版本对应未知，不能认定原实验一定使用此实现。"
+    },
+    {
+      "claim_id": "C10",
+      "evidence_class": "static_external_prior_scope",
+      "claim": "VGG19仅loss3，推荐loss2不含VGG；LPSNR线性式在PSNR>50时可负。",
+      "anchors": [
+        "code:src/train/loss.py:9-48",
+        "code:src/train/loss.py:251-297",
+        "paper:p5"
+      ],
+      "limitation": "不得泛化全配置无外部prior；边界算术未构成实际训练失败。"
+    },
+    {
+      "claim_id": "C11",
+      "evidence_class": "paper_source_training_protocol",
+      "claim": "当前CLI/README默认c24/loss1/limit.1与示例c32/loss2/limit.01不同，QAT强制32精度，原50ep/约62k步命令不能由默认恢复。",
+      "anchors": [
+        "paper:p5",
+        "code:src/train/train_qat.py:1-351",
+        "code:README.md:1-214"
+      ],
+      "limitation": "默认不是论文历史命令；QATFP32可与基础训练BF16描述并存，不臆断作者用错预算。"
+    },
+    {
+      "claim_id": "C12",
+      "evidence_class": "conditional_dataset_pairing",
+      "claim": "训练DPEDData独立未排序glob，无basename配对核；floatToTensor再/255正常。test作val，patch_data字符串False仍真属条件路径。",
+      "anchors": [
+        "code:src/data/dped_dataset.py:1-137",
+        "code:src/train/train_qat.py:1-351"
+      ],
+      "limitation": "未取数据像素，不声称实际错配/重复归一化或默认True失效；照片数据不是视频GT。"
+    },
+    {
+      "claim_id": "C13",
+      "evidence_class": "static_quantization_carrier_distinction",
+      "claim": "FXqnnpack/head与ConcatFP32保浮点和裸权重ONNX→TF代表集PTQ是不同载体；默认校准用测试输入。",
+      "anchors": [
+        "code:src/models/model_builder.py:34-50",
+        "code:src/export/quantize.py:194-209",
+        "code:src/ckpts_to_int8_tflite_eval.py:155-198",
+        "code:src/export/to_tflite.py:1-295"
+      ],
+      "limitation": "接触测试输入不等用了测试GT；历史表/实际手机文件对应未确定。"
+    },
+    {
+      "claim_id": "C14",
+      "evidence_class": "inert_checkpoint_metadata",
+      "claim": "CKPT992ZIP成员CRC全过，986storage，1186model键含1040observer；可见epoch37/global_step47652等文字。",
+      "anchors": [
+        "derived/docs/checkpoint-container-review.json",
+        "derived/docs/checkpoint-key-literal-review.json",
+        "derived/docs/checkpoint-blob-receipt.json"
+      ],
+      "limitation": "从未pickle/torch.load或重建rootobject，不证明完整训练/最优epoch/原表身份。"
+    },
+    {
+      "claim_id": "C15",
+      "evidence_class": "inert_tflite_metadata",
+      "claim": "100×100文件FLOAT32NHWC输入/NCHW输出，185INT8/42INT32/2FLOAT32tensor、139op，QUANTIZE/DEQUANTIZE浮点边界。",
+      "anchors": [
+        "derived/docs/tflite-container-review001.json",
+        "derived/docs/tflite-schema220-receipt.json"
+      ],
+      "limitation": "静态类型不证明运行数值正确/委派/速度；整数内部不等整数I/O。"
+    },
+    {
+      "claim_id": "C16",
+      "evidence_class": "inert_tflite_metadata",
+      "claim": "大文件INT8输入输出[1,1920,1080,3]，176INT8/40INT32tensor、128op，0floattypedop，scale约1/255零点−128。",
+      "anchors": [
+        "derived/docs/tflite-container-review001.json",
+        "derived/docs/author-source-manifest.json"
+      ],
+      "limitation": "H1920/W1080不擅改横屏；未invoke，不证明QNN整数委派/表内同一工件。"
+    },
+    {
+      "claim_id": "C17",
+      "evidence_class": "bounded_format_interpretation",
+      "claim": "两TFLite的dtype/layout/graph均不同，不仅尺寸；signedINT8与文中UINT8可通过affine范围表达比较。",
+      "anchors": [
+        "paper:p8",
+        "derived/docs/tflite-container-review001.json",
+        "code:src/export/to_tflite.py:1-295"
+      ],
+      "limitation": "不凭符号断定量化质量错误；元数据/源路径并不能建立历史生成链。"
+    },
+    {
+      "claim_id": "C18",
+      "evidence_class": "conditional_layout_risk",
+      "claim": "dynamic wrapper用reshape而非transpose；若predictions为NCHW，不能将reshape视作等价NHWC变换。",
+      "anchors": [
+        "code:src/export/to_tflite.py:1-295",
+        "derived/docs/tflite-container-review001.json"
+      ],
+      "limitation": "条件语义分析，不称已证公开大文件由该wrapper生成或运行出错。"
+    },
+    {
+      "claim_id": "C19",
+      "evidence_class": "conditional_tile_boundary",
+      "claim": "线性blend mask外端0，overlap>0强制tiles/回退路径的图像外边界可能全部0权重而置黑。",
+      "anchors": [
+        "code:src/infer/infer_tflite.py:1-353",
+        "derived/docs/static-numeric-review.json"
+      ],
+      "limitation": "未执行模型/产图，不能推广原图直接匹配路径或宣称论文图实际受此影响。"
+    },
+    {
+      "claim_id": "C20",
+      "evidence_class": "bounded_temporal_inference",
+      "claim": "InstanceNorm使用当前图像空间统计，块/全图输出未必等价，曝光/量化阈值可能影响时间敏感性。",
+      "anchors": [
+        "code:src/models/model_builder.py:108-137",
+        "code:src/infer/infer_tflite.py:1-353"
+      ],
+      "limitation": "无跨帧状态不保证无闪烁，但未实证此模型闪烁及其原因；后续需控制。"
+    },
+    {
+      "claim_id": "C21",
+      "evidence_class": "static_metric_protocol",
+      "claim": "train/PyTorch/TFLite PSNR阈值不同；TFLite SSIM显式population covariance，PyTorch未显式固定同项；均有8bitRGB SSIM路径。",
+      "anchors": [
+        "code:src/eval/eval_tflite.py:104-126",
+        "code:src/eval/eval_pytorch.py:29-78",
+        "code:src/train/train_qat.py:1-351"
+      ],
+      "limitation": "不从阈值差异推断已报22dB一定变化；未来固定度量定义后才比较。"
+    },
+    {
+      "claim_id": "C22",
+      "evidence_class": "static_device_label_scope",
+      "claim": "batch导出的cpu/cuda行都调用CPU TFLite；FP32每CKPT评一次，INT8按标签重复CPU评价。",
+      "anchors": [
+        "code:src/ckpts_to_tflite_eval.py:1-228",
+        "code:src/ckpts_to_int8_tflite_eval.py:1-386"
+      ],
+      "limitation": "源文档亦披露标签语义；不冒充作者论文QNN基准，更不把我们静态读说成运行。"
+    },
+    {
+      "claim_id": "C23",
+      "evidence_class": "static_resolution_benchmark_scope",
+      "claim": "Torch计时默认1088×1920、20warmup/100runs/5trials；原图BlackBerry/Sony当前配置2560×1440，与native注释不同。",
+      "anchors": [
+        "code:src/eval/benchmark_ckpts.py:62-156",
+        "code:src/eval/eval_original_images.py:1-81",
+        "code:src/eval/benchmark_quantized.py:445-540"
+      ],
+      "limitation": "不等FullHD手机端到端。INT8Torch分支没传full_hd而TFLite传，需固定具体入口；未测实际影响。"
+    },
+    {
+      "claim_id": "C24",
+      "evidence_class": "author_competition_protocol",
+      "claim": "比赛表1为1024×1024，Capybara21.82/.7653、MOS3.2、GPU291/Arm266ms，与patch验证及FullHD成本不同。",
+      "anchors": [
+        "paper:p5",
+        "paper:p6",
+        "paper:p7"
+      ],
+      "limitation": "不能将21.82与另一验证22dB门槛拼成内部错误，也非我们的MOS/公平跨队伍独立确认。"
+    },
+    {
+      "claim_id": "C25",
+      "evidence_class": "author_ablation_counterevidence",
+      "claim": "表2完整22.194/.796/469ms，去resolution20.398/.789/237；各精炼提升质量伴随成本增加。",
+      "anchors": [
+        "paper:p6",
+        "paper:p7"
+      ],
+      "limitation": "结构/容量共同变化，不能当纯机制或时序消融；不可仅报有利质量。"
+    },
+    {
+      "claim_id": "C26",
+      "evidence_class": "author_width_tradeoff",
+      "claim": "c24作者score最高，c32较其多.159dB/.011SSIM但249→469ms；加宽不自动扩大几何RF。",
+      "anchors": [
+        "paper:p7",
+        "derived/docs/static-numeric-review.json"
+      ],
+      "limitation": "c32是作者偏好质量取舍，不是所有目标下最优；非MobileIE同预算。"
+    },
+    {
+      "claim_id": "C27",
+      "evidence_class": "author_loss_counterevidence",
+      "claim": "表4推荐1.67h/22.194/.796，对照8.58h/19.79/.8763，后者SSIM更高。",
+      "anchors": [
+        "paper:p7",
+        "paper:p8"
+      ],
+      "limitation": "不可说全指标占优；训练时间非推理吞吐，当前单SSIM与历史对照身份未知。"
+    },
+    {
+      "claim_id": "C28",
+      "evidence_class": "author_quantization_remaining_loss",
+      "claim": "INT8QAT对PTQ+.474dB/+.1111SSIM，仍较FP32QAT少1.144dB/.071。",
+      "anchors": [
+        "paper:p8",
+        "derived/docs/static-numeric-review.json"
+      ],
+      "limitation": "不是完全恢复浮点质量；作者数值非本次复现，不能将静态选图当整体统计验证。"
+    },
+    {
+      "claim_id": "C29",
+      "evidence_class": "author_precision_latency_ambiguity",
+      "claim": "表5FP32表头/FP16正文保留；HTP151/41.8≈3.61倍、41.8ms倒数23.92FPS；PTQ41.4ms略快于QAT。",
+      "anchors": [
+        "paper:p8",
+        "derived/docs/static-numeric-review.json"
+      ],
+      "limitation": "非30FPS/持续端到端/热功耗证明，GPU与HTP及异分辨率不能混比。"
+    },
+    {
+      "claim_id": "C30",
+      "evidence_class": "research_scope_and_explicit_unknowns",
+      "claim": "固定carrier/输入/布局/校准及实际端侧完整成本有高价值；QAT/门控/损失已有先例，视频联合收益仍未知。",
+      "anchors": [
+        "derived/docs/reading-notes.md",
+        "derived/docs/version-and-availability-review.json",
+        "derived/report/analysis.md"
+      ],
+      "limitation": "原数据IDs/许可、训练命令seed、表与权重手机SHA/原始结果/视频证据缺口保留；Gate3只交接控制，无当前实验或创新成立。"
+    }
+  ]
+}
