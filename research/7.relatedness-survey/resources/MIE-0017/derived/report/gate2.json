@@ -1,0 +1,109 @@
+{
+  "resource_id": "MIE-0017",
+  "reviewed_at": "2026-11-21T08:30:56.020014+08:00",
+  "reviewer": "Codex  (sqs_A100) <langxibielangle@qq.com>",
+  "review_mode": "executor separate self-review, not external expert/second agent",
+  "standard": "gates/gate2-v1.md",
+  "standard_sha256": "b5371150d788916763c891e0298b862ad0d9302a1286d698172bfa03dd90f57f",
+  "status": "closed_limited",
+  "review_passed": true,
+  "claim_count": 10,
+  "checklist": {
+    "a": {
+      "passed": true,
+      "evidence": [
+        "identity.json",
+        "derived/docs/source-correspondence-audit.json"
+      ],
+      "scope": "Frozen evidence-limited closure; available carrier static analysis complete, trainable implementation source unavailable"
+    },
+    "b": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/reading-notes.md",
+        "derived/docs/archive-inventory.json"
+      ],
+      "scope": "Frozen evidence-limited closure; available carrier static analysis complete, trainable implementation source unavailable"
+    },
+    "c": {
+      "passed": true,
+      "evidence": [
+        "sources/manifest.json",
+        "derived/docs/upstream-code-manifest.json",
+        "derived/docs/compiled-code-manifest.json",
+        "derived/docs/reading-notes.md"
+      ],
+      "scope": "Frozen evidence-limited closure; available carrier static analysis complete, trainable implementation source unavailable"
+    },
+    "d": {
+      "passed": true,
+      "evidence": [
+        "derived/report/analysis.md",
+        "derived/docs/reading-notes.md"
+      ],
+      "scope": "Frozen evidence-limited closure; available carrier static analysis complete, trainable implementation source unavailable"
+    },
+    "e": {
+      "passed": true,
+      "evidence": [
+        "derived/report/claims.json",
+        "derived/docs/conclusion-evidence-check.json"
+      ],
+      "scope": "Frozen evidence-limited closure; available carrier static analysis complete, trainable implementation source unavailable"
+    },
+    "f": {
+      "passed": true,
+      "evidence": [
+        "derived/report/analysis.md"
+      ],
+      "scope": "Frozen evidence-limited closure; available carrier static analysis complete, trainable implementation source unavailable"
+    },
+    "g": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/gate2-review.md",
+        "derived/docs/conclusion-evidence-check.json"
+      ],
+      "scope": "Frozen evidence-limited closure; available carrier static analysis complete, trainable implementation source unavailable"
+    }
+  },
+  "limited_closure": {
+    "attempts": [
+      "collection/receipts/sourcezip-LukasYan30--L3IE-YUV.json: complete pinned official package4artifacts, README promises source once accepted",
+      "derived/docs/source-correspondence-audit.json:4exactSHA and primary pinnedblob evidence reused from16",
+      "resources/MIE-0016/derived/docs/author-tree-receipt.json: exact officialtree4blobs, all matched",
+      "collection/receipts/paper-e18f0ed64604-arxiv-pdf.json: full primary associated preprint available/read at16",
+      "resources/MIE-0016/derived/docs/publication-web-trace.json: primary authorhomepage InSubmission and officialrepo cross-check",
+      "derived/docs/compiled-code-manifest.json: actualPT carrier/97readable texts, no model loading"
+    ],
+    "missing": [
+      "Original trainable authoring/model/initialization and training/loss/config/split/model-selection sources",
+      "Complete benchmark/ablation checkpoint-to-table provenance and raw outputs/logs",
+      "Original/export source explanation for compiled graph/paper differences and precision/shape requirements",
+      "Explicit code/data license and independent numeric/model/videoGT/mobile/fullpipeline verification"
+    ],
+    "available_analyzed": "All4public carriers,3entry full texts, sameSHA compiled23custom cores and applicable standard wrappers;97prepared texts retained but not all generic wrappers individually audited. No deserialization/execution.",
+    "supportable_conclusions": [
+      "Current published entry/default/GT/metric/precision/timing conditions and bounded symbolic size analysis",
+      "Current compiled input, spatial/frequency and channelaxis behavior with exact version limits"
+    ],
+    "unsupported_conclusions": [
+      "Original complete trainable implementation or allpaper ablations/training verified",
+      "Published paper tables independently reproduced, arbitrary image sizes/precisions certified",
+      "Mobile video temporal stability or end-to-end cost established",
+      "Compiled differences invalidate all author historical results"
+    ],
+    "overall_impact": "Third limited resource, same YUVfamily missing source also recorded16; count resource closures separately but do not count as independent duplicate scientific counterevidence.",
+    "unlock_conditions": [
+      "Legitimate full source/config/export-version/model-to-data provenance and license release, then appended review",
+      "Future separate experimentbranch controls for sizes/precision/metrics/numeric equivalence and samequality/information/causal video/fulldevice cost"
+    ]
+  },
+  "execution": {
+    "upstream_source": false,
+    "model_load": false,
+    "training": false,
+    "GPU": false,
+    "Gate3": false
+  }
+}

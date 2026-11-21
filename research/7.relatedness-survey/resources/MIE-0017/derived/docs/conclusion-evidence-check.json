@@ -1,0 +1,166 @@
+{
+  "checked_at": "2026-11-21T08:30:56.020014+08:00",
+  "claims": 10,
+  "anchors": [
+    {
+      "claim_id": "C01",
+      "anchor": "identity.json",
+      "passed": true
+    },
+    {
+      "claim_id": "C01",
+      "anchor": "derived/docs/source-correspondence-audit.json",
+      "passed": true
+    },
+    {
+      "claim_id": "C01",
+      "anchor": "derived/docs/archive-inventory.json",
+      "passed": true
+    },
+    {
+      "claim_id": "C02",
+      "anchor": "derived/docs/reading-notes.md",
+      "passed": true
+    },
+    {
+      "claim_id": "C02",
+      "anchor": "derived/docs/compiled-code-manifest.json",
+      "passed": true
+    },
+    {
+      "claim_id": "C02",
+      "anchor": "code:README.md:1-27",
+      "passed": true
+    },
+    {
+      "claim_id": "C03",
+      "anchor": "code:inference.py:9-15",
+      "passed": true
+    },
+    {
+      "claim_id": "C03",
+      "anchor": "ts:model/___torch_mangle_128.py:1-65",
+      "passed": true
+    },
+    {
+      "claim_id": "C04",
+      "anchor": "ts:torch/nn/modules/pooling/___torch_mangle_41.py:1-9",
+      "passed": true
+    },
+    {
+      "claim_id": "C04",
+      "anchor": "ts:torch/nn/modules/upsampling/___torch_mangle_68.py:1-9",
+      "passed": true
+    },
+    {
+      "claim_id": "C04",
+      "anchor": "ts:model/___torch_mangle_128.py:48-65",
+      "passed": true
+    },
+    {
+      "claim_id": "C04",
+      "anchor": "code:inference.py:120-147",
+      "passed": true
+    },
+    {
+      "claim_id": "C05",
+      "anchor": "code:inference.py:70-169",
+      "passed": true
+    },
+    {
+      "claim_id": "C05",
+      "anchor": "derived/docs/archive-inventory.json",
+      "passed": true
+    },
+    {
+      "claim_id": "C06",
+      "anchor": "code:inference.py:17-68",
+      "passed": true
+    },
+    {
+      "claim_id": "C06",
+      "anchor": "code:inference.py:120-169",
+      "passed": true
+    },
+    {
+      "claim_id": "C07",
+      "anchor": "code:inference.py:109-136",
+      "passed": true
+    },
+    {
+      "claim_id": "C07",
+      "anchor": "ts:FCA/___torch_mangle_80.py:1-28",
+      "passed": true
+    },
+    {
+      "claim_id": "C08",
+      "anchor": "code:latency.py:1-52",
+      "passed": true
+    },
+    {
+      "claim_id": "C09",
+      "anchor": "ts:RFFNet/___torch_mangle_103.py:1-45",
+      "passed": true
+    },
+    {
+      "claim_id": "C09",
+      "anchor": "ts:RFFNet/___torch_mangle_114.py:1-139",
+      "passed": true
+    },
+    {
+      "claim_id": "C09",
+      "anchor": "ts:FCA/___torch_mangle_80.py:1-28",
+      "passed": true
+    },
+    {
+      "claim_id": "C09",
+      "anchor": "derived/docs/reading-notes.md",
+      "passed": true
+    },
+    {
+      "claim_id": "C10",
+      "anchor": "derived/report/analysis.md",
+      "passed": true
+    },
+    {
+      "claim_id": "C10",
+      "anchor": "derived/docs/reading-notes.md",
+      "passed": true
+    }
+  ],
+  "local_links": [
+    {
+      "document": "derived/docs/reading-notes.md",
+      "target": "../../../MIE-0016/derived/docs/reading-notes.md"
+    },
+    {
+      "document": "derived/report/analysis.md",
+      "target": "../../identity.json"
+    },
+    {
+      "document": "derived/report/analysis.md",
+      "target": "../../sources/manifest.json"
+    },
+    {
+      "document": "derived/report/analysis.md",
+      "target": "../docs/source-correspondence-audit.json"
+    },
+    {
+      "document": "derived/report/analysis.md",
+      "target": "../docs/compiled-code-manifest.json"
+    },
+    {
+      "document": "derived/report/analysis.md",
+      "target": "../docs/reading-notes.md"
+    }
+  ],
+  "source_text_hashes_checked": 3,
+  "compiled_text_hashes_checked": 97,
+  "original_PT_SHA_and_CRC_rechecked": true,
+  "source_receipt_hash_verified": 1,
+  "four_artifact_correspondence_reuse": "source-correspondence-audit.json",
+  "prior16closed_and_freezes_verified": true,
+  "current_unique_begin": "MIE-0017",
+  "all_passed": true,
+  "meaning": "Path/line/hash/container only, no upstream model or Gate3"
+}
