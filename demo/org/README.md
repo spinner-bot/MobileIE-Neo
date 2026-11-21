@@ -28,7 +28,7 @@ Android保留拍照、系统选图、保存、进程恢复与AI Benchmark跳转�
 | 本版范围、取消参数面板与阶段门控 | [13设计确认](docs/13-three-task-and-display-plan.md) |
 | 0.2.0交付、测试证据与安装包索引 | [14验收报告](docs/14-three-task-0.2.0-delivery.md) |
 | 分支改名 `demo.org` → `demo/org` | [15改名记录](docs/15-branch-rename.md) |
-| 桌面 0.2.1 任意路径可运行与真实 Windows 验收 | [16修复报告](docs/16-desktop-0.2.1-windows-path-fix.md)、[证据](../results/desktop-0.2.1/) |
+| 桌面 0.2.1 任意路径可运行与真实 Windows 验收 | [16修复报告](docs/16-desktop-0.2.1-windows-path-fix.md)、[证据](results/desktop-0.2.1/) |
 | 安卓 0.2.0 一加 9R 真机验收 | [17真机报告](docs/17-real-device-0.2.0-9r.md)、[证据](results/phone-0.2.0-9r/) |
 | Android构建与验收命令 | [App说明](app/README.md) |
 | Python启动与输入限制 | [桌面快速说明](desktop/QUICKSTART.txt) |
