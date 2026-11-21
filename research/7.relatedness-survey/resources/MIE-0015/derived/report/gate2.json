@@ -1,0 +1,77 @@
+{
+  "resource_id": "MIE-0015",
+  "reviewed_at": "2026-11-21T08:00:54.296107+08:00",
+  "reviewer": "Codex  (sqs_A100) <langxibielangle@qq.com>",
+  "review_mode": "separate executor self-review, not external expert or second agent",
+  "standard": "gates/gate2-v1.md",
+  "standard_sha256": "b5371150d788916763c891e0298b862ad0d9302a1286d698172bfa03dd90f57f",
+  "status": "pass_full",
+  "review_passed": true,
+  "scope": "Complete pinned published package, applicable static core, explicit sameSHA reading reuse and binary ZIP/CRC/opcode artifact inspection. Not numerical reproduction/full audit of unused utilities, license certification, or formal paper review.",
+  "checklist": {
+    "a": {
+      "passed": true,
+      "evidence": [
+        "identity.json",
+        "derived/docs/source-correspondence-audit.json"
+      ]
+    },
+    "b": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/reading-notes.md",
+        "derived/docs/archive-inventory.json"
+      ]
+    },
+    "c": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/reading-notes.md",
+        "sources/manifest.json",
+        "derived/docs/upstream-code-manifest.json"
+      ]
+    },
+    "d": {
+      "passed": true,
+      "evidence": [
+        "derived/report/analysis.md"
+      ]
+    },
+    "e": {
+      "passed": true,
+      "evidence": [
+        "derived/report/claims.json",
+        "derived/docs/conclusion-evidence-check.json",
+        "derived/docs/anchor-corrections.json"
+      ]
+    },
+    "f": {
+      "passed": true,
+      "evidence": [
+        "derived/report/analysis.md",
+        "derived/docs/reading-notes.md"
+      ]
+    },
+    "g": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/gate2-review.md",
+        "derived/docs/conclusion-evidence-check.json"
+      ]
+    }
+  },
+  "claim_count": 13,
+  "open_gaps": [
+    "Original generic blind configuration and historical onehot mapping not confirmed",
+    "Formal TMM fulltext and possible formal supplements remain MIE-0014 closed_limited, not superseded",
+    "Dataset exact splits/licenses/overlap and complete code license text",
+    "Installed-environment, tensor values/numerical fold, dynamicGT/mobile/full pipeline measurements"
+  ],
+  "execution": {
+    "upstream_code": false,
+    "model_load": false,
+    "training": false,
+    "GPU": false,
+    "Gate3": false
+  }
+}

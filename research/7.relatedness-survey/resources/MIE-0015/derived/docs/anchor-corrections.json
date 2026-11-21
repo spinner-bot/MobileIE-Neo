@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-11-21T08:00:54.171537+08:00",
+  "first_check": {
+    "claims": 13,
+    "anchor_count": 43,
+    "invalid": [
+      {
+        "anchor": "code:inference_5tasks.py:224-279",
+        "actual_lines": 274
+      },
+      {
+        "anchor": "code:requirements.txt:1-68",
+        "actual_lines": 61
+      }
+    ]
+  },
+  "corrections": {
+    "code:inference_5tasks.py:224-279": "code:inference_5tasks.py:224-274",
+    "code:requirements.txt:1-68": "code:requirements.txt:1-61"
+  },
+  "meaning": "Correct locator endpoints, no upstream edits or changed scientific claim"
+}

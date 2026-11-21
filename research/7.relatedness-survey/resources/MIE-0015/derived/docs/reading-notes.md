@@ -15,7 +15,7 @@
 |net/net_utils|Haar DWT/IDWT的自定义autograd空间分解；其数值梯度/非偶数输入/后端精度未实测。原推理pad/裁块协议须保持。|
 |train/options/dataset_utils|原子one-hot set→list与固定推理次序风险；默认3base对train固定5维；README150而默认1200、warmup15/max100；任务3/120/5/20重复与缺外部ID列表使预算需另核。源码他人绝对路径仅当字符串，不访问其目录。|
 |inference5 73–142|非去噪任务统一需要input/和target/，dehaze按下划线前缀匹配PNG目标。正常4任务_get_gt_path均给路径，因此代码中的clean=None分支不提供真正无GT评价。不能直接冒充RTTS无参考FADE/NIMA结果脚本。|
-|inference5 145–279、metric_util|逐图指标做样本数加权平均。默认save_img=False，CLI无保存开关，调用也没改；日志tofile=False，仅控制台汇总，没有自动导出逐图结果表/图像。拥有output_path不等于已保存输出或完整实验日志。|
+|inference5 145–274、metric_util|逐图指标做样本数加权平均。默认save_img=False，CLI无保存开关，调用也没改；日志tofile=False，仅控制台汇总，没有自动导出逐图结果表/图像。拥有output_path不等于已保存输出或完整实验日志。|
 |metrics/psnr_ssim 10–29|实际clamp RGB float/skimage/data_range1，不使用下方另一个Y/crop metric；没有FADE/NIMA/时间指标。|
 |requirements/util/metric|README环境名及包列表是作者声明，未建环境验证。显式torch1.13/torchvision0.14、lightning2.2.5；scikit-image、termcolor被源码导入但未在requirements显式列出，可能有外部/传递依赖，不能据此声称安装必失败。util的torch._six是依赖具体版本的导入，未实际测试或泛指所有新版本。|
 |transfer 1–21|从作者本地Lightning checkpoint取state_dict并去net.前缀，构造expert_dim3后strict=True加载再存普通state_dict；没有公开原训练checkpoint/任务映射，也没有转换盲模式。路径未访问，脚本未执行。|
