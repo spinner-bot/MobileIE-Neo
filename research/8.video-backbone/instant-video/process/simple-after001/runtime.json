@@ -1,0 +1,37 @@
+{
+  "at": "2026-11-21T18:49:34.097121+08:00",
+  "process": {
+    "pid": 3991883,
+    "start_ticks": 118916373,
+    "state": "R"
+  },
+  "completed_normally": true,
+  "seconds": 9198.031772363931,
+  "state": {
+    "at": "2026-11-21T18:49:34.096644+08:00",
+    "process": {
+      "pid": 3991883,
+      "start_ticks": 118916373,
+      "state": "R"
+    },
+    "stage": "results_ready_pending_actual_review_and_decision",
+    "children": {
+      "full-evaluation": {
+        "pid": 4035610,
+        "start_ticks": 119712122,
+        "state": "R",
+        "exit_code": 0
+      },
+      "complete-plots": {
+        "pid": 4037687,
+        "start_ticks": 119832790,
+        "state": "R",
+        "exit_code": 0
+      }
+    }
+  },
+  "GPU_used": false,
+  "human_or_agent_visual_review_done": false,
+  "candidate_or_paper_success_claimed": false,
+  "goal_complete": false
+}
