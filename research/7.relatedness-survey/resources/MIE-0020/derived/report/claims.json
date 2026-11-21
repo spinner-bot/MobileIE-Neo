@@ -1,0 +1,230 @@
+{
+  "resource_id": "MIE-0020",
+  "at": "2026-11-21T10:34:38.174806+08:00",
+  "source_aliases": {
+    "code": "code:source/path:first-last maps to derived/docs/upstream-code/source--path.txt atfixed66bd821",
+    "other": "explicitresourcerelativepath; associatedchallengepartialscope marked"
+  },
+  "claims": [
+    {
+      "claim_id": "C01",
+      "evidence_class": "primary_identity_fixed_release",
+      "claim": "HIT团队XinbaiWang/DuoLiu身份与挑战报告对应，固定66bd821/tree45844cf，35blob597296B全部匹配。",
+      "anchors": [
+        "identity.json",
+        "derived/docs/pinned-artifact-manifest.json",
+        "derived/docs/associated-challenge-assets.json"
+      ],
+      "limitation": "提交June2不是首次发布或挑战全文审查；MIE0031未begin。"
+    },
+    {
+      "claim_id": "C02",
+      "evidence_class": "static_direct_MobileIE_derivation",
+      "claim": "与MIE2原LLE完整diff保留FST/双调制骨架，尾从直接RGB改六输出Retinex，并改用IWO。",
+      "anchors": [
+        "derived/docs/official-LLE-six-output-diff.txt",
+        "code:model/lle_6channel.py:1-55",
+        "code:model/utils_IWO.py:331-357"
+      ],
+      "limitation": "不是原作完全不变，也不因模型名相同继承原4K速度/参数/质量。"
+    },
+    {
+      "claim_id": "C03",
+      "evidence_class": "static_mechanism_information",
+      "claim": "6Ch是3RGB照明+3残差输出，单RGB输入y=x/(.99sigmoid(z)+.01)+res，无时间state/历史/未来。",
+      "anchors": [
+        "code:model/lle_6channel.py:12-55",
+        "code:model/lle_6channel.py:89-135",
+        "code:infer_6channel.py:19-46"
+      ],
+      "limitation": "同图照明/残差与视频时间记忆不同，未证实视频稳定。"
+    },
+    {
+      "claim_id": "C04",
+      "evidence_class": "conditional_decomposition_interpretation",
+      "claim": "loss主要监督最终enhanced而非独立illum/noiseGT，illum/res命名不能证明物理可识别，分母下限仅约束单项增益。",
+      "anchors": [
+        "code:model/lle_6channel.py:48-55",
+        "code:loss.py:94-124",
+        "derived/docs/reading-notes.md"
+      ],
+      "limitation": "残差可能补偿，不由单项100倍上界称实际噪声/闪烁被放大100倍。"
+    },
+    {
+      "claim_id": "C05",
+      "evidence_class": "source_shape_and_opcode_literal_audit",
+      "claim": "当前19参数形状源码与PT操作码对应23882标量/95528Bstorage；README/报告写101922，恰为文件bytes。",
+      "anchors": [
+        "derived/docs/parameter-shape-audit.json",
+        "derived/docs/checkpoint-container-review.json",
+        "code:README.md:39-47"
+      ],
+      "limitation": "仅本固定工件，未反序列化或跑参数计数；历史提交/填报口径未知，不推故意或旧成绩无效。"
+    },
+    {
+      "claim_id": "C06",
+      "evidence_class": "arithmetic_memory_and_nonlinearity",
+      "claim": "单32channel1080pFP32feature253.125MiB，FST仍平方非线性，小权重不等于小峰值/全网络可折成线性。",
+      "anchors": [
+        "derived/docs/parameter-shape-audit.json",
+        "code:model/utils_IWO.py:331-357",
+        "code:model/lle_6channel.py:89-117"
+      ],
+      "limitation": "尺寸算术非峰值实测，算量/速度/量化稳定性尚未认证。"
+    },
+    {
+      "claim_id": "C07",
+      "evidence_class": "static_inference_scope",
+      "claim": "推荐infer固定slim32严格加载，RGB/255原尺寸单图、CPU/CUDA可选，clamp/uint8按扩展名存。",
+      "anchors": [
+        "code:infer_6channel.py:19-59"
+      ],
+      "limitation": "无视频/PTS/手机转换/计时，CPU回退不是端侧延迟证据，未运行。"
+    },
+    {
+      "claim_id": "C08",
+      "evidence_class": "primary_challenge_report_bounded",
+      "claim": "HIT主表rank7/完整表rank9，六指标一致；挑战约束提交文件<1MB、102测试GT保密。",
+      "anchors": [
+        "derived/docs/associated-challenge-excerpts.txt",
+        "derived/docs/associated-challenge-assets.json",
+        "derived/figures/associated-challenge-p03.png",
+        "derived/figures/associated-challenge-p17.png"
+      ],
+      "limitation": "只关联当前项目，MIE31全报告未begin；作者成绩非本次复现，模型大小限制不等于手机时延。"
+    },
+    {
+      "claim_id": "C09",
+      "evidence_class": "primary_visual_observation",
+      "claim": "全部6作者海报对比实际查看，可见度提高亦有平坦/阶梯样阴影/色调改变，无GT或视频。",
+      "anchors": [
+        "derived/docs/visual-review.json",
+        "derived/docs/artifacts/docs/assets/mobileie6ch_qualitative_results.jpg"
+      ],
+      "limitation": "压缩且作者选图，不量化质量或作模型故障归因，不代表全102case。"
+    },
+    {
+      "claim_id": "C10",
+      "evidence_class": "static_default_config_vs_report",
+      "claim": "默认re-parameterized配置直接训练slim；README/报告的MBR训练不等同默认路径。",
+      "anchors": [
+        "code:config/lle.yaml:53-60",
+        "code:model/__init__.py:17-40",
+        "code:train_ddp.sh:30-38"
+      ],
+      "limitation": "历史提交配置未知，不能认定原挑战没用MBR。"
+    },
+    {
+      "claim_id": "C11",
+      "evidence_class": "static_MBR_offset_and_fold",
+      "claim": "IWO冻结baseconv_out.weight、学weight1，forward/fold都使用两者和，BN用running统计合并。",
+      "anchors": [
+        "code:model/utils_IWO.py:30-52",
+        "code:model/utils_IWO.py:86-147",
+        "derived/docs/utils-IWO-local-diff.txt"
+      ],
+      "limitation": "未做浮点fold等价，BN训练/推理语义分开；默认slim不启该MBR。"
+    },
+    {
+      "claim_id": "C12",
+      "evidence_class": "static_warmup_and_conditional_DDP_paths",
+      "claim": "slim.forward_warm重复同一输出，warmup loss对input/GT双目标；原多头与DDPwrapper绕过仅条件路径问题。",
+      "anchors": [
+        "code:model/lle_6channel.py:137-146",
+        "code:loss.py:80-93",
+        "code:main_ddp.py:290-317",
+        "code:main_ddp.py:238-245"
+      ],
+      "limitation": "没有运行证明梯度不同步/死锁；若original还需核tail_warm未使用参数。"
+    },
+    {
+      "claim_id": "C13",
+      "evidence_class": "static_loss_semantics",
+      "claim": "clamp后Charbonnier1+箱SSIM.5+逐通道空间余弦.1+FFT幅度L1.1，无时间监督。",
+      "anchors": [
+        "code:loss.py:16-66",
+        "code:loss.py:94-124"
+      ],
+      "limitation": "逐通道余弦不是逐像素RGB方向；训练loss改善尚未独立验证。"
+    },
+    {
+      "claim_id": "C14",
+      "evidence_class": "static_data_fold_and_validation",
+      "claim": "fold按sorted清单索引未排序img_li，默认fold0无五折遍历；valid同类同opt仍随机crop/flip/inputgamma。",
+      "anchors": [
+        "code:main_ddp.py:50-76",
+        "code:data/lledata.py:8-26",
+        "code:data/lledata.py:137-171",
+        "code:config/lle.yaml:11-47"
+      ],
+      "limitation": "同目录稳定顺序可互斥但不是可复现字典序划分，无历史清单/全部五折证据，不能认证官方完整验证。"
+    },
+    {
+      "claim_id": "C15",
+      "evidence_class": "static_rank_subset_and_primary_API",
+      "claim": "valid用DistributedSampler，各rank分片，但只rank0遍历平均，无指标allreduce；多卡非空时仅rank0分片选模。",
+      "anchors": [
+        "code:main_ddp.py:201-222",
+        "code:main_ddp.py:382-433",
+        "derived/docs/pytorch251-sampler-source.json"
+      ],
+      "limitation": "API参照官方2.5.1原源，不是实际安装/运行版本；未声称特定GPU首异常或通用DDP死锁。"
+    },
+    {
+      "claim_id": "C16",
+      "evidence_class": "static_training_provenance_limits",
+      "claim": "EMA在warmup前初始化且warmup未更新；主调度固定WarmRestarts50/2，resume读取model字段不同train配置。",
+      "anchors": [
+        "code:main_ddp.py:265-340",
+        "code:main_ddp.py:374-441",
+        "code:config/lle.yaml:22-38"
+      ],
+      "limitation": "仅当前源；保存/选模缺历史完整日志，不能绑定发布权重训练轨迹。"
+    },
+    {
+      "claim_id": "C17",
+      "evidence_class": "static_metric_fallback_scope",
+      "claim": "main只FastRGBPSNR/箱SSIM；FullMetrics缺库返回常数，未被main训练选模调用。",
+      "anchors": [
+        "code:metrics.py:32-163",
+        "code:metrics.py:166-251",
+        "code:main_ddp.py:270-273",
+        "code:main_ddp.py:398-418"
+      ],
+      "limitation": "固定fallback不是测量值，不能归给官方挑战服务器结果或声称当前main已使用。"
+    },
+    {
+      "claim_id": "C18",
+      "evidence_class": "conditional_generic_test_protocol",
+      "claim": "通用test配置input==GT且pretrained空，dataset仍增强；main test未主动移device，和推荐infer路径不同。",
+      "anchors": [
+        "code:config/lle.yaml:45-60",
+        "code:main_ddp.py:452-490",
+        "code:data/__init__.py:49-64"
+      ],
+      "limitation": "条件参考/设备问题非推荐infer已失败；没运行定位实际异常。"
+    },
+    {
+      "claim_id": "C19",
+      "evidence_class": "availability_license_and_environment",
+      "claim": "有Apache2LICENSE/CITATION/模型卡/原源/检查点，数据与历史日志不重分发，依赖下限不是完整环境锁。",
+      "anchors": [
+        "code:docs/REPRODUCIBILITY.md:75-92",
+        "code:requirements.txt:1-25",
+        "code:logger.py:1-33",
+        "sources/manifest.json"
+      ],
+      "limitation": "数据许可/划分与训练重叠未知，未安装验证，不推法律充分或安装必败。"
+    },
+    {
+      "claim_id": "C20",
+      "evidence_class": "bounded_value_and_future_controls",
+      "claim": "直接派生RGB照明/残差先例，二期需等预算RGB/四/六输出、因果视频/曝光运动噪声及完整手机成本控制。",
+      "anchors": [
+        "derived/report/analysis.md",
+        "derived/docs/reading-notes.md"
+      ],
+      "limitation": "缺历史版本/选模/参数解释/手机视频证据；0模型/训练/GPU/Gate3，未证明新方法有效或新颖。"
+    }
+  ]
+}
