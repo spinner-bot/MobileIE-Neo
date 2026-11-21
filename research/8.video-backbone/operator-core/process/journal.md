@@ -27,3 +27,5 @@ observation001记录新链资源等待：4–7组当时平均利用率约88%、�
 原父3551565/start115612249自动再次准入并启动正式seed0原3582586/start115719183，GPU4 UUID GPU-aa1364f0-1402-b5f0-97fe-6a0bed58ed3e。初始继承共同步/更新均0，原F0＋fresh matching/Adam，不继承CPU/CUDA资格。observation002核父/worker同start且live、原completed共同步118、正式更新236/学生3776，近期中位每共同步1.186346秒，估首seed剩4605.4秒，只安排sleep，不作算法截止。没有读取部分held质量或据loss选择设计/seed。
 
 0193/各入口分别更新为真实正式运行，资格/首正式config/admission/观察等完成文件阶段推送。后续原4K＋4K、两个完整保留训练窗与36门自动接续，尚无正式质量/方法结论。原84/PDF020、旧STOP、独立最终/7号和其他worktree保持。
+
+2026-11-21T08:16:09.747841+08:00：实际clock.sleep2700.0054秒后核原父3551565与原worker3582586仍同start/live，seed0各2618、共5236更新/83776学生图、无resource-pause/runtime；1000/2000完整恢复备份已自有路径/SHA核对并分别提交。observation003保留完整已完成前缀摘要，不把增长trace当最终，不看中途held质量/改预算。近期1.201449秒/共同步、估首seed余1660.4秒，仅安排35分钟sleep覆盖收尾/CPU评价/新seed准入；不是墙钟截止，不按旧PID或静态stage另启。
