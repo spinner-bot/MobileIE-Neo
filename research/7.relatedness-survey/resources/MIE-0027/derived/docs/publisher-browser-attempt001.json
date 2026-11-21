@@ -1,0 +1,50 @@
+{
+  "at": "2026-11-21T06:36:39.336Z",
+  "scope": "Ordinary publisher browser navigation; no login/captcha solving/stealth/researchsource/models/GPU",
+  "steps": [
+    {
+      "event": "loaded",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2667379726000975",
+      "status": 403,
+      "visible_text": "There was a problem providing the content you requested\n\nPlease contact our support team for more information and provide the details below.\n\nReference number: a5ddae702b20f3c5\nIP Address: 129.146.170.157\nUser Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/141.0.7390.37 Safari/537.36\nTimestamp: 2026-11-21 06:36:42 UTC\nCPE00001\nAbout ScienceDirect\nRemote access\nContact and support\nTerms and conditions\nPrivacy policy\nCookie settings\n\nAll content on this site: Copyright © 2026 Elsevier B.V., its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training, and similar technologies. For all open access content, the relevant licensing terms apply."
+    }
+  ],
+  "responses": [
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S2667379726000975",
+      "status": 403,
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.sciencedirect.com/craft/hosnb",
+      "status": 404,
+      "content_type": "text/plain"
+    },
+    {
+      "url": "https://www.sciencedirect.com/cdn-cgi/challenge-platform/scripts/jsd/main.js",
+      "status": 302
+    },
+    {
+      "url": "https://www.sciencedirect.com/cdn-cgi/challenge-platform/h/b/scripts/jsd/f8df4d4a0cd6/main.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://www.sciencedirect.com/cdn-cgi/challenge-platform/h/b/jsd/oneshot/f8df4d4a0cd6/0.5445788102814837:1795238724:ReFXIcd2ZdkUSIn-VZgCfMFBZl6Y6OTdGc6gq8BhhIU/a5ddae702b20f3c5",
+      "status": 200,
+      "content_type": "text/plain; charset=UTF-8"
+    }
+  ],
+  "initial_HTML": {
+    "archive": "archive/mie0027-browser-publisher001.html",
+    "bytes": 833263,
+    "sha256": "a4ac70bce81e1a987abd795f477d5eef196921be70efa7876832e7fa934f7b26"
+  },
+  "initial_screenshot": {
+    "archive": "archive/mie0027-browser-publisher001.png",
+    "bytes": 72950,
+    "sha256": "11053e62150ae5e1d4a8a7e9511bede41a4e8a4c5ff8035f37341f604aec4ea5"
+  },
+  "stopped_for_access_challenge": true,
+  "downloads": []
+}
