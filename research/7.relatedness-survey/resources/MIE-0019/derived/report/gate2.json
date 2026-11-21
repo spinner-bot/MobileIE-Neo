@@ -1,0 +1,83 @@
+{
+  "resource_id": "MIE-0019",
+  "reviewed_at": "2026-11-21T09:53:35.814176+08:00",
+  "reviewer": "Codex  (sqs_A100) <langxibielangle@qq.com>",
+  "review_mode": "Executorseparateselfreview, notexternalexpert/secondagent",
+  "standard": "gates/gate2-v1.md",
+  "standard_sha256": "b5371150d788916763c891e0298b862ad0d9302a1286d698172bfa03dd90f57f",
+  "status": "pass_full",
+  "review_passed": true,
+  "claim_count": 12,
+  "scope": "Fullapplicablestaticanalysisofentirecurrentpublicinferencecarrier, sourceallavailable. Notoriginalpapertraining/fulldeployment/numericreproduction.",
+  "checklist": {
+    "a": {
+      "passed": true,
+      "evidence": [
+        "identity.json",
+        "derived/docs/artifact-correspondence-audit.json"
+      ],
+      "scope": "Currentpublishedcarrierstaticreview; missingoriginalpaperpipelineexplicitlymarked"
+    },
+    "b": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/reading-notes.md"
+      ],
+      "scope": "Currentpublishedcarrierstaticreview; missingoriginalpaperpipelineexplicitlymarked"
+    },
+    "c": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/upstream-code-manifest.json",
+        "derived/docs/archive-inventory.json",
+        "sources/manifest.json",
+        "derived/docs/reading-notes.md"
+      ],
+      "scope": "Currentpublishedcarrierstaticreview; missingoriginalpaperpipelineexplicitlymarked"
+    },
+    "d": {
+      "passed": true,
+      "evidence": [
+        "derived/report/analysis.md",
+        "derived/docs/static-entry-audit.json"
+      ],
+      "scope": "Currentpublishedcarrierstaticreview; missingoriginalpaperpipelineexplicitlymarked"
+    },
+    "e": {
+      "passed": true,
+      "evidence": [
+        "derived/report/claims.json",
+        "derived/docs/conclusion-evidence-check.json"
+      ],
+      "scope": "Currentpublishedcarrierstaticreview; missingoriginalpaperpipelineexplicitlymarked"
+    },
+    "f": {
+      "passed": true,
+      "evidence": [
+        "derived/report/analysis.md"
+      ],
+      "scope": "Currentpublishedcarrierstaticreview; missingoriginalpaperpipelineexplicitlymarked"
+    },
+    "g": {
+      "passed": true,
+      "evidence": [
+        "derived/docs/gate2-review.md",
+        "derived/docs/conclusion-evidence-check.json"
+      ],
+      "scope": "Currentpublishedcarrierstaticreview; missingoriginalpaperpipelineexplicitlymarked"
+    }
+  },
+  "limitations_retained": [
+    "MIE0018formalfulltext/originalIRM/train/config/modeltable/mobilechain gapsremain, nohierarchicalreleasefrom19",
+    "No runorGPU/numeric/video/phonecostorqualityverification; source/log/media reuse notindependentexperiment",
+    "Datasetofficialidentity/license/trainoverlap, dependenciesreproducibilityandtrainingselectionunknown",
+    "Conditionaltinyresize/clipbasename/globalbatchcontrol risksnotobservedhistoricalfailures"
+  ],
+  "execution": {
+    "upstream_source": false,
+    "model_load": false,
+    "training": false,
+    "GPU": false,
+    "Gate3": false
+  }
+}
