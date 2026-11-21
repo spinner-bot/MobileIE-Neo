@@ -1,0 +1,20 @@
+{
+  "at": "2026-11-21T11:05:00.951302+08:00",
+  "author": "Codex  (sqs_A100)",
+  "CPU_26_named_sources_unchanged": true,
+  "formal_named_sources": 44,
+  "all_L1_python_sources_AST_parse_passed": true,
+  "static_contract_review": [
+    "CuBLAS environment set before Torch; process-start UUID required",
+    "Qualification uses fixed step8000 twice, 4 discarded updates and 16 CPU F0 anchor images, exports no weights",
+    "Only completed two-arm step boundaries can resource checkpoint/resume",
+    "Formal 2 arms x 2 seeds x 8000 updates =32000, 512000 student images; no formal teacher inference",
+    "Seed workers independently use GPUs1/2 in same group0..3; failed sibling does not kill or restart the other",
+    "Evaluation sampling seed9150 and steps20000..20007 identical across trained seeds",
+    "Self4 performs all four complete backbone forwards, not an optimized reused-head shortcut",
+    "11 outputs x 32 windows x 2 seeds =704; 2048 backbone images and 44 means/comparisons",
+    "Space8 and history12 must pass for both A/B; strong24 limits .90/1.02, no DEV until separate cost gate"
+  ],
+  "checks_scope": "Static integration and registered-budget review plus prior actual CPU qualification; no new model forward, CUDA qualification, formal training or held scoring yet",
+  "independent_final_opened": false
+}
