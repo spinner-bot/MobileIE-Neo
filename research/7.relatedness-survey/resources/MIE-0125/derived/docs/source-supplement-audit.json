@@ -1,0 +1,113 @@
+{
+  "at": "2026-11-21T11:21:17.816489+08:00",
+  "source_receipt": "collection/receipts/mie0125-arxiv-source-v2.json",
+  "completed_bytes": 25230760,
+  "complete_length_and_sha_verified": true,
+  "tar_members": 57,
+  "regular_members": 47,
+  "regular_bytes": 26071864,
+  "source_roles": {
+    "arxiv.tex": "Currentmanuscriptsource inspectedforlinks/supplement/figure/TeXtemplate; underlyingPDF19pagefulltextread",
+    "main.bib": "Bibliographicsource retained; all69PDFreferencesread",
+    "README/lncs/eccvstyle/templatePDFs": "Authorincludedconferenceformatmaterials, notconferenceacceptanceproof ornewscience",
+    "figs": "Publishedfigurecomponentsandunuseddraftvariants retained, notcountasindependentexperiments"
+  },
+  "link_and_supplement_lines": [
+    {
+      "line": 36,
+      "text": "\\usepackage[percent]{overpic}",
+      "commented": false
+    },
+    {
+      "line": 97,
+      "text": "    \\begin{overpic}[width=0.8\\linewidth,tics=5]{Figs/Intro/fig1_compare.pdf}",
+      "commented": false
+    },
+    {
+      "line": 124,
+      "text": "    \\end{overpic}",
+      "commented": false
+    },
+    {
+      "line": 225,
+      "text": "\\includegraphics[width=1.0\\textwidth,keepaspectratio]{./Figs/Method/Framework_1118_1.pdf}",
+      "commented": false
+    },
+    {
+      "line": 257,
+      "text": "\t\\includegraphics[width=\\linewidth]{Figs/Intro/VisualCompare/dependencies_wavelet_coefficients1.png}",
+      "commented": false
+    },
+    {
+      "line": 263,
+      "text": "\t\\includegraphics[width=\\linewidth]{Figs/Intro/VisualCompare/dependencies_wavelet_coefficients2.png}",
+      "commented": false
+    },
+    {
+      "line": 269,
+      "text": "\t\\includegraphics[width=\\linewidth]{Figs/Intro/VisualCompare/dependencies_wavelet_coefficients3.png}",
+      "commented": false
+    },
+    {
+      "line": 275,
+      "text": "\t\\includegraphics[width=\\linewidth]{Figs/Intro/VisualCompare/dwt_architecture1.png}",
+      "commented": false
+    },
+    {
+      "line": 281,
+      "text": "\t\\includegraphics[width=\\linewidth]{Figs/Intro/VisualCompare/dwt_architecture2.png}",
+      "commented": false
+    },
+    {
+      "line": 431,
+      "text": "\\cref{fig:sig17,fig:iccv23} show two challenging scenes: large-scale foreground motion and significant camera motion with large disparities. The coexistence of occlusions and saturation is inevitable and intractable in the presence of exposure and motion variations. In such case, non-attention or non-transformer-based methods like the approaches of Sen \\etal and Kalantari \\etal, DeepHDR, NHDRRnet, HDRRNN and FSHDR struggle with ghosting artifacts due to unreliable alignment (\\eg, optical flow, homography) or lack of feature alignment, often failing in fine detail preservation, such as hair in \\cref{fig:sig17}. Additionally, the patch-based method of Sen \\etal incurs noticeable halos. In contrast, our method surpasses others like CA-ViT, SCT-Net and AHDRNet in ghosting removal, saturation handling, detail retention, and color consistency. In window scenes with significant disparities, approaches like Kalantari \\etal and NHDRRnet suffer content loss in saturated areas, while CA-ViT and SCTNet struggle with fine detail recovery and noise suppression, as shown in \\cref{fig:iccv23}'s red close-up regions. By comparison, our method achieves relatively noise-free results in these areas. The proposed method, especially PASTA-I, also preserve edge sharpness and intensity in smooth regions better than competitors like CA-ViT and SCTNet, evident in the green close-ups in \\cref{fig:iccv23}. For additional results, please refer to the supplementary materials.",
+      "commented": false
+    },
+    {
+      "line": 436,
+      "text": "\\begin{overpic}[width=0.9\\linewidth,tics=2]{Figs/Experiment/VisualCompare/SIG17/Sig17.pdf}",
+      "commented": false
+    },
+    {
+      "line": 437,
+      "text": "\\end{overpic}",
+      "commented": false
+    },
+    {
+      "line": 446,
+      "text": "\\begin{overpic}[width=0.95\\linewidth,tics=2]{Figs/Experiment/VisualCompare/ICCV23/SCT23_new.pdf}",
+      "commented": false
+    },
+    {
+      "line": 448,
+      "text": "\\end{overpic}",
+      "commented": false
+    },
+    {
+      "line": 564,
+      "text": "\t% \\begin{overpic}[scale=.108,tics=2]",
+      "commented": true
+    },
+    {
+      "line": 565,
+      "text": "    \\begin{overpic}[width=1.0\\textwidth]{Figs/Experiment/Discussion/occlusion_and_saturation_last.pdf}",
+      "commented": false
+    },
+    {
+      "line": 573,
+      "text": "\t\\end{overpic}",
+      "commented": false
+    }
+  ],
+  "found_separate_supplement_manuscript_or_video": false,
+  "found_algorithm_source_or_weights": false,
+  "scope": "Full47regularmembers safelycopied/hashretained, no tarlinks/dangerouspaths/compile/codeexecution. Doesnotclaimallgenerictemplate/sourcecomments/draftfiguresindividuallyscientificallyreviewed.",
+  "source_transport_last_modified": "2026-10-18 header isserverartifactmetadata, notnewarxivv2submissiondate",
+  "scientific_version": "arxiv2403.10376v2 2024-04-09",
+  "source_process_pid": 3848369,
+  "source_process_alive_now": false,
+  "receipt_status": "success",
+  "independent_supplement_status": "Paperp11mentionsadditionalresults in supplementarymaterials; none acquired in source package/authorhomepage/targetedsearch. Notproof noneexists.",
+  "code_status": "No officialcode/weight located; priorGate1mappingtoVideoMamba wasunrelatedarxiv2403.06977 andnotadopted.",
+  "formal_status": "Arxiv/authorhomepagepreprint only, ECCV2024templateREADME andtertiaryvenue labelsnotacceptedpublicationproof"
+}

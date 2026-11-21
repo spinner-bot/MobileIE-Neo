@@ -1,0 +1,48 @@
+{
+  "at": "2026-11-21T11:21:17.816489+08:00",
+  "method": "Literal printednumbers arithmetic only, no model/timing/qualityruns",
+  "table6_1000x1500": {
+    "SCTNet_sec": 6.621,
+    "CAViT_sec": 4.631,
+    "I_sec": 2.418,
+    "U_sec": 2.242,
+    "I_Tiny_sec": 0.867,
+    "U_Tiny_sec": 0.773
+  },
+  "SCTNet_over_I_speedratio": 2.738213399503722,
+  "CAViT_over_I_speedratio": 1.9152191894127377,
+  "SCTNet_over_U_Tiny_speedratio": 8.565329883570504,
+  "U_Tiny_reciprocal_outputs_per_second": 1.2936610608020698,
+  "I_reciprocal_outputs_per_second": 0.4135649296939619,
+  "table6_2560x1440": {
+    "I": {
+      "seconds": 5.969,
+      "memory_G": 18.743
+    },
+    "I_Tiny": {
+      "seconds": 2.071,
+      "memory_G": 14.399
+    },
+    "U_Tiny": {
+      "seconds": 2.036,
+      "memory_G": 14.402
+    }
+  },
+  "quality_deltas_I_Tiny_minus_I": {
+    "Kalantari_PSNR_l": -0.25,
+    "Kalantari_PSNR_mu": -0.07000000000000028
+  },
+  "counterexamples": {
+    "Kalantari_SSIM_mu_SCTNet": 0.9924,
+    "I": 0.9918,
+    "without_Lp_PSNR_l": 42.61,
+    "full_PSNR_l": 42.5
+  },
+  "table5_other_run_numbers_retained": {
+    "I_1000x1500_sec": 2.543,
+    "I_Tiny_sec": 0.829,
+    "I_2K_sec": 5.891,
+    "I_Tiny_2K_sec": 1.889
+  },
+  "caution": "Authorsreportedcoarselyroundednumbers, differenttablesnotmerged/min-picked, reciprocalisoneHDRtripletoutputperforward notvideoFPS/phone/fullcapturepipeline"
+}
