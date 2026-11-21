@@ -4,7 +4,7 @@
 
 ## 当前研究状态
 
-更新：2026-11-21T11:08:21.187276+08:00；Codex  (sqs_A100)。最新[0198：潜在状态全链就绪与GPU准入等待](docs/进展报告/0198-T-261121-潜在状态全链就绪与GPU准入等待.md)：research/O1上的[L1](research/8.video-backbone/latent-core/README.md)完整正式链已实现并冻44源，原CPU资格26源保持；原协调已live持续采样等待，当前无CUDA/正式更新，free够但busy比例超门，未占卡。仅原链准入/资格后fresh双seed，固定32K/共享32窗/self4/强post及全部门保持。无新质量/方法/创新结论，O1和所有旧STOP、原论文/最终/并行worktree保持，论文目标active。
+更新：2026-11-21T11:28:25.154314+08:00；Codex  (sqs_A100)。最新[0199：潜在状态CUDA资格与双种子正式学习启动](docs/进展报告/0199-T-261121-潜在状态CUDA资格与双种子正式学习启动.md)：research/O1上的[L1](research/8.video-backbone/latent-core/README.md)CUDA007正常全丢弃，外层143独立保留后仅执行恢复。原26/44数值源不改，fresh双seed已实际在GPU1/2启动，原8K×4预算与同32窗/current/self4/强post/44比较保持；按同PID/start继续，不重跑资格或继承资格权重。尚无完整质量/方法结果，O1及所有旧STOP、主论文/最终/并行worktree保持，论文目标active。
 
 此前[0191：外观索引特征历史完整筛查与止损](docs/进展报告/0191-T-26112101-外观索引特征历史完整筛查与止损.md)：冻结原模型的B1完成16训练窗口/80输出/320逐帧、0优化/GPU。历史对当前空间控制仅.167%–.744%时间改善，完整门失败，[固定配置停止](research/8.video-backbone/appearance-state/decision.md)；所有局部收益/完整结果和图已保留，原进程正常终态。
 
