@@ -73,12 +73,16 @@ def sequence(model, clip, history="causal"):
 
 
 class Streaming:
-    def __init__(self, model):
+    def __init__(self, model, history="causal"):
         self.model = model
+        self.history = history
+        self.state = None
+
+    def reset(self):
         self.state = None
 
     def step(self, image):
-        value, state = self.model(image, self.state)
+        value, state = self.model(image, self.state, self.history)
         self.state = state.detach().clone(memory_format=torch.contiguous_format)
         return value
 
