@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-21",
+  "accepted": true,
+  "target_branch": "main",
+  "source_branch": "demo/org",
+  "previous_main": "bcc4198a55b91785a4a2473d4532c7017fe2160e",
+  "source_tip": "055e310308151e6c25781dadbf74128c84309d76",
+  "merge_commit": "c8139cf34dfde04be0e1bf84469a554d62ac71a8",
+  "merge_strategy": "--no-ff; two parent commits retained; no conflicts",
+  "protected_main_paths_unchanged": [
+    "AGENTS.md",
+    "MobileIE",
+    "paper",
+    "research/2.reproduction",
+    "research/4.temporal-consistency",
+    "research/5.prior-art-survey",
+    "research/8.video-backbone",
+    "scripts",
+    "specs"
+  ],
+  "demo_application_source_identical_to_source_branch": true,
+  "research_worktree_branch": "research/O1; not switched or edited",
+  "checks": {
+    "android_assembleDebug": true,
+    "android_assembleDebugAndroidTest": true,
+    "android_lint_errors": 0,
+    "android_lint_warnings": 9,
+    "desktop_tests": 8,
+    "desktop_failures": 0,
+    "desktop_skips": 0,
+    "desktop_seconds": 13.512,
+    "desktop_three_task_numerics": 9,
+    "desktop_gui": true
+  },
+  "scope": "Integrated checkout build/lint and Linux Xvfb core/GUI regression; no new emulator instrumentation or native phone/Windows run; historical evidence retained",
+  "artifact_index": [
+    {
+      "file": "android-build-lint.txt",
+      "bytes": 4817,
+      "sha256": "715305bac392036e61ce59e25dd9162f5506bb125f9209646248f13d1f773f9f"
+    },
+    {
+      "file": "desktop-gui.json",
+      "bytes": 274,
+      "sha256": "fea7b792adb9d9c001a6e3ab2bf3318e7edf6dacf1a311d8ccd00456e3555d5f"
+    },
+    {
+      "file": "desktop-numerics.json",
+      "bytes": 1146,
+      "sha256": "572858d9a8ed43c6abd231382e232f6de6b6aa8b1bf138f45078c28ed4ca2d26"
+    },
+    {
+      "file": "desktop-tests.txt",
+      "bytes": 2311,
+      "sha256": "b80d8751c790bcf33e24eaec482e855d63456d18b4014143ac92db5c9b39efd8"
+    },
+    {
+      "file": "lint-results-debug.txt",
+      "bytes": 4524,
+      "sha256": "a8bcbd274fb8973ac8cc293ca693f3dd5ae05850ff484d708a348f6be416ce43"
+    }
+  ]
+}
