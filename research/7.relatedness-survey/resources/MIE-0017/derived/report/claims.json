@@ -1,0 +1,116 @@
+{
+  "resource_id": "MIE-0017",
+  "at": "2026-11-21T08:28:54.689745+08:00",
+  "source_aliases": {
+    "code": "derived/docs/upstream-code/{filename}.txt,1based eaf269b2 published text",
+    "ts": "derived/docs/compiled-code/__torch__/{path}.txt,static sameSHA compiled text reused16",
+    "other": "explicit resource-relative file"
+  },
+  "claims": [
+    {
+      "claim_id": "C01",
+      "evidence_class": "primary_identity_and_exact_reuse",
+      "claim": "固定eaf269b2/tree20f14878，4件297479B与16同SHA，官方README/arxiv/作者身份交叉验证。",
+      "anchors": [
+        "identity.json",
+        "derived/docs/source-correspondence-audit.json",
+        "derived/docs/archive-inventory.json"
+      ],
+      "limitation": "提交日期不是接受/首公开；相同工件不计独立科学实证，README4名不覆盖论文7名。"
+    },
+    {
+      "claim_id": "C02",
+      "evidence_class": "availability_and_source_limit",
+      "claim": "3公开文本和TorchScript可读，97编译文本留档但原作者可训练构造/初始化/训练/config/split/表列映射未提供。",
+      "anchors": [
+        "derived/docs/reading-notes.md",
+        "derived/docs/compiled-code-manifest.json",
+        "code:README.md:1-10"
+      ],
+      "limitation": "完整ZIP/编译图不等于训练source；缺LICENSE文本不作法律结论，原模型并非完全不可得。"
+    },
+    {
+      "claim_id": "C03",
+      "evidence_class": "static_input_temporal_scope",
+      "claim": "RGB/255输入，内部RGB统计prior及YUV转换；单当前图，无历史/未来/time-state。",
+      "anchors": [
+        "code:inference.py:9-15",
+        "ts:model/___torch_mangle_128.py:1-65"
+      ],
+      "limitation": "不是原生420平面零拷贝或已证时序稳定；形状/精度/完整成本未实测。"
+    },
+    {
+      "claim_id": "C04",
+      "evidence_class": "conditional_shape_inference",
+      "claim": "pool8/up8与原尺度相加，H65时支路64对原65不相容，入口无pad；输出后resize无法修内部相加。",
+      "anchors": [
+        "ts:torch/nn/modules/pooling/___torch_mangle_41.py:1-9",
+        "ts:torch/nn/modules/upsampling/___torch_mangle_68.py:1-9",
+        "ts:model/___torch_mangle_128.py:48-65",
+        "code:inference.py:120-147"
+      ],
+      "limitation": "按默认pool floor规则的符号尺寸反例，无模型执行/首异常观测；不推常见8倍尺寸也失败。"
+    },
+    {
+      "claim_id": "C05",
+      "evidence_class": "static_entry_pairing_check",
+      "claim": "默认lsrw_huawei.pt与包内lsrw.pt不同；同名GT缺失跳过，仅按有效n平均。",
+      "anchors": [
+        "code:inference.py:70-169",
+        "derived/docs/archive-inventory.json"
+      ],
+      "limitation": "CLI可指定实际文件；有效对不等于官方全清单，文件名不证明所有表列checkpoint来源，未实际评价。"
+    },
+    {
+      "claim_id": "C06",
+      "evidence_class": "static_metric_artifact_scope",
+      "claim": "输出clamp/必要GT尺寸resize，0–255浮点RGB PSNR/11高斯有效SSIM；未实现LPIPS/NIQE或保存输出图。",
+      "anchors": [
+        "code:inference.py:17-68",
+        "code:inference.py:120-169"
+      ],
+      "limitation": "GT像素不进模型；口径与尺寸处理不同需单列，不认证论文全表或动态视频。"
+    },
+    {
+      "claim_id": "C07",
+      "evidence_class": "static_precision_branch_check",
+      "claim": "--fp16仅CUDAflag分支选择GPUautocast，其他路径选CPUcontextconstructor而非null，FCA另转float32做rFFT。",
+      "anchors": [
+        "code:inference.py:109-136",
+        "ts:FCA/___torch_mangle_80.py:1-28"
+      ],
+      "limitation": "未验证实际后端默认dtype/数值/上下文重入，不将不传flag或传flag当全部设备纯FP32/FP16证明。"
+    },
+    {
+      "claim_id": "C08",
+      "evidence_class": "static_benchmark_boundary_check",
+      "claim": "计时脚本强设GPU4，256平方b1/10warmup100次、GPU同步，加载I-O指标在外，图内转换仍计；峰值无reset。",
+      "anchors": [
+        "code:latency.py:1-52"
+      ],
+      "limitation": "未执行/占用GPU4/得到本机时间；不能认证论文表9或手机端到端，CPU型号/线程/精度未留。"
+    },
+    {
+      "claim_id": "C09",
+      "evidence_class": "compiled_version_gap",
+      "claim": "编译SCA先1x1池化后跨C轴unfold，FCA/rFFT/残差细节与纸面表达需原source解释。",
+      "anchors": [
+        "ts:RFFNet/___torch_mangle_103.py:1-45",
+        "ts:RFFNet/___torch_mangle_114.py:1-139",
+        "ts:FCA/___torch_mangle_80.py:1-28",
+        "derived/docs/reading-notes.md"
+      ],
+      "limitation": "限当前导出图，不推全部历史实现/消融无效；编译前初始化/训练图未获。"
+    },
+    {
+      "claim_id": "C10",
+      "evidence_class": "bounded_conclusion_and_future_controls",
+      "claim": "可支持当前载体协议/图结构边界，原source/config/模型映射/许可后追加复审，再在实验分支做数值与同质量信息因果视频/全成本控制。",
+      "anchors": [
+        "derived/report/analysis.md",
+        "derived/docs/reading-notes.md"
+      ],
+      "limitation": "16/17为同一家族同一未解证据缺口，不重复计独立反证；当前无上游模型/训练/GPU/Gate3。"
+    }
+  ]
+}
