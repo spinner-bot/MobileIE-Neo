@@ -1,0 +1,41 @@
+{
+  "at": "2026-11-21T18:28:37.732731+08:00",
+  "process": {
+    "pid": 3965864,
+    "start_ticks": 118637026,
+    "state": "R"
+  },
+  "completed_normally": true,
+  "seconds": 10735.13101784396,
+  "state": {
+    "at": "2026-11-21T18:28:37.732378+08:00",
+    "process": {
+      "pid": 3965864,
+      "start_ticks": 118637026,
+      "state": "R"
+    },
+    "stage": "training_completed_pending_evaluation",
+    "children": {
+      "simple-cuda-qualification001": {
+        "pid": 3965924,
+        "start_ticks": 118637032,
+        "state": "R",
+        "exit_code": 0
+      },
+      "seed0-driver": {
+        "pid": 3966756,
+        "start_ticks": 118645204,
+        "state": "R",
+        "exit_code": 0
+      },
+      "seed1-driver": {
+        "pid": 3966757,
+        "start_ticks": 118645204,
+        "state": "R",
+        "exit_code": 0
+      }
+    }
+  },
+  "evaluation_completed": false,
+  "goal_complete": false
+}
