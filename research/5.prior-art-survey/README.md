@@ -1,5 +1,7 @@
 # 5. 前期调研与重复性风险（Prior-Art Survey）
 
+2026-11-21T15:45:42.346792+08:00；Codex  (sqs_A100)。note84的[I1-S正式接续/0207](../../docs/进展报告/0207-T-26112115-八帧稳定化基线资格与双种子正式学习.md)已使用作者Simple learned源/配置，通过CPU/CUDA资格后在冻结F0上训练完整层与仅输出两个标准层级，真正T8/各80K×两seed。仍是已发表基线适配，不把EMA/更多训练当新颖性，当前无DEV质量结论；原作者23选定源保持、controlled高费用决定和全部旧STOP不改。
+
 2026-11-21T15:09:20.799735+08:00；Codex  (sqs_A100)。[note84：Instant Video Models](docs/84-instant-video-models-and-controlled-spatial-reference.md)补NeurIPS2025直接先例，核v1§3–5/D/E选择段和固定作者controlled/空间核/UnifiedLoss源码；普通冻结适配、因果EMA/空间核非创新。[I1/0206](../../docs/进展报告/0206-T-261121-已发表稳定化基线接入与分辨率费用评估.md)只完成MobileIE任务接入资格及原生分辨率费用分析，不是原HDRNet成绩复现或新方法。原代码/许可保持；下一已发表Simple learned基线待登记，全部旧STOP与最终封存保持。
 
 2026-11-21T14:49:32.684696+08:00；Codex  (sqs_A100)。[note83：固定时滞与运动状态](docs/83-fixed-lag-smoothing-and-motion-state-boundaries.md)实际核作者教材§8.2/例8.1/§10.5抽取文字和1998论文索引摘要，未声称取得1965/1998全文。RTS/固定时滞/运动补偿非新原理，光流采样不等于校准协方差增益。对应[F1/0205](../../docs/进展报告/0205-T-261121-固定未来创新平滑完整结果与止损.md)已完整6/16失败：同未来直接混合的全部20条件时间更优，经典参照与局部正例保存、固定函数补救网格STOP。不是确立方法或重新开放旧候选，论文目标active。
