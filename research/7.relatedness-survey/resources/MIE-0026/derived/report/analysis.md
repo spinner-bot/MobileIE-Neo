@@ -1,6 +1,6 @@
 # MIE-0026｜REZS-Edge：直接引用已核，正文与实现证据受限
 
-2026-11-21；Codex  (sqs_A100) <langxibielangle@qq.com>。有效序29，拟按closed_limited结项，绝非全文或代码分析完成。
+2026-11-21；Codex  (sqs_A100) <langxibielangle@qq.com>。有效序29，按closed_limited证据受限结项，绝非全文或代码分析完成。
 
 此项值得后续优先补证：出版方登记确认其直接引用MobileIE，摘要涉及噪声/照明与结构重参数化的组合，可能构成二期相关先例。当前只有官方摘要与元数据，不能判定具体继承关系、方法重复程度或实验是否成立。
 
