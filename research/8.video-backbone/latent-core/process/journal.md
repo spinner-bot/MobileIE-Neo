@@ -21,3 +21,13 @@ question登记唯一L1基线，core实现12431参数、32ch quarter状态、分�
 上阶段CPU资格/先例/固定正式协议已推送，属于progress。此次先核挂载和干净research/O1，保持原26源；新增formal metadata、0–3组资源入口、训练/资源恢复、完整held/self4、44均值/门、单次资格后双seed独立driver并行链，各文件单独提交。资格固定同step8000两次，CuBLAS在Torch前设置；正式不额外跑F0教师，资格无权重导出；同帧self4完整四次backbone。AST/预算静态检查后44具名全链源冻结，尚无新的模型评分。
 
 瞬时NVML八卡均100%，父持续11×2采样GPU1 mean约55.82%但90% busy比例.4545>.25，显存24284MiB虽够13312仍拒绝。启动原coordinator 3843495/start117051681、工具33516，仅CPU/std采样，actual /proc为S且同start/live，observation001记录stage=resource_wait。当时无child/无CUDA或正式更新，不放宽利用率/增长余量、不开别人任务控制。完整config/已完成selection分别提交，不把增长state写成最终。后续仅原协调按新采样资格通过后fresh双seed1/2卡，不因等待/旧PID再启动一链。
+
+## 2026-11-21T11:26:16.892607+08:00：CUDA007正常、原外层143后独立调度恢复，两seed fresh正式启动
+
+阶段22提交已推送，原父确认为live后clock.sleep600.0047秒。醒后实际/proc核原3843495已无，工具33516真实exit143、无原父runtime/原因未建立；没有将其当科学失败或按超时重启。原资格007 worker3848429及wrapper3848340已无，guard exit0，数值正常56.360344秒、4丢弃更新/64学生+16CPU F0，初始最大差4.768372e−7、GPU1 UUID匹配、末次NVML834MiB、allocator peak286600192B/reserved350224384B，无资格权重导出。001..006只有资源选择，无CUDA worker。此前正式driver/worker/held均不存在、正式0；原全部metadata/原state及缺失父runtime单独留证。
+
+新增唯一执行源resume_execution001.py/修订/1执行冻结，原26/44数值全不改；先证明原句柄无及资格007同源全过，再以独立session后台父3852634/start117153546、自己的文件日志和DEVNULL启动，工具启动调用正常exit0。仅调用原run.py --seed0/1，未重跑资格或承接资格Adam/权重。parent两子driver3852693/3852694同start117153555，fresh1/2卡前后各新连续准入/锁/实际UUID。
+
+clock.sleep120.0050秒后核同新父/两driver/两worker live，seed0 worker3852927/start117158126、seed1 worker3852924/start117158111，GPU1/2 UUID各匹配；初始计数四项全0。observation002记录当时各209/205共同步、近期median 0.596733/0.602402秒、估余4649.1/4695.7秒，仅用于长sleep。没有看中途held排名/改预算，增长trace不当最终。
+
+0199与入口分别更新，资格/完整启动metadata/过程/报告各自提交并做阶段推送。后续同原父驱动两组8K完整预算、原CPU held/44门，失败不杀/重试另一live seed；不按观察超时/旧stage重起。全部旧STOP、原84/PDF020/独立最终/7号/并行main与其他worktree保持，论文目标active未完成。
