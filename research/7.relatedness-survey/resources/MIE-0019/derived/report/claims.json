@@ -1,0 +1,137 @@
+{
+  "resource_id": "MIE-0019",
+  "at": "2026-11-21T09:51:01.637593+08:00",
+  "source_aliases": {
+    "code": "code:filename:first-last = 1basedline in derived/docs/upstream-code/filename.txt, sameSHA67addb2",
+    "other": "explicitresourcerelativepath, reusedsources recordexplicitBpaths"
+  },
+  "claims": [
+    {
+      "claim_id": "C01",
+      "evidence_class": "primary_identity_fixed_revision",
+      "claim": "作者论文反向链接及README身份一致，固定67addb2/tree1855a3，提交日期2026-02-20。",
+      "anchors": [
+        "identity.json",
+        "derived/docs/artifact-correspondence-audit.json",
+        "code:README.md:130-142"
+      ],
+      "limitation": "提交日期不等于第一公开或正式出版；不凭Git用户名认定唯一论文作者。"
+    },
+    {
+      "claim_id": "C02",
+      "evidence_class": "source_correspondence_and_transparent_reuse",
+      "claim": "51件18361389B与18和Gitblob全一致，4文本全文阅读/15组图/55条log/PTH审查同SHA透明复用。",
+      "anchors": [
+        "derived/docs/artifact-correspondence-audit.json",
+        "derived/docs/archive-inventory.json",
+        "derived/docs/reading-notes.md"
+      ],
+      "limitation": "不算第二次独立复现或双份科研实证；PT只CRC/操作码，不加载。"
+    },
+    {
+      "claim_id": "C03",
+      "evidence_class": "static_current_version_mechanism",
+      "claim": "当前58可学习标量，两Conv共享三次，LeakyReLU/Tanh；无BN和原Eq3直接IRM，README明确改版。",
+      "anchors": [
+        "code:model.py:6-29",
+        "code:README.md:130-142",
+        "derived/docs/reading-notes.md"
+      ],
+      "limitation": "原论文历史实现及表列权重对应未知，不由新版差异判历史无效。"
+    },
+    {
+      "claim_id": "C04",
+      "evidence_class": "static_geometry_and_conditional_control",
+      "claim": "六个3×3局部卷积的内部感受野13×13，但N由全NCHW均值决定，.1附近次数8→7。",
+      "anchors": [
+        "code:model.py:11-29",
+        "derived/docs/static-entry-audit.json"
+      ],
+      "limitation": "默认stride/dilation几何及常数算术；不说整个映射纯局部，不称观察到闪烁或转换必失败。"
+    },
+    {
+      "claim_id": "C05",
+      "evidence_class": "static_causality_scope",
+      "claim": "当前入口单图batch1，无过去/未来/时间state，目录batchprocessing为forloop；未来多帧batch才有均值跨帧耦合。",
+      "anchors": [
+        "code:test.py:38-40",
+        "code:test.py:94-109",
+        "code:eval_en.py:93-95",
+        "code:model.py:25-29"
+      ],
+      "limitation": "当前没有实际非因果视频；若适配需新增信息预算/帧序协议。"
+    },
+    {
+      "claim_id": "C06",
+      "evidence_class": "static_preprocessing_scope",
+      "claim": "RGB/255，先resize16倍再输出双线性回原尺寸，eval小于16没有test的最小保护。",
+      "anchors": [
+        "code:test.py:43-70",
+        "code:eval_en.py:98-124"
+      ],
+      "limitation": "条件目标0风险非运行异常；输出尺寸保持不等于内部原采样或原生RAW/YUV。"
+    },
+    {
+      "claim_id": "C07",
+      "evidence_class": "static_timing_scope",
+      "claim": "仅一次全局warmup，timer准备输入之后至net末GPU同步，输出插值和保存随后；CUDA必需。",
+      "anchors": [
+        "code:test.py:43-89",
+        "code:eval_en.py:98-139"
+      ],
+      "limitation": "不含完整读写/视频/手机链，也不保证前置异步传输尾部全排除；没有CPU手机计时复现。"
+    },
+    {
+      "claim_id": "C08",
+      "evidence_class": "conditional_reference_identity_risk",
+      "claim": "GT先按相应reference路径，失败回退flatbasename；多clip同名且缺层级GT可能匹配其它clip。",
+      "anchors": [
+        "code:eval_en.py:75-90",
+        "derived/docs/artifact-correspondence-audit.json"
+      ],
+      "limitation": "当前15名唯一，未观察该包实际错配，不把条件风险写为历史错误。"
+    },
+    {
+      "claim_id": "C09",
+      "evidence_class": "static_metric_protocol",
+      "claim": "先保存8bit再读，与GT再对齐尺寸，RGBPSNR/逐通道11高斯validSSIM/AlexLPIPS，缺GT跳过有效样本均值。",
+      "anchors": [
+        "code:eval_en.py:19-62",
+        "code:eval_en.py:174-215"
+      ],
+      "limitation": "不等于Y/浮点/RAW指标，无全部无参考IQA实现或官方全样本名单验证；没计算独立成绩。"
+    },
+    {
+      "claim_id": "C10",
+      "evidence_class": "retained_author_artifacts_limited",
+      "claim": "作者55日志仅15图且不同段变值，缺run/device/checkpoint来源；PTH4FloatStorage232B结构与58一致。",
+      "anchors": [
+        "derived/docs/artifact-correspondence-audit.json",
+        "derived/docs/reading-notes.md"
+      ],
+      "limitation": "未反序列化，log零NIQE/PI不当实测0，epoch11/epoth199名称不定训练轮次。"
+    },
+    {
+      "claim_id": "C11",
+      "evidence_class": "source_and_dataset_availability",
+      "claim": "当前完整公开模型及推理源可审阅，未提供原训练/loss/config/split/手机导出链；README声明Apache但无LICENSE正文。",
+      "anchors": [
+        "code:README.md:25-63",
+        "code:README.md:172-174",
+        "derived/docs/archive-inventory.json",
+        "sources/manifest.json"
+      ],
+      "limitation": "非原论文全链完成；数据许可/训练重叠未知，不推安装必败、授权充分或未见泛化。"
+    },
+    {
+      "claim_id": "C12",
+      "evidence_class": "bounded_analysis_and_future_hypothesis",
+      "claim": "当前公开载体适用静态分析完整，后续用同权重/等质/因果对照检验离散控制及完整成本。",
+      "anchors": [
+        "derived/report/analysis.md",
+        "derived/docs/reading-notes.md"
+      ],
+      "limitation": "不解除18正式/历史实现缺口，不称数值/视频/手机复现或新方法成立，Gate3不执行。"
+    }
+  ]
+}
