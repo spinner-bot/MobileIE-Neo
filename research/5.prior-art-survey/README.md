@@ -1,5 +1,7 @@
 # 5. 前期调研与重复性风险（Prior-Art Survey）
 
+2026-11-21T14:49:32.684696+08:00；Codex  (sqs_A100)。[note83：固定时滞与运动状态](docs/83-fixed-lag-smoothing-and-motion-state-boundaries.md)实际核作者教材§8.2/例8.1/§10.5抽取文字和1998论文索引摘要，未声称取得1965/1998全文。RTS/固定时滞/运动补偿非新原理，光流采样不等于校准协方差增益。对应[F1/0205](../../docs/进展报告/0205-T-261121-固定未来创新平滑完整结果与止损.md)已完整6/16失败：同未来直接混合的全部20条件时间更优，经典参照与局部正例保存、固定函数补救网格STOP。不是确立方法或重新开放旧候选，论文目标active。
+
 最新2026-11-17：[70 增量执行与保持函数度量的边界](docs/70-incremental-inference-and-functional-gauge-boundaries.md)实际核DeltaCNN差分/非线性/截断累计、Sigma-Delta特定当前rounding等价、MotionDeltaCNN贡献/图注和DFQ通道尺度公式，不执行外部代码/采用其速度；MR-VNet仅索引/PDF检索片段未作架构证据。[R87/0167](../../docs/进展报告/0167-T-26111714-平方表征保持函数校准与匹配前提止损.md)原CPU32秒正常，RGB数值保持但四组匹配前提0/4，停止全局度量网格，非新方法。下一[更早stem信息问题](../4.temporal-consistency/docs/next-core-question-after-r87.md)仍待共享/几何描述/正交分支直接先例核查与完整因果设计，不能把普通共享或正交约束当创新。paper020/旧STOP/保留最终保持。
 
 最新实验接续：[R86/0166](../../docs/进展报告/0166-T-26111711-固定快速DIS经典参考完整质量与配对成本.md)已完成note69所提唯一固定native DIS ULTRAFAST传统对照；并非新论文/新方法或改先例读过范围。域平均PSNR/JOD正、CPU快约16%–26%，但逐源JOD/ND时间失败，联合0/4，保留trade-off、不扩preset/尺度/阈值或传统家族。原note69“0图像calc”描述的是执行前getter核查，当前完整实验证据以R86为准；来源/脚本/全部结果与20图实际审阅已分开提交。创新/自然动态/手机/独立最终仍缺，paper020/旧STOP保持。
