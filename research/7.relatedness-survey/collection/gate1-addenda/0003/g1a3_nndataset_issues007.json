@@ -1,0 +1,58 @@
+{
+  "requests": [
+    "https://api.github.com/search/issues?q=repo%3AABrain-One%2FNN-Dataset+is%3Aissue+LiteDenoiseNet&per_page=100&page=1",
+    "https://api.github.com/search/issues?q=repo%3AABrain-One%2FNN-Dataset+is%3Apr+LiteDenoiseNet&per_page=100&page=1"
+  ],
+  "responses": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "content": "{\"total_count\":0,\"incomplete_results\":false,\"items\":[],\"search_type\":\"lexical\"}",
+          "title": "issues",
+          "modified_date": null,
+          "url": "https://api.github.com/search/issues?q=repo%3AABrain-One%2FNN-Dataset+is%3Aissue+LiteDenoiseNet&per_page=100&page=1",
+          "display_url": "https://api.github.com/search/issues?q=repo%3AABrain-One%2FNN-Dataset+is%3Aissue+LiteDenoiseNet&per_page=100&page=1",
+          "display_title": "issues",
+          "structuredContent": {
+            "title": "issues",
+            "content": "{\"total_count\":0,\"incomplete_results\":false,\"items\":[],\"search_type\":\"lexical\"}",
+            "display_url": "https://api.github.com/search/issues?q=repo%3AABrain-One%2FNN-Dataset+is%3Aissue+LiteDenoiseNet&per_page=100&page=1"
+          }
+        },
+        "isError": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "content": "{\"total_count\":1,\"incomplete_results\":false,\"items\":[{\"url\":\"https://api.github.com/repos/ABrain-One/nn-dataset/issues/233\",\"repository_url\":\"https://api.github.com/repos/ABrain-One/nn-dataset\",\"labels_url\":\"https://api.github.com/repos/ABrain-One/nn-dataset/issues/233/labels{/name}\",\"comments_url\":\"https://api.github.com/repos/ABrain-One/nn-dataset/issues/233/comments\",\"events_url\":\"https://api.github.com/repos/ABrain-One/nn-dataset/issues/233/events\",\"html_url\":\"https://github.com/ABrain-One/nn-dataset/pull/233\",\"id\":4469201881,\"node_id\":\"PR_kwDONGKYgc7cpzC8\",\"number\":233,\"title\":\"Add MAI 2026 image denoising models (LiteDenoiseNet + HeavyDenoiseNet)\",\"user\":{\"login\":\"farazkayani\",\"id\":47716731,\"node_id\":\"MDQ6VXNlcjQ3NzE2NzMx\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/47716731?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/farazkayani\",\"html_url\":\"https://github.com/farazkayani\",\"followers_url\":\"https://api.github.com/users/farazkayani/followers\",\"following_url\":\"https://api.github.com/users/farazkayani/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/farazkayani/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/farazkayani/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/farazkayani/subscriptions\",\"organizations_url\":\"https://api.github.com/users/farazkayani/orgs\",\"repos_url\":\"https://api.github.com/users/farazkayani/repos\",\"events_url\":\"https://api.github.com/users/farazkayani/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/farazkayani/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"labels\":[],\"state\":\"closed\",\"locked\":false,\"assignees\":[],\"milestone\":null,\"comments\":0,\"created_at\":\"2026-05-18T12:44:52Z\",\"updated_at\":\"2026-05-19T13:06:40Z\",\"closed_at\":\"2026-05-19T13:06:40Z\",\"assignee\":null,\"author_association\":\"COLLABORATOR\",\"issue_field_values\":[],\"type\":null,\"active_lock_reason\":null,\"draft\":false,\"pull_request\":{\"url\":\"https://api.github.com/repos/ABrain-One/nn-dataset/pulls/233\",\"html_url\":\"https://github.com/ABrain-One/nn-dataset/pull/233\",\"diff_url\":\"https://github.com/ABrain-One/nn-dataset/pull/233.diff\",\"patch_url\":\"https://github.com/ABrain-One/nn-dataset/pull/233.patch\",\"merged_at\":\"2026-05-19T13:06:40Z\"},\"body\":\"This PR adds the two image denoising models from our Mobile AI 2026 Image Denoising Challenge submission, accepted at CVPRW 2026.\\r\\n\\r\\n## Models\\r\\n\\r\\n| File | Params | Val PSNR | Notes |\\r\\n|---|---|---|---|\\r\\n| `LiteDenoiseNet.py` | 1.96M | 37.66 dB | NPU-friendly student; deployable on Snapdragon 8 Elite (46.1 ms) and Dimensity 9500 (34.0 ms) at Full HD |\\r\\n| `HeavyDenoiseNet.py` | 41.6M | 37.71 dB | U-Net-style teacher used for knowledge distillation |\\r\\n\\r\\nThe lightweight student recovers 99.8% of the teacher's restoration quality with a 21.2× parameter reduction.\\r\\n\\r\\n## Supporting files\\r\\n\\r\\n- **`ab/nn/loader/denoise.py`** — Augmented loader with 2-pixel buffer crops, geometric augmentations (horizontal/vertical flips, 90/180/270 degree rotations), and separate validation cropping. Replaces the previous simpler version.\\r\\n- **`ab/nn/transform/denoise.py`** — Tensor conversion; removed `Resize(512,512)` since the loader now handles cropping directly.\\r\\n\\r\\n## Stats\\r\\n\\r\\nIncludes 300-epoch training statistics for both models.\\r\\n\\r\\n## Reference\\r\\n\\r\\n\\\"Real Image Denoising with Knowledge Distillation for High-Performance Mobile NPUs\\\"\",\"reactions\":{\"url\":\"https://api.github.com/repos/ABrain-One/nn-dataset/issues/233/reactions\",\"total_count\":0,\"+1\":0,\"-1\":0,\"laugh\":0,\"hooray\":0,\"confused\":0,\"heart\":0,\"rocket\":0,\"eyes\":0},\"timeline_url\":\"https://api.github.com/repos/ABrain-One/nn-dataset/issues/233/timeline\",\"performed_via_github_app\":null,\"state_reason\":null,\"score\":1.0}],\"search_type\":\"lexical\"}",
+          "title": "issues",
+          "modified_date": null,
+          "url": "https://api.github.com/search/issues?q=repo%3AABrain-One%2FNN-Dataset+is%3Apr+LiteDenoiseNet&per_page=100&page=1",
+          "display_url": "https://api.github.com/search/issues?q=repo%3AABrain-One%2FNN-Dataset+is%3Apr+LiteDenoiseNet&per_page=100&page=1",
+          "display_title": "issues",
+          "structuredContent": {
+            "title": "issues",
+            "content": "{\"total_count\":1,\"incomplete_results\":false,\"items\":[{\"url\":\"https://api.github.com/repos/ABrain-One/nn-dataset/issues/233\",\"repository_url\":\"https://api.github.com/repos/ABrain-One/nn-dataset\",\"labels_url\":\"https://api.github.com/repos/ABrain-One/nn-dataset/issues/233/labels{/name}\",\"comments_url\":\"https://api.github.com/repos/ABrain-One/nn-dataset/issues/233/comments\",\"events_url\":\"https://api.github.com/repos/ABrain-One/nn-dataset/issues/233/events\",\"html_url\":\"https://github.com/ABrain-One/nn-dataset/pull/233\",\"id\":4469201881,\"node_id\":\"PR_kwDONGKYgc7cpzC8\",\"number\":233,\"title\":\"Add MAI 2026 image denoising models (LiteDenoiseNet + HeavyDenoiseNet)\",\"user\":{\"login\":\"farazkayani\",\"id\":47716731,\"node_id\":\"MDQ6VXNlcjQ3NzE2NzMx\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/47716731?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/farazkayani\",\"html_url\":\"https://github.com/farazkayani\",\"followers_url\":\"https://api.github.com/users/farazkayani/followers\",\"following_url\":\"https://api.github.com/users/farazkayani/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/farazkayani/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/farazkayani/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/farazkayani/subscriptions\",\"organizations_url\":\"https://api.github.com/users/farazkayani/orgs\",\"repos_url\":\"https://api.github.com/users/farazkayani/repos\",\"events_url\":\"https://api.github.com/users/farazkayani/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/farazkayani/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"labels\":[],\"state\":\"closed\",\"locked\":false,\"assignees\":[],\"milestone\":null,\"comments\":0,\"created_at\":\"2026-05-18T12:44:52Z\",\"updated_at\":\"2026-05-19T13:06:40Z\",\"closed_at\":\"2026-05-19T13:06:40Z\",\"assignee\":null,\"author_association\":\"COLLABORATOR\",\"issue_field_values\":[],\"type\":null,\"active_lock_reason\":null,\"draft\":false,\"pull_request\":{\"url\":\"https://api.github.com/repos/ABrain-One/nn-dataset/pulls/233\",\"html_url\":\"https://github.com/ABrain-One/nn-dataset/pull/233\",\"diff_url\":\"https://github.com/ABrain-One/nn-dataset/pull/233.diff\",\"patch_url\":\"https://github.com/ABrain-One/nn-dataset/pull/233.patch\",\"merged_at\":\"2026-05-19T13:06:40Z\"},\"body\":\"This PR adds the two image denoising models from our Mobile AI 2026 Image Denoising Challenge submission, accepted at CVPRW 2026.\\r\\n\\r\\n## Models\\r\\n\\r\\n| File | Params | Val PSNR | Notes |\\r\\n|---|---|---|---|\\r\\n| `LiteDenoiseNet.py` | 1.96M | 37.66 dB | NPU-friendly student; deployable on Snapdragon 8 Elite (46.1 ms) and Dimensity 9500 (34.0 ms) at Full HD |\\r\\n| `HeavyDenoiseNet.py` | 41.6M | 37.71 dB | U-Net-style teacher used for knowledge distillation |\\r\\n\\r\\nThe lightweight student recovers 99.8% of the teacher's restoration quality with a 21.2× parameter reduction.\\r\\n\\r\\n## Supporting files\\r\\n\\r\\n- **`ab/nn/loader/denoise.py`** — Augmented loader with 2-pixel buffer crops, geometric augmentations (horizontal/vertical flips, 90/180/270 degree rotations), and separate validation cropping. Replaces the previous simpler version.\\r\\n- **`ab/nn/transform/denoise.py`** — Tensor conversion; removed `Resize(512,512)` since the loader now handles cropping directly.\\r\\n\\r\\n## Stats\\r\\n\\r\\nIncludes 300-epoch training statistics for both models.\\r\\n\\r\\n## Reference\\r\\n\\r\\n\\\"Real Image Denoising with Knowledge Distillation for High-Performance Mobile NPUs\\\"\",\"reactions\":{\"url\":\"https://api.github.com/repos/ABrain-One/nn-dataset/issues/233/reactions\",\"total_count\":0,\"+1\":0,\"-1\":0,\"laugh\":0,\"hooray\":0,\"confused\":0,\"heart\":0,\"rocket\":0,\"eyes\":0},\"timeline_url\":\"https://api.github.com/repos/ABrain-One/nn-dataset/issues/233/timeline\",\"performed_via_github_app\":null,\"state_reason\":null,\"score\":1.0}],\"search_type\":\"lexical\"}",
+            "display_url": "https://api.github.com/search/issues?q=repo%3AABrain-One%2FNN-Dataset+is%3Apr+LiteDenoiseNet&per_page=100&page=1"
+          }
+        },
+        "isError": false
+      }
+    }
+  ]
+}

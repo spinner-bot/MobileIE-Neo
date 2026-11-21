@@ -1,0 +1,57 @@
+[
+  {
+    "keyword": "MobileIE",
+    "offset": 9648,
+    "context": "ISP, 智能手机 |\r\n\r\n**摘要**: Mobile AI 2025 挑战赛报告，参与者需设计能在移动 GPU 上快速推理的学习型 ISP 模型。提供大规模对齐的智能手机 RAW/DSLR 图像对数据集。\r\n\r\n**关键贡献 / 可能价值**:\r\n- 大规模对齐 RAW/DSLR 数据集\r\n- 移动端 GPU 推理基准\r\n- 工程关注点：学习型 ISP 与去噪模块的整合是移动端影像管线关键方向\r\n\r\n---\r\n\r\n### 12. MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices\r\n\r\n| 项目 | 内容 |\r\n|------|------|\r\n| **ArXiv ID** | [2507.01838](https://arxiv.org/abs/2507.01838) |\r\n| **PDF** | [下载链接](https://arxiv.org/pdf/2507.01838) |\r\n| **作者** | Hailong Yan, Ao Li, Xiangtao Zhang, Zhe Liu, Zenglin Shi"
+  },
+  {
+    "keyword": "MobileIE",
+    "offset": 10050,
+    "context": "v.org/abs/2507.01838) |\r\n| **PDF** | [下载链接](https://arxiv.org/pdf/2507.01838) |\r\n| **作者** | Hailong Yan, Ao Li, Xiangtao Zhang, Zhe Liu, Zenglin Shi, Ce Zhu, Le Zhang |\r\n| **发布日期** | 2025-07-02 |\r\n| **代码** | [AVC2-UESTC/MobileIE](https://github.com/AVC2-UESTC/MobileIE) |\r\n| **会议** | ICCV 2025 |\r\n| **推荐等级** | A |\r\n| **关键词** | 移动端图像增强, 极致轻量化, 重参数化, CNN, 实时推理, 4K 参数 |\r\n\r\n**摘要**: 提出极致轻量化 CNN 框架（仅约 4K 参数），实现移动端实时图像增强。核心组件包括多分支重参数化卷积 (MBRConv)、特征自变换 (FST) 模块、分层双路径注意力 (HDPA) 以及增量权重优化 (IWO) 策略。首次在移动端实现高达 1100 FPS 的实时 IE 推理，同时保持竞争力的图像质量。\r\n\r\n**关键贡献 / 可能价"
+  },
+  {
+    "keyword": "MobileIE",
+    "offset": 10090,
+    "context": "链接](https://arxiv.org/pdf/2507.01838) |\r\n| **作者** | Hailong Yan, Ao Li, Xiangtao Zhang, Zhe Liu, Zenglin Shi, Ce Zhu, Le Zhang |\r\n| **发布日期** | 2025-07-02 |\r\n| **代码** | [AVC2-UESTC/MobileIE](https://github.com/AVC2-UESTC/MobileIE) |\r\n| **会议** | ICCV 2025 |\r\n| **推荐等级** | A |\r\n| **关键词** | 移动端图像增强, 极致轻量化, 重参数化, CNN, 实时推理, 4K 参数 |\r\n\r\n**摘要**: 提出极致轻量化 CNN 框架（仅约 4K 参数），实现移动端实时图像增强。核心组件包括多分支重参数化卷积 (MBRConv)、特征自变换 (FST) 模块、分层双路径注意力 (HDPA) 以及增量权重优化 (IWO) 策略。首次在移动端实现高达 1100 FPS 的实时 IE 推理，同时保持竞争力的图像质量。\r\n\r\n**关键贡献 / 可能价值**:\r\n- 仅 4K 参数的极致轻量化：移动端推理可达 1100 FPS\r\n"
+  },
+  {
+    "keyword": "LiteDenoiseNet",
+    "offset": 1338,
+    "context": " Timofte, Dmitry Ignatov |\r\n| **发布日期** | 2026-05-05 |\r\n| **代码** | [NN-Dataset](https://github.com/ABrain-One/NN-Dataset) |\r\n| **会议/挑战** | Mobile AI 2026 Challenge |\r\n| **推荐等级** | A |\r\n| **关键词** | NPU, 知识蒸馏, 硬件感知, 移动端去噪, LiteDenoiseNet |\r\n\r\n**摘要**: 提出 NPU-aware 硬件-算法协同设计方案，用于移动端 NPU 上的真实图像去噪。使用高容量教师网络监督轻量级学生网络 (LiteDenoiseNet)，优先使用 NPU 原语（标准 3×3 卷积、ReLU 激活、最近邻上采样），在 MediaTek Dimensity 9500 上推理仅需 34.0ms，Qualcomm Snapdragon 8 Elite NPU 上 46.1ms。学生模型仅 1.96M 参数，通过 α=0.9 的知识蒸馏恢复教师网络 99.8% 的修复质量。\r\n\r\n**关键贡献 / 可能价值**:\r\n- NPU-aware 硬件-算法协同设计\r\n- \"推理反转\"效应："
+  },
+  {
+    "keyword": "LiteDenoiseNet",
+    "offset": 1430,
+    "context": "b.com/ABrain-One/NN-Dataset) |\r\n| **会议/挑战** | Mobile AI 2026 Challenge |\r\n| **推荐等级** | A |\r\n| **关键词** | NPU, 知识蒸馏, 硬件感知, 移动端去噪, LiteDenoiseNet |\r\n\r\n**摘要**: 提出 NPU-aware 硬件-算法协同设计方案，用于移动端 NPU 上的真实图像去噪。使用高容量教师网络监督轻量级学生网络 (LiteDenoiseNet)，优先使用 NPU 原语（标准 3×3 卷积、ReLU 激活、最近邻上采样），在 MediaTek Dimensity 9500 上推理仅需 34.0ms，Qualcomm Snapdragon 8 Elite NPU 上 46.1ms。学生模型仅 1.96M 参数，通过 α=0.9 的知识蒸馏恢复教师网络 99.8% 的修复质量。\r\n\r\n**关键贡献 / 可能价值**:\r\n- NPU-aware 硬件-算法协同设计\r\n- \"推理反转\"效应：严格遵循 NPU 兼容操作，NPU 执行速度比集成 GPU 快 3.88 倍\r\n- 21.2 倍参数压缩，PSNR 差距仅 0.05 dB\r\n- 工程关注点：NPU 原语约束的设计范式"
+  },
+  {
+    "keyword": "2605.03680",
+    "offset": 957,
+    "context": "论文](#classics)\r\n- [关键词索引](#keywords)\r\n- [更新日志](#changelog)\r\n\r\n---\r\n\r\n## 2026\r\n\r\n### 1. Real Image Denoising with Knowledge Distillation for High-Performance Mobile NPUs\r\n\r\n| 项目 | 内容 |\r\n|------|------|\r\n| **ArXiv ID** | [2605.03680](https://arxiv.org/abs/2605.03680) |\r\n| **PDF** | [下载链接](https://arxiv.org/pdf/2605.03680) |\r\n| **作者** | Faraz Kayani, Sarmad Kayani, Asad Ahmed, Radu Timofte, Dmitry Ignatov |\r\n| **发布日期** | 2026-05-05 |\r\n| **代码** | [NN-Dataset](https://github.com/ABrain-One/NN-Dataset) |\r\n| **会议/挑战** | Mobile AI 2026 Challenge |\r\n| *"
+  },
+  {
+    "keyword": "2605.03680",
+    "offset": 991,
+    "context": "s)\r\n- [更新日志](#changelog)\r\n\r\n---\r\n\r\n## 2026\r\n\r\n### 1. Real Image Denoising with Knowledge Distillation for High-Performance Mobile NPUs\r\n\r\n| 项目 | 内容 |\r\n|------|------|\r\n| **ArXiv ID** | [2605.03680](https://arxiv.org/abs/2605.03680) |\r\n| **PDF** | [下载链接](https://arxiv.org/pdf/2605.03680) |\r\n| **作者** | Faraz Kayani, Sarmad Kayani, Asad Ahmed, Radu Timofte, Dmitry Ignatov |\r\n| **发布日期** | 2026-05-05 |\r\n| **代码** | [NN-Dataset](https://github.com/ABrain-One/NN-Dataset) |\r\n| **会议/挑战** | Mobile AI 2026 Challenge |\r\n| **推荐等级** | A |\r\n| **关键词** | NPU, 知识"
+  },
+  {
+    "keyword": "2605.03680",
+    "offset": 1047,
+    "context": "l Image Denoising with Knowledge Distillation for High-Performance Mobile NPUs\r\n\r\n| 项目 | 内容 |\r\n|------|------|\r\n| **ArXiv ID** | [2605.03680](https://arxiv.org/abs/2605.03680) |\r\n| **PDF** | [下载链接](https://arxiv.org/pdf/2605.03680) |\r\n| **作者** | Faraz Kayani, Sarmad Kayani, Asad Ahmed, Radu Timofte, Dmitry Ignatov |\r\n| **发布日期** | 2026-05-05 |\r\n| **代码** | [NN-Dataset](https://github.com/ABrain-One/NN-Dataset) |\r\n| **会议/挑战** | Mobile AI 2026 Challenge |\r\n| **推荐等级** | A |\r\n| **关键词** | NPU, 知识蒸馏, 硬件感知, 移动端去噪, LiteDenoiseNet |\r\n\r\n**摘要**: 提出 NPU-awar"
+  },
+  {
+    "keyword": "2507.01838",
+    "offset": 9806,
+    "context": " 推理基准\r\n- 工程关注点：学习型 ISP 与去噪模块的整合是移动端影像管线关键方向\r\n\r\n---\r\n\r\n### 12. MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices\r\n\r\n| 项目 | 内容 |\r\n|------|------|\r\n| **ArXiv ID** | [2507.01838](https://arxiv.org/abs/2507.01838) |\r\n| **PDF** | [下载链接](https://arxiv.org/pdf/2507.01838) |\r\n| **作者** | Hailong Yan, Ao Li, Xiangtao Zhang, Zhe Liu, Zenglin Shi, Ce Zhu, Le Zhang |\r\n| **发布日期** | 2025-07-02 |\r\n| **代码** | [AVC2-UESTC/MobileIE](https://github.com/AVC2-UESTC/MobileIE) |\r\n| **会议** | ICCV 2025 |\r\n| **推荐等级*"
+  },
+  {
+    "keyword": "2507.01838",
+    "offset": 9840,
+    "context": "端影像管线关键方向\r\n\r\n---\r\n\r\n### 12. MobileIE: An Extremely Lightweight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices\r\n\r\n| 项目 | 内容 |\r\n|------|------|\r\n| **ArXiv ID** | [2507.01838](https://arxiv.org/abs/2507.01838) |\r\n| **PDF** | [下载链接](https://arxiv.org/pdf/2507.01838) |\r\n| **作者** | Hailong Yan, Ao Li, Xiangtao Zhang, Zhe Liu, Zenglin Shi, Ce Zhu, Le Zhang |\r\n| **发布日期** | 2025-07-02 |\r\n| **代码** | [AVC2-UESTC/MobileIE](https://github.com/AVC2-UESTC/MobileIE) |\r\n| **会议** | ICCV 2025 |\r\n| **推荐等级** | A |\r\n| **关键词** | 移动端图像增强, 极致轻量"
+  },
+  {
+    "keyword": "2507.01838",
+    "offset": 9896,
+    "context": "weight and Effective ConvNet for Real-Time Image Enhancement on Mobile Devices\r\n\r\n| 项目 | 内容 |\r\n|------|------|\r\n| **ArXiv ID** | [2507.01838](https://arxiv.org/abs/2507.01838) |\r\n| **PDF** | [下载链接](https://arxiv.org/pdf/2507.01838) |\r\n| **作者** | Hailong Yan, Ao Li, Xiangtao Zhang, Zhe Liu, Zenglin Shi, Ce Zhu, Le Zhang |\r\n| **发布日期** | 2025-07-02 |\r\n| **代码** | [AVC2-UESTC/MobileIE](https://github.com/AVC2-UESTC/MobileIE) |\r\n| **会议** | ICCV 2025 |\r\n| **推荐等级** | A |\r\n| **关键词** | 移动端图像增强, 极致轻量化, 重参数化, CNN, 实时推理, 4K 参数 |\r\n\r\n**摘要**: 提出极致轻量化 CNN 框架（仅约"
+  }
+]
