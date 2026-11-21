@@ -1,0 +1,35 @@
+{
+  "default_time_unit": "registered_source_frame_index",
+  "local_selected_index_step": 1,
+  "source_groups": {
+    "OLiVES": 16,
+    "DAVIS2016": 30,
+    "DAVIS2017_extra": 30
+  },
+  "source_nominal_rates": {
+    "OLiVES": {
+      "fps": 25,
+      "level": "paper_reported_acquisition",
+      "sensor_or_export_PTS_verified": false
+    },
+    "DAVIS2016": {
+      "fps": 24,
+      "level": "paper_reported_for_2016_sources_confirmed_by_split",
+      "sensor_or_export_PTS_verified": false
+    },
+    "DAVIS2017_extra": {
+      "fps": null,
+      "level": "not_established_for_added_sources"
+    }
+  },
+  "conditional_one_frame_ms": {
+    "OLiVES": 40.0,
+    "DAVIS2016": 41.666666666666664,
+    "DAVIS2017_extra": null
+  },
+  "conversion_assumption": "Only if released source-frame indexing preserves reported acquisition cadence; arithmetic is not measured end-to-end handset latency",
+  "phone_timestamp_evidence": "Existing decoder positions only; use per-source intervals, do not assume every clip is exactly30fps",
+  "old_nominal30fps_JOD_or_quality_values_changed": false,
+  "new_metrics_computed": false,
+  "independent_final_pixels_read": false
+}
