@@ -77,8 +77,8 @@ def acquire(bound, out, qualification):
     samples = sustained_samples()
     selected = next(r for r in assess(samples)['candidates'] if r['uuid'] == bound)
     write(out / 'admission.json', dict(samples=samples, selected=selected, CPU_preparation_completed=True))
-    if not selected['allowed'] or selected['index'] not in (1, 2):
-        raise ResourcePressure('I1-S requires fresh headroom on registered physical1/2')
+    if not selected['allowed'] or selected['index'] not in (6, 7):
+        raise ResourcePressure('I1-S execution002 requires fresh headroom on physical6/7')
     lock = (ROOT / f'.cache/gpu-{selected["index"]}.lock').open('a')
     try:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
