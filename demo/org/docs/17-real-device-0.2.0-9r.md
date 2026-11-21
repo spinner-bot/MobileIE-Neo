@@ -36,7 +36,7 @@
 | 往返 3 导入 `Download/MobileIE/*.rggb`（401,436 B） | 来源改为「导入 RAW · 448×448 RAW 强度可视化」 | [12](../results/phone-0.2.0-9r/12-raw-imported.png) |
 | **导入 RAW 完整处理** | 处理完成，与内置同源样例输出一致 | [13](../results/phone-0.2.0-9r/13-raw-imported-processed.png) |
 | 内置样例 01 → 02 → 03 | 对话框逐项切换，原图与说明同步刷新，旧结果清空 | [14](../results/phone-0.2.0-9r/14-sample-03-selected.png) |
-| 水下任务 + 现场拍摄 | 拍照后处理完成，两条分界线同步 | [15](../results/phone-0.2.0-9r/15-underwater-camera-processed.png) |
+| 水下任务 + 现场拍摄（设备上同时出现的人工操作，非本次自动步骤） | 拍照后处理完成，两条分界线同步 | [15](../results/phone-0.2.0-9r/15-underwater-camera-processed.png) |
 | 往返 4：AI Benchmark | 首次跳转由系统确认「微光实验室 wants to open AI Benchmark」；确认后 `org.benchmark.demo/StartActivity` 正常打开 | [16](../results/phone-0.2.0-9r/16-aibench-confirm-dialog.png)、[17](../results/phone-0.2.0-9r/17-aibench-opened.png) |
 | 从 AI Benchmark 返回 | 回到本 App，任务、结果与计时（MobileIE 48.6 ms / baseline 90.0 ms）都在 | [18](../results/phone-0.2.0-9r/18-returned-with-timings.png) |
 | 保存对比结果 | 提示已存相册与记录；`Pictures/MobileIE/` 生成 comparison/baseline/mobileie/input PNG，`Download/MobileIE/` 生成 `.rggb` 与 record.json | [19](../results/phone-0.2.0-9r/19-saved-to-gallery.png) |
@@ -49,7 +49,8 @@
 
 ## 3. 设备与判定口径
 
-- 全程为 adb 注入点击与按键，系统相机/相册/文件选择器均为真实系统组件，未用 stub。
+- 表中除水下任务一行外，均为 adb 注入点击与按键完成；系统相机/相册/文件选择器都是真实系统组件，未用 stub。
+- 会话中途设备上也出现过本机操作者自己的界面状态（水下任务的现场拍摄结果，22:20 前后），该截图作为补充证据保留，不计入自动步骤，用于说明同一台设备上人工操作也能得到一致结果。
 - 相机预览在多数时刻被遮挡或对着室内，照片内容本身不含目标场景，因此**本报告只验证链路与状态，不评价画质**。
 - 「处理完成」只表示两条通路都跑完并出图，不是质量结论。
 
