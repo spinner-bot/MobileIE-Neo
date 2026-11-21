@@ -4,7 +4,7 @@
 
 ## 当前研究状态
 
-更新：2026-11-21T10:36:18.033361+08:00；Codex  (sqs_A100)。最新[0196：共享核心完整学习评价与止损](docs/进展报告/0196-T-261121-共享核心完整学习评价与止损.md)：当前分支 `research/O1`，论文目标恢复active。O1原双seed16000正式更新、固定32窗/416输出/52均值及全图实际审阅完成；空间8/8、独立历史0/8、目标2/4、强post4/16，完整门失败，[固定配置STOP](research/8.video-backbone/operator-core/decision.md)，局部收益保留。没有重跑或新DEV/最终；[0195](docs/进展报告/0195-T-261121-切换research-O1分支与结果归档.md)保留迁移历史，main指针/目录/资产保持。[当前入口](research/8.video-backbone/operator-core/README.md)。
+更新：2026-11-21T10:36:18.033361+08:00；Codex  (sqs_A100)。最新[0196：共享核心完整学习评价与止损](docs/进展报告/0196-T-261121-共享核心完整学习评价与止损.md)：当前分支 `research/O1`，论文目标恢复active。O1原双seed16000正式更新、固定32窗/416输出/52均值及全图实际审阅完成；空间8/8、独立历史0/8、目标2/4、强post4/16，完整门失败，[固定配置STOP](research/8.video-backbone/operator-core/decision.md)，局部收益保留。没有重跑或新DEV/最终；[0195](docs/进展报告/0195-T-261121-切换research-O1分支与结果归档.md)保留迁移历史，本分支不改其他worktree；main由独立工作目录继续推进，源码/资产目录保持。[当前入口](research/8.video-backbone/operator-core/README.md)。
 
 此前[0191：外观索引特征历史完整筛查与止损](docs/进展报告/0191-T-26112101-外观索引特征历史完整筛查与止损.md)：冻结原模型的B1完成16训练窗口/80输出/320逐帧、0优化/GPU。历史对当前空间控制仅.167%–.744%时间改善，完整门失败，[固定配置停止](research/8.video-backbone/appearance-state/decision.md)；所有局部收益/完整结果和图已保留，原进程正常终态。
 
