@@ -38,6 +38,14 @@
       "complete": true,
       "archive": "archive/g1a0002-pasta-author-home.html",
       "sha256": "f3565b69a377a5f3642abb4dcdd7891a2afa9e4569e850ef9905a1ffbba784e4"
+    },
+    {
+      "path": "receipts/mie0125-arxiv-source-v2.json",
+      "status": "success",
+      "http": 200,
+      "complete": true,
+      "archive": "archive/mie0125-arxiv-source-v2.txt",
+      "sha256": "18db0e5226965b8303a895953a0d6caaba445c6ef25f783883ea73bd67af5db4"
     }
   ],
   "discovery_evidence": [
@@ -54,11 +62,19 @@
       "url": "https://lumos-leo.github.io/"
     }
   ],
-  "not_yet_analyzed": true,
-  "adequacy": "19-page v2 acquired; official code/separate supplement/formal publication unconfirmed",
+  "not_yet_analyzed": false,
+  "adequacy": "Complete19pagev2scientifictextandallkeyfig/tablesread; independentmentioned supplement andalgorithm/weights notobtained. Fulltypesettingsourcearchive47files preserved/inspected foravailability, notexecuted/compiled.",
   "path_conventions": {
     "receipts[].path": "relative to workstation/collection",
     "receipts[].archive": "relative to workstation",
     "discovery_evidence[].source": "relative to workstation"
+  },
+  "scope_and_gaps": {
+    "full_preprint_read": true,
+    "all_key_figures_tables_viewed": true,
+    "algorithm_source_or_weights": false,
+    "independent_supplement_read": false,
+    "formal_published_version_confirmed": false,
+    "numeric_reproduction": false
   }
 }
