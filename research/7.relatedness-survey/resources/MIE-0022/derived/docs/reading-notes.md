@@ -42,7 +42,7 @@ Eq1乘法融合阈值，Eq2广义系数抑制/高斯滤波为传统teacher机制
 
 原文Adam3e-4/100Kiter/b16/224patch，λ1/.16/.02，K10。当前yaml补充seed123、weightdecay1e-6、cosine97000、warmup3000、split_num1/index1、dataset_enlarge4、center_crop224及paired h/v/rot90；rot90值1在实现中作概率1。替换random_crop是另一个路径，内部循环覆盖坐标变量i，会使pair使用0/1不同纵坐标；不是当前center_crop失败，不能以此否定已报实验。
 
-2008训练CSV和codec同集2008条可得，四外测CSV为HEVC5、XIPH15、MCLJCV30、MCLJCI50，均8bit420。元数据不等取回全部图像/序列，不证明语义无重叠。数据文档一处写KonIQ-10k，论文/README/同文档引用写KonJND-1K，实际原始来源/许可与具体筛选仍有歧义。原/teacher同basename位于不同root，不是同路径GT泄漏。split生成器是行随机而非scene/clip分组，README例5/.9/.05/.05/seed42与脚本默认10/.8/.1/.1、训练seed123分开；没有反序列化splitPKL或冒称验证实际成员。
+2008训练CSV和codec同集2008条可得，四外测CSV为HEVC5、XIPH15、MCLJCV30、MCLJCI50，均8bit420。元数据不等取回全部图像/序列，不证明语义无重叠。数据文档一处写KonIQ-10k，论文/README/同文档引用写KonJND-1K，实际原始来源/许可与具体筛选仍有歧义。原/teacher同basename位于不同root，不是同路径GT泄漏。split生成器是行随机而非scene/clip分组，README例5/.9/.05/.05/seed42与脚本默认10/.8/.1/.1、训练seed123分开；没有反序列化splitPKL或冒称验证实际成员。另以pickletools只读核28996B操作码：train/val/test三个字符串、10045个整数字面量、范围0..2007、没有GLOBAL/REDUCE/BUILD等执行操作；不据此认证具体phase成员或实际训练历史。
 
 GeneralFRDataset对YUV读取/上采样/归一化再PIL，训练只用Y；不把这些平面当RGB色彩转换。验证以teacher为参照、uint8 clip后PSNR/SSIM及总loss选best，各指标best可来自不同迭代；不等编码BD的best，也不等原图/人眼GT。模型eval/再train在每张验证图重建/丢弃slim，预测/输入/ref列表留device内存，验证开销不等单网forward。默认同一split不是五折平均证明。
 
