@@ -1,0 +1,249 @@
+{
+  "at": "2026-11-21T10:31:12.158991+08:00",
+  "author": "Codex  (sqs_A100)",
+  "branch": "research/O1",
+  "chain_completed_at": "2026-11-21T10:04:59.274059+08:00",
+  "numerical_chain_completed_normally": true,
+  "recorded_children": [
+    {
+      "label": "cuda-qualification013",
+      "code": 0
+    },
+    {
+      "label": "train-seed0-attempt001",
+      "code": 0
+    },
+    {
+      "label": "held-seed0",
+      "code": 0
+    },
+    {
+      "label": "train-seed1-attempt001",
+      "code": 0
+    },
+    {
+      "label": "held-seed1",
+      "code": 0
+    },
+    {
+      "label": "summarize",
+      "code": 0
+    }
+  ],
+  "original_handles": [
+    {
+      "label": "process/chain002/runtime.json",
+      "original": {
+        "pid": 3551565,
+        "start_ticks": 115612249,
+        "state": "R"
+      },
+      "current_proc": null,
+      "original_absent": true
+    },
+    {
+      "label": "process/train-seed0-attempt001/runtime.json",
+      "original": {
+        "pid": 3582586,
+        "start_ticks": 115719183,
+        "state": "R"
+      },
+      "current_proc": null,
+      "original_absent": true
+    },
+    {
+      "label": "process/train-seed1-attempt001/runtime.json",
+      "original": {
+        "pid": 3708363,
+        "start_ticks": 116206660,
+        "state": "R"
+      },
+      "current_proc": null,
+      "original_absent": true
+    },
+    {
+      "label": "results/held-seed0/runtime.json",
+      "original": {
+        "pid": 3705779,
+        "start_ticks": 116197876,
+        "state": "R"
+      },
+      "current_proc": null,
+      "original_absent": true
+    },
+    {
+      "label": "results/held-seed1/runtime.json",
+      "original": {
+        "pid": 3806383,
+        "start_ticks": 116684405,
+        "state": "R"
+      },
+      "current_proc": null,
+      "original_absent": true
+    },
+    {
+      "label": "cuda-qualification013",
+      "original": {
+        "pid": 3579353,
+        "start_ticks": 115706711,
+        "state": "R"
+      },
+      "current_proc": null,
+      "original_absent": true
+    },
+    {
+      "label": "train-seed0-attempt001",
+      "original": {
+        "pid": 3582005,
+        "start_ticks": 115716896,
+        "state": "R"
+      },
+      "current_proc": null,
+      "original_absent": true
+    },
+    {
+      "label": "held-seed0",
+      "original": {
+        "pid": 3705779,
+        "start_ticks": 116197876,
+        "state": "R"
+      },
+      "current_proc": null,
+      "original_absent": true
+    },
+    {
+      "label": "train-seed1-attempt001",
+      "original": {
+        "pid": 3707791,
+        "start_ticks": 116204358,
+        "state": "R"
+      },
+      "current_proc": null,
+      "original_absent": true
+    },
+    {
+      "label": "held-seed1",
+      "original": {
+        "pid": 3806383,
+        "start_ticks": 116684405,
+        "state": "R"
+      },
+      "current_proc": null,
+      "original_absent": true
+    },
+    {
+      "label": "summarize",
+      "original": {
+        "pid": 3806634,
+        "start_ticks": 116688538,
+        "state": "R"
+      },
+      "current_proc": null,
+      "original_absent": true
+    }
+  ],
+  "outer_tool_session": {
+    "id": 25213,
+    "resume_query": "Unknown process id 25213",
+    "OS_exit_code_available": false,
+    "scope": "No inferred outer exit code; numerical runtimes and six recorded child exits are the completion evidence."
+  },
+  "source_freezes": {
+    "preflight-source-freeze001.json": {
+      "named_sources": 25,
+      "unchanged": true
+    },
+    "training-source-freeze001.json": {
+      "named_sources": 39,
+      "unchanged": true
+    },
+    "cuda-execution-freeze001.json": {
+      "named_sources": 2,
+      "unchanged": true
+    }
+  },
+  "formal_totals": {
+    "optimizer_updates": 16000,
+    "student_images": 256000,
+    "teacher_images": 128000,
+    "teacher_FB_pairs": 96000
+  },
+  "resource_pauses": [
+    false,
+    false
+  ],
+  "formal_seconds": [
+    4784.696325369878,
+    4775.236593583832
+  ],
+  "held_totals": {
+    "F0_images": 128,
+    "student_images": 256,
+    "student_field_pairs": 192,
+    "windows": 32,
+    "output_rows": 416,
+    "frame_rows": 1664,
+    "classical_deployment_bidirectional_pairs": 576,
+    "GT_metric_FB_pairs": 96
+  },
+  "held_seconds": [
+    40.189992123050615,
+    39.65877759200521
+  ],
+  "unique_finals": [
+    {
+      "at": "2026-11-21T08:43:09.915887+08:00",
+      "seed": 0,
+      "arm": "coordinate",
+      "qualification": false,
+      "unique_final": true,
+      "updates": 4000,
+      "parameters": 5049,
+      "all_reloaded_finite": true,
+      "path": ".cache/experiments/topic8-operator-core/train-seed0-attempt001/coordinate-final.pt",
+      "sha256": "c135817f519cb298c951050b7b0bb3fa9f5c4210592793e056723ed00566af92"
+    },
+    {
+      "at": "2026-11-21T08:43:09.923182+08:00",
+      "seed": 0,
+      "arm": "response",
+      "qualification": false,
+      "unique_final": true,
+      "updates": 4000,
+      "parameters": 5049,
+      "all_reloaded_finite": true,
+      "path": ".cache/experiments/topic8-operator-core/train-seed0-attempt001/response-final.pt",
+      "sha256": "f16f27283c9159dd37469a59e790d214714074a1d216f53394d1586a94311994"
+    },
+    {
+      "at": "2026-11-21T10:04:15.295686+08:00",
+      "seed": 1,
+      "arm": "coordinate",
+      "qualification": false,
+      "unique_final": true,
+      "updates": 4000,
+      "parameters": 5049,
+      "all_reloaded_finite": true,
+      "path": ".cache/experiments/topic8-operator-core/train-seed1-attempt001/coordinate-final.pt",
+      "sha256": "9000df3cdfe3dcf2b725bf7cf9f6ca55c869b868a1e5a5b39340869db259f0fc"
+    },
+    {
+      "at": "2026-11-21T10:04:15.303260+08:00",
+      "seed": 1,
+      "arm": "response",
+      "qualification": false,
+      "unique_final": true,
+      "updates": 4000,
+      "parameters": 5049,
+      "all_reloaded_finite": true,
+      "path": ".cache/experiments/topic8-operator-core/train-seed1-attempt001/response-final.pt",
+      "sha256": "6d771c3d3b903251e77637d9f450c06e55b2daceaaeac6a69befed9550a27201"
+    }
+  ],
+  "qualification_updates_discarded": {
+    "CPU": 8,
+    "successful_CUDA": 4
+  },
+  "original_CUDA001_failure_preserved": "cuda-attempt001-terminal.json; partial forward before error, zero optimizer updates",
+  "new_training_or_inference_for_this_review": false
+}
