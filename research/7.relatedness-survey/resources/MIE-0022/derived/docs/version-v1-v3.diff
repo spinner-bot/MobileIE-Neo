@@ -1,0 +1,361 @@
+--- v1
+
++++ v3
+
+@@ -1,31 +1,31 @@
+
+ 
+ === PHYSICAL PDF PAGE 1 ===
+-JND-Guided Light-Weight Neural Pre-Filter for
++JND-Guided Lightweight Neural Pre-Filter for
+ Perceptual Image Coding
+-1Chenlong He † , 1Zijing Dong † , 1Min Li , 2Zhijian Hao , 3Leilei Huang ⋆ , 1Xiaoyang Zeng Member, IEEE,
+-and 1Yibo Fan ⋆ Member, IEEE
+-1Fudan University, Shanghai 2Xidian University, Xi’an 3East China Normal University, Shanghai
+-1clhe22@m.fudan.edu.cn 1fanyibo@fudan.edu.cn, 3llhuang@cee.ecnu.edu.cn
+-Abstract— Just Noticeable Distortion (JND)-guided pre-filter is
+-a promising technique for improving the perceptual compression
+-efficiency of image coding. However, existing methods are often
+-computationally expensive, and the field lacks standardized
+-benchmarks for fair comparison. To address these challenges,
+-this paper introduces a twofold contribution. First, we de-
+-velop and open-sourceFJNDF-Pytorch, a unified benchmark for
+-Frequency-domain JND -Guided pre-F ilters. Second, leveraging
+-this benchmark, we propose a complete learning framework
+-for a novel, lightweight Convolutional Neural Network (CNN).
+-Experimental results demonstrate that our proposed method
+-achieves better compression efficiency, consistently outperform-
+-ing existing approaches across multiple datasets and encoders.
+-In terms of computational cost, our model is exceptionally
++1Yangyang Wu , 1Chenlong He , 1Yuanheng Chen , 1Yibo Fan Member, IEEE
++1Fudan University, Shanghai
++1yywu26@m.fudan.edu.cn 1fanyibo@fudan.edu.cn,
++Abstract— Just Noticeable Distortion (JND)-guided pre-filter
++is a promising technique for improving the perceptual com-
++pression efficiency of image coding. However, existing methods
++are often computationally expensive, and the field lacks stan-
++dardized benchmarks for fair comparison. To address these
++challenges, this paper introduces a twofold contribution. First, we
++develop and open-source FJNDF-Pytorch, a unified benchmark
++for F requency-domain JND -Guided pre-F ilters. It provides a
++standardized environment to facilitate the rapid development
++and objective evaluation of pre-filter algorithms. Second, we
++propose a complete learning framework for neural pre-filters.
++Our framework trains a lightweight network to learn from a
++reference filter via supervised learning, with the key innovation
++being a frequency-domain loss that enables the network to break
++the performance ceiling set by its training reference. Experi-
++mental results demonstrate that our proposed method consis-
++tently outperforms existing approaches in compression efficiency
++across multiple datasets and encoders, while being exceptionally
+ lightweight, requiring only 7.15 GFLOPs to process a 1080p
+-image, which is merely14.1%of the cost of a leading lightweight
+-network in the field. Our work presents a robust solution that
+-demonstrates superior performance and efficiency, supported
+-by a reproducible research platform. The implementation is
+-available at https://github.com/viplab-fudan/FJNDF-Pytorch.
++image, which is 14.1% of a leading lightweight network. Our code
++is available at https://github.com/viplab-fudan/FJNDF-Pytorch.
+ Index Terms—Perceptual Coding, Just Notice Distortion, Pre-
+ Filter, Neural Network
+ I. INTRODUCTION
+@@ -37,20 +37,20 @@
+
+ methods [1]–[9] can be broadly categorized by the type
+ of JND model employed: spatial domain [1]–[3], frequency
+ domain [4]–[6], hybrid spatial-frequency domain [7], and
+-learning-based models [8], [9].
+-However, current research in this area suffers from two key
+-limitations: 1) the majority of studies rely on Mean Opinion
+-Score (MOS) for video quality evaluation, a metric that is
+-time-consuming and labor-intensive, thereby hindering rapid
+-algorithm iteration and large-scale validation; 2) many works
+-generally fail to employ the Bjøntegaard Delta Bitrate (BD-
+-BR) [10] to evaluate their impact on compression performance,
+-thus lacking an objective quantification of efficiency gains.
+-While the few studies [5], [6] that utilize BD-BR con-
+-firm that traditional frequency-domain methods are effective,
+-they suffer from prohibitive computational complexity. Their
+-†These authors contributed equally to this work.
+-⋆Corresponding author.
++learning-based models [8], [9]. Given the superior effec-
++tiveness demonstrated by frequency-domain approaches, this
++paper focuses on this category of methods.
++However, current research in this area suffers from three
++key limitations: 1)Inefficient Quality Metric: the majority
++of studies rely on Mean Opinion Score (MOS) for video
++quality evaluation, a metric that is time-consuming and labor-
++intensive, thereby hindering rapid algorithm iteration and
++large-scale validation; 2)Lack of Key Metric in Image
++Coding: many works generally fail to employ the Bjøntegaard
++Delta Bitrate (BD-BR) [10], the standard metric for quan-
++tifying efficiency gains in image coding task; and 3)High
++Algorithmic Complexity: While effective [5], [6], traditional
++Yangyang Wu and Chenlong He contributed equally to this work.
+ Modeling
+ [5][11][12][13]
+ Codec
+@@ -76,35 +76,36 @@
+
+ benchmark for frequency-domain JND pre-filters. (b) Using this benchmark,
+ we generate a dataset to train our proposed lightweight CNN via a supervised
+ pipeline, which is optimized by a joint spatial and frequency loss function.
+-reliance on expensive operations like the Discrete Cosine
+-Transform (DCT) and additional detail enhancement modules
+-for salient regions results in a severe increase in encoding time,
+-with overheads reaching up to 313% [5] and 123% [6].
+-In summary, current research on JND-guided pre-filter faces
+-two primary challenges: alimited evaluation methodology,
+-which relies on subjective metrics and lacks standardized
+-benchmarks for objective comparison, and thehigh com-
+-plexity of advanced algorithms, which renders the most
+-effective frequency-domain methods impractical for real-time
+-application. This paper addresses these gaps with two main
+-contributions, as illustrated in Fig. 1:
++frequency-domain methods suffer from prohibitive computa-
++tional complexity. Their reliance on expensive operations, such
++modules for texture and salient region detection, introduces
++encoding time overheads of up to 313% [5] and 123% [6].
++In summary, current research on JND-guided pre-filters
++faces two primary challenges:limited evaluation method-
++ology, andhigh complexity of advanced algorithms. This
++paper addresses these gaps with two main contributions, as
++illustrated in Fig. 1:
+ •We develop and open-sourceFJNDF-Pytorch, a unified
+-platform for the development and validation of JND pre-
+-filter methods. The platform integrates: 1) mainstream
++platform designed to facilitate the agile development and
++efficient validation of pre-filter methods to address the
++evaluation gap. The platform integrates: 1) mainstream
+ frequency-domain JND modeling and injection methods;
+ 2) multiple standard open-source encoders and datasets;
+-3) a suite of objective quality metrics, to facilitate repro-
+-ducible research and address the evaluation gap.
++3) a suite of objective quality metrics.
+ •We propose acomplete framework for lightweight
+-neural pre-filter. Leveraging our benchmark to generate
+-a high-quality dataset, the framework then effectively
+-trains a lightweight network to learn the fundamental
+-characteristics of the reference filter via a supervised,
+-residual learning strategy. The core of our method is a
+-novel hybrid loss function, featuring a frequency-domain
+-loss, which then empowers the network to surpass the
+-performance of this training reference.
+-arXiv:2510.10648v1  [eess.IV]  12 Oct 2025
++neural pre-filter. The framework trains a network to
++learn from a reference filter via supervised learning;
++however, to break the performance ceiling inherent in this
++approach, our key innovation is a novel frequency-domain
++loss. The core mechanism of this loss is the introduction
++of constraints that are independent of the reference target,
++enabling the network to correct the reference’s flaws and
++surpass its performance.
++II. THEFJNDF-PYTORCHBENCHMARK
++The architecture of our FJNDF-Pytorch framework is il-
++lustrated in Fig. 2. Inspired by established platforms such as
++IQA-Pytorch [31] and BasicSR [32], our benchmark is de-
++arXiv:2510.10648v3  [eess.IV]  8 Nov 2026
+ 
+ 
+ === PHYSICAL PDF PAGE 2 ===
+@@ -154,10 +155,6 @@
+
+ Metric PSNR, PSNR-HVSM [24], SSIM [25], MS-SSIM [26],
+ VMAF [27], VMAF-NEG [28]
+ Loss L1, L2, Charbonnier [29], MS-SSIM [30] Loss
+-II. THEFJNDF-PYTORCHBENCHMARK
+-The architecture of our FJNDF-Pytorch framework is il-
+-lustrated in Fig. 2. Inspired by established platforms such as
+-IQA-Pytorch [31] and BasicSR [32], our benchmark is de-
+ signed to power a complete research pipeline, from algorithm
+ benchmarking to model training. Due to space constraints, this
+ section focuses on the core components of the JND-guided
+@@ -178,6 +175,8 @@
+
+ els [5], [11]–[13] to cover the field’s breadth and depth.For
+ breadth, we include models [11] and [12], which represent
+ two distinct paradigms for CSF and LA modeling.For depth,
++we include model [13] (which adds CM to [12]) and model [5]
++(which adds SA to [13]), forming a clear evolutionary path.
+ TABLE II
+ RESULTS OF THE TOP-THREE PERFORMING ALGORITHMS ONVVENC
+ Dataset Method PSNR PSNR- MS- VMAF- ALLMa +I b HVSM SSIM NEG
+@@ -198,8 +197,6 @@
+
+ [5] + [7] 8.84 -10.39 -4.63-4.85-2.76
+ [13] + [7] 8.79 -10.29 -4.46 -4.54 -2.63
+ aMand bIdenotes the method for JND Modeling and Injection, respectively
+-we include model [13] (which adds CM to [12]) and model [5]
+-(which adds SA to [13]), forming a clear evolutionary path.
+ B. JND Injection
+ JND injection translates the computed thresholdJ T into
+ signal modifications to remove perceptual redundancy. The
+@@ -266,19 +263,68 @@
+
+ Our proposed method is a complete learning framework
+ designed to train a lightweight network for JND-guided pre-
+ filter. As illustrated in Fig. 3, we employ a supervised learning
+-paradigm with a residual learning strategy, which reduces the
+-task’s complexity and makes it feasible for a lightweight net-
+-work. The framework is composed of three key components: a
+-hybrid loss function designed to enable the network to surpass
+-the performance of its reference, a data generation strategy
+-to provide a high-quality training target, and a customized
+-lightweight network architecture for efficient inference.
+-A. Hybrid Loss Function Design
++paradigm with a residual learning strategy, which reduces
++the task’s complexity and makes it feasible for a lightweight
++network. The framework is composed of three key compo-
++nents: a data generation strategy to provide a high-quality
++training target, a customized lightweight network architecture
++for efficient inference, and a hybrid loss function designed to
++enable the network to surpass the performance of its reference.
++A. Data Generation Strategy
++To generate the training data, we adopte a data-driven
++approach. Leveraging our benchmark, we select the top-
++performing traditional pre-filter, [13] + [6], from Table II
++as the reference algorithm to process the DIV2K [18] and
++KonJND-1K [19] datasets, creating 2,008 original-reference
++image pairs, providing a validated, high-quality learning target
++for subsequent network training.
++B. Lightweight Network Architecture
++We select the efficient MobileIE [33] as our backbone,
++leveraging its re-parameterization mechanism for low infer-
++ence complexity. To further specialize this general-purpose
++model for our JND-Guided pre-filter task, we introduce two
++key architectural modifications.First, we replace all 5x5
++convolutions with 3x3 to better align the network’s receptive
++field with the local nature of DCT-domain operations.Second,
++we design a bottleneck-expansion channel configuration, as
++illustrated by theHead,Body, andTailstructure in Fig. 3.
++Specifically, while the backbone maintains a relatively uni-
++form channel width across its stages, we narrow the channels
++in theHeadandBodybefore expanding them in theTail.
++This structure encourages the network to learn a compact and
++refined feature representation in the early layers, enhancing
++parameter efficiency. These customizations yield an 41% re-
++duction in computational cost over the backbone, resulting in
++a highly specialized and efficient model.
++Horizontal Frequency
++0
++9
++5
++2
++3
++1
++4
++8
++7
++6
++𝐾
++Vertical Frequency
++LF: Low Frequency Area
++HF: High Frequency Area
++Zigzag index < K
++Zigzag index≥ K
++Zigzag Scan
++Fig. 4. Illustration of the frequency area partitioning for our proposed
++conservation constraint loss,L cons
++dct . An 8x8 DCT block is divided into a Low-
++Frequency (LF) and a High-Frequency (HF) area based on a zigzag scan
++order and a predefined threshold,K.
++C. Hybrid Loss Function Design
+ To enable the network to surpass the performance of the
+ traditional reference algorithm, the core of our methodology
+-is a hybrid loss function that incorporates frequency-domain
+-priors. The total loss,L all , is a weighted sum of a spatial-
+-domain loss and our proposed frequency-domain loss,L f req:
++is a hybrid loss function that incorporates spatial and frequency
++loss. The total loss,L all , is a weighted sum of a spatial-domain
++loss and our proposed frequency-domain loss,L f req:
+ Lall =λ 1Lc(If ,Igt) +λ2Lm(If ,Igt) +λ3Lf req(Cf ,Cgt,Co)(3)
+ The spatial-domain loss, guides the network to learn the
+ fundamental behavior of the reference algorithm. As shown in
+@@ -307,29 +353,6 @@
+
+  
+ Cf −Cgt
+ 2 (5)
+-Horizontal Frequency
+-0
+-9
+-5
+-2
+-3
+-1
+-4
+-8
+-7
+-6
+-𝐾
+-Vertical Frequency
+-LF: Low Frequency Area
+-HF: High Frequency Area
+-Zigzag index < K
+-Zigzag index≥ K
+-Zigzag Scan
+-Fig. 4. Illustration of the frequency area partitioning for our proposed
+-conservation constraint loss,L cons
+-dct . An 8x8 DCT block is divided into a Low-
+-Frequency (LF) and a High-Frequency (HF) area based on a zigzag scan
+-order and a predefined threshold,K.
+ The second term is theFrequency Conservation Constraint
+ Loss(L cons
+ dct ), which references the original input (I o) to en-
+@@ -344,37 +367,10 @@
+
+ (u,v)∈HF
+ max(0,|C f |−|Co|)2
+ (6)
+-TheLFterm prevents over-smoothing by penalizing the loss of
+-low-frequency energy, while theHFterm suppresses artifacts
+-by penalizing the creation of new high-frequency energy. This
+-constraint empowers the network to surpass the reference by
+-correcting its frequency-domain imperfections.
+-B. Data Generation Strategy
+-To generate the training data, we adopte a data-driven
+-approach. Leveraging our benchmark, we select the top-
+-performing traditional pre-filter, [13] + [6], from Table II
+-as the reference algorithm to process the DIV2K [18] and
+-KonJND-1K [19] datasets, creating 2,008 original-reference
+-image pairs, providing a validated, high-quality learning target
+-for subsequent network training.
+-C. Lightweight Network Architecture
+-We select the efficient MobileNetIE [33] as our backbone,
+-leveraging its re-parameterization mechanism for low infer-
+-ence complexity. To further specialize this general-purpose
+-model for our JND-Guided pre-filter task, we introduce two
+-key architectural modifications.First, we replace all 5x5
+-convolutions with 3x3 to better align the network’s receptive
+-field with the local nature of DCT-domain operations.Second,
+-we design a bottleneck-expansion channel configuration, as
+-illustrated by theHead,Body, andTailstructure in Fig. 3.
+-Specifically, while the backbone maintains a relatively uni-
+-form channel width across its stages, we narrow the channels
+-in theHeadandBodybefore expanding them in theTail.
+-This structure encourages the network to learn a compact and
+-refined feature representation in the early layers, enhancing
+-parameter efficiency. These customizations yield an 41% re-
+-duction in computational cost over the backbone, resulting in
+-a highly specialized and efficient model.
++Specifically, theLFterm penalizes the network when the
++magnitude of its low-frequency coefficients is less than the
++original’s, while theHFterm applies a penalty when the mag-
++nitude of its high-frequency coefficients exceeds the original’s.
+ 
+ 
+ === PHYSICAL PDF PAGE 4 ===
+@@ -598,10 +594,10 @@
+
+ IEEE, 2017, pp. 4277–4281. 2, 3
+ [31] C. Chen and J. Mo, “IQA-PyTorch: Pytorch toolbox for image
+ quality assessment,” [Online]. Available: https://github.com/chaofengc/
+-IQA-PyTorch, 2022. 2
++IQA-PyTorch, 2022. 1
+ [32] X. Wang, L. Xie, K. Yu, K. C. Chan, C. C. Loy, and C. Dong, “BasicSR:
+ Open source image and video restoration toolbox,” https://github.com/
+-XPixelGroup/BasicSR, 2022. 2
++XPixelGroup/BasicSR, 2022. 1
+ [33] H. Yan, A. Li, X. Zhang, Z. Liu, Z. Shi, C. Zhu, and L. Zhang, “Mo-
+ bileie: An extremely lightweight and effective convnet for real-time im-
+ age enhancement on mobile devices,”arXiv preprint arXiv:2507.01838,

@@ -1,0 +1,78 @@
+{
+  "at": "2026-11-21T12:24:12.883590+08:00",
+  "csv_inventory": [
+    {
+      "path": "datasets/info/codec/divkon_2k_yuv_meta_info.csv",
+      "rows": 2008,
+      "unique_names": 2008,
+      "name_families": {
+        "SRC": 1008,
+        "numeric": 1000
+      },
+      "formats": {
+        "yuv420p": 2008
+      }
+    },
+    {
+      "path": "datasets/info/codec/hevc_sdr_ctc_meta_info.csv",
+      "rows": 5,
+      "unique_names": 5,
+      "name_families": {
+        "other": 5
+      },
+      "formats": {
+        "yuv420p": 5
+      }
+    },
+    {
+      "path": "datasets/info/codec/mcl_jci_dataset_1080p_meta_info.csv",
+      "rows": 50,
+      "unique_names": 50,
+      "name_families": {
+        "other": 50
+      },
+      "formats": {
+        "yuv420p": 50
+      }
+    },
+    {
+      "path": "datasets/info/codec/mcl_jcv_dataset_1080p_meta_info.csv",
+      "rows": 30,
+      "unique_names": 30,
+      "name_families": {
+        "other": 30
+      },
+      "formats": {
+        "yuv420p": 30
+      }
+    },
+    {
+      "path": "datasets/info/codec/xiph_dataset_1080p_meta_info.csv",
+      "rows": 15,
+      "unique_names": 15,
+      "name_families": {
+        "other": 15
+      },
+      "formats": {
+        "yuv420p": 15
+      }
+    },
+    {
+      "path": "datasets/info/train/divkon_2k_yuv_meta_info.csv",
+      "rows": 2008,
+      "unique_names": 2008,
+      "name_families": {
+        "SRC": 1008,
+        "numeric": 1000
+      },
+      "formats": {
+        "yuv420p": 2008
+      }
+    }
+  ],
+  "scope": "Read-only metadata parsing, no image/sequence data download/model evaluation; splitPKL not loaded",
+  "split_source": "scripts/csv_to_random_split_pkl.py row-random permutation, default10/.8/.1/.1, READMEexample5/.9/.05/.05/seed42, current trainconfigsplit_num1/split_index1 andmanual_seed123. ActualPKLindices notdeserialized/verified.",
+  "training_corpus_ambiguity": "Paper/README refer DIV2K+KonJND-1K; datasets/prepare_datasets.md prose saysKonIQ-10k while samefilecitation saysKonJND. Filename counts and2008rows do not independently certify exact original corpus/license or semantic overlap.",
+  "evaluation": "HEVC5/XIPH15/MCLJCV30/MCLJCI50 metadata; current frame_num1 means first image/frame, notfullsequences. Different names do not prove no semantic overlap.",
+  "licenses": "Full FDU custom12lines read, READMECC BY-NC-SA4.0 noted. Dataset licenses not supplied/certified by mirror links; no legal conclusion/redistribution undertaken."
+}

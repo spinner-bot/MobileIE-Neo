@@ -1,0 +1,64 @@
+{
+  "at": "2026-11-21T12:14:16.285889+08:00",
+  "meaning": "Literal source/table arithmetic only, no source import/model/tensor/metric/benchmark run",
+  "lite_slim_parts": {
+    "head_conv1": 80,
+    "prelu": 8,
+    "head_conv2": 584,
+    "head_fst": 10,
+    "body_conv": 876,
+    "body_fst": 14,
+    "channel_attention": 156,
+    "spatial_attention": 24,
+    "tail_conv": 109
+  },
+  "lite_slim_total": 1861,
+  "lite_train_parts": {
+    "head1": 2952,
+    "head2": 6536,
+    "body": 11340,
+    "tail": 849,
+    "att": 1884,
+    "att1": 1356,
+    "fst": 24,
+    "prelu": 8
+  },
+  "lite_train_total": 24949,
+  "paper_lite_train_inference_k": [
+    24.95,
+    1.86
+  ],
+  "baseline_current_train": 41413,
+  "baseline_current_slim": 3257,
+  "paper_baseline_train_inference_k": [
+    38.92,
+    3.06
+  ],
+  "hypothetical_uniform12_all3x3": {
+    "train": 38917,
+    "slim": 3065,
+    "scope": "Hypothesis only: rounded values align paper, but published current baseline source and weight first-conv opcode literal are5x5; no correction or historical implementation claim"
+  },
+  "wrapper_stats_scope": "After eval, self.network remains registered with24949 params and _slim_network adds1861 =>26810 before dummy zero-sized parameter. scripts/model_stats.py sums all model.parameters and labels raw count K without dividing1000; not the isolated1861 deployment topology.",
+  "paper_cost_ratios": {
+    "lite_over_IQNet_gflops": 0.14102564102564102,
+    "reduction_over_reported_baseline": 0.411522633744856,
+    "gpu_network_only_reciprocal_fps": 91.91176470588235,
+    "cpu_network_only_reciprocal_fps": 2.336448598130841
+  },
+  "timing_scope": "Xeon6230 and RTX2080Ti at1080p authors only, not mobile/sustained/full encoding chain; exact timing setup absent",
+  "ALL_averages_from_displayed_values": {
+    "TableIII_HEVC_six": -2.7983333333333333,
+    "TableV_Ours_four": -2.475,
+    "TableIV_libaom_four": -4.2375,
+    "scope": "Different metric sets explain -2.80 vs-2.47/-4.24 vscurrentrepo six-metric ALL; not a uniform perceptual/time score or raw BD recalculation"
+  },
+  "loss_inspection": {
+    "paper_eq6": "squared positive magnitude violation",
+    "source_conservation": "positive violation summed without square; linear hinge, different gradient",
+    "zigzag_default": "Non-alternating anti-diagonal traversal differs from standard order but K10 includes complete first4 diagonals, same default low-band set; custom cutoff partial diagonal may differ",
+    "block8_parseval": "At N8 transform factor1/sqrt(2N)=2/N=.25 and n factors give orthonormal DCT. All-coefficient squared residual is covered-pixel residual energy by Parseval, not independent frequency weighting; conservation term remains distinct.",
+    "border": "Nonoverlap unfold drops incomplete boundary blocks in loss; default224 patch divisible8. Not prediction border omission.",
+    "mask_rank": "6D mask broadcasts extra leading singleton against5D coefficients; default mean value unaffected, not asserted batch mixing/runtime error."
+  }
+}
