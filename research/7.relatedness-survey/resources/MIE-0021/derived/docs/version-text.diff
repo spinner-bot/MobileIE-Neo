@@ -1,0 +1,402 @@
+--- arxivv2
+
++++ cvf2026W
+
+@@ -25,10 +25,12 @@
+
+ benchmark demonstrate that our scalable model family es-
+ tablishes a highly efficient speed-fidelity trade-off. Our base
+ FastSHADE-M variant maintains real-time latency (<50
+-ms on an Adreno 840 GPU) while preserving structural
++ms on a modern mobile GPU) while preserving structural
+ integrity, and our scaled-up FastSHADE-XL establishes a
+-new state-of-the-art for overall image quality, achieving
+-37.94 dB PSNR.
++new state-of-the-art for overall image quality. Ultimately,
++FastSHADE successfully bridges the gap between theoret-
++ical network efficiency and practical deployment for real-
++world mobile ISP pipelines.
+ 1. Introduction and Related Work
+ While mobile photography has become dominant, it relies
+ heavily on small, high-megapixel camera sensors. This
+@@ -39,8 +41,6 @@
+
+ age Signal Processing (ISP) tasks, with image denoising be-
+ ing among the central components for high-quality capture
+ in suboptimal conditions. However, processing frames di-
+-rectly on mobile edge devices under strict latency and power
+-constraints remains a challenging open problem.
+ 20 40 60 80 100 120 140 160 180
+ Inference Time (ms) 
+ 37.0
+@@ -71,6 +71,8 @@
+
+ tecture significantly expands the state-of-the-art efficiency fron-
+ tier, pushing the boundaries of visual fidelity while offering highly
+ competitive, low-latency variants for real-world mobile denoising.
++rectly on mobile edge devices under strict latency and power
++constraints remains a challenging open problem.
+ Historically, classical non-local collaborative filtering al-
+ gorithms like BM3D [3, 15] were applied to this task. It
+ was later shown that learning-based methods are far supe-
+@@ -83,36 +85,41 @@
+
+ in capturing the true signal-dependent nature of real sensor
+ noise, which is further spatially correlated by the camera’s
+ ISP.
+-Addressing this domain gap directly on mobile edge de-
+-vices has become a critical priority for the smartphone in-
+-arXiv:2604.10275v2  [cs.CV]  23 Apr 2026
++This CVPR Workshop paper is the Open Access version, provided by the Computer Vision
++Foundation. Except for this watermark, it is identical to the accepted version;
++the final published version of the proceedings is available on IEEE Xplore.
++3772
++
+ 
+ 
+ === PHYSICAL PDF PAGE 2 ===
+-dustry. This problem’s importance is highlighted by promi-
+-nent open challenges, such as the Mobile AI (MAI) [10],
+-NTIRE [12], and AIM workshops hosted at top-tier vision
+-conferences (CVPR, ECCV , ICCV). These competitions ex-
+-plicitly target the Pareto frontier of visual fidelity and actual
+-on-device execution latency, driving the research commu-
+-nity away from theoretical FLOPs optimization toward ad-
+-dressing real-world hardware limitations, such as memory
+-bandwidth bottlenecks, limited compute, and restricted en-
+-ergy resources.
+-To meet these strict benchmarks, many highly efficient
+-and top-performing models, such as those from Megvii,
+-NOAHTCV , and others [6, 10], heavily utilize U-Net-
+-style [17] architectures to balance spatial context and com-
+-putational load. Recent research, for example, NAFNet [2],
+-demonstrated that removing traditional non-linear activa-
+-tion functions can drastically reduce computational com-
+-plexity, establishing a strong baseline for efficient real-
+-world restoration. Its progressive continuation, Cascad-
+-edGaze [7], further improved this approach by utilizing cas-
+-caded bottleneck blocks to handle high-resolution inputs.
+-Another notable approach is SplitterNet [6], which was op-
+-timized for mobile inference by applying feature map chan-
+-nel splitting at different spatial scales to reduce compute.
++Addressing this domain gap directly on mobile edge
++devices has become a critical priority for the smartphone
++industry. This problem’s importance is highlighted by
++the prominent open challenges, such as the Mobile AI
++(MAI) [10], NTIRE [12], and AIM workshops hosted at
++top-tier vision conferences (CVPR, ECCV , ICCV). These
++competitions explicitly target the Pareto frontier of visual
++fidelity and actual on-device execution latency, driving the
++research community away from theoretical FLOPs opti-
++mization toward addressing real-world hardware limita-
++tions, such as memory bandwidth bottlenecks, limited com-
++pute, and restricted energy resources.
++To meet these strict benchmarks, many highly effi-
++cient and top-performing models, such as those from
++Megvii, NOAHTCV , and others [6, 10], heavily utilize
++U-Net-style [17] architectures to balance spatial context
++and computational load. Recent research, for example,
++NAFNet [2] demonstrated that removing traditional non-
++linear activation functions can drastically reduce compu-
++tational complexity, establishing a strong baseline for ef-
++ficient real-world restoration. Its progressive continuation,
++CascadeGaze [7], further improved this approach by utiliz-
++ing cascaded bottleneck blocks to handle high-resolution in-
++puts. Another notable approach is SplitterNet [6], which
++was optimized for mobile inference by applying feature
++map channel splitting at different spatial scales to reduce
++compute.
+ Recent advances in state-of-the-art image restoration
+ have also been widely driven by Vision Transformers
+ (ViTs), such as Restormer [20] and SwinIR [13]. While
+@@ -138,16 +145,16 @@
+
+ architectural and micro-block levels to maximize represen-
+ tational expressivity during training while providing opti-
+ mized edge GPU deployment. We achieve this deployment
+-efficiency via structural reparameterization, a technique that
+-decouples training-time topology from deployment-time ar-
+-chitecture. RepVGG [4] demonstrated that complex multi-
+-branch network blocks can be linearly fused into single con-
+-volutions during inference, allowing faster inference with-
+-out a reduction in prediction accuracy. This concept was
+-effectively adapted for mobile image enhancement in Mo-
+-bileIE [19] via the Multi-Branch Re-parameterized Convo-
+-lution (MBRConv). FastSHADE adopts the MBRConv as
+-its core operator, applying precision modifications to pre-
++efficiency via structural re-parameterization, a technique
++that decouples training-time topology from deployment-
++time architecture. RepVGG [4] demonstrated that complex
++multi-branch network blocks can be linearly fused into sin-
++gle convolutions during inference, allowing faster inference
++without a reduction in prediction accuracy. This concept
++was effectively adapted for mobile image enhancement in
++MobileIE [19] via the Multi-Branch Re-parameterized Con-
++volution (MBRConv). FastSHADE adopts the MBRConv
++as its core operator, applying precision modifications to pre-
+ vent numerical drift during the fusion process.
+ In designing FastSHADE, we initially utilized a fixed
+ Haar wavelet transform as a downscaling layer to separate
+@@ -189,15 +196,17 @@
+
+ operates in FP16 precision during inference.
+ 2.1. Architecture
+ Originally, the model used a fixed Haar Wavelet Transform
+-for spatial downsampling; however, based on experimental
+-results, FastSHADE now replaces it with learnable2×2
+-convolutions with a stride of 2. The network computes
++for spatial downsampling, but later, this approach evolved
++3773
++
+ 
+ 
+ === PHYSICAL PDF PAGE 3 ===
+ Figure 2. Proposed model architecture
+-representations at two spatial scales, projecting features to
+-channelsC 1 andC 2.
++as per experiments results and FastSHADE replaces it with
++learnable2×2convolutions with a stride of 2. The network
++computes representations at two spatial scales, projecting
++features to channelsC 1 andC 2.
+ The downsampled representations are processed using
+ a sequence of Asymmetric Frequency Denoising Blocks
+ (AFDB). We useN 1 intermediate blocks at the first scale
+@@ -245,6 +254,8 @@
+
+ gate features from different scales.
+ Given a low-resolution featureF LR and a high-
+ resolution skip featureF HR, the SGU generates a spatial
++3774
++
+ 
+ 
+ === PHYSICAL PDF PAGE 4 ===
+@@ -307,7 +318,7 @@
+
+ generalization, and avoids the out-of-distribution domain
+ shifts associated with synthetic data.
+ 2.5. Deployment Optimization
+-Multi-Branch Re-parameterized Convolution:MBR-
++Multi-Branch Re-parametrized Convolution:MBR-
+ Conv, adapted from MobileIE [19], is used as the founda-
+ tional convolutional layer in the model’s blocks. During
+ training, these blocks operate as heavy Multi-Branch Re-
+@@ -331,7 +342,7 @@
+
+ Iout =I out + (Round(Iout)−I out).detach() (5)
+ Furthermore, the model operates on data normalized
+ to[0,1.0]range to facilitate normal distribution of Batch
+-Normalization operations, embedded in MBRConv Blocks.
++Normalisation operations, embedded in MBRConv Blocks.
+ During deployment export, the input normalization scalar
+ (1/255.0), output denormalization scalar (×255.0) and the
+ learnable residual scaling are analytically fused into the
+@@ -350,6 +361,8 @@
+
+ 3.1.1. Model training protocol
+ The model was trained using the AdamW optimizer [14]
+ withβ 1 = 0.9, β2 = 0.999with a Cosine Annealing learn-
++3775
++
+ 
+ 
+ === PHYSICAL PDF PAGE 5 ===
+@@ -368,9 +381,9 @@
+
+ 5x5 Path (LF)
+ 3x3 Path (HF)
+ Figure 3. Frequency domain analysis of the internal features within the AFDB Block, averaged over 50 validation images. (Left, Center)
+-The 2D FFT magnitude spectra exhibit a broader energy distribution in the5×5path compared to the3×3path. (Right) In the normalized
+-radially averaged power spectrum, the spatial path (blue) retains significant energy in the low-to-mid spatial frequencies, indicating the
+-preservation of structural details and edges. In contrast, the HF noise path (red) has a flat spectral response characteristic of isotropic,
++The 2D FFT magnitude spectra exhibit a broader energy distribution in the5×5path compared to the3×3path. (Right) In the
++normalized radially averaged power spectrum spatial path (blue) retains significant energy in the low-to-mid spatial frequencies, indicating
++the preservation of structural details and edges. In contrast, the HF noise path (red) has a flat spectral response characteristic of isotropic,
+ unstructured noise extraction.
+ ing rate schedule decaying from1×10 −3 to1×10 −5. The
+ training procedure consisted of two stages:
+@@ -379,8 +392,8 @@
+
+ the ground truth image andϵ= 10 −3) on a batch size of
+ 32 samples, each consisting of256×256pixel patches.
+ • Fine-tuning for 20 epochs with PSNR loss (Eq. (7), where
+-maxy is the maximal possible value ofy, which is 255)
+-using512×512px patches. The loss function was used
++maxy is maximal possible value ofy, which is 255) us-
++ing512×512px patches. The loss function was used
+ as it directly optimizes the target metric. We observed
+ that simpler L1 or MSE losses do not allow achieving the
+ same result.
+@@ -413,16 +426,16 @@
+
+ MIDD [6] datasets were used for training. Training was
+ performed on patches extracted from the original training
+ images using a sliding window cropping.
+-The MIDD dataset contains data captured using 20 dif-
+-ferent sensors, so we constructed batches as follows: of the
+-32 patches per batch, 10 were from the MAI2021 dataset,
+-followed by 20 patches from MIDD (ensuring 1 patch from
+-each sensor type), and finally 2 patches from the SIDD
+-dataset.
++MIDD dataset contains data captured using 20 different
++sensors, so we constructed batches as follows: of 32 patches
++per batch 10 were from MAI2021 dataset, followed by 20
++patches from MIDD, ensuring 1 patch from each sensor
++type and finally 2 patches from SIDD dataset.
+ 3.3. Evaluation
+ SSIM and PSNR metrics were used as the main fidelity met-
+-rics. Additionally, following [10], we adopted the score
+-Eq. (8), which balances inference time and PSNR value.
++rics. Additionally, following [10], we adopted the follow-
++ing score Eq. (8), which balances inference time and PSNR
++value.
+ s= 22(PSNR−38.0)
+ t ,(8)
+ wheretis inference time, obtained on a mobile device.
+@@ -438,6 +451,8 @@
+
+ 64,N 1 = 2,N2 = 3),FastSHADE-L(C 1 = 24,C2 = 96,
+ N1 = 2,N2 = 3), andFastSHADE-XL(C 1 = 32,C2 =
+ 128,N 1 = 3,N2 = 5).
++3776
++
+ 
+ 
+ === PHYSICAL PDF PAGE 6 ===
+@@ -451,11 +466,11 @@
+
+ ference time of just 48.1 ms. This makes it significantly
+ faster than competitive baselines like SplitterNet [6] (66.1
+ ms) and TeamPAK (127 ms), while maintaining highly
+-competitive denoising performance (PSNR of 37.52 dB
+-on the test set). While the ultra-lightweight method TLG
+-achieves the highest challenge score by minimizing latency,
+-this comes at the cost of noticeable denoising quality degra-
+-dation (37.31 dB). FastSHADE was designed for real-world
++competitive denoising performance (PSNR of 37.52 dB on
++the test set). While ultra-lightweight method TLG achieves
++the highest challenge score by minimizing latency, this
++comes at the cost of noticeable denoising quality degrada-
++tion (37.31 dB). FastSHADE was designed for real-world
+ smartphone pipelines, where perceptual quality cannot be
+ severely compromised. Consequently, FastSHADE-M pro-
+ vides a much more practical balance, yielding a competitive
+@@ -466,7 +481,7 @@
+
+ demonstrate state-of-the-art image denoising results, with
+ FastSHADE-XL achieving the highest overall PSNR and
+ SSIM among all compared methods. Prediction results for
+-the FastSHADE model family are presented in Fig. 4.
++FastSHADE model family are present in Fig. 4.
+ 4.2. AFDB features
+ While no explicit frequency constraints are applied in the
+ AFDB or loss function, to validate the implicit empirical
+@@ -505,6 +520,8 @@
+
+ response indicates isotropic, unstructured noise. Thus, the
+ network learns a division of labor: the LF path acts as a
+ heavy spatial feature extractor to preserve image topology,
++3777
++
+ 
+ 
+ === PHYSICAL PDF PAGE 7 ===
+@@ -608,6 +625,8 @@
+
+ 3×3). The results demonstrate that the full SGU block
+ achieves the highest PSNR and the highest overall metric
+ score. Notably, the addition of the depthwise refinement
++3778
++
+ 
+ 
+ === PHYSICAL PDF PAGE 8 ===
+@@ -624,11 +643,11 @@
+
+ 3×3) 37.551363.919
+ SGU 37.58 136 4.108
+ Table 5. Data augmentation techniques ablation results.Baseline
+-means no augmentations;+ basicadds random rotations, flips, and
+-artificial Gaussian noise; (σ= 25);+ basic + noise swapincludes
+-basic augmentation and random noise profile swap between im-
+-ages in a batch;+ basic + ouradds the proposed Noise Shifting
+-Self-Augmentation.
++means no augmentations; + basic adds random rotations, flips and
++artificial Gaussian noise addition (σ= 25);+ basic + noise swap
++includes basic augmentation and random noise profile swap be-
++tween images in a batch;+ basic + ouradds the proposed Noise
++Shifting Self-Augmentation.
+ Data augmentation PSNR(dB)↑
+ Baseline 36.80
+ + basic 37.58
+@@ -650,21 +669,21 @@
+
+ swap of noise profiles.
+ 5. Limitations and Broader Impacts
+ While FastSHADE demonstrates exceptional Pareto-
+-optimality on mobile GPUs, the current architecture
+-is fundamentally optimized for FP32 and FP16 execu-
+-tion. Quantizing the model to INT8 could result in fur-
+-ther speedups and memory reductions; however, this re-
+-quires quantization-specific training optimizations, such as
+-Quantization-Aware Training, which was not explored in
+-this work. Furthermore, while our model runs efficiently via
+-the standard TFLite GPU delegate, we have yet to exploit
+-low-level hardware optimizations. Future work will focus
+-on tailoring the architecture for specific hardware streams
+-and advanced memory hierarchies, such as explicitly maxi-
+-mizing SRAM utilization and optimizing execution graphs
+-for dedicated Neural Processing Units (NPUs) to fully uti-
+-lize the available hardware and mitigate memory bandwidth
+-bottlenecks.
++optimality on mobile GPUs, the current architecture is fun-
++damentally optimized for FP32 and FP16 execution. Quan-
++tizing the model to INT8 could result in further speedups
++and memory reductions; however, it requires quantization-
++specific training optimizations, such as Quantization-Aware
++Training (QAT), which was not explored in this work. Fur-
++thermore, while our model runs highly efficiently via the
++standard TFLite GPU delegate, we have yet to exploit low-
++level hardware optimizations. Future work will focus on
++tailoring the architecture for specific hardware streams and
++advanced memory hierarchies, such as explicitly maximiz-
++ing SRAM utilization and optimizing execution graphs for
++dedicated Neural Processing Units (NPUs) to fully utilize
++the available hardware and mitigate memory bandwidth bot-
++tlenecks.
+ The broader impacts of FastSHADE extend beyond im-
+ age denoising. The core components of our architecture,
+ particularly the AFDB and the SGU block, offer a modu-
+@@ -694,7 +713,7 @@
+
+ strategy, FastSHADE maximizes representational capacity
+ under strict latency constraints. Extensive empirical eval-
+ uations demonstrate that our scalable model family effec-
+-tively expands the efficiency frontier for mobile denoising,
++tively expands the efficiency frontier for mobile denoising
+ enabling fast inference on real-world mobile devices. Our
+ base variant, FastSHADE-M, delivers an optimal balance
+ for real-world deployment, operating noticeably faster than
+@@ -708,6 +727,8 @@
+
+ ers of the Mobile AI 2026 Real Image Denoising Challenge
+ for providing the benchmarking framework and facilitating
+ the evaluations on the target Adreno 840 mobile GPU.
++3779
++
+ 
+ 
+ === PHYSICAL PDF PAGE 9 ===
+@@ -825,8 +846,11 @@
+
+ Processing, 26(7):3142–3155, 2017. 1
+ [22] Kai Zhang, Wangmeng Zuo, and Lei Zhang. Ffdnet: Toward
+ a fast and flexible solution for cnn-based image denoising.
++3780
++
+ 
+ 
+ === PHYSICAL PDF PAGE 10 ===
+ IEEE Transactions on Image Processing, 27(9):4608–4622,
+ 2018. 1
++3781
