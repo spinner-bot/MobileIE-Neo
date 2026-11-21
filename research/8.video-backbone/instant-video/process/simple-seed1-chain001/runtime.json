@@ -1,0 +1,29 @@
+{
+  "at": "2026-11-21T18:13:55.385168+08:00",
+  "process": {
+    "pid": 3966757,
+    "start_ticks": 118645204,
+    "state": "R"
+  },
+  "completed_normally": true,
+  "seconds": 9770.981009608833,
+  "state": {
+    "at": "2026-11-21T18:13:55.384806+08:00",
+    "process": {
+      "pid": 3966757,
+      "start_ticks": 118645204,
+      "state": "R"
+    },
+    "stage": "training_completed_pending_evaluation",
+    "children": {
+      "simple-train-seed1-attempt001": {
+        "pid": 3966759,
+        "start_ticks": 118645212,
+        "state": "R",
+        "exit_code": 0
+      }
+    }
+  },
+  "evaluation_completed": false,
+  "goal_complete": false
+}
