@@ -31,3 +31,5 @@ question登记唯一L1基线，core实现12431参数、32ch quarter状态、分�
 clock.sleep120.0050秒后核同新父/两driver/两worker live，seed0 worker3852927/start117158126、seed1 worker3852924/start117158111，GPU1/2 UUID各匹配；初始计数四项全0。observation002记录当时各209/205共同步、近期median 0.596733/0.602402秒、估余4649.1/4695.7秒，仅用于长sleep。没有看中途held排名/改预算，增长trace不当最终。
 
 0199与入口分别更新，资格/完整启动metadata/过程/报告各自提交并做阶段推送。后续同原父驱动两组8K完整预算、原CPU held/44门，失败不杀/重试另一live seed；不按观察超时/旧stage重起。全部旧STOP、原84/PDF020/独立最终/7号/并行main与其他worktree保持，论文目标active未完成。
+
+2026-11-21T12:16:00.363700+08:00：实际clock.sleep2700.0049秒后，原独立父3852634及两driver/worker均同start/live，无训练runtime/资源退出。两seed当时各4960/4880共同步，近期约0.639335/0.634773秒/共同步，估余1943.6/1980.5秒，只安排25分钟sleep不作算法截止。各1000/2000/3000/4000完整恢复备份自有路径/SHA核对并逐文件提交；observation003只记已完成前缀，不提交增长trace为最终，不读部分held排名/选模型。26/44＋1源与原32K预算不变，正式仍进行，后续只接同原句柄。
